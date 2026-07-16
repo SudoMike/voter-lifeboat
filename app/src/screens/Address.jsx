@@ -1,18 +1,42 @@
-import React, { useState } from 'react'
-import { lookupDistricts, GeoError } from '../lib/geo.js'
+import React, { useEffect, useRef, useState } from 'react'
+import { lookupDistricts, suggestAddresses, GeoError } from '../lib/geo.js'
 
 export default function Address({ onBack, onFound }) {
   const [addr, setAddr] = useState('')
   const [busy, setBusy] = useState(false)
   const [err, setErr] = useState(null)
+  const [suggestions, setSuggestions] = useState([])
+  const [open, setOpen] = useState(false)
+  const [activeIndex, setActiveIndex] = useState(-1)
+  const blurTimer = useRef(null)
 
-  const go = async (e) => {
+  useEffect(() => {
+    const controller = new AbortController()
+    const timer = setTimeout(async () => {
+      try {
+        const results = await suggestAddresses(addr, { signal: controller.signal })
+        setSuggestions(results)
+        setActiveIndex(-1)
+        setOpen(results.length > 0)
+      } catch {
+        // stale request aborted, or the suggest lookup failed — no dropdown, not fatal
+      }
+    }, 200)
+    return () => {
+      clearTimeout(timer)
+      controller.abort()
+    }
+  }, [addr])
+
+  const go = async (e, addressOverride) => {
     e?.preventDefault()
-    if (!addr.trim() || busy) return
+    const address = (addressOverride ?? addr).trim()
+    if (!address || busy) return
+    setOpen(false)
     setBusy(true)
     setErr(null)
     try {
-      const { districts } = await lookupDistricts(addr.trim())
+      const { districts } = await lookupDistricts(address)
       onFound(districts)
     } catch (ex) {
       setErr(
@@ -21,6 +45,29 @@ export default function Address({ onBack, onFound }) {
           : new GeoError('Something went wrong looking that up.', 'network')
       )
       setBusy(false)
+    }
+  }
+
+  const pick = (suggestion) => {
+    setAddr(suggestion.label)
+    setSuggestions([])
+    setOpen(false)
+    go(null, suggestion.label)
+  }
+
+  const onKeyDown = (e) => {
+    if (!open || suggestions.length === 0) return
+    if (e.key === 'ArrowDown') {
+      e.preventDefault()
+      setActiveIndex((i) => (i + 1) % suggestions.length)
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault()
+      setActiveIndex((i) => (i <= 0 ? suggestions.length - 1 : i - 1))
+    } else if (e.key === 'Enter' && activeIndex >= 0) {
+      e.preventDefault()
+      pick(suggestions[activeIndex])
+    } else if (e.key === 'Escape') {
+      setOpen(false)
     }
   }
 
@@ -99,18 +146,50 @@ export default function Address({ onBack, onFound }) {
           districts — then it's forgotten. We never store it.
         </p>
       </section>
-      <form onSubmit={go}>
+      <form onSubmit={go} autoComplete="off">
         <section style={{ padding: '22px 24px 0' }}>
-          <div className="input">
-            <span className="input-icon">⌖</span>
-            <input
-              type="text"
-              placeholder="4218 SW Othello St, Seattle…"
-              aria-label="Street address"
-              value={addr}
-              onChange={(e) => setAddr(e.target.value)}
-              autoFocus
-            />
+          <div className="suggest">
+            <div className="input">
+              <span className="input-icon">⌖</span>
+              <input
+                type="text"
+                placeholder="4218 SW Othello St, Seattle…"
+                aria-label="Street address"
+                aria-autocomplete="list"
+                aria-expanded={open}
+                aria-controls="address-suggestions"
+                aria-activedescendant={activeIndex >= 0 ? `address-suggestion-${activeIndex}` : undefined}
+                role="combobox"
+                value={addr}
+                onChange={(e) => setAddr(e.target.value)}
+                onKeyDown={onKeyDown}
+                onFocus={() => suggestions.length > 0 && setOpen(true)}
+                onBlur={() => {
+                  blurTimer.current = setTimeout(() => setOpen(false), 120)
+                }}
+                autoComplete="off"
+                autoFocus
+              />
+            </div>
+            {open && suggestions.length > 0 && (
+              <ul className="suggest-list" id="address-suggestions" role="listbox">
+                {suggestions.map((s, i) => (
+                  <li key={s.full} role="presentation">
+                    <button
+                      type="button"
+                      id={`address-suggestion-${i}`}
+                      role="option"
+                      aria-selected={i === activeIndex}
+                      className={`suggest-item${i === activeIndex ? ' suggest-item--active' : ''}`}
+                      onMouseDown={(e) => e.preventDefault()}
+                      onClick={() => pick(s)}
+                    >
+                      {s.label}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
           <button className="btn btn--coral btn--md" style={{ marginTop: 16 }} type="submit">
             Find my ballot

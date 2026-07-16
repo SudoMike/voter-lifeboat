@@ -9,6 +9,12 @@
 
 const KC = 'https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services'
 
+// King County's own address-point layer, used only for the type-ahead
+// dropdown. It's the same GIS system already queried for district lookups
+// (CORS-enabled, no key), so autocomplete adds no new third party — the
+// full address still only goes to the Census geocoder on submit.
+const ADDRESS_POINTS = `${KC}/ADDRESS_POINT_642/FeatureServer/0/query`
+
 // layer key -> [service, attribute that carries the value]
 const LAYERS = {
   CONGDST: ['CONGDST_AREA_405', 'CONGDST'],
@@ -45,6 +51,35 @@ export async function geocode(address) {
     throw new GeoError('That address is outside King County.', 'outside-kc')
   }
   return { x: match.coordinates.x, y: match.coordinates.y, matched: match.matchedAddress }
+}
+
+// Type-ahead suggestions as the user types a street address. Matches on
+// prefix against King County's address points, so it only fires once a
+// house number plus a few letters of the street are in ("4218 SW Oth…").
+export async function suggestAddresses(query, { signal } = {}) {
+  const q = query.trim()
+  if (q.length < 5) return []
+  const escaped = q.replace(/'/g, "''")
+  const params = new URLSearchParams({
+    where: `ADDR_FULL LIKE '${escaped}%'`,
+    outFields: 'ADDR_FULL,CTYNAME,ZIP5',
+    orderByFields: 'ADDR_FULL',
+    returnDistinctValues: 'true',
+    returnGeometry: 'false',
+    resultRecordCount: '6',
+    f: 'json',
+  })
+  const res = await fetch(`${ADDRESS_POINTS}?${params}`, { signal })
+  if (!res.ok) return []
+  const data = await res.json()
+  if (data.error || !Array.isArray(data.features)) return []
+  return data.features.map(({ attributes: a }) => {
+    const city = a.CTYNAME || 'Unincorporated King County'
+    return {
+      full: a.ADDR_FULL,
+      label: `${a.ADDR_FULL}, ${city}, WA${a.ZIP5 ? ` ${a.ZIP5}` : ''}`,
+    }
+  })
 }
 
 async function queryLayer(key, x, y) {
