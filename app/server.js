@@ -24,7 +24,34 @@ const MIME = {
 
 mkdirSync(DATA_DIR, { recursive: true })
 
+const CENSUS_GEOCODER =
+  'https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress'
+
 const server = createServer((req, res) => {
+  if (req.method === 'GET' && req.url.startsWith('/api/geocode')) {
+    const { searchParams } = new URL(req.url, 'http://internal')
+    const address = (searchParams.get('address') || '').slice(0, 200)
+    if (!address) {
+      res.writeHead(400, { 'Content-Type': 'application/json' })
+      return res.end('{"error":"address required"}')
+    }
+    const url = `${CENSUS_GEOCODER}?address=${encodeURIComponent(address)}&benchmark=Public_AR_Current&vintage=Current_Current&layers=Counties&format=json`
+    fetch(url)
+      .then((r) => {
+        if (!r.ok) throw new Error(`census ${r.status}`)
+        return r.json()
+      })
+      .then((data) => {
+        res.writeHead(200, { 'Content-Type': 'application/json' })
+        res.end(JSON.stringify(data))
+      })
+      .catch(() => {
+        res.writeHead(502, { 'Content-Type': 'application/json' })
+        res.end('{"error":"census geocoder unavailable"}')
+      })
+    return
+  }
+
   if (req.method === 'POST' && req.url === '/api/feedback') {
     let body = ''
     let dropped = false

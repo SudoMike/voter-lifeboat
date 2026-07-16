@@ -1,11 +1,11 @@
-// Address -> districts. Two steps, both straight from the browser:
-// 1. US Census geocoder: address -> lat/lon + county (CORS-enabled, no key)
-// 2. King County GIS layers on ArcGIS Online: point-in-polygon per district
-// The address itself goes ONLY to the Census geocoder; only coordinates go to
-// the district layers. Nothing touches our own server.
-
-const CENSUS =
-  'https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress'
+// Address -> districts. Two steps:
+// 1. US Census geocoder: address -> lat/lon + county, no key needed but no
+//    CORS headers either, so it's proxied through our own /api/geocode
+//    (see server.js) rather than fetched directly from the browser.
+// 2. King County GIS layers on ArcGIS Online: point-in-polygon per district,
+//    CORS-enabled, fetched straight from the browser.
+// The address itself goes ONLY to the Census geocoder (via our proxy); only
+// coordinates go to the district layers.
 
 const KC = 'https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services'
 
@@ -29,7 +29,7 @@ export class GeoError extends Error {
 }
 
 export async function geocode(address) {
-  const url = `${CENSUS}?address=${encodeURIComponent(address)}&benchmark=Public_AR_Current&vintage=Current_Current&layers=Counties&format=json`
+  const url = `/api/geocode?address=${encodeURIComponent(address)}`
   let res
   try {
     res = await fetch(url)

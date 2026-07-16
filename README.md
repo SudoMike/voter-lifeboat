@@ -28,9 +28,11 @@ Key properties (see the ADRs):
 - **No runtime AI.** All AI work happened offline in the pipeline; matching
   is transparent client-side arithmetic. The "chat" is a copy-to-clipboard
   Ballot Brief the voter pastes into their own AI.
-- **No accounts, no cookies, no analytics.** The address goes only to the
-  U.S. Census geocoder and King County GIS layers, directly from the browser.
-  The finished report lives in the URL hash fragment (Report Link).
+- **No accounts, no cookies, no analytics.** The address is geocoded via our
+  own `/api/geocode` proxy (the Census geocoder has no CORS headers, so it
+  can't be called straight from the browser) and then only coordinates go to
+  the King County GIS layers, directly from the browser. The finished report
+  lives in the URL hash fragment (Report Link).
 - **No accuracy claims.** Built and researched by AI, stated up front;
   citations are the check; a report button feeds fixes, deployed by git push.
 
@@ -39,8 +41,8 @@ Key properties (see the ADRs):
 ```bash
 cd app
 npm install
-npm run dev            # Vite dev server (proxies /api to :8080)
-node server.js         # feedback endpoint + serves dist/ after `npm run build`
+npm run dev             # Vite dev server (proxies /api to :5000)
+node server.js          # feedback + geocode proxy; serves dist/ after `npm run build`
 ```
 
 Rebuilding data: see `data/README.md` for the stage-by-stage pipeline
