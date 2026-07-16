@@ -105,7 +105,7 @@ export function buildBrief(data, answers, contests, measures, shareUrl, concerns
   L.push('---')
   L.push('')
   L.push(
-    'Now that you have my Ballot Brief above, act as my personal election advisor and go deeper on the candidates recommended for me, before I vote.'
+    'Now that you have my Ballot Brief above, act as my personal election advisor and write me a supplementary report before I vote.'
   )
   L.push('')
   if (concerns?.trim()) {
@@ -114,18 +114,36 @@ export function buildBrief(data, answers, contests, measures, shareUrl, concerns
     L.push('Address these directly and prominently in your report.')
     L.push('')
   }
-  L.push(
-    'Using my values above and whatever you can find on these specific candidates (news coverage, endorsements, donor records, public statements, voting history where applicable), write me a supplementary report. For each recommended candidate:'
-  )
-  L.push('- A quick verdict: how well do they actually fit my values?')
-  L.push(
-    '- A red-flag check: anything extremist (in any direction), scandal-adjacent, or sharply at odds with their campaign rhetoric?'
-  )
-  L.push('- 2–3 things the summaries above may have missed or understated')
-  L.push('- Your honest bottom line — would you recommend I vote for them?')
-  L.push('')
-  L.push(
-    "Output a nicely-formatted HTML report. Use color panels, verdict badges, and highlights so it's easy to scan. Be direct — I'd rather hear a hard truth now than regret a vote later."
-  )
+  L.push(`## YOUR RESEARCH
+Search the web for every serious contender above: news coverage, endorsements, donor records, public statements, voting history where applicable. If you do NOT have web access, say so in a prominent banner at the top of the report and confine yourself to analyzing this brief's own contents — do not invent outside facts and do not fabricate links. Candidates marked "not enough evidence to score" are in scope: you may find evidence the pipeline didn't, and one of them may be the best pick. Also draw on whatever you already know about me from our past conversations — my circumstances, priorities, and how I think — to sharpen your verdicts.
+
+## COVERAGE RULES
+- Cover EVERY contested race on my ballot, each in its own section, with exactly ONE explicit pick per race. Skip uncontested races.
+- The brief's rankings are one input, not the answer. Form your own recommendation from my values, your research, and what you know about me. Where your pick differs from the brief's top match, note the difference and why in a sentence or two — don't make the disagreement the story.
+- Cover every ballot measure the same way: an explicit YES or NO recommendation. Where no lean was computed above, reason directly from my values.
+
+## REPORT STRUCTURE — one self-contained HTML file (no external fonts, scripts, images, or stylesheets)
+1. Masthead: title, election and date, my districts.
+2. The no-web-access banner, if that applies.
+3. "Verdicts at a glance", subtitled "What I recommend for each contested race": one small chip per race and measure — race, your pick, verdict color — each anchor-linked to its section below. Directly above the chips, a one-line legend spelling out what the three colors mean.
+4. One section per race, in the same order as this brief, then the measures.
+5. Closing: patterns you noticed across races (e.g. one of my values doing hidden work in the rankings) and questions back to me — only real ones; if none, say so in one line.
+6. Footer: sources consulted, a reminder that I should verify against the linked sources before voting — the vote is mine, not yours or a tool's — and the regenerate link from the top of this brief.
+
+## EACH RACE SECTION MUST CONTAIN
+- Header: the office and what it does.
+- A colored verdict badge: "MY PICK: [name]", with the brief's match score beside it.
+- A 2–3 sentence rationale tied to MY values.
+- A red-flag check covering all serious contenders, not just your pick — explicit even when clean ("nothing concerning surfaced").
+- If your pick differs from the brief's top match: a brief note saying so and why.
+- 1–3 things the brief's summaries may have missed or understated.
+- 2–4 links to dig deeper on the candidates discussed — only links you verified exist.
+
+## PRESENTATION
+- Exactly TWO verdict colors, signaling how much of my attention a race needs — nothing else (not party, not agreement with the brief). Seafoam green #5FB39F = clear winner: confident pick — fill in the bubble and move on. Amber #C69A3A = some nuance I might want to look at: a close call, thin evidence, a caveat, or a red flag on a contender — read before deciding. Use these on badges, chips, and section accents, and never leave their meaning implicit — the legend in the glance section is the decoder. Cream #FBF5EA page background, navy #1B3A57 text, matching the Voter Lifeboat site. Friendly rounded sans-serif, system font stack.
+- Do NOT overwhelm me — no walls of text. Default view per race = badge, pick, and gist; put the evidence bullets, full red-flag detail, and "what the brief missed" inside native <details>/<summary> toggles ("show the evidence").
+- Depth proportional to the verdict: a green race should take ~30 seconds to read; spend your words where my decision could actually change. An amber race with a serious red flag may show more detail by default.
+- Link liberally: chips to sections, cross-references between related races, external sources inline.
+- Be direct — I'd rather hear a hard truth now than regret a vote later.`)
   return L.join('\n')
 }

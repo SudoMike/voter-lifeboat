@@ -11,6 +11,7 @@ import {
 } from '../lib/scoring.js'
 import { writeHash } from '../lib/codec.js'
 import { buildBrief, pamphletLink } from '../lib/brief.js'
+import { copyText } from '../lib/clipboard.js'
 
 const EVIDENCE = {
   rich: { marks: '◆◆◆', cls: 'evidence--rich', label: 'Rich record' },
@@ -426,10 +427,7 @@ function BriefSection({ data, answers, contests, measures, shareUrl }) {
   )
   const words = text.split(/\s+/).length
   const copy = () => {
-    navigator.clipboard.writeText(text).then(() => {
-      setCopied(true)
-      setTimeout(() => setCopied(false), 4000)
-    })
+    copyText(text).then(() => setCopied(true))
   }
   return (
     <section className="screen--navy" style={{ margin: '24px 0 0', padding: '30px 24px' }}>
@@ -438,8 +436,11 @@ function BriefSection({ data, answers, contests, measures, shareUrl }) {
         Take your ballot to your own AI
       </h1>
       <p className="copy" style={{ fontSize: 14, marginTop: 10, color: '#C7D4DF' }}>
-        One tap copies your values, results, and candidate summaries — plus a ready-made
-        prompt asking the AI to dig deeper and flag any extremism concerns. Paste and go.
+        The report below is a good starting point for matching your priorities to
+        candidates — but we <strong style={{ color: 'var(--cream)' }}>highly recommend</strong>{' '}
+        moving the conversation to your own chatbot (ChatGPT or Claude, for example),
+        where it can dig deeper and build you a much more personalized, much prettier
+        report. Just tap the button to copy everything, then paste it into your chatbot.
       </p>
       <div className="packet" style={{ marginTop: 18 }}>
         {text.split('\n').slice(4, 5)[0]?.slice(0, 60)}…<br />
@@ -497,7 +498,12 @@ function BriefSection({ data, answers, contests, measures, shareUrl }) {
           Copy my Ballot Brief
         </button>
       </div>
-      {copied && <div className="copied" style={{ marginTop: 16 }}>✓ Copied! Paste it into Claude, ChatGPT, or any AI — the prompt is included.</div>}
+      {copied && (
+        <div className="copied rise" style={{ marginTop: 16 }}>
+          ✓ Your Ballot Brief is in your clipboard — now open ChatGPT, Claude, or any
+          chatbot and paste it in. The prompt is included.
+        </div>
+      )}
       <p className="note" style={{ margin: '8px 0 0', textAlign: 'center', fontSize: 11.5 }}>
         ~{Math.round(words / 100) * 100} words · plain text · yours to keep
       </p>
@@ -599,7 +605,7 @@ export default function Results({ data, districts, answers, restored, onStartOve
   }, [restored, data, districts, answers])
 
   const copyLink = () => {
-    navigator.clipboard.writeText(shareUrl).then(() => {
+    copyText(shareUrl).then(() => {
       setLinkCopied(true)
       setTimeout(() => setLinkCopied(false), 3500)
     })
@@ -636,6 +642,8 @@ export default function Results({ data, districts, answers, restored, onStartOve
         )}
       </header>
 
+      <BriefSection data={data} answers={answers} contests={contests} measures={measures} shareUrl={shareUrl} />
+
       {contests.map((c) => (
         <ContestCard key={c.slug} data={data} contest={c} answers={answers} />
       ))}
@@ -653,7 +661,6 @@ export default function Results({ data, districts, answers, restored, onStartOve
         WA primaries send the top 2 to November, regardless of party.
       </p>
 
-      <BriefSection data={data} answers={answers} contests={contests} measures={measures} shareUrl={shareUrl} />
       <Footer />
     </main>
   )
