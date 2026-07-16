@@ -1,0 +1,140 @@
+{
+  "derived_from": [
+    "data/interim/axis-notes.md",
+    "data/dossiers/ (all _contest.md overviews and measure files)"
+  ],
+  "method": "Manual synthesis from ballot-derived evidence; rationale recorded in data/final/rubric-derivation.md",
+  "election": "August 4, 2026 Primary and Special Election, King County, WA",
+  "scale": {
+    "description": "Candidates and voters are positioned on each axis from -2 (fully pole_a) to +2 (fully pole_b); 0 = mixed/centrist on the axis. Voter weights per axis: 0 (don't care) to 2 (care a lot). Candidate scores must carry citations and a confidence level; low-confidence scores are excluded from alignment math.",
+    "range": [-2, 2]
+  },
+  "axes": [
+    {
+      "id": "taxes",
+      "title": "Taxes & revenue",
+      "tension": "Should Washington raise more revenue from high earners and wealth to fund public services, or hold the line and cut taxes?",
+      "pole_a": {"label": "Limit & cut taxes", "description": "Oppose new taxes (income, wealth, levy-cap lifts); prioritize reducing the tax burden"},
+      "pole_b": {"label": "Tax wealth to fund services", "description": "Expand progressive revenue (millionaires tax, wealth tax, cap lifts) to fund public investment"},
+      "applies_to": ["Federal", "State", "County", "City", "measures"],
+      "salience": "The single most recurrent divider: LD43 senate (wealth-tax spread), LD32, LD36 senate (repeal vs architect), LD5, every levy measure, assessor race legislative agendas"
+    },
+    {
+      "id": "spending",
+      "title": "Spending & accountability",
+      "tension": "Is the bigger problem that government under-invests, or that it doesn't manage and audit what it already spends?",
+      "pole_a": {"label": "Audit & restrain", "description": "Oversight, audits, performance standards, and restraint before any new spending"},
+      "pole_b": {"label": "Invest & expand", "description": "Expand programs and public investment as the primary lever for outcomes"},
+      "applies_to": ["Federal", "State", "County", "City", "measures"],
+      "salience": "Differentiates WITHIN parties: KCC D8 (accountability lane vs incumbent), LD32 senate (audit homelessness spending), LD33 P2, most R challengers; measures with ratchet/flexibility concerns"
+    },
+    {
+      "id": "housing",
+      "title": "Housing affordability",
+      "tension": "What fixes housing costs: unleashing market supply, or public investment and tenant protections?",
+      "pole_a": {"label": "Market supply & deregulation", "description": "Streamline permitting, cut red tape, let the market build; skepticism of rent regulation"},
+      "pole_b": {"label": "Public housing & tenant protections", "description": "Social housing, rent stabilization, tenant right-to-counsel, public investment"},
+      "applies_to": ["State", "County", "City"],
+      "salience": "Seattle D5 (three distinct positions), KCC D2 (social-housing levy timing), LD43 senate (rent-stabilization stringency), LD46, LD47"
+    },
+    {
+      "id": "safety",
+      "title": "Public safety & street disorder",
+      "tension": "Lead with enforcement and accountability, or with prevention, treatment, and non-police response?",
+      "pole_a": {"label": "Enforcement & accountability", "description": "Police staffing, prosecuting repeat offenders, mandatory treatment, clearing encampments"},
+      "pole_b": {"label": "Prevention & services", "description": "Root causes, voluntary treatment, housing-first, community/non-police responders, diversion"},
+      "applies_to": ["Federal", "State", "County", "City", "DistrictCourt", "StateSupremeCourt"],
+      "salience": "Seattle D5 (sharpest), KCC D8 (three-strikes proposal), LD5 (police chief candidate), LD47, LD30; judicial races via prosecution-vs-defense formation and bail/diversion posture"
+    },
+    {
+      "id": "climate",
+      "title": "Climate & energy",
+      "tension": "Press forward on climate policy even when it raises costs, or prioritize energy affordability?",
+      "pole_a": {"label": "Energy affordability first", "description": "Repeal/pare back the Climate Commitment Act and gas taxes; expand all energy sources"},
+      "pole_b": {"label": "Climate action first", "description": "Defend and extend carbon pricing, clean-energy transition, climate-resilient investment"},
+      "applies_to": ["Federal", "State", "County", "City"],
+      "salience": "LD36 senate (CCA architect vs repeal), LD33 P1 (eliminate CCA plank), CD9 (Basler's affordability critique), LD45 P1"
+    },
+    {
+      "id": "experience",
+      "title": "Record vs. renewal",
+      "tension": "Value a proven record and institutional effectiveness, or fresh perspectives and generational change?",
+      "pole_a": {"label": "Proven record", "description": "Incumbency, seniority, bills passed, institutional relationships that deliver"},
+      "pole_b": {"label": "New voices", "description": "Outsider energy, generational change, lived experience over insider tenure"},
+      "applies_to": ["Federal", "State", "County", "City", "DistrictCourt", "StateSupremeCourt"],
+      "salience": "Appears in nearly every contested race; THE axis in LD37 P1, LD11 P1, CD1, CD7, and the appointment-pipeline argument in all four Supreme Court races"
+    },
+    {
+      "id": "local-control",
+      "title": "Local control vs. regional consistency",
+      "tension": "Should decisions (zoning, schools, services) sit with the smallest local unit, or be set regionally/statewide for consistency?",
+      "pole_a": {"label": "Local control", "description": "City/parent/district control; skepticism of state mandates and regional consolidation"},
+      "pole_b": {"label": "Regional/state standards", "description": "State housing mandates, regional authorities, county-level coordination"},
+      "applies_to": ["State", "City", "measures"],
+      "salience": "LD1 P2 (GMA rollback candidates), LD33 P2 (unfunded mandates), both fire-annexation measures, Covington park district"
+    },
+    {
+      "id": "reform",
+      "title": "Money & power in politics",
+      "tension": "How much does independence from institutional money and structural political reform matter?",
+      "pole_a": {"label": "Work the system", "description": "Coalition-building within existing party/donor structures gets results"},
+      "pole_b": {"label": "Reform the system", "description": "Refuse PAC money; term limits, dark-money bans, RCV, direct democracy"},
+      "applies_to": ["Federal", "State", "County", "City"],
+      "salience": "Central for Etzkorn (CD1), Gordon, Sawant/Chaudhry (CD9), Sabio-Howell (LD43), Brown (LD37), Leritz (LD5), Jacobson (KCC D8)"
+    },
+    {
+      "id": "immigration",
+      "title": "Immigration & federal enforcement",
+      "tension": "Constrain federal immigration enforcement and protect immigrants, or prioritize enforcement and border security?",
+      "pole_a": {"label": "Enforcement first", "description": "Secure border, support ICE cooperation, enforcement of immigration law"},
+      "pole_b": {"label": "Protect immigrants", "description": "Constrain ICE (masking bans, surveillance limits), sanctuary policies, legal pathways"},
+      "applies_to": ["Federal", "State"],
+      "salience": "CD7 (Jayapal's signature), CD9 (abolish-ICE spread), CD8 (R field), LD32 P2 (Siddiqi), LD46 senate, LD33 P1"
+    },
+    {
+      "id": "healthcare",
+      "title": "Healthcare system",
+      "tension": "Replace private insurance with a universal public system, or strengthen and fix the current system?",
+      "pole_a": {"label": "Strengthen current system", "description": "Protect ACA/Medicaid, cap drug prices, lower premiums within existing structures"},
+      "pole_b": {"label": "Single-payer transformation", "description": "Medicare for All / universal public coverage as the goal"},
+      "applies_to": ["Federal", "State"],
+      "salience": "CD1 (three-way split), CD7, CD9 (mechanism/urgency differences), LD5 (Warmerdam single-payer), LD1 P2"
+    },
+    {
+      "id": "social",
+      "title": "Social issues & schools",
+      "tension": "Progressive social policy (reproductive rights, LGBTQ+ protections, inclusive curricula) vs. traditional values and parental rights?",
+      "pole_a": {"label": "Traditional values & parental rights", "description": "Parental control of curricula, opposition to CRT/gender content, pro-life positions"},
+      "pole_b": {"label": "Progressive social policy", "description": "Reproductive and gender-affirming care as rights, inclusive schools, anti-discrimination law"},
+      "applies_to": ["Federal", "State"],
+      "salience": "LD47 P2 (sharpest: DEI removal vs Members of Color Caucus chair), LD45 P1, LD41 P1, LD33 P1 (three-way spread), LD12 P2, LD46 senate"
+    },
+    {
+      "id": "tech",
+      "title": "AI & big tech",
+      "tension": "Regulate AI, data centers, and tech platforms aggressively, or keep Washington innovation-friendly?",
+      "pole_a": {"label": "Innovation-friendly", "description": "Light-touch regulation; treat tech/AI growth and its energy demand as opportunity"},
+      "pole_b": {"label": "Regulate aggressively", "description": "AI guardrails, data-center limits/subsidy skepticism, platform accountability, data privacy"},
+      "applies_to": ["Federal", "State"],
+      "salience": "The novel axis this cycle: LD46 P1 (race's flashpoint, AI-industry money contested), LD32 P1 (Noble's platform), LD32 senate, LD45 P2, CD1 (halt data centers vs nationalize AI vs opportunity)"
+    },
+    {
+      "id": "defense",
+      "title": "Foreign policy & defense",
+      "tension": "Reduce military spending and conditions on aid (especially to Israel), or maintain defense commitments and alliances?",
+      "pole_a": {"label": "Maintain commitments", "description": "Strong defense budget, support allies including Israel, defense-industry partnership"},
+      "pole_b": {"label": "Reduce & recondition", "description": "Arms embargo/aid conditions on Israel, audit/cut the Pentagon, end forever wars"},
+      "applies_to": ["Federal"],
+      "salience": "CD9's clearest divider (HASC ranking member vs arms-embargo challengers), CD7 (War Powers), CD1"
+    },
+    {
+      "id": "judicial",
+      "title": "Judicial philosophy",
+      "tension": "Should judges read law strictly as written, or pragmatically interpret it to protect rights as society changes?",
+      "pole_a": {"label": "As written", "description": "Strict construction, text and original meaning, judicial restraint, depoliticize the court"},
+      "pole_b": {"label": "Pragmatic & rights-protective", "description": "State constitution as rights guarantor, law meeting the community where it is, openness to reform"},
+      "applies_to": ["StateSupremeCourt", "DistrictCourt", "City"],
+      "salience": "SSC Pos 3 (clearest three-way philosophy spread), Pos 1 (rights-guarantor vs as-written), Pos 5 (posture toward Blake/bail), Pos 7 (Quinn/Blake critiques); Seattle Muni Court via bail/diversion posture"
+    }
+  ]
+}
