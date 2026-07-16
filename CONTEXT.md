@@ -34,3 +34,16 @@ candidate and measure on *their* ballot aligns with those values.
   voter's Values Profile, their ballot's contests, alignment results, and
   dossier summaries — formatted so the voter can paste it into their own AI
   chat to discuss further.
+- **Statement Card** — the interview's core unit: a short, neutrally-worded
+  position statement the voter agrees with, disagrees with, or skips;
+  strong reactions trigger a "how much do you care?" weight.
+- **Trade-off Scenario** — an interview question posing a concrete forced
+  choice between two goods (e.g., where a budget surplus goes). Highest
+  signal, used sparingly.
+- **Lean** — the alignment read for a Measure: leans yes, leans no, or
+  genuinely split, derived from the Values Profile via the measure's mapped
+  axes. Never shown when the axis mapping is weak.
+- **Source Tier** — the trust class of a dossier source. Tier 1: pamphlet
+  statement, candidate's own site/filings, official voting records. Tier 2:
+  endorsements, established-outlet news. Excluded: social media, opposition
+  sites, blogs.
