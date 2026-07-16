@@ -11,15 +11,14 @@ export default function Landing({ data, onStart }) {
       </header>
       <section style={{ padding: '34px 24px 8px' }}>
         <h1 className="display display--xl">
-          Your values.
+          Nobody finishes the
           <br />
-          Your ballot.
-          <br />
-          <span className="accent">Charted.</span>
+          <span className="accent">voters' pamphlet.</span>
         </h1>
         <p className="lede" style={{ marginTop: 16 }}>
-          Answer a few quick questions. See how everyone on <em>your</em> ballot
-          lines up with <em>your</em> values. King County primary · Aug 4, 2026.
+          Get through your whole ballot in three minutes — see how everyone on{' '}
+          <em>your</em> ballot lines up with <em>your</em> values. King County
+          primary · Aug 4, 2026.
         </p>
       </section>
       <section style={{ padding: '20px 24px 0' }}>
