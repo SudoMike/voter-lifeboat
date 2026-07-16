@@ -125,7 +125,7 @@ Search the web for every serious contender above: news coverage, endorsements, d
 ## REPORT STRUCTURE — one self-contained HTML file (no external fonts, scripts, images, or stylesheets)
 1. Masthead: title, election and date, my districts.
 2. The no-web-access banner, if that applies.
-3. "Verdicts at a glance", subtitled "What I recommend for each contested race": one small chip per race and measure — race, your pick, verdict color — each anchor-linked to its section below. Directly above the chips, a one-line legend spelling out what the three colors mean.
+3. "Verdicts at a glance", subtitled "What I recommend for each contested race": one small chip per race and measure — race, your pick, verdict color — each anchor-linked to its section below. Directly above the chips, a one-line legend spelling out what the two colors mean.
 4. One section per race, in the same order as this brief, then the measures.
 5. Closing: patterns you noticed across races (e.g. one of my values doing hidden work in the rankings) and questions back to me — only real ones; if none, say so in one line.
 6. Footer: sources consulted, a reminder that I should verify against the linked sources before voting — the vote is mine, not yours or a tool's — and the regenerate link from the top of this brief.
