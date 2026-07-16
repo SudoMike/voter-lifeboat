@@ -86,7 +86,7 @@ button { font: inherit; border: 0; background: none; color: inherit; cursor: poi
 .brand-name { font-family: var(--font-display); font-weight: 800; font-size: 21px; letter-spacing: -.3px; white-space: nowrap; }
 .brand-name--sm { font-size: 16px; }
 /* lifebuoy mark: ring + 4 notches */
-.buoy { position: relative; flex: none; width: 34px; height: 34px; border-radius: 50%; border: 7px solid var(--coral); background: var(--cream); }
+.buoy { position: relative; flex: none; width: 34px; height: 34px; border-radius: 50%; border: 7px solid var(--coral); background: var(--cream); overflow: hidden; }
 .buoy::before, .buoy::after { content: ""; position: absolute; background: var(--cream); }
 .buoy::before { left: 50%; top: -9px; width: 6px; height: 52px; margin-left: -3px; }
 .buoy::after { top: 50%; left: -9px; height: 6px; width: 52px; margin-top: -3px; }
