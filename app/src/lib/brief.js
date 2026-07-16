@@ -29,7 +29,7 @@ function axisPoleLabel(data, id, v) {
   return `${v <= -1.5 || v >= 1.5 ? 'strongly ' : 'leans '}"${pole.label}"`
 }
 
-export function buildBrief(data, answers, contests, measures, shareUrl) {
+export function buildBrief(data, answers, contests, measures, shareUrl, concerns) {
   const L = []
   L.push('# MY BALLOT BRIEF — King County Primary, August 4, 2026')
   L.push('')
@@ -100,6 +100,32 @@ export function buildBrief(data, answers, contests, measures, shareUrl) {
   L.push(`Regenerate this report anytime: ${shareUrl}`)
   L.push(
     'Method: candidates were scored -2..+2 per issue axis by an AI pipeline reading official pamphlet statements, candidate websites, public records, endorsements and established news — every score carries citations, an adversarial AI pass tried to refute each one, and low-confidence scores are excluded from matching.'
+  )
+  L.push('')
+  L.push('---')
+  L.push('')
+  L.push(
+    'Now that you have my Ballot Brief above, act as my personal election advisor and go deeper on the candidates recommended for me, before I vote.'
+  )
+  L.push('')
+  if (concerns?.trim()) {
+    L.push('## MY QUESTIONS AND CONCERNS')
+    L.push(concerns.trim())
+    L.push('Address these directly and prominently in your report.')
+    L.push('')
+  }
+  L.push(
+    'Using my values above and whatever you can find on these specific candidates (news coverage, endorsements, donor records, public statements, voting history where applicable), write me a supplementary report. For each recommended candidate:'
+  )
+  L.push('- A quick verdict: how well do they actually fit my values?')
+  L.push(
+    '- A red-flag check: anything extremist (in any direction), scandal-adjacent, or sharply at odds with their campaign rhetoric?'
+  )
+  L.push('- 2–3 things the summaries above may have missed or understated')
+  L.push('- Your honest bottom line — would you recommend I vote for them?')
+  L.push('')
+  L.push(
+    "Output a nicely-formatted HTML report. Use color panels, verdict badges, and highlights so it's easy to scan. Be direct — I'd rather hear a hard truth now than regret a vote later."
   )
   return L.join('\n')
 }

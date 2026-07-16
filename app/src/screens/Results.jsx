@@ -384,11 +384,33 @@ function MeasureCard({ measure, answers }) {
   )
 }
 
+const CONCERN_CHIPS = [
+  {
+    label: '🚩 No extremists',
+    text: "I don't want to support extremists in any direction, even if they match my values on paper. Check each candidate's record, endorsements, and donors for red flags.",
+  },
+  {
+    label: '💰 Follow the money',
+    text: 'Look closely at who funds each candidate — individual donors, PACs, party money — and flag anything that could pull them away from my interests.',
+  },
+  {
+    label: '🔨 Real track record',
+    text: 'I care more about what candidates have actually done than what they say. Which of these have a real record of delivering?',
+  },
+  {
+    label: '🗳️ Who can win',
+    text: 'For close matches, factor in who realistically has a shot of advancing past the primary.',
+  },
+]
+
 function BriefSection({ data, answers, contests, measures, shareUrl }) {
   const [copied, setCopied] = useState(false)
+  const [concerns, setConcerns] = useState('')
+  const addChip = (t) =>
+    setConcerns((prev) => (prev.includes(t) ? prev : prev ? `${prev.trimEnd()}\n${t}` : t))
   const text = useMemo(
-    () => buildBrief(data, answers, contests, measures, shareUrl),
-    [data, answers, contests, measures, shareUrl]
+    () => buildBrief(data, answers, contests, measures, shareUrl, concerns),
+    [data, answers, contests, measures, shareUrl, concerns]
   )
   const words = text.split(/\s+/).length
   const copy = () => {
@@ -404,8 +426,8 @@ function BriefSection({ data, answers, contests, measures, shareUrl }) {
         Take your ballot to your own AI
       </h1>
       <p className="copy" style={{ fontSize: 14, marginTop: 10, color: '#C7D4DF' }}>
-        One tap copies your values, your results, and every candidate summary —
-        paste it into ChatGPT, Claude, or any chat and argue it out.
+        One tap copies your values, results, and candidate summaries — plus a ready-made
+        prompt asking the AI to dig deeper and flag any extremism concerns. Paste and go.
       </p>
       <div className="packet" style={{ marginTop: 18 }}>
         {text.split('\n').slice(4, 5)[0]?.slice(0, 60)}…<br />
@@ -416,12 +438,54 @@ function BriefSection({ data, answers, contests, measures, shareUrl }) {
         …<br />
         <span className="hint">+ summaries &amp; sources for all {contests.length + measures.length} contests</span>
       </div>
+      <div style={{ marginTop: 18 }}>
+        <label
+          className="copy"
+          htmlFor="brief-concerns"
+          style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#C7D4DF' }}
+        >
+          Anything you want the AI to know or check? <span style={{ fontWeight: 400 }}>(optional)</span>
+        </label>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, margin: '10px 0' }}>
+          {CONCERN_CHIPS.map((chip) => (
+            <button
+              key={chip.label}
+              type="button"
+              onClick={() => addChip(chip.text)}
+              disabled={concerns.includes(chip.text)}
+              style={{
+                font: 'inherit',
+                fontSize: 12,
+                fontWeight: 700,
+                color: concerns.includes(chip.text) ? '#7E93A6' : 'var(--cream)',
+                background: 'transparent',
+                border: '1.5px solid currentColor',
+                borderRadius: 999,
+                padding: '5px 12px',
+                cursor: concerns.includes(chip.text) ? 'default' : 'pointer',
+              }}
+            >
+              {concerns.includes(chip.text) ? '✓ ' : '+ '}
+              {chip.label}
+            </button>
+          ))}
+        </div>
+        <textarea
+          id="brief-concerns"
+          className="field"
+          rows={3}
+          value={concerns}
+          onChange={(e) => setConcerns(e.target.value)}
+          placeholder={'Tap a suggestion above or write your own — e.g. "I\'m torn on the transit measure, push back on my lean."'}
+          style={{ resize: 'vertical' }}
+        />
+      </div>
       <div style={{ marginTop: 18, textAlign: 'center' }}>
         <button className="btn btn--coral btn--lg" style={{ fontSize: 18, padding: '15px 32px' }} onClick={copy}>
           Copy my Ballot Brief
         </button>
       </div>
-      {copied && <div className="copied" style={{ marginTop: 16 }}>✓ Copied! Now paste it into any AI chat.</div>}
+      {copied && <div className="copied" style={{ marginTop: 16 }}>✓ Copied! Paste it into Claude, ChatGPT, or any AI — the prompt is included.</div>}
       <p className="note" style={{ margin: '8px 0 0', textAlign: 'center', fontSize: 11.5 }}>
         ~{Math.round(words / 100) * 100} words · plain text · yours to keep
       </p>
