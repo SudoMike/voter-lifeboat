@@ -1,0 +1,104 @@
+{
+  "authored_by": "Hand-authored for this ballot from data/final/rubric.json axes; each item maps agree -> a signed axis value. Statement directions are deliberately mixed so 'agree' alternates poles across the interview (acquiescence-bias guard).",
+  "derived_from": ["data/final/rubric.json"],
+  "notes": "value semantics: agree applies `value`, disagree applies `-value`, skip applies nothing. weight from care pulse: not-much=0.5, default=1, a-lot=2. Scenarios apply every effect listed for the chosen option.",
+  "items": [
+    {
+      "id": "card-taxes", "kind": "statement", "axis": "taxes", "pulse": true,
+      "text": "Washington should tax high incomes and large fortunes more to fund public services.",
+      "value": 2
+    },
+    {
+      "id": "card-spending", "kind": "statement", "axis": "spending", "pulse": false,
+      "text": "Before asking taxpayers for anything new, government should first prove it spends what it already has well.",
+      "value": -2
+    },
+    {
+      "id": "scenario-safety", "kind": "tradeoff", "pulse": true,
+      "text": "The county finds a budget surplus. Where should it go first?",
+      "options": [
+        {"label": "Hiring more police officers", "detail": "Faster response times and more patrols", "effects": {"safety": -2}},
+        {"label": "Homelessness & treatment services", "detail": "Housing, addiction and mental-health programs", "effects": {"safety": 2}}
+      ]
+    },
+    {
+      "id": "card-housing", "kind": "statement", "axis": "housing", "pulse": true,
+      "text": "The fastest fix for housing costs is cutting permits and regulations so builders can build more.",
+      "value": -2
+    },
+    {
+      "id": "card-climate", "kind": "statement", "axis": "climate", "pulse": true,
+      "text": "Climate policies like carbon pricing are worth it, even when they raise gas and energy prices.",
+      "value": 2
+    },
+    {
+      "id": "card-experience", "kind": "statement", "axis": "experience", "pulse": false,
+      "text": "I'd rather have an experienced insider who knows how to get things done than a newcomer with fresh ideas.",
+      "value": -2
+    },
+    {
+      "id": "scenario-housing", "kind": "tradeoff", "pulse": false,
+      "text": "Two housing bills reach the governor's desk, but only one gets funded. Which one?",
+      "options": [
+        {"label": "Cut red tape for builders", "detail": "Streamlined permits, relaxed zoning — let supply catch up", "effects": {"housing": -2}},
+        {"label": "Public housing & renter protections", "detail": "Social housing dollars, rent stabilization, right to counsel", "effects": {"housing": 2}}
+      ]
+    },
+    {
+      "id": "card-local", "kind": "statement", "axis": "local-control", "pulse": false,
+      "text": "Zoning and school decisions belong with each city and community — not with the state.",
+      "value": -2
+    },
+    {
+      "id": "card-reform", "kind": "statement", "axis": "reform", "pulse": false,
+      "text": "I trust a candidate more when they refuse PAC and corporate money.",
+      "value": 2
+    },
+    {
+      "id": "card-immigration", "kind": "statement", "axis": "immigration", "pulse": true,
+      "text": "State and local government should limit how much they cooperate with federal immigration enforcement.",
+      "value": 2
+    },
+    {
+      "id": "card-healthcare", "kind": "statement", "axis": "healthcare", "pulse": false,
+      "text": "Healthcare works better when we improve the system we have, rather than replacing private insurance with one public plan.",
+      "value": -2
+    },
+    {
+      "id": "scenario-budget", "kind": "tradeoff", "pulse": false,
+      "text": "Olympia faces a budget shortfall. What should legislators reach for first?",
+      "options": [
+        {"label": "Cut programs & find efficiencies", "detail": "Tighten belts before touching anyone's taxes", "effects": {"taxes": -1, "spending": -2}},
+        {"label": "New taxes on the wealthiest", "detail": "Protect services by asking more from those with the most", "effects": {"taxes": 2, "spending": 1}}
+      ]
+    },
+    {
+      "id": "card-social", "kind": "statement", "axis": "social", "pulse": true,
+      "text": "Parents should have more say over what public schools teach about gender and race.",
+      "value": -2
+    },
+    {
+      "id": "card-tech", "kind": "statement", "axis": "tech", "pulse": false,
+      "text": "AI companies and data centers need much stricter rules here, even if that slows the local tech economy.",
+      "value": 2
+    },
+    {
+      "id": "card-defense", "kind": "statement", "axis": "defense", "pulse": false,
+      "text": "The U.S. should keep supporting allies like Israel with military aid, without adding new conditions.",
+      "value": -2
+    },
+    {
+      "id": "card-judicial", "kind": "statement", "axis": "judicial", "pulse": false,
+      "text": "Judges should stick to the exact text of the law as written — even when a strict reading produces harsh results.",
+      "value": -2
+    }
+  ],
+  "care_pulse": {
+    "text": "How much does this issue matter to you?",
+    "options": [
+      {"label": "Not much", "weight": 0.5},
+      {"label": "Somewhat", "weight": 1},
+      {"label": "A lot!", "weight": 2}
+    ]
+  }
+}
