@@ -1,0 +1,22 @@
+{
+  "contest_slug": "state-senator-legislative-district-no-36",
+  "reviewed_at": "2026-07-16",
+  "verdicts": [
+    {"candidate": "noel-c-frame", "axis": "taxes", "verdict": "upheld"},
+    {"candidate": "noel-c-frame", "axis": "spending", "verdict": "upheld"},
+    {"candidate": "noel-c-frame", "axis": "experience", "verdict": "upheld"},
+    {"candidate": "jillian-england", "axis": "taxes", "verdict": "upheld"},
+    {"candidate": "jillian-england", "axis": "spending", "verdict": "upheld"},
+    {"candidate": "jillian-england", "axis": "safety", "verdict": "upheld"},
+    {"candidate": "jillian-england", "axis": "climate", "verdict": "upheld"},
+    {"candidate": "jillian-england", "axis": "experience", "verdict": "upheld"},
+    {"candidate": "jillian-england", "axis": "social", "verdict": "adjust",
+     "adjusted_score": -1, "adjusted_confidence": "low",
+     "note": "The entire score hangs on one coded pamphlet phrase ('educate students rather than indoctrinate them'). The dossier shows no stated position on reproductive rights, LGBTQ+ issues, parental rights, or any named curriculum content. Reading a traditional-values stance out of one rhetorical flourish is indirect inference — low confidence, not medium. Direction -1 is plausible but should not enter alignment math."}
+  ],
+  "missing": [
+    {"candidate": "noel-c-frame", "axis": "climate", "proposed_score": 1, "confidence": "low",
+     "citations": ["S1", "S2"],
+     "basis": "Marginal, flagged for completeness: pamphlet endorsement by Washington Conservation Action [S1] and an 'environment' platform section [S2]. No stated carbon-pricing position, so low confidence at most; omit if the merge requires medium+."}
+  ]
+}

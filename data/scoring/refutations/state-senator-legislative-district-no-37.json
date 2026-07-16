@@ -1,0 +1,30 @@
+{
+  "contest_slug": "state-senator-legislative-district-no-37",
+  "reviewed_at": "2026-07-16",
+  "verdicts": [
+    {"candidate": "chipalo-street", "axis": "taxes", "verdict": "upheld"},
+    {"candidate": "chipalo-street", "axis": "spending", "verdict": "upheld"},
+    {"candidate": "chipalo-street", "axis": "housing", "verdict": "upheld"},
+    {"candidate": "chipalo-street", "axis": "experience", "verdict": "upheld"},
+    {"candidate": "chipalo-street", "axis": "immigration", "verdict": "adjust",
+     "adjusted_score": 2, "adjusted_confidence": "medium",
+     "note": "Direction and magnitude fit the pole description exactly (ICE masking ban, surveillance limits), but every claim traces to one uncorroborated pamphlet statement [S1]; the website [S2] is not cited for any of it. Self-reported claims in a single source are medium, not high."},
+    {"candidate": "chipalo-street", "axis": "social", "verdict": "adjust",
+     "adjusted_score": 1, "adjusted_confidence": "medium",
+     "note": "'Restoring abortion funding' is a single self-reported pamphlet claim [S1] with no corroboration and no broader social-policy platform documented. Single statement = medium confidence per the guide."},
+    {"candidate": "chipalo-street", "axis": "tech", "verdict": "adjust",
+     "adjusted_score": 1, "adjusted_confidence": "low",
+     "note": "The only evidence is one item — 'stopping Flock camera surveillance' — cited in the dossier under civil liberties/immigration, not tech policy. Extrapolating a general AI/big-tech regulatory posture from one police-surveillance item is indirect inference (low), and his Microsoft technologist career is an uncounted signal in the other direction."},
+    {"candidate": "tatiana-brown", "axis": "taxes", "verdict": "upheld"},
+    {"candidate": "tatiana-brown", "axis": "spending", "verdict": "upheld"},
+    {"candidate": "tatiana-brown", "axis": "safety", "verdict": "upheld"},
+    {"candidate": "tatiana-brown", "axis": "climate", "verdict": "upheld"},
+    {"candidate": "tatiana-brown", "axis": "experience", "verdict": "upheld"},
+    {"candidate": "tatiana-brown", "axis": "reform", "verdict": "upheld"}
+  ],
+  "missing": [
+    {"candidate": "chipalo-street", "axis": "reform", "proposed_score": -1, "confidence": "medium",
+     "citations": ["S1", "S2"],
+     "basis": "Dossier documents the work-the-system profile explicitly: backing from the outgoing incumbent, House Speaker, AG, County Executive, and city councilmembers [S2], pamphlet-touted 'unmatched endorsements' [S1], and delivery framed through establishment coalition work. His opponent scored +2 on this axis from the same dossier pair; the contrast evidence for -1 is at least as strong as several medium scores elsewhere in this batch."}
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "contest_slug": "state-senator-legislative-district-no-32",
+  "reviewed_at": "2026-07-16",
+  "verdicts": [
+    {"candidate": "jesse-salomon", "axis": "taxes", "verdict": "upheld"},
+    {"candidate": "jesse-salomon", "axis": "spending", "verdict": "upheld"},
+    {"candidate": "jesse-salomon", "axis": "housing", "verdict": "upheld"},
+    {"candidate": "jesse-salomon", "axis": "safety", "verdict": "upheld"},
+    {"candidate": "jesse-salomon", "axis": "climate", "verdict": "upheld"},
+    {"candidate": "jesse-salomon", "axis": "experience", "verdict": "upheld",
+     "note": "Score is airtight, but highlight 5 cites [S1] for 'the local party organization backed his opponent'; that fact is not in Salomon's S1 pamphlet — his dossier sources it to the contest file (contest S3). Highlight citation should be corrected or the clause dropped."},
+    {"candidate": "jesse-salomon", "axis": "immigration", "verdict": "upheld"},
+    {"candidate": "jesse-salomon", "axis": "tech", "verdict": "upheld"},
+    {"candidate": "cindy-ryu", "axis": "taxes", "verdict": "upheld"},
+    {"candidate": "cindy-ryu", "axis": "spending", "verdict": "upheld",
+     "note": "Upheld at +1 medium, but note the basis partly leans on the 'too moderate' framing (S5/S7), which is intra-party positioning rather than a spending stance; the load-bearing evidence is the fully-fund-public-education plank (S2). Do not escalate this score."},
+    {"candidate": "cindy-ryu", "axis": "housing", "verdict": "upheld"},
+    {"candidate": "cindy-ryu", "axis": "climate", "verdict": "upheld"},
+    {"candidate": "cindy-ryu", "axis": "experience", "verdict": "upheld"},
+    {"candidate": "cindy-ryu", "axis": "tech", "verdict": "upheld",
+     "note": "Upheld, but the highlight and basis omit the dossier's moderating nuance that she opposes data-center subsidies 'though not the facilities themselves' and supports AI/quantum development paired with regulation [S5][S6]. Since pole_b is defined by subsidy skepticism and guardrails, +2 still fits, but the display text slightly overstates her hostility to the industry."},
+    {"candidate": "ira-mcbee", "axis": "taxes", "verdict": "adjust",
+     "adjusted_score": -1, "adjusted_confidence": "low",
+     "note": "Direction is defensible but wholly indirect: the dossier contains no tax position — no opposition to any tax, no cut proposal. The score is inferred from his spending/regulation framing of affordability ('rather than revenue shortfalls') [S2][S3], which per the guide is indirect inference and merits low, not medium, confidence."},
+    {"candidate": "ira-mcbee", "axis": "spending", "verdict": "upheld"},
+    {"candidate": "ira-mcbee", "axis": "safety", "verdict": "upheld"},
+    {"candidate": "ira-mcbee", "axis": "experience", "verdict": "upheld"},
+    {"candidate": "ira-mcbee", "axis": "social", "verdict": "adjust",
+     "adjusted_score": -1, "adjusted_confidence": "low",
+     "note": "'Parental involvement and transparency' [S1][S2] is softer than pole_a's 'parental control of curricula,' and the dossier records no position on reproductive rights, gender content, or curriculum fights. The basis leans on church-ministry/homeschool biography, which is identity inference, not a stated position. Direction plausible, but this is indirect inference: low confidence."}
+  ],
+  "missing": [
+    {"candidate": "cindy-ryu", "axis": "social", "proposed_score": 1,
+     "confidence": "low", "citations": ["S4"],
+     "basis": "Sponsored HB 1052, updating the hate-crime statute so bias need only be a partial motive (passed the Senate, 2025) — matches pole_b's anti-discrimination-law element. A single narrow bill with no campaign statements on reproductive/LGBTQ+ issues, so low confidence only."}
+  ]
+}
