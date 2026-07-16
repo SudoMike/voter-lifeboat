@@ -7,6 +7,7 @@ import { createReadStream, existsSync, mkdirSync, appendFileSync, statSync } fro
 import { join, extname, normalize } from 'node:path'
 
 const PORT = process.env.PORT || 5000
+const BASE_PATH = process.env.BASE_PATH || '/king-county'
 const DIST = process.env.DIST_DIR || join(import.meta.dirname, 'dist')
 const DATA_DIR = process.env.DATA_DIR || join(import.meta.dirname, 'data')
 const FEEDBACK_FILE = join(DATA_DIR, 'feedback.jsonl')
@@ -90,8 +91,19 @@ const server = createServer((req, res) => {
     return
   }
 
+  if (req.url === '/') {
+    res.writeHead(302, { Location: `${BASE_PATH}/` }).end()
+    return
+  }
+
   let path = normalize(decodeURIComponent(req.url.split('?')[0])).replace(/^(\.\.[/\\])+/, '')
-  if (path === '/' || path === '\\') path = '/index.html'
+  if (path === BASE_PATH) path = `${BASE_PATH}/`
+  if (!path.startsWith(`${BASE_PATH}/`)) {
+    res.writeHead(404).end()
+    return
+  }
+  path = path.slice(BASE_PATH.length)
+  if (path === '/') path = '/index.html'
   let file = join(DIST, path)
   if (!file.startsWith(DIST)) {
     res.writeHead(403).end()

@@ -22,7 +22,7 @@ export default function App() {
   const [restored, setRestored] = useState(null) // profile that arrived via URL
 
   useEffect(() => {
-    fetch('/data/app-data.json')
+    fetch(`${import.meta.env.BASE_URL}data/app-data.json`)
       .then((r) => {
         if (!r.ok) throw new Error(`data ${r.status}`)
         return r.json()
