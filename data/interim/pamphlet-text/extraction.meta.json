@@ -1,0 +1,17 @@
+{
+  "stage": "interim",
+  "script": "pipeline/extract_pamphlet_text.py",
+  "derived_from": [
+    "data/raw/pamphlet/edition-1.pdf",
+    "data/raw/pamphlet/edition-2.pdf"
+  ],
+  "extracted_at": "2026-07-16T03:45:57.823172+00:00",
+  "editions": {
+    "edition-1": {
+      "pages": 84
+    },
+    "edition-2": {
+      "pages": 96
+    }
+  }
+}
