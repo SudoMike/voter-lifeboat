@@ -1,0 +1,127 @@
+import React, { useState } from 'react'
+import { lookupDistricts, GeoError } from '../lib/geo.js'
+
+export default function Address({ onBack, onFound }) {
+  const [addr, setAddr] = useState('')
+  const [busy, setBusy] = useState(false)
+  const [err, setErr] = useState(null)
+
+  const go = async (e) => {
+    e?.preventDefault()
+    if (!addr.trim() || busy) return
+    setBusy(true)
+    setErr(null)
+    try {
+      const { districts } = await lookupDistricts(addr.trim())
+      onFound(districts)
+    } catch (ex) {
+      setErr(
+        ex instanceof GeoError
+          ? ex
+          : new GeoError('Something went wrong looking that up.', 'network')
+      )
+      setBusy(false)
+    }
+  }
+
+  if (busy)
+    return (
+      <main className="screen screen--app rise" style={{ padding: '60px 24px 56px', textAlign: 'center' }}>
+        <h1 className="display display--md">Finding your ballot…</h1>
+        <p className="copy" style={{ marginTop: 10, fontSize: 14 }}>
+          Looking up your districts with the Census geocoder and King County GIS.
+          <br />
+          This is the only thing that leaves your browser.
+        </p>
+        <div className="bar bar--busy" style={{ margin: '22px auto 0', width: 150 }} role="progressbar" aria-label="Loading">
+          <i />
+        </div>
+      </main>
+    )
+
+  if (err)
+    return (
+      <main className="screen screen--app rise" style={{ padding: '44px 24px 40px', textAlign: 'center' }}>
+        <div
+          style={{
+            width: 64, height: 64, margin: '0 auto', borderRadius: '50%',
+            background: 'var(--coral-tint)', display: 'flex', alignItems: 'center',
+            justifyContent: 'center', fontSize: 28, color: 'var(--coral)', fontWeight: 800,
+          }}
+        >
+          ?
+        </div>
+        <h1 className="display display--md" style={{ marginTop: 14 }}>
+          {err.kind === 'outside-kc' ? "We're off the map" : err.kind === 'network' ? 'Rough seas' : "Hmm, we're off the map"}
+        </h1>
+        <p className="copy" style={{ margin: '10px auto 0', maxWidth: 300 }}>
+          {err.kind === 'no-match' &&
+            "We couldn't match that address. Check the spelling, or try adding your city or ZIP."}
+          {err.kind === 'outside-kc' &&
+            'That address looks like it is outside King County. This guide is county-only for now.'}
+          {err.kind === 'network' &&
+            'A lookup service did not answer. Give it a moment and try again.'}
+        </p>
+        <form onSubmit={go}>
+          <div className="input input--error" style={{ margin: '20px auto 0', maxWidth: 300, textAlign: 'left' }}>
+            <input
+              type="text"
+              value={addr}
+              onChange={(e) => setAddr(e.target.value)}
+              aria-label="Street address"
+              aria-invalid="true"
+            />
+          </div>
+          <button className="btn btn--navy btn--sm" style={{ marginTop: 16 }} type="submit">
+            Try again
+          </button>
+        </form>
+        <p style={{ margin: '14px 0 0', fontSize: 13, fontWeight: 700, color: 'var(--seafoam)' }}>
+          Outside King County? This guide is county-only for now.
+        </p>
+      </main>
+    )
+
+  return (
+    <main className="screen screen--app rise" style={{ paddingBottom: 28 }}>
+      <nav style={{ padding: '20px 24px' }}>
+        <button
+          onClick={onBack}
+          style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 15, color: 'var(--muted)' }}
+        >
+          ← back
+        </button>
+      </nav>
+      <section style={{ padding: '6px 24px 0' }}>
+        <h1 className="display display--lg">Where do you call home port?</h1>
+        <p className="copy" style={{ marginTop: 12 }}>
+          King County ballots differ street by street. Your address finds your
+          districts — then it's forgotten. We never store it.
+        </p>
+      </section>
+      <form onSubmit={go}>
+        <section style={{ padding: '22px 24px 0' }}>
+          <div className="input">
+            <span className="input-icon">⌖</span>
+            <input
+              type="text"
+              placeholder="4218 SW Othello St, Seattle…"
+              aria-label="Street address"
+              value={addr}
+              onChange={(e) => setAddr(e.target.value)}
+              autoFocus
+            />
+          </div>
+          <button className="btn btn--coral btn--md" style={{ marginTop: 16 }} type="submit">
+            Find my ballot
+          </button>
+          <p className="note" style={{ marginTop: 24, color: 'var(--muted)' }}>
+            Street address only — no name, no email, no signup. Ever. The address
+            goes to the U.S. Census geocoder and King County GIS to find your
+            districts, and nowhere else.
+          </p>
+        </section>
+      </form>
+    </main>
+  )
+}
