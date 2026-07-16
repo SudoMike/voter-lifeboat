@@ -47,3 +47,7 @@ candidate and measure on *their* ballot aligns with those values.
   statement, candidate's own site/filings, official voting records. Tier 2:
   endorsements, established-outlet news. Excluded: social media, opposition
   sites, blogs.
+- **Report Link** — the URL of a finished report: the voter's Values Profile
+  and districts encoded in the hash fragment, so the identical report can be
+  reopened or shared. Contains no address; readable by anyone holding it;
+  never transmitted to any server.
