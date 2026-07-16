@@ -1,0 +1,300 @@
+
+
+<!DOCTYPE html>
+<html lang="en" role="main" class="w-100 h-100 p-0 m-0">
+<head><title>
+	WashingtonVIP
+</title><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="stylesheet" href="/Styles/bootstrap.min.css" asp-append-version="true" /><link rel="stylesheet" href="/Styles/font-awesome.min.css" asp-append-version="true" />
+    <script src="/Scripts/jquery-3.7.1.min.js" asp-append-version="true"></script>
+    <script src="/Scripts/umd/popper.min.js" asp-append-version="true"></script>
+    <script src="/Scripts/bootstrap.min.js" asp-append-version="true"></script>
+    <script src="/Scripts/globals.js" asp-append-version="true"></script>
+    <script src="/Scripts/sweetalerts.js" asp-append-version="true"></script>
+    
+    
+    <style type="text/css">
+        @media print {
+
+            /* hide the page footer when printing */ 
+            .card-footer {
+                display: none !important;
+            }
+
+        }
+    </style>
+    <script type="text/javascript">
+        (function () {
+
+            var disclaimerAdded = false;
+            var retryCount = 0;
+
+            // waits until certain elements exist on the page and then adds a disclaimer message
+            function addLocalization() {
+                if ($('votewa-candidate-page').length == 1 &&
+                    $('votewa-candidate-page:first-of-type > div:first-of-type > div:last-of-type').length == 1 &&
+                    $('#divCustom01').length == 0) {
+                    $('votewa-candidate-page:first-of-type > div:first-of-type > div:last-of-type').append('<div id="divCustom01" _ngcontent-c2>Candidates submit their statements. Election officials do not correct typos or verify statements for accuracy.</div>');
+                    disclaimerAdded = true;
+                }
+            }
+
+            function fixWidthOfCard() {
+                if ($('.card.rounded.shadow.bg-transparent.col-xl-6.ml-auto.mr-auto.p-0').length == 1) {
+                    $('.card.rounded.shadow.bg-transparent.col-xl-6.ml-auto.mr-auto.p-0').addClass('col-xl-8').removeClass('col-xl-6');
+                }
+                if ($("mat-tab-body > div > div > div.right.borderLeft.ng-star-inserted").css('max-width') == '300px') {
+                    $("mat-tab-body > div > div > div.right.borderLeft.ng-star-inserted").css('max-width', '350px');
+                }
+            }
+
+            // replace the normal "Back" button with custom "Back" and "Continue" buttons in preview mode
+            function customizePreviewButtons() {
+                if (!window.previewMode) return;
+
+                // get the footer where the normal "Back" button is located
+                const footer = document.querySelector('.card-footer.bg-light');
+
+                if (!footer) return;
+
+                // hide the normal "Back" button
+                const oldBack = footer.querySelector('button');
+                if (oldBack) oldBack.style.display = 'none';
+
+                // stop if our custom buttons already exist
+                if (footer.querySelector('#previewBackBtn')) return;
+
+                // create the custom "Back" button
+                const previewBackBtn = document.createElement('a');
+                previewBackBtn.id = 'previewBackBtn';
+                previewBackBtn.className = 'btn btn-primary btn-lg mr-2';
+                previewBackBtn.innerHTML = '<i class="fa fa-chevron-left"></i> Back to My Statement';
+                previewBackBtn.href = '/CandidateFiling/CandidatePamphlet.aspx?k=' + window.candidateId + '&t=' + window.token;
+                //previewBackBtn.onclick = function () {
+                //    window.location.href = '/CandidateFiling/CandidatePamphlet.aspx?k=' + window.candidateId + '&t=' + window.token;
+                //};
+
+                // create the custom "Continue" button
+                const previewContinueBtn = document.createElement('a');
+                previewContinueBtn.id = 'previewContinueBtn';
+                previewContinueBtn.className = 'btn btn-primary btn-lg';
+                previewContinueBtn.innerHTML = '<i class="fa fa-check"></i> Submit Statement';
+                previewContinueBtn.href = '/CandidateFiling/CandidatePamphlet.aspx?k=' + window.candidateId + '&t=' + window.token + '&submit=true';
+                //previewContinueBtn.onclick = function () {
+                //    window.location.href = '/CandidateFiling/CandidatePamphlet.aspx?k=' + window.candidateId + '&t=' + window.token;
+                //};
+
+                // create the custom "Print" button
+                const previewPrintBtn = document.createElement('a');
+                previewPrintBtn.id = 'previewPrintBtn';
+                previewPrintBtn.className = 'btn btn-primary btn-lg';
+                previewPrintBtn.innerHTML = '<i class="fa fa-print"></i> Print Statement';
+                previewPrintBtn.href = "#";
+                previewPrintBtn.onclick = function (e) {
+                    e.preventDefault();
+                    window.print();
+                };
+
+                // Insert buttons
+                if (window.previewMode === true && window.candidateIsSubmitted === true) {
+                    footer.querySelector('nav.actions').appendChild(previewBackBtn);
+                    footer.querySelector('nav.actions').appendChild(previewPrintBtn);
+                }
+                else if (window.previewMode === true) {
+                    footer.querySelector('nav.actions').appendChild(previewBackBtn);
+                    footer.querySelector('nav.actions').appendChild(previewContinueBtn);
+                }
+            }
+
+
+            $(document).ready(function () {
+
+                // re-add the disclaimer any time there are changes in the body
+                const observer = new MutationObserver(() => {
+                    addLocalization();
+                    customizePreviewButtons();
+                });
+
+                observer.observe(document.body, {
+                    childList: true,
+                    subtree: true
+                });
+
+                // try every 1 second to add the disclaimer message to the page
+                var disclaimerInterval = window.setInterval(function () {
+
+                    // if the right conditions are met, "disclaimerAdded" will be set to true
+                    addLocalization();
+                    customizePreviewButtons();
+
+                    retryCount++;
+
+                    // if the disclaimer was added successfully or if we exceeded the maximum attempts, then cancel the interval
+                    if (disclaimerAdded || retryCount >= 20) {
+                        clearInterval(disclaimerInterval);
+                    }
+
+                }, 1000);
+
+                window.setInterval(fixWidthOfCard, 500);
+            });
+
+        })();
+    </script>
+
+    <style type="text/css">
+        ul.navbar-nav a:hover {
+            color: #f00 !important;
+        }
+    </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-50445087-8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-7B08VE04WV');
+    </script>
+</head>
+<body class="m-0 p-0" style="min-width: 100%; min-height: 100%; background-image: url(/Images/Background-Pic.jpg); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center;">
+
+    <form name="frmMain" method="post" action="./GenericVoterGuide.aspx?e=898&amp;c=17&amp;language=en" id="frmMain" autocomplete="off">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE__" id="__VIEWSTATE__" value="+8/In8LPyq1raGxmaGBkbGZpyZ8ixpQGIpiYgSQLEyM/iCPHXZCTmJyakZ+TklrEyhacmliUnJHCxMTPD5RjCUmtKIELpgAA" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['frmMain'];
+if (!theForm) {
+    theForm = document.frmMain;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div>
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="RC8cB2gJaiQNoL0YWDesneL0Y+/RuU/3F6nF6bpBgwBgOluJOwIKgd50jHYW5amJ3tnmUoJBfcZFkCeuVeMGAXaTq2UCC80V+qrSa1O45Qj40hJgZtPEs+14eyJaNPXaA8bfRZPldMvoVZDMsBBqFq0qpcY3JSs2QuGVJG7e3H+RceGKKkGt2k2n7VBac31OySPgk11pPfJvJA88ns0gcXs5okIo0WaU1rOgzKgGgl9O9dCA+weG49keLrjfd4z+0Ey+lJnZyLQNBvG87UE0WGhGfNlFT+qGDkxwJDhV3MFkvUkUqBv2gxYaBDESljg0" />
+</div>
+        <div class="container-fluid m-0 p-0">
+            <div class="row m-0 p-0">
+                <div class="col-md-12 m-0 p-0">
+                    <div class="d-none col-md-12 d-print-none" style="background-color: #8A3538;">
+                        <table class="border-0">
+                            <tr>
+                                <td><a href="/">
+                                    <img class="m-2" alt="Washington Secretary of State Logo" alt="Vote Washington Logo" height="25" width="118" src="/images/site-logo.png"></a>
+                                    <h1 class="float-right sr-only bg-dark text-light">Vote Washington</h1>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <nav class="navbar navbar-expand-lg shadow-lg bg-dark navbar-dark static-top d-print-none">
+                        <span id="spnHomelink" class="navbar-brand"><a href="/"><img src="/images/site-logo.png" id="imgHomelink" class="m-2" alt="Washington Secretary of State Logo" height="25" width="118" /></a></span>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" value="CollapsibleNavBar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                            <span class="sr-only">Toggle Menu</span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="d-none nav-item"><a class="nav-link text-white" href="/WhereToVote.aspx">Home</a></li>
+                                <li class="nav-item d-none"><a class="nav-link text-white" href="#">About the Office</a></li>
+                                <li class="nav-item d-none"><a class="nav-link text-white" href="#">Secretary of State Bio</a></li>
+                                <li class="nav-item d-none"><a class="nav-link text-white" href="#">Contact Us</a></li>
+                            </ul>
+                            <div class="form-inline" id="collapsibleNavbar">
+                            </div>
+                            <input name="ctl00$txtSearch" id="txtSearch" class="d-none form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                            <input type="button" name="ctl00$btnSearchHeader" value="Search" onclick="javascript:__doPostBack(&#39;ctl00$btnSearchHeader&#39;,&#39;&#39;)" id="btnSearchHeader" class="d-none btn btn-outline-light my-2 my-sm-0" />
+                            <label for="ddlLanguages" class="sr-only bg-dark text-light">Languages</label>
+                            <i class="fa fa-globe fa-2x text-white ml-3 align-middle mr-1"></i>
+                            <select name="ctl00$ddlLanguages" id="ddlLanguages" class="dropdown form-control" style="width: auto; display: inline;">
+	<option value="en-us" class="text-dark">English</option>
+	<option value="es" class="text-dark">Espa&#241;ol</option>
+	<option value="zh" class="text-dark">中文</option>
+	<option value="vi" class="text-dark">Tiếng Việt</option>
+	<option value="ko" class="text-dark">한국어</option>
+	<option value="ru" class="text-dark">Русский</option>
+	<option value="so" class="text-dark">Soomaali</option>
+
+</select>
+                            <button onclick="__doPostBack('ctl00$btnChangeLanguage','')" id="btnChangeLanguage" type="submit" class="btn btn-primary"><i class="fa fa-caret-right"></i><i class="sr-only bg-dark text-light">Change</i></button>
+                        </div>
+                    </nav>
+                    <div id="divBreadcrumb" class="breadcrumb d-none shadow font-weight-bold d-print-none" style="color: black;">
+                        <a class="breadcrumb-item">Home </a>
+                    </div>
+
+                    
+
+                    <br />
+                    <div class="row m-0 p-0">
+                        
+    <div class="container-fluid">
+        <div class="card rounded shadow bg-transparent col-xl-6 ml-auto mr-auto p-0">
+            <!-- This is a Voter Guide element. It can be placed anywhere on the page. -->
+            <votewa-vg api="https://voter.votewa.gov/elections" e="898" c="17" p="XX" la="en"></votewa-vg>
+
+        </div> 
+    </div>     
+
+                    </div>
+                    <br />
+                    <br />
+                    &nbsp;
+                </div>
+                <div class="d-none d-lg-block navbar navbar-expand-lg bg-dark navbar-dark fixed-bottom">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleFootbar" value="NavFootbarButton">
+                        <span class="navbar-toggler-icon"></span>
+                        <span class="sr-only">Toggle Menu</span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleFootbar">
+                        <span class="text-white">Copyright © 2026 Washington Secretary of State.</span>
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="https://www.sos.wa.gov/elections/" target="_blank">Contact Us</a>
+                            </li>
+                            <li class="nav-item d-none">
+                                <a class="nav-link text-light" href="#">Disclaimer</a>
+                            </li>
+                            <li class="nav-item d-none">
+                                <a class="nav-link text-light" href="#">Privacy Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+window.previewMode = false;window.candidateIsSubmitted = false;//]]>
+</script>
+</form>
+
+    
+  
+    <script src="Scripts/votewa-vg.js" asp-append-version="true"></script>
+     <!-- Start Embed Code -->
+
+    <!-- End Embed Code -->
+
+</body>
+</html>
+<script type="text/javascript">
+    $('input[type=text]').blur(function () {
+        $(this).val($(this).val().trim());
+    });
+</script>

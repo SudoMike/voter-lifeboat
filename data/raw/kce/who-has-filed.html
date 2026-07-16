@@ -1,0 +1,2243 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="kcmasterpageversion" content="2.1.1.0 G">
+    <meta charset="utf-8">
+    <title>Who has filed - King County</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="Description" content="">
+    <meta name="page-owner" content="">
+    <meta name="Keywords" content="">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+
+    <!-- CustomHead-->
+    <!-- new for https as of Nov. 2017 2020   -->
+<meta name="google-site-verification" content="rwhzuKCXAYDyl8Xg8o1NssFX7YZmw4QzJFenSThaUck" />
+
+
+
+<meta property="og:url"                content="https://www.kingcounty.gov/depts/elections.aspx" />
+<meta property="og:type"               content="website" />
+<meta property="og:title"              content="King County Elections" />
+<meta property="og:description"        content="Led by Director Julie Wise, King County Elections conducts accurate, secure, and accessible elections for King County's over 1.4 million registered voters." />
+<meta property="og:image"              content="https://kingcounty.govhttps://www.kingcounty.gov//mpmit.kingcounty.gov/~/media/depts/elections/images/voting.ashx?la=en" />
+
+<meta name="twitter:card"      content="summary_large_image" />
+<meta name="twitter:site"       content="@kcelections" />
+<meta name="twitter:title"       content="King County Elections home page" />
+<meta name="twitter:image"   content="https://kingcounty.govhttps://www.kingcounty.gov//mpmit.kingcounty.gov/~/media/depts/elections/rotator-images/767x598-woman-on-laptop.jpg" />
+<meta name="twitter:alt"         content="woman on laptop" />
+
+
+<!-- KCE specific styles 
+<link rel="stylesheet" type="text/css" href="https://aqua.kingcounty.gov/elections/scripts/css/elections-styles.css">
+ 
+<link rel="stylesheet" type="text/css" href="https://dnsyoqmi596me.cloudfront.net/custom-chatbot-style.css">
+-->
+<style>
+
+.space {margin-left: 1%; background-color:transparent;}
+.dv-main {background-color: #FFFFFF ;margin-top:-25px !important}
+
+.dv-floating-content-box {background-color:#264d5e !important;color:white !important;padding:15px !important;}
+
+#kc-home-col-box2a {padding-top:15px !important;}
+
+
+</style>
+
+
+ <style>
+
+ 
+  #pnlPCO p:first-child {display:none}  
+
+    #pnlprimarycandidatelist , #pnlpamphletheader{
+         padding-bottom: 20px;
+     }
+
+      .go-to-top{border-top:0px; }
+ 
+.nav-wrap, .nav-wrap-home{
+     
+    top: 40px !important;
+    
+    left: -1px;
+     
+}
+
+
+.li-candidate{ padding-bottom:5px}
+     .list-group  {
+         margin: 0;
+     }
+
+     #pnlcontactheaderstg2 {
+         margin-top: -20px;font:bold;
+     }
+
+    #pnlstg2desc h3,  #pnlstg3desc h3 {font-size:12pt; margin-top:3px !important;}
+
+     .list-group-item-heading, .sp-cdetail-candy-name, .cdetail-candy-party, #stg2header h3, #stg3header h3,
+     #pnlstg2desc h3, #pnlstg2desc h4, #pnlcandycontactinfo h3, #pnlstg3desc h3
+     {color:black;}
+
+     .p-cdetail-candy-name{font-weight:bold}
+     #candidate-contacts h6{color:white;text-transform:none}
+     /*.ballottitleone{font-weight:bold}*/
+     .cdetail-candy-name {/* margin-left:20px*/ }
+     .withdrawnstatus{color:red; font-size:9pt}
+      .fa-external-link { padding:5px; }
+  
+     .no-pamphlet{padding:10px;border:1px solid black;}
+
+   /*  .li-no-candidate, .insidelist{ list-style: none } */
+
+     #filingordercandiateonballotsummary{display:none}
+     /* [pamphlet starts */
+    #pmph-ul-clist { 
+         padding-top: 20px;  border-bottom:1px solid black;
+     }
+   .each-pamphlet{border:1px solid black;   }
+      
+     .img-contact-div div{border:0px solid black;}
+     .pmph-candy-contact-div p{margin-top:-5px;border:0px solid black;  }
+
+     .pmph-cname {
+  font-size: 16pt; 
+     }
+    
+   .each-pamphlet  .district-type-header{margin-bottom:30px;}
+     .candy-img-div { /* float: left;*/}
+    .candy-img-div {
+         padding: 0 10px 5px 15px; border:0px solid black;
+     }
+   .sp-no-photo {line-height:178px; }
+     .no-photo {height:178px;width:140px;text-align:center; border:1px solid black !important;margin:10px 20px 20px 10px}
+
+    .candidate-photo{height:178px;width:140px;  margin:10px 20px 20px 10px }
+
+     .pmph-candy-contact-div {
+ /*margin-left:-100px;*/   padding-top:10px;
+     }
+
+   .candy-statement-div   {text-align:justify;text-justify:inter-word;  
+         
+     }
+   .edu-occu-st{padding:0 10px 0 10px}
+   .occupation-div,.education-div{width:100%; }
+   .candidate-statement { }
+      .candy-contact-div { /* padding:30px; */}
+
+     /* [pamphlet ends */
+     .withdrawncandidate{  text-decoration: line-through;}
+   .cdetail-candy-party,  .candidateparty{/*color:red*/}
+
+
+     #candy-dropdown { padding-bottom:10px;  float:left }
+
+     .sp-cdetail-candy-name{font-weight:bold; font-size:15px;  }
+     .cdetail-candy-party{text-align:right;   }
+     .candidate-detail{border:1px solid black;padding-top:5px}
+
+     .candidatelist-top-div{border:1px solid black;   padding:.01px}
+     .candidatelist-div, .candidatelist{ /*border:1px solid black; padding:10px */}
+      .district-type-header , .district-type-subheader {background-color:#264D5E; color:white; }
+     
+
+      .ballottitleone { padding-top:10px}
+       #app-measure-detail-ballot-title{font-weight:bold}
+
+         #pnlelctionInfo  .page-header , #pnlcandidatelist .page-header, #pnlprimarycandidatelist  .page-header,
+        #pnlcandycontactinfo  .page-header, #pnlpamphletheader   .page-header {  
+           display:inline;  
+           padding-top: 0px;  /*border:1px solid black;float:left*/
+       }
+
+      
+       .list-group {
+           width: 100%;
+       }
+         .list-group div{
+           width: 100%;
+       }
+       #candy-dropdown li{border:0px solid black !important}
+       .go-to-top {text-align: right;padding:0 10px 0px 0px}
+       .back-to-top  { cursor: pointer; }
+
+      :target { /* background-color: #ffa;*/  }
+     #app-version, #candidatestage { display:none }
+     #pnlPCO{   padding-bottom: 10px; }
+
+   #candystage2 , #candystage3 {/* margin-top:-20px;*/} 
+     #pnlstg2updatetime {
+         padding-bottom: 15px;padding-top: 15px;
+         font-weight:bold;
+     }
+     .lbleducation, .lbloccupation,.lblstatement{font-weight:bold}
+ .candidate-address span,   .statement-div p { margin-top:0 ;margin-bottom:0 }
+     /* .landing-div p*/
+      .cdetail-phone { margin-top:10px  !important }
+
+      .occupation-div{ margin-bottom:10px  !important }
+      .pmph-candy-contact-div p { margin-top:0 ;margin-bottom:0 }
+         .pmph-phone { margin-top:10px  !important }
+
+         div#app-page-header .page-header {margin-top:-20px; display:block !important;}
+
+
+
+ .page-header  {display: none;}  
+
+.hide-me{display: none; }
+.show-me{ display: block;}
+
+
+/*
+#candystage2 h2 , #candystage3 h2{ padding-left:20px} */
+   </style>
+            
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.kingcounty.gov/favicon.ico">
+    <link rel="stylesheet" href="https://www.kingcounty.gov/css/kc-theme-Corporate.css">   
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,600,700,800,400" rel="stylesheet" type="text/css">
+    <script src="https://www.kingcounty.gov/js/vendor/kc-analytics.js"></script>
+    <script src="https://www.kingcounty.gov/js/vendor/modernizr-latest.js"></script>   
+</head>
+
+  <body>
+<!-- Global Alert Goes Here -->
+    
+<!-- End Global Alerts -->
+
+<header class="hidden-print">
+    <div id="navbar-bg"></div>
+    <!--Lg and md navbar-->
+    <div id="nav-lg" class="container hidden-sm hidden-xs">
+        <div class="row">
+            <div id="nav-left-lg">
+                <div id="logo-wrapper"><a href="https://www.kingcounty.gov/">
+                    <img id="kc-logo" src="https://www.kingcounty.gov/img/KClogo-horiz-black-lg.gif" alt="King County Logo" class="img-responsive" /></a></div>
+            </div>
+            <!-- /#nav-logo-lg -->
+            <div id="nav-right-lg">
+                <div class="row">
+                    <div id="lg-search-wrapper" class="navbar-right">
+                        <form role="form" accept-charset="UTF-8" action="//www.kingcounty.gov/search" method="get" class="search-form">
+                            <label for='lg-search-input' class="sr-only">Search kingcounty.gov</label>
+                            <input name="utf8" type="hidden" value="✓">
+                            <input name="query" id="lg-search-input" placeholder="Search Kingcounty.gov" type="search" class="form-control search-form-text">
+                            <button type="submit" class="btn btn-link search-form-btn"><span class="sr-only">Search KingCounty.gov</span><span class="fa fa-search"></span></button>
+                        </form>
+                    </div>
+                    <!-- /#lg-search-wrapper -->
+                </div>
+                <!-- /.row-->
+                <div class="row">
+                    <nav id="navbar-full" role="navigation" class="navbar yamm navbar-inverse">
+                        <ul class="nav navbar-nav pull-right">
+                            <li><a href="https://www.kingcounty.gov/" class="nav-header bold"><span class=""><span id="full-home-text">Home</span><span class="fa fa-home"></span></span></a></li>
+                            <li class="dropdown yamm-fw">
+                                <a href="https://www.kingcounty.gov/how-do-i" data-toggle="dropdown" class="dropdown-toggle disabled nav-header bold"><span class="">How do I...</span> <span class="fa fa-caret-down"></span></a>
+                                <ul class="dropdown-menu">
+    <li>
+    <div class="yamm-content">
+    <div class="row">
+    <div class="col-sm-12">
+    <div class="call-out-text call-out-text-default"><span class="fa fa-exclamation-circle fa-color-danger" aria-hidden="true"></span> Many King County services are continually adapting because of the COVID-19 pandemic. Each agency will update its pages with current information.</div>
+    </div>
+    <div class="col-md-4">
+    <ul class="list-unstyled">
+        <li class="nav-title">Apply for</li>
+        <li><a href="https://www.kingcounty.gov/depts/local-services/permits.aspx">Permits</a></li>
+        <li><a href="https://www.kingcounty.gov/audience/employees/careers.aspx">Jobs at King County</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/regional-animal-services/license-your-pet/purchase-renew-license.aspx">Pet license</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/services/business/licenses.aspx">Business license</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/depts/records-licensing/recorders-office/marriage-licensing.aspx">Marriage license</a></li>
+        <li><a class="toggle-hidden-links" href="#"><span class="fa fa-ellipsis-h"></span></a></li>
+    </ul>
+    <ul class="list-unstyled">
+        <li class="nav-title">Attend</li>
+        <li><a href="https://www.kingcounty.gov/how-do-i/jury-duty.aspx">Jury duty</a></li>
+    </ul>
+    <ul class="list-unstyled">
+        <li class="nav-title">Do business with King County</li>
+        <li><a href="https://www.kingcounty.gov/depts/finance-business-operations/procurement/for-business/register.aspx">Register as a supplier</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/finance-business-operations/procurement.aspx">View bid &amp; contract opportunities</a></li>
+        <li class="hidden-link"><a href="https://kingcounty.diversitycompliance.com/">Find certified small business contractors and suppliers</a></li>
+        <li><a class="toggle-hidden-links" href="#"><span class="fa fa-ellipsis-h"></span></a></li>
+    </ul>
+    <ul class="list-unstyled">
+        <li class="nav-title">Look up</li>
+        <li><a href="https://www.kingcounty.gov/tools/what-do-i-do-with.aspx">Recycle: What do I do with?</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/sheriff/sex-offender-search.aspx">Sex offenders</a></li>
+        <li><a href="https://blue.kingcounty.com/Assessor/eRealProperty/default.aspx">Property values</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/independent/forecasting.aspx">Economic forecast</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/depts/elections/results.aspx">Election results</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/depts/finance-business-operations/treasury/property-tax.aspx">Property taxes</a></li>
+        <li><a class="toggle-hidden-links" href="#"><span class="fa fa-ellipsis-h"></span></a></li>
+    </ul>
+    </div>
+    <div class="col-md-4">
+    <ul class="list-unstyled">
+        <li class="nav-title">File</li>
+        <li><a href="https://www.kingcounty.gov/courts/clerk/documents/file.aspx">Superior Court documents</a></li>
+    </ul>
+    <ul class="list-unstyled">
+        <li class="nav-title">Get around</li>
+        <li><a href="https://www.kingcounty.gov/tools/trip-planner.aspx">Plan a bus trip</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/transportation/metro/travel-options/bike.aspx">Travel by bike</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/transportation/metro/schedules-maps.aspx">Find a bus schedule</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/depts/transportation/metro/travel-options/parking.aspx">Find a park &amp; ride</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/depts/transportation/metro/travel-options/rideshare/programs/carpool.aspx">Explore carpooling options</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/depts/transportation/water-taxi.aspx">Take a water taxi</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/depts/transportation/metro/travel-options/accessible/programs.aspx">Find senior transportation</a></li>
+        <li><a class="toggle-hidden-links" href="#"><span class="fa fa-ellipsis-h"></span></a></li>
+    </ul>
+    <ul class="list-unstyled">
+        <li class="nav-title">Help for</li>
+        <li><a href="https://www.kingcounty.gov/how-do-i/domestic-violence.aspx">Domestic violence</a></li>
+        <li><a href="https://www.kingcounty.gov/services/police-safety.aspx">Emergencies</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/community-human-services/mental-health-substance-abuse/services/crisis-services.aspx">Crisis</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/depts/community-human-services/housing/services/homeless-housing.aspx">Homeless</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/depts/assessor/TaxpayerAssistance/TaxRelief.aspx">Property tax relief</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/services/rural-services/rural.aspx">Rural residents</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/depts/community-human-services/veterans.aspx">Veterans</a></li>
+        <li><a class="toggle-hidden-links" href="#"><span class="fa fa-ellipsis-h"></span></a></li>
+    </ul>
+    <ul class="list-unstyled">
+        <li class="nav-title">Locate</li>
+        <li><a href="//gismaps.kingcounty.gov/ParkFinder/">Parks</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/health/locations.aspx">Public health clinics</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/local-services/roads/road-closures.aspx">Road projects</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/depts/local-services/roads/bicycles.aspx">Bike routes</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/depts/finance-business-operations/treasury/foreclosure.aspx">Foreclosures</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/services/parks-recreation/parks/trails.aspx">Hiking &amp; biking trails</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/tools/inmate-lookup.aspx">Jail inmate</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/tools/parcel-viewer.aspx">Property</a></li>
+        <li><a class="toggle-hidden-links" href="#"><span class="fa fa-ellipsis-h"></span></a></li>
+    </ul>
+    </div>
+    <div class="col-md-4">
+    <ul class="list-unstyled">
+        <li class="nav-title">Pay for</li>
+        <li><a href="https://www.kingcounty.gov/depts/health/vital-statistics/birth.aspx">Birth certificate</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/finance-business-operations/treasury/property-tax.aspx">Pay or look up property taxes</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/records-licensing/recorders-office/marriage-licensing.aspx">Marriage certificate</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/depts/records-licensing/recorders-office/fees.aspx">Deed</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/depts/health/vital-statistics/death.aspx">Death certificate</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/depts/records-licensing/recorders-office/fees.aspx">Title certificate</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/services/environment/wastewater/capacity-charge.aspx">Sewage treatment capacity charge</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/payinvoices">Invoice</a></li>
+        <li><a class="toggle-hidden-links" href="#"><span class="fa fa-ellipsis-h"></span></a></li>
+    </ul>
+    <ul class="list-unstyled">
+        <li class="nav-title">Register or request</li>
+        <li><a href="https://public.govdelivery.com/accounts/WAKING/subscriber/new">Email or text alerts</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/elections/how-to-vote/register-to-vote.aspx">To vote</a></li>
+        <!--<li><a href="https://www.kingcounty.gov/depts/risk-management/public-records-program.aspx">Public records</a></li>-->
+        <li><a href="https://www.kingcounty.gov/services/licenses-permits-records/records/public-records-requests.aspx">Public records</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/services/business/licenses.aspx">Your business with King County</a></li>
+        <li><a class="toggle-hidden-links" href="#"><span class="fa fa-ellipsis-h"></span></a></li>
+    </ul>
+    <ul class="list-unstyled">
+        <li class="nav-title">Report</li>
+        <li><a href="https://www.kingcounty.gov/depts/sheriff/on-line-reporting/on-line-reporting.aspx">Crime</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/dnrp/solid-waste/programs/litter-dumping/report-dumping.aspx">Illegal dumping</a></li>
+        <li><a href="https://www.kingcounty.gov/elected/executive/equity-social-justice/civil-rights/civil-rights-complaint.aspx">Discrimination complaint</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/depts/health/environmental-health/food-safety/inspection-system/complaints.aspx">Unsafe food handling</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/depts/dnrp/wtd/response.aspx">Septic or sewer problem</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/tools/contact-us.aspx">Other problems or complaints</a></li>
+        <li><a class="toggle-hidden-links" href="#"><span class="fa fa-ellipsis-h"></span></a></li>
+    </ul>
+    <ul class="list-unstyled">
+        <li class="nav-title">Do more online</li>
+        <li><a href="https://www.kingcounty.gov/tools/trip-planner.aspx">Metro Trip Planner</a></li>
+        <li><a href="https://www.kingcounty.gov/tools/parcel-viewer.aspx">Parcel viewer property information</a></li>
+        <li><a href="https://www.kingcounty.gov/tools/inmate-lookup.aspx">Jail inmate lookup</a></li>
+        <li><a class="btn btn nav-dropdown-btn btn-block" href="https://www.kingcounty.gov/how-do-i.aspx">More tasks</a></li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    </li>
+</ul>
+                            </li>
+                            <li class="dropdown yamm-fw">
+                                <a href="https://www.kingcounty.gov/services" data-toggle="dropdown" class="dropdown-toggle disabled nav-header bold"><span class="">Services</span> <span class="fa fa-caret-down"></span></a>
+                                <ul class="dropdown-menu">
+                                        <li>
+                                            <div class="yamm-content">
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <div class="call-out-text call-out-text-default"><span class="fa fa-exclamation-circle fa-color-danger" aria-hidden="true"></span> With restrictions about COVID-19 rapidly changing, please check with individual departments to be sure a building is open before you seek in-person service. Also, some downtown buildings are not open to the public due to a project to close the Administration Building and relocate the agencies affected. This project will continue at least through the end of 2021.</div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="https://www.kingcounty.gov/services/animals-pets">Animals &amp; pets</a></li>
+                                                            <li><a href="https://www.kingcounty.gov/services/arts-culture">Arts &amp; culture</a></li>
+                                                            <li><a href="https://www.kingcounty.gov/depts/health/vital-statistics.aspx">Birth &amp; death records</a></li>
+                                                            <li><a href="https://www.kingcounty.gov/services/business">Business</a></li>
+                                                            <li><a href="https://www.kingcounty.gov/services/codes-laws">Codes &amp; laws</a></li>
+                                                            <li><a href="https://www.kingcounty.gov/services/courts">Courts</a></li>
+                                                            <li><a href="https://www.kingcounty.gov/services/emergencies">Emergencies</a></li>
+                                                            <li><a href="https://www.kingcounty.gov/services/environment">Environment</a></li>
+                                                            <li><a href="https://www.kingcounty.gov/services/health">Health</a></li>
+                                                           <li><a href="https://www.kingcounty.gov/services/home-property">Home &amp; property</a></li>
+                                                            <li><a href="https://www.kingcounty.gov/services/jails">Jails</a></li>
+                                                        </ul>
+                                                    </div>
+                                                   <div class="col-md-6">   
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="https://www.kingcounty.gov/services/jobs-training">Jobs &amp; training</a></li>
+                                                            <li><a href="https://www.kingcounty.gov/services/licenses-permits-records">Licenses, permits &amp; records</a></li>
+                                                            <li><a href="https://www.kingcounty.gov/services/parks-recreation">Parks &amp; recreation</a></li>
+                                                            <li><a href="https://www.kingcounty.gov/services/police-safety">Police &amp; safety</a></li>
+                                                            	    <li><a href="https://www.kingcounty.gov/services/data">Public Data</a></li>
+                                                            <li><a href="https://www.kingcounty.gov/services/recycling-garbage">Recycling &amp; garbage</a></li>
+                                                            <li><a href="https://www.kingcounty.gov/services/rural">Rural services</a></li>
+                                                            <li><a href="https://www.kingcounty.gov/services/social-services">Social services</a></li>
+                                                            <li><a href="https://www.kingcounty.gov/services/transportation-roads">Transportation &amp; roads</a></li>
+                                                            <li><a href="https://www.kingcounty.gov/services/voting-elections">Voting &amp; elections</a></li>
+                                                            <li><a href="https://www.kingcounty.gov/services/volunteer">Volunteer</a></li>
+                                                          
+                                                        </ul>
+                                                    </div>
+                                               </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                            </li>
+                            <li class="dropdown yamm-fw">
+                                <a href="https://www.kingcounty.gov/about" data-toggle="dropdown" class="dropdown-toggle disabled nav-header"><span class="">About King County</span> <span class="fa fa-caret-down"></span></a>
+                                <ul class="dropdown-menu">
+    <li>
+    <div class="yamm-content">
+    <div class="row">
+    <div class="col-md-6">
+    <ul class="list-unstyled">
+        <li><a href="https://www.kingcounty.gov/services/customer-service.aspx">Contact us</a></li>
+        <li><a href="https://www.kingcounty.gov/elected.aspx">Elected officials</a></li>
+        <li><a href="https://www.kingcounty.gov/elected/executive/equity-social-justice.aspx">Equity &amp; social justice</a></li>
+        <li><a href="https://www.kingcounty.gov/services/jobs-training.aspx">Jobs &amp; training</a></li>
+        <li><a href="https://www.kingcounty.gov/about/news.aspx">News &amp; events</a></li>
+    </ul>
+    </div>
+    <div class="col-md-6">
+    <ul class="list-unstyled">
+        <li><a href="https://www.kingcounty.gov/about/region/maps.aspx">Maps</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/executive/performance-strategy-budget/regional-planning/Demographics.aspx">Data and statistics</a></li>
+        <li><a href="https://www.kingcounty.gov/employees.aspx">King County Employees</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/executive/performance-strategy-budget/performance-strategy/Strategic-Planning.aspx">Vision &amp; strategic plan</a></li>
+        <li><a class="btn nav-dropdown-btn btn-block" href="https://www.kingcounty.gov/about.aspx">More information</a></li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    </li>
+</ul>
+                            </li>
+                            <li class="dropdown yamm-fw">
+                                <a href="https://www.kingcounty.gov/depts" data-toggle="dropdown" class="dropdown-toggle disabled nav-header"><span class="active">Departments</span> <span class="fa fa-caret-down"></span></a>
+                                <ul class="dropdown-menu">
+    <li>
+     <div class="yamm-content">
+        <div class="row">
+            <div class="col-md-4">
+             <ul class="list-unstyled">
+                <li><a href="https://www.kingcounty.gov/courts/detention">Adult &amp; Juvenile Detention</a></li>
+               <li><a href="https://www.kingcounty.gov/depts/assessor">Assessor</a></li>
+               <li><a href="https://www.kingcounty.gov/depts/auditor">Auditor</a></li>
+               <li><a href="https://www.kingcounty.gov/independent/board-of-appeals/about">Board of Appeals/Equalization</a></li>
+               <li><a href="https://www.kingcounty.gov/depts/community-human-services">Community &amp; Human Services</a></li>
+               <li><a href="https://www.kingcounty.gov/council">Council</a></li>
+               <li><a href="https://www.kingcounty.gov/courts/district-court">District Court</a></li>
+               <li><a href="https://www.kingcounty.gov/independent/forecasting">Economic &amp; Financial Analysis</a></li>
+               <li><a href="https://www.kingcounty.gov/depts/elections">Elections</a></li>
+           </ul>
+       </div>
+       <div class="col-md-4">
+        <ul class="list-unstyled">
+            <li><a href="https://www.kingcounty.gov/exec">Executive Office</a></li>
+            <li><a href="https://www.kingcounty.gov/depts/executive-services">Executive Services</a></li>
+            <li><a href="https://www.kingcounty.gov/independent/hearing-examiner">Hearing Examiner</a></li>
+            <li><a href="https://www.kingcounty.gov/depts/human-resources">Human Resources</a></li>
+            <li><a href="https://www.kingcounty.gov/depts/it">Information Technology</a></li>
+            <li><a href="https://www.kingcounty.gov/depts/KCTV">King County TV</a></li>
+             <li><a href="https://www.kingcounty.gov/depts/local-services.aspx">Local Services</a></li>
+            <li><a href="https://www.kingcounty.gov/independent/law-enforcement-oversight">Law Enforcement Oversight</a></li>
+            <li><a href="https://www.kingcounty.gov/depts/transportation/metro">Metro</a></li>
+            <li><a href="https://www.kingcounty.gov/environment/dnrp">Natural Resources &amp; Parks</a></li>
+            <li><a href="https://www.kingcounty.gov/independent/ombudsman">Ombuds and Office of Public Complaints</a></li>
+        </ul>
+    </div>
+
+    <div class="col-md-4">
+     <ul class="list-unstyled">
+        <li><a href="https://www.kingcounty.gov/depts/local-services/permits">Permits</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/prosecutor">Prosecuting Attorney</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/public-defense">Public Defense</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/health">Public Health</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/sheriff" >Sheriff</a></li>
+        <li><a href="https://www.kingcounty.gov/courts/superior-court">Superior Court</a></li>
+        <li><a href="https://www.kingcounty.gov/courts/clerk.aspx">Superior Court Clerk's Office (DJA)</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/transportation">Transportation</a></li>
+        <li><a href="https://www.kingcounty.gov/independent/property-tax-advisor">Tax Advisor</a></li>
+        <li><a href="https://www.kingcounty.gov/depts" class="btn nav-dropdown-btn btn-block">More departments</a></li>
+    </ul>
+</div>
+</div>
+</div>
+</li>
+</ul>                                    
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SM NAVBAR -->
+    <nav id="nav-sm" role="navigation" class="navbar navbar-inverse yamm">
+        <div class="container visible-sm">
+            <div class="navbar-header remove-border-bottom">
+                <a href="https://www.kingcounty.gov/">
+                    <img src="https://www.kingcounty.gov/img/KClogo-horiz-white-sm-xs.png" alt="King County logo" class="img-responsive"></a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="https://www.kingcounty.gov/" class="nav-header"><span class="fa fa-home"></span></a></li>
+                <li class="dropdown yamm-fw">
+                    <a href="https://www.kingcounty.gov/how-do-i" data-toggle="dropdown" class="dropdown-toggle disabled nav-header bold"><span>How do I...</span><span class="fa fa-caret-down"></span></a>
+                    <ul class="dropdown-menu">
+    <li>
+    <div class="yamm-content">
+    <div class="row">
+         <div class="col-sm-12">
+                                                        <div class="call-out-text call-out-text-default"><span class="fa fa-exclamation-circle fa-color-danger" aria-hidden="true"></span> Many King County services are continually adapting because of the COVID-19 pandemic. Each agency will update its pages with current information.</div>
+                                                    </div>
+    <div class="col-sm-4">
+    <ul class="list-unstyled">
+        <li class="nav-title">Apply for</li>
+        <li><a href="https://www.kingcounty.gov/depts/local-services/permits">Permits</a></li>
+        <li><a href="https://www.kingcounty.gov/jobs.aspx">Jobs at King County</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/regional-animal-services/license-your-pet/purchase-renew-license.aspx">Pet license</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/services/business/licenses.aspx">Business license</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/records-licensing/recorders-office/marriage-licensing.aspx">Marriage license</a></li>
+        <li><a href="#" class="toggle-hidden-links"><span class="fa fa-ellipsis-h"></span></a></li>
+    </ul>
+    <ul class="list-unstyled">
+        <li class="nav-title">Attend</li>
+        <li><a href="https://www.kingcounty.gov/how-do-i/jury-duty.aspx">Jury duty</a></li>
+    </ul>
+    <ul class="list-unstyled">
+        <li class="nav-title">Do business with King County</li>
+        <li><a href="https://www.kingcounty.gov/depts/finance-business-operations/procurement/for-business/register.aspx">Register as a supplier</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/finance-business-operations/procurement.aspx">View bid &amp; contract opportunities</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://kingcounty.diversitycompliance.com/">Find certified small business contractors and suppliers</a></li>
+        <li><a href="#" class="toggle-hidden-links" title="Show more"><span class="fa fa-ellipsis-h"></span></a></li>
+    </ul>
+    <ul class="list-unstyled">
+        <li class="nav-title">Look up</li>
+        <li><a href="https://www.kingcounty.gov/tools/what-do-i-do-with.aspx">Recycle: What do I do with?</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/sheriff/sex-offender-search.aspx">Sex offenders</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/tools/property-values.aspx">Property values</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/independent/forecasting.aspx">Economic forecast</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/elections/results.aspx">Election results</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/finance-business-operations/treasury/property-tax.aspx">Property tax</a></li>
+        <li><a href="#" class="toggle-hidden-links"><span class="fa fa-ellipsis-h"></span></a></li>
+    </ul>
+    </div>
+    <div class="col-sm-4">
+    <ul class="list-unstyled">
+        <li class="nav-title">File</li>
+        <li><a href="https://www.kingcounty.gov/courts/clerk/documents/file.aspx">Superior Court documents</a></li>
+    </ul>
+    <ul class="list-unstyled">
+        <li class="nav-title">Get around</li>
+        <li><a href="https://www.kingcounty.gov/tools/trip-planner.aspx">Plan a bus trip</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/transportation/metro/travel-options/bike.aspx">Travel by bike</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/transportation/metro/schedules-maps.aspx">Find a bus schedule</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/transportation/metro/travel-options/parking.aspx">Find a park &amp; ride</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/transportation/metro/travel-options/rideshare/programs/carpool.aspx">Explore carpooling options</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/transportation/water-taxi.aspx">Take a water taxi</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/transportation/metro/travel-options/accessible/programs.aspx">Find senior transportation</a></li>
+        <li><a href="#" class="toggle-hidden-links"><span class="fa fa-ellipsis-h"></span></a></li>
+    </ul>
+    <ul class="list-unstyled">
+        <li class="nav-title">Help for</li>
+        <li><a href="https://www.kingcounty.gov/how-do-i/domestic-violence.aspx">Domestic violence</a></li>
+        <li><a href="https://www.kingcounty.gov/services/police-safety.aspx">Emergencies</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/community-human-services/mental-health-substance-abuse/services/crisis-services.aspx">Crisis</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/community-human-services/housing/services/homeless-housing.aspx">Homeless</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/assessor/TaxpayerAssistance/TaxRelief.aspx">Property tax relief</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/services/rural.aspx">Rural residents</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/community-human-services/veterans.aspx">Veterans</a></li>
+        <li><a href="#" class="toggle-hidden-links"><span class="fa fa-ellipsis-h"></span></a></li>
+    </ul>
+    <ul class="list-unstyled">
+        <li class="nav-title">Locate</li>
+        <li><a href="//gismaps.kingcounty.gov/ParkFinder/">Parks</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/health/locations.aspx">Public health clinics</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/transportation/roads/road-closures.aspx">Road projects</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/transportation/roads/bicycles.aspx">Bike routes</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/finance-business-operations/treasury/foreclosure.aspx">Foreclosures</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/services/parks-recreation/parks/trails.aspx">Hiking &amp; biking trails</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/tools/inmate-lookup.aspx">Jail inmate</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/tools/parcel-viewer.aspx">Property</a></li>
+        <li><a href="#" class="toggle-hidden-links"><span class="fa fa-ellipsis-h"></span></a></li>
+    </ul>
+    </div>
+    <div class="col-sm-4">
+    <ul class="list-unstyled">
+        <li class="nav-title">Pay for</li>
+        <li><a href="https://www.kingcounty.gov/depts/health/vital-statistics/birth.aspx">Birth certificate</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/finance-business-operations/treasury/property-tax.aspx">Pay or look up property taxes</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/records-licensing/recorders-office/marriage-licensing.aspx">Marriage certificate</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/records-licensing/recorders-office/fees.aspx">Deed</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/health/vital-statistics/death.aspx">Death certificate</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/records-licensing/recorders-office/fees.aspx">Title certificate</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/services/environment/wastewater/capacity-charge.aspx">Sewage treatment capacity charge</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/payinvoices">Invoice</a></li>
+        <li><a href="#" class="toggle-hidden-links"><span class="fa fa-ellipsis-h"></span></a></li>
+    </ul>
+    <ul class="list-unstyled">
+        <li class="nav-title">Register or request</li>
+        <li><a href="https://public.govdelivery.com/accounts/WAKING/subscriber/new">Email or text alerts</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/elections/how-to-vote/register-to-vote.aspx">To vote</a></li>
+        <!--<li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/risk-management/public-records-program.aspx">Public records</a></li>-->
+        <li><a href="https://www.kingcounty.gov/services/licenses-permits-records/records/public-records-requests.aspx">Public Records</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/services/business/licenses.aspx">Your business with King County</a></li>
+        <li><a href="#" class="toggle-hidden-links"><em class="fa fa-ellipsis-h"></em></a></li>
+    </ul>
+    <ul class="list-unstyled">
+        <li class="nav-title">Report</li>
+        <li><a href="https://www.kingcounty.gov/depts/sheriff/on-line-reporting/on-line-reporting.aspx">Crime</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/dnrp/solid-waste/programs/litter-dumping/report-dumping.aspx">Illegal dumping</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/elected/executive/equity-social-justice/civil-rights/civil-rights-complaint.aspx">Discrimination complaint</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/health/environmental-health/food-safety/inspection-system/complaints.aspx">Unsafe food handling</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/dnrp/wtd/response.aspx">Septic or sewer problem</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/tools/contact-us.aspx">Other problems or complaints</a></li>
+        <li><a href="#" class="toggle-hidden-links"><span class="fa fa-ellipsis-h"></span></a></li>
+    </ul>
+    <ul class="list-unstyled">
+        <li class="nav-title">Do more online</li>
+        <li><a href="https://www.kingcounty.gov/tools/trip-planner.aspx">Metro Trip Planner</a></li>
+        <li><a href="https://www.kingcounty.gov/tools/parcel-viewer.aspx">Parcel viewer property information</a></li>
+        <li><a href="https://www.kingcounty.gov/tools/inmate-lookup.aspx">Jail inmate lookup</a></li>
+        <li><a href="https://www.kingcounty.gov/how-do-i.aspx" class="btn btn nav-dropdown-btn btn-block">More tasks</a></li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    </li>
+</ul>
+                </li>
+                <li class="dropdown yamm-fw">
+                    <a href="https://www.kingcounty.gov/services" data-toggle="dropdown" class="dropdown-toggle disabled nav-header bold">Services <span class="fa fa-caret-down"></span></a>
+                    <ul class="dropdown-menu">
+                            <li>
+                                <div class="yamm-content">
+                                    <div class="row">
+                                         <div class="col-sm-12">
+                                                       <div class="call-out-text call-out-text-default"><span class="fa fa-exclamation-circle fa-color-danger" aria-hidden="true"></span> With restrictions about COVID-19 rapidly changing, please check with individual departments to be sure a building is open before you seek in-person service. Also, some downtown buildings are not open to the public due to a project to close the Administration Building and relocate the agencies affected. This project will continue at least through the end of 2021.</div>
+                                                    </div>
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li><a href="https://www.kingcounty.gov/services/animals-pets" >Animals &amp; pets</a></li>
+                                                <li><a href="https://www.kingcounty.gov/services/arts-culture">Arts &amp; culture</a></li>
+                                                <li><a href="https://www.kingcounty.gov/depts/health/vital-statistics.aspx">Birth &amp; death records</a></li>
+                                                <li><a href="https://www.kingcounty.gov/services/business">Business</a></li>
+                                                <li><a href="https://www.kingcounty.gov/services/codes-laws">Codes &amp; laws</a></li>
+                                                <li><a href="https://www.kingcounty.gov/services/courts">Courts</a></li>
+                                                <li><a href="https://www.kingcounty.gov/services/emergencies">Emergencies</a></li>
+                                                <li><a href="https://www.kingcounty.gov/services/environment">Environment</a></li>
+                                                <li><a href="https://www.kingcounty.gov/services/health">Health</a></li>
+                                               <li><a href="https://www.kingcounty.gov/services/home-property">Home &amp; property</a></li>
+                                                <li><a href="https://www.kingcounty.gov/services/jails">Jails</a></li>
+                                            </ul>
+                                        </div>
+                                       <div class="col-sm-6">   
+                                            <ul class="list-unstyled">
+                                                <li><a href="https://www.kingcounty.gov/services/jobs-training">Jobs &amp; training</a></li>
+                                                <li><a href="https://www.kingcounty.gov/services/licenses-permits-records">Licenses, permits &amp; records</a></li>
+                                                <li><a href="https://www.kingcounty.gov/services/parks-recreation">Parks &amp; recreation</a></li>
+                                                <li><a href="https://www.kingcounty.gov/services/police-safety">Police &amp; safety</a></li>
+                                                	    <li><a href="https://www.kingcounty.gov/services/data">Public Data</a></li>
+                                                <li><a href="https://www.kingcounty.gov/services/recycling-garbage">Recycling &amp; garbage</a></li>
+                                                <li><a href="https://www.kingcounty.gov/services/rural">Rural services</a></li>
+                                                <li><a href="https://www.kingcounty.gov/services/social-services">Social services</a></li>
+                                                <li><a href="https://www.kingcounty.gov/services/transportation-roads">Transportation &amp; roads</a></li>
+                                                <li><a href="https://www.kingcounty.gov/services/voting-elections">Voting &amp; elections</a></li>
+                                                <li><a href="https://www.kingcounty.gov/services/volunteer">Volunteer</a></li>
+                                               <li>
+                                                    
+                                               </li>
+                                            </ul>
+                                        </div>
+                                   </div>
+                                </div>
+                            </li>
+                        </ul>
+                        
+                </li>
+                <li class="dropdown yamm-fw">
+                    <a href="#" data-toggle="dropdown" class="nav-header disabled dropdown-toggle">More <span class="fa fa-caret-down"></span></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <div class="yamm-content">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <ul class="list-unstyled">
+                                            <li class="nav-title"><a href="https://www.kingcounty.gov/about">About King County</a></li>
+                                            <li><a href="https://www.kingcounty.gov/tools/contact-us">Contact us</a></li>
+                                            <li><a href="https://www.kingcounty.gov/elected">Elected officials</a></li>
+                                            <li><a href="https://www.kingcounty.gov/elected/executive/equity-social-justice.aspx">Equity &amp; social justice</a></li>
+
+                                            <li><a href="https://www.kingcounty.gov/services/jobs-training.aspx">Jobs &amp; training</a></li>
+                                            <li><a href="https://www.kingcounty.gov/about/news.aspx">News &amp; events</a></li>
+                                            <li><a href="https://www.kingcounty.gov/about/region/maps.aspx">Maps</a></li>
+                                            <li><a href="https://www.kingcounty.gov/depts/executive/performance-strategy-budget/regional-planning/Demographics">Data and statistics</a></li>
+                                            <li><a href="https://www.kingcounty.gov/audience/employees.aspx">King County Employees</a></li>
+                                            <li><a href="https://www.kingcounty.gov/about/vision-strategic.aspx">Vision &amp; strategic plan</a></li>
+											<li><a href="https://www.kingcounty.gov/about" class="btn nav-dropdown-btn btn-block">More about King County</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <ul class="list-unstyled">
+                                                    <li class="nav-title">Departments</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <ul class="list-unstyled">
+                                                    <li><a href="https://www.kingcounty.gov/depts/jails">Adult &amp; Juvenile Detention</a></li>
+                                                    <li><a href="https://www.kingcounty.gov/depts/assessor">Assessor</a></li>
+                                                    <li><a href="https://www.kingcounty.gov/depts/community-human-services">Community &amp; Human Services</a></li>
+                                                    <li><a href="https://www.kingcounty.gov/council">Council</a></li>
+                                                    <li><a href="https://www.kingcounty.gov/courts/district-court">District Court</a></li>
+                                                    <li><a href="https://www.kingcounty.gov/depts/elections">Elections</a></li>
+                                                    <li><a href="https://www.kingcounty.gov/elected/executive">Executive Office</a></li>
+                                                    <li><a href="https://www.kingcounty.gov/depts/executive-services.aspx">Executive Services</a></li>
+                                                    <li><a href="https://www.kingcounty.gov/depts/kctv">King County TV</a></li>
+                                                    <li><a href="https://www.kingcounty.gov/depts/local-services/">Local Services</a></li>
+													<li><a href="//metro.kingcounty.gov">Metro</a></li>
+                                                    <li><a href="https://www.kingcounty.gov/depts/dnrp">Natural Resources &amp; Parks</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <ul class="list-unstyled">
+                                                    <li><a href="https://www.kingcounty.gov/depts/local-services/permits">Permits</a></li>
+                                                    <li><a href="https://www.kingcounty.gov/depts/prosecutor">Prosecuting Attorney</a></li>
+                                                    <li><a href="https://www.kingcounty.gov/courts/public-defense">Public Defense</a></li>
+                                                    <li><a href="https://www.kingcounty.gov/depts/health.aspx">Public Health</a></li>
+                                                    <li><a href="https://www.kingcounty.gov/depts/sheriff">Sheriff</a></li>
+                                                    <li><a href="https://www.kingcounty.gov/courts/superior-court">Superior Court</a></li>
+                                                    <li><a href="https://www.kingcounty.gov/courts/clerk.aspx">Superior Court Clerk's Office (DJA)</a></li>
+                                                    <li><a href="https://www.kingcounty.gov/depts/transportation/">Transportation</a></li>
+                                                    <li><a href="https://www.kingcounty.gov/independent/property-tax-advisor.aspx">Tax Advisor</a></li>
+                                                    <li><a href="https://www.kingcounty.gov/depts" class="btn nav-dropdown-btn btn-block">More departments</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown yamm-fw">
+                    <a href="#" data-toggle="dropdown" class="nav-header disabled dropdown-toggle"><span class="fa fa-search"></span></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                                <div class="yamm-content">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li><a href="//directory.kingcounty.gov/EmpSearch.asp">Staff directory</a></li>
+                                                <li><a href="https://www.kingcounty.gov/depts/records-licensing/recorders-office/records-search">Records search</a></li>
+                                                <li><a href="//aqua.kingcounty.gov/mkcc/legislation/">Legislation search</a></li>
+                                                <li><a href="https://www.kingcounty.gov/tools/property-values/">Property search</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                             <form action="https://kingcounty.gov/search" class="search-form" method="get">
+                                                <label class="sr-only" for="sm-search-input">Search kingcounty.gov</label>
+                                                <input name="utf8" type="hidden" value="&#x2713;" />
+                                                <input id="sm-search-input" class="form-control search-form-text"  name="query" placeholder="Search Kingcounty.gov" type="search" />
+                                                <!--fix this-->
+                                                <button type="submit" class="btn btn-link search-form-btn"><span class="fa fa-search"></span></button>
+                                               
+                                            </form>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </li>
+                    </ul>
+                   
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- XS NAVBAR -->
+    <nav id="nav-xs" role="navigation" class="navbar navbar-inverse">
+        <div class="container visible-xs">
+          <div class="navbar-header remove-border-bottom">
+            <button type="button" data-toggle="collapse" data-target="#navbar-dropdown-xs" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="fa fa-search fa-2x"></span></button><a href="https://www.kingcounty.gov/"><img src="https://www.kingcounty.gov/img/KClogo-horiz-white-sm-xs.png" alt="King County logo" class="img-responsive"></a>
+            <button id="nav-search-btn-xs" type="button" data-toggle="collapse" data-target="#navbar-dropdown-xs" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="fa fa-bars fa-2x"></span></button>
+          </div>
+          <div id="navbar-dropdown-xs" class="collapse navbar-collapse">
+            <form role="search" action="//www.kingcounty.gov/search" method="get" accept-charset="UTF-8" class="navbar-form search-form">
+              <label for="xs-search-input" class="sr-only">Search kingcounty.gov</label>
+              <input name="utf8" type="hidden" value="✓">
+              <input type="text" id='xs-search-input' name="query" placeholder="Search Kingcounty.gov" class="form-control">
+              <button type="submit" class="btn btn-link search-form-btn"><span class="fa fa-search"></span></button>
+            </form>
+            <ul class="nav navbar-nav">
+              <li><a href="https://www.kingcounty.gov/"><span>Home</span></a></li>
+              <li><a href="https://www.kingcounty.gov/how-do-i"><span>How Do I...</span></a></li>
+              <li><a href="https://www.kingcounty.gov/services"><span>Services</span></a></li>
+              <li><a href="https://www.kingcounty.gov/about">About King County</a></li>
+              <li><a href="https://www.kingcounty.gov/depts">Departments</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+</header>
+
+
+<!-- MAIN CONTENT -->
+<div id="main-content">
+    <!-- MOBILE IMAGE IS OPTIONAL -->
+    <img id="mobile-bg" src="" alt="background image" aria-hidden="true" class="visible-xs img-responsive hidden-print" />
+    <div class="container">
+        <img id="logo-img-print" src="https://www.kingcounty.gov/img/KClogo-horiz-black-lg.gif" alt="King County logo" class="visible-print">
+        <div class="row row-offcanvas row-offcanvas-left">
+
+            
+            
+            
+                <div id="main-content-sr" class="col-sm-12 col-md-12">
+            
+
+            <!-- BREADCRUMB-->
+            <div class="row addon-row main-breadcrumb-row hidden-print">
+                <div class="col-xs-12">
+                    
+        
+            <ol class="breadcrumb main-breadcrumb hidden-xs" style="margin-left:0">
+        
+                
+              
+        <li class="hidden-xs">             
+            <a href="https://www.kingcounty.gov/" title="Home">
+                Home</a><span aria-hidden="true" class="fa fa-angle-double-right"></span>          
+        </li>
+                
+      
+        <li class="hidden-xs">             
+            <a href="https://www.kingcounty.gov/depts/elections.aspx" title="Elections Home">
+                Elections Home</a><span aria-hidden="true" class="fa fa-angle-double-right"></span>          
+        </li>
+                
+      
+        <li class="hidden-xs">             
+            <a href="https://www.kingcounty.gov/depts/elections/for-candidates.aspx" title="For candidates">
+                For candidates</a><span aria-hidden="true" class="fa fa-angle-double-right"></span>          
+        </li>
+                
+      
+        <li class="">             
+            <a href="https://www.kingcounty.gov/depts/elections/for-candidates/who-has-filed.aspx" title="Who has filed">
+                Who has filed</a><span aria-hidden="true" class="fa fa-angle-double-right"></span>          
+        </li>
+                
+      
+        
+        <li class="active">                       
+                Who has filed                        
+        </li>        
+    
+        </ol>
+    
+
+                </div>
+            </div>
+            <!-- /BREADCRUMB-->
+
+
+<!-- PAGE CONTENT BEGINS HERE -->
+
+
+ <div class="row addon-row addon-row-attached">
+                <div class="col-sm-12">
+                    <div class="page-header">
+                        <h1>
+                            Who has filed
+                        </h1>
+                        
+                            <h2><small>
+                                
+                            </small></h2>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+
+
+    <div class="row addon-row addon-row-attached">
+        <div class="col-sm-12">
+            
+  
+ 
+     <div id="app-version" class="pull-left">v1.0.0</div>
+
+  <div id="topofpage" class="pull-left"></div>
+
+     <div id="app-maincontent"   class="col-xs-12 pull-left" >
+          <div id="pnlcndspecialnote" class="pull-left">
+	
+      <span id="lblspecialnote" class="pull-left"></span> 
+
+
+</div>
+            
+           <div class="pull-left" id="dvcl">
+         <div id="pnlcandidatelist" class="row addon-row addon-row-attached">
+	 
+
+              <div class="page-header">
+         <h1>
+                         <span id="lblwhohasfiled">Who has filed</span>    
+                        </h1>
+              <h2><small>
+                                
+        <span id="lblelectiontitlewhf">2026 candidate filing</span>
+                            </small></h2>
+     </div>
+                       <div id="pnlstg2updatetime" class="pull-left">
+		
+<span id="stg2updatedesc">Last updated: </span><span id="lblstg2lastupdated">May 12, 2026, 4:12 PM</span>
+
+                       
+	</div>
+     
+
+
+     
+<div id="pnlstg3desc" class="pull-left">
+		
+  <span id="lblstg3desc"><h3>Below is the official list of all candidates that filed for office. Candidates are listed in the order they will appear on the ballot.</h3></span>
+  
+	</div>
+ 
+</div>
+
+                <div class="dv-specialnotes">
+          
+       </div>
+
+             </div>
+
+            
+           <div id="pnlmediafilelist" class="row addon-row addon-row-attached">
+	 
+          <p>
+<a href="https://aqua.kingcounty.gov/elections/candidatefiling/2026/2026-candidates.csv">Download candidate filing list <span class="fa fa-file-excel-o"></span></a></li>
+    </p>
+
+<p>Precinct Committee Officers (PCO) who have filed:</p>
+<p><ul>
+    <li><a href="https://aqua.kingcounty.gov/elections/candidatefiling/2026/2026-pco-dems.csv">Democratic <span class="fa fa-file-excel-o"></span></a></li>
+    <li><a href="https://aqua.kingcounty.gov/elections/candidatefiling/2026/2026-pco-reps.csv">Republican <span class="fa fa-file-excel-o"></span></a></li>
+</ul>
+</p>
+<p>See the list of <a href="https://voter.votewa.gov/CandidateList.aspx?e=898">all candidates who have filed in the State</a>.</p>
+<p><a href="https://kingcounty.gov/en/dept/elections/about-us/data-statistics/candidate-filing-statistics/2026">See candidate filing statistics</a>. </p>
+ 
+     
+</div>
+          <div class="row addon-row addon-row-attached"><div class="pull-left" id="candy-dropdown" ><div class="input-group pull-left" id="mydropdownnew"><select class="form-control" id="ddldistricts"><option> Select a district...</option><option value="City">City </option><option value="County">County </option><option value="CourtofAppeals,Division1,District1">Court of Appeals, Division 1, District 1 </option><option value="DistrictCourt">District Court </option><option value="Federal">Federal </option><option value="Judicial">Judicial </option><option value="State">State </option><option value="StateSupremeCourt">State Supreme Court </option></select> </div></div><div class="list-group pull-left candidate-list-group" id="Federal">
+	<div class="list-group-item active">
+		<h4 class="list-group-item-heading">
+			Federal
+		</h4>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">United States Representative</span><span class="sp-bt-title-2">, Congressional District 1</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=179213#cnd1645456" target="_blank"><span class="ballotname" id="candidate1645456">Benjamin Kincaid</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=179213#cnd1643813" target="_blank"><span class="ballotname" id="candidate1643813">Suzan DelBene</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=179213#cnd1647422" target="_blank"><span class="ballotname" id="candidate1647422">Bryce Nickel</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=179213#cnd1648502" target="_blank"><span class="ballotname" id="candidate1648502">James Etzkorn</span></a><span class="small candidateparty party"> (Prefers Independent Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=179213#cnd1647919" target="_blank"><span class="ballotname" id="candidate1647919">Hunter Gordon</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=179213#cnd1648018" target="_blank"><span class="ballotname" id="candidate1648018">Mary Silva</span></a><span class="small candidateparty party"> (Prefers Republican Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=179213#cnd1644869" target="_blank"><span class="ballotname" id="candidate1644869">Catherine Hildebrand</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">United States Representative</span><span class="sp-bt-title-2">, Congressional District 7</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=178590#cnd1650136" target="_blank"><span class="ballotname" id="candidate1650136">David W. Blomstrom</span></a><span class="small candidateparty party"> (Prefers Fifth Republic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=178590#cnd1645638" target="_blank"><span class="ballotname" id="candidate1645638">Pramila Jayapal</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=178590#cnd1647752" target="_blank"><span class="ballotname" id="candidate1647752">Nirav Sheth</span></a><span class="small candidateparty party"> (Prefers Republican Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=178590#cnd1645748" target="_blank"><span class="ballotname" id="candidate1645748">Gwen Kirkland</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">United States Representative</span><span class="sp-bt-title-2">, Congressional District 8</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=180108#cnd1647241" target="_blank"><span class="ballotname" id="candidate1647241">Kim Schrier</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=180108#cnd1645186" target="_blank"><span class="ballotname" id="candidate1645186">Trinh Ha</span></a><span class="small candidateparty party"> (Prefers Republican Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=180108#cnd1645994" target="_blank"><span class="ballotname" id="candidate1645994">Spencer Meline</span></a><span class="small candidateparty party"> (Prefers Republican Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=180108#cnd1647688" target="_blank"><span class="ballotname" id="candidate1647688">Keith Arnold</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=180108#cnd1649713" target="_blank"><span class="ballotname" id="candidate1649713">Andres Valleza</span></a><span class="small candidateparty party"> (Prefers Republican Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=180108#cnd1645177" target="_blank"><span class="ballotname" id="candidate1645177">Bob Hagglund</span></a><span class="small candidateparty party"> (Prefers Republican Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">United States Representative</span><span class="sp-bt-title-2">, Congressional District 9</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=169994#cnd1647491" target="_blank"><span class="ballotname" id="candidate1647491">Jacob Perasso</span></a><span class="small candidateparty party"> (Prefers Socialist Workers Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=169994#cnd1643309" target="_blank"><span class="ballotname" id="candidate1643309">Kshama Sawant</span></a><span class="small candidateparty party"> (Prefers Independent Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=169994#cnd1649306" target="_blank"><span class="ballotname" id="candidate1649306">Melissa Chaudhry</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=169994#cnd1649970" target="_blank"><span class="ballotname" id="candidate1649970">Doug Basler</span></a><span class="small candidateparty party"> (Prefers Republican Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=169994#cnd1645529" target="_blank"><span class="ballotname" id="candidate1645529">Adam Smith</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div>
+</div><div class="list-group pull-left candidate-list-group" id="State">
+	<div class="list-group-item active">
+		<h4 class="list-group-item-heading">
+			State
+		</h4>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  1</span><span class="sp-bt-title-2">, State Representative Position No. 1</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=180757#cnd1645003" target="_blank"><span class="ballotname" id="candidate1645003">Davina Duerr</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=180757#cnd1649640" target="_blank"><span class="ballotname" id="candidate1649640">Maggie Wang</span></a><span class="small candidateparty party"> (Prefers Republican Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  1</span><span class="sp-bt-title-2">, State Representative Position No. 2</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=182344#cnd1650829" target="_blank"><span class="ballotname" id="candidate1650829">Jeff Lyon</span></a><span class="small candidateparty party"> (Prefers Libertarian Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=182344#cnd1644115" target="_blank"><span class="ballotname" id="candidate1644115">Shelley Kloba</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=182344#cnd1650570" target="_blank"><span class="ballotname" id="candidate1650570">Cliff Moon</span></a><span class="small candidateparty party"> (Prefers Republican Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=182344#cnd1650125" target="_blank"><span class="ballotname" id="candidate1650125">Jenne Alderks</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  5</span><span class="sp-bt-title-2">, State Representative Position No. 1</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=177138#cnd1647684" target="_blank"><span class="ballotname" id="candidate1647684">Topher Leritz</span></a><span class="small candidateparty party"> (States No Party Preference)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=177138#cnd1643348" target="_blank"><span class="ballotname" id="candidate1643348">Zach Hall</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=177138#cnd1647656" target="_blank"><span class="ballotname" id="candidate1647656">Aimee Warmerdam</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=177138#cnd1643540" target="_blank"><span class="ballotname" id="candidate1643540">Michelle Bennett</span></a><span class="small candidateparty party"> (Prefers Republican Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  5</span><span class="sp-bt-title-2">, State Representative Position No. 2</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=186004#cnd1643692" target="_blank"><span class="ballotname" id="candidate1643692">Patrick Peacock</span></a><span class="small candidateparty party"> (Prefers Republican Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=186004#cnd1645705" target="_blank"><span class="ballotname" id="candidate1645705">Lisa Callan</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  11</span><span class="sp-bt-title-2">, State Representative Position No. 1</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=182860#cnd1646838" target="_blank"><span class="ballotname" id="candidate1646838">Ashley Fedan</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=182860#cnd1646851" target="_blank"><span class="ballotname" id="candidate1646851">Christian Rombough</span></a><span class="small candidateparty party"> (Prefers Republican Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=182860#cnd1646769" target="_blank"><span class="ballotname" id="candidate1646769">David Hackney</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  11</span><span class="sp-bt-title-2">, State Representative Position No. 2</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=174458#cnd1644369" target="_blank"><span class="ballotname" id="candidate1644369">Steve Bergquist</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  12</span><span class="sp-bt-title-2">, State Representative Position No. 1</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=185524#cnd1643491" target="_blank"><span class="ballotname" id="candidate1643491">Brian Burnett</span></a><span class="small candidateparty party"> (Prefers Republican Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=185524#cnd1647079" target="_blank"><span class="ballotname" id="candidate1647079">Stacy Willoughby</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  12</span><span class="sp-bt-title-2">, State Representative Position No. 2</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=170524#cnd1644606" target="_blank"><span class="ballotname" id="candidate1644606">Mike Steele</span></a><span class="small candidateparty party"> (Prefers Republican Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=170524#cnd1648005" target="_blank"><span class="ballotname" id="candidate1648005">Adam James</span></a><span class="small candidateparty party"> (Prefers Republican Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=170524#cnd1646552" target="_blank"><span class="ballotname" id="candidate1646552">Maggie Adams</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  30</span><span class="sp-bt-title-2">, State Senator</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=179747#cnd1643818" target="_blank"><span class="ballotname" id="candidate1643818">Claire Wilson</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=179747#cnd1643350" target="_blank"><span class="ballotname" id="candidate1643350">Michael Rutland</span></a><span class="small candidateparty party"> (Prefers Republican Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  30</span><span class="sp-bt-title-2">, State Representative Position No. 1</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=180494#cnd1643969" target="_blank"><span class="ballotname" id="candidate1643969">Jamila E. Taylor</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=180494#cnd1645769" target="_blank"><span class="ballotname" id="candidate1645769">Tiffany Bowyer</span></a><span class="small candidateparty party"> (Prefers Republican Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  30</span><span class="sp-bt-title-2">, State Representative Position No. 2</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=186326#cnd1644935" target="_blank"><span class="ballotname" id="candidate1644935">Kristine Reeves</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=186326#cnd1650881" target="_blank"><span class="ballotname" id="candidate1650881">Paul McDaniel</span></a><span class="small candidateparty party"> (Prefers Independent Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  31</span><span class="sp-bt-title-2">, State Senator</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=176340#cnd1643715" target="_blank"><span class="ballotname" id="candidate1643715">Tamara Stramel</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=176340#cnd1645131" target="_blank"><span class="ballotname" id="candidate1645131">Phil Fortunato</span></a><span class="small candidateparty party"> (Prefers Republican Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  31</span><span class="sp-bt-title-2">, State Representative Position No. 1</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=182451#cnd1643339" target="_blank"><span class="ballotname" id="candidate1643339">Drew Stokesbary</span></a><span class="small candidateparty party"> (Prefers Republican Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=182451#cnd1647710" target="_blank"><span class="ballotname" id="candidate1647710">Stephen Szczurko-Walton</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  31</span><span class="sp-bt-title-2">, State Representative Position No. 2</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=175221#cnd1645060" target="_blank"><span class="ballotname" id="candidate1645060">John Bielka</span></a><span class="small candidateparty party"> (Prefers Democrat Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=175221#cnd1648167" target="_blank"><span class="ballotname" id="candidate1648167">Joshua Penner</span></a><span class="small candidateparty party"> (Prefers Republican Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  32</span><span class="sp-bt-title-2">, State Senator</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=184903#cnd1644691" target="_blank"><span class="ballotname" id="candidate1644691">Cindy Ryu</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=184903#cnd1649605" target="_blank"><span class="ballotname" id="candidate1649605">Ira McBee</span></a><span class="small candidateparty party"> (Prefers Republican Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=184903#cnd1646843" target="_blank"><span class="ballotname" id="candidate1646843">Jesse Salomon</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  32</span><span class="sp-bt-title-2">, State Representative Position No. 1</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=174799#cnd1645780" target="_blank"><span class="ballotname" id="candidate1645780">Jenna Nand</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=174799#cnd1644015" target="_blank"><span class="ballotname" id="candidate1644015">Will Chen</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=174799#cnd1645010" target="_blank"><span class="ballotname" id="candidate1645010">Keith Scully</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=174799#cnd1647721" target="_blank"><span class="ballotname" id="candidate1647721">Danica Noble</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=174799#cnd1649480" target="_blank"><span class="ballotname" id="candidate1649480">Lisa Rezac</span></a><span class="small candidateparty party"> (Prefers Republican Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=174799#cnd1644168" target="_blank"><span class="ballotname" id="candidate1644168">Chris Bloomquist</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  32</span><span class="sp-bt-title-2">, State Representative Position No. 2</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=184124#cnd1643501" target="_blank"><span class="ballotname" id="candidate1643501">Lauren Davis</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=184124#cnd1643381" target="_blank"><span class="ballotname" id="candidate1643381">Imraan Siddiqi</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  33</span><span class="sp-bt-title-2">, State Senator</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=178530#cnd1644033" target="_blank"><span class="ballotname" id="candidate1644033">Tina L. Orwall</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  33</span><span class="sp-bt-title-2">, State Representative Position No. 1</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=185736#cnd1645097" target="_blank"><span class="ballotname" id="candidate1645097">Edwin Obras</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=185736#cnd1649470" target="_blank"><span class="ballotname" id="candidate1649470">Darryl K. Jones</span></a><span class="small candidateparty party"> (Prefers Republican Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=185736#cnd1646137" target="_blank"><span class="ballotname" id="candidate1646137">Chris Martinez</span></a><span class="small candidateparty party"> (Prefers Republican Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  33</span><span class="sp-bt-title-2">, State Representative Position No. 2</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=183993#cnd1643761" target="_blank"><span class="ballotname" id="candidate1643761">Mia Su-Ling Gregerson</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=183993#cnd1649353" target="_blank"><span class="ballotname" id="candidate1649353">Yuri Marinchik</span></a><span class="small candidateparty party"> (Prefers Republican Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=183993#cnd1649870" target="_blank"><span class="ballotname" id="candidate1649870">Alex Andrade</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  34</span><span class="sp-bt-title-2">, State Senator</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=181522#cnd1644089" target="_blank"><span class="ballotname" id="candidate1644089">Emily Alvarado</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  34</span><span class="sp-bt-title-2">, State Representative Position No. 1</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=173528#cnd1647040" target="_blank"><span class="ballotname" id="candidate1647040">Brianna K. Thomas</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  34</span><span class="sp-bt-title-2">, State Representative Position No. 2</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=174814#cnd1645891" target="_blank"><span class="ballotname" id="candidate1645891">Joe Fitzgibbon</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=174814#cnd1648613" target="_blank"><span class="ballotname" id="candidate1648613">Mary Anito</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  36</span><span class="sp-bt-title-2">, State Senator</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=172339#cnd1644452" target="_blank"><span class="ballotname" id="candidate1644452">Noel C. Frame</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=172339#cnd1646683" target="_blank"><span class="ballotname" id="candidate1646683">Jillian England</span></a><span class="small candidateparty party"> (Prefers Republican Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  36</span><span class="sp-bt-title-2">, State Representative Position No. 1</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=180602#cnd1646595" target="_blank"><span class="ballotname" id="candidate1646595">Julia Grant Reed</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  36</span><span class="sp-bt-title-2">, State Representative Position No. 2</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=182999#cnd1646678" target="_blank"><span class="ballotname" id="candidate1646678">Liz Berry</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  37</span><span class="sp-bt-title-2">, State Senator</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=181215#cnd1644791" target="_blank"><span class="ballotname" id="candidate1644791">Chipalo Street</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=181215#cnd1650944" target="_blank"><span class="withdrawncandidate ballotname" id="candidate1650944">Emijah Smith</span></a><span class="withdrawncandidate candidateparty party"> (Prefers Democratic Party)</span><span class="withdrawnstatus"> Withdrawn</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=181215#cnd1649443" target="_blank"><span class="ballotname" id="candidate1649443">Tatiana Brown</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  37</span><span class="sp-bt-title-2">, State Representative Position No. 1</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=176175#cnd1643407" target="_blank"><span class="ballotname" id="candidate1643407">Sharon Tomiko Santos</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=176175#cnd1645256" target="_blank"><span class="ballotname" id="candidate1645256">Kelabe Tewolde</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  37</span><span class="sp-bt-title-2">, State Representative Position No. 2</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=182736#cnd1644806" target="_blank"><span class="ballotname" id="candidate1644806">Jaelynn Scott</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=182736#cnd1648473" target="_blank"><span class="ballotname" id="candidate1648473">Evon McCorkle</span></a><span class="small candidateparty party"> (Prefers Independent Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  41</span><span class="sp-bt-title-2">, State Representative Position No. 1</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=186384#cnd1643573" target="_blank"><span class="ballotname" id="candidate1643573">Janice Zahn</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=186384#cnd1651109" target="_blank"><span class="ballotname" id="candidate1651109">Elle Nguyen</span></a><span class="small candidateparty party"> (Prefers Republican Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=186384#cnd1644893" target="_blank"><span class="ballotname" id="candidate1644893">Alex Tsimerman</span></a><span class="small candidateparty party"> (Prefers Standup-America Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  41</span><span class="sp-bt-title-2">, State Representative Position No. 2</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=173818#cnd1645130" target="_blank"><span class="ballotname" id="candidate1645130">Michael Rosen</span></a><span class="small candidateparty party"> (Prefers Independent Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=173818#cnd1645903" target="_blank"><span class="ballotname" id="candidate1645903">My-Linh T Thai</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  43</span><span class="sp-bt-title-2">, State Senator</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=170140#cnd1644690" target="_blank"><span class="ballotname" id="candidate1644690">Hannah Sabio-Howell</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=170140#cnd1649086" target="_blank"><span class="ballotname" id="candidate1649086">Heather-Marie Wilson</span></a><span class="small candidateparty party"> (States No Party Preference)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=170140#cnd1644434" target="_blank"><span class="ballotname" id="candidate1644434">Jamie Pedersen</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  43</span><span class="sp-bt-title-2">, State Representative Position No. 1</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=185887#cnd1644548" target="_blank"><span class="ballotname" id="candidate1644548">Nicole Macri</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=185887#cnd1649562" target="_blank"><span class="ballotname" id="candidate1649562">Alby Clendennin</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  43</span><span class="sp-bt-title-2">, State Representative Position No. 2</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=175946#cnd1644725" target="_blank"><span class="ballotname" id="candidate1644725">Shaun Scott</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  45</span><span class="sp-bt-title-2">, State Senator</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=180313#cnd1645418" target="_blank"><span class="ballotname" id="candidate1645418">Manka Dhingra</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  45</span><span class="sp-bt-title-2">, State Representative Position No. 1</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=179881#cnd1644851" target="_blank"><span class="ballotname" id="candidate1644851">JoAnn Tolentino</span></a><span class="small candidateparty party"> (Prefers Republican Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=179881#cnd1646696" target="_blank"><span class="ballotname" id="candidate1646696">Roger Goodman</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  45</span><span class="sp-bt-title-2">, State Representative Position No. 2</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=178412#cnd1643659" target="_blank"><span class="ballotname" id="candidate1643659">Vanessa Kritzer</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=178412#cnd1650960" target="_blank"><span class="ballotname" id="candidate1650960">John P Gibbons</span></a><span class="small candidateparty party"> (Prefers Republican Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=178412#cnd1645145" target="_blank"><span class="ballotname" id="candidate1645145">Chandler Torbett</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  46</span><span class="sp-bt-title-2">, State Senator</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=178207#cnd1643876" target="_blank"><span class="ballotname" id="candidate1643876">Javier Valdez</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=178207#cnd1646201" target="_blank"><span class="ballotname" id="candidate1646201">Sandra Stephens</span></a><span class="small candidateparty party"> (Prefers Republican Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  46</span><span class="sp-bt-title-2">, State Representative Position No. 1</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=175389#cnd1644347" target="_blank"><span class="ballotname" id="candidate1644347">Gerry Pollet</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=175389#cnd1647104" target="_blank"><span class="ballotname" id="candidate1647104">Ron Davis</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=175389#cnd1646732" target="_blank"><span class="ballotname" id="candidate1646732">Will Dreher</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  46</span><span class="sp-bt-title-2">, State Representative Position No. 2</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=171631#cnd1643730" target="_blank"><span class="ballotname" id="candidate1643730">Darya Farivar</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=171631#cnd1647666" target="_blank"><span class="ballotname" id="candidate1647666">Rodney 'Star' Thornley</span></a><span class="small candidateparty party"> (Prefers Independent Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  47</span><span class="sp-bt-title-2">, State Senator</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=182132#cnd1645960" target="_blank"><span class="ballotname" id="candidate1645960">Claudia Kauffman</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=182132#cnd1648318" target="_blank"><span class="ballotname" id="candidate1648318">Kristina Soltys</span></a><span class="small candidateparty party"> (Prefers Republican Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  47</span><span class="sp-bt-title-2">, State Representative Position No. 1</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=182514#cnd1649138" target="_blank"><span class="ballotname" id="candidate1649138">Jasnoor Kaur Hans</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=182514#cnd1643638" target="_blank"><span class="ballotname" id="candidate1643638">Cobi Clark</span></a><span class="small candidateparty party"> (Prefers Libertarian Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=182514#cnd1646391" target="_blank"><span class="ballotname" id="candidate1646391">Logan Evans</span></a><span class="small candidateparty party"> (Prefers Cascade Democrat Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=182514#cnd1644200" target="_blank"><span class="ballotname" id="candidate1644200">Debra Jean Entenman</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  47</span><span class="sp-bt-title-2">, State Representative Position No. 2</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=177070#cnd1644698" target="_blank"><span class="ballotname" id="candidate1644698">Chris Stearns</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=177070#cnd1648781" target="_blank"><span class="ballotname" id="candidate1648781">Ted Cooke</span></a><span class="small candidateparty party"> (Prefers Republican Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  48</span><span class="sp-bt-title-2">, State Senator</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=183440#cnd1644478" target="_blank"><span class="ballotname" id="candidate1644478">Vandana Slatter</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  48</span><span class="sp-bt-title-2">, State Representative Position No. 1</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=175301#cnd1643521" target="_blank"><span class="ballotname" id="candidate1643521">Osman Salahuddin</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=175301#cnd1650355" target="_blank"><span class="ballotname" id="candidate1650355">Jeffery Poppe</span></a><span class="small candidateparty party"> (Prefers Republican Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Legislative District No.  48</span><span class="sp-bt-title-2">, State Representative Position No. 2</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=180806#cnd1643722" target="_blank"><span class="ballotname" id="candidate1643722">Jessica Forsythe</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=180806#cnd1644391" target="_blank"><span class="ballotname" id="candidate1644391">Amy Walen</span></a><span class="small candidateparty party"> (Prefers Democratic Party)</span></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div>
+</div><div class="list-group pull-left candidate-list-group" id="County">
+	<div class="list-group-item active">
+		<h4 class="list-group-item-heading">
+			County
+		</h4>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Prosecuting Attorney</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=175675#cnd1643364" target="_blank"><span class="ballotname" id="candidate1643364">Leesa Manion</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Assessor</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=172479#cnd1649200" target="_blank"><span class="ballotname" id="candidate1649200">Dominique M Scarimbolo</span></a></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=172479#cnd1643393" target="_blank"><span class="ballotname" id="candidate1643393">Christopher Roberts</span></a></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=172479#cnd1643315" target="_blank"><span class="ballotname" id="candidate1643315">Rob Foxcurran</span></a></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=172479#cnd1644886" target="_blank"><span class="ballotname" id="candidate1644886">Al Dams</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Director of Elections</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=181853#cnd1643538" target="_blank"><span class="ballotname" id="candidate1643538">Julie Wise</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Metropolitan King County</span><span class="sp-bt-title-2">, Council District No. 2</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=175682#cnd1646306" target="_blank"><span class="ballotname" id="candidate1646306">Miriam Mboya</span></a></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=175682#cnd1643798" target="_blank"><span class="ballotname" id="candidate1643798">Toshiko Grace Hasegawa</span></a></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=175682#cnd1648284" target="_blank"><span class="ballotname" id="candidate1648284">Rebecca Saldaña</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Metropolitan King County</span><span class="sp-bt-title-2">, Council District No. 4</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=185252#cnd1645089" target="_blank"><span class="ballotname" id="candidate1645089">Jorge L. Barón</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Metropolitan King County</span><span class="sp-bt-title-2">, Council District No. 6</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=183236#cnd1644981" target="_blank"><span class="ballotname" id="candidate1644981">Claudia Balducci</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Metropolitan King County</span><span class="sp-bt-title-2">, Council District No. 8</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=184455#cnd1650506" target="_blank"><span class="ballotname" id="candidate1650506">Mia Jacobson</span></a></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=184455#cnd1645378" target="_blank"><span class="ballotname" id="candidate1645378">Teresa Mosqueda</span></a></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=184455#cnd1649047" target="_blank"><span class="ballotname" id="candidate1649047">Nick Duda</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div>
+</div><div class="list-group pull-left candidate-list-group" id="StateSupremeCourt">
+	<div class="list-group-item active">
+		<h4 class="list-group-item-heading">
+			State Supreme Court
+		</h4>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Supreme Court</span><span class="sp-bt-title-2">, Justice Position No. 1</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=183585#cnd1649862" target="_blank"><span class="withdrawncandidate ballotname" id="candidate1649862">Anne Melani Bremner</span></a><span class="withdrawnstatus"> Withdrawn</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=183585#cnd1644573" target="_blank"><span class="ballotname" id="candidate1644573">Colleen Melody</span></a></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=183585#cnd1647096" target="_blank"><span class="ballotname" id="candidate1647096">Laura Christensen Colberg</span></a></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=183585#cnd1645971" target="_blank"><span class="ballotname" id="candidate1645971">Scott Edwards</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Supreme Court</span><span class="sp-bt-title-2">, Justice Position No. 3</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=170155#cnd1644091" target="_blank"><span class="ballotname" id="candidate1644091">Jaime Michelle Hawk</span></a></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=170155#cnd1646058" target="_blank"><span class="ballotname" id="candidate1646058">David Stevens</span></a></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=170155#cnd1645202" target="_blank"><span class="ballotname" id="candidate1645202">Mike Diaz</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Supreme Court</span><span class="sp-bt-title-2">, Justice Position No. 4</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=174688#cnd1643329" target="_blank"><span class="ballotname" id="candidate1643329">Ian Birk</span></a></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=174688#cnd1645775" target="_blank"><span class="ballotname" id="candidate1645775">Sean O'Donnell</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Supreme Court</span><span class="sp-bt-title-2">, Justice Position No. 5</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=186441#cnd1649186" target="_blank"><span class="ballotname" id="candidate1649186">Greg Miller</span></a></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=186441#cnd1643479" target="_blank"><span class="ballotname" id="candidate1643479">Theo Angelis</span></a></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=186441#cnd1644953" target="_blank"><span class="ballotname" id="candidate1644953">Dave Larson</span></a></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=186441#cnd1643539" target="_blank"><span class="ballotname" id="candidate1643539">Sharonda Amamilo</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Supreme Court</span><span class="sp-bt-title-2">, Justice Position No. 7</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=171290#cnd1650523" target="_blank"><span class="ballotname" id="candidate1650523">David R Shelvey</span></a></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=171290#cnd1644054" target="_blank"><span class="ballotname" id="candidate1644054">Debra L. Stephens</span></a></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=171290#cnd1650202" target="_blank"><span class="ballotname" id="candidate1650202">Karim A. Merchant</span></a></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=171290#cnd1650089" target="_blank"><span class="ballotname" id="candidate1650089">Todd A. Bloom</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div>
+</div><div class="list-group pull-left candidate-list-group" id="CourtofAppeals,Division1,District1">
+	<div class="list-group-item active">
+		<h4 class="list-group-item-heading">
+			Court of Appeals, Division 1, District 1
+		</h4>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Judge Position No. 5</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=172167#cnd1643370" target="_blank"><span class="ballotname" id="candidate1643370">David S. Mann</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Judge Position No. 6</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=172520#cnd1643739" target="_blank"><span class="ballotname" id="candidate1643739">Bill A. Bowman</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div>
+</div><div class="list-group pull-left candidate-list-group" id="Judicial">
+	<div class="list-group-item active">
+		<h4 class="list-group-item-heading">
+			Judicial
+		</h4>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">King County Superior Court</span><span class="sp-bt-title-2">, Judge Position No. 20</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=172004#cnd1643418" target="_blank"><span class="ballotname" id="candidate1643418">Kent Y. Liu</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">King County Superior Court</span><span class="sp-bt-title-2">, Judge Position No. 32</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=181870#cnd1644411" target="_blank"><span class="ballotname" id="candidate1644411">Daniel York</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">King County Superior Court</span><span class="sp-bt-title-2">, Judge Position No. 45</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=186442#cnd1644232" target="_blank"><span class="ballotname" id="candidate1644232">Tenaya Scheinman</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div>
+</div><div class="list-group pull-left candidate-list-group" id="DistrictCourt">
+	<div class="list-group-item active">
+		<h4 class="list-group-item-heading">
+			District Court
+		</h4>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Northeast Electoral District</span><span class="sp-bt-title-2">, Judge Position No. 1</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=172778#cnd1644671" target="_blank"><span class="ballotname" id="candidate1644671">Josh Schaer</span></a></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=172778#cnd1643345" target="_blank"><span class="ballotname" id="candidate1643345">Jan Trasen</span></a></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=172778#cnd1644840" target="_blank"><span class="ballotname" id="candidate1644840">Bianca Tse</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Northeast Electoral District</span><span class="sp-bt-title-2">, Judge Position No. 2</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=183208#cnd1643532" target="_blank"><span class="ballotname" id="candidate1643532">Michelle Gehlsen</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Northeast Electoral District</span><span class="sp-bt-title-2">, Judge Position No. 3</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=179390#cnd1643619" target="_blank"><span class="ballotname" id="candidate1643619">Lisa O'Toole</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Northeast Electoral District</span><span class="sp-bt-title-2">, Judge Position No. 4</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=183364#cnd1643572" target="_blank"><span class="ballotname" id="candidate1643572">Kevin Peck</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Northeast Electoral District</span><span class="sp-bt-title-2">, Judge Position No. 5</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=169838#cnd1645317" target="_blank"><span class="ballotname" id="candidate1645317">Jill Klinge</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Northeast Electoral District</span><span class="sp-bt-title-2">, Judge Position No. 6</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=171466#cnd1644257" target="_blank"><span class="ballotname" id="candidate1644257">Denice Gagner</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Northeast Electoral District</span><span class="sp-bt-title-2">, Judge Position No. 7</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=177993#cnd1643435" target="_blank"><span class="ballotname" id="candidate1643435">Peter Peaquin</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Shoreline Electoral District</span><span class="sp-bt-title-2">, Judge Position No. 1</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=170687#cnd1643746" target="_blank"><span class="ballotname" id="candidate1643746">Raul Martinez</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Shoreline Electoral District</span><span class="sp-bt-title-2">, Judge Position No. 2</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=175366#cnd1646021" target="_blank"><span class="ballotname" id="candidate1646021">Karama H. Hawkins</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Southeast Electoral District</span><span class="sp-bt-title-2">, Judge Position No. 1</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=186114#cnd1644178" target="_blank"><span class="ballotname" id="candidate1644178">Leah Taguba</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Southeast Electoral District</span><span class="sp-bt-title-2">, Judge Position No. 2</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=170266#cnd1643785" target="_blank"><span class="ballotname" id="candidate1643785">Matthew York</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Southeast Electoral District</span><span class="sp-bt-title-2">, Judge Position No. 3</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=177707#cnd1643437" target="_blank"><span class="ballotname" id="candidate1643437">Tricia Grove Johnson</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Southeast Electoral District</span><span class="sp-bt-title-2">, Judge Position No. 4</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=180892#cnd1643417" target="_blank"><span class="ballotname" id="candidate1643417">Corinna Harn</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Southeast Electoral District</span><span class="sp-bt-title-2">, Judge Position No. 5</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=172802#cnd1649736" target="_blank"><span class="ballotname" id="candidate1649736">Joshua C. Harris</span></a></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=172802#cnd1643395" target="_blank"><span class="ballotname" id="candidate1643395">Heather M. Barker</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Southeast Electoral District</span><span class="sp-bt-title-2">, Judge Position No. 6</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=170594#cnd1643826" target="_blank"><span class="ballotname" id="candidate1643826">Rhonda Laumann</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Southwest Electoral District</span><span class="sp-bt-title-2">, Judge Position No. 1</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=176114#cnd1643290" target="_blank"><span class="ballotname" id="candidate1643290">Brian Todd</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Southwest Electoral District</span><span class="sp-bt-title-2">, Judge Position No. 2</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=176252#cnd1644942" target="_blank"><span class="ballotname" id="candidate1644942">Andrea Samonica Jarmon</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Southwest Electoral District</span><span class="sp-bt-title-2">, Judge Position No. 3</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=181074#cnd1643657" target="_blank"><span class="withdrawncandidate ballotname" id="candidate1643657">Laurel Gibson</span></a><span class="withdrawnstatus"> Withdrawn</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=181074#cnd1650508" target="_blank"><span class="withdrawncandidate ballotname" id="candidate1650508">Quita St. John</span></a><span class="withdrawnstatus"> Withdrawn</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=181074#cnd1647005" target="_blank"><span class="ballotname" id="candidate1647005">Mitch Greene</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Southwest Electoral District</span><span class="sp-bt-title-2">, Judge Position No. 4</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=185437#cnd1643616" target="_blank"><span class="ballotname" id="candidate1643616">Fa'amomoi Masaniai, Jr.</span></a></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=185437#cnd1643480" target="_blank"><span class="ballotname" id="candidate1643480">Harry Steinmetz</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">Southwest Electoral District</span><span class="sp-bt-title-2">, Judge Position No. 5</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=183157#cnd1644762" target="_blank"><span class="withdrawncandidate ballotname" id="candidate1644762">Quita St. John</span></a><span class="withdrawnstatus"> Withdrawn</span></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=183157#cnd1650458" target="_blank"><span class="ballotname" id="candidate1650458">Noel Merfeld</span></a></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=183157#cnd1644103" target="_blank"><span class="ballotname" id="candidate1644103">Renee Walls</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">West Electoral District</span><span class="sp-bt-title-2">, Judge Position No. 1</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=171783#cnd1645071" target="_blank"><span class="ballotname" id="candidate1645071">Bardi Martin</span></a></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=171783#cnd1644810" target="_blank"><span class="ballotname" id="candidate1644810">Nyjat Rose-Akins</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">West Electoral District</span><span class="sp-bt-title-2">, Judge Position No. 2</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=172688#cnd1643734" target="_blank"><span class="ballotname" id="candidate1643734">Kuljinder K. Dhillon</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">West Electoral District</span><span class="sp-bt-title-2">, Judge Position No. 3</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=184635#cnd1643380" target="_blank"><span class="ballotname" id="candidate1643380">Rebecca Robertson</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">West Electoral District</span><span class="sp-bt-title-2">, Judge Position No. 4</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=177122#cnd1646255" target="_blank"><span class="ballotname" id="candidate1646255">Yvonne Chin</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">West Electoral District</span><span class="sp-bt-title-2">, Judge Position No. 5</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=170399#cnd1646256" target="_blank"><span class="ballotname" id="candidate1646256">Kristin Shotwell</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div>
+</div><div class="list-group pull-left candidate-list-group" id="City">
+	<div class="list-group-item active">
+		<h4 class="list-group-item-heading">
+			City
+		</h4>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">City of Seattle</span><span class="sp-bt-title-2">, Council District No. 5</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=181940#cnd1649762" target="_blank"><span class="ballotname" id="candidate1649762">Dimitri Georgakopoulos</span></a></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=181940#cnd1645863" target="_blank"><span class="ballotname" id="candidate1645863">Silas James</span></a></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=181940#cnd1643394" target="_blank"><span class="ballotname" id="candidate1643394">Julie Kang</span></a></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=181940#cnd1647380" target="_blank"><span class="ballotname" id="candidate1647380">Nilu Jenks</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">City of Seattle</span><span class="sp-bt-title-2">, Municipal Court Judge Position No. 1</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=183667#cnd1643716" target="_blank"><span class="ballotname" id="candidate1643716">Cat McDowall</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">City of Seattle</span><span class="sp-bt-title-2">, Municipal Court Judge Position No. 2</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=175811#cnd1644051" target="_blank"><span class="ballotname" id="candidate1644051">Katharine Edwards</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">City of Seattle</span><span class="sp-bt-title-2">, Municipal Court Judge Position No. 3</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=177084#cnd1646589" target="_blank"><span class="ballotname" id="candidate1646589">Pooja Vaddadi</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">City of Seattle</span><span class="sp-bt-title-2">, Municipal Court Judge Position No. 4</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=184775#cnd1644067" target="_blank"><span class="ballotname" id="candidate1644067">Anita Crawford-Willis</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">City of Seattle</span><span class="sp-bt-title-2">, Municipal Court Judge Position No. 5</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=180038#cnd1645907" target="_blank"><span class="ballotname" id="candidate1645907">Lindsay Calkins</span></a></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=180038#cnd1645751" target="_blank"><span class="ballotname" id="candidate1645751">Garmon Newsom</span></a></li><li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=180038#cnd1644911" target="_blank"><span class="ballotname" id="candidate1644911">Gabe Rothstein</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">City of Seattle</span><span class="sp-bt-title-2">, Municipal Court Judge Position No. 6</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=179887#cnd1644144" target="_blank"><span class="ballotname" id="candidate1644144">Shantrice Anderson</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div><div class="list-group-item candidatelist-div">
+		<h5 class="list-group-item-heading">
+			 <span class="sp-bt-title-1">City of Seattle</span><span class="sp-bt-title-2">, Municipal Court Judge Position No. 7</span>
+		</h5><p class="candidate-list  list-group-item-text"><ul class="ul-candidatelist">
+			<li class="li-candidate"><a class="candidate-anchor" href="who-has-filed.aspx?requesttype=filing&amp;cid=175871#cnd1646002" target="_blank"><span class="ballotname" id="candidate1646002">Damon Shadid</span></a></li>
+		</ul></p><p class="go-to-top"><a class="back-to-top">Back to top</a></p>
+	</div>
+</div></div>
+         </div>
+
+     <div id="candidatestage">
+   
+     <span id="lblelectionid">54</span> 
+      <span id="lbllanguage"></span> 
+     <span id="lblenvironment">Production</span> 
+ 
+
+
+    </div>
+
+        </div>
+    </div>
+
+
+
+
+        
+
+
+<div class="row addon-row addon-row-attached ">
+                        <div class="col-sm-12">
+                                        <div class="col-sm-12 p-x-0 p-t-lg">
+                    <div id="can-dl"></div>
+            </div>
+                        </div>
+                    </div>
+
+
+    
+        
+
+
+<div class="row addon-row  addon-row-transparent">
+                        <div class="col-sm-12">
+                            <!-- .row . full-width-row are required for formating of row -->
+<section>
+<div class="row full-width-row">
+
+  <!-- use col-sm-XX to set the column sizes of the image/overlay text and additional content -->
+  <!-- HIDE IN MOBILE -->
+  <div class="hidden-xs col-sm-6 col-xs-12">
+    <div class="dept-footer-image">
+      <div class="image-container">
+
+        <!-- Set image source here. 
+        Resize browser to test if image will work in mobile devices. 
+        -->
+        <div class="image-canvas">
+        <img src="https://www.kingcounty.gov//mpmit.kingcounty.gov/~/media/depts/elections/images/contact-box-image-jpg.ashx?la=en" width="100%" height="100%" alt="King County Elections building entrance">
+        </div>
+
+        <!-- Text for map overlay begins here -->
+        <!-- KCE should not be an H3 -->
+        <div class="image-overlay">
+          <div class="mapsTitle">King County Elections</div>
+          <address>
+            <p>919 Southwest Grady Way<br />Renton, WA 98057</p>
+          </address>
+<!-- 
+Pascal
+This button is required. 
+href link will be automatically set by JavaScript 
+-->
+<!-- 
+Kathy changed the link to Google short URL because it contained spaces 
+-->
+<!-- structurally, Get Directions should be an H2 -->
+            <h2>
+            <a href="https://goo.gl/maps/pjehv1x41x32" id="mapButton" class="btn btn-primary">Directions to Elections</a>
+            </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- This can be a column for additional contact information -->
+  <!-- changed from h5 to h3  -->
+  
+  <div class="col-sm-6 col-md-5">
+
+	<h3 class="contact-head remove-link-underline">
+        <a href="https://www.kingcounty.gov/depts/elections/about-us/contact-us">
+		<span style="color: #000 !important;">Contact Elections</span></a>
+	</h3>
+    <!-- Use media class to get proper formating of icon and text -->
+    <div class="media med-height">
+      <div class="media-body">
+        <p>
+        <strong>Email:  </strong><a href="mailto:elections@kingcounty.gov?subject=Inquiry From Elections Web Site">elections@kingcounty.gov</a>
+        </p>
+      </div>
+    </div>
+    <div class="media med-height">
+      <div class="media-body">
+        <p>
+        <strong>Phone:  </strong>
+        <a href="tel://206.296.8683">206-296-VOTE (8683)</a>
+        </p>
+      </div>
+    </div>
+    <div class="media med-height">
+      <div class="media-body">
+        <p><strong>TTY:  </strong><a href="tel://711">Relay 711</a></p>
+      </div>
+    </div>
+    <!-- EMAIL TEXT --> 
+   <div class="">
+        <p style="margin:7px 0 7px 0;">
+        <strong>Sign up for email or text notifications</strong>
+        </p>
+    <div class="input-group col-xs-12">
+      <input type="text" class="form-control" id="emailphone" placeholder="me@example.com or (000) 000-0000" title="Enter email or cellphone to receive alerts" onfocus="this.value=''">
+      <span class="input-group-btn">
+        <button class="btn btn-primary" id="emph-btn" type="button" data-toggle="modal" data-target="">&nbsp;&nbsp; Go &nbsp;&nbsp;</button>
+      </span>
+     </div><!-- input-group -->
+     </div>
+     <!-- email-text -->
+  </div>
+  <!-- COL 6 -->
+    
+  <div class="col-md-1 col-sm-6 remove-link-underline" id="social">
+          <a href="https://www.facebook.com/kcelections" title="Go to Elections on Facebook"><i class="fa fa-facebook-square fa-4x soc-foot"></i></a>
+          <a href="http://twitter.com/KCElections" title="Go to Elections on Twitter"><i class="fa fa-twitter-square fa-4x soc-foot"></i></a>
+          <a href="http://instagram.com/kcelections" title="Go to Elections on Instagram"><i class="fa fa-instagram fa-4x soc-foot"></i></a>
+          <a href="http://kcelections.com/" title="Go to Elections blog"><i class="fa fa-wordpress fa-4x soc-foot" aria-hidden="true"></i></a>
+
+    </div>
+  <!-- /. END FB TWITTER -->
+    
+    
+		<!-- #######         MOBILE MAP AND CONTACT ROW    ###### -->   
+		<!-- SHOW IN MOBILE / HIDE IN ALL OTHER SIZES-->
+  
+		<!-- use col-sm-XX to set the column sizes of the image/overlay text and additional content -->
+
+		  <div class="visible-xs col-sm-6 col-xs-12" style="margin:20px 0px; z-index:2;">
+			<div class="dept-footer-image">
+			  <div class="image-container">
+
+				<!-- Set image source here. 
+				Resize browser to test if image will work in mobile devices. 
+				-->
+				<div class="image-canvas">
+				    <img src="https://www.kingcounty.gov//mpmit.kingcounty.gov/~/media/depts/elections/images/contact-box-image-jpg.ashx?la=en" width="100%" height="100%" alt="King County Elections building entrance">
+				    </div>
+
+				<!-- Text for map overlay begins here -->
+				<div class="image-overlay">
+				  <div class="mapsTitle">King County Elections</div>
+				  <address>
+					<p>919 Southwest Grady Way<br />Renton, WA 98057</p>
+				  </address>
+					<!-- This button is required. href link will be automatically set by JavaScript -->
+					<h3>
+					<a href="http://maps.google.com/?q=King County Elections 919 Southwest Grady Way Renton, WA 98057" id="mapButton" class="btn btn-primary">Get directions</a>
+					</h3>
+				</div>
+			  </div>
+			</div>
+		  </div>
+  
+		  <!-- /. END mobile map and contact row -->
+    
+
+<!-- #######  LANGUAGES  ###### --> 
+
+    
+</div>
+</section> 
+
+<!-- /. END MAP AND CONTACT ROW -->
+
+
+<!-- BEGIN Modals -->
+   <!-- Modal1 -->
+      <div class="modal fade" id="myModal1" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Email Notifications</h4>
+            </div>
+            <div class="modal-body">
+                <p>Please confirm you wish to receive email notifications at: <b><span class="jcontent"></span></b></p>
+            </div>
+            <div class="modal-footer"> 
+                <form name="govdelivery" action="https://public.govdelivery.com/accounts/WAKING/subscribers/qualify?qsp=WaKing_15" method="post">
+                    <input type="hidden" id="subscription_type" name="subscription_type" value="email">
+                    <!--div class="input-group"-->
+                     <input type="hidden" id="emailIn" name="email" class="form-control">
+                    <span class="input-group-btn">
+                    <button type="submit" value="submit" name="commit" class="btn btn-primary">Confirm</button>
+                    
+                    <!--/div-->
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    </span>
+                    </form>
+                
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- /. END myModal1-->
+
+
+    <!-- Modal2 -->
+      <div class="modal fade" id="myModal2" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Mobile Text Notifications</h4>
+            </div>
+            <div class="modal-body">
+              <p>Please confirm you wish to receive text notifications at: <b><span id="jcontent" class="jcontent"></span></b></p>
+            </div>
+            <div class="modal-footer"> 
+            
+            <form name="govdelivery" action="https://public.govdelivery.com/accounts/WAKING/subscribers/qualify?qsp=WaKing_15" method="post">
+    <input type="hidden" id="country_code" name="country_code" value="1">
+    <input type="hidden" id="subscription_type" name="subscription_type" value="phone">
+                <!-- div class="input-group" -->
+                <input type="hidden" id="phone" name="phone" class="form-control" value="">
+                <span class="input-group-btn">
+                <button type="submit" value="submit" name="commit" class="btn btn-primary">Confirm</button>
+              
+                <!--/div-->
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    </span>
+                </form>
+            </div>
+            <!-- /. END modal footer -->
+          </div>
+		  <!-- /. END modal content -->
+        </div>
+        <!-- /. END modal dialog -->
+      </div>
+      <!-- /. END myModal2-->
+      
+
+      <!-- Modal3 -->
+      <div class="modal fade" id="myModal3" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Sorry...</h4>
+            </div>
+            <div class="modal-body">
+              <p>You must enter a valid Phone Number or Email Address</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+        </div>
+        <!-- /. END myModal3 -->
+        
+        
+<!-- /. END ALL modals-->
+                        </div>
+                    </div>
+
+
+    
+        
+
+
+<div class="row addon-row addon-row-attached addon-row-transparent">
+                        <div class="col-sm-12">
+                            <!-- #######  LANGUAGES  ###### -->
+<!--  HIDES IN MOBILE -->
+<div class="col-sm-12  m-t-md m-l-0 p-l-0 hidden-xs">
+<span style="font-size: 20px; font-weight: 600;"><span class="fa fa-language" aria-hidden="true"></span> Languages:</span>
+<span class="lang-text"><mark class="space"></mark>
+<a href="https://www.kingcounty.gov/depts/elections/chinese.aspx">中文 (Chinese)</a><mark class="space"></mark>|<mark class="space"></mark>
+<a href="https://www.kingcounty.gov/depts/elections/korean.aspx">한국어  (Korean)</a><mark class="space"></mark>|<mark class="space"></mark>
+<a href="https://www.kingcounty.gov/depts/elections/russian.aspx">Русский (Russian)</a><mark class="space"></mark>|<mark class="space"></mark>
+<a href="https://www.kingcounty.gov/depts/elections/somali.aspx">Soomaali (Somali)</a><mark class="space"></mark>|<mark class="space"></mark>
+<a href="https://www.kingcounty.gov/depts/elections/spanish.aspx">Espa&ntilde;ol (Spanish)</a><mark class="space"></mark>|<mark class="space"></mark>
+<a href="https://www.kingcounty.gov/depts/elections/vietnamese.aspx">Tiếng Việt (Vietnamese)</a>
+</span>
+</div>
+<!--  VISIBLE IN MOBILE -->
+<div class="col-sm-12 m-t-lg visible-xs" style="line-height:3em; z-index:1;">
+<span style="font-size: 20px; font-weight: 600;"><span class="fa fa-language" aria-hidden="true"></span> Languages:</span>
+<span class="lang-text">
+<br />
+<a href="https://www.kingcounty.gov/depts/elections/chinese.aspx">中文 (Chinese)</a>
+<br />
+<a href="https://www.kingcounty.gov/depts/elections/korean.aspx">한국어  (Korean)</a>
+<br />
+<a href="https://www.kingcounty.gov/depts/elections/russian.aspx">Русский  (Russian)</a>
+<br />
+<a href="https://www.kingcounty.gov/depts/elections/somali.aspx">Soomaali (Somali)</a>
+<br />
+<a href="https://www.kingcounty.gov/depts/elections/spanish.aspx">Espa&ntilde;ol (Spanish)</a>
+<br />
+<a href="https://www.kingcounty.gov/depts/elections/vietnamese.aspx">Tiếng Việt (Vietnamese)</a>
+</span>
+</div>
+                        </div>
+                    </div>
+
+
+    
+
+
+
+<div class="row addon-row addon-row-transparent main-share-links">
+                <div class="col-sm-12">
+                    <ul class="list-inline">
+                        <li id="LastUpdate">Last Updated May 6, 2024 &nbsp; &nbsp;</li>
+                        <li class="clearfix visible-xs"></li>
+                        <li class="hidden-print"><a id="facebook-share-button" href="#" class="btn btn-default" rel="nofollow"><span class="fa fa-facebook-square"></span>&nbsp;Share</a></li>
+                        <li class="hidden-print"><a id="twitter-share-button" href="#" class="btn btn-default" rel="nofollow"><span class="fa fa-twitter"></span>&nbsp;Tweet</a></li>
+                        <li class="hidden-print"><a id="email-share-button" href="#" class="btn btn-default" rel="nofollow"><span class="fa fa-envelope"></span>&nbsp;Email</a></li>
+                        <li class="hidden-print"><a id="print-share-button" href="#" class="btn btn-default" rel="nofollow"><span class="fa fa-print"></span>&nbsp;Print</a></li>
+                    </ul>
+                </div>
+            </div>
+
+</div>
+
+        </div>
+    </div>
+</div>
+</div><footer class='footer hidden-print' id="footer">
+        <div id="footer-nav-limit"></div>
+        <div id="sticky-footer"  class="hidden-xs hidden-sm">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <p class="h4">
+                            <a href="#footer-nav">Information for...</a>
+                        </p>
+                    </div>
+                    <div class="col-sm-3">
+                        <p class="h4">
+                        <a href="#footer-nav">Do more online</a>
+                        </p>
+                    </div>
+                    <div class="col-sm-3">
+                        <p class="h4">
+                            <a href="#footer-nav">Get help</a>
+                        </p>
+                    </div>
+                    <div class="col-sm-3">
+                        <p class="h4">
+                            <a href="#footer-nav">Espa&ntilde;ol</a>
+                        </p>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+        <div id="footer-nav">
+            <div class="container">
+                <div class="row" >
+                    <div class="col-sm-3">
+                        <h4>Information for
+                            <span class="pull-right fa fa-plus visible-xs"></span>
+                        </h4>
+                        <ul class="list-unstyled collapse in">                            
+                            <li><a href="https://www.kingcounty.gov/audience/residents">Residents</a> </li>
+                            <li><a href="https://www.kingcounty.gov/audience/businesses">Businesses</a> </li>
+                            <li><a href="https://www.kingcounty.gov/audience/employees/careers">Job seekers</a> </li>
+                            <li><a href="https://www.kingcounty.gov/audience/volunteers">Volunteers</a> </li>
+                            <li><a href="https://www.kingcounty.gov/audience/employees">King County employees</a> </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+                        <h4>Do more online
+                            <span class="pull-right fa fa-plus visible-xs"></span>
+                        </h4>
+                        <ul class="list-unstyled collapse in"> 
+                            <li><a href="https://www.kingcounty.gov/tools/trip-planner">Trip Planner</a></li>
+                            <li><a href="https://www.kingcounty.gov/depts/finance-business-operations/treasury/property-tax.aspx">Property tax information &amp; payment</a></li>
+                            <li><a href="https://www.kingcounty.gov/tools/inmate-lookup">Jail inmate look up</a></li>
+                            <li><a href="https://www.kingcounty.gov/tools/parcel-viewer">Parcel viewer or iMap</a></li>
+                            <li><a href="https://www.kingcounty.gov/tools/public-records">Public records</a></li>                               
+                            <li><a href="https://www.kingcounty.gov/how-do-i.aspx#do-more-online-tab"><em>More online tools...</em></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+                        <h4>
+                            Get help <span class="pull-right fa fa-plus visible-xs"></span>
+                        </h4>
+                        <ul class="list-unstyled collapse in"> 
+							<li><a href="https://www.kingcounty.gov/tools/contact-us">Contact us <span class="fa fa-envelope"></span></a></li>
+                            <li><a href="https://www.kingcounty.gov/elected/executive/customer-service">Customer service</a> </li>
+							<li><a href="https://www.kingcounty.gov/about/contact-us/phone-directory.aspx">Phone list</a></li>
+							<li><a href="https://www.kingcounty.gov/tools/staff-directory">Employee directory</a> </li>
+                            <!--<li><a href="https://www.kingcounty.gov/tools/report-problem">Report a problem</a> </li>-->
+                            <li><a href="https://www.kingcounty.gov/tools/subscribe-to-alerts">Subscribe to alerts <span class="fa fa-exclamation-triangle"></span></a></li>
+                            <!--<li class="visible-xs"><a href="https://www.surveymonkey.com/s/kcwebfeedback">Website Feedback</a></li>-->
+                        </ul>
+                    </div>
+                   <div class="col-sm-3">
+                        <h4>
+                            Languages<span class="pull-right fa fa-plus visible-xs"></span>
+                        </h4>
+                        <ul class="list-unstyled collapse in"> 
+							<li><a href="https://www.kingcounty.gov/languages/spanish">En Espa&ntilde;ol</a></li>
+                            
+                        </ul>
+                    </div>                </div>
+            </div>
+        </div>
+        <!--<div id="footer-social-bar">-->
+<!--<div class="survey-link hidden-xs"><a href="https://www.surveymonkey.com/s/kcwebfeedback" class="btn btn-success btn-lg"><span class="hidden-sm ">Website </span>Feedback</a></div>-->
+            <!--<div class="container">
+                <div class="row">
+                    <ul class="list-inline">
+                        <li class="hidden-xs">Stay connected!</li>
+                        <li class="hidden-xs"><a onClick="ga('send', 'event', 'social footer', 'click', 'kc social link footer');" href="https://www.kingcounty.gov/about/news/social-media">View King County social media</a> </li>
+                        <li><a onClick="ga('send', 'event', 'social footer', 'click', 'facebook footer');" href="//www.facebook.com/KingCountyWA" title="King County Facebook"><span class="fa fa-facebook-square" aria-hidden="true"></span><span class="sr-only">King County Facebook</span></a></li>
+                        <li><a onClick="ga('send', 'event', 'social footer', 'click', 'twitter footer');" href="//www.twitter.com/KingCountyWA" title="King County Twitter"><span class="fa fa-twitter-square" aria-hidden="true"></span><span class="sr-only">King County Twitter</span></a></li>                     
+						<li><a onClick="ga('send', 'event', 'social footer', 'click', 'linkedin footer');" href="//www.linkedin.com/company/king-county" title="King County Linked In"><span class="fa fa-linkedin-square" aria-hidden="true"></span><span class="sr-only">King County Linked In</span></a></li>
+						
+                    </ul>
+                </div>
+            </div>
+        </div>-->
+        <div id="footer-legal">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <a href="https://www.kingcounty.gov/" title="King County Home">
+                            <img id="footer-legal-logo" class="img-responsive" src="https://www.kingcounty.gov/img/horiz_transbg.gif" alt="footer logo"></a>
+                    </div>
+                    <div class="col-sm-8">
+                        <ul class="list-unstyled list-inline">
+                            <li>© King County, WA <script>document.write(new Date().getFullYear())</script></li>
+                            <li><a href="https://www.kingcounty.gov/about/website/privacy" title="Privacy Statement">Privacy </a></li>
+                            <li><a href="https://www.kingcounty.gov/about/website/accessibility">Accessibility </a></li>
+                            <li><a href="https://www.kingcounty.gov/about/website/termsofuse">Terms of use</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<!-- Javascript files -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://www.kingcounty.gov/js/main.js"></script>
+<!--set the background image-->
+<script>$(window).on("resize", function () { chooseBG("https://www.kingcounty.gov//mpmit.kingcounty.gov/~/media/global/heroimages/elections/hero-ballots-1-sm.ashx", "https://www.kingcounty.gov//mpmit.kingcounty.gov/~/media/global/heroimages/elections/hero-ballots-1-lg.ashx", "https://www.kingcounty.gov//mpmit.kingcounty.gov/~/media/global/heroimages/elections/hero-ballots-1-xlg.ashx") }).resize();</script>
+
+<!--CustomScriptBlock-->
+<script src="//www.kingcounty.gov//www.kingcounty.govhttps://www.kingcounty.gov//mpmit.kingcounty.gov/~/media/depts/elections/app-scripts/who-has-filed.js"></script>
+
+<script>
+
+$('#cnd1643538 .cdetail-email').prev('br').remove();
+
+$('#emailphone').parent().parent().hide();
+
+
+ $( "#pnlcandycontactinfo" ).prev().hide();
+//$('#pnlPCO').children().first().text('Precinct Committee Officers (PCO) who have filed:');
+
+var curreid = $('#lblelectionid').text();
+
+//alert (curreid);
+
+ if (curreid=='32')
+{
+/*
+$( "<p>Test</p>" ).insertAfter( ".inner" );
+$( "<p><a href='https://kingcounty.gov//editstaging.kingcounty.govhttps://www.kingcounty.gov//mpmit.kingcounty.gov/~/media/depts/elections/for-candidates/csvs/2022-candidates'>Download candidate filing list <span class='fa fa-file-excel-o'></span></a></p>" ).insertAfter( ".dv-specialnotes" ); */
+
+//$("<p><a>Download candidate filing list <span class="fa fa-file-excel-o"></span></a></p>" ).insertAfter( ".dv-specialnotes" );
+
+}
+
+
+if (curreid=='16')
+{
+
+$( "<p>Test</p>" ).insertAfter( ".inner" );
+$( "<p><a href='https://kingcounty.govhttps://www.kingcounty.gov//mpmit.kingcounty.gov/~/media/depts/elections/for-candidates/csvs/2019-candidates'>Download candidate filing list <span class='fa fa-file-excel-o'></span></a></p>" ).insertAfter( ".dv-specialnotes" );
+//$("<p><a>Download candidate filing list <span class="fa fa-file-excel-o"></span></a></p>" ).insertAfter( ".dv-specialnotes" );
+}
+
+if (curreid=='26')
+{
+
+$( "<p>Test</p>" ).insertAfter( ".inner" );
+$( "<p><a href='https://kingcounty.govhttps://www.kingcounty.gov//mpmit.kingcounty.gov/~/media/depts/elections/for-candidates/csvs/2021-candidates'>Download candidate filing list <span class='fa fa-file-excel-o'></span></a></p>" ).insertAfter( ".dv-specialnotes" );
+//$("<p><a>Download candidate filing list <span class="fa fa-file-excel-o"></span></a></p>" ).insertAfter( ".dv-specialnotes" );
+}
+//$('#lblelectiontitle').text('2025 candidate filing');
+
+
+$(".cdetail-webaddress a").each(function() {
+   var $this = $(this);       
+   var _href = $this.attr("href"); 
+   $this.attr("href", 'http://' + _href);
+});
+
+ var x = $('#lblelectiontitlewhf').text();
+            if (x != '')
+            {
+                $("ol.breadcrumb  li:last").html(x);
+            }
+
+
+
+
+            if (x == '')
+            {
+   x = $('#lblelectiontitlecc').text();
+                $("ol.breadcrumb  li:last").html(x);
+            }
+         
+
+
+   
+
+    $(".nav-wrap").prependTo( $(".main-breadcrumb-row" ) );
+
+$("#ddldistricts").on("click", function () {
+        onddlClick();
+    });
+
+$("#ddldistricts").on("change", function () {
+        onddlChange();
+    });
+var prevddlIndex = "";
+
+function onddlChange() {
+
+    var currIndex = document.getElementById("ddldistricts").selectedIndex;
+
+    if (currIndex > 0) {
+        if (prevddlIndex != currIndex) {
+            window.location = '#' + ddldistricts.options[ddldistricts.selectedIndex].value;
+            prevddlIndex = currIndex;
+        }
+        else {
+            prevddlIndex = "";
+        }
+    }
+    currIndex.selectedIndex = 0;
+    history.pushState("", document.title, window.location.pathname + window.location.search);
+}
+
+var prevIndex = "";
+
+function onddlClick() {
+
+    var currIndex = document.getElementById("ddldistricts").selectedIndex;
+
+    if (currIndex > 0) {
+        if (prevIndex != currIndex) {
+            window.location = '#' + ddldistricts.options[ddldistricts.selectedIndex].value;
+            prevIndex = currIndex;
+        }
+        else {
+            prevIndex = "";
+        }
+    }
+    currIndex.selectedIndex = 0;
+    history.pushState("", document.title, window.location.pathname + window.location.search);
+}
+ 
+/*
+var prevddlIndex = "";
+
+function onddlClick() {
+
+    var currIndex = document.getElementById("ddldistricts").selectedIndex;
+
+    if (currIndex > 0) {
+        if (prevddlIndex != currIndex) {
+            window.location = '#' + ddldistricts.options[ddldistricts.selectedIndex].value;
+            prevddlIndex = currIndex;
+        }
+        else {
+            prevddlIndex = "";
+        }
+    }
+    currIndex.selectedIndex = 0;
+    history.pushState("", document.title, window.location.pathname + window.location.search);
+}
+
+
+var prevIndex = "";
+
+function onSelect() {
+
+    var currIndex = document.getElementById("ddldistricts").selectedIndex;
+
+    if (currIndex > 0) {
+        if (prevIndex != currIndex) {
+            window.location = '#' + ddldistricts.options[ddldistricts.selectedIndex].value;
+            prevIndex = currIndex;
+        }
+        else {
+            prevIndex = "";
+        }
+    }
+    currIndex.selectedIndex = 0;
+    history.pushState("", document.title, window.location.pathname + window.location.search);
+}
+*/
+
+$(".back-to-top").bind('click', function (e) {
+
+    e.preventDefault();
+    $('html,body').animate({ scrollTop: $("body").offset().top }, 'slow');
+});
+
+</script>
+
+</body></html>

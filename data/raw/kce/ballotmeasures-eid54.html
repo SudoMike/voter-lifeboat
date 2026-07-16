@@ -1,0 +1,1664 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="kcmasterpageversion" content="2.1.1.0 G">
+    <meta charset="utf-8">
+    <title>Ballot measures - King County</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="Description" content="">
+    <meta name="page-owner" content="">
+    <meta name="Keywords" content="">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+
+    <!-- CustomHead-->
+    <!-- new for https as of Nov. 2017 2020   -->
+<meta name="google-site-verification" content="rwhzuKCXAYDyl8Xg8o1NssFX7YZmw4QzJFenSThaUck" />
+
+
+
+<meta property="og:url"                content="https://www.kingcounty.gov/depts/elections.aspx" />
+<meta property="og:type"               content="website" />
+<meta property="og:title"              content="King County Elections" />
+<meta property="og:description"        content="Led by Director Julie Wise, King County Elections conducts accurate, secure, and accessible elections for King County's over 1.4 million registered voters." />
+<meta property="og:image"              content="https://kingcounty.govhttps://www.kingcounty.gov//mpmit.kingcounty.gov/~/media/depts/elections/images/voting.ashx?la=en" />
+
+<meta name="twitter:card"      content="summary_large_image" />
+<meta name="twitter:site"       content="@kcelections" />
+<meta name="twitter:title"       content="King County Elections home page" />
+<meta name="twitter:image"   content="https://kingcounty.govhttps://www.kingcounty.gov//mpmit.kingcounty.gov/~/media/depts/elections/rotator-images/767x598-woman-on-laptop.jpg" />
+<meta name="twitter:alt"         content="woman on laptop" />
+
+
+<!-- KCE specific styles 
+<link rel="stylesheet" type="text/css" href="https://aqua.kingcounty.gov/elections/scripts/css/elections-styles.css">
+ 
+<link rel="stylesheet" type="text/css" href="https://dnsyoqmi596me.cloudfront.net/custom-chatbot-style.css">
+-->
+<style>
+
+.space {margin-left: 1%; background-color:transparent;}
+.dv-main {background-color: #FFFFFF ;margin-top:-25px !important}
+
+.dv-floating-content-box {background-color:#264d5e !important;color:white !important;padding:15px !important;}
+
+#kc-home-col-box2a {padding-top:15px !important;}
+
+
+</style>
+
+
+<style>
+
+/* #app-measure-detail-ballot-title p { margin:0 } */
+
+#bmstage1{padding-top:20px}
+
+
+  #app-measure-detail-title table{ margin-bottom: 15px}
+
+  #app-measure-detail-title tr, #app-measure-detail-title   td {
+    border:1px solid black; padding:5px
+}
+
+#app-measure-detail-description table {
+    border-collapse: collapse;
+}
+
+#app-measure-detail-description table, #app-measure-detail-description table th, #app-measure-detail-description table td {
+   border: 1px solid black;
+}
+
+  #app-measure-detail-description table th, #app-measure-detail-description table td {
+   padding: 5px; text-align: center;
+}
+
+ 
+
+/*
+.mr-900071 {
+    border-collapse: collapse;
+}
+
+.mr-900071, .mr-900071 th, .mr-900071 td {
+    border: 1px solid black;
+}
+
+.mr-900071 td, .mr-900071 th{ padding: 5px; text-align: center; }*/
+
+#pnluseraddon{padding-bottom:15px;}
+.fa-external-link { padding:5px; }
+.caret { /* padding-left:15px; */}
+#dropdownMenu1 {background-color:white !important;}
+
+#bm-dropdown .btn-group{ padding-bottom:10px;  float:left }
+
+.bm-accordion-header-open{background-color:#4c4943 !important; color:white !important}
+
+.bm-accordion-header-close{background-color:white !important; color:#4c4943 !important;}
+.app-external-link-icon:after{    
+   /* font-family: 'FontAwesome';
+    content: '\f08e';*/
+    margin:0 0px 0 3px; 
+}
+/* #bm-anchor-first-minus{background-color:#4c4943; color:white } */
+.first-plus:after{    
+   font-family: 'FontAwesome';
+    content: '\f067';
+    margin:0 0px 0 0px; 
+}
+.first-minus:after {    
+   font-family: 'FontAwesome';
+    content: '\f068';
+    margin:0 5px 0 -15px; 
+}
+#textofresolution p:after{  
+  
+   /* font-family: 'FontAwesome';
+   content: '\f1c1';
+ 
+    margin:0 0px 0 10px;  */
+} 
+.inner a:after{ }
+.app-pdf-icon {/*  padding-left:-300px;*/ }
+.inner p:after{  
+  
+   /* font-family: 'FontAwesome';
+   content: '\f1c1'; */
+ 
+    margin:0 10px 0 5px;  
+} 
+#myCurrentMeasures  li {padding-top:2px !important;  padding-bottom:2px  !important;  }
+ul.inner  li  {  border:0px solid black !important; padding:2px !important; }
+
+#measurestage{display:none }
+
+.nav-pills 
+{
+    margin-bottom: -20px !important;
+}
+ 
+#active-measure-tab a 
+
+{color: white;
+  background-color: #264d5e;
+
+}
+#LastUpdate 
+
+{visibility: hidden;
+
+}
+
+.tab-pane {
+    border-width:0 !important;
+ 
+}
+
+
+div#app-page-header .page-header {margin-top:-20px; display:block !important;}
+
+#app-maincontent {     }
+
+.nav-wrap, .nav-wrap-home{
+     
+    top: 40px !important;
+    
+    left: -1px;
+     
+}
+.call-out-text {  width:100%; float:left}
+
+.float-left, .panel-accordion-inverse{ width:100%; float:left}
+.app-measure-options {   list-style-type:none}
+/*
+.app-measure-options li:before {    
+   font-family: 'FontAwesome';
+    content: '\f096';
+    margin:0 5px 0 -15px; 
+} */
+.app-down-arrow {/* padding-left:20px; */}
+.app-down-arrow:before {  
+  /*
+    font-family: 'FontAwesome';
+    content: '\f078';
+ 
+    margin:0 5px 0 -15px;  */
+} 
+
+ .breadcrumb>li:nth-child(n+3):before
+  { display:inline !important; }
+
+   .breadcrumb>li:nth-last-child(1)
+    {/* display:none; */}
+
+.list-group > li {
+    line-height: 1.5em !important;
+    /*margin: -1px 5px;*/
+
+}
+
+
+
+ 
+.hide-me{display: none; }
+.show-me{ display: block;}
+ 
+
+          .bm-ballotitleone {padding-top:20px;}
+            #app-version  { display:none }
+       .fa-file-pdf-o{    
+
+          /* font-family: 'FontAwesome';
+   content: '\f1c1';
+ */
+    padding:5px;  
+     
+}
+
+       #bm-dropdown { padding-bottom:10px;  float:left }
+        .district-type-header , .district-type-subheader {background-color:#264D5E; color:white;   }
+      .district-type-header h2 ,h3 {
+            margin: 3px 0 3px 0; color:white; 
+        }
+      .measurelist-top-div{border:1px solid black;   padding:.01px}
+      .measurelist-div{ padding:0 0 20px 20px;margin-bottom:10px; }
+       #app-measure-detail-ballot-title{font-weight:bold}
+
+        #pnlelctionInfo  .page-header {  
+           display:inline;
+           padding-top: 0px; 
+       }
+
+      
+       .list-group {
+           width: 100%;
+       }
+         .list-group div{
+           width: 100%;
+       }
+       #bm-dropdown li{border:0px solid black !important}
+        .go-to-top {text-align: right;padding:0 10px 10px 0px}
+       .back-to-top  { cursor: pointer; }
+
+ .page-header  {display: none;}  
+</style>
+            
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.kingcounty.gov/favicon.ico">
+    <link rel="stylesheet" href="https://www.kingcounty.gov/css/kc-theme-Corporate.css">   
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,600,700,800,400" rel="stylesheet" type="text/css">
+    <script src="https://www.kingcounty.gov/js/vendor/kc-analytics.js"></script>
+    <script src="https://www.kingcounty.gov/js/vendor/modernizr-latest.js"></script>   
+</head>
+
+  <body>
+<!-- Global Alert Goes Here -->
+    
+<!-- End Global Alerts -->
+
+<header class="hidden-print">
+    <div id="navbar-bg"></div>
+    <!--Lg and md navbar-->
+    <div id="nav-lg" class="container hidden-sm hidden-xs">
+        <div class="row">
+            <div id="nav-left-lg">
+                <div id="logo-wrapper"><a href="https://www.kingcounty.gov/">
+                    <img id="kc-logo" src="https://www.kingcounty.gov/img/KClogo-horiz-black-lg.gif" alt="King County Logo" class="img-responsive" /></a></div>
+            </div>
+            <!-- /#nav-logo-lg -->
+            <div id="nav-right-lg">
+                <div class="row">
+                    <div id="lg-search-wrapper" class="navbar-right">
+                        <form role="form" accept-charset="UTF-8" action="//www.kingcounty.gov/search" method="get" class="search-form">
+                            <label for='lg-search-input' class="sr-only">Search kingcounty.gov</label>
+                            <input name="utf8" type="hidden" value="✓">
+                            <input name="query" id="lg-search-input" placeholder="Search Kingcounty.gov" type="search" class="form-control search-form-text">
+                            <button type="submit" class="btn btn-link search-form-btn"><span class="sr-only">Search KingCounty.gov</span><span class="fa fa-search"></span></button>
+                        </form>
+                    </div>
+                    <!-- /#lg-search-wrapper -->
+                </div>
+                <!-- /.row-->
+                <div class="row">
+                    <nav id="navbar-full" role="navigation" class="navbar yamm navbar-inverse">
+                        <ul class="nav navbar-nav pull-right">
+                            <li><a href="https://www.kingcounty.gov/" class="nav-header bold"><span class=""><span id="full-home-text">Home</span><span class="fa fa-home"></span></span></a></li>
+                            <li class="dropdown yamm-fw">
+                                <a href="https://www.kingcounty.gov/how-do-i" data-toggle="dropdown" class="dropdown-toggle disabled nav-header bold"><span class="">How do I...</span> <span class="fa fa-caret-down"></span></a>
+                                <ul class="dropdown-menu">
+    <li>
+    <div class="yamm-content">
+    <div class="row">
+    <div class="col-sm-12">
+    <div class="call-out-text call-out-text-default"><span class="fa fa-exclamation-circle fa-color-danger" aria-hidden="true"></span> Many King County services are continually adapting because of the COVID-19 pandemic. Each agency will update its pages with current information.</div>
+    </div>
+    <div class="col-md-4">
+    <ul class="list-unstyled">
+        <li class="nav-title">Apply for</li>
+        <li><a href="https://www.kingcounty.gov/depts/local-services/permits.aspx">Permits</a></li>
+        <li><a href="https://www.kingcounty.gov/audience/employees/careers.aspx">Jobs at King County</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/regional-animal-services/license-your-pet/purchase-renew-license.aspx">Pet license</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/services/business/licenses.aspx">Business license</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/depts/records-licensing/recorders-office/marriage-licensing.aspx">Marriage license</a></li>
+        <li><a class="toggle-hidden-links" href="#"><span class="fa fa-ellipsis-h"></span></a></li>
+    </ul>
+    <ul class="list-unstyled">
+        <li class="nav-title">Attend</li>
+        <li><a href="https://www.kingcounty.gov/how-do-i/jury-duty.aspx">Jury duty</a></li>
+    </ul>
+    <ul class="list-unstyled">
+        <li class="nav-title">Do business with King County</li>
+        <li><a href="https://www.kingcounty.gov/depts/finance-business-operations/procurement/for-business/register.aspx">Register as a supplier</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/finance-business-operations/procurement.aspx">View bid &amp; contract opportunities</a></li>
+        <li class="hidden-link"><a href="https://kingcounty.diversitycompliance.com/">Find certified small business contractors and suppliers</a></li>
+        <li><a class="toggle-hidden-links" href="#"><span class="fa fa-ellipsis-h"></span></a></li>
+    </ul>
+    <ul class="list-unstyled">
+        <li class="nav-title">Look up</li>
+        <li><a href="https://www.kingcounty.gov/tools/what-do-i-do-with.aspx">Recycle: What do I do with?</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/sheriff/sex-offender-search.aspx">Sex offenders</a></li>
+        <li><a href="https://blue.kingcounty.com/Assessor/eRealProperty/default.aspx">Property values</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/independent/forecasting.aspx">Economic forecast</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/depts/elections/results.aspx">Election results</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/depts/finance-business-operations/treasury/property-tax.aspx">Property taxes</a></li>
+        <li><a class="toggle-hidden-links" href="#"><span class="fa fa-ellipsis-h"></span></a></li>
+    </ul>
+    </div>
+    <div class="col-md-4">
+    <ul class="list-unstyled">
+        <li class="nav-title">File</li>
+        <li><a href="https://www.kingcounty.gov/courts/clerk/documents/file.aspx">Superior Court documents</a></li>
+    </ul>
+    <ul class="list-unstyled">
+        <li class="nav-title">Get around</li>
+        <li><a href="https://www.kingcounty.gov/tools/trip-planner.aspx">Plan a bus trip</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/transportation/metro/travel-options/bike.aspx">Travel by bike</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/transportation/metro/schedules-maps.aspx">Find a bus schedule</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/depts/transportation/metro/travel-options/parking.aspx">Find a park &amp; ride</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/depts/transportation/metro/travel-options/rideshare/programs/carpool.aspx">Explore carpooling options</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/depts/transportation/water-taxi.aspx">Take a water taxi</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/depts/transportation/metro/travel-options/accessible/programs.aspx">Find senior transportation</a></li>
+        <li><a class="toggle-hidden-links" href="#"><span class="fa fa-ellipsis-h"></span></a></li>
+    </ul>
+    <ul class="list-unstyled">
+        <li class="nav-title">Help for</li>
+        <li><a href="https://www.kingcounty.gov/how-do-i/domestic-violence.aspx">Domestic violence</a></li>
+        <li><a href="https://www.kingcounty.gov/services/police-safety.aspx">Emergencies</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/community-human-services/mental-health-substance-abuse/services/crisis-services.aspx">Crisis</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/depts/community-human-services/housing/services/homeless-housing.aspx">Homeless</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/depts/assessor/TaxpayerAssistance/TaxRelief.aspx">Property tax relief</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/services/rural-services/rural.aspx">Rural residents</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/depts/community-human-services/veterans.aspx">Veterans</a></li>
+        <li><a class="toggle-hidden-links" href="#"><span class="fa fa-ellipsis-h"></span></a></li>
+    </ul>
+    <ul class="list-unstyled">
+        <li class="nav-title">Locate</li>
+        <li><a href="//gismaps.kingcounty.gov/ParkFinder/">Parks</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/health/locations.aspx">Public health clinics</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/local-services/roads/road-closures.aspx">Road projects</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/depts/local-services/roads/bicycles.aspx">Bike routes</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/depts/finance-business-operations/treasury/foreclosure.aspx">Foreclosures</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/services/parks-recreation/parks/trails.aspx">Hiking &amp; biking trails</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/tools/inmate-lookup.aspx">Jail inmate</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/tools/parcel-viewer.aspx">Property</a></li>
+        <li><a class="toggle-hidden-links" href="#"><span class="fa fa-ellipsis-h"></span></a></li>
+    </ul>
+    </div>
+    <div class="col-md-4">
+    <ul class="list-unstyled">
+        <li class="nav-title">Pay for</li>
+        <li><a href="https://www.kingcounty.gov/depts/health/vital-statistics/birth.aspx">Birth certificate</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/finance-business-operations/treasury/property-tax.aspx">Pay or look up property taxes</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/records-licensing/recorders-office/marriage-licensing.aspx">Marriage certificate</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/depts/records-licensing/recorders-office/fees.aspx">Deed</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/depts/health/vital-statistics/death.aspx">Death certificate</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/depts/records-licensing/recorders-office/fees.aspx">Title certificate</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/services/environment/wastewater/capacity-charge.aspx">Sewage treatment capacity charge</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/payinvoices">Invoice</a></li>
+        <li><a class="toggle-hidden-links" href="#"><span class="fa fa-ellipsis-h"></span></a></li>
+    </ul>
+    <ul class="list-unstyled">
+        <li class="nav-title">Register or request</li>
+        <li><a href="https://public.govdelivery.com/accounts/WAKING/subscriber/new">Email or text alerts</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/elections/how-to-vote/register-to-vote.aspx">To vote</a></li>
+        <!--<li><a href="https://www.kingcounty.gov/depts/risk-management/public-records-program.aspx">Public records</a></li>-->
+        <li><a href="https://www.kingcounty.gov/services/licenses-permits-records/records/public-records-requests.aspx">Public records</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/services/business/licenses.aspx">Your business with King County</a></li>
+        <li><a class="toggle-hidden-links" href="#"><span class="fa fa-ellipsis-h"></span></a></li>
+    </ul>
+    <ul class="list-unstyled">
+        <li class="nav-title">Report</li>
+        <li><a href="https://www.kingcounty.gov/depts/sheriff/on-line-reporting/on-line-reporting.aspx">Crime</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/dnrp/solid-waste/programs/litter-dumping/report-dumping.aspx">Illegal dumping</a></li>
+        <li><a href="https://www.kingcounty.gov/elected/executive/equity-social-justice/civil-rights/civil-rights-complaint.aspx">Discrimination complaint</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/depts/health/environmental-health/food-safety/inspection-system/complaints.aspx">Unsafe food handling</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/depts/dnrp/wtd/response.aspx">Septic or sewer problem</a></li>
+        <li class="hidden-link"><a href="https://www.kingcounty.gov/tools/contact-us.aspx">Other problems or complaints</a></li>
+        <li><a class="toggle-hidden-links" href="#"><span class="fa fa-ellipsis-h"></span></a></li>
+    </ul>
+    <ul class="list-unstyled">
+        <li class="nav-title">Do more online</li>
+        <li><a href="https://www.kingcounty.gov/tools/trip-planner.aspx">Metro Trip Planner</a></li>
+        <li><a href="https://www.kingcounty.gov/tools/parcel-viewer.aspx">Parcel viewer property information</a></li>
+        <li><a href="https://www.kingcounty.gov/tools/inmate-lookup.aspx">Jail inmate lookup</a></li>
+        <li><a class="btn btn nav-dropdown-btn btn-block" href="https://www.kingcounty.gov/how-do-i.aspx">More tasks</a></li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    </li>
+</ul>
+                            </li>
+                            <li class="dropdown yamm-fw">
+                                <a href="https://www.kingcounty.gov/services" data-toggle="dropdown" class="dropdown-toggle disabled nav-header bold"><span class="">Services</span> <span class="fa fa-caret-down"></span></a>
+                                <ul class="dropdown-menu">
+                                        <li>
+                                            <div class="yamm-content">
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <div class="call-out-text call-out-text-default"><span class="fa fa-exclamation-circle fa-color-danger" aria-hidden="true"></span> With restrictions about COVID-19 rapidly changing, please check with individual departments to be sure a building is open before you seek in-person service. Also, some downtown buildings are not open to the public due to a project to close the Administration Building and relocate the agencies affected. This project will continue at least through the end of 2021.</div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="https://www.kingcounty.gov/services/animals-pets">Animals &amp; pets</a></li>
+                                                            <li><a href="https://www.kingcounty.gov/services/arts-culture">Arts &amp; culture</a></li>
+                                                            <li><a href="https://www.kingcounty.gov/depts/health/vital-statistics.aspx">Birth &amp; death records</a></li>
+                                                            <li><a href="https://www.kingcounty.gov/services/business">Business</a></li>
+                                                            <li><a href="https://www.kingcounty.gov/services/codes-laws">Codes &amp; laws</a></li>
+                                                            <li><a href="https://www.kingcounty.gov/services/courts">Courts</a></li>
+                                                            <li><a href="https://www.kingcounty.gov/services/emergencies">Emergencies</a></li>
+                                                            <li><a href="https://www.kingcounty.gov/services/environment">Environment</a></li>
+                                                            <li><a href="https://www.kingcounty.gov/services/health">Health</a></li>
+                                                           <li><a href="https://www.kingcounty.gov/services/home-property">Home &amp; property</a></li>
+                                                            <li><a href="https://www.kingcounty.gov/services/jails">Jails</a></li>
+                                                        </ul>
+                                                    </div>
+                                                   <div class="col-md-6">   
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="https://www.kingcounty.gov/services/jobs-training">Jobs &amp; training</a></li>
+                                                            <li><a href="https://www.kingcounty.gov/services/licenses-permits-records">Licenses, permits &amp; records</a></li>
+                                                            <li><a href="https://www.kingcounty.gov/services/parks-recreation">Parks &amp; recreation</a></li>
+                                                            <li><a href="https://www.kingcounty.gov/services/police-safety">Police &amp; safety</a></li>
+                                                            	    <li><a href="https://www.kingcounty.gov/services/data">Public Data</a></li>
+                                                            <li><a href="https://www.kingcounty.gov/services/recycling-garbage">Recycling &amp; garbage</a></li>
+                                                            <li><a href="https://www.kingcounty.gov/services/rural">Rural services</a></li>
+                                                            <li><a href="https://www.kingcounty.gov/services/social-services">Social services</a></li>
+                                                            <li><a href="https://www.kingcounty.gov/services/transportation-roads">Transportation &amp; roads</a></li>
+                                                            <li><a href="https://www.kingcounty.gov/services/voting-elections">Voting &amp; elections</a></li>
+                                                            <li><a href="https://www.kingcounty.gov/services/volunteer">Volunteer</a></li>
+                                                          
+                                                        </ul>
+                                                    </div>
+                                               </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                            </li>
+                            <li class="dropdown yamm-fw">
+                                <a href="https://www.kingcounty.gov/about" data-toggle="dropdown" class="dropdown-toggle disabled nav-header"><span class="">About King County</span> <span class="fa fa-caret-down"></span></a>
+                                <ul class="dropdown-menu">
+    <li>
+    <div class="yamm-content">
+    <div class="row">
+    <div class="col-md-6">
+    <ul class="list-unstyled">
+        <li><a href="https://www.kingcounty.gov/services/customer-service.aspx">Contact us</a></li>
+        <li><a href="https://www.kingcounty.gov/elected.aspx">Elected officials</a></li>
+        <li><a href="https://www.kingcounty.gov/elected/executive/equity-social-justice.aspx">Equity &amp; social justice</a></li>
+        <li><a href="https://www.kingcounty.gov/services/jobs-training.aspx">Jobs &amp; training</a></li>
+        <li><a href="https://www.kingcounty.gov/about/news.aspx">News &amp; events</a></li>
+    </ul>
+    </div>
+    <div class="col-md-6">
+    <ul class="list-unstyled">
+        <li><a href="https://www.kingcounty.gov/about/region/maps.aspx">Maps</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/executive/performance-strategy-budget/regional-planning/Demographics.aspx">Data and statistics</a></li>
+        <li><a href="https://www.kingcounty.gov/employees.aspx">King County Employees</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/executive/performance-strategy-budget/performance-strategy/Strategic-Planning.aspx">Vision &amp; strategic plan</a></li>
+        <li><a class="btn nav-dropdown-btn btn-block" href="https://www.kingcounty.gov/about.aspx">More information</a></li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    </li>
+</ul>
+                            </li>
+                            <li class="dropdown yamm-fw">
+                                <a href="https://www.kingcounty.gov/depts" data-toggle="dropdown" class="dropdown-toggle disabled nav-header"><span class="active">Departments</span> <span class="fa fa-caret-down"></span></a>
+                                <ul class="dropdown-menu">
+    <li>
+     <div class="yamm-content">
+        <div class="row">
+            <div class="col-md-4">
+             <ul class="list-unstyled">
+                <li><a href="https://www.kingcounty.gov/courts/detention">Adult &amp; Juvenile Detention</a></li>
+               <li><a href="https://www.kingcounty.gov/depts/assessor">Assessor</a></li>
+               <li><a href="https://www.kingcounty.gov/depts/auditor">Auditor</a></li>
+               <li><a href="https://www.kingcounty.gov/independent/board-of-appeals/about">Board of Appeals/Equalization</a></li>
+               <li><a href="https://www.kingcounty.gov/depts/community-human-services">Community &amp; Human Services</a></li>
+               <li><a href="https://www.kingcounty.gov/council">Council</a></li>
+               <li><a href="https://www.kingcounty.gov/courts/district-court">District Court</a></li>
+               <li><a href="https://www.kingcounty.gov/independent/forecasting">Economic &amp; Financial Analysis</a></li>
+               <li><a href="https://www.kingcounty.gov/depts/elections">Elections</a></li>
+           </ul>
+       </div>
+       <div class="col-md-4">
+        <ul class="list-unstyled">
+            <li><a href="https://www.kingcounty.gov/exec">Executive Office</a></li>
+            <li><a href="https://www.kingcounty.gov/depts/executive-services">Executive Services</a></li>
+            <li><a href="https://www.kingcounty.gov/independent/hearing-examiner">Hearing Examiner</a></li>
+            <li><a href="https://www.kingcounty.gov/depts/human-resources">Human Resources</a></li>
+            <li><a href="https://www.kingcounty.gov/depts/it">Information Technology</a></li>
+            <li><a href="https://www.kingcounty.gov/depts/KCTV">King County TV</a></li>
+             <li><a href="https://www.kingcounty.gov/depts/local-services.aspx">Local Services</a></li>
+            <li><a href="https://www.kingcounty.gov/independent/law-enforcement-oversight">Law Enforcement Oversight</a></li>
+            <li><a href="https://www.kingcounty.gov/depts/transportation/metro">Metro</a></li>
+            <li><a href="https://www.kingcounty.gov/environment/dnrp">Natural Resources &amp; Parks</a></li>
+            <li><a href="https://www.kingcounty.gov/independent/ombudsman">Ombuds and Office of Public Complaints</a></li>
+        </ul>
+    </div>
+
+    <div class="col-md-4">
+     <ul class="list-unstyled">
+        <li><a href="https://www.kingcounty.gov/depts/local-services/permits">Permits</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/prosecutor">Prosecuting Attorney</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/public-defense">Public Defense</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/health">Public Health</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/sheriff" >Sheriff</a></li>
+        <li><a href="https://www.kingcounty.gov/courts/superior-court">Superior Court</a></li>
+        <li><a href="https://www.kingcounty.gov/courts/clerk.aspx">Superior Court Clerk's Office (DJA)</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/transportation">Transportation</a></li>
+        <li><a href="https://www.kingcounty.gov/independent/property-tax-advisor">Tax Advisor</a></li>
+        <li><a href="https://www.kingcounty.gov/depts" class="btn nav-dropdown-btn btn-block">More departments</a></li>
+    </ul>
+</div>
+</div>
+</div>
+</li>
+</ul>                                    
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SM NAVBAR -->
+    <nav id="nav-sm" role="navigation" class="navbar navbar-inverse yamm">
+        <div class="container visible-sm">
+            <div class="navbar-header remove-border-bottom">
+                <a href="https://www.kingcounty.gov/">
+                    <img src="https://www.kingcounty.gov/img/KClogo-horiz-white-sm-xs.png" alt="King County logo" class="img-responsive"></a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="https://www.kingcounty.gov/" class="nav-header"><span class="fa fa-home"></span></a></li>
+                <li class="dropdown yamm-fw">
+                    <a href="https://www.kingcounty.gov/how-do-i" data-toggle="dropdown" class="dropdown-toggle disabled nav-header bold"><span>How do I...</span><span class="fa fa-caret-down"></span></a>
+                    <ul class="dropdown-menu">
+    <li>
+    <div class="yamm-content">
+    <div class="row">
+         <div class="col-sm-12">
+                                                        <div class="call-out-text call-out-text-default"><span class="fa fa-exclamation-circle fa-color-danger" aria-hidden="true"></span> Many King County services are continually adapting because of the COVID-19 pandemic. Each agency will update its pages with current information.</div>
+                                                    </div>
+    <div class="col-sm-4">
+    <ul class="list-unstyled">
+        <li class="nav-title">Apply for</li>
+        <li><a href="https://www.kingcounty.gov/depts/local-services/permits">Permits</a></li>
+        <li><a href="https://www.kingcounty.gov/jobs.aspx">Jobs at King County</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/regional-animal-services/license-your-pet/purchase-renew-license.aspx">Pet license</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/services/business/licenses.aspx">Business license</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/records-licensing/recorders-office/marriage-licensing.aspx">Marriage license</a></li>
+        <li><a href="#" class="toggle-hidden-links"><span class="fa fa-ellipsis-h"></span></a></li>
+    </ul>
+    <ul class="list-unstyled">
+        <li class="nav-title">Attend</li>
+        <li><a href="https://www.kingcounty.gov/how-do-i/jury-duty.aspx">Jury duty</a></li>
+    </ul>
+    <ul class="list-unstyled">
+        <li class="nav-title">Do business with King County</li>
+        <li><a href="https://www.kingcounty.gov/depts/finance-business-operations/procurement/for-business/register.aspx">Register as a supplier</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/finance-business-operations/procurement.aspx">View bid &amp; contract opportunities</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://kingcounty.diversitycompliance.com/">Find certified small business contractors and suppliers</a></li>
+        <li><a href="#" class="toggle-hidden-links" title="Show more"><span class="fa fa-ellipsis-h"></span></a></li>
+    </ul>
+    <ul class="list-unstyled">
+        <li class="nav-title">Look up</li>
+        <li><a href="https://www.kingcounty.gov/tools/what-do-i-do-with.aspx">Recycle: What do I do with?</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/sheriff/sex-offender-search.aspx">Sex offenders</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/tools/property-values.aspx">Property values</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/independent/forecasting.aspx">Economic forecast</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/elections/results.aspx">Election results</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/finance-business-operations/treasury/property-tax.aspx">Property tax</a></li>
+        <li><a href="#" class="toggle-hidden-links"><span class="fa fa-ellipsis-h"></span></a></li>
+    </ul>
+    </div>
+    <div class="col-sm-4">
+    <ul class="list-unstyled">
+        <li class="nav-title">File</li>
+        <li><a href="https://www.kingcounty.gov/courts/clerk/documents/file.aspx">Superior Court documents</a></li>
+    </ul>
+    <ul class="list-unstyled">
+        <li class="nav-title">Get around</li>
+        <li><a href="https://www.kingcounty.gov/tools/trip-planner.aspx">Plan a bus trip</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/transportation/metro/travel-options/bike.aspx">Travel by bike</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/transportation/metro/schedules-maps.aspx">Find a bus schedule</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/transportation/metro/travel-options/parking.aspx">Find a park &amp; ride</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/transportation/metro/travel-options/rideshare/programs/carpool.aspx">Explore carpooling options</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/transportation/water-taxi.aspx">Take a water taxi</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/transportation/metro/travel-options/accessible/programs.aspx">Find senior transportation</a></li>
+        <li><a href="#" class="toggle-hidden-links"><span class="fa fa-ellipsis-h"></span></a></li>
+    </ul>
+    <ul class="list-unstyled">
+        <li class="nav-title">Help for</li>
+        <li><a href="https://www.kingcounty.gov/how-do-i/domestic-violence.aspx">Domestic violence</a></li>
+        <li><a href="https://www.kingcounty.gov/services/police-safety.aspx">Emergencies</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/community-human-services/mental-health-substance-abuse/services/crisis-services.aspx">Crisis</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/community-human-services/housing/services/homeless-housing.aspx">Homeless</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/assessor/TaxpayerAssistance/TaxRelief.aspx">Property tax relief</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/services/rural.aspx">Rural residents</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/community-human-services/veterans.aspx">Veterans</a></li>
+        <li><a href="#" class="toggle-hidden-links"><span class="fa fa-ellipsis-h"></span></a></li>
+    </ul>
+    <ul class="list-unstyled">
+        <li class="nav-title">Locate</li>
+        <li><a href="//gismaps.kingcounty.gov/ParkFinder/">Parks</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/health/locations.aspx">Public health clinics</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/transportation/roads/road-closures.aspx">Road projects</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/transportation/roads/bicycles.aspx">Bike routes</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/finance-business-operations/treasury/foreclosure.aspx">Foreclosures</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/services/parks-recreation/parks/trails.aspx">Hiking &amp; biking trails</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/tools/inmate-lookup.aspx">Jail inmate</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/tools/parcel-viewer.aspx">Property</a></li>
+        <li><a href="#" class="toggle-hidden-links"><span class="fa fa-ellipsis-h"></span></a></li>
+    </ul>
+    </div>
+    <div class="col-sm-4">
+    <ul class="list-unstyled">
+        <li class="nav-title">Pay for</li>
+        <li><a href="https://www.kingcounty.gov/depts/health/vital-statistics/birth.aspx">Birth certificate</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/finance-business-operations/treasury/property-tax.aspx">Pay or look up property taxes</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/records-licensing/recorders-office/marriage-licensing.aspx">Marriage certificate</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/records-licensing/recorders-office/fees.aspx">Deed</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/health/vital-statistics/death.aspx">Death certificate</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/records-licensing/recorders-office/fees.aspx">Title certificate</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/services/environment/wastewater/capacity-charge.aspx">Sewage treatment capacity charge</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/payinvoices">Invoice</a></li>
+        <li><a href="#" class="toggle-hidden-links"><span class="fa fa-ellipsis-h"></span></a></li>
+    </ul>
+    <ul class="list-unstyled">
+        <li class="nav-title">Register or request</li>
+        <li><a href="https://public.govdelivery.com/accounts/WAKING/subscriber/new">Email or text alerts</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/elections/how-to-vote/register-to-vote.aspx">To vote</a></li>
+        <!--<li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/risk-management/public-records-program.aspx">Public records</a></li>-->
+        <li><a href="https://www.kingcounty.gov/services/licenses-permits-records/records/public-records-requests.aspx">Public Records</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/services/business/licenses.aspx">Your business with King County</a></li>
+        <li><a href="#" class="toggle-hidden-links"><em class="fa fa-ellipsis-h"></em></a></li>
+    </ul>
+    <ul class="list-unstyled">
+        <li class="nav-title">Report</li>
+        <li><a href="https://www.kingcounty.gov/depts/sheriff/on-line-reporting/on-line-reporting.aspx">Crime</a></li>
+        <li><a href="https://www.kingcounty.gov/depts/dnrp/solid-waste/programs/litter-dumping/report-dumping.aspx">Illegal dumping</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/elected/executive/equity-social-justice/civil-rights/civil-rights-complaint.aspx">Discrimination complaint</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/health/environmental-health/food-safety/inspection-system/complaints.aspx">Unsafe food handling</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/depts/dnrp/wtd/response.aspx">Septic or sewer problem</a></li>
+        <li class="hidden-link" style="display: none;"><a href="https://www.kingcounty.gov/tools/contact-us.aspx">Other problems or complaints</a></li>
+        <li><a href="#" class="toggle-hidden-links"><span class="fa fa-ellipsis-h"></span></a></li>
+    </ul>
+    <ul class="list-unstyled">
+        <li class="nav-title">Do more online</li>
+        <li><a href="https://www.kingcounty.gov/tools/trip-planner.aspx">Metro Trip Planner</a></li>
+        <li><a href="https://www.kingcounty.gov/tools/parcel-viewer.aspx">Parcel viewer property information</a></li>
+        <li><a href="https://www.kingcounty.gov/tools/inmate-lookup.aspx">Jail inmate lookup</a></li>
+        <li><a href="https://www.kingcounty.gov/how-do-i.aspx" class="btn btn nav-dropdown-btn btn-block">More tasks</a></li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    </li>
+</ul>
+                </li>
+                <li class="dropdown yamm-fw">
+                    <a href="https://www.kingcounty.gov/services" data-toggle="dropdown" class="dropdown-toggle disabled nav-header bold">Services <span class="fa fa-caret-down"></span></a>
+                    <ul class="dropdown-menu">
+                            <li>
+                                <div class="yamm-content">
+                                    <div class="row">
+                                         <div class="col-sm-12">
+                                                       <div class="call-out-text call-out-text-default"><span class="fa fa-exclamation-circle fa-color-danger" aria-hidden="true"></span> With restrictions about COVID-19 rapidly changing, please check with individual departments to be sure a building is open before you seek in-person service. Also, some downtown buildings are not open to the public due to a project to close the Administration Building and relocate the agencies affected. This project will continue at least through the end of 2021.</div>
+                                                    </div>
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li><a href="https://www.kingcounty.gov/services/animals-pets" >Animals &amp; pets</a></li>
+                                                <li><a href="https://www.kingcounty.gov/services/arts-culture">Arts &amp; culture</a></li>
+                                                <li><a href="https://www.kingcounty.gov/depts/health/vital-statistics.aspx">Birth &amp; death records</a></li>
+                                                <li><a href="https://www.kingcounty.gov/services/business">Business</a></li>
+                                                <li><a href="https://www.kingcounty.gov/services/codes-laws">Codes &amp; laws</a></li>
+                                                <li><a href="https://www.kingcounty.gov/services/courts">Courts</a></li>
+                                                <li><a href="https://www.kingcounty.gov/services/emergencies">Emergencies</a></li>
+                                                <li><a href="https://www.kingcounty.gov/services/environment">Environment</a></li>
+                                                <li><a href="https://www.kingcounty.gov/services/health">Health</a></li>
+                                               <li><a href="https://www.kingcounty.gov/services/home-property">Home &amp; property</a></li>
+                                                <li><a href="https://www.kingcounty.gov/services/jails">Jails</a></li>
+                                            </ul>
+                                        </div>
+                                       <div class="col-sm-6">   
+                                            <ul class="list-unstyled">
+                                                <li><a href="https://www.kingcounty.gov/services/jobs-training">Jobs &amp; training</a></li>
+                                                <li><a href="https://www.kingcounty.gov/services/licenses-permits-records">Licenses, permits &amp; records</a></li>
+                                                <li><a href="https://www.kingcounty.gov/services/parks-recreation">Parks &amp; recreation</a></li>
+                                                <li><a href="https://www.kingcounty.gov/services/police-safety">Police &amp; safety</a></li>
+                                                	    <li><a href="https://www.kingcounty.gov/services/data">Public Data</a></li>
+                                                <li><a href="https://www.kingcounty.gov/services/recycling-garbage">Recycling &amp; garbage</a></li>
+                                                <li><a href="https://www.kingcounty.gov/services/rural">Rural services</a></li>
+                                                <li><a href="https://www.kingcounty.gov/services/social-services">Social services</a></li>
+                                                <li><a href="https://www.kingcounty.gov/services/transportation-roads">Transportation &amp; roads</a></li>
+                                                <li><a href="https://www.kingcounty.gov/services/voting-elections">Voting &amp; elections</a></li>
+                                                <li><a href="https://www.kingcounty.gov/services/volunteer">Volunteer</a></li>
+                                               <li>
+                                                    
+                                               </li>
+                                            </ul>
+                                        </div>
+                                   </div>
+                                </div>
+                            </li>
+                        </ul>
+                        
+                </li>
+                <li class="dropdown yamm-fw">
+                    <a href="#" data-toggle="dropdown" class="nav-header disabled dropdown-toggle">More <span class="fa fa-caret-down"></span></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <div class="yamm-content">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <ul class="list-unstyled">
+                                            <li class="nav-title"><a href="https://www.kingcounty.gov/about">About King County</a></li>
+                                            <li><a href="https://www.kingcounty.gov/tools/contact-us">Contact us</a></li>
+                                            <li><a href="https://www.kingcounty.gov/elected">Elected officials</a></li>
+                                            <li><a href="https://www.kingcounty.gov/elected/executive/equity-social-justice.aspx">Equity &amp; social justice</a></li>
+
+                                            <li><a href="https://www.kingcounty.gov/services/jobs-training.aspx">Jobs &amp; training</a></li>
+                                            <li><a href="https://www.kingcounty.gov/about/news.aspx">News &amp; events</a></li>
+                                            <li><a href="https://www.kingcounty.gov/about/region/maps.aspx">Maps</a></li>
+                                            <li><a href="https://www.kingcounty.gov/depts/executive/performance-strategy-budget/regional-planning/Demographics">Data and statistics</a></li>
+                                            <li><a href="https://www.kingcounty.gov/audience/employees.aspx">King County Employees</a></li>
+                                            <li><a href="https://www.kingcounty.gov/about/vision-strategic.aspx">Vision &amp; strategic plan</a></li>
+											<li><a href="https://www.kingcounty.gov/about" class="btn nav-dropdown-btn btn-block">More about King County</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <ul class="list-unstyled">
+                                                    <li class="nav-title">Departments</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <ul class="list-unstyled">
+                                                    <li><a href="https://www.kingcounty.gov/depts/jails">Adult &amp; Juvenile Detention</a></li>
+                                                    <li><a href="https://www.kingcounty.gov/depts/assessor">Assessor</a></li>
+                                                    <li><a href="https://www.kingcounty.gov/depts/community-human-services">Community &amp; Human Services</a></li>
+                                                    <li><a href="https://www.kingcounty.gov/council">Council</a></li>
+                                                    <li><a href="https://www.kingcounty.gov/courts/district-court">District Court</a></li>
+                                                    <li><a href="https://www.kingcounty.gov/depts/elections">Elections</a></li>
+                                                    <li><a href="https://www.kingcounty.gov/elected/executive">Executive Office</a></li>
+                                                    <li><a href="https://www.kingcounty.gov/depts/executive-services.aspx">Executive Services</a></li>
+                                                    <li><a href="https://www.kingcounty.gov/depts/kctv">King County TV</a></li>
+                                                    <li><a href="https://www.kingcounty.gov/depts/local-services/">Local Services</a></li>
+													<li><a href="//metro.kingcounty.gov">Metro</a></li>
+                                                    <li><a href="https://www.kingcounty.gov/depts/dnrp">Natural Resources &amp; Parks</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <ul class="list-unstyled">
+                                                    <li><a href="https://www.kingcounty.gov/depts/local-services/permits">Permits</a></li>
+                                                    <li><a href="https://www.kingcounty.gov/depts/prosecutor">Prosecuting Attorney</a></li>
+                                                    <li><a href="https://www.kingcounty.gov/courts/public-defense">Public Defense</a></li>
+                                                    <li><a href="https://www.kingcounty.gov/depts/health.aspx">Public Health</a></li>
+                                                    <li><a href="https://www.kingcounty.gov/depts/sheriff">Sheriff</a></li>
+                                                    <li><a href="https://www.kingcounty.gov/courts/superior-court">Superior Court</a></li>
+                                                    <li><a href="https://www.kingcounty.gov/courts/clerk.aspx">Superior Court Clerk's Office (DJA)</a></li>
+                                                    <li><a href="https://www.kingcounty.gov/depts/transportation/">Transportation</a></li>
+                                                    <li><a href="https://www.kingcounty.gov/independent/property-tax-advisor.aspx">Tax Advisor</a></li>
+                                                    <li><a href="https://www.kingcounty.gov/depts" class="btn nav-dropdown-btn btn-block">More departments</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown yamm-fw">
+                    <a href="#" data-toggle="dropdown" class="nav-header disabled dropdown-toggle"><span class="fa fa-search"></span></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                                <div class="yamm-content">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled">
+                                                <li><a href="//directory.kingcounty.gov/EmpSearch.asp">Staff directory</a></li>
+                                                <li><a href="https://www.kingcounty.gov/depts/records-licensing/recorders-office/records-search">Records search</a></li>
+                                                <li><a href="//aqua.kingcounty.gov/mkcc/legislation/">Legislation search</a></li>
+                                                <li><a href="https://www.kingcounty.gov/tools/property-values/">Property search</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                             <form action="https://kingcounty.gov/search" class="search-form" method="get">
+                                                <label class="sr-only" for="sm-search-input">Search kingcounty.gov</label>
+                                                <input name="utf8" type="hidden" value="&#x2713;" />
+                                                <input id="sm-search-input" class="form-control search-form-text"  name="query" placeholder="Search Kingcounty.gov" type="search" />
+                                                <!--fix this-->
+                                                <button type="submit" class="btn btn-link search-form-btn"><span class="fa fa-search"></span></button>
+                                               
+                                            </form>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </li>
+                    </ul>
+                   
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- XS NAVBAR -->
+    <nav id="nav-xs" role="navigation" class="navbar navbar-inverse">
+        <div class="container visible-xs">
+          <div class="navbar-header remove-border-bottom">
+            <button type="button" data-toggle="collapse" data-target="#navbar-dropdown-xs" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="fa fa-search fa-2x"></span></button><a href="https://www.kingcounty.gov/"><img src="https://www.kingcounty.gov/img/KClogo-horiz-white-sm-xs.png" alt="King County logo" class="img-responsive"></a>
+            <button id="nav-search-btn-xs" type="button" data-toggle="collapse" data-target="#navbar-dropdown-xs" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="fa fa-bars fa-2x"></span></button>
+          </div>
+          <div id="navbar-dropdown-xs" class="collapse navbar-collapse">
+            <form role="search" action="//www.kingcounty.gov/search" method="get" accept-charset="UTF-8" class="navbar-form search-form">
+              <label for="xs-search-input" class="sr-only">Search kingcounty.gov</label>
+              <input name="utf8" type="hidden" value="✓">
+              <input type="text" id='xs-search-input' name="query" placeholder="Search Kingcounty.gov" class="form-control">
+              <button type="submit" class="btn btn-link search-form-btn"><span class="fa fa-search"></span></button>
+            </form>
+            <ul class="nav navbar-nav">
+              <li><a href="https://www.kingcounty.gov/"><span>Home</span></a></li>
+              <li><a href="https://www.kingcounty.gov/how-do-i"><span>How Do I...</span></a></li>
+              <li><a href="https://www.kingcounty.gov/services"><span>Services</span></a></li>
+              <li><a href="https://www.kingcounty.gov/about">About King County</a></li>
+              <li><a href="https://www.kingcounty.gov/depts">Departments</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+</header>
+
+
+<!-- MAIN CONTENT -->
+<div id="main-content">
+    <!-- MOBILE IMAGE IS OPTIONAL -->
+    <img id="mobile-bg" src="" alt="background image" aria-hidden="true" class="visible-xs img-responsive hidden-print" />
+    <div class="container">
+        <img id="logo-img-print" src="https://www.kingcounty.gov/img/KClogo-horiz-black-lg.gif" alt="King County logo" class="visible-print">
+        <div class="row row-offcanvas row-offcanvas-left">
+
+            
+            
+            
+                <div id="main-content-sr" class="col-sm-12 col-md-12">
+            
+
+            <!-- BREADCRUMB-->
+            <div class="row addon-row main-breadcrumb-row hidden-print">
+                <div class="col-xs-12">
+                    
+        
+            <ol class="breadcrumb main-breadcrumb hidden-xs" style="margin-left:0">
+        
+                
+              
+        <li class="hidden-xs">             
+            <a href="https://www.kingcounty.gov/" title="Home">
+                Home</a><span aria-hidden="true" class="fa fa-angle-double-right"></span>          
+        </li>
+                
+      
+        <li class="hidden-xs">             
+            <a href="https://www.kingcounty.gov/depts/elections.aspx" title="Elections Home">
+                Elections Home</a><span aria-hidden="true" class="fa fa-angle-double-right"></span>          
+        </li>
+                
+      
+        <li class="hidden-xs">             
+            <a href="https://www.kingcounty.gov/depts/elections/how-to-vote.aspx" title="How to vote">
+                How to vote</a><span aria-hidden="true" class="fa fa-angle-double-right"></span>          
+        </li>
+                
+      
+        <li class="hidden-xs">             
+            <a href="https://www.kingcounty.gov/depts/elections/how-to-vote/ballots.aspx" title="Ballots">
+                Ballots</a><span aria-hidden="true" class="fa fa-angle-double-right"></span>          
+        </li>
+                
+      
+        <li class="hidden-xs">             
+            <a href="https://www.kingcounty.gov/depts/elections/how-to-vote/ballots/whats-on-the-ballot.aspx" title="What's on the ballot">
+                What's on the ballot</a><span aria-hidden="true" class="fa fa-angle-double-right"></span>          
+        </li>
+                
+      
+        <li class="">             
+            <a href="https://www.kingcounty.gov/depts/elections/how-to-vote/ballots/whats-on-the-ballot/ballot-measures.aspx" title="Ballot measures">
+                Ballot measures</a><span aria-hidden="true" class="fa fa-angle-double-right"></span>          
+        </li>
+                
+      
+        
+        <li class="active">                       
+                Ballot measures                        
+        </li>        
+    
+        </ol>
+    
+
+                </div>
+            </div>
+            <!-- /BREADCRUMB-->
+
+
+<!-- PAGE CONTENT BEGINS HERE -->
+
+
+ <div class="row addon-row addon-row-attached">
+                <div class="col-sm-12">
+                    <div class="page-header">
+                        <h1>
+                            Ballot measures
+                        </h1>
+                        
+                            <h2><small>
+                                
+                            </small></h2>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+
+
+    <div class="row addon-row addon-row-attached">
+        <div class="col-sm-12">
+            
+   
+ 
+
+     <div id="app-version" class="pull-left">v1.0.0.1</div>
+
+  <div id="topofpage" class="pull-left"></div>
+
+     <div id="app-maincontent" class="row">
+ <div id="pnlelctionInfo" class="col-xs-12 pull-left">
+	
+      <div>
+          <div class="page-header">
+         <h1>
+                         <span id="lblbmpageheader">Ballot measures</span>    
+                        </h1>
+              <h2><small>
+                                <span id="lblelectiontitle">PRIMARY 2026</span>
+                            </small></h2>
+     </div>
+          </div>
+
+      
+  
+</div>
+        
+     
+      
+
+
+       <div id="bmstage3" class="col-xs-12 pull-left">
+	<h2>Official list</h2>
+ 
+ 
+</div>
+
+    
+    <div id="cPanelUserAddon" class="col-xs-12 pull-left">
+	
+     <div id="pnluseraddon"  class="col-xs-12 pull-left">
+           
+
+    
+
+        </div>
+          
+</div>
+
+        <div class="col-xs-12 pull-left"><div class="pull-left" id="bm-dropdown" ><div class="input-group pull-left" id="mydropdownnew"><select class="form-control" id="ddldistricts"><option> Select a district...</option><option value="City">City </option><option value="School">School </option><option value="SpecialPurposeDistrict">Special Purpose District </option></select> </div></div><div class="list-group pull-left measure-list-group" id="City">
+	<div class="list-group-item active">
+		<h3 class="list-group-item-heading">
+			City
+		</h3>
+	</div><a class="list-group-item pull-left col-xs-12" href="ballotmeasures.aspx?lang=en-US&amp;cid=102182&amp;groupname=City" target="_blank"><p class="ballotmeasure-name"><span><span>City of Black Diamond<br />Proposition No. 1<br />Annexation of the City of Black Diamond Into the Puget Sound Regional Fire Authority</span></span></p></a><a class="list-group-item pull-left col-xs-12" href="ballotmeasures.aspx?lang=en-US&amp;cid=102183&amp;groupname=City" target="_blank"><p class="ballotmeasure-name"><span><span>City of Covington<br />Proposition No. 1<br />Formation and Funding of Covington Park and Recreation District</span></span></p></a><a class="list-group-item pull-left col-xs-12" href="ballotmeasures.aspx?lang=en-US&amp;cid=102184&amp;groupname=City" target="_blank"><p class="ballotmeasure-name"><span><span>City of Seattle<br />Proposition No. 1<br />Property Tax Levy for The Seattle Public Library</span></span></p></a><div class="col-xs-12 list-group-item go-to-top">
+		<a class="back-to-top">Back to top</a>
+	</div>
+</div><div class="list-group pull-left measure-list-group" id="School">
+	<div class="list-group-item active">
+		<h3 class="list-group-item-heading">
+			School
+		</h3>
+	</div><a class="list-group-item pull-left col-xs-12" href="ballotmeasures.aspx?lang=en-US&amp;cid=102186&amp;groupname=School" target="_blank"><p class="ballotmeasure-name"><span><span>Skykomish School District No. 404<br />Proposition No. 1<br />Replacement of Existing Educational Programs and Operations Levy</span></span></p></a><div class="col-xs-12 list-group-item go-to-top">
+		<a class="back-to-top">Back to top</a>
+	</div>
+</div><div class="list-group pull-left measure-list-group" id="SpecialPurposeDistrict">
+	<div class="list-group-item active">
+		<h3 class="list-group-item-heading">
+			Special Purpose District
+		</h3>
+	</div><a class="list-group-item pull-left col-xs-12" href="ballotmeasures.aspx?lang=en-US&amp;cid=102152&amp;groupname=SpecialPurposeDistrict" target="_blank"><p class="ballotmeasure-name"><span><span>King County Fire Protection District No. 43<br />Proposition No. 1<br />Annexation of the District into the Puget Sound Regional Fire Authority</span></span></p></a><a class="list-group-item pull-left col-xs-12" href="ballotmeasures.aspx?lang=en-US&amp;cid=102159&amp;groupname=SpecialPurposeDistrict" target="_blank"><p class="ballotmeasure-name"><span><span>King County Fire Protection District No. 47<br />Proposition No. 1<br />Property Tax Levy for Fire Protection and Emergency Medical Services</span></span></p></a><a class="list-group-item pull-left col-xs-12" href="ballotmeasures.aspx?lang=en-US&amp;cid=102166&amp;groupname=SpecialPurposeDistrict" target="_blank"><p class="ballotmeasure-name"><span><span>Snoqualmie Pass Fire And Rescue<br />Intent to Continue Voter Authorized Benefit Charge<br />Proposition No. 1</span></span></p></a><div class="col-xs-12 list-group-item go-to-top">
+		<a class="back-to-top">Back to top</a>
+	</div>
+</div></div>
+ 
+          </div>
+
+ <div id="measurestage">
+   
+     <span id="lblelectionid">54</span> 
+      <span id="lbllanguage">en-US</span> 
+     <span id="lblenvironment">Production</span> 
+ 
+
+
+    </div>
+
+
+        </div>
+    </div>
+
+
+
+
+        
+
+
+<div class="row addon-row  addon-row-transparent">
+                        <div class="col-sm-12">
+                            <!-- .row . full-width-row are required for formating of row -->
+<section>
+<div class="row full-width-row">
+
+  <!-- use col-sm-XX to set the column sizes of the image/overlay text and additional content -->
+  <!-- HIDE IN MOBILE -->
+  <div class="hidden-xs col-sm-6 col-xs-12">
+    <div class="dept-footer-image">
+      <div class="image-container">
+
+        <!-- Set image source here. 
+        Resize browser to test if image will work in mobile devices. 
+        -->
+        <div class="image-canvas">
+        <img src="https://www.kingcounty.gov//mpmit.kingcounty.gov/~/media/depts/elections/images/contact-box-image-jpg.ashx?la=en" width="100%" height="100%" alt="King County Elections building entrance">
+        </div>
+
+        <!-- Text for map overlay begins here -->
+        <!-- KCE should not be an H3 -->
+        <div class="image-overlay">
+          <div class="mapsTitle">King County Elections</div>
+          <address>
+            <p>919 Southwest Grady Way<br />Renton, WA 98057</p>
+          </address>
+<!-- 
+Pascal
+This button is required. 
+href link will be automatically set by JavaScript 
+-->
+<!-- 
+Kathy changed the link to Google short URL because it contained spaces 
+-->
+<!-- structurally, Get Directions should be an H2 -->
+            <h2>
+            <a href="https://goo.gl/maps/pjehv1x41x32" id="mapButton" class="btn btn-primary">Directions to Elections</a>
+            </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- This can be a column for additional contact information -->
+  <!-- changed from h5 to h3  -->
+  
+  <div class="col-sm-6 col-md-5">
+
+	<h3 class="contact-head remove-link-underline">
+        <a href="https://www.kingcounty.gov/depts/elections/about-us/contact-us">
+		<span style="color: #000 !important;">Contact Elections</span></a>
+	</h3>
+    <!-- Use media class to get proper formating of icon and text -->
+    <div class="media med-height">
+      <div class="media-body">
+        <p>
+        <strong>Email:  </strong><a href="mailto:elections@kingcounty.gov?subject=Inquiry From Elections Web Site">elections@kingcounty.gov</a>
+        </p>
+      </div>
+    </div>
+    <div class="media med-height">
+      <div class="media-body">
+        <p>
+        <strong>Phone:  </strong>
+        <a href="tel://206.296.8683">206-296-VOTE (8683)</a>
+        </p>
+      </div>
+    </div>
+    <div class="media med-height">
+      <div class="media-body">
+        <p><strong>TTY:  </strong><a href="tel://711">Relay 711</a></p>
+      </div>
+    </div>
+    <!-- EMAIL TEXT --> 
+   <div class="">
+        <p style="margin:7px 0 7px 0;">
+        <strong>Sign up for email or text notifications</strong>
+        </p>
+    <div class="input-group col-xs-12">
+      <input type="text" class="form-control" id="emailphone" placeholder="me@example.com or (000) 000-0000" title="Enter email or cellphone to receive alerts" onfocus="this.value=''">
+      <span class="input-group-btn">
+        <button class="btn btn-primary" id="emph-btn" type="button" data-toggle="modal" data-target="">&nbsp;&nbsp; Go &nbsp;&nbsp;</button>
+      </span>
+     </div><!-- input-group -->
+     </div>
+     <!-- email-text -->
+  </div>
+  <!-- COL 6 -->
+    
+  <div class="col-md-1 col-sm-6 remove-link-underline" id="social">
+          <a href="https://www.facebook.com/kcelections" title="Go to Elections on Facebook"><i class="fa fa-facebook-square fa-4x soc-foot"></i></a>
+          <a href="http://twitter.com/KCElections" title="Go to Elections on Twitter"><i class="fa fa-twitter-square fa-4x soc-foot"></i></a>
+          <a href="http://instagram.com/kcelections" title="Go to Elections on Instagram"><i class="fa fa-instagram fa-4x soc-foot"></i></a>
+          <a href="http://kcelections.com/" title="Go to Elections blog"><i class="fa fa-wordpress fa-4x soc-foot" aria-hidden="true"></i></a>
+
+    </div>
+  <!-- /. END FB TWITTER -->
+    
+    
+		<!-- #######         MOBILE MAP AND CONTACT ROW    ###### -->   
+		<!-- SHOW IN MOBILE / HIDE IN ALL OTHER SIZES-->
+  
+		<!-- use col-sm-XX to set the column sizes of the image/overlay text and additional content -->
+
+		  <div class="visible-xs col-sm-6 col-xs-12" style="margin:20px 0px; z-index:2;">
+			<div class="dept-footer-image">
+			  <div class="image-container">
+
+				<!-- Set image source here. 
+				Resize browser to test if image will work in mobile devices. 
+				-->
+				<div class="image-canvas">
+				    <img src="https://www.kingcounty.gov//mpmit.kingcounty.gov/~/media/depts/elections/images/contact-box-image-jpg.ashx?la=en" width="100%" height="100%" alt="King County Elections building entrance">
+				    </div>
+
+				<!-- Text for map overlay begins here -->
+				<div class="image-overlay">
+				  <div class="mapsTitle">King County Elections</div>
+				  <address>
+					<p>919 Southwest Grady Way<br />Renton, WA 98057</p>
+				  </address>
+					<!-- This button is required. href link will be automatically set by JavaScript -->
+					<h3>
+					<a href="http://maps.google.com/?q=King County Elections 919 Southwest Grady Way Renton, WA 98057" id="mapButton" class="btn btn-primary">Get directions</a>
+					</h3>
+				</div>
+			  </div>
+			</div>
+		  </div>
+  
+		  <!-- /. END mobile map and contact row -->
+    
+
+<!-- #######  LANGUAGES  ###### --> 
+
+    
+</div>
+</section> 
+
+<!-- /. END MAP AND CONTACT ROW -->
+
+
+<!-- BEGIN Modals -->
+   <!-- Modal1 -->
+      <div class="modal fade" id="myModal1" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Email Notifications</h4>
+            </div>
+            <div class="modal-body">
+                <p>Please confirm you wish to receive email notifications at: <b><span class="jcontent"></span></b></p>
+            </div>
+            <div class="modal-footer"> 
+                <form name="govdelivery" action="https://public.govdelivery.com/accounts/WAKING/subscribers/qualify?qsp=WaKing_15" method="post">
+                    <input type="hidden" id="subscription_type" name="subscription_type" value="email">
+                    <!--div class="input-group"-->
+                     <input type="hidden" id="emailIn" name="email" class="form-control">
+                    <span class="input-group-btn">
+                    <button type="submit" value="submit" name="commit" class="btn btn-primary">Confirm</button>
+                    
+                    <!--/div-->
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    </span>
+                    </form>
+                
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- /. END myModal1-->
+
+
+    <!-- Modal2 -->
+      <div class="modal fade" id="myModal2" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Mobile Text Notifications</h4>
+            </div>
+            <div class="modal-body">
+              <p>Please confirm you wish to receive text notifications at: <b><span id="jcontent" class="jcontent"></span></b></p>
+            </div>
+            <div class="modal-footer"> 
+            
+            <form name="govdelivery" action="https://public.govdelivery.com/accounts/WAKING/subscribers/qualify?qsp=WaKing_15" method="post">
+    <input type="hidden" id="country_code" name="country_code" value="1">
+    <input type="hidden" id="subscription_type" name="subscription_type" value="phone">
+                <!-- div class="input-group" -->
+                <input type="hidden" id="phone" name="phone" class="form-control" value="">
+                <span class="input-group-btn">
+                <button type="submit" value="submit" name="commit" class="btn btn-primary">Confirm</button>
+              
+                <!--/div-->
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    </span>
+                </form>
+            </div>
+            <!-- /. END modal footer -->
+          </div>
+		  <!-- /. END modal content -->
+        </div>
+        <!-- /. END modal dialog -->
+      </div>
+      <!-- /. END myModal2-->
+      
+
+      <!-- Modal3 -->
+      <div class="modal fade" id="myModal3" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Sorry...</h4>
+            </div>
+            <div class="modal-body">
+              <p>You must enter a valid Phone Number or Email Address</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+        </div>
+        <!-- /. END myModal3 -->
+        
+        
+<!-- /. END ALL modals-->
+                        </div>
+                    </div>
+
+
+    
+        
+
+
+<div class="row addon-row addon-row-attached addon-row-transparent">
+                        <div class="col-sm-12">
+                            <!-- #######  LANGUAGES  ###### -->
+<!--  HIDES IN MOBILE -->
+<div class="col-sm-12  m-t-md m-l-0 p-l-0 hidden-xs">
+<span style="font-size: 20px; font-weight: 600;"><span class="fa fa-language" aria-hidden="true"></span> Languages:</span>
+<span class="lang-text"><mark class="space"></mark>
+<a href="https://www.kingcounty.gov/depts/elections/chinese.aspx">中文 (Chinese)</a><mark class="space"></mark>|<mark class="space"></mark>
+<a href="https://www.kingcounty.gov/depts/elections/korean.aspx">한국어  (Korean)</a><mark class="space"></mark>|<mark class="space"></mark>
+<a href="https://www.kingcounty.gov/depts/elections/russian.aspx">Русский (Russian)</a><mark class="space"></mark>|<mark class="space"></mark>
+<a href="https://www.kingcounty.gov/depts/elections/somali.aspx">Soomaali (Somali)</a><mark class="space"></mark>|<mark class="space"></mark>
+<a href="https://www.kingcounty.gov/depts/elections/spanish.aspx">Espa&ntilde;ol (Spanish)</a><mark class="space"></mark>|<mark class="space"></mark>
+<a href="https://www.kingcounty.gov/depts/elections/vietnamese.aspx">Tiếng Việt (Vietnamese)</a>
+</span>
+</div>
+<!--  VISIBLE IN MOBILE -->
+<div class="col-sm-12 m-t-lg visible-xs" style="line-height:3em; z-index:1;">
+<span style="font-size: 20px; font-weight: 600;"><span class="fa fa-language" aria-hidden="true"></span> Languages:</span>
+<span class="lang-text">
+<br />
+<a href="https://www.kingcounty.gov/depts/elections/chinese.aspx">中文 (Chinese)</a>
+<br />
+<a href="https://www.kingcounty.gov/depts/elections/korean.aspx">한국어  (Korean)</a>
+<br />
+<a href="https://www.kingcounty.gov/depts/elections/russian.aspx">Русский  (Russian)</a>
+<br />
+<a href="https://www.kingcounty.gov/depts/elections/somali.aspx">Soomaali (Somali)</a>
+<br />
+<a href="https://www.kingcounty.gov/depts/elections/spanish.aspx">Espa&ntilde;ol (Spanish)</a>
+<br />
+<a href="https://www.kingcounty.gov/depts/elections/vietnamese.aspx">Tiếng Việt (Vietnamese)</a>
+</span>
+</div>
+                        </div>
+                    </div>
+
+
+    
+
+
+
+<div class="row addon-row addon-row-transparent main-share-links">
+                <div class="col-sm-12">
+                    <ul class="list-inline">
+                        <li id="LastUpdate">Last Updated May 20, 2024 &nbsp; &nbsp;</li>
+                        <li class="clearfix visible-xs"></li>
+                        <li class="hidden-print"><a id="facebook-share-button" href="#" class="btn btn-default" rel="nofollow"><span class="fa fa-facebook-square"></span>&nbsp;Share</a></li>
+                        <li class="hidden-print"><a id="twitter-share-button" href="#" class="btn btn-default" rel="nofollow"><span class="fa fa-twitter"></span>&nbsp;Tweet</a></li>
+                        <li class="hidden-print"><a id="email-share-button" href="#" class="btn btn-default" rel="nofollow"><span class="fa fa-envelope"></span>&nbsp;Email</a></li>
+                        <li class="hidden-print"><a id="print-share-button" href="#" class="btn btn-default" rel="nofollow"><span class="fa fa-print"></span>&nbsp;Print</a></li>
+                    </ul>
+                </div>
+            </div>
+
+</div>
+
+        </div>
+    </div>
+</div>
+</div><footer class='footer hidden-print' id="footer">
+        <div id="footer-nav-limit"></div>
+        <div id="sticky-footer"  class="hidden-xs hidden-sm">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <p class="h4">
+                            <a href="#footer-nav">Information for...</a>
+                        </p>
+                    </div>
+                    <div class="col-sm-3">
+                        <p class="h4">
+                        <a href="#footer-nav">Do more online</a>
+                        </p>
+                    </div>
+                    <div class="col-sm-3">
+                        <p class="h4">
+                            <a href="#footer-nav">Get help</a>
+                        </p>
+                    </div>
+                    <div class="col-sm-3">
+                        <p class="h4">
+                            <a href="#footer-nav">Espa&ntilde;ol</a>
+                        </p>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+        <div id="footer-nav">
+            <div class="container">
+                <div class="row" >
+                    <div class="col-sm-3">
+                        <h4>Information for
+                            <span class="pull-right fa fa-plus visible-xs"></span>
+                        </h4>
+                        <ul class="list-unstyled collapse in">                            
+                            <li><a href="https://www.kingcounty.gov/audience/residents">Residents</a> </li>
+                            <li><a href="https://www.kingcounty.gov/audience/businesses">Businesses</a> </li>
+                            <li><a href="https://www.kingcounty.gov/audience/employees/careers">Job seekers</a> </li>
+                            <li><a href="https://www.kingcounty.gov/audience/volunteers">Volunteers</a> </li>
+                            <li><a href="https://www.kingcounty.gov/audience/employees">King County employees</a> </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+                        <h4>Do more online
+                            <span class="pull-right fa fa-plus visible-xs"></span>
+                        </h4>
+                        <ul class="list-unstyled collapse in"> 
+                            <li><a href="https://www.kingcounty.gov/tools/trip-planner">Trip Planner</a></li>
+                            <li><a href="https://www.kingcounty.gov/depts/finance-business-operations/treasury/property-tax.aspx">Property tax information &amp; payment</a></li>
+                            <li><a href="https://www.kingcounty.gov/tools/inmate-lookup">Jail inmate look up</a></li>
+                            <li><a href="https://www.kingcounty.gov/tools/parcel-viewer">Parcel viewer or iMap</a></li>
+                            <li><a href="https://www.kingcounty.gov/tools/public-records">Public records</a></li>                               
+                            <li><a href="https://www.kingcounty.gov/how-do-i.aspx#do-more-online-tab"><em>More online tools...</em></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+                        <h4>
+                            Get help <span class="pull-right fa fa-plus visible-xs"></span>
+                        </h4>
+                        <ul class="list-unstyled collapse in"> 
+							<li><a href="https://www.kingcounty.gov/tools/contact-us">Contact us <span class="fa fa-envelope"></span></a></li>
+                            <li><a href="https://www.kingcounty.gov/elected/executive/customer-service">Customer service</a> </li>
+							<li><a href="https://www.kingcounty.gov/about/contact-us/phone-directory.aspx">Phone list</a></li>
+							<li><a href="https://www.kingcounty.gov/tools/staff-directory">Employee directory</a> </li>
+                            <!--<li><a href="https://www.kingcounty.gov/tools/report-problem">Report a problem</a> </li>-->
+                            <li><a href="https://www.kingcounty.gov/tools/subscribe-to-alerts">Subscribe to alerts <span class="fa fa-exclamation-triangle"></span></a></li>
+                            <!--<li class="visible-xs"><a href="https://www.surveymonkey.com/s/kcwebfeedback">Website Feedback</a></li>-->
+                        </ul>
+                    </div>
+                   <div class="col-sm-3">
+                        <h4>
+                            Languages<span class="pull-right fa fa-plus visible-xs"></span>
+                        </h4>
+                        <ul class="list-unstyled collapse in"> 
+							<li><a href="https://www.kingcounty.gov/languages/spanish">En Espa&ntilde;ol</a></li>
+                            
+                        </ul>
+                    </div>                </div>
+            </div>
+        </div>
+        <!--<div id="footer-social-bar">-->
+<!--<div class="survey-link hidden-xs"><a href="https://www.surveymonkey.com/s/kcwebfeedback" class="btn btn-success btn-lg"><span class="hidden-sm ">Website </span>Feedback</a></div>-->
+            <!--<div class="container">
+                <div class="row">
+                    <ul class="list-inline">
+                        <li class="hidden-xs">Stay connected!</li>
+                        <li class="hidden-xs"><a onClick="ga('send', 'event', 'social footer', 'click', 'kc social link footer');" href="https://www.kingcounty.gov/about/news/social-media">View King County social media</a> </li>
+                        <li><a onClick="ga('send', 'event', 'social footer', 'click', 'facebook footer');" href="//www.facebook.com/KingCountyWA" title="King County Facebook"><span class="fa fa-facebook-square" aria-hidden="true"></span><span class="sr-only">King County Facebook</span></a></li>
+                        <li><a onClick="ga('send', 'event', 'social footer', 'click', 'twitter footer');" href="//www.twitter.com/KingCountyWA" title="King County Twitter"><span class="fa fa-twitter-square" aria-hidden="true"></span><span class="sr-only">King County Twitter</span></a></li>                     
+						<li><a onClick="ga('send', 'event', 'social footer', 'click', 'linkedin footer');" href="//www.linkedin.com/company/king-county" title="King County Linked In"><span class="fa fa-linkedin-square" aria-hidden="true"></span><span class="sr-only">King County Linked In</span></a></li>
+						
+                    </ul>
+                </div>
+            </div>
+        </div>-->
+        <div id="footer-legal">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <a href="https://www.kingcounty.gov/" title="King County Home">
+                            <img id="footer-legal-logo" class="img-responsive" src="https://www.kingcounty.gov/img/horiz_transbg.gif" alt="footer logo"></a>
+                    </div>
+                    <div class="col-sm-8">
+                        <ul class="list-unstyled list-inline">
+                            <li>© King County, WA <script>document.write(new Date().getFullYear())</script></li>
+                            <li><a href="https://www.kingcounty.gov/about/website/privacy" title="Privacy Statement">Privacy </a></li>
+                            <li><a href="https://www.kingcounty.gov/about/website/accessibility">Accessibility </a></li>
+                            <li><a href="https://www.kingcounty.gov/about/website/termsofuse">Terms of use</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<!-- Javascript files -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://www.kingcounty.gov/js/main.js"></script>
+<!--set the background image-->
+<script>$(window).on("resize", function () { chooseBG("https://www.kingcounty.gov//mpmit.kingcounty.gov/~/media/global/heroimages/elections/hero-ballots-3-sm.ashx", "https://www.kingcounty.gov//mpmit.kingcounty.gov/~/media/global/heroimages/elections/hero-ballots-3-lg.ashx", "https://www.kingcounty.gov//mpmit.kingcounty.gov/~/media/global/heroimages/elections/hero-ballots-3-xlg.ashx") }).resize();</script>
+
+<!--CustomScriptBlock-->
+ 
+
+<script type="text/javascript">
+
+// ENGLISH
+
+$('#emailphone').parent().parent().hide();
+
+
+function GetQueryStringParams(sParam)
+{
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++)
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam)
+        {
+            return sParameterName[1];
+        }
+    } }
+ 
+var contestid = GetQueryStringParams('cid');
+if (contestid==90183)
+{
+$("<div class='call-out-text call-out-text-info'> <p> <span class='fa fa-exclamation-triangle'></span> The Skykomish School District inadvertently provided incorrect information regarding the assessed tax rate associated with the Skykomish School District Technology Capital Projects Levy. As such, the estimated amount included in the voters’ pamphlet and ballot are incorrect. </p> <p> The corrected approximate assessed levy rate is listed below. </p> <p> Please contact Skykomish School District directly at 360-677-2623 if you have any questions regarding this change or the levy as a whole. </p></div>").prependTo( "#pnluseraddon" );
+}
+else if ( contestid==99521)
+{
+$("<div class='call-out-text call-out-text-info'> <p> <span class='fa fa-exclamation-triangle'></span> The estimated levy rate listed on the ballot for Issaquah School District Proposition 1, the Educational Programs and Operations Replacement Levy, is incorrect.</p> <p>  The corrected levy rate is below. This corrected rate does not impact the overall levy amount.</p> <p> Please contact the Issaquah School District directly at 425-837-7000 if you have any questions about this levy. </p></div>").prependTo( "#pnluseraddon" );
+}
+var newaccordion= "<div class='panel panel-accordion-inverse'> <div class='panel-heading' id='headingNineInverse' role='tab'><h4 class='panel-title'><a class='collapsed bm-toggle-color' aria-expanded='false' aria-controls='collapseNineInverse' href='#collapseNineInverse' data-toggle='collapse' data-parent='#accordion-inverse'>Tax transparency tool<span class='fa fa-plus pull-right'></span></a>  </h4></div> <div class='panel-collapse collapse' id='collapseNineInverse' role='tabpanel' aria-labelledby='headingNineInverse'> <div class='panel-body' id='taxtransparencytool'><p>Get an individualized accounting of where your property tax dollars go, as well as the estimated cost of any proposed property tax measure to be voted on with the King County Assessor&#39;s taxpayer transparency tool. &nbsp;</p><p><a type='button' class='btn btn-success' href='https://www.kingcounty.gov/depts/assessor/TaxpayerTransparencyTool.aspx'>Tax Transparency Tool</a></div></div></div>"
+//$(newaccordion).appendTo( "#accordion-inverse" );
+$( "<div><p><i>King County Elections does not correct punctuation, grammar, or fact check candidate and measure statements.</i></p></div>" ).insertBefore( "#measurestage" );
+$(".back-to-top").bind('click', function (e) {
+    e.preventDefault();
+    $('html,body').animate({ scrollTop: $("body").offset().top }, 'slow');
+});
+if( $('#lblelectionid').text()=='10')
+{
+ $("ol.breadcrumb  li:nth-last-child(2) a").html('2018 ballot measures');
+}
+ //  $('#bmstage2 p').text('Below are the resolutions submitted by jurisdictions to place a measure on the ballot. The deadline to submit a resolution is December 15, 2017. The official //list of ballot measures will be available about 30 days prior to the election.');
+ $(document).ready(function()
+ {  $('.dropdown-inverse li > a').click(function(e){
+     $('.status').text(this.innerHTML);
+ });
+     $("div.panel-accordion-inverse .bm-toggle-color").click(function(){
+         $("#bm-first-minus").removeClass("fa-minus").addClass("fa-plus");
+         $("#bm-anchor-first-minus").removeClass("bm-accordion-header-open").addClass("bm-accordion-header-close");
+     });
+     $(".fa-plus").click(function(){
+         $("#bm-first-minus").removeClass("fa-minus").addClass("fa-plus");
+         $("#bm-anchor-first-minus").removeClass("bm-accordion-header-open").addClass("bm-accordion-header-close");
+     }); 
+    $("#bm-first-minus").click(function(){
+         $(this).toggleClass('fa-minus','fa-plus');
+         /* $("#bm-anchor-first-minus").removeClass("bm-accordion-header-open").addClass("bm-accordion-header-close"); */
+         if ($(this).hasClass( "fa-plus" ))
+         {
+             $("#bm-anchor-first-minus").removeClass("bm-accordion-header-open").addClass("bm-accordion-header-close");
+         }
+         else
+         {
+             $("#bm-anchor-first-minus").removeClass("bm-accordion-header-close").addClass("bm-accordion-header-open");
+         }
+     }); 
+     $(".fa-minus").click(function(){
+         $("#bm-first-minus").toggleClass('fa-plus','fa-minus');
+         /* $("#bm-anchor-first-minus").removeClass("bm-accordion-header-open").addClass("bm-accordion-header-close");*/
+         if ($( "#bm-first-minus" ).hasClass( "fa-plus" ))
+         {
+             $("#bm-anchor-first-minus").removeClass("bm-accordion-header-open").addClass("bm-accordion-header-close");
+         }
+         else
+         {
+             $("#bm-anchor-first-minus").removeClass("bm-accordion-header-close").addClass("bm-accordion-header-open");
+         }
+     });
+     /*
+      $("#bm-anchor-first-minus").click(function(){
+           $("#bm-first-minus").toggleClass('fa-plus','fa-minus');
+      $("this").removeClass("bm-accordion-header-close").addClass("bm-accordion-header-open");
+         });
+     */
+     if ($("#lblelectionid").text()=='2')
+     {
+         $("#resolution-submit-date").html('February 26');
+         $("#lblelectiontitle").html('April 2016 special election'); 
+     }
+//if ($("#lblelectionid").text()=='22')
+    // {
+    //   $('#bmstage2 p').text('Below are the resolutions submitted by jurisdictions to place a measure on the ballot. The deadline to submit a resolution is August 4, //2020. The official list of ballot measures will be available about 30 days prior to the election.');
+   //  }
+if ($("#lblelectionid").text()=='16')
+     {
+       $('#bmstage2 p').text('Below are the resolutions submitted by jurisdictions to place a measure on the ballot. The deadline to submit a resolution is May 10, 2019. The official list of ballot measures will be available about 30 days prior to the election.');
+     }
+if ($("#lblelectionid").text()=='17')
+     {
+       $('#bmstage2 p').text('Below are the resolutions submitted by jurisdictions to place a measure on the ballot. The deadline to submit a resolution is August 6, 2019. The official list of ballot measures will be available about 30 days prior to the election.');
+     }
+     //if ($("#lblstageone").text() =='true')
+    //{
+     //    $( "#bm-main-row-stage1").show();
+     //    $( "#bm-main-row-stage2").hide();
+     //    $( "#bm-main-row-stage3").hide();
+     //}
+ 
+     //if ($("#lblstagetwo").text() =='true')
+    //{
+     //    $( "#bm-main-row-stage1").hide();
+     //    $( "#bm-main-row-stage2").show();
+     //    $( "#bm-main-row-stage3").hide();
+    //}
+    //if ($("#lblstagethree").text() =='true')
+    //{
+     //    $( "#bm-main-row-stage1").hide();
+     //    $( "#bm-main-row-stage2").hide();
+     //    $( "#bm-main-row-stage3").show();
+     //}
+    var htmlElectitileString = $("#lblelectiontitle").text();
+     $("ol.breadcrumb  li:last").html(htmlElectitileString);
+     $("#sidebar a.active").html(htmlElectitileString);
+     $("#bm-myCurrentMeasures").hide();
+     $(".nav-wrap").prependTo( $(".main-breadcrumb-row" ) );
+     $("#bm-main-row-stage3").prependTo( $("#pnluseraddon") );
+     $("#bm-main-row-stage2").prependTo( $("#pnluseraddon") );
+     $("#bm-main-row-stage1").prependTo( $("#pnluseraddon") );
+ });
+$("#bm-nav-pills #myTab1 li").click(function()
+{
+    $("#cPanelUserAddon").removeClass( "hide-me" ).addClass( "show-me" );
+   $( ".call-out-text" ).hide();
+    $("#accordion-inverse" ).hide();
+    $("#no-measure-detailnote" ).hide();
+    $("#bm-myCurrentMeasures").show();
+   
+    $(this).siblings().removeAttr("id");
+    //var href = $(this).attr("href");
+   history.pushState({}, '', 'ballotmeasures.aspx');
+    //return false;
+});
+  
+$("#ddldistricts").on("click", function () {
+        onddlClick();
+    });
+$("#ddldistricts").on("change", function () {
+        onddlChange();
+    });
+var prevddlIndex = "";
+function onddlChange() {
+    var currIndex = document.getElementById("ddldistricts").selectedIndex;
+    if (currIndex > 0) {
+        if (prevddlIndex != currIndex) {
+            window.location = '#' + ddldistricts.options[ddldistricts.selectedIndex].value;
+            prevddlIndex = currIndex;
+        }
+        else {
+            prevddlIndex = "";
+        }
+    }
+    currIndex.selectedIndex = 0;
+    history.pushState("", document.title, window.location.pathname + window.location.search);
+}
+var prevIndex = "";
+function onddlClick() {
+    var currIndex = document.getElementById("ddldistricts").selectedIndex;
+    if (currIndex > 0) {
+        if (prevIndex != currIndex) {
+            window.location = '#' + ddldistricts.options[ddldistricts.selectedIndex].value;
+            prevIndex = currIndex;
+        }
+        else {
+            prevIndex = "";
+        }
+    }
+    currIndex.selectedIndex = 0;
+    history.pushState("", document.title, window.location.pathname + window.location.search);
+}
+//$(".back-to-top").bind('click', function (e) {
+    //e.preventDefault();
+   // $('html,body').animate({ scrollTop: $("#topofpage").offset().top }, 'slow');
+//});
+
+</script>
+</body></html>
