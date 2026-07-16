@@ -1,9 +1,18 @@
-// Production server: serves the built SPA and accepts feedback posts.
-// Zero dependencies (node:http only). Feedback appends JSONL to DATA_DIR —
+// Production server: serves the built SPA, accepts feedback posts, and
+// records anonymous report completions (answers + districts, never address).
+// Zero dependencies (node:http only). Both append JSONL to DATA_DIR —
 // on siteplat that's the persistent /app/data mount; read it over SSH.
+// The reports dataset is public: GET /api/reports returns every record.
 
 import { createServer } from 'node:http'
-import { createReadStream, existsSync, mkdirSync, appendFileSync, statSync } from 'node:fs'
+import {
+  createReadStream,
+  existsSync,
+  mkdirSync,
+  appendFileSync,
+  statSync,
+  readFileSync,
+} from 'node:fs'
 import { join, extname, normalize } from 'node:path'
 
 const PORT = process.env.PORT || 5000
@@ -11,7 +20,58 @@ const BASE_PATH = process.env.BASE_PATH || '/king-county'
 const DIST = process.env.DIST_DIR || join(import.meta.dirname, 'dist')
 const DATA_DIR = process.env.DATA_DIR || join(import.meta.dirname, 'data')
 const FEEDBACK_FILE = join(DATA_DIR, 'feedback.jsonl')
+const REPORTS_FILE = join(DATA_DIR, 'reports.jsonl')
 const MAX_BODY = 64 * 1024
+
+// mirrors LAYERS in app/src/lib/geo.js — anything else is dropped
+const DISTRICT_KEYS = ['CONGDST', 'LEGDST', 'KCCDST', 'SCCDST', 'JUDDST', 'FIRDST', 'SCHDST', 'CITY']
+
+function readBody(req, res, onJson) {
+  let body = ''
+  let dropped = false
+  req.on('data', (chunk) => {
+    body += chunk
+    if (body.length > MAX_BODY && !dropped) {
+      dropped = true
+      res.writeHead(413).end()
+      req.destroy()
+    }
+  })
+  req.on('end', () => {
+    if (dropped) return
+    try {
+      onJson(JSON.parse(body))
+    } catch {
+      res.writeHead(400, { 'Content-Type': 'application/json' })
+      res.end('{"error":"bad json"}')
+    }
+  })
+}
+
+// { v, districts: {LAYER: value}, answers: {axis: [value, weight]} } -> sanitized record
+function sanitizeReport(payload) {
+  const districts = {}
+  for (const k of DISTRICT_KEYS) {
+    if (payload.districts?.[k] != null) districts[k] = String(payload.districts[k]).slice(0, 60)
+  }
+  const answers = {}
+  for (const [axis, pair] of Object.entries(payload.answers || {}).slice(0, 40)) {
+    if (!Array.isArray(pair)) continue
+    const [v, w] = pair
+    if (typeof v !== 'number' || typeof w !== 'number') continue
+    answers[String(axis).slice(0, 60)] = [
+      Math.max(-2, Math.min(2, v)),
+      Math.max(0, Math.min(4, w)),
+    ]
+  }
+  if (!Object.keys(districts).length || !Object.keys(answers).length) return null
+  return {
+    at: new Date().toISOString(),
+    v: payload.v ? String(payload.v).slice(0, 40) : undefined,
+    districts,
+    answers,
+  }
+}
 
 const MIME = {
   '.html': 'text/html; charset=utf-8',
@@ -54,36 +114,52 @@ const server = createServer((req, res) => {
   }
 
   if (req.method === 'POST' && req.url === '/api/feedback') {
-    let body = ''
-    let dropped = false
-    req.on('data', (chunk) => {
-      body += chunk
-      if (body.length > MAX_BODY && !dropped) {
-        dropped = true
-        res.writeHead(413).end()
-        req.destroy()
+    readBody(req, res, (payload) => {
+      const entry = {
+        at: new Date().toISOString(),
+        kind: String(payload.kind || 'comment').slice(0, 40),
+        contest: payload.contest ? String(payload.contest).slice(0, 120) : undefined,
+        candidate: payload.candidate ? String(payload.candidate).slice(0, 120) : undefined,
+        message: String(payload.message || '').slice(0, 4000),
       }
-    })
-    req.on('end', () => {
-      if (dropped) return
-      try {
-        const payload = JSON.parse(body)
-        const entry = {
-          at: new Date().toISOString(),
-          kind: String(payload.kind || 'comment').slice(0, 40),
-          contest: payload.contest ? String(payload.contest).slice(0, 120) : undefined,
-          candidate: payload.candidate ? String(payload.candidate).slice(0, 120) : undefined,
-          message: String(payload.message || '').slice(0, 4000),
-          shared_profile: payload.shared_profile,
-        }
-        appendFileSync(FEEDBACK_FILE, JSON.stringify(entry) + '\n')
-        res.writeHead(204).end()
-      } catch {
-        res.writeHead(400, { 'Content-Type': 'application/json' })
-        res.end('{"error":"bad json"}')
-      }
+      appendFileSync(FEEDBACK_FILE, JSON.stringify(entry) + '\n')
+      res.writeHead(204).end()
     })
     return
+  }
+
+  // Anonymous report completion: answers + districts, never an address.
+  if (req.method === 'POST' && req.url === '/api/report') {
+    readBody(req, res, (payload) => {
+      const record = sanitizeReport(payload)
+      if (!record) {
+        res.writeHead(400, { 'Content-Type': 'application/json' })
+        return res.end('{"error":"missing districts or answers"}')
+      }
+      appendFileSync(REPORTS_FILE, JSON.stringify(record) + '\n')
+      res.writeHead(204).end()
+    })
+    return
+  }
+
+  // The public dataset: every recorded report, as a JSON array.
+  if (req.method === 'GET' && req.url.split('?')[0] === '/api/reports') {
+    let reports = []
+    if (existsSync(REPORTS_FILE)) {
+      reports = readFileSync(REPORTS_FILE, 'utf8')
+        .split('\n')
+        .filter(Boolean)
+        .map((line) => {
+          try {
+            return JSON.parse(line)
+          } catch {
+            return null
+          }
+        })
+        .filter(Boolean)
+    }
+    res.writeHead(200, { 'Content-Type': 'application/json', 'Cache-Control': 'no-cache' })
+    return res.end(JSON.stringify({ count: reports.length, reports }))
   }
 
   if (req.method !== 'GET' && req.method !== 'HEAD') {

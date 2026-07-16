@@ -4,6 +4,7 @@ import Address from './screens/Address.jsx'
 import Interview from './screens/Interview.jsx'
 import Snapshot from './screens/Snapshot.jsx'
 import Results from './screens/Results.jsx'
+import DataPage from './screens/DataPage.jsx'
 import { scopeMatches } from './lib/geo.js'
 import {
   contestsOnBallot,
@@ -20,6 +21,14 @@ export default function App() {
   const [districts, setDistricts] = useState(null)
   const [answers, setAnswers] = useState(null)
   const [restored, setRestored] = useState(null) // profile that arrived via URL
+  const [dataPage, setDataPage] = useState(location.hash === '#data')
+
+  // #data overlays whatever stage the visitor is in; leaving it returns them.
+  useEffect(() => {
+    const onHash = () => setDataPage(location.hash === '#data')
+    window.addEventListener('hashchange', onHash)
+    return () => window.removeEventListener('hashchange', onHash)
+  }, [])
 
   useEffect(() => {
     fetch(`${import.meta.env.BASE_URL}data/app-data.json`)
@@ -69,6 +78,12 @@ export default function App() {
         </div>
       </main>
     )
+
+  const leaveDataPage = () => {
+    history.replaceState(null, '', location.pathname)
+    setDataPage(false)
+  }
+  if (dataPage) return <DataPage data={data} onBack={leaveDataPage} />
 
   const startOver = () => {
     clearHash()

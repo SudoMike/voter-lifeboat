@@ -45,14 +45,16 @@ export default function Landing({ data, onStart }) {
             ⌂
           </div>
           <div>
-            <strong>Private by design.</strong> Your address and answers never
-            leave your browser, except to look up your voting districts.
+            <strong>Anonymous &amp; open.</strong> Your address is used once to
+            find your districts, then discarded — never stored. Your answers and
+            districts are recorded anonymously and published as{' '}
+            <a href="#data">an open dataset</a>.
           </div>
         </div>
       </section>
       <footer style={{ marginTop: 26 }}>
         <div className="wave-bottom">
-          <div className="wave-label">NO ACCOUNTS · NO COOKIES · NO TRACKING</div>
+          <div className="wave-label">NO ACCOUNTS · NO COOKIES · OPEN DATA</div>
         </div>
       </footer>
     </main>

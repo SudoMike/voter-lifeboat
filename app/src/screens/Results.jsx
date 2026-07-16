@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { scopeMatches } from '../lib/geo.js'
 import {
   contestsOnBallot,
@@ -24,6 +24,18 @@ function postFeedback(payload) {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload),
   })
+}
+
+// Fire-and-forget: record this report (answers + districts, never an address)
+// into the public dataset. See /api/report in server.js and the #data page.
+function postReport(dataVersion, districts, answers) {
+  const a = {}
+  for (const [axis, { v, w }] of Object.entries(answers)) a[axis] = [v, w]
+  fetch('/api/report', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ v: dataVersion, districts, answers: a }),
+  }).catch(() => {})
 }
 
 function ReportButton({ contest, candidate }) {
@@ -493,16 +505,11 @@ function BriefSection({ data, answers, contests, measures, shareUrl }) {
   )
 }
 
-function Footer({ answers, districts }) {
+function Footer() {
   const [msg, setMsg] = useState('')
-  const [share, setShare] = useState(false)
   const [state, setState] = useState(null)
   const send = () => {
-    postFeedback({
-      kind: 'comment',
-      message: msg,
-      shared_profile: share ? { districts, answers } : undefined,
-    })
+    postFeedback({ kind: 'comment', message: msg })
       .then((r) => setState(r.ok ? 'sent' : 'error'))
       .catch(() => setState('error'))
   }
@@ -541,10 +548,6 @@ function Footer({ answers, districts }) {
                 value={msg}
                 onChange={(e) => setMsg(e.target.value)}
               />
-              <label className="opt-in" style={{ marginTop: 10 }}>
-                <input type="checkbox" checked={share} onChange={(e) => setShare(e.target.checked)} />
-                Share my interview answers (anonymously) to help improve this tool
-              </label>
               {state === 'error' && (
                 <div style={{ fontSize: 11.5, fontWeight: 700, color: 'var(--coral-deep)', marginTop: 6 }}>
                   Couldn't send — try again in a moment.
@@ -556,8 +559,13 @@ function Footer({ answers, districts }) {
             </>
           )}
         </div>
-        <p style={{ margin: '14px 0 0', fontSize: 11, fontWeight: 700, color: 'var(--muted)' }}>
-          No accounts · no cookies · no analytics · open methodology
+        <p style={{ margin: '14px 0 0', fontSize: 11.5, fontWeight: 600, color: 'var(--muted-deep)' }}>
+          Your interview answers and voting districts (never your address) are
+          recorded anonymously and published as an open dataset —{' '}
+          <a href="#data">see what King County values so far</a>.
+        </p>
+        <p style={{ margin: '10px 0 0', fontSize: 11, fontWeight: 700, color: 'var(--muted)' }}>
+          No accounts · no cookies · open methodology · open data
         </p>
       </div>
     </footer>
@@ -580,6 +588,15 @@ export default function Results({ data, districts, answers, restored, onStartOve
   useEffect(() => {
     setShareUrl(writeHash(data.data_version, districts, answers))
   }, [data, districts, answers])
+
+  // Record fresh completions in the public dataset — once, and never for
+  // reports someone else shared (that would double-count the original voter).
+  const recorded = useRef(false)
+  useEffect(() => {
+    if (restored || recorded.current) return
+    recorded.current = true
+    postReport(data.data_version, districts, answers)
+  }, [restored, data, districts, answers])
 
   const copyLink = () => {
     navigator.clipboard.writeText(shareUrl).then(() => {
@@ -637,7 +654,7 @@ export default function Results({ data, districts, answers, restored, onStartOve
       </p>
 
       <BriefSection data={data} answers={answers} contests={contests} measures={measures} shareUrl={shareUrl} />
-      <Footer answers={answers} districts={districts} />
+      <Footer />
     </main>
   )
 }
