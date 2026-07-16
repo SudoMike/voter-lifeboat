@@ -1,0 +1,453 @@
+{
+  "contest_slug": "congressional-district-1-united-states-representative",
+  "scored_at": "2026-07-16",
+  "derived_from": ["data/dossiers/congressional-district-1-united-states-representative/"],
+  "office_does": "A U.S. Representative writes and votes on federal law in the House, originates tax bills, controls federal spending through appropriations, conducts oversight of the executive branch, and runs constituent services for the district.",
+  "race_blurb": "Seven candidates compete in the August 4 top-two primary: seven-term incumbent Suzan DelBene (D), four other Democrats, one Republican, and one independent. DelBene holds a large fundraising and endorsement advantage in a district that has favored Democrats in recent cycles, so the practical question is which challenger joins her on the November ballot.",
+  "candidates": [
+    {
+      "slug": "suzan-delbene",
+      "summary": "Seven-term U.S. Representative (since 2012) who serves on the House Ways and Means Committee and chairs the Democratic Congressional Campaign Committee. A former Microsoft executive and director of Washington's Department of Revenue.",
+      "highlights": [
+        "Has sponsored 153 bills since 2012, including an enacted infant-formula law, and led efforts to permanently expand the Child Tax Credit [S4]",
+        "Says she is focused on lowering the cost of living, reducing taxes for working families, and ensuring the wealthy pay their fair share [S1]",
+        "Introduced bipartisan legislation to spur creation of two million affordable homes [S1]",
+        "Supports immigration reform and says ICE agents must be 'reined in' [S1]",
+        "Endorsed by Sen. Patty Murray, Gov. Bob Ferguson, county Democratic parties, and the Washington State Labor Council [S3]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S2"],
+          "basis": "Says the wealthy should pay their fair share and opposes the 2025 Republican tax law, while emphasizing tax cuts for working families and targeted credits rather than broad new wealth taxes."
+        },
+        "spending": {
+          "score": 1,
+          "confidence": "high",
+          "citations": ["S1", "S4"],
+          "basis": "Record of expanding programs — Child Tax Credit expansion push, affordable-housing legislation, opposing Medicaid and food-assistance cuts — within a targeted, bipartisan framing."
+        },
+        "climate": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S4", "S6", "S3"],
+          "basis": "Sponsored the Clean Competition Act (carbon-based trade measure), supports renewable-energy investment including a regional hydrogen hub, and is endorsed by Sierra Club and League of Conservation Voters."
+        },
+        "experience": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S4", "S7"],
+          "basis": "Fourteen-year incumbent with an enacted legislative record, a Ways and Means seat, and national party leadership as DCCC chair — the maximal proven-record profile in this field."
+        },
+        "reform": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S7", "S3"],
+          "basis": "Chairs the Democratic Congressional Campaign Committee and runs with broad establishment, party, and institutional-labor endorsements — coalition-building within existing party and donor structures."
+        },
+        "immigration": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S6"],
+          "basis": "Supports immigration reform and says ICE agents must be 'reined in,' pairing reform with ICE accountability."
+        },
+        "healthcare": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S4"],
+          "basis": "Works within the current system: lower premiums, roll back Medicaid cuts, and Medicare chronic-care and prior-authorization reform bills; no single-payer support in the dossier."
+        },
+        "social": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S2", "S3"],
+          "basis": "Supports reproductive rights, opposes a nationwide abortion ban, and is endorsed by Planned Parenthood Action Fund."
+        },
+        "tech": {
+          "score": 0,
+          "confidence": "medium",
+          "citations": ["S4", "S1"],
+          "basis": "Repeatedly sponsors data-privacy legislation (Email Privacy Act) while being a former Microsoft executive with a tech-industry-friendly legislative profile — evidence points both directions."
+        }
+      }
+    },
+    {
+      "slug": "benjamin-kincaid",
+      "summary": "First-time candidate who describes himself as a working American with a blue-collar job and a 'moderate reform Democrat' emphasizing practical solutions and pilot-tested programs over ideology.",
+      "highlights": [
+        "Would eliminate federal income tax and filing requirements for Americans earning $61,000 or less [S1]",
+        "Supports a pilot program to test universal healthcare before any national rollout and opposes forcing an end to private health insurance [S1]",
+        "States 'men should not be in women's sports or women's prisons' and 'socialism doesn't work' [S1]",
+        "Says he takes no corporate PAC money and campaigns on outsider status against the incumbent's twelve-year record [S3]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S1", "S4"],
+          "basis": "Signature proposal is a large working-class tax cut (no federal income tax under $61,000) rather than new progressive revenue."
+        },
+        "spending": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S1", "S4"],
+          "basis": "Frames homelessness policy around 'real accountability rather than endless spending with no results' and says the defense budget can spend less through efficiency."
+        },
+        "safety": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S1", "S4"],
+          "basis": "Accountability-first framing on homelessness and crime, with a Secure Storage Law targeting stolen firearms that fuel street crime and victim-protection accountability acts."
+        },
+        "experience": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S3"],
+          "basis": "First-time candidate with no elected record who explicitly campaigns on outsider, blue-collar status against career politicians."
+        },
+        "reform": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S3"],
+          "basis": "Refuses corporate PAC money and centers his rationale on scrutiny of the incumbent's tenure and wealth growth in office."
+        },
+        "healthcare": {
+          "score": 0,
+          "confidence": "medium",
+          "citations": ["S1", "S4"],
+          "basis": "Open to universal coverage but only via a pilot-tested public-option approach, and opposes ending private health insurance — genuinely between the poles."
+        },
+        "social": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S1", "S4"],
+          "basis": "States men should not be in women's sports or prisons and runs a 'women's safety and fairness' sex-based-spaces agenda, positioning right of the incumbent on gender issues."
+        },
+        "tech": {
+          "score": 0,
+          "confidence": "medium",
+          "citations": ["S1", "S4"],
+          "basis": "Calls for accountability from major tech companies on layoffs and H-1B use while treating AI-era energy demand as a housing/manufacturing opportunity — evidence in both directions."
+        },
+        "defense": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S1", "S4"],
+          "basis": "Supports Ukraine, Taiwan, and a free Iran with zero tolerance for antisemitism (alliance commitments), tempered by a call for defense-budget efficiency."
+        }
+      }
+    },
+    {
+      "slug": "bryce-nickel",
+      "summary": "Paraeducator in the Marysville School District and developmentally disabled self-advocate who has experienced homelessness; a repeat candidate whose platform centers disability policy and structural economic change.",
+      "highlights": [
+        "Supports Medicare for All, framing healthcare as a human right [S1]",
+        "Supports a universal basic income, a federal jobs guarantee, and nationalizing AI and automation [S1]",
+        "Wants to remove income caps on Social Security disability income and increase funding for paraeducators and home care [S2]",
+        "No FEC registration or reported fundraising found as of mid-July 2026 [S3]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "Calls for 'taking on extreme wealth,' raising corporate tax rates, and taxing AI/automation companies to fund programs."
+        },
+        "spending": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "Would fully fund Section 8, build large-scale affordable housing, expand disability and home-care funding, and add UBI and a federal jobs guarantee — public investment as the primary lever."
+        },
+        "climate": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S2"],
+          "basis": "Supports environmental regulations and climate-adjacent aid for disabled and low-income families, while describing climate as a lower campaign priority."
+        },
+        "experience": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S4"],
+          "basis": "No elected experience (prior primary losses for state House and city council); runs on lived experience of disability, homelessness, and poverty rather than institutional tenure."
+        },
+        "immigration": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S2"],
+          "basis": "Says ICE is overfunded and wants to support immigration as much as possible while still policing criminal activity."
+        },
+        "healthcare": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "Supports Medicare for All / universal healthcare, opposing insurance-profit-driven care."
+        },
+        "tech": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "Would nationalize AI and automation so the technologies benefit the public, and tax AI/automation companies — the maximal intervention position in this field."
+        }
+      }
+    },
+    {
+      "slug": "james-etzkorn",
+      "summary": "Hardware engineer and Monroe School District board director running as the race's sole independent. Pitches data-driven, engineering-style governing and structural reform of the two-party system.",
+      "highlights": [
+        "Supports term limits, ending dark money, and banning congressional insider trading [S1]",
+        "Platform pillar to 'modernize government': measure program results rather than spending amounts and eliminate waste [S2]",
+        "Would close tax loopholes used by the wealthy, including the 'buy-borrow-die' loophole [S1]",
+        "Only challenger with elected experience: appointed to the Monroe school board in 2023, then elected unopposed [S4]",
+        "Supports securing the border 'humanely' with immigration reform, and opposes the Trump administration's ICE policies [S2]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S2"],
+          "basis": "Would close tax loopholes used by the wealthy, including 'buy-borrow-die,' as part of his revenue approach."
+        },
+        "spending": {
+          "score": -1,
+          "confidence": "high",
+          "citations": ["S1", "S2", "S5"],
+          "basis": "Central platform pillars are government efficiency, measuring program results, eliminating waste, and reducing the $39T national debt partly through spending cuts — though he also proposes infrastructure and housing investment."
+        },
+        "climate": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S5"],
+          "basis": "Would incentivize clean energy, though via relaxed permitting rather than carbon pricing or mandates."
+        },
+        "experience": {
+          "score": 1,
+          "confidence": "high",
+          "citations": ["S1", "S3", "S5"],
+          "basis": "Runs explicitly against career politicians and the two-party system, but holds minor elected office (Monroe school board) — an outsider profile with some governing experience."
+        },
+        "reform": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "Central pitch is structural reform: term limits, ending dark money, banning congressional insider trading, and breaking the two-party system as the sole independent."
+        },
+        "immigration": {
+          "score": 0,
+          "confidence": "medium",
+          "citations": ["S2", "S5"],
+          "basis": "Pairs securing the border 'humanely' with immigration reform and opposition to the Trump administration's ICE policies — elements of both poles."
+        },
+        "healthcare": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S2", "S5"],
+          "basis": "Would reduce costs through standardized medical records and hospital price transparency while preserving individual freedom in healthcare — market fixes within the current system, not single-payer."
+        },
+        "tech": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S5", "S1"],
+          "basis": "Supports data-center construction paired with required power-plant development as a jobs strategy; a tech-industry engineer treating tech growth as opportunity."
+        },
+        "defense": {
+          "score": 0,
+          "confidence": "medium",
+          "citations": ["S1", "S2"],
+          "basis": "Would end U.S. involvement in the Iran war while working with allies to restore global stability — one element from each pole."
+        }
+      }
+    },
+    {
+      "slug": "hunter-gordon",
+      "summary": "Home care aide from Redmond and first-time candidate running to the incumbent's left, citing five-plus years of caregiving for his brother, who depends on Medicaid, as his reason for running.",
+      "highlights": [
+        "Supports Medicare for All and opposes any further cuts to Medicaid and Medicare [S1]",
+        "Calls for wealth taxes on wealth over $1 billion, framed as making 'billionaires illegal' [S2]",
+        "Supports national rent stabilization, a $25 federal minimum wage, regulating AI, and halting data center construction [S1]",
+        "Would halt all U.S. funding and military aid to Israel and supports abolishing ICE [S4]",
+        "Accepts no corporate PAC, AIPAC, or big-tech money [S1]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S2", "S4"],
+          "basis": "Repeatedly calls for a billionaires tax and wealth taxes aimed at taxing 'the billionaire class out of existence,' with rigorous enforcement against the top 1%."
+        },
+        "spending": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "Major public housing investment funded by corporate taxes, a $25 federal minimum wage, and expanded public programs — investment as the primary lever."
+        },
+        "climate": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S4"],
+          "basis": "Supports clean energy investment and expanded public transit."
+        },
+        "experience": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "First-time candidate, 28, with no public-office record, running on lived caregiving experience explicitly contrasted with the incumbent's tenure and wealth."
+        },
+        "reform": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "Refuses corporate PAC, AIPAC, and big-tech money; calls for ending 'the corporate takeover of our politics' and reforming the Democratic Party."
+        },
+        "immigration": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S2", "S4"],
+          "basis": "Supports abolishing ICE and 'humane immigration that understands these are human people.'"
+        },
+        "healthcare": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S2", "S4"],
+          "basis": "Supports Medicare for All / a publicly funded universal system, repeated across pamphlet, website, and press coverage."
+        },
+        "social": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "Would fight to codify Roe, defend gender-affirming care, and protect trans rights and bodily autonomy."
+        },
+        "tech": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "Would regulate AI, halt data center construction, and break up tech monopolies including Apple, Google, Meta, Amazon, and Microsoft."
+        },
+        "defense": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S2", "S4"],
+          "basis": "Calls for halting all U.S. funding and military aid to Israel and refuses AIPAC contributions."
+        }
+      }
+    },
+    {
+      "slug": "mary-silva",
+      "summary": "Clinical audiologist from Everett with 20 years of practice experience and long-time Republican precinct committee officer service; the only Republican-preference candidate in the seven-way field.",
+      "highlights": [
+        "Platform centers on reshoring manufacturing, cybersecurity investment, and tax incentives for small and medium-sized businesses [S1]",
+        "Supports controlled immigration with border security and opposes open borders [S3]",
+        "Told the Everett Herald she is 'not a big believer in the climate change narrative' [S3]",
+        "Endorsed by the King County Republican Party and Stand for Health Freedom [S3]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S1", "S3"],
+          "basis": "Proposes small-business tax incentives and reducing the overall tax burden, while also targeting offshore tax havens and corporate welfare."
+        },
+        "climate": {
+          "score": -2,
+          "confidence": "medium",
+          "citations": ["S3"],
+          "basis": "Says she is 'not a big believer in the climate change narrative,' expressing support only for land stewardship."
+        },
+        "experience": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S3"],
+          "basis": "No elected-office record; experience is clinical/managerial (audiology practice) plus party-organizational roles, in a challenge to a fourteen-year incumbent."
+        },
+        "immigration": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S3"],
+          "basis": "Supports controlled immigration with border security and opposes open borders."
+        },
+        "healthcare": {
+          "score": -1,
+          "confidence": "low",
+          "citations": ["S3", "S2"],
+          "basis": "Opposes large insurance-healthcare conglomerates and emphasizes individual choice within the existing system; no support for single-payer transformation."
+        },
+        "defense": {
+          "score": 1,
+          "confidence": "low",
+          "citations": ["S2"],
+          "basis": "Campaign website questions U.S. support for Israeli military actions."
+        }
+      }
+    },
+    {
+      "slug": "catherine-hildebrand",
+      "summary": "Travel agency owner and certified personal trainer from Mountlake Terrace making her first run for office. Describes herself as one of the 'young progressives' running nationwide, with climate, housing, and universal healthcare as top priorities.",
+      "highlights": [
+        "Supports Medicare for All, framing healthcare as 'a human right, not an industry' [S3]",
+        "Would increase EPA funding and enforcement, invest in renewables, and expand rail and transit over highways [S3]",
+        "Supports term limits in all branches and calls for eliminating lobbying, which she characterizes as 'bribery' [S3]",
+        "Would substantially reduce defense spending [S5]",
+        "Opposes current immigration enforcement practices, calling them 'barbaric' [S5]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "spending": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S3", "S5"],
+          "basis": "Proposes expanded EPA and Department of Education funding, federal subsidized housing, government-run grocery stores, SNAP expansion, loan forgiveness, and free public college."
+        },
+        "climate": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S3", "S5"],
+          "basis": "Names climate change a top priority: increased EPA funding and enforcement, stricter environmental protections, renewable investment, grid rebuilding, and transit/rail over highways."
+        },
+        "experience": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S5"],
+          "basis": "First-time candidate with no elected or governmental experience who identifies with the 'young progressives' running nationwide."
+        },
+        "reform": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S3"],
+          "basis": "Supports term limits in all branches, calls lobbying 'bribery' and would eliminate it, and wants to end multi-million-dollar political campaigns."
+        },
+        "immigration": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S3", "S5"],
+          "basis": "Supports major reform so immigrants can 'come here safely and live, work, and participate,' and calls current enforcement practices 'barbaric.'"
+        },
+        "healthcare": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S3", "S5"],
+          "basis": "Supports Medicare for All and a universal healthcare system, opposing profit-driven pharmaceutical and insurance companies."
+        },
+        "defense": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S5", "S1"],
+          "basis": "Would substantially reduce defense spending and opposes what she describes as 'an unauthorized war that has only brought death and disaster.'"
+        }
+      }
+    }
+  ]
+}

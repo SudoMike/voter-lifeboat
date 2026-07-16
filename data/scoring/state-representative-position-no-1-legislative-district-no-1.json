@@ -1,0 +1,83 @@
+{
+  "contest_slug": "state-representative-position-no-1-legislative-district-no-1",
+  "scored_at": "2026-07-16",
+  "derived_from": ["data/dossiers/state-representative-position-no-1-legislative-district-no-1/"],
+  "office_does": "One of two state representatives for the 1st Legislative District (Bothell area / north King-Snohomish suburbs), serving a two-year term and voting on state budgets and legislation.",
+  "race_blurb": "Incumbent Democrat Davina Duerr, who chairs the House Local Government Committee, faces Republican first-time candidate and small-business owner Maggie Wang. With only two candidates, both advance to the November general election regardless of primary results.",
+  "candidates": [
+    {
+      "slug": "davina-duerr",
+      "summary": "Incumbent Democratic state representative first appointed in 2019, chair of the House Local Government Committee and a licensed architect with a prior Bothell City Council career.",
+      "highlights": [
+        "States seven of her bills became law last term, including permit streamlining and lowering the cost of building affordable housing [S1]",
+        "Cites securing $532 million for the district in 2025, including $464.5 million for the I-405 corridor project [S1]",
+        "Endorsed by the Washington State Labor Council, Washington Conservation Action, and Sierra Club Washington [S1][S2]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "experience": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1"],
+          "basis": "Incumbent since 2019, House Local Government Committee chair, seven bills signed last term, prior Bothell council/deputy-mayor service."
+        },
+        "spending": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1"],
+          "basis": "Runs on public investment: district transportation funding ($532M secured), affordable-housing subsidy, and education funding priorities."
+        },
+        "housing": {
+          "score": 0,
+          "confidence": "medium",
+          "citations": ["S1"],
+          "basis": "Record spans both poles: permit-streamlining and cheaper/faster building alongside bills lowering the cost of subsidized affordable housing."
+        },
+        "climate": {
+          "score": 1,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "Passed bills phasing out super-pollutant refrigerants and strengthening landfill enforcement; endorsed by Sierra Club and Washington Conservation Action."
+        }
+      }
+    },
+    {
+      "slug": "maggie-wang",
+      "summary": "Republican first-time candidate, an immigrant from Taiwan who ran a hair salon and a downtown Redmond restaurant for twenty-six years; volunteer election observer at King County Elections since 2022.",
+      "highlights": [
+        "Opposes tax increases; campaign messaging includes \"Stop Tax Increases\" and a focus on lower taxes [S1][S2]",
+        "Names parental rights and safer neighborhoods as core priorities [S1][S2]",
+        "Frames rising taxes, housing costs, and \"government overreach\" as the main threats to affordability [S1]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "Repeated explicit opposition to tax increases across pamphlet and campaign site; \"lower taxes\" is her stated focus."
+        },
+        "spending": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S1"],
+          "basis": "Runs on reduced government spending and frames \"government overreach\" as a threat to affordability."
+        },
+        "social": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S1", "S2"],
+          "basis": "Names parental rights as a core priority in both pamphlet and campaign materials, without further policy detail."
+        },
+        "experience": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1"],
+          "basis": "First-time candidate with no elected experience, running on a small-business outsider profile against a sitting committee chair."
+        }
+      }
+    }
+  ]
+}

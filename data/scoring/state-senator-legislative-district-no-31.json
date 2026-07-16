@@ -1,0 +1,77 @@
+{
+  "contest_slug": "state-senator-legislative-district-no-31",
+  "scored_at": "2026-07-16",
+  "derived_from": ["data/dossiers/state-senator-legislative-district-no-31/"],
+  "office_does": "The district's single member in the 49-seat Washington State Senate, elected to a four-year term to write and vote on state law and budgets and confirm gubernatorial appointments.",
+  "race_blurb": "Republican incumbent Phil Fortunato, a senator since 2017 running on spending restraint and Second Amendment rights, faces Democrat Tamara Stramel, a first-time candidate and school-bond organizer. Both advance to the November general election.",
+  "candidates": [
+    {
+      "slug": "tamara-stramel",
+      "summary": "Democratic first-time candidate, a precinct committee officer since 2017 and field organizer for the 2024 Sumner-Bonney Lake school bond, with a background in residential-treatment program management.",
+      "highlights": [
+        "Says schools are \"asked to do more with less\" and pledges to champion education funding [S1]",
+        "Would advocate for the district to be prioritized in the state transportation budget and for rural infrastructure development [S1]",
+        "Endorsed by the Washington State Labor Council, AFL-CIO and Pierce County Democrats [S1]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "experience": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1"],
+          "basis": "First-time candidate with grassroots organizing background and no elected or legislative record, facing a legislator with roughly 13 years of service."
+        },
+        "spending": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1"],
+          "basis": "Argues schools and infrastructure are underfunded and pledges to champion education funding and transportation investment."
+        }
+      }
+    },
+    {
+      "slug": "phil-fortunato",
+      "summary": "Incumbent Republican state senator since 2017 with prior House service, whose background is in environmental training and consulting and small contracting.",
+      "highlights": [
+        "Attributes the state's financial challenges to \"excessive spending and the unchecked growth of government programs\" and pledges disciplined use of tax dollars [S1]",
+        "Pledges to \"continue to stand firmly against efforts to erode our Second Amendment rights\" [S1]",
+        "Campaign centers on resisting government overreach, safeguarding parental rights, and addressing crime and homelessness [S2]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "experience": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S3"],
+          "basis": "Senator since 2017 with prior House terms (1998-2000, 2016) — roughly 13 years of cumulative legislative service."
+        },
+        "spending": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1"],
+          "basis": "Explicitly attributes state financial challenges to excessive spending and unchecked program growth; pledges disciplined use of tax dollars."
+        },
+        "taxes": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S1", "S2"],
+          "basis": "Runs on tax restraint and disciplined use of tax dollars rather than new revenue, though no specific tax-cut proposals are documented."
+        },
+        "safety": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S1", "S2"],
+          "basis": "Campaign addresses crime and homelessness from an accountability frame and cites law-enforcement-leader endorsements."
+        },
+        "social": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S2"],
+          "basis": "Campaign lists safeguarding parental rights among its central themes."
+        }
+      }
+    }
+  ]
+}

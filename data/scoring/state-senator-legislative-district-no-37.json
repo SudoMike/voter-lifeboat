@@ -1,0 +1,113 @@
+{
+  "contest_slug": "state-senator-legislative-district-no-37",
+  "scored_at": "2026-07-16",
+  "derived_from": ["data/dossiers/state-senator-legislative-district-no-37/"],
+  "office_does": "One of 49 Washington State Senators, voting on state law, the state budget, and taxation for the 37th District (southeast Seattle, Skyway, part of Renton).",
+  "race_blurb": "An open seat after Sen. Rebecca Saldaña declined to seek reelection. Sitting State Rep. Chipalo Street, backed by Saldaña and much of the Democratic establishment, faces first-time candidate and environmental-justice organizer Tatiana Brown; both prefer the Democratic Party, overlap broadly on policy, and advance to the general.",
+  "candidates": [
+    {
+      "slug": "chipalo-street",
+      "summary": "State Representative for the 37th District since 2023 and Microsoft technologist, running for the open Senate seat with the outgoing incumbent's endorsement and a record of bills passed and district funding secured.",
+      "highlights": [
+        "Says he secured $131 million in state investment for the district, including Garfield Super Block, Skyway homeownership, and a reparations study [S1]",
+        "Championed the 'millionaires tax' and cites passage of rent stabilization, tenant protections, and zoning reform to increase home building [S1][S2]",
+        "Cites work restoring abortion funding, maintaining food assistance for immigrants, banning ICE mask-wearing, and stopping Flock camera surveillance [S1]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "Championed the millionaires tax to fund education and healthcare access; wants the wealthy to pay more."
+        },
+        "spending": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1"],
+          "basis": "Record emphasizes securing state investment ($131 million for district projects) as the lever for outcomes."
+        },
+        "housing": {
+          "score": 1,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "Passed tenant protections including rent stabilization, while also reforming zoning to increase home building — tilts to protections with a supply component."
+        },
+        "experience": {
+          "score": -1,
+          "confidence": "high",
+          "citations": ["S1"],
+          "basis": "Sitting legislator since 2023 with Democratic leadership role, passed bills, and establishment backing — the record candidate in this race, though tenure is short."
+        },
+        "immigration": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1"],
+          "basis": "Cites work maintaining food assistance for immigrants, banning ICE mask-wearing, and stopping Flock camera surveillance."
+        },
+        "social": {
+          "score": 1,
+          "confidence": "high",
+          "citations": ["S1"],
+          "basis": "Cites legislative work restoring abortion funding."
+        },
+        "tech": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1"],
+          "basis": "Cites stopping Flock camera surveillance — a surveillance-limiting posture — while working in the tech industry."
+        }
+      }
+    },
+    {
+      "slug": "tatiana-brown",
+      "summary": "First-time candidate and community organizer; co-chair of the Washington Environmental Justice Council, running a small-dollar campaign that rejects corporate and PAC money and emphasizes participatory governance.",
+      "highlights": [
+        "Co-chairs the Washington Environmental Justice Council implementing the HEAL Act, and helped shape advocacy around the Climate Commitment Act [S1][S2]",
+        "Rejects corporate donations, PAC, fossil fuel, and defense contractor money; wants government-funded community assemblies in policymaking [S1][S2]",
+        "Supports progressive revenue so 'the wealthiest pay their fair share,' plus education funding, public health, and alternative public safety approaches [S1][S2]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "Platform repeatedly calls for progressive revenue so 'the wealthiest pay their fair share.'"
+        },
+        "spending": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S2"],
+          "basis": "Priorities center on funding K-12, higher education, public health, and transit as levers for outcomes."
+        },
+        "safety": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S2"],
+          "basis": "Lists 'alternative public safety approaches' among her public-service priorities."
+        },
+        "climate": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "Climate-justice platform grounded in a record: co-chairs the Environmental Justice Council implementing the HEAL Act and helped shape CCA advocacy."
+        },
+        "experience": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1"],
+          "basis": "First-time candidate with an organizer profile and no elected experience, contrasting with a sitting legislator."
+        },
+        "reform": {
+          "score": 2,
+          "confidence": "medium",
+          "citations": ["S2"],
+          "basis": "Explicitly refuses corporate, PAC, fossil fuel, and defense contractor money; small-dollar funded and emphasizes participatory community assemblies."
+        }
+      }
+    }
+  ]
+}

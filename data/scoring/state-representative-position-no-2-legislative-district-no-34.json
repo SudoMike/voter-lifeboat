@@ -1,0 +1,89 @@
+{
+  "contest_slug": "state-representative-position-no-2-legislative-district-no-34",
+  "scored_at": "2026-07-16",
+  "derived_from": ["data/dossiers/state-representative-position-no-2-legislative-district-no-34/"],
+  "office_does": "One of two House seats for the 34th District (West Seattle, Vashon Island, White Center, west Burien), serving two-year terms writing state law and budgets.",
+  "race_blurb": "Fifteen-year incumbent and House Majority Leader Joe Fitzgibbon faces political newcomer Mary Anito; both prefer the Democratic Party and both advance to the general. The visible contrasts are experience (legislative leadership vs. private-sector operations) and fiscal emphasis, with a notable evidence asymmetry since Anito's platform detail is limited.",
+  "candidates": [
+    {
+      "slug": "joe-fitzgibbon",
+      "summary": "State Representative since 2010 and House Majority Leader since 2022, with nine years chairing the House Environment & Energy Committee and a signature record on climate legislation and the 2026 tax-reform package.",
+      "highlights": [
+        "Championed the Climate Commitment Act and Clean Fuel Standard; pamphlet describes passing 'the nation's strongest climate laws' [S1][S3]",
+        "Says he led passage of the 'millionaires' tax' paired with tax cuts for working families and small businesses [S1]",
+        "House Majority Leader since 2022 after chairing Environment & Energy from 2014 to 2022; now also on Appropriations and Rules [S1][S3]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1"],
+          "basis": "Says he led passage of the millionaires-tax reform package — an enacted progressive-revenue record."
+        },
+        "spending": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1"],
+          "basis": "Pamphlet emphasizes securing investments in education, healthcare, transit, public safety, and the environment, alongside budget stabilization."
+        },
+        "housing": {
+          "score": 0,
+          "confidence": "medium",
+          "citations": ["S3"],
+          "basis": "Supports both supply-side measures (building near transit, modernizing local planning) and public-investment measures (affordable housing, homelessness prevention, limiting displacement)."
+        },
+        "climate": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S3"],
+          "basis": "Championed the Climate Commitment Act and Clean Fuel Standard and pledges to continue advancing clean energy and emission reductions."
+        },
+        "experience": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1"],
+          "basis": "Fifteen-year incumbent and House Majority Leader — among the most senior legislators on the King County ballot."
+        },
+        "local-control": {
+          "score": 1,
+          "confidence": "low",
+          "citations": ["S1", "S3"],
+          "basis": "Supports 'modernizing local planning' and served on the board of Futurewise, a growth-management advocacy organization — an indirect lean toward state/regional standards."
+        },
+        "social": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S3"],
+          "basis": "Defends reproductive freedom, voting rights, and racial and environmental justice in both pamphlet and campaign materials."
+        }
+      }
+    },
+    {
+      "slug": "mary-anito",
+      "summary": "First-time candidate with an operations and supply-chain management background at REI, Wayfair, Caterpillar, and Cisco, running on pairing fiscal responsibility with public investment.",
+      "highlights": [
+        "Argues 'fiscal responsibility and strong public investment are not mutually exclusive'; wants to balance the budget while funding infrastructure, education, and healthcare [S1]",
+        "Operations and engineering background (MIT Leaders for Global Operations Fellow; senior operations manager at REI) with board service at ROOTS Young Adult Shelter [S1]",
+        "Political newcomer challenging the House Majority Leader; platform detail beyond the pamphlet was not retrievable [S1][S4]"
+      ],
+      "evidence_level": "pamphlet-only",
+      "withdrawn": false,
+      "scores": {
+        "spending": {
+          "score": 0,
+          "confidence": "medium",
+          "citations": ["S1"],
+          "basis": "Explicitly pairs balancing the budget with funding infrastructure, education, and healthcare — a stated mix of restraint and investment."
+        },
+        "experience": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S4"],
+          "basis": "First-time candidate and political newcomer running on private-sector operations experience rather than any governmental record."
+        }
+      }
+    }
+  ]
+}

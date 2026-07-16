@@ -1,0 +1,168 @@
+{
+  "contest_slug": "state-senator-legislative-district-no-32",
+  "scored_at": "2026-07-16",
+  "derived_from": ["data/dossiers/state-senator-legislative-district-no-32/"],
+  "office_does": "One of 49 members of the state Senate, elected to a four-year term to write state law, adopt state budgets, set tax policy, and confirm gubernatorial appointments.",
+  "race_blurb": "Two sitting Democratic legislators face each other: Rep. Cindy Ryu, in the House since 2011, is challenging two-term incumbent Sen. Jesse Salomon, calling him 'too moderate,' while Salomon calls himself a 'pragmatic progressive.' Republican first-time candidate Ira McBee runs on partisan balance in this heavily Democratic district.",
+  "candidates": [
+    {
+      "slug": "jesse-salomon",
+      "summary": "Two-term incumbent Democratic senator, former public defender and child welfare prosecutor, who chairs the Senate Local Government Committee and self-describes as a 'pragmatic progressive.'",
+      "highlights": [
+        "Supports a 9.9% 'Millionaires Tax' on incomes over $1 million; passed ESSB 5794 closing corporate tax loopholes and expanded low-income tax rebates [S1][S2][S5]",
+        "Emphasizes auditing homelessness spending rather than simply increasing budgets, and addressing the Aurora corridor 'with compassion and accountability' [S1][S4]",
+        "Passed ESSB 5611 cutting permitting red tape to speed housing, while his pamphlet also cites capping rent increases and blocking AI-powered rent-setting [S1][S2][S6]",
+        "Banned ICE face coverings by law and campaigns on 'Trump-proofing' the state [S1][S2]",
+        "Endorsement base of sitting officeholders — legislators, mayors, the Snohomish County Sheriff — while the local party organization backed his opponent [S1]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S2", "S5"],
+          "basis": "Champions a 9.9% millionaires tax and has an enacted record of closing corporate tax loopholes while expanding low-income rebates."
+        },
+        "spending": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S1", "S4"],
+          "basis": "Stresses auditing homelessness program spending over budget increases and pairs compassion with accountability, though he also backs major public investment packages."
+        },
+        "housing": {
+          "score": 0,
+          "confidence": "medium",
+          "citations": ["S1", "S2", "S4"],
+          "basis": "Genuinely mixed: leads with supply expansion, permitting streamlining, and senior tax relief, but also cites capping rent increases and blocking AI rent-setting."
+        },
+        "safety": {
+          "score": 0,
+          "confidence": "medium",
+          "citations": ["S1"],
+          "basis": "Mixed posture: calls for connecting people to mental health and addiction treatment, framed 'with compassion and accountability,' and carries the Snohomish County Sheriff's endorsement."
+        },
+        "climate": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S2"],
+          "basis": "Supports a fracking ban, environmental restoration, and a transportation package his campaign calls among the state's greenest; no explicit carbon-pricing stance in the dossier."
+        },
+        "experience": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S3"],
+          "basis": "Two-term incumbent with a committee chairmanship, prior JLARC chairmanship, seven years on the Shoreline council, and bills passed each session."
+        },
+        "immigration": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "Passed the ICE face-covering ban and campaigns on 'Trump-proofing' the state against federal overreach."
+        },
+        "tech": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S3"],
+          "basis": "Blocked AI-powered rent-setting and is working on algorithmic pricing regulation, but has no stated position on data-center subsidies."
+        }
+      }
+    },
+    {
+      "slug": "cindy-ryu",
+      "summary": "Eight-term Democratic state representative and former Shoreline mayor, giving up her House seat to challenge the incumbent senator from her own party as insufficiently progressive.",
+      "highlights": [
+        "Has backed the capital gains tax and a millionaire's tax; campaigns on a fairer tax system asking the wealthiest to pay their share [S1][S2][S6]",
+        "Housing approach leans on mixed-income and social housing plus streamlined permitting and modular construction [S5][S6]",
+        "Wants aggressive AI regulation, a comprehensive state privacy law, and opposes data-center subsidies; passed a ban on AI deepfake likeness content [S4][S5][S6]",
+        "16 years in the House, chairing the Housing Committee for five years and now Technology, Economic Development & Veterans [S3][S6]",
+        "Holds the 32nd District Democrats' endorsement over the incumbent, plus the Washington State Labor Council and WEA [S1][S8]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S2", "S6"],
+          "basis": "Has backed the capital gains tax and a millionaire's tax and campaigns on making the wealthiest pay their share."
+        },
+        "spending": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S2", "S5"],
+          "basis": "Runs on fully funding public education and challenges the incumbent as 'too moderate,' positioning toward public investment over restraint."
+        },
+        "housing": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S5", "S6"],
+          "basis": "Emphasizes mixed-income and social housing, though paired with permitting streamlining and modular construction."
+        },
+        "climate": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S6"],
+          "basis": "Has backed climate initiatives and wants clean-air legislation targeting working-class communities and communities of color."
+        },
+        "experience": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S3", "S6"],
+          "basis": "Longest legislative tenure in the race: in the House since 2011, five years chairing Housing, current committee chair, with bills signed into law."
+        },
+        "tech": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S4", "S5", "S6"],
+          "basis": "Wants aggressive AI regulation and a comprehensive state privacy law, opposes data-center subsidies, and passed a deepfake-likeness ban."
+        }
+      }
+    },
+    {
+      "slug": "ira-mcbee",
+      "summary": "Republican first-time candidate, entrepreneur, and international humanitarian worker from Lynnwood/Edmonds, running on partisan balance against one-party control.",
+      "highlights": [
+        "Attributes rising costs to regulatory burdens and government spending rather than revenue shortfalls [S2][S3]",
+        "Supports 'responsible budgeting' and reforming spending inefficiency [S1][S3]",
+        "Backs rehabilitation for first-time offenders paired with strengthened penalties for repeat offenders [S2][S3]",
+        "Supports parental involvement in education, transparency, and expanded skilled-trades pathways [S1][S2]",
+        "Has raised under $8,000, roughly one-twentieth of either Democratic opponent [S3][S4]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S2", "S3"],
+          "basis": "Frames affordability as a spending-and-regulation problem, not a revenue shortfall; no specific tax proposals in the dossier."
+        },
+        "spending": {
+          "score": -2,
+          "confidence": "medium",
+          "citations": ["S1", "S2", "S3"],
+          "basis": "Runs on responsible budgeting and reforming spending inefficiency as core planks."
+        },
+        "safety": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S2", "S3"],
+          "basis": "Wants to restore safety on transit and in public spaces with stronger repeat-offender penalties, softened by rehabilitation for first-time offenders."
+        },
+        "experience": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S3"],
+          "basis": "First-time candidate with no governing record, running explicitly as balance against entrenched one-party control."
+        },
+        "social": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S1", "S2"],
+          "basis": "Emphasizes parental involvement and transparency in education, with a background in church ministry and homeschool-cooperative instruction."
+        }
+      }
+    }
+  ]
+}

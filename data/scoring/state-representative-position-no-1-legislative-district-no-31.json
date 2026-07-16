@@ -1,0 +1,83 @@
+{
+  "contest_slug": "state-representative-position-no-1-legislative-district-no-31",
+  "scored_at": "2026-07-16",
+  "derived_from": ["data/dossiers/state-representative-position-no-1-legislative-district-no-31/"],
+  "office_does": "One of two state representatives for the 31st Legislative District, serving a two-year term voting on state law and the operating, capital, and transportation budgets.",
+  "race_blurb": "Republican incumbent Drew Stokesbary, the sitting House Minority Leader, faces Democrat Stephen Szczurko-Walton, a first-time candidate, Navy veteran, and HVAC technician running on campaign-finance reform. Both advance to the November general election.",
+  "candidates": [
+    {
+      "slug": "drew-stokesbary",
+      "summary": "Incumbent Republican state representative from Auburn and the current House Minority Leader, an attorney advising startups and small businesses on corporate and securities law.",
+      "highlights": [
+        "Selected House Republican leader in 2023; previously Ranking Member on House Appropriations and House Minority Floor Leader [S1][S3]",
+        "Says taxes \"keep increasing, by billions each year\" and called the 2026 session \"an inflection point\" given another budget shortfall [S1][S4]",
+        "Campaign site lists endorsements from the Washington Council of Police and Sheriffs, Washington State PTA, and State Council of Fire Fighters [S2]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "experience": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S3"],
+          "basis": "Sitting House Minority Leader with a long legislative tenure and prior Appropriations ranking-member and floor-leader roles."
+        },
+        "taxes": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S4"],
+          "basis": "Repeated explicit critique of rising state taxes, including citing billions in new 2025 taxes and fees at the 2026 session opening."
+        },
+        "safety": {
+          "score": -2,
+          "confidence": "medium",
+          "citations": ["S1"],
+          "basis": "Pledges \"safer neighborhoods where laws are enforced and criminals are apprehended\" — an enforcement-first framing with no prevention component."
+        }
+      }
+    },
+    {
+      "slug": "stephen-szczurko-walton",
+      "summary": "Democratic first-time candidate, a U.S. Navy nuclear reactor operator from 2015-2024 and now a commercial HVAC technician, challenging the sitting House Minority Leader.",
+      "highlights": [
+        "Signature issue is passing SB 6358 to \"end corporate election spending in Washington,\" framed as a way to bypass Citizens United [S1][S2]",
+        "Pledges to \"defend the Climate Commitment Act,\" modernize the electrical grid, and maintain diverse clean energy options [S1][S2]",
+        "Website advocates universal healthcare and progressive taxation to bring down housing, healthcare, and tax costs [S1][S2]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "experience": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1"],
+          "basis": "First-time candidate with no prior elected experience, running a challenger campaign against the House Minority Leader."
+        },
+        "reform": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "Makes ending corporate election spending (SB 6358) his signature issue across pamphlet and website."
+        },
+        "climate": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "Explicitly pledges to defend the Climate Commitment Act and expand clean energy, repeated in both pamphlet and website."
+        },
+        "healthcare": {
+          "score": 2,
+          "confidence": "medium",
+          "citations": ["S2"],
+          "basis": "Website advocates universal healthcare."
+        },
+        "taxes": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S2"],
+          "basis": "Website advocates progressive taxation while pledging to bring down tax costs for regular households — a burden-shifting posture."
+        }
+      }
+    }
+  ]
+}
