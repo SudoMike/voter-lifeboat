@@ -1,0 +1,30 @@
+{
+  "contest_slug": "cowlitz-cowlitz-county-clerk",
+  "scored_at": "2026-07-17",
+  "derived_from": ["data/washington-state/counties/cowlitz/dossiers/cowlitz-cowlitz-county-clerk/"],
+  "office_does": "The clerk maintains Superior Court records, receives filings and payments, supports court operations, and provides public access to case records.",
+  "race_blurb": "Incumbent Staci Myklebust faces Ashley White; the available source set establishes Myklebust's court-administration tenure but little substantive information about White.",
+  "candidates": [
+    {
+      "slug": "ashley-white",
+      "summary": "White is a candidate for county clerk; the approved dossier sources do not establish an attributable administrative platform or experience record.",
+      "highlights": ["Current ballot status is verified, while policy and experience remain research gaps [S1][S2]"],
+      "evidence_level": "pamphlet-only",
+      "withdrawn": false,
+      "scores": {}
+    },
+    {
+      "slug": "staci-myklebust",
+      "summary": "Myklebust is the incumbent county clerk with a long record in the office and prior work expanding remote and paperless access.",
+      "highlights": [
+        "Washington Courts and county records verify her incumbency [S1][S2]",
+        "An earlier official statement reported 17 years in the office and access-modernization work [S1]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "experience": {"score": -2, "confidence": "high", "citations": ["S1", "S2"], "basis": "Verified incumbency and a reported 17-year clerk-office career make her the established-record candidate."}
+      }
+    }
+  ]
+}
