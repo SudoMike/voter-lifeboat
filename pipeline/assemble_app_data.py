@@ -27,6 +27,15 @@ KING = WA / "counties/king"
 INTERIM = KING / "interim"
 FINAL = ROOT / "data/final"
 DOSSIER_DIRS = [STATE / "dossiers", KING / "dossiers"]
+COUNTY_NAMES = {
+    "clark": ("Clark County", "53011"),
+    "king": ("King County", "53033"),
+    "kitsap": ("Kitsap County", "53035"),
+    "pierce": ("Pierce County", "53053"),
+    "snohomish": ("Snohomish County", "53061"),
+    "spokane": ("Spokane County", "53063"),
+    "thurston": ("Thurston County", "53067"),
+}
 
 contests = json.load(open(INTERIM / "contests.json"))["contests"]
 scores = {c["contest_slug"]: c for c in json.load(open(FINAL / "scores.json"))["contests"]}
@@ -160,6 +169,29 @@ for m in measures_meta:
         "lean_mappings": ms.get("lean_mappings", {}),
     })
 
+supported_counties = [{"id": "king", "name": "King County", "state": "WA", "fips": "53033"}]
+for county_dir in sorted((WA / "counties").iterdir()):
+    if county_dir.name == "king" or not county_dir.is_dir():
+        continue
+    cfile = county_dir / "interim/app-contests.json"
+    mfile = county_dir / "interim/app-measures.json"
+    if cfile.exists():
+        pack = json.load(open(cfile))
+        out_contests.extend(pack.get("contests", []))
+    if mfile.exists():
+        pack = json.load(open(mfile))
+        out_measures.extend(pack.get("measures", []))
+    if cfile.exists() or mfile.exists():
+        name, fips = COUNTY_NAMES.get(county_dir.name, (county_dir.name.title(), None))
+        supported_counties.append({"id": county_dir.name, "name": name, "state": "WA", "fips": fips})
+
+contest_slugs = [c["slug"] for c in out_contests]
+measure_slugs = [m["slug"] for m in out_measures]
+duplicate_contests = sorted({s for s in contest_slugs if contest_slugs.count(s) > 1})
+duplicate_measures = sorted({s for s in measure_slugs if measure_slugs.count(s) > 1})
+if duplicate_contests or duplicate_measures:
+    raise SystemExit(f"duplicate app slugs: contests={duplicate_contests} measures={duplicate_measures}")
+
 sha = subprocess.run(["git", "rev-parse", "--short", "HEAD"], capture_output=True,
                      text=True, cwd=ROOT).stdout.strip() or "dev"
 
@@ -167,6 +199,7 @@ app_data = {
     "derived_from": [
         "data/washington-state/statewide/**",
         "data/washington-state/counties/king/**",
+        "data/washington-state/counties/*/interim/app-*.json",
         "data/final/scores.json",
         "data/final/measures.json",
         "data/final/rubric.json",
@@ -182,7 +215,7 @@ app_data = {
     },
     "coverage": {
         "statewide_complete": True,
-        "supported_counties": [{"id": "king", "name": "King County", "state": "WA", "fips": "53033"}],
+        "supported_counties": supported_counties,
     },
     "rubric": {"scale": rubric["scale"], "axes": rubric["axes"]},
     "interview": interview,
@@ -198,8 +231,13 @@ appdir.mkdir(parents=True, exist_ok=True)
 (appdir / "app-data.json").write_text(payload)
 
 n_src = sum(len(c["sources"]) for con in out_contests for c in con["candidates"])
-no_src = [f"{con['slug']}/{c['slug']}" for con in out_contests for c in con["candidates"] if not c["sources"]]
+no_src = [
+    f"{con['slug']}/{c['slug']}"
+    for con in out_contests
+    for c in con["candidates"]
+    if not c["sources"] and c.get("evidence_level") != "official-ballot-only"
+]
 print(f"contests: {len(out_contests)}  measures: {len(out_measures)}  size: {len(payload)//1024}KB")
-print(f"candidate sources parsed: {n_src}  candidates with zero sources: {len(no_src)}")
+print(f"candidate sources parsed: {n_src}  dossier candidates with zero sources: {len(no_src)}")
 for x in no_src[:10]:
     print("  NO SOURCES:", x)

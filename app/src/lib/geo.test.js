@@ -57,6 +57,7 @@ test('supported non-King counties use Census federal/state districts as partial 
       '119th Congressional Districts': [{ BASENAME: '2' }],
       '2024 State Legislative Districts - Lower': [{ BASENAME: '38' }],
       '2024 State Legislative Districts - Upper': [{ BASENAME: '38' }],
+      'Incorporated Places': [{ BASENAME: 'Everett' }],
     },
   })
   const context = await lookupBallotContext(
@@ -64,6 +65,6 @@ test('supported non-King counties use Census federal/state districts as partial 
     '3000 Rockefeller Ave Everett WA 98201'
   )
   assert.equal(context.coverageStatus, 'partial_county')
-  assert.deepEqual(context.districts, { CONGDST: '2', LEGDST: '38' })
+  assert.deepEqual(context.districts, { CONGDST: '2', LEGDST: '38', CITY: 'Everett' })
   assert.deepEqual(context.missingLayers, ['county-local'])
 })

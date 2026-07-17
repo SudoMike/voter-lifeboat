@@ -160,11 +160,14 @@ function lookupCensusDistricts(pt) {
   const congressional = firstGeo(pt, '119th Congressional Districts')
   const lower = firstGeo(pt, '2024 State Legislative Districts - Lower')
   const upper = firstGeo(pt, '2024 State Legislative Districts - Upper')
+  const place = firstGeo(pt, 'Incorporated Places')
   const districts = {}
   const cd = trimDistrictNumber(congressional?.BASENAME || congressional?.CD119 || congressional?.GEOID)
   const ld = trimDistrictNumber(lower?.BASENAME || lower?.SLDL || upper?.BASENAME || upper?.SLDU)
+  const city = (place?.BASENAME || place?.NAME || '').replace(/\s+city$/i, '').trim()
   if (cd) districts.CONGDST = cd
   if (ld) districts.LEGDST = ld
+  if (city) districts.CITY = city
   return districts
 }
 

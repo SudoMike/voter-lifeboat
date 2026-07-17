@@ -1,0 +1,16 @@
+{
+  "county": "snohomish",
+  "script": "pipeline/extract_pdf_text.mjs",
+  "files": [
+    {
+      "source_pointer": "data/washington-state/counties/snohomish/raw/snoco/local-voters-pamphlet.pdf.url",
+      "url": "https://www.snohomishcountywa.gov/DocumentCenter/View/149774",
+      "output": "data/washington-state/counties/snohomish/interim/pdf-text/local-voters-pamphlet.txt"
+    },
+    {
+      "source_pointer": "data/washington-state/counties/snohomish/raw/snoco/sample-ballot.pdf.url",
+      "url": "https://www.snohomishcountywa.gov/DocumentCenter/View/128277",
+      "output": "data/washington-state/counties/snohomish/interim/pdf-text/sample-ballot.txt"
+    }
+  ]
+}

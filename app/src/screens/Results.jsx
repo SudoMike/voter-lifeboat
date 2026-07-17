@@ -17,6 +17,7 @@ const EVIDENCE = {
   rich: { marks: '◆◆◆', cls: 'evidence--rich', label: 'Rich record' },
   moderate: { marks: '◆◆◇', cls: 'evidence--mod', label: 'Moderate record' },
   'pamphlet-only': { marks: '◆◇◇', cls: 'evidence--thin', label: 'Pamphlet only — take with sea salt' },
+  'official-ballot-only': { marks: '◇◇◇', cls: 'evidence--thin', label: 'Official ballot only' },
 }
 
 function postFeedback(payload) {
@@ -137,6 +138,12 @@ function CandidateExpanded({ data, contest, row, answers }) {
               Read the pamphlet →
             </a>
           )}
+        </div>
+      )}
+      {c.evidence_level === 'official-ballot-only' && (
+        <div className="pamphlet-warn" style={{ marginBottom: 12 }}>
+          This candidate is listed in the official county ballot source, but
+          Voter Lifeboat has not completed a scored dossier for them yet.
         </div>
       )}
       {axes.length > 0 && (
@@ -636,7 +643,7 @@ export default function Results({ data, ballotContext, answers, restored, onStar
         <p style={{ fontSize: 13, fontWeight: 700, color: 'var(--ink-soft)', margin: '4px 0 0' }}>
           {contests.length} contests
           {measures.length ? ` · ${measures.length} measure${measures.length > 1 ? 's' : ''}` : ''}{' '}
-          · {coverageLabel.toLowerCase()} · <span className="accent">every score cites sources</span>
+          · {coverageLabel.toLowerCase()} · <span className="accent">covered scores cite sources</span>
         </p>
         <div className="share-row" style={{ marginTop: 10 }}>
           <button className="btn btn--navy btn--xs" onClick={copyLink}>

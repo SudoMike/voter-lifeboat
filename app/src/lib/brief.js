@@ -14,7 +14,8 @@ const PAMPHLET_URLS = {
 export function pamphletLink(pages) {
   if (!pages?.length) return null
   const p = pages[0]
-  return `${PAMPHLET_URLS[p.edition]}#page=${p.page}`
+  const url = PAMPHLET_URLS[p.edition]
+  return url ? `${url}#page=${p.page}` : null
 }
 
 function axisName(data, id) {
@@ -120,7 +121,7 @@ export function buildBrief(data, context, answers, contests, measures, shareUrl,
   L.push('---')
   L.push(`Regenerate this report anytime: ${shareUrl}`)
   L.push(
-    'Method: candidates were scored -2..+2 per issue axis by an AI pipeline reading official pamphlet statements, candidate websites, public records, endorsements and established news — every score carries citations, an adversarial AI pass tried to refute each one, and low-confidence scores are excluded from matching.'
+    'Method: candidates with completed dossiers were scored -2..+2 per issue axis by an AI pipeline reading official pamphlet statements, candidate websites, public records, endorsements and established news. Every score carries citations, an adversarial AI pass tried to refute each one, and low-confidence scores are excluded from matching. Some county candidates may be official-ballot-only entries with no computed score yet.'
   )
   L.push('')
   L.push('---')
