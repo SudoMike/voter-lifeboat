@@ -17,9 +17,9 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-STATE_SCORING = ROOT / "data/washington-state/statewide/scoring"
-KING_SCORING = ROOT / "data/washington-state/counties/king/scoring"
-SCORING_DIRS = [STATE_SCORING, KING_SCORING]
+WA = ROOT / "data/washington-state"
+PACKAGES = [WA / "statewide"] + [p for p in sorted((WA / "counties").iterdir()) if p.is_dir()]
+SCORING_DIRS = [p / "scoring" for p in PACKAGES if (p / "scoring").is_dir()]
 FINAL = ROOT / "data/final"
 
 stats = {"upheld": 0, "adjust": 0, "refuted": 0, "missing_added": 0, "missing_dropped_low": 0}
@@ -75,48 +75,52 @@ for scoring_dir in SCORING_DIRS:
             stats["missing_added"] += 1
         contests_out.append(data)
 
-meas = json.load(open(KING_SCORING / "measures.json"))
-mrf = KING_SCORING / "refutations/measures.json"
-if mrf.exists():
-    r = json.load(open(mrf))
-    by_slug = {m["slug"]: m for m in meas["measures"]}
-    for v in r.get("verdicts", []):
-        m = by_slug.get(v.get("measure"))
-        if not m:
-            continue
-        lm = (m.get("lean_mappings") or {}).get(v.get("axis"))
-        if not lm:
-            continue
-        if v.get("verdict") == "refuted":
-            del m["lean_mappings"][v["axis"]]
-            stats["refuted"] += 1
-        elif v.get("verdict") == "adjust":
-            if v.get("adjusted_direction") in (-1, 1):
-                lm["direction"] = v["adjusted_direction"]
-            lm["adjusted_by_refutation"] = True
-            stats["adjust"] += 1
-        else:
-            stats["upheld"] += 1
+measures_out = []
+measure_sources = []
+for scoring_dir in SCORING_DIRS:
+    measures_file = scoring_dir / "measures.json"
+    if not measures_file.exists():
+        continue
+    meas = json.load(open(measures_file))
+    package_path = scoring_dir.relative_to(ROOT).as_posix()
+    measure_sources.extend([f"{package_path}/measures.json", f"{package_path}/refutations/measures.json"])
+    mrf = scoring_dir / "refutations/measures.json"
+    if mrf.exists():
+        r = json.load(open(mrf))
+        by_slug = {m["slug"]: m for m in meas["measures"]}
+        for v in r.get("verdicts", []):
+            m = by_slug.get(v.get("measure"))
+            if not m:
+                continue
+            lm = (m.get("lean_mappings") or {}).get(v.get("axis"))
+            if not lm:
+                continue
+            if v.get("verdict") == "refuted":
+                del m["lean_mappings"][v["axis"]]
+                stats["refuted"] += 1
+            elif v.get("verdict") == "adjust":
+                if v.get("adjusted_direction") in (-1, 1):
+                    lm["direction"] = v["adjusted_direction"]
+                lm["adjusted_by_refutation"] = True
+                stats["adjust"] += 1
+            else:
+                stats["upheld"] += 1
+    measures_out.extend(meas["measures"])
 
 FINAL.mkdir(exist_ok=True)
 (FINAL / "scores.json").write_text(json.dumps({
-    "derived_from": [
-        "data/washington-state/statewide/scoring/*.json",
-        "data/washington-state/statewide/scoring/refutations/*.json",
-        "data/washington-state/counties/king/scoring/*.json",
-        "data/washington-state/counties/king/scoring/refutations/*.json",
-    ],
+    "derived_from": [source for scoring_dir in SCORING_DIRS for source in (
+        f"{scoring_dir.relative_to(ROOT).as_posix()}/*.json",
+        f"{scoring_dir.relative_to(ROOT).as_posix()}/refutations/*.json",
+    )],
     "script": "pipeline/merge_scores.py",
     "verdict_stats": stats,
     "contests": contests_out,
 }, indent=2))
 (FINAL / "measures.json").write_text(json.dumps({
-    "derived_from": [
-        "data/washington-state/counties/king/scoring/measures.json",
-        "data/washington-state/counties/king/scoring/refutations/measures.json",
-    ],
+    "derived_from": measure_sources,
     "script": "pipeline/merge_scores.py",
-    "measures": meas["measures"],
+    "measures": measures_out,
 }, indent=2))
 
 n = sum(len(c.get("scores") or {}) for con in contests_out for c in con["candidates"])
