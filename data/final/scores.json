@@ -2,18 +2,863 @@
   "derived_from": [
     "data/washington-state/statewide/scoring/*.json",
     "data/washington-state/statewide/scoring/refutations/*.json",
+    "data/washington-state/counties/clark/scoring/*.json",
+    "data/washington-state/counties/clark/scoring/refutations/*.json",
     "data/washington-state/counties/king/scoring/*.json",
-    "data/washington-state/counties/king/scoring/refutations/*.json"
+    "data/washington-state/counties/king/scoring/refutations/*.json",
+    "data/washington-state/counties/pierce/scoring/*.json",
+    "data/washington-state/counties/pierce/scoring/refutations/*.json",
+    "data/washington-state/counties/spokane/scoring/*.json",
+    "data/washington-state/counties/spokane/scoring/refutations/*.json"
   ],
   "script": "pipeline/merge_scores.py",
   "verdict_stats": {
-    "upheld": 677,
-    "adjust": 106,
-    "refuted": 9,
-    "missing_added": 6,
+    "upheld": 785,
+    "adjust": 118,
+    "refuted": 23,
+    "missing_added": 11,
     "missing_dropped_low": 4
   },
   "contests": [
+    {
+      "contest_slug": "congressional-district-10-u-s-representative",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/congressional-district-10-u-s-representative/"
+      ],
+      "office_does": "A U.S. representative serves a two-year term, legislates and votes in the House, conducts oversight, and provides constituent services.",
+      "race_blurb": "Incumbent Marilyn Strickland faces five challengers. Adam Arafat supplies a health-care and accountability platform, Alex Scheel emphasizes housing justice and anti-war policy, and the remaining challengers have sparse dossier evidence.",
+      "candidates": [
+        {
+          "slug": "adam-arafat",
+          "summary": "A challenger supporting universal health care, prescription-cost reductions, mental-health access, corporate tax enforcement, and public performance reporting.",
+          "highlights": [
+            "Supports universal health care and lower prescription-drug prices [S2]",
+            "Supports expanded mental-health access and corporate tax enforcement [S2]",
+            "Rejects corporate PAC contributions and favors measurable public reporting [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Supports stronger corporate tax enforcement as a revenue and fairness tool."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Supports expanded mental-health access and universal health coverage alongside cost reduction."
+            },
+            "reform": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Rejects corporate PAC money and proposes measurable public accountability reporting."
+            }
+          }
+        },
+        {
+          "slug": "alex-scheel",
+          "summary": "A progressive challenger whose documented platform centers housing justice and an anti-war foreign policy.",
+          "highlights": [
+            "Campaigns as a progressive focused on housing justice [S2]",
+            "Supports an anti-war foreign policy [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "defense": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier explicitly characterizes his foreign-policy platform as anti-war.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "chris-d-chung",
+          "summary": "A filed District 10 candidate for whom the reviewed dossier found no verifiable issue positions.",
+          "highlights": [
+            "Identity was matched to the official candidate record [S1]",
+            "Policy axes are omitted because the dossier found no verifiable issue position [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "derek-maynes",
+          "summary": "A filed District 10 candidate for whom the reviewed dossier found no verifiable issue positions.",
+          "highlights": [
+            "Identity was matched to the official candidate record [S1]",
+            "Policy axes are omitted because the dossier found no verifiable issue position [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "kurtis-engle",
+          "summary": "A filed District 10 candidate for whom the reviewed dossier found no verifiable issue positions.",
+          "highlights": [
+            "Identity was matched to the official candidate record [S1]",
+            "Policy axes are omitted because the dossier found no verifiable issue position [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "marilyn-strickland",
+          "summary": "The incumbent representative, with campaign materials emphasizing congressional tenure and institutional leadership.",
+          "highlights": [
+            "Campaign materials emphasize her incumbent congressional role [S2]",
+            "Serves as Secretary of the Congressional Black Caucus [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Runs on incumbent congressional service and Congressional Black Caucus leadership.",
+              "adjusted_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "congressional-district-2-u-s-representative",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/congressional-district-2-u-s-representative/"
+      ],
+      "office_does": "A U.S. representative writes and votes on federal law and spending, conducts executive oversight, and provides constituent services.",
+      "race_blurb": "Long-serving incumbent Rick Larsen faces Edwin Feller's smaller-government campaign and two progressive challengers, Tomas Scheel and Devin Hermanson, who advocate more structural changes.",
+      "candidates": [
+        {
+          "slug": "devin-hermanson",
+          "summary": "Hermanson runs to the incumbent's left on wealth taxation, universal health care, climate investment, institutional reform, and U.S. aid to Israel.",
+          "highlights": [
+            "Supports taxing billionaires, Medicare for All, and the Green New Deal [S1][S2]",
+            "Rejects corporate money and supports Supreme Court reform [S1][S2]",
+            "Calls for ending U.S. aid to Israel [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He explicitly supports taxing billionaires to fund a broader public agenda."
+            },
+            "spending": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The Green New Deal and Medicare for All place expanded public investment at the center of his platform."
+            },
+            "climate": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He explicitly supports the Green New Deal."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He is a challenger without elected office who frames his campaign around institutional rebuilding."
+            },
+            "reform": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He rejects corporate money and calls for structural Supreme Court reform."
+            },
+            "healthcare": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He explicitly supports Medicare for All."
+            },
+            "defense": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He calls for ending U.S. aid to Israel."
+            }
+          }
+        },
+        {
+          "slug": "edwin-h-feller",
+          "summary": "Feller campaigns on smaller government, lower taxes, balanced budgets, border enforcement, law enforcement, and traditional Title IX protections.",
+          "highlights": [
+            "Attributes affordability problems to taxes and government growth [S1]",
+            "Supports border security, law enforcement, election security, and balanced budgets [S1][S2]",
+            "Offers extensive private-sector work but no elected record [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He explicitly identifies high taxes and government growth as causes of affordability problems."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He emphasizes smaller government and balanced budgets."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He supports law enforcement as a central public-safety approach."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He offers private-sector and overseas facilities experience but no elected record."
+            },
+            "immigration": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He explicitly prioritizes border security and enforcement."
+            },
+            "social": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "His Title IX position is framed around traditional sex-based protections for women."
+            }
+          }
+        },
+        {
+          "slug": "rick-larsen",
+          "summary": "The long-serving incumbent emphasizes incremental expansion of health-care access, housing and infrastructure investment, fentanyl enforcement, and legal constraints on ICE.",
+          "highlights": [
+            "Supports expanding health-care access and lowering costs [S1][S2]",
+            "Supports affordable-housing supply, infrastructure, jobs, and childcare [S1]",
+            "Supports fentanyl enforcement while requiring ICE agents to follow ordinary law-enforcement rules [S1]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He supports federal investment in housing, infrastructure, jobs, and childcare."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He combines law-enforcement action against fentanyl with constraints on immigration agents.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3",
+                "S4"
+              ],
+              "basis": "He is a long-serving incumbent with an extensive congressional record."
+            },
+            "immigration": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He opposes executive actions targeting immigrant communities and supports law-enforcement rules for ICE."
+            },
+            "healthcare": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He proposes expanding access and lowering costs within the current health-care system."
+            }
+          }
+        },
+        {
+          "slug": "tomas-scheel",
+          "summary": "Scheel combines universal health care and clean-energy investment with progressive social policy, replacing ICE, and restrictions on institutional campaign money.",
+          "highlights": [
+            "Supports universal health care, clean energy, and major housing investment [S1][S2]",
+            "Calls for dismantling ICE and replacing it with a rights-grounded system [S1]",
+            "Rejects corporate PAC and foreign-lobby money [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He supports major federal investment in health care, housing, and clean energy."
+            },
+            "climate": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He explicitly supports a clean-energy transition."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He is an outsider candidate whose experience is military, technical, business, and volunteer service rather than elected office."
+            },
+            "reform": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He rejects corporate PAC and foreign-lobby money and calls for higher official-accountability standards."
+            },
+            "immigration": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He calls for dismantling ICE and replacing it with a rights-grounded immigration system."
+            },
+            "healthcare": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He explicitly supports universal health care."
+            },
+            "social": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He supports reproductive freedom and access to gender-affirming care."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "congressional-district-6-u-s-representative",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/congressional-district-6-u-s-representative/"
+      ],
+      "office_does": "A U.S. representative writes and votes on federal law and spending, conducts oversight, and provides constituent services.",
+      "race_blurb": "First-term incumbent Emily Randall faces an anti-party independent, a fiscal and public-safety Republican, a social-investment and demilitarization candidate, and an America First challenger.",
+      "candidates": [
+        {
+          "slug": "brian-p-o-gorman",
+          "summary": "O'Gorman centers an anti-two-party, anti-insider critique and calls for reforms involving civil forfeiture, qualified immunity, and gerrymandering.",
+          "highlights": [
+            "Served 16 years as an Army and National Guard field medic [S1]",
+            "Says party and insider arrangements distort representation [S1][S2]",
+            "Criticizes civil forfeiture, qualified immunity, and gerrymandering [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He offers military and volunteer experience but no elected record."
+            },
+            "reform": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "His campaign centrally attacks two-party, insider, gerrymandering, and qualified-immunity structures."
+            }
+          }
+        },
+        {
+          "slug": "emily-randall",
+          "summary": "The first-term incumbent emphasizes Medicaid protection, cost reduction, oversight, and bipartisan investment in district infrastructure and services.",
+          "highlights": [
+            "Prioritizes reducing costs and protecting Medicaid [S1][S2]",
+            "Reports securing nearly $18 million for district projects [S1]",
+            "Emphasizes bipartisan housing, ferry, infrastructure, tribal, and military-family projects [S1]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Her record and platform emphasize federal investment in district infrastructure, housing, emergency management, and services."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3",
+                "S4"
+              ],
+              "basis": "She has a current congressional voting and oversight record, though she is a first-term incumbent."
+            },
+            "reform": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She emphasizes institutional coalition-building, bipartisan caucus work, and established organizational support.",
+              "adjusted_by_refutation": true
+            },
+            "immigration": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She opposes Trump administration immigration actions, without advocating the structural abolition proposed by Jones."
+            },
+            "healthcare": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She prioritizes protecting Medicaid and reducing costs within the existing system."
+            }
+          }
+        },
+        {
+          "slug": "leon-lawson",
+          "summary": "Lawson offers an America First populist platform with juvenile workforce rehabilitation, tribal empowerment, and targeted health-care and technology proposals.",
+          "highlights": [
+            "Supports secure elections, tribal empowerment, and juvenile rehabilitation tied to workforce development [S1][S2]",
+            "Proposes changes aimed at pharmaceutical intermediaries [S1]",
+            "Previously ran for governor and U.S. Senate but has not held elected office [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "His documented public-safety proposal emphasizes juvenile rehabilitation through workforce development."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He is a repeat outsider candidate without an elected record."
+            },
+            "reform": {
+              "score": 1,
+              "confidence": "low",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "His America First candidacy is explicitly populist and anti-establishment.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "macy-jones",
+          "summary": "Jones advances the field's broadest social-investment platform and its clearest positions for abolishing ICE, reducing overseas-war spending, and regulating AI.",
+          "highlights": [
+            "Supports universal health care, labor rights, schools, infrastructure, elder care, and food security [S1][S2]",
+            "Supports abolishing ICE and detention centers and limiting surveillance [S1]",
+            "Opposes overseas-war spending and rejects AIPAC funding [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She proposes broad public investment across health care, labor, schools, infrastructure, elder care, and food security."
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She supports environmental protection and tribal partnerships to protect forests and rivers."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She brings health-care, elder-care, and community experience but no elected record."
+            },
+            "immigration": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She explicitly supports abolishing ICE and detention centers."
+            },
+            "healthcare": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She explicitly supports universal health care."
+            },
+            "tech": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She favors surveillance limits and responsible AI regulation."
+            },
+            "defense": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She opposes overseas-war spending and rejects AIPAC funding."
+            },
+            "reform": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Rejects AIPAC and foreign money and says she would represent constituents rather than corporate donors or political insiders, directly engaging institutional campaign money.",
+              "added_by_refutation": true
+            },
+            "social": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Explicitly supports gender equality, marriage equality, voting rights, privacy, and related progressive rights protections.",
+              "added_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "teresa-fox",
+          "summary": "Fox presents a conventional Republican platform focused on lower taxes, balanced budgets, law enforcement, anti-trafficking efforts, and maritime and naval employment.",
+          "highlights": [
+            "Supports lower taxes and balanced budgets [S1][S2]",
+            "Supports law enforcement, first responders, and stronger action against drugs and trafficking [S1][S2]",
+            "Reports 30 years in compliance, safety, risk management, and project budgets [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She explicitly supports lower taxes."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She explicitly prioritizes balanced budgets."
+            },
+            "safety": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She emphasizes law enforcement, first responders, and enforcement against drugs and trafficking."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She has extensive professional and party-service experience but no elected record."
+            },
+            "defense": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Explicitly prioritizes building naval dominance and supporting the district's maritime and naval industries, aligning with maintained defense commitments and defense-industry partnership.",
+              "added_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "congressional-district-8-u-s-representative",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/congressional-district-8-u-s-representative/"
+      ],
+      "office_does": "A U.S. representative serves a two-year term, legislates and votes in the House, conducts oversight, and provides constituent services.",
+      "race_blurb": "Incumbent Kim Schrier faces five challengers. The dossiers document substantive platforms for Schrier, Keith Arnold, and Bob Hagglund, while evidence for Andres Valleza, Spencer Meline, and Trinh Ha is insufficient for policy scoring.",
+      "candidates": [
+        {
+          "slug": "andres-valleza",
+          "summary": "A filed District 8 candidate for whom the reviewed dossier found no verifiable issue positions.",
+          "highlights": [
+            "Identity was matched to the official candidate record and campaign contact [S1][S2]",
+            "Policy axes are omitted because the dossier found no verifiable issue position [S1][S2]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "bob-hagglund",
+          "summary": "A District 8 challenger emphasizing lower costs, local jobs, producer-focused trade, and market-oriented clean-energy innovation.",
+          "highlights": [
+            "Supports lowering costs and expanding local jobs [S2]",
+            "Supports trade policy favoring Washington producers [S2]",
+            "Backs clean-energy innovation while opposing punitive green-energy taxes [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "climate": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Supports clean-energy innovation but prioritizes affordability and opposes punitive green-energy taxes."
+            }
+          }
+        },
+        {
+          "slug": "keith-arnold",
+          "summary": "A challenger with an ideologically mixed platform supporting progressive taxation, universal health care, renewable energy, and political reform.",
+          "highlights": [
+            "Supports ranked-choice voting and campaign reform [S2]",
+            "Supports progressive taxation, a living wage, and universal health care [S2]",
+            "Supports renewable energy and fair-trade conditions [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Explicitly supports progressive taxation, though the dossier gives no detailed revenue mechanism."
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Explicitly supports renewable energy."
+            },
+            "reform": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Explicitly supports ranked-choice voting and campaign reform."
+            }
+          }
+        },
+        {
+          "slug": "kim-schrier",
+          "summary": "The incumbent representative, emphasizing health-care costs, abortion access, local police, and federal infrastructure and agricultural-research funding.",
+          "highlights": [
+            "Emphasizes lowering health-care costs [S2]",
+            "Supports protecting abortion access and local police [S2]",
+            "Highlights federal infrastructure and agricultural-research funding [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Emphasizes securing federal infrastructure and agricultural-research investment."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Explicitly supports local police; no services-first safety plank is documented."
+            },
+            "social": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Explicitly supports protecting abortion access."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier identifies her as the incumbent who has represented the district since 2019, a maximal proven-tenure profile within this field.",
+              "added_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "spencer-meline",
+          "summary": "A filed District 8 candidate for whom the reviewed dossier found no verifiable issue positions.",
+          "highlights": [
+            "Identity was matched to the official candidate record and campaign contact [S1][S2]",
+            "Policy axes are omitted because the dossier found no verifiable issue position [S1][S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "trinh-ha",
+          "summary": "A filed District 8 candidate for whom the reviewed dossier found no verifiable issue positions.",
+          "highlights": [
+            "Identity was matched to the official candidate record and campaign contact [S1][S2]",
+            "Policy axes are omitted because the dossier found no verifiable issue position [S1][S2]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
     {
       "contest_slug": "justice-position-no-1-supreme-court",
       "scored_at": "2026-07-16",
@@ -574,6 +1419,395 @@
               "added_by_refutation": true
             }
           }
+        }
+      ]
+    },
+    {
+      "contest_slug": "clark-clark-county-assessor",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/counties/clark/dossiers/clark-clark-county-assessor/"
+      ],
+      "office_does": "The assessor values taxable real property and administers property-tax exemption programs but does not set levy rates.",
+      "race_blurb": "Four-term incumbent Peter Van Nortwick emphasizes appraisal credentials and operational continuity, while real-estate investor Tyler Thoune campaigns on valuation accuracy, appeals, and customer service.",
+      "candidates": [
+        {
+          "slug": "tyler-thoune",
+          "summary": "A real-estate investor running as an outsider focused on market-grounded assessments, transparency, and taxpayer appeals.",
+          "highlights": [
+            "Says assessments should track the local market and high-value property should not be under-assessed relative to ordinary homes [S1]",
+            "Promises transparency, accountability for errors, and improved customer service [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Runs as a first-time office outsider against a four-term incumbent, relying on private real-estate experience.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "peter-van-nortwick",
+          "summary": "The four-term incumbent assessor, emphasizing certified appraisal experience, exemption access, technology, and a smaller workforce.",
+          "highlights": [
+            "Has served as assessor since 2011 and is a certified general appraiser [S1]",
+            "Supports expanded senior exemptions and a state homestead exemption [S1]",
+            "Says the office uses fewer full-time employees than when he was first elected [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Highlights technology and operating the office with fewer employees as evidence of lower-cost administration."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Four-term incumbent with certified appraisal credentials and direct residential, agricultural, and commercial valuation experience."
+            },
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Supports senior property-tax exemptions and a state homestead exemption, a clear but limited tax-relief direction.",
+              "added_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "clark-clark-county-clerk",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/counties/clark/dossiers/clark-clark-county-clerk/"
+      ],
+      "office_does": "The clerk preserves Superior Court records and manages court-related deposits, disbursements, filing access, and administrative systems.",
+      "race_blurb": "Four-term incumbent Scott Weber runs on continuity and court technology; attorney Rachel Shapiro emphasizes accessibility and transparency, while attorney Gerald Gray emphasizes courtroom experience.",
+      "candidates": [
+        {
+          "slug": "scott-g-weber",
+          "summary": "The four-term incumbent clerk, offering a specific record on court technology, access, restitution collection, and service delivery.",
+          "highlights": [
+            "Says an independent imaging system kept the court operating during the 2024 statewide outage [S1]",
+            "Reports improvements to restitution collection, real-time document access, and electronic filing [S1]",
+            "Emphasizes record integrity, open access, efficiency, and responsive service [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Centers efficiency and operational systems rather than program expansion."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Has led the clerk's office since 2010 and cites a concrete 16-year administrative and technology record."
+            }
+          }
+        },
+        {
+          "slug": "rachel-shapiro",
+          "summary": "An attorney and mediator proposing easier access to records and financial information plus regular public office hours.",
+          "highlights": [
+            "Promises accurate records, timely service, accessible information, and a more user-friendly office [S1]",
+            "Supports easier online budget and spending information and monthly public office hours [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Brings legal and mediation experience but no documented clerk-office administration or elected record."
+            }
+          }
+        },
+        {
+          "slug": "gerald-e-gray",
+          "summary": "A longtime attorney with prosecution, defense, military-law, and voting-officer experience who emphasizes accurate records and efficient administration.",
+          "highlights": [
+            "Reports more than 25 years as an attorney across prosecution, defense, and Navy JAG work [S1]",
+            "Emphasizes accurate court records, efficient administration, and retaining an elected clerk [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Has extensive court-facing legal experience but no documented clerk-office administration, a mixed record-versus-renewal profile."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "clark-clark-county-council-district-2-county-councilor",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/counties/clark/dossiers/clark-clark-county-council-district-2-county-councilor/"
+      ],
+      "office_does": "The county council adopts policy and budgets and oversees county services, land use, infrastructure, and public health.",
+      "race_blurb": "Incumbent Michelle Belkot faces public administrator Martin Pittioni and teacher John Zingale, with differences over tax and spending restraint, public investment, infrastructure, and services.",
+      "candidates": [
+        {
+          "slug": "martin-pittioni",
+          "summary": "A public-health and financial-regulation administrator advocating balanced growth, fiscal responsibility, public safety, and consensus.",
+          "highlights": [
+            "Supports balanced growth, fiscal responsibility, public safety, and homelessness reduction [S1]",
+            "Cites work on mental-health licensure, prescription-history access, and professional-license portability [S1]",
+            "Presents a nonpartisan, consensus-oriented approach [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Combines fiscal responsibility and balanced budgets with support for behavioral-health and homelessness services."
+            },
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Has substantial public regulatory and health administration but no documented elected county record."
+            }
+          }
+        },
+        {
+          "slug": "michelle-belkot",
+          "summary": "The incumbent councilor, prioritizing tax and spending restraint, police, fire, and infrastructure while opposing annexation, light-rail subsidies, and bridge tolls.",
+          "highlights": [
+            "Opposes new taxes she considers unnecessary and places core infrastructure before program expansion [S1]",
+            "Prioritizes law enforcement and fire protection [S1]",
+            "Opposes unwanted annexation, Oregon light-rail subsidies, and bridge-related tolls [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Explicitly opposes new taxes and seeks to reduce taxes and housing costs."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Prioritizes core services before expansion and opposes taxpayer subsidies for Oregon light rail."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Makes law enforcement and fire protection explicit top priorities without a documented services-first alternative.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Incumbent county councilor with more than 20 years in federal acquisition and 25 years of military service.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "john-zingale",
+          "summary": "A teacher, union representative, and historic-preservation commissioner emphasizing social services, affordable housing, labor, rights, and natural-space protection.",
+          "highlights": [
+            "Supports investment in social services, infrastructure, and affordable housing [S1]",
+            "Emphasizes natural-space protection, working families, and fundamental rights [S1]",
+            "Says county government should remain responsive and avoid wasting taxpayer money [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Explicitly favors social-service and infrastructure investment as primary county tools."
+            },
+            "housing": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Explicitly supports affordable housing alongside social-service investment, though the mechanism is unspecified."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Brings commission, teaching, and union experience but no documented elected-government record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "clark-clark-county-council-district-5-county-councilor",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/counties/clark/dossiers/clark-clark-county-council-district-5-county-councilor/"
+      ],
+      "office_does": "The county council adopts county policy and budgets and oversees services in unincorporated Clark County.",
+      "race_blurb": "Peter Silliman offers county charter and policy-analysis experience; Troy McCoy offers elected school-board, council, and mayoral experience. Both stress public safety, infrastructure, controlled spending, and voter consent for light rail.",
+      "candidates": [
+        {
+          "slug": "peter-silliman",
+          "summary": "A county charter participant and former council policy analyst emphasizing checks and balances, budget transparency, taxpayer protection, and public safety.",
+          "highlights": [
+            "Supports public-safety prioritization, budget transparency, and taxpayer protection [S1]",
+            "Says he sponsored charter amendments on public safety, budgets, ambiguity, and checks and balances [S1]",
+            "Also supports housing affordability, parks, trails, and infrastructure [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Centers budget transparency, taxpayer protection, checks, and reduced government interference.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Has deep county charter and council-office experience but no documented elected tenure."
+            }
+          }
+        },
+        {
+          "slug": "troy-mccoy",
+          "summary": "A former mayor and current municipal councilmember emphasizing managed growth, responsible budgets, public safety, infrastructure, and open administration.",
+          "highlights": [
+            "Says taxpayers should not fund light rail without voter approval [S1]",
+            "Supports responsible budgets, managed growth, infrastructure, and public safety [S1]",
+            "Has served on a school board, city council, and as mayor [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Stresses responsible budgets and rejects taxpayer-funded light rail absent voter approval."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Offers elected school-board, city-council, and mayoral experience plus long small-business ownership."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "clark-public-utility-district-no-1-of-clark-county-district-3-pud-commissioner",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/counties/clark/dossiers/clark-public-utility-district-no-1-of-clark-county-district-3-pud-commissioner/"
+      ],
+      "office_does": "The PUD commissioner governs electric and water rates, resource planning, reliability, conservation, and utility infrastructure.",
+      "race_blurb": "Incumbent Jane Van Dyke faces utility engineer Gordon Matthews and utility systems worker Kevin Roegner. The rubric defines no candidate axes for the normalized Local category, so policy axes are omitted.",
+      "candidates": [
+        {
+          "slug": "gordon-matthews",
+          "summary": "A utility engineer emphasizing solar expansion, decarbonization, electrification, and new resources as hydro supply becomes constrained.",
+          "highlights": [
+            "Supports expanded solar, utility partnerships, and redesigned community-solar programs [S1]",
+            "Says declining snowpack and constrained hydro supply require new resources [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "kevin-roegner",
+          "summary": "A longtime utility worker prioritizing stable rates, financial oversight, grid resilience, cybersecurity, and controlled modernization.",
+          "highlights": [
+            "Reports 34 years across utility line work, customer service, finance, and protection systems [S1]",
+            "Prioritizes rate stability, storm resilience, cybersecurity, and financial oversight [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "jane-a-van-dyke",
+          "summary": "The incumbent commissioner, emphasizing conservation, rate stability, customer assistance, and the utility's reliability record.",
+          "highlights": [
+            "Supports conservation, efficiency, solar, nonprofit rates, and income-limited customer assistance [S1]",
+            "Reports one electric rate increase in 15 years and one water increase in 13 years [S1]",
+            "Cites conservation exceeding regional goals [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
         }
       ]
     },
@@ -9911,6 +11145,706 @@
                 "S3"
               ],
               "basis": "Lead sponsor of the My Health My Data Act, a consumer health data privacy law."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "pierce-pierce-county-council-district-1-county-councilmember",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/dossiers/pierce-pierce-county-council-district-1-county-councilmember/"
+      ],
+      "office_does": "The seven-member Pierce County Council adopts county ordinances, budgets, and land-use policy and oversees county services.",
+      "race_blurb": "Four candidates bring business and agricultural, school-board and public-management, behavioral-health, and higher-education and charter-review backgrounds. Growth, infrastructure, safety, services, transit, and fiscal oversight distinguish the field.",
+      "candidates": [
+        {
+          "slug": "jerome-o-leary",
+          "summary": "A commercial-real-estate executive, farmer, Planning Commissioner, and Charter Review Commissioner emphasizing business-minded government and fiscal stewardship.",
+          "highlights": [
+            "Calls for a business-minded approach to housing, infrastructure, public safety, homelessness, and taxpayer stewardship [S1]",
+            "Emphasizes efficiency, accountability, and practical results over partisanship [S1]",
+            "Serves on the Planning Commission and Charter Review Commission [S2][S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Emphasizes efficiency, accountability, and long-term stewardship before expanding county activity."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Offers commission service and private-sector experience but no documented elected governing tenure."
+            }
+          }
+        },
+        {
+          "slug": "terrance-mayers",
+          "summary": "A Bethel School Board director, entrepreneur, and public-sector manager emphasizing basic services, safety with accountability, schools, childcare, and workforce development.",
+          "highlights": [
+            "Pairs community public-safety presence with officer accountability [S2]",
+            "Supports roads, bridges, basic services, childcare, schools, workforce development, and small-business assistance [S1][S2]",
+            "Reports school-board partnerships for sidewalks and school health clinics [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Supports county investment in infrastructure, childcare, schools, workforce development, and business assistance."
+            },
+            "safety": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Explicitly combines public-safety presence with officer accountability rather than privileging enforcement or services alone."
+            },
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Has elected school-board and public-management experience but would be new to county legislative office."
+            }
+          }
+        },
+        {
+          "slug": "kenneth-king",
+          "summary": "A behavioral-health program manager and Continuum of Care board member emphasizing infrastructure-led growth and coordinated housing, homelessness, and crisis services.",
+          "highlights": [
+            "Supports regional coordination of homelessness, housing, food, mental-health, and crisis services [S2]",
+            "Presents voluntary stabilization and behavioral-health diversion as ways to reduce emergency-service pressure [S2]",
+            "Connects growth to infrastructure capacity and rural preservation [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Treats coordinated service investment as the principal lever for housing, health, and crisis outcomes."
+            },
+            "safety": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Centers voluntary stabilization, behavioral-health diversion, and coordinated homelessness services rather than enforcement.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Brings direct program and advisory-board experience but no documented elected-office tenure."
+            }
+          }
+        },
+        {
+          "slug": "kelsey-barrans",
+          "summary": "A college student-support professional and Charter Review Commission chair emphasizing public transit expansion and participatory, cross-partisan governance.",
+          "highlights": [
+            "Supports expanding bus service to communities such as Orting and Buckley [S4]",
+            "Identifies transit absence as a barrier for older, disabled, young, and low-income residents [S4]",
+            "Chaired the 2026 Charter Review Commission [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Supports expanding county transit service as a public investment to address mobility barriers."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Has led the Charter Review Commission but would bring a new voice to elected county governance."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "pierce-pierce-county-council-district-5-county-councilmember",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/dossiers/pierce-pierce-county-council-district-5-county-councilmember/"
+      ],
+      "office_does": "The Pierce County Council adopts county ordinances, budgets, and land-use policy and oversees county services.",
+      "race_blurb": "Appointed incumbent Bryan Yambe, an eleven-year former Fife councilmember, faces business owner and Puyallup Tribal member Bettina Gese. Their clearest contrast is public investment versus tax and spending scrutiny.",
+      "candidates": [
+        {
+          "slug": "bryan-yambe",
+          "summary": "The appointed incumbent and former Fife councilmember emphasizes public investment in housing, behavioral health, infrastructure, food security, safety, and regional transit.",
+          "highlights": [
+            "Supports affordable housing, behavioral-health and crisis-response funding, transportation safety, and food security [S1][S3]",
+            "Opposes delaying or reducing South Sound Sound Transit projects [S2]",
+            "Helped adopt the county budget and cites first-year housing, health, infrastructure, and community funding [S3]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "His platform and first-year record center on expanded public investment across housing, health, infrastructure, and community services."
+            },
+            "housing": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Supports county funding for affordable housing, indicating a public-investment approach without a detailed tenant-policy platform."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Combines current county incumbency with eleven years on the Fife City Council and a documented budget record."
+            }
+          }
+        },
+        {
+          "slug": "bettina-gese",
+          "summary": "A Puyallup Tribal member and family-business operator emphasizing small-business conditions, public safety, infrastructure, accountability, and scrutiny of taxes and spending.",
+          "highlights": [
+            "Emphasizes small-business conditions, accountability, public safety, and infrastructure [S1][S2]",
+            "Calls for scrutiny of taxes and county spending [S1][S2]",
+            "Brings tribal, commercial-diving, real-estate, and family-business experience [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Calls for scrutiny of taxes and county spending, indicating tax restraint without a specific cut proposal."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Emphasizes fiscal restraint and accountability in county spending."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Runs as a private-sector and tribal-community outsider with no documented elected-office record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "pierce-pierce-county-council-district-7-county-councilmember",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/dossiers/pierce-pierce-county-council-district-7-county-councilmember/"
+      ],
+      "office_does": "The Pierce County Council adopts county ordinances, budgets, and land-use policy and oversees county services.",
+      "race_blurb": "The open-seat field includes a school-board member, former Gig Harbor councilmember, police officer and former police-guild president, and a contingency candidate who says she is not actively running. Public safety and fiscal posture provide the clearest contrasts.",
+      "candidates": [
+        {
+          "slug": "chuck-west",
+          "summary": "A Peninsula School Board member emphasizing peninsula representation, local services, infrastructure, and responsible budgeting.",
+          "highlights": [
+            "Emphasizes local services and infrastructure [S1]",
+            "Calls for responsible budgeting and representation for peninsula communities [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "His limited platform explicitly foregrounds responsible budgeting alongside service and infrastructure needs."
+            },
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Has elected school-board experience but would be new to county legislative office."
+            }
+          }
+        },
+        {
+          "slug": "brenda-lykins",
+          "summary": "A nurse practitioner, former Gig Harbor councilmember, and Charter Review Commissioner emphasizing public safety, managed growth, infrastructure, affordability, and health-service access.",
+          "highlights": [
+            "Links healthcare experience to behavioral health, emergency response, and service access [S1][S2]",
+            "Served on the Gig Harbor City Council and Charter Review Commission [S2][S3]",
+            "Endorsed by Washington Conservation Action [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Links public safety to behavioral health, emergency response, and access to services, leaning toward prevention while retaining a broad safety emphasis."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Brings recent municipal governing and regional and charter-review experience to the open county seat."
+            }
+          }
+        },
+        {
+          "slug": "mike-solan",
+          "summary": "A 27-year Seattle police officer and former police-guild president prioritizing deputy staffing, conventional law enforcement, fiscal restraint, bridge replacement, and shoreline and land-use policy.",
+          "highlights": [
+            "Prioritizes deputy staffing and conventional public-safety enforcement [S1][S2]",
+            "Calls for limits on rising county costs and overlapping taxes [S1][S2]",
+            "Proposes planning to replace the Fox Island bridge and protecting shorelines and docks [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Explicitly campaigns against rising county costs and overlapping taxes.",
+              "adjusted_by_refutation": true
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Emphasizes fiscal accountability and limiting county costs, while supporting specified infrastructure spending."
+            },
+            "safety": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Centers deputy staffing and conventional law-enforcement capacity."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Has a long police and labor-leadership record but no documented elected governing tenure."
+            }
+          }
+        },
+        {
+          "slug": "ann-e-jolie",
+          "summary": "A contingency candidate who says she is not actively running and supports Mike Solan.",
+          "highlights": [
+            "Filed while Solan's ballot eligibility was disputed [S2]",
+            "Says she is not actively running and hopes to receive no votes [S1][S2]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": true,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "pierce-pierce-county-district-court-no-7-judge-position-no-7",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/dossiers/pierce-pierce-county-district-court-no-7-judge-position-no-7/"
+      ],
+      "office_does": "Pierce County District Court hears misdemeanors, gross misdemeanors, traffic infractions, protection orders, and limited-jurisdiction civil matters.",
+      "race_blurb": "Three candidates seek an open judicial position: Eric J. Lawless, longtime deputy prosecutor and judge pro tem Mike Sommerfeld, and former municipal judge and Superior Court commissioner Pam Nogueira.",
+      "candidates": [
+        {
+          "slug": "eric-j-lawless",
+          "summary": "A legal professional pledging impartial application of law, respectful courtroom treatment, and attention to both public safety and individual rights.",
+          "highlights": [
+            "Pledges impartial application of law [S1]",
+            "Emphasizes respectful treatment, public safety, and individual rights [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "mike-sommerfeld",
+          "summary": "A deputy prosecutor since 1995 and judge pro tem supporting language access, therapeutic courts, barrier reduction, bias-aware practice, and efficient resolution consistent with defense rights.",
+          "highlights": [
+            "Supports language access, reducing barriers, therapeutic courts, and representative juries [S3]",
+            "Says efficiency must remain consistent with constitutional rights and defense preparation [S3]",
+            "Has three decades of criminal and civil county-law experience plus judge-pro-tem service [S2][S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "judicial": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Supports access reforms, bias-aware practice, representative juries, and therapeutic courts while emphasizing constitutional process."
+            },
+            "safety": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "His explicit support for therapeutic courts places some weight on treatment-oriented responses despite a prosecutorial background."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Has three decades of criminal and civil county-law practice and judge-pro-tem service, though not full-time judicial tenure."
+            }
+          }
+        },
+        {
+          "slug": "pam-nogueira",
+          "summary": "A former Olympia Municipal Court judge and Superior Court commissioner whose record emphasizes accessible courts, therapeutic courts, judicial education, and court administration.",
+          "highlights": [
+            "Only candidate with documented full-time judicial and commissioner service [S2][S4]",
+            "Served on committees involving therapeutic courts, protection orders, education, jury instructions, diversity, and jail modernization [S2][S3]",
+            "Emphasizes fair treatment and accessible courts [S1][S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "judicial": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Her documented emphasis on accessible and therapeutic courts reflects a pragmatic, reform-open judicial posture."
+            },
+            "safety": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Therapeutic-court work supports a treatment-oriented public-safety approach without evidence for a maximal placement."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S3",
+                "S4"
+              ],
+              "basis": "Only candidate with documented full-time judge and court-commissioner service, plus court-administration and education work.",
+              "adjusted_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-spokane-county-auditor",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/counties/spokane/dossiers/spokane-spokane-county-auditor/"
+      ],
+      "office_does": "The auditor administers elections and voter registration, records property documents, licenses vehicles and marriages, and performs county financial and payroll functions.",
+      "race_blurb": "In this open race, Callie Gee and Dale Whitaker foreground accounting credentials, while Michael Cathcart emphasizes elected management, oversight, and open-government work.",
+      "candidates": [
+        {
+          "slug": "callie-gee",
+          "summary": "A public accountant, Gee emphasizes election access, vote-by-mail protection, transparent reporting, and private-sector financial management.",
+          "highlights": [
+            "Works as a public accountant and has accounting and finance degrees [S1][S3]",
+            "Supports vote-by-mail protection, broad participation, and independent election oversight [S1][S2]",
+            "Promises transparent and fiscally responsible administration [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She centers financial reporting, compliance, transparency, and fiscal responsibility."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "She has professional accounting experience but no prior county-office management record."
+            }
+          }
+        },
+        {
+          "slug": "dale-whitaker",
+          "summary": "An enrolled agent and tax-practice owner, Whitaker presents the auditor primarily as an accounting and fraud-detection office.",
+          "highlights": [
+            "Reports 18 years of accounting experience and prior corporate CFO work [S1][S3]",
+            "Proposes readable statements, modernized services, and close stewardship of public funds [S1][S2]",
+            "Emphasizes election security rather than an access-oriented program [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "His platform centers accounting controls, fraud detection, and close stewardship of existing funds."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "He has extensive accounting and CFO experience but no county auditor management record."
+            }
+          }
+        },
+        {
+          "slug": "michael-cathcart",
+          "summary": "A Spokane city councilmember, Cathcart emphasizes his elected budget oversight, regional-board service, fraud prevention, and open-government record.",
+          "highlights": [
+            "Has served on the Spokane City Council since 2020 with finance and regional-board roles [S1][S3]",
+            "Promises financial scrutiny, fraud prevention, election integrity, and public access to facts [S1][S2]",
+            "Points to budget oversight and open-government work as his relevant record [S1]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He repeatedly frames the office around scrutiny, fraud prevention, oversight, and public accountability."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "He has the field's strongest elected and intergovernmental management record, though not direct auditor service."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-spokane-county-clerk",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/counties/spokane/dossiers/spokane-spokane-county-clerk/"
+      ],
+      "office_does": "The clerk maintains Superior Court records, receives filings and fees, supports courtroom administration, and manages lawful public access to records.",
+      "race_blurb": "Dave Lucas emphasizes court-administration experience and continuity; Elliot Robison emphasizes technology, accessibility, workplace relations, and operational reporting.",
+      "candidates": [
+        {
+          "slug": "dave-lucas",
+          "summary": "Cheney's municipal court administrator, Lucas presents direct court-management and military leadership experience as preparation for the clerk's office.",
+          "highlights": [
+            "Serves as Cheney Municipal Court administrator and completed the state Court Administrators Academy [S1]",
+            "Proposes continued modernization with attention to speed, accuracy, and confidential information [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He has direct court-administration experience, though not prior elected county-clerk service."
+            }
+          }
+        },
+        {
+          "slug": "elliot-robison",
+          "summary": "A business-intelligence analyst, Robison proposes technology-driven workflow improvements and expanded public access tools.",
+          "highlights": [
+            "Proposes expanded guides, notifications, translated forms, and public operational reporting [S1][S2]",
+            "Would apply capacity analysis and supports a union-friendly workplace [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He offers relevant analytics and software experience but no direct court-administration record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-spokane-county-prosecuting-attorney",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/counties/spokane/dossiers/spokane-spokane-county-prosecuting-attorney/"
+      ],
+      "office_does": "The prosecutor leads felony and juvenile prosecution, represents the county in civil matters, advises county government, and sets charging and diversion priorities within state law.",
+      "race_blurb": "Both candidates are deputy prosecutors. Danny Tarkenton emphasizes psychology-informed recidivism reduction and political independence, while incumbent Preston McCollam emphasizes enforcement, victim advocacy, and institutional continuity.",
+      "candidates": [
+        {
+          "slug": "danny-tarkenton",
+          "summary": "A deputy prosecutor and Iraq War veteran, Tarkenton emphasizes behavioral evidence, recidivism reduction, and independence from party organizations.",
+          "highlights": [
+            "Handles criminal and involuntary-treatment proceedings and reports a docket exceeding 500 cases [S1]",
+            "Says psychology-informed prosecution can reduce repeat offending [S1][S2]",
+            "Frames independence from political parties as important to prosecutorial discretion [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Her public-safety approach emphasizes reducing recidivism through psychology-informed prosecution."
+            },
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She has substantial current prosecutorial responsibility but not the incumbent's senior management record."
+            }
+          }
+        },
+        {
+          "slug": "preston-mccollam",
+          "summary": "The incumbent prosecutor, McCollam emphasizes conventional enforcement, crime-victim advocacy, and continuity in senior office management.",
+          "highlights": [
+            "Has served as county prosecutor since July 2025 after more than a decade in criminal and civil prosecution [S1]",
+            "Promises law-enforcement collaboration, offender accountability, and victim advocacy [S1][S2]",
+            "Previously served as chief criminal deputy and interim civil chief [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He repeatedly centers law-enforcement collaboration, offender accountability, and conventional prosecution."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He is the incumbent with more than a decade of prosecution and senior office-management experience."
             }
           }
         }

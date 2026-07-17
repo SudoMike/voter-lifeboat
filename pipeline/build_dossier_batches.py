@@ -69,8 +69,16 @@ def build():
     for c in d["contests"]:
         if c["owner"] in ("king", "statewide"):
             continue
-        unscored = [x for x in c["candidates"] if not x.get("scores")]
-        if len(unscored) < 2:  # uncontested -> no dossier
+        # A researched candidate can legitimately have no scoreable axes.
+        # `official-ballot-only` is the queue marker; an empty `scores` object
+        # is not (omission-over-guessing and withdrawn candidates depend on it).
+        unfinished = [
+            x for x in c["candidates"]
+            if x.get("evidence_level") == "official-ballot-only"
+        ]
+        if len(c["candidates"]) < 2:  # uncontested -> no dossier
+            continue
+        if not unfinished:
             continue
         fk = fed_state_key(c)
         if fk:
@@ -82,7 +90,7 @@ def build():
                 "candidates": set(), "counties": set(),
             })
             u["counties"].add(c["owner"])
-            u["candidates"].update(x["slug"] for x in unscored)
+            u["candidates"].update(x["slug"] for x in unfinished)
         else:
             reach = POP.get(c["owner"], 10000)
             if c["category"] in ("PublicUtility", "Port"):
@@ -90,7 +98,7 @@ def build():
             units[("L", c["owner"], c["slug"])] = {
                 "id": c["slug"], "kind": "local", "reach": reach,
                 "category": c["category"], "label": f"{c['owner']}: {c['district']} {c['office']}",
-                "candidates": set(x["slug"] for x in unscored), "counties": {c["owner"]},
+                "candidates": set(x["slug"] for x in unfinished), "counties": {c["owner"]},
             }
 
     def importance(u):

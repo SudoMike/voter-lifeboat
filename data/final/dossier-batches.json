@@ -4,247 +4,12 @@
   ],
   "script": "pipeline/build_dossier_batches.py",
   "batch_size_target": 50,
-  "total_units": 191,
-  "total_dossiers": 590,
-  "total_batches": 12,
+  "total_units": 175,
+  "total_dossiers": 536,
+  "total_batches": 11,
   "batches": [
     {
       "batch": 1,
-      "dossiers": 54,
-      "races": 16,
-      "units": [
-        {
-          "id": "pierce-pierce-county-council-district-5-county-councilmember",
-          "kind": "local",
-          "label": "pierce: Pierce County Council District 5 County Councilmember",
-          "candidates": [
-            "bettina-gese",
-            "bryan-yambe"
-          ],
-          "counties": [
-            "pierce"
-          ]
-        },
-        {
-          "id": "pierce-pierce-county-district-court-no-7-judge-position-no-7",
-          "kind": "local",
-          "label": "pierce: Pierce County District Court No. 7 Judge Position No. 7",
-          "candidates": [
-            "eric-j-lawless",
-            "mike-sommerfeld",
-            "pam-nogueira"
-          ],
-          "counties": [
-            "pierce"
-          ]
-        },
-        {
-          "id": "pierce-pierce-county-council-district-1-county-councilmember",
-          "kind": "local",
-          "label": "pierce: Pierce County Council District 1 County Councilmember",
-          "candidates": [
-            "jerome-o-leary",
-            "kelsey-barrans",
-            "kenneth-king",
-            "terrance-mayers"
-          ],
-          "counties": [
-            "pierce"
-          ]
-        },
-        {
-          "id": "pierce-pierce-county-council-district-7-county-councilmember",
-          "kind": "local",
-          "label": "pierce: Pierce County Council District 7 County Councilmember",
-          "candidates": [
-            "ann-e-jolie",
-            "brenda-lykins",
-            "chuck-west",
-            "mike-solan"
-          ],
-          "counties": [
-            "pierce"
-          ]
-        },
-        {
-          "id": "Federal/CD2",
-          "kind": "shared",
-          "label": "Congressional District 2 U.S. Representative",
-          "candidates": [
-            "devin-hermanson",
-            "edwin-h-feller",
-            "rick-larsen",
-            "tomas-scheel"
-          ],
-          "counties": [
-            "island",
-            "san-juan",
-            "skagit",
-            "snohomish",
-            "whatcom"
-          ]
-        },
-        {
-          "id": "spokane-spokane-county-clerk",
-          "kind": "local",
-          "label": "spokane: Spokane County Clerk",
-          "candidates": [
-            "dave-lucas",
-            "elliot-robison"
-          ],
-          "counties": [
-            "spokane"
-          ]
-        },
-        {
-          "id": "spokane-spokane-county-prosecuting-attorney",
-          "kind": "local",
-          "label": "spokane: Spokane County Prosecuting Attorney",
-          "candidates": [
-            "danny-tarkenton",
-            "preston-mccollam"
-          ],
-          "counties": [
-            "spokane"
-          ]
-        },
-        {
-          "id": "clark-clark-county-assessor",
-          "kind": "local",
-          "label": "clark: Clark County Assessor",
-          "candidates": [
-            "peter-van-nortwick",
-            "tyler-thoune"
-          ],
-          "counties": [
-            "clark"
-          ]
-        },
-        {
-          "id": "clark-clark-county-council-district-5-county-councilor",
-          "kind": "local",
-          "label": "clark: Clark County Council District 5 County Councilor",
-          "candidates": [
-            "peter-silliman",
-            "troy-mccoy"
-          ],
-          "counties": [
-            "clark"
-          ]
-        },
-        {
-          "id": "spokane-spokane-county-auditor",
-          "kind": "local",
-          "label": "spokane: Spokane County Auditor",
-          "candidates": [
-            "callie-gee",
-            "dale-whitaker",
-            "michael-cathcart"
-          ],
-          "counties": [
-            "spokane"
-          ]
-        },
-        {
-          "id": "clark-clark-county-clerk",
-          "kind": "local",
-          "label": "clark: Clark County Clerk",
-          "candidates": [
-            "gerald-e-gray",
-            "rachel-shapiro",
-            "scott-g-weber"
-          ],
-          "counties": [
-            "clark"
-          ]
-        },
-        {
-          "id": "clark-clark-county-council-district-2-county-councilor",
-          "kind": "local",
-          "label": "clark: Clark County Council District 2 County Councilor",
-          "candidates": [
-            "john-zingale",
-            "martin-pittioni",
-            "michelle-belkot"
-          ],
-          "counties": [
-            "clark"
-          ]
-        },
-        {
-          "id": "clark-public-utility-district-no-1-of-clark-county-district-3-pud-commissioner",
-          "kind": "local",
-          "label": "clark: Public Utility District No. 1 of Clark County District 3 PUD Commissioner",
-          "candidates": [
-            "gordon-matthews",
-            "jane-a-van-dyke",
-            "kevin-roegner"
-          ],
-          "counties": [
-            "clark"
-          ]
-        },
-        {
-          "id": "Federal/CD6",
-          "kind": "shared",
-          "label": "Congressional District 6 U.S. Representative",
-          "candidates": [
-            "brian-p-o-gorman",
-            "emily-randall",
-            "leon-lawson",
-            "macy-jones",
-            "teresa-fox"
-          ],
-          "counties": [
-            "clallam",
-            "grays-harbor",
-            "jefferson",
-            "kitsap",
-            "mason",
-            "pierce"
-          ]
-        },
-        {
-          "id": "Federal/CD10",
-          "kind": "shared",
-          "label": "Congressional District 10 U.S. Representative",
-          "candidates": [
-            "adam-arafat",
-            "alex-scheel",
-            "chris-d-chung",
-            "derek-maynes",
-            "kurtis-engle",
-            "marilyn-strickland"
-          ],
-          "counties": [
-            "pierce",
-            "thurston"
-          ]
-        },
-        {
-          "id": "Federal/CD8",
-          "kind": "shared",
-          "label": "Congressional District 8 U.S. Representative",
-          "candidates": [
-            "andres-valleza",
-            "bob-hagglund",
-            "keith-arnold",
-            "kim-schrier",
-            "spencer-meline",
-            "trinh-ha"
-          ],
-          "counties": [
-            "chelan",
-            "douglas",
-            "kittitas",
-            "pierce",
-            "snohomish"
-          ]
-        }
-      ]
-    },
-    {
-      "batch": 2,
       "dossiers": 54,
       "races": 18,
       "units": [
@@ -491,7 +256,7 @@
       ]
     },
     {
-      "batch": 3,
+      "batch": 2,
       "dossiers": 50,
       "races": 13,
       "units": [
@@ -703,7 +468,7 @@
       ]
     },
     {
-      "batch": 4,
+      "batch": 3,
       "dossiers": 52,
       "races": 24,
       "units": [
@@ -1017,7 +782,7 @@
       ]
     },
     {
-      "batch": 5,
+      "batch": 4,
       "dossiers": 53,
       "races": 17,
       "units": [
@@ -1254,7 +1019,7 @@
       ]
     },
     {
-      "batch": 6,
+      "batch": 5,
       "dossiers": 52,
       "races": 15,
       "units": [
@@ -1475,7 +1240,7 @@
       ]
     },
     {
-      "batch": 7,
+      "batch": 6,
       "dossiers": 51,
       "races": 15,
       "units": [
@@ -1694,7 +1459,7 @@
       ]
     },
     {
-      "batch": 8,
+      "batch": 7,
       "dossiers": 54,
       "races": 14,
       "units": [
@@ -1903,7 +1668,7 @@
       ]
     },
     {
-      "batch": 9,
+      "batch": 8,
       "dossiers": 51,
       "races": 17,
       "units": [
@@ -2131,7 +1896,7 @@
       ]
     },
     {
-      "batch": 10,
+      "batch": 9,
       "dossiers": 50,
       "races": 16,
       "units": [
@@ -2348,7 +2113,7 @@
       ]
     },
     {
-      "batch": 11,
+      "batch": 10,
       "dossiers": 51,
       "races": 18,
       "units": [
@@ -2586,7 +2351,7 @@
       ]
     },
     {
-      "batch": 12,
+      "batch": 11,
       "dossiers": 18,
       "races": 8,
       "units": [

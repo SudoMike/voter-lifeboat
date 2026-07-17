@@ -1,10 +1,64 @@
 {
   "derived_from": [
+    "data/washington-state/counties/clark/scoring/measures.json",
+    "data/washington-state/counties/clark/scoring/refutations/measures.json",
     "data/washington-state/counties/king/scoring/measures.json",
-    "data/washington-state/counties/king/scoring/refutations/measures.json"
+    "data/washington-state/counties/king/scoring/refutations/measures.json",
+    "data/washington-state/counties/pierce/scoring/measures.json",
+    "data/washington-state/counties/pierce/scoring/refutations/measures.json",
+    "data/washington-state/counties/spokane/scoring/measures.json",
+    "data/washington-state/counties/spokane/scoring/refutations/measures.json"
   ],
   "script": "pipeline/merge_scores.py",
   "measures": [
+    {
+      "slug": "clark-east-county-fire-and-rescue-proposition-no-6",
+      "what_it_does": "Renews East County Fire & Rescue's emergency-medical-services property-tax levy for six years beginning in 2027, at no more than $0.35 per $1,000 of assessed value; the current levy expires at the end of 2026.",
+      "cost_line": "Up to $140 per year on $400,000 assessed value, $227.50 on $650,000, or $350 on $1 million.",
+      "pro_summary": "The submitted pro committee says renewal maintains dedicated funding for paramedics, EMTs, ambulances, equipment, and training and continues rather than creates the levy.",
+      "con_summary": "No person volunteered to submit a con statement or rebuttal, so the official pamphlet contains no organized opposition argument.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "YES continues a dedicated property-tax levy for six years, but at an existing rather than newly added rate.",
+          "citations": [
+            "S1"
+          ]
+        },
+        "spending": {
+          "direction": 1,
+          "basis": "YES maintains dedicated investment in EMS staffing, vehicles, equipment, and training.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official pamphlet resolution summary, explanatory statement, and submitted pro statement (S1); no con committee material was filed."
+    },
+    {
+      "slug": "clark-clark-county-fire-protection-district-no-10-proposition-no-3",
+      "what_it_does": "Authorizes up to $15.2 million in general-obligation bonds, maturing within 20 years, to construct and equip a replacement fire station, with excess property taxes authorized for repayment.",
+      "cost_line": "The district estimates $0.45 per $1,000 of assessed value, about $292.50 annually or $24.38 monthly for a $650,000 home.",
+      "pro_summary": "The submitted pro committee says the 1963 station has water damage, asbestos, obsolete infrastructure, earthquake damage, and inadequate space, and that assessments found replacement more responsible than retrofit.",
+      "con_summary": "No person volunteered to submit a con statement or rebuttal, so the official pamphlet contains no organized opposition argument.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES authorizes an excess property-tax levy over as many as 20 years to repay $15.2 million in bonds.",
+          "citations": [
+            "S1"
+          ]
+        },
+        "spending": {
+          "direction": 1,
+          "basis": "YES makes a major capital investment in replacing and equipping an aging fire station.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official pamphlet resolution summary, explanatory statement, and submitted pro statement (S1); no con committee material was filed."
+    },
     {
       "slug": "city-of-black-diamond-proposition-no-1",
       "what_it_does": "Annexes the City of Black Diamond into the Puget Sound Regional Fire Authority, which would take over fire protection and emergency medical services starting January 1, 2028, replacing the city's expiring contract with Mountain View Fire & Rescue.",
@@ -144,6 +198,226 @@
       "con_summary": "No statement against this measure was filed \u2014 no one in the jurisdiction came forward to serve on the con committee, so the pamphlet presents only the district's own explanation.",
       "lean_mappings": {},
       "sources_note": "Pamphlet ballot title and explanatory statement (S1); the pamphlet page noting no pro or con committee filed (S2); Snoqualmie Valley Record coverage of the 2020 renewal for history only (S3)."
+    },
+    {
+      "slug": "pierce-town-of-carbonado-proposition-no-1",
+      "what_it_does": "Reauthorizes Carbonado to levy up to $0.50 per $1,000 of assessed value for six years to continue basic and advanced emergency medical services.",
+      "cost_line": "Up to $50 annually per $100,000 of assessed value, or $250 on a $500,000 property, before applicable exemptions.",
+      "pro_summary": "The official measure materials present the levy as continuing local EMT and paramedic services through a dedicated revenue source.",
+      "con_summary": "No statement against was identified in the official pamphlet material reviewed; the principal trade-off is continuing the property-tax cost.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "YES continues a dedicated local property tax for six years; it is a renewal rather than a new or larger stated rate.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official pamphlet material (S1) and the sample ballot (S2)."
+    },
+    {
+      "slug": "pierce-city-of-fircrest-proposition-no-1",
+      "what_it_does": "Renews Fircrest's authority to levy up to $0.50 per $1,000 of assessed value from 2027 through 2032 for emergency medical services delivered under its Tacoma service contract.",
+      "cost_line": "Up to $50 annually per $100,000 of assessed value, or $250 on a $500,000 property.",
+      "pro_summary": "The city resolution says uninterrupted levy authority is needed to continue emergency medical care and services under the Tacoma service contract.",
+      "con_summary": "No opposition statement was identified in the official material reviewed; the measurable trade-off is continuation of the property levy.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "YES renews a six-year property tax dedicated to EMS rather than creating permanent authority.",
+          "citations": [
+            "S1",
+            "S2"
+          ]
+        },
+        "local-control": {
+          "direction": 1,
+          "basis": "YES continues a locally funded contract through which Tacoma delivers Fircrest fire and EMS service, a modest regional-service alignment.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Fircrest Resolution No. 2020 (S1) and official pamphlet material (S2)."
+    },
+    {
+      "slug": "pierce-city-of-tacoma-proposition-no-1",
+      "what_it_does": "Reinstates for ten years a 1.5% utility tax and a $0.20-per-$1,000 property-tax increase to fund Connect Tacoma school routes, paving, sidewalks, maintenance, lighting, traffic calming, ADA, multimodal, greenway, and neighborhood projects.",
+      "cost_line": "The official estimate is $101.52 annually in property tax plus $23.64 in utility tax for the average homeowner, about $125.16 combined; some residents may qualify for property-tax exemptions.",
+      "pro_summary": "The pro committee says the prior program leveraged partner funding and improved school crossings and streets, and that renewal funds safer access, potholes, and neighborhood projects.",
+      "con_summary": "The con committee says too little is reserved for neighborhood paving, the safety category is insufficiently defined, Tacoma already has a high tax burden and budget deficit, and a narrower road-repair measure would be preferable.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES reinstates both utility and property taxes for ten years, even though they replace an expired tax structure.",
+          "citations": [
+            "S1"
+          ]
+        },
+        "spending": {
+          "direction": 2,
+          "basis": "YES dedicates substantial revenue to a broad transportation capital, safety, maintenance, accessibility, and multimodal program.",
+          "citations": [
+            "S1",
+            "S2"
+          ]
+        }
+      },
+      "sources_note": "Official pamphlet explanation and pro/con statements (S1) and Tacoma Resolution No. 41894 as incorporated in the ballot title (S2)."
+    },
+    {
+      "slug": "pierce-fire-protection-district-no-10-proposition-no-1",
+      "what_it_does": "Authorizes up to $25 million in general-obligation bonds maturing within 20 years to acquire, construct, and equip a replacement fire station, repaid through annual excess property taxes.",
+      "cost_line": "The official material states the maximum principal and repayment mechanism but gives no household estimate or projected tax rate.",
+      "pro_summary": "The pro committee says the existing station is undersized and outdated, lacks modern decontamination and exhaust separation, and cannot accommodate a diverse workforce; replacement would improve health and operations.",
+      "con_summary": "No statement against was submitted; the central unargued trade-off is up to $25 million in debt and the excess property taxes required for repayment.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES authorizes additional property taxes over as long as 20 years to repay new bond debt.",
+          "citations": [
+            "S1",
+            "S2"
+          ]
+        },
+        "spending": {
+          "direction": 1,
+          "basis": "YES makes a major public-safety capital investment in a replacement station; the measure is facility-specific rather than a broad program expansion.",
+          "citations": [
+            "S1",
+            "S2"
+          ]
+        }
+      },
+      "sources_note": "Official pamphlet ballot title and committee statement (S1) and District Resolution No. 444 as summarized in the ballot title (S2)."
+    },
+    {
+      "slug": "spokane-city-of-cheney-proposition-no-1",
+      "what_it_does": "Renews for 14 years Cheney's 16.75% tax on electrical-energy and natural-gas businesses, including six percentage points dedicated to residential street and sidewalk repair.",
+      "cost_line": "No model household cost is stated; the measure continues a six-percentage-point utility-business tax increment through the 14-year term.",
+      "pro_summary": "No pro committee filed; the city explanation says dedicated revenue is needed to preserve residential streets and sidewalks and support travel safety.",
+      "con_summary": "No con committee filed; the trade-off is continuation of the utility tax, which may be passed through to customers, versus dedicated maintenance funding, with no pass-through estimate provided.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "YES continues an existing utility-business tax increment for 14 years rather than allowing the rate to fall.",
+          "citations": [
+            "S1",
+            "S2"
+          ]
+        },
+        "spending": {
+          "direction": 1,
+          "basis": "YES preserves dedicated public funding for residential street and sidewalk repair.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official pamphlet ballot title and explanation (S1) and the linked city resolution (S2)."
+    },
+    {
+      "slug": "spokane-rosalia-park-recreation-district-proposition-no-1",
+      "what_it_does": "Authorizes Rosalia Park and Recreation District No. 5 to collect $85,000 in each of 2027 and 2028 for pool operations, maintenance, improvements, supplies, salaries, and utilities.",
+      "cost_line": "Estimated at $0.39 per $1,000 of assessed value, about $117 annually on a $300,000 property; the stated maximum is $0.60 per $1,000.",
+      "pro_summary": "The pro committee says stable funding supports maintenance, trained lifeguards, affordable access, safe recreation, and avoidance of larger deferred repairs.",
+      "con_summary": "No con committee filed; the trade-off is a temporary property-tax levy versus reduced hours, higher user fees, or facility deterioration without operating revenue.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES authorizes a two-year property-tax levy for pool operations.",
+          "citations": [
+            "S1",
+            "S2"
+          ]
+        },
+        "spending": {
+          "direction": 1,
+          "basis": "YES uses dedicated public funding to maintain operations, staffing, access, and improvements at a community pool.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official pamphlet ballot title, explanation, and pro statement (S1), plus the linked district resolution (S2)."
+    },
+    {
+      "slug": "spokane-spokane-county-library-district-proposition-no-1",
+      "what_it_does": "Restores the library district's regular property-tax levy from approximately $0.33 to $0.45 per $1,000 for 2027, establishing a new basis for future levy limits and funding operations, materials, facilities, accessibility, and security.",
+      "cost_line": "The pro statement estimates about $3.50 per month for a $350,000 home.",
+      "pro_summary": "The pro committee says inflation threatens staffing, hours, programs, maintenance, and accessibility improvements across ten branches and mobile services.",
+      "con_summary": "No con committee filed; the trade-off is the higher property-tax bill versus the service reductions the district says would occur if the levy fails.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES raises the district's property-tax rate and resets the base for future levy limits.",
+          "citations": [
+            "S1",
+            "S2"
+          ]
+        },
+        "spending": {
+          "direction": 2,
+          "basis": "YES expands the revenue base used for library staffing, hours, materials, facilities, accessibility, and security.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official pamphlet ballot title, explanation, and pro statement (S1), plus the linked library resolution (S2)."
+    },
+    {
+      "slug": "spokane-spokane-transit-authority-proposition-no-1",
+      "what_it_does": "Reauthorizes an existing Spokane Transit Authority sales and use tax of up to 0.2% from 2029 through no later than 2048 for fixed-route, paratransit, rideshare, service expansion, programs, and facilities.",
+      "cost_line": "Up to 20 cents per $100 of taxable purchases, continuing the maximum rate approved in 2016 rather than increasing it.",
+      "pro_summary": "The pro committee says the tax supported service expansion, stations, and City Line and would fund Division Street bus rapid transit, mobility pilots, longer hours, and wider coverage.",
+      "con_summary": "The con committee says STA's reserves grew above $270 million and argues existing revenues and reserves should be used before extending the tax for up to 20 years.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "YES continues an existing 0.2% sales tax for up to 20 additional years without raising its maximum rate.",
+          "citations": [
+            "S1",
+            "S3"
+          ]
+        },
+        "spending": {
+          "direction": 2,
+          "basis": "YES secures long-range funding for continued and expanded public transportation rather than first drawing down reserves.",
+          "citations": [
+            "S1",
+            "S2"
+          ]
+        }
+      },
+      "sources_note": "Official ballot title and explanation (S1), pro/con statements and rebuttals (S2), and the linked STA resolution (S3)."
+    },
+    {
+      "slug": "spokane-west-plains-aquifer-protection-area-measure-no-1",
+      "what_it_does": "Creates a West Plains Aquifer Protection Area for 20 years and authorizes water-withdrawal and on-site-sewage fees to raise about $400,000 annually for monitoring, planning, education, water-quality facilities, and preventive work.",
+      "cost_line": "Household fees are capped at $1.25 per month for water withdrawal and $1.25 per month for on-site sewage disposal; non-household water fees vary by meter size.",
+      "pro_summary": "The pro committee says growth, runoff, disposal, and spills threaten the aquifers and that dedicated science, planning, and prevention funding can reduce future harm.",
+      "con_summary": "The con committee says contaminated residents should not pay, the measure will not clean existing contamination, and responsible airport and Air Force entities should fund cleanup.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "YES imposes new user fees for a 20-year aquifer-protection program, with household caps stated in the ballot materials.",
+          "citations": [
+            "S1",
+            "S3"
+          ]
+        },
+        "spending": {
+          "direction": 1,
+          "basis": "YES creates a dedicated preventive planning, monitoring, education, and water-quality program rather than limiting action to polluter-funded remediation.",
+          "citations": [
+            "S1",
+            "S2"
+          ]
+        }
+      },
+      "sources_note": "Official ballot title and explanation (S1), pro/con statements and rebuttal (S2), and the linked county resolution (S3)."
     }
   ]
 }

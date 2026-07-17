@@ -1,0 +1,27 @@
+{
+  "script": "pipeline/verify_dossiers.py",
+  "derived_from": [
+    "data/washington-state/counties/spokane/interim/research-plan.json",
+    "data/washington-state/counties/spokane/dossiers/"
+  ],
+  "missing": [],
+  "no_frontmatter": [],
+  "evidence_levels": {
+    "moderate": 5,
+    "rich": 1,
+    "pamphlet-only": 1
+  },
+  "contest_overviews_missing": [],
+  "untouched_contests": [
+    "spokane-congressional-district-5-u-s-representative",
+    "spokane-legislative-district-3-state-representative-pos-1",
+    "spokane-legislative-district-3-state-representative-pos-2",
+    "spokane-legislative-district-4-state-representative-pos-1",
+    "spokane-legislative-district-4-state-representative-pos-2",
+    "spokane-legislative-district-6-state-representative-pos-1",
+    "spokane-legislative-district-6-state-representative-pos-2",
+    "spokane-legislative-district-7-state-senator",
+    "spokane-legislative-district-9-state-representative-pos-2"
+  ],
+  "untouched_measures": []
+}
