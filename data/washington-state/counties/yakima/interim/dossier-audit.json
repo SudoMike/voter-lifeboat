@@ -1,0 +1,25 @@
+{
+  "script": "pipeline/verify_dossiers.py",
+  "derived_from": [
+    "data/washington-state/counties/yakima/interim/research-plan.json",
+    "data/washington-state/counties/yakima/dossiers/"
+  ],
+  "missing": [],
+  "no_frontmatter": [],
+  "evidence_levels": {
+    "pamphlet-only": 3,
+    "moderate": 4,
+    "rich": 1
+  },
+  "contest_overviews_missing": [],
+  "untouched_contests": [
+    "yakima-congressional-district-4-u-s-representative",
+    "yakima-legislative-district-14-state-representative-pos-1",
+    "yakima-legislative-district-14-state-representative-pos-2",
+    "yakima-legislative-district-15-state-representative-pos-1",
+    "yakima-legislative-district-15-state-representative-pos-2",
+    "yakima-yakima-county-auditor",
+    "yakima-yakima-county-commissioner-district-1-county-commissioner-district-1"
+  ],
+  "untouched_measures": []
+}

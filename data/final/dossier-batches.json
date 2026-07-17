@@ -4,259 +4,12 @@
   ],
   "script": "pipeline/build_dossier_batches.py",
   "batch_size_target": 50,
-  "total_units": 175,
-  "total_dossiers": 536,
-  "total_batches": 11,
+  "total_units": 157,
+  "total_dossiers": 482,
+  "total_batches": 10,
   "batches": [
     {
       "batch": 1,
-      "dossiers": 54,
-      "races": 18,
-      "units": [
-        {
-          "id": "clark-clark-county-auditor",
-          "kind": "local",
-          "label": "clark: Clark County Auditor",
-          "candidates": [
-            "eileen-quiring-o-brien",
-            "mitchell-kelly",
-            "sharon-wylie",
-            "ty-stober"
-          ],
-          "counties": [
-            "clark"
-          ]
-        },
-        {
-          "id": "clark-clark-county-council-district-1-county-councilor",
-          "kind": "local",
-          "label": "clark: Clark County Council District 1 County Councilor",
-          "candidates": [
-            "bryan-shull",
-            "dusti-arab",
-            "glen-yung",
-            "lukas-bardue"
-          ],
-          "counties": [
-            "clark"
-          ]
-        },
-        {
-          "id": "Federal/CD1",
-          "kind": "shared",
-          "label": "Congressional District 1 U.S. Representative",
-          "candidates": [
-            "benjamin-kincaid",
-            "bryce-nickel",
-            "catherine-hildebrand",
-            "hunter-gordon",
-            "james-etzkorn",
-            "mary-silva",
-            "suzan-delbene"
-          ],
-          "counties": [
-            "snohomish"
-          ]
-        },
-        {
-          "id": "snohomish-public-utility-district-no-1-commissioner-district-1",
-          "kind": "local",
-          "label": "snohomish: Public Utility District No. 1 Commissioner District 1",
-          "candidates": [
-            "bruce-king",
-            "janet-st-clair",
-            "sid-logan"
-          ],
-          "counties": [
-            "snohomish"
-          ]
-        },
-        {
-          "id": "thurston-thurston-county-assessor",
-          "kind": "local",
-          "label": "thurston: Thurston County Assessor",
-          "candidates": [
-            "jj-olson",
-            "lynda-nashed-zeman"
-          ],
-          "counties": [
-            "thurston"
-          ]
-        },
-        {
-          "id": "thurston-thurston-county-clerk",
-          "kind": "local",
-          "label": "thurston: Thurston County Clerk",
-          "candidates": [
-            "garrett-cady",
-            "nicole-miller"
-          ],
-          "counties": [
-            "thurston"
-          ]
-        },
-        {
-          "id": "thurston-thurston-county-sheriff",
-          "kind": "local",
-          "label": "thurston: Thurston County Sheriff",
-          "candidates": [
-            "derek-sanders",
-            "kevin-burton-crow"
-          ],
-          "counties": [
-            "thurston"
-          ]
-        },
-        {
-          "id": "thurston-thurston-county-commissioner-district-no-5-county-commissioner",
-          "kind": "local",
-          "label": "thurston: Thurston County Commissioner District No. 5 County Commissioner",
-          "candidates": [
-            "emily-clouse",
-            "michelle-gipson",
-            "nicolas-martinez-dunning"
-          ],
-          "counties": [
-            "thurston"
-          ]
-        },
-        {
-          "id": "kitsap-kitsap-county-assessor",
-          "kind": "local",
-          "label": "kitsap: Kitsap County Assessor",
-          "candidates": [
-            "michael-simonds",
-            "phil-cook"
-          ],
-          "counties": [
-            "kitsap"
-          ]
-        },
-        {
-          "id": "kitsap-kitsap-county-clerk",
-          "kind": "local",
-          "label": "kitsap: Kitsap County Clerk",
-          "candidates": [
-            "brien-kennedy",
-            "david-t-lewis-iii"
-          ],
-          "counties": [
-            "kitsap"
-          ]
-        },
-        {
-          "id": "kitsap-kitsap-county-commissioner-district-3-county-commissioner",
-          "kind": "local",
-          "label": "kitsap: Kitsap County Commissioner District 3 County Commissioner",
-          "candidates": [
-            "katie-walters",
-            "kevin-tisdel"
-          ],
-          "counties": [
-            "kitsap"
-          ]
-        },
-        {
-          "id": "kitsap-kitsap-county-prosecuting-attorney",
-          "kind": "local",
-          "label": "kitsap: Kitsap County Prosecuting Attorney",
-          "candidates": [
-            "chad-m-enright",
-            "joe-lombardi"
-          ],
-          "counties": [
-            "kitsap"
-          ]
-        },
-        {
-          "id": "kitsap-kitsap-county-sheriff",
-          "kind": "local",
-          "label": "kitsap: Kitsap County Sheriff",
-          "candidates": [
-            "brandon-l-myers",
-            "rick-kuss"
-          ],
-          "counties": [
-            "kitsap"
-          ]
-        },
-        {
-          "id": "yakima-yakima-county-assessor",
-          "kind": "local",
-          "label": "yakima: Yakima County Assessor",
-          "candidates": [
-            "jacob-tate",
-            "keith-effler"
-          ],
-          "counties": [
-            "yakima"
-          ]
-        },
-        {
-          "id": "yakima-yakima-county-prosecuting-attorney",
-          "kind": "local",
-          "label": "yakima: Yakima County Prosecuting Attorney",
-          "candidates": [
-            "quinn-dalan",
-            "tyler-haueter"
-          ],
-          "counties": [
-            "yakima"
-          ]
-        },
-        {
-          "id": "yakima-yakima-county-sheriff",
-          "kind": "local",
-          "label": "yakima: Yakima County Sheriff",
-          "candidates": [
-            "jake-church",
-            "roman-kilinkaridis"
-          ],
-          "counties": [
-            "yakima"
-          ]
-        },
-        {
-          "id": "yakima-yakima-county-treasurer",
-          "kind": "local",
-          "label": "yakima: Yakima County Treasurer",
-          "candidates": [
-            "sam-johnson",
-            "stephanie-patterson"
-          ],
-          "counties": [
-            "yakima"
-          ]
-        },
-        {
-          "id": "Federal/CD3",
-          "kind": "shared",
-          "label": "Congressional District 3 U.S. Representative",
-          "candidates": [
-            "antony-barran",
-            "austin-braswell",
-            "brent-hennrich",
-            "john-braun",
-            "john-p-roco",
-            "john-saulie-rohman",
-            "lawrence-kellogg",
-            "marie-gluesenkamp-perez",
-            "troy-rasband"
-          ],
-          "counties": [
-            "clark",
-            "cowlitz",
-            "lewis",
-            "pacific",
-            "skamania",
-            "thurston",
-            "wahkiakum"
-          ]
-        }
-      ]
-    },
-    {
-      "batch": 2,
       "dossiers": 50,
       "races": 13,
       "units": [
@@ -468,7 +221,7 @@
       ]
     },
     {
-      "batch": 3,
+      "batch": 2,
       "dossiers": 52,
       "races": 24,
       "units": [
@@ -782,7 +535,7 @@
       ]
     },
     {
-      "batch": 4,
+      "batch": 3,
       "dossiers": 53,
       "races": 17,
       "units": [
@@ -1019,7 +772,7 @@
       ]
     },
     {
-      "batch": 5,
+      "batch": 4,
       "dossiers": 52,
       "races": 15,
       "units": [
@@ -1240,7 +993,7 @@
       ]
     },
     {
-      "batch": 6,
+      "batch": 5,
       "dossiers": 51,
       "races": 15,
       "units": [
@@ -1459,7 +1212,7 @@
       ]
     },
     {
-      "batch": 7,
+      "batch": 6,
       "dossiers": 54,
       "races": 14,
       "units": [
@@ -1668,7 +1421,7 @@
       ]
     },
     {
-      "batch": 8,
+      "batch": 7,
       "dossiers": 51,
       "races": 17,
       "units": [
@@ -1896,7 +1649,7 @@
       ]
     },
     {
-      "batch": 9,
+      "batch": 8,
       "dossiers": 50,
       "races": 16,
       "units": [
@@ -2113,7 +1866,7 @@
       ]
     },
     {
-      "batch": 10,
+      "batch": 9,
       "dossiers": 51,
       "races": 18,
       "units": [
@@ -2351,7 +2104,7 @@
       ]
     },
     {
-      "batch": 11,
+      "batch": 10,
       "dossiers": 18,
       "races": 8,
       "units": [
