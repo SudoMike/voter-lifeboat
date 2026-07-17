@@ -23,8 +23,11 @@ const FEEDBACK_FILE = join(DATA_DIR, 'feedback.jsonl')
 const REPORTS_FILE = join(DATA_DIR, 'reports.jsonl')
 const MAX_BODY = 64 * 1024
 
-// mirrors LAYERS in app/src/lib/geo.js — anything else is dropped
-const DISTRICT_KEYS = ['CONGDST', 'LEGDST', 'KCCDST', 'SCCDST', 'JUDDST', 'FIRDST', 'SCHDST', 'CITY']
+// District layer keys are county-specific and grow with coverage (see
+// COUNTY_LAYERS in app/src/lib/geo.js), so accept any plausible layer key
+// rather than mirroring a list that goes stale.
+const DISTRICT_KEY_RE = /^[A-Z][A-Z0-9_]{1,29}$/
+const MAX_DISTRICTS = 24
 
 function readBody(req, res, onJson) {
   let body = ''
@@ -53,8 +56,9 @@ const COVERAGE_STATUSES = new Set(['full_county', 'partial_county', 'statewide_o
 // { v, election, coverageStatus, county, districts, answers } -> sanitized record
 function sanitizeReport(payload) {
   const districts = {}
-  for (const k of DISTRICT_KEYS) {
-    if (payload.districts?.[k] != null) districts[k] = String(payload.districts[k]).slice(0, 60)
+  for (const [k, v] of Object.entries(payload.districts || {})) {
+    if (Object.keys(districts).length >= MAX_DISTRICTS) break
+    if (DISTRICT_KEY_RE.test(k) && v != null) districts[k] = String(v).slice(0, 60)
   }
   const answers = {}
   for (const [axis, pair] of Object.entries(payload.answers || {}).slice(0, 40)) {
@@ -112,7 +116,7 @@ const server = createServer((req, res) => {
       return res.end('{"error":"address required"}')
     }
     const url = `${CENSUS_GEOCODER}?address=${encodeURIComponent(address)}&benchmark=Public_AR_Current&vintage=Current_Current&format=json`
-    fetch(url)
+    fetch(url, { signal: AbortSignal.timeout(15000) })
       .then((r) => {
         if (!r.ok) throw new Error(`census ${r.status}`)
         return r.json()

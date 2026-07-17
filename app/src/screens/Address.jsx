@@ -108,6 +108,8 @@ export default function Address({ data, onBack, onFound }) {
             'That address looks like it is outside Washington State. This guide supports Washington elections only.'}
           {err.kind === 'unsupported-county' &&
             'That Washington county is not covered yet, and the statewide fallback is not available for this election data.'}
+          {err.kind === 'no-districts' &&
+            'We found the address but could not resolve its voting districts. Double-check the address, or try again in a moment.'}
           {err.kind === 'network' &&
             'A lookup service did not answer. Give it a moment and try again.'}
         </p>

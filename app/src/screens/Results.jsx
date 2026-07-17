@@ -121,7 +121,7 @@ function CandidateExpanded({ data, contest, row, answers }) {
   const axes = Object.entries(c.scores || {})
     .filter(([axis]) => answers[axis])
     .sort((a, b) => answers[b[0]].w - answers[a[0]].w)
-  const pam = pamphletLink(c.pamphlet_pages)
+  const pam = pamphletLink(c.pamphlet_pages, contest.owner)
   return (
     <div className="race-expand rise">
       {c.summary && (
@@ -240,7 +240,7 @@ function ContestCard({ data, contest, answers }) {
     return (
       <section className="panel panel--sand" style={{ margin: '12px 20px 0' }}>
         <div className="eyebrow eyebrow--sm eyebrow--muted">
-          {contest.office.toUpperCase()} · {(contest.district || 'COUNTYWIDE').toUpperCase()}
+          {contest.office.toUpperCase()} · {(contest.district || (contest.scope?.kind === 'STATEWIDE' ? 'STATEWIDE' : 'COUNTYWIDE')).toUpperCase()}
         </div>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 2 }}>
           <div style={{ fontWeight: 800, fontSize: 15 }}>{c.name}</div>
@@ -259,7 +259,7 @@ function ContestCard({ data, contest, answers }) {
     <section className="card" style={{ margin: '16px 20px 0', overflow: 'hidden' }}>
       <div style={{ padding: '14px 18px 10px', borderBottom: '2px dashed var(--sand)' }}>
         <div className="eyebrow eyebrow--sm">
-          {contest.office.toUpperCase()} · {(contest.district || 'COUNTYWIDE').toUpperCase()}
+          {contest.office.toUpperCase()} · {(contest.district || (contest.scope?.kind === 'STATEWIDE' ? 'STATEWIDE' : 'COUNTYWIDE')).toUpperCase()}
         </div>
         {contest.office_does && (
           <div className="note" style={{ marginTop: 3, fontSize: 11.5 }}>
@@ -343,7 +343,7 @@ function MeasureCard({ measure, answers }) {
     : lean === 'no' ? { text: 'leans NO', bg: 'var(--coral)' }
     : lean === 'split' ? { text: 'genuinely split', bg: 'var(--muted-deep)' }
     : null
-  const pam = pamphletLink(measure.pamphlet_pages)
+  const pam = pamphletLink(measure.pamphlet_pages, measure.owner)
   return (
     <section className="card" style={{ margin: '12px 20px 0', overflow: 'hidden' }}>
       <button className="cand" style={{ padding: '14px 18px' }} onClick={() => setOpen(!open)}>
@@ -441,7 +441,9 @@ function BriefSection({ data, context, answers, contests, measures, shareUrl }) 
   )
   const words = text.split(/\s+/).length
   const copy = () => {
-    copyText(text).then(() => setCopied(true))
+    // writeText rejects when the document loses focus mid-click; leave the
+    // button in its resting state so the voter can simply try again.
+    copyText(text).then(() => setCopied(true)).catch(() => {})
   }
   return (
     <section className="screen--navy" style={{ margin: '24px 0 0', padding: '30px 24px' }}>
@@ -619,10 +621,12 @@ export default function Results({ data, ballotContext, answers, restored, onStar
   }, [restored, data, ballotContext, answers])
 
   const copyLink = () => {
-    copyText(shareUrl).then(() => {
-      setLinkCopied(true)
-      setTimeout(() => setLinkCopied(false), 3500)
-    })
+    copyText(shareUrl)
+      .then(() => {
+        setLinkCopied(true)
+        setTimeout(() => setLinkCopied(false), 3500)
+      })
+      .catch(() => {})
   }
 
   const dataChanged =
@@ -671,8 +675,12 @@ export default function Results({ data, ballotContext, answers, restored, onStar
         )}
         {ballotContext.coverageStatus === 'partial_county' && (
           <div className="banner-tcc" style={{ marginTop: 10 }}>
-            Partial county guide: some local district lookups did not complete,
-            so local contests may be missing.
+            Partial county guide: some local ballot items are not covered or
+            could not be matched to your address, so local contests may be
+            missing.
+            {ballotContext.missingLayers?.length
+              ? ` District lookups that did not resolve: ${ballotContext.missingLayers.join(', ')}.`
+              : ''}
           </div>
         )}
       </header>

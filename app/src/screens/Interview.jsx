@@ -108,6 +108,23 @@ export default function Interview({ data, items, onDone }) {
     )
   }
 
+  // A ballot whose covered candidates and measures carry no scored axes
+  // yields zero interview items; skip straight to results rather than crash.
+  if (!total) {
+    return (
+      <main className="screen screen--app rise" style={{ padding: '60px 24px', textAlign: 'center' }}>
+        <h1 className="display display--md">Nothing to ask you yet</h1>
+        <p className="copy" style={{ margin: '10px auto 0', maxWidth: 320 }}>
+          None of the covered items on this ballot have scored positions, so
+          there is no interview to take — you can still browse the ballot.
+        </p>
+        <button className="btn btn--navy btn--sm" style={{ marginTop: 20 }} onClick={() => onDone({})}>
+          Show my ballot
+        </button>
+      </main>
+    )
+  }
+
   const item = items[idx]
 
   // --- trade-off scenario ---

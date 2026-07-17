@@ -41,7 +41,8 @@ export default function App() {
   }, [])
 
   useEffect(() => {
-    if (location.pathname === '/') history.replaceState(null, '', '/washington-state/')
+    if (location.pathname === '/')
+      history.replaceState(null, '', `/washington-state/${location.search}${location.hash}`)
   }, [])
 
   // Restore a shared/bookmarked report from the hash fragment.

@@ -43,10 +43,14 @@ export function decodeProfile(fragment) {
     if (!p || typeof p !== 'object' || !p.a) return null
     const context = p.c || (p.d ? { coverageStatus: 'full_county', county: { id: 'king', fips: '53033', name: 'King County' }, districts: p.d } : null)
     if (!context) return null
+    // A tampered or corrupted link must not overclaim coverage or distort the
+    // scoring weights; unknown statuses degrade to the partial-county banner.
+    const statuses = ['full_county', 'partial_county', 'statewide_only']
+    if (!statuses.includes(context.coverageStatus)) context.coverageStatus = 'partial_county'
     const answers = {}
     for (const [axis, [v, w]] of Object.entries(p.a)) {
       if (typeof v !== 'number' || typeof w !== 'number') return null
-      answers[axis] = { v: Math.max(-2, Math.min(2, v)), w }
+      answers[axis] = { v: Math.max(-2, Math.min(2, v)), w: Math.max(0, Math.min(4, w)) }
     }
     return {
       schema: p.s || 1,

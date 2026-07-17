@@ -8,7 +8,7 @@ export default function Snapshot({ data, answers, onShow }) {
       return { axis: a, v, w, strength: Math.abs(v) }
     })
     .sort((x, y) => y.w - x.w || y.strength - x.strength)
-  const maxW = Math.max(...rows.map((r) => r.w))
+  const maxW = rows.length ? Math.max(...rows.map((r) => r.w)) : 0
 
   const tag = (r) => {
     if (r.w === maxW && r.w >= 2) return { text: 'cared most ★', cls: 'tag tag--star' }

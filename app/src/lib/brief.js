@@ -5,17 +5,28 @@
 import { rankContest, measureLean } from './scoring.js'
 
 const PAMPHLET_URLS = {
-  'edition-1':
+  'king/edition-1':
     'https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/08/english/edition-1.pdf',
-  'edition-2':
+  'king/edition-2':
     'https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/08/english/edition-2.pdf',
+  'clark/local-voters-pamphlet':
+    'https://clark.wa.gov/sites/default/files/media/document/2026-06/2026clarkcountyprimaryvp_web.pdf',
+  'kitsap/local-voters-pamphlet': 'https://www.kitsap.gov/auditor/Documents/LVP.pdf',
+  'pierce/local-voters-pamphlet':
+    'https://www.piercecountywa.gov/DocumentCenter/View/158538/Primary-2026-VP-Final',
+  'snohomish/local-voters-pamphlet':
+    'https://www.snohomishcountywa.gov/DocumentCenter/View/149774',
+  'spokane/local-voters-pamphlet':
+    'https://www.spokanecounty.gov/DocumentCenter/View/72507/August-4-2026-Primary-Election-Voters-Pamphlet-PDF',
+  'thurston/local-voters-pamphlet': 'https://www.thurstoncountywa.gov/media/33642',
 }
 
-export function pamphletLink(pages) {
-  if (!pages?.length) return null
-  const p = pages[0]
-  const url = PAMPHLET_URLS[p.edition]
-  return url ? `${url}#page=${p.page}` : null
+export function pamphletLink(pages, owner) {
+  for (const p of pages || []) {
+    const url = PAMPHLET_URLS[`${owner}/${p.edition}`] || PAMPHLET_URLS[`king/${p.edition}`]
+    if (url) return `${url}#page=${p.page}`
+  }
+  return null
 }
 
 function axisName(data, id) {
@@ -38,10 +49,16 @@ function coverageText(context) {
     ]
   }
   if (context.coverageStatus === 'partial_county') {
-    return [
+    const lines = [
       'Coverage: PARTIAL COUNTY GUIDE.',
-      'This packet includes statewide contests, countywide contests, and local contests whose district scope was resolved exactly. Some local contests may be missing because one or more district lookups failed.',
+      'This packet includes statewide contests, countywide contests, and local contests whose district scope was resolved exactly. Some local contests may be missing because one or more district lookups failed or are not covered yet.',
     ]
+    if (context.missingLayers?.length) {
+      lines.push(
+        `District lookups that did not resolve: ${context.missingLayers.join(', ')}. Races scoped to these districts are the ones to double-check against my official ballot.`
+      )
+    }
+    return lines
   }
   return [
     'Coverage: FULL COUNTY GUIDE.',
@@ -68,7 +85,9 @@ export function buildBrief(data, context, answers, contests, measures, shareUrl,
 
   for (const contest of contests) {
     const { rows, tooClose } = rankContest(contest, answers)
-    L.push(`## ${contest.office.toUpperCase()} — ${contest.district || 'Countywide'}`)
+    L.push(
+      `## ${contest.office.toUpperCase()} — ${contest.district || (contest.scope?.kind === 'STATEWIDE' ? 'Statewide' : 'Countywide')}`
+    )
     if (contest.office_does) L.push(`(${contest.office_does})`)
     if (contest.uncontested) L.push('Uncontested — shown for information only.')
     if (tooClose)
@@ -91,7 +110,7 @@ export function buildBrief(data, context, answers, contests, measures, shareUrl,
         .filter(Boolean)
         .slice(0, 5)
       if (urls.length) L.push(`Sources: ${urls.join(' · ')}`)
-      const pam = pamphletLink(c.pamphlet_pages)
+      const pam = pamphletLink(c.pamphlet_pages, contest.owner)
       if (pam) L.push(`Official pamphlet statement: ${pam}`)
     }
     L.push('')
@@ -114,6 +133,8 @@ export function buildBrief(data, context, answers, contests, measures, shareUrl,
       if (m.cost_line) L.push(`Cost: ${m.cost_line}`)
       if (m.pro_summary) L.push(`Pro: ${m.pro_summary}`)
       if (m.con_summary) L.push(`Con: ${m.con_summary}`)
+      const pam = pamphletLink(m.pamphlet_pages, m.owner)
+      if (pam) L.push(`Official pamphlet entry: ${pam}`)
     }
     L.push('')
   }
