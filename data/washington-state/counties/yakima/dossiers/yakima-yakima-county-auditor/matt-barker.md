@@ -6,8 +6,16 @@ depth: deep
 evidence_level: pamphlet-only
 researched_at: 2026-07-17
 sources:
-  - {id: S1, tier: 1, type: government-record, url: "https://voter.votewa.gov/CandidateList.aspx?c=39&e=898", accessed: 2026-07-17}
-  - {id: S2, tier: 1, type: candidate-website, url: "https://barker4auditor.com/", accessed: 2026-07-17}
+  - id: S1
+    tier: 1
+    type: government-record
+    url: https://voter.votewa.gov/CandidateList.aspx?c=39&e=898
+    accessed: 2026-07-17
+  - id: S2
+    tier: 1
+    type: candidate-website
+    url: https://barker4auditor.com/
+    accessed: 2026-07-17
 ---
 
 ## Background

@@ -6,8 +6,16 @@ depth: deep
 evidence_level: rich
 researched_at: 2026-07-17
 sources:
-  - {id: S1, tier: 1, type: pamphlet, url: "https://www.bentoncountywa.gov/Documents/Government/Elected%20Officials/Auditor/Elections/Current%20Election/Primary%202026.pdf", accessed: 2026-07-17}
-  - {id: S2, tier: 1, type: candidate-website, url: "https://mckinneyforwashington.com/", accessed: 2026-07-17}
+  - id: S1
+    tier: 1
+    type: pamphlet
+    url: https://www.bentoncountywa.gov/Documents/Government/Elected%20Officials/Auditor/Elections/Current%20Election/Primary%202026.pdf
+    accessed: 2026-07-17
+  - id: S2
+    tier: 1
+    type: candidate-website
+    url: https://mckinneyforwashington.com/
+    accessed: 2026-07-17
 ---
 
 ## Background
