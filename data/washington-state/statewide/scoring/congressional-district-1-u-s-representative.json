@@ -1,0 +1,94 @@
+{
+  "contest_slug": "congressional-district-1-u-s-representative",
+  "scored_at": "2026-07-17",
+  "derived_from": ["data/washington-state/statewide/dossiers/congressional-district-1-u-s-representative/"],
+  "office_does": "A U.S. representative writes and votes on federal law and spending, conducts executive oversight, and provides constituent services.",
+  "race_blurb": "Incumbent Suzan DelBene faces challengers ranging from progressive structural-change campaigns to independent reform and smaller-government alternatives.",
+  "candidates": [
+    {
+      "slug": "benjamin-kincaid",
+      "summary": "Kincaid is a first-time candidate combining working-class tax relief and domestic production with an incremental approach to health-system change.",
+      "highlights": ["Supports a large working-class income-tax cut and expanded domestic energy and manufacturing [S1][S2]", "Supports pilot-tested incrementalism before national single-payer implementation [S1][S2]"],
+      "evidence_level": "moderate", "withdrawn": false,
+      "scores": {
+        "taxes": {"score": -2, "confidence": "high", "citations": ["S1", "S2"], "basis": "He explicitly supports a large working-class income-tax cut."},
+        "experience": {"score": 2, "confidence": "high", "citations": ["S1", "S2"], "basis": "He is a first-time candidate without an institutional record."},
+        "healthcare": {"score": -1, "confidence": "medium", "citations": ["S1", "S2"], "basis": "He favors pilots and incremental steps before a national single-payer rollout."}
+      }
+    },
+    {
+      "slug": "bryce-nickel",
+      "summary": "Nickel proposes structural public intervention on health care, wealth inequality, rents, and AI-driven economic displacement.",
+      "highlights": ["Supports Medicare for All and wealth-focused taxation [S1][S2]", "Supports strong rent intervention and public control of AI and automation [S1][S2]"],
+      "evidence_level": "moderate", "withdrawn": false,
+      "scores": {
+        "taxes": {"score": 2, "confidence": "high", "citations": ["S1", "S2"], "basis": "He explicitly supports wealth-focused taxation."},
+        "spending": {"score": 2, "confidence": "medium", "citations": ["S1", "S2"], "basis": "His platform centers public provision and intervention in major economic systems."},
+        "experience": {"score": 2, "confidence": "medium", "citations": ["S1", "S2"], "basis": "He is a challenger without a documented institutional record."},
+        "healthcare": {"score": 2, "confidence": "high", "citations": ["S1", "S2"], "basis": "He explicitly supports Medicare for All."},
+        "tech": {"score": 2, "confidence": "high", "citations": ["S1", "S2"], "basis": "He supports public control of AI and automation."}
+      }
+    },
+    {
+      "slug": "catherine-hildebrand",
+      "summary": "Hildebrand is a first-time federal candidate advocating universal basic needs and structural limits on lobbying and campaign money.",
+      "highlights": ["Supports universal basic needs including medical care and housing [S1][S2]", "Supports term limits and limits on lobbying and campaign money [S1][S2]"],
+      "evidence_level": "moderate", "withdrawn": false,
+      "scores": {
+        "spending": {"score": 2, "confidence": "medium", "citations": ["S1", "S2"], "basis": "She supports public guarantees of basic needs including medical care and housing."},
+        "experience": {"score": 2, "confidence": "high", "citations": ["S1", "S2"], "basis": "She is a first-time federal candidate from a small-business background."},
+        "reform": {"score": 2, "confidence": "high", "citations": ["S1", "S2"], "basis": "She supports term limits and restrictions on lobbying and campaign money."}
+      }
+    },
+    {
+      "slug": "hunter-gordon",
+      "summary": "Gordon campaigns on a broad progressive program spanning wealth taxes, universal health care, climate investment, technology regulation, and ending aid to Israel.",
+      "highlights": ["Supports Medicare for All, wealth taxes, and rent stabilization [S1][S2]", "Supports a Green New Deal and tighter AI and data-center regulation [S1][S2]", "Calls for ending U.S. aid to Israel [S1][S2]"],
+      "evidence_level": "moderate", "withdrawn": false,
+      "scores": {
+        "taxes": {"score": 2, "confidence": "high", "citations": ["S1", "S2"], "basis": "He explicitly supports wealth taxes."},
+        "spending": {"score": 2, "confidence": "high", "citations": ["S1", "S2"], "basis": "Medicare for All and a Green New Deal place expanded public investment at the center of his platform."},
+        "climate": {"score": 2, "confidence": "high", "citations": ["S1", "S2"], "basis": "He explicitly supports a Green New Deal."},
+        "experience": {"score": 2, "confidence": "medium", "citations": ["S1", "S2"], "basis": "He is a challenger without a documented elected record."},
+        "reform": {"score": 1, "confidence": "medium", "citations": ["S1", "S2"], "basis": "His campaign centers opposition to corporate political influence."},
+        "healthcare": {"score": 2, "confidence": "high", "citations": ["S1", "S2"], "basis": "He explicitly supports Medicare for All."},
+        "tech": {"score": 2, "confidence": "high", "citations": ["S1", "S2"], "basis": "He supports tighter regulation of AI and data centers."},
+        "defense": {"score": 2, "confidence": "high", "citations": ["S1", "S2"], "basis": "He calls for ending U.S. aid to Israel."}
+      }
+    },
+    {
+      "slug": "james-etzkorn",
+      "summary": "Etzkorn combines local elected experience with an independent campaign focused on term limits, dark-money restrictions, and official accountability.",
+      "highlights": ["Has served on the Monroe School Board [S1][S2]", "Supports term limits and bans on dark money and congressional insider trading [S1][S2]"],
+      "evidence_level": "moderate", "withdrawn": false,
+      "scores": {
+        "experience": {"score": 0, "confidence": "medium", "citations": ["S1", "S2"], "basis": "He combines elected local service with outsider status in federal politics."},
+        "reform": {"score": 2, "confidence": "high", "citations": ["S1", "S2"], "basis": "His platform centers term limits, dark-money restrictions, and an insider-trading ban."}
+      }
+    },
+    {
+      "slug": "mary-silva",
+      "summary": "Silva is a small-business owner running on smaller government, enforcement-oriented public safety, domestic production, and traditional values.",
+      "highlights": ["Emphasizes smaller government and domestic production [S1][S2]", "Emphasizes public safety, health freedom, and traditional values [S1][S2]"],
+      "evidence_level": "moderate", "withdrawn": false,
+      "scores": {
+        "spending": {"score": -2, "confidence": "medium", "citations": ["S1", "S2"], "basis": "She explicitly emphasizes smaller government."},
+        "safety": {"score": -1, "confidence": "medium", "citations": ["S1", "S2"], "basis": "Public safety is a stated campaign priority in an enforcement-oriented platform."},
+        "experience": {"score": 2, "confidence": "high", "citations": ["S1", "S2"], "basis": "She offers business and volunteer experience rather than an elected record."},
+        "social": {"score": -1, "confidence": "medium", "citations": ["S1", "S2"], "basis": "Her campaign presents traditional values as a defining alternative."}
+      }
+    },
+    {
+      "slug": "suzan-delbene",
+      "summary": "DelBene is the long-serving incumbent, emphasizing targeted tax credits, housing-supply incentives, current-system health coverage, privacy, and district investment.",
+      "highlights": ["Supports targeted tax credits and affordable-housing supply incentives [S1][S2]", "Supports protecting the ACA and Medicaid and strengthening data privacy [S1][S2]", "Offers a long congressional and technology-sector record [S1][S2]"],
+      "evidence_level": "rich", "withdrawn": false,
+      "scores": {
+        "spending": {"score": 1, "confidence": "medium", "citations": ["S1", "S2"], "basis": "She supports federal district investment while using targeted incentives and credits."},
+        "experience": {"score": -2, "confidence": "high", "citations": ["S1", "S2"], "basis": "She is the long-serving incumbent with an established federal record."},
+        "healthcare": {"score": -2, "confidence": "high", "citations": ["S1", "S2"], "basis": "She supports protecting and improving ACA and Medicaid coverage within the current system."},
+        "tech": {"score": 1, "confidence": "medium", "citations": ["S1", "S2"], "basis": "She supports stronger federal data-privacy protections."}
+      }
+    }
+  ]
+}
