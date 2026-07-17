@@ -68,3 +68,54 @@ test('supported non-King counties use Census federal/state districts as partial 
   assert.deepEqual(context.districts, { CONGDST: '2', LEGDST: '38', CITY: 'Everett' })
   assert.deepEqual(context.missingLayers, ['county-local'])
 })
+
+test('configured non-King county layers produce full county coverage', async () => {
+  global.fetch = async (url) => {
+    if (String(url).startsWith('/api/geocode')) {
+      return {
+        ok: true,
+        async json() {
+          return {
+            result: {
+              addressMatches: [{
+                matchedAddress: '1408 FRANKLIN ST, VANCOUVER, WA, 98660',
+                coordinates: { x: -122.67, y: 45.63 },
+                geographies: {
+                  Counties: [{ STATE: '53', COUNTY: '011', NAME: 'Clark County' }],
+                  '119th Congressional Districts': [{ BASENAME: '3' }],
+                  '2024 State Legislative Districts - Lower': [{ BASENAME: '49' }],
+                  'Incorporated Places': [{ BASENAME: 'Vancouver' }],
+                },
+              }],
+            },
+          }
+        },
+      }
+    }
+    const attr = String(url).includes('BoardofCountyCouncilorsDistrict')
+      ? { BOCCDistrict: 1 }
+      : String(url).includes('CPUCommissionerDistrict')
+        ? { DISTRICT: 3 }
+        : { FIREDST: 10 }
+    return {
+      ok: true,
+      async json() {
+        return { features: [{ attributes: attr }] }
+      },
+    }
+  }
+  const context = await lookupBallotContext(
+    { coverage: { statewide_complete: true, supported_counties: [{ id: 'king' }, { id: 'clark' }] } },
+    '1408 Franklin St Vancouver WA 98660'
+  )
+  assert.equal(context.coverageStatus, 'full_county')
+  assert.deepEqual(context.districts, {
+    CONGDST: '3',
+    LEGDST: '49',
+    CITY: 'Vancouver',
+    COUNTY_COUNCIL: '1',
+    PUDDST: '3',
+    FIRDST: '10',
+  })
+  assert.deepEqual(context.missingLayers, [])
+})

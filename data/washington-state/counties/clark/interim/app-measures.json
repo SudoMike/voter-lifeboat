@@ -4,6 +4,61 @@
   "derived_from": [
     "data/washington-state/counties/clark/interim/pdf-text/sample-ballot.txt"
   ],
-  "coverage": "partial_county",
-  "measures": []
+  "coverage": "full_county",
+  "measures": [
+    {
+      "slug": "clark-east-county-fire-and-rescue-proposition-no-6",
+      "owner": "clark",
+      "jurisdiction": "East County Fire & Rescue",
+      "proposition": "Proposition No. 6",
+      "title": "Emergency Medical Services Property Tax Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "clark",
+        "layer": "FIRDST",
+        "value": "1"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Continues East County Fire & Rescue's regular emergency medical services property tax levy for six consecutive years beginning in 2027.",
+      "cost_line": "Authorizes a regular property tax levy of $0.35 or less per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES continues a property tax levy for emergency medical services.",
+          "citations": [
+            "Clark sample ballot"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "clark-clark-county-fire-protection-district-no-10-proposition-no-3",
+      "owner": "clark",
+      "jurisdiction": "Clark County Fire Protection District No. 10",
+      "proposition": "Proposition No. 3",
+      "title": "New Fire Station General Obligation Bonds",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "clark",
+        "layer": "FIRDST",
+        "value": "10"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Authorizes the district to construct and equip a new fire station, issue $15.2 million in general obligation bonds maturing within 20 years, and levy annual excess property taxes to repay the bonds.",
+      "cost_line": "Authorizes $15,200,000 in bonds repaid by annual excess property taxes.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES authorizes bond debt and excess property taxes for a new fire station.",
+          "citations": [
+            "Clark sample ballot"
+          ]
+        }
+      }
+    }
+  ]
 }

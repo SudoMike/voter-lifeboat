@@ -33,6 +33,74 @@ const COUNTY_IDS = {
   '53067': 'thurston',
 }
 
+const COUNTY_LAYERS = {
+  clark: [
+    {
+      key: 'COUNTY_COUNCIL',
+      url: 'https://gis.clark.wa.gov/arcgisfed/rest/services/ClarkView_Public/BoardofCountyCouncilorsDistrict/MapServer/0/query',
+      attr: 'BOCCDistrict',
+    },
+    {
+      key: 'PUDDST',
+      url: 'https://gis.clark.wa.gov/arcgisfed/rest/services/ClarkView_Public/CPUCommissionerDistrict/MapServer/0/query',
+      attr: 'DISTRICT',
+    },
+    {
+      key: 'FIRDST',
+      url: 'https://gis.clark.wa.gov/arcgisfed/rest/services/ClarkView_Public/FireDistrictBoundary/MapServer/0/query',
+      attr: 'FIREDST',
+    },
+  ],
+  kitsap: [
+    {
+      key: 'COUNTY_COUNCIL',
+      url: 'https://services6.arcgis.com/qt3UCV9x5kB4CwRA/arcgis/rest/services/County_Commissioner_District_Outlines/FeatureServer/0/query',
+      attr: 'DISTRICT',
+    },
+    {
+      key: 'FIRDST',
+      url: 'https://services6.arcgis.com/qt3UCV9x5kB4CwRA/arcgis/rest/services/Fire_District_Outlines/FeatureServer/0/query',
+      attr: 'DISTRICT',
+    },
+  ],
+  pierce: [
+    {
+      key: 'COUNTY_COUNCIL',
+      url: 'https://services2.arcgis.com/1UvBaQ5y1ubjUPmd/arcgis/rest/services/Pierce_County_Council_Districts/FeatureServer/0/query',
+      attr: 'District_Number',
+    },
+    {
+      key: 'FIRDST',
+      url: 'https://services2.arcgis.com/1UvBaQ5y1ubjUPmd/arcgis/rest/services/Fire_Districts/FeatureServer/0/query',
+      attr: 'FIRE_DIS',
+    },
+  ],
+  spokane: [
+    {
+      key: 'COUNTY_COUNCIL',
+      url: 'https://services1.arcgis.com/ozNll27nt9ZtPWOn/arcgis/rest/services/Current_Districts/FeatureServer/1/query',
+      attr: 'DISTNUM',
+    },
+    {
+      key: 'AQUIFER',
+      url: 'https://services.arcgis.com/3PDwyTturHqnGCu0/arcgis/rest/services/Aquifer/FeatureServer/0/query',
+      attr: 'AQUIFER',
+    },
+  ],
+  thurston: [
+    {
+      key: 'COUNTY_COUNCIL',
+      url: 'https://tconline.co.thurston.wa.us/server/rest/services/Thurston_CommissionerDistricts/FeatureServer/0/query',
+      attr: 'CommissionerDistrictNumber',
+    },
+    {
+      key: 'FIRDST',
+      url: 'https://tconline.co.thurston.wa.us/server/rest/services/ThurstonExt/Thurston_FireDistricts_TCOMM/FeatureServer/0/query',
+      attr: 'CONSOL_NUM',
+    },
+  ],
+}
+
 export class GeoError extends Error {
   constructor(message, kind, details = {}) {
     super(message)
@@ -126,6 +194,25 @@ async function queryKingLayer(key, x, y) {
   return feat ? String(feat.attributes[attr]).trim() : null
 }
 
+async function queryArcgisLayer(layer, x, y) {
+  const params = new URLSearchParams({
+    geometry: `${x},${y}`,
+    geometryType: 'esriGeometryPoint',
+    inSR: '4326',
+    spatialRel: 'esriSpatialRelIntersects',
+    outFields: layer.attr,
+    returnGeometry: 'false',
+    f: 'json',
+  })
+  const res = await fetch(`${layer.url}?${params}`)
+  if (!res.ok) throw new GeoError(`District lookup failed (${layer.key}).`, 'network', { layer: layer.key })
+  const data = await res.json()
+  if (data.error) throw new GeoError(`District lookup failed (${layer.key}).`, 'network', { layer: layer.key })
+  const feat = data.features?.[0]
+  const value = feat?.attributes?.[layer.attr]
+  return value == null || value === '' ? null : String(value).trim()
+}
+
 async function lookupKingDistricts(pt) {
   const keys = Object.keys(KING_LAYERS)
   const results = await Promise.allSettled(keys.map((k) => queryKingLayer(k, pt.x, pt.y)))
@@ -171,6 +258,23 @@ function lookupCensusDistricts(pt) {
   return districts
 }
 
+async function lookupCountyDistricts(pt) {
+  const layers = COUNTY_LAYERS[pt.county.id] || []
+  const districts = lookupCensusDistricts(pt)
+  if (!layers.length) return { districts, missingLayers: ['county-local'] }
+  const results = await Promise.allSettled(layers.map((layer) => queryArcgisLayer(layer, pt.x, pt.y)))
+  const missingLayers = []
+  layers.forEach((layer, i) => {
+    const r = results[i]
+    if (r.status === 'fulfilled') {
+      if (r.value != null) districts[layer.key] = r.value
+    } else {
+      missingLayers.push(layer.key)
+    }
+  })
+  return { districts, missingLayers }
+}
+
 export async function lookupBallotContext(data, address) {
   const pt = await geocode(address)
   const countySupported = data.coverage?.supported_counties?.some((c) => c.id === pt.county.id)
@@ -187,11 +291,12 @@ export async function lookupBallotContext(data, address) {
     }
   }
   if (pt.county.id !== 'king') {
+    const { districts, missingLayers } = await lookupCountyDistricts(pt)
     return {
-      coverageStatus: 'partial_county',
+      coverageStatus: missingLayers.length ? 'partial_county' : 'full_county',
       county: pt.county,
-      districts: lookupCensusDistricts(pt),
-      missingLayers: ['county-local'],
+      districts,
+      missingLayers,
       matched: pt.matched,
     }
   }
