@@ -3,7 +3,7 @@ name: Jimi O'Hagan
 slug: jimi-o-hagan
 contest: legislative-district-19-state-representative-position-2
 depth: deep
-evidence_level: limited
+evidence_level: pamphlet-only
 researched_at: 2026-07-17
 sources:
   - id: S1

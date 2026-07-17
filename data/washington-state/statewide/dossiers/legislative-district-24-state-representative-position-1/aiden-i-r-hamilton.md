@@ -3,7 +3,7 @@ name: Aiden I.R. Hamilton
 slug: aiden-i-r-hamilton
 contest: legislative-district-24-state-representative-position-1
 depth: deep
-evidence_level: limited
+evidence_level: pamphlet-only
 researched_at: 2026-07-17
 sources:
   - id: S1

@@ -37,6 +37,7 @@ def audit_package(package: Path):
         "derived_from": [str(plan_file.relative_to(ROOT)), str(dossiers.relative_to(ROOT)) + "/"],
         "missing": [],
         "no_frontmatter": [],
+        "invalid_evidence_levels": [],
         "evidence_levels": {},
         "contest_overviews_missing": [],
         "untouched_contests": [],
@@ -63,6 +64,8 @@ def audit_package(package: Path):
             level_match = re.search(r"^evidence_level:\s*(\S+)", fm, re.M)
             level = level_match.group(1) if level_match else "MISSING"
             audit["evidence_levels"][level] = audit["evidence_levels"].get(level, 0) + 1
+            if level not in {"rich", "moderate", "pamphlet-only"}:
+                audit["invalid_evidence_levels"].append(f"{slug}/{candidate['slug']}: {level}")
 
     measure_dir = dossiers / "measures"
     for measure in plan.get("measures", []):
@@ -90,7 +93,12 @@ def main():
         if not (package / "interim/research-plan.json").exists():
             continue
         audit = audit_package(package)
-        hard_errors = audit["missing"] + audit["no_frontmatter"] + audit["contest_overviews_missing"]
+        hard_errors = (
+            audit["missing"]
+            + audit["no_frontmatter"]
+            + audit["invalid_evidence_levels"]
+            + audit["contest_overviews_missing"]
+        )
         failed |= bool(hard_errors)
         print(
             f"{package.name}: errors={len(hard_errors)} started={sum(audit['evidence_levels'].values())} "

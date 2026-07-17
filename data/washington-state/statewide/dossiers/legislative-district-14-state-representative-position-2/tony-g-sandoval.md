@@ -3,7 +3,7 @@ name: Tony G Sandoval
 slug: tony-g-sandoval
 contest: legislative-district-14-state-representative-position-2
 depth: deep
-evidence_level: limited
+evidence_level: pamphlet-only
 researched_at: 2026-07-17
 sources:
   - id: S1

@@ -22,6 +22,7 @@ applies = {a["id"]: set(a["applies_to"]) for a in rubric["axes"]}
 
 JUDICIAL_OFFICES = re.compile(r"justice|judge|municipal-court")
 JUDICIAL_AXES = {"judicial", "safety", "experience"}
+EVIDENCE_LEVELS = {"rich", "moderate", "pamphlet-only"}
 
 errors, warnings = [], []
 
@@ -73,6 +74,12 @@ for package in PACKAGES:
                 errors.append(f"{slug}: candidate missing {cand['slug']}")
                 continue
             src_ids, lvl = dossier_sources_and_level(package, slug, cand["slug"])
+            if lvl not in EVIDENCE_LEVELS:
+                errors.append(f"{slug}/{cand['slug']}: invalid dossier evidence_level {lvl}")
+            if cs.get("evidence_level") not in EVIDENCE_LEVELS:
+                errors.append(
+                    f"{slug}/{cand['slug']}: invalid scoring evidence_level {cs.get('evidence_level')}"
+                )
             if lvl and cs.get("evidence_level") != lvl:
                 warnings.append(f"{slug}/{cand['slug']}: evidence_level {cs.get('evidence_level')} != dossier {lvl}")
             for axis, s in (cs.get("scores") or {}).items():

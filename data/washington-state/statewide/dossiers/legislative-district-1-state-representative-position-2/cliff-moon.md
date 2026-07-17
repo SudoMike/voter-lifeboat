@@ -3,7 +3,7 @@ name: Cliff Moon
 slug: cliff-moon
 contest: legislative-district-1-state-representative-position-2
 depth: deep
-evidence_level: limited
+evidence_level: pamphlet-only
 researched_at: 2026-07-17
 sources:
   - id: S1

@@ -3,7 +3,7 @@ name: Thomas Everett Haynes
 slug: thomas-everett-haynes
 contest: legislative-district-17-state-representative-position-1
 depth: deep
-evidence_level: limited
+evidence_level: pamphlet-only
 researched_at: 2026-07-17
 sources:
   - id: S1
