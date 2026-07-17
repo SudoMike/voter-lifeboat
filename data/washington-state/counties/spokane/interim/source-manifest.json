@@ -1,0 +1,45 @@
+{
+  "county": "spokane",
+  "election": "2026-08-04-primary",
+  "status": "ingested_not_supported",
+  "official_sources": {
+    "current_election": "https://www.spokanecounty.gov/178/Current-Election",
+    "ballot_resolutions": "https://www.spokanecounty.gov/5861/2026-Ballot-Resolutions",
+    "sample_ballot_pdf": "https://www.spokanecounty.gov/DocumentCenter/View/72492/August-4-2026-Primary-Election-Sample-Ballot-PDF",
+    "local_voters_pamphlet_pdf": "https://www.spokanecounty.gov/DocumentCenter/View/72507/August-4-2026-Primary-Election-Voters-Pamphlet-PDF"
+  },
+  "current_primary_measure_resolution_pdfs": [
+    {
+      "label": "City of Cheney Proposition No. 1",
+      "url": "https://www.spokanecounty.gov/DocumentCenter/View/71213/City-of-Cheney---Proposition-1-PDF"
+    },
+    {
+      "label": "Spokane Transit Authority Proposition No. 1",
+      "url": "https://www.spokanecounty.gov/DocumentCenter/View/71221/Spokane-Transit-Authority---Proposition-1-PDF"
+    },
+    {
+      "label": "West Plains Aquifer Protection Area Measure No. 1",
+      "url": "https://www.spokanecounty.gov/DocumentCenter/View/71185/West-Plains-Aquifer-Protection-Area---Measure-No-1-PDF"
+    },
+    {
+      "label": "Spokane County Library District Proposition No. 1",
+      "url": "https://www.spokanecounty.gov/DocumentCenter/View/70792/Spokane-County-Library-District---Proposition-1-PDF"
+    },
+    {
+      "label": "Rosalia Park & Recreation District Proposition No. 1",
+      "url": "https://www.spokanecounty.gov/DocumentCenter/View/71631/Rosalia-Park--Recreation-District---Proposition-1-PDF"
+    }
+  ],
+  "sample_ballot_local_measures": [
+    "Spokane Transit Authority Proposition No. 1, Maintenance and Enhancement of Public Transportation Services",
+    "Spokane County Library District Proposition No. 1, Regular Library Operations and Maintenance Levy",
+    "Spokane County West Plains Aquifer Protection Area Measure No. 1",
+    "City of Cheney Proposition No. 1, Renewal of Residential Street Utility Tax",
+    "Rosalia Park and Recreation District Proposition No. 1, Two Year Maintenance and Operations Levy for the Rosalia Pool"
+  ],
+  "notes": [
+    "The current-election page links VoteWA for personalized online voter-guide content.",
+    "The sample ballot includes county, federal, legislative, judicial, PCO, and local measure content, but individual voters receive only the subset assigned to their address.",
+    "This package stores PDF URLs only; it does not commit PDF binaries."
+  ]
+}
