@@ -1,0 +1,918 @@
+{
+  "county": "thurston",
+  "script": "pipeline/build_thurston_lite_data.py",
+  "derived_from": [
+    "data/washington-state/counties/thurston/interim/pdf-text/sample-ballot.txt",
+    "data/washington-state/counties/thurston/interim/pdf-text/primary-candidates-ballot-order.txt"
+  ],
+  "coverage": "partial_county",
+  "contests": [
+    {
+      "slug": "thurston-congressional-district-3-u-s-representative",
+      "owner": "thurston",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 3",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "thurston",
+        "layer": "CONGDST",
+        "value": "3"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Thurston County sample ballot. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "marie-gluesenkamp-perez",
+          "name": "Marie Gluesenkamp Perez",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "brent-hennrich",
+          "name": "Brent Hennrich",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "john-p-roco",
+          "name": "John P. Roco",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "john-saulie-rohman",
+          "name": "John Saulie-Rohman",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "troy-rasband",
+          "name": "Troy Rasband",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "john-braun",
+          "name": "John Braun",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "antony-barran",
+          "name": "Antony Barran",
+          "party": "Prefers Cascade Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "austin-braswell",
+          "name": "Austin Braswell",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "lawrence-kellogg",
+          "name": "Lawrence Kellogg",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "thurston-congressional-district-10-u-s-representative",
+      "owner": "thurston",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 10",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "thurston",
+        "layer": "CONGDST",
+        "value": "10"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Thurston County sample ballot. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "adam-arafat",
+          "name": "Adam Arafat",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "marilyn-strickland",
+          "name": "Marilyn Strickland",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "kurtis-engle",
+          "name": "Kurtis Engle",
+          "party": "Prefers Union Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "alex-scheel",
+          "name": "Alex Scheel",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "derek-maynes",
+          "name": "Derek Maynes",
+          "party": "States No Party Preference",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "chris-d-chung",
+          "name": "Chris D. Chung",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "thurston-legislative-district-2-state-representative-pos-1",
+      "owner": "thurston",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 2",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "thurston",
+        "layer": "LEGDST",
+        "value": "2"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Thurston County sample ballot. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "william-dehnel",
+          "name": "William Dehnel",
+          "party": "Prefers Labor Democrat Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "andrew-barkis",
+          "name": "Andrew Barkis",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "thurston-legislative-district-2-state-representative-pos-2",
+      "owner": "thurston",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 2",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "thurston",
+        "layer": "LEGDST",
+        "value": "2"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Thurston County sample ballot. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "angela-taylor",
+          "name": "Angela Taylor",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "martin-l-miller",
+          "name": "Martin L Miller",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "matt-marshall",
+          "name": "Matt Marshall",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "thurston-legislative-district-19-state-representative-pos-1",
+      "owner": "thurston",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 19",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "thurston",
+        "layer": "LEGDST",
+        "value": "19"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Thurston County sample ballot. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "jim-walsh",
+          "name": "Jim Walsh",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "kevin-moynihan",
+          "name": "Kevin Moynihan",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "thurston-legislative-district-19-state-representative-pos-2",
+      "owner": "thurston",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 19",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "thurston",
+        "layer": "LEGDST",
+        "value": "19"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Thurston County sample ballot. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "daniel-william-bradley",
+          "name": "Daniel William Bradley",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "jimi-o-hagan",
+          "name": "Jimi O'Hagan",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "terry-carlson",
+          "name": "Terry Carlson",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "joel-mcentire",
+          "name": "Joel McEntire",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "thurston-legislative-district-20-state-representative-pos-1",
+      "owner": "thurston",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 20",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "thurston",
+        "layer": "LEGDST",
+        "value": "20"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Thurston County sample ballot. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "peter-abbarno",
+          "name": "Peter Abbarno",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "andy-zahn",
+          "name": "Andy Zahn",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "thurston-legislative-district-20-state-representative-pos-2",
+      "owner": "thurston",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 20",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "thurston",
+        "layer": "LEGDST",
+        "value": "20"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Thurston County sample ballot. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "evan-jones",
+          "name": "Evan Jones",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "ed-orcutt",
+          "name": "Ed Orcutt",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "thurston-legislative-district-22-state-representative-pos-1",
+      "owner": "thurston",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 22",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "thurston",
+        "layer": "LEGDST",
+        "value": "22"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Thurston County sample ballot. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "beth-doglio",
+          "name": "Beth Doglio",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "don-hewett",
+          "name": "Don Hewett",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "thurston-legislative-district-22-state-representative-pos-2",
+      "owner": "thurston",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 22",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "thurston",
+        "layer": "LEGDST",
+        "value": "22"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Thurston County sample ballot. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "lisa-parshley",
+          "name": "Lisa Parshley",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "jamie-keenan-devargas",
+          "name": "Jamie Keenan-deVargas",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "thurston-legislative-district-35-state-senator",
+      "owner": "thurston",
+      "category": "State",
+      "office": "State Senator",
+      "district": "Legislative District 35",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "thurston",
+        "layer": "LEGDST",
+        "value": "35"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Thurston County sample ballot. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "carolina-mejia",
+          "name": "Carolina Mejia",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "drew-c-macewen",
+          "name": "Drew C MacEwen",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "thurston-legislative-district-35-state-representative-pos-1",
+      "owner": "thurston",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 35",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "thurston",
+        "layer": "LEGDST",
+        "value": "35"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Thurston County sample ballot. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "dan-griffey",
+          "name": "Dan Griffey",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "shaena-garberich",
+          "name": "Shaena Garberich",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "jim-pierson",
+          "name": "Jim Pierson",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "thurston-legislative-district-35-state-representative-pos-2",
+      "owner": "thurston",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 35",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "thurston",
+        "layer": "LEGDST",
+        "value": "35"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Thurston County sample ballot. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "travis-couture",
+          "name": "Travis Couture",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "maria-littlesun",
+          "name": "Maria Littlesun",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "thurston-thurston-county-assessor",
+      "owner": "thurston",
+      "category": "County",
+      "office": "Assessor",
+      "district": "Thurston County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "thurston"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Thurston County sample ballot. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "jj-olson",
+          "name": "JJ Olson",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "lynda-nashed-zeman",
+          "name": "Lynda Nashed Zeman",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "thurston-thurston-county-auditor",
+      "owner": "thurston",
+      "category": "County",
+      "office": "Auditor",
+      "district": "Thurston County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "thurston"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Thurston County sample ballot. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "tillie-naputi-pullar",
+          "name": "Tillie Naputi-Pullar",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "thurston-thurston-county-clerk",
+      "owner": "thurston",
+      "category": "County",
+      "office": "Clerk",
+      "district": "Thurston County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "thurston"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Thurston County sample ballot. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "nicole-miller",
+          "name": "Nicole Miller",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "garrett-cady",
+          "name": "Garrett Cady",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "thurston-thurston-county-coroner",
+      "owner": "thurston",
+      "category": "County",
+      "office": "Coroner",
+      "district": "Thurston County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "thurston"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Thurston County sample ballot. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "gary-warnock",
+          "name": "Gary Warnock",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "thurston-thurston-county-prosecuting-attorney",
+      "owner": "thurston",
+      "category": "County",
+      "office": "Prosecuting Attorney",
+      "district": "Thurston County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "thurston"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Thurston County sample ballot. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "christy-peters",
+          "name": "Christy Peters",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "thurston-thurston-county-sheriff",
+      "owner": "thurston",
+      "category": "County",
+      "office": "Sheriff",
+      "district": "Thurston County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "thurston"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Thurston County sample ballot. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "kevin-burton-crow",
+          "name": "Kevin Burton-Crow",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "derek-sanders",
+          "name": "Derek Sanders",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "thurston-thurston-county-treasurer",
+      "owner": "thurston",
+      "category": "County",
+      "office": "Treasurer",
+      "district": "Thurston County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "thurston"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Thurston County sample ballot. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "jeff-gadman",
+          "name": "Jeff Gadman",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    }
+  ]
+}

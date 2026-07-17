@@ -1,0 +1,21 @@
+{
+  "county": "thurston",
+  "script": "pipeline/extract_pdf_text.mjs",
+  "files": [
+    {
+      "source_pointer": "data/washington-state/counties/thurston/raw/thurston/local-voters-pamphlet.pdf.url",
+      "url": "https://www.thurstoncountywa.gov/media/33642",
+      "output": "data/washington-state/counties/thurston/interim/pdf-text/local-voters-pamphlet.txt"
+    },
+    {
+      "source_pointer": "data/washington-state/counties/thurston/raw/thurston/primary-candidates-ballot-order.pdf.url",
+      "url": "https://www.thurstoncountywa.gov/media/33285",
+      "output": "data/washington-state/counties/thurston/interim/pdf-text/primary-candidates-ballot-order.txt"
+    },
+    {
+      "source_pointer": "data/washington-state/counties/thurston/raw/thurston/sample-ballot.pdf.url",
+      "url": "https://www.thurstoncountywa.gov/media/33408",
+      "output": "data/washington-state/counties/thurston/interim/pdf-text/sample-ballot.txt"
+    }
+  ]
+}
