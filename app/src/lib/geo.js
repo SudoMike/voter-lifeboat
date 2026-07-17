@@ -1,22 +1,18 @@
-// Address -> districts. Two steps:
+// Address -> ballot context. Two steps:
 // 1. US Census geocoder: address -> lat/lon + county, no key needed but no
-//    CORS headers either, so it's proxied through our own /api/geocode
-//    (see server.js) rather than fetched directly from the browser.
-// 2. King County GIS layers on ArcGIS Online: point-in-polygon per district,
-//    CORS-enabled, fetched straight from the browser.
-// The address itself goes ONLY to the Census geocoder (via our proxy); only
-// coordinates go to the district layers.
+//    CORS headers either, so it's proxied through our own /api/geocode.
+// 2. Supported counties use their own District Adapter. King County currently
+//    uses King County GIS layers on ArcGIS Online.
 
 const KC = 'https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services'
 
-// King County's own address-point layer, used only for the type-ahead
-// dropdown. It's the same GIS system already queried for district lookups
-// (CORS-enabled, no key), so autocomplete adds no new third party — the
-// full address still only goes to the Census geocoder on submit.
 const ADDRESS_POINTS = `${KC}/ADDRESS_POINT_642/FeatureServer/0/query`
 
+const KING_COUNTY_FIPS = '53033'
+const WASHINGTON_STATE_FIPS = '53'
+
 // layer key -> [service, attribute that carries the value]
-const LAYERS = {
+const KING_LAYERS = {
   CONGDST: ['CONGDST_AREA_405', 'CONGDST'],
   LEGDST: ['LEGDST_AREA_410', 'LEGDST'],
   KCCDST: ['KCCDST_AREA_185', 'KCCDST'],
@@ -27,10 +23,28 @@ const LAYERS = {
   CITY: ['CITYDST_AREA_337', 'NAME'],
 }
 
+const COUNTY_IDS = {
+  [KING_COUNTY_FIPS]: 'king',
+}
+
 export class GeoError extends Error {
-  constructor(message, kind) {
+  constructor(message, kind, details = {}) {
     super(message)
-    this.kind = kind // 'no-match' | 'outside-kc' | 'network'
+    this.kind = kind // 'no-match' | 'outside-wa' | 'unsupported-county' | 'network'
+    this.details = details
+  }
+}
+
+function countyFromMatch(match) {
+  const county = match.geographies?.Counties?.[0]
+  if (!county) return null
+  const fips = `${county.STATE}${county.COUNTY}`
+  return {
+    id: COUNTY_IDS[fips] || null,
+    fips,
+    state: county.STATE,
+    county: county.COUNTY,
+    name: county.NAME || county.BASENAME || 'Unknown County',
   }
 }
 
@@ -46,16 +60,15 @@ export async function geocode(address) {
   const data = await res.json()
   const match = data?.result?.addressMatches?.[0]
   if (!match) throw new GeoError('No match for that address.', 'no-match')
-  const county = match.geographies?.Counties?.[0]
-  if (county && !(county.STATE === '53' && county.COUNTY === '033')) {
-    throw new GeoError('That address is outside King County.', 'outside-kc')
+  const county = countyFromMatch(match)
+  if (!county || county.state !== WASHINGTON_STATE_FIPS) {
+    throw new GeoError('That address is outside Washington State.', 'outside-wa')
   }
-  return { x: match.coordinates.x, y: match.coordinates.y, matched: match.matchedAddress }
+  return { x: match.coordinates.x, y: match.coordinates.y, matched: match.matchedAddress, county }
 }
 
-// Type-ahead suggestions as the user types a street address. Matches on
-// prefix against King County's address points, so it only fires once a
-// house number plus a few letters of the street are in ("4218 SW Oth…").
+// Type-ahead remains King County-only until a statewide address suggestion
+// source is added. Users outside King County can still type and submit.
 export async function suggestAddresses(query, { signal } = {}) {
   const q = query.trim()
   if (q.length < 5) return []
@@ -82,8 +95,8 @@ export async function suggestAddresses(query, { signal } = {}) {
   })
 }
 
-async function queryLayer(key, x, y) {
-  const [service, attr] = LAYERS[key]
+async function queryKingLayer(key, x, y) {
+  const [service, attr] = KING_LAYERS[key]
   const params = new URLSearchParams({
     geometry: `${x},${y}`,
     geometryType: 'esriGeometryPoint',
@@ -94,31 +107,71 @@ async function queryLayer(key, x, y) {
     f: 'json',
   })
   const res = await fetch(`${KC}/${service}/FeatureServer/0/query?${params}`)
-  if (!res.ok) throw new GeoError(`District lookup failed (${key}).`, 'network')
+  if (!res.ok) throw new GeoError(`District lookup failed (${key}).`, 'network', { layer: key })
   const data = await res.json()
-  if (data.error) throw new GeoError(`District lookup failed (${key}).`, 'network')
+  if (data.error) throw new GeoError(`District lookup failed (${key}).`, 'network', { layer: key })
   const feat = data.features?.[0]
   return feat ? String(feat.attributes[attr]).trim() : null
 }
 
-export async function lookupDistricts(address) {
-  const pt = await geocode(address)
-  const keys = Object.keys(LAYERS)
-  const values = await Promise.all(keys.map((k) => queryLayer(k, pt.x, pt.y)))
+async function lookupKingDistricts(pt) {
+  const keys = Object.keys(KING_LAYERS)
+  const results = await Promise.allSettled(keys.map((k) => queryKingLayer(k, pt.x, pt.y)))
   const districts = {}
+  const missingLayers = []
   keys.forEach((k, i) => {
-    if (values[i] != null) districts[k] = values[i]
+    const r = results[i]
+    if (r.status === 'fulfilled') {
+      if (r.value != null) districts[k] = r.value
+    } else {
+      missingLayers.push(k)
+    }
   })
-  // King County GIS "King County" means unincorporated; don't treat as a city
   if (districts.CITY === 'King County') delete districts.CITY
-  if (!districts.CONGDST || !districts.LEGDST) {
-    throw new GeoError('That point is outside King County voting districts.', 'outside-kc')
+  if (!districts.CONGDST && !districts.LEGDST && !missingLayers.length) {
+    throw new GeoError('That point is outside King County voting districts.', 'unsupported-county')
   }
-  return { districts, matched: pt.matched }
+  return { districts, missingLayers }
 }
 
-export function scopeMatches(scope, districts) {
-  if (scope.layer === 'ALL') return true
-  const have = districts[scope.layer]
+export async function lookupBallotContext(data, address) {
+  const pt = await geocode(address)
+  const countySupported = data.coverage?.supported_counties?.some((c) => c.id === pt.county.id)
+  if (!countySupported) {
+    if (!data.coverage?.statewide_complete) {
+      throw new GeoError('This Washington county is not covered yet.', 'unsupported-county', { county: pt.county })
+    }
+    return {
+      coverageStatus: 'statewide_only',
+      county: pt.county,
+      districts: {},
+      missingLayers: [],
+      matched: pt.matched,
+    }
+  }
+  if (pt.county.id !== 'king') {
+    throw new GeoError('This supported county does not have a district adapter yet.', 'unsupported-county', { county: pt.county })
+  }
+  const { districts, missingLayers } = await lookupKingDistricts(pt)
+  return {
+    coverageStatus: missingLayers.length ? 'partial_county' : 'full_county',
+    county: pt.county,
+    districts,
+    missingLayers,
+    matched: pt.matched,
+  }
+}
+
+export function scopeMatches(scope, context) {
+  if (!scope) return false
+  if (scope.kind === 'STATEWIDE' || scope.layer === 'ALL') return true
+  if (scope.kind === 'COUNTY') return context?.county?.id === scope.county
+  if (scope.kind === 'DISTRICT') {
+    if (context?.county?.id !== scope.county) return false
+    const have = context?.districts?.[scope.layer]
+    return have != null && String(have) === String(scope.value)
+  }
+  // Backward compatibility for older report links/data during development.
+  const have = context?.districts?.[scope.layer]
   return have != null && String(have) === String(scope.value)
 }

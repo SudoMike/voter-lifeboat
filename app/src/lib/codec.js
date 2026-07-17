@@ -1,15 +1,38 @@
-// Profile <-> URL hash fragment. The fragment never reaches any server
-// (ours included) — that's the whole point. Compact keys keep URLs short.
+// Profile <-> URL hash fragment. The fragment never reaches any server.
 //
-// payload: { v: dataVersion, d: districts, a: {axis: [value, weight]} }
+// payload: {
+//   s: schema version,
+//   e: election id,
+//   v: data version,
+//   c: ballot context,
+//   a: {axis: [value, weight]}
+// }
 
 const b64url = (s) => btoa(s).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '')
 const unb64url = (s) => atob(s.replace(/-/g, '+').replace(/_/g, '/'))
 
-export function encodeProfile(dataVersion, districts, answers) {
+export function encodeProfile(data, context, answers) {
   const a = {}
   for (const [axis, { v, w }] of Object.entries(answers)) a[axis] = [v, w]
-  const json = JSON.stringify({ v: dataVersion, d: districts, a })
+  const safeContext = {
+    coverageStatus: context.coverageStatus,
+    county: context.county
+      ? {
+          id: context.county.id,
+          fips: context.county.fips,
+          name: context.county.name,
+        }
+      : undefined,
+    districts: context.districts || {},
+    missingLayers: context.missingLayers || [],
+  }
+  const json = JSON.stringify({
+    s: 2,
+    e: data.election?.id,
+    v: data.data_version,
+    c: safeContext,
+    a,
+  })
   return b64url(unescape(encodeURIComponent(json)))
 }
 
@@ -17,13 +40,22 @@ export function decodeProfile(fragment) {
   try {
     const json = decodeURIComponent(escape(unb64url(fragment)))
     const p = JSON.parse(json)
-    if (!p || typeof p !== 'object' || !p.d || !p.a) return null
+    if (!p || typeof p !== 'object' || !p.a) return null
+    const context = p.c || (p.d ? { coverageStatus: 'full_county', county: { id: 'king', fips: '53033', name: 'King County' }, districts: p.d } : null)
+    if (!context) return null
     const answers = {}
     for (const [axis, [v, w]] of Object.entries(p.a)) {
       if (typeof v !== 'number' || typeof w !== 'number') return null
       answers[axis] = { v: Math.max(-2, Math.min(2, v)), w }
     }
-    return { dataVersion: p.v, districts: p.d, answers }
+    return {
+      schema: p.s || 1,
+      electionId: p.e,
+      dataVersion: p.v,
+      context,
+      districts: context.districts || {},
+      answers,
+    }
   } catch {
     return null
   }
@@ -34,9 +66,9 @@ export function readHash() {
   return m ? decodeProfile(m[1]) : null
 }
 
-export function writeHash(dataVersion, districts, answers) {
-  const frag = encodeProfile(dataVersion, districts, answers)
-  history.replaceState(null, '', `#p=${frag}`)
+export function writeHash(data, context, answers) {
+  const frag = encodeProfile(data, context, answers)
+  history.replaceState(null, '', `${location.pathname}#p=${frag}`)
   return `${location.origin}${location.pathname}#p=${frag}`
 }
 

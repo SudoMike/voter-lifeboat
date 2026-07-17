@@ -18,7 +18,7 @@ export default function App() {
   const [data, setData] = useState(null)
   const [loadErr, setLoadErr] = useState(null)
   const [stage, setStage] = useState('landing')
-  const [districts, setDistricts] = useState(null)
+  const [ballotContext, setBallotContext] = useState(null)
   const [answers, setAnswers] = useState(null)
   const [restored, setRestored] = useState(null) // profile that arrived via URL
   const [dataPage, setDataPage] = useState(location.hash === '#data')
@@ -40,12 +40,16 @@ export default function App() {
       .catch((e) => setLoadErr(String(e)))
   }, [])
 
+  useEffect(() => {
+    if (location.pathname === '/') history.replaceState(null, '', '/washington-state/')
+  }, [])
+
   // Restore a shared/bookmarked report from the hash fragment.
   useEffect(() => {
     if (!data) return
     const p = readHash()
     if (p) {
-      setDistricts(p.districts)
+      setBallotContext(p.context)
       setAnswers(p.answers)
       setRestored(p)
       setStage('results')
@@ -53,13 +57,13 @@ export default function App() {
   }, [data])
 
   const ballot = useMemo(() => {
-    if (!data || !districts) return null
-    const contests = contestsOnBallot(data, districts, scopeMatches)
-    const measures = measuresOnBallot(data, districts, scopeMatches)
+    if (!data || !ballotContext) return null
+    const contests = contestsOnBallot(data, ballotContext, scopeMatches)
+    const measures = measuresOnBallot(data, ballotContext, scopeMatches)
     const axes = axesForBallot(data, contests, measures)
     const items = interviewItemsForBallot(data, axes)
     return { contests, measures, axes, items }
-  }, [data, districts])
+  }, [data, ballotContext])
 
   if (loadErr)
     return (
@@ -87,7 +91,7 @@ export default function App() {
 
   const startOver = () => {
     clearHash()
-    setDistricts(null)
+    setBallotContext(null)
     setAnswers(null)
     setRestored(null)
     setStage('landing')
@@ -100,8 +104,9 @@ export default function App() {
       return (
         <Address
           onBack={() => setStage('landing')}
-          onFound={(d) => {
-            setDistricts(d)
+          data={data}
+          onFound={(context) => {
+            setBallotContext(context)
             setStage('interview')
           }}
         />
@@ -125,7 +130,7 @@ export default function App() {
       return (
         <Results
           data={data}
-          districts={districts}
+          ballotContext={ballotContext}
           answers={answers}
           restored={restored}
           onStartOver={startOver}

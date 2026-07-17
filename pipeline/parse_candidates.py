@@ -1,14 +1,14 @@
 """Stage: raw -> interim. Parse official candidate CSVs and the eid=54 contest pages.
 
 Inputs:
-  data/raw/kce/2026-primary-candidates.csv   (primary ballot subset, ballot order)
-  data/raw/kce/2026-candidates.csv           (full 2026 filings, has Submitted Date)
-  data/raw/kce/candidates-eid54.html         (contest ids, categories, candidate ids)
-  data/raw/kce/ballotmeasures-eid54.html     (measures on the primary ballot)
+  data/washington-state/counties/king/raw/kce/2026-primary-candidates.csv
+  data/washington-state/counties/king/raw/kce/2026-candidates.csv
+  data/washington-state/counties/king/raw/kce/candidates-eid54.html
+  data/washington-state/counties/king/raw/kce/ballotmeasures-eid54.html
 
 Outputs:
-  data/interim/contests.json    (one record per race, candidates in ballot order)
-  data/interim/measures.json    (one record per measure)
+  data/washington-state/counties/king/interim/contests.json
+  data/washington-state/counties/king/interim/measures.json
 
 Every output record carries `derived_from` pointing at its raw sources.
 """
@@ -20,8 +20,9 @@ from html import unescape
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-RAW = ROOT / "data/raw/kce"
-OUT = ROOT / "data/interim"
+KING = ROOT / "data/washington-state/counties/king"
+RAW = KING / "raw/kce"
+OUT = KING / "interim"
 OUT.mkdir(parents=True, exist_ok=True)
 
 
@@ -143,8 +144,8 @@ while i < len(m_lines) - 1:
 
 out = {
     "derived_from": [
-        "data/raw/kce/candidates-eid54.html",
-        "data/raw/kce/2026-primary-candidates.csv",
+        "data/washington-state/counties/king/raw/kce/candidates-eid54.html",
+        "data/washington-state/counties/king/raw/kce/2026-primary-candidates.csv",
     ],
     "script": "pipeline/parse_candidates.py",
     "election": {"name": "August 4, 2026 Primary and Special Election", "kce_eid": 54},
@@ -153,7 +154,7 @@ out = {
 (OUT / "contests.json").write_text(json.dumps(out, indent=2))
 
 mout = {
-    "derived_from": ["data/raw/kce/ballotmeasures-eid54.html"],
+    "derived_from": ["data/washington-state/counties/king/raw/kce/ballotmeasures-eid54.html"],
     "script": "pipeline/parse_candidates.py",
     "measures": measures,
 }

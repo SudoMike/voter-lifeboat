@@ -2,12 +2,12 @@
 pamphlet pages that mention them.
 
 Inputs:
-  data/interim/contests.json
-  data/interim/measures.json
-  data/interim/pamphlet-text/edition-{1,2}/page-NNN.txt
+  data/washington-state/counties/king/interim/contests.json
+  data/washington-state/counties/king/interim/measures.json
+  data/washington-state/counties/king/interim/pamphlet-text/edition-{1,2}/page-NNN.txt
 
 Output:
-  data/interim/pamphlet-index.json  ({candidate_slug: [{edition, page}...]},
+  data/washington-state/counties/king/interim/pamphlet-index.json  ({candidate_slug: [{edition, page}...]},
                                      {measure_slug: [...]})
 
 PDF extraction inserts soft breaks and ligature spaces, so matching is done on
@@ -19,7 +19,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-INTERIM = ROOT / "data/interim"
+INTERIM = ROOT / "data/washington-state/counties/king/interim"
 PAGES = INTERIM / "pamphlet-text"
 
 
@@ -42,8 +42,11 @@ for ed_dir in sorted(PAGES.glob("edition-*")):
 contests = json.load(open(INTERIM / "contests.json"))
 measures = json.load(open(INTERIM / "measures.json"))
 
-index = {"derived_from": ["data/interim/contests.json", "data/interim/measures.json",
-                          "data/interim/pamphlet-text/"],
+index = {"derived_from": [
+            "data/washington-state/counties/king/interim/contests.json",
+            "data/washington-state/counties/king/interim/measures.json",
+            "data/washington-state/counties/king/interim/pamphlet-text/",
+         ],
          "script": "pipeline/build_pamphlet_index.py",
          "candidates": {}, "measures": {}, "unmatched": []}
 

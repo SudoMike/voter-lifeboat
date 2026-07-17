@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "concurrently \"vite\" \"node server.js\"",
     "build": "vite build",
+    "test": "node --test src/lib/*.test.js",
     "preview": "vite preview",
     "serve": "node server.js"
   },

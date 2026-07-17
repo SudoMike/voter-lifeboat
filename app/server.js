@@ -1,5 +1,5 @@
 // Production server: serves the built SPA, accepts feedback posts, and
-// records anonymous report completions (answers + districts, never address).
+// records anonymous report completions (answers + ballot context, never address).
 // Zero dependencies (node:http only). Both append JSONL to DATA_DIR —
 // on siteplat that's the persistent /app/data mount; read it over SSH.
 // The reports dataset is public: GET /api/reports returns every record.
@@ -16,7 +16,7 @@ import {
 import { join, extname, normalize } from 'node:path'
 
 const PORT = process.env.PORT || 5000
-const BASE_PATH = process.env.BASE_PATH || '/king-county'
+const BASE_PATH = process.env.BASE_PATH || '/washington-state'
 const DIST = process.env.DIST_DIR || join(import.meta.dirname, 'dist')
 const DATA_DIR = process.env.DATA_DIR || join(import.meta.dirname, 'data')
 const FEEDBACK_FILE = join(DATA_DIR, 'feedback.jsonl')
@@ -48,7 +48,9 @@ function readBody(req, res, onJson) {
   })
 }
 
-// { v, districts: {LAYER: value}, answers: {axis: [value, weight]} } -> sanitized record
+const COVERAGE_STATUSES = new Set(['full_county', 'partial_county', 'statewide_only'])
+
+// { v, election, coverageStatus, county, districts, answers } -> sanitized record
 function sanitizeReport(payload) {
   const districts = {}
   for (const k of DISTRICT_KEYS) {
@@ -64,10 +66,23 @@ function sanitizeReport(payload) {
       Math.max(0, Math.min(4, w)),
     ]
   }
-  if (!Object.keys(districts).length || !Object.keys(answers).length) return null
+  if (!Object.keys(answers).length) return null
+  const coverageStatus = COVERAGE_STATUSES.has(payload.coverageStatus)
+    ? payload.coverageStatus
+    : undefined
+  const county = payload.county && typeof payload.county === 'object'
+    ? {
+        id: payload.county.id ? String(payload.county.id).slice(0, 40) : undefined,
+        fips: payload.county.fips ? String(payload.county.fips).slice(0, 10) : undefined,
+        name: payload.county.name ? String(payload.county.name).slice(0, 80) : undefined,
+      }
+    : undefined
   return {
     at: new Date().toISOString(),
     v: payload.v ? String(payload.v).slice(0, 40) : undefined,
+    election: payload.election ? String(payload.election).slice(0, 80) : undefined,
+    coverageStatus,
+    county,
     districts,
     answers,
   }
@@ -128,13 +143,13 @@ const server = createServer((req, res) => {
     return
   }
 
-  // Anonymous report completion: answers + districts, never an address.
+  // Anonymous report completion: answers + ballot context, never an address.
   if (req.method === 'POST' && req.url === '/api/report') {
     readBody(req, res, (payload) => {
       const record = sanitizeReport(payload)
       if (!record) {
         res.writeHead(400, { 'Content-Type': 'application/json' })
-        return res.end('{"error":"missing districts or answers"}')
+        return res.end('{"error":"missing answers"}')
       }
       appendFileSync(REPORTS_FILE, JSON.stringify(record) + '\n')
       res.writeHead(204).end()

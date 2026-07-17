@@ -4,22 +4,25 @@ Depth rule: contests with 3+ candidates are 'deep' (the primary genuinely
 decides something there — WA top-2); 1-2 candidate contests are 'light'
 (everyone advances regardless).
 
-Input:  data/interim/contests.json, measures.json, pamphlet-index.json
-Output: data/interim/research-plan.json
+Input:  data/washington-state/counties/king/interim/{contests,measures,pamphlet-index}.json
+Output: data/washington-state/counties/king/interim/research-plan.json
 """
 
 import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-INTERIM = ROOT / "data/interim"
+INTERIM = ROOT / "data/washington-state/counties/king/interim"
 
 contests = json.load(open(INTERIM / "contests.json"))["contests"]
 measures = json.load(open(INTERIM / "measures.json"))["measures"]
 pidx = json.load(open(INTERIM / "pamphlet-index.json"))
 
-plan = {"derived_from": ["data/interim/contests.json", "data/interim/measures.json",
-                         "data/interim/pamphlet-index.json"],
+plan = {"derived_from": [
+            "data/washington-state/counties/king/interim/contests.json",
+            "data/washington-state/counties/king/interim/measures.json",
+            "data/washington-state/counties/king/interim/pamphlet-index.json",
+        ],
         "script": "pipeline/build_research_plan.py", "contests": [], "measures": []}
 
 for con in contests:

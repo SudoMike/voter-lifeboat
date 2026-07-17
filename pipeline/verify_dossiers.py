@@ -1,8 +1,9 @@
 """Stage: QA. Verify every planned candidate/measure has a dossier with valid
 frontmatter, and report evidence-level distribution.
 
-Input:  data/interim/research-plan.json, data/dossiers/**
-Output: data/interim/dossier-audit.json (+ console report)
+Input:  data/washington-state/counties/king/interim/research-plan.json,
+        data/washington-state/counties/king/dossiers/**
+Output: data/washington-state/counties/king/interim/dossier-audit.json (+ console report)
 """
 
 import json
@@ -10,11 +11,16 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-DOSS = ROOT / "data/dossiers"
-plan = json.load(open(ROOT / "data/interim/research-plan.json"))
+STATE = ROOT / "data/washington-state/statewide"
+KING = ROOT / "data/washington-state/counties/king"
+DOSS_DIRS = [STATE / "dossiers", KING / "dossiers"]
+plan = json.load(open(KING / "interim/research-plan.json"))
 
 audit = {"script": "pipeline/verify_dossiers.py",
-         "derived_from": ["data/interim/research-plan.json", "data/dossiers/"],
+         "derived_from": [
+             "data/washington-state/counties/king/interim/research-plan.json",
+             "data/washington-state/counties/king/dossiers/",
+         ],
          "missing": [], "no_frontmatter": [], "evidence_levels": {}, "contest_overviews_missing": []}
 
 def frontmatter(p: Path):
@@ -23,12 +29,12 @@ def frontmatter(p: Path):
     return m.group(1) if m else None
 
 for con in plan["contests"]:
-    cdir = DOSS / con["contest_slug"]
-    if not (cdir / "_contest.md").exists():
+    cdir = next((d / con["contest_slug"] for d in DOSS_DIRS if (d / con["contest_slug"]).exists()), None)
+    if cdir is None or not (cdir / "_contest.md").exists():
         audit["contest_overviews_missing"].append(con["contest_slug"])
     for c in con["candidates"]:
-        f = cdir / f"{c['slug']}.md"
-        if not f.exists():
+        f = cdir / f"{c['slug']}.md" if cdir else None
+        if f is None or not f.exists():
             audit["missing"].append(f"{con['contest_slug']}/{c['slug']}")
             continue
         fm = frontmatter(f)
@@ -40,11 +46,11 @@ for con in plan["contests"]:
         audit["evidence_levels"][lvl] = audit["evidence_levels"].get(lvl, 0) + 1
 
 for m in plan["measures"]:
-    f = DOSS / "measures" / f"{m['slug']}.md"
+    f = KING / "dossiers/measures" / f"{m['slug']}.md"
     if not f.exists():
         audit["missing"].append(f"measures/{m['slug']}")
 
-(ROOT / "data/interim/dossier-audit.json").write_text(json.dumps(audit, indent=2))
+(KING / "interim/dossier-audit.json").write_text(json.dumps(audit, indent=2))
 print("missing:", audit["missing"] or "none")
 print("no frontmatter:", audit["no_frontmatter"] or "none")
 print("overview missing:", audit["contest_overviews_missing"] or "none")

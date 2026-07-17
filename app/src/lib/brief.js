@@ -29,13 +29,34 @@ function axisPoleLabel(data, id, v) {
   return `${v <= -1.5 || v >= 1.5 ? 'strongly ' : 'leans '}"${pole.label}"`
 }
 
-export function buildBrief(data, answers, contests, measures, shareUrl, concerns) {
+function coverageText(context) {
+  if (context.coverageStatus === 'statewide_only') {
+    return [
+      'Coverage: STATEWIDE-ONLY GUIDE.',
+      'This packet includes only Washington-wide contests currently covered by Voter Lifeboat. It omits county, city, school, fire, judicial district, and other local contests.',
+    ]
+  }
+  if (context.coverageStatus === 'partial_county') {
+    return [
+      'Coverage: PARTIAL COUNTY GUIDE.',
+      'This packet includes statewide contests, countywide contests, and local contests whose district scope was resolved exactly. Some local contests may be missing because one or more district lookups failed.',
+    ]
+  }
+  return [
+    'Coverage: FULL COUNTY GUIDE.',
+    'This packet includes the contests Voter Lifeboat matched to the resolved ballot context for this supported county.',
+  ]
+}
+
+export function buildBrief(data, context, answers, contests, measures, shareUrl, concerns) {
   const L = []
-  L.push('# MY BALLOT BRIEF — King County Primary, August 4, 2026')
+  L.push(`# MY BALLOT BRIEF — ${data.election?.scope || 'Washington State'}, ${data.election?.name || ''}`)
   L.push('')
   L.push(
-    'I used Voter Lifeboat (an AI-built, citation-first voter guide; it makes no accuracy claims and tells users to verify via sources). Below are MY values from its interview, and how the candidates and measures on MY ballot scored against them. Please act as my thinking partner: challenge my matches, point out what the summaries might miss, and help me decide. Ask me questions where my values seem ambiguous.'
+    'I used Voter Lifeboat (an AI-built, citation-first voter guide; it makes no accuracy claims and tells users to verify via sources). Below are MY values from its interview, and how the covered candidates and measures scored against them.'
   )
+  for (const line of coverageText(context)) L.push(line)
+  if (context.county?.name) L.push(`Resolved county: ${context.county.name}`)
   L.push('')
   L.push('## MY VALUES (from the interview)')
   for (const [axis, { v, w }] of Object.entries(answers)) {
@@ -104,8 +125,9 @@ export function buildBrief(data, answers, contests, measures, shareUrl, concerns
   L.push('')
   L.push('---')
   L.push('')
+  L.push('## FIRST RESPONSE INSTRUCTIONS')
   L.push(
-    'Now that you have my Ballot Brief above, act as my personal election advisor and write me a supplementary report before I vote.'
+    'Do not generate the HTML report immediately. First, briefly welcome me, summarize what election data and coverage limits you have, and tell me you can generate the HTML report now if I want. Also tell me I can ask questions, add personal context, or refine my priorities before you generate the report. Wait for me to ask before producing the HTML report.'
   )
   L.push('')
   if (concerns?.trim()) {
@@ -114,7 +136,10 @@ export function buildBrief(data, answers, contests, measures, shareUrl, concerns
     L.push('Address these directly and prominently in your report.')
     L.push('')
   }
-  L.push(`## YOUR RESEARCH
+  L.push(`## WHEN I ASK FOR THE HTML REPORT
+Use these instructions only after I ask you to generate the report.
+
+## YOUR RESEARCH
 Search the web for every serious contender above: news coverage, endorsements, donor records, public statements, voting history where applicable. If you do NOT have web access, say so in a prominent banner at the top of the report and confine yourself to analyzing this brief's own contents — do not invent outside facts and do not fabricate links. Candidates marked "not enough evidence to score" are in scope: you may find evidence the pipeline didn't, and one of them may be the best pick. Also draw on whatever you already know about me from our past conversations — my circumstances, priorities, and how I think — to sharpen your verdicts.
 
 ## COVERAGE RULES

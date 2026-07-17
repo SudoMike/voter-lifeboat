@@ -17,8 +17,8 @@ export default function Landing({ data, onStart }) {
         </h1>
         <p className="lede" style={{ marginTop: 16 }}>
           Get through your whole ballot in three minutes — see how everyone on{' '}
-          <em>your</em> ballot lines up with <em>your</em> values. King County
-          primary · Aug 4, 2026.
+          <em>your</em> covered ballot lines up with <em>your</em> values.
+          Washington State primary · Aug 4, 2026.
         </p>
       </section>
       <section style={{ padding: '20px 24px 0' }}>
@@ -45,8 +45,8 @@ export default function Landing({ data, onStart }) {
           </div>
           <div>
             <strong>Anonymous &amp; open.</strong> Your address is used once to
-            find your districts, then discarded — never stored. Your answers and
-            districts are recorded anonymously and published as{' '}
+            find your ballot context, then discarded — never stored. Your
+            answers and ballot context are recorded anonymously and published as{' '}
             <a href="#data">an open dataset</a>.
           </div>
         </div>

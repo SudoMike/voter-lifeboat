@@ -1,16 +1,18 @@
-"""Stage: final assembly. Merge contests, refutation-hardened scores, dossier
-source lists, measures, rubric, interview, and district-scoping rules into
-the single JSON the app ships.
+"""Stage: final assembly. Merge package data into the single JSON the app ships.
 
-Inputs:  data/interim/contests.json, data/final/{scores,measures,rubric,interview}.json,
-         data/interim/pamphlet-index.json, data/dossiers/**（frontmatter sources）
-Outputs: data/final/app-data.json  (canonical)
-         app/public/data/app-data.json  (build copy, identical)
+Inputs:
+  data/washington-state/counties/king/interim/{contests,measures,pamphlet-index}.json
+  data/final/{scores,measures,rubric,interview}.json
+  data/washington-state/{statewide,counties/king}/dossiers/**
 
-District scoping: each contest/measure carries a `scope` the app matches
-against the voter's GIS lookup results:
-  {"layer": "CONGDST"|"LEGDST"|"KCCDST"|"SCCDST"|"JUDDST"|"FIRDST"|"SCHDST"|"CITY", "value": "..."}
-  or {"layer": "ALL"} for countywide/statewide contests.
+Outputs:
+  data/final/app-data.json
+  app/public/data/app-data.json
+
+Scope model:
+  {"kind": "STATEWIDE"}
+  {"kind": "COUNTY", "county": "king"}
+  {"kind": "DISTRICT", "county": "king", "layer": "...", "value": "..."}
 """
 
 import json
@@ -19,9 +21,12 @@ import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-INTERIM = ROOT / "data/interim"
+WA = ROOT / "data/washington-state"
+STATE = WA / "statewide"
+KING = WA / "counties/king"
+INTERIM = KING / "interim"
 FINAL = ROOT / "data/final"
-DOSS = ROOT / "data/dossiers"
+DOSSIER_DIRS = [STATE / "dossiers", KING / "dossiers"]
 
 contests = json.load(open(INTERIM / "contests.json"))["contests"]
 scores = {c["contest_slug"]: c for c in json.load(open(FINAL / "scores.json"))["contests"]}
@@ -31,11 +36,13 @@ pidx = json.load(open(INTERIM / "pamphlet-index.json"))
 rubric = json.load(open(FINAL / "rubric.json"))
 interview = json.load(open(FINAL / "interview.json"))
 
+STATEWIDE_CATEGORIES = {"StateSupremeCourt"}
+
 
 def parse_sources(contest_slug: str, cand_slug: str):
     """Parse the frontmatter sources list of a dossier into dicts."""
-    f = DOSS / contest_slug / f"{cand_slug}.md"
-    if not f.exists():
+    f = next((d / contest_slug / f"{cand_slug}.md" for d in DOSSIER_DIRS if (d / contest_slug / f"{cand_slug}.md").exists()), None)
+    if f is None:
         return []
     fm_m = re.match(r"^---\n(.*?)\n---", f.read_text(), re.S)
     if not fm_m:
@@ -60,42 +67,42 @@ def parse_sources(contest_slug: str, cand_slug: str):
     return out
 
 
+def district_scope(layer: str, value: str):
+    return {"kind": "DISTRICT", "county": "king", "layer": layer, "value": str(value)}
+
+
 def contest_scope(con):
     cat, district, office = con["category"], con["district"], con["office"]
+    if cat in STATEWIDE_CATEGORIES:
+        return {"kind": "STATEWIDE"}
     if cat == "Federal":
         n = re.search(r"Congressional District (\d+)", district).group(1)
-        return {"layer": "CONGDST", "value": n}
+        return district_scope("CONGDST", n)
     if cat == "State":
         n = re.search(r"Legislative District No\.\s*(\d+)", office + " " + district)
-        return {"layer": "LEGDST", "value": n.group(1)}
-    if cat == "StateSupremeCourt":
-        return {"layer": "ALL"}
+        return district_scope("LEGDST", n.group(1))
     if cat == "County":
         m = re.search(r"Council District No\.\s*(\d+)", district)
-        return {"layer": "KCCDST", "value": m.group(1)} if m else {"layer": "ALL"}
+        return district_scope("KCCDST", m.group(1)) if m else {"kind": "COUNTY", "county": "king"}
     if cat == "DistrictCourt":
-        return {"layer": "JUDDST", "value": "NE"}
+        return district_scope("JUDDST", "NE")
     if cat == "City":
         m = re.search(r"Council District No\.\s*(\d+)", district)
         if m:
-            return {"layer": "SCCDST", "value": f"SCC{m.group(1)}"}
-        return {"layer": "CITY", "value": "Seattle"}
+            return district_scope("SCCDST", f"SCC{m.group(1)}")
+        return district_scope("CITY", "Seattle")
     raise ValueError(f"no scope rule for {con['slug']}")
 
 
 MEASURE_SCOPES = {
-    "city-of-black-diamond-proposition-no-1": {"layer": "CITY", "value": "Black Diamond"},
-    "city-of-covington-proposition-no-1": {"layer": "CITY", "value": "Covington"},
-    "city-of-seattle-proposition-no-1": {"layer": "CITY", "value": "Seattle"},
-    "skykomish-school-district-no-404-proposition-no-1": {"layer": "SCHDST", "value": "404"},
-    "king-county-fire-protection-district-no-43-proposition-no-1": {"layer": "FIRDST", "value": "43"},
-    "king-county-fire-protection-district-no-47-proposition-no-1": {"layer": "FIRDST", "value": "47"},
-    "snoqualmie-pass-fire-and-rescue-proposition-no-1": {"layer": "FIRDST", "value": "51"},
+    "city-of-black-diamond-proposition-no-1": district_scope("CITY", "Black Diamond"),
+    "city-of-covington-proposition-no-1": district_scope("CITY", "Covington"),
+    "city-of-seattle-proposition-no-1": district_scope("CITY", "Seattle"),
+    "skykomish-school-district-no-404-proposition-no-1": district_scope("SCHDST", "404"),
+    "king-county-fire-protection-district-no-43-proposition-no-1": district_scope("FIRDST", "43"),
+    "king-county-fire-protection-district-no-47-proposition-no-1": district_scope("FIRDST", "47"),
+    "snoqualmie-pass-fire-and-rescue-proposition-no-1": district_scope("FIRDST", "51"),
 }
-
-# State contests: office string carries the position; district carries the LD.
-# Fix contest_scope's State regex to search the district field, which holds
-# "State Representative Position No. 1" or the LD depending on parse order.
 
 out_contests = []
 for con in contests:
@@ -121,8 +128,10 @@ for con in contests:
             "sources": parse_sources(con["slug"], c["slug"]),
         })
     cands.sort(key=lambda x: (x["ballot_order"] or 99))
+    owner = "statewide" if con["category"] in STATEWIDE_CATEGORIES else "king"
     out_contests.append({
         "slug": con["slug"],
+        "owner": owner,
         "category": con["category"],
         "office": con["office"],
         "district": con["district"],
@@ -138,6 +147,7 @@ for m in measures_meta:
     ms = measures_scored[m["slug"]]
     out_measures.append({
         "slug": m["slug"],
+        "owner": "king",
         "jurisdiction": m["jurisdiction"],
         "proposition": m["proposition"],
         "title": m["title"],
@@ -154,13 +164,26 @@ sha = subprocess.run(["git", "rev-parse", "--short", "HEAD"], capture_output=Tru
                      text=True, cwd=ROOT).stdout.strip() or "dev"
 
 app_data = {
-    "derived_from": ["data/interim/contests.json", "data/final/scores.json",
-                     "data/final/measures.json", "data/final/rubric.json",
-                     "data/final/interview.json", "data/dossiers/**"],
+    "derived_from": [
+        "data/washington-state/statewide/**",
+        "data/washington-state/counties/king/**",
+        "data/final/scores.json",
+        "data/final/measures.json",
+        "data/final/rubric.json",
+        "data/final/interview.json",
+    ],
     "script": "pipeline/assemble_app_data.py",
     "data_version": sha,
-    "election": {"name": "August 4, 2026 Primary and Special Election",
-                 "day": "2026-08-04", "county": "King County, WA"},
+    "election": {
+        "id": "2026-08-04-primary-special",
+        "name": "August 4, 2026 Primary and Special Election",
+        "day": "2026-08-04",
+        "scope": "Washington State",
+    },
+    "coverage": {
+        "statewide_complete": True,
+        "supported_counties": [{"id": "king", "name": "King County", "state": "WA", "fips": "53033"}],
+    },
     "rubric": {"scale": rubric["scale"], "axes": rubric["axes"]},
     "interview": interview,
     "contests": out_contests,
@@ -168,6 +191,7 @@ app_data = {
 }
 
 payload = json.dumps(app_data, separators=(",", ":"))
+FINAL.mkdir(exist_ok=True)
 (FINAL / "app-data.json").write_text(payload)
 appdir = ROOT / "app/public/data"
 appdir.mkdir(parents=True, exist_ok=True)

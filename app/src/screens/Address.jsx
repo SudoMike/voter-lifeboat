@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { lookupDistricts, suggestAddresses, GeoError } from '../lib/geo.js'
+import { lookupBallotContext, suggestAddresses, GeoError } from '../lib/geo.js'
 
-export default function Address({ onBack, onFound }) {
+export default function Address({ data, onBack, onFound }) {
   const [addr, setAddr] = useState('')
   const [busy, setBusy] = useState(false)
   const [err, setErr] = useState(null)
@@ -36,8 +36,8 @@ export default function Address({ onBack, onFound }) {
     setBusy(true)
     setErr(null)
     try {
-      const { districts } = await lookupDistricts(address)
-      onFound(districts)
+      const context = await lookupBallotContext(data, address)
+      onFound(context)
     } catch (ex) {
       setErr(
         ex instanceof GeoError
@@ -76,7 +76,7 @@ export default function Address({ onBack, onFound }) {
       <main className="screen screen--app rise" style={{ padding: '60px 24px 56px', textAlign: 'center' }}>
         <h1 className="display display--md">Finding your ballot…</h1>
         <p className="copy" style={{ marginTop: 10, fontSize: 14 }}>
-          Looking up your districts with the Census geocoder and King County GIS.
+          Looking up your county and voting districts.
           <br />
           This is the only thing that leaves your browser.
         </p>
@@ -99,13 +99,15 @@ export default function Address({ onBack, onFound }) {
           ?
         </div>
         <h1 className="display display--md" style={{ marginTop: 14 }}>
-          {err.kind === 'outside-kc' ? "We're off the map" : err.kind === 'network' ? 'Rough seas' : "Hmm, we're off the map"}
+          {err.kind === 'outside-wa' || err.kind === 'unsupported-county' ? "We're off the map" : err.kind === 'network' ? 'Rough seas' : "Hmm, we're off the map"}
         </h1>
         <p className="copy" style={{ margin: '10px auto 0', maxWidth: 300 }}>
           {err.kind === 'no-match' &&
             "We couldn't match that address. Check the spelling, or try adding your city or ZIP."}
-          {err.kind === 'outside-kc' &&
-            'That address looks like it is outside King County. This guide is county-only for now.'}
+          {err.kind === 'outside-wa' &&
+            'That address looks like it is outside Washington State. This guide supports Washington elections only.'}
+          {err.kind === 'unsupported-county' &&
+            'That Washington county is not covered yet, and the statewide fallback is not available for this election data.'}
           {err.kind === 'network' &&
             'A lookup service did not answer. Give it a moment and try again.'}
         </p>
@@ -124,7 +126,7 @@ export default function Address({ onBack, onFound }) {
           </button>
         </form>
         <p style={{ margin: '14px 0 0', fontSize: 13, fontWeight: 700, color: 'var(--seafoam)' }}>
-          Outside King County? This guide is county-only for now.
+          Voter Lifeboat currently supports Washington State elections.
         </p>
       </main>
     )
@@ -142,8 +144,8 @@ export default function Address({ onBack, onFound }) {
       <section style={{ padding: '6px 24px 0' }}>
         <h1 className="display display--lg">Where do you call home port?</h1>
         <p className="copy" style={{ marginTop: 12 }}>
-          King County ballots differ street by street. Your address finds your
-          districts — then it's forgotten. We never store it.
+          Washington ballots differ street by street. Your address finds your
+          county and districts — then it's forgotten. We never store it.
         </p>
       </section>
       <form onSubmit={go} autoComplete="off">
@@ -196,8 +198,8 @@ export default function Address({ onBack, onFound }) {
           </button>
           <p className="note" style={{ marginTop: 24, color: 'var(--muted)' }}>
             Street address only — no name, no email, no signup. Ever. The address
-            goes to the U.S. Census geocoder and King County GIS to find your
-            districts, and nowhere else.
+            goes to the U.S. Census geocoder and official district services to
+            find your ballot context, and nowhere else.
           </p>
         </section>
       </form>

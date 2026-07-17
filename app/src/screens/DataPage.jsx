@@ -1,5 +1,5 @@
 // The open dataset, visualized. Every completed report records interview
-// answers + voting districts (never an address) — this page aggregates the
+// answers + ballot context (never an address) — this page aggregates the
 // whole file live on each visit. Raw records: GET /api/reports.
 
 import React, { useEffect, useMemo, useState } from 'react'
@@ -46,6 +46,15 @@ function districtCounts(reports, key) {
   const counts = new Map()
   for (const r of reports) {
     const val = r.districts?.[key]
+    if (val != null) counts.set(val, (counts.get(val) || 0) + 1)
+  }
+  return [...counts.entries()].sort((a, b) => b[1] - a[1])
+}
+
+function fieldCounts(reports, read) {
+  const counts = new Map()
+  for (const r of reports) {
+    const val = read(r)
     if (val != null) counts.set(val, (counts.get(val) || 0) + 1)
   }
   return [...counts.entries()].sort((a, b) => b[1] - a[1])
@@ -157,11 +166,11 @@ export default function DataPage({ data, onBack }) {
         </div>
         <div className="eyebrow" style={{ marginTop: 22 }}>The open dataset</div>
         <h1 className="display display--lg" style={{ marginTop: 6 }}>
-          What King County values
+          What Washington voters value
         </h1>
         <p className="copy" style={{ fontSize: 14, marginTop: 8 }}>
           Every completed report adds one anonymous record — interview answers
-          and voting districts, never an address — to a public dataset. This
+          and ballot context, never an address — to a public dataset. This
           page recounts the whole thing on every visit.
         </p>
         <button className="linkish" style={{ fontSize: 12, marginTop: 8 }} onClick={onBack}>
@@ -223,6 +232,16 @@ export default function DataPage({ data, onBack }) {
             ))}
 
             <div className="eyebrow" style={{ marginTop: 10 }}>Where reports come from</div>
+            <DistrictBars
+              title="By coverage status"
+              entries={fieldCounts(reports, (r) => r.coverageStatus || 'legacy')}
+              total={reports.length}
+            />
+            <DistrictBars
+              title="By county"
+              entries={fieldCounts(reports, (r) => r.county?.name || r.county?.id)}
+              total={reports.length}
+            />
             {DISTRICT_GROUPS.map(([key, title]) => (
               <DistrictBars
                 key={key}

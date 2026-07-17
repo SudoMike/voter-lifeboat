@@ -27,15 +27,22 @@ function postFeedback(payload) {
   })
 }
 
-// Fire-and-forget: record this report (answers + districts, never an address)
+// Fire-and-forget: record this report (answers + ballot context, never an address)
 // into the public dataset. See /api/report in server.js and the #data page.
-function postReport(dataVersion, districts, answers) {
+function postReport(data, context, answers) {
   const a = {}
   for (const [axis, { v, w }] of Object.entries(answers)) a[axis] = [v, w]
   fetch('/api/report', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ v: dataVersion, districts, answers: a }),
+    body: JSON.stringify({
+      v: data.data_version,
+      election: data.election?.id,
+      coverageStatus: context.coverageStatus,
+      county: context.county,
+      districts: context.districts || {},
+      answers: a,
+    }),
   }).catch(() => {})
 }
 
@@ -416,14 +423,14 @@ const CONCERN_CHIPS = [
   },
 ]
 
-function BriefSection({ data, answers, contests, measures, shareUrl }) {
+function BriefSection({ data, context, answers, contests, measures, shareUrl }) {
   const [copied, setCopied] = useState(false)
   const [concerns, setConcerns] = useState('')
   const addChip = (t) =>
     setConcerns((prev) => (prev.includes(t) ? prev : prev ? `${prev.trimEnd()}\n${t}` : t))
   const text = useMemo(
-    () => buildBrief(data, answers, contests, measures, shareUrl, concerns),
-    [data, answers, contests, measures, shareUrl, concerns]
+    () => buildBrief(data, context, answers, contests, measures, shareUrl, concerns),
+    [data, context, answers, contests, measures, shareUrl, concerns]
   )
   const words = text.split(/\s+/).length
   const copy = () => {
@@ -529,10 +536,10 @@ function Footer() {
         </div>
         <p style={{ margin: '12px 0 0', fontSize: 12.5, lineHeight: 1.65, fontWeight: 600, color: 'var(--ink-soft)' }}>
           Built and researched by AI — <strong style={{ color: 'var(--navy)' }}>we make no accuracy claims.</strong>{' '}
-          Check every citation yourself. Not affiliated with King County
-          Elections or any campaign. English-only for now — we know, and we're
-          sorry. The county's official pamphlet is available in seven languages
-          at{' '}
+          Check every citation yourself. Not affiliated with Washington election
+          officials, county election offices, or any campaign. English-only for
+          now — we know, and we're sorry. King County source pamphlets are
+          available at{' '}
           <a href="https://kingcounty.gov/en/dept/elections/how-to-vote/voters-pamphlet" target="_blank" rel="noopener noreferrer">
             kingcounty.gov
           </a>
@@ -566,9 +573,9 @@ function Footer() {
           )}
         </div>
         <p style={{ margin: '14px 0 0', fontSize: 11.5, fontWeight: 600, color: 'var(--muted-deep)' }}>
-          Your interview answers and voting districts (never your address) are
+          Your interview answers and ballot context (never your address) are
           recorded anonymously and published as an open dataset —{' '}
-          <a href="#data">see what King County values so far</a>.
+          <a href="#data">see what Washington voters value so far</a>.
         </p>
         <p style={{ margin: '10px 0 0', fontSize: 11, fontWeight: 700, color: 'var(--muted)' }}>
           No accounts · no cookies · open methodology · open data
@@ -578,22 +585,22 @@ function Footer() {
   )
 }
 
-export default function Results({ data, districts, answers, restored, onStartOver }) {
+export default function Results({ data, ballotContext, answers, restored, onStartOver }) {
   const contests = useMemo(
-    () => contestsOnBallot(data, districts, scopeMatches),
-    [data, districts]
+    () => contestsOnBallot(data, ballotContext, scopeMatches),
+    [data, ballotContext]
   )
   const measures = useMemo(
-    () => measuresOnBallot(data, districts, scopeMatches),
-    [data, districts]
+    () => measuresOnBallot(data, ballotContext, scopeMatches),
+    [data, ballotContext]
   )
   const [shareUrl, setShareUrl] = useState('')
   const [linkCopied, setLinkCopied] = useState(false)
 
   // Auto-update the address bar so the report is bookmarkable/sharable.
   useEffect(() => {
-    setShareUrl(writeHash(data.data_version, districts, answers))
-  }, [data, districts, answers])
+    setShareUrl(writeHash(data, ballotContext, answers))
+  }, [data, ballotContext, answers])
 
   // Record fresh completions in the public dataset — once, and never for
   // reports someone else shared (that would double-count the original voter).
@@ -601,8 +608,8 @@ export default function Results({ data, districts, answers, restored, onStartOve
   useEffect(() => {
     if (restored || recorded.current) return
     recorded.current = true
-    postReport(data.data_version, districts, answers)
-  }, [restored, data, districts, answers])
+    postReport(data, ballotContext, answers)
+  }, [restored, data, ballotContext, answers])
 
   const copyLink = () => {
     copyText(shareUrl).then(() => {
@@ -611,7 +618,16 @@ export default function Results({ data, districts, answers, restored, onStartOve
     })
   }
 
-  const dataChanged = restored && restored.dataVersion && restored.dataVersion !== data.data_version
+  const dataChanged =
+    restored &&
+    ((restored.dataVersion && restored.dataVersion !== data.data_version) ||
+      (restored.electionId && restored.electionId !== data.election?.id))
+  const coverageLabel =
+    ballotContext.coverageStatus === 'statewide_only'
+      ? 'Statewide-only guide'
+      : ballotContext.coverageStatus === 'partial_county'
+        ? 'Partial county guide'
+        : 'Full county guide'
 
   return (
     <main className="screen screen--app screen--wide rise" style={{ paddingBottom: 0 }}>
@@ -620,7 +636,7 @@ export default function Results({ data, districts, answers, restored, onStartOve
         <p style={{ fontSize: 13, fontWeight: 700, color: 'var(--ink-soft)', margin: '4px 0 0' }}>
           {contests.length} contests
           {measures.length ? ` · ${measures.length} measure${measures.length > 1 ? 's' : ''}` : ''}{' '}
-          · matched to your values · <span className="accent">every score cites sources</span>
+          · {coverageLabel.toLowerCase()} · <span className="accent">every score cites sources</span>
         </p>
         <div className="share-row" style={{ marginTop: 10 }}>
           <button className="btn btn--navy btn--xs" onClick={copyLink}>
@@ -637,12 +653,24 @@ export default function Results({ data, districts, answers, restored, onStartOve
         {dataChanged && (
           <div className="banner-tcc" style={{ marginTop: 10 }}>
             ☔ Our data has been updated since this link was made — scores may
-            have shifted slightly.
+            have shifted slightly. Start over for the latest coverage.
+          </div>
+        )}
+        {ballotContext.coverageStatus === 'statewide_only' && (
+          <div className="banner-tcc" style={{ marginTop: 10 }}>
+            Statewide-only guide: county, city, school, fire, judicial district,
+            and other local contests are not included.
+          </div>
+        )}
+        {ballotContext.coverageStatus === 'partial_county' && (
+          <div className="banner-tcc" style={{ marginTop: 10 }}>
+            Partial county guide: some local district lookups did not complete,
+            so local contests may be missing.
           </div>
         )}
       </header>
 
-      <BriefSection data={data} answers={answers} contests={contests} measures={measures} shareUrl={shareUrl} />
+      <BriefSection data={data} context={ballotContext} answers={answers} contests={contests} measures={measures} shareUrl={shareUrl} />
 
       {contests.map((c) => (
         <ContestCard key={c.slug} data={data} contest={c} answers={answers} />

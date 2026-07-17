@@ -1,7 +1,7 @@
 {
   "derived_from": [
-    "data/scoring/measures.json",
-    "data/scoring/refutations/measures.json"
+    "data/washington-state/counties/king/scoring/measures.json",
+    "data/washington-state/counties/king/scoring/refutations/measures.json"
   ],
   "script": "pipeline/merge_scores.py",
   "measures": [
@@ -65,13 +65,12 @@
       "con_summary": "No statement against this measure was filed \u2014 no one in the jurisdiction came forward to serve on the con committee, so the pamphlet presents only one side.",
       "lean_mappings": {
         "taxes": {
-          "direction": 1,
+          "direction": 2,
           "basis": "YES approves a levy lid lift funding library services \u2014 and an enlarged one, expanded about 17% above the mayor's proposal, not a flat renewal.",
           "citations": [
             "S1",
             "S6"
-          ],
-          "adjusted_by_refutation": true
+          ]
         },
         "spending": {
           "direction": 1,
