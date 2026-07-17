@@ -1,8 +1,8 @@
 {
   "derived_from": [
-    "data/interim/contests.json",
-    "data/interim/measures.json",
-    "data/interim/pamphlet-index.json"
+    "data/washington-state/counties/king/interim/contests.json",
+    "data/washington-state/counties/king/interim/measures.json",
+    "data/washington-state/counties/king/interim/pamphlet-index.json"
   ],
   "script": "pipeline/build_research_plan.py",
   "contests": [
@@ -668,31 +668,6 @@
       ]
     },
     {
-      "contest_slug": "state-representative-position-no-2-legislative-district-no-11",
-      "category": "State",
-      "office": "Legislative District No.  11",
-      "district": "State Representative Position No. 2",
-      "depth": "light",
-      "candidates": [
-        {
-          "slug": "steve-bergquist",
-          "name": "Steve Bergquist",
-          "party_preference": "Prefers Democratic Party",
-          "campaign_website": "https://www.steve4house.com/",
-          "pamphlet_pages": [
-            {
-              "edition": "edition-1",
-              "page": 28
-            },
-            {
-              "edition": "edition-2",
-              "page": 37
-            }
-          ]
-        }
-      ]
-    },
-    {
       "contest_slug": "state-representative-position-no-1-legislative-district-no-12",
       "category": "State",
       "office": "Legislative District No.  12",
@@ -1168,31 +1143,6 @@
       ]
     },
     {
-      "contest_slug": "state-senator-legislative-district-no-33",
-      "category": "State",
-      "office": "Legislative District No.  33",
-      "district": "State Senator",
-      "depth": "light",
-      "candidates": [
-        {
-          "slug": "tina-l-orwall",
-          "name": "Tina L. Orwall",
-          "party_preference": "Prefers Democratic Party",
-          "campaign_website": "www.electtinaorwall.com",
-          "pamphlet_pages": [
-            {
-              "edition": "edition-1",
-              "page": 35
-            },
-            {
-              "edition": "edition-2",
-              "page": 47
-            }
-          ]
-        }
-      ]
-    },
-    {
       "contest_slug": "state-representative-position-no-1-legislative-district-no-33",
       "category": "State",
       "office": "Legislative District No.  33",
@@ -1315,56 +1265,6 @@
       ]
     },
     {
-      "contest_slug": "state-senator-legislative-district-no-34",
-      "category": "State",
-      "office": "Legislative District No.  34",
-      "district": "State Senator",
-      "depth": "light",
-      "candidates": [
-        {
-          "slug": "emily-alvarado",
-          "name": "Emily Alvarado",
-          "party_preference": "Prefers Democratic Party",
-          "campaign_website": "https://emilyalvarado.com/",
-          "pamphlet_pages": [
-            {
-              "edition": "edition-1",
-              "page": 40
-            },
-            {
-              "edition": "edition-2",
-              "page": 52
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "contest_slug": "state-representative-position-no-1-legislative-district-no-34",
-      "category": "State",
-      "office": "Legislative District No.  34",
-      "district": "State Representative Position No. 1",
-      "depth": "light",
-      "candidates": [
-        {
-          "slug": "brianna-k-thomas",
-          "name": "Brianna K. Thomas",
-          "party_preference": "Prefers Democratic Party",
-          "campaign_website": "Briannathomas.org",
-          "pamphlet_pages": [
-            {
-              "edition": "edition-1",
-              "page": 40
-            },
-            {
-              "edition": "edition-2",
-              "page": 52
-            }
-          ]
-        }
-      ]
-    },
-    {
       "contest_slug": "state-representative-position-no-2-legislative-district-no-34",
       "category": "State",
       "office": "Legislative District No.  34",
@@ -1433,52 +1333,6 @@
             {
               "edition": "edition-1",
               "page": 42
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "contest_slug": "state-representative-position-no-1-legislative-district-no-36",
-      "category": "State",
-      "office": "Legislative District No.  36",
-      "district": "State Representative Position No. 1",
-      "depth": "light",
-      "candidates": [
-        {
-          "slug": "julia-grant-reed",
-          "name": "Julia Grant Reed",
-          "party_preference": "Prefers Democratic Party",
-          "campaign_website": "www.votejuliareed.com",
-          "pamphlet_pages": [
-            {
-              "edition": "edition-1",
-              "page": 43
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "contest_slug": "state-representative-position-no-2-legislative-district-no-36",
-      "category": "State",
-      "office": "Legislative District No.  36",
-      "district": "State Representative Position No. 2",
-      "depth": "light",
-      "candidates": [
-        {
-          "slug": "liz-berry",
-          "name": "Liz Berry",
-          "party_preference": "Prefers Democratic Party",
-          "campaign_website": "www.lizberry.com",
-          "pamphlet_pages": [
-            {
-              "edition": "edition-1",
-              "page": 43
-            },
-            {
-              "edition": "edition-1",
-              "page": 73
             }
           ]
         }
@@ -1746,72 +1600,6 @@
             {
               "edition": "edition-1",
               "page": 49
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "contest_slug": "state-representative-position-no-2-legislative-district-no-43",
-      "category": "State",
-      "office": "Legislative District No.  43",
-      "district": "State Representative Position No. 2",
-      "depth": "light",
-      "candidates": [
-        {
-          "slug": "shaun-scott",
-          "name": "Shaun Scott",
-          "party_preference": "Prefers Democratic Party",
-          "campaign_website": "BolderWashington.org",
-          "pamphlet_pages": [
-            {
-              "edition": "edition-1",
-              "page": 47
-            },
-            {
-              "edition": "edition-1",
-              "page": 50
-            },
-            {
-              "edition": "edition-2",
-              "page": 34
-            },
-            {
-              "edition": "edition-2",
-              "page": 57
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "contest_slug": "state-senator-legislative-district-no-45",
-      "category": "State",
-      "office": "Legislative District No.  45",
-      "district": "State Senator",
-      "depth": "light",
-      "candidates": [
-        {
-          "slug": "manka-dhingra",
-          "name": "Manka Dhingra",
-          "party_preference": "Prefers Democratic Party",
-          "campaign_website": "https://electmanka.com/",
-          "pamphlet_pages": [
-            {
-              "edition": "edition-1",
-              "page": 50
-            },
-            {
-              "edition": "edition-2",
-              "page": 57
-            },
-            {
-              "edition": "edition-2",
-              "page": 80
-            },
-            {
-              "edition": "edition-2",
-              "page": 81
             }
           ]
         }
@@ -2136,27 +1924,6 @@
             {
               "edition": "edition-2",
               "page": 64
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "contest_slug": "state-senator-legislative-district-no-48",
-      "category": "State",
-      "office": "Legislative District No.  48",
-      "district": "State Senator",
-      "depth": "light",
-      "candidates": [
-        {
-          "slug": "vandana-slatter",
-          "name": "Vandana Slatter",
-          "party_preference": "Prefers Democratic Party",
-          "campaign_website": "vandanaslatter.com",
-          "pamphlet_pages": [
-            {
-              "edition": "edition-2",
-              "page": 65
             }
           ]
         }

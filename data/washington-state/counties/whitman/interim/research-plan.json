@@ -1,0 +1,185 @@
+{
+  "derived_from": [
+    "data/washington-state/counties/whitman/interim/contests.json",
+    "data/washington-state/counties/whitman/interim/measures.json"
+  ],
+  "script": "pipeline/build_research_plan.py",
+  "contests": [
+    {
+      "contest_slug": "whitman-congressional-district-5-u-s-representative",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 5",
+      "depth": "deep",
+      "candidates": [
+        {
+          "slug": "nate-powell",
+          "name": "Nate Powell",
+          "party_preference": "Prefers Independent Party",
+          "campaign_website": null,
+          "pamphlet_pages": []
+        },
+        {
+          "slug": "carmela-conroy",
+          "name": "Carmela Conroy",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": []
+        },
+        {
+          "slug": "matthew-hayes",
+          "name": "Matthew Hayes",
+          "party_preference": "Prefers Independent Party",
+          "campaign_website": null,
+          "pamphlet_pages": []
+        },
+        {
+          "slug": "bajun-r-mavalwalla",
+          "name": "Bajun R. Mavalwalla",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": []
+        },
+        {
+          "slug": "michael-mcgarr",
+          "name": "Michael McGarr",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": []
+        },
+        {
+          "slug": "kevin-fagan",
+          "name": "Kevin Fagan",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": []
+        },
+        {
+          "slug": "michael-baumgartner",
+          "name": "Michael Baumgartner",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": []
+        },
+        {
+          "slug": "kyle-usrey",
+          "name": "Kyle Usrey",
+          "party_preference": "Prefers Independent Party",
+          "campaign_website": null,
+          "pamphlet_pages": []
+        },
+        {
+          "slug": "andrew-bartleson",
+          "name": "Andrew Bartleson",
+          "party_preference": "Prefers Independent Party",
+          "campaign_website": null,
+          "pamphlet_pages": []
+        },
+        {
+          "slug": "ann-marie-danimus",
+          "name": "Ann Marie Danimus",
+          "party_preference": "Prefers Independent Party",
+          "campaign_website": null,
+          "pamphlet_pages": []
+        },
+        {
+          "slug": "richard-freudenberg",
+          "name": "Richard Freudenberg",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": []
+        },
+        {
+          "slug": "david-womack",
+          "name": "David Womack",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": []
+        }
+      ]
+    },
+    {
+      "contest_slug": "whitman-legislative-district-9-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 9",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "joe-schmick",
+          "name": "Joe Schmick",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": []
+        },
+        {
+          "slug": "karina-wallace",
+          "name": "Karina Wallace",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": []
+        }
+      ]
+    },
+    {
+      "contest_slug": "whitman-whitman-county-auditor",
+      "category": "County",
+      "office": "Auditor",
+      "district": "Whitman County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "kenneth-millar",
+          "name": "Kenneth Millar",
+          "party_preference": "States No Party Preference",
+          "campaign_website": null,
+          "pamphlet_pages": []
+        },
+        {
+          "slug": "crystn-guenthner",
+          "name": "Crystn Guenthner",
+          "party_preference": "States No Party Preference",
+          "campaign_website": null,
+          "pamphlet_pages": []
+        }
+      ]
+    }
+  ],
+  "measures": [
+    {
+      "jurisdiction": "Rosalia Park and Recreation District No. 5",
+      "proposition": "Proposition No. 1",
+      "title": "Two Year Maintenance and Operations Levy for the Rosalia Pool",
+      "slug": "whitman-rosalia-park-and-recreation-district-no-5-proposition-no-1",
+      "pamphlet_pages": []
+    },
+    {
+      "jurisdiction": "Whitman County Fire Protection District No. 1",
+      "proposition": "Special Election - Proposition No. 1",
+      "title": "Annexation of the City of Tekoa",
+      "slug": "whitman-whitman-county-fire-protection-district-no-1-special-election-proposition-no-1",
+      "pamphlet_pages": []
+    },
+    {
+      "jurisdiction": "City of Tekoa",
+      "proposition": "Special Election - Proposition No. 1",
+      "title": "Annexation into Fire Protection District No. 1",
+      "slug": "whitman-city-of-tekoa-special-election-proposition-no-1",
+      "pamphlet_pages": []
+    },
+    {
+      "jurisdiction": "Town of Farmington",
+      "proposition": "Special Election - Proposition No. 1",
+      "title": "Excess Levy",
+      "slug": "whitman-town-of-farmington-special-election-proposition-no-1",
+      "pamphlet_pages": []
+    },
+    {
+      "jurisdiction": "Whitman County Fire Protection District No. 5",
+      "proposition": "Special Election - Proposition No. 1",
+      "title": "Maintenance and Operations Levy",
+      "slug": "whitman-whitman-county-fire-protection-district-no-5-special-election-proposition-no-1",
+      "pamphlet_pages": []
+    }
+  ]
+}

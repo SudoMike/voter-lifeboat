@@ -97,7 +97,9 @@ for package in PACKAGES:
 
     measures_file = package / "scoring/measures.json"
     if not measures_file.exists():
-        if plan.get("measures"):
+        # Plans describe the full incremental queue. Require scoring only
+        # after measure research has actually started for this package.
+        if plan.get("measures") and (package / "dossiers/measures").is_dir():
             errors.append(f"{package.name}: MISSING FILE measures.json")
         continue
     m = json.load(open(measures_file))
