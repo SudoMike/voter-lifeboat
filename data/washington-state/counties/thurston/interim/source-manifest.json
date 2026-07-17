@@ -1,0 +1,31 @@
+{
+  "county": "thurston",
+  "election": "2026-08-04-primary",
+  "status": "ingested_not_supported",
+  "official_sources": {
+    "current_election": "https://www.thurstoncountywa.gov/departments/auditor/elections/August-2026-Primary",
+    "primary_candidates_ballot_order_pdf": "https://www.thurstoncountywa.gov/media/33285",
+    "sample_ballot_pdf": "https://www.thurstoncountywa.gov/media/33408",
+    "local_voters_pamphlet_pdf": "https://www.thurstoncountywa.gov/media/33642",
+    "online_voters_guide": "https://www.sos.wa.gov/elections/data-research/election-data-and-maps/election-results-and-voters-pamphlets/2026-primary-election-voters-guide"
+  },
+  "current_primary_measure_resolution_pdfs": [
+    {
+      "label": "Southeast Thurston Fire Authority",
+      "url": "https://www.thurstoncountywa.gov/media/33143"
+    },
+    {
+      "label": "West Thurston Fire Protection District #1 (Rochester)",
+      "url": "https://www.thurstoncountywa.gov/media/33151"
+    },
+    {
+      "label": "West Thurston Fire Protection District #11 (Littlerock)",
+      "url": "https://www.thurstoncountywa.gov/media/33152"
+    }
+  ],
+  "notes": [
+    "The current-election page links VoteWA and the Secretary of State online voters' guide for personalized content.",
+    "The county news release says local voters' pamphlets were mailed to all Thurston County households and include candidates and local ballot measures.",
+    "This package stores PDF URLs only; it does not commit PDF binaries."
+  ]
+}
