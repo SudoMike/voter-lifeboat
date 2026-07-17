@@ -4,326 +4,12 @@
   ],
   "script": "pipeline/build_dossier_batches.py",
   "batch_size_target": 50,
-  "total_units": 144,
-  "total_dossiers": 432,
-  "total_batches": 9,
+  "total_units": 120,
+  "total_dossiers": 380,
+  "total_batches": 8,
   "batches": [
     {
       "batch": 1,
-      "dossiers": 52,
-      "races": 24,
-      "units": [
-        {
-          "id": "State/LD23/REP1",
-          "kind": "shared",
-          "label": "Legislative District 23 State Representative Pos. 1",
-          "candidates": [
-            "daria-ilgen",
-            "tarra-simmons"
-          ],
-          "counties": [
-            "kitsap"
-          ]
-        },
-        {
-          "id": "State/LD26/SEN",
-          "kind": "shared",
-          "label": "Legislative District 26 State Senator",
-          "candidates": [
-            "deborah-krishnadasan",
-            "gary-parker"
-          ],
-          "counties": [
-            "kitsap",
-            "pierce"
-          ]
-        },
-        {
-          "id": "State/LD27/REP1",
-          "kind": "shared",
-          "label": "Legislative District 27 State Representative Pos. 1",
-          "candidates": [
-            "carole-sue-braaten",
-            "laurie-jinkins"
-          ],
-          "counties": [
-            "pierce"
-          ]
-        },
-        {
-          "id": "State/LD28/REP1",
-          "kind": "shared",
-          "label": "Legislative District 28 State Representative Pos. 1",
-          "candidates": [
-            "kathy-richardson",
-            "mari-leavitt"
-          ],
-          "counties": [
-            "pierce"
-          ]
-        },
-        {
-          "id": "State/LD29/REP1",
-          "kind": "shared",
-          "label": "Legislative District 29 State Representative Pos. 1",
-          "candidates": [
-            "krista-perez",
-            "melanie-morgan"
-          ],
-          "counties": [
-            "pierce"
-          ]
-        },
-        {
-          "id": "State/LD29/SEN",
-          "kind": "shared",
-          "label": "Legislative District 29 State Senator",
-          "candidates": [
-            "david-anderson",
-            "sharlett-mena"
-          ],
-          "counties": [
-            "pierce"
-          ]
-        },
-        {
-          "id": "State/LD31/SEN",
-          "kind": "shared",
-          "label": "Legislative District 31 State Senator",
-          "candidates": [
-            "phil-fortunato",
-            "tamara-stramel"
-          ],
-          "counties": [
-            "pierce"
-          ]
-        },
-        {
-          "id": "State/LD32/REP2",
-          "kind": "shared",
-          "label": "Legislative District 32 State Representative Pos. 2",
-          "candidates": [
-            "imraan-siddiqi",
-            "lauren-davis"
-          ],
-          "counties": [
-            "snohomish"
-          ]
-        },
-        {
-          "id": "State/LD35/REP2",
-          "kind": "shared",
-          "label": "Legislative District 35 State Representative Pos. 2",
-          "candidates": [
-            "maria-littlesun",
-            "travis-couture"
-          ],
-          "counties": [
-            "kitsap",
-            "mason",
-            "thurston"
-          ]
-        },
-        {
-          "id": "State/LD35/SEN",
-          "kind": "shared",
-          "label": "Legislative District 35 State Senator",
-          "candidates": [
-            "carolina-mejia",
-            "drew-c-macewen"
-          ],
-          "counties": [
-            "kitsap",
-            "mason",
-            "thurston"
-          ]
-        },
-        {
-          "id": "State/LD38/SEN",
-          "kind": "shared",
-          "label": "Legislative District 38 State Senator",
-          "candidates": [
-            "brad-bender",
-            "june-robinson"
-          ],
-          "counties": [
-            "snohomish"
-          ]
-        },
-        {
-          "id": "State/LD40/REP1",
-          "kind": "shared",
-          "label": "Legislative District 40 State Representative Pos. 1",
-          "candidates": [
-            "cindy-carter",
-            "debra-lekanoff"
-          ],
-          "counties": [
-            "san-juan",
-            "skagit",
-            "whatcom"
-          ]
-        },
-        {
-          "id": "State/LD42/REP1",
-          "kind": "shared",
-          "label": "Legislative District 42 State Representative Pos. 1",
-          "candidates": [
-            "alicia-rule",
-            "misty-flowers"
-          ],
-          "counties": [
-            "whatcom"
-          ]
-        },
-        {
-          "id": "State/LD42/REP2",
-          "kind": "shared",
-          "label": "Legislative District 42 State Representative Pos. 2",
-          "candidates": [
-            "joe-timmons",
-            "justin-pike"
-          ],
-          "counties": [
-            "whatcom"
-          ]
-        },
-        {
-          "id": "State/LD44/REP1",
-          "kind": "shared",
-          "label": "Legislative District 44 State Representative Pos. 1",
-          "candidates": [
-            "brandy-donaghy",
-            "chris-elder"
-          ],
-          "counties": [
-            "snohomish"
-          ]
-        },
-        {
-          "id": "State/LD44/REP2",
-          "kind": "shared",
-          "label": "Legislative District 44 State Representative Pos. 2",
-          "candidates": [
-            "april-berg",
-            "tonya-stadlman"
-          ],
-          "counties": [
-            "snohomish"
-          ]
-        },
-        {
-          "id": "State/LD44/SEN",
-          "kind": "shared",
-          "label": "Legislative District 44 State Senator",
-          "candidates": [
-            "john-lovick",
-            "sherri-larkin"
-          ],
-          "counties": [
-            "snohomish"
-          ]
-        },
-        {
-          "id": "State/LD49/REP2",
-          "kind": "shared",
-          "label": "Legislative District 49 State Representative Pos. 2",
-          "candidates": [
-            "derek-thompson",
-            "monica-jurado-stonier"
-          ],
-          "counties": [
-            "clark"
-          ]
-        },
-        {
-          "id": "State/LD8/SEN",
-          "kind": "shared",
-          "label": "Legislative District 8 State Senator",
-          "candidates": [
-            "gabe-galbraith",
-            "nikki-torres"
-          ],
-          "counties": [
-            "benton",
-            "franklin"
-          ]
-        },
-        {
-          "id": "State/LD9/REP2",
-          "kind": "shared",
-          "label": "Legislative District 9 State Representative Pos. 2",
-          "candidates": [
-            "joe-schmick",
-            "karina-wallace"
-          ],
-          "counties": [
-            "adams",
-            "asotin",
-            "columbia",
-            "garfield",
-            "lincoln",
-            "spokane",
-            "whitman"
-          ]
-        },
-        {
-          "id": "State/LD2/REP2",
-          "kind": "shared",
-          "label": "Legislative District 2 State Representative Pos. 2",
-          "candidates": [
-            "angela-taylor",
-            "martin-l-miller",
-            "matt-marshall"
-          ],
-          "counties": [
-            "pierce",
-            "thurston"
-          ]
-        },
-        {
-          "id": "State/LD23/REP2",
-          "kind": "shared",
-          "label": "Legislative District 23 State Representative Pos. 2",
-          "candidates": [
-            "greg-nance",
-            "kristin-lillegard",
-            "lance-byrd"
-          ],
-          "counties": [
-            "kitsap"
-          ]
-        },
-        {
-          "id": "State/LD25/REP1",
-          "kind": "shared",
-          "label": "Legislative District 25 State Representative Pos. 1",
-          "candidates": [
-            "david-berg",
-            "michael-keaton",
-            "nick-oloo"
-          ],
-          "counties": [
-            "pierce"
-          ]
-        },
-        {
-          "id": "State/LD25/REP2",
-          "kind": "shared",
-          "label": "Legislative District 25 State Representative Pos. 2",
-          "candidates": [
-            "cyndy-jacobsen",
-            "jenn-marie-strickling",
-            "ren-fanony"
-          ],
-          "counties": [
-            "pierce"
-          ]
-        }
-      ]
-    },
-    {
-      "batch": 2,
       "dossiers": 53,
       "races": 17,
       "units": [
@@ -560,7 +246,7 @@
       ]
     },
     {
-      "batch": 3,
+      "batch": 2,
       "dossiers": 52,
       "races": 15,
       "units": [
@@ -781,7 +467,7 @@
       ]
     },
     {
-      "batch": 4,
+      "batch": 3,
       "dossiers": 51,
       "races": 15,
       "units": [
@@ -1000,7 +686,7 @@
       ]
     },
     {
-      "batch": 5,
+      "batch": 4,
       "dossiers": 54,
       "races": 14,
       "units": [
@@ -1209,7 +895,7 @@
       ]
     },
     {
-      "batch": 6,
+      "batch": 5,
       "dossiers": 51,
       "races": 17,
       "units": [
@@ -1437,7 +1123,7 @@
       ]
     },
     {
-      "batch": 7,
+      "batch": 6,
       "dossiers": 50,
       "races": 16,
       "units": [
@@ -1654,7 +1340,7 @@
       ]
     },
     {
-      "batch": 8,
+      "batch": 7,
       "dossiers": 51,
       "races": 18,
       "units": [
@@ -1892,7 +1578,7 @@
       ]
     },
     {
-      "batch": 9,
+      "batch": 8,
       "dossiers": 18,
       "races": 8,
       "units": [

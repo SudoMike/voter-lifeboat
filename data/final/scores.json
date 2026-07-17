@@ -25,10 +25,10 @@
   ],
   "script": "pipeline/merge_scores.py",
   "verdict_stats": {
-    "upheld": 1098,
-    "adjust": 142,
-    "refuted": 53,
-    "missing_added": 12,
+    "upheld": 1221,
+    "adjust": 154,
+    "refuted": 61,
+    "missing_added": 13,
     "missing_dropped_low": 4
   },
   "contests": [
@@ -3314,6 +3314,159 @@
       ]
     },
     {
+      "contest_slug": "legislative-district-2-state-representative-position-2",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-2-state-representative-position-2/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "Three candidates offer distinct approaches: working-family public investment, expansive universal benefits, and incumbent-led tax and spending restraint.",
+      "candidates": [
+        {
+          "slug": "angela-taylor",
+          "summary": "Taylor is a small-business owner and caregiver advocating school funding, rural health access, child care, housing affordability, and less corporate influence.",
+          "highlights": [
+            "Calls for fully funded schools and affordable child care [S1]",
+            "Criticizes corporate and insurance influence in Olympia [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She supports expanded funding for schools, rural health access, and child care."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She has business and volunteer experience but no documented elected record."
+            },
+            "reform": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She explicitly criticizes corporate and insurance influence in state government."
+            }
+          }
+        },
+        {
+          "slug": "martin-l-miller",
+          "summary": "Miller is a planning commissioner and retired power lineman proposing broad price controls, universal benefits, housing rights, and progressive social policies.",
+          "highlights": [
+            "Proposes free health and car insurance, a living wage, and housing as a right [S1]",
+            "Supports women's rights, DEI, and fully funded schools [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He proposes multiple expansive subsidies and universal benefits."
+            },
+            "housing": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He explicitly describes housing as a right.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He has planning-commission experience but no legislative record."
+            },
+            "social": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He explicitly supports women's rights and DEI."
+            }
+          }
+        },
+        {
+          "slug": "matt-marshall",
+          "summary": "Marshall is the incumbent representative and former school director, emphasizing tax and spending restraint, public safety, parental authority, and reduced regulation.",
+          "highlights": [
+            "Opposes new taxes and a state income tax [S1]",
+            "Supports parental authority, elected sheriffs, and reduced regulation [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He explicitly opposes new taxes and a state income tax."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He explicitly supports a restrained state budget."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He prioritizes public safety and elected sheriffs."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He is the incumbent representative and a former elected school director."
+            },
+            "local-control": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "His support for parental authority and elected sheriffs favors local control."
+            },
+            "social": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He explicitly supports parental authority in schools.",
+              "adjusted_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
       "contest_slug": "legislative-district-20-state-representative-position-1",
       "scored_at": "2026-07-17",
       "derived_from": [
@@ -3751,6 +3904,1881 @@
                 "S1"
               ],
               "basis": "She has served in the Legislature since 2024 after prior service on the Olympia City Council."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-23-state-representative-position-1",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-23-state-representative-position-1/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "A business and community leader emphasizing fiscal accountability faces an incumbent civil-rights attorney with a legislative focus on justice reform and immigrant protections.",
+      "candidates": [
+        {
+          "slug": "daria-ilgen",
+          "summary": "Ilgen is a business and community leader focused on affordability, fiscal responsibility, measurement, and collaborative problem solving.",
+          "highlights": [
+            "Emphasizes affordability across housing, health care, child care, schools, utilities, and ferries [S2]",
+            "Calls for fiscal responsibility, measurement, and accountability [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "She explicitly calls for fiscal responsibility, measurement, and accountability."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "She brings extensive business and community partnership experience but no documented elected record."
+            }
+          }
+        },
+        {
+          "slug": "tarra-simmons",
+          "summary": "Simmons is an incumbent representative and civil-rights attorney whose official work emphasizes justice reform and protections for immigrants.",
+          "highlights": [
+            "Brings an incumbent legislative and civil-rights-law record [S2]",
+            "Official work emphasizes criminal-justice reform and immigrant-community protections [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She is an incumbent representative with an official legislative record."
+            },
+            "immigration": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Her official legislative work emphasizes protections for immigrant communities."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-23-state-representative-position-2",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-23-state-representative-position-2/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "The incumbent's infrastructure and environmental investment record faces a democratic-socialist universal-services platform and a tax-and-budget-restraint alternative.",
+      "candidates": [
+        {
+          "slug": "greg-nance",
+          "summary": "Nance is the incumbent representative and Maritime Caucus vice chair emphasizing ferries, environmental protection, families, and health-care training.",
+          "highlights": [
+            "Prioritizes ferries, Puget Sound protection, child care, and health-care training [S1]",
+            "Cites major ferry, workforce-training, and forest-protection investments [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He centers substantial public investment in ferries, workforce training, and family services."
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He prioritizes Puget Sound protection and cites forest conservation."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He is the incumbent representative with a legislative leadership role."
+            }
+          }
+        },
+        {
+          "slug": "kristin-lillegard",
+          "summary": "Lillegard is a community-health board member and party officer advocating universal health care, public transit, school funding, living wages, and affordable housing.",
+          "highlights": [
+            "Supports universal health care and equitable school funding [S1]",
+            "Supports faster transit, living wages, and sustainable affordable housing [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Her platform calls for broad expansion of public health, transit, education, and housing investment."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She has organizational and professional experience but no documented elected record."
+            },
+            "healthcare": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She explicitly supports universal health care."
+            }
+          }
+        },
+        {
+          "slug": "lance-byrd",
+          "summary": "Byrd is an information-technology professional emphasizing affordability, policing, balanced budgets, essential services, and opposition to a state income tax.",
+          "highlights": [
+            "Opposes a state income tax and supports balanced budgets [S1]",
+            "Supports law enforcement alongside help and shelter for mentally ill people [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He explicitly opposes a state income tax."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He prioritizes balanced budgets while preserving education and essential-service funding."
+            },
+            "safety": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He combines law-enforcement support with shelter and services for mentally ill people."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He brings private-sector experience but no documented elected record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-25-state-representative-position-1",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-25-state-representative-position-1/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "A school-board member focused on education and workers, an incumbent emphasizing fiscal restraint and safety, and a human-services professional focused on access and prevention form the field.",
+      "candidates": [
+        {
+          "slug": "david-berg",
+          "summary": "Berg is a school-board member and education advocate prioritizing public schools, workers, family stability, and economic opportunity.",
+          "highlights": [
+            "Prioritizes public education and workers' rights [S1]",
+            "Supports working-family stability and expanded economic opportunity [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He emphasizes public-education investment and working-family support."
+            },
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He has several years of elected school-board service but no legislative record."
+            }
+          }
+        },
+        {
+          "slug": "michael-keaton",
+          "summary": "Keaton is the incumbent representative and former school-board member, Air Force officer, and educator emphasizing safety, affordability, schools, and spending restraint.",
+          "highlights": [
+            "Opposes high taxes and what he calls reckless spending [S1]",
+            "Prioritizes public safety, lower living costs, and stronger schools [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He explicitly opposes high taxes.",
+              "adjusted_by_refutation": true
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He explicitly opposes what he calls reckless spending and emphasizes savings."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He prioritizes public safety without a detailed mechanism."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He is the incumbent representative and a former school-board member."
+            }
+          }
+        },
+        {
+          "slug": "nick-oloo",
+          "summary": "Oloo is an educator, social worker, caregiver, pastor, and federal civilian focusing on disability access, caregivers, transportation, and youth opportunity.",
+          "highlights": [
+            "Supports better services and access for disabled people [S1]",
+            "Prioritizes caregiver pay and youth opportunity and crime prevention [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He supports expanded services, caregiver compensation, transportation access, and family support."
+            },
+            "safety": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "His stated public-safety approach emphasizes youth opportunity and prevention."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He has broad service experience but no documented elected record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-25-state-representative-position-2",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-25-state-representative-position-2/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "The incumbent emphasizes policing and tax restraint, a recently elected charter commissioner focuses on household costs and housing protections, and an outsider candidate offers broad fiscal-sustainability themes.",
+      "candidates": [
+        {
+          "slug": "cyndy-jacobsen",
+          "summary": "Jacobsen is the incumbent representative and former councilmember emphasizing police resources, responses to homelessness and addiction, jobs, traffic, and opposition to new taxes.",
+          "highlights": [
+            "Supports police funding, recruitment, and retention [S1]",
+            "Opposes new taxes [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She explicitly opposes new taxes."
+            },
+            "safety": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She emphasizes police funding, recruitment, and retention alongside treatment-related priorities.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She is the incumbent representative and a former city councilmember.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "jenn-marie-strickling",
+          "summary": "Strickling is a recently elected charter-review commissioner and small-business owner focusing on household costs, local jobs, and housing protections.",
+          "highlights": [
+            "Prioritizes gas, grocery, and housing affordability [S1]",
+            "Cites charter work on housing protections for seniors and veterans [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "housing": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She cites housing protections intended to help seniors and veterans remain in their homes."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She has recently elected charter-review experience but no legislative record."
+            }
+          }
+        },
+        {
+          "slug": "ren-fanony",
+          "summary": "Fanony is an architectural designer and first-time candidate focused broadly on taxes, living costs, public services, and sustainable finances.",
+          "highlights": [
+            "Wants to address rising taxes and living costs while maintaining public services [S1]",
+            "Reports no prior public office [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He explicitly reports no prior public office."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-26-state-senator",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-26-state-senator/"
+      ],
+      "office_does": "A state senator writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "An incumbent senator and former school-board president faces a restaurant owner campaigning on taxes, regulation, affordability, and public safety.",
+      "candidates": [
+        {
+          "slug": "deborah-krishnadasan",
+          "summary": "Krishnadasan is an incumbent senator and former school-board president emphasizing education, affordability, transportation, reproductive rights, and safety.",
+          "highlights": [
+            "Brings Senate incumbency and former school-board leadership [S2]",
+            "Official priorities include reproductive rights, education, transportation, and affordability [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She combines current Senate service with prior elected school-board leadership."
+            },
+            "social": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Her official record emphasizes reproductive rights.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "gary-parker",
+          "summary": "Parker is a restaurant owner and philanthropist whose campaign themes include taxes, regulation, affordability, and public safety.",
+          "highlights": [
+            "Runs as a business and philanthropic outsider [S2]",
+            "Identifies taxes, regulation, affordability, and public safety as campaign themes [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He is a business and philanthropic challenger with no documented elected record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-27-state-representative-position-1",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-27-state-representative-position-1/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "House Speaker Laurie Jinkins faces repeat candidate Carole Sue Braaten, whose approved sources provide no detailed policy platform.",
+      "candidates": [
+        {
+          "slug": "carole-sue-braaten",
+          "summary": "Braaten is a repeat legislative candidate whose approved sources provide no detailed policy platform.",
+          "highlights": [
+            "Appeared on the district's 2024 state-Senate primary ballot [S2]",
+            "The approved sources provide no sufficiently detailed policy platform [S1][S2]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She is a repeat candidate with no documented elected or institutional record."
+            }
+          }
+        },
+        {
+          "slug": "laurie-jinkins",
+          "summary": "Jinkins is the incumbent House Speaker with an official record on progressive revenue, housing supply and tenant protections, and progressive social policy.",
+          "highlights": [
+            "Serves as Speaker of the Washington House [S2]",
+            "Official work emphasizes progressive revenue and both housing supply and tenant protections [S2]",
+            "Supports reproductive and LGBTQ rights [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Her official legislative work emphasizes progressive revenue."
+            },
+            "housing": {
+              "score": 0,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Her official work combines housing-supply measures with tenant protections."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She is the incumbent House Speaker with a senior institutional leadership record."
+            },
+            "social": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Her official work emphasizes reproductive and LGBTQ rights."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-28-state-representative-position-1",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-28-state-representative-position-1/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "An incumbent representative with legislative and human-services experience faces an Army veteran and health-care leader emphasizing fiscal restraint and accountability.",
+      "candidates": [
+        {
+          "slug": "kathy-richardson",
+          "summary": "Richardson is an Army veteran, nurse practitioner, educator, and business owner advocating fiscal restraint and measurable government performance.",
+          "highlights": [
+            "Brings military, health-care, education, and business experience [S2]",
+            "Calls for fiscal restraint, transparent spending, accountability, and measurable outcomes [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "She explicitly calls for fiscal restraint, transparent spending, accountability, and measurable outcomes."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "She brings substantial professional leadership but no documented elected record."
+            }
+          }
+        },
+        {
+          "slug": "mari-leavitt",
+          "summary": "Leavitt is an incumbent representative and former county human-services administrator focused on education, workforce, veterans, human services, housing, and safety.",
+          "highlights": [
+            "Brings incumbent legislative and county human-services experience [S1][S2]",
+            "Prioritizes education, workforce training, veterans, human services, housing, and public safety [S1][S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She is an incumbent representative with prior county administrative experience."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-29-state-representative-position-1",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-29-state-representative-position-1/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "An incumbent legislator and former school-board member faces a business owner and community organizer whose platform emphasizes affordability, housing, and safety without detailed mechanisms.",
+      "candidates": [
+        {
+          "slug": "krista-perez",
+          "summary": "Perez is a business owner, community organizer, and working mother campaigning on affordability, housing, small businesses, and community safety.",
+          "highlights": [
+            "Brings business, organizing, and lived working-family experience [S2]",
+            "Emphasizes affordability, housing, small businesses, and community safety [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "She is a community and business outsider with no documented elected or institutional record."
+            }
+          }
+        },
+        {
+          "slug": "melanie-morgan",
+          "summary": "Morgan is a legislator, former school-board member, veteran, and community advocate with an official record spanning health, housing, and consumer protections.",
+          "highlights": [
+            "Brings legislative and prior elected school-board experience [S2]",
+            "Official work emphasizes health-care access, behavioral-health parity, consumer protections, housing, and equity [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She combines legislative service with prior elected school-board experience."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-29-state-senator",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-29-state-senator/"
+      ],
+      "office_does": "A state senator writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "An incumbent state representative with an environmental-justice and voting-access record faces a STEM professor whose approved sources contain no detailed platform.",
+      "candidates": [
+        {
+          "slug": "david-anderson",
+          "summary": "Anderson is a STEM professor and first-time candidate whose approved sources provide no detailed policy platform.",
+          "highlights": [
+            "Works as a STEM professor at Tacoma Community College [S1]",
+            "The approved sources provide no sufficiently detailed policy platform [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He reports no prior elected office or institutional political record."
+            }
+          }
+        },
+        {
+          "slug": "sharlett-mena",
+          "summary": "Mena is an incumbent state representative and committee chair whose official work emphasizes environmental justice, access, consumer issues, and affordability.",
+          "highlights": [
+            "Serves as a state representative and House committee chair [S2]",
+            "Official work emphasizes environmental justice, voting and language access, and consumer and utility issues [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Her official legislative work emphasizes environmental justice."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She is an incumbent state representative and committee chair seeking a Senate seat."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-31-state-senator",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-31-state-senator/"
+      ],
+      "office_does": "A state senator writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "A long-serving incumbent advocating lower taxes, spending restraint, deregulation, and parental authority faces a school and community organizer emphasizing education and infrastructure investment with fiscal accountability.",
+      "candidates": [
+        {
+          "slug": "phil-fortunato",
+          "summary": "Fortunato is an incumbent senator and former representative campaigning on lower taxes, spending restraint, enforcement-oriented safety, deregulation, and parental authority.",
+          "highlights": [
+            "Supports lower taxes and spending restraint [S3]",
+            "Supports public safety, parental authority in education, and reduced regulation for housing and business [S3]",
+            "Brings incumbent Senate and prior House experience [S2][S3]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S3"
+              ],
+              "basis": "He explicitly emphasizes lower taxes."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S3"
+              ],
+              "basis": "He explicitly emphasizes spending restraint."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "He supports reducing regulation to expand housing activity."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "He is an incumbent senator and former state representative with a long legislative record."
+            },
+            "social": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "He explicitly supports parental authority in education."
+            },
+            "local-control": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "His explicit support for parental authority in education maps to the rubric's local parent-control pole.",
+              "added_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "tamara-stramel",
+          "summary": "Stramel is a school and community organizer advocating education and rural-infrastructure investment alongside transparent government and fiscal accountability.",
+          "highlights": [
+            "Supports education investment and rural infrastructure [S2]",
+            "Supports transparent government and fiscal accountability [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 0,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "She genuinely combines education and infrastructure investment with fiscal accountability."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "She brings community, school, and political-organizing experience but no documented elected or legislative record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-32-state-representative-position-2",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-32-state-representative-position-2/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "A civil-rights nonprofit leader emphasizing immigrant protections challenges an incumbent behavioral-health advocate with a legislative focus on treatment, gun-violence prevention, housing, and reproductive rights.",
+      "candidates": [
+        {
+          "slug": "imraan-siddiqi",
+          "summary": "Siddiqi is a civil-rights nonprofit leader and former small-business owner campaigning on affordability, immigrant protections, and resistance to federal overreach.",
+          "highlights": [
+            "Brings civil-rights, nonprofit, corporate, and small-business experience [S2][S3]",
+            "Emphasizes immigrant and civil-rights protections and resistance to federal overreach [S2][S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "He is a nonprofit and business outsider with no documented elected or legislative record."
+            },
+            "immigration": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "He explicitly emphasizes immigrant protections and resistance to federal overreach."
+            }
+          }
+        },
+        {
+          "slug": "lauren-davis",
+          "summary": "Davis is an incumbent representative and behavioral-health advocate whose official work emphasizes treatment, gun-violence prevention, housing, and reproductive rights.",
+          "highlights": [
+            "Brings incumbent legislative and addiction-treatment advocacy experience [S2]",
+            "Official work emphasizes addiction treatment, mental health, and gun-violence prevention [S2]",
+            "Supports housing affordability and reproductive rights [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Her official work centers addiction treatment and mental-health responses alongside gun-violence prevention."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She is an incumbent representative with an official legislative record."
+            },
+            "social": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Her official work emphasizes reproductive rights.",
+              "adjusted_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-35-state-representative-position-2",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-35-state-representative-position-2/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "Incumbent Travis Couture faces public-service professional Maria Littlesun; their documented priorities differ on fiscal restraint and public investment.",
+      "candidates": [
+        {
+          "slug": "maria-littlesun",
+          "summary": "Littlesun is a public-service professional emphasizing affordability, housing, schools, and health-care access.",
+          "highlights": [
+            "Emphasizes affordability and expanded housing options [S2]",
+            "Supports stronger public schools and wider health-care access [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "She emphasizes stronger public schools and wider health-care access as public priorities."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She brings public-service experience but has no documented elected record."
+            }
+          }
+        },
+        {
+          "slug": "travis-couture",
+          "summary": "Couture is an incumbent representative and House Republican budget leader emphasizing tax and spending restraint and government accountability.",
+          "highlights": [
+            "Opposes the 2026 income tax and supports tax restraint [S2]",
+            "Supports spending restraint and government accountability [S2][S3]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He explicitly opposes the 2026 income tax and supports tax restraint."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "He explicitly argues for spending restraint and government accountability."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "He is an incumbent representative and House Republican budget leader."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-35-state-senator",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-35-state-senator/"
+      ],
+      "office_does": "A state senator writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "A county commissioner emphasizing family and community priorities faces a long-serving legislator emphasizing fiscal restraint and accountability.",
+      "candidates": [
+        {
+          "slug": "carolina-mejia",
+          "summary": "Mejia is a county commissioner focused on affordable living, education, health care, and family opportunity.",
+          "highlights": [
+            "Emphasizes affordable living, education, and health care [S2]",
+            "Offers an elected county-government record [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Her platform emphasizes education, health care, and family opportunity as public priorities."
+            },
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "She has county elected experience but no legislative tenure."
+            }
+          }
+        },
+        {
+          "slug": "drew-c-macewen",
+          "summary": "MacEwen is a long-serving legislator and Senate Republican deputy leader focused on restrained budgeting, accountability, and private-sector growth.",
+          "highlights": [
+            "Supports restrained and sustainable budgeting [S2]",
+            "Opposes the 2026 income tax and recent tax increases [S3]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S3"
+              ],
+              "basis": "He explicitly criticizes the income tax and recent tax increases."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "He supports restrained budgeting and criticizes state spending growth."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He has served in the Legislature since 2013 and holds Senate leadership roles."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-38-state-senator",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-38-state-senator/"
+      ],
+      "office_does": "A state senator writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "Long-serving senator and budget chair June Robinson faces Brad Bender, whose reviewed platform evidence is sparse.",
+      "candidates": [
+        {
+          "slug": "brad-bender",
+          "summary": "Bender is a candidate whose reviewed dossier establishes his candidacy but not a policy or professional profile.",
+          "highlights": [
+            "Official sources confirm his candidacy [S1][S2]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "june-robinson",
+          "summary": "Robinson is a long-serving senator and budget chair emphasizing progressive revenue and investment in housing, health, schools, and infrastructure.",
+          "highlights": [
+            "Supports progressive revenue for public services [S3]",
+            "Cites budget work supporting housing, schools, health, and infrastructure [S2][S3]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S3"
+              ],
+              "basis": "She explicitly supports progressive revenue for public services."
+            },
+            "spending": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Her platform and budget record center investment in housing, schools, health, and infrastructure."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "She has served in the Legislature since 2013 and chairs Senate Ways and Means."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-40-state-representative-position-1",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-40-state-representative-position-1/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "Eight-year incumbent Debra Lekanoff faces first-time legislative candidate Cindy Carter, with differences on taxes, fiscal policy, environment, and reproductive rights.",
+      "candidates": [
+        {
+          "slug": "cindy-carter",
+          "summary": "Carter is a first-time candidate focused on repealing the state income tax, fiscal restraint, transportation, and resident control.",
+          "highlights": [
+            "Supports repealing the statewide income tax [S1][S2]",
+            "Calls for fiscal responsibility and returning power to residents [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She explicitly supports repealing the statewide income tax."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She explicitly calls for fiscal responsibility."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She has no documented elected record."
+            }
+          }
+        },
+        {
+          "slug": "debra-lekanoff",
+          "summary": "Lekanoff is an eight-year representative emphasizing public investment, environmental protection, reproductive freedom, and a broad public-service record.",
+          "highlights": [
+            "Supports housing, health care, schools, unions, and jobs [S1]",
+            "Supports reproductive freedom and environmental protection [S1]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Her platform emphasizes public investment in housing, health care, schools, and transportation.",
+              "adjusted_by_refutation": true
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She explicitly supports environmental protection and has a documented climate and salmon-recovery record."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She is an eight-year incumbent with more than 30 years of public-service work."
+            },
+            "social": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She explicitly supports reproductive freedom."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-42-state-representative-position-1",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-42-state-representative-position-1/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "Incumbent Alicia Rule runs on a mixed tax and housing record plus reproductive-rights and immigration positions; Misty Flowers emphasizes lower taxes, spending restraint, and outsider leadership.",
+      "candidates": [
+        {
+          "slug": "alicia-rule",
+          "summary": "Rule is a third-term representative with a mixed supply-and-tenant-protection housing record and explicit reproductive-rights and immigration-enforcement positions.",
+          "highlights": [
+            "Supports small-business tax cuts and opposed tax increases [S1]",
+            "Reports passing rent caps and zoning changes to increase supply [S1]",
+            "Supports abortion and IVF access and limits on masked ICE agents [S1]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She supports small-business tax cuts and reports opposing tax increases."
+            },
+            "housing": {
+              "score": 0,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Her record combines rent-increase caps with zoning changes intended to increase supply."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She is a third-term representative and former city councilmember."
+            },
+            "immigration": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She supports limits on masked ICE agents and federal access to private data."
+            },
+            "social": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She explicitly supports abortion and IVF access and replacement Planned Parenthood funding."
+            }
+          }
+        },
+        {
+          "slug": "misty-flowers",
+          "summary": "Flowers is a small-business owner and first-time candidate emphasizing tax and spending restraint, public safety, and property protection.",
+          "highlights": [
+            "Supports lowering the tax burden [S1]",
+            "Supports restraining state spending [S1]",
+            "Prioritizes public safety and property protection [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She explicitly supports lowering Washingtonians' tax burden."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She explicitly supports restraining state spending."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She emphasizes public safety and property protection, though mechanisms are broad."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She has no documented elected record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-42-state-representative-position-2",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-42-state-representative-position-2/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "Second-term representative Joe Timmons emphasizes local investment and public services; military and law-enforcement veteran Justin Pike emphasizes behavioral-health-based safety and government accountability.",
+      "candidates": [
+        {
+          "slug": "joe-timmons",
+          "summary": "Timmons is a second-term representative emphasizing public investment, education, housing, health-care access, and living-wage jobs.",
+          "highlights": [
+            "Supports education, housing, and health-care access [S1]",
+            "Reports securing state funding for flood protection and community facilities [S1]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "His platform and record emphasize public investment and securing state funding for local projects."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He is a second-term representative with prior government-relations and executive-branch experience."
+            }
+          }
+        },
+        {
+          "slug": "justin-pike",
+          "summary": "Pike is a first-time candidate and military and law-enforcement veteran emphasizing behavioral-health-based safety and government accountability.",
+          "highlights": [
+            "Supports addressing behavioral health as part of public safety [S1]",
+            "Supports greater government accountability and transparency [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He emphasizes state-government accountability and transparency rather than program expansion."
+            },
+            "safety": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "His law-enforcement formation and behavioral-health emphasis combine enforcement and service approaches."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He has substantial military, law-enforcement, and guild leadership experience but no public-office record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-44-state-representative-position-1",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-44-state-representative-position-1/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "Incumbent Brandy Donaghy faces Navy veteran and small-business owner Chris Elder, who emphasizes lower taxes, accountable spending, and public safety.",
+      "candidates": [
+        {
+          "slug": "brandy-donaghy",
+          "summary": "Donaghy is an incumbent representative with emergency-management and community-organizing experience focused on preparedness, housing, transportation, veterans, and reproductive rights.",
+          "highlights": [
+            "Emphasizes emergency preparedness, housing, and transportation [S2][S3]",
+            "Supports reproductive rights and community safety [S2][S3]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "She has served in the House since 2021 and reports a legislative record across several issue areas."
+            },
+            "social": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "She explicitly supports reproductive rights."
+            }
+          }
+        },
+        {
+          "slug": "chris-elder",
+          "summary": "Elder is a Navy veteran, farmer, and small-business owner emphasizing lower taxes, spending accountability, first responders, and law-enforcement capacity.",
+          "highlights": [
+            "Supports lower taxes and accountable spending [S2]",
+            "Supports first responders and law-enforcement capacity alongside prevention [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He explicitly supports lower taxes."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He explicitly supports accountable spending.",
+              "adjusted_by_refutation": true
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He emphasizes first responders and law-enforcement capacity while also mentioning prevention."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "He has extensive military and business experience but no documented elected office."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-44-state-representative-position-2",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-44-state-representative-position-2/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "Long-serving representative and former school-board member April Berg faces Tonya Stadlman, whose reviewed public platform evidence is sparse.",
+      "candidates": [
+        {
+          "slug": "april-berg",
+          "summary": "Berg is an incumbent representative and House Finance chair with prior school-board, business, aerospace, and planning experience.",
+          "highlights": [
+            "Emphasizes education, housing, public safety, and community investment [S2][S3]",
+            "Chairs House Finance and cites work on tax policy and economic development [S2][S3]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Her documented priorities include education and community investment."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "She has served in the House since 2021, previously served on a school board, and chairs House Finance."
+            }
+          }
+        },
+        {
+          "slug": "tonya-stadlman",
+          "summary": "Stadlman's reviewed dossier verifies her candidacy but does not establish a legislative platform or professional profile.",
+          "highlights": [
+            "Official records confirm her candidacy [S1][S2]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-44-state-senator",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-44-state-senator/"
+      ],
+      "office_does": "A state senator writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "An incumbent senator with extensive state and county service faces a school-board member emphasizing law enforcement and fiscal restraint.",
+      "candidates": [
+        {
+          "slug": "john-lovick",
+          "summary": "Lovick is the incumbent senator and a former sheriff, county executive, state representative, councilmember, Coast Guard member, and State Patrol trooper.",
+          "highlights": [
+            "Cites work opening regional peace-officer academies and building an accountability system [S1]",
+            "Supports extending light rail to Everett and beyond [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He supports major public transit investment through completing light rail to Everett and beyond."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "His public-safety record emphasizes officer training and an accountability system."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He is an incumbent senator with extensive prior state, county, city, and law-enforcement service."
+            }
+          }
+        },
+        {
+          "slug": "sherri-larkin",
+          "summary": "Larkin is a school-board member and former teacher emphasizing law enforcement, schools, affordability, and measured government results.",
+          "highlights": [
+            "Supports law enforcement and stronger school preparation [S1]",
+            "Promises fiscal restraint and measured program results [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She explicitly promises fiscal restraint and measurement of program results.",
+              "adjusted_by_refutation": true
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She prioritizes support for law enforcement."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She has school-board experience but no documented legislative record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-49-state-representative-position-2",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-49-state-representative-position-2/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "A first-time candidate focused on school funding and living costs faces the incumbent House majority floor leader.",
+      "candidates": [
+        {
+          "slug": "derek-thompson",
+          "summary": "Thompson brings private-sector and volunteer experience and focuses on school funding, living costs, and efficient use of taxes.",
+          "highlights": [
+            "Wants to change the school-funding formula and reduce living costs [S1]",
+            "Calls for efficient use of tax dollars [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He emphasizes efficient use of tax dollars while also seeking school-funding changes."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "His dossier documents professional and volunteer experience but no elected record."
+            }
+          }
+        },
+        {
+          "slug": "monica-jurado-stonier",
+          "summary": "Jurado Stonier is the incumbent representative and House majority floor leader, with education and appropriations experience.",
+          "highlights": [
+            "Calls for special-education funding and affordable health care, child care, and housing [S1]",
+            "Serves as House majority floor leader [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She supports added public investment in special education and affordability-related services."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She is an incumbent and House majority floor leader with broad committee experience."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-8-state-senator",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-8-state-senator/"
+      ],
+      "office_does": "A state senator writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "A school-board president and small-business owner faces an incumbent senator and former councilmember; both emphasize restraint, public safety, schools, and housing.",
+      "candidates": [
+        {
+          "slug": "gabe-galbraith",
+          "summary": "Galbraith is a school-board president, Marine veteran, security specialist, and small-business owner emphasizing taxes, public safety, schools, and parental rights.",
+          "highlights": [
+            "Opposes higher taxes on working families [S1]",
+            "Supports law enforcement and parental rights [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He explicitly opposes higher taxes on working families.",
+              "adjusted_by_refutation": true
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He explicitly supports law enforcement."
+            },
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He has several years of elected school-board service but no legislative record."
+            },
+            "social": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He explicitly supports parental rights in schools.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "nikki-torres",
+          "summary": "Torres is an incumbent senator and former councilmember emphasizing fiscal restraint, public safety, schools, housing, and mental-health services.",
+          "highlights": [
+            "Opposes wasteful spending, unfair taxes, and burdensome regulation [S1]",
+            "Prioritizes public safety, schools, housing, and mental-health services [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She opposes taxes she describes as unfair."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She calls for restrained budgets and opposes waste while also citing major regional investment."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She prioritizes public safety, though the dossier gives no detailed mechanism."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She is an incumbent senator and former city councilmember."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-9-state-representative-position-2",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-9-state-representative-position-2/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "A farmer and business owner emphasizing spending restraint faces a peer-support specialist running on rural health access and anti-lobbying commitments.",
+      "candidates": [
+        {
+          "slug": "joe-schmick",
+          "summary": "Schmick is a former farmer and small-business owner focused on affordability, rural services, agriculture, and restraining state spending.",
+          "highlights": [
+            "Says state spending has outpaced taxpayer income [S1]",
+            "Supports returning excess revenue [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He supports returning excess state revenue to taxpayers."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He argues spending has outpaced incomes and favors returning excess revenue."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "The dossier documents industry-board service but no elected office."
+            }
+          }
+        },
+        {
+          "slug": "karina-wallace",
+          "summary": "Wallace is a peer-support specialist, trauma-recovery coach, caregiver, and civic educator emphasizing rural health access and political-money reform.",
+          "highlights": [
+            "Prioritizes rural health-care access [S1]",
+            "Pledges no corporate PAC or lobbyist donations [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She brings service and lived experience but no documented elected record."
+            },
+            "reform": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She explicitly rejects corporate PAC and lobbyist donations and targets the revolving door."
             }
           }
         }
