@@ -5,6 +5,7 @@ The Washington dataset is package-based:
 ```
 statewide/       Washington-wide contests and sources
 counties/king/   King County local package
+counties/*/      Other county packages, as they are ingested and supported
 ../final/        generated app-facing JSON
 ```
 
@@ -26,6 +27,13 @@ official VoteWA PRIMARY 2026 Candidate List.
 Owns King County local coverage: King County Elections raw pages/CSVs, local
 pamphlet text, county/local dossiers, measures, and county-specific scoping.
 King County remains the first fully supported county.
+
+### Other County Packages
+
+County packages may exist before the app supports that county. A package marked
+`ingested, not app-supported` has official source pointers in place, but still
+needs parsed contests/measures, dossiers, scoring files, and district scoping
+before it can be added to `coverage.supported_counties`.
 
 ## Transformations
 

@@ -1,0 +1,3660 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+<!-- Google Tag Manager for GA4 -->
+				<script>(function(w,d,s,l,i){w.GAMeasurementID='G-3KGSGEWX9V';w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+				})(window,document,'script','cpDataLayerGA4','GTM-K73C5PS');</script>
+				<!-- End Google Tag Manager for GA4 -->
+				<script type='text/javascript'>
+					var enableTelemetry = 'false'
+					var aiConfig = {
+					instrumentationKey: '1cde048e-3185-4906-aa46-c92a7312b60f'						
+					}
+					var appInsights = window.appInsights || function (a) { function b(a) { c[a] = function () { var b = arguments; c.queue.push(function () { c[a].apply(c, b) }) } } var c = { config: a }, d = document, e = window; setTimeout(function () { var b = d.createElement('script'); b.src = a.url || 'https://js.monitor.azure.com/scripts/a/ai.0.js', d.getElementsByTagName('script')[0].parentNode.appendChild(b) }); try { c.cookie = d.cookie } catch (a) { } c.queue = []; for (var f = ['Event', 'Exception', 'Metric', 'PageView', 'Trace', 'Dependency']; f.length;)b('track' + f.pop()); if (b('setAuthenticatedUserContext'), b('clearAuthenticatedUserContext'), b('startTrackEvent'), b('stopTrackEvent'), b('startTrackPage'), b('stopTrackPage'), b('flush'), !a.disableExceptionTracking) { f = 'onerror', b('_' + f); var g = e[f]; e[f] = function (a, b, d, e, h) { var i = g && g(a, b, d, e, h); return !0 !== i && c['_' + f](a, b, d, e, h), i } } return c }(aiConfig);
+					window.appInsights = appInsights, appInsights.queue && 0 === appInsights.queue.length;
+					// Add telemetry initializer
+					appInsights.queue.push(function() {
+						appInsights.context.addTelemetryInitializer(function(envelope) {
+							var telemetryItem = envelope.data.baseData;
+							// To check the telemetry item’s type:
+							if (!false)
+							{
+								//If the telemetry is not enabled, we still want to capture Google map custom event, so only allow that
+								if (envelope.name.indexOf('.Event') == -1)
+									return false;
+							}
+						});
+					});						
+					appInsights.trackPageView();
+				</script>
+	<script>
+		function populateAntiForgery(token) {
+			var input = document.createElement("input");
+			input.name = "__RequestVerificationToken";
+			input.type = "hidden";
+			input.value = token;
+			var absPat = /^https?:\/\/|^\/\//i;
+			var forms = document.getElementsByTagName("form");
+			for (var i = 0; i < forms.length; i++) {
+				if (forms[i].method == "post" &&
+					!forms[i].querySelector('[name="__RequestVerificationToken"]') &&
+					!absPat.test(forms[i].getAttribute("action"))) {
+					forms[i].appendChild(input.cloneNode());
+				}
+			}
+		}
+
+		function getAntiForgeryToken(callback, error) {
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", "/antiforgery");
+			xhr.addEventListener("load", function() {
+				try {
+					if (this.status !== 200) {
+						throw Error("Invalid status. Could not retrieve antiforgery token.");
+		}
+					var obj = JSON.parse(this.responseText);
+					callback(obj.token);
+				} catch (e) {
+					typeof error === "function" && error(e);
+				}
+			});
+			xhr.send();
+		}
+
+		getAntiForgeryToken(function(token) {
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded" 
+				|| document.readyState === "interactive") {
+				populateAntiForgery(token);
+				return;
+			}
+			document.addEventListener("DOMContentLoaded", function() {
+				populateAntiForgery(token);
+			}, false);
+		}, console.error);
+			</script>
+			
+
+	<script type="text/javascript">
+		window.departmentHeader = {"DepartmentHeaderId":176,"DepartmentHeaderName":"Auditor"};
+		window.pageSectionTracker = {};
+		window.isResponsiveEnabled = true;
+		window.isRemoveSetHeights= true;
+		if (window.isRemoveSetHeights) {
+			document.documentElement.className += ' removeSetHeights';
+		}
+		window.mainMenuMediaQuery = 'screen and (max-width: 45em)';
+		window.isMobileBrowserIncludingTablets = false;
+		window.fixedResponsiveMenu = false;
+		window.fullWidthResponsiveMenu = false;
+		window.responsiveMenuHeight = '';
+		window.responsiveMenuFontSize = '';
+		window.isContentAdvisor = false;
+		(function () {
+			window.setSizeCookie = function () {
+				document.cookie = "dpi=" + window.devicePixelRatio + "; path=/";
+				document.cookie = "viewportWidth=" + window.innerWidth + "; path=/";
+				document.cookie = "viewportHeight=" + window.innerHeight + "; path=/";
+				if (screen && screen.width && screen.height) {
+					document.cookie = "screenWidth=" + screen.width + "; path=/";
+					document.cookie = "screenHeight=" + screen.height + "; path=/";
+				}
+				document.cookie = "responsiveGhost=1; path=/";
+			};
+
+			setSizeCookie();
+		}());
+	</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<script async src="https://docaccess.com/docbox.js"></script>
+	<meta name="google-site-verification" content="s5WDeo05EpM19e4YZRgVEsHcTttezFOzVt_GyXDHAlk" />
+
+<meta name="google-site-verification" content="7cJ0HVfX6qO-sVkbtv_xEWw7RJKGb1EdzV8uRp06tG8" />
+
+<!-- Favicon MetaTags -->
+<link rel='icon' type='image/png' sizes='192x192' href='/DocumentCenter/View/58165'>
+
+<link rel='icon' type='image/png' sizes='384x384' href='/DocumentCenter/View/58166'>
+<link rel='apple-touch-icon' sizes='120x120' href='/DocumentCenter/View/58167'>
+<link rel='icon' type='image/png' sizes='16x16' href='/DocumentCenter/View/58168'>
+<link rel='icon' type='image/png' sizes='32x32' href='/DocumentCenter/View/58169'>
+<meta rel='msapplication-config' content='/DocumentCenter/View/58170'>
+<link rel='icon' type='image/png' sizes='150x150' href='/DocumentCenter/View/58170'>
+<link rel='mask-icon' href='/DocumentCenter/View/58172'>
+<link rel='shortcut icon' href='/DocumentCenter/View/58173'>
+<link rel='manifest' href='/DocumentCenter/View/58174'>
+<meta name="msapplication-TileColor" content="#f1f1f1">
+<meta name="theme-color" content="#ffffff">
+<!-- End Favicon MetaTags -->
+
+	<meta name="category0" content="Home" />
+<meta name="category1" content="Your Government" />
+<meta name="category2" content="Finance &amp; Records" />
+<meta name="category3" content="Auditor" />
+<meta name="category4" content="Elections &amp; Voter Registration" />
+<meta name="category5" content="Voting" />
+<meta name="category6" content="Candidates and Measures on the Ballot" />
+
+	
+	<meta name="theme-color" content="#284860">
+	<link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+		<title>Candidates and Measures on the Ballot | Snohomish County, WA - Official Website</title>
+
+		<meta name="description" content="Information about ballot measures and candidates that appear on your ballot and resources including voters&#39; guides, a sample ballot, and local voters&#39; pamphlets.">
+		<meta name="keywords" content="sample ballot,voters&#39; guide,ballot,measures,candidates,levy,districts,levies,on the ballot,local voters&#39; pamphlet,">
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-K8VJZRSEYP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-K8VJZRSEYP');
+</script>		<script src="/Assets/Scripts/jQuery/jquery-3.7.1.min.js"></script>
+	<script src="/Assets/Scripts/jQuery/jquery-migrate-3.5.2.min.js" type="text/javascript"></script>
+	
+
+	<!--[if IE 6]><script language="JavaScript" type="text/javascript"> var isie6 = true; </script><![endif]-->
+	<!--[if IE 7]><script language="JavaScript" type="text/javascript"> var isie7 = true; </script><![endif]-->
+	<!--[if IE 8]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<!--[if IE 9]><script language="JavaScript" type="text/javascript"> var isie8 = true; </script><![endif]-->
+	<script type="text/javascript"><!--
+	var intCountryCode = 840;
+	var order = '';
+//--></script>
+	
+<link href="/-681783051.css" rel="stylesheet" type="text/css" />	<link href="/-1465647691.css" rel="stylesheet" type="text/css" />	<link href="/271932428.css" rel="stylesheet" type="text/css" />
+
+	<link rel="stylesheet" type="text/css" href="/Assets/Styles/Print.css" media="print">
+	<script type="text/javascript">
+		window.Pages = window.Pages || {};
+		// FrontEnd RWD initialization
+		window.Pages.rwdReady = $.Deferred();
+		window.Pages.toolBarDeferred = $.Deferred();
+		window.Pages.rwdSetupComplete = $.Deferred();
+		window.Pages.megaMenuLoaded = $.Deferred();
+		window.Pages.angularToolbarComplete = $.Deferred();
+		window.Pages.frontEndToolbarComplete = $.Deferred();
+	</script>
+	<!--CPHeadContent-->
+	<script src="/739942322.js" type="text/javascript"></script>
+	
+	
+	
+	
+
+
+
+
+	<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/App_Themes/ie8.css"><![endif]-->
+	<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="/App_Themes/ie7.css"><![endif]-->
+	<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="/App_Themes/ie6.css"><![endif]-->
+	<!--[if lt IE 9]><script type="text/javascript" src="/Scripts/html5.js"></script><![endif]-->
+
+	<script type="text/javascript">
+		setEditorVariables(false, 840);
+		function getPrintPreviewType() { return 0; } function printPreview() {pPreview(getPrintPreviewType()); }
+	</script>
+	<script src="/Assets/Scripts/AlpineJS/3.14.1/alpine.min.js" type="text/javascript" defer="defer"></script>
+</head>
+<body class="wide " >
+
+    <script>jQuery(document).click(function (event) {
+	var target = jQuery(event.target);
+	if (target.attr('src') && target.parents('.image').length && target.parents('.widget').length) {
+		var text = target.attr('title');
+		
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Image',
+				eventAction: 'Image - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.is('button') || target.hasClass('button') || target.parents().hasClass('button')) {
+		var text = "";
+		if (target.parents('.button')[0]) {
+			text = target.parents('.button').first().text();
+		} else if (target.text().length) {
+			text = target.text();
+		} else if (target.attr('title').length) {
+			text = target.attr('title');
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Button',
+				eventAction: 'Button - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetCustomHtml').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Custom Html',
+				eventAction: 'Custom Html Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.editor').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Editor',
+				eventAction: 'Editor Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.GraphicLinks').length) {
+		var text = "";
+		var targetGraphicLink = target;
+		if (target.hasClass('widgetGraphicLinksLink')) {
+			targetGraphicLink = jQuery(target.children()[0]);
+		}
+		if (targetGraphicLink.hasClass('text')) {
+			text = targetGraphicLink.text();
+		} else if (targetGraphicLink.attr('src').length) {
+			if (targetGraphicLink.attr('alt').length) {
+				text = targetGraphicLink.attr('alt');
+			} else {
+				text = targetGraphicLink.attr('src');
+			}
+		} else {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Graphic Links',
+				eventAction: 'Graphic Link - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.InfoAdvanced').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Info Advanced',
+				eventAction: 'Info Advanced Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.list').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'List',
+				eventAction: 'List Clicked',
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.megaMenuItem').length || target.parents('.topMenuItem').length) {
+		var megaMenuText = jQuery('.topMenuItem.mouseover').find('span').text();
+		var breadCrumbs = [];
+		jQuery('.breadCrumbs > li').each(function () {
+			 breadCrumbs.push(this.textContent);
+		});
+		var pageTitle = breadCrumbs.join('>');
+		var subTitleText = target.parents('.megaMenuItem').children('.widgetTitle').children().text();
+		var text = "";
+		if (pageTitle) {
+			text += pageTitle + " | ";
+		} else {
+			text += document.title + ' - ';
+		}
+		if (target.text() == "" && megaMenuText == "") {
+			text += "N/A";
+		} else if (target.text().length && megaMenuText.length) {
+			if (megaMenuText == target.text()) {
+				text += megaMenuText;
+			} else {
+				text += megaMenuText + " - " + subTitleText + " - " + target.text();
+			}
+		} else if (target.text() == "") {
+			text += megaMenuText;
+		} else {
+			text += target.text();
+		}
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Mega Menu',
+				eventAction: 'Mega Menu : ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetNewsFlash').length && target.parents('.widgetItem').length) {
+		var text = jQuery(target.parents('.widgetItem')[0]).find('.widgetTitle').children().text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'News Flash',
+				eventAction: 'News Flash - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.hasClass('widgetQuickLinksLink') || target.find('.widgetQuickLinksLink').length) {
+		var text = target.text();
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Quick Links',
+				eventAction: 'Quick Links - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.attr('src') && target.parents('.cpSlideshow').length) {
+		var text = target.attr('title');
+		if (!text.length) {
+			text = "N/A";
+		}
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Slideshow',
+				eventAction: 'Slideshow - ' + text,
+				eventLabel: window.location.href
+			});
+	}
+	if (target.parents('.widgetText').length) {
+		ga('send',
+			{
+				hitType: 'event',
+				eventCategory: 'Text',
+				eventAction: 'Text Link Clicked',
+				eventLabel: window.location.href
+			});
+	}
+});</script>
+	<div id="popoverModal" class="cp-PopOver cp-PopOver--modal cp-AdminWrap" style="position: fixed; display: none;">
+	<div class="cp-PopOver-header">
+		<h3 class="cp-PopOver-title"></h3>
+		<button class="cp-Btn cp-PopOver-close" onclick="closePopOverModal(event)">
+			<svg class="cp-Icon--close" alt="close" title="close">
+				<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconClose"></use>
+			</svg>
+		</button>
+	</div>
+	<div id="cpPopOverBody" class="cp-PopOver-body">
+		<form id="cpPopOverForm" name="cpPopOverForm" novalidate></form>
+	</div>
+	<div id="cpPopOverFooter" class="cp-PopOver-footer">
+		<div class="cp-BtnGroup" id="actionButtons">
+			<!-- Action buttons will be dynamically added here -->
+		</div>
+	</div>
+</div>
+    <div id="fb-root"></div>
+<div id=skipToContentLinks>
+<a href="#cc5f8c90dc-b4cb-431b-90ee-10648f8df655" target="_self" class="skipToContentLink">Skip to Main Content</a>
+</div>
+    <form id="frmReferenceFormForTelerikEditorDialogs"></form>
+
+        <input type="hidden" id="GoogleMapsKey" value="AIzaSyDWUuE-ifkbhxblF920N8MjpBdTg1Wt784" />
+
+
+
+    <input type="hidden" id="cpcDomain" value="https://cp-civicplusuniversity2.civicplus.com">
+    <input type="hidden" id="hdnStructureID" value="1" />
+    <input type="hidden" id="hdnContentCollectionID" value="60a1dc1e-9cc3-45a1-8d47-d982c86e65a7" />
+    <input type="hidden" id="hdnWorkingCopyID" value="00000000-0000-0000-0000-000000000000" />
+    <input type="hidden" id="hdnThemeID" value="25" />
+    <input type="hidden" id="pageIsFrontEnd" value="true" />
+    <input type="hidden" id="pageModuleID" />
+    <input type="hidden" id="pagePageID" value="5722" />
+
+    <div id="stickyPlaceholder"></div>
+    <div id="outer-wrap" class="outer-wrap">
+        <div id="inner-wrap" class="inner-wrap">
+                <div id="divToolbars" class="cpToolbars newCP mui-fixed" style="">
+                    
+
+
+
+                </div>
+            <div id="bodyWrapper">
+                <div id="mainNavHolderMobile" class="mainNavHolderMobile"></div>
+                
+<div data-cpRole="structuralContainer" id="structuralContainer1">
+<div data-cpRole="banner" id="banner1"><div data-cpRole="structuralContainer" id="structuralContainer2">
+<div data-cpRole="stickyStructuralContainer" id="stickyStructuralContainer"><div id="stickyStructuralContainer_19e17519-cfcd-4585-87ae-5176d40c0307" class="stickyInnerDiv   ">
+<header class="siteHeader"><div data-cpRole="structuralContainer" id="structuralContainer3">
+<div class="siteWrap"><aside data-cpRole="structuralContainer" id="structuralContainer4" class="logoTS">
+<div data-cpRole="banner" id="banner2" class="imageBig empty">
+
+
+
+
+				<a id="banner2-92" style="			display: block; text-align: center;
+" class="bannerObject" href="/" target="_self"><img alt="Click To Home" class="bannerObject" height="53" src="/ImageRepository/Document?documentID=54782" width="401" /></a>
+</div>
+</aside><aside data-cpRole="contentContainer" id="contentContainer3a" class="searchTS">	<div id="cc6e67fe76-da9a-4640-b719-c8fe898cc3ee" data-containerid="6e67fe76-da9a-4640-b719-c8fe898cc3ee" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="1">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col18 first" style="" data-widgetcontainerid="b06e2f19-b1ec-4f04-ab74-f62d27a1c67b">				
+	<div class="row nest first last wide">
+	
+	<div class="inner col col18 first last idabf0dc05-e3ce-4c85-984d-613c3a085264" style="" data-widgetcontainerid="abf0dc05-e3ce-4c85-984d-613c3a085264">	
+<div data-widget-id="abddc995-bfe3-4eb0-9c16-00e929251eb2" data-widget-controller-path="/Layout/WidgetSearch">
+	
+	<script defer type="text/javascript" src="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.js"></script>
+	<script defer src="/Areas/Layout/Assets/Scripts/Search.js" type="text/javascript"></script>
+	<script defer type="text/javascript">
+
+		$(document).ready(function () {
+			try {
+				// Minimum characters required before performing a search/autocomplete
+				var minPrefixLength = 3;
+				var autoCompleteDebounceDelay = 500;
+				var searchFieldSelector = "#searchField" + 'abddc995-bfe3-4eb0-9c16-00e929251eb2';
+				var checkboxSelector = "#ysnSearchOnlyDept" + 'abddc995-bfe3-4eb0-9c16-00e929251eb2';
+				var buttonSelector = ".widgetSearchButton" + 'abddc995-bfe3-4eb0-9c16-00e929251eb2';
+				var autoCompleteCache = {};
+				var autoCompleteCacheKeys = [];
+				var autoCompleteCacheLimit = 25;
+				var currentAutoCompleteRequest = null;
+				var currentAutoCompleteRequestKey = null;
+				var autoCompleteDebounceTimer = null;
+				var autoCompleteDebounceKey = null;
+				var pendingAutoCompleteResponses = [];
+
+				function normalizeAutoCompleteTerm(term) {
+					return $.trim((term || "") + "").replace(/\s+/g, " ");
+				}
+
+				function shouldSearch(term) {
+					return normalizeAutoCompleteTerm(term).length >= minPrefixLength;
+				}
+
+				function getAutoCompleteUrl() {
+					return '/Search/AutoComplete' + ($(checkboxSelector).is(':checked') || false? '?departmentId=0' : '');
+				}
+
+				function getAutoCompleteCacheKey(requestUrl, term) {
+					return requestUrl + "|" + term.toLowerCase();
+				}
+
+				function cacheAutoCompleteResult(cacheKey, data) {
+					if (!Object.prototype.hasOwnProperty.call(autoCompleteCache, cacheKey)) {
+						autoCompleteCacheKeys.push(cacheKey);
+						if (autoCompleteCacheKeys.length > autoCompleteCacheLimit) {
+							delete autoCompleteCache[autoCompleteCacheKeys.shift()];
+						}
+					}
+					autoCompleteCache[cacheKey] = data;
+				}
+
+				function respondToPendingAutoComplete(data) {
+					var responses = pendingAutoCompleteResponses;
+					pendingAutoCompleteResponses = [];
+					for (var i = 0; i < responses.length; i++) {
+						responses[i](data);
+					}
+				}
+
+				function cancelPendingAutoComplete() {
+					clearTimeout(autoCompleteDebounceTimer);
+					autoCompleteDebounceKey = null;
+					if (currentAutoCompleteRequest != null) {
+						currentAutoCompleteRequest.abort();
+						currentAutoCompleteRequest = null;
+					}
+					currentAutoCompleteRequestKey = null;
+					respondToPendingAutoComplete([]);
+				}
+
+				function createWidgetAutoCompleteSource(options) {
+					return function (request, response) {
+						var term = normalizeAutoCompleteTerm(request.term);
+						if (!options.shouldSearch(term)) {
+							response([]);
+							return;
+						}
+
+						var requestUrl = options.url();
+						var cacheKey = getAutoCompleteCacheKey(requestUrl, term);
+						if (Object.prototype.hasOwnProperty.call(autoCompleteCache, cacheKey)) {
+							response(autoCompleteCache[cacheKey]);
+							if (options.success) {
+								options.success(autoCompleteCache[cacheKey]);
+							}
+							return;
+						}
+
+						if (currentAutoCompleteRequestKey === cacheKey || autoCompleteDebounceKey === cacheKey) {
+							pendingAutoCompleteResponses.push(response);
+							return;
+						}
+
+						cancelPendingAutoComplete();
+						autoCompleteDebounceKey = cacheKey;
+						pendingAutoCompleteResponses.push(response);
+						autoCompleteDebounceTimer = setTimeout(function () {
+							autoCompleteDebounceKey = null;
+							currentAutoCompleteRequestKey = cacheKey;
+							currentAutoCompleteRequest = $.ajax({
+								url: requestUrl,
+								dataType: "json",
+								timeout: options.timeout,
+								data: {
+									term: term,
+								},
+								success: function (data) {
+									if (currentAutoCompleteRequestKey === cacheKey) {
+										cacheAutoCompleteResult(cacheKey, data);
+										respondToPendingAutoComplete(data);
+										if (options.success) {
+											options.success(data);
+										}
+									}
+								},
+								error: function (xmlhttprequest, textstatus, message) {
+									if (textstatus === "abort") {
+										return;
+									}
+
+									if (options.error) {
+										options.error(xmlhttprequest, textstatus, message);
+									}
+
+									respondToPendingAutoComplete([]);
+								},
+								complete: function (xmlhttprequest) {
+									if (currentAutoCompleteRequest === xmlhttprequest) {
+										currentAutoCompleteRequest = null;
+										currentAutoCompleteRequestKey = null;
+									}
+								}
+							});
+						}, options.delay);
+					};
+				}
+
+				// click handler for search buttons
+				$(buttonSelector).click(function (e) {
+					e.preventDefault();
+					var $btn = $(this);
+					var $field = $btn.siblings(".widgetSearchBox");
+					var term = $field.val() + "";
+					if (!shouldSearch(term)) {
+						// do nothing until user types enough characters
+						$field.focus();
+						return;
+					}
+
+					if ($(checkboxSelector).is(':checked') || false)
+					{
+						doWidgetSearch($.trim(term), Number(0));
+					}
+					else {
+						doWidgetSearch($.trim(term), 0);
+					}
+				});
+
+				// enter key handler for the search field
+				$(searchFieldSelector).keypress(function (e) {
+					var code = e.which || e.keyCode;
+					if (code === 13) {
+						e.preventDefault();
+						var $this = $(this);
+						var term = $this.val() + "";
+						if (!shouldSearch(term)) {
+							// do nothing until user types enough characters
+							$this.focus();
+							return false;
+						}
+
+						if ($(checkboxSelector).is(':checked') || false) {
+							doWidgetSearch($.trim(term), Number(0));
+						} else {
+							doWidgetSearch($.trim(term), 0);
+						}
+						return false;
+					}
+					return true;
+				});
+
+				// autocomplete: set minLength and guard source
+				if (true) {
+					var $searchField = $(searchFieldSelector).autocomplete({
+						minLength: minPrefixLength,
+						source: createWidgetAutoCompleteSource({
+							delay: autoCompleteDebounceDelay,
+							timeout: 10000,
+							shouldSearch: shouldSearch,
+							url: getAutoCompleteUrl,
+							success: function () {
+								$('.autoCompleteError').remove();
+							},
+							error: function (xmlhttprequest, textstatus, message) {
+								if (textstatus === "timeout") {
+									if ($(searchFieldSelector).siblings('.autoCompleteError').length == 0)
+										$('<span class="autoCompleteError"><p class="alert error">Search autocomplete is currently not responding. Please try again later.</p></span>').insertAfter($(searchFieldSelector));
+								}
+							}
+						}),
+						html: true,
+						delay: 0,
+						select: function (event, ui) {
+							$(this).val(ui.item.value);
+							$(this).next().click();
+						}
+					});
+
+					$searchField.data("ui-autocomplete")._renderItem = function (ul, item) {
+						return $("<li class=\"itemList\"></li>")
+							.data("ui-autocomplete-item", item)
+							.append("<a>" + item.label + "</a>")
+							.appendTo(ul);
+					};
+				}
+
+				// keep searchBtnApplyQuery consistent with prefix rule
+				window.searchBtnApplyQuery = function() {
+					var $field = $(searchFieldSelector);
+					var term = $field.val() + "";
+					if (shouldSearch(term)) {
+						// update href for the icon/button (if present)
+						var btn = document.getElementById("btnSearchIcon");
+						if (btn) btn.href = "/Search?searchPhrase=" + encodeURIComponent($.trim(term));
+					} else {
+						var btn = document.getElementById("btnSearchIcon");
+						if (btn) btn.href = "#";
+					}
+				};
+			}
+			catch(e) {} //we're going to eat this error. Autocomplete won't work but we dont wan't to break anything else on the page.
+		});
+	</script>
+
+	<section id="widgetPreviewSearch" class="widget widgetSearch skin43 widgetOptionSet15" style="display: block;" aria-label="Search">
+				<!-- For the button right and inside -->
+		<div class="widgetBody buttonRightInside">
+			<input class="widgetSearchBox widgetSearchBoxabddc995-bfe3-4eb0-9c16-00e929251eb2" cp5ph="true" id="searchFieldabddc995-bfe3-4eb0-9c16-00e929251eb2" name="searchField" onchange="searchBtnApplyQuery();" placeholder="Search..." type="text" value="" />
+						<a href="/Search/Results" id="btnSearchIcon" class="widgetSearchButton widgetSearchButtonabddc995-bfe3-4eb0-9c16-00e929251eb2" role="button"><img alt="Search" class="imageHover" data-hover="/ImageRepository/Document?documentID=54836" data-image="/ImageRepository/Document?documentID=54835" src="/ImageRepository/Document?documentID=54835" /></a>
+
+			<label class="searchLabel" aria-hidden="true" for="searchFieldabddc995-bfe3-4eb0-9c16-00e929251eb2">Search</label>
+		</div>
+
+	</section>
+
+
+<style scoped>
+	  
+		.widgetSearch ::-webkit-input-placeholder {
+		color: #2d2e2f;
+	  }
+		.widgetSearch :-moz-placeholder { /* Firefox 18- */
+	   color: #2d2e2f;
+	}
+		.widgetSearch ::-moz-placeholder {  /* Firefox 19+ */
+	   color: #2d2e2f;
+	}
+	.widgetSearch :-ms-input-placeholder {
+	   color: #2d2e2f;
+	}
+	
+
+	.widgetSearch .widgetBody .widgetSearchBoxabddc995-bfe3-4eb0-9c16-00e929251eb2
+	{
+		color: #2d2e2f;
+		height: 48px; background: #ededed; Font-family: Ubuntu; font-weight: 500; font-style: itlaic; font-size: 1.05em; padding: 0 40px 0 20px; border: none; border-radius: 47px; box-shadow:  inset 0 0 10px #333;
+	}
+	.widgetSearch .widgetBody .widgetSearchButtonabddc995-bfe3-4eb0-9c16-00e929251eb2
+	{
+		margin: 6px 8px 0px 0px;
+	}
+	.widgetSearch .widgetSearch-onlyDeptabddc995-bfe3-4eb0-9c16-00e929251eb2
+	{
+		display: inline-block;
+		color: #333;
+		
+		
+		 padding-top: 10px;
+	}
+	#ysnSearchOnlyDeptabddc995-bfe3-4eb0-9c16-00e929251eb2
+	{
+		position: relative;
+		top: .125em;
+	}
+
+</style>
+
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.min.css">
+<link rel="stylesheet" href="/Common/Controls/jquery-ui-1.14.1/jquery-ui.theme.min.css">
+
+
+
+<script type="text/javascript">
+	//Updates search icons href to have the correct queryString
+	function searchBtnApplyQuery() {
+		document.getElementById("btnSearchIcon").href = "/Search?searchPhrase=" + document.getElementById("searchFieldabddc995-bfe3-4eb0-9c16-00e929251eb2").value;
+	}
+</script>
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!----><div class="outer col col6 last" style="" data-widgetcontainerid="4a4546a0-9be1-4efb-8a41-4a9824b96340">				
+	<div class="row nest first last wide">
+	
+	<div class="inner col col6 first last id9551d923-7907-44c7-bcc2-0ae6bb17d577" style="" data-widgetcontainerid="9551d923-7907-44c7-bcc2-0ae6bb17d577">	
+<div data-widget-id="4879ede2-61ae-4f4f-bbef-658a2bee32f1" data-widget-controller-path="/Layout/WidgetSiteTools">
+
+		<script type="text/javascript">
+			$(document).ready(function () {
+				setWidgetServiceClicking($("#widgetSiteToolsHeader4879ede2-61ae-4f4f-bbef-658a2bee32f1"), true, function () {
+					var $widgetBody = $('#widgetSiteToolsBody4879ede2-61ae-4f4f-bbef-658a2bee32f1');
+
+					if ($widgetBody.is(':visible')) {
+						var menuItems = $('.widgetItem a', $widgetBody);
+
+						$(menuItems[0]).focus();
+
+						$('.widgetItem', $widgetBody).unbind("keydown").bind("keydown", function (e) {
+
+							if (e.which === 9) {
+								var index = menuItems.index(e.target);
+
+								if ((index === 0 && e.shiftKey) || (index === (menuItems.length - 1) && !e.shiftKey)) {
+									$("#widgetSiteToolsHeader4879ede2-61ae-4f4f-bbef-658a2bee32f1").trigger('click').focus();
+								}
+							}
+						});
+					} else {
+						$('.widgetItem', $widgetBody).unbind("keydown");
+					}
+				});
+			});
+		</script>
+	<style type="text/css">@media (max-width:400px) { .flyOut.widgetSiteTools { left: 5% !important; } }</style>
+
+	<section id="widgetSiteTools4879ede2-61ae-4f4f-bbef-658a2bee32f1" class="widget widgetSiteTools skin65 widgetOptionSet7 flyOutParent wide"  aria-label="Site Tools">
+				<header id="widgetSiteToolsHeader4879ede2-61ae-4f4f-bbef-658a2bee32f1" class="widgetHeader" tabindex="0" role="button" aria-haspopup="true">
+			<h3><img alt="Site Tools" class="imageHover" data-hover="/ImageRepository/Document?documentID=54838" data-image="/ImageRepository/Document?documentID=54837" src="/ImageRepository/Document?documentID=54837" /></h3>
+		</header>
+	<div id="widgetSiteToolsBody4879ede2-61ae-4f4f-bbef-658a2bee32f1" class="widgetBody whiteIcons flyOut bottom leftEdge widget widgetSiteTools skin65 cpGrid cpGrid1" style="display:none;">
+         <div class="row                   
+ wide">
+	<div class="col col1 first last">
+		<ol class="semanticList">
+					<li class="widgetItem"><a tabindex="0" role="button" aria-label="Site Tools Home" class="widgetSiteToolsHome siteToolsService" href="/">Home</a></li>
+					<li class="widgetItem"><a tabindex="0" role="button" aria-label="Site Tools My Account" class="widgetSiteToolsMyAccount siteToolsService" href="/MyAccount">My Account</a></li>
+					<li id="PrinterFriendly4879ede2-61ae-4f4f-bbef-658a2bee32f1" class="widgetItem"><a tabindex="0" aria-label="Site Tools Printer Friendly opens in new window" role="button" class="widgetSiteToolsPrinterFriendly siteToolsService" onkeypress="if (event.which == 13) { this.onclick(); }" onclick="Core.Layout.dynamicJavascript('printPreview();'); return false;" href="#PrinterFriendly4879ede2-61ae-4f4f-bbef-658a2bee32f1">Printer Friendly</a></li>
+					<li class="widgetItem"><a tabindex="0" role="button" aria-label="Site Tools Email Page" class="widgetSiteToolsEmailPage siteToolsService" href="/EmailPage">Email Page</a></li>
+					<li class="widgetItem"><a tabindex="0" role="button" aria-label="Site Tools Contact Us" class="widgetSiteToolsContactUs siteToolsService" href="/directory.aspx">Contact Us</a></li>
+					<li class="widgetItem"><a tabindex="0" role="button" aria-label="Site Tools RSS" class="widgetSiteToolsRSS siteToolsService" href="/rss.aspx">RSS</a></li>
+					<li class="widgetItem"><a tabindex="0" role="button" aria-label="Site Tools Site Map" class="widgetSiteToolsSiteMap siteToolsService" href="/SiteMap">Site Map</a></li>
+					<li id="TranslatePage4879ede2-61ae-4f4f-bbef-658a2bee32f1" class="widgetItem"><a tabindex="0" aria-label="Site Tools Translate Page opens in new window" role="button" class="widgetSiteToolsTranslatePage siteToolsService" onkeypress="if (event.which == 13) { this.onclick(); }" onclick="Core.Layout.dynamicJavascript('window.open(\&#39;https://translate.google.com/translate?js=n&amp;sl=auto&amp;tl=es&amp;u=\&#39; + document.location.href, \&quot;TranslateWindow\&quot;);'); return false;" href="#TranslatePage4879ede2-61ae-4f4f-bbef-658a2bee32f1">Translate Page</a></li>
+					<li class="widgetItem"><a tabindex="0" role="button" aria-label="Site Tools Notifications" class="widgetSiteToolsNotifications siteToolsService" href="/list.aspx">Notifications</a></li>
+					<li class="widgetItem"><a tabindex="0" role="button" aria-label="Site Tools Documents" class="widgetSiteToolsDocuments siteToolsService" href="/DocumentCenter">Documents</a></li>
+		</ol>
+	</div>
+
+		 </div>
+	</div>
+
+	</section>
+
+
+
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</aside><nav data-cpRole="nav" id="mainNav" class="siteNav mainNav" role="navigation">
+<ol id="mainNavMenu" data-parent="1" class="rootNavMenu" role="menu"><!--
+--><li id="MainItem31" class="topMenuItem" role="none" data-pageid="31" data-displaymegamenu="True"><!--
+			--><!--
+			--> <a role = "menuitem"  aria-haspopup=true aria-expanded='false' aria-controls="mainNavMegaMenu31" id = "mainNavCountyServices" class="navMainItem mainNavItem mainNavItem1 " href="/31/County-Services" target = "_self" >   County Services  </a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem127" class="topMenuItem" role="none" data-pageid="127" data-displaymegamenu="True"><!--
+			--><!--
+			--> <a role = "menuitem"  aria-haspopup=true aria-expanded='false' aria-controls="mainNavMegaMenu127" id = "mainNavYourGovernment" class="navMainItem mainNavItem mainNavItem2 " href="/127/Your-Government" target = "_self" >   Your Government  </a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem35" class="topMenuItem" role="none" data-pageid="35" data-displaymegamenu="True"><!--
+			--><!--
+			--> <a role = "menuitem"  aria-haspopup=true aria-expanded='false' aria-controls="mainNavMegaMenu35" id = "mainNavDoingBusiness" class="navMainItem mainNavItem mainNavItem3 " href="/35/Doing-Business" target = "_self" >   Doing Business  </a>			<!--
+			--><!--
+			--></li><!----><li id="MainItem9" class="topMenuItem" role="none" data-pageid="9" data-displaymegamenu="True"><!--
+			--><!--
+			--> <a role = "menuitem"  aria-haspopup=true aria-expanded='false' aria-controls="mainNavMegaMenu9" id = "mainNavOurCommunity" class="navMainItem mainNavItem mainNavItem4 " href="/9/Our-Community" target = "_self" >   Our Community  </a>			<!--
+			--><!--
+			--></li><!---->
+</ol>
+
+
+	<script type="text/javascript">
+		(function () {
+			function setupMenu() {
+				const menuID = 'mainNavMenu';
+				const menuType = MAIN_MENU;
+
+				//setup menu manager properties for main menu
+				if (!menuManager.mobileMainNav && true)
+					menuManager.adjustMainItemsWidth('#' + menuID);
+				menuManager.isMainMenuEditable = false;
+				menuManager.mainMenuMaxSubMenuLevels = 4;
+				menuManager.setMOMMode(2, menuType);
+
+				//Init main menu
+				const setupDraggable = menuManager.isMainMenuEditable;
+				const urlToGetHiddenMenus = '/Pages/MenuMain/HiddenMainSubMenus?pageID=1&moduleID=&themeID=25&menuContainerID=mainNav';
+
+				menuManager.setupMenu(menuID, 'mainNav', menuType, setupDraggable, urlToGetHiddenMenus);
+				menuManager.mainMenuInit = true;
+				menuManager.mainMenuTextResizer = true;
+				if (1.00 > 0)
+					menuManager.mainMenuTextResizerRatio = 1.00;
+				if (window.isResponsiveEnabled)
+					menuManager.mainMenuReady.resolve();
+
+			}
+
+			if (document.readyState === "complete"
+				|| document.readyState === "loaded"
+				|| document.readyState === "interactive") {
+				setupMenu();
+				return;
+			}
+
+			document.addEventListener("DOMContentLoaded", setupMenu);
+		})();
+	</script>
+
+
+<aside data-cpRole="megaMenu" id="megaMenu" class="megaMenu" style="display: none;"><input type="hidden" id="megaMenuPopupDirection" value="0"><input type="hidden" id="megaMenuWidthReference" value="1"><aside role="menu" data-cpRole="contentContainer" id="mainNavMegaMenu31" class="contentTop mainNavMegaMenu megaMenuContainer pageID_31 hidden" data-orientation="horizontal">	<div id="cc928de31e-d71c-4bcd-b8ab-c7599e986d3b" data-containerid="928de31e-d71c-4bcd-b8ab-c7599e986d3b" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cpRole="contentContainer" id="mainNavMegaMenu127" class="contentTop mainNavMegaMenu megaMenuContainer pageID_127 hidden" data-orientation="horizontal">	<div id="cc6b2f004a-5573-4a10-b364-91a87cf30677" data-containerid="6b2f004a-5573-4a10-b364-91a87cf30677" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cpRole="contentContainer" id="mainNavMegaMenu35" class="contentTop mainNavMegaMenu megaMenuContainer pageID_35 hidden" data-orientation="horizontal">	<div id="cc2f50a2a2-1a3c-425e-89f8-242a934b9f13" data-containerid="2f50a2a2-1a3c-425e-89f8-242a934b9f13" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside><aside role="menu" data-cpRole="contentContainer" id="mainNavMegaMenu9" class="contentTop mainNavMegaMenu megaMenuContainer pageID_9 hidden" data-orientation="horizontal">	<div id="cc07c7e2e3-77d4-4760-bba6-a69a8f6ab4e8" data-containerid="07c7e2e3-77d4-4760-bba6-a69a8f6ab4e8" class="pageContent cpGrid cpGrid24">
+				                
+
+
+
+	</div>
+</aside></aside></nav></div>
+</div></header></div>
+</div><div data-cpRole="structuralContainer" id="structuralContainer6">
+<div data-cpRole="structuralContainer" id="structuralContainer7">
+<div class="siteWrap2"><div data-cpRole="structuralContainer" id="structuralContaine8" class="mainWrap" role="main">
+<div data-cpRole="structuralContainer" id="structuralContainer9" class="outerContentWrap">
+<div data-cpRole="structuralContainer" id="structuralContainer10" class="contentWrap"><div class="inner">
+<div data-cpRole="breadCrumbs" class="breadCrumbContainer" id="breadCrumbs">		<ol class="semanticList breadCrumbs">
+			<li><a class="breadCrumb" href="/">Home</a></li><li><a class="breadCrumb" href="/127/Your-Government">Your Government</a></li><li><a class="breadCrumb" href="/1508/Finance-Records">Finance & Records</a></li><li><a class="breadCrumb" href="/176/Auditor">Auditor</a></li><li><a class="breadCrumb" href="/224/Elections-Voter-Registration">Elections & Voter Registration</a></li><li><a class="breadCrumb" href="/6790/Voting">Voting</a></li><li id="currentBCPage" data-pageid="5722"><a href class="breadCrumb" aria-current="page">Candidates and Measures on the Ballot</a></li>
+		</ol>
+	<div class="contentTools">
+			<a href="/Pages/ViewArchives/Index/5722" title="View archive" class="viewArchiveLink">View archive</a>
+			</div>
+
+	   
+    
+</div><div data-cpRole="mainContentContainer" id="moduleContent">
+	
+	<div id="page" class="moduleContentNew">
+		
+
+	<input id="hdnPageID" name="hdnPageID" type="hidden" value="5722" />
+	<input id="hdnParentID" name="hdnParentID" type="hidden" value="6790" />
+	<input id="hdnVersionID" name="hdnVersionID" type="hidden" value="112452" />
+	<input id="pageMenuTitle" name="pageMenuTitle" type="hidden" value="Candidates and Measures on the Ballot" />
+	<input id="pageShowFeatureColumn" name="pageShowFeatureColumn" type="hidden" value="False" />
+	<input id="hdnIsLayoutPage" name="hdnIsLayoutPage" type="hidden" value="False" />
+	<input id="hdnPageStatus" name="hdnPageStatus" type="hidden" value="Published" />
+
+				<h1 id="versionHeadLine" class="headline">
+
+Candidates and Measures on the Ballot		</h1>
+	
+		<div id="cc5f8c90dc-b4cb-431b-90ee-10648f8df655" data-containerid="5f8c90dc-b4cb-431b-90ee-10648f8df655" class="pageContent cpGrid cpGrid24"  data-contentcontainerbreakpoint="15" data-smoothscrolling="True">
+			
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="" data-widgetcontainerid="66996ea9-5632-4251-b6cd-faa7c1738419">				
+	<div class="row nest first last wide">
+	
+	<div class="inner col col24 first last id5ddb18ad-6cac-44e7-848a-5ab76d6d6b5d" style="" data-widgetcontainerid="5ddb18ad-6cac-44e7-848a-5ab76d6d6b5d">	
+<div class="widget editor pageStyles narrow" id="divEditor4e3e05df-0015-43d8-9f29-a7063b63a539" data-elementqueryclasses='{"wide-narrow":"min-width:25em"}'>
+	    <div class="fr-view">
+
+
+        <p>Find official information about what&apos;s on your ballot for the current election, including voters&apos; guides, a sample ballot, ballot measures, resolutions received, and other important ballot information.</p><p><br></p><div style="border-left: 3px solid #E5E7EB;"><h2 style="margin: 0 0 1em 1em;"><strong>Jump to Section:</strong></h2><ul style="list-style: none;"><li style="margin:.35rem 0;"><a style="color:#344B5E;" href="#Sample-Ballot">Sample Ballot</a></li><li style="margin:.35rem 0;"><a style="color:#344B5E;" href="#Voters-Guides">Voters&apos; Guides</a></li><li style="margin:.35rem 0;"><a style="color:#344B5E;" href="#Current-LVP-Editions">View Current Voters&apos; Pamphlet Editions</a></li><li style="margin:.35rem 0;"><a style="color:#284860;" href="#Resolutions">Resolutions Submitted by Districts</a></li><li style="margin:.35rem 0;"><a style="color:#344B5E;" href="#About-Ballot-Measures">About Measures on the Ballot</a></li><li style="margin:.35rem 0;"><a style="color:#344B5E;" href="#About-Candidates">About Candidates on the Ballot</a></li></ul></div><hr style="border:1px solid black;" id="Sample-Ballot" aria-hidden="true"><h2 style="background-color:#284860; color:white; font-weight: 700; padding: 5px;margin-top:1em; margin-bottom:1em;">What&apos;s on the Ballot</h2><p>The sample ballot contains all the candidates and/or measures that will be voted on in Snohomish County. It may look different from the official ballot you receive in the mail, which has only the candidates and/or measures you are eligible to vote on.</p><ul><li><h3><a href="/DocumentCenter/View/128277" target="_blank" rel="noopener"><strong>Sample Ballot</strong> (PDF)</a></h3></li></ul><hr style="border:1px solid black;" id="Voters-Guides" aria-hidden="true"><h2 style="background-color:#284860; color:white; font-weight: 700; padding: 5px;margin-top:1em; margin-bottom:1em;">Finding Information on Candidates and Measures</h2><p>Your voters&rsquo; guide is the best place to get information on the candidates and measures that appear on your ballot. The voters&rsquo; guide lets candidates tell you who they are and what they stand for. Explanations of bond and levy measures, as well as statements for and against each measure, are also included in the voters&apos; guide.<br><br>The voters&apos; guide is available in two formats:</p><ul style="margin-bottom:0px;"><li><h3><a href="https://voter.votewa.gov/WhereToVote.aspx" class="external_link"><strong>Online Voters&rsquo; Guide (VoteWA)</strong></a></h3>Contains only the candidates and issues on your ballot. Once you log in, click on the &quot;Voters&rsquo; Guide&quot; tab on the left of your screen.&nbsp;<br><br></li><li><h3><strong>Local Voters&apos; Pamphlet</strong></h3>Includes information on candidates and/or measures that will be voted on in Snohomish County. Every household is mailed one Local Voters&apos; Pamphlet in primary and general elections. It is mailed either as an insert with the ballot or separately to households for special elections.<br><br><a href="/DocumentCenter/View/149774" target="_blank" rel="noopener"><strong>View the</strong><strong>&nbsp;Local Voters&apos; Pamphlet (PDF)</strong><br></a></li><li><h3><a href="https://lwvsnoho.org/content.aspx?page_id=22&club_id=108940&module_id=563630" class="external_link"><strong>League of Women Voters&apos; Candidate Forums</strong></a></h3>These nonpartisan candidate forums, hosted by the <a href="https://lwvsnoho.org/">Snohomish County League of Women Voters</a>, provide an opportunity for voters to hear directly from candidates in contested races as they respond to questions from a moderator. Voters can tune in for the live streams or view the recordings.</li></ul>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '4e3e05df-0015-43d8-9f29-a7063b63a539'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="" data-widgetcontainerid="de46c412-96b3-4ab5-9843-606b647ee681">				
+	<div class="row nest first wide">
+	
+	<div class="inner col col24 first last id958b4fbb-59be-42b6-8921-acd38e8f412c" style="" data-widgetcontainerid="958b4fbb-59be-42b6-8921-acd38e8f412c">	
+<div class="widget editor pageStyles narrow" id="divEditor0589926a-1b75-4429-90cc-ea0b26fd481b" data-elementqueryclasses='{"wide-narrow":"min-width:25em"}'>
+	    <div class="fr-view">
+
+
+        <hr style="border:1px solid black;" aria-hidden="true" id="Resolutions"><h2 style="background-color:#284860; color:white; font-weight: 700; padding: 5px;margin-top:1em; margin-bottom:1em;">Ballot Resolutions Submitted by Districts</h2><p>Local ballot measures are placed on the ballot by local districts. To do this, the district must submit a resolution to the Snohomish County Auditor&apos;s Office calling for an election. The district also provides an explanatory statement and identifies people to write statements in support of and in opposition to the measure. This information is used to prepare the local voters&apos; pamphlet and place the measure on the ballot.<br><br>The full resolution does not appear on the ballot. Ballot language is developed separately and may differ from the wording used in the resolution.<br><br></p><p id="About-Ballot-Measures" style="margin-bottom:0px;"><strong>Expand the section below to see the resolutions submitted by districts for the August 4 Primary.</strong></p>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '0589926a-1b75-4429-90cc-ea0b26fd481b'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+	<div class="row nest last wide">
+	
+	<div class="inner col col24 first last id3bbafbd5-523c-461d-8fa2-54d21109f038" style="" data-widgetcontainerid="3bbafbd5-523c-461d-8fa2-54d21109f038">	
+
+	<div id="divTabbed73b28f71-4de1-4a8d-a5e1-2b6de72b2f08" class="widget widgetTabbed narrow skin105 accordionTabs" data-widgetid="73b28f71-4de1-4a8d-a5e1-2b6de72b2f08">
+
+		<div class="cpTabPanels">
+					<ol class="tabbedWidgetNarrow cpTabs  accordion"  aria-hidden="False.ToString().ToLowerInvariant()" >
+						<li class="" role="presentation">	<a href="#tab73b28f71-4de1-4a8d-a5e1-2b6de72b2f08_0" class="tabButton" id="tabBtnNarrow73b28f71-4de1-4a8d-a5e1-2b6de72b2f08_0" role="button" aria-controls="tab73b28f71-4de1-4a8d-a5e1-2b6de72b2f08_0" aria-expanded="false" ><span class="tabName editable" data-sequence="0" data-tabname="View Resolutions Received for the Current Election" contenteditable="false">View Resolutions Received for the Current Election</span></a>
+</li>
+					</ol>
+				<div class="tabbedWidget cpTabPanel " style="display: none;" id="tab73b28f71-4de1-4a8d-a5e1-2b6de72b2f08_0" role="region" aria-labelledby="tabBtn73b28f71-4de1-4a8d-a5e1-2b6de72b2f08_0" >
+
+<div class="widget editor pageStyles narrow" id="divEditor3667a7bc-92b6-4e0e-9a9a-e3f79c823f0d" data-elementqueryclasses='{"wide-narrow":"min-width:25em"}'>
+	    <div class="fr-view">
+
+
+        <p><strong>August 4 Primary</strong></p><p data-pasted="true"><a href="/DocumentCenter/View/148417" target="_blank" rel="noopener">City of Everett Proposition No. 1 (PDF)</a></p><p><a href="/DocumentCenter/View/148428" target="_blank" rel="noopener">City of Stanwood Proposition No. 1 (PDF)</a></p><p><a href="/DocumentCenter/View/148418" target="_blank" rel="noopener">Darrington School District No. 330 Proposition No. 1 (PDF)</a></p><p><a href="/DocumentCenter/View/148419" target="_blank" rel="noopener">Fire Protection District No. 15 Proposition No. 1 (PDF)</a></p><p><a href="/DocumentCenter/View/148420" target="_blank" rel="noopener">Fire Protection District No. 19 Proposition No. 1 (PDF)</a></p><p><a href="/DocumentCenter/View/148423" target="_blank" rel="noopener">Snohomish Regional Fire &amp; Rescue Proposition No. 1 (PDF)</a></p><p><a href="/DocumentCenter/View/148421" target="_blank" rel="noopener">Public Hospital District No. 1 Proposition No. 1 (PDF)</a></p><p><a href="/DocumentCenter/View/148422" target="_blank" rel="noopener">Sno-Isle Intercounty Rural Library District Proposition No. 1 (PDF)</a></p><p><br></p><p><strong>November 3 General Election</strong></p><p><a href="/DocumentCenter/View/150228" target="_blank" rel="noopener">Snohomish County (Proposed Charter Amendments) Propositions 1-5 (PDF)</a></p><p><a href="/DocumentCenter/View/150229" target="_blank" rel="noopener">Public Hospital District No. 1 Proposition No. 1 (PDF)</a></p>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '3667a7bc-92b6-4e0e-9a9a-e3f79c823f0d'));
+	});
+</script>
+</div>
+				</div>
+				<div class="tabbedWidget cpTabPanel " style="display: none;" id="tab73b28f71-4de1-4a8d-a5e1-2b6de72b2f08_1" role="region" aria-labelledby="tabBtn73b28f71-4de1-4a8d-a5e1-2b6de72b2f08_1" >
+							<ol class="cpForm selfClear">
+								<li class="left">
+									<label for="txtTabName">Tab Name</label>
+								</li>
+							</ol>
+				</div>
+					</div>
+	</div>
+	<script type="text/javascript">
+
+		//If responsive not enabled, execute this after a timeout
+		if(!isResponsiveEnabled)
+		{
+			window.setTimeout(function(){
+				var tabbedWidgetID = 'divTabbed73b28f71-4de1-4a8d-a5e1-2b6de72b2f08';
+				typeof setTabbedWidgetsTabHeight === "function" && setTabbedWidgetsTabHeight(tabbedWidgetID);
+			}, 1500);
+		}
+
+		function reinitCarousels() {
+			if (window.carouselsToInit) {
+				for (var i = 0; i < window.carouselsToInit.length; i++) {
+					carouselsToInit[i]();
+				}
+			}
+		}
+		function sizeTabbedContent(element){
+			if(window.Pages){
+				if(window.Pages.onResizeHandlers){
+					var setTabbedInterval = setInterval(function () {
+						window.Pages.onResizeHandlers.forEach(function(car){car();});
+					}, 25)
+
+
+					setTimeout(function () {
+						clearInterval(setTabbedInterval);
+						if ($.cookie("enableLiveEdit") === "true") {
+							setInterval(function () {
+								window.Pages.onResizeHandlers.forEach(function(car){car();});
+							}, 2000);
+						}
+					}, 2500);
+					element.onclick="window.setTimeout(function(){reinitCarousels();},2);"
+				}
+			}
+		}
+
+		function adjustTab(e) {
+			e.preventDefault();
+			window.setTimeout(function(){
+				reinitCarousels();
+			}, 2);
+			sizeTabbedContent(this);
+		}
+
+		var tabButtons = document.querySelectorAll("#divTabbed73b28f71-4de1-4a8d-a5e1-2b6de72b2f08 .tabButton");
+
+		tabButtons.forEach(function (tabButton) {
+			tabButton.addEventListener("click", adjustTab);
+		});
+
+	</script>
+
+
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="" data-widgetcontainerid="f30db5f0-df40-43f4-b1cf-fd8ed493ebf4">				
+	<div class="row nest first last wide">
+	
+	<div class="inner col col24 first last id54bca2b3-44e5-495f-b019-87960c9e8092" style="" data-widgetcontainerid="54bca2b3-44e5-495f-b019-87960c9e8092">	
+<div class="widget editor pageStyles narrow" id="divEditor98bd59f5-3792-4c27-abe6-3ecb64ed1036" data-elementqueryclasses='{"wide-narrow":"min-width:25em"}'>
+	    <div class="fr-view">
+
+
+        <h3 style="margin-bottom: 0px;">Common questions about ballot measures (click or tap to expand):</h3>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '98bd59f5-3792-4c27-abe6-3ecb64ed1036'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="" data-widgetcontainerid="949a90d6-5b2c-41c3-844e-d3476afcdfc4">				
+	<div class="row nest first last wide">
+	
+	<div class="inner col col24 first last idd830a99a-8156-47ba-a5e0-a58992b7dee7" style="" data-widgetcontainerid="d830a99a-8156-47ba-a5e0-a58992b7dee7">	
+
+	<div id="divTabbed6bd0eb39-f1c5-4ba7-a1ed-79fe2b111c61" class="widget widgetTabbed narrow skin105 accordionTabs" data-widgetid="6bd0eb39-f1c5-4ba7-a1ed-79fe2b111c61">
+
+		<div class="cpTabPanels">
+					<ol class="tabbedWidgetNarrow cpTabs  accordion"  aria-hidden="False.ToString().ToLowerInvariant()" >
+						<li class="" role="presentation">	<a href="#tab6bd0eb39-f1c5-4ba7-a1ed-79fe2b111c61_0" class="tabButton" id="tabBtnNarrow6bd0eb39-f1c5-4ba7-a1ed-79fe2b111c61_0" role="button" aria-controls="tab6bd0eb39-f1c5-4ba7-a1ed-79fe2b111c61_0" aria-expanded="false" ><span class="tabName editable" data-sequence="0" data-tabname="What are ballot measures?" contenteditable="false">What are ballot measures?</span></a>
+</li>
+					</ol>
+				<div class="tabbedWidget cpTabPanel " style="display: none;" id="tab6bd0eb39-f1c5-4ba7-a1ed-79fe2b111c61_0" role="region" aria-labelledby="tabBtn6bd0eb39-f1c5-4ba7-a1ed-79fe2b111c61_0" >
+
+<div class="widget editor pageStyles narrow" id="divEditor9f8a03f3-051e-471f-ba12-19d2fad6766e" data-elementqueryclasses='{"wide-narrow":"min-width:25em"}'>
+	    <div class="fr-view">
+
+
+        <p>A ballot measure is a question that voters are asked to approve or reject in an election. Local districts use ballot measures to make decisions or raise funding for services and projects. A short summary for each measure is included on the ballot, and the full details are provided in the voters&apos; pamphlet. There are different types of measures:<br><br></p><ul><li><strong>Levy:&nbsp;</strong>Usually provides funding for ongoing local services like schools, fire protection, emergency medical services, hospitals, libraries, and more. School levies only need a simple majority of &quot;yes&quot; votes, while others require a 60% supermajority. Levy measures expire after a set number of years, and voter approval is required to renew the levy.<br><br></li><li><strong>Bond:</strong> Allows a district to borrow funds for major capital projects, like building schools or public facilities. Funds are repaid over time through property taxes. Bonds always require a 60% supermajority and a minimum voter turnout.&nbsp;<br><br></li><li><strong>Other measures:</strong> Can include sales taxes, levy lid lifts, and non-revenue measures that require voter approval.&nbsp;</li></ul><p>Some measures are placed on the ballot through petition initiatives or referenda. Learn more about how these work on our <a href="https://www.snohomishcountywa.gov/5736/Petitions-for-Initiatives-and-Referenda">Petitions for Initiatives and Referenda</a> page.</p>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '9f8a03f3-051e-471f-ba12-19d2fad6766e'));
+	});
+</script>
+</div>
+				</div>
+					<ol class="tabbedWidgetNarrow cpTabs  accordion"  aria-hidden="False.ToString().ToLowerInvariant()" >
+						<li class="" role="presentation">	<a href="#tab6bd0eb39-f1c5-4ba7-a1ed-79fe2b111c61_1" class="tabButton" id="tabBtnNarrow6bd0eb39-f1c5-4ba7-a1ed-79fe2b111c61_1" role="button" aria-controls="tab6bd0eb39-f1c5-4ba7-a1ed-79fe2b111c61_1" aria-expanded="false" ><span class="tabName editable" data-sequence="1" data-tabname="How are ballot measures passed?" contenteditable="false">How are ballot measures passed?</span></a>
+</li>
+					</ol>
+				<div class="tabbedWidget cpTabPanel " style="display: none;" id="tab6bd0eb39-f1c5-4ba7-a1ed-79fe2b111c61_1" role="region" aria-labelledby="tabBtn6bd0eb39-f1c5-4ba7-a1ed-79fe2b111c61_1" >
+
+<div class="widget editor pageStyles narrow" id="divEditor47e4ac5c-823a-4068-aabd-53c48550bfd2" data-elementqueryclasses='{"wide-narrow":"min-width:25em"}'>
+	    <div class="fr-view">
+
+
+        <p>Not all ballot measures are approved the same way. Some only need a simple majority of more than 50% of the votes to pass, while others have a higher threshold of requirements or additional rules. Here&apos;s a breakdown:<br>&nbsp;</p><ul><li><strong>Simple Majority Measures:</strong> Most measures, like sales taxes, school levies, and levy lid lifts, pass if more than 50% of voters vote &quot;yes.&quot; No minimum voter turnout is required.<br><br></li><li><strong>Supermajority Measures:&nbsp;</strong>Other measures require at least 60% &quot;yes&quot; votes, or a supermajority, to pass.&nbsp;<br><br></li><li><strong>Turnout Rules</strong><strong>:&nbsp;</strong>Certain measures also require a minimum number of voters to participate, based off voter turnout in the last general election:<br><br></li><li style="margin-left: 40px; list-style-type: circle;"><strong>Bonds:&nbsp;</strong>Must receive 60% &quot;yes&quot; votes <em><strong>and</strong></em><strong>&nbsp;</strong>at least 40% turnout of the voters who participated in the last general election. So, a bond measure could receive the required number of &quot;yes&quot; votes and still fail if not enough people vote in the election.<br><br></li><li style="margin-left: 40px; list-style-type: circle;"><strong>Levy ballot measure:</strong> Must receive at least 60% &ldquo;yes&rdquo; votes and meet validation requirements based on voter participation in the most recent general election. Validation is met either through sufficient voter turnout or by meeting a minimum number of &ldquo;yes&rdquo; votes set by law.<br>&nbsp;</li><li><strong>School Levies:</strong> Only a simple majority of votes cast is required.</li></ul><p>For more detailed information, see <a href="https://www.snohomishcountywa.gov/DocumentCenter/View/96/Validation-Requirements?bidId=" data-docaccess-source-url="https://www.snohomishcountywa.gov/DocumentCenter/View/96/Validation-Requirements?bidId=" data-url-hash="e31df44a2ddb158d4057d434adb97c28322b5e56e295a5e7e2ca0c7839ecc188" data-url-status="disabled" class="docaccess-activated"><strong>Validation Requirements (PDF)</strong></a>.&nbsp;Specific details about the ballot measures that appear on your ballot can be found in the voters&apos; pamphlet. If you have additional questions, please reach out to the district&apos;s representative.</p>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '47e4ac5c-823a-4068-aabd-53c48550bfd2'));
+	});
+</script>
+</div>
+				</div>
+					<ol class="tabbedWidgetNarrow cpTabs  accordion"  aria-hidden="False.ToString().ToLowerInvariant()" >
+						<li class="" role="presentation">	<a href="#tab6bd0eb39-f1c5-4ba7-a1ed-79fe2b111c61_2" class="tabButton" id="tabBtnNarrow6bd0eb39-f1c5-4ba7-a1ed-79fe2b111c61_2" role="button" aria-controls="tab6bd0eb39-f1c5-4ba7-a1ed-79fe2b111c61_2" aria-expanded="false" ><span class="tabName editable" data-sequence="2" data-tabname="If a levy or bond passes, how will it affect my taxes and local services?" contenteditable="false">If a levy or bond passes, how will it affect my taxes and local services?</span></a>
+</li>
+					</ol>
+				<div class="tabbedWidget cpTabPanel " style="display: none;" id="tab6bd0eb39-f1c5-4ba7-a1ed-79fe2b111c61_2" role="region" aria-labelledby="tabBtn6bd0eb39-f1c5-4ba7-a1ed-79fe2b111c61_2" >
+
+<div class="widget editor pageStyles narrow" id="divEditor507cfb16-0006-42a9-b441-7c96cdb33c67" data-elementqueryclasses='{"wide-narrow":"min-width:25em"}'>
+	    <div class="fr-view">
+
+
+        <p>When a levy/bond passes, the impact on the services your community receives and the taxes you may pay depends greatly on your unique situation. For the information on proposed uses for funding measures, see your voters&rsquo; guide or reach out to your district representative. You can find your elected officials on <a href="//VoteWA.gov">VoteWA.gov</a> or by using our&nbsp;<a href="https://experience.arcgis.com/experience/0a219ac968ee4ddc833491fc7b7a7ca9/">interactive district map</a>.<br><br>For information on how your current property taxes are distributed, please visit the <a href="https://www.snohomishcountywa.gov/2934/Assessor">Snohomish County Assessor&rsquo;s website</a>.</p>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '507cfb16-0006-42a9-b441-7c96cdb33c67'));
+	});
+</script>
+</div>
+				</div>
+					</div>
+	</div>
+	<script type="text/javascript">
+
+		//If responsive not enabled, execute this after a timeout
+		if(!isResponsiveEnabled)
+		{
+			window.setTimeout(function(){
+				var tabbedWidgetID = 'divTabbed6bd0eb39-f1c5-4ba7-a1ed-79fe2b111c61';
+				typeof setTabbedWidgetsTabHeight === "function" && setTabbedWidgetsTabHeight(tabbedWidgetID);
+			}, 1500);
+		}
+
+		function reinitCarousels() {
+			if (window.carouselsToInit) {
+				for (var i = 0; i < window.carouselsToInit.length; i++) {
+					carouselsToInit[i]();
+				}
+			}
+		}
+		function sizeTabbedContent(element){
+			if(window.Pages){
+				if(window.Pages.onResizeHandlers){
+					var setTabbedInterval = setInterval(function () {
+						window.Pages.onResizeHandlers.forEach(function(car){car();});
+					}, 25)
+
+
+					setTimeout(function () {
+						clearInterval(setTabbedInterval);
+						if ($.cookie("enableLiveEdit") === "true") {
+							setInterval(function () {
+								window.Pages.onResizeHandlers.forEach(function(car){car();});
+							}, 2000);
+						}
+					}, 2500);
+					element.onclick="window.setTimeout(function(){reinitCarousels();},2);"
+				}
+			}
+		}
+
+		function adjustTab(e) {
+			e.preventDefault();
+			window.setTimeout(function(){
+				reinitCarousels();
+			}, 2);
+			sizeTabbedContent(this);
+		}
+
+		var tabButtons = document.querySelectorAll("#divTabbed6bd0eb39-f1c5-4ba7-a1ed-79fe2b111c61 .tabButton");
+
+		tabButtons.forEach(function (tabButton) {
+			tabButton.addEventListener("click", adjustTab);
+		});
+
+	</script>
+
+
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="" data-widgetcontainerid="c1bc2afb-3296-4a8d-b26d-8da1bf186ccc">				
+	<div class="row nest first last wide">
+	
+	<div class="inner col col24 first last idc2b8d267-f1e3-45da-82fe-cd22d310e113" style="" data-widgetcontainerid="c2b8d267-f1e3-45da-82fe-cd22d310e113">	
+<div class="widget editor pageStyles narrow" id="divEditora2b90bc0-c466-4d4b-a737-18c1d7a48ab5" data-elementqueryclasses='{"wide-narrow":"min-width:25em"}'>
+	    <div class="fr-view">
+
+
+        <hr style="border:1px solid black;" id="About-Candidates" aria-hidden="true"><h2 style="background-color:#284860; color:white; font-weight: 700; padding: 5px;margin-top:1em; margin-bottom:1em;">Candidates on the Ballot</h2><p>Candidate filing takes place during the first full week of May. This is when individuals officially submit their paperwork to run for federal, state, or local office.<br><br>After candidate filing closes, a primary election is held in August to narrow the field of candidates before the General Election in November.&nbsp;<br><br><strong data-pasted="true">Nonpartisan&nbsp;</strong><strong>offices:&nbsp;</strong>Candidates appear on the primary ballot only if more than two people filed for the position. If two or fewer candidates filed for the position, they advance directly to the General Election.<br><br><strong>Partisan offices:&nbsp;</strong>Candidates running for partisan offices always appear on the primary ballot, even if only one or two candidates filed for the position. A partisan office is a government position in which candidates may specify a political party preference, but their stated preference does not mean the party endorses or approves the candidate.&nbsp;<br><br></p><p>To view the offices that affect your area, enter your address in our&nbsp;<a href="https://experience.arcgis.com/experience/0a219ac968ee4ddc833491fc7b7a7ca9/">Find Your District and Elected Officials interactive map</a>.<br><br></p><h3>Common questions about candidates on the ballot (click or tap to expand):</h3>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + 'a2b90bc0-c466-4d4b-a737-18c1d7a48ab5'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="" data-widgetcontainerid="12d208b3-00e8-41c6-a997-8cb76a2c25a0">				
+	<div class="row nest first last wide">
+	
+	<div class="inner col col24 first last ide7fd1228-d203-42a3-92a7-fc22bf9c4dc6" style="" data-widgetcontainerid="e7fd1228-d203-42a3-92a7-fc22bf9c4dc6">	
+
+	<div id="divTabbed193e3605-d4e1-4782-8982-6bbd493a9828" class="widget widgetTabbed narrow skin105 accordionTabs" data-widgetid="193e3605-d4e1-4782-8982-6bbd493a9828">
+
+		<div class="cpTabPanels">
+					<ol class="tabbedWidgetNarrow cpTabs  accordion"  aria-hidden="False.ToString().ToLowerInvariant()" >
+						<li class="" role="presentation">	<a href="#tab193e3605-d4e1-4782-8982-6bbd493a9828_0" class="tabButton" id="tabBtnNarrow193e3605-d4e1-4782-8982-6bbd493a9828_0" role="button" aria-controls="tab193e3605-d4e1-4782-8982-6bbd493a9828_0" aria-expanded="false" ><span class="tabName editable" data-sequence="0" data-tabname="Why don&#39;t I see a particular candidate on my ballot?" contenteditable="false">Why don't I see a particular candidate on my ballot?</span></a>
+</li>
+					</ol>
+				<div class="tabbedWidget cpTabPanel " style="display: none;" id="tab193e3605-d4e1-4782-8982-6bbd493a9828_0" role="region" aria-labelledby="tabBtn193e3605-d4e1-4782-8982-6bbd493a9828_0" >
+
+<div class="widget editor pageStyles narrow" id="divEditor37808170-09cc-46b8-95da-916c3811e6e3" data-elementqueryclasses='{"wide-narrow":"min-width:25em"}'>
+	    <div class="fr-view">
+
+
+        <p>We use your residential address to determine the candidates and measures that appear on your ballot. You can check your local, state, and federal districts and elected officials using our&nbsp;<a href="https://experience.arcgis.com/experience/0a219ac968ee4ddc833491fc7b7a7ca9/" target="_blank" rel="noopener" aria-describedby="audioeye_new_window_message" class="external_link">interactive district map</a>.<br><br>In a primary election, candidates who have filed for a <strong>partisan position</strong> will always appear on the primary ballot, regardless of how many people filed to run for that position. Candidates who have filed for a&nbsp;<strong>nonpartisan position&nbsp;</strong>appear on the primary ballot only if more than two candidates filed for that position. Otherwise, they will advance directly to the general election in November.<br><br></p>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '37808170-09cc-46b8-95da-916c3811e6e3'));
+	});
+</script>
+</div>
+				</div>
+					<ol class="tabbedWidgetNarrow cpTabs  accordion"  aria-hidden="False.ToString().ToLowerInvariant()" >
+						<li class="" role="presentation">	<a href="#tab193e3605-d4e1-4782-8982-6bbd493a9828_1" class="tabButton" id="tabBtnNarrow193e3605-d4e1-4782-8982-6bbd493a9828_1" role="button" aria-controls="tab193e3605-d4e1-4782-8982-6bbd493a9828_1" aria-expanded="false" ><span class="tabName editable" data-sequence="1" data-tabname="Where can I find the descriptions and responsibilities of elected offices?" contenteditable="false">Where can I find the descriptions and responsibilities of elected offices?</span></a>
+</li>
+					</ol>
+				<div class="tabbedWidget cpTabPanel " style="display: none;" id="tab193e3605-d4e1-4782-8982-6bbd493a9828_1" role="region" aria-labelledby="tabBtn193e3605-d4e1-4782-8982-6bbd493a9828_1" >
+
+<div class="widget editor pageStyles narrow" id="divEditorc445d775-ebc2-41b9-94f7-31549014573c" data-elementqueryclasses='{"wide-narrow":"min-width:25em"}'>
+	    <div class="fr-view">
+
+
+        <p>We provide descriptions of all elected positions on the ballot in the Local Voters&apos; Pamphlet for the election. You can also find qualifications and responsibilities for federal and state elected offices on the&nbsp;<a href="https://www.sos.wa.gov/elections/candidates/information/descriptions-elected-offices" target="_blank" rel="noopener" class="external_link" aria-describedby="audioeye_new_window_message">Secretary of State&apos;s website</a>.&nbsp;<br><br></p>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + 'c445d775-ebc2-41b9-94f7-31549014573c'));
+	});
+</script>
+</div>
+				</div>
+					<ol class="tabbedWidgetNarrow cpTabs  accordion"  aria-hidden="False.ToString().ToLowerInvariant()" >
+						<li class="" role="presentation">	<a href="#tab193e3605-d4e1-4782-8982-6bbd493a9828_2" class="tabButton" id="tabBtnNarrow193e3605-d4e1-4782-8982-6bbd493a9828_2" role="button" aria-controls="tab193e3605-d4e1-4782-8982-6bbd493a9828_2" aria-expanded="false" ><span class="tabName editable" data-sequence="2" data-tabname="Why aren&#39;t candidate names displayed in alphabetical order?" contenteditable="false">Why aren't candidate names displayed in alphabetical order?</span></a>
+</li>
+					</ol>
+				<div class="tabbedWidget cpTabPanel " style="display: none;" id="tab193e3605-d4e1-4782-8982-6bbd493a9828_2" role="region" aria-labelledby="tabBtn193e3605-d4e1-4782-8982-6bbd493a9828_2" >
+
+<div class="widget editor pageStyles narrow" id="divEditord49c9a5d-d124-4ccf-a42c-491dd43bbd82" data-elementqueryclasses='{"wide-narrow":"min-width:25em"}'>
+	    <div class="fr-view">
+
+
+        <p>As required by state law, the order that candidates&apos; names appear on the ballot and in the Local Voters&apos; Pamphlet is determined by a random lot drawing, which is held by staff at the end of filing week. During this process, staff and a member of the public pull lettered tiles from a rotating &quot;bingo barrel.&quot; The order that the lettered tiles are drawn in is recorded and becomes the official candidate listing order.<br><br>The lot drawing is <a href="https://www.snohomishcountywa.gov/5731/Observe-the-Elections-Process">open to the public to observe</a>, and the final listing order is publicly available on our&nbsp;<a href="https://www.snohomishcountywa.gov/5729/Run-for-Office">Run for Office page</a>.&nbsp;<br><br></p>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + 'd49c9a5d-d124-4ccf-a42c-491dd43bbd82'));
+	});
+</script>
+</div>
+				</div>
+					</div>
+	</div>
+	<script type="text/javascript">
+
+		//If responsive not enabled, execute this after a timeout
+		if(!isResponsiveEnabled)
+		{
+			window.setTimeout(function(){
+				var tabbedWidgetID = 'divTabbed193e3605-d4e1-4782-8982-6bbd493a9828';
+				typeof setTabbedWidgetsTabHeight === "function" && setTabbedWidgetsTabHeight(tabbedWidgetID);
+			}, 1500);
+		}
+
+		function reinitCarousels() {
+			if (window.carouselsToInit) {
+				for (var i = 0; i < window.carouselsToInit.length; i++) {
+					carouselsToInit[i]();
+				}
+			}
+		}
+		function sizeTabbedContent(element){
+			if(window.Pages){
+				if(window.Pages.onResizeHandlers){
+					var setTabbedInterval = setInterval(function () {
+						window.Pages.onResizeHandlers.forEach(function(car){car();});
+					}, 25)
+
+
+					setTimeout(function () {
+						clearInterval(setTabbedInterval);
+						if ($.cookie("enableLiveEdit") === "true") {
+							setInterval(function () {
+								window.Pages.onResizeHandlers.forEach(function(car){car();});
+							}, 2000);
+						}
+					}, 2500);
+					element.onclick="window.setTimeout(function(){reinitCarousels();},2);"
+				}
+			}
+		}
+
+		function adjustTab(e) {
+			e.preventDefault();
+			window.setTimeout(function(){
+				reinitCarousels();
+			}, 2);
+			sizeTabbedContent(this);
+		}
+
+		var tabButtons = document.querySelectorAll("#divTabbed193e3605-d4e1-4782-8982-6bbd493a9828 .tabButton");
+
+		tabButtons.forEach(function (tabButton) {
+			tabButton.addEventListener("click", adjustTab);
+		});
+
+	</script>
+
+
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="" data-widgetcontainerid="7cd8abe8-171a-47c2-bc54-08829aaf956d">				
+	<div class="row nest first wide">
+	
+	<div class="inner col col24 first last id97b892ac-805b-43bc-a895-bce2c18514cf" style="" data-widgetcontainerid="97b892ac-805b-43bc-a895-bce2c18514cf">	
+<div class="widget editor pageStyles narrow" id="divEditorc0ce6c52-92c0-4f7d-ae1e-8c775473aa60" data-elementqueryclasses='{"wide-narrow":"min-width:25em"}'>
+	    <div class="fr-view">
+
+
+        <hr style="border:1px solid black;" aria-hidden="true"><h2 style="background-color:#284860; color:white; font-weight: 700; padding: 5px;margin-top:1em; margin-bottom:1em;">Related Topics</h2>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + 'c0ce6c52-92c0-4f7d-ae1e-8c775473aa60'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+	<div class="row nest last wide">
+	
+	<div class="inner col col24 first last id38883171-081e-478d-9847-2a7dd8e7b1bb" style="" data-widgetcontainerid="38883171-081e-478d-9847-2a7dd8e7b1bb">	
+<div data-widget-id="d1dc35c1-d9ff-4269-a498-7a896af5559d" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidgetd1dc35c1-d9ff-4269-a498-7a896af5559d" class="widget widgetGraphicLinks skin43 widgetOptionSet4 wide" data-elementqueryclasses='{"wide-narrow":"min-width:25em"}' data-elementquerymatch='matchMultiColumn' data-elementqueryunmatch='unmatchMultiColumn' data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid2 ">
+		<nav class="widgetGraphicLinksNav" aria-labelledby="GraphicLinkHeaderText">
+				<div class="row   wide">
+					<!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.snohomishcountywa.gov/3972/Register-to-Vote-or-Update-Registration" target="_self" class="fancyButton fancyButton2656 " >
+		<span>
+			<span><span class="text">Register to Vote</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton2656.fancyButton:link,.fancyButton2656.fancyButton:visited, .fancyButton2656div.fancyButton{
+	background-color: rgb(245, 236, 248);
+	height: 0em;
+	padding-top: 1.5em;
+	padding-bottom: 1.5em;
+	padding-right: 1em;
+	padding-left: 5em;
+	-webkit-border-top-left-radius: 10px;
+	-moz-border-top-left-radius: 10px;
+	-khtml-border-top-left-radius: 10px;
+	border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-top-right-radius: 10px;
+	-khtml-border-top-right-radius: 10px;
+	border-top-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-bottom-left-radius: 10px;
+	-khtml-border-bottom-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-moz-border-bottom-right-radius: 10px;
+	-khtml-border-bottom-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	background-image: url('/ImageRepository/Document?documentID=141197');
+	background-repeat: no-repeat;
+	background-position: 5%  center;
+	border-top: 2px solid rgb(0, 0, 0);
+	border-left: 2px solid rgb(0, 0, 0);
+	border-right: 2px solid rgb(0, 0, 0);
+	border-bottom: 2px solid rgb(0, 0, 0);
+background-size: 75px auto;
+background-repeat: no-repeat;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+min-height: 120px;
+height: auto !important;
+box-sizing: border-box;
+max-width: 325px;
+margin-left: 2em;
+}
+.fancyButton2656.fancyButton:hover,.fancyButton2656.fancyButton:focus,.fancyButton2656.fancyButton:active,.fancyButton2656.fancyButton.hover{
+	background-color: rgb(245, 233, 250);
+	background-repeat: no-repeat;
+	background-position: 5%  center;
+	border-top: 2px solid rgb(118, 118, 118);
+	border-left: 2px solid rgb(118, 118, 118);
+	border-right: 2px solid rgb(118, 118, 118);
+	border-bottom: 2px solid rgb(118, 118, 118);
+background-size: 75px auto;
+background-repeat: no-repeat;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+min-height: 120px;
+height: auto !important;
+box-sizing: border-box;
+max-width: 325px;
+margin-left: 2em;}
+.fancyButton2656.fancyButton:link > span,.fancyButton2656.fancyButton:visited > span, .fancyButton2656div.fancyButton > span{
+}
+.fancyButton2656.fancyButton:hover > span,.fancyButton2656.fancyButton:focus > span,.fancyButton2656.fancyButton:active > span,.fancyButton2656.fancyButton.hover > span{
+}
+.fancyButton2656.fancyButton .text{
+	color: rgb(0, 0, 0);
+	font-size: 1.25em;
+	font-family: "Arial";
+	text-align: left;
+	font-weight: 700;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+margin-left: 1em;
+padding: 1em;
+vertical-align: middle;}
+.fancyButton2656.fancyButton:hover .text,.fancyButton2656.fancyButton:focus .text,.fancyButton2656.fancyButton:active .text,.fancyButton2656.fancyButton.hover .text{
+	color: rgb(0, 0, 0);
+	font-size: 1.3em;
+	font-family: Arial;
+	text-align: left;
+	font-weight: 700;
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+margin-left: 1em;
+padding: 1em;
+vertical-align: middle;}
+</style>
+
+ </li><!--
+
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://experience.arcgis.com/experience/0a219ac968ee4ddc833491fc7b7a7ca9/" target="_self" class="fancyButton fancyButton2655 " >
+		<span>
+			<span><span class="text">Find Your District (Interactive Map)</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton2655.fancyButton:link,.fancyButton2655.fancyButton:visited, .fancyButton2655div.fancyButton{
+	background-color: rgb(245, 236, 248);
+	padding-top: 1.5em;
+	padding-bottom: 1.5em;
+	padding-right: .75em;
+	padding-left: 5em;
+	-webkit-border-top-left-radius: 10px;
+	-moz-border-top-left-radius: 10px;
+	-khtml-border-top-left-radius: 10px;
+	border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-top-right-radius: 10px;
+	-khtml-border-top-right-radius: 10px;
+	border-top-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-bottom-left-radius: 10px;
+	-khtml-border-bottom-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-moz-border-bottom-right-radius: 10px;
+	-khtml-border-bottom-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	background-image: url('/ImageRepository/Document?documentID=141351');
+	background-repeat: no-repeat;
+	background-position: 5%  center;
+	border-top: 2px solid rgb(0, 0, 0);
+	border-left: 2px solid rgb(0, 0, 0);
+	border-right: 2px solid rgb(0, 0, 0);
+	border-bottom: 2px solid rgb(0, 0, 0);
+background-size: 75px auto;
+background-repeat: no-repeat;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+min-height: 120px;
+height: auto !important;
+box-sizing: border-box;
+max-width: 325px;
+margin-left: 2em;}
+.fancyButton2655.fancyButton:hover,.fancyButton2655.fancyButton:focus,.fancyButton2655.fancyButton:active,.fancyButton2655.fancyButton.hover{
+	background-color: rgb(245, 233, 250);
+	background-repeat: no-repeat;
+	background-position: 5%  center;
+	border-top: 2px solid rgb(118, 118, 118);
+	border-left: 2px solid rgb(118, 118, 118);
+	border-right: 2px solid rgb(118, 118, 118);
+	border-bottom: 2px solid rgb(118, 118, 118);
+background-size: 75px auto;
+background-repeat: no-repeat;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+min-height: 120px;
+height: auto !important;
+box-sizing: border-box;
+max-width: 325px;
+margin-left: 2em;}
+.fancyButton2655.fancyButton:link > span,.fancyButton2655.fancyButton:visited > span, .fancyButton2655div.fancyButton > span{
+}
+.fancyButton2655.fancyButton:hover > span,.fancyButton2655.fancyButton:focus > span,.fancyButton2655.fancyButton:active > span,.fancyButton2655.fancyButton.hover > span{
+}
+.fancyButton2655.fancyButton .text{
+	color: rgb(0, 0, 0);
+	font-size: 1.2em;
+	font-family: "Arial";
+	text-align: left;
+	font-weight: 700;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+padding-left: 1em;
+vertical-align: middle;}
+.fancyButton2655.fancyButton:hover .text,.fancyButton2655.fancyButton:focus .text,.fancyButton2655.fancyButton:active .text,.fancyButton2655.fancyButton.hover .text{
+	color: rgb(0, 0, 0);
+	font-size: 1.25em;
+	font-family: Arial;
+	text-align: left;
+	font-weight: 700;
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+padding-left: 1em;
+vertical-align: middle;}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.snohomishcountywa.gov/5723/Track-Your-Ballot" target="_self" class="fancyButton fancyButton2657 " >
+		<span>
+			<span><span class="text">Track Your Ballot</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton2657.fancyButton:link,.fancyButton2657.fancyButton:visited, .fancyButton2657div.fancyButton{
+	background-color: rgb(245, 236, 248);
+	padding-top: 1.5em;
+	padding-bottom: 1.5em;
+	padding-right: .75em;
+	padding-left: 5em;
+	-webkit-border-top-left-radius: 10px;
+	-moz-border-top-left-radius: 10px;
+	-khtml-border-top-left-radius: 10px;
+	border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-top-right-radius: 10px;
+	-khtml-border-top-right-radius: 10px;
+	border-top-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-bottom-left-radius: 10px;
+	-khtml-border-bottom-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-moz-border-bottom-right-radius: 10px;
+	-khtml-border-bottom-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	background-image: url('/ImageRepository/Document?documentID=141831');
+	background-repeat: no-repeat;
+	background-position: 5%  center;
+	border-top: 2px solid rgb(0, 0, 0);
+	border-left: 2px solid rgb(0, 0, 0);
+	border-right: 2px solid rgb(0, 0, 0);
+	border-bottom: 2px solid rgb(0, 0, 0);
+background-size: 75px auto;
+background-repeat: no-repeat;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+min-height: 120px;
+height: auto !important;
+box-sizing: border-box;
+max-width: 325px;
+margin-left: 2em;}
+.fancyButton2657.fancyButton:hover,.fancyButton2657.fancyButton:focus,.fancyButton2657.fancyButton:active,.fancyButton2657.fancyButton.hover{
+	background-color: rgb(245, 233, 250);
+	background-repeat: no-repeat;
+	background-position: 5%  center;
+	border-top: 2px solid rgb(118, 118, 118);
+	border-left: 2px solid rgb(118, 118, 118);
+	border-right: 2px solid rgb(118, 118, 118);
+	border-bottom: 2px solid rgb(118, 118, 118);
+background-size: 75px auto;
+background-repeat: no-repeat;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+min-height: 120px;
+height: auto !important;
+box-sizing: border-box;
+max-width: 325px;
+margin-left: 2em;}
+.fancyButton2657.fancyButton:link > span,.fancyButton2657.fancyButton:visited > span, .fancyButton2657div.fancyButton > span{
+}
+.fancyButton2657.fancyButton:hover > span,.fancyButton2657.fancyButton:focus > span,.fancyButton2657.fancyButton:active > span,.fancyButton2657.fancyButton.hover > span{
+}
+.fancyButton2657.fancyButton .text{
+	color: rgb(0, 0, 0);
+	font-size: 1.25em;
+	font-family: "Arial";
+	text-align: left;
+	font-weight: 700;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+padding-left: 1em;
+vertical-align: middle;}
+.fancyButton2657.fancyButton:hover .text,.fancyButton2657.fancyButton:focus .text,.fancyButton2657.fancyButton:active .text,.fancyButton2657.fancyButton.hover .text{
+	color: rgb(0, 0, 0);
+	font-size: 1.3em;
+	font-family: Arial;
+	text-align: left;
+	font-weight: 700;
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+padding-left: 1em;
+vertical-align: middle;}
+</style>
+
+ </li><!--
+
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="https://www.snohomishcountywa.gov/231/Learn-How-to-Vote-in-Snohomish-County" target="_self" class="fancyButton fancyButton2658 " >
+		<span>
+			<span><span class="text">Learn How to Vote</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton2658.fancyButton:link,.fancyButton2658.fancyButton:visited, .fancyButton2658div.fancyButton{
+	background-color: rgb(245, 236, 248);
+	padding-top: 1.5em;
+	padding-bottom: 1.5em;
+	padding-right: .75em;
+	padding-left: 5em;
+	-webkit-border-top-left-radius: 10px;
+	-moz-border-top-left-radius: 10px;
+	-khtml-border-top-left-radius: 10px;
+	border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-top-right-radius: 10px;
+	-khtml-border-top-right-radius: 10px;
+	border-top-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-bottom-left-radius: 10px;
+	-khtml-border-bottom-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-moz-border-bottom-right-radius: 10px;
+	-khtml-border-bottom-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	background-image: url('/ImageRepository/Document?documentID=141854');
+	background-repeat: no-repeat;
+	background-position: 5%  center;
+	border-top: 2px solid rgb(0, 0, 0);
+	border-left: 2px solid rgb(0, 0, 0);
+	border-right: 2px solid rgb(0, 0, 0);
+	border-bottom: 2px solid rgb(0, 0, 0);
+background-size: 75px auto;
+background-repeat: no-repeat;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+min-height: 120px;
+height: auto !important;
+box-sizing: border-box;
+max-width: 325px;
+margin-left: 2em;}
+.fancyButton2658.fancyButton:hover,.fancyButton2658.fancyButton:focus,.fancyButton2658.fancyButton:active,.fancyButton2658.fancyButton.hover{
+	background-color: rgb(245, 233, 250);
+	background-repeat: no-repeat;
+	background-position: 5%  center;
+	border-top: 2px solid rgb(118, 118, 118);
+	border-left: 2px solid rgb(118, 118, 118);
+	border-right: 2px solid rgb(118, 118, 118);
+	border-bottom: 2px solid rgb(118, 118, 118);
+background-size: 75px auto;
+background-repeat: no-repeat;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+min-height: 120px;
+height: auto !important;
+box-sizing: border-box;
+max-width: 325px;
+margin-left: 2em;}
+.fancyButton2658.fancyButton:link > span,.fancyButton2658.fancyButton:visited > span, .fancyButton2658div.fancyButton > span{
+}
+.fancyButton2658.fancyButton:hover > span,.fancyButton2658.fancyButton:focus > span,.fancyButton2658.fancyButton:active > span,.fancyButton2658.fancyButton.hover > span{
+}
+.fancyButton2658.fancyButton .text{
+	color: rgb(0, 0, 0);
+	font-size: 1.25em;
+	font-family: "Arial";
+	text-align: left;
+	font-weight: 700;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+padding-left: 1em;
+vertical-align: middle;}
+.fancyButton2658.fancyButton:hover .text,.fancyButton2658.fancyButton:focus .text,.fancyButton2658.fancyButton:active .text,.fancyButton2658.fancyButton.hover .text{
+	color: rgb(0, 0, 0);
+	font-size: 1.3em;
+	font-family: Arial;
+	text-align: left;
+	font-weight: 700;
+	text-decoration: underline;
+	background-repeat: no-repeat;
+	background-position: left top;
+
+padding-left: 1em;
+vertical-align: middle;}
+</style>
+
+ </li><!--
+--></ul></div><!--				-->
+				</div>
+			</nav>
+		</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="" data-widgetcontainerid="bf4c075d-f91a-4519-b9d5-a3acf9801fd6">				
+	<div class="row nest first last wide">
+	
+	<div class="inner col col24 first last idbd2f6063-b41f-4c1c-8c76-d40275ea8513" style="" data-widgetcontainerid="bd2f6063-b41f-4c1c-8c76-d40275ea8513">	
+<div class="widget editor pageStyles narrow" id="divEditor5c7c16bb-cb54-43a6-9b27-c8a0cd5e804e" data-elementqueryclasses='{"wide-narrow":"min-width:25em"}'>
+	    <div class="fr-view">
+
+
+        <div id="Contact" style="background-color:#f5f5f7;
+  border-top:2px solid #ccc;
+  padding:1.5em 1em;
+  margin-top:2em;"><h2 style="font-size:1.25em;
+    margin-top:0;
+    margin-bottom:0.5em;">Contact Us</h2><p style="margin-top:0;
+    margin-bottom:1em;
+    max-width:40em;">If you have questions or need assistance with voting or elections, we&rsquo;re here to help.</p><div style="display:flex;
+    flex-wrap:wrap;
+    gap:1.25em;"><div style="flex:1 1 260px;"><strong>Office Location</strong><br>3000 Rockefeller Avenue<br>Admin. West Building, First Floor<br>Everett, WA 98201</div><div style="flex:1 1 260px;"><strong>Email:&nbsp;</strong><a href="/cdn-cgi/l/email-protection#cfaaa3aaacbba6a0a1bc8fbca1a0aca0e1a8a0b9" style="color:#003366;"><span class="__cf_email__" data-cfemail="61040d040215080e0f1221120f0e020e4f060e17">[email&#160;protected]</span>&nbsp;</a><br><strong>Phone:</strong> <a href="tel:4253883444" style="color:#003366;">(425) 388-3444</a><br><strong>Fax:&nbsp;</strong>(425) 355-3444</div><div style="flex:1 1 260px;"><strong>Office Hours</strong><br>Monday through Friday<br>9 a.m. to 5 p.m.<br><br><p><strong>Please Note:</strong> hours may vary on holidays and during election periods.</p></div></div><p style="margin-top:1em;
+    max-width:40em;"><a href="https://snohomishcountywa.gov/4150/Contact-Us" style="color:#003366;"><strong>View all contact info, including directions and parking information</strong></a></p><p style="margin-top:1em; max-width:40em;" data-pasted="true">For accessible service, call Washington Relay 1-800-833-6388 or 7-1-1 (TTY/TDD). Language assistance is available upon request.</p></div>
+    </div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '5c7c16bb-cb54-43a6-9b27-c8a0cd5e804e'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+		</div>
+
+	</div>
+
+	
+	<div class="newCP">
+
+	</div>
+</div></div>
+</div><aside data-cpRole="contentContainer" id="featureColumn" class="secondaryContent"><div class="inner">	<div id="ccd6923f64-2522-4bce-8783-61ad1b416b69" data-containerid="d6923f64-2522-4bce-8783-61ad1b416b69" class="pageContent cpGrid cpGrid24 showInMobile" data-contentcontainerbreakpoint="40">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="" data-widgetcontainerid="0c7a82d4-8193-45cb-814b-7bf86cdd2b7c">				
+	<div class="row nest first last wide">
+	
+	<div class="inner col col24 first last idef2aaa1b-4506-44fd-8d3f-99f3c4f13119" style="" data-widgetcontainerid="ef2aaa1b-4506-44fd-8d3f-99f3c4f13119">	
+
+<div class="widget widgetSpacer" id="c546de85-e3cb-423a-8ffe-84b0b2b0d6f7"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="" data-widgetcontainerid="6b098314-e662-4e04-8019-0a53a1b2ba92">				
+	<div class="row nest first last wide">
+	
+	<div class="inner col col24 first last id0270ea9a-87af-44f3-9c35-91815e0c7018" style="" data-widgetcontainerid="0270ea9a-87af-44f3-9c35-91815e0c7018">	
+<div class="widget editor pageStyles narrow" id="divEditordf1fed90-dda1-40bd-9021-6b829a96da51" data-elementqueryclasses='{"wide-narrow":"min-width:25em"}'>
+	    <div class="fr-view">
+
+
+        <h2 class="subhead1 ">Upcoming Elections&nbsp;</h2><p><strong>February 10, 2026</strong></p><p>Special Election</p><p><strong>April 28, 2026</strong></p><p>Special Election</p>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + 'df1fed90-dda1-40bd-9021-6b829a96da51'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="" data-widgetcontainerid="0b892dc9-d8cf-4aa5-9aad-7494489ac292">				
+	<div class="row nest first wide">
+	
+	<div class="inner col col24 first last id38df4685-4eac-46d0-b03e-82da9f0cd841" style="" data-widgetcontainerid="38df4685-4eac-46d0-b03e-82da9f0cd841">	
+
+<div class="widget widgetSpacer" id="a5b5aecc-d249-441c-bf15-894a9a455988"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+	<div class="row nest wide">
+	
+	<div class="inner col col24 first last id1fefdee5-0eae-43e6-8f28-cebe6720da4f" style="" data-widgetcontainerid="1fefdee5-0eae-43e6-8f28-cebe6720da4f">	
+
+<div class="widget widgetSpacer" id="c033e2f1-c643-4d2c-9900-9a64a9062bb2"></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+	<div class="row nest last wide">
+	
+	<div class="inner col col24 first last id6ca5ea8f-3d5a-4cf2-8d86-56545b0e1eca" style="" data-widgetcontainerid="6ca5ea8f-3d5a-4cf2-8d86-56545b0e1eca">	
+<div data-widget-id="b0b74827-1e05-445f-86bb-3592e9a3afbe" data-widget-controller-path="/Faq/Widget">
+
+
+
+
+
+
+
+
+	<section id="widgetFaqb0b74827-1e05-445f-86bb-3592e9a3afbe" class="widget widgetFAQ skin43 widgetOptionSet1 narrow" data-modulewidgettype="FAQ" data-elementqueryclasses='{"wide-narrow":"min-width:25em"}' data-elementquerymatch='matchMultiColumn' data-elementqueryunmatch='unmatchMultiColumn' aria-labelledby="faqHeaderb0b74827-1e05-445f-86bb-3592e9a3afbe">
+		    <header class="widgetHeader" id="faqHeaderb0b74827-1e05-445f-86bb-3592e9a3afbe">
+        <div class="">
+                    <h3><a href="/Faq.aspx?TID=170">FAQs</a></h3>
+                                </div>
+    </header>
+	<div class="widgetBody pageStyles cpGrid cpGrid1 ">
+		<div class="row  narrow">
+					<link href="/Areas/FAQ/Assets/Styles/Widget.css" rel="stylesheet" />
+					<div class="col col1">
+						<ol class="semanticList" style="columns: 1">
+
+
+        <li style="position: relative" class="widgetItem">
+            <a class="widgetDesc widgetFAQQuestion" href="/Faq.aspx?QID=1483">What happens to the ballots returned through the official ballot drop boxes?</a>
+        </li>
+
+
+        <li style="position: relative" class="widgetItem">
+            <a class="widgetDesc widgetFAQQuestion" href="/Faq.aspx?QID=1484">What happens to the ballots returned through the mail?</a>
+        </li>
+
+
+        <li style="position: relative" class="widgetItem">
+            <a class="widgetDesc widgetFAQQuestion" href="/Faq.aspx?QID=1485">How are ballot envelope signatures verified?</a>
+        </li>
+						</ol>
+					</div>
+		</div>
+        <a id="faqViewAllb0b74827-1e05-445f-86bb-3592e9a3afbe" class="widgetViewAll alignLeft" style="" href="/Faq.aspx?TID=170">View All</a>
+        	</div>
+	<div class="widgetFooter">	
+	</div>
+    <div class="addItemModal hidden">
+        <div class="url hidden">/FAQ.aspx</div>
+    </div>
+
+	</section>
+
+
+<script>
+	function handleExpandCollapse(e) {
+		const element = e.currentTarget;
+		const answer = document.getElementById(element.getAttribute("aria-controls")).parentElement;
+		const expandArrow = element.getElementsByClassName("widgetFAQ--arrow")[0];
+		if (answer.classList.contains("hidden")) {
+			expandArrow.classList.add('widgetFAQ--arrow-expanded');
+			expandArrow.classList.remove('widgetFAQ--arrow-collapsed');
+			answer.classList.remove("hidden");
+			element.setAttribute("aria-expanded", "true");
+		} else {
+			expandArrow.classList.add('widgetFAQ--arrow-collapsed');
+			expandArrow.classList.remove('widgetFAQ--arrow-expanded');
+			answer.classList.add("hidden");
+			element.setAttribute("aria-expanded", "false");
+		}
+		e.preventDefault();
+		e.stopImmediatePropagation();
+		e.stopPropagation();
+	}
+    document.querySelectorAll(".widgetFAQ--question a").forEach(element => {
+        // When the link is clicked, expand or collapse the answer
+		element.addEventListener("click", handleExpandCollapse);
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="" data-widgetcontainerid="61cb9373-52e8-4010-94de-4c96243d029a">				
+	<div class="row nest first wide">
+	
+	<div class="inner col col24 first last id35767ac7-84f4-4358-9c95-07b03f4d7bfd" style="" data-widgetcontainerid="35767ac7-84f4-4358-9c95-07b03f4d7bfd">	
+<div class="widget editor pageStyles narrow" id="divEditor35fc30f3-31d1-481a-a50f-3dd118f0d8f6" data-elementqueryclasses='{"wide-narrow":"min-width:25em"}'>
+	    <div class="fr-view">
+
+
+        <h2 class="subhead1">Candidate Forums</h2>
+    </div>
+
+<script type="text/javascript">
+	$(document).ready(function (e) {		
+	    renderSlideshowIfApplicable($('#divEditor' + '35fc30f3-31d1-481a-a50f-3dd118f0d8f6'));
+	});
+</script>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+	<div class="row nest last wide">
+	
+	<div class="inner col col24 first last id4fce395f-52fa-48d5-9e8d-8a4e99bb4254" style="" data-widgetcontainerid="4fce395f-52fa-48d5-9e8d-8a4e99bb4254">	
+
+<div class="widget image pageStyles" id="divImageOuterb9ad5619-b8aa-4aa8-b95c-b0db042eb92e" data-widget-id="b9ad5619-b8aa-4aa8-b95c-b0db042eb92e">
+            <header class="widgetHeader"><div><h3  data-headertext="Sponsored by League of Women Voters">Sponsored by League of Women Voters</h3></div></header>       
+    
+	<div class="widgetBody " id="divImageb9ad5619-b8aa-4aa8-b95c-b0db042eb92e">				<a href="https://lwvsnoho.org/content.aspx?page_id=22&amp;club_id=108940&amp;module_id=563630" target="_blank"><img src="/ImageRepository/Document?documentID=123670" alt="Hear from the candidates! (1) - LWVSC" title="Hear from the candidates! (1) - LWVSC"/></a>
+	</div></div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</div></aside>
+</div><div data-cpRole="structuralContainer" id="structuralContainer11" class="siteSidebar">
+<nav data-cpRole="nav" id="secondaryNav" class="siteNav secondaryNav">
+
+
+
+
+
+	<ol role="menu" id="secondaryMenusecondaryNav" data-parent="224" class="rootNavMenu accordionNav">
+	<li class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem6807" data-pageid="6807">
+		<div class="accordionNavItem">
+			<a href="https://www.snohomishcountywa.gov/224/Elections-Voter-Registration" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Elections and Voting Home</a>
+		</div>
+			</li>
+	<li class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem6798" data-pageid="6798">
+		<div class="accordionNavItem">
+			<a href="/6798/Voter-Registration" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Voter Registration</a>
+				<a href="#" role="button" class="openAccordionNav accordionSecondaryNavItem" aria-label="Voter Registration Submenu" aria-expanded="false" aria-controls="submenu-lvl1-6798"></a>
+		</div>
+					<ol aria-hidden="true" class="accordionNavContainer accordionNavContainer--lvl1" id="submenu-lvl1-6798" style="display: none;" data-parent="6798">
+						<li class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem3972" data-pageid="3972">
+			<div class="accordionNavItem">
+				<a href="/3972/Register-to-Vote-or-Update-Registration" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Register to Vote or Update Registration</span></a>
+			</div>
+					</li>
+		<li class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem6789" data-pageid="6789">
+			<div class="accordionNavItem">
+				<a href="/6789/Military-or-Overseas-Voters" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Military or Overseas Voters</span></a>
+			</div>
+					</li>
+
+			</ol>
+	</li>
+	<li class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem6790" data-pageid="6790">
+		<div class="accordionNavItem">
+			<a href="/6790/Voting" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Voting</a>
+				<a href="#" role="button" class="openAccordionNav accordionSecondaryNavItem" aria-label="Voting Submenu" aria-expanded="false" aria-controls="submenu-lvl1-6790"></a>
+		</div>
+					<ol aria-hidden="true" class="accordionNavContainer accordionNavContainer--lvl1" id="submenu-lvl1-6790" style="display: none;" data-parent="6790">
+						<li class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem5721" data-pageid="5721">
+			<div class="accordionNavItem">
+				<a href="/5721/Important-Election-Dates-and-Information" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Important Election Dates and Information</span></a>
+			</div>
+					</li>
+		<li class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem5722" data-pageid="5722">
+			<div class="accordionNavItem">
+				<a href="/5722/Candidates-and-Measures-on-the-Ballot" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Candidates and Measures on the Ballot</span></a>
+			</div>
+					</li>
+		<li class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem6817" data-pageid="6817">
+			<div class="accordionNavItem">
+				<a href="https://experience.arcgis.com/experience/0a219ac968ee4ddc833491fc7b7a7ca9/" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Find Your District and Elected Officials (interactive map)</span></a>
+			</div>
+					</li>
+		<li class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem5726" data-pageid="5726">
+			<div class="accordionNavItem">
+				<a href="/5726/Find-a-Ballot-Drop-Box" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Find a Ballot Drop Box</span></a>
+			</div>
+					</li>
+		<li class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem231" data-pageid="231">
+			<div class="accordionNavItem">
+				<a href="/231/Learn-How-to-Vote-in-Snohomish-County" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Learn How to Vote in Snohomish County</span></a>
+			</div>
+					</li>
+		<li class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem5723" data-pageid="5723">
+			<div class="accordionNavItem">
+				<a href="/5723/Track-Your-Ballot" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Track Your Ballot</span></a>
+			</div>
+					</li>
+		<li class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem5724" data-pageid="5724">
+			<div class="accordionNavItem">
+				<a href="/5737/Get-Current-and-Past-Election-Results" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">View Election Results</span></a>
+			</div>
+					</li>
+		<li class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem6791" data-pageid="6791">
+			<div class="accordionNavItem">
+				<a href="/6791/Information-for-Voters-with-Disabilities" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Information for Voters with Disabilities</span></a>
+			</div>
+					</li>
+		<li class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem6800" data-pageid="6800">
+			<div class="accordionNavItem">
+				<a href="/6800/Ballot-Signature-Challenges" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Ballot Signature Challenges</span></a>
+			</div>
+					</li>
+		<li class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem6492" data-pageid="6492">
+			<div class="accordionNavItem">
+				<a href="/6342/Language-Access-Resources" target="_blank" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Recursos en espa&#241;ol</span></a>
+			</div>
+					</li>
+		<li class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem5720" data-pageid="5720">
+			<div class="accordionNavItem">
+				<a href="/5720/Elections-Explained" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Elections Explained</span></a>
+			</div>
+					</li>
+		<li class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem5727" data-pageid="5727">
+			<div class="accordionNavItem">
+				<a href="/5727/Accessible-Voting-and-In-Person-Voter-Se" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Accessible Voting and In-Person Voter Services Locations</span></a>
+			</div>
+					</li>
+
+			</ol>
+	</li>
+	<li class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem6792" data-pageid="6792">
+		<div class="accordionNavItem">
+			<a href="/6792/Candidate-and-District-Services" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Candidate and District Services</a>
+				<a href="#" role="button" class="openAccordionNav accordionSecondaryNavItem" aria-label="Candidate and District Services Submenu" aria-expanded="false" aria-controls="submenu-lvl1-6792"></a>
+		</div>
+					<ol aria-hidden="true" class="accordionNavContainer accordionNavContainer--lvl1" id="submenu-lvl1-6792" style="display: none;" data-parent="6792">
+						<li class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem5729" data-pageid="5729">
+			<div class="accordionNavItem">
+				<a href="/5729/Run-for-Office" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Run for Office</span></a>
+			</div>
+					</li>
+		<li class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem5730" data-pageid="5730">
+			<div class="accordionNavItem">
+				<a href="/5730/Place-a-Measure-on-the-Ballot" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Place a Measure on the Ballot</span></a>
+			</div>
+					</li>
+		<li class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem5731" data-pageid="5731">
+			<div class="accordionNavItem">
+				<a href="/5731/Observe-the-Elections-Process" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Observe the Elections Process</span></a>
+			</div>
+					</li>
+		<li class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem6353" data-pageid="6353">
+			<div class="accordionNavItem">
+				<a href="/6353/Diking-Drainage-and-Flood-Control-Distri" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Diking, Drainage, and Flood Control Districts</span></a>
+			</div>
+					</li>
+		<li class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem6917" data-pageid="6917">
+			<div class="accordionNavItem">
+				<a href="/6917/Ballot-Measure-Validation-Requirements" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Ballot Measure Validation Requirements</span></a>
+			</div>
+					</li>
+
+			</ol>
+	</li>
+	<li class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem6793" data-pageid="6793">
+		<div class="accordionNavItem">
+			<a href="/6793/Get-Involved" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Get Involved</a>
+				<a href="#" role="button" class="openAccordionNav accordionSecondaryNavItem" aria-label="Get Involved Submenu" aria-expanded="false" aria-controls="submenu-lvl1-6793"></a>
+		</div>
+					<ol aria-hidden="true" class="accordionNavContainer accordionNavContainer--lvl1" id="submenu-lvl1-6793" style="display: none;" data-parent="6793">
+						<li class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem6809" data-pageid="6809">
+			<div class="accordionNavItem">
+				<a href="/6809/Become-a-Seasonal-Elections-Worker" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Become a Seasonal Elections Worker</span></a>
+			</div>
+					</li>
+		<li class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem5732" data-pageid="5732">
+			<div class="accordionNavItem">
+				<a href="/5732/Conduct-a-Voter-Registration-Drive" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Conduct a Voter Registration Drive</span></a>
+			</div>
+					</li>
+		<li class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem6497" data-pageid="6497">
+			<div class="accordionNavItem">
+				<a href="/6497/Frequently-Asked-Questions" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Frequently Asked Questions</span></a>
+			</div>
+					</li>
+		<li class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem6796" data-pageid="6796">
+			<div class="accordionNavItem">
+				<a href="/6796/Voter-Outreach-Materials-and-Resources" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Voter Outreach Materials and Resources</span></a>
+			</div>
+					</li>
+		<li class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem6795" data-pageid="6795">
+			<div class="accordionNavItem">
+				<a href="/6795/2026-Elections-Dates-and-Deadlines" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">2026 Elections Dates and Deadlines</span></a>
+			</div>
+					</li>
+		<li class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem6674" data-pageid="6674">
+			<div class="accordionNavItem">
+				<a href="/5720/Elections-Explained" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Elections Explained</span></a>
+			</div>
+					</li>
+
+			</ol>
+	</li>
+	<li class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem6794" data-pageid="6794">
+		<div class="accordionNavItem">
+			<a href="/6794/Data-and-Research" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Data and Research</a>
+				<a href="#" role="button" class="openAccordionNav accordionSecondaryNavItem" aria-label="Data and Research Submenu" aria-expanded="false" aria-controls="submenu-lvl1-6794"></a>
+		</div>
+					<ol aria-hidden="true" class="accordionNavContainer accordionNavContainer--lvl1" id="submenu-lvl1-6794" style="display: none;" data-parent="6794">
+						<li class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem5737" data-pageid="5737">
+			<div class="accordionNavItem">
+				<a href="/5737/Get-Current-Election-Results-and-Statist" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Get Current Election Results and Statistics</span></a>
+			</div>
+					</li>
+		<li class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem5936" data-pageid="5936">
+			<div class="accordionNavItem">
+				<a href="https://experience.arcgis.com/experience/0a219ac968ee4ddc833491fc7b7a7ca9/" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Find Your District and Elected Officials (Interactive Map)</span></a>
+			</div>
+					</li>
+		<li class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem5736" data-pageid="5736">
+			<div class="accordionNavItem">
+				<a href="/5736/Learn-About-Initiatives-and-Referenda" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Learn About Initiatives and Referenda</span></a>
+			</div>
+					</li>
+		<li class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem5735" data-pageid="5735">
+			<div class="accordionNavItem">
+				<a href="https://snohomishcountywa.gov/DocumentCenter/Index/8903" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Request Printable Map</span></a>
+			</div>
+					</li>
+		<li class="sideNavLi subMenuItem hasAccordionChildren" id="SideItem6801" data-pageid="6801">
+			<div class="accordionNavItem">
+				<a href="/6801/Archived-Election-Results-and-Materials" target="_self" class="navMenuItem cpComponent" data-type="SecondaryMenuItem"><span lang="en">Archived Election Results and Materials</span></a>
+			</div>
+					</li>
+
+			</ol>
+	</li>
+	<li class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem5260" data-pageid="5260">
+		<div class="accordionNavItem">
+			<a href="/5260/Forms" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Forms</a>
+		</div>
+			</li>
+	<li class="topMenuItem sideNavLi hasAccordionChildren" id="SideItem4150" data-pageid="4150">
+		<div class="accordionNavItem">
+			<a href="/4150/Office-Location-and-Directions" target="_self" class="navMainItem secondaryNavItem cpComponent" data-type="SecondaryMainItem">Office Location and Directions</a>
+		</div>
+			</li>
+
+	</ol>
+
+
+	<script type="text/javascript">
+		(function () {
+			function setupSecondaryMenuProperties() {
+				//setup menu manager properties for secondary menu
+				menuManager.isSideMenuEditable = false;
+				menuManager.sideMenuMaxSubMenuLevels = 4;
+				menuManager.sideMenuHasCustomLinks = false;
+			}
+
+			if (document.readyState === "loading") {
+				document.addEventListener("DOMContentLoaded", setupSecondaryMenuProperties, { once: true });
+				return;
+			}
+
+			setupSecondaryMenuProperties();
+		})();
+	</script>
+
+	<script type="text/javascript">
+		(function () {
+			function setupAccordionSecondaryNav() {
+				var $menuContainer = $('#secondaryNav');
+
+				$menuContainer.find('*[id^="SideItem"]').each(function () {
+					var ids = $('[id="' + this.id + '"]');
+					if (ids.length > 1)
+						$.each(ids, function (index, value) {
+							value.id = value.id + '_' + index;
+						});
+				});
+
+				$menuContainer.find('.hasAccordionChildren .openAccordionNav').off('click.secondaryNav').on('click.secondaryNav', function (e) {
+					e.preventDefault();
+					showHideAccordionMenuForSecondaryNav($(this));
+				});
+
+				$menuContainer.find(".grippy").each(function () {
+					menuManager.setupDraggableElement($(this), SIDE_MENU, '#secondaryNav');
+				});
+
+				$menuContainer.find("li").each(function () {
+					menuManager.setupDroppableAccordionElement($(this), SIDE_MENU);
+				});
+			}
+
+			if (document.readyState === "loading") {
+				document.addEventListener("DOMContentLoaded", setupAccordionSecondaryNav, { once: true });
+				return;
+			}
+
+			setupAccordionSecondaryNav();
+		})();
+	</script>
+
+
+
+</nav>
+</div>
+</div></div>
+</div>
+</div>
+</div><div data-cpRole="structuralContainer" id="structuralContainer12" class="fixedButtonsTS">
+<aside data-cpRole="contentContainer" id="contentContainer12a">	<div id="cc076d45d2-23b4-4308-a382-ae00ce3b8405" data-containerid="076d45d2-23b4-4308-a382-ae00ce3b8405" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="" data-widgetcontainerid="9a47baf7-6a3d-4fde-9997-159e730b1108">				
+	<div class="row nest first last wide">
+	
+	<div class="inner col col24 first last id1e2e4125-bbad-41f5-8030-1864b5c10530" style="" data-widgetcontainerid="1e2e4125-bbad-41f5-8030-1864b5c10530">	
+<div data-widget-id="56fcc7d9-095f-40d6-bd45-6880fe84d313" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget56fcc7d9-095f-40d6-bd45-6880fe84d313" class="widget widgetGraphicLinks skin43 widgetOptionSet35 wide" data-elementqueryclasses='{"wide-narrow":"min-width:25em"}' data-elementquerymatch='matchMultiColumn' data-elementqueryunmatch='unmatchMultiColumn' data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid1 ">
+		<nav class="widgetGraphicLinksNav" aria-labelledby="GraphicLinkHeaderText">
+					<ul class="semanticList">
+						<!--
+
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="/" target="_self" class="fancyButton fancyButton1733 " >
+		<span>
+			<span><span class="text">Home</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton1733.fancyButton:link,.fancyButton1733.fancyButton:visited, .fancyButton1733div.fancyButton{
+	background-color: #6c7525;
+	height: 55px;
+	background-repeat: no-repeat;
+	background-position: left top;
+width: 75px; opacity: 1;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;}
+.fancyButton1733.fancyButton:hover,.fancyButton1733.fancyButton:focus,.fancyButton1733.fancyButton:active,.fancyButton1733.fancyButton.hover{
+	background-color: #2b4a5d;
+	background-repeat: no-repeat;
+	background-position: left top;
+width: 130px;}
+.fancyButton1733.fancyButton:link > span,.fancyButton1733.fancyButton:visited > span, .fancyButton1733div.fancyButton > span{
+}
+.fancyButton1733.fancyButton:hover > span,.fancyButton1733.fancyButton:focus > span,.fancyButton1733.fancyButton:active > span,.fancyButton1733.fancyButton.hover > span{
+}
+.fancyButton1733.fancyButton .text{
+	color: #fff;
+	font-size: .9em;
+	font-family: "Ubuntu";
+	text-align: left;
+	padding-left: 1em;
+	font-weight: 700;
+	text-decoration: none;
+	padding-left: 1em;
+	background-image: url('/ImageRepository/Document?documentID=54839');
+	background-repeat: no-repeat;
+	background-position: right center;
+height: 55px; opacity: 1;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;font-size: 0;}
+.fancyButton1733.fancyButton:hover .text,.fancyButton1733.fancyButton:focus .text,.fancyButton1733.fancyButton:active .text,.fancyButton1733.fancyButton.hover .text{
+	text-decoration: none;
+	background-image: url('/ImageRepository/Document?documentID=54840');
+	background-repeat: no-repeat;
+	background-position: right center;
+
+font-size: .8em;}
+</style>
+
+ </li><!--
+
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="/facebook" target="_self" class="fancyButton fancyButton1734 " >
+		<span>
+			<span><span class="text">Facebook</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton1734.fancyButton:link,.fancyButton1734.fancyButton:visited, .fancyButton1734div.fancyButton{
+	background-color: #6c7525;
+	height: 55px;
+	background-repeat: no-repeat;
+	background-position: left top;
+width: 75px; opacity: 1;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;}
+.fancyButton1734.fancyButton:hover,.fancyButton1734.fancyButton:focus,.fancyButton1734.fancyButton:active,.fancyButton1734.fancyButton.hover{
+	background-color: #2b4a5d;
+	background-repeat: no-repeat;
+	background-position: left top;
+width: 130px;}
+.fancyButton1734.fancyButton:link > span,.fancyButton1734.fancyButton:visited > span, .fancyButton1734div.fancyButton > span{
+}
+.fancyButton1734.fancyButton:hover > span,.fancyButton1734.fancyButton:focus > span,.fancyButton1734.fancyButton:active > span,.fancyButton1734.fancyButton.hover > span{
+}
+.fancyButton1734.fancyButton .text{
+	color: #fff;
+	font-size: .9em;
+	font-family: "Ubuntu";
+	text-align: left;
+	padding-left: 1em;
+	font-weight: 700;
+	text-decoration: none;
+	padding-left: 1em;
+	background-image: url('/ImageRepository/Document?documentID=54841');
+	background-repeat: no-repeat;
+	background-position: right center;
+height: 55px; opacity: 1;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;font-size: 0;}
+.fancyButton1734.fancyButton:hover .text,.fancyButton1734.fancyButton:focus .text,.fancyButton1734.fancyButton:active .text,.fancyButton1734.fancyButton.hover .text{
+	text-decoration: none;
+	background-image: url('/ImageRepository/Document?documentID=54842');
+	background-repeat: no-repeat;
+	background-position: right center;
+
+font-size: .8em;}
+</style>
+
+ </li><!--
+
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="/twitter" target="_self" class="fancyButton fancyButton1739 " >
+		<span>
+			<span><span class="text">Twitter</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton1739.fancyButton:link,.fancyButton1739.fancyButton:visited, .fancyButton1739div.fancyButton{
+	background-color: #6c7525;
+	height: 55px;
+	background-repeat: no-repeat;
+	background-position: left top;
+width: 75px; opacity: 1;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;}
+.fancyButton1739.fancyButton:hover,.fancyButton1739.fancyButton:focus,.fancyButton1739.fancyButton:active,.fancyButton1739.fancyButton.hover{
+	background-color: #2b4a5d;
+	background-repeat: no-repeat;
+	background-position: left top;
+width: 130px;}
+.fancyButton1739.fancyButton:link > span,.fancyButton1739.fancyButton:visited > span, .fancyButton1739div.fancyButton > span{
+}
+.fancyButton1739.fancyButton:hover > span,.fancyButton1739.fancyButton:focus > span,.fancyButton1739.fancyButton:active > span,.fancyButton1739.fancyButton.hover > span{
+}
+.fancyButton1739.fancyButton .text{
+	color: #fff;
+	font-size: .9em;
+	font-family: "Ubuntu";
+	text-align: left;
+	padding-left: 1em;
+	font-weight: 700;
+	text-decoration: none;
+	padding-left: 1em;
+	background-image: url('/ImageRepository/Document?documentID=54847');
+	background-repeat: no-repeat;
+	background-position: right center;
+height: 55px; opacity: 1;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;font-size: 0;}
+.fancyButton1739.fancyButton:hover .text,.fancyButton1739.fancyButton:focus .text,.fancyButton1739.fancyButton:active .text,.fancyButton1739.fancyButton.hover .text{
+	text-decoration: none;
+	background-image: url('/ImageRepository/Document?documentID=54848');
+	background-repeat: no-repeat;
+	background-position: right center;
+
+font-size: .8em;}
+</style>
+
+ </li><!--
+
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="/youtube" target="_self" class="fancyButton fancyButton1740 " >
+		<span>
+			<span><span class="text">YouTube</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton1740.fancyButton:link,.fancyButton1740.fancyButton:visited, .fancyButton1740div.fancyButton{
+	background-color: #6c7525;
+	height: 55px;
+	background-repeat: no-repeat;
+	background-position: left top;
+width: 75px; opacity: 1;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;}
+.fancyButton1740.fancyButton:hover,.fancyButton1740.fancyButton:focus,.fancyButton1740.fancyButton:active,.fancyButton1740.fancyButton.hover{
+	background-color: #2b4a5d;
+	background-repeat: no-repeat;
+	background-position: left top;
+width: 130px;}
+.fancyButton1740.fancyButton:link > span,.fancyButton1740.fancyButton:visited > span, .fancyButton1740div.fancyButton > span{
+}
+.fancyButton1740.fancyButton:hover > span,.fancyButton1740.fancyButton:focus > span,.fancyButton1740.fancyButton:active > span,.fancyButton1740.fancyButton.hover > span{
+}
+.fancyButton1740.fancyButton .text{
+	color: #fff;
+	font-size: .9em;
+	font-family: "Ubuntu";
+	text-align: left;
+	padding-left: 1em;
+	font-weight: 700;
+	text-decoration: none;
+	padding-left: 1em;
+	background-image: url('/ImageRepository/Document?documentID=54849');
+	background-repeat: no-repeat;
+	background-position: right center;
+height: 55px; opacity: 1;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;font-size: 0;}
+.fancyButton1740.fancyButton:hover .text,.fancyButton1740.fancyButton:focus .text,.fancyButton1740.fancyButton:active .text,.fancyButton1740.fancyButton.hover .text{
+	text-decoration: none;
+	background-image: url('/ImageRepository/Document?documentID=54850');
+	background-repeat: no-repeat;
+	background-position: right center;
+
+font-size: .8em;}
+</style>
+
+ </li><!--
+
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="/3862/Subscribe-to-County-E-Newsletters" target="_self" class="fancyButton fancyButton1910 " >
+		<span>
+			<span><span class="text">Newsletter</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton1910.fancyButton:link,.fancyButton1910.fancyButton:visited, .fancyButton1910div.fancyButton{
+	background-color: #6c7525;
+	height: 55px;
+	background-repeat: no-repeat;
+	background-position: left top;
+width: 75px; opacity: 1;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;}
+.fancyButton1910.fancyButton:hover,.fancyButton1910.fancyButton:focus,.fancyButton1910.fancyButton:active,.fancyButton1910.fancyButton.hover{
+	background-color: #2b4a5d;
+	background-repeat: no-repeat;
+	background-position: left top;
+width: 140px;}
+.fancyButton1910.fancyButton:link > span,.fancyButton1910.fancyButton:visited > span, .fancyButton1910div.fancyButton > span{
+}
+.fancyButton1910.fancyButton:hover > span,.fancyButton1910.fancyButton:focus > span,.fancyButton1910.fancyButton:active > span,.fancyButton1910.fancyButton.hover > span{
+}
+.fancyButton1910.fancyButton .text{
+	color: #fff;
+	font-size: .9em;
+	font-family: "Ubuntu";
+	text-align: left;
+	padding-left: 1em;
+	font-weight: 700;
+	text-decoration: none;
+	padding-left: 1em;
+	background-image: url('/ImageRepository/Document?documentID=58111');
+	background-repeat: no-repeat;
+	background-position: right center;
+height: 55px; opacity: 1;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;font-size: 0;}
+.fancyButton1910.fancyButton:hover .text,.fancyButton1910.fancyButton:focus .text,.fancyButton1910.fancyButton:active .text,.fancyButton1910.fancyButton.hover .text{
+	text-decoration: none;
+	background-image: url('/ImageRepository/Document?documentID=58112');
+	background-repeat: no-repeat;
+	background-position: right center;
+
+font-size: .8em;}
+</style>
+
+ </li><!--
+
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="http://translate.google.com/translate?js=n&amp;sl=auto&amp;tl=es&amp;u=https://www.snohomishcountywa.gov/" target="_self" class="fancyButton fancyButton2085 " >
+		<span>
+			<span><span class="text">Translate</span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton2085.fancyButton:link,.fancyButton2085.fancyButton:visited, .fancyButton2085div.fancyButton{
+	background-color: #6c7525;
+	height: 55px;
+	background-repeat: no-repeat;
+	background-position: left top;
+width: 75px; opacity: 1;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;}
+.fancyButton2085.fancyButton:hover,.fancyButton2085.fancyButton:focus,.fancyButton2085.fancyButton:active,.fancyButton2085.fancyButton.hover{
+	background-color: #2b4a5d;
+	background-repeat: no-repeat;
+	background-position: left top;
+width: 130px;}
+.fancyButton2085.fancyButton:link > span,.fancyButton2085.fancyButton:visited > span, .fancyButton2085div.fancyButton > span{
+}
+.fancyButton2085.fancyButton:hover > span,.fancyButton2085.fancyButton:focus > span,.fancyButton2085.fancyButton:active > span,.fancyButton2085.fancyButton.hover > span{
+}
+.fancyButton2085.fancyButton .text{
+	color: #fff;
+	font-size: .9em;
+	font-family: "Ubuntu";
+	text-align: left;
+	padding-left: 1em;
+	font-weight: 700;
+	text-decoration: none;
+	padding-left: 1em;
+	background-image: url('/ImageRepository/Document?documentID=69238');
+	background-repeat: no-repeat;
+	background-position: right center;
+height: 55px; opacity: 1;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;font-size: 0;}
+.fancyButton2085.fancyButton:hover .text,.fancyButton2085.fancyButton:focus .text,.fancyButton2085.fancyButton:active .text,.fancyButton2085.fancyButton.hover .text{
+	text-decoration: none;
+	background-image: url('/ImageRepository/Document?documentID=69238');
+	background-repeat: no-repeat;
+	background-position: right center;
+
+font-size: .8em;}
+</style>
+
+ </li><!--
+					-->
+					</ul>
+			</nav>
+		</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</aside>
+</div><div data-cpRole="structuralContainer" id="structuralContainer13">
+<div class="siteWrap"><aside data-cpRole="contentContainer" id="contentContainer13a">	<div id="ccfc99e6af-e0f8-42e3-80c3-db9e63f5ac87" data-containerid="fc99e6af-e0f8-42e3-80c3-db9e63f5ac87" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="" data-widgetcontainerid="299cac34-806d-46dc-9de0-4de51ce2a757">				
+	<div class="row nest first last wide">
+	
+	<div class="inner col col24 first last idcf1f9a0e-709d-4b41-935d-3acd79ce2cc0" style="" data-widgetcontainerid="cf1f9a0e-709d-4b41-935d-3acd79ce2cc0">	
+<div data-widget-id="5248bc3a-9af8-4880-85f7-5f9925e68358" data-widget-controller-path="/GraphicLinks/Widget">
+
+
+
+
+<div id="graphicLinkWidget5248bc3a-9af8-4880-85f7-5f9925e68358" class="widget widgetGraphicLinks skin43 widgetOptionSet55 wide" data-elementqueryclasses='{"wide-narrow":"min-width:50em"}' data-elementquerymatch='matchMultiColumn' data-elementqueryunmatch='unmatchMultiColumn' data-modulewidgettype="graphicLinks">
+	<div class="widgetHeader">
+		<div class="">
+				</div>
+	</div>
+	<div class="widgetBody cpGrid cpGrid7 ">
+		<nav class="widgetGraphicLinksNav" aria-labelledby="GraphicLinkHeaderText">
+				<div class="row   wide">
+					<!--
+--><div class="col col1 first "><ul class="semanticList"><!--
+
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="/1704" target="_self" class="fancyButton fancyButton1743 " >
+		<span>
+			<span><span class="text">County Records<br><span class="textStyle1">Request Public Records</span></span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton1743.fancyButton:link,.fancyButton1743.fancyButton:visited, .fancyButton1743div.fancyButton{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton1743.fancyButton:hover,.fancyButton1743.fancyButton:focus,.fancyButton1743.fancyButton:active,.fancyButton1743.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton1743.fancyButton:link > span,.fancyButton1743.fancyButton:visited > span, .fancyButton1743div.fancyButton > span{
+}
+.fancyButton1743.fancyButton:hover > span,.fancyButton1743.fancyButton:focus > span,.fancyButton1743.fancyButton:active > span,.fancyButton1743.fancyButton.hover > span{
+}
+.fancyButton1743.fancyButton .text{
+	color: #5b6222;
+	font-size: 1.25em;
+	font-family: "Merriweather";
+	text-align: center;
+	padding-top: 100px;
+	font-weight: 700;
+	text-decoration: none;
+	padding-top: 100px;
+	background-image: url('/ImageRepository/Document?documentID=54857');
+	background-repeat: no-repeat;
+	background-position: center top;
+opacity: 1;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;line-height: 1;}
+.fancyButton1743.fancyButton:hover .text,.fancyButton1743.fancyButton:focus .text,.fancyButton1743.fancyButton:active .text,.fancyButton1743.fancyButton.hover .text{
+	text-decoration: none;
+	background-image: url('/ImageRepository/Document?documentID=54858');
+	background-repeat: no-repeat;
+	background-position: center top;
+
+
+}
+.fancyButton1743.fancyButton .textStyle1{
+	color: #2d2e2f;
+	font-size: .95em;
+	font-family: Ubuntu;
+	font-weight: 500;
+	font-style: italic;
+	text-decoration: none;
+
+}
+.fancyButton1743.fancyButton:hover .textStyle1, .fancyButton1743.fancyButton.hover .textStyle1{
+	text-decoration: none;
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="/1183" target="_self" class="fancyButton fancyButton1744 " >
+		<span>
+			<span><span class="text">County Jobs<br><span class="textStyle1">Current opportunities</span></span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton1744.fancyButton:link,.fancyButton1744.fancyButton:visited, .fancyButton1744div.fancyButton{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton1744.fancyButton:hover,.fancyButton1744.fancyButton:focus,.fancyButton1744.fancyButton:active,.fancyButton1744.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton1744.fancyButton:link > span,.fancyButton1744.fancyButton:visited > span, .fancyButton1744div.fancyButton > span{
+}
+.fancyButton1744.fancyButton:hover > span,.fancyButton1744.fancyButton:focus > span,.fancyButton1744.fancyButton:active > span,.fancyButton1744.fancyButton.hover > span{
+}
+.fancyButton1744.fancyButton .text{
+	color: #5b6222;
+	font-size: 1.25em;
+	font-family: "Merriweather";
+	text-align: center;
+	padding-top: 100px;
+	font-weight: 700;
+	text-decoration: none;
+	padding-top: 100px;
+	background-image: url('/ImageRepository/Document?documentID=54855');
+	background-repeat: no-repeat;
+	background-position: center top;
+opacity: 1;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;line-height: 1;}
+.fancyButton1744.fancyButton:hover .text,.fancyButton1744.fancyButton:focus .text,.fancyButton1744.fancyButton:active .text,.fancyButton1744.fancyButton.hover .text{
+	text-decoration: none;
+	background-image: url('/ImageRepository/Document?documentID=54856');
+	background-repeat: no-repeat;
+	background-position: center top;
+
+
+}
+.fancyButton1744.fancyButton .textStyle1{
+	color: #2d2e2f;
+	font-size: .95em;
+	font-family: Ubuntu;
+	font-weight: 500;
+	font-style: italic;
+	text-decoration: none;
+
+}
+.fancyButton1744.fancyButton:hover .textStyle1, .fancyButton1744.fancyButton.hover .textStyle1{
+	text-decoration: none;
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="/5519" target="_self" class="fancyButton fancyButton1745 " >
+		<span>
+			<span><span class="text">Jury Duty<br><span class="textStyle1">Keep Informed</span></span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton1745.fancyButton:link,.fancyButton1745.fancyButton:visited, .fancyButton1745div.fancyButton{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton1745.fancyButton:hover,.fancyButton1745.fancyButton:focus,.fancyButton1745.fancyButton:active,.fancyButton1745.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton1745.fancyButton:link > span,.fancyButton1745.fancyButton:visited > span, .fancyButton1745div.fancyButton > span{
+}
+.fancyButton1745.fancyButton:hover > span,.fancyButton1745.fancyButton:focus > span,.fancyButton1745.fancyButton:active > span,.fancyButton1745.fancyButton.hover > span{
+}
+.fancyButton1745.fancyButton .text{
+	color: #5b6222;
+	font-size: 1.25em;
+	font-family: "Merriweather";
+	text-align: center;
+	padding-top: 100px;
+	font-weight: 700;
+	text-decoration: none;
+	padding-top: 100px;
+	background-image: url('/ImageRepository/Document?documentID=54859');
+	background-repeat: no-repeat;
+	background-position: center top;
+opacity: 1;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;line-height: 1;}
+.fancyButton1745.fancyButton:hover .text,.fancyButton1745.fancyButton:focus .text,.fancyButton1745.fancyButton:active .text,.fancyButton1745.fancyButton.hover .text{
+	text-decoration: none;
+	background-image: url('/ImageRepository/Document?documentID=54860');
+	background-repeat: no-repeat;
+	background-position: center top;
+
+
+}
+.fancyButton1745.fancyButton .textStyle1{
+	color: #2d2e2f;
+	font-size: .95em;
+	font-family: Ubuntu;
+	font-weight: 500;
+	font-style: italic;
+	text-decoration: none;
+
+}
+.fancyButton1745.fancyButton:hover .textStyle1, .fancyButton1745.fancyButton.hover .textStyle1{
+	text-decoration: none;
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="/3111" target="_self" class="fancyButton fancyButton1746 " >
+		<span>
+			<span><span class="text">Payments<br><span class="textStyle1">Easily pay your bills online</span></span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton1746.fancyButton:link,.fancyButton1746.fancyButton:visited, .fancyButton1746div.fancyButton{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton1746.fancyButton:hover,.fancyButton1746.fancyButton:focus,.fancyButton1746.fancyButton:active,.fancyButton1746.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton1746.fancyButton:link > span,.fancyButton1746.fancyButton:visited > span, .fancyButton1746div.fancyButton > span{
+}
+.fancyButton1746.fancyButton:hover > span,.fancyButton1746.fancyButton:focus > span,.fancyButton1746.fancyButton:active > span,.fancyButton1746.fancyButton.hover > span{
+}
+.fancyButton1746.fancyButton .text{
+	color: #5b6222;
+	font-size: 1.25em;
+	font-family: "Merriweather";
+	text-align: center;
+	padding-top: 100px;
+	font-weight: 700;
+	text-decoration: none;
+	padding-top: 100px;
+	background-image: url('/ImageRepository/Document?documentID=54863');
+	background-repeat: no-repeat;
+	background-position: center top;
+opacity: 1;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;line-height: 1;}
+.fancyButton1746.fancyButton:hover .text,.fancyButton1746.fancyButton:focus .text,.fancyButton1746.fancyButton:active .text,.fancyButton1746.fancyButton.hover .text{
+	text-decoration: none;
+	background-image: url('/ImageRepository/Document?documentID=54864');
+	background-repeat: no-repeat;
+	background-position: center top;
+
+
+}
+.fancyButton1746.fancyButton .textStyle1{
+	color: #2d2e2f;
+	font-size: .95em;
+	font-family: Ubuntu;
+	font-weight: 500;
+	font-style: italic;
+	text-decoration: none;
+
+}
+.fancyButton1746.fancyButton:hover .textStyle1, .fancyButton1746.fancyButton.hover .textStyle1{
+	text-decoration: none;
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="/207" target="_self" class="fancyButton fancyButton1907 " >
+		<span>
+			<span><span class="text">Waste<br><span class="textStyle1">What you need to know</span></span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton1907.fancyButton:link,.fancyButton1907.fancyButton:visited, .fancyButton1907div.fancyButton{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton1907.fancyButton:hover,.fancyButton1907.fancyButton:focus,.fancyButton1907.fancyButton:active,.fancyButton1907.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton1907.fancyButton:link > span,.fancyButton1907.fancyButton:visited > span, .fancyButton1907div.fancyButton > span{
+}
+.fancyButton1907.fancyButton:hover > span,.fancyButton1907.fancyButton:focus > span,.fancyButton1907.fancyButton:active > span,.fancyButton1907.fancyButton.hover > span{
+}
+.fancyButton1907.fancyButton .text{
+	color: #5b6222;
+	font-size: 1.25em;
+	font-family: "Merriweather";
+	text-align: center;
+	padding-top: 100px;
+	font-weight: 700;
+	text-decoration: none;
+	padding-top: 100px;
+	background-image: url('/ImageRepository/Document?documentID=54867');
+	background-repeat: no-repeat;
+	background-position: center top;
+opacity: 1;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;line-height: 1;}
+.fancyButton1907.fancyButton:hover .text,.fancyButton1907.fancyButton:focus .text,.fancyButton1907.fancyButton:active .text,.fancyButton1907.fancyButton.hover .text{
+	text-decoration: none;
+	background-image: url('/ImageRepository/Document?documentID=54868');
+	background-repeat: no-repeat;
+	background-position: center top;
+
+
+}
+.fancyButton1907.fancyButton .textStyle1{
+	color: #2d2e2f;
+	font-size: .95em;
+	font-family: Ubuntu;
+	font-weight: 500;
+	font-style: italic;
+	text-decoration: none;
+
+}
+.fancyButton1907.fancyButton:hover .textStyle1, .fancyButton1907.fancyButton.hover .textStyle1{
+	text-decoration: none;
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  "><ul class="semanticList"><!--
+
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="/2251" target="_self" class="fancyButton fancyButton1908 " >
+		<span>
+			<span><span class="text">Taxes<br><span class="textStyle1">Search our database</span></span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton1908.fancyButton:link,.fancyButton1908.fancyButton:visited, .fancyButton1908div.fancyButton{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton1908.fancyButton:hover,.fancyButton1908.fancyButton:focus,.fancyButton1908.fancyButton:active,.fancyButton1908.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton1908.fancyButton:link > span,.fancyButton1908.fancyButton:visited > span, .fancyButton1908div.fancyButton > span{
+}
+.fancyButton1908.fancyButton:hover > span,.fancyButton1908.fancyButton:focus > span,.fancyButton1908.fancyButton:active > span,.fancyButton1908.fancyButton.hover > span{
+}
+.fancyButton1908.fancyButton .text{
+	color: #5b6222;
+	font-size: 1.25em;
+	font-family: "Merriweather";
+	text-align: center;
+	padding-top: 100px;
+	font-weight: 700;
+	text-decoration: none;
+	padding-top: 100px;
+	background-image: url('/ImageRepository/Document?documentID=54865');
+	background-repeat: no-repeat;
+	background-position: center top;
+opacity: 1;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;line-height: 1;}
+.fancyButton1908.fancyButton:hover .text,.fancyButton1908.fancyButton:focus .text,.fancyButton1908.fancyButton:active .text,.fancyButton1908.fancyButton.hover .text{
+	text-decoration: none;
+	background-image: url('/ImageRepository/Document?documentID=54866');
+	background-repeat: no-repeat;
+	background-position: center top;
+
+
+}
+.fancyButton1908.fancyButton .textStyle1{
+	color: #2d2e2f;
+	font-size: .95em;
+	font-family: Ubuntu;
+	font-weight: 500;
+	font-style: italic;
+	text-decoration: none;
+
+}
+.fancyButton1908.fancyButton:hover .textStyle1, .fancyButton1908.fancyButton.hover .textStyle1{
+	text-decoration: none;
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!----><div class="col col1  last"><ul class="semanticList"><!--
+
+	    --><li class="widgetItem GraphicLinks">
+
+<div>
+	<a href="/1609" target="_self" class="fancyButton fancyButton1909 " >
+		<span>
+			<span><span class="text">Licenses<br><span class="textStyle1">Application information</span></span></span>
+		</span>
+	</a>
+</div>
+		<style scoped="scoped">.fancyButton1909.fancyButton:link,.fancyButton1909.fancyButton:visited, .fancyButton1909div.fancyButton{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton1909.fancyButton:hover,.fancyButton1909.fancyButton:focus,.fancyButton1909.fancyButton:active,.fancyButton1909.fancyButton.hover{
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+.fancyButton1909.fancyButton:link > span,.fancyButton1909.fancyButton:visited > span, .fancyButton1909div.fancyButton > span{
+}
+.fancyButton1909.fancyButton:hover > span,.fancyButton1909.fancyButton:focus > span,.fancyButton1909.fancyButton:active > span,.fancyButton1909.fancyButton.hover > span{
+}
+.fancyButton1909.fancyButton .text{
+	color: #5b6222;
+	font-size: 1.25em;
+	font-family: "Merriweather";
+	text-align: center;
+	padding-top: 100px;
+	font-weight: 700;
+	text-decoration: none;
+	padding-top: 100px;
+	background-image: url('/ImageRepository/Document?documentID=54861');
+	background-repeat: no-repeat;
+	background-position: center top;
+opacity: 1;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;line-height: 1;}
+.fancyButton1909.fancyButton:hover .text,.fancyButton1909.fancyButton:focus .text,.fancyButton1909.fancyButton:active .text,.fancyButton1909.fancyButton.hover .text{
+	text-decoration: none;
+	background-image: url('/ImageRepository/Document?documentID=54862');
+	background-repeat: no-repeat;
+	background-position: center top;
+
+
+}
+.fancyButton1909.fancyButton .textStyle1{
+	color: #2d2e2f;
+	font-size: .95em;
+	font-family: Ubuntu;
+	font-weight: 500;
+	font-style: italic;
+	text-decoration: none;
+
+}
+.fancyButton1909.fancyButton:hover .textStyle1, .fancyButton1909.fancyButton.hover .textStyle1{
+	text-decoration: none;
+
+}
+</style>
+
+ </li><!--
+--></ul></div><!--				-->
+				</div>
+			</nav>
+		</div>
+	<div class="widgetFooter">
+			</div>
+</div>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</aside></div>
+</div><div data-cpRole="structuralContainer" id="structuralContainer14"><div class="inner">
+<div class="siteWrap2"><footer data-cpRole="contentContainer" id="contentContainer14a" class="siteFooter">	<div id="ccffc748b0-8900-4f5c-a12e-0ebc5762a569" data-containerid="ffc748b0-8900-4f5c-a12e-0ebc5762a569" class="pageContent cpGrid cpGrid24 isLockedContainer showInMobile" data-contentcontainerbreakpoint="40">
+				                
+
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="" data-widgetcontainerid="0a1a0b57-7b78-435e-9942-052ef9ee9df0">				
+	<div class="row nest first last wide">
+	
+	<div class="inner col col24 first last id1dbf5bcd-c738-4e35-b410-b8279e10286f" style="" data-widgetcontainerid="1dbf5bcd-c738-4e35-b410-b8279e10286f">	
+	<div data-widget-id="5da8ccc6-206a-4715-880b-a6417799ebce" data-widget-controller-path="/QuickLinks/Widget">
+
+
+
+
+
+
+
+
+	<section id="widgetQuicklink5da8ccc6-206a-4715-880b-a6417799ebce" class="widget widgetQuickLinks skin66 widgetOptionSet37 narrow" data-modulewidgettype="quickLinks" data-elementqueryclasses='{"wide-narrow":"min-width:25em"}' data-elementquerymatch='matchMultiColumn' data-elementqueryunmatch='unmatchMultiColumn' aria-label="Quick Links">
+			<header class="widgetHeader" id="quickLinksHeader5da8ccc6-206a-4715-880b-a6417799ebce">
+		<div class="">
+						</div>
+	</header>
+	<div class="widgetBody cpGrid cpGrid6 ">
+        <div class="row autoWidths center narrow">
+				<div class="col col1 first ">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="/accessibility" target="_self" >Accessibility</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+				<div class="col col1  ">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="/site/copyright" target="_self" >Copyright</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+				<div class="col col1  ">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="/privacy" target="_self" >Privacy Policy</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+				<div class="col col1  ">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="/1965/Website-Information" target="_self" >Site Information</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+				<div class="col col1  ">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="/howarewedoing" target="_self" >Webpage Feedback</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+				<div class="col col1  last">
+					<ol class="semanticList">
+
+    <li style="position:relative" class="widgetItem QuickLinks">
+        <a class="widgetDesc widgetQuickLinksLink" href="http://translate.google.com/translate?js=n&amp;sl=auto&amp;tl=es&amp;u=https://www.snohomishcountywa.gov/#TranslatePage2dddd745-2c39-4d70-a17f-88384b2ae058" target="_self" >Translate</a>
+        <div class="widgetMeta"></div>
+    </li>
+					</ol>
+				</div>
+		</div>
+        
+	</div>
+	<div class="widgetFooter">
+	</div>
+	<div class="addItemModal hidden">
+		<div class="url hidden">/QuickLinks.aspx</div>
+	</div>
+
+	</section>
+</div>
+	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="" data-widgetcontainerid="fad0e5c4-5f8a-4100-993a-81976767301e">				
+	<div class="row nest first last wide">
+	
+	<div class="inner col col24 first last id58a1bd5f-79bb-43c7-9ed9-085983de7ad0" style="" data-widgetcontainerid="58a1bd5f-79bb-43c7-9ed9-085983de7ad0">	
+    <div data-widget-id="40d7fb06-23f1-4d26-9771-ec7ef1afc1bd" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdv40d7fb06-23f1-4d26-9771-ec7ef1afc1bd" class="widget widgetInfoAdvanced skin67 widgetOptionSet5 wide" data-modulewidgettype="infoAdv" data-elementqueryclasses='{"wide-narrow":"min-width:25em"}' data-elementquerymatch='matchMultiColumn' data-elementqueryunmatch='unmatchMultiColumn' aria-label="Info Advanced">
+			<header class="widgetHeader" id="header40d7fb06-23f1-4d26-9771-ec7ef1afc1bd">
+		<div class="">
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid1 ">
+		<div class="row  wide">
+					<div class="col col1 first last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<div style="text-align: center;"><span style="">Snohomish County Government&nbsp; &nbsp; &nbsp;3000 Rockefeller Avenue&nbsp; &nbsp; &nbsp;Everett, WA 98201&nbsp; &nbsp; &nbsp;Phone: </span><a href="tel: 425-388-3411" target="_self" class="Hyperlink" style="">425-388-3411</a></div>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdv40d7fb06-23f1-4d26-9771-ec7ef1afc1bd .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+		<div class="row outer wide"><!--
+--><div class="outer col col24 first last" style="" data-widgetcontainerid="1d891fc3-9295-4e7b-9c63-5b9af5501612">				
+	<div class="row nest first last wide">
+	
+	<div class="inner col col24 first last iddf97ce82-c50d-4d62-b5c5-8058931569a3" style="" data-widgetcontainerid="df97ce82-c50d-4d62-b5c5-8058931569a3">	
+    <div data-widget-id="526fa6be-232c-48f4-9117-0092e38de2b8" data-widget-controller-path="/InfoAdvanced/Widget">
+
+
+
+
+
+	<section id="divInfoAdv526fa6be-232c-48f4-9117-0092e38de2b8" class="widget widgetInfoAdvanced skin68 widgetOptionSet5 wide" data-modulewidgettype="infoAdv" data-elementqueryclasses='{"wide-narrow":"min-width:25em"}' data-elementquerymatch='matchMultiColumn' data-elementqueryunmatch='unmatchMultiColumn' aria-label="Info Advanced">
+			<header class="widgetHeader" id="header526fa6be-232c-48f4-9117-0092e38de2b8">
+		<div class="">
+								</div>
+	</header>
+	<div class="widgetBody  cpGrid cpGrid1 ">
+		<div class="row  wide">
+					<div class="col col1 first last">
+						<ol class="pageStyles semanticList">
+
+<li class="InfoAdvanced widgetItem fr-view">
+	<div style="text-align: center;"><img src="/ImageRepository/Document?documentID=54873" alt="CivicPlus Logo" title="CivicPlus Logo">&nbsp;Government Websites by <a href="http://www.civicplus.com" target="_self" class="Hyperlink">CivicPlus&reg;</a><br>
+</div>
+</li>						</ol>
+					</div>
+		</div>
+	</div>
+	<div class="widgetFooter">
+
+	</div>
+
+	</section>
+
+
+
+<script type="text/javascript">
+	//Render slideshow if info advacned items contain one.
+	$(document).ready(function (e) {
+		$('#divInfoAdv526fa6be-232c-48f4-9117-0092e38de2b8 .InfoAdvanced.widgetItem').each(function () {
+			renderSlideshowIfApplicable($(this));		
+		});
+	});
+</script></div>	</div> <!-- inner column -->
+
+	</div> <!-- inner row -->
+
+			</div><!-- outer column --><!--		--></div> <!-- outer row -->
+
+
+	</div>
+</footer></div></div>
+</div>
+
+
+
+
+		<div id="bannerImagesJSON91" class="hidden"></div>
+		<div id="bannerSlideshowControls_banner1" class="bannerSlideshowControlsNew none " style="display:none">
+			<a id="arrowPrev_banner1" tabindex="0" class="arrowNew prev" aria-label="Banner Arrow Previous"><svg style=" " class=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconSlideshowArrowLeft"></use></svg></a>
+			<a id="arrowNext_banner1" tabindex="0" class="arrowNew next" aria-label="Banner Arrow Next"><svg style=" " class=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#iconSlideshowArrowRight"></use></svg></a>
+		</div>
+			<script type="text/javascript">
+				$(window).on("load", function () {
+					$.when(window.Pages.rwdSetupComplete)
+						.done(function () {
+							renderExternalBannerSlideshow('banner1',
+								{"BannerOptionID":91,"ThemeID":25,"SlotName":"banner1","Name":"Default","IsDefault":true,"BannerMode":2,"SlideShowSlideTiming":"5","SlideshowTransition":0,"SlideShowTransitionTiming":"1","ImageScale":true,"ImageAlignment":1,"ImageScroll":false,"MuteSound":true,"VideoType":0,"Status":40,"SlideshowControlsPosition":0,"SlideshowControlsAlignment":0,"SlideshowBannerControlsColorScheme":0,"DisplayVideoPauseButton":false,"VideoPauseButtonAlignment":1,"VideoPauseButtonControlsAlignment":0,"VideoPauseButtonStyle":"#FFFFFF","VideoPauseButtonBackgroundStyle":"#000000","VideoPauseButtonAlignmentClass":"alignRight viewport","DisplaySlideshowPauseButton":true,"SlideshowControlsColor":"#FFFFFF","SlideshowControlsBackgroundColor":"#000000","SlideshowPauseButtonClass":"isHidden","BannerImages":[{"BannerImageID":166,"BannerOptionID":91,"FileName":"/ImageRepository/Document?documentID=54781","Height":906,"Width":2016,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":1,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135568000000)\/","AltText":""},{"BannerImageID":167,"BannerOptionID":91,"FileName":"/ImageRepository/Document?documentID=54780","Height":906,"Width":2016,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":2,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135568000000)\/","AltText":""},{"BannerImageID":168,"BannerOptionID":91,"FileName":"/ImageRepository/Document?documentID=54779","Height":906,"Width":2016,"StartingOn":null,"StoppingOn":null,"IsLink":false,"LinkAddress":null,"Sequence":3,"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135568000000)\/","AltText":""}],"BannerVideos":[{"BannerVideoID":1,"BannerOptionID":91,"VideoFileName":"","ImageFileName":"EmptyBannerBkg201809111553277606.png","IsLink":false,"LinkAddress":null,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135568000000)\/","VideoFileID":"00000000-0000-0000-0000-000000000000","ImageFileID":"00000000-0000-0000-0000-000000000000","VideoWidth":0,"VideoHeight":0,"ImageWidth":0,"ImageHeight":0,"LinkedVideoUrl":"","RecordStatus":0,"AltText":null}],"RecordStatus":0,"ModifiedBy":0,"ModifiedOn":"\/Date(-62135568000000)\/"},
+								'/App_Themes/Interior/Images/',
+								'Rotating');
+						});
+				});
+			</script>
+
+</div>
+</div>
+
+            </div>
+        </div>
+    </div>
+
+<link href="/745732998.css" rel="stylesheet" type="text/css" />
+
+<div id="SplashMessageWrapper" class="cp-Splash-wrapper">
+	<div role="dialog" aria-labelledby="cp-Splash-title" aria-describedby="editorContentDesc" aria-modal="true" tabindex="-1" id="SplashMessage" class="hidden cp-Splash cp-Splash--modal is-open">
+		<div class="cp-Splash-header">
+			<h2 class="cp-Splash-title" id="cp-Splash-title">Loading</h2>
+			<button class="cp-Splash-Btn cp-Splash-close" aria-label="Close this modal" title="Close this window">
+				<svg id="iconClose" viewBox="0 0 25 25">
+					<polygon style="fill:currentcolor"
+							 points="18.806,6.98 18.075,6.248 12.532,11.792 6.989,6.248 6.257,6.98 11.786,12.508 6.212,18.084 6.943,18.815 12.532,13.224 18.12,18.815 18.851,18.084 13.277,12.508"></polygon>
+				</svg>
+			</button>
+		</div>
+		<div class="cp-Splash-body">
+			<div class="cp-Splash-Prose editorContent fr-view" id="editorContentDesc">
+				<!-- Content from the Froala Editor will go here. -->
+				Loading
+			</div>
+		</div>
+		<div class="cp-Splash-footer">
+			<button class="cp-Splash-Btn cp-Splash-Btn--NoShow">Do Not Show Again</button>
+			<button class="cp-Splash-Btn cp-Splash-Btn--Close">Close</button>
+		</div>
+	</div>
+</div>
+
+<script src="/Assets/Scripts/APIClient.js"></script>
+<script src="/Assets/Mystique/Shared/Scripts/Moment/Moment.min.js"></script>
+<script src="/Assets/Scripts/SplashModal/SplashModalRender.js"></script>
+<script>
+
+		$(document).ready(function () {
+			var filter = {
+				targetId: '5722',
+				targetType: 1
+			}
+
+			new SplashModalRender().triggerRender(filter);
+		});
+</script>
+
+
+	
+	
+	
+	
+
+
+
+	<script type="text/javascript">function dynamicStretchContainers () {Core.Layout.stretchContainers('#structuralContainer9, #structuralContainer11');}</script>
+
+
+
+
+
+
+    <script src="/-978663714.js" type="text/javascript"></script>
+    <!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })
+(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-51402208-1', 'snohomishcountywa.gov');
+  ga('send', 'pageview');
+gtag('config', 'AW-979976779');
+</script>
+<!-- End Google Analytics Code -->
+
+<!-- Google tag (gtag.js) -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WJCPSBS8BM"></script>
+
+<script>
+
+window.dataLayer = window.dataLayer || [];
+
+function gtag(){dataLayer.push(arguments);}
+
+gtag('js', new Date());
+
+gtag('config', 'G-WJCPSBS8BM');
+
+</script>
+
+<!-- End of GA4 Tag -->
+
+<!----------Google Translate (Mobile Friendly)--------->
+
+
+
+<style>#google-translate-container {float: right;padding: 3px 5px 0px 0px;}.goog-te-combo,.goog-te-banner *,.goog-te-ftab *,.goog-te-menu *,.goog-te-menu2 *,.goog-te-balloon * {font-family: arial;font-size: 10pt;background-image: url("https://theme.zdassets.com/theme_assets/958586/bae8aa24db8d43595871692a9d259186f2db3fb4.png");background-position: 3px 4px;background-size: 22px;background-repeat: no-repeat;text-indent: 20px;background-color: #fff;color: #000 !important;}.goog-logo-link {display: none !important;}.goog-te-gadget {color: transparent !important;}.goog-te-gadget .goog-te-combo {margin: 2px 0 !important;border-radius: 15px !important;}.goog-te-combo{border: 1px solid !important;border-color: #bcc9d7 #96a3b1 #96a3b1 #bcc9d7 !important;border-radius: 0 !important;height:32px; !important;padding: 0 1px 0 .25rem !important;}
+
+#launcher-wrapper {bottom: 50px !important;}
+
+</style>
+
+<div id="google-translate-container">
+
+<div id="google_translate_element" style="position: fixed; bottom: 0px; right: 20px; z-index: 5;"></div>
+
+</div>
+
+<script>
+
+function googleTranslateElementInit() {
+var el = document.getElementById("google_translate_element");
+if (el && el.innerHTML.trim() !== "") {
+    return;
+}
+
+
+new google.translate.TranslateElement({ pageLanguage: "en" }, "google_translate_element");
+
+// begin accessibility compliance
+
+$('img.goog-te-gadget-icon').attr('alt','Google Translate');
+
+$('div#goog-gt-tt div.logo img').attr('alt','translate');
+
+$('div#goog-gt-tt .original-text').css('text-align','left');
+
+$('.goog-te-gadget-simple .goog-te-menu-value span').css('color','#000000');
+
+$('.goog-te-combo').attr('aria-label','google translate languages');
+
+$('svg.goog-te-spinner').attr('title','Google Translate Spinner');
+
+$('.goog-te-gadget-simple .goog-te-menu-value span').css('color','#000000');
+
+}
+
+$(function() {
+
+$.getScript("//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit");
+
+});
+
+</script>
+
+
+
+<!--------------End Google Translate----------------->
+
+<script type="text/javascript">!function(){var b=function(){window.__AudioEyeSiteHash = "7c67c92bfedec716fe1cf45a94627dab"; var a=document.createElement("script");a.src="https://wsmcdn.audioeye.com/aem.js";a.type="text/javascript";a.setAttribute("async","");document.getElementsByTagName("body")[0].appendChild(a)};"complete"!==document.readyState?window.addEventListener?window.addEventListener("load",b):window.attachEvent&&window.attachEvent("onload",b):b()}();</script>
+
+<script type="module"
+data-hash="9afd566920e64066b01b1620441df899" id="frase-script"
+src="https://answers-script.frase.io/bot.js"></script>
+
+
+    <script type="text/javascript">
+        $(function () {
+            document.cookie = "responsiveGhost=0; path=/";
+        });
+        $(window).on("load", function () {
+            $('body').addClass('doneLoading').removeClass('hideContent');
+
+            if ($('#404Content').length > 0)
+                $('div#bodyWrapper').css('padding', '0px');
+        });
+    </script>
+
+    <noscript>
+        <style>
+            body.hideContent {
+                opacity: 1 !important;
+            }
+        </style>
+    </noscript>
+
+        
+<div style="display: none;">
+	<svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+
+		<symbol id="iconArrow--left" viewbox="0 0 25 25">
+			<title>Arrow Left</title>
+			<polygon style="fill:currentcolor" points="18.044,25 19.498,23.545 8.409,12.454 19.408,1.455 17.954,0 5.502,12.452"></polygon>
+		</symbol>
+
+		<symbol id="iconArrow--right" viewbox="0 0 25 25">
+			<title>Arrow Right</title>
+			<polygon style="fill:currentcolor" points="6.957,0 5.502,1.455 16.591,12.546 5.592,23.545 7.047,25 19.498,12.548"></polygon>
+		</symbol>
+
+	</svg>
+</div>
+    <script type="text/javascript">loadCSS('//fonts.googleapis.com/css?family=Fira+Sans:100,100italic,200,200italic,300,300italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic,italic,regular|Merriweather:300,300italic,700,700italic,900,900italic,italic,regular|Ubuntu:300,300italic,500,500italic,700,700italic,italic,regular|');</script>
+    
+
+    <div class="hidden activeWidgetSkinComponentsOnPageJson">[]</div>
+        <div style="display: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <symbol id="iconSlideshowArrowLeft" viewBox="0 0 22.68 40">
+                    <title>Slideshow Left Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M20,40a2.67,2.67,0,0,1-1.9-.79L.79,21.9a2.68,2.68,0,0,1,0-3.79L18.1.79a2.68,2.68,0,1,1,3.79,3.79L6.47,20,21.89,35.42A2.68,2.68,0,0,1,20,40Z"></path>
+                    </g>
+                </symbol>
+                <symbol id="iconSlideshowArrowRight" viewBox="0 0 22.68 40">
+                    <title>Slideshow Right Arrow</title>
+                    <g>
+                        <path style="fill:currentcolor;" d="M2.68,0a2.67,2.67,0,0,1,1.9.79L21.89,18.1a2.68,2.68,0,0,1,0,3.79L4.58,39.21A2.68,2.68,0,0,1,.79,35.42L16.21,20,.79,4.58A2.68,2.68,0,0,1,2.68,0Z"></path>
+                    </g>
+                </symbol>
+            </svg>
+        </div>
+    
+	
+
+    <div id="root-picker-outlet"></div>
+</body>
+</html>
