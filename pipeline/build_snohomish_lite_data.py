@@ -24,7 +24,9 @@ def dist_scope(layer, value):
 
 def candidate_rows(block):
     rows = []
-    for party, name in re.findall(r"\((Prefers [^)]+ Party|States No Party Preference)\)\s+(.+?)(?=\s+\(|\s+Write-In|\Z)", block):
+    # Names may carry parenthesized nicknames — "Robert (Chili) Hicks" — so a
+    # name only ends at the NEXT party-preference paren, not at any paren.
+    for party, name in re.findall(r"\((Prefers [^)]+ Party|States No Party Preference)\)\s+(.+?)(?=\s+\((?:Prefers |States No)|\s+Write-In|\Z)", block):
         rows.append({
             "slug": slugify(name),
             "name": name.strip(),

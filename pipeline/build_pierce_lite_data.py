@@ -1,10 +1,12 @@
 """Build app-facing Pierce County lite data from official sample ballot facts.
 
 Pierce County's DocumentCenter PDFs are Cloudflare-challenged from this data
-environment, so this package is keyed to the official sample ballot URL pointer
-and includes only scopes the current non-King resolver can match: CONGDST,
-LEGDST, CITY, and countywide. County council, district court, fire district,
-and PCO items remain out until a Pierce district adapter exists.
+environment, so this package is keyed to the official sample ballot URL
+pointer and cross-validated against the official VoteWA PRIMARY 2026
+candidate list export (data/washington-state/statewide/raw). Scopes cover
+CONGDST, LEGDST, CITY, COUNTY_COUNCIL, FIRDST, DISTCRT, and countywide via
+the Pierce district adapter in app/src/lib/geo.js. PCO races are excluded
+(statewide convention).
 """
 
 import json
@@ -189,11 +191,13 @@ contests = [
         candidate("Mike Solan", "Prefers Republican Party"),
         candidate("Ann E. Jolie", "Prefers Republican Party"),
     ], dist_scope("COUNTY_COUNCIL", 7)),
+    # The Election_Precincts PC_DISTRICT attribute is a YES/NO "inside the
+    # district court electoral district" flag, not a district number.
     scoped_contest("Judicial", "Pierce County District Court No. 7", "Judge Position No. 7", [
         candidate("Eric J. Lawless"),
         candidate("Mike Sommerfeld"),
         candidate("Pam Nogueira"),
-    ], dist_scope("DISTCRT", 7)),
+    ], dist_scope("DISTCRT", "YES")),
 ]
 
 measures = [

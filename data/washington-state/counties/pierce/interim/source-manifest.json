@@ -1,7 +1,7 @@
 {
   "county": "pierce",
   "election": "2026-08-04-primary",
-  "status": "ingested_not_supported",
+  "status": "ingested_supported",
   "official_sources": {
     "current_election": "https://www.piercecountywa.gov/7959/Current-Election",
     "local_voters_pamphlet_pdf": "https://www.piercecountywa.gov/DocumentCenter/View/158538/Primary-2026-VP-Final",
@@ -42,6 +42,7 @@
   "notes": [
     "The current-election page links VoteWA for personalized online voter-guide content and candidate filing.",
     "The election-at-a-glance PDF says the August ballot includes four local special-election measures in Pierce County.",
-    "This package stores PDF URLs only; it does not commit PDF binaries."
+    "This package stores PDF URLs only; it does not commit PDF binaries.",
+    "Contests and candidates cross-validated 2026-07-17 against the official VoteWA PRIMARY 2026 candidate list (voter.votewa.gov/candidatelist.aspx?e=898, Pierce county export): all 24 non-PCO primary contests and every active candidate matched exactly."
   ]
 }

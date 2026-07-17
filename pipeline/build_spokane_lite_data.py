@@ -172,8 +172,17 @@ contests = [
 measures = [
     measure("Spokane Transit Authority", "Proposition No. 1", "Maintenance and Enhancement of Public Transportation Services", dist_scope("PTBA", "Y"), 41, "Reauthorizes an existing voter-approved sales and use tax for public transportation services, transit system maintenance and enhancement, expansion, and support facilities.", "Reauthorizes up to 0.2% sales and use tax from January 1, 2029 through no later than December 31, 2048."),
     measure("Spokane County Library District", "Proposition No. 1", "Regular Library Operations and Maintenance Levy", dist_scope("LIBDST", "Spokane County Library District"), 43, "Restores the library district's regular property tax levy rate to support library operations, maintenance, services, materials, staffing, and facilities.", "Restores the levy rate to $0.45 per $1,000 of assessed value for collection in 2027."),
+    # No public GIS boundary exists for the PROPOSED West Plains APA (the only
+    # public "Aquifer" service is the Spokane Valley-Rathdrum Prairie aquifer,
+    # a different geography). The AQUIFER layer is intentionally unresolvable,
+    # so this measure is never shown to the wrong voters; it is why Spokane
+    # remains partial_county.
     measure("West Plains Aquifer Protection Area", "Measure No. 1", "Spokane County West Plains Aquifer Protection Area", dist_scope("AQUIFER", "yes"), 44, "Authorizes monthly fees to fund aquifer protection activities including planning, water quality improvements, sewage and stormwater facilities, monitoring, inspections, and public education.", "Authorizes monthly fees up to $1.25 per household unit for water withdrawal and $1.25 for on-site sewage disposal for up to 20 years."),
     measure("City of Cheney", "Proposition No. 1", "Renewal of Residential Street Utility Tax", dist_scope("CITY", "Cheney"), 46, "Renews Cheney's tax on electrical energy and natural gas businesses to 16.75% of gross revenue for 14 years, with proceeds used to repair streets and sidewalks.", "Renews a utility tax rate six percentage points above the otherwise authorized 10.75% rate for 14 years."),
+    # Rosalia Park & Recreation District #5 spans the Whitman county line; the
+    # WA DOR park & recreation district layer (PKR2025) answers point queries
+    # with DISTATTRIB 'ROSA' on the Spokane side (the Whitman side is '5').
+    measure("Rosalia Park & Recreation District", "Proposition No. 1", "Two Year Maintenance and Operations Levy for the Rosalia Pool", dist_scope("PARKDST", "ROSA"), 47, "Authorizes the Rosalia Park and Recreation District No. 5 to levy regular property taxes in 2027 and 2028 to fund operating, maintaining, and improving the Rosalia Pool, including maintenance, supplies, salaries, and utilities. Requires a 60% supermajority to pass.", "Levies of $85,000.00 per year, approximately $0.39 (maximum $0.60) per $1,000 of assessed value, collected in 2027 and 2028."),
 ]
 
 OUT.mkdir(parents=True, exist_ok=True)
