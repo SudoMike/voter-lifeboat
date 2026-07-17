@@ -1,0 +1,39 @@
+{
+  "county": "pend-oreille",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/counties/pend-oreille/raw/votewa/candidate-list.csv",
+    "https://pendoreilleco.org/your-government/auditor/elections/"
+  ],
+  "coverage": "full_county",
+  "notes": [],
+  "measures": [
+    {
+      "slug": "pend-oreille-pend-oreille-county-public-hospital-district-no-1-proposition-no-1",
+      "owner": "pend-oreille",
+      "jurisdiction": "Pend Oreille County Public Hospital District No. 1",
+      "proposition": "Proposition No. 1",
+      "title": "Hospital Expansion and Renovation Bonds",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pend-oreille",
+        "layer": "HOSPDST",
+        "value": "1"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Authorizes 30-year general obligation bonds to expand and renovate Newport Community Hospital.",
+      "cost_line": "$51,000,000 in bonds.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://pendoreilleco.org/your-government/auditor/elections/"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -142,7 +142,11 @@ test('configured non-King layers stay partial until the county data package is f
         },
       }
     }
-    const attr = String(url).includes('Current_Districts') ? { DISTNUM: 2 } : { AQUIFER: 'Y' }
+    const attr = String(url).includes('Boundary/MapServer/8')
+      ? { DISTNUM: 2 }
+      : String(url).includes('WADOR_PropertyTax')
+        ? { DISTATTRIB: 'ROSA' }
+        : { NAME: 'Spokane County Library District', PTBA: 'Y' }
     return {
       ok: true,
       async json() {
@@ -156,4 +160,74 @@ test('configured non-King layers stay partial until the county data package is f
   )
   assert.equal(context.coverageStatus, 'partial_county')
   assert.deepEqual(context.missingLayers, [])
+})
+
+test('missing census congressional/legislative districts degrade coverage to partial', async () => {
+  global.fetch = async (url) => {
+    if (String(url).startsWith('/api/geocode')) {
+      return {
+        ok: true,
+        async json() {
+          return {
+            result: {
+              addressMatches: [{
+                matchedAddress: '1408 FRANKLIN ST, VANCOUVER, WA, 98660',
+                coordinates: { x: -122.67, y: 45.63 },
+                geographies: {
+                  Counties: [{ STATE: '53', COUNTY: '011', NAME: 'Clark County' }],
+                  // No congressional/legislative geographies: the census
+                  // vintage rotated or the response degraded.
+                },
+              }],
+            },
+          }
+        },
+      }
+    }
+    return {
+      ok: true,
+      async json() {
+        return { features: [{ attributes: { BOCCDistrict: 1, District: 3, FIREDST: 10 } }] }
+      },
+    }
+  }
+  const context = await lookupBallotContext(
+    { coverage: { statewide_complete: true, supported_counties: [{ id: 'clark', coverage: 'full_county' }] } },
+    '1408 Franklin St Vancouver WA 98660'
+  )
+  assert.equal(context.coverageStatus, 'partial_county')
+  assert.ok(context.missingLayers.includes('CONGDST'))
+  assert.ok(context.missingLayers.includes('LEGDST'))
+})
+
+test('King County honors a partial data package even when every GIS layer resolves', async () => {
+  global.fetch = async (url) => {
+    if (String(url).startsWith('/api/geocode')) {
+      return {
+        ok: true,
+        async json() {
+          return {
+            result: {
+              addressMatches: [{
+                matchedAddress: '400 BROAD ST, SEATTLE, WA, 98109',
+                coordinates: { x: -122.35, y: 47.62 },
+                geographies: { Counties: [{ STATE: '53', COUNTY: '033', NAME: 'King County' }] },
+              }],
+            },
+          }
+        },
+      }
+    }
+    return {
+      ok: true,
+      async json() {
+        return { features: [{ attributes: { CONGDST: '7', LEGDST: '36', KCCDST: '4', SCCDST: 'SCC7', juddst: 'W', FIRDST: null, SCHDST: '1', NAME: 'Seattle' } }] }
+      },
+    }
+  }
+  const context = await lookupBallotContext(
+    { coverage: { statewide_complete: true, supported_counties: [{ id: 'king', coverage: 'partial_county' }] } },
+    '400 Broad St Seattle WA 98109'
+  )
+  assert.equal(context.coverageStatus, 'partial_county')
 })

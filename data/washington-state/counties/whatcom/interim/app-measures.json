@@ -1,0 +1,120 @@
+{
+  "county": "whatcom",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/counties/whatcom/raw/votewa/candidate-list.csv",
+    "https://www.whatcomcounty.us/2794/Elections"
+  ],
+  "coverage": "full_county",
+  "notes": [],
+  "measures": [
+    {
+      "slug": "whatcom-whatcom-county-fire-protection-district-no-1-proposition-2026-02",
+      "owner": "whatcom",
+      "jurisdiction": "Whatcom County Fire Protection District No. 1",
+      "proposition": "Proposition 2026-02",
+      "title": "Levy Lid Lift",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whatcom",
+        "layer": "FIRDST",
+        "value": "1"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Lifts the fire district levy lid with a 106% limit factor for nine years (Everson/Nooksack area).",
+      "cost_line": "$1.48 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.whatcomcounty.us/2794/Elections"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whatcom-glacier-fire-and-rescue-whatcom-county-fire-protection-district-no-19-proposition-2026-04",
+      "owner": "whatcom",
+      "jurisdiction": "Glacier Fire and Rescue (Whatcom County Fire Protection District No. 19)",
+      "proposition": "Proposition 2026-04",
+      "title": "Regular Property Tax Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whatcom",
+        "layer": "FIRDST",
+        "value": "19"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Sets the fire district's regular levy with a 104% limit factor for six years.",
+      "cost_line": "$1.10 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.whatcomcounty.us/2794/Elections"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whatcom-whatcom-county-fire-protection-district-no-21-proposition-2026-03",
+      "owner": "whatcom",
+      "jurisdiction": "Whatcom County Fire Protection District No. 21",
+      "proposition": "Proposition 2026-03",
+      "title": "Regular Property Tax Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whatcom",
+        "layer": "FIRDST",
+        "value": "21"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Sets the fire district's regular levy with a 103% limit factor for five years.",
+      "cost_line": "$1.20 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.whatcomcounty.us/2794/Elections"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whatcom-skagit-county-public-hospital-district-no-304-united-general-proposition-no-1",
+      "owner": "whatcom",
+      "jurisdiction": "Skagit County Public Hospital District No. 304 (United General)",
+      "proposition": "Proposition No. 1",
+      "title": "Levy Lid Lift",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whatcom",
+        "layer": "HOSPDST",
+        "value": "304"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Lifts the cross-county hospital district's regular levy lid for 2027 collection.",
+      "cost_line": "$0.50 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.whatcomcounty.us/2794/Elections"
+          ]
+        }
+      }
+    }
+  ]
+}

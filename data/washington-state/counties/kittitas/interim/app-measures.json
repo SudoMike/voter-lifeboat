@@ -1,0 +1,120 @@
+{
+  "county": "kittitas",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/counties/kittitas/raw/votewa/candidate-list.csv",
+    "https://www.co.kittitas.wa.us/auditor/elections/"
+  ],
+  "coverage": "full_county",
+  "notes": [],
+  "measures": [
+    {
+      "slug": "kittitas-snoqualmie-pass-fire-and-rescue-proposition-no-1",
+      "owner": "kittitas",
+      "jurisdiction": "Snoqualmie Pass Fire and Rescue",
+      "proposition": "Proposition No. 1",
+      "title": "Continuation of Benefit Charge",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "kittitas",
+        "layer": "FIRDST",
+        "value": "51"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Continues the fire district's benefit charge (up to 60% of its budget) for six years.",
+      "cost_line": "Benefit charge up to 60% of the district's operating budget.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.co.kittitas.wa.us/auditor/elections/"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "kittitas-city-of-cle-elum-proposition-no-1",
+      "owner": "kittitas",
+      "jurisdiction": "City of Cle Elum",
+      "proposition": "Proposition No. 1",
+      "title": "Fire Levy Lid Lift",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "kittitas",
+        "layer": "CITY",
+        "value": "Cle Elum"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Lifts the city levy lid for fire service funding for two years.",
+      "cost_line": "An additional $0.98, to $1.87 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.co.kittitas.wa.us/auditor/elections/"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "kittitas-city-of-roslyn-proposition-no-1",
+      "owner": "kittitas",
+      "jurisdiction": "City of Roslyn",
+      "proposition": "Proposition No. 1",
+      "title": "Library Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "kittitas",
+        "layer": "CITY",
+        "value": "Roslyn"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Authorizes a library levy.",
+      "cost_line": "Up to $1.50 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.co.kittitas.wa.us/auditor/elections/"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "kittitas-kittitas-county-fire-protection-district-no-2-kittitas-valley-fire-rescue-proposition-no-1",
+      "owner": "kittitas",
+      "jurisdiction": "Kittitas County Fire Protection District No. 2 (Kittitas Valley Fire Rescue)",
+      "proposition": "Proposition No. 1",
+      "title": "Levy Lid Lift",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "kittitas",
+        "layer": "FIRDST",
+        "value": "2"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Lifts the fire district's regular levy lid.",
+      "cost_line": "Up to $1.50 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.co.kittitas.wa.us/auditor/elections/"
+          ]
+        }
+      }
+    }
+  ]
+}

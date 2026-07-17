@@ -1,0 +1,533 @@
+{
+  "county": "stevens",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/counties/stevens/raw/votewa/candidate-list.csv",
+    "https://voter.votewa.gov/genericvoterguide.aspx?e=898&c=33"
+  ],
+  "coverage": "full_county",
+  "notes": [],
+  "contests": [
+    {
+      "slug": "stevens-stevens-county-assessor",
+      "owner": "stevens",
+      "category": "County",
+      "office": "Assessor",
+      "district": "Stevens County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "stevens"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Stevens County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "rick-johnson",
+          "name": "Rick Johnson",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "stevens-stevens-county-auditor",
+      "owner": "stevens",
+      "category": "County",
+      "office": "Auditor",
+      "district": "Stevens County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "stevens"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Stevens County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "lori-larsen",
+          "name": "Lori Larsen",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "eric-simpson",
+          "name": "Eric Simpson",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "stevens-stevens-county-clerk",
+      "owner": "stevens",
+      "category": "County",
+      "office": "Clerk",
+      "district": "Stevens County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "stevens"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Stevens County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "michelle-enright",
+          "name": "Michelle Enright",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "stevens-stevens-county-commissioner-district-2-commissioner-2",
+      "owner": "stevens",
+      "category": "County",
+      "office": "Commissioner #2",
+      "district": "Stevens County Commissioner District 2",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "stevens",
+        "layer": "COUNTY_COUNCIL",
+        "value": "2"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Stevens County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "mark-burrows",
+          "name": "Mark Burrows",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "jack-griffin-jr",
+          "name": "Jack Griffin Jr",
+          "party": "States No Party Preference",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "stevens-stevens-county-coroner",
+      "owner": "stevens",
+      "category": "County",
+      "office": "Coroner",
+      "district": "Stevens County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "stevens"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Stevens County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "johnathan-waldrop",
+          "name": "Johnathan Waldrop",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "roseanne-ennis-jezerinac",
+          "name": "Roseanne Ennis Jezerinac",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "stevens-congressional-district-5-u-s-representative",
+      "owner": "stevens",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 5",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "stevens",
+        "layer": "CONGDST",
+        "value": "5"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Stevens County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "nate-powell",
+          "name": "Nate Powell",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "carmela-conroy",
+          "name": "Carmela Conroy",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "matthew-hayes",
+          "name": "Matthew Hayes",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "bajun-r-mavalwalla",
+          "name": "Bajun R. Mavalwalla",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "michael-mcgarr",
+          "name": "Michael McGarr",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "kevin-fagan",
+          "name": "Kevin Fagan",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "michael-baumgartner",
+          "name": "Michael Baumgartner",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "kyle-usrey",
+          "name": "Kyle Usrey",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "andrew-bartleson",
+          "name": "Andrew Bartleson",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "ann-marie-danimus",
+          "name": "Ann Marie Danimus",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "richard-freudenberg",
+          "name": "Richard Freudenberg",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "david-womack",
+          "name": "David Womack",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "stevens-stevens-county-prosecuting-attorney",
+      "owner": "stevens",
+      "category": "County",
+      "office": "Prosecuting Attorney",
+      "district": "Stevens County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "stevens"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Stevens County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "erika-george",
+          "name": "Erika George",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "stevens-stevens-county-sheriff",
+      "owner": "stevens",
+      "category": "County",
+      "office": "Sheriff",
+      "district": "Stevens County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "stevens"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Stevens County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "brad-a-manke",
+          "name": "Brad A. Manke",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "stevens-stevens-county-treasurer",
+      "owner": "stevens",
+      "category": "County",
+      "office": "Treasurer",
+      "district": "Stevens County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "stevens"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Stevens County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "tonia-toni-graham",
+          "name": "Tonia \"Toni\" Graham",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "stevens-legislative-district-7-state-senator",
+      "owner": "stevens",
+      "category": "State",
+      "office": "State Senator",
+      "district": "Legislative District 7",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "stevens",
+        "layer": "LEGDST",
+        "value": "7"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Stevens County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "shelly-short",
+          "name": "Shelly Short",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "ronald-l-mccoy",
+          "name": "Ronald L McCoy",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "brandon-ray-medina",
+          "name": "Brandon Ray Medina",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "david-swoap",
+          "name": "David Swoap",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "stevens-legislative-district-7-state-representative-pos-1",
+      "owner": "stevens",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 7",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "stevens",
+        "layer": "LEGDST",
+        "value": "7"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Stevens County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "andrew-engell",
+          "name": "Andrew Engell",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "stevens-legislative-district-7-state-representative-pos-2",
+      "owner": "stevens",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 7",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "stevens",
+        "layer": "LEGDST",
+        "value": "7"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Stevens County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "hunter-abell",
+          "name": "Hunter Abell",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    }
+  ]
+}

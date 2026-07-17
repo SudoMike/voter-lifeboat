@@ -1,0 +1,41 @@
+{
+  "county": "lincoln",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/counties/lincoln/raw/votewa/candidate-list.csv",
+    "https://www.co.lincoln.wa.us/auditor/elections/"
+  ],
+  "coverage": "partial_county",
+  "notes": [
+    "Unresolvable district scopes (no queryable official boundary): COUNTY_COUNCIL. Contests/measures scoped to them are hidden rather than shown to the wrong voters."
+  ],
+  "measures": [
+    {
+      "slug": "lincoln-lincoln-county-cemetery-district-no-7-sprague-proposition-no-1",
+      "owner": "lincoln",
+      "jurisdiction": "Lincoln County Cemetery District No. 7 (Sprague)",
+      "proposition": "Proposition No. 1",
+      "title": "Excess Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "lincoln",
+        "layer": "CEMDST",
+        "value": "7"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Authorizes a one-year excess levy for cemetery operations, collected in 2027 (Resolution 2026-01).",
+      "cost_line": "$40,000, approximately $0.25 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.co.lincoln.wa.us/auditor/elections/"
+          ]
+        }
+      }
+    }
+  ]
+}

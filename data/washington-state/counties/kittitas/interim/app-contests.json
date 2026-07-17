@@ -1,0 +1,478 @@
+{
+  "county": "kittitas",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/counties/kittitas/raw/votewa/candidate-list.csv",
+    "https://www.co.kittitas.wa.us/auditor/elections/"
+  ],
+  "coverage": "full_county",
+  "notes": [],
+  "contests": [
+    {
+      "slug": "kittitas-congressional-district-8-u-s-representative",
+      "owner": "kittitas",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 8",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "kittitas",
+        "layer": "CONGDST",
+        "value": "8"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Kittitas County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "kim-schrier",
+          "name": "Kim Schrier",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "trinh-ha",
+          "name": "Trinh Ha",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "spencer-meline",
+          "name": "Spencer Meline",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "keith-arnold",
+          "name": "Keith Arnold",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "andres-valleza",
+          "name": "Andres Valleza",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "bob-hagglund",
+          "name": "Bob Hagglund",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "kittitas-legislative-district-13-state-senator",
+      "owner": "kittitas",
+      "category": "State",
+      "office": "State Senator",
+      "district": "Legislative District 13",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "kittitas",
+        "layer": "LEGDST",
+        "value": "13"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Kittitas County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "alex-ybarra",
+          "name": "Alex Ybarra",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "kittitas-legislative-district-13-state-representative-pos-1",
+      "owner": "kittitas",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 13",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "kittitas",
+        "layer": "LEGDST",
+        "value": "13"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Kittitas County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "tom-dent",
+          "name": "Tom Dent",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "juan-jerry-garcia",
+          "name": "Juan \"Jerry\" Garcia",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "kittitas-legislative-district-13-state-representative-pos-2",
+      "owner": "kittitas",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 13",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "kittitas",
+        "layer": "LEGDST",
+        "value": "13"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Kittitas County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "deanna-martinez",
+          "name": "Deanna Martinez",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "joshua-thompson",
+          "name": "Joshua Thompson",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "don-myers",
+          "name": "Don Myers",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "kittitas-kittitas-county-assessor",
+      "owner": "kittitas",
+      "category": "County",
+      "office": "Assessor",
+      "district": "Kittitas County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "kittitas"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Kittitas County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "mike-hougardy",
+          "name": "Mike Hougardy",
+          "party": "Prefers Gop Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "kittitas-kittitas-county-auditor",
+      "owner": "kittitas",
+      "category": "County",
+      "office": "Auditor",
+      "district": "Kittitas County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "kittitas"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Kittitas County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "bryan-elliott",
+          "name": "Bryan Elliott",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "kittitas-kittitas-county-clerk",
+      "owner": "kittitas",
+      "category": "County",
+      "office": "Clerk",
+      "district": "Kittitas County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "kittitas"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Kittitas County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "stephanie-george",
+          "name": "Stephanie George",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "kittitas-kittitas-county-commissioner-district-3-commissioner-3",
+      "owner": "kittitas",
+      "category": "County",
+      "office": "Commissioner 3",
+      "district": "Kittitas County Commissioner District 3",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "kittitas",
+        "layer": "COUNTY_COUNCIL",
+        "value": "3"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Kittitas County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "brett-wachsmith",
+          "name": "Brett Wachsmith",
+          "party": "Prefers Gop Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "kittitas-kittitas-county-coroner",
+      "owner": "kittitas",
+      "category": "County",
+      "office": "Coroner",
+      "district": "Kittitas County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "kittitas"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Kittitas County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "cori-mckean",
+          "name": "Cori McKean",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "charlie-divine",
+          "name": "Charlie Divine",
+          "party": "States No Party Preference",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "kittitas-kittitas-county-prosecuting-attorney",
+      "owner": "kittitas",
+      "category": "County",
+      "office": "Prosecuting Attorney",
+      "district": "Kittitas County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "kittitas"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Kittitas County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "jodi-hammond",
+          "name": "Jodi Hammond",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "aaron-reiman",
+          "name": "Aaron Reiman",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "patricia-todd",
+          "name": "Patricia Todd",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "kittitas-kittitas-county-sheriff",
+      "owner": "kittitas",
+      "category": "County",
+      "office": "Sheriff",
+      "district": "Kittitas County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "kittitas"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Kittitas County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "ben-kokjer",
+          "name": "Ben Kokjer",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "darryl-chepoda-jr",
+          "name": "Darryl Chepoda JR",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "kittitas-kittitas-county-treasurer",
+      "owner": "kittitas",
+      "category": "County",
+      "office": "Treasurer",
+      "district": "Kittitas County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "kittitas"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Kittitas County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "amy-cziske",
+          "name": "Amy Cziske",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,555 @@
+{
+  "county": "mason",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/counties/mason/raw/votewa/candidate-list.csv",
+    "https://masoncountywa.gov/auditor/elections/"
+  ],
+  "coverage": "full_county",
+  "notes": [],
+  "contests": [
+    {
+      "slug": "mason-congressional-district-6-u-s-representative",
+      "owner": "mason",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 6",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "mason",
+        "layer": "CONGDST",
+        "value": "6"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Mason County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "emily-randall",
+          "name": "Emily Randall",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "brian-p-o-gorman",
+          "name": "Brian P. O'Gorman",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "teresa-fox",
+          "name": "Teresa Fox",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "macy-jones",
+          "name": "Macy Jones",
+          "party": "States No Party Preference",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "leon-lawson",
+          "name": "Leon Lawson",
+          "party": "Prefers Trump Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "mason-legislative-district-35-state-senator",
+      "owner": "mason",
+      "category": "State",
+      "office": "State Senator",
+      "district": "Legislative District 35",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "mason",
+        "layer": "LEGDST",
+        "value": "35"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Mason County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "carolina-mejia",
+          "name": "Carolina Mejia",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "drew-c-macewen",
+          "name": "Drew C MacEwen",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "mason-legislative-district-35-state-representative-pos-1",
+      "owner": "mason",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 35",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "mason",
+        "layer": "LEGDST",
+        "value": "35"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Mason County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "dan-griffey",
+          "name": "Dan Griffey",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "shaena-garberich",
+          "name": "Shaena Garberich",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "jim-pierson",
+          "name": "Jim Pierson",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "mason-legislative-district-35-state-representative-pos-2",
+      "owner": "mason",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 35",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "mason",
+        "layer": "LEGDST",
+        "value": "35"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Mason County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "travis-couture",
+          "name": "Travis Couture",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "maria-littlesun",
+          "name": "Maria Littlesun",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "mason-mason-county-assessor",
+      "owner": "mason",
+      "category": "County",
+      "office": "Assessor",
+      "district": "Mason County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "mason"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Mason County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "patti-mclean",
+          "name": "Patti McLean",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "mason-mason-county-auditor",
+      "owner": "mason",
+      "category": "County",
+      "office": "Auditor",
+      "district": "Mason County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "mason"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Mason County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "tamra-tam-ingwaldson",
+          "name": "Tamra 'Tam' Ingwaldson",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "steve-duenkel",
+          "name": "Steve Duenkel",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "monika-balmer",
+          "name": "Monika Balmer",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "vivian-glass",
+          "name": "Vivian Glass",
+          "party": "States No Party Preference",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "mason-mason-county-clerk",
+      "owner": "mason",
+      "category": "County",
+      "office": "Clerk",
+      "district": "Mason County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "mason"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Mason County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "charles-g-rhodes",
+          "name": "Charles G. Rhodes",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "tammy-clark",
+          "name": "Tammy Clark",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "mason-mason-county-commissioner-district-3-county-commissioner-district-no-3",
+      "owner": "mason",
+      "category": "County",
+      "office": "County Commissioner District No. 3",
+      "district": "Mason County Commissioner District 3",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "mason",
+        "layer": "COUNTY_COUNCIL",
+        "value": "3"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Mason County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "eric-onisko",
+          "name": "Eric Onisko",
+          "party": "Prefers Gop Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "daniel-cameron",
+          "name": "Daniel Cameron",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "miguel-gutierrez",
+          "name": "Miguel Gutierrez",
+          "party": "Prefers Labor Democrat Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "rick-lee",
+          "name": "Rick Lee",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "karen-schade-sullivan",
+          "name": "Karen (Schade) Sullivan",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "george-blush",
+          "name": "George Blush",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "lovejoy-schaefer",
+          "name": "Lovejoy Schaefer",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "mason-mason-county-coroner",
+      "owner": "mason",
+      "category": "County",
+      "office": "Coroner",
+      "district": "Mason County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "mason"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Mason County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "jaime-taylor",
+          "name": "Jaime Taylor",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "mason-mason-county-prosecutor",
+      "owner": "mason",
+      "category": "County",
+      "office": "Prosecutor",
+      "district": "Mason County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "mason"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Mason County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "michael-dorcy",
+          "name": "Michael Dorcy",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "mason-mason-county-sheriff",
+      "owner": "mason",
+      "category": "County",
+      "office": "Sheriff",
+      "district": "Mason County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "mason"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Mason County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "ryan-spurling",
+          "name": "Ryan Spurling",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "mason-mason-county-treasurer",
+      "owner": "mason",
+      "category": "County",
+      "office": "Treasurer",
+      "district": "Mason County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "mason"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Mason County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "randy-lewis",
+          "name": "Randy Lewis",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "brittany-a-pearson",
+          "name": "Brittany A Pearson",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    }
+  ]
+}

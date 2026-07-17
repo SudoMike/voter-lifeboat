@@ -1,0 +1,424 @@
+{
+  "county": "lincoln",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/counties/lincoln/raw/votewa/candidate-list.csv",
+    "https://www.co.lincoln.wa.us/auditor/elections/"
+  ],
+  "coverage": "partial_county",
+  "notes": [
+    "Unresolvable district scopes (no queryable official boundary): COUNTY_COUNCIL. Contests/measures scoped to them are hidden rather than shown to the wrong voters."
+  ],
+  "contests": [
+    {
+      "slug": "lincoln-congressional-district-5-u-s-representative",
+      "owner": "lincoln",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 5",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "lincoln",
+        "layer": "CONGDST",
+        "value": "5"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Lincoln County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "nate-powell",
+          "name": "Nate Powell",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "carmela-conroy",
+          "name": "Carmela Conroy",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "matthew-hayes",
+          "name": "Matthew Hayes",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "bajun-r-mavalwalla",
+          "name": "Bajun R. Mavalwalla",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "michael-mcgarr",
+          "name": "Michael McGarr",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "kevin-fagan",
+          "name": "Kevin Fagan",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "michael-baumgartner",
+          "name": "Michael Baumgartner",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "kyle-usrey",
+          "name": "Kyle Usrey",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "andrew-bartleson",
+          "name": "Andrew Bartleson",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "ann-marie-danimus",
+          "name": "Ann Marie Danimus",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "richard-freudenberg",
+          "name": "Richard Freudenberg",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "david-womack",
+          "name": "David Womack",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "lincoln-legislative-district-9-state-representative-pos-1",
+      "owner": "lincoln",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 9",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "lincoln",
+        "layer": "LEGDST",
+        "value": "9"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Lincoln County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "mary-dye",
+          "name": "Mary Dye",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "lincoln-legislative-district-9-state-representative-pos-2",
+      "owner": "lincoln",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 9",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "lincoln",
+        "layer": "LEGDST",
+        "value": "9"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Lincoln County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "joe-schmick",
+          "name": "Joe Schmick",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "karina-wallace",
+          "name": "Karina Wallace",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "lincoln-lincoln-county-assessor",
+      "owner": "lincoln",
+      "category": "County",
+      "office": "Assessor",
+      "district": "Lincoln County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "lincoln"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Lincoln County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "j-scott-liebing",
+          "name": "J Scott Liebing",
+          "party": "Prefers Republican - Gop Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "lincoln-lincoln-county-auditor",
+      "owner": "lincoln",
+      "category": "County",
+      "office": "Auditor",
+      "district": "Lincoln County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "lincoln"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Lincoln County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "chandra-l-schumacher",
+          "name": "Chandra L Schumacher",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "lincoln-lincoln-county-clerk",
+      "owner": "lincoln",
+      "category": "County",
+      "office": "Clerk",
+      "district": "Lincoln County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "lincoln"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Lincoln County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "traci-gants",
+          "name": "Traci Gants",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "lincoln-lincoln-county-prosecuting-attorney",
+      "owner": "lincoln",
+      "category": "County",
+      "office": "Prosecuting Attorney",
+      "district": "Lincoln County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "lincoln"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Lincoln County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "ty-albertson",
+          "name": "Ty Albertson",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "lincoln-lincoln-county-sheriff",
+      "owner": "lincoln",
+      "category": "County",
+      "office": "Sheriff",
+      "district": "Lincoln County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "lincoln"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Lincoln County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "gabe-gants",
+          "name": "Gabe Gants",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "lincoln-lincoln-county-treasurer",
+      "owner": "lincoln",
+      "category": "County",
+      "office": "Treasurer",
+      "district": "Lincoln County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "lincoln"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Lincoln County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "emily-lybbert-hansen",
+          "name": "Emily Lybbert-Hansen",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "lincoln-lincoln-county-commissioner-district-3-county-commissioner-district-no-3",
+      "owner": "lincoln",
+      "category": "County",
+      "office": "County Commissioner District No. 3",
+      "district": "Lincoln County Commissioner District 3",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "lincoln",
+        "layer": "COUNTY_COUNCIL",
+        "value": "3"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for Lincoln County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "rob-coffman",
+          "name": "Rob Coffman",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    }
+  ]
+}

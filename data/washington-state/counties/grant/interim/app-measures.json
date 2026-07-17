@@ -1,0 +1,39 @@
+{
+  "county": "grant",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/counties/grant/raw/votewa/candidate-list.csv",
+    "https://www.grantcountywa.gov/DocumentCenter/View/16463"
+  ],
+  "coverage": "full_county",
+  "notes": [],
+  "measures": [
+    {
+      "slug": "grant-grant-county-public-hospital-district-no-5-proposition-no-1",
+      "owner": "grant",
+      "jurisdiction": "Grant County Public Hospital District No. 5",
+      "proposition": "Proposition No. 1",
+      "title": "Multi-year Levy Lid Lift For Health Care Services",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "grant",
+        "layer": "HOSPDST",
+        "value": "5"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Lifts the hospital district levy lid for health care services at the Mattawa Community Medical Clinic, with up to a 6% limit factor for 2027 through 2035.",
+      "cost_line": "Up to $0.75 per $1,000 of assessed value for 2027 collection.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.grantcountywa.gov/DocumentCenter/View/16463"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "county": "mason",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/counties/mason/raw/votewa/candidate-list.csv",
+    "https://masoncountywa.gov/auditor/elections/"
+  ],
+  "coverage": "full_county",
+  "notes": [],
+  "measures": [
+    {
+      "slug": "mason-central-mason-fire-ems-ballot-measure",
+      "owner": "mason",
+      "jurisdiction": "Central Mason Fire & EMS",
+      "proposition": "Ballot Measure",
+      "title": "Property Tax Levy for Fire Protection and Emergency Medical Services",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "mason",
+        "layer": "FIRDST",
+        "value": "5"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Restores the fire district's regular levy with a 104% limit factor for three years (Resolution 414).",
+      "cost_line": "Up to $1.48 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://masoncountywa.gov/auditor/elections/"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "mason-mason-county-fire-protection-district-no-12-matlock-ballot-measure",
+      "owner": "mason",
+      "jurisdiction": "Mason County Fire Protection District No. 12 (Matlock)",
+      "proposition": "Ballot Measure",
+      "title": "Renewal and Increase of Emergency Medical Services Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "mason",
+        "layer": "FIRDST",
+        "value": "12"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Renews and increases the district's EMS levy for six years, 2027 through 2032.",
+      "cost_line": "Up to $0.50 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://masoncountywa.gov/auditor/elections/"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "mason-north-mason-regional-fire-authority-ballot-measure",
+      "owner": "mason",
+      "jurisdiction": "North Mason Regional Fire Authority",
+      "proposition": "Ballot Measure",
+      "title": "Emergency Medical Services Property Tax Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "mason",
+        "layer": "FIRDST",
+        "value": "NMRFA"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Continues the fire authority's EMS levy for six years.",
+      "cost_line": "Up to $0.50 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://masoncountywa.gov/auditor/elections/"
+          ]
+        }
+      }
+    }
+  ]
+}

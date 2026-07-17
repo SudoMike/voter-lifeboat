@@ -1,0 +1,13 @@
+{
+  "county": "garfield",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/counties/garfield/raw/votewa/candidate-list.csv"
+  ],
+  "coverage": "partial_county",
+  "notes": [
+    "Measure absence corroborated by the VoteWA 2026 primary guide and local press but not confirmed on an official county page (site blocks automated access).",
+    "Unresolvable district scopes (no queryable official boundary): COUNTY_COUNCIL. Contests/measures scoped to them are hidden rather than shown to the wrong voters."
+  ],
+  "measures": []
+}

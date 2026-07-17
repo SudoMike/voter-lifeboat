@@ -1,0 +1,39 @@
+{
+  "county": "san-juan",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/counties/san-juan/raw/votewa/candidate-list.csv",
+    "https://www.sanjuancountywa.gov/"
+  ],
+  "coverage": "full_county",
+  "notes": [],
+  "measures": [
+    {
+      "slug": "san-juan-lopez-island-school-district-no-144-proposition-no-1",
+      "owner": "san-juan",
+      "jurisdiction": "Lopez Island School District No. 144",
+      "proposition": "Proposition No. 1",
+      "title": "Replacement Educational Programs and Operations Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "san-juan",
+        "layer": "SCHDST",
+        "value": "144"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Replaces the expiring educational programs and operations levy for 2027 through 2030.",
+      "cost_line": "Approximately $0.36 per $1,000 of assessed value ($1,115,000 to $1,235,000 per year).",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.sanjuancountywa.gov/"
+          ]
+        }
+      }
+    }
+  ]
+}

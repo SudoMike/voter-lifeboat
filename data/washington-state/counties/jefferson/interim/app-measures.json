@@ -1,0 +1,145 @@
+{
+  "county": "jefferson",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/counties/jefferson/raw/votewa/candidate-list.csv",
+    "https://www.co.jefferson.wa.us/1266/Elections"
+  ],
+  "coverage": "full_county",
+  "notes": [],
+  "measures": [
+    {
+      "slug": "jefferson-jefferson-county-proposition-no-1",
+      "owner": "jefferson",
+      "jurisdiction": "Jefferson County",
+      "proposition": "Proposition No. 1",
+      "title": "Parks and Recreation Levy",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "jefferson"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Authorizes a six-year county-wide levy for parks and recreation.",
+      "cost_line": "$0.21 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.co.jefferson.wa.us/1266/Elections"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "jefferson-jefferson-county-fire-protection-district-no-2-quilcene-fire-rescue-proposition-no-1",
+      "owner": "jefferson",
+      "jurisdiction": "Jefferson County Fire Protection District No. 2 (Quilcene Fire Rescue)",
+      "proposition": "Proposition No. 1",
+      "title": "Levy Lid Lift",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "jefferson",
+        "layer": "FIRDST",
+        "value": "2"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Lifts the fire district's regular levy lid.",
+      "cost_line": "$1.25 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.co.jefferson.wa.us/1266/Elections"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "jefferson-jefferson-county-fire-protection-district-no-4-brinnon-fire-department-proposition-no-1",
+      "owner": "jefferson",
+      "jurisdiction": "Jefferson County Fire Protection District No. 4 (Brinnon Fire Department)",
+      "proposition": "Proposition No. 1",
+      "title": "Regular Property Tax Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "jefferson",
+        "layer": "FIRDST",
+        "value": "4"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Restores the fire district's regular levy with a 104% limit factor for nine years.",
+      "cost_line": "$1.50 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.co.jefferson.wa.us/1266/Elections"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "jefferson-jefferson-county-fire-protection-district-no-4-brinnon-fire-department-proposition-no-2",
+      "owner": "jefferson",
+      "jurisdiction": "Jefferson County Fire Protection District No. 4 (Brinnon Fire Department)",
+      "proposition": "Proposition No. 2",
+      "title": "Emergency Medical Services Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "jefferson",
+        "layer": "FIRDST",
+        "value": "4"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Authorizes an EMS levy with a 104% limit factor for nine years.",
+      "cost_line": "$0.50 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.co.jefferson.wa.us/1266/Elections"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "jefferson-jefferson-county-cemetery-district-no-2-quilcene-cemetery-proposition-no-1",
+      "owner": "jefferson",
+      "jurisdiction": "Jefferson County Cemetery District No. 2 (Quilcene Cemetery)",
+      "proposition": "Proposition No. 1",
+      "title": "Regular Property Tax Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "jefferson",
+        "layer": "CEMDST",
+        "value": "2"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Authorizes a regular levy for cemetery maintenance.",
+      "cost_line": "$0.04 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.co.jefferson.wa.us/1266/Elections"
+          ]
+        }
+      }
+    }
+  ]
+}

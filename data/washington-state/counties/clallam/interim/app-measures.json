@@ -1,0 +1,39 @@
+{
+  "county": "clallam",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/counties/clallam/raw/votewa/candidate-list.csv",
+    "https://www.clallamcountywa.gov/"
+  ],
+  "coverage": "full_county",
+  "notes": [],
+  "measures": [
+    {
+      "slug": "clallam-clallam-county-fire-protection-district-no-2-proposition-no-1",
+      "owner": "clallam",
+      "jurisdiction": "Clallam County Fire Protection District No. 2",
+      "proposition": "Proposition No. 1",
+      "title": "Property Tax Levy For Emergency Medical Services",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "clallam",
+        "layer": "FIRDST",
+        "value": "2"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Authorizes a ten-year EMS levy collected beginning in 2027; requires a 60% supermajority with validation.",
+      "cost_line": "$0.50 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.clallamcountywa.gov/"
+          ]
+        }
+      }
+    }
+  ]
+}

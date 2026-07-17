@@ -1,0 +1,39 @@
+{
+  "county": "skamania",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/counties/skamania/raw/votewa/candidate-list.csv",
+    "https://voter.votewa.gov/genericvoterguide.aspx?e=898&c=30"
+  ],
+  "coverage": "full_county",
+  "notes": [],
+  "measures": [
+    {
+      "slug": "skamania-home-valley-water-district-no-1-proposition-no-1",
+      "owner": "skamania",
+      "jurisdiction": "Home Valley Water District No. 1",
+      "proposition": "Proposition No. 1",
+      "title": "Maintenance and Capital Improvement Fund Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "skamania",
+        "layer": "WATDST",
+        "value": "1"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Authorizes a one-year excess levy replacing an expiring levy for water system maintenance and capital improvements (Resolution 2026-3).",
+      "cost_line": "$25,000 for 2027, approximately $0.57 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/genericvoterguide.aspx?e=898&c=30"
+          ]
+        }
+      }
+    }
+  ]
+}

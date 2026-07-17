@@ -1,0 +1,41 @@
+{
+  "county": "island",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/counties/island/raw/votewa/candidate-list.csv",
+    "https://voter.votewa.gov/genericvoterguide.aspx?e=898&c=15"
+  ],
+  "coverage": "partial_county",
+  "notes": [
+    "Unresolvable district scopes (no queryable official boundary): PUDDST. Contests/measures scoped to them are hidden rather than shown to the wrong voters."
+  ],
+  "measures": [
+    {
+      "slug": "island-sno-isle-intercounty-rural-library-district-proposition-no-1",
+      "owner": "island",
+      "jurisdiction": "Sno-Isle Intercounty Rural Library District",
+      "proposition": "Proposition No. 1",
+      "title": "Levy Lid Lift",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "island",
+        "layer": "LIBDST",
+        "value": "L"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Restores the library district's regular levy rate for 2027 collection.",
+      "cost_line": "Restores the levy to $0.47 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/genericvoterguide.aspx?e=898&c=15"
+          ]
+        }
+      }
+    }
+  ]
+}

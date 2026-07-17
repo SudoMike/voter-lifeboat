@@ -1,0 +1,41 @@
+{
+  "county": "pacific",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/counties/pacific/raw/votewa/candidate-list.csv",
+    "https://www.pacificcountywa.gov/"
+  ],
+  "coverage": "partial_county",
+  "notes": [
+    "Unresolvable district scopes (no queryable official boundary): COUNTY_COUNCIL. Contests/measures scoped to them are hidden rather than shown to the wrong voters."
+  ],
+  "measures": [
+    {
+      "slug": "pacific-south-beach-regional-fire-authority-proposition-no-1",
+      "owner": "pacific",
+      "jurisdiction": "South Beach Regional Fire Authority",
+      "proposition": "Proposition No. 1",
+      "title": "General Obligation Bonds for Headquarters Fire Station",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pacific",
+        "layer": "FIRDST",
+        "value": "5 SBRFA"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Authorizes general obligation bonds over 25 years to replace the headquarters fire station.",
+      "cost_line": "$10,000,000 in bonds.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.pacificcountywa.gov/"
+          ]
+        }
+      }
+    }
+  ]
+}

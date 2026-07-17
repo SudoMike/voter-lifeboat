@@ -1,0 +1,39 @@
+{
+  "county": "stevens",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/counties/stevens/raw/votewa/candidate-list.csv",
+    "https://voter.votewa.gov/genericvoterguide.aspx?e=898&c=33"
+  ],
+  "coverage": "full_county",
+  "notes": [],
+  "measures": [
+    {
+      "slug": "stevens-stevens-county-fire-protection-district-no-6-proposition-no-1",
+      "owner": "stevens",
+      "jurisdiction": "Stevens County Fire Protection District No. 6",
+      "proposition": "Proposition No. 1",
+      "title": "Property Tax Levy for Fire Protection Services",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "stevens",
+        "layer": "FIRDST",
+        "value": "6"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Sets the 2026 fire levy with CPI-based annual growth for nine succeeding years (Resolution 2026-01).",
+      "cost_line": "$1.07 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/genericvoterguide.aspx?e=898&c=33"
+          ]
+        }
+      }
+    }
+  ]
+}

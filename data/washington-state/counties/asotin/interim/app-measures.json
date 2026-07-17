@@ -1,0 +1,68 @@
+{
+  "county": "asotin",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/counties/asotin/raw/votewa/candidate-list.csv",
+    "https://www.co.asotin.wa.us/"
+  ],
+  "coverage": "partial_county",
+  "notes": [
+    "Unresolvable district scopes (no queryable official boundary): COUNTY_COUNCIL. Contests/measures scoped to them are hidden rather than shown to the wrong voters."
+  ],
+  "measures": [
+    {
+      "slug": "asotin-asotin-county-rural-ems-district-no-2-proposition-no-1",
+      "owner": "asotin",
+      "jurisdiction": "Asotin County Rural EMS District No. 2",
+      "proposition": "Proposition No. 1",
+      "title": "Emergency Medical Services Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "asotin",
+        "layer": "EMSDST",
+        "value": "1"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Increases the rural EMS district's regular levy to fund emergency medical services for six years starting in 2027.",
+      "cost_line": "Up to $0.28 per $1,000 of assessed value (up from $0.15).",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.co.asotin.wa.us/"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "asotin-city-of-clarkston-proposition-no-1",
+      "owner": "asotin",
+      "jurisdiction": "City of Clarkston",
+      "proposition": "Proposition No. 1",
+      "title": "Emergency Medical Services Excess Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "asotin",
+        "layer": "CITY",
+        "value": "Clarkston"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Authorizes a one-year excess property tax levy to fund emergency medical services in Clarkston.",
+      "cost_line": "$1,217,828 for collection in 2027, approximately $1.64 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.co.asotin.wa.us/"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "county": "klickitat",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/counties/klickitat/raw/votewa/candidate-list.csv",
+    "https://klickitatcounty.org/DocumentCenter/View/22962"
+  ],
+  "coverage": "partial_county",
+  "notes": [
+    "Unresolvable district scopes (no queryable official boundary): PUDDST. Contests/measures scoped to them are hidden rather than shown to the wrong voters."
+  ],
+  "measures": [
+    {
+      "slug": "klickitat-klickitat-county-fire-protection-district-no-4-lyle-proposition-no-1",
+      "owner": "klickitat",
+      "jurisdiction": "Klickitat County Fire Protection District No. 4 (Lyle)",
+      "proposition": "Proposition No. 1",
+      "title": "Fire Protection and Emergency Medical Services Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "klickitat",
+        "layer": "FIRDST",
+        "value": "4"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Sets the fire and EMS levy for 2026 with CPI adjustments for nine years (Resolution 2026-04).",
+      "cost_line": "$1.15 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://klickitatcounty.org/DocumentCenter/View/22962"
+          ]
+        }
+      }
+    }
+  ]
+}

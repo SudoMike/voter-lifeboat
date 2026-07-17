@@ -1,0 +1,120 @@
+{
+  "county": "okanogan",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/counties/okanogan/raw/votewa/candidate-list.csv",
+    "https://www.okanogancounty.org/government/auditor/district_resolutions.php"
+  ],
+  "coverage": "partial_county",
+  "notes": [
+    "Unresolvable district scopes (no queryable official boundary): COUNTY_COUNCIL. Contests/measures scoped to them are hidden rather than shown to the wrong voters."
+  ],
+  "measures": [
+    {
+      "slug": "okanogan-okanogan-county-proposition-no-1",
+      "owner": "okanogan",
+      "jurisdiction": "Okanogan County",
+      "proposition": "Proposition No. 1",
+      "title": "Levy Lid Lift",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "okanogan"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Lifts the county's regular levy lid for 2027 collection (Resolution 48-2026).",
+      "cost_line": "$1.15 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.okanogancounty.org/government/auditor/district_resolutions.php"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "okanogan-douglas-okanogan-county-fire-district-15-proposition-no-1",
+      "owner": "okanogan",
+      "jurisdiction": "Douglas Okanogan County Fire District 15",
+      "proposition": "Proposition No. 1",
+      "title": "Emergency Medical Services Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "okanogan",
+        "layer": "FIRDST",
+        "value": "J15"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Continues a six-year EMS levy.",
+      "cost_line": "$0.50 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.okanogancounty.org/government/auditor/district_resolutions.php"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "okanogan-city-of-pateros-ballot-measure",
+      "owner": "okanogan",
+      "jurisdiction": "City of Pateros",
+      "proposition": "Ballot Measure",
+      "title": "Emergency Medical Services Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "okanogan",
+        "layer": "CITY",
+        "value": "Pateros"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Continues a six-year EMS levy in the City of Pateros.",
+      "cost_line": "$0.50 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.okanogancounty.org/government/auditor/district_resolutions.php"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "okanogan-public-hospital-district-no-1-okanogan-and-douglas-counties-proposition-no-1",
+      "owner": "okanogan",
+      "jurisdiction": "Public Hospital District No. 1, Okanogan and Douglas Counties",
+      "proposition": "Proposition No. 1",
+      "title": "One-Year Special Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "okanogan",
+        "layer": "HOSPDST",
+        "value": "1J"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Renews a one-year special levy for hospital district operations.",
+      "cost_line": "$1,460,000, approximately $0.33 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.okanogancounty.org/government/auditor/district_resolutions.php"
+          ]
+        }
+      }
+    }
+  ]
+}

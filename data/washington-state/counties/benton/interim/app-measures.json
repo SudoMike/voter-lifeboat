@@ -1,0 +1,66 @@
+{
+  "county": "benton",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/counties/benton/raw/votewa/candidate-list.csv",
+    "https://elections.bentoncountywa.gov/"
+  ],
+  "coverage": "full_county",
+  "notes": [],
+  "measures": [
+    {
+      "slug": "benton-benton-county-fire-protection-district-no-4-proposition-no-1",
+      "owner": "benton",
+      "jurisdiction": "Benton County Fire Protection District No. 4",
+      "proposition": "Proposition No. 1",
+      "title": "Restoration of Regular Property Tax Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "benton",
+        "layer": "FIRDST",
+        "value": "4"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Restores the fire district's regular levy rate with a 106% limit factor for nine years (West Richland area).",
+      "cost_line": "Restores the levy to $1.50 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://elections.bentoncountywa.gov/"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "benton-benton-county-fire-protection-district-no-6-proposition-no-1",
+      "owner": "benton",
+      "jurisdiction": "Benton County Fire Protection District No. 6",
+      "proposition": "Proposition No. 1",
+      "title": "Emergency Medical Services Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "benton",
+        "layer": "FIRDST",
+        "value": "6"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Reestablishes an EMS levy for ten years beginning in 2027.",
+      "cost_line": "Up to $0.50 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://elections.bentoncountywa.gov/"
+          ]
+        }
+      }
+    }
+  ]
+}

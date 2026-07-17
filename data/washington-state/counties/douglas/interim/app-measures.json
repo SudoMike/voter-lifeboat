@@ -1,0 +1,68 @@
+{
+  "county": "douglas",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/counties/douglas/raw/votewa/candidate-list.csv",
+    "https://www.douglascountywa.net/"
+  ],
+  "coverage": "partial_county",
+  "notes": [
+    "Unresolvable district scopes (no queryable official boundary): COUNTY_COUNCIL. Contests/measures scoped to them are hidden rather than shown to the wrong voters."
+  ],
+  "measures": [
+    {
+      "slug": "douglas-public-hospital-district-no-1-okanogan-and-douglas-counties-proposition-no-1",
+      "owner": "douglas",
+      "jurisdiction": "Public Hospital District No. 1, Okanogan and Douglas Counties",
+      "proposition": "Proposition No. 1",
+      "title": "One-Year Special Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "douglas",
+        "layer": "HOSPDST",
+        "value": "1"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Renews a one-year special levy for hospital district operations, levied in 2026 for collection in 2027.",
+      "cost_line": "$1,460,000, approximately $0.33 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.douglascountywa.net/"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "douglas-douglas-okanogan-county-fire-district-no-15-proposition-no-1",
+      "owner": "douglas",
+      "jurisdiction": "Douglas-Okanogan County Fire District No. 15",
+      "proposition": "Proposition No. 1",
+      "title": "Emergency Medical Services Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "douglas",
+        "layer": "FIRDST",
+        "value": "J15"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Continues a six-year EMS levy beginning in 2027.",
+      "cost_line": "$0.50 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.douglascountywa.net/"
+          ]
+        }
+      }
+    }
+  ]
+}

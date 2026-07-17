@@ -1,0 +1,147 @@
+{
+  "county": "whitman",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/counties/whitman/raw/votewa/candidate-list.csv",
+    "https://www.whitmancounty.gov/"
+  ],
+  "coverage": "full_county",
+  "notes": [],
+  "measures": [
+    {
+      "slug": "whitman-rosalia-park-and-recreation-district-no-5-proposition-no-1",
+      "owner": "whitman",
+      "jurisdiction": "Rosalia Park and Recreation District No. 5",
+      "proposition": "Proposition No. 1",
+      "title": "Two Year Maintenance and Operations Levy for the Rosalia Pool",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whitman",
+        "layer": "PARKDST",
+        "value": "5"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Authorizes regular property tax levies in 2027 and 2028 to fund operating, maintaining, and improving the Rosalia Pool. Requires a 60% supermajority.",
+      "cost_line": "$85,000 per year, approximately $0.39 (maximum $0.60) per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.whitmancounty.gov/"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whitman-whitman-county-fire-protection-district-no-1-special-election-proposition-no-1",
+      "owner": "whitman",
+      "jurisdiction": "Whitman County Fire Protection District No. 1",
+      "proposition": "Special Election - Proposition No. 1",
+      "title": "Annexation of the City of Tekoa",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whitman",
+        "layer": "FIRDST",
+        "value": "1"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Asks fire district voters whether the City of Tekoa should be annexed into Fire Protection District No. 1.",
+      "cost_line": "Annexed property becomes subject to the district's regular fire levies.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.whitmancounty.gov/"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whitman-city-of-tekoa-special-election-proposition-no-1",
+      "owner": "whitman",
+      "jurisdiction": "City of Tekoa",
+      "proposition": "Special Election - Proposition No. 1",
+      "title": "Annexation into Fire Protection District No. 1",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whitman",
+        "layer": "CITY",
+        "value": "Tekoa"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Asks Tekoa voters whether the city should be annexed into Whitman County Fire Protection District No. 1.",
+      "cost_line": "City property becomes subject to the district's regular fire levies.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.whitmancounty.gov/"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whitman-town-of-farmington-special-election-proposition-no-1",
+      "owner": "whitman",
+      "jurisdiction": "Town of Farmington",
+      "proposition": "Special Election - Proposition No. 1",
+      "title": "Excess Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whitman",
+        "layer": "CITY",
+        "value": "Farmington"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Authorizes a one-year excess property tax levy for town operations.",
+      "cost_line": "$28,000, approximately $4.18 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.whitmancounty.gov/"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whitman-whitman-county-fire-protection-district-no-5-special-election-proposition-no-1",
+      "owner": "whitman",
+      "jurisdiction": "Whitman County Fire Protection District No. 5",
+      "proposition": "Special Election - Proposition No. 1",
+      "title": "Maintenance and Operations Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whitman",
+        "layer": "FIRDST",
+        "value": "5"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Authorizes maintenance and operations levies collected 2027 through 2030.",
+      "cost_line": "$10,000 per year, approximately $0.21 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.whitmancounty.gov/"
+          ]
+        }
+      }
+    }
+  ]
+}

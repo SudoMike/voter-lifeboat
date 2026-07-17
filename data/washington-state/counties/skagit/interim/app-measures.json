@@ -1,0 +1,93 @@
+{
+  "county": "skagit",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/counties/skagit/raw/votewa/candidate-list.csv",
+    "https://www.skagitcounty.net/Departments/Elections"
+  ],
+  "coverage": "full_county",
+  "notes": [],
+  "measures": [
+    {
+      "slug": "skagit-darrington-school-district-no-330-proposition-no-1",
+      "owner": "skagit",
+      "jurisdiction": "Darrington School District No. 330",
+      "proposition": "Proposition No. 1",
+      "title": "Replacement Educational Programs and Operations Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "skagit",
+        "layer": "SCHDST",
+        "value": "330"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Replaces the expiring educational programs and operations levy, $950,000 per year for 2027 through 2030.",
+      "cost_line": "Estimated $1.24 declining to $1.02 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.skagitcounty.net/Departments/Elections"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "skagit-skagit-county-public-hospital-district-no-304-united-general-proposition-no-1",
+      "owner": "skagit",
+      "jurisdiction": "Skagit County Public Hospital District No. 304 (United General)",
+      "proposition": "Proposition No. 1",
+      "title": "Levy Lid Lift",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "skagit",
+        "layer": "HOSPDST",
+        "value": "304"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Lifts the hospital district's regular levy lid for 2027 collection.",
+      "cost_line": "$0.50 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.skagitcounty.net/Departments/Elections"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "skagit-skagit-county-fire-protection-district-no-8-proposition-no-1",
+      "owner": "skagit",
+      "jurisdiction": "Skagit County Fire Protection District No. 8",
+      "proposition": "Proposition No. 1",
+      "title": "Levy Restoration",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "skagit",
+        "layer": "FIRDST",
+        "value": "8"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Restores the fire district's regular levy with a 103% limit factor for five years.",
+      "cost_line": "$1.25 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.skagitcounty.net/Departments/Elections"
+          ]
+        }
+      }
+    }
+  ]
+}

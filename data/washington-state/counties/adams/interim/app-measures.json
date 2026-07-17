@@ -1,0 +1,122 @@
+{
+  "county": "adams",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/counties/adams/raw/votewa/candidate-list.csv",
+    "https://www.co.adams.wa.us/DocumentCenter/View/2595"
+  ],
+  "coverage": "partial_county",
+  "notes": [
+    "Unresolvable district scopes (no queryable official boundary): COUNTY_COUNCIL. Contests/measures scoped to them are hidden rather than shown to the wrong voters."
+  ],
+  "measures": [
+    {
+      "slug": "adams-adams-county-park-and-recreation-district-no-2-ballot-measure",
+      "owner": "adams",
+      "jurisdiction": "Adams County Park and Recreation District No. 2",
+      "proposition": "Ballot Measure",
+      "title": "Maintenance and Operations Levy (Washtucna Pool)",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "adams",
+        "layer": "PARKDST",
+        "value": "2"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Authorizes a one-year maintenance and operations levy for the Washtucna Pool.",
+      "cost_line": "$85,000, approximately $0.83 per $1,000 of assessed value, collected in 2027.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.co.adams.wa.us/DocumentCenter/View/2595"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "adams-adams-county-park-and-recreation-district-no-3-ballot-measure",
+      "owner": "adams",
+      "jurisdiction": "Adams County Park and Recreation District No. 3",
+      "proposition": "Ballot Measure",
+      "title": "Maintenance and Operations Levy (Lind Swimming Pool)",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "adams",
+        "layer": "PARKDST",
+        "value": "3"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Authorizes a one-year maintenance and operations levy for the Lind Swimming Pool.",
+      "cost_line": "$85,000, approximately $0.20 per $1,000 of assessed value, collected in 2027.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.co.adams.wa.us/DocumentCenter/View/2595"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "adams-adams-county-park-and-recreation-district-no-4-ballot-measure",
+      "owner": "adams",
+      "jurisdiction": "Adams County Park and Recreation District No. 4",
+      "proposition": "Ballot Measure",
+      "title": "Maintenance and Operations Levy (Ritzville Water Park)",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "adams",
+        "layer": "PARKDST",
+        "value": "4"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Authorizes a one-year maintenance and operations levy for the Ritzville Water Park.",
+      "cost_line": "$170,000, approximately $0.30 per $1,000 of assessed value, collected in 2027.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.co.adams.wa.us/DocumentCenter/View/2595"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "adams-adams-county-cemetery-district-no-1-ballot-measure",
+      "owner": "adams",
+      "jurisdiction": "Adams County Cemetery District No. 1",
+      "proposition": "Ballot Measure",
+      "title": "Maintenance and Operations Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "adams",
+        "layer": "CEMDST",
+        "value": "1"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Authorizes a one-year maintenance and operations levy for cemetery upkeep.",
+      "cost_line": "$55,500, approximately $0.55 per $1,000 of assessed value, collected in 2027.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.co.adams.wa.us/DocumentCenter/View/2595"
+          ]
+        }
+      }
+    }
+  ]
+}
