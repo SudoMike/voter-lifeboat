@@ -4,6 +4,103 @@
   "derived_from": [
     "data/washington-state/counties/thurston/interim/pdf-text/sample-ballot.txt"
   ],
-  "coverage": "partial_county",
-  "measures": []
+  "coverage": "full_county",
+  "measures": [
+    {
+      "slug": "thurston-s-e-thurston-fire-authority-proposition-no-1",
+      "owner": "thurston",
+      "jurisdiction": "S.E. Thurston Fire Authority",
+      "proposition": "Proposition No. 1",
+      "title": "Bonds to Improve Fire Stations and Acquire Apparatus",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "thurston",
+        "layer": "FIRE_AUTH",
+        "value": "S.E. Thurston Fire Authority"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 66
+        }
+      ],
+      "what_it_does": "Authorizes bonds to renovate and improve Yelm, Lake Lawrence, Rainier, and McIntosh Ridge fire stations and acquire firefighting and emergency response apparatus.",
+      "cost_line": "Authorizes up to $21,010,000 in general obligation bonds maturing within 25 years, repaid through annual excess property taxes.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax or bond measure for fire services.",
+          "citations": [
+            "Thurston local voters' pamphlet"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "thurston-thurston-county-fire-protection-district-no-1-proposition-no-1",
+      "owner": "thurston",
+      "jurisdiction": "Thurston County Fire Protection District No. 1",
+      "proposition": "Proposition No. 1",
+      "title": "Property Tax for Fire Maintenance and Operations",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "thurston",
+        "layer": "FIRDST",
+        "value": "FD01"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 68
+        }
+      ],
+      "what_it_does": "Authorizes a four-year maintenance and operations levy to maintain fire services and emergency medical services in the Rochester-Grand Mound area.",
+      "cost_line": "Authorizes levy amounts from $826,166 in 2027 to $956,500 in 2030, at an approximate rate of $0.38 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax or bond measure for fire services.",
+          "citations": [
+            "Thurston local voters' pamphlet"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "thurston-thurston-county-fire-protection-district-no-11-proposition-no-1",
+      "owner": "thurston",
+      "jurisdiction": "Thurston County Fire Protection District No. 11",
+      "proposition": "Proposition No. 1",
+      "title": "Property Tax for Fire Maintenance and Operations",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "thurston",
+        "layer": "FIRDST",
+        "value": "FD11"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 70
+        }
+      ],
+      "what_it_does": "Authorizes a four-year maintenance and operations levy to maintain fire services and emergency medical services in the Littlerock-Maytown area.",
+      "cost_line": "Authorizes levy amounts from $807,020 in 2027 to $934,226 in 2030, at an approximate rate of $0.38 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax or bond measure for fire services.",
+          "citations": [
+            "Thurston local voters' pamphlet"
+          ]
+        }
+      }
+    }
+  ]
 }

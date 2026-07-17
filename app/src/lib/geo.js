@@ -136,9 +136,19 @@ const COUNTY_LAYERS = {
       attr: 'CommissionerDistrictNumber',
     },
     {
+      key: 'PUDDST',
+      url: 'https://tconline.co.thurston.wa.us/server/rest/services/Common_Layers/Jurisdictions/FeatureServer/15/query',
+      attr: 'CommissionerDistrictNumber',
+    },
+    {
       key: 'FIRDST',
       url: 'https://tconline.co.thurston.wa.us/server/rest/services/ThurstonExt/Thurston_FireDistricts_TCOMM/FeatureServer/0/query',
-      attr: 'CONSOL_NUM',
+      attr: 'DISPATCH_G',
+    },
+    {
+      key: 'FIRE_AUTH',
+      url: 'https://tconline.co.thurston.wa.us/server/rest/services/ThurstonExt/Thurston_FireDistricts_TCOMM/FeatureServer/0/query',
+      attr: 'CONSOL_DIS',
     },
   ],
 }

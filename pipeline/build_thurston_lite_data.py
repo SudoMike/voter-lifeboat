@@ -50,6 +50,23 @@ def contest(category, district, office, candidates, scope):
     }
 
 
+def measure(jurisdiction, proposition, title, scope, page, what_it_does, cost_line):
+    return {
+        "slug": county_slug(f"{jurisdiction}-{proposition}"),
+        "owner": "thurston",
+        "jurisdiction": jurisdiction,
+        "proposition": proposition,
+        "title": title,
+        "scope": scope,
+        "pamphlet_pages": [{"edition": "local-voters-pamphlet", "page": page}],
+        "what_it_does": what_it_does,
+        "cost_line": cost_line,
+        "pro_summary": None,
+        "con_summary": None,
+        "lean_mappings": {"taxes": {"direction": 2, "basis": "YES approves a local tax or bond measure for fire services.", "citations": ["Thurston local voters' pamphlet"]}},
+    }
+
+
 contests = [
     contest("Federal", "Congressional District 3", "U.S. Representative", [
         cand("Marie Gluesenkamp Perez", "Prefers Democratic Party"),
@@ -129,6 +146,14 @@ contests = [
         cand("Nicole Miller", "Prefers Democratic Party"),
         cand("Garrett Cady", "Prefers Independent Party"),
     ], {"kind": "COUNTY", "county": "thurston"}),
+    contest("County", "Thurston County Commissioner District No. 3", "County Commissioner", [
+        cand("Tye Menser", "Prefers Democratic Party"),
+    ], dist_scope("COUNTY_COUNCIL", 3)),
+    contest("County", "Thurston County Commissioner District No. 5", "County Commissioner", [
+        cand("Nicolas Martinez-Dunning", "Prefers Moderate Democrat Party"),
+        cand("Emily Clouse", "Prefers Democratic Party"),
+        cand("Michelle Gipson", "Prefers Democratic Party"),
+    ], dist_scope("COUNTY_COUNCIL", 5)),
     contest("County", "Thurston County", "Coroner", [
         cand("Gary Warnock", "Prefers Democratic Party"),
     ], {"kind": "COUNTY", "county": "thurston"}),
@@ -142,6 +167,11 @@ contests = [
     contest("County", "Thurston County", "Treasurer", [
         cand("Jeff Gadman", "Prefers Democratic Party"),
     ], {"kind": "COUNTY", "county": "thurston"}),
+    contest("PublicUtility", "Thurston County Public Utility District Commissioner District No. 1", "Public Utility District Commissioner", [
+        cand("Troy Kirby"),
+        cand("Bruce D. Wilkinson, Jr."),
+        cand("Jim Campbell"),
+    ], dist_scope("PUDDST", 1)),
 ]
 
 OUT.mkdir(parents=True, exist_ok=True)
@@ -152,14 +182,18 @@ OUT.mkdir(parents=True, exist_ok=True)
         "data/washington-state/counties/thurston/interim/pdf-text/sample-ballot.txt",
         "data/washington-state/counties/thurston/interim/pdf-text/primary-candidates-ballot-order.txt",
     ],
-    "coverage": "partial_county",
+    "coverage": "full_county",
     "contests": contests,
 }, indent=2))
 (OUT / "app-measures.json").write_text(json.dumps({
     "county": "thurston",
     "script": "pipeline/build_thurston_lite_data.py",
     "derived_from": ["data/washington-state/counties/thurston/interim/pdf-text/sample-ballot.txt"],
-    "coverage": "partial_county",
-    "measures": [],
+    "coverage": "full_county",
+    "measures": [
+        measure("S.E. Thurston Fire Authority", "Proposition No. 1", "Bonds to Improve Fire Stations and Acquire Apparatus", dist_scope("FIRE_AUTH", "S.E. Thurston Fire Authority"), 66, "Authorizes bonds to renovate and improve Yelm, Lake Lawrence, Rainier, and McIntosh Ridge fire stations and acquire firefighting and emergency response apparatus.", "Authorizes up to $21,010,000 in general obligation bonds maturing within 25 years, repaid through annual excess property taxes."),
+        measure("Thurston County Fire Protection District No. 1", "Proposition No. 1", "Property Tax for Fire Maintenance and Operations", dist_scope("FIRDST", "FD01"), 68, "Authorizes a four-year maintenance and operations levy to maintain fire services and emergency medical services in the Rochester-Grand Mound area.", "Authorizes levy amounts from $826,166 in 2027 to $956,500 in 2030, at an approximate rate of $0.38 per $1,000 of assessed value."),
+        measure("Thurston County Fire Protection District No. 11", "Proposition No. 1", "Property Tax for Fire Maintenance and Operations", dist_scope("FIRDST", "FD11"), 70, "Authorizes a four-year maintenance and operations levy to maintain fire services and emergency medical services in the Littlerock-Maytown area.", "Authorizes levy amounts from $807,020 in 2027 to $934,226 in 2030, at an approximate rate of $0.38 per $1,000 of assessed value."),
+    ],
 }, indent=2))
-print(f"thurston contests: {len(contests)} measures: 0")
+print(f"thurston contests: {len(contests)} measures: 3")
