@@ -111,7 +111,7 @@ const server = createServer((req, res) => {
       res.writeHead(400, { 'Content-Type': 'application/json' })
       return res.end('{"error":"address required"}')
     }
-    const url = `${CENSUS_GEOCODER}?address=${encodeURIComponent(address)}&benchmark=Public_AR_Current&vintage=Current_Current&layers=Counties&format=json`
+    const url = `${CENSUS_GEOCODER}?address=${encodeURIComponent(address)}&benchmark=Public_AR_Current&vintage=Current_Current&format=json`
     fetch(url)
       .then((r) => {
         if (!r.ok) throw new Error(`census ${r.status}`)

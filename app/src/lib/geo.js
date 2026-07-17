@@ -24,7 +24,13 @@ const KING_LAYERS = {
 }
 
 const COUNTY_IDS = {
+  '53011': 'clark',
+  '53035': 'kitsap',
   [KING_COUNTY_FIPS]: 'king',
+  '53053': 'pierce',
+  '53061': 'snohomish',
+  '53063': 'spokane',
+  '53067': 'thurston',
 }
 
 export class GeoError extends Error {
@@ -64,7 +70,13 @@ export async function geocode(address) {
   if (!county || county.state !== WASHINGTON_STATE_FIPS) {
     throw new GeoError('That address is outside Washington State.', 'outside-wa')
   }
-  return { x: match.coordinates.x, y: match.coordinates.y, matched: match.matchedAddress, county }
+  return {
+    x: match.coordinates.x,
+    y: match.coordinates.y,
+    matched: match.matchedAddress,
+    county,
+    geographies: match.geographies || {},
+  }
 }
 
 // Type-ahead remains King County-only until a statewide address suggestion
@@ -134,6 +146,28 @@ async function lookupKingDistricts(pt) {
   return { districts, missingLayers }
 }
 
+function firstGeo(pt, key) {
+  return pt.geographies?.[key]?.[0] || null
+}
+
+function trimDistrictNumber(value) {
+  if (value == null) return null
+  const n = String(value).match(/\d+/)?.[0]
+  return n ? String(parseInt(n, 10)) : null
+}
+
+function lookupCensusDistricts(pt) {
+  const congressional = firstGeo(pt, '119th Congressional Districts')
+  const lower = firstGeo(pt, '2024 State Legislative Districts - Lower')
+  const upper = firstGeo(pt, '2024 State Legislative Districts - Upper')
+  const districts = {}
+  const cd = trimDistrictNumber(congressional?.BASENAME || congressional?.CD119 || congressional?.GEOID)
+  const ld = trimDistrictNumber(lower?.BASENAME || lower?.SLDL || upper?.BASENAME || upper?.SLDU)
+  if (cd) districts.CONGDST = cd
+  if (ld) districts.LEGDST = ld
+  return districts
+}
+
 export async function lookupBallotContext(data, address) {
   const pt = await geocode(address)
   const countySupported = data.coverage?.supported_counties?.some((c) => c.id === pt.county.id)
@@ -150,7 +184,13 @@ export async function lookupBallotContext(data, address) {
     }
   }
   if (pt.county.id !== 'king') {
-    throw new GeoError('This supported county does not have a district adapter yet.', 'unsupported-county', { county: pt.county })
+    return {
+      coverageStatus: 'partial_county',
+      county: pt.county,
+      districts: lookupCensusDistricts(pt),
+      missingLayers: ['county-local'],
+      matched: pt.matched,
+    }
   }
   const { districts, missingLayers } = await lookupKingDistricts(pt)
   return {
