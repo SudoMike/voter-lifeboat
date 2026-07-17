@@ -16,13 +16,13 @@ sources:
 
 ## Background
 
-Cyndy Jacobsen is listed as a 2026 candidate for State Representative, Legislative District 25 Position 2 and states the ballot preference “Prefers Republican Party” [S1].
+Cyndy Jacobsen is the incumbent representative and a former Puyallup councilmember, math teacher, paraeducator, accountant, and entrepreneur [S1].
 
 ## Positions
 
-- No detailed policy position was retained because the approved source set reviewed in this pass did not support a stable, attributable claim [S1].
+- Prioritizes homelessness, addiction and mental-health responses; local jobs and reduced traffic; and police funding, recruitment, and retention [S1].
+- Opposes new taxes and says she seeks balance against one-party state government [S1].
 
 ## Scoring notes
 
-- Identity is verified by candidate name, district, position, and official ballot listing [S1].
-- Omit all unsupported axes and do not infer positions from party preference [S1].
+- Positions are stated as broad campaign priorities [S1].

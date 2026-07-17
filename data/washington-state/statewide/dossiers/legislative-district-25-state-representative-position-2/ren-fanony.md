@@ -16,13 +16,13 @@ sources:
 
 ## Background
 
-Ren Fanony is listed as a 2026 candidate for State Representative, Legislative District 25 Position 2 and states the ballot preference “Prefers Republican Party” [S1].
+Ren Fanony is an architectural designer and drafter and reports no prior public office. He describes lifelong roots in Puyallup and Tacoma and experience with local housing, infrastructure, and energy issues [S1].
 
 ## Positions
 
-- No detailed policy position was retained because the approved source set reviewed in this pass did not support a stable, attributable claim [S1].
+- Wants to address rising taxes and living costs while maintaining smoothly operating public services [S1].
+- Frames his approach as simple solutions for sustainable state and household finances [S1].
 
 ## Scoring notes
 
-- Identity is verified by candidate name, district, position, and official ballot listing [S1].
-- Omit all unsupported axes and do not infer positions from party preference [S1].
+- The statement does not specify tax, spending, or service changes [S1].

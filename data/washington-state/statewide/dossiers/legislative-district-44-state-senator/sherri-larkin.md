@@ -16,13 +16,13 @@ sources:
 
 ## Background
 
-Sherri Larkin is listed as a 2026 candidate for State Senator, Legislative District 44 and states the ballot preference “Prefers Republican Party” [S1].
+Sherri Larkin reports serving on the Snohomish School Board since 2023 and previously working as an elementary and substitute teacher, with extensive school, youth, church, and food-bank volunteering [S1].
 
 ## Positions
 
-- No detailed policy position was retained because the approved source set reviewed in this pass did not support a stable, attributable claim [S1].
+- Prioritizes supported law enforcement, school preparation, affordable housing, and an economy rewarding work [S1].
+- Promises fiscal restraint, lower burdens on families and businesses, measured program results, and bipartisan work [S1].
 
 ## Scoring notes
 
-- Identity is verified by candidate name, district, position, and official ballot listing [S1].
-- Omit all unsupported axes and do not infer positions from party preference [S1].
+- Her record and agenda are candidate-submitted pamphlet claims [S1].

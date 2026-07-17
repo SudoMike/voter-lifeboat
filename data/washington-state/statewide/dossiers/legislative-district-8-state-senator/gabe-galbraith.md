@@ -16,13 +16,13 @@ sources:
 
 ## Background
 
-Gabe Galbraith is listed as a 2026 candidate for State Senator, Legislative District 8 and states the ballot preference “Prefers Republican Party” [S1].
+Gabe Galbraith reports serving on the Kennewick School Board since 2021 and as president since 2023. He is a Marine veteran, Hanford security specialist, small-business owner, and former substitute teacher [S1].
 
 ## Positions
 
-- No detailed policy position was retained because the approved source set reviewed in this pass did not support a stable, attributable claim [S1].
+- Supports law enforcement, parental rights, stronger schools, affordable housing, and attention to water and power [S1].
+- Opposes higher taxes on working families and says he will protect constitutional freedoms [S1].
 
 ## Scoring notes
 
-- Identity is verified by candidate name, district, position, and official ballot listing [S1].
-- Omit all unsupported axes and do not infer positions from party preference [S1].
+- The pamphlet provides a substantive agenda, mostly at priority level [S1].

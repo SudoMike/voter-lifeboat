@@ -16,13 +16,13 @@ sources:
 
 ## Background
 
-Greg Nance is listed as a 2026 candidate for State Representative, Legislative District 23 Position 2 and states the ballot preference “Prefers Democratic Party” [S1].
+Greg Nance is the incumbent representative and vice chair of the Maritime Caucus. He co-founded student-debt nonprofit Moneythink and reports long-term youth mental-health and mentoring work [S1].
 
 ## Positions
 
-- No detailed policy position was retained because the approved source set reviewed in this pass did not support a stable, attributable claim [S1].
+- Prioritizes ferries, Puget Sound protection, working families, child care, fentanyl prevention, and health-care training [S1].
+- Cites securing $895 million for ferries, $42 million for West Sound Tech, and protection of 680 acres of forest [S1].
 
 ## Scoring notes
 
-- Identity is verified by candidate name, district, position, and official ballot listing [S1].
-- Omit all unsupported axes and do not infer positions from party preference [S1].
+- Funding and accomplishment claims are candidate-submitted and not independently audited here [S1].

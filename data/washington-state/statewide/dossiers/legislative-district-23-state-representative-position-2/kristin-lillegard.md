@@ -16,13 +16,13 @@ sources:
 
 ## Background
 
-Kristin Lillegard is listed as a 2026 candidate for State Representative, Legislative District 23 Position 2 and states the ballot preference “Prefers Democratic Party” [S1].
+Kristin Lillegard reports serving as a Democratic PCO and Peninsula Community Health board member, with experience in customer service, banking, insurance, manufacturing, and client relations [S1].
 
 ## Positions
 
-- No detailed policy position was retained because the approved source set reviewed in this pass did not support a stable, attributable claim [S1].
+- Identifies as a democratic socialist and supports universal health care, faster buses and ferries, equitable school funding, living wages, and sustainable affordable housing [S1].
+- Frames these policies as reversing wealth transfer from workers to the top ten percent [S1].
 
 ## Scoring notes
 
-- Identity is verified by candidate name, district, position, and official ballot listing [S1].
-- Omit all unsupported axes and do not infer positions from party preference [S1].
+- The pamphlet states goals but not detailed financing or implementation [S1].

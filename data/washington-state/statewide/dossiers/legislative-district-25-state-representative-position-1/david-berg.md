@@ -16,13 +16,13 @@ sources:
 
 ## Background
 
-David Berg is listed as a 2026 candidate for State Representative, Legislative District 25 Position 1 and states the ballot preference “Prefers Democratic Party” [S1].
+David Berg has served on the Puyallup School Board since 2021 and reports extensive state and local gifted-education and PTA advocacy [S1].
 
 ## Positions
 
-- No detailed policy position was retained because the approved source set reviewed in this pass did not support a stable, attributable claim [S1].
+- Prioritizes public education, workers’ rights, working-family economic stability, and expanded economic opportunity [S1].
+- Promises practical, responsive government and a listening-oriented approach [S1].
 
 ## Scoring notes
 
-- Identity is verified by candidate name, district, position, and official ballot listing [S1].
-- Omit all unsupported axes and do not infer positions from party preference [S1].
+- The pamphlet identifies priorities but no specific bills [S1].

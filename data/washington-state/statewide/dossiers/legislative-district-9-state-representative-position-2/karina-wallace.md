@@ -16,13 +16,13 @@ sources:
 
 ## Background
 
-Karina Wallace is listed as a 2026 candidate for State Representative, Legislative District 9 Position 2 and states the ballot preference “Prefers Democratic Party” [S1].
+Karina Wallace reports work as a certified peer-support specialist, trauma-recovery coach, caregiver, and civic-education creator, plus personal experience with lupus and raising neurodivergent children [S1].
 
 ## Positions
 
-- No detailed policy position was retained because the approved source set reviewed in this pass did not support a stable, attributable claim [S1].
+- Prioritizes paycheck protection and rural health-care access [S1].
+- Wants to close the lobbyist-legislator revolving door and pledges no corporate PAC or lobbyist donations [S1].
 
 ## Scoring notes
 
-- Identity is verified by candidate name, district, position, and official ballot listing [S1].
-- Omit all unsupported axes and do not infer positions from party preference [S1].
+- The anti-lobbying pledge is explicit, but no legislative mechanism is specified [S1].

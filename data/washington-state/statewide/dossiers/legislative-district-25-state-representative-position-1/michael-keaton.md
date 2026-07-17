@@ -16,13 +16,13 @@ sources:
 
 ## Background
 
-Michael Keaton is listed as a 2026 candidate for State Representative, Legislative District 25 Position 1 and states the ballot preference “Prefers Republican Party” [S1].
+Michael Keaton is the incumbent representative and served on the Puyallup School Board from 2015 to 2023. He reports 20 years as an Air Force F-16 pilot, instructor, and squadron commander [S1].
 
 ## Positions
 
-- No detailed policy position was retained because the approved source set reviewed in this pass did not support a stable, attributable claim [S1].
+- Prioritizes public safety, lower living costs, traffic reduction, and stronger schools [S1].
+- Opposes high taxes and what he calls reckless spending; cites bipartisan legislation intended to save millions on capital projects [S1].
 
 ## Scoring notes
 
-- Identity is verified by candidate name, district, position, and official ballot listing [S1].
-- Omit all unsupported axes and do not infer positions from party preference [S1].
+- Claimed savings are candidate-submitted and not independently audited here [S1].

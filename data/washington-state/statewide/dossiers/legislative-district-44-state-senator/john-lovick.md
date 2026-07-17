@@ -16,13 +16,13 @@ sources:
 
 ## Background
 
-John Lovick is listed as a 2026 candidate for State Senator, Legislative District 44 and states the ballot preference “Prefers Democratic Party” [S1].
+John Lovick is the incumbent senator and a former Snohomish County sheriff and executive, state representative, Mill Creek councilmember, Coast Guard member, and 31-year State Patrol trooper and sergeant [S1].
 
 ## Positions
 
-- No detailed policy position was retained because the approved source set reviewed in this pass did not support a stable, attributable claim [S1].
+- Says safety should extend to homes, streets, and schools; cites work opening three regional peace-officer academies and building an accountability system [S1].
+- Supports completing light rail to Everett and beyond as an accessible option amid rising living costs [S1].
 
 ## Scoring notes
 
-- Identity is verified by candidate name, district, position, and official ballot listing [S1].
-- Omit all unsupported axes and do not infer positions from party preference [S1].
+- Accomplishments are candidate-submitted and not independently audited here [S1].

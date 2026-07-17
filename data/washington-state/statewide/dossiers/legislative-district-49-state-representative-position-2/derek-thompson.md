@@ -16,13 +16,13 @@ sources:
 
 ## Background
 
-Derek Thompson is listed as a 2026 candidate for State Representative, Legislative District 49 Position 2 and states the ballot preference “Prefers Republican Party” [S1].
+Derek Thompson reports work as a cosmetology instructor, Nike department supervisor, and delivery driver, plus food-bank and school volunteering [S1].
 
 ## Positions
 
-- No detailed policy position was retained because the approved source set reviewed in this pass did not support a stable, attributable claim [S1].
+- Prioritizes changing the school-funding formula and reducing rising living costs [S1].
+- Says infrastructure projects should protect legacy businesses and promises efficient tax-dollar use [S1].
 
 ## Scoring notes
 
-- Identity is verified by candidate name, district, position, and official ballot listing [S1].
-- Omit all unsupported axes and do not infer positions from party preference [S1].
+- His statement identifies goals but not detailed legislative mechanisms [S1].

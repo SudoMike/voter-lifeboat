@@ -16,13 +16,13 @@ sources:
 
 ## Background
 
-Jenn Marie Strickling is listed as a 2026 candidate for State Representative, Legislative District 25 Position 2 and states the ballot preference “Prefers Democratic Party” [S1].
+Jenn Marie Strickling is a Pierce County Charter Review commissioner elected in 2025 and reports being a small-business owner, home renovator, artist, and community leader [S1].
 
 ## Positions
 
-- No detailed policy position was retained because the approved source set reviewed in this pass did not support a stable, attributable claim [S1].
+- Prioritizes protecting paychecks from gas, grocery, and housing costs and developing local jobs that reduce commuting [S1].
+- Cites charter work on housing protections intended to keep seniors and veterans in their homes and promises bipartisan work [S1].
 
 ## Scoring notes
 
-- Identity is verified by candidate name, district, position, and official ballot listing [S1].
-- Omit all unsupported axes and do not infer positions from party preference [S1].
+- The housing-protection accomplishment is candidate-submitted [S1].

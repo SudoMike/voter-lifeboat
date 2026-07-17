@@ -16,13 +16,13 @@ sources:
 
 ## Background
 
-Lance Byrd is listed as a 2026 candidate for State Representative, Legislative District 23 Position 2 and states the ballot preference “Prefers Republican Party” [S1].
+Lance Byrd reports 26 years in information technology and earlier restaurant work, with church and local-party volunteering [S1].
 
 ## Positions
 
-- No detailed policy position was retained because the approved source set reviewed in this pass did not support a stable, attributable claim [S1].
+- Prioritizes affordable housing, lower living costs, crime reduction, law enforcement, balanced budgets, and help and shelter for mentally ill people [S1].
+- Supports education and essential-service funding while opposing a state income tax [S1].
 
 ## Scoring notes
 
-- Identity is verified by candidate name, district, position, and official ballot listing [S1].
-- Omit all unsupported axes and do not infer positions from party preference [S1].
+- The statement gives priorities but few implementation details [S1].

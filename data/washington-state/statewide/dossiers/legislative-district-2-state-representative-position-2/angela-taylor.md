@@ -16,13 +16,13 @@ sources:
 
 ## Background
 
-Angela Taylor is listed as a 2026 candidate for State Representative, Legislative District 2 Position 2 and states the ballot preference “Prefers Democratic Party” [S1].
+Angela Taylor reports being a small-business owner and working caregiver with two decades of youth, family, school, food-bank, and business volunteering [S1].
 
 ## Positions
 
-- No detailed policy position was retained because the approved source set reviewed in this pass did not support a stable, attributable claim [S1].
+- Calls for fully funded schools, accessible rural health care, responsible budgets, affordable child care, and lower housing costs [S1].
+- Criticizes corporate and insurance influence in Olympia and centers working families [S1].
 
 ## Scoring notes
 
-- Identity is verified by candidate name, district, position, and official ballot listing [S1].
-- Omit all unsupported axes and do not infer positions from party preference [S1].
+- The statement gives priorities but no named bills or funding mechanisms [S1].

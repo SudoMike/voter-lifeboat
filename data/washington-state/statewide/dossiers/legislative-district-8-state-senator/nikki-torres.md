@@ -16,13 +16,13 @@ sources:
 
 ## Background
 
-Nikki Torres is listed as a 2026 candidate for State Senator, Legislative District 8 and states the ballot preference “Prefers Republican Party” [S1].
+Nikki Torres is an incumbent senator elected in the 15th District in 2022 and a former Pasco councilmember. She reports private-sector small-business development work and regional civic service [S1].
 
 ## Positions
 
-- No detailed policy position was retained because the approved source set reviewed in this pass did not support a stable, attributable claim [S1].
+- Prioritizes schools, public safety, affordable housing, mental-health services, and fiscally restrained budgets [S1].
+- Opposes wasteful spending, unfair taxes, and burdensome regulation; says she secured over $500 million in regional capital funding [S1].
 
 ## Scoring notes
 
-- Identity is verified by candidate name, district, position, and official ballot listing [S1].
-- Omit all unsupported axes and do not infer positions from party preference [S1].
+- Funding and accomplishment figures are candidate-submitted and not independently audited here [S1].

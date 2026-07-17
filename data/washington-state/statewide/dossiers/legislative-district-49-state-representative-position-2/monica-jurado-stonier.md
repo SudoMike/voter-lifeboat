@@ -16,13 +16,13 @@ sources:
 
 ## Background
 
-Monica Jurado Stonier is listed as a 2026 candidate for State Representative, Legislative District 49 Position 2 and states the ballot preference “Prefers Democratic Party” [S1].
+Monica Jurado Stonier is the incumbent representative and House majority floor leader, with committee work in appropriations, education, health care, and rules and a professional background as a teacher and educator [S1].
 
 ## Positions
 
-- No detailed policy position was retained because the approved source set reviewed in this pass did not support a stable, attributable claim [S1].
+- Calls for special-education funding, working-family jobs, affordable health care, child care, and housing [S1].
+- Frames her candidacy around defending constitutional democracy and neighbors targeted by federal leaders [S1].
 
 ## Scoring notes
 
-- Identity is verified by candidate name, district, position, and official ballot listing [S1].
-- Omit all unsupported axes and do not infer positions from party preference [S1].
+- The statement supplies priorities but few mechanisms or named bills [S1].

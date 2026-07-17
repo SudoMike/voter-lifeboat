@@ -16,13 +16,13 @@ sources:
 
 ## Background
 
-Matt Marshall is listed as a 2026 candidate for State Representative, Legislative District 2 Position 2 and states the ballot preference “Prefers Republican Party” [S1].
+Matt Marshall is the incumbent representative and a former Eatonville school director. He reports being a small-business owner, Army combat veteran, physician assistant, adjunct professor, and law-school graduate [S1].
 
 ## Positions
 
-- No detailed policy position was retained because the approved source set reviewed in this pass did not support a stable, attributable claim [S1].
+- Opposes new taxes and the state income tax; supports a restrained budget funding public safety, schools, and infrastructure [S1].
+- Supports parental authority and elected sheriffs, reducing fees and regulation, and opposing a proposed mega-airport [S1].
 
 ## Scoring notes
 
-- Identity is verified by candidate name, district, position, and official ballot listing [S1].
-- Omit all unsupported axes and do not infer positions from party preference [S1].
+- The statement does not identify specific bills or budget tradeoffs [S1].

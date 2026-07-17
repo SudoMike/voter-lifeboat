@@ -16,13 +16,13 @@ sources:
 
 ## Background
 
-Martin L Miller is listed as a 2026 candidate for State Representative, Legislative District 2 Position 2 and states the ballot preference “Prefers Democratic Party” [S1].
+Martin L Miller reports five years on the Eatonville Planning Commission and 42 years as a power lineman, plus parks, trails, salmon-restoration, cleanup, recovery-housing, and scholarship service [S1].
 
 ## Positions
 
-- No detailed policy position was retained because the approved source set reviewed in this pass did not support a stable, attributable claim [S1].
+- Proposes a $3 gasoline cap, $50 minimum wage or alternate living wage, free car and health insurance, subsidized media, and housing as a right [S1].
+- Supports full school funding, no senior property tax or sales tax on necessities, women’s rights, DEI, and outlawing hate speech [S1].
 
 ## Scoring notes
 
-- Identity is verified by candidate name, district, position, and official ballot listing [S1].
-- Omit all unsupported axes and do not infer positions from party preference [S1].
+- Specific outcomes are stated without costs, authority, or implementation details [S1].

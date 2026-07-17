@@ -16,13 +16,13 @@ sources:
 
 ## Background
 
-Joe Schmick is listed as a 2026 candidate for State Representative, Legislative District 9 Position 2 and states the ballot preference “Prefers Republican Party” [S1].
+Joe Schmick reports being a former second-generation farmer and small-business owner, with service on the state Farm Bureau board and Barley Commission [S1].
 
 ## Positions
 
-- No detailed policy position was retained because the approved source set reviewed in this pass did not support a stable, attributable claim [S1].
+- Prioritizes affordable and accessible health care, affordability, education, safe communities, and agriculture [S1].
+- Argues state spending has outpaced taxpayer income and supports returning excess revenue [S1].
 
 ## Scoring notes
 
-- Identity is verified by candidate name, district, position, and official ballot listing [S1].
-- Omit all unsupported axes and do not infer positions from party preference [S1].
+- His statement emphasizes broad fiscal and rural priorities rather than named bills [S1].
