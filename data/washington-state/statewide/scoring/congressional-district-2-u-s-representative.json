@@ -1,0 +1,86 @@
+{
+  "contest_slug": "congressional-district-2-u-s-representative",
+  "scored_at": "2026-07-17",
+  "derived_from": ["data/washington-state/statewide/dossiers/congressional-district-2-u-s-representative/"],
+  "office_does": "A U.S. representative writes and votes on federal law and spending, conducts executive oversight, and provides constituent services.",
+  "race_blurb": "Long-serving incumbent Rick Larsen faces Edwin Feller's smaller-government campaign and two progressive challengers, Tomas Scheel and Devin Hermanson, who advocate more structural changes.",
+  "candidates": [
+    {
+      "slug": "devin-hermanson",
+      "summary": "Hermanson runs to the incumbent's left on wealth taxation, universal health care, climate investment, institutional reform, and U.S. aid to Israel.",
+      "highlights": [
+        "Supports taxing billionaires, Medicare for All, and the Green New Deal [S1][S2]",
+        "Rejects corporate money and supports Supreme Court reform [S1][S2]",
+        "Calls for ending U.S. aid to Israel [S1]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": 2, "confidence": "high", "citations": ["S1", "S2"], "basis": "He explicitly supports taxing billionaires to fund a broader public agenda."},
+        "spending": {"score": 2, "confidence": "medium", "citations": ["S1", "S2"], "basis": "The Green New Deal and Medicare for All place expanded public investment at the center of his platform."},
+        "climate": {"score": 2, "confidence": "high", "citations": ["S1", "S2"], "basis": "He explicitly supports the Green New Deal."},
+        "experience": {"score": 2, "confidence": "medium", "citations": ["S1"], "basis": "He is a challenger without elected office who frames his campaign around institutional rebuilding."},
+        "reform": {"score": 2, "confidence": "high", "citations": ["S1", "S2"], "basis": "He rejects corporate money and calls for structural Supreme Court reform."},
+        "healthcare": {"score": 2, "confidence": "high", "citations": ["S1", "S2"], "basis": "He explicitly supports Medicare for All."},
+        "defense": {"score": 2, "confidence": "high", "citations": ["S1"], "basis": "He calls for ending U.S. aid to Israel."}
+      }
+    },
+    {
+      "slug": "edwin-h-feller",
+      "summary": "Feller campaigns on smaller government, lower taxes, balanced budgets, border enforcement, law enforcement, and traditional Title IX protections.",
+      "highlights": [
+        "Attributes affordability problems to taxes and government growth [S1]",
+        "Supports border security, law enforcement, election security, and balanced budgets [S1][S2]",
+        "Offers extensive private-sector work but no elected record [S1]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": -2, "confidence": "high", "citations": ["S1"], "basis": "He explicitly identifies high taxes and government growth as causes of affordability problems."},
+        "spending": {"score": -2, "confidence": "high", "citations": ["S1", "S2"], "basis": "He emphasizes smaller government and balanced budgets."},
+        "safety": {"score": -1, "confidence": "medium", "citations": ["S1", "S2"], "basis": "He supports law enforcement as a central public-safety approach."},
+        "experience": {"score": 2, "confidence": "high", "citations": ["S1"], "basis": "He offers private-sector and overseas facilities experience but no elected record."},
+        "immigration": {"score": -2, "confidence": "high", "citations": ["S1", "S2"], "basis": "He explicitly prioritizes border security and enforcement."},
+        "social": {"score": -1, "confidence": "medium", "citations": ["S1", "S2"], "basis": "His Title IX position is framed around traditional sex-based protections for women."}
+      }
+    },
+    {
+      "slug": "rick-larsen",
+      "summary": "The long-serving incumbent emphasizes incremental expansion of health-care access, housing and infrastructure investment, fentanyl enforcement, and legal constraints on ICE.",
+      "highlights": [
+        "Supports expanding health-care access and lowering costs [S1][S2]",
+        "Supports affordable-housing supply, infrastructure, jobs, and childcare [S1]",
+        "Supports fentanyl enforcement while requiring ICE agents to follow ordinary law-enforcement rules [S1]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "spending": {"score": 1, "confidence": "medium", "citations": ["S1"], "basis": "He supports federal investment in housing, infrastructure, jobs, and childcare."},
+        "safety": {"score": 0, "confidence": "medium", "citations": ["S1"], "basis": "He combines law-enforcement action against fentanyl with constraints on immigration agents."},
+        "experience": {"score": -2, "confidence": "high", "citations": ["S1", "S3", "S4"], "basis": "He is a long-serving incumbent with an extensive congressional record."},
+        "immigration": {"score": 1, "confidence": "medium", "citations": ["S1"], "basis": "He opposes executive actions targeting immigrant communities and supports law-enforcement rules for ICE."},
+        "healthcare": {"score": -1, "confidence": "medium", "citations": ["S1", "S2"], "basis": "He proposes expanding access and lowering costs within the current health-care system."}
+      }
+    },
+    {
+      "slug": "tomas-scheel",
+      "summary": "Scheel combines universal health care and clean-energy investment with progressive social policy, replacing ICE, and restrictions on institutional campaign money.",
+      "highlights": [
+        "Supports universal health care, clean energy, and major housing investment [S1][S2]",
+        "Calls for dismantling ICE and replacing it with a rights-grounded system [S1]",
+        "Rejects corporate PAC and foreign-lobby money [S1]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "spending": {"score": 2, "confidence": "medium", "citations": ["S1", "S2"], "basis": "He supports major federal investment in health care, housing, and clean energy."},
+        "climate": {"score": 2, "confidence": "high", "citations": ["S1", "S2"], "basis": "He explicitly supports a clean-energy transition."},
+        "experience": {"score": 2, "confidence": "medium", "citations": ["S1"], "basis": "He is an outsider candidate whose experience is military, technical, business, and volunteer service rather than elected office."},
+        "reform": {"score": 2, "confidence": "high", "citations": ["S1"], "basis": "He rejects corporate PAC and foreign-lobby money and calls for higher official-accountability standards."},
+        "immigration": {"score": 2, "confidence": "high", "citations": ["S1"], "basis": "He calls for dismantling ICE and replacing it with a rights-grounded immigration system."},
+        "healthcare": {"score": 2, "confidence": "high", "citations": ["S1", "S2"], "basis": "He explicitly supports universal health care."},
+        "social": {"score": 2, "confidence": "high", "citations": ["S1", "S2"], "basis": "He supports reproductive freedom and access to gender-affirming care."}
+      }
+    }
+  ]
+}

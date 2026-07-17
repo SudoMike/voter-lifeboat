@@ -1,0 +1,41 @@
+{
+  "contest_slug": "spokane-spokane-county-prosecuting-attorney",
+  "scored_at": "2026-07-17",
+  "derived_from": ["data/washington-state/counties/spokane/dossiers/spokane-spokane-county-prosecuting-attorney/"],
+  "office_does": "The prosecutor leads felony and juvenile prosecution, represents the county in civil matters, advises county government, and sets charging and diversion priorities within state law.",
+  "race_blurb": "Both candidates are deputy prosecutors. Danny Tarkenton emphasizes psychology-informed recidivism reduction and political independence, while incumbent Preston McCollam emphasizes enforcement, victim advocacy, and institutional continuity.",
+  "candidates": [
+    {
+      "slug": "danny-tarkenton",
+      "summary": "A deputy prosecutor and Iraq War veteran, Tarkenton emphasizes behavioral evidence, recidivism reduction, and independence from party organizations.",
+      "highlights": [
+        "Handles criminal and involuntary-treatment proceedings and reports a docket exceeding 500 cases [S1]",
+        "Says psychology-informed prosecution can reduce repeat offending [S1][S2]",
+        "Frames independence from political parties as important to prosecutorial discretion [S1]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "safety": {"score": 1, "confidence": "medium", "citations": ["S1", "S2"], "basis": "Her public-safety approach emphasizes reducing recidivism through psychology-informed prosecution."},
+        "experience": {"score": 0, "confidence": "medium", "citations": ["S1"], "basis": "She has substantial current prosecutorial responsibility but not the incumbent's senior management record."},
+        "reform": {"score": 1, "confidence": "medium", "citations": ["S1"], "basis": "She explicitly argues prosecutorial discretion should be independent of political parties."}
+      }
+    },
+    {
+      "slug": "preston-mccollam",
+      "summary": "The incumbent prosecutor, McCollam emphasizes conventional enforcement, crime-victim advocacy, and continuity in senior office management.",
+      "highlights": [
+        "Has served as county prosecutor since July 2025 after more than a decade in criminal and civil prosecution [S1]",
+        "Promises law-enforcement collaboration, offender accountability, and victim advocacy [S1][S2]",
+        "Previously served as chief criminal deputy and interim civil chief [S1]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "safety": {"score": -2, "confidence": "high", "citations": ["S1", "S2"], "basis": "He repeatedly centers law-enforcement collaboration, offender accountability, and conventional prosecution."},
+        "experience": {"score": -2, "confidence": "high", "citations": ["S1"], "basis": "He is the incumbent with more than a decade of prosecution and senior office-management experience."},
+        "reform": {"score": -1, "confidence": "medium", "citations": ["S1"], "basis": "His candidacy emphasizes institutional continuity and endorsements from prosecutors and law-enforcement officials."}
+      }
+    }
+  ]
+}
