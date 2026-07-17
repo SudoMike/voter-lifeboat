@@ -8,6 +8,102 @@
   "coverage": "partial_county",
   "measures": [
     {
+      "slug": "spokane-spokane-transit-authority-proposition-no-1",
+      "owner": "spokane",
+      "jurisdiction": "Spokane Transit Authority",
+      "proposition": "Proposition No. 1",
+      "title": "Maintenance and Enhancement of Public Transportation Services",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "spokane",
+        "layer": "PTBA",
+        "value": "Y"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 41
+        }
+      ],
+      "what_it_does": "Reauthorizes an existing voter-approved sales and use tax for public transportation services, transit system maintenance and enhancement, expansion, and support facilities.",
+      "cost_line": "Reauthorizes up to 0.2% sales and use tax from January 1, 2029 through no later than December 31, 2048.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax or fee measure for the listed public service.",
+          "citations": [
+            "Spokane local voters' pamphlet"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "spokane-spokane-county-library-district-proposition-no-1",
+      "owner": "spokane",
+      "jurisdiction": "Spokane County Library District",
+      "proposition": "Proposition No. 1",
+      "title": "Regular Library Operations and Maintenance Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "spokane",
+        "layer": "LIBDST",
+        "value": "Spokane County Library District"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 43
+        }
+      ],
+      "what_it_does": "Restores the library district's regular property tax levy rate to support library operations, maintenance, services, materials, staffing, and facilities.",
+      "cost_line": "Restores the levy rate to $0.45 per $1,000 of assessed value for collection in 2027.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax or fee measure for the listed public service.",
+          "citations": [
+            "Spokane local voters' pamphlet"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "spokane-west-plains-aquifer-protection-area-measure-no-1",
+      "owner": "spokane",
+      "jurisdiction": "West Plains Aquifer Protection Area",
+      "proposition": "Measure No. 1",
+      "title": "Spokane County West Plains Aquifer Protection Area",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "spokane",
+        "layer": "AQUIFER",
+        "value": "yes"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 44
+        }
+      ],
+      "what_it_does": "Authorizes monthly fees to fund aquifer protection activities including planning, water quality improvements, sewage and stormwater facilities, monitoring, inspections, and public education.",
+      "cost_line": "Authorizes monthly fees up to $1.25 per household unit for water withdrawal and $1.25 for on-site sewage disposal for up to 20 years.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax or fee measure for the listed public service.",
+          "citations": [
+            "Spokane local voters' pamphlet"
+          ]
+        }
+      }
+    },
+    {
       "slug": "spokane-city-of-cheney-proposition-no-1",
       "owner": "spokane",
       "jurisdiction": "City of Cheney",
@@ -32,9 +128,9 @@
       "lean_mappings": {
         "taxes": {
           "direction": 2,
-          "basis": "YES renews a utility tax for street and sidewalk repair.",
+          "basis": "YES approves a local tax or fee measure for the listed public service.",
           "citations": [
-            "Spokane sample ballot"
+            "Spokane local voters' pamphlet"
           ]
         }
       }

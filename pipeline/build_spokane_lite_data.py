@@ -50,6 +50,23 @@ def contest(category, district, office, candidates, scope):
     }
 
 
+def measure(jurisdiction, proposition, title, scope, page, what_it_does, cost_line):
+    return {
+        "slug": county_slug(f"{jurisdiction}-{proposition}"),
+        "owner": "spokane",
+        "jurisdiction": jurisdiction,
+        "proposition": proposition,
+        "title": title,
+        "scope": scope,
+        "pamphlet_pages": [{"edition": "local-voters-pamphlet", "page": page}],
+        "what_it_does": what_it_does,
+        "cost_line": cost_line,
+        "pro_summary": None,
+        "con_summary": None,
+        "lean_mappings": {"taxes": {"direction": 2, "basis": "YES approves a local tax or fee measure for the listed public service.", "citations": ["Spokane local voters' pamphlet"]}},
+    }
+
+
 contests = [
     contest("Federal", "Congressional District 5", "U.S. Representative", [
         cand("Nate Powell", "Prefers Independent Party"),
@@ -122,6 +139,12 @@ contests = [
         cand("Joe Schmick", "Prefers Republican Party"),
         cand("Karina Wallace", "Prefers Democratic Party"),
     ], dist_scope("LEGDST", 9)),
+    contest("County", "Spokane County Commissioner District 2", "Commissioner", [
+        cand("Amber Waldref", "Prefers Democratic Party"),
+    ], dist_scope("COUNTY_COUNCIL", 2)),
+    contest("County", "Spokane County Commissioner District 4", "Commissioner", [
+        cand("Suzanne Schmidt", "Prefers Republican Party"),
+    ], dist_scope("COUNTY_COUNCIL", 4)),
     contest("County", "Spokane County", "Assessor", [
         cand("Tom Konis", "Prefers Republican Party"),
     ], {"kind": "COUNTY", "county": "spokane"}),
@@ -147,20 +170,10 @@ contests = [
 ]
 
 measures = [
-    {
-        "slug": "spokane-city-of-cheney-proposition-no-1",
-        "owner": "spokane",
-        "jurisdiction": "City of Cheney",
-        "proposition": "Proposition No. 1",
-        "title": "Renewal of Residential Street Utility Tax",
-        "scope": dist_scope("CITY", "Cheney"),
-        "pamphlet_pages": [{"edition": "local-voters-pamphlet", "page": 46}],
-        "what_it_does": "Renews Cheney's tax on electrical energy and natural gas businesses to 16.75% of gross revenue for 14 years, with proceeds used to repair streets and sidewalks.",
-        "cost_line": "Renews a utility tax rate six percentage points above the otherwise authorized 10.75% rate for 14 years.",
-        "pro_summary": None,
-        "con_summary": None,
-        "lean_mappings": {"taxes": {"direction": 2, "basis": "YES renews a utility tax for street and sidewalk repair.", "citations": ["Spokane sample ballot"]}},
-    }
+    measure("Spokane Transit Authority", "Proposition No. 1", "Maintenance and Enhancement of Public Transportation Services", dist_scope("PTBA", "Y"), 41, "Reauthorizes an existing voter-approved sales and use tax for public transportation services, transit system maintenance and enhancement, expansion, and support facilities.", "Reauthorizes up to 0.2% sales and use tax from January 1, 2029 through no later than December 31, 2048."),
+    measure("Spokane County Library District", "Proposition No. 1", "Regular Library Operations and Maintenance Levy", dist_scope("LIBDST", "Spokane County Library District"), 43, "Restores the library district's regular property tax levy rate to support library operations, maintenance, services, materials, staffing, and facilities.", "Restores the levy rate to $0.45 per $1,000 of assessed value for collection in 2027."),
+    measure("West Plains Aquifer Protection Area", "Measure No. 1", "Spokane County West Plains Aquifer Protection Area", dist_scope("AQUIFER", "yes"), 44, "Authorizes monthly fees to fund aquifer protection activities including planning, water quality improvements, sewage and stormwater facilities, monitoring, inspections, and public education.", "Authorizes monthly fees up to $1.25 per household unit for water withdrawal and $1.25 for on-site sewage disposal for up to 20 years."),
+    measure("City of Cheney", "Proposition No. 1", "Renewal of Residential Street Utility Tax", dist_scope("CITY", "Cheney"), 46, "Renews Cheney's tax on electrical energy and natural gas businesses to 16.75% of gross revenue for 14 years, with proceeds used to repair streets and sidewalks.", "Renews a utility tax rate six percentage points above the otherwise authorized 10.75% rate for 14 years."),
 ]
 
 OUT.mkdir(parents=True, exist_ok=True)

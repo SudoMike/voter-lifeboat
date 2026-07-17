@@ -114,6 +114,16 @@ const COUNTY_LAYERS = {
       attr: 'DISTNUM',
     },
     {
+      key: 'PTBA',
+      url: 'https://services9.arcgis.com/EULiDWk01e6LlXCu/arcgis/rest/services/PTBA/FeatureServer/18/query',
+      attr: 'PTBA',
+    },
+    {
+      key: 'LIBDST',
+      url: 'https://gismo.spokanecounty.org/arcgis/rest/services/OpenData/Boundary/MapServer/5/query',
+      attr: 'NAME',
+    },
+    {
       key: 'AQUIFER',
       url: 'https://services.arcgis.com/3PDwyTturHqnGCu0/arcgis/rest/services/Aquifer/FeatureServer/0/query',
       attr: 'AQUIFER',
