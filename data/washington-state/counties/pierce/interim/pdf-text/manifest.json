@@ -1,0 +1,26 @@
+{
+  "county": "pierce",
+  "script": "pipeline/extract_pdf_text.mjs",
+  "files": [
+    {
+      "source_pointer": "data/washington-state/counties/pierce/raw/pierce/election-at-a-glance.pdf.url",
+      "url": "https://www.piercecountywa.gov/DocumentCenter/View/159153/Aug-2026-Election-at-a-Glance",
+      "error": "download failed 403: https://www.piercecountywa.gov/DocumentCenter/View/159153/Aug-2026-Election-at-a-Glance"
+    },
+    {
+      "source_pointer": "data/washington-state/counties/pierce/raw/pierce/local-voters-pamphlet.pdf.url",
+      "url": "https://www.piercecountywa.gov/DocumentCenter/View/158538/Primary-2026-VP-Final",
+      "error": "download failed 403: https://www.piercecountywa.gov/DocumentCenter/View/158538/Primary-2026-VP-Final"
+    },
+    {
+      "source_pointer": "data/washington-state/counties/pierce/raw/pierce/lot-draw.pdf.url",
+      "url": "https://www.piercecountywa.gov/DocumentCenter/View/157949/Lot-Draw-2026",
+      "error": "download failed 403: https://www.piercecountywa.gov/DocumentCenter/View/157949/Lot-Draw-2026"
+    },
+    {
+      "source_pointer": "data/washington-state/counties/pierce/raw/pierce/sample-ballot.pdf.url",
+      "url": "https://www.piercecountywa.gov/DocumentCenter/View/158808/Sample-Ballot",
+      "error": "download failed 403: https://www.piercecountywa.gov/DocumentCenter/View/158808/Sample-Ballot"
+    }
+  ]
+}

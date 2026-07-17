@@ -41,7 +41,14 @@ async function download(url) {
     await fs.access(cachePath)
     return cachePath
   } catch {}
-  const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } })
+  const res = await fetch(url, {
+    headers: {
+      accept: 'application/pdf,application/octet-stream,*/*',
+      'accept-language': 'en-US,en;q=0.9',
+      'user-agent':
+        'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36',
+    },
+  })
   if (!res.ok) throw new Error(`download failed ${res.status}: ${url}`)
   const bytes = new Uint8Array(await res.arrayBuffer())
   await fs.writeFile(cachePath, bytes)
@@ -75,9 +82,20 @@ if (!pointers.length) {
 const manifest = []
 for (const pointer of pointers) {
   const url = (await fs.readFile(pointer, 'utf8')).trim()
-  const cachePath = await download(url)
-  const text = await extract(cachePath)
   const slug = slugFromPointer(pointer)
+  let cachePath
+  try {
+    cachePath = await download(url)
+  } catch (err) {
+    console.warn(`${county}: skipped ${slug}: ${err.message}`)
+    manifest.push({
+      source_pointer: path.relative(root, pointer),
+      url,
+      error: err.message,
+    })
+    continue
+  }
+  const text = await extract(cachePath)
   const outPath = path.join(outDir, `${slug}.txt`)
   await fs.writeFile(outPath, `${text}\n`)
   manifest.push({
