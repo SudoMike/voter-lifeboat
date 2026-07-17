@@ -4,6 +4,22 @@ import { buildProfile } from '../lib/scoring.js'
 const AXIS_LABEL = (data, id) =>
   data.rubric.axes.find((a) => a.id === id)?.title?.toUpperCase() || id.toUpperCase()
 
+// Shared progress bar — the sail slides toward the finish as cards are answered.
+// `tone` recolors it to stay legible on the seafoam and navy screens.
+function ProgressHeader({ idx, total, tone, style }) {
+  const pct = `${Math.round((idx / total) * 100)}%`
+  return (
+    <header className={`progress${tone ? ` progress--${tone}` : ''}`} style={style}>
+      <div className="progress-track">
+        <div className="progress-fill" style={{ width: pct }} />
+      </div>
+      <div className="progress-count">
+        {idx + 1} of {total}
+      </div>
+    </header>
+  )
+}
+
 export default function Interview({ data, items, onDone }) {
   const [idx, setIdx] = useState(0)
   const [responses, setResponses] = useState([])
@@ -71,7 +87,8 @@ export default function Interview({ data, items, onDone }) {
     const verb = pulseFor.choice === 'agree' ? 'You agreed.' : pulseFor.choice === 'disagree' ? 'You disagreed.' : 'Noted.'
     const axisTitle = data.rubric.axes.find((a) => a.id === pulseFor.axis)?.title?.toLowerCase()
     return (
-      <main className="screen screen--app screen--navy rise" style={{ padding: '38px 24px 34px', textAlign: 'center' }}>
+      <main className="screen screen--app screen--navy rise" style={{ padding: '18px 24px 34px', textAlign: 'center' }}>
+        <ProgressHeader idx={idx} total={total} tone="navy" style={{ marginBottom: 24, textAlign: 'left' }} />
         <div className="eyebrow" style={{ letterSpacing: 2 }}>QUICK PULSE</div>
         <h1 className="display" style={{ fontSize: 26, lineHeight: 1.25, marginTop: 12 }}>
           {verb} How much do you care about this one?
@@ -92,20 +109,17 @@ export default function Interview({ data, items, onDone }) {
   }
 
   const item = items[idx]
-  const progressPct = `${Math.round((idx / total) * 100)}%`
 
   // --- trade-off scenario ---
   if (item.kind === 'tradeoff') {
     return (
       <main className="screen screen--app screen--seafoam rise" style={{ paddingBottom: 30 }} key={item.id}>
-        <header style={{ padding: '20px 24px 0', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <div className="eyebrow" style={{ color: 'var(--navy)', letterSpacing: 2 }}>
+        <div style={{ padding: '18px 24px 0' }}>
+          <ProgressHeader idx={idx} total={total} tone="seafoam" />
+          <div className="eyebrow" style={{ color: 'var(--navy)', letterSpacing: 2, marginTop: 14 }}>
             ⚓ TRADE-OFF · {tradeoffNo} OF {tradeoffCount}
           </div>
-          <div className="progress-count" style={{ color: 'var(--navy)' }}>
-            {idx + 1} of {total}
-          </div>
-        </header>
+        </div>
         <section style={{ padding: '26px 24px 0' }}>
           <h1 className="display" style={{ fontSize: 29, lineHeight: 1.2, color: '#fff', textShadow: '0 2px 0 rgba(27,58,87,.2)', textWrap: 'pretty' }}>
             {item.text}
@@ -147,15 +161,7 @@ export default function Interview({ data, items, onDone }) {
 
   return (
     <main className="screen screen--app rise" style={{ paddingBottom: 26 }} key={item.id}>
-      <header className="progress" style={{ padding: '18px 24px 0' }}>
-        <div className="progress-track">
-          <div className="progress-fill" style={{ width: progressPct }} />
-          <div className="progress-sail" style={{ left: progressPct }} />
-        </div>
-        <div className="progress-count">
-          {idx + 1} of {total}
-        </div>
-      </header>
+      <ProgressHeader idx={idx} total={total} style={{ padding: '18px 24px 0' }} />
       <section
         className={`statement${exiting ? ` exit-${exiting}` : ''}`}
         style={{ margin: '22px 20px 0', touchAction: 'pan-y' }}

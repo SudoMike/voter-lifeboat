@@ -144,8 +144,13 @@ button { font: inherit; border: 0; background: none; color: inherit; cursor: poi
 .progress { display: flex; align-items: center; gap: 12px; }
 .progress-track { flex: 1; height: 12px; background: var(--sand); border-radius: 999px; position: relative; }
 .progress-fill { height: 100%; background: var(--seafoam); border-radius: 999px; }
-.progress-sail { position: absolute; top: -7px; margin-left: -9px; width: 0; height: 0; border-left: 9px solid transparent; border-right: 9px solid transparent; border-bottom: 13px solid var(--coral); } /* set left:% inline */
 .progress-count { font-family: var(--font-display); font-weight: 800; font-size: 14px; color: var(--ink-soft); white-space: nowrap; }
+/* seafoam screen (trade-off): sand fill reads against the seafoam ground */
+.progress--seafoam .progress-track { background: rgba(15, 36, 57, .18); }
+.progress--seafoam .progress-fill { background: var(--sand); }
+.progress--seafoam .progress-count { color: #fff; }
+/* navy screen (quick pulse): default seafoam fill already pops; lighten the count */
+.progress--navy .progress-count { color: var(--cream); }
 
 /* ---------- statement card ---------- */
 .statement { background: #fff; border: 2.5px solid var(--navy); border-radius: 24px; padding: 30px 26px 26px; box-shadow: 0 6px 0 rgba(27,58,87,.12); }
