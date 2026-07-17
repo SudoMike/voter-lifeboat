@@ -1,0 +1,697 @@
+{
+  "county": "clark",
+  "script": "pipeline/build_clark_lite_data.py",
+  "derived_from": [
+    "data/washington-state/counties/clark/interim/pdf-text/sample-ballot.txt"
+  ],
+  "coverage": "partial_county",
+  "contests": [
+    {
+      "slug": "clark-congressional-district-3-u-s-representative",
+      "owner": "clark",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 3",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "clark",
+        "layer": "CONGDST",
+        "value": "3"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Clark County sample ballot. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "marie-gluesenkamp-perez",
+          "name": "Marie Gluesenkamp Perez",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "brent-hennrich",
+          "name": "Brent Hennrich",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "john-p-roco",
+          "name": "John P. Roco",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "john-saulie-rohman",
+          "name": "John Saulie-Rohman",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "troy-rasband",
+          "name": "Troy Rasband",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "john-braun",
+          "name": "John Braun",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "antony-barran",
+          "name": "Antony Barran",
+          "party": "Prefers Cascade Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "austin-braswell",
+          "name": "Austin Braswell",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "lawrence-kellogg",
+          "name": "Lawrence Kellogg",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "clark-legislative-district-17-state-representative-pos-1",
+      "owner": "clark",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 17",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "clark",
+        "layer": "LEGDST",
+        "value": "17"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Clark County sample ballot. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "kevin-waters",
+          "name": "Kevin Waters",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "thomas-everett-haynes",
+          "name": "Thomas Everett Haynes",
+          "party": "Prefers Pro Gun Liberal Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "ben-christly",
+          "name": "Ben Christly",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "clark-legislative-district-17-state-representative-pos-2",
+      "owner": "clark",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 17",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "clark",
+        "layer": "LEGDST",
+        "value": "17"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Clark County sample ballot. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "diana-h-perez",
+          "name": "Diana H. Perez",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "david-stuebe",
+          "name": "David Stuebe",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "clark-legislative-district-18-state-representative-pos-1",
+      "owner": "clark",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 18",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "clark",
+        "layer": "LEGDST",
+        "value": "18"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Clark County sample ballot. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "stephanie-mcclintock",
+          "name": "Stephanie McClintock",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "randi-l-knott",
+          "name": "Randi L. Knott",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "clark-legislative-district-18-state-representative-pos-2",
+      "owner": "clark",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 18",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "clark",
+        "layer": "LEGDST",
+        "value": "18"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Clark County sample ballot. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "john-ley",
+          "name": "John Ley",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "deken-letinich",
+          "name": "Deken Letinich",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "clark-legislative-district-20-state-representative-pos-1",
+      "owner": "clark",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 20",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "clark",
+        "layer": "LEGDST",
+        "value": "20"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Clark County sample ballot. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "peter-abbarno",
+          "name": "Peter Abbarno",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "andy-zahn",
+          "name": "Andy Zahn",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "clark-legislative-district-20-state-representative-pos-2",
+      "owner": "clark",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 20",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "clark",
+        "layer": "LEGDST",
+        "value": "20"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Clark County sample ballot. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "evan-jones",
+          "name": "Evan Jones",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "ed-orcutt",
+          "name": "Ed Orcutt",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "clark-legislative-district-49-state-representative-pos-1",
+      "owner": "clark",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 49",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "clark",
+        "layer": "LEGDST",
+        "value": "49"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Clark County sample ballot. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "kim-d-harless",
+          "name": "Kim D. Harless",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "sarah-mittelman",
+          "name": "Sarah Mittelman",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "mike-pond",
+          "name": "Mike Pond",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "clark-legislative-district-49-state-representative-pos-2",
+      "owner": "clark",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 49",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "clark",
+        "layer": "LEGDST",
+        "value": "49"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Clark County sample ballot. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "monica-jurado-stonier",
+          "name": "Monica Jurado Stonier",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "derek-thompson",
+          "name": "Derek Thompson",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "clark-clark-county-assessor",
+      "owner": "clark",
+      "category": "County",
+      "office": "Assessor",
+      "district": "Clark County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "clark"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Clark County sample ballot. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "tyler-thoune",
+          "name": "Tyler Thoune",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "peter-van-nortwick",
+          "name": "Peter Van Nortwick",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "clark-clark-county-auditor",
+      "owner": "clark",
+      "category": "County",
+      "office": "Auditor",
+      "district": "Clark County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "clark"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Clark County sample ballot. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "mitchell-kelly",
+          "name": "Mitchell Kelly",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "eileen-quiring-o-brien",
+          "name": "Eileen Quiring O'Brien",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "sharon-wylie",
+          "name": "Sharon Wylie",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "ty-stober",
+          "name": "Ty Stober",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "clark-clark-county-clerk",
+      "owner": "clark",
+      "category": "County",
+      "office": "Clerk",
+      "district": "Clark County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "clark"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Clark County sample ballot. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "scott-g-weber",
+          "name": "Scott G Weber",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "rachel-shapiro",
+          "name": "Rachel Shapiro",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "gerald-e-gray",
+          "name": "Gerald E. Gray",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "clark-clark-county-prosecuting-attorney",
+      "owner": "clark",
+      "category": "County",
+      "office": "Prosecuting Attorney",
+      "district": "Clark County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "clark"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Clark County sample ballot. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "laurel-smith",
+          "name": "Laurel Smith",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "clark-clark-county-sheriff",
+      "owner": "clark",
+      "category": "County",
+      "office": "Sheriff",
+      "district": "Clark County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "clark"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Clark County sample ballot. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "john-horch",
+          "name": "John Horch",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "clark-clark-county-treasurer",
+      "owner": "clark",
+      "category": "County",
+      "office": "Treasurer",
+      "district": "Clark County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "clark"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Clark County sample ballot. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "alishia-topper",
+          "name": "Alishia Topper",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    }
+  ]
+}

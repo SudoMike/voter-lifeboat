@@ -1,0 +1,16 @@
+{
+  "county": "clark",
+  "script": "pipeline/extract_pdf_text.mjs",
+  "files": [
+    {
+      "source_pointer": "data/washington-state/counties/clark/raw/clark/local-voters-pamphlet.pdf.url",
+      "url": "https://clark.wa.gov/sites/default/files/media/document/2026-06/2026clarkcountyprimaryvp_web.pdf",
+      "output": "data/washington-state/counties/clark/interim/pdf-text/local-voters-pamphlet.txt"
+    },
+    {
+      "source_pointer": "data/washington-state/counties/clark/raw/clark/sample-ballot.pdf.url",
+      "url": "https://clark.wa.gov/sites/default/files/media/document/2026-05/august_4_2026_primary_and_special_election_sample_ballot.pdf",
+      "output": "data/washington-state/counties/clark/interim/pdf-text/sample-ballot.txt"
+    }
+  ]
+}
