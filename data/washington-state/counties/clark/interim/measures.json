@@ -1,0 +1,20 @@
+{
+  "derived_from": [
+    "data/washington-state/counties/clark/interim/app-measures.json"
+  ],
+  "script": "pipeline/normalize_research_inputs.py",
+  "measures": [
+    {
+      "jurisdiction": "East County Fire & Rescue",
+      "proposition": "Proposition No. 6",
+      "title": "Emergency Medical Services Property Tax Levy",
+      "slug": "clark-east-county-fire-and-rescue-proposition-no-6"
+    },
+    {
+      "jurisdiction": "Clark County Fire Protection District No. 10",
+      "proposition": "Proposition No. 3",
+      "title": "New Fire Station General Obligation Bonds",
+      "slug": "clark-clark-county-fire-protection-district-no-10-proposition-no-3"
+    }
+  ]
+}

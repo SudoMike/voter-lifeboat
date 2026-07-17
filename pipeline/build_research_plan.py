@@ -1,52 +1,73 @@
-"""Stage: interim -> interim. Emit the dossier research work manifest.
+"""Stage: interim -> interim. Emit a dossier research work manifest.
 
-Depth rule: contests with 3+ candidates are 'deep' (the primary genuinely
-decides something there — WA top-2); 1-2 candidate contests are 'light'
-(everyone advances regardless).
+Depth rule: 3+ candidates are ``deep``, 2 are ``light``, and uncontested
+single-candidate contests are omitted because everyone advances.
 
-Input:  data/washington-state/counties/king/interim/{contests,measures,pamphlet-index}.json
-Output: data/washington-state/counties/king/interim/research-plan.json
+Pass a county slug, ``statewide``, or ``--all`` (the default).
 """
 
+import argparse
 import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-INTERIM = ROOT / "data/washington-state/counties/king/interim"
 
-contests = json.load(open(INTERIM / "contests.json"))["contests"]
-measures = json.load(open(INTERIM / "measures.json"))["measures"]
-pidx = json.load(open(INTERIM / "pamphlet-index.json"))
 
-plan = {"derived_from": [
-            "data/washington-state/counties/king/interim/contests.json",
-            "data/washington-state/counties/king/interim/measures.json",
-            "data/washington-state/counties/king/interim/pamphlet-index.json",
-        ],
-        "script": "pipeline/build_research_plan.py", "contests": [], "measures": []}
+def interim_for(package):
+    base = ROOT / "data/washington-state"
+    return base / ("statewide/interim" if package == "statewide" else f"counties/{package}/interim")
 
-for con in contests:
-    depth = "deep" if len(con["candidates"]) >= 3 else "light"
-    plan["contests"].append({
-        "contest_slug": con["slug"],
-        "category": con["category"],
-        "office": con["office"],
-        "district": con["district"],
-        "depth": depth,
-        "candidates": [{
-            "slug": c["slug"],
-            "name": c["name"],
-            "party_preference": c.get("party_preference"),
-            "campaign_website": c.get("campaign_website"),
-            "pamphlet_pages": pidx["candidates"].get(c["slug"], []),
-        } for c in con["candidates"]],
-    })
 
-for m in measures:
-    plan["measures"].append({**m, "pamphlet_pages": pidx["measures"].get(m["slug"], [])})
+def build(package):
+    interim = interim_for(package)
+    rel = interim.relative_to(ROOT)
+    contests = json.loads((interim / "contests.json").read_text())["contests"]
+    measures = json.loads((interim / "measures.json").read_text())["measures"]
+    index_path = interim / "pamphlet-index.json"
+    pidx = json.loads(index_path.read_text()) if index_path.exists() else {"candidates": {}, "measures": {}}
+    derived = [f"{rel}/contests.json", f"{rel}/measures.json"]
+    if index_path.exists():
+        derived.append(f"{rel}/pamphlet-index.json")
+    plan = {"derived_from": derived, "script": "pipeline/build_research_plan.py", "contests": [], "measures": []}
 
-(INTERIM / "research-plan.json").write_text(json.dumps(plan, indent=2))
-deep = [c for c in plan["contests"] if c["depth"] == "deep"]
-light = [c for c in plan["contests"] if c["depth"] == "light"]
-print(f"deep contests: {len(deep)} ({sum(len(c['candidates']) for c in deep)} candidates)")
-print(f"light contests: {len(light)} ({sum(len(c['candidates']) for c in light)} candidates)")
+    for contest in contests:
+        if len(contest["candidates"]) < 2:
+            continue
+        plan["contests"].append({
+            "contest_slug": contest["slug"], "category": contest["category"],
+            "office": contest["office"], "district": contest["district"],
+            "depth": "deep" if len(contest["candidates"]) >= 3 else "light",
+            "candidates": [{
+                "slug": candidate["slug"], "name": candidate["name"],
+                "party_preference": candidate.get("party_preference"),
+                "campaign_website": candidate.get("campaign_website"),
+                "pamphlet_pages": pidx.get("candidates", {}).get(candidate["slug"], []),
+            } for candidate in contest["candidates"]],
+        })
+    for measure in measures:
+        plan["measures"].append({
+            **measure, "pamphlet_pages": pidx.get("measures", {}).get(measure["slug"], [])
+        })
+    (interim / "research-plan.json").write_text(json.dumps(plan, indent=2) + "\n")
+    print(f"{package}: {len(plan['contests'])} contested races, {len(plan['measures'])} measures")
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("package", nargs="?")
+    parser.add_argument("--all", action="store_true", help="build every normalized package")
+    args = parser.parse_args()
+    if args.all and args.package:
+        parser.error("provide either a package or --all")
+    if args.all or args.package is None:
+        packages = sorted(path.parent.parent.name for path in
+                          (ROOT / "data/washington-state/counties").glob("*/interim/contests.json"))
+        packages.append("statewide")
+    else:
+        packages = [args.package]
+    for package in packages:
+        build(package)
+
+
+if __name__ == "__main__":
+    main()

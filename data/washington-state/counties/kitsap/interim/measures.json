@@ -1,0 +1,26 @@
+{
+  "derived_from": [
+    "data/washington-state/counties/kitsap/interim/app-measures.json"
+  ],
+  "script": "pipeline/normalize_research_inputs.py",
+  "measures": [
+    {
+      "jurisdiction": "City of Bremerton",
+      "proposition": "Proposition No. 1",
+      "title": "Public Safety and Governmental Services Levy",
+      "slug": "kitsap-city-of-bremerton-proposition-no-1"
+    },
+    {
+      "jurisdiction": "Kitsap County Fire Protection District No. 18",
+      "proposition": "Proposition No. 1",
+      "title": "Bonds for Fire and Emergency Response Facilities, Vehicles and Equipment",
+      "slug": "kitsap-kitsap-county-fire-protection-district-no-18-proposition-no-1"
+    },
+    {
+      "jurisdiction": "North Mason Regional Fire Authority",
+      "proposition": "Proposition No. 1",
+      "title": "Emergency Medical Services Property Tax Levy",
+      "slug": "kitsap-north-mason-regional-fire-authority-proposition-no-1"
+    }
+  ]
+}

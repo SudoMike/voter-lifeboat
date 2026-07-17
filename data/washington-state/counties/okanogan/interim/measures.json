@@ -1,0 +1,32 @@
+{
+  "derived_from": [
+    "data/washington-state/counties/okanogan/interim/app-measures.json"
+  ],
+  "script": "pipeline/normalize_research_inputs.py",
+  "measures": [
+    {
+      "jurisdiction": "Okanogan County",
+      "proposition": "Proposition No. 1",
+      "title": "Levy Lid Lift",
+      "slug": "okanogan-okanogan-county-proposition-no-1"
+    },
+    {
+      "jurisdiction": "Douglas Okanogan County Fire District 15",
+      "proposition": "Proposition No. 1",
+      "title": "Emergency Medical Services Levy",
+      "slug": "okanogan-douglas-okanogan-county-fire-district-15-proposition-no-1"
+    },
+    {
+      "jurisdiction": "City of Pateros",
+      "proposition": "Ballot Measure",
+      "title": "Emergency Medical Services Levy",
+      "slug": "okanogan-city-of-pateros-ballot-measure"
+    },
+    {
+      "jurisdiction": "Public Hospital District No. 1, Okanogan and Douglas Counties",
+      "proposition": "Proposition No. 1",
+      "title": "One-Year Special Levy",
+      "slug": "okanogan-public-hospital-district-no-1-okanogan-and-douglas-counties-proposition-no-1"
+    }
+  ]
+}

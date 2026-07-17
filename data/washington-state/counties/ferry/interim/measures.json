@@ -1,0 +1,20 @@
+{
+  "derived_from": [
+    "data/washington-state/counties/ferry/interim/app-measures.json"
+  ],
+  "script": "pipeline/normalize_research_inputs.py",
+  "measures": [
+    {
+      "jurisdiction": "Ferry County Emergency Medical Services District 1",
+      "proposition": "Ballot Measure",
+      "title": "Continuing Emergency Medical Services Levy",
+      "slug": "ferry-ferry-county-emergency-medical-services-district-1-ballot-measure"
+    },
+    {
+      "jurisdiction": "City of Republic",
+      "proposition": "Ballot Measure",
+      "title": "Emergency Medical Services Levy",
+      "slug": "ferry-city-of-republic-ballot-measure"
+    }
+  ]
+}

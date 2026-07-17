@@ -1,0 +1,26 @@
+{
+  "derived_from": [
+    "data/washington-state/counties/mason/interim/app-measures.json"
+  ],
+  "script": "pipeline/normalize_research_inputs.py",
+  "measures": [
+    {
+      "jurisdiction": "Central Mason Fire & EMS",
+      "proposition": "Ballot Measure",
+      "title": "Property Tax Levy for Fire Protection and Emergency Medical Services",
+      "slug": "mason-central-mason-fire-ems-ballot-measure"
+    },
+    {
+      "jurisdiction": "Mason County Fire Protection District No. 12 (Matlock)",
+      "proposition": "Ballot Measure",
+      "title": "Renewal and Increase of Emergency Medical Services Levy",
+      "slug": "mason-mason-county-fire-protection-district-no-12-matlock-ballot-measure"
+    },
+    {
+      "jurisdiction": "North Mason Regional Fire Authority",
+      "proposition": "Ballot Measure",
+      "title": "Emergency Medical Services Property Tax Levy",
+      "slug": "mason-north-mason-regional-fire-authority-ballot-measure"
+    }
+  ]
+}

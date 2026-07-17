@@ -1,0 +1,32 @@
+{
+  "derived_from": [
+    "data/washington-state/counties/pierce/interim/app-measures.json"
+  ],
+  "script": "pipeline/normalize_research_inputs.py",
+  "measures": [
+    {
+      "jurisdiction": "Town of Carbonado",
+      "proposition": "Proposition No. 1",
+      "title": "Emergency Medical Services Property Tax Levy",
+      "slug": "pierce-town-of-carbonado-proposition-no-1"
+    },
+    {
+      "jurisdiction": "City of Fircrest",
+      "proposition": "Proposition No. 1",
+      "title": "Emergency Medical Care and Services",
+      "slug": "pierce-city-of-fircrest-proposition-no-1"
+    },
+    {
+      "jurisdiction": "City of Tacoma",
+      "proposition": "Proposition No. 1",
+      "title": "Funding Transportation Safety Improvements",
+      "slug": "pierce-city-of-tacoma-proposition-no-1"
+    },
+    {
+      "jurisdiction": "Fire Protection District No. 10",
+      "proposition": "Proposition No. 1",
+      "title": "Bonds to Construct a New Fire Station",
+      "slug": "pierce-fire-protection-district-no-10-proposition-no-1"
+    }
+  ]
+}
