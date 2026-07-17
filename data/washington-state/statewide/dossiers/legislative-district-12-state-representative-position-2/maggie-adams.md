@@ -3,7 +3,7 @@ name: Maggie Adams
 slug: maggie-adams
 contest: legislative-district-12-state-representative-position-2
 depth: deep
-evidence_level: official-ballot-only
+evidence_level: pamphlet-only
 researched_at: 2026-07-17
 sources:
   - id: S1
