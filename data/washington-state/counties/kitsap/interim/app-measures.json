@@ -4,7 +4,7 @@
   "derived_from": [
     "data/washington-state/counties/kitsap/interim/pdf-text/local-voters-pamphlet.txt"
   ],
-  "coverage": "partial_county",
+  "coverage": "full_county",
   "measures": [
     {
       "slug": "kitsap-city-of-bremerton-proposition-no-1",
@@ -32,6 +32,60 @@
         "taxes": {
           "direction": 2,
           "basis": "YES raises a city property tax levy for public safety and governmental services.",
+          "citations": [
+            "Kitsap local voters' pamphlet"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "kitsap-kitsap-county-fire-protection-district-no-18-proposition-no-1",
+      "owner": "kitsap",
+      "jurisdiction": "Kitsap County Fire Protection District No. 18",
+      "proposition": "Proposition No. 1",
+      "title": "Bonds for Fire and Emergency Response Facilities, Vehicles and Equipment",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "kitsap",
+        "layer": "FIRDST",
+        "value": "18"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Authorizes Poulsbo Fire to acquire, construct, and renovate firefighting and emergency response facilities, vehicles, and equipment, issue up to $7.64 million in general obligation bonds maturing within 6 years, and levy annual excess property taxes to repay the bonds.",
+      "cost_line": "Authorizes up to $7,640,000 in bonds repaid by annual excess property taxes.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES authorizes bond debt and excess property taxes for fire and emergency response facilities, vehicles, and equipment.",
+          "citations": [
+            "Kitsap local voters' pamphlet"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "kitsap-north-mason-regional-fire-authority-proposition-no-1",
+      "owner": "kitsap",
+      "jurisdiction": "North Mason Regional Fire Authority",
+      "proposition": "Proposition No. 1",
+      "title": "Emergency Medical Services Property Tax Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "kitsap",
+        "layer": "FIRDST",
+        "value": "MCF2"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Continues North Mason Regional Fire Authority's emergency medical services property tax levy for six consecutive years beginning in 2027.",
+      "cost_line": "Continues a regular EMS property tax levy of $0.50 or less per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES continues a property tax levy for emergency medical services.",
           "citations": [
             "Kitsap local voters' pamphlet"
           ]

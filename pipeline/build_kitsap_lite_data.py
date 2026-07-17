@@ -49,6 +49,22 @@ def contest(category, district, office, candidates, scope):
         "candidates": candidates,
     }
 
+def measure(slug, jurisdiction, proposition, title, scope, what_it_does, cost_line, basis):
+    return {
+        "slug": f"kitsap-{slug}",
+        "owner": "kitsap",
+        "jurisdiction": jurisdiction,
+        "proposition": proposition,
+        "title": title,
+        "scope": scope,
+        "pamphlet_pages": [],
+        "what_it_does": what_it_does,
+        "cost_line": cost_line,
+        "pro_summary": None,
+        "con_summary": None,
+        "lean_mappings": {"taxes": {"direction": 2, "basis": basis, "citations": ["Kitsap local voters' pamphlet"]}},
+    }
+
 
 contests = [
     contest("Federal", "Congressional District 6", "U.S. Representative", [
@@ -99,6 +115,10 @@ contests = [
         cand("Phil Cook", "Prefers Republican Party"),
         cand("Michael Simonds", "Prefers Democratic Party"),
     ], {"kind": "COUNTY", "county": "kitsap"}),
+    contest("County", "Kitsap County Commissioner District 3", "County Commissioner", [
+        cand("Kevin Tisdel", "Prefers Republican Party"),
+        cand("Katie Walters", "Prefers Democratic Party"),
+    ], dist_scope("COUNTY_COUNCIL", 3)),
     contest("County", "Kitsap County", "Auditor", [
         cand("Paul Andrews", "Prefers Democratic Party"),
     ], {"kind": "COUNTY", "county": "kitsap"}),
@@ -133,7 +153,27 @@ measures = [
         "pro_summary": None,
         "con_summary": None,
         "lean_mappings": {"taxes": {"direction": 2, "basis": "YES raises a city property tax levy for public safety and governmental services.", "citations": ["Kitsap local voters' pamphlet"]}},
-    }
+    },
+    measure(
+        "kitsap-county-fire-protection-district-no-18-proposition-no-1",
+        "Kitsap County Fire Protection District No. 18",
+        "Proposition No. 1",
+        "Bonds for Fire and Emergency Response Facilities, Vehicles and Equipment",
+        dist_scope("FIRDST", 18),
+        "Authorizes Poulsbo Fire to acquire, construct, and renovate firefighting and emergency response facilities, vehicles, and equipment, issue up to $7.64 million in general obligation bonds maturing within 6 years, and levy annual excess property taxes to repay the bonds.",
+        "Authorizes up to $7,640,000 in bonds repaid by annual excess property taxes.",
+        "YES authorizes bond debt and excess property taxes for fire and emergency response facilities, vehicles, and equipment.",
+    ),
+    measure(
+        "north-mason-regional-fire-authority-proposition-no-1",
+        "North Mason Regional Fire Authority",
+        "Proposition No. 1",
+        "Emergency Medical Services Property Tax Levy",
+        dist_scope("FIRDST", "MCF2"),
+        "Continues North Mason Regional Fire Authority's emergency medical services property tax levy for six consecutive years beginning in 2027.",
+        "Continues a regular EMS property tax levy of $0.50 or less per $1,000 of assessed value.",
+        "YES continues a property tax levy for emergency medical services.",
+    ),
 ]
 
 OUT.mkdir(parents=True, exist_ok=True)
@@ -141,14 +181,14 @@ OUT.mkdir(parents=True, exist_ok=True)
     "county": "kitsap",
     "script": "pipeline/build_kitsap_lite_data.py",
     "derived_from": ["data/washington-state/counties/kitsap/interim/pdf-text/local-voters-pamphlet.txt"],
-    "coverage": "partial_county",
+    "coverage": "full_county",
     "contests": contests,
 }, indent=2))
 (OUT / "app-measures.json").write_text(json.dumps({
     "county": "kitsap",
     "script": "pipeline/build_kitsap_lite_data.py",
     "derived_from": ["data/washington-state/counties/kitsap/interim/pdf-text/local-voters-pamphlet.txt"],
-    "coverage": "partial_county",
+    "coverage": "full_county",
     "measures": measures,
 }, indent=2))
 print(f"kitsap contests: {len(contests)} measures: {len(measures)}")
