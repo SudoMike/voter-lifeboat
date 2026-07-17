@@ -26,7 +26,10 @@ STATE = WA / "statewide"
 KING = WA / "counties/king"
 INTERIM = KING / "interim"
 FINAL = ROOT / "data/final"
-DOSSIER_DIRS = [STATE / "dossiers", KING / "dossiers"]
+DOSSIER_DIRS = [STATE / "dossiers", KING / "dossiers"] + sorted(
+    p / "dossiers" for p in (WA / "counties").iterdir()
+    if p.is_dir() and p.name != "king"
+)
 COUNTY_NAMES = {
     "adams": ("Adams County", "53001"),
     "asotin": ("Asotin County", "53003"),
@@ -78,6 +81,46 @@ rubric = json.load(open(FINAL / "rubric.json"))
 interview = json.load(open(FINAL / "interview.json"))
 
 STATEWIDE_CATEGORIES = {"StateSupremeCourt"}
+SHARED_CATEGORIES = {"Federal", "State"}
+
+
+def apply_scoring(contest, scored, dossier_slug=None):
+    """Overlay research fields without disturbing county ballot metadata."""
+    if not scored:
+        return contest
+    scored_by_slug = {c["slug"]: c for c in scored.get("candidates", [])}
+    for candidate in contest.get("candidates", []):
+        score = scored_by_slug.get(candidate["slug"])
+        if not score:
+            continue
+        for field, default in (
+            ("evidence_level", None), ("withdrawn", False), ("summary", None),
+            ("highlights", []), ("scores", {}),
+        ):
+            candidate[field] = score.get(field, default)
+        candidate["sources"] = parse_sources(
+            dossier_slug or scored["contest_slug"], candidate["slug"]
+        )
+    contest["office_does"] = scored.get("office_does")
+    contest["race_blurb"] = scored.get("race_blurb")
+    return contest
+
+
+def shared_score_index(all_scores):
+    """Index shared federal/state scoring via normalized statewide contests."""
+    normalized = STATE / "interim/contests.json"
+    if not normalized.exists():
+        return {}
+    by_slug = {c["contest_slug"]: c for c in all_scores.values()}
+    result = {}
+    for contest in json.load(open(normalized)).get("contests", []):
+        if contest.get("category") not in SHARED_CATEGORIES:
+            continue
+        scored = by_slug.get(contest["slug"])
+        if scored:
+            key = (contest["category"], contest["district"], contest["office"])
+            result[key] = (scored, contest["slug"])
+    return result
 
 
 def parse_sources(contest_slug: str, cand_slug: str):
@@ -202,6 +245,7 @@ for m in measures_meta:
     })
 
 supported_counties = [{"id": "king", "name": "King County", "state": "WA", "fips": "53033", "coverage": "full_county"}]
+shared_scores = shared_score_index(scores)
 for county_dir in sorted((WA / "counties").iterdir()):
     if county_dir.name == "king" or not county_dir.is_dir():
         continue
@@ -211,7 +255,16 @@ for county_dir in sorted((WA / "counties").iterdir()):
     if cfile.exists():
         pack = json.load(open(cfile))
         package_coverages.append(pack.get("coverage", "partial_county"))
-        out_contests.extend(pack.get("contests", []))
+        for contest in pack.get("contests", []):
+            scored = scores.get(contest["slug"])
+            dossier_slug = contest["slug"]
+            if contest.get("category") in SHARED_CATEGORIES:
+                shared = shared_scores.get((
+                    contest["category"], contest["district"], contest["office"]
+                ))
+                if shared:
+                    scored, dossier_slug = shared
+            out_contests.append(apply_scoring(contest, scored, dossier_slug))
     if mfile.exists():
         pack = json.load(open(mfile))
         package_coverages.append(pack.get("coverage", "partial_county"))
