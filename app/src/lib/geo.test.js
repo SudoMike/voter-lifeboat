@@ -105,7 +105,7 @@ test('configured non-King county layers produce full county coverage', async () 
     }
   }
   const context = await lookupBallotContext(
-    { coverage: { statewide_complete: true, supported_counties: [{ id: 'king' }, { id: 'clark' }] } },
+    { coverage: { statewide_complete: true, supported_counties: [{ id: 'king' }, { id: 'clark', coverage: 'full_county' }] } },
     '1408 Franklin St Vancouver WA 98660'
   )
   assert.equal(context.coverageStatus, 'full_county')
@@ -117,5 +117,43 @@ test('configured non-King county layers produce full county coverage', async () 
     PUDDST: '3',
     FIRDST: '10',
   })
+  assert.deepEqual(context.missingLayers, [])
+})
+
+test('configured non-King layers stay partial until the county data package is full', async () => {
+  global.fetch = async (url) => {
+    if (String(url).startsWith('/api/geocode')) {
+      return {
+        ok: true,
+        async json() {
+          return {
+            result: {
+              addressMatches: [{
+                matchedAddress: '1116 W BROADWAY AVE, SPOKANE, WA, 99260',
+                coordinates: { x: -117.43, y: 47.66 },
+                geographies: {
+                  Counties: [{ STATE: '53', COUNTY: '063', NAME: 'Spokane County' }],
+                  '119th Congressional Districts': [{ BASENAME: '5' }],
+                  '2024 State Legislative Districts - Lower': [{ BASENAME: '3' }],
+                },
+              }],
+            },
+          }
+        },
+      }
+    }
+    const attr = String(url).includes('Current_Districts') ? { DISTNUM: 2 } : { AQUIFER: 'Y' }
+    return {
+      ok: true,
+      async json() {
+        return { features: [{ attributes: attr }] }
+      },
+    }
+  }
+  const context = await lookupBallotContext(
+    { coverage: { statewide_complete: true, supported_counties: [{ id: 'spokane', coverage: 'partial_county' }] } },
+    '1116 W Broadway Ave Spokane WA 99260'
+  )
+  assert.equal(context.coverageStatus, 'partial_county')
   assert.deepEqual(context.missingLayers, [])
 })

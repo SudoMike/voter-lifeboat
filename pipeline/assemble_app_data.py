@@ -169,21 +169,25 @@ for m in measures_meta:
         "lean_mappings": ms.get("lean_mappings", {}),
     })
 
-supported_counties = [{"id": "king", "name": "King County", "state": "WA", "fips": "53033"}]
+supported_counties = [{"id": "king", "name": "King County", "state": "WA", "fips": "53033", "coverage": "full_county"}]
 for county_dir in sorted((WA / "counties").iterdir()):
     if county_dir.name == "king" or not county_dir.is_dir():
         continue
     cfile = county_dir / "interim/app-contests.json"
     mfile = county_dir / "interim/app-measures.json"
+    package_coverages = []
     if cfile.exists():
         pack = json.load(open(cfile))
+        package_coverages.append(pack.get("coverage", "partial_county"))
         out_contests.extend(pack.get("contests", []))
     if mfile.exists():
         pack = json.load(open(mfile))
+        package_coverages.append(pack.get("coverage", "partial_county"))
         out_measures.extend(pack.get("measures", []))
     if cfile.exists() or mfile.exists():
         name, fips = COUNTY_NAMES.get(county_dir.name, (county_dir.name.title(), None))
-        supported_counties.append({"id": county_dir.name, "name": name, "state": "WA", "fips": fips})
+        coverage = "full_county" if package_coverages and all(c == "full_county" for c in package_coverages) else "partial_county"
+        supported_counties.append({"id": county_dir.name, "name": name, "state": "WA", "fips": fips, "coverage": coverage})
 
 contest_slugs = [c["slug"] for c in out_contests]
 measure_slugs = [m["slug"] for m in out_measures]

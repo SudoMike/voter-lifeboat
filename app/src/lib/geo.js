@@ -282,7 +282,8 @@ async function lookupCountyDistricts(pt) {
 
 export async function lookupBallotContext(data, address) {
   const pt = await geocode(address)
-  const countySupported = data.coverage?.supported_counties?.some((c) => c.id === pt.county.id)
+  const countyCoverage = data.coverage?.supported_counties?.find((c) => c.id === pt.county.id)
+  const countySupported = Boolean(countyCoverage)
   if (!countySupported) {
     if (!data.coverage?.statewide_complete) {
       throw new GeoError('This Washington county is not covered yet.', 'unsupported-county', { county: pt.county })
@@ -297,8 +298,9 @@ export async function lookupBallotContext(data, address) {
   }
   if (pt.county.id !== 'king') {
     const { districts, missingLayers } = await lookupCountyDistricts(pt)
+    const packageIsFull = countyCoverage.coverage === 'full_county'
     return {
-      coverageStatus: missingLayers.length ? 'partial_county' : 'full_county',
+      coverageStatus: packageIsFull && !missingLayers.length ? 'full_county' : 'partial_county',
       county: pt.county,
       districts,
       missingLayers,
