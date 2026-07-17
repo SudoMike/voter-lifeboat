@@ -80,6 +80,33 @@ const COUNTY_LAYERS = {
       attr: 'PC_DISTRICT',
     },
   ],
+  snohomish: [
+    {
+      key: 'PUDDST',
+      url: 'https://gis.snoco.org/sis/rest/services/Districts/Districts_and_Boundaries/MapServer/22/query',
+      attr: 'District',
+    },
+    {
+      key: 'SCHDST',
+      url: 'https://services6.arcgis.com/z6WYi9VRHfgwgtyW/arcgis/rest/services/School_Districts/FeatureServer/0/query',
+      attr: 'District',
+    },
+    {
+      key: 'FIRDST',
+      url: 'https://services6.arcgis.com/z6WYi9VRHfgwgtyW/arcgis/rest/services/Fire_Districts_and_RFAs_in_Snohomish_County/FeatureServer/1/query',
+      attr: 'District',
+    },
+    {
+      key: 'HOSPDST',
+      url: 'https://services6.arcgis.com/z6WYi9VRHfgwgtyW/arcgis/rest/services/Snohomish_County_Hospital_Districts/FeatureServer/0/query',
+      attr: 'District',
+    },
+    {
+      key: 'LIBDST',
+      url: 'https://gis.snoco.org/sis/rest/services/Districts/Districts_and_Boundaries/MapServer/16/query',
+      attr: 'District',
+    },
+  ],
   spokane: [
     {
       key: 'COUNTY_COUNCIL',

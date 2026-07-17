@@ -4,10 +4,10 @@
   "derived_from": [
     "data/washington-state/counties/snohomish/interim/pdf-text/sample-ballot.txt"
   ],
-  "coverage": "partial_county",
+  "coverage": "full_county",
   "measures": [
     {
-      "slug": "city-of-everett-proposition-no-1",
+      "slug": "snohomish-city-of-everett-proposition-no-1",
       "owner": "snohomish",
       "jurisdiction": "City of Everett",
       "proposition": "Proposition No. 1",
@@ -31,15 +31,15 @@
       "lean_mappings": {
         "taxes": {
           "direction": 2,
-          "basis": "YES raises/restores a property tax levy for emergency medical services.",
+          "basis": "YES approves a local tax or bond measure for the listed public service.",
           "citations": [
-            "Snohomish sample ballot"
+            "Snohomish local voters' pamphlet"
           ]
         }
       }
     },
     {
-      "slug": "city-of-stanwood-proposition-no-1",
+      "slug": "snohomish-city-of-stanwood-proposition-no-1",
       "owner": "snohomish",
       "jurisdiction": "City of Stanwood",
       "proposition": "Proposition No. 1",
@@ -63,9 +63,201 @@
       "lean_mappings": {
         "taxes": {
           "direction": 2,
-          "basis": "YES adds a local sales and use tax for public safety services.",
+          "basis": "YES approves a local tax or bond measure for the listed public service.",
           "citations": [
-            "Snohomish sample ballot"
+            "Snohomish local voters' pamphlet"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "snohomish-darrington-school-district-no-330-proposition-no-1",
+      "owner": "snohomish",
+      "jurisdiction": "Darrington School District No. 330",
+      "proposition": "Proposition No. 1",
+      "title": "Replacement of Expiring Educational Programs and Operations Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "SCHDST",
+        "value": "Darrington School District 330"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 68
+        }
+      ],
+      "what_it_does": "Replaces an expiring educational programs and operations levy for 2027 through 2030 to fund programs and services not funded by the state.",
+      "cost_line": "Authorizes four annual levies of $950,000, with estimated rates declining from $1.24 to $1.02 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax or bond measure for the listed public service.",
+          "citations": [
+            "Snohomish local voters' pamphlet"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "snohomish-fire-protection-district-no-15-proposition-no-1",
+      "owner": "snohomish",
+      "jurisdiction": "Fire Protection District No. 15",
+      "proposition": "Proposition No. 1",
+      "title": "Tax Levy for Maintenance and Operations",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "FIRDST",
+        "value": "Fire District 15"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 70
+        }
+      ],
+      "what_it_does": "Authorizes a four-year excess property tax levy for maintenance and operations to maintain fire and emergency medical services.",
+      "cost_line": "Authorizes $450,000 per year from 2027 through 2030, with estimated rates from $0.6214 to $0.6031 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax or bond measure for the listed public service.",
+          "citations": [
+            "Snohomish local voters' pamphlet"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "snohomish-fire-protection-district-no-19-proposition-no-1",
+      "owner": "snohomish",
+      "jurisdiction": "Fire Protection District No. 19",
+      "proposition": "Proposition No. 1",
+      "title": "Emergency Medical Services Levy Lid Lift",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "FIRDST",
+        "value": "Fire District 19"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 72
+        }
+      ],
+      "what_it_does": "Restores the district's emergency medical services levy and sets a six-year limit factor for levy increases.",
+      "cost_line": "Restores the EMS levy to $0.50 per $1,000 of assessed value in 2027 and allows up to 106% annual increases through 2032.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax or bond measure for the listed public service.",
+          "citations": [
+            "Snohomish local voters' pamphlet"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "snohomish-snohomish-regional-fire-and-rescue-proposition-no-1",
+      "owner": "snohomish",
+      "jurisdiction": "Snohomish Regional Fire and Rescue",
+      "proposition": "Proposition No. 1",
+      "title": "Emergency Medical Services Levy Lid Lift",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "FIRDST",
+        "value": "Snohomish Regional Fire & Rescue"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 74
+        }
+      ],
+      "what_it_does": "Restores the district's regular EMS property tax levy and authorizes inflation-indexed increases for five following years.",
+      "cost_line": "Restores the EMS levy to $0.50 per $1,000 of assessed value for collection in 2027.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax or bond measure for the listed public service.",
+          "citations": [
+            "Snohomish local voters' pamphlet"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "snohomish-public-hospital-district-no-1-proposition-no-1",
+      "owner": "snohomish",
+      "jurisdiction": "Public Hospital District No. 1",
+      "proposition": "Proposition No. 1",
+      "title": "Bonds for New Replacement Hospital",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "HOSPDST",
+        "value": "Hospital District 1"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 76
+        }
+      ],
+      "what_it_does": "Authorizes construction and equipping of a replacement hospital and related capital improvements for EvergreenHealth Monroe.",
+      "cost_line": "Authorizes up to $382,000,000 in general obligation bonds maturing within 30 years, repaid through annual excess property taxes.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax or bond measure for the listed public service.",
+          "citations": [
+            "Snohomish local voters' pamphlet"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "snohomish-sno-isle-intercounty-rural-library-district-proposition-no-1",
+      "owner": "snohomish",
+      "jurisdiction": "Sno-Isle Intercounty Rural Library District",
+      "proposition": "Proposition No. 1",
+      "title": "Regular Property Tax Levy Lid Lift for Support of Public Library Services",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "LIBDST",
+        "value": "Sno - Isle Library District"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 78
+        }
+      ],
+      "what_it_does": "Restores the library district's regular property tax levy rate for operations, maintenance, and library services.",
+      "cost_line": "Restores the levy rate to $0.47 per $1,000 of assessed value for collection in 2027.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax or bond measure for the listed public service.",
+          "citations": [
+            "Snohomish local voters' pamphlet"
           ]
         }
       }

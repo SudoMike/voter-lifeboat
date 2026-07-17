@@ -66,7 +66,7 @@ test('supported non-King counties use Census federal/state districts as partial 
   )
   assert.equal(context.coverageStatus, 'partial_county')
   assert.deepEqual(context.districts, { CONGDST: '2', LEGDST: '38', CITY: 'Everett' })
-  assert.deepEqual(context.missingLayers, ['county-local'])
+  assert.deepEqual(context.missingLayers, [])
 })
 
 test('configured non-King county layers produce full county coverage', async () => {
