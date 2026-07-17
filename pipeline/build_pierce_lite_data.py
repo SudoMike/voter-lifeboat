@@ -58,6 +58,21 @@ def contest(category, district_no, office, candidates, layer):
     }
 
 
+def scoped_contest(category, district, office, candidates, scope):
+    return {
+        "slug": county_slug(f"{district}-{office}"),
+        "owner": "pierce",
+        "category": category,
+        "office": office,
+        "district": district,
+        "scope": scope,
+        "office_does": None,
+        "race_blurb": "Official ballot listing imported from the Pierce County sample ballot. Candidate scoring is not complete for this county yet.",
+        "uncontested": len(candidates) == 1,
+        "candidates": candidates,
+    }
+
+
 contests = [
     contest("Federal", 6, "U.S. Representative", [
         candidate("Emily Randall", "Prefers Democratic Party"),
@@ -158,6 +173,27 @@ contests = [
         candidate("John Bielka", "Prefers Democrat Party"),
         candidate("Joshua Penner", "Prefers Republican Party"),
     ], "LEGDST"),
+    scoped_contest("County", "Pierce County Council District 1", "County Councilmember", [
+        candidate("Jerome O'Leary", "Prefers Republican Party"),
+        candidate("Terrance Mayers", "Prefers Democratic Party"),
+        candidate("Kenneth King", "Prefers Democratic Party"),
+        candidate("Kelsey Barrans", "Prefers Democratic Party"),
+    ], dist_scope("COUNTY_COUNCIL", 1)),
+    scoped_contest("County", "Pierce County Council District 5", "County Councilmember", [
+        candidate("Bryan Yambe", "Prefers Democratic Party"),
+        candidate("Bettina Gese", "Prefers Republican Party"),
+    ], dist_scope("COUNTY_COUNCIL", 5)),
+    scoped_contest("County", "Pierce County Council District 7", "County Councilmember", [
+        candidate("Chuck West", "Prefers Nonpartisan Party"),
+        candidate("Brenda Lykins", "Prefers Democratic Party"),
+        candidate("Mike Solan", "Prefers Republican Party"),
+        candidate("Ann E. Jolie", "Prefers Republican Party"),
+    ], dist_scope("COUNTY_COUNCIL", 7)),
+    scoped_contest("Judicial", "Pierce County District Court No. 7", "Judge Position No. 7", [
+        candidate("Eric J. Lawless"),
+        candidate("Mike Sommerfeld"),
+        candidate("Pam Nogueira"),
+    ], dist_scope("DISTCRT", 7)),
 ]
 
 measures = [
@@ -203,6 +239,20 @@ measures = [
         "con_summary": None,
         "lean_mappings": {"taxes": {"direction": 2, "basis": "YES raises utility and property taxes for transportation safety improvements.", "citations": ["Pierce sample ballot"]}},
     },
+    {
+        "slug": "pierce-fire-protection-district-no-10-proposition-no-1",
+        "owner": "pierce",
+        "jurisdiction": "Fire Protection District No. 10",
+        "proposition": "Proposition No. 1",
+        "title": "Bonds to Construct a New Fire Station",
+        "scope": dist_scope("FIRDST", "FPD #010 FIFE"),
+        "pamphlet_pages": [],
+        "what_it_does": "Authorizes Fire Protection District No. 10 to acquire, construct, and equip a new fire station, issue up to $25 million in general obligation bonds maturing within 20 years, and levy annual excess property taxes to repay the bonds.",
+        "cost_line": "Authorizes up to $25,000,000 in bonds repaid by annual excess property taxes.",
+        "pro_summary": None,
+        "con_summary": None,
+        "lean_mappings": {"taxes": {"direction": 2, "basis": "YES authorizes bond debt and excess property taxes for a new fire station.", "citations": ["Pierce sample ballot"]}},
+    },
 ]
 
 OUT.mkdir(parents=True, exist_ok=True)
@@ -210,14 +260,14 @@ OUT.mkdir(parents=True, exist_ok=True)
     "county": "pierce",
     "script": "pipeline/build_pierce_lite_data.py",
     "derived_from": ["data/washington-state/counties/pierce/raw/pierce/sample-ballot.pdf.url"],
-    "coverage": "partial_county",
+    "coverage": "full_county",
     "contests": contests,
 }, indent=2))
 (OUT / "app-measures.json").write_text(json.dumps({
     "county": "pierce",
     "script": "pipeline/build_pierce_lite_data.py",
     "derived_from": ["data/washington-state/counties/pierce/raw/pierce/sample-ballot.pdf.url"],
-    "coverage": "partial_county",
+    "coverage": "full_county",
     "measures": measures,
 }, indent=2))
 print(f"pierce contests: {len(contests)} measures: {len(measures)}")

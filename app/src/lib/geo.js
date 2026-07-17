@@ -74,6 +74,11 @@ const COUNTY_LAYERS = {
       url: 'https://services2.arcgis.com/1UvBaQ5y1ubjUPmd/arcgis/rest/services/Fire_Districts/FeatureServer/0/query',
       attr: 'FIRE_DIS',
     },
+    {
+      key: 'DISTCRT',
+      url: 'https://services2.arcgis.com/1UvBaQ5y1ubjUPmd/arcgis/rest/services/Election_Precincts/FeatureServer/0/query',
+      attr: 'PC_DISTRICT',
+    },
   ],
   spokane: [
     {

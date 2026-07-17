@@ -4,7 +4,7 @@
   "derived_from": [
     "data/washington-state/counties/pierce/raw/pierce/sample-ballot.pdf.url"
   ],
-  "coverage": "partial_county",
+  "coverage": "full_county",
   "measures": [
     {
       "slug": "pierce-town-of-carbonado-proposition-no-1",
@@ -81,6 +81,33 @@
         "taxes": {
           "direction": 2,
           "basis": "YES raises utility and property taxes for transportation safety improvements.",
+          "citations": [
+            "Pierce sample ballot"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "pierce-fire-protection-district-no-10-proposition-no-1",
+      "owner": "pierce",
+      "jurisdiction": "Fire Protection District No. 10",
+      "proposition": "Proposition No. 1",
+      "title": "Bonds to Construct a New Fire Station",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "FIRDST",
+        "value": "FPD #010 FIFE"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Authorizes Fire Protection District No. 10 to acquire, construct, and equip a new fire station, issue up to $25 million in general obligation bonds maturing within 20 years, and levy annual excess property taxes to repay the bonds.",
+      "cost_line": "Authorizes up to $25,000,000 in bonds repaid by annual excess property taxes.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES authorizes bond debt and excess property taxes for a new fire station.",
           "citations": [
             "Pierce sample ballot"
           ]
