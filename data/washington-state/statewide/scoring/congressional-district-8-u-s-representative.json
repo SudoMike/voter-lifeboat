@@ -1,0 +1,70 @@
+{
+  "contest_slug": "congressional-district-8-u-s-representative",
+  "scored_at": "2026-07-17",
+  "derived_from": ["data/washington-state/statewide/dossiers/congressional-district-8-u-s-representative/"],
+  "office_does": "A U.S. representative serves a two-year term, legislates and votes in the House, conducts oversight, and provides constituent services.",
+  "race_blurb": "Incumbent Kim Schrier faces five challengers. The dossiers document substantive platforms for Schrier, Keith Arnold, and Bob Hagglund, while evidence for Andres Valleza, Spencer Meline, and Trinh Ha is insufficient for policy scoring.",
+  "candidates": [
+    {
+      "slug": "andres-valleza",
+      "summary": "A filed District 8 candidate for whom the reviewed dossier found no verifiable issue positions.",
+      "highlights": ["Identity was matched to the official candidate record and campaign contact [S1][S2]", "Policy axes are omitted because the dossier found no verifiable issue position [S1][S2]"],
+      "evidence_level": "pamphlet-only",
+      "withdrawn": false,
+      "scores": {}
+    },
+    {
+      "slug": "bob-hagglund",
+      "summary": "A District 8 challenger emphasizing lower costs, local jobs, producer-focused trade, and market-oriented clean-energy innovation.",
+      "highlights": ["Supports lowering costs and expanding local jobs [S2]", "Supports trade policy favoring Washington producers [S2]", "Backs clean-energy innovation while opposing punitive green-energy taxes [S2]"],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": -1, "confidence": "medium", "citations": ["S2"], "basis": "Explicitly opposes taxes he characterizes as punitive green-energy taxes."},
+        "climate": {"score": -1, "confidence": "medium", "citations": ["S2"], "basis": "Supports clean-energy innovation but prioritizes affordability and opposes punitive green-energy taxes."}
+      }
+    },
+    {
+      "slug": "keith-arnold",
+      "summary": "A challenger with an ideologically mixed platform supporting progressive taxation, universal health care, renewable energy, and political reform.",
+      "highlights": ["Supports ranked-choice voting and campaign reform [S2]", "Supports progressive taxation, a living wage, and universal health care [S2]", "Supports renewable energy and fair-trade conditions [S2]"],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": 1, "confidence": "medium", "citations": ["S2"], "basis": "Explicitly supports progressive taxation, though the dossier gives no detailed revenue mechanism."},
+        "climate": {"score": 1, "confidence": "medium", "citations": ["S2"], "basis": "Explicitly supports renewable energy."},
+        "reform": {"score": 2, "confidence": "medium", "citations": ["S2"], "basis": "Explicitly supports ranked-choice voting and campaign reform."},
+        "healthcare": {"score": 2, "confidence": "medium", "citations": ["S2"], "basis": "Explicitly supports universal health care."}
+      }
+    },
+    {
+      "slug": "kim-schrier",
+      "summary": "The incumbent representative, emphasizing health-care costs, abortion access, local police, and federal infrastructure and agricultural-research funding.",
+      "highlights": ["Emphasizes lowering health-care costs [S2]", "Supports protecting abortion access and local police [S2]", "Highlights federal infrastructure and agricultural-research funding [S2]"],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "spending": {"score": 1, "confidence": "medium", "citations": ["S2"], "basis": "Emphasizes securing federal infrastructure and agricultural-research investment."},
+        "safety": {"score": -1, "confidence": "medium", "citations": ["S2"], "basis": "Explicitly supports local police; no services-first safety plank is documented."},
+        "healthcare": {"score": -1, "confidence": "medium", "citations": ["S2"], "basis": "Focuses on lowering health-care costs without proposing replacement of the current insurance system."},
+        "social": {"score": 1, "confidence": "medium", "citations": ["S2"], "basis": "Explicitly supports protecting abortion access."}
+      }
+    },
+    {
+      "slug": "spencer-meline",
+      "summary": "A filed District 8 candidate for whom the reviewed dossier found no verifiable issue positions.",
+      "highlights": ["Identity was matched to the official candidate record and campaign contact [S1][S2]", "Policy axes are omitted because the dossier found no verifiable issue position [S1][S2]"],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {}
+    },
+    {
+      "slug": "trinh-ha",
+      "summary": "A filed District 8 candidate for whom the reviewed dossier found no verifiable issue positions.",
+      "highlights": ["Identity was matched to the official candidate record and campaign contact [S1][S2]", "Policy axes are omitted because the dossier found no verifiable issue position [S1][S2]"],
+      "evidence_level": "pamphlet-only",
+      "withdrawn": false,
+      "scores": {}
+    }
+  ]
+}

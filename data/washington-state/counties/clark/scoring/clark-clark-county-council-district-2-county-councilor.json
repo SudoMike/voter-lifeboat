@@ -1,0 +1,58 @@
+{
+  "contest_slug": "clark-clark-county-council-district-2-county-councilor",
+  "scored_at": "2026-07-17",
+  "derived_from": ["data/washington-state/counties/clark/dossiers/clark-clark-county-council-district-2-county-councilor/"],
+  "office_does": "The county council adopts policy and budgets and oversees county services, land use, infrastructure, and public health.",
+  "race_blurb": "Incumbent Michelle Belkot faces public administrator Martin Pittioni and teacher John Zingale, with differences over tax and spending restraint, public investment, infrastructure, and services.",
+  "candidates": [
+    {
+      "slug": "martin-pittioni",
+      "summary": "A public-health and financial-regulation administrator advocating balanced growth, fiscal responsibility, public safety, and consensus.",
+      "highlights": [
+        "Supports balanced growth, fiscal responsibility, public safety, and homelessness reduction [S1]",
+        "Cites work on mental-health licensure, prescription-history access, and professional-license portability [S1]",
+        "Presents a nonpartisan, consensus-oriented approach [S1]"
+      ],
+      "evidence_level": "pamphlet-only",
+      "withdrawn": false,
+      "scores": {
+        "spending": {"score": 0, "confidence": "medium", "citations": ["S1"], "basis": "Combines fiscal responsibility and balanced budgets with support for behavioral-health and homelessness services."},
+        "experience": {"score": 0, "confidence": "medium", "citations": ["S1"], "basis": "Has substantial public regulatory and health administration but no documented elected county record."}
+      }
+    },
+    {
+      "slug": "michelle-belkot",
+      "summary": "The incumbent councilor, prioritizing tax and spending restraint, police, fire, and infrastructure while opposing annexation, light-rail subsidies, and bridge tolls.",
+      "highlights": [
+        "Opposes new taxes she considers unnecessary and places core infrastructure before program expansion [S1]",
+        "Prioritizes law enforcement and fire protection [S1]",
+        "Opposes unwanted annexation, Oregon light-rail subsidies, and bridge-related tolls [S1]"
+      ],
+      "evidence_level": "pamphlet-only",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": -2, "confidence": "high", "citations": ["S1"], "basis": "Explicitly opposes new taxes and seeks to reduce taxes and housing costs."},
+        "spending": {"score": -2, "confidence": "high", "citations": ["S1"], "basis": "Prioritizes core services before expansion and opposes taxpayer subsidies for Oregon light rail."},
+        "safety": {"score": -2, "confidence": "medium", "citations": ["S1"], "basis": "Makes law enforcement and fire protection explicit top priorities without a documented services-first alternative."},
+        "experience": {"score": -1, "confidence": "high", "citations": ["S1"], "basis": "Incumbent county councilor with more than 20 years in federal acquisition and 25 years of military service."}
+      }
+    },
+    {
+      "slug": "john-zingale",
+      "summary": "A teacher, union representative, and historic-preservation commissioner emphasizing social services, affordable housing, labor, rights, and natural-space protection.",
+      "highlights": [
+        "Supports investment in social services, infrastructure, and affordable housing [S1]",
+        "Emphasizes natural-space protection, working families, and fundamental rights [S1]",
+        "Says county government should remain responsive and avoid wasting taxpayer money [S1]"
+      ],
+      "evidence_level": "pamphlet-only",
+      "withdrawn": false,
+      "scores": {
+        "spending": {"score": 2, "confidence": "medium", "citations": ["S1"], "basis": "Explicitly favors social-service and infrastructure investment as primary county tools."},
+        "housing": {"score": 1, "confidence": "medium", "citations": ["S1"], "basis": "Explicitly supports affordable housing alongside social-service investment, though the mechanism is unspecified."},
+        "climate": {"score": 1, "confidence": "medium", "citations": ["S1"], "basis": "Makes protection of natural spaces a stated county priority."},
+        "experience": {"score": 1, "confidence": "medium", "citations": ["S1"], "basis": "Brings commission, teaching, and union experience but no documented elected-government record."}
+      }
+    }
+  ]
+}

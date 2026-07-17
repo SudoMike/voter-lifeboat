@@ -1,0 +1,66 @@
+{
+  "contest_slug": "congressional-district-10-u-s-representative",
+  "scored_at": "2026-07-17",
+  "derived_from": ["data/washington-state/statewide/dossiers/congressional-district-10-u-s-representative/"],
+  "office_does": "A U.S. representative serves a two-year term, legislates and votes in the House, conducts oversight, and provides constituent services.",
+  "race_blurb": "Incumbent Marilyn Strickland faces five challengers. Adam Arafat supplies a health-care and accountability platform, Alex Scheel emphasizes housing justice and anti-war policy, and the remaining challengers have sparse dossier evidence.",
+  "candidates": [
+    {
+      "slug": "adam-arafat",
+      "summary": "A challenger supporting universal health care, prescription-cost reductions, mental-health access, corporate tax enforcement, and public performance reporting.",
+      "highlights": ["Supports universal health care and lower prescription-drug prices [S2]", "Supports expanded mental-health access and corporate tax enforcement [S2]", "Rejects corporate PAC contributions and favors measurable public reporting [S2]"],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": 1, "confidence": "medium", "citations": ["S2"], "basis": "Supports stronger corporate tax enforcement as a revenue and fairness tool."},
+        "spending": {"score": 1, "confidence": "medium", "citations": ["S2"], "basis": "Supports expanded mental-health access and universal health coverage alongside cost reduction."},
+        "reform": {"score": 1, "confidence": "medium", "citations": ["S2"], "basis": "Rejects corporate PAC money and proposes measurable public accountability reporting."},
+        "healthcare": {"score": 2, "confidence": "medium", "citations": ["S2"], "basis": "Explicitly supports universal health care."}
+      }
+    },
+    {
+      "slug": "alex-scheel",
+      "summary": "A progressive challenger whose documented platform centers housing justice and an anti-war foreign policy.",
+      "highlights": ["Campaigns as a progressive focused on housing justice [S2]", "Supports an anti-war foreign policy [S2]"],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "defense": {"score": 2, "confidence": "medium", "citations": ["S2"], "basis": "The dossier explicitly characterizes his foreign-policy platform as anti-war."}
+      }
+    },
+    {
+      "slug": "chris-d-chung",
+      "summary": "A filed District 10 candidate for whom the reviewed dossier found no verifiable issue positions.",
+      "highlights": ["Identity was matched to the official candidate record [S1]", "Policy axes are omitted because the dossier found no verifiable issue position [S1]"],
+      "evidence_level": "pamphlet-only",
+      "withdrawn": false,
+      "scores": {}
+    },
+    {
+      "slug": "derek-maynes",
+      "summary": "A filed District 10 candidate for whom the reviewed dossier found no verifiable issue positions.",
+      "highlights": ["Identity was matched to the official candidate record [S1]", "Policy axes are omitted because the dossier found no verifiable issue position [S1]"],
+      "evidence_level": "pamphlet-only",
+      "withdrawn": false,
+      "scores": {}
+    },
+    {
+      "slug": "kurtis-engle",
+      "summary": "A filed District 10 candidate for whom the reviewed dossier found no verifiable issue positions.",
+      "highlights": ["Identity was matched to the official candidate record [S1]", "Policy axes are omitted because the dossier found no verifiable issue position [S1]"],
+      "evidence_level": "pamphlet-only",
+      "withdrawn": false,
+      "scores": {}
+    },
+    {
+      "slug": "marilyn-strickland",
+      "summary": "The incumbent representative, with campaign materials emphasizing congressional tenure and institutional leadership.",
+      "highlights": ["Campaign materials emphasize her incumbent congressional role [S2]", "Serves as Secretary of the Congressional Black Caucus [S2]"],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "experience": {"score": -1, "confidence": "high", "citations": ["S2"], "basis": "Runs on incumbent congressional service and Congressional Black Caucus leadership."}
+      }
+    }
+  ]
+}
