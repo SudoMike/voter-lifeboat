@@ -2,6 +2,8 @@
   "derived_from": [
     "data/washington-state/statewide/scoring/*.json",
     "data/washington-state/statewide/scoring/refutations/*.json",
+    "data/washington-state/counties/benton/scoring/*.json",
+    "data/washington-state/counties/benton/scoring/refutations/*.json",
     "data/washington-state/counties/clark/scoring/*.json",
     "data/washington-state/counties/clark/scoring/refutations/*.json",
     "data/washington-state/counties/king/scoring/*.json",
@@ -16,15 +18,17 @@
     "data/washington-state/counties/spokane/scoring/refutations/*.json",
     "data/washington-state/counties/thurston/scoring/*.json",
     "data/washington-state/counties/thurston/scoring/refutations/*.json",
+    "data/washington-state/counties/whatcom/scoring/*.json",
+    "data/washington-state/counties/whatcom/scoring/refutations/*.json",
     "data/washington-state/counties/yakima/scoring/*.json",
     "data/washington-state/counties/yakima/scoring/refutations/*.json"
   ],
   "script": "pipeline/merge_scores.py",
   "verdict_stats": {
-    "upheld": 911,
-    "adjust": 129,
-    "refuted": 28,
-    "missing_added": 11,
+    "upheld": 1098,
+    "adjust": 142,
+    "refuted": 53,
+    "missing_added": 12,
     "missing_dropped_low": 4
   },
   "contests": [
@@ -1245,6 +1249,997 @@
       ]
     },
     {
+      "contest_slug": "congressional-district-4-u-s-representative",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/congressional-district-4-u-s-representative/"
+      ],
+      "office_does": "A U.S. representative writes and votes on federal law and spending, conducts oversight, and provides constituent services.",
+      "race_blurb": "The open-seat field spans experienced officeholders and outsider candidates with differences on taxes, immigration, energy, reform, social policy, technology, and defense.",
+      "candidates": [
+        {
+          "slug": "jacek-jack-kobiesa",
+          "summary": "Engineer emphasizing capitalism, liberty, constitutional limits, science, and accountability.",
+          "highlights": [
+            "Engineer emphasizing capitalism, liberty, constitutional limits, science, and accountability. [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "First-time outsider."
+            }
+          }
+        },
+        {
+          "slug": "amanda-mckinney",
+          "summary": "County commissioner emphasizing agriculture, affordable conventional energy, enforcement, gun rights, and fiscal responsibility.",
+          "highlights": [
+            "County commissioner emphasizing agriculture, affordable conventional energy, enforcement, gun rights, and fiscal responsibility. [S1]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Fiscal-responsibility and fraud-prevention emphasis."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Explicit law-enforcement priority.",
+              "adjusted_by_refutation": true
+            },
+            "climate": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Dams, nuclear, fusion, LNG and affordability-first posture."
+            },
+            "immigration": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Explicit border enforcement."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Six years as county commissioner and national county leadership.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "john-duresky",
+          "summary": "Veteran and federal technology manager supporting labor, infrastructure, current health programs moving universal, ethics reform, and public lands.",
+          "highlights": [
+            "Veteran and federal technology manager supporting labor, infrastructure, current health programs moving universal, ethics reform, and public lands. [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Infrastructure, broadband, rural hospitals and subsidies."
+            },
+            "reform": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Stock ban, Citizens United reversal, ethics rules."
+            },
+            "healthcare": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Current-system protections with eventual universal coverage."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Substantial federal management but no elected record."
+            }
+          }
+        },
+        {
+          "slug": "john-c-hughs",
+          "summary": "Farmer, lawyer, engineer, and small-business candidate emphasizing debt, tax breaks, stewardship, family, church, and property rights.",
+          "highlights": [
+            "Farmer, lawyer, engineer, and small-business candidate emphasizing debt, tax breaks, stewardship, family, church, and property rights. [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Small-business tax breaks."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "National-debt reduction."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "No elected record."
+            }
+          }
+        },
+        {
+          "slug": "favian-valencia",
+          "summary": "Civil-rights attorney emphasizing constitutional protections and independent, cross-partisan governance.",
+          "highlights": [
+            "Civil-rights attorney emphasizing constitutional protections and independent, cross-partisan governance. [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "First-time candidate."
+            }
+          }
+        },
+        {
+          "slug": "jerrod-sessler",
+          "summary": "Repeat America First candidate opposing tax-and-spend policy and emphasizing faith, family, constitutional government, and anti-establishment politics.",
+          "highlights": [
+            "Repeat America First candidate opposing tax-and-spend policy and emphasizing faith, family, constitutional government, and anti-establishment politics. [S1]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Explicit opposition to taxes and property taxes."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Explicit anti-spending platform."
+            },
+            "social": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Faith-and-family traditional-values platform."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Repeat candidate and primary winner but no officeholding record."
+            }
+          }
+        },
+        {
+          "slug": "devin-poore",
+          "summary": "Software engineer supporting structural reform, public investment, clean energy, dignified immigration, and reduced foreign wars.",
+          "highlights": [
+            "Software engineer supporting structural reform, public investment, clean energy, dignified immigration, and reduced foreign wars. [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Farm stabilization and workforce programs."
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Decentralized clean energy and wildfire management."
+            },
+            "reform": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Term limits, stock ban, finance reform, lobbying transparency."
+            },
+            "immigration": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Dignified immigration policy."
+            },
+            "defense": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Opposes costly wars and Gaza policy.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "No elected record."
+            }
+          }
+        },
+        {
+          "slug": "ken-vaz",
+          "summary": "Technology entrepreneur emphasizing budgets, public safety, affordable energy, jobs, and innovation with worker protections.",
+          "highlights": [
+            "Technology entrepreneur emphasizing budgets, public safety, affordable energy, jobs, and innovation with worker protections. [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Responsible-budgeting emphasis."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Public-safety priority without detailed mechanism."
+            },
+            "climate": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Energy affordability emphasis."
+            },
+            "tech": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Innovation-friendly AI posture with worker protections."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "First-time candidate."
+            }
+          }
+        },
+        {
+          "slug": "zac-rossi",
+          "summary": "Nuclear operator proposing spending caps, subsidy reductions, later eligibility, Medicare competition, and targeted tax increases.",
+          "highlights": [
+            "Nuclear operator proposing spending caps, subsidy reductions, later eligibility, Medicare competition, and targeted tax increases. [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Combines top-bracket and payroll increases with other restraint.",
+              "adjusted_by_refutation": true
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Specific spending caps, subsidy reductions, and later eligibility."
+            },
+            "healthcare": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "More private Medicare competition within current system."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "No elected record."
+            }
+          }
+        },
+        {
+          "slug": "elpidia-saavedra",
+          "summary": "Mayor combining infrastructure, safety, health, housing, clean energy, immigration reform, parental rights, lower taxes, and donor independence.",
+          "highlights": [
+            "Mayor combining infrastructure, safety, health, housing, clean energy, immigration reform, parental rights, lower taxes, and donor independence. [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Explicit lower-tax position."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Infrastructure and public-safety funding."
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Renewable-energy and clean-water support."
+            },
+            "reform": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Independence from large donors."
+            },
+            "social": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Parental-rights and faith-family platform."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Mayor and council record."
+            }
+          }
+        },
+        {
+          "slug": "matt-boehnke",
+          "summary": "State senator and veteran emphasizing lower taxes, less regulation, conventional energy, border enforcement, fentanyl interdiction, faith, and family.",
+          "highlights": [
+            "State senator and veteran emphasizing lower taxes, less regulation, conventional energy, border enforcement, fentanyl interdiction, faith, and family. [S1]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Explicit lower taxes."
+            },
+            "safety": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Fentanyl interdiction and enforcement."
+            },
+            "climate": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Hydropower, nuclear, dams and affordability."
+            },
+            "immigration": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Border enforcement."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Eight years legislative and prior council record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "congressional-district-5-u-s-representative",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/congressional-district-5-u-s-representative/"
+      ],
+      "office_does": "A U.S. representative writes and votes on federal law and spending, conducts executive oversight, and provides constituent services.",
+      "race_blurb": "Freshman incumbent Michael Baumgartner faces eleven challengers spanning independent reform, Democratic health-care and affordability platforms, and candidates with military, diplomatic, legal, medical, or business experience.",
+      "candidates": [
+        {
+          "slug": "andrew-bartleson",
+          "summary": "Bartleson is a first-time candidate advocating universal health and dental coverage, antitrust action, political disclosure, and AI controls.",
+          "highlights": [
+            "Supports universal health and dental coverage [S1][S2]",
+            "Supports stock-trading disclosure, antitrust action, and AI privacy and price-fixing controls [S1][S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He is a first-time candidate without an elected record."
+            },
+            "reform": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He supports stock-trading disclosure as a political-accountability reform."
+            },
+            "tech": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He supports AI privacy and price-fixing controls.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "ann-marie-danimus",
+          "summary": "Danimus is an independent small-business consultant emphasizing no PAC money, affordability, reproductive rights, balanced immigration policy, and addiction services.",
+          "highlights": [
+            "Rejects PAC money and supports program restructuring [S1][S2]",
+            "Supports abortion rights and immigration with border protection [S1][S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She offers business and caregiving experience rather than elected office."
+            },
+            "reform": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She explicitly rejects PAC money and runs independently.",
+              "adjusted_by_refutation": true
+            },
+            "immigration": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She combines support for immigration with border protection."
+            },
+            "social": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She explicitly supports abortion rights."
+            }
+          }
+        },
+        {
+          "slug": "bajun-r-mavalwalla",
+          "summary": "Mavalwalla is a retired military officer and union member advocating balanced budgets, trade, alliances, infrastructure, and cross-party governance.",
+          "highlights": [
+            "Supports balanced budgets and free trade [S1][S2]",
+            "Supports military alliances, infrastructure, and broadband [S1][S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He explicitly supports balanced budgets while also backing infrastructure investment."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He has military and campaign experience but no documented elected record."
+            },
+            "defense": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He supports maintaining U.S. military alliances."
+            }
+          }
+        },
+        {
+          "slug": "carmela-conroy",
+          "summary": "Conroy is a former diplomat and deputy prosecutor emphasizing current-system health funding, reproductive autonomy, and executive and anti-corruption accountability.",
+          "highlights": [
+            "Supports rural hospitals, Medicare, and Medicaid [S1][S2]",
+            "Supports reproductive autonomy and anti-corruption enforcement [S1][S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She has substantial diplomatic and prosecutorial experience but no documented elected record."
+            },
+            "reform": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She emphasizes executive accountability and anti-corruption enforcement."
+            },
+            "healthcare": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She supports funding rural hospitals, Medicare, and Medicaid within the current system."
+            },
+            "social": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She explicitly supports reproductive autonomy."
+            }
+          }
+        },
+        {
+          "slug": "david-womack",
+          "summary": "Womack is a retired military medical commander and rural-hospital executive advocating universal coverage, reproductive autonomy, climate and water research, and humane border security.",
+          "highlights": [
+            "Supports universal coverage and sustainable rural hospitals [S1][S2]",
+            "Supports reproductive autonomy, climate research, water stewardship, and humane border security [S1][S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He has senior military and hospital experience but no elected record."
+            },
+            "immigration": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "His humane-border-security position combines enforcement and protections."
+            },
+            "social": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He explicitly supports reproductive autonomy."
+            },
+            "defense": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He supports defense while opposing forever wars."
+            }
+          }
+        },
+        {
+          "slug": "kevin-fagan",
+          "summary": "Fagan is a filed Democratic candidate whose reviewed dossier documents only general affordability and representation priorities.",
+          "highlights": [
+            "Official statement emphasizes affordability and representation [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "kyle-usrey",
+          "summary": "Usrey is a lawyer and former university president advocating single-payer major-medical coverage, limits on ICE misconduct, AI regulation, and institutional term limits.",
+          "highlights": [
+            "Supports single-payer major-medical reform [S1][S2]",
+            "Supports civil liability for unlawful ICE conduct, AI regulation, and Supreme Court term limits [S1][S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He has extensive professional and institutional leadership but no documented elected record."
+            },
+            "reform": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He supports executive limits and Supreme Court term limits."
+            },
+            "immigration": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He supports civil liability for unlawful ICE conduct."
+            },
+            "healthcare": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He explicitly supports single-payer major-medical reform."
+            },
+            "tech": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He explicitly supports AI regulation."
+            }
+          }
+        },
+        {
+          "slug": "matthew-hayes",
+          "summary": "Hayes is a retired physician and Air Force veteran emphasizing lower health costs, rural institutions, forests, and clean water.",
+          "highlights": [
+            "Supports lower health-care costs and rural hospitals [S1][S2]",
+            "Supports farmers, schools, forests, and clean water [S1][S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He is a first-time candidate despite extensive military and medical experience."
+            },
+            "healthcare": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He emphasizes lower costs and rural-hospital support without proposing single-payer transformation."
+            }
+          }
+        },
+        {
+          "slug": "michael-baumgartner",
+          "summary": "Baumgartner is the freshman incumbent and a former state senator and county treasurer emphasizing dams, agriculture, water, constituent service, and cross-party work.",
+          "highlights": [
+            "Has served in Congress, the state Senate, and as county treasurer [S1][S2]",
+            "Supports Snake River dams, agriculture, water resources, and congressional integrity [S1][S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He is the incumbent with substantial prior state and county elected service."
+            }
+          }
+        },
+        {
+          "slug": "michael-mcgarr",
+          "summary": "McGarr is a veteran and retired editor advocating restored federal capacity, congressional oversight, and bipartisan institutional governance.",
+          "highlights": [
+            "Supports restoring federal agencies and congressional oversight [S1][S2]",
+            "Opposes shutdowns and supports bipartisan governance [S1][S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He supports restoring federal-agency capacity rather than reducing it."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He offers military and journalism experience but no elected record."
+            }
+          }
+        },
+        {
+          "slug": "nate-powell",
+          "summary": "Powell is a firefighter and Marine veteran advocating billionaire-tax enforcement, universal health access, labor protections, waste reduction, and independence from corporate parties.",
+          "highlights": [
+            "Supports ending billionaire tax avoidance and reducing waste and debt [S1][S2]",
+            "Supports universal health-care access and labor protections [S1][S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He explicitly supports ending billionaire tax avoidance.",
+              "adjusted_by_refutation": true
+            },
+            "spending": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He combines universal-service ambitions with waste and debt reduction."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He is a first-time candidate without an elected record."
+            },
+            "reform": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He emphasizes independence from corporate parties."
+            },
+            "healthcare": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He supports universal health-care access, though the dossier does not specify a single-payer mechanism."
+            }
+          }
+        },
+        {
+          "slug": "richard-freudenberg",
+          "summary": "Freudenberg is a retired Air Force lawyer emphasizing health access, rural hospitals, affordability, legal accountability, and opposition to tax cuts concentrated on wealthy people.",
+          "highlights": [
+            "Supports health-care access and rural hospitals [S1][S2]",
+            "Opposes tax cuts concentrated on millionaires and billionaires [S1][S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He opposes tax cuts concentrated on millionaires and billionaires."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He is a first-time candidate despite extensive military legal experience."
+            },
+            "healthcare": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He supports access and rural hospitals without proposing single-payer transformation."
+            }
+          }
+        }
+      ]
+    },
+    {
       "contest_slug": "congressional-district-6-u-s-representative",
       "scored_at": "2026-07-17",
       "derived_from": [
@@ -2238,6 +3233,662 @@
               ],
               "basis": "His pamphlet pledge that he 'won't be soft on criminals' is a direct, documented enforcement-side posture toward criminal defendants \u2014 far more probative for the safety axis than for judicial philosophy, where the scorer placed it. Single clear statement supports medium; flagged for the merger because it is a stated posture rather than the bail/diversion/formation evidence the guide enumerates.",
               "added_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-2-state-representative-position-1",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-2-state-representative-position-1/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "The race contrasts a long-serving legislator emphasizing fiscal restraint and housing supply with a transit worker and labor advocate emphasizing public investment and worker supports.",
+      "candidates": [
+        {
+          "slug": "andrew-barkis",
+          "summary": "Barkis is a state representative and property-management business owner emphasizing restrained transportation budgeting and housing availability.",
+          "highlights": [
+            "Supports fiscally restrained transportation budgets and housing availability [S1]",
+            "Reports legislative work on housing supply and transportation budgets [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He explicitly supports fiscally restrained transportation budgets."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "His documented housing work emphasizes increasing supply and availability."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He has served in the Legislature since 2016 and reports a legislative record on housing and transportation."
+            }
+          }
+        },
+        {
+          "slug": "william-dehnel",
+          "summary": "Dehnel is a transit worker, union officer, and legislative advocate focused on wages, public supports, and infrastructure.",
+          "highlights": [
+            "Supports wages, collective bargaining, affordable health care, and childcare [S1]",
+            "Supports rural communities, infrastructure, and restrictions on predatory pricing [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He supports infrastructure and public supports including affordable health care and childcare."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He brings labor and legislative-advocacy experience but no documented elected record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-20-state-representative-position-1",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-20-state-representative-position-1/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "A rural public-investment advocate challenges an incumbent legislator emphasizing tax relief, public safety, and accountable government.",
+      "candidates": [
+        {
+          "slug": "andy-zahn",
+          "summary": "Zahn is a writer and photographer advocating rural public investment, union jobs, transit, sustainable development, and limits on data centers.",
+          "highlights": [
+            "Supports rural public investment, union jobs, parks, housing, and public transit [S1]",
+            "Supports sustainable materials and stopping data centers [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He explicitly centers rural public investment, parks, public transit, and health care."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He is a writer and photographer without a documented elected or institutional record."
+            },
+            "tech": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He explicitly supports stopping data centers."
+            }
+          }
+        },
+        {
+          "slug": "peter-abbarno",
+          "summary": "Abbarno is an incumbent state representative, former councilmember, attorney, and small-business owner emphasizing tax relief and public safety.",
+          "highlights": [
+            "Supports tax relief and accountable government [S1]",
+            "Supports public safety and economic and educational opportunity [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He explicitly supports tax relief."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He has served as a state representative since 2021 and previously served on the Centralia City Council."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-20-state-representative-position-2",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-20-state-representative-position-2/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "A twelve-term incumbent focused on tax and budget restraint faces a port commissioner emphasizing permitting, regional industries, and contractor accountability.",
+      "candidates": [
+        {
+          "slug": "ed-orcutt",
+          "summary": "Orcutt is a twelve-term state representative and Finance Committee leader advocating taxpayer protection and budgeting within existing revenue.",
+          "highlights": [
+            "Supports taxpayer protection and existing-revenue budgeting [S1]",
+            "Supports property rights, natural-resource jobs, and agency responsiveness [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He explicitly prioritizes taxpayer protection."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He explicitly supports budgeting within existing revenue."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He is a twelve-term legislator with senior finance and audit committee roles."
+            }
+          }
+        },
+        {
+          "slug": "evan-jones",
+          "summary": "Jones is a port commissioner, trades worker, Army veteran, and transportation-board chair focused on permitting and industrial jobs.",
+          "highlights": [
+            "Supports permitting reform and local timber, shipping, and construction jobs [S1]",
+            "Reports port work on contractor accountability and worker safety [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He combines elected port and regional-board experience with outsider status in the Legislature."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-21-state-senator",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-21-state-senator/"
+      ],
+      "office_does": "A state senator writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "A long-serving senator emphasizing housing, infrastructure, and civil protections faces a former councilmember emphasizing lower taxes, spending restraint, public safety, and parental rights.",
+      "candidates": [
+        {
+          "slug": "marko-liias",
+          "summary": "Liias is a long-serving state senator and transportation chair supporting housing and infrastructure investment, targeted tax relief, and LGBTQ and immigrant protections.",
+          "highlights": [
+            "Supports affordable housing near transit, infrastructure, tax relief, and a working-family tax credit [S1]",
+            "Supports childcare and LGBTQ and immigrant protections [S1]",
+            "Reports securing housing resources and chairing transportation investment [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He supports targeted small-business tax relief and a working-family tax credit."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He supports and reports a record of housing and transportation investment."
+            },
+            "housing": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He supports affordable housing near transit and reports securing housing resources."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He has served in the Senate since 2014 after service as a representative and councilmember."
+            },
+            "immigration": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He explicitly supports protections for immigrants.",
+              "adjusted_by_refutation": true
+            },
+            "social": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He explicitly supports LGBTQ protections."
+            }
+          }
+        },
+        {
+          "slug": "riaz-khan",
+          "summary": "Khan is a former councilmember, labor representative, and business founder emphasizing lower taxes, spending restraint, public safety, and parental rights.",
+          "highlights": [
+            "Supports lower taxes, spending restraint, and transparency [S1]",
+            "Supports public safety, affordable housing, education, and parental rights [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He explicitly supports lower taxes."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He explicitly supports spending restraint and transparency."
+            },
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He combines former city-council service with private-sector and labor experience outside the Legislature."
+            },
+            "social": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He explicitly supports parental rights."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-22-state-representative-position-1",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-22-state-representative-position-1/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "A long-serving incumbent with a legislative record on climate, labor, safety, and housing faces a veteran and technology leader whose approved sources contain no detailed platform.",
+      "candidates": [
+        {
+          "slug": "beth-doglio",
+          "summary": "Doglio is an eight-year state representative and former advocate with a record spanning climate, labor, housing, and progressive social policy.",
+          "highlights": [
+            "Supports climate policy, housing funding, labor protections, and a social safety net [S1]",
+            "Supports reproductive rights, domestic-violence protections, and gun laws [S1]",
+            "Reports passing legislation across climate, labor, safety, and housing [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She supports housing funding, education, and a social safety net as public investments."
+            },
+            "housing": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She supports housing funding and reports passing housing legislation."
+            },
+            "climate": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She supports climate policy and reports passing climate legislation after prior climate advocacy."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She is an eight-year incumbent with a reported legislative record across several policy areas."
+            },
+            "social": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She explicitly supports reproductive rights and has prior reproductive-rights advocacy experience."
+            }
+          }
+        },
+        {
+          "slug": "don-hewett",
+          "summary": "Hewett is an Air Force veteran, engineer, and technology-team leader whose approved sources provide no detailed policy platform.",
+          "highlights": [
+            "Brings military, engineering, and technology-team leadership experience [S1]",
+            "The approved sources provide no detailed policy platform [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He brings non-government professional experience with no documented elected or institutional record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-22-state-representative-position-2",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-22-state-representative-position-2/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "An organizer advocating rent controls, universal public programs, and immigration-enforcement constraints faces an incumbent with city and state elected experience and broad affordability and environmental priorities.",
+      "candidates": [
+        {
+          "slug": "jamie-keenan-devargas",
+          "summary": "Keenan-deVargas is a renter, retail worker, and organizer advocating a rent freeze, universal public programs, and constraints on federal immigration enforcement.",
+          "highlights": [
+            "Supports a rent freeze and universal health care and childcare [S1]",
+            "Supports ICE constraints and lower utility costs without working-class taxes [S1]",
+            "Describes a volunteer-led anti-corporate campaign [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Universal health care and childcare place expanded public provision at the center of the platform."
+            },
+            "housing": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Keenan-deVargas explicitly supports a rent freeze."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Keenan-deVargas is a retail worker and organizer with no documented elected or institutional record."
+            },
+            "reform": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "The campaign is explicitly volunteer-led and anti-corporate."
+            },
+            "immigration": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Keenan-deVargas founded organizations opposing federal immigration enforcement and supports constraints on ICE."
+            },
+            "healthcare": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Keenan-deVargas explicitly supports universal health care."
+            }
+          }
+        },
+        {
+          "slug": "lisa-parshley",
+          "summary": "Parshley is an incumbent state representative, former councilmember, veterinary oncologist, and small-business owner focused on affordability, rights, housing, and environmental protection.",
+          "highlights": [
+            "Supports affordability, worker and voting rights, and housing [S1]",
+            "Supports equality, environmental protection, and responses to homelessness [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She explicitly supports environmental protection."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She has served in the Legislature since 2024 after prior service on the Olympia City Council."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-benton-county-prosecuting-attorney",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/counties/benton/dossiers/benton-benton-county-prosecuting-attorney/"
+      ],
+      "office_does": "The prosecutor brings criminal cases and represents and advises the county.",
+      "race_blurb": "Both candidates emphasize enforcement; Long also supports limited specialty courts.",
+      "candidates": [
+        {
+          "slug": "julie-long",
+          "summary": "Trial prosecutor emphasizing high bail, violent-crime trials, gangs and drugs.",
+          "highlights": [
+            "Trial prosecutor emphasizing high bail, violent-crime trials, gangs and drugs. [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Enforcement-first agenda."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Twenty-eight years prosecutorial experience."
+            }
+          }
+        },
+        {
+          "slug": "eric-eisinger",
+          "summary": "Incumbent emphasizing bail, punishment, violent crime, victims, and police partnership.",
+          "highlights": [
+            "Incumbent emphasizing bail, punishment, violent crime, victims, and police partnership. [S1]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Enforcement-first agenda."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Incumbent with long record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-benton-county-sheriff",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/counties/benton/dossiers/benton-benton-county-sheriff/"
+      ],
+      "office_does": "The sheriff leads patrol, investigations, emergency response, and administration.",
+      "race_blurb": "Both candidates emphasize enforcement and constitutional rights.",
+      "candidates": [
+        {
+          "slug": "brad-klippert",
+          "summary": "Longtime officer, veteran, and elected official emphasizing enforcement and rights.",
+          "highlights": [
+            "Longtime officer, veteran, and elected official emphasizing enforcement and rights. [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Enforcement and officer capacity."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Extensive officer and elected record."
+            }
+          }
+        },
+        {
+          "slug": "michael-mike-clark",
+          "summary": "Incumbent emphasizing proactive enforcement, partnerships, rights, budgets, and planning.",
+          "highlights": [
+            "Incumbent emphasizing proactive enforcement, partnerships, rights, budgets, and planning. [S1]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Proactive enforcement."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Incumbent with 23 years in agency."
             }
           }
         }
@@ -13665,6 +15316,142 @@
       ]
     },
     {
+      "contest_slug": "whatcom-whatcom-county-prosecuting-attorney",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/counties/whatcom/dossiers/whatcom-whatcom-county-prosecuting-attorney/"
+      ],
+      "office_does": "The prosecutor brings criminal cases, represents and advises the county, and manages charging, diversion, victim-service, and office policy.",
+      "race_blurb": "Four attorneys compete for the open office, differing in enforcement, diversion, management, and the balance between prosecution and defense experience.",
+      "candidates": [
+        {
+          "slug": "jesse-corkern",
+          "summary": "Corkern is a senior civil deputy with defense and litigation experience emphasizing consistent charging, management reform, partnerships, fairness, and transparency.",
+          "highlights": [
+            "Has civil-deputy, criminal-defense, and litigation experience [S1][S2][S3]",
+            "Proposes consistent charging, training, supervision, reduced delays, and balanced caseloads [S2][S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "He emphasizes consistent charging and law-enforcement partnerships alongside fairness and management reform."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "He has direct senior prosecutor-office, defense, and civil-litigation experience."
+            }
+          }
+        },
+        {
+          "slug": "erik-sigmar",
+          "summary": "Sigmar is the chief criminal deputy, combining prosecution leadership with diversion, rehabilitation, root-cause work, and victim justice.",
+          "highlights": [
+            "Has about 15 years in prosecution and more than seven leading the felony division [S1][S2][S3]",
+            "Combines accountability with rehabilitation, diversion, and root-cause work [S2][S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "He explicitly pairs accountability with rehabilitation, diversion, and root-cause approaches."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "He has long prosecution tenure and current felony-division leadership.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "ryan-swinburnson",
+          "summary": "Swinburnson is a defense attorney and school-board president with prior prosecution experience, emphasizing balanced decisions, trust, safety, and leadership.",
+          "highlights": [
+            "Has more than 26 years across prosecution and defense [S1][S2][S3]",
+            "Serves as Blaine School Board president and emphasizes balanced decision-making [S2][S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "His platform explicitly presents a balanced prosecution-and-defense approach to public safety."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "He combines a long legal record with elected school-board leadership, though not prosecutor-office executive service."
+            }
+          }
+        },
+        {
+          "slug": "dona-bracke",
+          "summary": "Bracke is an assistant chief criminal deputy emphasizing serious-case accountability, victims, safety, and close law-enforcement partnership.",
+          "highlights": [
+            "Oversees District Court as an assistant chief criminal deputy [S1][S2][S3]",
+            "Emphasizes serious-case accountability, victim support, and law-enforcement partnership [S2][S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Her platform centers serious-case prosecution, accountability, and law-enforcement partnership."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "She has direct criminal-deputy leadership and prosecution experience."
+            }
+          }
+        }
+      ]
+    },
+    {
       "contest_slug": "yakima-yakima-county-assessor",
       "scored_at": "2026-07-17",
       "derived_from": [
@@ -13697,6 +15484,156 @@
           "summary": "A filed challenger with no verified substantive platform or assessment-administration record.",
           "highlights": [
             "Official record verifies candidacy but not qualifications or positions [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "yakima-yakima-county-auditor",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/counties/yakima/dossiers/yakima-yakima-county-auditor/"
+      ],
+      "office_does": "The auditor administers elections, records, licenses, passports, and financial functions.",
+      "race_blurb": "Incumbent Ross faces Cuevas and Barker.",
+      "candidates": [
+        {
+          "slug": "maria-cuevas",
+          "summary": "Educator proposing bilingual access, reporting, operational review, and digital services.",
+          "highlights": [
+            "Educator proposing bilingual access, reporting, operational review, and digital services. [S1]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Operational review and expenditure transparency."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "No auditor-office management."
+            }
+          }
+        },
+        {
+          "slug": "charles-ross",
+          "summary": "Incumbent auditor with no detailed platform.",
+          "highlights": [
+            "Incumbent auditor with no detailed platform. [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Current auditor.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "matt-barker",
+          "summary": "Challenger with insufficient stable platform evidence.",
+          "highlights": [
+            "Challenger with insufficient stable platform evidence. [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "yakima-yakima-county-commissioner-district-1-county-commissioner-district-1",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/counties/yakima/dossiers/yakima-yakima-county-commissioner-district-1-county-commissioner-district-1/"
+      ],
+      "office_does": "Commissioners adopt budgets and policy and oversee county services.",
+      "race_blurb": "Four names remain; Mullen suspended after the withdrawal deadline.",
+      "candidates": [
+        {
+          "slug": "roman-buermann",
+          "summary": "Candidate with insufficient platform evidence.",
+          "highlights": [
+            "Candidate with insufficient platform evidence. [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": true,
+          "scores": {}
+        },
+        {
+          "slug": "robert-udell",
+          "summary": "Sheriff emphasizing safety, agriculture, water, budgets, and cooperation.",
+          "highlights": [
+            "Sheriff emphasizing safety, agriculture, water, budgets, and cooperation. [S1]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Budget accountability."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Sheriff and safety priority.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Elected sheriff and long record."
+            }
+          }
+        },
+        {
+          "slug": "dave-mullen",
+          "summary": "Ballot-listed candidate who suspended campaigning after the withdrawal deadline.",
+          "highlights": [
+            "Ballot-listed candidate who suspended campaigning after the withdrawal deadline. [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "kristoffer-strutner",
+          "summary": "Candidate with insufficient platform evidence.",
+          "highlights": [
+            "Candidate with insufficient platform evidence. [S1]"
           ],
           "evidence_level": "pamphlet-only",
           "withdrawn": false,

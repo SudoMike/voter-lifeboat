@@ -1,5 +1,7 @@
 {
   "derived_from": [
+    "data/washington-state/counties/benton/scoring/measures.json",
+    "data/washington-state/counties/benton/scoring/refutations/measures.json",
     "data/washington-state/counties/clark/scoring/measures.json",
     "data/washington-state/counties/clark/scoring/refutations/measures.json",
     "data/washington-state/counties/king/scoring/measures.json",
@@ -14,11 +16,63 @@
     "data/washington-state/counties/spokane/scoring/refutations/measures.json",
     "data/washington-state/counties/thurston/scoring/measures.json",
     "data/washington-state/counties/thurston/scoring/refutations/measures.json",
+    "data/washington-state/counties/whatcom/scoring/measures.json",
+    "data/washington-state/counties/whatcom/scoring/refutations/measures.json",
     "data/washington-state/counties/yakima/scoring/measures.json",
     "data/washington-state/counties/yakima/scoring/refutations/measures.json"
   ],
   "script": "pipeline/merge_scores.py",
   "measures": [
+    {
+      "slug": "benton-benton-county-fire-protection-district-no-4-proposition-no-1",
+      "what_it_does": "Restores the regular levy from about $1.31 to up to $1.50 per $1,000 in 2027, permits a 106% limit factor for nine years, and resets the later levy base.",
+      "cost_line": "The pro committee estimates about $5.54 monthly for a $350,000 home.",
+      "pro_summary": "The pro committee says restoration supports six firefighters, an engine, water rescue, prevention, equipment, facilities, response times, and reliability.",
+      "con_summary": "No con statement was submitted; the direct trade-off is the rate and growth authority versus service and capital funding.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES raises the rate, allows up to 6% growth for nine years, and resets the base.",
+          "citations": [
+            "S1"
+          ]
+        },
+        "spending": {
+          "direction": 2,
+          "basis": "YES expands staffing and capital capacity.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official pamphlet and pro statement (S1); no con submitted."
+    },
+    {
+      "slug": "benton-benton-county-fire-protection-district-no-6-proposition-no-1",
+      "what_it_does": "Reestablishes for ten years a dedicated EMS levy up to $0.50 per $1,000 beginning in 2027.",
+      "cost_line": "Up to $50 annually per $100,000 assessed value, or $250 on $500,000.",
+      "pro_summary": "The official explanation says reestablishment maintains EMS personnel, equipment, facilities, ambulance service, and current service amid rising costs; no pro statement was submitted.",
+      "con_summary": "No con statement was submitted; the trade-off is a ten-year dedicated property tax versus EMS continuity.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "YES reestablishes a ten-year dedicated property tax.",
+          "citations": [
+            "S1"
+          ],
+          "adjusted_by_refutation": true
+        },
+        "spending": {
+          "direction": 1,
+          "basis": "YES continues a restricted EMS program funding personnel, equipment, facilities, ambulance service, and current service levels.",
+          "citations": [
+            "S1"
+          ],
+          "added_by_refutation": true
+        }
+      },
+      "sources_note": "Official pamphlet explanation (S1); no pro or con statement submitted."
+    },
     {
       "slug": "clark-east-county-fire-and-rescue-proposition-no-6",
       "what_it_does": "Renews East County Fire & Rescue's emergency-medical-services property-tax levy for six years beginning in 2027, at no more than $0.35 per $1,000 of assessed value; the current levy expires at the end of 2026.",
@@ -29,13 +83,6 @@
         "taxes": {
           "direction": 1,
           "basis": "YES continues a dedicated property-tax levy for six years, but at an existing rather than newly added rate.",
-          "citations": [
-            "S1"
-          ]
-        },
-        "spending": {
-          "direction": 1,
-          "basis": "YES maintains dedicated investment in EMS staffing, vehicles, equipment, and training.",
           "citations": [
             "S1"
           ]
@@ -132,7 +179,8 @@
           "citations": [
             "S1",
             "S6"
-          ]
+          ],
+          "adjusted_by_refutation": true
         },
         "spending": {
           "direction": 1,
@@ -310,13 +358,6 @@
             "S1",
             "S2"
           ]
-        },
-        "local-control": {
-          "direction": 1,
-          "basis": "YES continues a locally funded contract through which Tacoma delivers Fircrest fire and EMS service, a modest regional-service alignment.",
-          "citations": [
-            "S1"
-          ]
         }
       },
       "sources_note": "Fircrest Resolution No. 2020 (S1) and official pamphlet material (S2)."
@@ -385,13 +426,6 @@
           "citations": [
             "S1"
           ]
-        },
-        "spending": {
-          "direction": 1,
-          "basis": "YES restores dedicated revenue to maintain current paramedic and EMT service.",
-          "citations": [
-            "S1"
-          ]
         }
       },
       "sources_note": "Official pamphlet ballot material and pro statement (S1)."
@@ -433,13 +467,6 @@
           "citations": [
             "S1"
           ]
-        },
-        "spending": {
-          "direction": 1,
-          "basis": "YES continues dedicated operating funding rather than requiring the reprioritization urged by opponents.",
-          "citations": [
-            "S1"
-          ]
         }
       },
       "sources_note": "Official pamphlet ballot material and pro/con statements (S1)."
@@ -454,13 +481,6 @@
         "taxes": {
           "direction": 2,
           "basis": "YES authorizes a four-year excess property-tax levy.",
-          "citations": [
-            "S1"
-          ]
-        },
-        "spending": {
-          "direction": 1,
-          "basis": "YES funds current emergency-service staffing, equipment, and operations rather than relying on efficiencies or alternatives.",
           "citations": [
             "S1"
           ]
@@ -550,13 +570,6 @@
         "taxes": {
           "direction": 2,
           "basis": "YES restores a higher permanent levy rate and permits five years of inflation-linked growth.",
-          "citations": [
-            "S1"
-          ]
-        },
-        "spending": {
-          "direction": 1,
-          "basis": "YES restores revenue to maintain EMS personnel, equipment, training, and service stability.",
           "citations": [
             "S1"
           ]
@@ -762,6 +775,74 @@
         }
       },
       "sources_note": "Official pamphlet ballot material and pro statement (S1)."
+    },
+    {
+      "slug": "whatcom-glacier-fire-and-rescue-whatcom-county-fire-protection-district-no-19-proposition-2026-04",
+      "what_it_does": "Sets the regular fire levy at $1.10 per $1,000 and authorizes a 104% limit factor for six years.",
+      "cost_line": "At the stated rate, $110 annually per $100,000 assessed value, or $550 on $500,000; this is arithmetic from the official rate, not a model-home estimate.",
+      "pro_summary": "Official material identifies fire and emergency-service funding; no pro committee statement was available.",
+      "con_summary": "No con committee statement was available; the trade-off is fire-service revenue versus higher property tax.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES sets a property-tax rate and permits six years of levy growth.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official Whatcom County election material (S1)."
+    },
+    {
+      "slug": "whatcom-skagit-county-public-hospital-district-no-304-united-general-proposition-no-1",
+      "what_it_does": "Restores the cross-county hospital district's regular levy to $0.50 per $1,000 for 2027 and resets the later levy base.",
+      "cost_line": "At the stated rate, $50 annually per $100,000 assessed value, or $250 on $500,000; this is arithmetic from the official rate, not a model-home estimate.",
+      "pro_summary": "Official material identifies hospital-district funding; no pro committee statement was available.",
+      "con_summary": "No con committee statement was available; the trade-off is public-health funding versus higher property tax.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES restores a higher levy rate and resets the future property-tax base.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official Whatcom County election material (S1)."
+    },
+    {
+      "slug": "whatcom-whatcom-county-fire-protection-district-no-1-proposition-2026-02",
+      "what_it_does": "Restores the regular fire levy to $1.48 per $1,000 and authorizes a 106% limit factor for nine years.",
+      "cost_line": "At the stated maximum, $148 annually per $100,000 assessed value, or $740 on $500,000; this is arithmetic from the official rate, not a model-home estimate.",
+      "pro_summary": "Official material identifies local fire-protection funding; no pro committee statement was available.",
+      "con_summary": "No con committee statement was available; the trade-off is higher and growing property-tax revenue versus taxpayer restraint.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES restores the levy rate and permits nine years of up to 6% levy growth.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official Whatcom County election material (S1)."
+    },
+    {
+      "slug": "whatcom-whatcom-county-fire-protection-district-no-21-proposition-2026-03",
+      "what_it_does": "Sets the regular fire levy at $1.20 per $1,000 and authorizes a 103% limit factor for five years.",
+      "cost_line": "At the stated rate, $120 annually per $100,000 assessed value, or $600 on $500,000; this is arithmetic from the official rate, not a model-home estimate.",
+      "pro_summary": "Official material identifies local fire-protection funding; no pro committee statement was available.",
+      "con_summary": "No con committee statement was available; the trade-off is fire-service revenue versus higher property tax.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES sets a property-tax rate and permits five years of levy growth.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official Whatcom County election material (S1)."
     },
     {
       "slug": "yakima-yakima-county-fire-protection-district-no-6-proposition-no-1",

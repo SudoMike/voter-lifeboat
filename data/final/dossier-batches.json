@@ -4,224 +4,12 @@
   ],
   "script": "pipeline/build_dossier_batches.py",
   "batch_size_target": 50,
-  "total_units": 157,
-  "total_dossiers": 482,
-  "total_batches": 10,
+  "total_units": 144,
+  "total_dossiers": 432,
+  "total_batches": 9,
   "batches": [
     {
       "batch": 1,
-      "dossiers": 50,
-      "races": 13,
-      "units": [
-        {
-          "id": "yakima-yakima-county-auditor",
-          "kind": "local",
-          "label": "yakima: Yakima County Auditor",
-          "candidates": [
-            "charles-ross",
-            "maria-cuevas",
-            "matt-barker"
-          ],
-          "counties": [
-            "yakima"
-          ]
-        },
-        {
-          "id": "benton-benton-county-prosecuting-attorney",
-          "kind": "local",
-          "label": "benton: Benton County Prosecuting Attorney",
-          "candidates": [
-            "eric-eisinger",
-            "julie-long"
-          ],
-          "counties": [
-            "benton"
-          ]
-        },
-        {
-          "id": "benton-benton-county-sheriff",
-          "kind": "local",
-          "label": "benton: Benton County Sheriff",
-          "candidates": [
-            "brad-klippert",
-            "michael-mike-clark"
-          ],
-          "counties": [
-            "benton"
-          ]
-        },
-        {
-          "id": "Federal/CD4",
-          "kind": "shared",
-          "label": "Congressional District 4 U.S. Representative",
-          "candidates": [
-            "amanda-mckinney",
-            "devin-poore",
-            "elpidia-saavedra",
-            "favian-valencia",
-            "jacek-jack-kobiesa",
-            "jerrod-sessler",
-            "john-c-hughs",
-            "john-duresky",
-            "ken-vaz",
-            "matt-boehnke",
-            "zac-rossi"
-          ],
-          "counties": [
-            "adams",
-            "benton",
-            "douglas",
-            "franklin",
-            "grant",
-            "klickitat",
-            "okanogan",
-            "yakima"
-          ]
-        },
-        {
-          "id": "Federal/CD5",
-          "kind": "shared",
-          "label": "Congressional District 5 U.S. Representative",
-          "candidates": [
-            "andrew-bartleson",
-            "ann-marie-danimus",
-            "bajun-r-mavalwalla",
-            "carmela-conroy",
-            "david-womack",
-            "kevin-fagan",
-            "kyle-usrey",
-            "matthew-hayes",
-            "michael-baumgartner",
-            "michael-mcgarr",
-            "nate-powell",
-            "richard-freudenberg"
-          ],
-          "counties": [
-            "adams",
-            "asotin",
-            "columbia",
-            "ferry",
-            "franklin",
-            "garfield",
-            "lincoln",
-            "pend-oreille",
-            "spokane",
-            "stevens",
-            "walla-walla",
-            "whitman"
-          ]
-        },
-        {
-          "id": "yakima-yakima-county-commissioner-district-1-county-commissioner-district-1",
-          "kind": "local",
-          "label": "yakima: Yakima County Commissioner District 1 County Commissioner; District 1",
-          "candidates": [
-            "dave-mullen",
-            "kristoffer-strutner",
-            "robert-udell",
-            "roman-buermann"
-          ],
-          "counties": [
-            "yakima"
-          ]
-        },
-        {
-          "id": "whatcom-whatcom-county-prosecuting-attorney",
-          "kind": "local",
-          "label": "whatcom: Whatcom County Prosecuting Attorney",
-          "candidates": [
-            "dona-bracke",
-            "erik-sigmar",
-            "jesse-corkern",
-            "ryan-swinburnson"
-          ],
-          "counties": [
-            "whatcom"
-          ]
-        },
-        {
-          "id": "State/LD2/REP1",
-          "kind": "shared",
-          "label": "Legislative District 2 State Representative Pos. 1",
-          "candidates": [
-            "andrew-barkis",
-            "william-dehnel"
-          ],
-          "counties": [
-            "pierce",
-            "thurston"
-          ]
-        },
-        {
-          "id": "State/LD20/REP1",
-          "kind": "shared",
-          "label": "Legislative District 20 State Representative Pos. 1",
-          "candidates": [
-            "andy-zahn",
-            "peter-abbarno"
-          ],
-          "counties": [
-            "clark",
-            "cowlitz",
-            "lewis",
-            "thurston"
-          ]
-        },
-        {
-          "id": "State/LD20/REP2",
-          "kind": "shared",
-          "label": "Legislative District 20 State Representative Pos. 2",
-          "candidates": [
-            "ed-orcutt",
-            "evan-jones"
-          ],
-          "counties": [
-            "clark",
-            "cowlitz",
-            "lewis",
-            "thurston"
-          ]
-        },
-        {
-          "id": "State/LD21/SEN",
-          "kind": "shared",
-          "label": "Legislative District 21 State Senator",
-          "candidates": [
-            "marko-liias",
-            "riaz-khan"
-          ],
-          "counties": [
-            "snohomish"
-          ]
-        },
-        {
-          "id": "State/LD22/REP1",
-          "kind": "shared",
-          "label": "Legislative District 22 State Representative Pos. 1",
-          "candidates": [
-            "beth-doglio",
-            "don-hewett"
-          ],
-          "counties": [
-            "thurston"
-          ]
-        },
-        {
-          "id": "State/LD22/REP2",
-          "kind": "shared",
-          "label": "Legislative District 22 State Representative Pos. 2",
-          "candidates": [
-            "jamie-keenan-devargas",
-            "lisa-parshley"
-          ],
-          "counties": [
-            "thurston"
-          ]
-        }
-      ]
-    },
-    {
-      "batch": 2,
       "dossiers": 52,
       "races": 24,
       "units": [
@@ -535,7 +323,7 @@
       ]
     },
     {
-      "batch": 3,
+      "batch": 2,
       "dossiers": 53,
       "races": 17,
       "units": [
@@ -772,7 +560,7 @@
       ]
     },
     {
-      "batch": 4,
+      "batch": 3,
       "dossiers": 52,
       "races": 15,
       "units": [
@@ -993,7 +781,7 @@
       ]
     },
     {
-      "batch": 5,
+      "batch": 4,
       "dossiers": 51,
       "races": 15,
       "units": [
@@ -1212,7 +1000,7 @@
       ]
     },
     {
-      "batch": 6,
+      "batch": 5,
       "dossiers": 54,
       "races": 14,
       "units": [
@@ -1421,7 +1209,7 @@
       ]
     },
     {
-      "batch": 7,
+      "batch": 6,
       "dossiers": 51,
       "races": 17,
       "units": [
@@ -1649,7 +1437,7 @@
       ]
     },
     {
-      "batch": 8,
+      "batch": 7,
       "dossiers": 50,
       "races": 16,
       "units": [
@@ -1866,7 +1654,7 @@
       ]
     },
     {
-      "batch": 9,
+      "batch": 8,
       "dossiers": 51,
       "races": 18,
       "units": [
@@ -2104,7 +1892,7 @@
       ]
     },
     {
-      "batch": 10,
+      "batch": 9,
       "dossiers": 18,
       "races": 8,
       "units": [

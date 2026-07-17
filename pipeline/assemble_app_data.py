@@ -84,6 +84,14 @@ STATEWIDE_CATEGORIES = {"StateSupremeCourt"}
 SHARED_CATEGORIES = {"Federal", "State"}
 
 
+def shared_contest_key(contest):
+    """Canonicalize harmless ballot-source abbreviations for shared races."""
+    office = contest["office"].lower().replace("pos.", "position").replace("pos ", "position ")
+    office = re.sub(r"\s+", " ", office).strip()
+    district = re.sub(r"\s+", " ", contest["district"]).strip().lower()
+    return contest["category"], district, office
+
+
 def apply_scoring(contest, scored, dossier_slug=None):
     """Overlay research fields without disturbing county ballot metadata."""
     if not scored:
@@ -118,7 +126,7 @@ def shared_score_index(all_scores):
             continue
         scored = by_slug.get(contest["slug"])
         if scored:
-            key = (contest["category"], contest["district"], contest["office"])
+            key = shared_contest_key(contest)
             result[key] = (scored, contest["slug"])
     return result
 
@@ -259,9 +267,7 @@ for county_dir in sorted((WA / "counties").iterdir()):
             scored = scores.get(contest["slug"])
             dossier_slug = contest["slug"]
             if contest.get("category") in SHARED_CATEGORIES:
-                shared = shared_scores.get((
-                    contest["category"], contest["district"], contest["office"]
-                ))
+                shared = shared_scores.get(shared_contest_key(contest))
                 if shared:
                     scored, dossier_slug = shared
             out_contests.append(apply_scoring(contest, scored, dossier_slug))

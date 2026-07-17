@@ -89,7 +89,9 @@ for scoring_dir in SCORING_DIRS:
         r = json.load(open(mrf))
         by_slug = {m["slug"]: m for m in meas["measures"]}
         for v in r.get("verdicts", []):
-            m = by_slug.get(v.get("measure"))
+            # Measure refutations historically use `candidate`, matching the
+            # candidate refutation schema. Accept `measure` as an alias.
+            m = by_slug.get(v.get("measure") or v.get("candidate"))
             if not m:
                 continue
             lm = (m.get("lean_mappings") or {}).get(v.get("axis"))
@@ -105,6 +107,20 @@ for scoring_dir in SCORING_DIRS:
                 stats["adjust"] += 1
             else:
                 stats["upheld"] += 1
+        for missing in r.get("missing", []):
+            m = by_slug.get(missing.get("measure") or missing.get("candidate"))
+            if not m:
+                continue
+            if missing.get("confidence") not in ("medium", "high"):
+                stats["missing_dropped_low"] += 1
+                continue
+            m.setdefault("lean_mappings", {})[missing["axis"]] = {
+                "direction": missing["proposed_score"],
+                "basis": missing.get("basis", ""),
+                "citations": missing.get("citations", []),
+                "added_by_refutation": True,
+            }
+            stats["missing_added"] += 1
     measures_out.extend(meas["measures"])
 
 FINAL.mkdir(exist_ok=True)
