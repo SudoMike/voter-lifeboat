@@ -1,0 +1,664 @@
+{
+  "county": "kitsap",
+  "script": "pipeline/build_kitsap_lite_data.py",
+  "derived_from": [
+    "data/washington-state/counties/kitsap/interim/pdf-text/local-voters-pamphlet.txt"
+  ],
+  "coverage": "partial_county",
+  "contests": [
+    {
+      "slug": "kitsap-congressional-district-6-u-s-representative",
+      "owner": "kitsap",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 6",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "kitsap",
+        "layer": "CONGDST",
+        "value": "6"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Kitsap County local voters' pamphlet. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "emily-randall",
+          "name": "Emily Randall",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "brian-p-o-gorman",
+          "name": "Brian P. O'Gorman",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "teresa-fox",
+          "name": "Teresa Fox",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "macy-jones",
+          "name": "Macy Jones",
+          "party": "States No Party Preference",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "leon-lawson",
+          "name": "Leon Lawson",
+          "party": "Prefers Trump Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "kitsap-legislative-district-23-state-representative-pos-1",
+      "owner": "kitsap",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 23",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "kitsap",
+        "layer": "LEGDST",
+        "value": "23"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Kitsap County local voters' pamphlet. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "daria-ilgen",
+          "name": "Daria Ilgen",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "tarra-simmons",
+          "name": "Tarra Simmons",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "kitsap-legislative-district-23-state-representative-pos-2",
+      "owner": "kitsap",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 23",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "kitsap",
+        "layer": "LEGDST",
+        "value": "23"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Kitsap County local voters' pamphlet. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "greg-nance",
+          "name": "Greg Nance",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "lance-byrd",
+          "name": "Lance Byrd",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "kristin-lillegard",
+          "name": "Kristin Lillegard",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "kitsap-legislative-district-26-state-senator",
+      "owner": "kitsap",
+      "category": "State",
+      "office": "State Senator",
+      "district": "Legislative District 26",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "kitsap",
+        "layer": "LEGDST",
+        "value": "26"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Kitsap County local voters' pamphlet. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "deborah-krishnadasan",
+          "name": "Deborah Krishnadasan",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "gary-parker",
+          "name": "Gary Parker",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "kitsap-legislative-district-26-state-representative-pos-1",
+      "owner": "kitsap",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 26",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "kitsap",
+        "layer": "LEGDST",
+        "value": "26"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Kitsap County local voters' pamphlet. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "david-olson",
+          "name": "David Olson",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "natalie-bornfleth",
+          "name": "Natalie Bornfleth",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "adison-richards",
+          "name": "Adison Richards",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "kitsap-legislative-district-26-state-representative-pos-2",
+      "owner": "kitsap",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 26",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "kitsap",
+        "layer": "LEGDST",
+        "value": "26"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Kitsap County local voters' pamphlet. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "randy-phillips",
+          "name": "Randy Phillips",
+          "party": "States No Party Preference",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "tedd-wetherbee",
+          "name": "Tedd Wetherbee",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "renee-hernandez-greenfield",
+          "name": "Renee Hernandez Greenfield",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "katy-cornell",
+          "name": "Katy Cornell",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "kitsap-legislative-district-35-state-senator",
+      "owner": "kitsap",
+      "category": "State",
+      "office": "State Senator",
+      "district": "Legislative District 35",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "kitsap",
+        "layer": "LEGDST",
+        "value": "35"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Kitsap County local voters' pamphlet. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "carolina-mejia",
+          "name": "Carolina Mejia",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "drew-c-macewen",
+          "name": "Drew C MacEwen",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "kitsap-legislative-district-35-state-representative-pos-1",
+      "owner": "kitsap",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 35",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "kitsap",
+        "layer": "LEGDST",
+        "value": "35"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Kitsap County local voters' pamphlet. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "dan-griffey",
+          "name": "Dan Griffey",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "shaena-garberich",
+          "name": "Shaena Garberich",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "jim-pierson",
+          "name": "Jim Pierson",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "kitsap-legislative-district-35-state-representative-pos-2",
+      "owner": "kitsap",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 35",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "kitsap",
+        "layer": "LEGDST",
+        "value": "35"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Kitsap County local voters' pamphlet. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "travis-couture",
+          "name": "Travis Couture",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "maria-littlesun",
+          "name": "Maria Littlesun",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "kitsap-kitsap-county-assessor",
+      "owner": "kitsap",
+      "category": "County",
+      "office": "Assessor",
+      "district": "Kitsap County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "kitsap"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Kitsap County local voters' pamphlet. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "phil-cook",
+          "name": "Phil Cook",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "michael-simonds",
+          "name": "Michael Simonds",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "kitsap-kitsap-county-auditor",
+      "owner": "kitsap",
+      "category": "County",
+      "office": "Auditor",
+      "district": "Kitsap County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "kitsap"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Kitsap County local voters' pamphlet. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "paul-andrews",
+          "name": "Paul Andrews",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "kitsap-kitsap-county-clerk",
+      "owner": "kitsap",
+      "category": "County",
+      "office": "Clerk",
+      "district": "Kitsap County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "kitsap"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Kitsap County local voters' pamphlet. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "david-t-lewis-iii",
+          "name": "David T Lewis III",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "brien-kennedy",
+          "name": "Brien Kennedy",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "kitsap-kitsap-county-prosecuting-attorney",
+      "owner": "kitsap",
+      "category": "County",
+      "office": "Prosecuting Attorney",
+      "district": "Kitsap County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "kitsap"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Kitsap County local voters' pamphlet. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "joe-lombardi",
+          "name": "Joe Lombardi",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "chad-m-enright",
+          "name": "Chad M. Enright",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "kitsap-kitsap-county-sheriff",
+      "owner": "kitsap",
+      "category": "County",
+      "office": "Sheriff",
+      "district": "Kitsap County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "kitsap"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Kitsap County local voters' pamphlet. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "rick-kuss",
+          "name": "Rick Kuss",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "brandon-l-myers",
+          "name": "Brandon L. Myers",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "kitsap-kitsap-county-treasurer",
+      "owner": "kitsap",
+      "category": "County",
+      "office": "Treasurer",
+      "district": "Kitsap County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "kitsap"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the Kitsap County local voters' pamphlet. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "pete-boissonneau",
+          "name": "Pete Boissonneau",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    }
+  ]
+}

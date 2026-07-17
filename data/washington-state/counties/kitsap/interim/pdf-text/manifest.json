@@ -1,0 +1,11 @@
+{
+  "county": "kitsap",
+  "script": "pipeline/extract_pdf_text.mjs",
+  "files": [
+    {
+      "source_pointer": "data/washington-state/counties/kitsap/raw/kitsap/local-voters-pamphlet.pdf.url",
+      "url": "https://www.kitsap.gov/auditor/Documents/LVP.pdf",
+      "output": "data/washington-state/counties/kitsap/interim/pdf-text/local-voters-pamphlet.txt"
+    }
+  ]
+}

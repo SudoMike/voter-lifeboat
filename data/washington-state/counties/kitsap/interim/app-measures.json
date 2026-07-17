@@ -1,0 +1,42 @@
+{
+  "county": "kitsap",
+  "script": "pipeline/build_kitsap_lite_data.py",
+  "derived_from": [
+    "data/washington-state/counties/kitsap/interim/pdf-text/local-voters-pamphlet.txt"
+  ],
+  "coverage": "partial_county",
+  "measures": [
+    {
+      "slug": "kitsap-city-of-bremerton-proposition-no-1",
+      "owner": "kitsap",
+      "jurisdiction": "City of Bremerton",
+      "proposition": "Proposition No. 1",
+      "title": "Public Safety and Governmental Services Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "kitsap",
+        "layer": "CITY",
+        "value": "Bremerton"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 48
+        }
+      ],
+      "what_it_does": "Raises Bremerton's regular property tax rate by $0.48 to a total authorized rate of $1.95 per $1,000 of assessed value for 2027, with the 2027 levy amount used to calculate subsequent levies for public safety and governmental services.",
+      "cost_line": "Increases the city property tax rate by $0.48 per $1,000 of assessed value for 2027 collections.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES raises a city property tax levy for public safety and governmental services.",
+          "citations": [
+            "Kitsap local voters' pamphlet"
+          ]
+        }
+      }
+    }
+  ]
+}
