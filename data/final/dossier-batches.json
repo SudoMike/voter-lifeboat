@@ -4,296 +4,12 @@
   ],
   "script": "pipeline/build_dossier_batches.py",
   "batch_size_target": 50,
-  "total_units": 112,
-  "total_dossiers": 327,
-  "total_batches": 7,
+  "total_units": 93,
+  "total_dossiers": 276,
+  "total_batches": 6,
   "batches": [
     {
       "batch": 1,
-      "dossiers": 51,
-      "races": 19,
-      "units": [
-        {
-          "id": "State/LD1/REP1",
-          "kind": "shared",
-          "label": "Legislative District 1 State Representative Pos. 1",
-          "candidates": [
-            "davina-duerr",
-            "maggie-wang"
-          ],
-          "counties": [
-            "snohomish"
-          ]
-        },
-        {
-          "id": "State/LD10/REP1",
-          "kind": "shared",
-          "label": "Legislative District 10 State Representative Pos. 1",
-          "candidates": [
-            "clyde-shavers",
-            "robert-chili-hicks"
-          ],
-          "counties": [
-            "island",
-            "skagit",
-            "snohomish"
-          ]
-        },
-        {
-          "id": "State/LD12/REP1",
-          "kind": "shared",
-          "label": "Legislative District 12 State Representative Pos. 1",
-          "candidates": [
-            "brian-burnett",
-            "stacy-willoughby"
-          ],
-          "counties": [
-            "chelan",
-            "snohomish"
-          ]
-        },
-        {
-          "id": "State/LD13/REP1",
-          "kind": "shared",
-          "label": "Legislative District 13 State Representative Pos. 1",
-          "candidates": [
-            "juan-jerry-garcia",
-            "tom-dent"
-          ],
-          "counties": [
-            "adams",
-            "douglas",
-            "grant",
-            "kittitas"
-          ]
-        },
-        {
-          "id": "State/LD15/REP1",
-          "kind": "shared",
-          "label": "Legislative District 15 State Representative Pos. 1",
-          "candidates": [
-            "chris-corry",
-            "jack-mcentire"
-          ],
-          "counties": [
-            "benton",
-            "yakima"
-          ]
-        },
-        {
-          "id": "State/LD17/REP2",
-          "kind": "shared",
-          "label": "Legislative District 17 State Representative Pos. 2",
-          "candidates": [
-            "david-stuebe",
-            "diana-h-perez"
-          ],
-          "counties": [
-            "clark",
-            "klickitat",
-            "skamania"
-          ]
-        },
-        {
-          "id": "State/LD19/REP1",
-          "kind": "shared",
-          "label": "Legislative District 19 State Representative Pos. 1",
-          "candidates": [
-            "jim-walsh",
-            "kevin-moynihan"
-          ],
-          "counties": [
-            "cowlitz",
-            "grays-harbor",
-            "lewis",
-            "pacific",
-            "thurston",
-            "wahkiakum"
-          ]
-        },
-        {
-          "id": "State/LD31/REP1",
-          "kind": "shared",
-          "label": "Legislative District 31 State Representative Pos. 1",
-          "candidates": [
-            "drew-stokesbary",
-            "stephen-szczurko-walton"
-          ],
-          "counties": [
-            "pierce"
-          ]
-        },
-        {
-          "id": "State/LD31/REP2",
-          "kind": "shared",
-          "label": "Legislative District 31 State Representative Pos. 2",
-          "candidates": [
-            "john-bielka",
-            "joshua-penner"
-          ],
-          "counties": [
-            "pierce"
-          ]
-        },
-        {
-          "id": "State/LD10/REP2",
-          "kind": "shared",
-          "label": "Legislative District 10 State Representative Pos. 2",
-          "candidates": [
-            "carrie-r-kennedy",
-            "dave-paul",
-            "tim-hazelo"
-          ],
-          "counties": [
-            "island",
-            "skagit",
-            "snohomish"
-          ]
-        },
-        {
-          "id": "State/LD12/REP2",
-          "kind": "shared",
-          "label": "Legislative District 12 State Representative Pos. 2",
-          "candidates": [
-            "adam-james",
-            "maggie-adams",
-            "mike-steele"
-          ],
-          "counties": [
-            "chelan",
-            "snohomish"
-          ]
-        },
-        {
-          "id": "State/LD13/REP2",
-          "kind": "shared",
-          "label": "Legislative District 13 State Representative Pos. 2",
-          "candidates": [
-            "deanna-martinez",
-            "don-myers",
-            "joshua-thompson"
-          ],
-          "counties": [
-            "adams",
-            "douglas",
-            "grant",
-            "kittitas"
-          ]
-        },
-        {
-          "id": "State/LD14/REP1",
-          "kind": "shared",
-          "label": "Legislative District 14 State Representative Pos. 1",
-          "candidates": [
-            "chelsea-dimas",
-            "gloria-mendoza",
-            "william-chichenoff"
-          ],
-          "counties": [
-            "benton",
-            "franklin",
-            "klickitat",
-            "yakima"
-          ]
-        },
-        {
-          "id": "State/LD14/REP2",
-          "kind": "shared",
-          "label": "Legislative District 14 State Representative Pos. 2",
-          "candidates": [
-            "deb-manjarrez",
-            "ezequiel-morfin",
-            "tony-g-sandoval"
-          ],
-          "counties": [
-            "benton",
-            "franklin",
-            "klickitat",
-            "yakima"
-          ]
-        },
-        {
-          "id": "State/LD15/REP2",
-          "kind": "shared",
-          "label": "Legislative District 15 State Representative Pos. 2",
-          "candidates": [
-            "chase-foster",
-            "liz-hallock",
-            "reedy-berg"
-          ],
-          "counties": [
-            "benton",
-            "yakima"
-          ]
-        },
-        {
-          "id": "State/LD17/REP1",
-          "kind": "shared",
-          "label": "Legislative District 17 State Representative Pos. 1",
-          "candidates": [
-            "ben-christly",
-            "kevin-waters",
-            "thomas-everett-haynes"
-          ],
-          "counties": [
-            "clark",
-            "klickitat",
-            "skamania"
-          ]
-        },
-        {
-          "id": "State/LD1/REP2",
-          "kind": "shared",
-          "label": "Legislative District 1 State Representative Pos. 2",
-          "candidates": [
-            "cliff-moon",
-            "jeff-lyon",
-            "jenne-alderks",
-            "shelley-kloba"
-          ],
-          "counties": [
-            "snohomish"
-          ]
-        },
-        {
-          "id": "State/LD19/REP2",
-          "kind": "shared",
-          "label": "Legislative District 19 State Representative Pos. 2",
-          "candidates": [
-            "daniel-william-bradley",
-            "jimi-o-hagan",
-            "joel-mcentire",
-            "terry-carlson"
-          ],
-          "counties": [
-            "cowlitz",
-            "grays-harbor",
-            "lewis",
-            "pacific",
-            "thurston",
-            "wahkiakum"
-          ]
-        },
-        {
-          "id": "State/LD24/REP1",
-          "kind": "shared",
-          "label": "Legislative District 24 State Representative Pos. 1",
-          "candidates": [
-            "adam-bernbaum",
-            "aiden-i-r-hamilton",
-            "eric-w-pratt",
-            "ted-bowen"
-          ],
-          "counties": [
-            "clallam",
-            "grays-harbor",
-            "jefferson"
-          ]
-        }
-      ]
-    },
-    {
-      "batch": 2,
       "dossiers": 52,
       "races": 15,
       "units": [
@@ -514,7 +230,7 @@
       ]
     },
     {
-      "batch": 3,
+      "batch": 2,
       "dossiers": 54,
       "races": 19,
       "units": [
@@ -765,7 +481,7 @@
       ]
     },
     {
-      "batch": 4,
+      "batch": 3,
       "dossiers": 51,
       "races": 17,
       "units": [
@@ -993,7 +709,7 @@
       ]
     },
     {
-      "batch": 5,
+      "batch": 4,
       "dossiers": 50,
       "races": 16,
       "units": [
@@ -1210,7 +926,7 @@
       ]
     },
     {
-      "batch": 6,
+      "batch": 5,
       "dossiers": 51,
       "races": 18,
       "units": [
@@ -1448,7 +1164,7 @@
       ]
     },
     {
-      "batch": 7,
+      "batch": 6,
       "dossiers": 18,
       "races": 8,
       "units": [

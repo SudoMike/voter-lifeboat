@@ -29,10 +29,10 @@
   ],
   "script": "pipeline/merge_scores.py",
   "verdict_stats": {
-    "upheld": 1317,
-    "adjust": 166,
-    "refuted": 74,
-    "missing_added": 16,
+    "upheld": 1417,
+    "adjust": 189,
+    "refuted": 87,
+    "missing_added": 24,
     "missing_dropped_low": 4
   },
   "contests": [
@@ -3243,6 +3243,1263 @@
       ]
     },
     {
+      "contest_slug": "legislative-district-1-state-representative-position-1",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-1-state-representative-position-1/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "Incumbent Davina Duerr faces Maggie Wang.",
+      "candidates": [
+        {
+          "slug": "davina-duerr",
+          "summary": "Duerr is an incumbent representative, architect, and former Bothell councilmember and deputy mayor.",
+          "highlights": [
+            "Emphasizes housing supply, climate and clean energy, transportation, and local-government coordination [S2]."
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Duerr explicitly emphasizes housing supply as an affordability strategy."
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "She explicitly emphasizes climate and clean energy."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She is an incumbent legislator and former councilmember and deputy mayor."
+            }
+          }
+        },
+        {
+          "slug": "maggie-wang",
+          "summary": "Wang is a candidate whose identity and office are verified, but the dossier contains no sufficiently detailed policy platform.",
+          "highlights": [
+            "Official election records verify her candidacy [S1][S2]."
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-1-state-representative-position-2",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-1-state-representative-position-2/"
+      ],
+      "office_does": "State representatives write and vote on state laws and budgets, oversee state government, and represent their legislative district.",
+      "race_blurb": "Incumbent Shelley Kloba faces Bothell Deputy Mayor Jenne Alderks and first-time legislative candidates Jeff Lyon and Cliff Moon.",
+      "candidates": [
+        {
+          "slug": "cliff-moon",
+          "summary": "Moon is a construction and small-business professional who emphasizes lower taxes, parental involvement, law enforcement, and legal immigration.",
+          "highlights": [
+            "Supports lower taxes and costs [S1]",
+            "Emphasizes parental involvement in education and law enforcement [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He explicitly campaigns for lower taxes."
+            },
+            "social": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "His education platform emphasizes parental involvement and academic fundamentals."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He brings business and construction experience but no documented elected office.",
+              "adjusted_by_refutation": true
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He explicitly emphasizes law enforcement and public safety.",
+              "added_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "jeff-lyon",
+          "summary": "Lyon is a Navy veteran, former sheriff's deputy, and cybersecurity manager proposing broad tax relief, permanent school funding, and local housing control.",
+          "highlights": [
+            "Proposes eliminating state taxes for families earning under $125,000 [S1]",
+            "Supports permanent school funding and restoring local control over housing rules [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He proposes eliminating state taxes for a large income group and requiring voter approval for an income tax."
+            },
+            "local-control": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He explicitly proposes restoring local control over housing rules."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "His military, law-enforcement, and technical record is outside elected office."
+            }
+          }
+        },
+        {
+          "slug": "jenne-alderks",
+          "summary": "Alderks is Bothell's deputy mayor and a former planning commissioner emphasizing transportation, housing, rights, parks, and local business.",
+          "highlights": [
+            "Has served on the Bothell City Council since 2021 and is deputy mayor [S1]",
+            "Emphasizes housing, transportation, human rights, affordability, and local businesses [S1]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "City-council, deputy-mayor, and planning-commission service provide a substantial local governing record."
+            }
+          }
+        },
+        {
+          "slug": "shelley-kloba",
+          "summary": "Kloba is a multi-term incumbent and former city councilmember focused on data privacy, AI safeguards, progressive taxation, green jobs, education, health, and civil rights.",
+          "highlights": [
+            "Supports progressive taxation and education funding [S1][S2]",
+            "Supports data privacy, limits on data brokers, and reducing AI harms [S1][S2]",
+            "Offers state and municipal legislative experience [S1][S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She explicitly supports progressive taxation to fund public priorities."
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "low",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Green jobs provide a climate-action direction, though the dossier does not identify a detailed climate mechanism."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She has served in the Legislature since 2016 after municipal office."
+            },
+            "tech": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Data-broker limits, privacy protections, and reducing AI harms directly favor stronger technology regulation."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-10-state-representative-position-1",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-10-state-representative-position-1/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "Incumbent Clyde Shavers faces Stanwood City Councilmember Robert (Chili) Hicks.",
+      "candidates": [
+        {
+          "slug": "clyde-shavers",
+          "summary": "Shavers is an incumbent representative and Navy veteran with law and technology experience.",
+          "highlights": [
+            "Emphasizes veterans, transportation, workforce development, reproductive rights, and environmental protection [S2]."
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Shavers explicitly emphasizes environmental protection."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He is an incumbent state representative."
+            },
+            "social": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He explicitly supports reproductive rights."
+            }
+          }
+        },
+        {
+          "slug": "robert-chili-hicks",
+          "summary": "Hicks is a Stanwood city councilmember and Navy veteran emphasizing lower taxes and regulation, public safety, parental involvement, transportation, and small business.",
+          "highlights": [
+            "Supports lower taxes, public safety, and parental involvement [S2]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Hicks explicitly emphasizes lower taxes."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He emphasizes public safety without a detailed enforcement mechanism."
+            },
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He has current city council experience but no documented state legislative tenure.",
+              "adjusted_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-10-state-representative-position-2",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-10-state-representative-position-2/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "Candidates differ in documented experience and policy priorities; unsupported axes are omitted.",
+      "candidates": [
+        {
+          "slug": "carrie-r-kennedy",
+          "summary": "Candidate profile and positions are summarized from the cited dossier.",
+          "highlights": [
+            "See the dossier for the documented background and positions [S1][S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement.",
+              "adjusted_by_refutation": true
+            },
+            "social": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement.",
+              "adjusted_by_refutation": true
+            },
+            "local-control": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Her opposition to state mandates and emphasis on parental authority favor decisions below the state level.",
+              "added_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "dave-paul",
+          "summary": "Candidate profile and positions are summarized from the cited dossier.",
+          "highlights": [
+            "See the dossier for the documented background and positions [S1][S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement."
+            },
+            "social": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement."
+            }
+          }
+        },
+        {
+          "slug": "tim-hazelo",
+          "summary": "Candidate profile and positions are summarized from the cited dossier.",
+          "highlights": [
+            "See the dossier for the documented background and positions [S1][S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement."
+            },
+            "climate": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement.",
+              "adjusted_by_refutation": true
+            },
+            "social": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement.",
+              "adjusted_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-12-state-representative-position-1",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-12-state-representative-position-1/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "Incumbent Brian Burnett faces challenger Stacy Willoughby.",
+      "candidates": [
+        {
+          "slug": "brian-burnett",
+          "summary": "Burnett is an incumbent representative and former Chelan County sheriff emphasizing public safety and fiscal restraint.",
+          "highlights": [
+            "Emphasizes public safety, tax and spending restraint, wildfire response, transportation, and rural development [S2]."
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Burnett explicitly emphasizes tax restraint."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He explicitly emphasizes spending restraint."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He is a former sheriff who explicitly emphasizes public safety.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He is an incumbent legislator and former county sheriff.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "stacy-willoughby",
+          "summary": "Willoughby is a challenger emphasizing affordability, education, health-care access, reproductive rights, and rural investment.",
+          "highlights": [
+            "Supports rural investment and reproductive rights [S2]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Willoughby explicitly calls for investment in rural communities."
+            },
+            "social": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "She explicitly supports reproductive rights."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-12-state-representative-position-2",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-12-state-representative-position-2/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "Candidates differ in documented experience and policy priorities; unsupported axes are omitted.",
+      "candidates": [
+        {
+          "slug": "adam-james",
+          "summary": "Candidate profile and positions are summarized from the cited dossier.",
+          "highlights": [
+            "See the dossier for the documented background and positions [S1][S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement."
+            },
+            "social": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement."
+            }
+          }
+        },
+        {
+          "slug": "maggie-adams",
+          "summary": "Candidate profile and positions are summarized from the cited dossier.",
+          "highlights": [
+            "See the dossier for the documented background and positions [S1][S2]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "mike-steele",
+          "summary": "Candidate profile and positions are summarized from the cited dossier.",
+          "highlights": [
+            "See the dossier for the documented background and positions [S1][S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement."
+            },
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Tax restraint is an explicit priority, though the dossier does not identify a specific tax cut.",
+              "added_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-13-state-representative-position-1",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-13-state-representative-position-1/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "Incumbent Tom Dent faces Juan \"Jerry\" Garcia.",
+      "candidates": [
+        {
+          "slug": "juan-jerry-garcia",
+          "summary": "Garcia's candidacy is verified, but the dossier contains no sufficiently detailed legislative platform.",
+          "highlights": [
+            "Official records verify his candidacy [S1][S2]."
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "tom-dent",
+          "summary": "Dent is an incumbent representative, farmer, pilot, and former law-enforcement officer.",
+          "highlights": [
+            "Emphasizes agriculture, wildfire and emergency response, public safety, aviation, water, and reduced regulation [S2]."
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Dent has law-enforcement experience and explicitly emphasizes public safety.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He is an incumbent legislator with prior law-enforcement experience."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-13-state-representative-position-2",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-13-state-representative-position-2/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "Candidates differ in documented experience and policy priorities; unsupported axes are omitted.",
+      "candidates": [
+        {
+          "slug": "deanna-martinez",
+          "summary": "Candidate profile and positions are summarized from the cited dossier.",
+          "highlights": [
+            "See the dossier for the documented background and positions [S1][S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement.",
+              "adjusted_by_refutation": true
+            },
+            "local-control": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement."
+            }
+          }
+        },
+        {
+          "slug": "don-myers",
+          "summary": "Candidate profile and positions are summarized from the cited dossier.",
+          "highlights": [
+            "See the dossier for the documented background and positions [S1][S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement.",
+              "adjusted_by_refutation": true
+            },
+            "local-control": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement."
+            }
+          }
+        },
+        {
+          "slug": "joshua-thompson",
+          "summary": "Candidate profile and positions are summarized from the cited dossier.",
+          "highlights": [
+            "See the dossier for the documented background and positions [S1][S2]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement.",
+              "adjusted_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-14-state-representative-position-1",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-14-state-representative-position-1/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "Candidates differ in documented experience and policy priorities; unsupported axes are omitted.",
+      "candidates": [
+        {
+          "slug": "chelsea-dimas",
+          "summary": "Candidate profile and positions are summarized from the cited dossier.",
+          "highlights": [
+            "See the dossier for the documented background and positions [S1][S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement.",
+              "adjusted_by_refutation": true
+            },
+            "immigration": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement."
+            }
+          }
+        },
+        {
+          "slug": "gloria-mendoza",
+          "summary": "Candidate profile and positions are summarized from the cited dossier.",
+          "highlights": [
+            "See the dossier for the documented background and positions [S1][S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement.",
+              "adjusted_by_refutation": true
+            },
+            "social": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement."
+            }
+          }
+        },
+        {
+          "slug": "william-chichenoff",
+          "summary": "Candidate profile and positions are summarized from the cited dossier.",
+          "highlights": [
+            "See the dossier for the documented background and positions [S1][S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement."
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "low",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-14-state-representative-position-2",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-14-state-representative-position-2/"
+      ],
+      "office_does": "State representatives write and vote on state laws and budgets, oversee state government, and represent their legislative district.",
+      "race_blurb": "Incumbent Deb Manjarrez faces Democratic challengers Ezequiel Morfin and Tony G Sandoval.",
+      "candidates": [
+        {
+          "slug": "deb-manjarrez",
+          "summary": "Manjarrez is the incumbent representative, a CPA and orchardist who emphasizes agriculture, affordability, public safety, education, and spending accountability.",
+          "highlights": [
+            "Serves as the incumbent representative with documented committee and legislative records [S1][S2]",
+            "Emphasizes agriculture, affordability, education, public safety, and accountable spending [S1][S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Accountable state spending is an explicit priority, though the dossier gives no detailed audit mechanism."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She is an incumbent with an accessible legislative record and substantial professional experience."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She explicitly emphasizes public safety, though the dossier gives no detailed enforcement proposal.",
+              "added_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "ezequiel-morfin",
+          "summary": "Morfin is a former Toppenish councilmember and planning commissioner who emphasizes workforce training, housing costs, and immigrant communities.",
+          "highlights": [
+            "Supports apprenticeship and workforce training and lower housing costs [S1]",
+            "Emphasizes advocacy for immigrant communities [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "His city-council and planning-commission service provide a local governing record."
+            },
+            "immigration": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Advocacy for immigrant communities supplies a protect-immigrants direction without a detailed enforcement policy."
+            }
+          }
+        },
+        {
+          "slug": "tony-g-sandoval",
+          "summary": "Sandoval brings management and regulatory-compliance experience and campaigns on practical, bipartisan state administration.",
+          "highlights": [
+            "Reports more than 30 years of community involvement and management experience [S1]",
+            "Emphasizes cross-party work and practical management [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He brings professional management experience but no documented elected or legislative record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-15-state-representative-position-1",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-15-state-representative-position-1/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "Incumbent Chris Corry faces former representative Jack McEntire.",
+      "candidates": [
+        {
+          "slug": "chris-corry",
+          "summary": "Corry is an incumbent representative and House deputy minority leader emphasizing fiscal restraint, public safety, parental rights, housing supply, and less regulation.",
+          "highlights": [
+            "Supports tax and spending restraint, public safety, parental rights, and housing supply [S2]."
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Corry explicitly emphasizes tax restraint."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He explicitly emphasizes spending restraint."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He emphasizes housing supply and less regulation."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He explicitly emphasizes public safety."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He is an incumbent legislator and House deputy minority leader."
+            },
+            "social": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He explicitly emphasizes parental rights."
+            }
+          }
+        },
+        {
+          "slug": "jack-mcentire",
+          "summary": "McEntire is an Army veteran and former state representative seeking to return to the House.",
+          "highlights": [
+            "Emphasizes agriculture, veterans, infrastructure, public safety, and fiscal restraint [S2]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He explicitly emphasizes fiscal restraint."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He explicitly emphasizes public safety."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He is a former state representative.",
+              "adjusted_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-15-state-representative-position-2",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-15-state-representative-position-2/"
+      ],
+      "office_does": "State representatives write and vote on state laws and budgets, oversee state government, and represent their legislative district.",
+      "race_blurb": "The open-seat primary includes housing-authority chair Chase Foster, anti-establishment candidate Liz Hallock, and Yakima Councilmember Reedy Berg.",
+      "candidates": [
+        {
+          "slug": "chase-foster",
+          "summary": "Foster chairs the Kennewick Housing Authority and emphasizes housing supply, public safety, education, and limits on taxes and spending.",
+          "highlights": [
+            "Supports housing supply and affordability [S1]",
+            "Calls for limits on taxes and state spending [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He explicitly calls for limits on taxes."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He explicitly calls for limits on state spending."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Housing supply is his stated mechanism for affordability."
+            },
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Housing-authority governance supplies an institutional record, while he has no legislative tenure."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He explicitly emphasizes public safety without a detailed prevention-oriented mechanism.",
+              "added_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "liz-hallock",
+          "summary": "Hallock is a repeat candidate running an anti-establishment campaign focused on accountability and concentrated political power.",
+          "highlights": [
+            "Calls for government accountability [S1]",
+            "Campaigns against concentrated political power [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "reform": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Limiting concentrated political power is the central stated purpose of her anti-establishment campaign."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She presents as an outsider and the dossier establishes no prior elected office."
+            }
+          }
+        },
+        {
+          "slug": "reedy-berg",
+          "summary": "Berg is a Yakima city councilmember who emphasizes infrastructure, affordability, public safety, and economic opportunity.",
+          "highlights": [
+            "Serves on the Yakima City Council [S1]",
+            "Emphasizes infrastructure, affordability, and economic opportunity [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Current city-council service supplies a public governing record."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He explicitly emphasizes public safety without a detailed prevention-oriented mechanism.",
+              "added_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
       "contest_slug": "legislative-district-16-state-representative-position-1",
       "scored_at": "2026-07-17",
       "derived_from": [
@@ -3364,6 +4621,198 @@
                 "S2"
               ],
               "basis": "The dossier directly supports this experience placement."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-17-state-representative-position-1",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-17-state-representative-position-1/"
+      ],
+      "office_does": "State representatives write and vote on state laws and budgets, oversee state government, and represent their legislative district.",
+      "race_blurb": "Incumbent Kevin Waters faces health-care professional Ben Christly and Army veteran and small-business owner Thomas Everett Haynes.",
+      "candidates": [
+        {
+          "slug": "ben-christly",
+          "summary": "Christly is a charter-review commissioner, Navy veteran, nurse, and former business owner who emphasizes schools, housing, health care, and bipartisan work.",
+          "highlights": [
+            "Serves on the Clark County Charter Review Commission [S1]",
+            "Supports more housing, affordable health care, schools, and skills training [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "housing": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He calls for more housing, giving a supply direction without a specific policy mechanism."
+            },
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "His charter-review public service and extensive professional record balance new legislative perspective with institutional experience."
+            }
+          }
+        },
+        {
+          "slug": "kevin-waters",
+          "summary": "Waters is the incumbent representative and former port commissioner and economic-development leader focused on infrastructure, housing, schools, and cost relief.",
+          "highlights": [
+            "Offers legislative and prior port-commission experience [S1][S2]",
+            "Emphasizes roads, bridges, broadband, affordable housing, and cost relief [S1][S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He combines incumbency with prior port governance and economic-development leadership."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He explicitly supports law enforcement and local safety programs.",
+              "added_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "thomas-everett-haynes",
+          "summary": "Haynes is an Army veteran and cybersecurity and small-business professional who emphasizes gun rights and refuses PAC money.",
+          "highlights": [
+            "Strongly supports gun rights [S1]",
+            "Says he will not take PAC money [S1]",
+            "Lists affordable health care, schools, and housing as priorities [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "reform": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "His explicit refusal of PAC money directly matches the reform pole."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He brings military, technical, and business experience but no documented elected record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-17-state-representative-position-2",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-17-state-representative-position-2/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "Incumbent David Stuebe faces community advocate Diana H. Perez.",
+      "candidates": [
+        {
+          "slug": "david-stuebe",
+          "summary": "Stuebe is an incumbent representative, Washougal mayor, Army veteran, and former law-enforcement officer.",
+          "highlights": [
+            "Emphasizes public safety, veterans, transportation, affordability, tax restraint, and accountable government [S2]."
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Stuebe explicitly emphasizes tax restraint."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He emphasizes accountable government without a detailed spending proposal."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He has law-enforcement experience and explicitly emphasizes public safety.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He is an incumbent representative and mayor with prior law-enforcement experience.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "diana-h-perez",
+          "summary": "Perez is a community advocate and repeat legislative candidate emphasizing health care, housing, education, reproductive rights, and environmental protection.",
+          "highlights": [
+            "Supports reproductive rights and environmental protection [S2]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Perez explicitly emphasizes environmental protection."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She is a repeat candidate and community advocate with no documented elected tenure."
+            },
+            "social": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "She explicitly supports reproductive rights."
             }
           }
         }
@@ -3515,6 +4964,222 @@
                 "S2"
               ],
               "basis": "The dossier directly supports this experience placement."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-19-state-representative-position-1",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-19-state-representative-position-1/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "Incumbent Jim Walsh faces challenger Kevin Moynihan.",
+      "candidates": [
+        {
+          "slug": "jim-walsh",
+          "summary": "Walsh is an incumbent representative, publisher, and House Republican leader emphasizing fiscal restraint, parental rights, public safety, rural industry, and limits on mandates.",
+          "highlights": [
+            "Supports lower taxes and spending, parental rights, public safety, and limits on state mandates [S2]."
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Walsh explicitly emphasizes lower taxes."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He explicitly emphasizes lower spending."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He explicitly emphasizes public safety."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He is an incumbent legislator and House Republican leader."
+            },
+            "local-control": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "His emphasis on limiting state mandates aligns with local control."
+            },
+            "social": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He explicitly emphasizes parental rights."
+            }
+          }
+        },
+        {
+          "slug": "kevin-moynihan",
+          "summary": "Moynihan is a challenger emphasizing affordability, labor and working families, health care, education, housing, and reproductive rights.",
+          "highlights": [
+            "Supports working families and reproductive rights [S2]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "social": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He explicitly supports reproductive rights."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-19-state-representative-position-2",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-19-state-representative-position-2/"
+      ],
+      "office_does": "State representatives write and vote on state laws and budgets, oversee state government, and represent their legislative district.",
+      "race_blurb": "Incumbent Joel McEntire faces educator Daniel William Bradley, natural-resources worker Jimi O'Hagan, and labor leader Terry Carlson.",
+      "candidates": [
+        {
+          "slug": "daniel-william-bradley",
+          "summary": "Bradley is an educator and public employee running on traceable spending, measurable results, and taxpayer protection.",
+          "highlights": [
+            "Calls for transparent and traceable public spending [S1]",
+            "Emphasizes measurable results and taxpayer protection [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "His campaign centers on tracing spending and demanding measurable results before more expenditure."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He brings education and public-work experience but no documented elected record."
+            }
+          }
+        },
+        {
+          "slug": "jimi-o-hagan",
+          "summary": "O'Hagan has farming, fishing, forestry, and construction experience and calls for investigations into alleged official corruption.",
+          "highlights": [
+            "Calls for legislative and grand-jury investigations of alleged corruption [S1]",
+            "The dossier notes those allegations were not independently substantiated [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "reform": {
+              "score": 1,
+              "confidence": "low",
+              "citations": [
+                "S1"
+              ],
+              "basis": "His focus on investigating official corruption supplies an accountability direction, but no broader structural reform is specified."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "His professional background is outside elected government."
+            }
+          }
+        },
+        {
+          "slug": "joel-mcentire",
+          "summary": "McEntire is the incumbent representative, Marine veteran, and educator who emphasizes fiscal restraint, lower taxes, business growth, and infrastructure.",
+          "highlights": [
+            "Supports limiting taxes and restraining spending [S1][S2]",
+            "Offers an incumbent legislative record [S1][S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He explicitly supports limiting taxes and criticizes recent tax increases."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Fiscal restraint and insufficient benefit from recent spending are central stated positions."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He is an incumbent with accessible voting, committee, and sponsorship records."
+            }
+          }
+        },
+        {
+          "slug": "terry-carlson",
+          "summary": "Carlson is a longtime timber worker and labor leader who emphasizes affordability, schools, workers, families, and accountable leadership.",
+          "highlights": [
+            "Leads regional and local labor organizations [S1]",
+            "Emphasizes affordability, economic growth, schools, workers, families, and seniors [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He brings substantial labor leadership but no documented elected or legislative record."
             }
           }
         }
@@ -4509,6 +6174,68 @@
       ]
     },
     {
+      "contest_slug": "legislative-district-24-state-representative-position-1",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-24-state-representative-position-1/"
+      ],
+      "office_does": "State representatives write and vote on state laws and budgets, oversee state government, and represent their legislative district.",
+      "race_blurb": "Incumbent Adam Bernbaum faces Aiden I.R. Hamilton, Eric W. Pratt, and Ted Bowen; the approved dossiers contain no substantive platforms for the three challengers.",
+      "candidates": [
+        {
+          "slug": "adam-bernbaum",
+          "summary": "Bernbaum is the incumbent District 24 representative with an accessible committee, voting, and bill-sponsorship record.",
+          "highlights": [
+            "Serves as the incumbent representative [S1][S2]",
+            "His legislative profile provides committee, voting, and sponsorship records [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Incumbency supplies a state legislative record, though the dossier does not establish long tenure or major enacted accomplishments."
+            }
+          }
+        },
+        {
+          "slug": "aiden-i-r-hamilton",
+          "summary": "Hamilton is a candidate for District 24 Position 1; the approved dossier establishes no substantive platform or prior elected record.",
+          "highlights": [
+            "Official election records verify his candidacy [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "eric-w-pratt",
+          "summary": "Pratt is a candidate for District 24 Position 1; the approved dossier establishes no substantive platform or prior elected record.",
+          "highlights": [
+            "Official election records verify his candidacy [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "ted-bowen",
+          "summary": "Bowen is a candidate for District 24 Position 1; the approved dossier establishes no substantive platform or prior elected record.",
+          "highlights": [
+            "Official election records verify his candidacy [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
       "contest_slug": "legislative-district-25-state-representative-position-1",
       "scored_at": "2026-07-17",
       "derived_from": [
@@ -5224,6 +6951,212 @@
                 "S2"
               ],
               "basis": "He is a repeat candidate with professional experience but no documented elected record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-31-state-representative-position-1",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-31-state-representative-position-1/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "Candidates differ in documented experience and policy priorities; unsupported axes are omitted.",
+      "candidates": [
+        {
+          "slug": "drew-stokesbary",
+          "summary": "Candidate profile and positions are summarized from the cited dossier.",
+          "highlights": [
+            "See the dossier for the documented background and positions [S1][S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement."
+            }
+          }
+        },
+        {
+          "slug": "stephen-szczurko-walton",
+          "summary": "Candidate profile and positions are summarized from the cited dossier.",
+          "highlights": [
+            "See the dossier for the documented background and positions [S1][S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement.",
+              "adjusted_by_refutation": true
+            },
+            "healthcare": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He explicitly supports housing supply, placing his stated mechanism on the supply side.",
+              "added_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-31-state-representative-position-2",
+      "scored_at": "2026-07-17",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-31-state-representative-position-2/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "Candidates differ in documented experience and policy priorities; unsupported axes are omitted.",
+      "candidates": [
+        {
+          "slug": "john-bielka",
+          "summary": "Candidate profile and positions are summarized from the cited dossier.",
+          "highlights": [
+            "See the dossier for the documented background and positions [S1][S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "joshua-penner",
+          "summary": "Candidate profile and positions are summarized from the cited dossier.",
+          "highlights": [
+            "See the dossier for the documented background and positions [S1][S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement.",
+              "adjusted_by_refutation": true
+            },
+            "local-control": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier directly supports this rubric placement."
             }
           }
         }
