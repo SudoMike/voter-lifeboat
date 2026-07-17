@@ -1,0 +1,16 @@
+{
+  "county": "spokane",
+  "script": "pipeline/extract_pdf_text.mjs",
+  "files": [
+    {
+      "source_pointer": "data/washington-state/counties/spokane/raw/spokane/local-voters-pamphlet.pdf.url",
+      "url": "https://www.spokanecounty.gov/DocumentCenter/View/72507/August-4-2026-Primary-Election-Voters-Pamphlet-PDF",
+      "output": "data/washington-state/counties/spokane/interim/pdf-text/local-voters-pamphlet.txt"
+    },
+    {
+      "source_pointer": "data/washington-state/counties/spokane/raw/spokane/sample-ballot.pdf.url",
+      "url": "https://www.spokanecounty.gov/DocumentCenter/View/72492/August-4-2026-Primary-Election-Sample-Ballot-PDF",
+      "output": "data/washington-state/counties/spokane/interim/pdf-text/sample-ballot.txt"
+    }
+  ]
+}

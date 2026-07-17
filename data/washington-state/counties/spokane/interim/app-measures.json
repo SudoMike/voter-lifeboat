@@ -1,0 +1,43 @@
+{
+  "county": "spokane",
+  "script": "pipeline/build_spokane_lite_data.py",
+  "derived_from": [
+    "data/washington-state/counties/spokane/interim/pdf-text/sample-ballot.txt",
+    "data/washington-state/counties/spokane/interim/pdf-text/local-voters-pamphlet.txt"
+  ],
+  "coverage": "partial_county",
+  "measures": [
+    {
+      "slug": "spokane-city-of-cheney-proposition-no-1",
+      "owner": "spokane",
+      "jurisdiction": "City of Cheney",
+      "proposition": "Proposition No. 1",
+      "title": "Renewal of Residential Street Utility Tax",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "spokane",
+        "layer": "CITY",
+        "value": "Cheney"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 46
+        }
+      ],
+      "what_it_does": "Renews Cheney's tax on electrical energy and natural gas businesses to 16.75% of gross revenue for 14 years, with proceeds used to repair streets and sidewalks.",
+      "cost_line": "Renews a utility tax rate six percentage points above the otherwise authorized 10.75% rate for 14 years.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES renews a utility tax for street and sidewalk repair.",
+          "citations": [
+            "Spokane sample ballot"
+          ]
+        }
+      }
+    }
+  ]
+}
