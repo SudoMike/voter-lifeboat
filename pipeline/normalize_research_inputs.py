@@ -62,6 +62,29 @@ def _shared_key(contest):
     return ("State", int(match.group(1)), seat)
 
 
+def _merge_shared_contest(shared, key, contest, county):
+    """Union one county's roster into a shared contest without aliasing input.
+
+    County ballot packages can contain only the candidates visible in that
+    county.  Shared races therefore need a stable union, not a representative
+    county roster.
+    """
+    unit = shared.get(key)
+    if unit is None:
+        unit = {
+            **contest,
+            "candidates": [],
+            "counties": [],
+        }
+        shared[key] = unit
+    unit["counties"].append(county)
+    known = {candidate["slug"] for candidate in unit["candidates"]}
+    unit["candidates"].extend(
+        dict(candidate) for candidate in contest["candidates"]
+        if candidate["slug"] not in known
+    )
+
+
 def normalize():
     shared = {}
     normalized_counties = 0
@@ -91,10 +114,7 @@ def normalize():
             key = _shared_key(contest)
             if key is None:
                 continue
-            unit = shared.setdefault(key, {**contest, "counties": []})
-            unit["counties"].append(county_dir.name)
-            known = {candidate["slug"] for candidate in unit["candidates"]}
-            unit["candidates"].extend(c for c in contest["candidates"] if c["slug"] not in known)
+            _merge_shared_contest(shared, key, contest, county_dir.name)
 
     statewide_contests = []
     for key, contest in sorted(shared.items()):

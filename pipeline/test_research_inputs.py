@@ -27,6 +27,24 @@ class ResearchInputTest(unittest.TestCase):
         self.assertEqual(len(contests), len({normalize_research_inputs._shared_key(c) for c in contests}))
         self.assertTrue(all(c["counties"] == sorted(set(c["counties"])) for c in contests))
 
+    def test_shared_contest_unions_partial_county_rosters(self):
+        shared = {}
+        key = ("State", 99, "representative-position-1")
+        first = {
+            "category": "State", "office": "State Representative Pos. 1",
+            "district": "Legislative District 99", "slug": "first",
+            "candidates": [{"slug": "alpha", "name": "Alpha", "party_preference": None}],
+        }
+        second = {
+            **first, "slug": "second",
+            "candidates": [{"slug": "beta", "name": "Beta", "party_preference": None}],
+        }
+        normalize_research_inputs._merge_shared_contest(shared, key, first, "alpha-county")
+        normalize_research_inputs._merge_shared_contest(shared, key, second, "beta-county")
+        self.assertEqual(["alpha", "beta"], [c["slug"] for c in shared[key]["candidates"]])
+        self.assertEqual(["alpha-county", "beta-county"], shared[key]["counties"])
+        self.assertEqual(["alpha"], [c["slug"] for c in first["candidates"]])
+
     def test_research_plan_omits_uncontested(self):
         build_research_plan.build("statewide")
         plan = json.loads((ROOT / "data/washington-state/statewide/interim/research-plan.json").read_text())

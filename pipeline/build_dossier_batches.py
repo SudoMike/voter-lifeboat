@@ -58,7 +58,9 @@ def fed_state_key(c):
         if not n:
             return None
         blob = c["office"] + " " + c["district"]
-        seat = "SEN" if "Senator" in blob else ("REP1" if re.search(r"Pos.*1", blob) else "REP2")
+        seat = "SEN" if "Senator" in blob else (
+            "REP1" if re.search(r"Pos(?:ition)?\.?\s*1\b", blob, re.I) else "REP2"
+        )
         return ("State", f"LD{n.group(1)}", seat)
     return None
 
