@@ -1,0 +1,38 @@
+{
+  "contest_slug": "legislative-district-21-state-senator",
+  "scored_at": "2026-07-17",
+  "derived_from": ["data/washington-state/statewide/dossiers/legislative-district-21-state-senator/"],
+  "office_does": "A state senator writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+  "race_blurb": "A long-serving senator emphasizing housing, infrastructure, and civil protections faces a former councilmember emphasizing lower taxes, spending restraint, public safety, and parental rights.",
+  "candidates": [
+    {
+      "slug": "marko-liias",
+      "summary": "Liias is a long-serving state senator and transportation chair supporting housing and infrastructure investment, targeted tax relief, and LGBTQ and immigrant protections.",
+      "highlights": ["Supports affordable housing near transit, infrastructure, tax relief, and a working-family tax credit [S1]", "Supports childcare and LGBTQ and immigrant protections [S1]", "Reports securing housing resources and chairing transportation investment [S1]"],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": -1, "confidence": "medium", "citations": ["S1"], "basis": "He supports targeted small-business tax relief and a working-family tax credit."},
+        "spending": {"score": 1, "confidence": "high", "citations": ["S1"], "basis": "He supports and reports a record of housing and transportation investment."},
+        "housing": {"score": 1, "confidence": "medium", "citations": ["S1"], "basis": "He supports affordable housing near transit and reports securing housing resources."},
+        "experience": {"score": -2, "confidence": "high", "citations": ["S1"], "basis": "He has served in the Senate since 2014 after service as a representative and councilmember."},
+        "immigration": {"score": 2, "confidence": "medium", "citations": ["S1"], "basis": "He explicitly supports protections for immigrants."},
+        "social": {"score": 2, "confidence": "medium", "citations": ["S1"], "basis": "He explicitly supports LGBTQ protections."}
+      }
+    },
+    {
+      "slug": "riaz-khan",
+      "summary": "Khan is a former councilmember, labor representative, and business founder emphasizing lower taxes, spending restraint, public safety, and parental rights.",
+      "highlights": ["Supports lower taxes, spending restraint, and transparency [S1]", "Supports public safety, affordable housing, education, and parental rights [S1]"],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": -1, "confidence": "medium", "citations": ["S1"], "basis": "He explicitly supports lower taxes."},
+        "spending": {"score": -1, "confidence": "medium", "citations": ["S1"], "basis": "He explicitly supports spending restraint and transparency."},
+        "safety": {"score": -1, "confidence": "medium", "citations": ["S1"], "basis": "He makes public safety a priority, though the dossier provides no detailed enforcement proposal."},
+        "experience": {"score": 0, "confidence": "medium", "citations": ["S1"], "basis": "He combines former city-council service with private-sector and labor experience outside the Legislature."},
+        "social": {"score": -1, "confidence": "medium", "citations": ["S1"], "basis": "He explicitly supports parental rights."}
+      }
+    }
+  ]
+}

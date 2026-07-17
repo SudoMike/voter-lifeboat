@@ -1,0 +1,33 @@
+{
+  "contest_slug": "legislative-district-20-state-representative-position-1",
+  "scored_at": "2026-07-17",
+  "derived_from": ["data/washington-state/statewide/dossiers/legislative-district-20-state-representative-position-1/"],
+  "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+  "race_blurb": "A rural public-investment advocate challenges an incumbent legislator emphasizing tax relief, public safety, and accountable government.",
+  "candidates": [
+    {
+      "slug": "andy-zahn",
+      "summary": "Zahn is a writer and photographer advocating rural public investment, union jobs, transit, sustainable development, and limits on data centers.",
+      "highlights": ["Supports rural public investment, union jobs, parks, housing, and public transit [S1]", "Supports sustainable materials and stopping data centers [S1]"],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "spending": {"score": 2, "confidence": "medium", "citations": ["S1"], "basis": "He explicitly centers rural public investment, parks, public transit, and health care."},
+        "experience": {"score": 2, "confidence": "high", "citations": ["S1"], "basis": "He is a writer and photographer without a documented elected or institutional record."},
+        "tech": {"score": 2, "confidence": "high", "citations": ["S1"], "basis": "He explicitly supports stopping data centers."}
+      }
+    },
+    {
+      "slug": "peter-abbarno",
+      "summary": "Abbarno is an incumbent state representative, former councilmember, attorney, and small-business owner emphasizing tax relief and public safety.",
+      "highlights": ["Supports tax relief and accountable government [S1]", "Supports public safety and economic and educational opportunity [S1]"],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": -1, "confidence": "medium", "citations": ["S1"], "basis": "He explicitly supports tax relief."},
+        "safety": {"score": -1, "confidence": "medium", "citations": ["S1"], "basis": "He makes public safety a stated priority, though the dossier provides no detailed enforcement proposal."},
+        "experience": {"score": -2, "confidence": "high", "citations": ["S1"], "basis": "He has served as a state representative since 2021 and previously served on the Centralia City Council."}
+      }
+    }
+  ]
+}
