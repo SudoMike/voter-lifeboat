@@ -4,14 +4,14 @@
   ],
   "script": "pipeline/build_dossier_batches.py",
   "batch_size_target": 50,
-  "total_units": 132,
-  "total_dossiers": 380,
-  "total_batches": 8,
+  "total_units": 112,
+  "total_dossiers": 327,
+  "total_batches": 7,
   "batches": [
     {
       "batch": 1,
       "dossiers": 51,
-      "races": 22,
+      "races": 19,
       "units": [
         {
           "id": "State/LD1/REP1",
@@ -81,36 +81,6 @@
           ]
         },
         {
-          "id": "State/LD16/REP1",
-          "kind": "shared",
-          "label": "Legislative District 16 State Representative Pos. 1",
-          "candidates": [
-            "kyle-palmer",
-            "mark-klicker"
-          ],
-          "counties": [
-            "benton",
-            "franklin",
-            "grant",
-            "walla-walla"
-          ]
-        },
-        {
-          "id": "State/LD16/REP2",
-          "kind": "shared",
-          "label": "Legislative District 16 State Representative Pos. 2",
-          "candidates": [
-            "derek-sarley",
-            "skyler-rude"
-          ],
-          "counties": [
-            "benton",
-            "franklin",
-            "grant",
-            "walla-walla"
-          ]
-        },
-        {
           "id": "State/LD17/REP2",
           "kind": "shared",
           "label": "Legislative District 17 State Representative Pos. 2",
@@ -122,30 +92,6 @@
             "clark",
             "klickitat",
             "skamania"
-          ]
-        },
-        {
-          "id": "State/LD18/REP1",
-          "kind": "shared",
-          "label": "Legislative District 18 State Representative Pos. 1",
-          "candidates": [
-            "randi-l-knott",
-            "stephanie-mcclintock"
-          ],
-          "counties": [
-            "clark"
-          ]
-        },
-        {
-          "id": "State/LD18/REP2",
-          "kind": "shared",
-          "label": "Legislative District 18 State Representative Pos. 2",
-          "candidates": [
-            "deken-letinich",
-            "john-ley"
-          ],
-          "counties": [
-            "clark"
           ]
         },
         {
@@ -163,30 +109,6 @@
             "pacific",
             "thurston",
             "wahkiakum"
-          ]
-        },
-        {
-          "id": "State/LD21/REP1",
-          "kind": "shared",
-          "label": "Legislative District 21 State Representative Pos. 1",
-          "candidates": [
-            "jason-moon",
-            "strom-peterson"
-          ],
-          "counties": [
-            "snohomish"
-          ]
-        },
-        {
-          "id": "State/LD21/REP2",
-          "kind": "shared",
-          "label": "Legislative District 21 State Representative Pos. 2",
-          "candidates": [
-            "bruce-guthrie",
-            "lillian-ortiz-self"
-          ],
-          "counties": [
-            "snohomish"
           ]
         },
         {
@@ -318,198 +240,6 @@
             "klickitat",
             "skamania"
           ]
-        }
-      ]
-    },
-    {
-      "batch": 2,
-      "dossiers": 53,
-      "races": 17,
-      "units": [
-        {
-          "id": "State/LD26/REP1",
-          "kind": "shared",
-          "label": "Legislative District 26 State Representative Pos. 1",
-          "candidates": [
-            "adison-richards",
-            "david-olson",
-            "natalie-bornfleth"
-          ],
-          "counties": [
-            "kitsap",
-            "pierce"
-          ]
-        },
-        {
-          "id": "State/LD3/REP1",
-          "kind": "shared",
-          "label": "Legislative District 3 State Representative Pos. 1",
-          "candidates": [
-            "john-kness",
-            "natasha-hill",
-            "tony-kiepe"
-          ],
-          "counties": [
-            "spokane"
-          ]
-        },
-        {
-          "id": "State/LD32/SEN",
-          "kind": "shared",
-          "label": "Legislative District 32 State Senator",
-          "candidates": [
-            "cindy-ryu",
-            "ira-mcbee",
-            "jesse-salomon"
-          ],
-          "counties": [
-            "snohomish"
-          ]
-        },
-        {
-          "id": "State/LD35/REP1",
-          "kind": "shared",
-          "label": "Legislative District 35 State Representative Pos. 1",
-          "candidates": [
-            "dan-griffey",
-            "jim-pierson",
-            "shaena-garberich"
-          ],
-          "counties": [
-            "kitsap",
-            "mason",
-            "thurston"
-          ]
-        },
-        {
-          "id": "State/LD38/REP1",
-          "kind": "shared",
-          "label": "Legislative District 38 State Representative Pos. 1",
-          "candidates": [
-            "annie-fitzgerald",
-            "julio-cortes",
-            "thomas-jeff-kelly"
-          ],
-          "counties": [
-            "snohomish"
-          ]
-        },
-        {
-          "id": "State/LD39/REP1",
-          "kind": "shared",
-          "label": "Legislative District 39 State Representative Pos. 1",
-          "candidates": [
-            "dusty-wisniew",
-            "kathryn-lewandowsky",
-            "sam-low"
-          ],
-          "counties": [
-            "skagit",
-            "snohomish"
-          ]
-        },
-        {
-          "id": "State/LD4/REP2",
-          "kind": "shared",
-          "label": "Legislative District 4 State Representative Pos. 2",
-          "candidates": [
-            "bob-curtis",
-            "rob-chase",
-            "rob-tupper"
-          ],
-          "counties": [
-            "spokane"
-          ]
-        },
-        {
-          "id": "State/LD49/REP1",
-          "kind": "shared",
-          "label": "Legislative District 49 State Representative Pos. 1",
-          "candidates": [
-            "kim-d-harless",
-            "mike-pond",
-            "sarah-mittelman"
-          ],
-          "counties": [
-            "clark"
-          ]
-        },
-        {
-          "id": "State/LD6/REP2",
-          "kind": "shared",
-          "label": "Legislative District 6 State Representative Pos. 2",
-          "candidates": [
-            "aaron-m-croft",
-            "jonathan-bingle",
-            "julia-payne"
-          ],
-          "counties": [
-            "spokane"
-          ]
-        },
-        {
-          "id": "skagit-skagit-county-auditor",
-          "kind": "local",
-          "label": "skagit: Skagit County Auditor",
-          "candidates": [
-            "jeremy-harrison-smith",
-            "mark-hulst"
-          ],
-          "counties": [
-            "skagit"
-          ]
-        },
-        {
-          "id": "skagit-skagit-county-commissioner-district-3-commissioner-district-3",
-          "kind": "local",
-          "label": "skagit: Skagit County Commissioner District 3 Commissioner District 3",
-          "candidates": [
-            "connie-krier",
-            "joe-burns",
-            "keith-l-wagoner"
-          ],
-          "counties": [
-            "skagit"
-          ]
-        },
-        {
-          "id": "benton-city-of-richland-council-pos-4",
-          "kind": "local",
-          "label": "benton: City Of Richland Council Pos. 4",
-          "candidates": [
-            "david-tveraas",
-            "kyle-saltz",
-            "mary-s-lipton",
-            "ragan-faylor",
-            "todd-samuel"
-          ],
-          "counties": [
-            "benton"
-          ]
-        },
-        {
-          "id": "cowlitz-cowlitz-county-clerk",
-          "kind": "local",
-          "label": "cowlitz: Cowlitz County Clerk",
-          "candidates": [
-            "ashley-white",
-            "staci-myklebust"
-          ],
-          "counties": [
-            "cowlitz"
-          ]
-        },
-        {
-          "id": "cowlitz-cowlitz-county-commissioner-district-3-commissioner-district-3",
-          "kind": "local",
-          "label": "cowlitz: Cowlitz County Commissioner District 3 Commissioner District 3",
-          "candidates": [
-            "chelsea-chandler",
-            "richard-dahl"
-          ],
-          "counties": [
-            "cowlitz"
-          ]
         },
         {
           "id": "State/LD1/REP2",
@@ -563,7 +293,7 @@
       ]
     },
     {
-      "batch": 3,
+      "batch": 2,
       "dossiers": 52,
       "races": 15,
       "units": [
@@ -784,7 +514,7 @@
       ]
     },
     {
-      "batch": 4,
+      "batch": 3,
       "dossiers": 54,
       "races": 19,
       "units": [
@@ -1035,7 +765,7 @@
       ]
     },
     {
-      "batch": 5,
+      "batch": 4,
       "dossiers": 51,
       "races": 17,
       "units": [
@@ -1263,7 +993,7 @@
       ]
     },
     {
-      "batch": 6,
+      "batch": 5,
       "dossiers": 50,
       "races": 16,
       "units": [
@@ -1480,7 +1210,7 @@
       ]
     },
     {
-      "batch": 7,
+      "batch": 6,
       "dossiers": 51,
       "races": 18,
       "units": [
@@ -1718,7 +1448,7 @@
       ]
     },
     {
-      "batch": 8,
+      "batch": 7,
       "dossiers": 18,
       "races": 8,
       "units": [

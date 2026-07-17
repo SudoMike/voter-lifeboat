@@ -10,6 +10,8 @@
     "data/washington-state/counties/kitsap/scoring/refutations/measures.json",
     "data/washington-state/counties/pierce/scoring/measures.json",
     "data/washington-state/counties/pierce/scoring/refutations/measures.json",
+    "data/washington-state/counties/skagit/scoring/measures.json",
+    "data/washington-state/counties/skagit/scoring/refutations/measures.json",
     "data/washington-state/counties/snohomish/scoring/measures.json",
     "data/washington-state/counties/snohomish/scoring/refutations/measures.json",
     "data/washington-state/counties/spokane/scoring/measures.json",
@@ -412,6 +414,88 @@
         }
       },
       "sources_note": "Official pamphlet ballot title and committee statement (S1) and District Resolution No. 444 as summarized in the ballot title (S2)."
+    },
+    {
+      "slug": "skagit-darrington-school-district-no-330-proposition-no-1",
+      "what_it_does": "Replaces an expiring school operations levy with a four-year levy collecting up to $950,000 annually from 2027 through 2030 for staffing, student programs, transportation, supplies, training, and other operations not fully state-funded.",
+      "cost_line": "Estimated rates decline from $1.24 per $1,000 of assessed value in 2027 to $1.02 in 2030; supporters describe it as a no-increase replacement.",
+      "pro_summary": "Supporters say the replacement preserves athletics, paraeducators, transportation, maintenance, and other school and community-center services without increasing the fixed annual collection.",
+      "con_summary": "Opponents say compensation costs and academic results warrant rejecting the levy and forcing the district to prioritize spending and rebuild parent trust.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "YES continues a local property-tax levy for school operations, but replaces an expiring levy without increasing the fixed annual collection.",
+          "citations": [
+            "S1"
+          ]
+        },
+        "spending": {
+          "direction": 1,
+          "basis": "YES sustains staffing, student programs, transportation, and other operations, choosing continued public investment over the opposition's requested retrenchment.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official pamphlet ballot explanation and pro/con statements (S1)."
+    },
+    {
+      "slug": "skagit-skagit-county-fire-protection-district-no-8-proposition-no-1",
+      "what_it_does": "Restores the district's regular property-tax levy to no more than $1.25 per $1,000 in 2027, permits 3% annual growth for five years, and makes the final-year amount the later levy base for fire and EMS staffing and equipment.",
+      "cost_line": "About $180 annually on $500,000 assessed value, based on an initial increase of approximately $0.36 per $1,000.",
+      "pro_summary": "Supporters cite rising emergency calls and reduced volunteer availability and say the levy would add two full-time firefighters and help replace response vehicles.",
+      "con_summary": "No opposition statement was filed.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES raises the property-tax rate, allows above-default growth for five years, and permanently resets the levy base.",
+          "citations": [
+            "S1"
+          ]
+        },
+        "spending": {
+          "direction": 1,
+          "basis": "YES expands staffing and equipment investment to respond to higher call volume.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official pamphlet ballot explanation and supporting statement (S1); no opposition statement was filed."
+    },
+    {
+      "slug": "skagit-skagit-county-public-hospital-district-no-304-united-general-proposition-no-1",
+      "what_it_does": "Raises District 304's regular property-tax levy from about $0.09 to $0.50 per $1,000 beginning in 2027 and resets the later levy base to fund local prevention, nutrition, family, youth, mental-health, senior, and health-access programs.",
+      "cost_line": "About $17 per month on a $500,000 home, based on an increase of approximately $0.41 per $1,000.",
+      "pro_summary": "Supporters say stable local revenue would preserve and expand prevention and wellness programs while allowing residents to set local health priorities.",
+      "con_summary": "No opposition statement was filed.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES substantially raises the district's regular property-tax rate and permanently resets its levy base.",
+          "citations": [
+            "S1",
+            "S2"
+          ]
+        },
+        "spending": {
+          "direction": 2,
+          "basis": "YES provides stable expanded public funding across a broad range of health, prevention, and family programs.",
+          "citations": [
+            "S1",
+            "S2"
+          ]
+        },
+        "local-control": {
+          "direction": -1,
+          "basis": "YES raises revenue retained by the local hospital district so local residents can set health-service priorities rather than relying on restricted outside grants.",
+          "citations": [
+            "S1",
+            "S2"
+          ]
+        }
+      },
+      "sources_note": "Official pamphlet explanation and supporting statement (S1) plus the district's levy information (S2); no opposition statement was filed."
     },
     {
       "slug": "snohomish-city-of-everett-proposition-no-1",
