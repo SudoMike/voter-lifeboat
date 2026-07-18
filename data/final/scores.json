@@ -8,6 +8,10 @@
     "data/washington-state/counties/clark/scoring/refutations/*.json",
     "data/washington-state/counties/cowlitz/scoring/*.json",
     "data/washington-state/counties/cowlitz/scoring/refutations/*.json",
+    "data/washington-state/counties/franklin/scoring/*.json",
+    "data/washington-state/counties/franklin/scoring/refutations/*.json",
+    "data/washington-state/counties/grant/scoring/*.json",
+    "data/washington-state/counties/grant/scoring/refutations/*.json",
     "data/washington-state/counties/king/scoring/*.json",
     "data/washington-state/counties/king/scoring/refutations/*.json",
     "data/washington-state/counties/kitsap/scoring/*.json",
@@ -29,10 +33,10 @@
   ],
   "script": "pipeline/merge_scores.py",
   "verdict_stats": {
-    "upheld": 1417,
-    "adjust": 189,
-    "refuted": 87,
-    "missing_added": 24,
+    "upheld": 1516,
+    "adjust": 219,
+    "refuted": 92,
+    "missing_added": 25,
     "missing_dropped_low": 4
   },
   "contests": [
@@ -6236,6 +6240,234 @@
       ]
     },
     {
+      "contest_slug": "legislative-district-24-state-representative-position-2",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-24-state-representative-position-2/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "The field includes candidates with differing public records and documented policy priorities; unsupported axes are omitted.",
+      "candidates": [
+        {
+          "slug": "bradley-nemo-callaway",
+          "summary": "The candidate's documented background and priorities are summarized from the dossier.",
+          "highlights": [
+            "Dossier documents the candidate's relevant background and stated priorities [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "The cited dossier evidence directly supports this taxes placement."
+            },
+            "spending": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "The cited dossier evidence directly supports this spending placement."
+            },
+            "housing": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "The cited dossier evidence directly supports this housing placement."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "The cited dossier evidence directly supports this experience placement.",
+              "adjusted_by_refutation": true
+            },
+            "healthcare": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "The cited dossier evidence directly supports this healthcare placement."
+            }
+          }
+        },
+        {
+          "slug": "kaylee-kuehn",
+          "summary": "The candidate's documented background and priorities are summarized from the dossier.",
+          "highlights": [
+            "Dossier documents the candidate's relevant background and stated priorities [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "climate": {
+              "score": 1,
+              "confidence": "low",
+              "citations": [
+                "S1"
+              ],
+              "basis": "The cited dossier evidence directly supports this climate placement.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "The cited dossier evidence directly supports this experience placement.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "marcia-kelbon",
+          "summary": "The candidate's documented background and priorities are summarized from the dossier.",
+          "highlights": [
+            "Dossier documents the candidate's relevant background and stated priorities [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "The cited dossier evidence directly supports this taxes placement.",
+              "adjusted_by_refutation": true
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "The cited dossier evidence directly supports this housing placement."
+            },
+            "safety": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "The cited dossier evidence directly supports this safety placement."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "The cited dossier evidence directly supports this experience placement.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "mark-hodgson",
+          "summary": "The candidate's documented background and priorities are summarized from the dossier.",
+          "highlights": [
+            "Dossier documents the candidate's relevant background and stated priorities [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "The cited dossier evidence directly supports this spending placement."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "The cited dossier evidence directly supports this housing placement."
+            },
+            "safety": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "The cited dossier evidence directly supports this safety placement."
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "low",
+              "citations": [
+                "S1"
+              ],
+              "basis": "The cited dossier evidence directly supports this climate placement.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "The cited dossier evidence directly supports this experience placement.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "patrick-depoe",
+          "summary": "The candidate's documented background and priorities are summarized from the dossier.",
+          "highlights": [
+            "Dossier documents the candidate's relevant background and stated priorities [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 1,
+              "confidence": "low",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The cited dossier evidence directly supports this spending placement.",
+              "adjusted_by_refutation": true
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "low",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The cited dossier evidence directly supports this climate placement.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The cited dossier evidence directly supports this experience placement.",
+              "adjusted_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
       "contest_slug": "legislative-district-25-state-representative-position-1",
       "scored_at": "2026-07-17",
       "derived_from": [
@@ -6553,6 +6785,153 @@
                 "S2"
               ],
               "basis": "She has labor, education, military, and trades experience but no documented elected record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-26-state-representative-position-2",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-26-state-representative-position-2/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "The open-seat field includes nonprofit leader Katy Cornell, student leader Randy Phillips, educator Renee Hernandez Greenfield, and small-business owner Tedd Wetherbee.",
+      "candidates": [
+        {
+          "slug": "katy-cornell",
+          "summary": "Cornell is a nonprofit leader and pastor emphasizing affordability, safety, parental rights, small businesses, and fiscal restraint.",
+          "highlights": [
+            "Emphasizes public safety, parental rights, and fiscal restraint [S2]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Fiscal restraint supplies an audit-and-restrain direction without a detailed mechanism."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "She explicitly emphasizes public safety."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She brings nonprofit leadership but no documented elected or legislative record."
+            },
+            "social": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "She explicitly emphasizes parental rights."
+            }
+          }
+        },
+        {
+          "slug": "randy-phillips",
+          "summary": "Phillips is a college student-body and student-association leader emphasizing education affordability, workforce training, housing, representation, and accountability.",
+          "highlights": [
+            "Brings student-government leadership and emphasizes accountability [S2]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Government accountability supplies an oversight direction without a detailed spending proposal."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He has institutional student-governance leadership but no documented elected public-office record."
+            }
+          }
+        },
+        {
+          "slug": "renee-hernandez-greenfield",
+          "summary": "Hernandez Greenfield is an educator and community advocate emphasizing education, housing, health-care access, worker protections, reproductive rights, and ferries.",
+          "highlights": [
+            "Supports reproductive rights and public education [S2]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She brings education, advocacy, and party-organization experience but no documented elected record."
+            },
+            "social": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "She explicitly supports reproductive rights."
+            }
+          }
+        },
+        {
+          "slug": "tedd-wetherbee",
+          "summary": "Wetherbee is a small-business owner emphasizing affordability, transportation, reproductive rights, and environmental protection.",
+          "highlights": [
+            "Supports reproductive rights and environmental protection [S2]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He explicitly emphasizes environmental protection."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He brings business and advocacy experience but no documented public-office record."
+            },
+            "social": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He explicitly supports reproductive rights."
             }
           }
         }
@@ -6951,6 +7330,129 @@
                 "S2"
               ],
               "basis": "He is a repeat candidate with professional experience but no documented elected record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-3-state-representative-position-2",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-3-state-representative-position-2/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "The open-seat field includes Donovan Arnold DeLeon, Luc Jasmin III, Natalie Poulson, and Pam Kohlmeier.",
+      "candidates": [
+        {
+          "slug": "donovan-arnold-deleon",
+          "summary": "DeLeon is a paratransit operator, former business owner and caregiver, and first-time candidate emphasizing workers, health care, housing, transportation, and LGBTQ rights.",
+          "highlights": [
+            "Supports accessible transportation, worker protections, and LGBTQ civil rights [S2]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier explicitly identifies him as a first-time candidate with no elected record."
+            },
+            "social": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He explicitly emphasizes LGBTQ civil rights."
+            }
+          }
+        },
+        {
+          "slug": "luc-jasmin-iii",
+          "summary": "Jasmin is an early-learning business owner and education advocate emphasizing child care, public education, housing, small businesses, and opportunity.",
+          "highlights": [
+            "Emphasizes child-care access and public education [S2]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He has policy and community-organization experience but no documented elected tenure."
+            }
+          }
+        },
+        {
+          "slug": "natalie-poulson",
+          "summary": "Poulson emphasizes lower living costs, public safety, education, parental involvement, and accountable spending.",
+          "highlights": [
+            "Supports public safety, parental involvement, and accountable spending [S2]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "She explicitly emphasizes accountable state spending."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "She explicitly emphasizes public safety."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The dossier documents no elected or institutional public-office record."
+            }
+          }
+        },
+        {
+          "slug": "pam-kohlmeier",
+          "summary": "Kohlmeier is a physician, attorney, and former Medical Commission policy manager emphasizing health care, public health, evidence-based government, affordability, and reproductive rights.",
+          "highlights": [
+            "Brings health and regulatory-policy experience and supports reproductive rights [S2]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She has public-policy management experience but no documented elected tenure."
+            },
+            "social": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "She explicitly supports reproductive rights."
             }
           }
         }
@@ -7980,6 +8482,400 @@
       ]
     },
     {
+      "contest_slug": "legislative-district-39-state-representative-position-2",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-39-state-representative-position-2/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "The field includes court administrator Ida Keeley, ferry employee Lacey Sauvageau, former representative Robert J Sutherland, and former councilmember Steve Ewing.",
+      "candidates": [
+        {
+          "slug": "ida-keeley",
+          "summary": "Keeley is a superior-court administrator emphasizing affordability, public safety, reproductive rights, gun-violence prevention, labor, and environmental protection.",
+          "highlights": [
+            "Supports reproductive rights, gun-violence prevention, and environmental protection [S2]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "She explicitly emphasizes environmental protection."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She has court-administration experience but no documented elected tenure."
+            },
+            "social": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "She explicitly supports reproductive rights."
+            }
+          }
+        },
+        {
+          "slug": "lacey-sauvageau",
+          "summary": "Sauvageau is a ferry employee, former dispatcher and police volunteer, and union negotiator emphasizing ferries, safety, workers, affordability, and accountability.",
+          "highlights": [
+            "Brings emergency-response and labor experience and emphasizes accountable government [S2]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "She explicitly emphasizes accountable government."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "She explicitly emphasizes public safety and has emergency-dispatch experience."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She has operational and union experience but no documented elected tenure."
+            }
+          }
+        },
+        {
+          "slug": "robert-j-sutherland",
+          "summary": "Sutherland is a former state representative emphasizing lower taxes and spending, gun and property rights, public safety, parental rights, and limits on mandates.",
+          "highlights": [
+            "Supports lower taxes and spending, parental rights, public safety, and limits on state mandates [S2]."
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He explicitly emphasizes lower taxes."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He explicitly emphasizes lower spending."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He explicitly emphasizes public safety."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He is a former state representative seeking to return to office.",
+              "adjusted_by_refutation": true
+            },
+            "local-control": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "His opposition to state mandates supplies a local-control direction."
+            },
+            "social": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He explicitly emphasizes parental rights."
+            }
+          }
+        },
+        {
+          "slug": "steve-ewing",
+          "summary": "Ewing is a former Lake Stevens councilmember and board member emphasizing safety, transportation, housing supply, tax restraint, local government, and small businesses.",
+          "highlights": [
+            "Supports housing supply, tax restraint, public safety, and local government [S2]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He explicitly emphasizes tax restraint."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He explicitly emphasizes housing supply."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He explicitly emphasizes public safety."
+            },
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He has city-council and multiple board-service records.",
+              "adjusted_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-4-state-representative-position-1",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-4-state-representative-position-1/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "Four candidates compete for the open seat: school-board member Debra Long, former legislative assistant George Wagner, legislative assistant Hillary Q. Pham, and business owner Trent Maier.",
+      "candidates": [
+        {
+          "slug": "debra-long",
+          "summary": "Long is a long-serving school-board member emphasizing parental involvement, school performance, lower taxes, safety, and limited government.",
+          "highlights": [
+            "Supports lower taxes, parental involvement, public safety, and limited government [S2]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "She explicitly emphasizes lower taxes."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Limited government supplies a restraint direction without a detailed budget proposal."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "She explicitly emphasizes public safety."
+            },
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She has a long school-board governing record.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "george-wagner",
+          "summary": "Wagner is a Navy veteran and former legislative assistant emphasizing safety, veterans, fiscal restraint, energy affordability, and parental rights.",
+          "highlights": [
+            "Supports tax and spending restraint, energy affordability, public safety, and parental rights [S2]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He explicitly emphasizes tax restraint."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He explicitly emphasizes spending restraint."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He explicitly emphasizes public safety."
+            },
+            "climate": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He explicitly prioritizes energy affordability."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He has legislative staff experience but no documented elected tenure."
+            },
+            "social": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He explicitly emphasizes parental rights."
+            }
+          }
+        },
+        {
+          "slug": "hillary-q-pham",
+          "summary": "Pham is an entrepreneur and legislative assistant emphasizing lower taxes and regulation, small businesses, safety, parental rights, and opposition to abortion.",
+          "highlights": [
+            "Supports lower taxes, public safety, parental rights, and opposition to abortion [S2]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "She explicitly emphasizes lower taxes."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "She explicitly emphasizes public safety."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "She has legislative staff experience but no documented elected tenure."
+            },
+            "social": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "She explicitly supports parental rights and opposes abortion."
+            }
+          }
+        },
+        {
+          "slug": "trent-maier",
+          "summary": "Maier is a small-business owner emphasizing agriculture and business, tax restraint, reduced regulation, energy affordability, and local control.",
+          "highlights": [
+            "Supports tax restraint, energy affordability, and local control [S2]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He explicitly emphasizes tax restraint."
+            },
+            "climate": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He explicitly prioritizes energy affordability."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He brings business experience but no documented public-office record."
+            },
+            "local-control": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He explicitly emphasizes local control.",
+              "adjusted_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
       "contest_slug": "legislative-district-4-state-representative-position-2",
       "scored_at": "2026-07-17",
       "derived_from": [
@@ -8185,6 +9081,154 @@
       ]
     },
     {
+      "contest_slug": "legislative-district-40-state-representative-position-2",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-40-state-representative-position-2/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "The field includes candidates with differing public records and documented policy priorities; unsupported axes are omitted.",
+      "candidates": [
+        {
+          "slug": "alex-ramel",
+          "summary": "The candidate's documented background and priorities are summarized from the dossier.",
+          "highlights": [
+            "Dossier documents the candidate's relevant background and stated priorities [S1]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The cited dossier evidence directly supports this taxes placement."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The cited dossier evidence directly supports this spending placement.",
+              "adjusted_by_refutation": true
+            },
+            "climate": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The cited dossier evidence directly supports this climate placement."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The cited dossier evidence directly supports this experience placement."
+            }
+          }
+        },
+        {
+          "slug": "joseph-segault",
+          "summary": "The candidate's documented background and priorities are summarized from the dossier.",
+          "highlights": [
+            "Dossier documents the candidate's relevant background and stated priorities [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "The cited dossier evidence directly supports this taxes placement.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "monte-jay-mahan",
+          "summary": "The candidate's documented background and priorities are summarized from the dossier.",
+          "highlights": [
+            "Dossier documents the candidate's relevant background and stated priorities [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The cited dossier evidence directly supports this taxes placement."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The cited dossier evidence directly supports this spending placement.",
+              "adjusted_by_refutation": true
+            },
+            "housing": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The cited dossier evidence directly supports this housing placement."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The cited dossier evidence directly supports this experience placement.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "salomon-rodrigue-mbouombouo",
+          "summary": "The candidate's documented background and priorities are summarized from the dossier.",
+          "highlights": [
+            "Dossier documents the candidate's relevant background and stated priorities [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "The cited dossier evidence directly supports this experience placement.",
+              "adjusted_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
       "contest_slug": "legislative-district-42-state-representative-position-1",
       "scored_at": "2026-07-17",
       "derived_from": [
@@ -8368,6 +9412,163 @@
                 "S2"
               ],
               "basis": "He has substantial military, law-enforcement, and guild leadership experience but no public-office record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-42-state-senator",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-42-state-senator/"
+      ],
+      "office_does": "A state senator writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "The field includes candidates with differing public records and documented policy priorities; unsupported axes are omitted.",
+      "candidates": [
+        {
+          "slug": "eamonn-collins",
+          "summary": "The candidate's documented background and priorities are summarized from the dossier.",
+          "highlights": [
+            "Dossier documents the candidate's relevant background and stated priorities [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The cited dossier evidence directly supports this spending placement.",
+              "adjusted_by_refutation": true
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The cited dossier evidence directly supports this climate placement.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The cited dossier evidence directly supports this experience placement."
+            }
+          }
+        },
+        {
+          "slug": "erika-creydt",
+          "summary": "The candidate's documented background and priorities are summarized from the dossier.",
+          "highlights": [
+            "Dossier documents the candidate's relevant background and stated priorities [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The cited dossier evidence directly supports this taxes placement."
+            },
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The cited dossier evidence directly supports this experience placement."
+            },
+            "local-control": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The cited dossier evidence directly supports this local-control placement."
+            },
+            "social": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Her explicit emphasis on parental decision-making supports a modest traditionalist lean on the social axis.",
+              "added_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "michael-alvarez-shepard",
+          "summary": "The candidate's documented background and priorities are summarized from the dossier.",
+          "highlights": [
+            "Dossier documents the candidate's relevant background and stated priorities [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The cited dossier evidence directly supports this spending placement."
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The cited dossier evidence directly supports this climate placement."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The cited dossier evidence directly supports this experience placement.",
+              "adjusted_by_refutation": true
+            },
+            "social": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The cited dossier evidence directly supports this social placement."
+            }
+          }
+        },
+        {
+          "slug": "ryan-bowman",
+          "summary": "The candidate's documented background and priorities are summarized from the dossier.",
+          "highlights": [
+            "Dossier documents the candidate's relevant background and stated priorities [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The cited dossier evidence directly supports this experience placement.",
+              "adjusted_by_refutation": true
             }
           }
         }
@@ -8865,6 +10066,168 @@
                 "S2"
               ],
               "basis": "The dossier directly supports this experience placement."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-7-state-senator",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-7-state-senator/"
+      ],
+      "office_does": "A state senator writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "The field includes candidates with differing public records and documented policy priorities; unsupported axes are omitted.",
+      "candidates": [
+        {
+          "slug": "brandon-ray-medina",
+          "summary": "The candidate's documented background and priorities are summarized from the dossier.",
+          "highlights": [
+            "Dossier documents the candidate's relevant background and stated priorities [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The cited dossier evidence directly supports this taxes placement.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The cited dossier evidence directly supports this experience placement.",
+              "adjusted_by_refutation": true
+            },
+            "local-control": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The cited dossier evidence directly supports this local-control placement."
+            }
+          }
+        },
+        {
+          "slug": "david-swoap",
+          "summary": "The candidate's documented background and priorities are summarized from the dossier.",
+          "highlights": [
+            "Dossier documents the candidate's relevant background and stated priorities [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The cited dossier evidence directly supports this experience placement.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "ronald-l-mccoy",
+          "summary": "The candidate's documented background and priorities are summarized from the dossier.",
+          "highlights": [
+            "Dossier documents the candidate's relevant background and stated priorities [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The cited dossier evidence directly supports this spending placement."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The cited dossier evidence directly supports this experience placement.",
+              "adjusted_by_refutation": true
+            },
+            "local-control": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The cited dossier evidence directly supports this local-control placement.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "shelly-short",
+          "summary": "The candidate's documented background and priorities are summarized from the dossier.",
+          "highlights": [
+            "Dossier documents the candidate's relevant background and stated priorities [S1]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The cited dossier evidence directly supports this taxes placement."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The cited dossier evidence directly supports this spending placement."
+            },
+            "climate": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The cited dossier evidence directly supports this climate placement."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The cited dossier evidence directly supports this experience placement."
+            },
+            "local-control": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The cited dossier evidence directly supports this local-control placement."
             }
           }
         }
@@ -10126,6 +11489,449 @@
                 "S2"
               ],
               "basis": "He combines verified incumbency with a 39-year banking-management career."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "franklin-franklin-county-assessor",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/franklin/dossiers/franklin-franklin-county-assessor/"
+      ],
+      "office_does": "The assessor values taxable property, administers exemptions, and maintains assessment records.",
+      "race_blurb": "Incumbent John A. Rosenau faces certified residential appraiser Chris Hollingsworth.",
+      "candidates": [
+        {
+          "slug": "chris-hollingsworth",
+          "summary": "Hollingsworth is a certified appraiser and business owner focused on training, professional standards, and consistent assessments.",
+          "highlights": [
+            "Reports more than 20 years of appraisal experience [S1]",
+            "Supports training, appraisal standards, transparent communication, and consistent assessments [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He has extensive appraisal expertise but no prior assessor-office record."
+            }
+          }
+        },
+        {
+          "slug": "john-a-rosenau",
+          "summary": "Rosenau is the incumbent assessor and regional assessors' leader focused on valuation consistency, training, responsiveness, and exemptions.",
+          "highlights": [
+            "Has served as assessor since 2021 and in regional and statewide assessor leadership [S1][S2]",
+            "Supports consistent valuations, training, taxpayer responsiveness, and expanded exemptions [S1]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Incumbency and professional-association leadership provide an established assessor record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "franklin-franklin-county-commissioner-district-3-commissioner-district-3",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/franklin/dossiers/franklin-franklin-county-commissioner-district-3-commissioner-district-3/"
+      ],
+      "office_does": "County commissioners adopt budgets and policy and oversee county departments, infrastructure, land use, and services.",
+      "race_blurb": "Incumbent Clint Didier faces planning commissioner and business owner Joel Prantle.",
+      "candidates": [
+        {
+          "slug": "clint-didier",
+          "summary": "Didier is the incumbent commissioner and campaigns on lower taxes, fewer regulations, and limited government.",
+          "highlights": [
+            "Opposes tax increases and supports lower taxes [S1]",
+            "Supports fewer regulations and limited government [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He explicitly opposes tax increases and supports lower taxes."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Limited government supplies a restraint direction without a detailed budget mechanism."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He is the incumbent commissioner with a county-governance record."
+            }
+          }
+        },
+        {
+          "slug": "joel-prantle",
+          "summary": "Prantle is a business owner and appointed planning commissioner focused on responsible growth, constituent listening, and community values.",
+          "highlights": [
+            "Serves on the county planning commission [S1]",
+            "Emphasizes responsible growth and servant leadership [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Planning-commission service provides local institutional experience while he remains new to elected county office."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "franklin-franklin-county-sheriff",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/franklin/dossiers/franklin-franklin-county-sheriff/"
+      ],
+      "office_does": "The sheriff leads county law enforcement, jail and court-security functions, emergency response, staffing, and the office budget.",
+      "race_blurb": "Three law-enforcement professionals seek the open sheriff position: Kohl St. Peter, Undersheriff Monty Huber, and Connell Police Chief Chris Lee.",
+      "candidates": [
+        {
+          "slug": "christopher-chris-lee",
+          "summary": "Lee is Connell's police chief and a veteran officer focused on deputy support, victims, dangerous offenders, partnerships, and fiscal discipline.",
+          "highlights": [
+            "Has more than 25 years in regional law enforcement and serves as police chief [S1]",
+            "Supports incarceration of dangerous offenders, victims, transparency, and fiscal discipline [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He explicitly emphasizes law enforcement and incarceration of dangerous offenders."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "More than 25 years in policing and current police-chief service provide executive law-enforcement experience."
+            }
+          }
+        },
+        {
+          "slug": "kohl-st-peter",
+          "summary": "St. Peter is a career officer focused on integrity, officer wellness, technology, and long-range organizational planning.",
+          "highlights": [
+            "Has served in law enforcement since 2012 [S1]",
+            "Emphasizes command integrity, officer wellness, modernization, and planning [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He has substantial policing experience but no sheriff-command or elected record."
+            }
+          }
+        },
+        {
+          "slug": "monty-huber",
+          "summary": "Huber is the county undersheriff, Army veteran, and former councilmember focused on training, accreditation, deputy support, trust, and behavioral-health response.",
+          "highlights": [
+            "Has more than 23 years in the sheriff's office and serves as undersheriff [S1]",
+            "Supports training, accreditation, community trust, and responses to mental health and addiction [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "His explicit attention to mental-health and addiction responses gives a services direction, balanced by a law-enforcement command role.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Sheriff-command, operational, military, and municipal elected experience provide an extensive record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "grant-grant-county-county-auditor",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/grant/dossiers/grant-grant-county-county-auditor/"
+      ],
+      "office_does": "The auditor administers elections, recording, licensing, and county financial processes.",
+      "race_blurb": "Appointed auditor Shannon Falstad faces business owner Andrew Koeppen and Darci Homesley.",
+      "candidates": [
+        {
+          "slug": "andrew-koeppen",
+          "summary": "Koeppen is a business owner running on accountability, personal responsibility, and private-sector management.",
+          "highlights": [
+            "Owns a local printing and marketing business [S1][S2]",
+            "Emphasizes accountability and private-business management [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He presents private-sector management as an outsider alternative to auditor-office experience."
+            }
+          }
+        },
+        {
+          "slug": "darci-homesley",
+          "summary": "Homesley is a candidate for auditor; the approved dossiers establish no detailed platform or prior auditor record.",
+          "highlights": [
+            "Official election records verify her candidacy [S1][S2]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "shannon-falstad",
+          "summary": "Falstad is the appointed auditor and a roughly 30-year county employee focused on continuity, accounting implementation, retention, and stability.",
+          "highlights": [
+            "Has about 20 years in the auditor's office and roughly 30 years with the county [S1][S2]",
+            "Prioritizes election continuity, staff retention, and accounting-system implementation [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Appointed incumbency plus decades of detailed auditor and county operational experience provide a maximal proven record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "grant-grant-county-county-sheriff",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/grant/dossiers/grant-grant-county-county-sheriff/"
+      ],
+      "office_does": "The sheriff leads county law enforcement, emergency operations, staffing, public-safety programs, and the office budget.",
+      "race_blurb": "Incumbent Joey Kriete faces Moses Lake patrol sergeant Darrik Gregg and Grant County sheriff's sergeant Josh Sainsbury.",
+      "candidates": [
+        {
+          "slug": "darrik-gregg",
+          "summary": "Gregg is a patrol sergeant and former chief deputy focused on accountability, partnerships, rural visibility, and tough-on-crime enforcement.",
+          "highlights": [
+            "Has about 23 years in law enforcement and former chief-deputy experience [S1][S2]",
+            "Emphasizes rural visibility and a tough-on-crime posture [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "A tough-on-crime posture and increased law-enforcement visibility directly favor enforcement."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Long policing tenure and former chief-deputy command work provide an extensive record."
+            }
+          }
+        },
+        {
+          "slug": "joey-kriete",
+          "summary": "Kriete is the incumbent sheriff with more than 33 years in law enforcement, focused on proactive enforcement, partnerships, staffing, transparency, and wellness.",
+          "highlights": [
+            "Has more than 33 years in law enforcement and more than 20 in leadership [S1][S2]",
+            "Supports proactive property-crime enforcement and program expansion [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Proactive property-crime enforcement is an explicit central approach."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Incumbency and decades of law-enforcement leadership provide a maximal proven record."
+            }
+          }
+        },
+        {
+          "slug": "josh-sainsbury",
+          "summary": "Sainsbury is a sheriff's sergeant and former chief deputy who emphasizes training, morale, engagement, and treatment-backed drug enforcement.",
+          "highlights": [
+            "Has more than two decades in the sheriff's office and former command experience [S1][S2]",
+            "Supports felony drug treatment with a treatment off-ramp [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": 0,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He explicitly pairs felony accountability with a treatment off-ramp, a genuinely mixed enforcement-and-services approach."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Long sheriff-office tenure and extensive operational and command experience provide a proven record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "grant-grant-superior-court-judge-position-03",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/grant/dossiers/grant-grant-superior-court-judge-position-03/"
+      ],
+      "office_does": "A Superior Court judge presides over felony, civil, family, juvenile, probate, and other cases within the court's jurisdiction.",
+      "race_blurb": "Appointed Judge Jennifer Richardson faces deputy prosecutor Trevor Bevier and private attorney Ken Chadwick for an unexpired term.",
+      "candidates": [
+        {
+          "slug": "jennifer-richardson",
+          "summary": "Richardson is the appointed incumbent judge and a career litigator admitted to practice in 2000.",
+          "highlights": [
+            "Currently serves as the Position 3 Superior Court judge [S1][S2]",
+            "Brings more than two decades of litigation experience [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Current judicial service and more than two decades of litigation provide the strongest established judicial record.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "kenneth-ken-chadwick",
+          "summary": "Chadwick is a senior private attorney with broad litigation, arbitration, guardian-ad-litem, pro-tem commissioner, business, and law-enforcement experience.",
+          "highlights": [
+            "Has practiced across family, criminal, and civil matters [S2]",
+            "Has served as arbitrator, guardian ad litem, and pro tem court commissioner [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Broad legal practice and quasi-judicial roles provide a substantial proven record short of current judgeship."
+            }
+          }
+        },
+        {
+          "slug": "trevor-bevier",
+          "summary": "Bevier is a deputy prosecutor with civil and county-contract duties following about 14 years in private practice.",
+          "highlights": [
+            "Handles civil litigation, opinions, and contracts for the county [S2]",
+            "Previously practiced civil, probate, real-estate, bankruptcy, and injury law [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Public and private legal experience provide a proven professional record but no judicial tenure."
             }
           }
         }
@@ -20923,6 +22729,50 @@
               "basis": "She has elected school-governance and nonprofit operations experience."
             }
           }
+        }
+      ]
+    },
+    {
+      "contest_slug": "thurston-thurston-county-public-utility-district-commissioner-district-no-1-public-utility-district-commissioner",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/thurston/dossiers/thurston-thurston-county-public-utility-district-commissioner-district-no-1-public-utility-district-commissioner/"
+      ],
+      "office_does": "The commissioner oversees the public utility district's budget, infrastructure, rates, and utility services.",
+      "race_blurb": "Appointed incumbent Jim Campbell faces Troy Kirby and Bruce D. Wilkinson Jr. in a race centered on water reliability, infrastructure, rates, and utility scope.",
+      "candidates": [
+        {
+          "slug": "bruce-d-wilkinson-jr",
+          "summary": "Wilkinson is a nonprofit and political organizer focused on affordable water, aquifer planning, and a larger public-utility role.",
+          "highlights": [
+            "Supports safe, reliable, affordable water and long-term aquifer planning [S1]",
+            "Supports a larger public-utility role as a check on private electric rates [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "jim-campbell",
+          "summary": "Campbell is the appointed commissioner and former PUD field-operations director focused on infrastructure, maintenance, drinking-water safety, and stable rates.",
+          "highlights": [
+            "Has utility governance and technical-management experience [S1][S2]",
+            "Prioritizes preventive maintenance, rate stability, and cost review [S1]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "troy-kirby",
+          "summary": "Kirby is a former parks commissioner who supports grants, infrastructure investment, customer assistance, aquifer protection, and open meetings.",
+          "highlights": [
+            "Supports grants and polluter settlements to limit customer costs [S1]",
+            "Calls for preventive maintenance, backup power, regional planning, and open meetings [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
         }
       ]
     },

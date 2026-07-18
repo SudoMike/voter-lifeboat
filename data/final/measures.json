@@ -4,6 +4,8 @@
     "data/washington-state/counties/benton/scoring/refutations/measures.json",
     "data/washington-state/counties/clark/scoring/measures.json",
     "data/washington-state/counties/clark/scoring/refutations/measures.json",
+    "data/washington-state/counties/grant/scoring/measures.json",
+    "data/washington-state/counties/grant/scoring/refutations/measures.json",
     "data/washington-state/counties/king/scoring/measures.json",
     "data/washington-state/counties/king/scoring/refutations/measures.json",
     "data/washington-state/counties/kitsap/scoring/measures.json",
@@ -115,6 +117,30 @@
         }
       },
       "sources_note": "Official pamphlet resolution summary, explanatory statement, and submitted pro statement (S1); no con committee material was filed."
+    },
+    {
+      "slug": "grant-grant-county-public-hospital-district-no-5-proposition-no-1",
+      "what_it_does": "Authorizes a multi-year levy lid lift for expanded health-care services and facilities at Mattawa Community Medical Clinic.",
+      "cost_line": "Sets a maximum 2027 regular property-tax rate of $0.75 per $1,000, permits annual levy growth up to 6% through 2035, and uses the 2035 levy as the later statutory base.",
+      "pro_summary": "The ballot title states that revenue is limited to expanded local health-care services and facilities.",
+      "con_summary": "No official pro or con committee statements were available; the stated tradeoff is the property-tax increase and long-term levy growth.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES raises the regular property-tax levy, allows up to 6% annual growth through 2035, and permanently resets the levy base.",
+          "citations": [
+            "S1"
+          ]
+        },
+        "spending": {
+          "direction": 2,
+          "basis": "YES funds expanded public health-care services and facilities as the primary lever for local access.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official sample-ballot title and fiscal terms (S1); no committee statements were available."
     },
     {
       "slug": "city-of-black-diamond-proposition-no-1",

@@ -1,0 +1,25 @@
+{
+  "script": "pipeline/verify_dossiers.py",
+  "derived_from": [
+    "data/washington-state/counties/grant/interim/research-plan.json",
+    "data/washington-state/counties/grant/dossiers/"
+  ],
+  "missing": [],
+  "no_frontmatter": [],
+  "invalid_evidence_levels": [],
+  "evidence_levels": {
+    "moderate": 4,
+    "pamphlet-only": 1,
+    "rich": 4
+  },
+  "contest_overviews_missing": [],
+  "untouched_contests": [
+    "grant-congressional-district-4-u-s-representative",
+    "grant-legislative-district-13-state-representative-pos-1",
+    "grant-legislative-district-13-state-representative-pos-2",
+    "grant-legislative-district-16-state-representative-pos-1",
+    "grant-legislative-district-16-state-representative-pos-2",
+    "grant-grant-county-commissioner-district-3-commissioner-district-3"
+  ],
+  "untouched_measures": []
+}
