@@ -261,6 +261,13 @@ export default function DataPage({ data, onBack }) {
         )}
       </section>
       <footer>
+        <div
+          className="note"
+          style={{ textAlign: 'center', padding: '4px 24px 18px', fontSize: 12 }}
+        >
+          How were these scores built? See the{' '}
+          <a href="#methodology">methodology</a>.
+        </div>
         <div className="wave-bottom">
           <div className="wave-label">NO ACCOUNTS · NO COOKIES · OPEN DATA</div>
         </div>

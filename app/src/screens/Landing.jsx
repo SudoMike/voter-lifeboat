@@ -36,7 +36,7 @@ export default function Landing({ data, onStart }) {
           <div>
             <strong>Built and researched entirely by AI.</strong> We make no
             accuracy claims — every score shows its sources so you can check our
-            work.
+            work. See the <a href="#methodology">methodology</a>.
           </div>
         </div>
         <div className="panel trust-row">
@@ -52,6 +52,13 @@ export default function Landing({ data, onStart }) {
         </div>
       </section>
       <footer style={{ marginTop: 26 }}>
+        <div
+          className="note"
+          style={{ textAlign: 'center', padding: '0 24px 18px', fontSize: 12 }}
+        >
+          <a href="#methodology">How this guide is built</a> ·{' '}
+          <a href="#data">Open dataset</a>
+        </div>
         <div className="wave-bottom">
           <div className="wave-label">NO ACCOUNTS · NO COOKIES · OPEN DATA</div>
         </div>
