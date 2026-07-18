@@ -449,7 +449,7 @@ function BriefSection({ data, context, answers, contests, measures, shareUrl }) 
     <section className="screen--navy" style={{ margin: '24px 0 0', padding: '30px 24px' }}>
       <div className="eyebrow" style={{ letterSpacing: 2 }}>⚓ THE BALLOT BRIEF</div>
       <h1 className="display" style={{ fontSize: 26, lineHeight: 1.2, marginTop: 8, color: 'var(--cream)' }}>
-        Take your ballot to your own AI
+        <span style={{ color: 'var(--amber-border)' }}>Highly recommended:</span> Take your ballot to your own AI
       </h1>
       <p className="copy" style={{ fontSize: 14, marginTop: 10, color: '#C7D4DF' }}>
         The report below is a good starting point for matching your priorities to
@@ -686,6 +686,17 @@ export default function Results({ data, ballotContext, answers, restored, onStar
       </header>
 
       <BriefSection data={data} context={ballotContext} answers={answers} contests={contests} measures={measures} shareUrl={shareUrl} />
+
+      <div style={{ margin: '32px 24px 0' }}>
+        <div className="eyebrow" style={{ letterSpacing: 2, color: 'var(--muted)' }}>REPORT</div>
+        <p className="copy" style={{ fontSize: 13.5, lineHeight: 1.6, margin: '8px 0 0', color: 'var(--ink-soft)' }}>
+          The report below comes from matching your answers to our database of
+          candidates and measures. It beats picking names at random, but it can't
+          know everything about you. For a recommendation built around your
+          situation, tap <strong>Copy my Ballot Brief</strong> above and paste it
+          into your own chatbot.
+        </p>
+      </div>
 
       {contests.map((c) => (
         <ContestCard key={c.slug} data={data} contest={c} answers={answers} />
