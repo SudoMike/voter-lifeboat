@@ -188,6 +188,15 @@ button { font: inherit; border: 0; background: none; color: inherit; cursor: poi
 .gauge--low > b { color: var(--muted); }
 /* pamphlet-only: dashed ring, no fill claim */
 .gauge--dashed { background: none; border: 3px dashed var(--amber); width: 44px; height: 44px; font-family: var(--font-display); font-weight: 800; font-size: 14px; color: var(--amber-deep); align-items: center; justify-content: center; display: flex; }
+.gauge[title], .gauge--dashed[title] { cursor: help; }
+
+/* legend swatches: smaller, non-interactive versions of the row markers */
+.marker-legend { margin-top: 14px; display: flex; flex-direction: column; gap: 10px; background: var(--sand-tint, #F6EFE0); border: 1px solid var(--sand); border-radius: 12px; padding: 12px 14px; }
+.marker-legend__item { display: flex; align-items: center; gap: 12px; font-size: 12.5px; line-height: 1.45; color: var(--ink-soft); }
+.marker-legend__item strong { color: var(--navy); }
+.gauge--legend { flex: none; width: 34px; height: 34px; font-size: 12px; }
+.gauge--legend > b { width: 25px; height: 25px; font-size: 11px; }
+.gauge--dashed.gauge--legend { border-width: 2.5px; }
 
 /* ---------- candidates & evidence ---------- */
 .cand { display: flex; align-items: center; gap: 12px; }
@@ -277,3 +286,4 @@ details.sources-list summary { cursor: pointer; font-size: 12px; font-weight: 80
 /* withdrawn candidate */
 .cand--withdrawn { opacity: .55; }
 .withdrawn-tag { font-size: 11px; font-weight: 800; color: var(--coral-deep); background: var(--coral-tint); border-radius: 8px; padding: 2px 8px; }
+.best-tag { font-size: 11px; font-weight: 800; color: var(--seafoam-deep); background: var(--seafoam-tint); border-radius: 8px; padding: 2px 8px; white-space: nowrap; }

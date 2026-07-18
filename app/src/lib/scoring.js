@@ -92,6 +92,23 @@ export function alignCandidate(candidate, answers, applicableAnswered) {
   return { score, shared, coverage, reason: null }
 }
 
+// A confident match at or above this alignment reads as a genuinely strong
+// pick — green dial in the UI, and eligible for the "Best match" spotlight.
+export const STRONG_MATCH = 60
+
+// Display tier decides row order independent of the raw score: we always show
+// what we're confident about before rough reads, and rough reads before
+// candidates we can't score at all. Within a tier, higher alignment wins.
+//   0 = confident real score (round dial)
+//   1 = provisional/rough read (dashed square with a number)
+//   2 = withdrawn or too little evidence (dashed — or ?)
+function displayTier(row) {
+  if (row.score == null) return 2
+  const provisional =
+    row.cand.evidence_level === 'pamphlet-only' || row.coverage < LOW_COVERAGE
+  return provisional ? 1 : 0
+}
+
 export function rankContest(contest, answers) {
   // axes any candidate in this contest is scored on, that the voter answered
   const contestAxes = new Set()
@@ -106,14 +123,24 @@ export function rankContest(contest, answers) {
     ...alignCandidate(cand, answers, applicableAnswered),
   }))
   rows.sort((a, b) => {
+    const ta = displayTier(a)
+    const tb = displayTier(b)
+    if (ta !== tb) return ta - tb
     if (a.score == null && b.score == null) return 0
     if (a.score == null) return 1
     if (b.score == null) return -1
     return b.score - a.score
   })
-  const scored = rows.filter((r) => r.score != null)
+  // "Too close to call" only makes sense between the two confident front-runners.
+  const confident = rows.filter((r) => displayTier(r) === 0)
   const tooClose =
-    scored.length >= 2 && scored[0].score - scored[1].score <= NOISE_MARGIN
+    confident.length >= 2 &&
+    confident[0].score - confident[1].score <= NOISE_MARGIN
+  // Spotlight a single clear winner: confident, genuinely strong, not a tie.
+  const top = rows[0]
+  if (top && !tooClose && displayTier(top) === 0 && top.score >= STRONG_MATCH) {
+    top.best = true
+  }
   return { rows, tooClose }
 }
 

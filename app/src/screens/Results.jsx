@@ -8,6 +8,7 @@ import {
   axisMatchVerdict,
   pct,
   LOW_COVERAGE,
+  STRONG_MATCH,
 } from '../lib/scoring.js'
 import { writeHash } from '../lib/codec.js'
 import { buildBrief, pamphletLink } from '../lib/brief.js'
@@ -231,6 +232,25 @@ function CandidateExpanded({ data, contest, row, answers }) {
   )
 }
 
+function MarkerLegend() {
+  return (
+    <div className="marker-legend">
+      <div className="marker-legend__item">
+        <div className="gauge gauge--legend" style={{ '--pct': '80%' }}><b>80</b></div>
+        <span><strong>Green dial</strong> — a strong match with your answers. The number is the score (0–100); the ring fills to match.</span>
+      </div>
+      <div className="marker-legend__item">
+        <div className="gauge gauge--low gauge--legend" style={{ '--pct': '40%' }}><b>40</b></div>
+        <span><strong>Gray dial</strong> — a real score, but a weak match (below {STRONG_MATCH}).</span>
+      </div>
+      <div className="marker-legend__item">
+        <div className="gauge--dashed gauge--legend">?</div>
+        <span><strong>Dashed square</strong> — no confident score: a rough read from thin evidence (shows a faint number), a candidate we couldn't score (<b>?</b>), or one who withdrew (<b>—</b>).</span>
+      </div>
+    </div>
+  )
+}
+
 function ContestCard({ data, contest, answers }) {
   const [openSlug, setOpenSlug] = useState(null)
   const { rows, tooClose } = rankContest(contest, answers)
@@ -285,19 +305,24 @@ function ContestCard({ data, contest, answers }) {
               onClick={() => setOpenSlug(open ? null : c.slug)}
             >
               {c.withdrawn ? (
-                <div className="gauge--dashed">—</div>
+                <div className="gauge--dashed" title="Withdrew after the pamphlet was printed — may still be on your ballot.">—</div>
               ) : r.score == null ? (
-                <div className="gauge--dashed">?</div>
+                <div className="gauge--dashed" title="Not enough confident evidence to score this candidate against your values.">?</div>
               ) : c.evidence_level === 'pamphlet-only' || r.coverage < LOW_COVERAGE ? (
-                <div className="gauge--dashed">{r.score}</div>
+                <div className="gauge--dashed" title={`Rough read only (${r.score}/100) — thin evidence, so treat this as provisional.`}>{r.score}</div>
               ) : (
-                <div className={`gauge${r.score < 60 ? ' gauge--low' : ''}`} style={{ '--pct': `${r.score}%` }}>
+                <div
+                  className={`gauge${r.score < STRONG_MATCH ? ' gauge--low' : ''}`}
+                  style={{ '--pct': `${r.score}%` }}
+                  title={`${r.score}/100 match with your answers — ${r.score < STRONG_MATCH ? 'a weak match' : 'a strong match'}.`}
+                >
                   <b>{r.score}</b>
                 </div>
               )}
               <div style={{ flex: 1 }}>
-                <div className={`cand-name${r.score != null && r.score < 60 ? ' cand-name--dim' : ''}`}>
+                <div className={`cand-name${r.score != null && r.score < STRONG_MATCH ? ' cand-name--dim' : ''}`}>
                   {c.name}{' '}
+                  {r.best && <span className="best-tag">★ Best match for you</span>}
                   {c.withdrawn && <span className="withdrawn-tag">withdrew</span>}
                 </div>
                 <div className={`evidence ${ev.cls}`}>
@@ -688,7 +713,7 @@ export default function Results({ data, ballotContext, answers, restored, onStar
       <BriefSection data={data} context={ballotContext} answers={answers} contests={contests} measures={measures} shareUrl={shareUrl} />
 
       <div style={{ margin: '32px 24px 0' }}>
-        <div className="eyebrow" style={{ letterSpacing: 2, color: 'var(--muted)' }}>REPORT</div>
+        <h2 className="display" style={{ fontSize: 25, margin: 0 }}>Report</h2>
         <p className="copy" style={{ fontSize: 13.5, lineHeight: 1.6, margin: '8px 0 0', color: 'var(--ink-soft)' }}>
           The report below comes from matching your answers to our database of
           candidates and measures. It beats picking names at random, but it can't
@@ -696,6 +721,7 @@ export default function Results({ data, ballotContext, answers, restored, onStar
           situation, tap <strong>Copy my Ballot Brief</strong> above and paste it
           into your own chatbot.
         </p>
+        <MarkerLegend />
       </div>
 
       {contests.map((c) => (
