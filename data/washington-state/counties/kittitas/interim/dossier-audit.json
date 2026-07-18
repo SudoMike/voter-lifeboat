@@ -1,0 +1,22 @@
+{
+  "script": "pipeline/verify_dossiers.py",
+  "derived_from": [
+    "data/washington-state/counties/kittitas/interim/research-plan.json",
+    "data/washington-state/counties/kittitas/dossiers/"
+  ],
+  "missing": [],
+  "no_frontmatter": [],
+  "invalid_evidence_levels": [],
+  "evidence_levels": {
+    "rich": 2
+  },
+  "contest_overviews_missing": [],
+  "untouched_contests": [
+    "kittitas-congressional-district-8-u-s-representative",
+    "kittitas-legislative-district-13-state-representative-pos-1",
+    "kittitas-legislative-district-13-state-representative-pos-2",
+    "kittitas-kittitas-county-prosecuting-attorney",
+    "kittitas-kittitas-county-sheriff"
+  ],
+  "untouched_measures": []
+}

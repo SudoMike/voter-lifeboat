@@ -1,0 +1,24 @@
+{
+  "script": "pipeline/verify_dossiers.py",
+  "derived_from": [
+    "data/washington-state/counties/mason/interim/research-plan.json",
+    "data/washington-state/counties/mason/dossiers/"
+  ],
+  "missing": [],
+  "no_frontmatter": [],
+  "invalid_evidence_levels": [],
+  "evidence_levels": {
+    "pamphlet-only": 4,
+    "rich": 3,
+    "moderate": 1
+  },
+  "contest_overviews_missing": [],
+  "untouched_contests": [
+    "mason-congressional-district-6-u-s-representative",
+    "mason-legislative-district-35-state-senator",
+    "mason-legislative-district-35-state-representative-pos-1",
+    "mason-legislative-district-35-state-representative-pos-2",
+    "mason-mason-county-commissioner-district-3-county-commissioner-district-no-3"
+  ],
+  "untouched_measures": []
+}
