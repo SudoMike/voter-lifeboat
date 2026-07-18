@@ -114,6 +114,18 @@ def apply_scoring(contest, scored, dossier_slug=None):
     return contest
 
 
+def apply_measure_scoring(measure, scored):
+    """Overlay researched measure display and lean fields on ballot metadata."""
+    if not scored:
+        return measure
+    for field, default in (
+        ("what_it_does", None), ("cost_line", None), ("pro_summary", None),
+        ("con_summary", None), ("lean_mappings", {}),
+    ):
+        measure[field] = scored.get(field, default)
+    return measure
+
+
 def shared_score_index(all_scores):
     """Index shared federal/state scoring via normalized statewide contests."""
     normalized = STATE / "interim/contests.json"
@@ -274,7 +286,10 @@ for county_dir in sorted((WA / "counties").iterdir()):
     if mfile.exists():
         pack = json.load(open(mfile))
         package_coverages.append(pack.get("coverage", "partial_county"))
-        out_measures.extend(pack.get("measures", []))
+        for measure in pack.get("measures", []):
+            out_measures.append(apply_measure_scoring(
+                measure, measures_scored.get(measure["slug"])
+            ))
     if cfile.exists() or mfile.exists():
         name, fips = COUNTY_NAMES.get(county_dir.name, (county_dir.name.title(), None))
         coverage = "full_county" if package_coverages and all(c == "full_county" for c in package_coverages) else "partial_county"
