@@ -1,0 +1,25 @@
+{
+  "script": "pipeline/verify_dossiers.py",
+  "derived_from": [
+    "data/washington-state/counties/grays-harbor/interim/research-plan.json",
+    "data/washington-state/counties/grays-harbor/dossiers/"
+  ],
+  "missing": [],
+  "no_frontmatter": [],
+  "invalid_evidence_levels": [],
+  "evidence_levels": {
+    "rich": 6,
+    "pamphlet-only": 2,
+    "moderate": 2
+  },
+  "contest_overviews_missing": [],
+  "untouched_contests": [
+    "grays-harbor-congressional-district-6-u-s-representative",
+    "grays-harbor-legislative-district-19-state-representative-pos-1",
+    "grays-harbor-legislative-district-19-state-representative-pos-2",
+    "grays-harbor-legislative-district-24-state-representative-pos-1",
+    "grays-harbor-legislative-district-24-state-representative-pos-2",
+    "grays-harbor-grays-harbor-county-commissioner-district-3-commissioner-3"
+  ],
+  "untouched_measures": []
+}
