@@ -1,11 +1,15 @@
 {
   "derived_from": [
+    "data/washington-state/counties/asotin/scoring/measures.json",
+    "data/washington-state/counties/asotin/scoring/refutations/measures.json",
     "data/washington-state/counties/benton/scoring/measures.json",
     "data/washington-state/counties/benton/scoring/refutations/measures.json",
     "data/washington-state/counties/clallam/scoring/measures.json",
     "data/washington-state/counties/clallam/scoring/refutations/measures.json",
     "data/washington-state/counties/clark/scoring/measures.json",
     "data/washington-state/counties/clark/scoring/refutations/measures.json",
+    "data/washington-state/counties/douglas/scoring/measures.json",
+    "data/washington-state/counties/douglas/scoring/refutations/measures.json",
     "data/washington-state/counties/grant/scoring/measures.json",
     "data/washington-state/counties/grant/scoring/refutations/measures.json",
     "data/washington-state/counties/grays-harbor/scoring/measures.json",
@@ -22,6 +26,10 @@
     "data/washington-state/counties/lewis/scoring/refutations/measures.json",
     "data/washington-state/counties/mason/scoring/measures.json",
     "data/washington-state/counties/mason/scoring/refutations/measures.json",
+    "data/washington-state/counties/okanogan/scoring/measures.json",
+    "data/washington-state/counties/okanogan/scoring/refutations/measures.json",
+    "data/washington-state/counties/pacific/scoring/measures.json",
+    "data/washington-state/counties/pacific/scoring/refutations/measures.json",
     "data/washington-state/counties/pierce/scoring/measures.json",
     "data/washington-state/counties/pierce/scoring/refutations/measures.json",
     "data/washington-state/counties/skagit/scoring/measures.json",
@@ -43,6 +51,42 @@
   ],
   "script": "pipeline/merge_scores.py",
   "measures": [
+    {
+      "slug": "asotin-asotin-county-rural-ems-district-no-2-proposition-no-1",
+      "what_it_does": "Continues a rural emergency-medical-services property-tax levy for six years beginning with 2027 collections.",
+      "cost_line": "The maximum rate rises from $0.15 to $0.28 per $1,000 assessed value, equal to $140 annually on $500,000 at the maximum.",
+      "pro_summary": "Official material identifies continued rural EMS as the use; no committee argument was available.",
+      "con_summary": "No committee argument was available; the direct tradeoff is continued EMS funding at an increased property-tax rate.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES continues the levy for six years and raises its maximum property-tax rate.",
+          "citations": [
+            "S1",
+            "S2"
+          ]
+        }
+      },
+      "sources_note": "Official sample ballot and county election page (S1, S2)."
+    },
+    {
+      "slug": "asotin-city-of-clarkston-proposition-no-1",
+      "what_it_does": "Authorizes a one-year excess property-tax levy for Clarkston ambulance and EMS maintenance and operations in 2027.",
+      "cost_line": "The levy raises $1,217,828 at approximately $1.540 per $1,000 assessed value, or about $770 on $500,000.",
+      "pro_summary": "Official material identifies ambulance and EMS maintenance and operations as the use; no committee argument was available.",
+      "con_summary": "No committee argument was available; the direct tradeoff is one year of EMS operating revenue versus the excess property-tax levy.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES authorizes a one-year excess property-tax levy at the stated approximate rate.",
+          "citations": [
+            "S1",
+            "S2"
+          ]
+        }
+      },
+      "sources_note": "Official sample ballot and county election page (S1, S2)."
+    },
     {
       "slug": "benton-benton-county-fire-protection-district-no-4-proposition-no-1",
       "what_it_does": "Restores the regular levy from about $1.31 to up to $1.50 per $1,000 in 2027, permits a 106% limit factor for nine years, and resets the later levy base.",
@@ -159,6 +203,47 @@
         }
       },
       "sources_note": "Official pamphlet resolution summary, explanatory statement, and submitted pro statement (S1); no con committee material was filed."
+    },
+    {
+      "slug": "douglas-douglas-okanogan-county-fire-district-no-15-proposition-no-1",
+      "what_it_does": "Continues an EMS property-tax levy of up to $0.50 per $1,000 for six years beginning with 2027 collections.",
+      "cost_line": "At the maximum rate, $50 annually per $100,000 assessed value, or $250 on $500,000.",
+      "pro_summary": "Official material identifies continued emergency-medical-service funding as the purpose; no committee statement was available.",
+      "con_summary": "No official opposition statement was available; the tradeoff is continued EMS funding versus the six-year property-tax levy.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "YES continues an existing local property-tax levy for six years.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official sample ballot and resolution index (S1, S2); no committee statements were available."
+    },
+    {
+      "slug": "douglas-public-hospital-district-no-1-okanogan-and-douglas-counties-proposition-no-1",
+      "what_it_does": "Renews a one-year excess levy raising $1,460,000 to maintain, develop, and expand district health-care facilities and services.",
+      "cost_line": "The estimated 2027 rate is $0.33 per $1,000: $33 annually per $100,000 assessed value, or $165 on $500,000.",
+      "pro_summary": "Official material says the levy maintains essential health-care availability and funds maintenance, development, and expansion.",
+      "con_summary": "No official opposition statement was available; the tradeoff is health-care investment versus a one-year excess property-tax levy.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "YES renews a one-year excess property-tax levy.",
+          "citations": [
+            "S1"
+          ]
+        },
+        "spending": {
+          "direction": 2,
+          "basis": "YES expressly funds maintenance, development, and expansion of health-care facilities and services.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official sample ballot and resolution index (S1, S2); no opposition statement was available."
     },
     {
       "slug": "grant-grant-county-public-hospital-district-no-5-proposition-no-1",
@@ -652,6 +737,98 @@
         }
       },
       "sources_note": "Official election material (S1); no committee statements were available."
+    },
+    {
+      "slug": "okanogan-okanogan-county-proposition-no-1",
+      "what_it_does": "Lifts the county regular property-tax levy lid for 2027 collections.",
+      "cost_line": "$1.15 per $1,000, or $115 per $100,000 and $575 on $500,000.",
+      "pro_summary": "Official material identifies the named public-service revenue; no pro committee statement was available.",
+      "con_summary": "No con committee statement was available; the tradeoff is the named service funding versus property-tax cost.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES lifts the regular property-tax levy lid to the stated rate.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official election material (S1); no committee statements were available."
+    },
+    {
+      "slug": "okanogan-douglas-okanogan-county-fire-district-15-proposition-no-1",
+      "what_it_does": "Continues the fire district EMS property-tax levy for six years.",
+      "cost_line": "$0.50 per $1,000, or $50 per $100,000 and $250 on $500,000.",
+      "pro_summary": "Official material identifies the named public-service revenue; no pro committee statement was available.",
+      "con_summary": "No con committee statement was available; the tradeoff is the named service funding versus property-tax cost.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "YES continues an existing EMS property-tax levy for six years.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official election material (S1); no committee statements were available."
+    },
+    {
+      "slug": "okanogan-city-of-pateros-ballot-measure",
+      "what_it_does": "Continues the City of Pateros EMS property-tax levy for six years.",
+      "cost_line": "$0.50 per $1,000, or $50 per $100,000 and $250 on $500,000.",
+      "pro_summary": "Official material identifies the named public-service revenue; no pro committee statement was available.",
+      "con_summary": "No con committee statement was available; the tradeoff is the named service funding versus property-tax cost.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "YES continues an existing municipal EMS property-tax levy for six years.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official election material (S1); no committee statements were available."
+    },
+    {
+      "slug": "okanogan-public-hospital-district-no-1-okanogan-and-douglas-counties-proposition-no-1",
+      "what_it_does": "Renews a one-year special property-tax levy for hospital-district operations.",
+      "cost_line": "Raises $1,460,000 at about $0.33 per $1,000, or about $165 on $500,000.",
+      "pro_summary": "Official material identifies the named public-service revenue; no pro committee statement was available.",
+      "con_summary": "No con committee statement was available; the tradeoff is the named service funding versus property-tax cost.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "YES renews a one-year special hospital-district property-tax levy.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official election material (S1); no committee statements were available."
+    },
+    {
+      "slug": "pacific-south-beach-regional-fire-authority-proposition-no-1",
+      "what_it_does": "Authorizes up to $10 million in general-obligation bonds, maturing within 25 years, to replace the regional fire authority headquarters station.",
+      "cost_line": "Up to $10 million in bonds repaid through annual excess property-tax levies over no more than 25 years; the official summary does not state a uniform tax rate.",
+      "pro_summary": "Official material identifies replacement of the headquarters fire station as the use; no committee argument was available.",
+      "con_summary": "No committee argument was available; the direct tradeoff is a replacement public-safety facility versus long-term debt and excess property-tax levies.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES authorizes annual excess property-tax levies to repay up to $10 million in bonds.",
+          "citations": [
+            "S1"
+          ]
+        },
+        "spending": {
+          "direction": 2,
+          "basis": "YES authorizes a major long-term public capital investment in a replacement headquarters station.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official Pacific County election material (S1)."
     },
     {
       "slug": "pierce-town-of-carbonado-proposition-no-1",

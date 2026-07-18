@@ -1,0 +1,24 @@
+{
+  "script": "pipeline/verify_dossiers.py",
+  "derived_from": [
+    "data/washington-state/counties/pacific/interim/research-plan.json",
+    "data/washington-state/counties/pacific/dossiers/"
+  ],
+  "missing": [],
+  "no_frontmatter": [],
+  "invalid_evidence_levels": [],
+  "evidence_levels": {
+    "rich": 3,
+    "pamphlet-only": 1
+  },
+  "contest_overviews_missing": [],
+  "untouched_contests": [
+    "pacific-congressional-district-3-u-s-representative",
+    "pacific-legislative-district-19-state-representative-pos-1",
+    "pacific-legislative-district-19-state-representative-pos-2",
+    "pacific-pacific-county-county-sheriff",
+    "pacific-pacific-county-prosecuting-attorney",
+    "pacific-pacific-county-commissioner-district-3-county-commissioner-03"
+  ],
+  "untouched_measures": []
+}
