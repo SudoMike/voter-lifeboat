@@ -4,6 +4,10 @@
     "data/washington-state/statewide/scoring/refutations/*.json",
     "data/washington-state/counties/benton/scoring/*.json",
     "data/washington-state/counties/benton/scoring/refutations/*.json",
+    "data/washington-state/counties/chelan/scoring/*.json",
+    "data/washington-state/counties/chelan/scoring/refutations/*.json",
+    "data/washington-state/counties/clallam/scoring/*.json",
+    "data/washington-state/counties/clallam/scoring/refutations/*.json",
     "data/washington-state/counties/clark/scoring/*.json",
     "data/washington-state/counties/clark/scoring/refutations/*.json",
     "data/washington-state/counties/cowlitz/scoring/*.json",
@@ -12,10 +16,16 @@
     "data/washington-state/counties/franklin/scoring/refutations/*.json",
     "data/washington-state/counties/grant/scoring/*.json",
     "data/washington-state/counties/grant/scoring/refutations/*.json",
+    "data/washington-state/counties/grays-harbor/scoring/*.json",
+    "data/washington-state/counties/grays-harbor/scoring/refutations/*.json",
+    "data/washington-state/counties/island/scoring/*.json",
+    "data/washington-state/counties/island/scoring/refutations/*.json",
     "data/washington-state/counties/king/scoring/*.json",
     "data/washington-state/counties/king/scoring/refutations/*.json",
     "data/washington-state/counties/kitsap/scoring/*.json",
     "data/washington-state/counties/kitsap/scoring/refutations/*.json",
+    "data/washington-state/counties/lewis/scoring/*.json",
+    "data/washington-state/counties/lewis/scoring/refutations/*.json",
     "data/washington-state/counties/pierce/scoring/*.json",
     "data/washington-state/counties/pierce/scoring/refutations/*.json",
     "data/washington-state/counties/skagit/scoring/*.json",
@@ -33,9 +43,9 @@
   ],
   "script": "pipeline/merge_scores.py",
   "verdict_stats": {
-    "upheld": 1516,
-    "adjust": 219,
-    "refuted": 92,
+    "upheld": 1592,
+    "adjust": 251,
+    "refuted": 106,
     "missing_added": 25,
     "missing_dropped_low": 4
   },
@@ -7189,6 +7199,177 @@
       ]
     },
     {
+      "contest_slug": "legislative-district-29-state-representative-position-2",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-29-state-representative-position-2/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "Candidates differ in documented experience and policy priorities; unsupported axes are omitted.",
+      "candidates": [
+        {
+          "slug": "darek-blum",
+          "summary": "The candidate's documented background and priorities are summarized from the dossier.",
+          "highlights": [
+            "The dossier documents the candidate's relevant experience and stated priorities [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this taxes placement.",
+              "adjusted_by_refutation": true
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this spending placement."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this experience placement.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "erin-chapman-smith",
+          "summary": "The candidate's documented background and priorities are summarized from the dossier.",
+          "highlights": [
+            "The dossier documents the candidate's relevant experience and stated priorities [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this spending placement.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this experience placement.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "joe-bushnell",
+          "summary": "The candidate's documented background and priorities are summarized from the dossier.",
+          "highlights": [
+            "The dossier documents the candidate's relevant experience and stated priorities [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this experience placement.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "natasha-laitila",
+          "summary": "The candidate's documented background and priorities are summarized from the dossier.",
+          "highlights": [
+            "The dossier documents the candidate's relevant experience and stated priorities [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this experience placement.",
+              "adjusted_by_refutation": true
+            },
+            "social": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this social placement."
+            }
+          }
+        },
+        {
+          "slug": "patrick-stickney",
+          "summary": "The candidate's documented background and priorities are summarized from the dossier.",
+          "highlights": [
+            "The dossier documents the candidate's relevant experience and stated priorities [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "housing": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this housing placement."
+            },
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this experience placement.",
+              "adjusted_by_refutation": true
+            },
+            "social": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this social placement."
+            }
+          }
+        },
+        {
+          "slug": "sheri-hayes",
+          "summary": "The candidate's documented background and priorities are summarized from the dossier.",
+          "highlights": [
+            "The dossier documents the candidate's relevant experience and stated priorities [S2]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
       "contest_slug": "legislative-district-29-state-senator",
       "scored_at": "2026-07-17",
       "derived_from": [
@@ -7762,6 +7943,214 @@
                 "S2"
               ],
               "basis": "She brings community, school, and political-organizing experience but no documented elected or legislative record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "legislative-district-32-state-representative-position-1",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-32-state-representative-position-1/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "Candidates differ in documented experience and policy priorities; unsupported axes are omitted.",
+      "candidates": [
+        {
+          "slug": "chris-bloomquist",
+          "summary": "The candidate's documented background and priorities are summarized from the dossier.",
+          "highlights": [
+            "The dossier documents the candidate's relevant experience and stated priorities [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this spending placement."
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this climate placement.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this experience placement.",
+              "adjusted_by_refutation": true
+            },
+            "immigration": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this immigration placement.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "danica-noble",
+          "summary": "The candidate's documented background and priorities are summarized from the dossier.",
+          "highlights": [
+            "The dossier documents the candidate's relevant experience and stated priorities [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this experience placement.",
+              "adjusted_by_refutation": true
+            },
+            "social": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this social placement."
+            },
+            "tech": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this tech placement.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "jenna-nand",
+          "summary": "The candidate's documented background and priorities are summarized from the dossier.",
+          "highlights": [
+            "The dossier documents the candidate's relevant experience and stated priorities [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this experience placement.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "keith-scully",
+          "summary": "The candidate's documented background and priorities are summarized from the dossier.",
+          "highlights": [
+            "The dossier documents the candidate's relevant experience and stated priorities [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this housing placement."
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this climate placement.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this experience placement.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "lisa-rezac",
+          "summary": "The candidate's documented background and priorities are summarized from the dossier.",
+          "highlights": [
+            "The dossier documents the candidate's relevant experience and stated priorities [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this taxes placement.",
+              "adjusted_by_refutation": true
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this spending placement."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this experience placement.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "will-chen",
+          "summary": "The candidate's documented background and priorities are summarized from the dossier.",
+          "highlights": [
+            "The dossier documents the candidate's relevant experience and stated priorities [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this experience placement.",
+              "adjusted_by_refutation": true
             }
           }
         }
@@ -9974,6 +10363,187 @@
       ]
     },
     {
+      "contest_slug": "legislative-district-6-state-representative-position-1",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/statewide/dossiers/legislative-district-6-state-representative-position-1/"
+      ],
+      "office_does": "A state representative writes and votes on state laws and budgets, conducts oversight, and represents their legislative district.",
+      "race_blurb": "Candidates differ in documented experience and policy priorities; unsupported axes are omitted.",
+      "candidates": [
+        {
+          "slug": "alan-nolan",
+          "summary": "The candidate's documented background and priorities are summarized from the dossier.",
+          "highlights": [
+            "The dossier documents the candidate's relevant experience and stated priorities [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this taxes placement.",
+              "adjusted_by_refutation": true
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this spending placement.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this experience placement.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "isaiah-paine",
+          "summary": "The candidate's documented background and priorities are summarized from the dossier.",
+          "highlights": [
+            "The dossier documents the candidate's relevant experience and stated priorities [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this taxes placement.",
+              "adjusted_by_refutation": true
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this housing placement."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this experience placement.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "jennifer-morton",
+          "summary": "The candidate's documented background and priorities are summarized from the dossier.",
+          "highlights": [
+            "The dossier documents the candidate's relevant experience and stated priorities [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this experience placement.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "michaela-kelso",
+          "summary": "The candidate's documented background and priorities are summarized from the dossier.",
+          "highlights": [
+            "The dossier documents the candidate's relevant experience and stated priorities [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this experience placement.",
+              "adjusted_by_refutation": true
+            },
+            "social": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this social placement."
+            }
+          }
+        },
+        {
+          "slug": "nicolette-ocheltree",
+          "summary": "The candidate's documented background and priorities are summarized from the dossier.",
+          "highlights": [
+            "The dossier documents the candidate's relevant experience and stated priorities [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this spending placement.",
+              "adjusted_by_refutation": true
+            },
+            "safety": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this safety placement."
+            },
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this experience placement.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "sueann-davis",
+          "summary": "The candidate's documented background and priorities are summarized from the dossier.",
+          "highlights": [
+            "The dossier documents the candidate's relevant experience and stated priorities [S2]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
       "contest_slug": "legislative-district-6-state-representative-position-2",
       "scored_at": "2026-07-17",
       "derived_from": [
@@ -10693,6 +11263,405 @@
                 "S1"
               ],
               "basis": "He reports current council service plus prior planning, code-enforcement, and project-management work."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "chelan-chelan-county-assessor",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/chelan/dossiers/chelan-chelan-county-assessor/"
+      ],
+      "office_does": "The assessor values taxable property, maintains parcel records, and administers exemptions and appeals under state law.",
+      "race_blurb": "Challenger Britini Port emphasizes valuation, service, appeals, and technology; incumbent Wes Cornelius emphasizes accredited appraisal, compliance, records access, and continuity.",
+      "candidates": [
+        {
+          "slug": "britini-port",
+          "summary": "Port has property-assessment and customer-service experience and emphasizes accurate valuation, transparent methods, appeals, and technology.",
+          "highlights": [
+            "Has property-assessment and customer-service experience [S1]",
+            "Emphasizes transparent valuation and efficient technology [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Relevant assessment experience supports her qualifications, while no office-leading tenure is documented."
+            }
+          }
+        },
+        {
+          "slug": "wes-cornelius",
+          "summary": "Cornelius is the incumbent assessor and a state-accredited appraiser emphasizing consistency, compliance, access, expertise, and continuity.",
+          "highlights": [
+            "Serves as incumbent assessor [S1]",
+            "Is a state-accredited appraiser emphasizing continuity [S1]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Incumbency and accredited appraisal expertise provide a direct proven record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "chelan-chelan-county-auditor",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/chelan/dossiers/chelan-chelan-county-auditor/"
+      ],
+      "office_does": "The auditor administers elections, recording, licensing, and county financial and public-record functions.",
+      "race_blurb": "Appointed incumbent Brandt Cappell offers direct chief-deputy and auditor continuity; retired fire chief Brian Brett offers outside public-agency leadership.",
+      "candidates": [
+        {
+          "slug": "brandt-cappell",
+          "summary": "Cappell is the appointed incumbent and former chief deputy auditor emphasizing secure accessible elections, recording, licensing, continuity, and transparency.",
+          "highlights": [
+            "Serves as appointed auditor after chief-deputy service [S1]",
+            "Emphasizes secure accessible elections and transparent administration [S1]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Current auditor and former chief-deputy service establish direct institutional experience."
+            }
+          }
+        },
+        {
+          "slug": "brian-brett",
+          "summary": "Brett is a retired fire chief emphasizing service leadership, election security, accountability, staff support, and trust.",
+          "highlights": [
+            "Led a public agency as fire chief [S1]",
+            "Emphasizes accountability, staff support, and election security [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Accountability is central to his administrative pitch, supporting an oversight lean."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Fire-chief service provides proven public-agency leadership, though outside the auditor office."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "chelan-chelan-county-commissioner-district-2-commissioner-district-no-2",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/chelan/dossiers/chelan-chelan-county-commissioner-district-2-commissioner-district-no-2/"
+      ],
+      "office_does": "County commissioners adopt budgets and policy, oversee county services and infrastructure, and make land-use and administrative decisions.",
+      "race_blurb": "Strand and Helligso offer broad challenger priorities; incumbent Smith distinguishes himself through fiscal discipline, limited regulation, roads, safety, and wildfire resilience.",
+      "candidates": [
+        {
+          "slug": "clint-strand",
+          "summary": "Strand is a Leavenworth-area candidate emphasizing housing, water, natural resources, infrastructure, transparency, and family services.",
+          "highlights": [
+            "Prioritizes housing, water, and natural resources [S1]",
+            "Emphasizes infrastructure, transparency, and family services [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "The dossier documents community stewardship but no elected or county-management tenure."
+            }
+          }
+        },
+        {
+          "slug": "nathanial-helligso",
+          "summary": "Helligso is a Cashmere-area independent emphasizing affordability, infrastructure, transparent budgets, safety, and land use.",
+          "highlights": [
+            "Prioritizes affordability and infrastructure [S1]",
+            "Emphasizes transparent budgets, safety, and land use [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Transparent budgets weakly support accountability, but no restraint mechanism is specified."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "The dossier describes a new practical-administration candidacy without institutional tenure."
+            }
+          }
+        },
+        {
+          "slug": "shon-d-smith",
+          "summary": "Smith is the incumbent commissioner and a small-business owner emphasizing fiscal discipline, development, safety, roads, wildfire resilience, and limited regulation.",
+          "highlights": [
+            "Serves as incumbent commissioner [S1]",
+            "Emphasizes fiscal discipline and limited regulation [S1]",
+            "Prioritizes safety, roads, and wildfire resilience [S1]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Fiscal discipline is a central and explicit governing priority."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Safety is explicit, though the dossier provides no specific enforcement mechanism."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Incumbency and business ownership establish the strongest proven record in the field."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "chelan-chelan-county-sheriff",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/chelan/dossiers/chelan-chelan-county-sheriff/"
+      ],
+      "office_does": "The sheriff leads county law enforcement, jail and civil functions, emergency response, staffing, training, and interagency public-safety work.",
+      "race_blurb": "Incumbent Mike Morrison emphasizes enforcement and prevention with department continuity; deputy Stan Langlow emphasizes front-line command, patrol, morale, and communication.",
+      "candidates": [
+        {
+          "slug": "mike-morrison",
+          "summary": "Morrison is the incumbent sheriff emphasizing enforcement, prevention, training, retention, emergency response, and partnerships.",
+          "highlights": [
+            "Serves as incumbent sheriff [S1]",
+            "Pairs enforcement with prevention and partnerships [S1]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "His platform explicitly combines enforcement with prevention, producing a mixed safety posture."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Incumbency and department leadership establish a proven institutional record."
+            }
+          }
+        },
+        {
+          "slug": "stan-langlow",
+          "summary": "Langlow is a sheriff\u2019s deputy emphasizing front-line leadership, patrol coverage, morale, training, communication, and safety.",
+          "highlights": [
+            "Serves as a county sheriff\u2019s deputy [S1]",
+            "Prioritizes patrol coverage and front-line leadership [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Patrol coverage and police capacity support an enforcement lean."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Direct department service supplies institutional experience, though he has not led the office."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "chelan-chelan-county-treasurer",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/chelan/dossiers/chelan-chelan-county-treasurer/"
+      ],
+      "office_does": "The treasurer collects and distributes taxes, safeguards and invests county funds, and administers payments and financial records.",
+      "race_blurb": "Both candidates emphasize stewardship and service; Miller adds modern payment systems, while Viall foregrounds conservative investment and secure distributions.",
+      "candidates": [
+        {
+          "slug": "doug-miller",
+          "summary": "Miller has finance, administration, and community-service experience and emphasizes collection accuracy, prudent investment, reporting, and modern payments.",
+          "highlights": [
+            "Has finance and administration experience [S1]",
+            "Emphasizes prudent investment, reporting, and modern payment systems [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Prudent investment and financial reporting support an accountability orientation."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Relevant finance and administration experience is documented, but not elected treasurer tenure."
+            }
+          }
+        },
+        {
+          "slug": "richard-rick-viall",
+          "summary": "Viall is a Chelan-area candidate emphasizing secure funds, timely distributions, conservative investment, service, and transparency.",
+          "highlights": [
+            "Emphasizes conservative investment and secure funds [S1]",
+            "Prioritizes timely distributions and transparency [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Conservative investment and transparency support an oversight-and-restraint orientation."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "The dossier documents no specific institutional finance role or elected-office tenure."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "clallam-clallam-county-commissioner-district-3-county-commissioner-dist-no-3",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/clallam/dossiers/clallam-clallam-county-commissioner-district-3-county-commissioner-dist-no-3/"
+      ],
+      "office_does": "A county commissioner adopts county policy and budgets, oversees departments, and represents county residents.",
+      "race_blurb": "Candidates differ in documented experience and policy priorities; unsupported axes are omitted.",
+      "candidates": [
+        {
+          "slug": "jake-seegers",
+          "summary": "The candidate's documented background and priorities are summarized from the dossier.",
+          "highlights": [
+            "The dossier documents the candidate's relevant experience and stated priorities [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this spending placement.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this experience placement.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "mike-french",
+          "summary": "The candidate's documented background and priorities are summarized from the dossier.",
+          "highlights": [
+            "The dossier documents the candidate's relevant experience and stated priorities [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The dossier directly supports this experience placement."
             }
           }
         }
@@ -11932,6 +12901,546 @@
                 "S2"
               ],
               "basis": "Public and private legal experience provide a proven professional record but no judicial tenure."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "grays-harbor-grays-harbor-county-assessor",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/grays-harbor/dossiers/grays-harbor-grays-harbor-county-assessor/"
+      ],
+      "office_does": "The assessor values taxable property, administers exemptions, and maintains assessment records.",
+      "race_blurb": "Incumbent Dan Lindgren faces challenger Josh Nuxoll.",
+      "candidates": [
+        {
+          "slug": "dan-lindgren",
+          "summary": "Lindgren is the incumbent assessor and emphasizes service improvements and politically neutral valuations.",
+          "highlights": [
+            "Has an incumbent assessor record [S1][S2][S3]."
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Incumbency provides an established assessor record.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "josh-nuxoll",
+          "summary": "Nuxoll is a filed candidate whose dossier contains no identity-safe biography or platform.",
+          "highlights": [
+            "Election records verify his candidacy [S1][S2]."
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "grays-harbor-grays-harbor-county-auditor",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/grays-harbor/dossiers/grays-harbor-grays-harbor-county-auditor/"
+      ],
+      "office_does": "The auditor administers elections, recording, licensing, and county financial processes.",
+      "race_blurb": "Brielle Joyce faces financial-industry professional Charlee Paull.",
+      "candidates": [
+        {
+          "slug": "brielle-s-joyce",
+          "summary": "Joyce is a filed candidate without a detailed biography or platform in the approved dossier.",
+          "highlights": [
+            "Election records verify her candidacy [S1][S2]."
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "charlee-paull",
+          "summary": "Paull has banking and mortgage experience and emphasizes audits, transparent elections and records, accountability, and professional administration.",
+          "highlights": [
+            "Supports accurate audits and transparent administration [S2]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Accurate audits and accountability supply an oversight direction."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "She has relevant financial experience but no documented auditor-office record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "grays-harbor-grays-harbor-county-prosecutor",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/grays-harbor/dossiers/grays-harbor-grays-harbor-county-prosecutor/"
+      ],
+      "office_does": "The prosecutor directs criminal prosecution, provides county legal advice, and supports victims and law enforcement.",
+      "race_blurb": "Appointed prosecutor Jason Walker faces chief criminal deputy Daniel Crawford.",
+      "candidates": [
+        {
+          "slug": "daniel-crawford",
+          "summary": "Crawford is chief criminal deputy prosecutor and campaigns on aggressive prosecution of violent, repeat, drug, domestic-abuse, and property offenders.",
+          "highlights": [
+            "Supports aggressive prosecution and victim and law-enforcement backing [S2]."
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Aggressive prosecution of violent and repeat offenders directly favors enforcement."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Chief-deputy prosecutorial service provides a substantial professional record."
+            }
+          }
+        },
+        {
+          "slug": "jason-f-walker",
+          "summary": "Walker is the appointed prosecutor and former chief criminal deputy who has opposed pretrial-rule changes on enforcement grounds.",
+          "highlights": [
+            "Serves as appointed prosecutor after long chief-deputy tenure [S2][S3]."
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "His official opposition to pretrial-rule changes is based on enforcement and case-disposition concerns."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Appointed incumbency and long chief-deputy service provide an established prosecutorial record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "grays-harbor-grays-harbor-county-sheriff",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/grays-harbor/dossiers/grays-harbor-grays-harbor-county-sheriff/"
+      ],
+      "office_does": "The sheriff leads county law enforcement, emergency response, staffing, investigations, and the office budget.",
+      "race_blurb": "Incumbent Darrin Wallace faces deputy and former hospital-board member Edward Welter.",
+      "candidates": [
+        {
+          "slug": "darrin-e-wallace",
+          "summary": "Wallace is the incumbent sheriff and former chief investigations deputy emphasizing law-enforcement tools, agency strategy, and safety.",
+          "highlights": [
+            "Supports restoring law-enforcement tools and community safety [S3]."
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Restoring law-enforcement tools supplies a clear enforcement direction."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Incumbency and former investigations-command service provide an extensive record.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "edward-welter",
+          "summary": "Welter is a sheriff's deputy and former hospital-board member proposing more staffing, training, property-crime investigation, and engaged leadership.",
+          "highlights": [
+            "Supports staffing increases and full property-crime investigation [S2]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Increased staffing and full property-crime investigation directly favor enforcement."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Deputy service and prior hospital-board experience provide a public record short of sheriff incumbency."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "grays-harbor-grays-harbor-county-treasurer",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/grays-harbor/dossiers/grays-harbor-grays-harbor-county-treasurer/"
+      ],
+      "office_does": "The treasurer collects revenue, manages county funds, distributes money to local agencies, and administers foreclosure and excise-tax functions.",
+      "race_blurb": "Incumbent Shawn Hill faces former county commissioner Wes Cormier.",
+      "candidates": [
+        {
+          "slug": "shawn-d-hill",
+          "summary": "Hill is the incumbent treasurer and former chief deputy treasurer.",
+          "highlights": [
+            "Serves as treasurer after chief-deputy experience [S1][S2][S3]."
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Incumbency and chief-deputy service provide an extensive office record.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "wes-cormier",
+          "summary": "Cormier is a former county commissioner and assessor-office appraiser emphasizing controls, efficiency, access, accurate distributions, and stewardship.",
+          "highlights": [
+            "Supports internal controls and taxpayer-dollar stewardship [S2][S3]."
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Internal controls and stewardship supply an oversight direction."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Eight years as commissioner plus assessor-office experience provide a substantial county record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "island-island-county-commissioner-district-3-county-commissioner-district-3",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/island/dossiers/island-island-county-commissioner-district-3-county-commissioner-district-3/"
+      ],
+      "office_does": "County commissioners adopt budgets and policy, oversee county services and infrastructure, and make land-use and administrative decisions.",
+      "race_blurb": "The field differs most clearly on fiscal posture: Shaw stresses discipline and collaboration, Van Pelt explicit tax and spending restraint, and Arnett services and sustainable budgeting.",
+      "candidates": [
+        {
+          "slug": "grant-shaw",
+          "summary": "Shaw is a Camano Island candidate emphasizing budget discipline, infrastructure, safety, economic opportunity, and bipartisan administration.",
+          "highlights": [
+            "Centers budget discipline and infrastructure [S1]",
+            "Emphasizes safety and bipartisan administration [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Budget discipline is an explicit priority, supporting modest restraint without a detailed cut mechanism."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Safety is a priority but the dossier does not describe an enforcement mechanism."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "The dossier presents a community candidate without documented elected or county-management tenure."
+            }
+          }
+        },
+        {
+          "slug": "matthew-van-pelt",
+          "summary": "Van Pelt is a North Whidbey candidate with private-sector and community experience emphasizing tax and spending restraint, safety, property rights, and infrastructure.",
+          "highlights": [
+            "Explicitly supports tax and spending restraint [S1]",
+            "Emphasizes property rights, safety, and infrastructure [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Tax restraint directly supports the lower-tax pole, without a specific maximal cut proposal."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Explicit spending restraint is a central stated priority."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Safety is emphasized, but no specific enforcement approach is documented."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Private-sector and community experience support renewal while providing some relevant background."
+            }
+          }
+        },
+        {
+          "slug": "satin-arnett",
+          "summary": "Arnett is a Camano Island community candidate emphasizing housing, the environment, public health, services, and sustainable budgeting.",
+          "highlights": [
+            "Prioritizes public health and county services [S1]",
+            "Emphasizes housing, environment, and sustainable budgeting [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Her emphasis on public health and services supports public investment, tempered by sustainable-budget language."
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "low",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Environmental emphasis weakly supports the climate-action direction, but no mechanism is documented."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "The dossier identifies community candidacy without a documented elected or county-management record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "island-island-county-county-assessor",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/island/dossiers/island-island-county-county-assessor/"
+      ],
+      "office_does": "The assessor values taxable property, maintains parcel records, and administers exemptions and appeals under state law.",
+      "race_blurb": "The race contrasts challenger Doug Stults\u2019s local valuation and systems background with incumbent Kelly Todd Mauck\u2019s accredited assessment record.",
+      "candidates": [
+        {
+          "slug": "doug-stults",
+          "summary": "Stults is a property-assessment candidate emphasizing accurate valuations, responsive appeals, service, and modern systems.",
+          "highlights": [
+            "Has local valuation experience [S1]",
+            "Emphasizes appeals, service, and system modernization [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He brings relevant valuation experience but no documented tenure leading the assessor office."
+            }
+          }
+        },
+        {
+          "slug": "kelly-todd-mauck",
+          "summary": "Mauck is the incumbent assessor and an accredited assessment professional emphasizing uniform valuation, compliance, access, and training.",
+          "highlights": [
+            "Serves as incumbent assessor [S1]",
+            "Emphasizes uniform valuations, compliance, and staff training [S1]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Incumbency and accredited assessment experience establish the race\u2019s strongest direct institutional record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "island-island-county-county-sheriff",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/island/dossiers/island-island-county-county-sheriff/"
+      ],
+      "office_does": "The sheriff leads county law enforcement, jail and civil functions, emergency response, staffing, training, and interagency public-safety work.",
+      "race_blurb": "Both candidates have command experience; incumbent Rick Felici emphasizes continuity and standards, while Langley police chief Tavier Wasser emphasizes communication, training, and recruitment.",
+      "candidates": [
+        {
+          "slug": "rick-felici",
+          "summary": "Felici is the incumbent sheriff with policing, corrections, military, and command experience, emphasizing response, standards, retention, trust, and safety.",
+          "highlights": [
+            "Serves as incumbent sheriff after chief-criminal-deputy experience [S1]",
+            "Emphasizes emergency response, standards, and retention [S1]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Emergency response and policing standards support an enforcement lean, though no maximal mechanism is specified."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Incumbency plus broad policing, corrections, military, and command experience establish a proven record."
+            }
+          }
+        },
+        {
+          "slug": "tavier-wasser",
+          "summary": "Wasser is a police chief and Marine veteran emphasizing communication, training, accountability, recruitment, and community safety.",
+          "highlights": [
+            "Serves as Langley police chief [S1]",
+            "Emphasizes training, accountability, recruitment, and safety [S1]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "His command platform centers police capacity and accountability, supporting a modest enforcement lean."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Police-chief service and military experience provide a substantial institutional record, though not county-sheriff incumbency."
             }
           }
         }
@@ -21600,6 +23109,156 @@
                 "S1"
               ],
               "basis": "Has deputy, military-leadership, and co-responder experience but no sheriff-office executive record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "lewis-lewis-county-auditor",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/lewis/dossiers/lewis-lewis-county-auditor/"
+      ],
+      "office_does": "The auditor administers elections, records, licensing, and county financial functions.",
+      "race_blurb": "Three candidates emphasize different combinations of transparency, modernization, and professional preparation.",
+      "candidates": [
+        {
+          "slug": "frank-l-corbin",
+          "summary": "Corbin is a former local party leader campaigning on election audits, open financial records, and transparency.",
+          "highlights": [
+            "Supports auditing election results and opening county financial records [S2]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Opening financial records and auditing results supply an oversight direction."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He has organizational leadership but no documented auditor-office or elected record."
+            }
+          }
+        },
+        {
+          "slug": "mitch-townsend",
+          "summary": "Townsend is a former local party chair emphasizing modernization, accountability, transparency, and leadership development.",
+          "highlights": [
+            "Emphasizes modernization and accountable administration [S2]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Accountability and transparency supply an oversight direction."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "He has organizational leadership but no documented auditor-office record."
+            }
+          }
+        },
+        {
+          "slug": "mitchell-l-merrill",
+          "summary": "Merrill is a CPA candidate whose campaign centers on honest administration without a detailed platform.",
+          "highlights": [
+            "Campaign identifies accounting preparation and honest administration [S2]."
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "CPA preparation is relevant, but no auditor-office or elected record is documented."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "lewis-lewis-county-coroner",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/lewis/dossiers/lewis-lewis-county-coroner/"
+      ],
+      "office_does": "The coroner investigates qualifying deaths, determines cause and manner, maintains records, and works with families and justice agencies.",
+      "race_blurb": "Incumbent Warren McLeod faces chief deputy Chelsie Niemcziek and candidate Jessica Stickley.",
+      "candidates": [
+        {
+          "slug": "chelsie-niemcziek",
+          "summary": "Niemcziek is the chief deputy coroner and presents continuity and readiness to lead.",
+          "highlights": [
+            "Serves as chief deputy coroner [S2][S3]."
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Current chief-deputy service provides a substantial office record short of elected incumbency."
+            }
+          }
+        },
+        {
+          "slug": "jessica-stickley",
+          "summary": "Stickley is a filed candidate for coroner without an identity-safe detailed biography or platform in the dossier.",
+          "highlights": [
+            "Official and local election coverage verify her candidacy [S1][S2]."
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "warren-mcleod",
+          "summary": "McLeod has served as coroner since 2011 and teaches forensics.",
+          "highlights": [
+            "Has held the elected office since 2011 [S2][S3]."
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Sixteen years as elected coroner provide a maximal proven office record."
             }
           }
         }

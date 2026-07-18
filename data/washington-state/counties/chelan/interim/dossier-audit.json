@@ -1,0 +1,23 @@
+{
+  "script": "pipeline/verify_dossiers.py",
+  "derived_from": [
+    "data/washington-state/counties/chelan/interim/research-plan.json",
+    "data/washington-state/counties/chelan/dossiers/"
+  ],
+  "missing": [],
+  "no_frontmatter": [],
+  "invalid_evidence_levels": [],
+  "evidence_levels": {
+    "moderate": 7,
+    "rich": 4
+  },
+  "contest_overviews_missing": [],
+  "untouched_contests": [
+    "chelan-congressional-district-8-u-s-representative",
+    "chelan-legislative-district-7-state-senator",
+    "chelan-legislative-district-12-state-representative-pos-1",
+    "chelan-legislative-district-12-state-representative-pos-2",
+    "chelan-chelan-county-clerk"
+  ],
+  "untouched_measures": []
+}

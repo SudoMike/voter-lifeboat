@@ -2,14 +2,22 @@
   "derived_from": [
     "data/washington-state/counties/benton/scoring/measures.json",
     "data/washington-state/counties/benton/scoring/refutations/measures.json",
+    "data/washington-state/counties/clallam/scoring/measures.json",
+    "data/washington-state/counties/clallam/scoring/refutations/measures.json",
     "data/washington-state/counties/clark/scoring/measures.json",
     "data/washington-state/counties/clark/scoring/refutations/measures.json",
     "data/washington-state/counties/grant/scoring/measures.json",
     "data/washington-state/counties/grant/scoring/refutations/measures.json",
+    "data/washington-state/counties/grays-harbor/scoring/measures.json",
+    "data/washington-state/counties/grays-harbor/scoring/refutations/measures.json",
+    "data/washington-state/counties/island/scoring/measures.json",
+    "data/washington-state/counties/island/scoring/refutations/measures.json",
     "data/washington-state/counties/king/scoring/measures.json",
     "data/washington-state/counties/king/scoring/refutations/measures.json",
     "data/washington-state/counties/kitsap/scoring/measures.json",
     "data/washington-state/counties/kitsap/scoring/refutations/measures.json",
+    "data/washington-state/counties/lewis/scoring/measures.json",
+    "data/washington-state/counties/lewis/scoring/refutations/measures.json",
     "data/washington-state/counties/pierce/scoring/measures.json",
     "data/washington-state/counties/pierce/scoring/refutations/measures.json",
     "data/washington-state/counties/skagit/scoring/measures.json",
@@ -78,6 +86,32 @@
       "sources_note": "Official pamphlet explanation (S1); no pro or con statement submitted."
     },
     {
+      "slug": "clallam-clallam-county-fire-protection-district-no-2-proposition-no-1",
+      "what_it_does": "Creates a dedicated ten-year property-tax levy for basic and advanced emergency medical services beginning with 2027 collections.",
+      "cost_line": "Up to $0.50 per $1,000 of assessed value for ten consecutive years; approval requires the statutory supermajority and turnout thresholds.",
+      "pro_summary": "The district says dedicated revenue would separate EMS funding from the general fire levy and support staffing as emergency-call demand grows.",
+      "con_summary": "No official opposition statement was available; the direct tradeoff is a new dedicated property-tax charge for ten years.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES creates a new dedicated property-tax levy of up to $0.50 per $1,000 for ten years.",
+          "citations": [
+            "S1",
+            "S2"
+          ]
+        },
+        "spending": {
+          "direction": 1,
+          "basis": "YES funds dedicated EMS operations and additional staffing as the service-expansion lever.",
+          "citations": [
+            "S1",
+            "S2"
+          ]
+        }
+      },
+      "sources_note": "Official sample ballot (S1) and local reporting on the district's funding rationale (S2)."
+    },
+    {
       "slug": "clark-east-county-fire-and-rescue-proposition-no-6",
       "what_it_does": "Renews East County Fire & Rescue's emergency-medical-services property-tax levy for six years beginning in 2027, at no more than $0.35 per $1,000 of assessed value; the current levy expires at the end of 2026.",
       "cost_line": "Up to $140 per year on $400,000 assessed value, $227.50 on $650,000, or $350 on $1 million.",
@@ -141,6 +175,92 @@
         }
       },
       "sources_note": "Official sample-ballot title and fiscal terms (S1); no committee statements were available."
+    },
+    {
+      "slug": "grays-harbor-grays-harbor-county-fire-protection-district-no-7-proposition-no-1",
+      "what_it_does": "Authorizes a four-year excess levy raising $200,000 annually for ambulance maintenance and operations.",
+      "cost_line": "Approximately $0.45 per $1,000, or $45 annually per $100,000 and $225 on $500,000.",
+      "pro_summary": "Official material identifies ambulance maintenance and operations as the use; no pro statement was available.",
+      "con_summary": "No con statement was available; the tradeoff is ambulance funding versus higher property taxes.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES restores or creates a substantial property-tax levy or debt obligation.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official election material (S1); no committee statements were available."
+    },
+    {
+      "slug": "grays-harbor-mason-county-fire-protection-district-no-12-proposition-no-1",
+      "what_it_does": "Renews a six-year EMS levy at $0.50 per $1,000 of assessed value.",
+      "cost_line": "$50 annually per $100,000 assessed value, or $250 on $500,000.",
+      "pro_summary": "Official material identifies EMS operations as the use; no pro statement was available.",
+      "con_summary": "No con statement was available; the tradeoff is continued EMS funding versus continued property taxes.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "YES continues or renews an existing property-tax levy.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official election material (S1); no committee statements were available."
+    },
+    {
+      "slug": "grays-harbor-south-beach-regional-fire-authority-proposition-no-1",
+      "what_it_does": "Authorizes $10 million in bonds, repayable over no more than 25 years, to replace the headquarters fire station.",
+      "cost_line": "Up to $10 million principal plus interest through excess property-tax levies over no more than 25 years; no model-home estimate is stated.",
+      "pro_summary": "Official material identifies replacement headquarters construction as the use; no pro statement was available.",
+      "con_summary": "No con statement was available; the tradeoff is a replacement station versus long-term property-tax debt service.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES restores or creates a substantial property-tax levy or debt obligation.",
+          "citations": [
+            "S1"
+          ]
+        },
+        "spending": {
+          "direction": 2,
+          "basis": "YES makes a substantial public-service or capital investment.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official election material (S1); no committee statements were available."
+    },
+    {
+      "slug": "island-sno-isle-intercounty-rural-library-district-proposition-no-1",
+      "what_it_does": "Restores the library district's regular property-tax levy to $0.47 per $1,000 for 2027 and establishes that collection as the base for later statutory levy limits.",
+      "cost_line": "The official pamphlet estimates an increase of $124.25 annually, or $10.35 monthly, for a home assessed at $748,100.",
+      "pro_summary": "The official pro statement says the restoration protects literacy programs, hours, digital access, bookmobile and student support, and collections.",
+      "con_summary": "The official con statement describes a 55% rate increase, questions budget growth since 2018, and argues for reassessing services and priorities before raising taxes.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES restores a higher property-tax levy rate and resets the base used for future statutory limits.",
+          "citations": [
+            "S0",
+            "S1",
+            "S2"
+          ]
+        },
+        "spending": {
+          "direction": 2,
+          "basis": "YES expands the revenue base for general library operations and maintenance rather than requiring service reprioritization within current revenue.",
+          "citations": [
+            "S0",
+            "S1",
+            "S2"
+          ]
+        }
+      },
+      "sources_note": "Official Island County pamphlet (S0), district resolution (S1), and district levy information (S2)."
     },
     {
       "slug": "city-of-black-diamond-proposition-no-1",
@@ -354,6 +474,57 @@
         }
       },
       "sources_note": "Official pamphlet ballot title, explanation, and pro statement (S1); no con committee formed."
+    },
+    {
+      "slug": "lewis-lewis-county-fire-protection-district-no-15-winlock-proposition-no-1",
+      "what_it_does": "Continues a six-year EMS levy at $0.45 per $1,000 of assessed value.",
+      "cost_line": "$45 annually per $100,000 assessed value, or $225 on $500,000.",
+      "pro_summary": "Official material identifies the revenue for EMS operations; no pro statement was available.",
+      "con_summary": "No con statement was available; the tradeoff is EMS funding versus continued property taxes.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "YES continues or renews an existing property-tax levy.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official election material (S1); no committee statements were available."
+    },
+    {
+      "slug": "lewis-lewis-county-fire-protection-district-no-3-mossyrock-proposition-no-1",
+      "what_it_does": "Restores the district EMS levy to $0.50 per $1,000 of assessed value.",
+      "cost_line": "$50 annually per $100,000 assessed value, or $250 on $500,000.",
+      "pro_summary": "Official material identifies the revenue for EMS operations; no pro statement was available.",
+      "con_summary": "No con statement was available; the tradeoff is EMS funding versus higher property taxes.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES restores or creates a substantial property-tax levy or debt obligation.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official election material (S1); no committee statements were available."
+    },
+    {
+      "slug": "lewis-lewis-county-fire-protection-district-no-8-salkum-proposition-no-1",
+      "what_it_does": "Restores the fire and EMS levy to $0.88 per $1,000 and permits nine years of CPI adjustments.",
+      "cost_line": "Initially $88 annually per $100,000 assessed value, or $440 on $500,000; later collections may adjust with CPI.",
+      "pro_summary": "Official material identifies the revenue for fire and EMS operations; no pro statement was available.",
+      "con_summary": "No con statement was available; the tradeoff is fire and EMS funding versus higher, CPI-adjusted property taxes.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES restores or creates a substantial property-tax levy or debt obligation.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official election material (S1); no committee statements were available."
     },
     {
       "slug": "pierce-town-of-carbonado-proposition-no-1",

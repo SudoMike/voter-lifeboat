@@ -1,0 +1,22 @@
+{
+  "script": "pipeline/verify_dossiers.py",
+  "derived_from": [
+    "data/washington-state/counties/clallam/interim/research-plan.json",
+    "data/washington-state/counties/clallam/dossiers/"
+  ],
+  "missing": [],
+  "no_frontmatter": [],
+  "invalid_evidence_levels": [],
+  "evidence_levels": {
+    "rich": 1,
+    "moderate": 1
+  },
+  "contest_overviews_missing": [],
+  "untouched_contests": [
+    "clallam-congressional-district-6-u-s-representative",
+    "clallam-legislative-district-24-state-representative-pos-1",
+    "clallam-legislative-district-24-state-representative-pos-2",
+    "clallam-public-utility-district-commissioner-district-1-commissioner-district-no-2"
+  ],
+  "untouched_measures": []
+}
