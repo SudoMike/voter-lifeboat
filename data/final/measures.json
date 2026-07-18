@@ -1,5 +1,7 @@
 {
   "derived_from": [
+    "data/washington-state/counties/adams/scoring/measures.json",
+    "data/washington-state/counties/adams/scoring/refutations/measures.json",
     "data/washington-state/counties/asotin/scoring/measures.json",
     "data/washington-state/counties/asotin/scoring/refutations/measures.json",
     "data/washington-state/counties/benton/scoring/measures.json",
@@ -10,18 +12,24 @@
     "data/washington-state/counties/clark/scoring/refutations/measures.json",
     "data/washington-state/counties/douglas/scoring/measures.json",
     "data/washington-state/counties/douglas/scoring/refutations/measures.json",
+    "data/washington-state/counties/ferry/scoring/measures.json",
+    "data/washington-state/counties/ferry/scoring/refutations/measures.json",
     "data/washington-state/counties/grant/scoring/measures.json",
     "data/washington-state/counties/grant/scoring/refutations/measures.json",
     "data/washington-state/counties/grays-harbor/scoring/measures.json",
     "data/washington-state/counties/grays-harbor/scoring/refutations/measures.json",
     "data/washington-state/counties/island/scoring/measures.json",
     "data/washington-state/counties/island/scoring/refutations/measures.json",
+    "data/washington-state/counties/jefferson/scoring/measures.json",
+    "data/washington-state/counties/jefferson/scoring/refutations/measures.json",
     "data/washington-state/counties/king/scoring/measures.json",
     "data/washington-state/counties/king/scoring/refutations/measures.json",
     "data/washington-state/counties/kitsap/scoring/measures.json",
     "data/washington-state/counties/kitsap/scoring/refutations/measures.json",
     "data/washington-state/counties/kittitas/scoring/measures.json",
     "data/washington-state/counties/kittitas/scoring/refutations/measures.json",
+    "data/washington-state/counties/klickitat/scoring/measures.json",
+    "data/washington-state/counties/klickitat/scoring/refutations/measures.json",
     "data/washington-state/counties/lewis/scoring/measures.json",
     "data/washington-state/counties/lewis/scoring/refutations/measures.json",
     "data/washington-state/counties/mason/scoring/measures.json",
@@ -30,10 +38,16 @@
     "data/washington-state/counties/okanogan/scoring/refutations/measures.json",
     "data/washington-state/counties/pacific/scoring/measures.json",
     "data/washington-state/counties/pacific/scoring/refutations/measures.json",
+    "data/washington-state/counties/pend-oreille/scoring/measures.json",
+    "data/washington-state/counties/pend-oreille/scoring/refutations/measures.json",
     "data/washington-state/counties/pierce/scoring/measures.json",
     "data/washington-state/counties/pierce/scoring/refutations/measures.json",
+    "data/washington-state/counties/san-juan/scoring/measures.json",
+    "data/washington-state/counties/san-juan/scoring/refutations/measures.json",
     "data/washington-state/counties/skagit/scoring/measures.json",
     "data/washington-state/counties/skagit/scoring/refutations/measures.json",
+    "data/washington-state/counties/skamania/scoring/measures.json",
+    "data/washington-state/counties/skamania/scoring/refutations/measures.json",
     "data/washington-state/counties/snohomish/scoring/measures.json",
     "data/washington-state/counties/snohomish/scoring/refutations/measures.json",
     "data/washington-state/counties/spokane/scoring/measures.json",
@@ -51,6 +65,74 @@
   ],
   "script": "pipeline/merge_scores.py",
   "measures": [
+    {
+      "slug": "adams-adams-county-park-and-recreation-district-no-2-ballot-measure",
+      "what_it_does": "Authorizes a one-year maintenance and operations levy for the Washtucna Pool.",
+      "cost_line": "Raises $85,000 at about $0.83 per $1,000, or $415 on $500,000.",
+      "pro_summary": "Official material identifies the named local-service funding; no committee statement was available.",
+      "con_summary": "No committee statement was available; the tradeoff is the named service funding versus property-tax cost.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES authorizes a one-year property-tax levy.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official election material (S1); no committee statements were available."
+    },
+    {
+      "slug": "adams-adams-county-park-and-recreation-district-no-3-ballot-measure",
+      "what_it_does": "Authorizes a one-year maintenance and operations levy for the Lind Swimming Pool.",
+      "cost_line": "Raises $85,000 at about $0.20 per $1,000, or $100 on $500,000.",
+      "pro_summary": "Official material identifies the named local-service funding; no committee statement was available.",
+      "con_summary": "No committee statement was available; the tradeoff is the named service funding versus property-tax cost.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES authorizes a one-year property-tax levy.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official election material (S1); no committee statements were available."
+    },
+    {
+      "slug": "adams-adams-county-park-and-recreation-district-no-4-ballot-measure",
+      "what_it_does": "Authorizes a one-year maintenance and operations levy for the Ritzville Water Park.",
+      "cost_line": "Raises $170,000 at about $0.30 per $1,000, or $150 on $500,000.",
+      "pro_summary": "Official material identifies the named local-service funding; no committee statement was available.",
+      "con_summary": "No committee statement was available; the tradeoff is the named service funding versus property-tax cost.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES authorizes a one-year property-tax levy.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official election material (S1); no committee statements were available."
+    },
+    {
+      "slug": "adams-adams-county-cemetery-district-no-1-ballot-measure",
+      "what_it_does": "Authorizes a one-year maintenance and operations levy for cemetery upkeep.",
+      "cost_line": "Raises $55,500 at about $0.55 per $1,000, or $275 on $500,000.",
+      "pro_summary": "Official material identifies the named local-service funding; no committee statement was available.",
+      "con_summary": "No committee statement was available; the tradeoff is the named service funding versus property-tax cost.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES authorizes a one-year property-tax levy.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official election material (S1); no committee statements were available."
+    },
     {
       "slug": "asotin-asotin-county-rural-ems-district-no-2-proposition-no-1",
       "what_it_does": "Continues a rural emergency-medical-services property-tax levy for six years beginning with 2027 collections.",
@@ -246,6 +328,40 @@
       "sources_note": "Official sample ballot and resolution index (S1, S2); no opposition statement was available."
     },
     {
+      "slug": "ferry-city-of-republic-ballot-measure",
+      "what_it_does": "Authorizes regular property-tax levies for six years to fund emergency medical services in Republic.",
+      "cost_line": "$0.50 per $1,000 assessed value, or $250 annually on $500,000.",
+      "pro_summary": "Official material identifies Republic EMS as the use; no committee statement was available.",
+      "con_summary": "No committee statement was available; the direct tradeoff is EMS funding versus six years of property tax.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES authorizes a six-year regular property-tax levy for EMS.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official election material (S1)."
+    },
+    {
+      "slug": "ferry-ferry-county-emergency-medical-services-district-1-ballot-measure",
+      "what_it_does": "Continues the district's regular EMS levy for six years, collected from 2027 through 2032 outside Republic.",
+      "cost_line": "$0.50 per $1,000 assessed value, or $250 annually on $500,000.",
+      "pro_summary": "Official material identifies district EMS as the use; no committee statement was available.",
+      "con_summary": "No committee statement was available; the direct tradeoff is continued EMS funding versus six years of property tax.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "YES continues an existing six-year regular property-tax levy for EMS.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official election material (S1)."
+    },
+    {
       "slug": "grant-grant-county-public-hospital-district-no-5-proposition-no-1",
       "what_it_does": "Authorizes a multi-year levy lid lift for expanded health-care services and facilities at Mattawa Community Medical Clinic.",
       "cost_line": "Sets a maximum 2027 regular property-tax rate of $0.75 per $1,000, permits annual levy growth up to 6% through 2035, and uses the 2035 levy as the later statutory base.",
@@ -354,6 +470,128 @@
         }
       },
       "sources_note": "Official Island County pamphlet (S0), district resolution (S1), and district levy information (S2)."
+    },
+    {
+      "slug": "jefferson-jefferson-county-cemetery-district-no-2-quilcene-cemetery-proposition-no-1",
+      "what_it_does": "Restores the cemetery levy to $0.04 per $1,000 for maintenance, repairs, capital costs, and administration.",
+      "cost_line": "$4 annually per $100,000, or $20 on $500,000; the county estimates a $6.40 increase on $400,000.",
+      "pro_summary": "The pro committee says restoration maintains cemetery grounds and facilities.",
+      "con_summary": "No against committee formed; the tradeoff is cemetery services versus the levy increase.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES restores or creates a property-tax levy.",
+          "citations": [
+            "S1"
+          ]
+        },
+        "spending": {
+          "direction": 1,
+          "basis": "YES funds cemetery maintenance, repairs, capital costs, and administration.",
+          "citations": [
+            "S1"
+          ],
+          "added_by_refutation": true
+        }
+      },
+      "sources_note": "Official local voters' pamphlet (S1)."
+    },
+    {
+      "slug": "jefferson-jefferson-county-fire-protection-district-no-2-quilcene-fire-rescue-proposition-no-1",
+      "what_it_does": "Restores the fire levy to $1.25 per $1,000 for fire, EMS, apparatus, equipment, staffing, and safety.",
+      "cost_line": "$125 annually per $100,000, or $625 on $500,000; the current rate is about $0.75.",
+      "pro_summary": "The pro committee says restored funding supports staffing, equipment, training, and response.",
+      "con_summary": "No against committee formed; the tradeoff is emergency-service funding versus higher property tax.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES restores or creates a property-tax levy.",
+          "citations": [
+            "S1"
+          ]
+        },
+        "spending": {
+          "direction": 2,
+          "basis": "YES restores substantial funding for staffing, apparatus, equipment, training, response, and safety.",
+          "citations": [
+            "S1"
+          ],
+          "added_by_refutation": true
+        }
+      },
+      "sources_note": "Official local voters' pamphlet (S1)."
+    },
+    {
+      "slug": "jefferson-jefferson-county-fire-protection-district-no-4-brinnon-fire-department-proposition-no-1",
+      "what_it_does": "Restores the fire levy to as much as $1.50 per $1,000 and permits 104% annual growth for nine following years.",
+      "cost_line": "Initially up to $150 annually per $100,000, or $750 on $500,000; later collections may grow 4% annually.",
+      "pro_summary": "The pro committee cites staffing, training, equipment, planning, and advanced-life-support development.",
+      "con_summary": "No against committee formed; the tradeoff is service stability versus a restored and growing levy.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES restores or creates a property-tax levy.",
+          "citations": [
+            "S1"
+          ]
+        },
+        "spending": {
+          "direction": 2,
+          "basis": "YES funds an explicit public-service or capital investment.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official local voters' pamphlet (S1)."
+    },
+    {
+      "slug": "jefferson-jefferson-county-fire-protection-district-no-4-brinnon-fire-department-proposition-no-2",
+      "what_it_does": "Restores the EMS levy to as much as $0.50 per $1,000 and permits 104% annual growth for nine following years.",
+      "cost_line": "Initially up to $50 annually per $100,000, or $250 on $500,000; later collections may grow 4% annually.",
+      "pro_summary": "The pro committee cites supplies, training, vehicles, response, and advanced life support.",
+      "con_summary": "No against committee formed; the tradeoff is EMS funding versus a restored and growing levy.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES restores or creates a property-tax levy.",
+          "citations": [
+            "S1"
+          ]
+        },
+        "spending": {
+          "direction": 2,
+          "basis": "YES funds an explicit public-service or capital investment.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official local voters' pamphlet (S1)."
+    },
+    {
+      "slug": "jefferson-jefferson-county-proposition-no-1",
+      "what_it_does": "Provides six years of dedicated funding for parks, recreation, community centers, fairgrounds, and 4-H.",
+      "cost_line": "$0.21 per $1,000, or $21 annually per $100,000 and $105 on $500,000.",
+      "pro_summary": "The county says the levy replaces unavailable funding for community programs and facilities.",
+      "con_summary": "No official opposition statement was available; the tradeoff is services versus a new six-year tax.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES restores or creates a property-tax levy.",
+          "citations": [
+            "S1"
+          ]
+        },
+        "spending": {
+          "direction": 2,
+          "basis": "YES funds an explicit public-service or capital investment.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official local voters' pamphlet (S1)."
     },
     {
       "slug": "city-of-black-diamond-proposition-no-1",
@@ -637,6 +875,23 @@
       "sources_note": "Official election material (S1); no committee statements were available."
     },
     {
+      "slug": "klickitat-klickitat-county-fire-protection-district-no-4-lyle-proposition-no-1",
+      "what_it_does": "Sets the district fire and EMS levy at $1.15 per $1,000 and authorizes CPI adjustments for nine years.",
+      "cost_line": "$115 annually per $100,000, or $575 on $500,000, before later CPI adjustments.",
+      "pro_summary": "Official material identifies the named local-service funding; no committee statement was available.",
+      "con_summary": "No committee statement was available; the tradeoff is the named service funding versus property-tax cost.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES sets a property-tax rate and authorizes nine years of CPI adjustments.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official election material (S1); no committee statements were available."
+    },
+    {
       "slug": "lewis-lewis-county-fire-protection-district-no-15-winlock-proposition-no-1",
       "what_it_does": "Continues a six-year EMS levy at $0.45 per $1,000 of assessed value.",
       "cost_line": "$45 annually per $100,000 assessed value, or $225 on $500,000.",
@@ -831,6 +1086,30 @@
       "sources_note": "Official Pacific County election material (S1)."
     },
     {
+      "slug": "pend-oreille-pend-oreille-county-public-hospital-district-no-1-proposition-no-1",
+      "what_it_does": "Authorizes 30-year general-obligation bonds to expand and renovate Newport Community Hospital.",
+      "cost_line": "Up to $51 million in bonds repaid through excess property-tax levies over no more than 30 years.",
+      "pro_summary": "Official material identifies hospital expansion and renovation as the use; no committee statement was available.",
+      "con_summary": "No committee statement was available; the direct tradeoff is the hospital project versus long-term bond and property-tax cost.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES authorizes excess property-tax levies to repay up to $51 million in bonds.",
+          "citations": [
+            "S1"
+          ]
+        },
+        "spending": {
+          "direction": 2,
+          "basis": "YES authorizes a major long-term public capital investment in hospital expansion and renovation.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official election material (S1)."
+    },
+    {
       "slug": "pierce-town-of-carbonado-proposition-no-1",
       "what_it_does": "Reauthorizes Carbonado to levy up to $0.50 per $1,000 of assessed value for six years to continue basic and advanced emergency medical services.",
       "cost_line": "Up to $50 annually per $100,000 of assessed value, or $250 on a $500,000 property, before applicable exemptions.",
@@ -917,6 +1196,30 @@
       "sources_note": "Official pamphlet ballot title and committee statement (S1) and District Resolution No. 444 as summarized in the ballot title (S2)."
     },
     {
+      "slug": "san-juan-lopez-island-school-district-no-144-proposition-no-1",
+      "what_it_does": "Replaces an expiring levy for educational programs and operations not fully funded by the state for 2027-2030.",
+      "cost_line": "Estimated $0.36 per $1,000 annually, or $180 on $500,000; collections rise from $1,115,000 to $1,235,000.",
+      "pro_summary": "The pro committee cites nursing, library, advanced courses, garden, projects, staffing, and classroom resources.",
+      "con_summary": "The opposition argues against continuing local property-tax burdens; the tradeoff is programs versus a four-year levy.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "YES continues or replaces an existing property-tax levy.",
+          "citations": [
+            "S1"
+          ]
+        },
+        "spending": {
+          "direction": 1,
+          "basis": "YES funds an explicit public-service or capital investment.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official local voters' pamphlet (S1)."
+    },
+    {
       "slug": "skagit-darrington-school-district-no-330-proposition-no-1",
       "what_it_does": "Replaces an expiring school operations levy with a four-year levy collecting up to $950,000 annually from 2027 through 2030 for staffing, student programs, transportation, supplies, training, and other operations not fully state-funded.",
       "cost_line": "Estimated rates decline from $1.24 per $1,000 of assessed value in 2027 to $1.02 in 2030; supporters describe it as a no-increase replacement.",
@@ -997,6 +1300,30 @@
         }
       },
       "sources_note": "Official pamphlet explanation and supporting statement (S1) plus the district's levy information (S2); no opposition statement was filed."
+    },
+    {
+      "slug": "skamania-home-valley-water-district-no-1-proposition-no-1",
+      "what_it_does": "Authorizes a one-year excess levy replacing an expiring levy for water-system maintenance and capital improvements.",
+      "cost_line": "Raises $25,000 for 2027 at approximately $0.57 per $1,000, or $285 on $500,000.",
+      "pro_summary": "Official material identifies water maintenance and capital improvements as the use; no committee statement was available.",
+      "con_summary": "No committee statement was available; the direct tradeoff is water-system funding versus the one-year excess levy.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "YES replaces an expiring one-year excess property-tax levy.",
+          "citations": [
+            "S1"
+          ]
+        },
+        "spending": {
+          "direction": 1,
+          "basis": "YES funds water-system maintenance and capital improvements.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official election material (S1)."
     },
     {
       "slug": "snohomish-city-of-everett-proposition-no-1",

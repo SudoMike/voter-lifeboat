@@ -2,6 +2,8 @@
   "derived_from": [
     "data/washington-state/statewide/scoring/*.json",
     "data/washington-state/statewide/scoring/refutations/*.json",
+    "data/washington-state/counties/adams/scoring/*.json",
+    "data/washington-state/counties/adams/scoring/refutations/*.json",
     "data/washington-state/counties/asotin/scoring/*.json",
     "data/washington-state/counties/asotin/scoring/refutations/*.json",
     "data/washington-state/counties/benton/scoring/*.json",
@@ -16,6 +18,8 @@
     "data/washington-state/counties/cowlitz/scoring/refutations/*.json",
     "data/washington-state/counties/douglas/scoring/*.json",
     "data/washington-state/counties/douglas/scoring/refutations/*.json",
+    "data/washington-state/counties/ferry/scoring/*.json",
+    "data/washington-state/counties/ferry/scoring/refutations/*.json",
     "data/washington-state/counties/franklin/scoring/*.json",
     "data/washington-state/counties/franklin/scoring/refutations/*.json",
     "data/washington-state/counties/grant/scoring/*.json",
@@ -24,12 +28,16 @@
     "data/washington-state/counties/grays-harbor/scoring/refutations/*.json",
     "data/washington-state/counties/island/scoring/*.json",
     "data/washington-state/counties/island/scoring/refutations/*.json",
+    "data/washington-state/counties/jefferson/scoring/*.json",
+    "data/washington-state/counties/jefferson/scoring/refutations/*.json",
     "data/washington-state/counties/king/scoring/*.json",
     "data/washington-state/counties/king/scoring/refutations/*.json",
     "data/washington-state/counties/kitsap/scoring/*.json",
     "data/washington-state/counties/kitsap/scoring/refutations/*.json",
     "data/washington-state/counties/kittitas/scoring/*.json",
     "data/washington-state/counties/kittitas/scoring/refutations/*.json",
+    "data/washington-state/counties/klickitat/scoring/*.json",
+    "data/washington-state/counties/klickitat/scoring/refutations/*.json",
     "data/washington-state/counties/lewis/scoring/*.json",
     "data/washington-state/counties/lewis/scoring/refutations/*.json",
     "data/washington-state/counties/mason/scoring/*.json",
@@ -38,10 +46,16 @@
     "data/washington-state/counties/okanogan/scoring/refutations/*.json",
     "data/washington-state/counties/pacific/scoring/*.json",
     "data/washington-state/counties/pacific/scoring/refutations/*.json",
+    "data/washington-state/counties/pend-oreille/scoring/*.json",
+    "data/washington-state/counties/pend-oreille/scoring/refutations/*.json",
     "data/washington-state/counties/pierce/scoring/*.json",
     "data/washington-state/counties/pierce/scoring/refutations/*.json",
+    "data/washington-state/counties/san-juan/scoring/*.json",
+    "data/washington-state/counties/san-juan/scoring/refutations/*.json",
     "data/washington-state/counties/skagit/scoring/*.json",
     "data/washington-state/counties/skagit/scoring/refutations/*.json",
+    "data/washington-state/counties/skamania/scoring/*.json",
+    "data/washington-state/counties/skamania/scoring/refutations/*.json",
     "data/washington-state/counties/snohomish/scoring/*.json",
     "data/washington-state/counties/snohomish/scoring/refutations/*.json",
     "data/washington-state/counties/spokane/scoring/*.json",
@@ -61,10 +75,10 @@
   ],
   "script": "pipeline/merge_scores.py",
   "verdict_stats": {
-    "upheld": 1687,
-    "adjust": 264,
-    "refuted": 125,
-    "missing_added": 26,
+    "upheld": 1740,
+    "adjust": 269,
+    "refuted": 130,
+    "missing_added": 28,
     "missing_dropped_low": 4
   },
   "contests": [
@@ -10998,6 +11012,167 @@
       ]
     },
     {
+      "contest_slug": "adams-adams-county-assessor",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/adams/dossiers/adams-adams-county-assessor/"
+      ],
+      "office_does": "The assessor values taxable property, maintains property records and maps, and calculates levy rates.",
+      "race_blurb": "Both candidates have filing-level dossiers without substantive biographies or platforms.",
+      "candidates": [
+        {
+          "slug": "curtis-templin",
+          "summary": "Candidate for Adams County assessor.",
+          "highlights": [
+            "Local election coverage verifies candidacy [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "veronica-rodriguez",
+          "summary": "Candidate for Adams County assessor.",
+          "highlights": [
+            "Local election coverage verifies candidacy [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "adams-adams-county-auditor",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/adams/dossiers/adams-adams-county-auditor/"
+      ],
+      "office_does": "The auditor administers elections, licensing, recording, and county financial functions.",
+      "race_blurb": "County elections administrator Jacque Laird faces two candidates with filing-level dossiers.",
+      "candidates": [
+        {
+          "slug": "courtney-fannin",
+          "summary": "Candidate for Adams County auditor.",
+          "highlights": [
+            "Local election coverage verifies candidacy [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "jacque-laird",
+          "summary": "County elections administrator seeking the auditor office.",
+          "highlights": [
+            "Has direct current election-administration experience [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Current election administration supplies directly relevant institutional experience."
+            }
+          }
+        },
+        {
+          "slug": "stephanie-dormaier",
+          "summary": "Candidate for Adams County auditor.",
+          "highlights": [
+            "Local election coverage verifies candidacy [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "adams-adams-county-commissioner-district-3-county-commissioner-district-3",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/adams/dossiers/adams-adams-county-commissioner-district-3-county-commissioner-district-3/"
+      ],
+      "office_does": "County commissioners adopt budgets and policy and oversee departments and public works.",
+      "race_blurb": "Incumbent Miguel Garza faces Eleanor Brodahl, whose dossier contains filing-level information only.",
+      "candidates": [
+        {
+          "slug": "eleanor-brodahl",
+          "summary": "Candidate for Adams County commissioner District 3.",
+          "highlights": [
+            "Local election coverage verifies candidacy [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "miguel-a-mike-garza",
+          "summary": "Incumbent District 3 county commissioner.",
+          "highlights": [
+            "Local reporting establishes incumbency [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Incumbency supports a record-oriented profile, though tenure and accomplishments are not detailed."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "adams-adams-county-sheriff",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/adams/dossiers/adams-adams-county-sheriff/"
+      ],
+      "office_does": "The sheriff leads county law enforcement, jail, civil process, and public-safety coordination.",
+      "race_blurb": "Incumbent Dale Wagner faces Matthew Carlson, whose dossier contains filing-level information only.",
+      "candidates": [
+        {
+          "slug": "matthew-carlson",
+          "summary": "Candidate for Adams County sheriff.",
+          "highlights": [
+            "Local election coverage verifies candidacy [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "dale-j-wagner",
+          "summary": "Incumbent Adams County sheriff.",
+          "highlights": [
+            "Local reporting establishes incumbency [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Incumbency supports a record-oriented profile, though tenure and accomplishments are not detailed."
+            }
+          }
+        }
+      ]
+    },
+    {
       "contest_slug": "asotin-asotin-county-county-sheriff",
       "scored_at": "2026-07-18",
       "derived_from": [
@@ -11852,6 +12027,72 @@
               "basis": "The dossier directly supports this experience placement."
             }
           }
+        }
+      ]
+    },
+    {
+      "contest_slug": "clallam-public-utility-district-commissioner-district-1-commissioner-district-no-2",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/clallam/dossiers/clallam-public-utility-district-commissioner-district-1-commissioner-district-no-2/"
+      ],
+      "office_does": "The commission sets utility policy and rates and oversees electric and water operations.",
+      "race_blurb": "Five candidates seek the open seat; the rubric defines no axis applicable to this PUD contest.",
+      "candidates": [
+        {
+          "slug": "john-w-jack-smith",
+          "summary": "Retired PUD engineer emphasizing low rates, reliability, conservation, consolidation, and water supply.",
+          "highlights": [
+            "Has 28 years of PUD experience [S2]",
+            "Opposes Snake River dam removal [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "missi-baker",
+          "summary": "Area resident emphasizing affordability, accountability, assistance, and cautious merger review.",
+          "highlights": [
+            "Prioritizes stability and affordability [S2]",
+            "Opposes Snake River dam removal [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "randy-brackett",
+          "summary": "Professional engineer emphasizing renewable generation, resilience, and water research.",
+          "highlights": [
+            "Has more than 30 years of public-works experience [S2]",
+            "Opposes Snake River dam removal [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "rick-paschall",
+          "summary": "Former PUD commissioner emphasizing rate pressure, regional leverage, and water constraints.",
+          "highlights": [
+            "Has 30 years in the electric-utility industry [S2]",
+            "Opposes Snake River dam removal [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "timothy-dalton",
+          "summary": "Community-development specialist emphasizing partnerships, oversight, cost-benefit analysis, and grants.",
+          "highlights": [
+            "Prioritizes policy and financial oversight [S2]",
+            "Opposes Snake River dam removal [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
         }
       ]
     },
@@ -12801,6 +13042,48 @@
               "basis": "Current command and prior undersheriff service establish a strong office record, though the dossier gives no long tenure."
             }
           }
+        }
+      ]
+    },
+    {
+      "contest_slug": "ferry-ferry-county-county-clerk",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/ferry/dossiers/ferry-ferry-county-county-clerk/"
+      ],
+      "office_does": "The clerk maintains Superior Court records, filings, exhibits, and court-related financial processes.",
+      "race_blurb": "Incumbent Melanie Breezee faces Sheri Mott, for whom only filing-level evidence was available.",
+      "candidates": [
+        {
+          "slug": "melanie-breezee",
+          "summary": "Incumbent clerk with direct responsibility for administering the office.",
+          "highlights": [
+            "Ballot and court directory verify incumbency [S1][S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Incumbency and direct office administration support the proven-record pole.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "sheri-l-mott",
+          "summary": "Filed candidate without an identity-safe professional biography or detailed platform.",
+          "highlights": [
+            "Official voter guide verifies candidacy [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
         }
       ]
     },
@@ -14188,6 +14471,133 @@
           "evidence_level": "rich",
           "withdrawn": false,
           "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "jefferson-jefferson-county-commissioner-district-3-district-3",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/jefferson/dossiers/jefferson-jefferson-county-commissioner-district-3-district-3/"
+      ],
+      "office_does": "County commissioners adopt budgets, set policy, and oversee departments, infrastructure, and services.",
+      "race_blurb": "Four candidates present business, nonprofit, housing, civic, inspection, and emergency-management backgrounds.",
+      "candidates": [
+        {
+          "slug": "anji-scalf",
+          "summary": "Scalf is a former chamber executive with nonprofit, business, restoration, and extension experience emphasizing prudent budgets and broad public investment.",
+          "highlights": [
+            "Emphasizes prudent budgeting, housing, infrastructure, health care, transportation, and workforce investment [S1]."
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Her platform combines prudent budgeting with multiple public-investment priorities."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She has substantial civic and management experience but no documented elected county record."
+            }
+          }
+        },
+        {
+          "slug": "christopher-hannon",
+          "summary": "Hannon manages housing resources and emphasizes affordable housing, infrastructure, services, responsible growth, and working families.",
+          "highlights": [
+            "Has direct housing-services and coordinated-entry experience [S1]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "housing": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "His stated housing focus is affordable housing and service coordination rather than market deregulation."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He emphasizes infrastructure and public services as primary tools."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He has relevant service-management experience but no documented elected record."
+            }
+          }
+        },
+        {
+          "slug": "jean-ball",
+          "summary": "Ball is a business owner and civic leader emphasizing fiscal stewardship, roads, safety, services, development, and environmental protection.",
+          "highlights": [
+            "Emphasizes fiscal stewardship, roads, safety, essential services, and environmental protection [S1]."
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Fiscal stewardship is an explicit priority."
+            }
+          }
+        },
+        {
+          "slug": "stephen-t-nieman",
+          "summary": "Nieman is a contractor, inspector, investigator, and emergency volunteer emphasizing oversight, measurable results, service efficiency, and permitting reform.",
+          "highlights": [
+            "Calls for oversight, measurable results, efficiency or cuts, and permitting reform [S1]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He explicitly prioritizes oversight, measurable results, efficiency, and service cuts where warranted."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He proposes permitting reform to lower housing costs."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He brings private and volunteer experience without a documented elected record."
+            }
+          }
         }
       ]
     },
@@ -24025,6 +24435,168 @@
       ]
     },
     {
+      "contest_slug": "klickitat-klickitat-county-commissioner-district-2-county-commissioner-2",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/klickitat/dossiers/klickitat-klickitat-county-commissioner-district-2-county-commissioner-2/"
+      ],
+      "office_does": "County commissioners adopt budgets and policy and oversee departments, public works, and regional responsibilities.",
+      "race_blurb": "Incumbent Lori Zoller faces two candidates whose dossiers contain filing-level information only.",
+      "candidates": [
+        {
+          "slug": "andy-kallinen",
+          "summary": "Active commissioner candidate without additional identity-safe substantive material.",
+          "highlights": [
+            "Official filing verifies candidacy [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "lori-zoller",
+          "summary": "Incumbent District 2 commissioner and county Board of Health member.",
+          "highlights": [
+            "Official pages document current commission and public-health governance [S2][S3]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Current commission and Board of Health service support a record-oriented profile, though tenure and accomplishments are not detailed."
+            }
+          }
+        },
+        {
+          "slug": "gene-klejeski",
+          "summary": "Active commissioner candidate without additional identity-safe substantive material.",
+          "highlights": [
+            "Official filing verifies candidacy [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "klickitat-klickitat-county-klickitat-county-sheriff",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/klickitat/dossiers/klickitat-klickitat-county-klickitat-county-sheriff/"
+      ],
+      "office_does": "The sheriff leads patrol, investigations, jail, civil process, staffing, and interagency public safety.",
+      "race_blurb": "A retired police chief faces two current county sheriff's-office candidates.",
+      "candidates": [
+        {
+          "slug": "john-bruce",
+          "summary": "Retired chief of three police agencies with graduate education and FBI National Academy training.",
+          "highlights": [
+            "Has prior executive command of multiple police agencies [S2][S3]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Executive command of three police agencies establishes the field's maximal proven leadership record."
+            }
+          }
+        },
+        {
+          "slug": "tony-warren",
+          "summary": "County detective sergeant with patrol, training, warrants, marine, tactical, and municipal experience.",
+          "highlights": [
+            "Holds current county supervisory and training responsibilities [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Current county supervisory work across multiple operational assignments establishes substantial relevant experience."
+            }
+          }
+        },
+        {
+          "slug": "dwayne-t-matulovich",
+          "summary": "County deputy with more than a decade of direct investigative experience.",
+          "highlights": [
+            "Joined the sheriff's office in 2015 [S2][S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "More than a decade of direct county-agency work supports a record-oriented placement."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "klickitat-public-utility-district-commissioner-district-3-public-utility-district-1-commissioner-pos-3",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/klickitat/dossiers/klickitat-public-utility-district-commissioner-district-3-public-utility-district-1-commissioner-pos-3/"
+      ],
+      "office_does": "PUD commissioners set utility policy and rates and oversee electric and water operations.",
+      "race_blurb": "Three candidates seek Position 3; the rubric defines no PublicUtility-applicable axes.",
+      "candidates": [
+        {
+          "slug": "dan-christopher",
+          "summary": "Former county commissioner seeking PUD Position 3.",
+          "highlights": [
+            "Official records establish prior county governance [S1][S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "dan-g-gunkel",
+          "summary": "Active PUD candidate without additional identity-safe substantive material.",
+          "highlights": [
+            "Official filing verifies candidacy [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "logan-b-siebert",
+          "summary": "Active PUD candidate without additional identity-safe substantive material.",
+          "highlights": [
+            "Official filing verifies candidacy [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
       "contest_slug": "lewis-lewis-county-auditor",
       "scored_at": "2026-07-18",
       "derived_from": [
@@ -24796,6 +25368,77 @@
       ]
     },
     {
+      "contest_slug": "pacific-pacific-county-commissioner-district-3-county-commissioner-03",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/pacific/dossiers/pacific-pacific-county-commissioner-district-3-county-commissioner-03/"
+      ],
+      "office_does": "County commissioners adopt budgets, set county policy, and oversee departments and services.",
+      "race_blurb": "Five candidates seek the District 3 seat; only Pattie Gray's dossier supplies a substantive current campaign direction.",
+      "candidates": [
+        {
+          "slug": "jerry-doyle",
+          "summary": "Doyle is a filed candidate without a substantive identity-safe platform.",
+          "highlights": [
+            "Official election material verifies his candidacy [S1]."
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "michael-hawk-runyon",
+          "summary": "Runyon is a filed candidate without a substantive identity-safe platform.",
+          "highlights": [
+            "Official election material verifies his candidacy [S1]."
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "pattie-gray",
+          "summary": "Gray campaigns as a change from current county-government practices and emphasizes constituent representation.",
+          "highlights": [
+            "Calls for changing county-government practices [S2]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Her campaign explicitly presents an outsider-change profile without a documented government record."
+            }
+          }
+        },
+        {
+          "slug": "ron-a-mullins",
+          "summary": "Mullins is a filed candidate without a substantive identity-safe platform.",
+          "highlights": [
+            "Official election material verifies his candidacy [S1]."
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "ron-black",
+          "summary": "Black is a filed candidate without a substantive identity-safe platform.",
+          "highlights": [
+            "Official election material verifies his candidacy [S1]."
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
       "contest_slug": "pacific-pacific-county-county-assessor",
       "scored_at": "2026-07-18",
       "derived_from": [
@@ -24888,6 +25531,179 @@
               ],
               "basis": "Incumbency and direct administration of the full office support the proven-record pole.",
               "adjusted_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "pacific-pacific-county-county-sheriff",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/pacific/dossiers/pacific-pacific-county-county-sheriff/"
+      ],
+      "office_does": "The sheriff leads county law enforcement, jail operations, emergency response, and civil process.",
+      "race_blurb": "Incumbent Daniel Garcia faces three challengers with law-enforcement, investigative, public-board, and management backgrounds.",
+      "candidates": [
+        {
+          "slug": "daniel-c-garcia",
+          "summary": "Garcia is the incumbent sheriff; the dossier provides no detailed current campaign platform.",
+          "highlights": [
+            "Currently commands the sheriff's office [S2]."
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Current command supports a proven record, though tenure and accomplishments are not detailed."
+            }
+          }
+        },
+        {
+          "slug": "david-podesta",
+          "summary": "Podesta is a law-enforcement candidate emphasizing respectful professional policing and department leadership.",
+          "highlights": [
+            "Emphasizes respectful, professional law enforcement [S2]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "rich-byrd",
+          "summary": "Byrd is a former hospital commissioner, business operator, and Adult Protective Services investigator emphasizing agency leadership.",
+          "highlights": [
+            "Has elected-board, business, and investigative experience [S2]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "His leadership record is relevant but outside sheriff-office command.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "sean-k-eastham",
+          "summary": "Eastham is a county sheriff's deputy supporting drug-task-force enforcement against traffickers alongside treatment options for addiction.",
+          "highlights": [
+            "Supports targeting traffickers and dealers while offering addiction treatment [S2]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He explicitly combines enforcement against dealers with treatment for people with addiction."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Current service as a county deputy provides a directly relevant office record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "pacific-pacific-county-prosecuting-attorney",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/pacific/dossiers/pacific-pacific-county-prosecuting-attorney/"
+      ],
+      "office_does": "The prosecuting attorney prosecutes crimes, advises county government, and represents the county in civil matters.",
+      "race_blurb": "Chief criminal deputy Jennifer Zorn faces Michael Turner, whose approved dossier contains filing-level information only.",
+      "candidates": [
+        {
+          "slug": "jennifer-zorn",
+          "summary": "Zorn is the chief criminal deputy prosecutor and has practiced in Washington since 2015.",
+          "highlights": [
+            "Has direct chief-deputy prosecutorial experience [S2]."
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Chief criminal deputy service and a decade-plus legal record support a strong institutional profile."
+            }
+          }
+        },
+        {
+          "slug": "michael-s-turner",
+          "summary": "Turner is a filed candidate without an identity-safe professional biography or detailed platform.",
+          "highlights": [
+            "Official election material verifies his candidacy [S1]."
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "pend-oreille-pend-oreille-county-commissioner-district-2-county-commissioner-2",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/pend-oreille/dossiers/pend-oreille-pend-oreille-county-commissioner-district-2-county-commissioner-2/"
+      ],
+      "office_does": "Commissioners adopt budgets and county policy and oversee departments and services.",
+      "race_blurb": "Incumbent Robert Rosencrantz faces small-business owner Brandy Parker Warren.",
+      "candidates": [
+        {
+          "slug": "brandy-parker-warren",
+          "summary": "Small-business owner emphasizing responsible growth, local services, collaboration, and accountability.",
+          "highlights": [
+            "Calls for practical locally driven decisions [S2]",
+            "Emphasizes strong local services and responsible growth [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "robert-rosencrantz",
+          "summary": "Incumbent District 2 commissioner serving since September 2021.",
+          "highlights": [
+            "Has direct county-governance experience since 2021 [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Multi-year incumbency establishes a direct proven governing record."
             }
           }
         }
@@ -25369,6 +26185,90 @@
       ]
     },
     {
+      "contest_slug": "san-juan-san-juan-county-council-residency-district-3",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/san-juan/dossiers/san-juan-san-juan-county-council-residency-district-3/"
+      ],
+      "office_does": "The county council adopts budgets and policy and oversees county services, infrastructure, and land-use decisions.",
+      "race_blurb": "Three candidates bring school, ferry, nonprofit, health-care, emergency-service, and environmental backgrounds.",
+      "candidates": [
+        {
+          "slug": "jennifer-swanson",
+          "summary": "Swanson is a former school-board member and superintendent and current ferry-advisory chair emphasizing reserves, housing, ferries, and stewardship.",
+          "highlights": [
+            "Emphasizes rebuilding reserves, housing options, ferry reliability, and stewardship [S1]."
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Rebuilding financial reserves supplies a modest restraint and accountability direction."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Prior elected school-board service and current ferry leadership establish a public record."
+            }
+          }
+        },
+        {
+          "slug": "katherine-bryant-ingman",
+          "summary": "Ingman is a nonprofit manager with housing, food-access, health-care, ferry, and youth experience emphasizing housing, business, ferries, environment, transparency, and balanced budgets.",
+          "highlights": [
+            "Emphasizes housing, local business, ferry reliability, environmental protection, and balanced budgets [S1]."
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Her platform genuinely mixes balanced budgets with public-service and housing priorities."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She has broad nonprofit and service experience but no documented elected record."
+            }
+          }
+        },
+        {
+          "slug": "renee-j-koplan",
+          "summary": "Koplan is a health-care and school professional with climate, emergency-service, hospice, and wildlife service emphasizing collaboration and environmental protection.",
+          "highlights": [
+            "Has climate, fire and EMS, oil-spill, hospice, and wildlife service [S1]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She has broad public-service experience but no documented elected record."
+            }
+          }
+        }
+      ]
+    },
+    {
       "contest_slug": "skagit-skagit-county-auditor",
       "scored_at": "2026-07-17",
       "derived_from": [
@@ -25512,6 +26412,178 @@
               "basis": "His record spans state Senate service and prior terms as mayor and city councilmember."
             }
           }
+        }
+      ]
+    },
+    {
+      "contest_slug": "skamania-skamania-county-assessor",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/skamania/dossiers/skamania-skamania-county-assessor/"
+      ],
+      "office_does": "The assessor administers taxable-property valuation and records under state law.",
+      "race_blurb": "Longtime incumbent Gabriel Spencer faces county-government veteran Cora Moser.",
+      "candidates": [
+        {
+          "slug": "cora-moser",
+          "summary": "Paralegal and county-government employee emphasizing transparent valuations, access, and a homestead exemption.",
+          "highlights": [
+            "Has eight years in county government [S2]",
+            "Advocates for a state homestead exemption [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "A homestead exemption would reduce covered property-tax burdens."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Eight years in county government establish a substantial relevant institutional record."
+            }
+          }
+        },
+        {
+          "slug": "gabriel-p-spencer",
+          "summary": "Incumbent assessor emphasizing data-based valuation, clear appeals, and a larger business-property exemption.",
+          "highlights": [
+            "Has roughly 20 years as assessor [S2]",
+            "Supports increasing the business personal-property exemption [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Increasing the exemption would reduce covered business property-tax burdens."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Roughly 20 years as incumbent assessor support the maximal proven-record pole."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "skamania-skamania-county-clerk",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/skamania/dossiers/skamania-skamania-county-clerk/"
+      ],
+      "office_does": "The clerk administers court records, filings, exhibits, and related public access.",
+      "race_blurb": "Incumbent Grace Cross faces Olivia Munsch.",
+      "candidates": [
+        {
+          "slug": "grace-d-cross",
+          "summary": "Incumbent clerk emphasizing trained staff, electronic filing, online records, access, and responsiveness.",
+          "highlights": [
+            "Current officeholder [S1][S2]",
+            "Prioritizes electronic filing and online records [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Incumbency and direct administration of the clerk's office support the proven-record pole.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "olivia-d-munsch",
+          "summary": "Challenger emphasizing plain-language procedures, accessible records and fees, feedback, and neutral service.",
+          "highlights": [
+            "Calls for accessible procedures and records [S2]",
+            "Emphasizes professional neutral service [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "skamania-skamania-county-commissioner-district-3-commissioner-no-3",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/skamania/dossiers/skamania-skamania-county-commissioner-district-3-commissioner-no-3/"
+      ],
+      "office_does": "County commissioners adopt budgets and policy and oversee county services and departments.",
+      "race_blurb": "Incumbent Asa Leckie faces Paul Mosbrucker, for whom no detailed platform was available.",
+      "candidates": [
+        {
+          "slug": "asa-leckie",
+          "summary": "Incumbent commissioner emphasizing tax restraint, core-service budgets, lower-burden regulation, timber revenue, and business partnerships.",
+          "highlights": [
+            "Calls for tax restraint and core-service budgets [S2]",
+            "Supports lower-burden regulation and timber revenue [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Tax restraint is an explicit central campaign commitment.",
+              "adjusted_by_refutation": true
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Core-service budgeting supports modest spending restraint."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Current county commission incumbency establishes a direct governing record.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "paul-h-mosbrucker",
+          "summary": "Filed candidate without a sufficiently detailed response in the reviewed sources.",
+          "highlights": [
+            "Official and chamber sources verify candidacy [S1][S2]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
         }
       ]
     },

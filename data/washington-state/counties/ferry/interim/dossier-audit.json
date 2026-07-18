@@ -1,0 +1,23 @@
+{
+  "script": "pipeline/verify_dossiers.py",
+  "derived_from": [
+    "data/washington-state/counties/ferry/interim/research-plan.json",
+    "data/washington-state/counties/ferry/dossiers/"
+  ],
+  "missing": [],
+  "no_frontmatter": [],
+  "invalid_evidence_levels": [],
+  "invalid_source_formats": [],
+  "evidence_levels": {
+    "rich": 1,
+    "pamphlet-only": 1
+  },
+  "contest_overviews_missing": [],
+  "untouched_contests": [
+    "ferry-congressional-district-5-u-s-representative",
+    "ferry-legislative-district-7-state-senator",
+    "ferry-ferry-county-commissioner-district-2-county-commissioner-2",
+    "ferry-ferry-county-county-sheriff"
+  ],
+  "untouched_measures": []
+}

@@ -1,0 +1,23 @@
+{
+  "script": "pipeline/verify_dossiers.py",
+  "derived_from": [
+    "data/washington-state/counties/skamania/interim/research-plan.json",
+    "data/washington-state/counties/skamania/dossiers/"
+  ],
+  "missing": [],
+  "no_frontmatter": [],
+  "invalid_evidence_levels": [],
+  "invalid_source_formats": [],
+  "evidence_levels": {
+    "rich": 4,
+    "moderate": 1,
+    "pamphlet-only": 1
+  },
+  "contest_overviews_missing": [],
+  "untouched_contests": [
+    "skamania-congressional-district-3-u-s-representative",
+    "skamania-legislative-district-17-state-representative-pos-1",
+    "skamania-legislative-district-17-state-representative-pos-2"
+  ],
+  "untouched_measures": []
+}

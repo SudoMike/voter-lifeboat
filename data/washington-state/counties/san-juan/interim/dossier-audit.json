@@ -1,0 +1,22 @@
+{
+  "script": "pipeline/verify_dossiers.py",
+  "derived_from": [
+    "data/washington-state/counties/san-juan/interim/research-plan.json",
+    "data/washington-state/counties/san-juan/dossiers/"
+  ],
+  "missing": [],
+  "no_frontmatter": [],
+  "invalid_evidence_levels": [],
+  "invalid_source_formats": [],
+  "evidence_levels": {
+    "moderate": 1,
+    "rich": 2
+  },
+  "contest_overviews_missing": [],
+  "untouched_contests": [
+    "san-juan-congressional-district-2-u-s-representative",
+    "san-juan-legislative-district-40-state-representative-pos-1",
+    "san-juan-legislative-district-40-state-representative-pos-2"
+  ],
+  "untouched_measures": []
+}

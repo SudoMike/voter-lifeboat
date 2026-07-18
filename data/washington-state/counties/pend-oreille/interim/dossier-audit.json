@@ -1,0 +1,21 @@
+{
+  "script": "pipeline/verify_dossiers.py",
+  "derived_from": [
+    "data/washington-state/counties/pend-oreille/interim/research-plan.json",
+    "data/washington-state/counties/pend-oreille/dossiers/"
+  ],
+  "missing": [],
+  "no_frontmatter": [],
+  "invalid_evidence_levels": [],
+  "invalid_source_formats": [],
+  "evidence_levels": {
+    "rich": 2
+  },
+  "contest_overviews_missing": [],
+  "untouched_contests": [
+    "pend-oreille-congressional-district-5-u-s-representative",
+    "pend-oreille-legislative-district-7-state-senator",
+    "pend-oreille-public-utility-district-commissioner-district-2-public-utility-commissioner-2"
+  ],
+  "untouched_measures": []
+}
