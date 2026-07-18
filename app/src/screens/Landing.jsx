@@ -1,13 +1,22 @@
 import React from 'react'
+import GitHubLink from './GitHubLink.jsx'
 
 export default function Landing({ data, onStart }) {
   return (
     <main className="screen screen--app rise">
-      <header style={{ padding: '22px 24px 0' }}>
+      <header
+        style={{
+          padding: '22px 24px 0',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+        }}
+      >
         <div className="brand">
           <div className="buoy" />
           <div className="brand-name">Voter Lifeboat</div>
         </div>
+        <GitHubLink />
       </header>
       <section style={{ padding: '34px 24px 8px' }}>
         <h1 className="display display--xl">
@@ -35,8 +44,15 @@ export default function Landing({ data, onStart }) {
           </div>
           <div>
             <strong>Built and researched entirely by AI.</strong> We make no
-            accuracy claims — every score shows its sources so you can check our
-            work. See the <a href="#methodology">methodology</a>.
+            accuracy claims — every score shows its sources so you can{' '}
+            <a
+              href="https://github.com/SudoMike/voter-lifeboat"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              check our work
+            </a>
+            . See the <a href="#methodology">methodology</a>.
           </div>
         </div>
         <div className="panel trust-row">

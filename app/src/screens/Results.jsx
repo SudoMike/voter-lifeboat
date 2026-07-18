@@ -13,6 +13,7 @@ import {
 import { writeHash } from '../lib/codec.js'
 import { buildBrief, pamphletLink } from '../lib/brief.js'
 import { copyText } from '../lib/clipboard.js'
+import GitHubLink from './GitHubLink.jsx'
 
 const EVIDENCE = {
   rich: { marks: '◆◆◆', cls: 'evidence--rich', label: 'Rich record' },
@@ -667,8 +668,9 @@ export default function Results({ data, ballotContext, answers, restored, onStar
 
   return (
     <main className="screen screen--app screen--wide rise" style={{ paddingBottom: 0 }}>
-      <header style={{ padding: '20px 24px 0' }}>
-        <h1 className="display" style={{ fontSize: 25 }}>Your ballot, charted</h1>
+      <header style={{ padding: '20px 24px 0', position: 'relative' }}>
+        <GitHubLink style={{ position: 'absolute', top: 20, right: 24 }} />
+        <h1 className="display" style={{ fontSize: 25, paddingRight: 32 }}>Your ballot, charted</h1>
         <p style={{ fontSize: 13, fontWeight: 700, color: 'var(--ink-soft)', margin: '4px 0 0' }}>
           {contests.length} contests
           {measures.length ? ` · ${measures.length} measure${measures.length > 1 ? 's' : ''}` : ''}{' '}
