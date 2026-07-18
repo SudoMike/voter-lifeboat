@@ -14,6 +14,8 @@
     "data/washington-state/counties/clallam/scoring/refutations/*.json",
     "data/washington-state/counties/clark/scoring/*.json",
     "data/washington-state/counties/clark/scoring/refutations/*.json",
+    "data/washington-state/counties/columbia/scoring/*.json",
+    "data/washington-state/counties/columbia/scoring/refutations/*.json",
     "data/washington-state/counties/cowlitz/scoring/*.json",
     "data/washington-state/counties/cowlitz/scoring/refutations/*.json",
     "data/washington-state/counties/douglas/scoring/*.json",
@@ -22,6 +24,8 @@
     "data/washington-state/counties/ferry/scoring/refutations/*.json",
     "data/washington-state/counties/franklin/scoring/*.json",
     "data/washington-state/counties/franklin/scoring/refutations/*.json",
+    "data/washington-state/counties/garfield/scoring/*.json",
+    "data/washington-state/counties/garfield/scoring/refutations/*.json",
     "data/washington-state/counties/grant/scoring/*.json",
     "data/washington-state/counties/grant/scoring/refutations/*.json",
     "data/washington-state/counties/grays-harbor/scoring/*.json",
@@ -64,6 +68,8 @@
     "data/washington-state/counties/stevens/scoring/refutations/*.json",
     "data/washington-state/counties/thurston/scoring/*.json",
     "data/washington-state/counties/thurston/scoring/refutations/*.json",
+    "data/washington-state/counties/wahkiakum/scoring/*.json",
+    "data/washington-state/counties/wahkiakum/scoring/refutations/*.json",
     "data/washington-state/counties/walla-walla/scoring/*.json",
     "data/washington-state/counties/walla-walla/scoring/refutations/*.json",
     "data/washington-state/counties/whatcom/scoring/*.json",
@@ -75,9 +81,9 @@
   ],
   "script": "pipeline/merge_scores.py",
   "verdict_stats": {
-    "upheld": 1740,
-    "adjust": 269,
-    "refuted": 130,
+    "upheld": 1753,
+    "adjust": 271,
+    "refuted": 131,
     "missing_added": 28,
     "missing_dropped_low": 4
   },
@@ -12799,6 +12805,49 @@
       ]
     },
     {
+      "contest_slug": "columbia-columbia-county-commissioner-district-3-columbia-county-commissioner-no-3",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/columbia/dossiers/columbia-columbia-county-commissioner-district-3-columbia-county-commissioner-no-3/"
+      ],
+      "office_does": "County commissioners adopt budgets and policy, oversee departments and public works, and represent the county on regional boards.",
+      "race_blurb": "Incumbent Jack Miller faces Bill Warren, for whom only filing-level evidence was located.",
+      "candidates": [
+        {
+          "slug": "jack-miller",
+          "summary": "Miller is the incumbent District 3 commissioner and represents Columbia County on a regional aging and long-term-care board.",
+          "highlights": [
+            "Serves as the incumbent District 3 commissioner [S1][S3]",
+            "Represents the county on a regional governance board [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Incumbent county and regional-board service support a proven-record placement, while the dossier does not establish long tenure or specific accomplishments."
+            }
+          }
+        },
+        {
+          "slug": "bill-warren",
+          "summary": "Warren is an active District 3 candidate whose dossier contains no identity-safe biography or detailed platform.",
+          "highlights": [
+            "Official election records verify the candidacy [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
       "contest_slug": "cowlitz-cowlitz-county-clerk",
       "scored_at": "2026-07-17",
       "derived_from": [
@@ -13046,6 +13095,96 @@
       ]
     },
     {
+      "contest_slug": "ferry-ferry-county-commissioner-district-2-county-commissioner-2",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/ferry/dossiers/ferry-ferry-county-commissioner-district-2-county-commissioner-2/"
+      ],
+      "office_does": "County commissioners manage county finances and property, adopt ordinances and budgets, and oversee county services.",
+      "race_blurb": "Incumbent Robert Dean faces Kevin Berry and Jeremiah Adams, who emphasize rural economic opportunity, infrastructure, and local investment.",
+      "candidates": [
+        {
+          "slug": "jeremiah-aymish-adams",
+          "summary": "Adams has nonprofit, industrial, maintenance, and community-organization experience and proposes using existing county resources for cottage industries and youth retention.",
+          "highlights": [
+            "Proposes county investment focused on residents, cottage industries, and youth retention [S1].",
+            "Has nonprofit-management, industrial-supervision, and community-organization experience [S1]."
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He explicitly proposes using existing county resources for resident-focused economic investment."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He brings varied management and community experience but no documented elected county record."
+            }
+          }
+        },
+        {
+          "slug": "kevin-j-berry",
+          "summary": "Berry is an Army veteran and former business manager and truck driver emphasizing jobs, small businesses, roads, infrastructure, and transparent budgeting.",
+          "highlights": [
+            "Prioritizes local jobs, small businesses, rural industries, roads, and infrastructure [S1].",
+            "Calls for responsible and transparent budgeting [S1]."
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "His military and private-sector management record is substantial but outside elected county government."
+            }
+          }
+        },
+        {
+          "slug": "robert-bob-dean",
+          "summary": "Dean is the incumbent commissioner with intergovernmental board experience who emphasizes fiscal responsibility, efficiency, transparency, and continuity.",
+          "highlights": [
+            "Has served three and a half years as commissioner and on several regional boards [S1][S2].",
+            "Emphasizes fiscal responsibility, government efficiency, transparent fund management, and taxpayer respect [S1]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "His stated governing approach centers on fiscal responsibility, efficiency, taxpayer restraint, and transparent fund management.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Three and a half years as commissioner plus regional-board service establish a proven institutional record."
+            }
+          }
+        }
+      ]
+    },
+    {
       "contest_slug": "ferry-ferry-county-county-clerk",
       "scored_at": "2026-07-18",
       "derived_from": [
@@ -13084,6 +13223,67 @@
           "evidence_level": "pamphlet-only",
           "withdrawn": false,
           "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "ferry-ferry-county-county-sheriff",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/ferry/dossiers/ferry-ferry-county-county-sheriff/"
+      ],
+      "office_does": "The sheriff preserves the peace, makes arrests, executes court process, and operates the county jail.",
+      "race_blurb": "Three-term incumbent Ray Maycumber faces former Ferry County deputy and longtime Border Patrol agent Sam Olson.",
+      "candidates": [
+        {
+          "slug": "ray-maycumber",
+          "summary": "Maycumber is a three-term incumbent sheriff with more than 25 years as a Ferry County peace officer who emphasizes staffing and local authority over sheriff qualifications.",
+          "highlights": [
+            "Has served as sheriff since 2015 after prior police, deputy, chief-deputy, and 911 roles [S1].",
+            "Identifies recruitment and retention as a major challenge [S1].",
+            "Opposes state legislation changing sheriff qualification and retention rules [S1][S2]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Three terms as sheriff and more than 25 years in local law enforcement establish a maximal proven record."
+            }
+          }
+        },
+        {
+          "slug": "sam-olson",
+          "summary": "Olson is a former Ferry County deputy and Republic officer with 20 years in the U.S. Border Patrol who proposes aggressive enforcement against theft and drug abuse.",
+          "highlights": [
+            "Has local patrol and narcotics experience plus 20 years in the Border Patrol [S1].",
+            "Prioritizes household and property security and aggressive action against theft and drug abuse [S1]."
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "His explicit operational priority is aggressive enforcement against theft and drug abuse."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Local patrol and narcotics work plus 20 years of federal law-enforcement service establish a maximal proven record."
+            }
+          }
         }
       ]
     },
@@ -13289,6 +13489,153 @@
                 "S1"
               ],
               "basis": "Sheriff-command, operational, military, and municipal elected experience provide an extensive record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "garfield-garfield-county-commissioner-district-1-county-commissioner-1",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/garfield/dossiers/garfield-garfield-county-commissioner-district-1-county-commissioner-1/"
+      ],
+      "office_does": "County commissioners adopt budgets and policy and oversee county departments and services.",
+      "race_blurb": "Appointed incumbent Vonda Mulrony faces Beau Blachly, for whom only filing-level evidence was available.",
+      "candidates": [
+        {
+          "slug": "beau-blachly",
+          "summary": "Active candidate without an identity-safe substantive biography or stable platform.",
+          "highlights": [
+            "Official filing verifies candidacy [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "vonda-vonni-mulrony",
+          "summary": "Appointed incumbent with a financial background emphasizing fiscal responsibility and a balanced county budget.",
+          "highlights": [
+            "Identifies financial responsibility and balancing the budget as central duties [S2]",
+            "Official records verify appointed incumbency [S1][S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Explicit financial responsibility and budget-balancing priorities support modest fiscal restraint."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Appointed incumbency establishes direct governing experience, though not a long elected tenure."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "garfield-garfield-county-commissioner-district-3-county-commissioner-3",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/garfield/dossiers/garfield-garfield-county-commissioner-district-3-county-commissioner-3/"
+      ],
+      "office_does": "County commissioners adopt budgets and policy and oversee county departments and services.",
+      "race_blurb": "Incumbent Justin Dixon faces Gary Bowles, for whom only filing-level evidence was available.",
+      "candidates": [
+        {
+          "slug": "gary-w-bowles",
+          "summary": "Active candidate without an identity-safe substantive biography or stable platform.",
+          "highlights": [
+            "Official filing verifies candidacy [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "justin-e-dixon",
+          "summary": "Incumbent District 3 commissioner with documented commission-chair and appointment responsibilities.",
+          "highlights": [
+            "Served as commission chairman during the 2026 District 1 appointment [S2]",
+            "Official sources verify incumbency [S1][S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Incumbency and documented commission-chair responsibilities support the proven-record pole.",
+              "adjusted_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "garfield-garfield-county-county-sheriff",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/garfield/dossiers/garfield-garfield-county-county-sheriff/"
+      ],
+      "office_does": "The sheriff leads county law enforcement, emergency response, civil-process, staffing, and agency administration.",
+      "race_blurb": "Undersheriff Calvin Dansereau faces deputy and search-and-rescue officer Kristopher Taylor; neither dossier supplies a directional public-safety platform.",
+      "candidates": [
+        {
+          "slug": "calvin-dansereau",
+          "summary": "County undersheriff and field-training officer with current executive and training responsibility.",
+          "highlights": [
+            "Serves as undersheriff [S2][S3]",
+            "Has field-training responsibility [S3]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Current executive and field-training roles establish substantial direct agency experience."
+            }
+          }
+        },
+        {
+          "slug": "kristopher-lee-taylor",
+          "summary": "County deputy assigned to search and rescue with direct agency and emergency-response experience.",
+          "highlights": [
+            "Serves as a county deputy [S2]",
+            "Assigned to search and rescue [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Current deputy and search-and-rescue service provide a directly relevant office record."
             }
           }
         }
@@ -25710,6 +26057,49 @@
       ]
     },
     {
+      "contest_slug": "pend-oreille-public-utility-district-commissioner-district-2-public-utility-commissioner-2",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/pend-oreille/dossiers/pend-oreille-public-utility-district-commissioner-district-2-public-utility-commissioner-2/"
+      ],
+      "office_does": "The commission sets policy, rates, budgets, and executive oversight for the publicly owned electric, water, and broadband utility.",
+      "race_blurb": "Ernie Hood, Tracy Rutt, and Gerry David Bradbury seek the open District 2 seat.",
+      "candidates": [
+        {
+          "slug": "ernie-hood",
+          "summary": "Hood is a District 2 candidate whose dossier documents participation in a PUD board proceeding but no detailed campaign platform.",
+          "highlights": [
+            "Participated in formal PUD board public comment [S2]",
+            "Available sources do not establish a detailed current platform [S1][S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "tracy-rutt",
+          "summary": "Rutt emphasizes ratepayer protection, utility reliability, public ownership, and fiscal responsibility.",
+          "highlights": [
+            "Emphasizes protecting ratepayers and reliable infrastructure [S2]",
+            "Supports public utility ownership and fiscal responsibility [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "gerry-david-bradbury",
+          "summary": "Bradbury's candidacy is verified, but the dossier contains no additional identity-safe substantive material.",
+          "highlights": [
+            "Official and local sources verify the candidacy [S1][S2]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
       "contest_slug": "pierce-pierce-county-council-district-1-county-councilmember",
       "scored_at": "2026-07-17",
       "derived_from": [
@@ -27333,6 +27723,50 @@
                 "S2"
               ],
               "basis": "He is the incumbent sheriff with prior front-line agency experience."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "wahkiakum-wahkiakum-county-county-assessor",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/wahkiakum/dossiers/wahkiakum-wahkiakum-county-county-assessor/"
+      ],
+      "office_does": "The assessor values taxable property, maintains property records, and supports equitable distribution of property-tax liabilities.",
+      "race_blurb": "Incumbent Drew Jenkins faces state-accredited appraiser Justin Moriarty in a rematch of the 2025 unexpired-term election.",
+      "candidates": [
+        {
+          "slug": "justin-moriarty",
+          "summary": "Moriarty is a state-accredited appraiser who previously ran for assessor in 2025; the dossier contains no detailed 2026 platform.",
+          "highlights": [
+            "Holds current state appraiser accreditation [S2]",
+            "Previously ran for assessor in 2025 [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "drew-jenkins",
+          "summary": "Jenkins is the incumbent assessor with a long documented appraisal record in Wahkiakum County and Chicago.",
+          "highlights": [
+            "Currently serves as county assessor [S1][S2]",
+            "Worked in the assessor's office from 2016 through 2023 [S3]",
+            "Reports 13 earlier years as a residential appraiser [S3]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Incumbency and a long directly relevant appraisal record support the maximal proven-record placement."
             }
           }
         }
