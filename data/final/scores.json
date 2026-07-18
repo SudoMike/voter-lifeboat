@@ -44,6 +44,8 @@
     "data/washington-state/counties/klickitat/scoring/refutations/*.json",
     "data/washington-state/counties/lewis/scoring/*.json",
     "data/washington-state/counties/lewis/scoring/refutations/*.json",
+    "data/washington-state/counties/lincoln/scoring/*.json",
+    "data/washington-state/counties/lincoln/scoring/refutations/*.json",
     "data/washington-state/counties/mason/scoring/*.json",
     "data/washington-state/counties/mason/scoring/refutations/*.json",
     "data/washington-state/counties/okanogan/scoring/*.json",
@@ -81,9 +83,9 @@
   ],
   "script": "pipeline/merge_scores.py",
   "verdict_stats": {
-    "upheld": 1753,
+    "upheld": 1755,
     "adjust": 271,
-    "refuted": 131,
+    "refuted": 132,
     "missing_added": 28,
     "missing_dropped_low": 4
   },

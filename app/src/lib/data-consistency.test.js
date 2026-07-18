@@ -10,6 +10,9 @@ import { COUNTY_IDS, COUNTY_LAYERS, KING_LAYERS } from './geo.js'
 const data = JSON.parse(
   readFileSync(new URL('../../public/data/app-data.json', import.meta.url), 'utf8')
 )
+const dossierQueue = JSON.parse(
+  readFileSync(new URL('../../../data/final/dossier-batches.json', import.meta.url), 'utf8')
+)
 
 // Scopes that are knowingly unresolvable, with the reason documented at the
 // definition site. Keep this list short and deliberate.
@@ -77,5 +80,37 @@ test('every supported county with local DISTRICT scopes has a District Adapter',
         `county ${county.id} has local scopes but no configured layers`
       )
     }
+  }
+})
+
+test('release data has no unfinished contested candidate dossiers', () => {
+  assert.equal(dossierQueue.total_units, 0)
+  assert.equal(dossierQueue.total_dossiers, 0)
+  assert.equal(dossierQueue.total_batches, 0)
+  for (const contest of data.contests.filter((item) => item.candidates.length >= 2)) {
+    for (const candidate of contest.candidates) {
+      assert.notEqual(
+        candidate.evidence_level,
+        'official-ballot-only',
+        `${contest.slug}/${candidate.slug} is still ballot-only`
+      )
+      assert.ok(candidate.sources.length, `${contest.slug}/${candidate.slug} has no assembled sources`)
+      const sourceIds = new Set(candidate.sources.map((source) => source.id))
+      for (const [axis, score] of Object.entries(candidate.scores || {})) {
+        for (const citation of score.citations || []) {
+          assert.ok(sourceIds.has(citation), `${contest.slug}/${candidate.slug}/${axis}: missing ${citation}`)
+        }
+      }
+    }
+  }
+})
+
+test('researched county measures are present in the shipped app data', () => {
+  for (const measure of data.measures.filter((item) => item.owner !== 'king')) {
+    assert.ok(measure.what_it_does, `${measure.slug}: missing what_it_does`)
+    assert.ok(measure.cost_line, `${measure.slug}: missing cost_line`)
+    assert.ok(measure.pro_summary, `${measure.slug}: missing pro_summary`)
+    assert.ok(measure.con_summary, `${measure.slug}: missing con_summary`)
+    assert.equal(typeof measure.lean_mappings, 'object', `${measure.slug}: bad lean_mappings`)
   }
 })

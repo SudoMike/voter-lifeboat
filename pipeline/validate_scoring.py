@@ -102,6 +102,28 @@ for package in PACKAGES:
             if cs.get("withdrawn") and cs.get("scores"):
                 errors.append(f"{slug}/{cand['slug']}: withdrawn but has scores")
 
+        expected_verdicts = {
+            (candidate["slug"], axis)
+            for candidate in data["candidates"]
+            for axis in (candidate.get("scores") or {})
+        }
+        refutation_file = f.parent / "refutations" / f.name
+        if not refutation_file.exists():
+            if expected_verdicts:
+                errors.append(f"{package.name}: MISSING REFUTATION {slug}")
+        else:
+            refutation = json.load(open(refutation_file))
+            actual_verdicts = [
+                (verdict["candidate"], verdict["axis"])
+                for verdict in refutation.get("verdicts", [])
+            ]
+            if set(actual_verdicts) != expected_verdicts or len(actual_verdicts) != len(set(actual_verdicts)):
+                errors.append(
+                    f"{slug}: refutation coverage mismatch "
+                    f"missing={expected_verdicts - set(actual_verdicts)} "
+                    f"extra={set(actual_verdicts) - expected_verdicts}"
+                )
+
     measures_file = package / "scoring/measures.json"
     if not measures_file.exists():
         # Plans describe the full incremental queue. Require scoring only
@@ -121,6 +143,28 @@ for package in PACKAGES:
             d = lm.get("direction")
             if d not in (-2, -1, 1, 2):
                 errors.append(f"measure {meas['slug']}/{axis}: bad direction {d}")
+
+    measure_refutation_file = package / "scoring/refutations/measures.json"
+    expected_measure_verdicts = {
+        (measure["slug"], axis)
+        for measure in m["measures"]
+        for axis in (measure.get("lean_mappings") or {})
+    } | {(measure["slug"], "_display") for measure in m["measures"]}
+    if not measure_refutation_file.exists():
+        errors.append(f"{package.name}: MISSING MEASURE REFUTATION")
+    else:
+        refutation = json.load(open(measure_refutation_file))
+        actual_measure_verdicts = [
+            (verdict.get("candidate") or verdict.get("measure"), verdict["axis"])
+            for verdict in refutation.get("verdicts", [])
+        ]
+        if (set(actual_measure_verdicts) != expected_measure_verdicts or
+                len(actual_measure_verdicts) != len(set(actual_measure_verdicts))):
+            errors.append(
+                f"{package.name} measures: refutation coverage mismatch "
+                f"missing={expected_measure_verdicts - set(actual_measure_verdicts)} "
+                f"extra={set(actual_measure_verdicts) - expected_measure_verdicts}"
+            )
 
 n_scores = 0
 for scoring_dir in SCORING_DIRS:
