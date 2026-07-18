@@ -1,0 +1,39 @@
+{
+  "contest_slug": "grays-harbor-grays-harbor-county-commissioner-district-3-commissioner-3",
+  "scored_at": "2026-07-18",
+  "derived_from": ["data/washington-state/counties/grays-harbor/dossiers/grays-harbor-grays-harbor-county-commissioner-district-3-commissioner-3/"],
+  "office_does": "The county commission sets county policy, adopts the budget, and oversees county services and operations.",
+  "race_blurb": "Appointed commissioner JR Streifel faces local business owner and drainage-district commissioner Stan Sturgeon; Gordon E. Mitchell is no longer listed on the current official active-primary list.",
+  "candidates": [
+    {
+      "slug": "gordon-e-mitchell",
+      "summary": "Mitchell appears in the research manifest but not on the current official active-primary list.",
+      "highlights": ["The approved official source no longer establishes active ballot status [S1]."],
+      "evidence_level": "pamphlet-only",
+      "withdrawn": true,
+      "scores": {}
+    },
+    {
+      "slug": "jr-streifel",
+      "summary": "Streifel is the appointed incumbent commissioner and a former firefighter and school-board member who emphasizes services, safety, development, and accountable operations.",
+      "highlights": ["Serves as the appointed incumbent commissioner [S1].", "Emphasizes collaboration, safety, services, development, and accountable operations [S1]."],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "spending": {"score": -1, "confidence": "medium", "citations": ["S1"], "basis": "His emphasis on accountable operations supports a modest oversight direction."},
+        "experience": {"score": -1, "confidence": "high", "citations": ["S1"], "basis": "He is the appointed incumbent with additional firefighter and school-board service."}
+      }
+    },
+    {
+      "slug": "stan-sturgeon",
+      "summary": "Sturgeon is a local business owner and drainage-district commissioner emphasizing jobs, partnerships, community policing, and affordable housing.",
+      "highlights": ["Has business, flood-control, and drainage-district experience [S1].", "Emphasizes small-business growth, community policing, and affordable-housing partnerships [S1]."],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "safety": {"score": -1, "confidence": "medium", "citations": ["S1"], "basis": "His stated public-safety priority is community policing."},
+        "experience": {"score": 1, "confidence": "medium", "citations": ["S1"], "basis": "He brings local district and community experience but no documented county-commission record."}
+      }
+    }
+  ]
+}
