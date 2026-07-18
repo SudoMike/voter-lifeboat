@@ -5,6 +5,7 @@ import Interview from './screens/Interview.jsx'
 import Snapshot from './screens/Snapshot.jsx'
 import Results from './screens/Results.jsx'
 import DataPage from './screens/DataPage.jsx'
+import Methodology from './screens/Methodology.jsx'
 import { scopeMatches } from './lib/geo.js'
 import {
   contestsOnBallot,
@@ -22,10 +23,15 @@ export default function App() {
   const [answers, setAnswers] = useState(null)
   const [restored, setRestored] = useState(null) // profile that arrived via URL
   const [dataPage, setDataPage] = useState(location.hash === '#data')
+  const [methodologyPage, setMethodologyPage] = useState(location.hash === '#methodology')
 
-  // #data overlays whatever stage the visitor is in; leaving it returns them.
+  // #data and #methodology overlay whatever stage the visitor is in; leaving
+  // them returns the visitor to that stage.
   useEffect(() => {
-    const onHash = () => setDataPage(location.hash === '#data')
+    const onHash = () => {
+      setDataPage(location.hash === '#data')
+      setMethodologyPage(location.hash === '#methodology')
+    }
     window.addEventListener('hashchange', onHash)
     return () => window.removeEventListener('hashchange', onHash)
   }, [])
@@ -84,11 +90,13 @@ export default function App() {
       </main>
     )
 
-  const leaveDataPage = () => {
+  const leaveOverlay = () => {
     history.replaceState(null, '', location.pathname)
     setDataPage(false)
+    setMethodologyPage(false)
   }
-  if (dataPage) return <DataPage data={data} onBack={leaveDataPage} />
+  if (dataPage) return <DataPage data={data} onBack={leaveOverlay} />
+  if (methodologyPage) return <Methodology data={data} onBack={leaveOverlay} />
 
   const startOver = () => {
     clearHash()
