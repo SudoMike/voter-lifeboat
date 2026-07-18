@@ -5,7 +5,7 @@ contest: whatcom-port-of-bellingham-commissioner-district-4-commissioner-distric
 depth: deep
 evidence_level: moderate
 researched_at: 2026-07-18
-sources: &sources
+sources:
   - id: S1
     tier: 1
     type: election-filing

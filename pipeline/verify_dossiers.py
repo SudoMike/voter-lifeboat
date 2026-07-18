@@ -38,6 +38,7 @@ def audit_package(package: Path):
         "missing": [],
         "no_frontmatter": [],
         "invalid_evidence_levels": [],
+        "invalid_source_formats": [],
         "evidence_levels": {},
         "contest_overviews_missing": [],
         "untouched_contests": [],
@@ -61,6 +62,14 @@ def audit_package(package: Path):
             if not fm:
                 audit["no_frontmatter"].append(f"{slug}/{candidate['slug']}")
                 continue
+            if re.search(r"^sources:[ \t]+\S", fm, re.M) or re.search(r"^[ \t]*-[ \t]*\{[ \t]*id:", fm, re.M):
+                audit["invalid_source_formats"].append(
+                    f"{slug}/{candidate['slug']}: sources must use standard multiline '- id:' blocks"
+                )
+            if not re.search(r"^\s*-\s+id:\s*\S+", fm, re.M):
+                audit["invalid_source_formats"].append(
+                    f"{slug}/{candidate['slug']}: no parseable source ids"
+                )
             level_match = re.search(r"^evidence_level:\s*(\S+)", fm, re.M)
             level = level_match.group(1) if level_match else "MISSING"
             audit["evidence_levels"][level] = audit["evidence_levels"].get(level, 0) + 1
@@ -97,6 +106,7 @@ def main():
             audit["missing"]
             + audit["no_frontmatter"]
             + audit["invalid_evidence_levels"]
+            + audit["invalid_source_formats"]
             + audit["contest_overviews_missing"]
         )
         failed |= bool(hard_errors)
