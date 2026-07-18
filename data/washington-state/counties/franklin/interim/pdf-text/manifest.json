@@ -1,0 +1,11 @@
+{
+  "county": "franklin",
+  "script": "pipeline/extract_pdf_text.mjs",
+  "files": [
+    {
+      "source_pointer": "data/washington-state/counties/franklin/raw/franklin/local-voters-pamphlet.pdf.url",
+      "url": "https://www.franklincountywa.gov/DocumentCenter/View/4411/Franklin-County-Voters-Pamphlet-2026_English-Primary-FINAL",
+      "output": "data/washington-state/counties/franklin/interim/pdf-text/local-voters-pamphlet.txt"
+    }
+  ]
+}
