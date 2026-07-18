@@ -4,6 +4,7 @@
 // renders live from the shipped data so it can never drift from what ships.
 
 import React from 'react'
+import GitHubLink from './GitHubLink.jsx'
 
 function Section({ eyebrow, title, children }) {
   return (
@@ -67,9 +68,18 @@ export default function Methodology({ data, onBack }) {
   return (
     <main className="screen screen--app screen--wide rise" style={{ paddingBottom: 0 }}>
       <header style={{ padding: '22px 24px 0' }}>
-        <div className="brand">
-          <div className="buoy" />
-          <div className="brand-name">Voter Lifeboat</div>
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+          }}
+        >
+          <div className="brand">
+            <div className="buoy" />
+            <div className="brand-name">Voter Lifeboat</div>
+          </div>
+          <GitHubLink />
         </div>
         <div className="eyebrow" style={{ marginTop: 22 }}>
           How this guide is built

@@ -3,6 +3,7 @@
 // whole file live on each visit. Raw records: GET /api/reports.
 
 import React, { useEffect, useMemo, useState } from 'react'
+import GitHubLink from './GitHubLink.jsx'
 
 const HOT_WEIGHT = 2 // weight at which the interview labels an axis "care a lot"
 
@@ -160,9 +161,18 @@ export default function DataPage({ data, onBack }) {
   return (
     <main className="screen screen--app screen--wide rise" style={{ paddingBottom: 0 }}>
       <header style={{ padding: '22px 24px 0' }}>
-        <div className="brand">
-          <div className="buoy" />
-          <div className="brand-name">Voter Lifeboat</div>
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+          }}
+        >
+          <div className="brand">
+            <div className="buoy" />
+            <div className="brand-name">Voter Lifeboat</div>
+          </div>
+          <GitHubLink />
         </div>
         <div className="eyebrow" style={{ marginTop: 22 }}>The open dataset</div>
         <h1 className="display display--lg" style={{ marginTop: 6 }}>
