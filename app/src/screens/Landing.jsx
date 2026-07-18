@@ -70,10 +70,23 @@ export default function Landing({ data, onStart }) {
       <footer style={{ marginTop: 26 }}>
         <div
           className="note"
-          style={{ textAlign: 'center', padding: '0 24px 18px', fontSize: 12 }}
+          style={{ textAlign: 'center', padding: '0 24px 10px', fontSize: 12 }}
         >
           <a href="#methodology">How this guide is built</a> ·{' '}
           <a href="#data">Open dataset</a>
+        </div>
+        <div
+          className="note"
+          style={{ textAlign: 'center', padding: '0 24px 18px', fontSize: 12 }}
+        >
+          Interested in the WA state budget?{' '}
+          <a
+            href="https://washington.openbudgets.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Check this out.
+          </a>
         </div>
         <div className="wave-bottom">
           <div className="wave-label">NO ACCOUNTS · NO COOKIES · OPEN DATA</div>
