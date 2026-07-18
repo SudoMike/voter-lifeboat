@@ -1,22 +1,21 @@
 {
   "script": "pipeline/verify_dossiers.py",
   "derived_from": [
-    "data/washington-state/counties/pend-oreille/interim/research-plan.json",
-    "data/washington-state/counties/pend-oreille/dossiers/"
+    "data/washington-state/counties/columbia/interim/research-plan.json",
+    "data/washington-state/counties/columbia/dossiers/"
   ],
   "missing": [],
   "no_frontmatter": [],
   "invalid_evidence_levels": [],
   "invalid_source_formats": [],
   "evidence_levels": {
-    "rich": 2,
-    "moderate": 2,
+    "rich": 1,
     "pamphlet-only": 1
   },
   "contest_overviews_missing": [],
   "untouched_contests": [
-    "pend-oreille-congressional-district-5-u-s-representative",
-    "pend-oreille-legislative-district-7-state-senator"
+    "columbia-congressional-district-5-u-s-representative",
+    "columbia-legislative-district-9-state-representative-pos-2"
   ],
   "untouched_measures": []
 }
