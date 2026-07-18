@@ -1,0 +1,25 @@
+{
+  "script": "pipeline/verify_dossiers.py",
+  "derived_from": [
+    "data/washington-state/counties/klickitat/interim/research-plan.json",
+    "data/washington-state/counties/klickitat/dossiers/"
+  ],
+  "missing": [],
+  "no_frontmatter": [],
+  "invalid_evidence_levels": [],
+  "invalid_source_formats": [],
+  "evidence_levels": {
+    "pamphlet-only": 4,
+    "rich": 2,
+    "moderate": 3
+  },
+  "contest_overviews_missing": [],
+  "untouched_contests": [
+    "klickitat-congressional-district-4-u-s-representative",
+    "klickitat-legislative-district-14-state-representative-pos-1",
+    "klickitat-legislative-district-14-state-representative-pos-2",
+    "klickitat-legislative-district-17-state-representative-pos-1",
+    "klickitat-legislative-district-17-state-representative-pos-2"
+  ],
+  "untouched_measures": []
+}

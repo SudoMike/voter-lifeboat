@@ -1,0 +1,23 @@
+---
+name: Dale J. Wagner
+slug: dale-j-wagner
+contest: adams-adams-county-sheriff
+depth: light
+evidence_level: moderate
+researched_at: 2026-07-18
+sources:
+  - id: S1
+    tier: 2
+    type: local-news
+    outlet: Ritzville Adams County Journal
+    url: https://www.ritzvillejournal.com/story/2026/05/13/news/candidates-names-advance-to-ballot/30123.html
+    accessed: 2026-07-18
+---
+
+## Background
+
+Dale J. Wagner is the incumbent Adams County sheriff [S1].
+
+## Scoring notes
+
+- The source establishes incumbency but no detailed current platform [S1].
