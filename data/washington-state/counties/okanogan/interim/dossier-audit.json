@@ -1,0 +1,21 @@
+{
+  "script": "pipeline/verify_dossiers.py",
+  "derived_from": [
+    "data/washington-state/counties/okanogan/interim/research-plan.json",
+    "data/washington-state/counties/okanogan/dossiers/"
+  ],
+  "missing": [],
+  "no_frontmatter": [],
+  "invalid_evidence_levels": [],
+  "evidence_levels": {
+    "rich": 3,
+    "moderate": 2,
+    "pamphlet-only": 1
+  },
+  "contest_overviews_missing": [],
+  "untouched_contests": [
+    "okanogan-congressional-district-4-u-s-representative",
+    "okanogan-legislative-district-7-state-senator"
+  ],
+  "untouched_measures": []
+}
