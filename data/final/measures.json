@@ -16,8 +16,12 @@
     "data/washington-state/counties/king/scoring/refutations/measures.json",
     "data/washington-state/counties/kitsap/scoring/measures.json",
     "data/washington-state/counties/kitsap/scoring/refutations/measures.json",
+    "data/washington-state/counties/kittitas/scoring/measures.json",
+    "data/washington-state/counties/kittitas/scoring/refutations/measures.json",
     "data/washington-state/counties/lewis/scoring/measures.json",
     "data/washington-state/counties/lewis/scoring/refutations/measures.json",
+    "data/washington-state/counties/mason/scoring/measures.json",
+    "data/washington-state/counties/mason/scoring/refutations/measures.json",
     "data/washington-state/counties/pierce/scoring/measures.json",
     "data/washington-state/counties/pierce/scoring/refutations/measures.json",
     "data/washington-state/counties/skagit/scoring/measures.json",
@@ -26,10 +30,14 @@
     "data/washington-state/counties/snohomish/scoring/refutations/measures.json",
     "data/washington-state/counties/spokane/scoring/measures.json",
     "data/washington-state/counties/spokane/scoring/refutations/measures.json",
+    "data/washington-state/counties/stevens/scoring/measures.json",
+    "data/washington-state/counties/stevens/scoring/refutations/measures.json",
     "data/washington-state/counties/thurston/scoring/measures.json",
     "data/washington-state/counties/thurston/scoring/refutations/measures.json",
     "data/washington-state/counties/whatcom/scoring/measures.json",
     "data/washington-state/counties/whatcom/scoring/refutations/measures.json",
+    "data/washington-state/counties/whitman/scoring/measures.json",
+    "data/washington-state/counties/whitman/scoring/refutations/measures.json",
     "data/washington-state/counties/yakima/scoring/measures.json",
     "data/washington-state/counties/yakima/scoring/refutations/measures.json"
   ],
@@ -476,6 +484,74 @@
       "sources_note": "Official pamphlet ballot title, explanation, and pro statement (S1); no con committee formed."
     },
     {
+      "slug": "kittitas-city-of-cle-elum-proposition-no-1",
+      "what_it_does": "Lifts the city fire-service levy lid for two years, adding $0.98 and setting the rate at $1.87 per $1,000.",
+      "cost_line": "At the total rate, $187 annually per $100,000 assessed value, or $935 on $500,000; the increase is $98 per $100,000.",
+      "pro_summary": "Official material identifies city fire service as the use; no pro committee statement was available.",
+      "con_summary": "No con committee statement was available; the tradeoff is city fire revenue versus a higher property-tax rate.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES adds $0.98 per $1,000 through a two-year levy lid lift.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official election material (S1); no committee statements were available."
+    },
+    {
+      "slug": "kittitas-city-of-roslyn-proposition-no-1",
+      "what_it_does": "Authorizes a city library levy at up to $1.50 per $1,000 of assessed value.",
+      "cost_line": "At the maximum rate, $150 annually per $100,000 assessed value, or $750 on $500,000.",
+      "pro_summary": "Official material identifies library service as the use; no pro committee statement was available.",
+      "con_summary": "No con committee statement was available; the tradeoff is library revenue versus the authorized property-tax levy.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES authorizes a city library property-tax levy of up to $1.50 per $1,000.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official election material (S1); no committee statements were available."
+    },
+    {
+      "slug": "kittitas-kittitas-county-fire-protection-district-no-2-kittitas-valley-fire-rescue-proposition-no-1",
+      "what_it_does": "Lifts the district's regular fire levy lid to as much as $1.50 per $1,000.",
+      "cost_line": "At the maximum rate, $150 annually per $100,000 assessed value, or $750 on $500,000.",
+      "pro_summary": "Official material identifies fire and emergency operations as the use; no pro committee statement was available.",
+      "con_summary": "No con committee statement was available; the tradeoff is fire-service revenue versus a higher property-tax levy.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES lifts the regular fire-levy lid to a stated maximum rate.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official election material (S1); no committee statements were available."
+    },
+    {
+      "slug": "kittitas-snoqualmie-pass-fire-and-rescue-proposition-no-1",
+      "what_it_does": "Continues the fire district benefit charge for six years, allowing it to fund up to 60% of the operating budget.",
+      "cost_line": "The charge may fund up to 60% of the operating budget; no uniform parcel rate is stated because charges vary by property characteristics.",
+      "pro_summary": "Official material identifies fire and emergency operations as the use; no pro committee statement was available.",
+      "con_summary": "No con committee statement was available; the tradeoff is continued operating revenue versus continued property charges.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "YES continues an existing fire-district benefit charge for six years.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official election material (S1); no committee statements were available."
+    },
+    {
       "slug": "lewis-lewis-county-fire-protection-district-no-15-winlock-proposition-no-1",
       "what_it_does": "Continues a six-year EMS levy at $0.45 per $1,000 of assessed value.",
       "cost_line": "$45 annually per $100,000 assessed value, or $225 on $500,000.",
@@ -519,6 +595,57 @@
         "taxes": {
           "direction": 2,
           "basis": "YES restores or creates a substantial property-tax levy or debt obligation.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official election material (S1); no committee statements were available."
+    },
+    {
+      "slug": "mason-central-mason-fire-ems-ballot-measure",
+      "what_it_does": "Restores the regular fire and EMS levy to as much as $1.48 per $1,000 and permits a 104% limit factor for three years.",
+      "cost_line": "At the maximum initial rate, $148 annually per $100,000 assessed value, or $740 on $500,000; later collections may grow under the limit factor.",
+      "pro_summary": "Official material identifies fire protection and EMS operations as the use; no pro committee statement was available.",
+      "con_summary": "No con committee statement was available; the tradeoff is fire and EMS revenue versus a restored and growing property-tax levy.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES restores the levy to a stated maximum and permits three years of 104% growth.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official election material (S1); no committee statements were available."
+    },
+    {
+      "slug": "mason-mason-county-fire-protection-district-no-12-matlock-ballot-measure",
+      "what_it_does": "Renews and increases the district EMS levy to as much as $0.50 per $1,000 for 2027 through 2032.",
+      "cost_line": "At the maximum rate, $50 annually per $100,000 assessed value, or $250 on $500,000.",
+      "pro_summary": "Official material identifies EMS operations as the use; no pro committee statement was available.",
+      "con_summary": "No con committee statement was available; the tradeoff is EMS revenue versus an increased six-year property-tax levy.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES both renews and increases the EMS property-tax levy for six years.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official election material (S1); no committee statements were available."
+    },
+    {
+      "slug": "mason-north-mason-regional-fire-authority-ballot-measure",
+      "what_it_does": "Continues the authority's EMS levy at up to $0.50 per $1,000 for six years.",
+      "cost_line": "At the maximum rate, $50 annually per $100,000 assessed value, or $250 on $500,000.",
+      "pro_summary": "Official material identifies EMS operations as the use; no pro committee statement was available.",
+      "con_summary": "No con committee statement was available; the tradeoff is continued EMS revenue versus continued property tax.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "YES continues an existing EMS property-tax levy for six years.",
           "citations": [
             "S1"
           ]
@@ -986,6 +1113,23 @@
       "sources_note": "Official ballot title and explanation (S1), pro/con statements and rebuttal (S2), and the linked county resolution (S3)."
     },
     {
+      "slug": "stevens-stevens-county-fire-protection-district-no-6-proposition-no-1",
+      "what_it_does": "Authorizes a property-tax levy for fire-protection services in Stevens County Fire Protection District No. 6.",
+      "cost_line": "The official title establishes a fire-service property tax; no reliable rate or model-home cost estimate is stated.",
+      "pro_summary": "The stated purpose is continued fire-protection service funding.",
+      "con_summary": "No official con statement was available; the trade-off is fire-service funding versus property-tax cost.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "YES authorizes a property-tax levy, but the dossier does not establish whether it raises a current rate or its magnitude.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official election material (S1)."
+    },
+    {
       "slug": "thurston-s-e-thurston-fire-authority-proposition-no-1",
       "what_it_does": "Authorizes $21.01 million in general-obligation bonds maturing within 25 years to renovate four fire stations and acquire an ambulance, tender/pumper, and other apparatus.",
       "cost_line": "The pro committee estimates about $0.20 per $1,000, or $8.33 monthly for a $500,000 home.",
@@ -1124,6 +1268,119 @@
         }
       },
       "sources_note": "Official Whatcom County election material (S1)."
+    },
+    {
+      "slug": "whitman-city-of-tekoa-special-election-proposition-no-1",
+      "what_it_does": "Annexes the City of Tekoa Fire Department into Whitman County Fire Protection District No. 1 if both jurisdictions approve.",
+      "cost_line": "City residents become subject to the district tax levy and eligible to vote in district elections; no model-home estimate is stated.",
+      "pro_summary": "The explanation says annexation supports direct district service, long-term planning, and service delivery.",
+      "con_summary": "No pro or con volunteers submitted statements after recruitment.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "YES subjects city residents to the district property-tax levy, with no rate or model-home estimate documented.",
+          "citations": [
+            "S1"
+          ]
+        },
+        "local-control": {
+          "direction": 2,
+          "basis": "YES transfers city fire service into a county fire-protection district and gives residents district voting rights.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official Whitman County election material (S1)."
+    },
+    {
+      "slug": "whitman-rosalia-park-and-recreation-district-no-5-proposition-no-1",
+      "what_it_does": "Authorizes two years of taxes for operating, maintaining, and improving the Rosalia Pool.",
+      "cost_line": "Raises $85,000 in each of 2027 and 2028 at an estimated $0.39 per $1,000, capped at $0.60; about $195 annually on $500,000 at the estimate.",
+      "pro_summary": "The pro statement says stable funding supports maintenance, lifeguards, access, public health, and avoiding larger deferred repairs.",
+      "con_summary": "No against statement was submitted.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES authorizes a two-year property-tax levy for pool operations and improvements.",
+          "citations": [
+            "S1"
+          ]
+        },
+        "spending": {
+          "direction": 1,
+          "basis": "YES dedicates public funding to pool operations, staffing, maintenance, access, and improvements.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official Whitman County election material (S1)."
+    },
+    {
+      "slug": "whitman-town-of-farmington-special-election-proposition-no-1",
+      "what_it_does": "Raises $28,000 for street maintenance, repairs and improvements and the town current-expense fund.",
+      "cost_line": "Estimated at $4.18 or less per $1,000 for 2027 collection, or about $2,090 on $500,000.",
+      "pro_summary": "The ballot identifies street work and the current-expense fund as the uses of revenue.",
+      "con_summary": "No official committee arguments were available.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES authorizes a high-rate excess property-tax levy for 2027.",
+          "citations": [
+            "S1"
+          ]
+        },
+        "spending": {
+          "direction": 1,
+          "basis": "YES provides dedicated revenue for street work and current expenses.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official Whitman County sample ballot (S1)."
+    },
+    {
+      "slug": "whitman-whitman-county-fire-protection-district-no-1-special-election-proposition-no-1",
+      "what_it_does": "Annexes the City of Tekoa into Fire Protection District No. 1 if both jurisdictions approve.",
+      "cost_line": "City residents become subject to the district tax levy and eligible to vote in district elections; no model-home estimate is stated.",
+      "pro_summary": "The explanation says annexation supports direct district service, long-term planning, and service delivery.",
+      "con_summary": "No pro or con volunteers submitted statements after recruitment.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "YES subjects annexed city residents to the district property-tax levy, with no rate documented.",
+          "citations": [
+            "S1"
+          ]
+        },
+        "local-control": {
+          "direction": 2,
+          "basis": "YES consolidates city fire service into a county fire-protection district.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official Whitman County election material (S1)."
+    },
+    {
+      "slug": "whitman-whitman-county-fire-protection-district-no-5-special-election-proposition-no-1",
+      "what_it_does": "Authorizes a four-year levy for fire-protection maintenance and operations.",
+      "cost_line": "Raises $10,000 annually from 2027 through 2030 at approximately $0.21 per $1,000, or about $105 annually on $500,000.",
+      "pro_summary": "The ballot identifies fire-protection maintenance and operations as the use.",
+      "con_summary": "No official committee arguments were available.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES authorizes a four-year property-tax levy.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Official Whitman County sample ballot (S1)."
     },
     {
       "slug": "yakima-yakima-county-fire-protection-district-no-6-proposition-no-1",

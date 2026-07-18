@@ -24,8 +24,12 @@
     "data/washington-state/counties/king/scoring/refutations/*.json",
     "data/washington-state/counties/kitsap/scoring/*.json",
     "data/washington-state/counties/kitsap/scoring/refutations/*.json",
+    "data/washington-state/counties/kittitas/scoring/*.json",
+    "data/washington-state/counties/kittitas/scoring/refutations/*.json",
     "data/washington-state/counties/lewis/scoring/*.json",
     "data/washington-state/counties/lewis/scoring/refutations/*.json",
+    "data/washington-state/counties/mason/scoring/*.json",
+    "data/washington-state/counties/mason/scoring/refutations/*.json",
     "data/washington-state/counties/pierce/scoring/*.json",
     "data/washington-state/counties/pierce/scoring/refutations/*.json",
     "data/washington-state/counties/skagit/scoring/*.json",
@@ -34,19 +38,25 @@
     "data/washington-state/counties/snohomish/scoring/refutations/*.json",
     "data/washington-state/counties/spokane/scoring/*.json",
     "data/washington-state/counties/spokane/scoring/refutations/*.json",
+    "data/washington-state/counties/stevens/scoring/*.json",
+    "data/washington-state/counties/stevens/scoring/refutations/*.json",
     "data/washington-state/counties/thurston/scoring/*.json",
     "data/washington-state/counties/thurston/scoring/refutations/*.json",
+    "data/washington-state/counties/walla-walla/scoring/*.json",
+    "data/washington-state/counties/walla-walla/scoring/refutations/*.json",
     "data/washington-state/counties/whatcom/scoring/*.json",
     "data/washington-state/counties/whatcom/scoring/refutations/*.json",
+    "data/washington-state/counties/whitman/scoring/*.json",
+    "data/washington-state/counties/whitman/scoring/refutations/*.json",
     "data/washington-state/counties/yakima/scoring/*.json",
     "data/washington-state/counties/yakima/scoring/refutations/*.json"
   ],
   "script": "pipeline/merge_scores.py",
   "verdict_stats": {
-    "upheld": 1592,
-    "adjust": 251,
-    "refuted": 106,
-    "missing_added": 25,
+    "upheld": 1648,
+    "adjust": 261,
+    "refuted": 119,
+    "missing_added": 26,
     "missing_dropped_low": 4
   },
   "contests": [
@@ -11379,6 +11389,105 @@
       ]
     },
     {
+      "contest_slug": "chelan-chelan-county-clerk",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/chelan/dossiers/chelan-chelan-county-clerk/"
+      ],
+      "office_does": "The county clerk maintains Superior Court records, processes filings, and supports court administration and public access.",
+      "race_blurb": "Incumbent Marty Young faces three challengers with clerk-office, court-reporting, and court-facilitator experience.",
+      "candidates": [
+        {
+          "slug": "charlene-beck",
+          "summary": "Beck is a veteran court reporter and business owner emphasizing equitable service, efficient operations, quality control, and budget stewardship.",
+          "highlights": [
+            "Has 35 years of court-reporting experience and 31 years as a firm owner [S1].",
+            "Emphasizes efficient operations, quality control, and budget stewardship [S1]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Her stated priorities include budget stewardship and operational quality control."
+            },
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Her extensive court-system and management experience is directly relevant, though not a documented clerk-office record."
+            }
+          }
+        },
+        {
+          "slug": "marty-young",
+          "summary": "Young is the incumbent clerk with an established management record emphasizing continuity, backlog reduction, compliance, and service.",
+          "highlights": [
+            "Serves as incumbent clerk with an established office-management record [S1].",
+            "Emphasizes continuity, backlog reduction, compliance, and service [S1]."
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He is the incumbent with an established record managing the clerk's office."
+            }
+          }
+        },
+        {
+          "slug": "samantha-j-thompson",
+          "summary": "Thompson is a clerk's-office records administrator with more than a decade of service emphasizing procedures, retention, leadership, and records.",
+          "highlights": [
+            "Has more than a decade of clerk-office service [S1].",
+            "Emphasizes procedures, retention, leadership, records, and service [S1]."
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Her decade-plus clerk-office record is directly relevant, though she is not the incumbent clerk."
+            }
+          }
+        },
+        {
+          "slug": "sandra-arechiga",
+          "summary": "Arechiga is a family-law court facilitator with front-line court-user experience emphasizing access, service, processing, and practical administration.",
+          "highlights": [
+            "Works as a family-law court facilitator with front-line court-user experience [S1].",
+            "Emphasizes court access, processing, expertise, and practical administration [S1]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Her court-facilitator role supplies directly relevant court-system experience but no documented clerk-office tenure."
+            }
+          }
+        }
+      ]
+    },
+    {
       "contest_slug": "chelan-chelan-county-commissioner-district-2-commissioner-district-no-2",
       "scored_at": "2026-07-18",
       "derived_from": [
@@ -12671,6 +12780,114 @@
       ]
     },
     {
+      "contest_slug": "grant-grant-county-commissioner-district-3-commissioner-district-3",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/grant/dossiers/grant-grant-county-commissioner-district-3-commissioner-district-3/"
+      ],
+      "office_does": "The county commission sets county policy, adopts the budget, and oversees county services and operations.",
+      "race_blurb": "Four candidates with municipal, school-board, agricultural, business, and consulting backgrounds are seeking the District 3 commission seat.",
+      "candidates": [
+        {
+          "slug": "janice-flynn",
+          "summary": "Flynn is Royal City's finance director and emphasizes infrastructure, public safety, tax stewardship, economic partnerships, and streamlined permitting.",
+          "highlights": [
+            "Serves as Royal City's finance director [S1].",
+            "Emphasizes tax stewardship and streamlined planning and building permits [S1]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Tax stewardship and a finance-administration background support a modest restraint and oversight direction."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She calls for streamlining planning and building permits."
+            },
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She has relevant municipal finance experience but no documented county-commission tenure.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "kelly-raap",
+          "summary": "Raap operates a family farm and cattle business; the approved dossier contains no sufficiently detailed current platform.",
+          "highlights": [
+            "Operates a family farm and cattle business in rural Ephrata [S1]."
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "The dossier documents a private agricultural-business background and no prior public-office record.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "seth-weeks",
+          "summary": "Weeks is a horticulturist and school-board director; the approved dossier contains no sufficiently detailed current platform.",
+          "highlights": [
+            "Works as a horticulturist and serves on the Wahluke School Board [S1]."
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He has elected school-board experience but no documented county-commission tenure.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "shannon-durfee",
+          "summary": "Durfee is an administrative-services consultant and school-board member with agricultural and food-business quality-management experience.",
+          "highlights": [
+            "Has consulting, school-board, and private-sector quality-management experience [S1]."
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She has school-board and administrative experience but no documented county-commission tenure.",
+              "adjusted_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
       "contest_slug": "grant-grant-county-county-auditor",
       "scored_at": "2026-07-18",
       "derived_from": [
@@ -12994,6 +13211,86 @@
                 "S3"
               ],
               "basis": "She has relevant financial experience but no documented auditor-office record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "grays-harbor-grays-harbor-county-commissioner-district-3-commissioner-3",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/grays-harbor/dossiers/grays-harbor-grays-harbor-county-commissioner-district-3-commissioner-3/"
+      ],
+      "office_does": "The county commission sets county policy, adopts the budget, and oversees county services and operations.",
+      "race_blurb": "Appointed commissioner JR Streifel faces local business owner and drainage-district commissioner Stan Sturgeon; Gordon E. Mitchell is no longer listed on the current official active-primary list.",
+      "candidates": [
+        {
+          "slug": "gordon-e-mitchell",
+          "summary": "Mitchell appears in the research manifest but not on the current official active-primary list.",
+          "highlights": [
+            "The approved official source no longer establishes active ballot status [S1]."
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": true,
+          "scores": {}
+        },
+        {
+          "slug": "jr-streifel",
+          "summary": "Streifel is the appointed incumbent commissioner and a former firefighter and school-board member who emphasizes services, safety, development, and accountable operations.",
+          "highlights": [
+            "Serves as the appointed incumbent commissioner [S1].",
+            "Emphasizes collaboration, safety, services, development, and accountable operations [S1]."
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S1"
+              ],
+              "basis": "His emphasis on accountable operations supports a modest oversight direction.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He is the appointed incumbent with additional firefighter and school-board service.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "stan-sturgeon",
+          "summary": "Sturgeon is a local business owner and drainage-district commissioner emphasizing jobs, partnerships, community policing, and affordable housing.",
+          "highlights": [
+            "Has business, flood-control, and drainage-district experience [S1].",
+            "Emphasizes small-business growth, community policing, and affordable-housing partnerships [S1]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "His stated public-safety priority is community policing."
+            },
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "He brings local district and community experience but no documented county-commission record.",
+              "adjusted_by_refutation": true
             }
           }
         }
@@ -13374,6 +13671,179 @@
                 "S1"
               ],
               "basis": "Incumbency and accredited assessment experience establish the race\u2019s strongest direct institutional record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "island-island-county-county-auditor",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/island/dossiers/island-island-county-county-auditor/"
+      ],
+      "office_does": "The auditor administers elections, recording, licensing, and county financial processes.",
+      "race_blurb": "Incumbent Sheilah Crider faces three challengers with auditor-office, education, administration, nonprofit, and public-service backgrounds.",
+      "candidates": [
+        {
+          "slug": "andrea-downs",
+          "summary": "Downs is a school-board member, educator, administrator, and nonprofit executive emphasizing outreach, accessibility, staffing, and transparency.",
+          "highlights": [
+            "Has education, administration, nonprofit, and school-board experience [S1].",
+            "Emphasizes outreach, accessibility, staffing, and transparency [S1]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She has substantial public and administrative experience but no documented auditor-office record.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "barbara-fuller",
+          "summary": "Fuller has prior auditor-office and law-enforcement experience and emphasizes staffing, outreach, accurate elections and records, and access.",
+          "highlights": [
+            "Has prior auditor-office and law-enforcement experience [S1].",
+            "Emphasizes accurate elections and records, staffing, outreach, and access [S1]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Her prior auditor-office experience supplies a directly relevant institutional record."
+            }
+          }
+        },
+        {
+          "slug": "sheilah-crider",
+          "summary": "Crider is the incumbent auditor with a long record across elections, licensing, recording, and administration.",
+          "highlights": [
+            "Serves as incumbent auditor with a long office record [S1].",
+            "Emphasizes election security, cybersecurity, staffing, records, and continuity [S1]."
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She is the incumbent with a long, directly relevant record across the auditor's functions."
+            }
+          }
+        },
+        {
+          "slug": "terry-lacey",
+          "summary": "Lacey emphasizes efficient administration and public service, but the approved dossier supplies limited stable professional detail.",
+          "highlights": [
+            "Emphasizes efficient administration and public service [S1]."
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "island-island-county-county-clerk",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/island/dossiers/island-island-county-county-clerk/"
+      ],
+      "office_does": "The county clerk maintains Superior Court records, processes filings, and supports court administration and public access.",
+      "race_blurb": "Four candidates with legal, court, administrative, management, and community-service backgrounds are seeking the clerk's office.",
+      "candidates": [
+        {
+          "slug": "amber-sewell",
+          "summary": "Sewell has legal and community-service experience and emphasizes court access, processing, training, communication, and records.",
+          "highlights": [
+            "Has legal and community-service experience [S1].",
+            "Emphasizes accessible justice, training, communication, and records [S1]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She has related legal experience but no documented clerk-office tenure."
+            }
+          }
+        },
+        {
+          "slug": "dierdre-butler",
+          "summary": "Butler has legal-system, management, and community experience and emphasizes court access, procedures, staff development, and secure records.",
+          "highlights": [
+            "Has legal-system and management experience [S1].",
+            "Emphasizes court access, staff development, and secure records [S1]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She has related legal-system and management experience but no documented clerk-office tenure."
+            }
+          }
+        },
+        {
+          "slug": "maria-hazelo",
+          "summary": "Hazelo has organizational and public-service experience and emphasizes responsive service, records accuracy, employee support, and modernization.",
+          "highlights": [
+            "Has professional, organizational, and public-service experience [S1].",
+            "Emphasizes records accuracy, employee support, and modernization [S1]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "She has organizational and public-service experience but no documented clerk-office tenure."
+            }
+          }
+        },
+        {
+          "slug": "toni-adams",
+          "summary": "Adams has court, legal-support, and administrative experience and emphasizes records, technology, service, and case processing.",
+          "highlights": [
+            "Has court, legal-support, and administrative experience [S1].",
+            "Emphasizes records, technology, service, and case processing [S1]."
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Her directly related court and legal-support experience places her between a proven clerk-office record and an outsider profile."
             }
           }
         }
@@ -23115,6 +23585,60 @@
       ]
     },
     {
+      "contest_slug": "kittitas-kittitas-county-coroner",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/kittitas/dossiers/kittitas-kittitas-county-coroner/"
+      ],
+      "office_does": "The county coroner investigates reportable deaths, determines cause and manner of death, maintains records, and works with families and public-safety agencies.",
+      "race_blurb": "Incumbent Cori McKean faces former deputy coroner Charlie Divine; both present medicolegal death-investigation experience.",
+      "candidates": [
+        {
+          "slug": "cori-mckean",
+          "summary": "Incumbent coroner with D-ABMDI death-investigation credentials.",
+          "highlights": [
+            "Leads the county coroner office and holds D-ABMDI credentials [S2][S3]",
+            "Emphasizes accurate investigations, family dignity, and continuity of accredited operations [S2][S3]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Incumbency, professional certification, and responsibility for accredited office operations establish a record-based profile, though the dossier does not establish long tenure."
+            }
+          }
+        },
+        {
+          "slug": "charlie-divine",
+          "summary": "Former deputy coroner and Washington-certified medicolegal forensic death investigator.",
+          "highlights": [
+            "Recently served as a Kittitas County deputy coroner [S2][S3]",
+            "Emphasizes accurate investigations, transparency, compassion, and interdepartmental cooperation [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Direct deputy-coroner service and state medicolegal certification establish substantial relevant experience short of incumbency."
+            }
+          }
+        }
+      ]
+    },
+    {
       "contest_slug": "lewis-lewis-county-auditor",
       "scored_at": "2026-07-18",
       "derived_from": [
@@ -23139,15 +23663,6 @@
                 "S2"
               ],
               "basis": "Opening financial records and auditing results supply an oversight direction."
-            },
-            "experience": {
-              "score": 1,
-              "confidence": "medium",
-              "citations": [
-                "S1",
-                "S2"
-              ],
-              "basis": "He has organizational leadership but no documented auditor-office or elected record."
             }
           }
         },
@@ -23167,15 +23682,6 @@
                 "S2"
               ],
               "basis": "Accountability and transparency supply an oversight direction."
-            },
-            "experience": {
-              "score": 1,
-              "confidence": "medium",
-              "citations": [
-                "S1",
-                "S2"
-              ],
-              "basis": "He has organizational leadership but no documented auditor-office record."
             }
           }
         },
@@ -23187,15 +23693,106 @@
           ],
           "evidence_level": "pamphlet-only",
           "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "lewis-lewis-county-commissioner-district-3-county-commissioner-district-3",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/lewis/dossiers/lewis-lewis-county-commissioner-district-3-county-commissioner-district-3/"
+      ],
+      "office_does": "County commissioners adopt budgets and policy, oversee departments and infrastructure, and represent county residents.",
+      "race_blurb": "The five-candidate field includes an incumbent, a PUD commissioner, business and community challengers, and one candidate without a detailed platform.",
+      "candidates": [
+        {
+          "slug": "zac-eckstein",
+          "summary": "Eckstein is a community candidate emphasizing housing, working families, public services, infrastructure, and transparency.",
+          "highlights": [
+            "Prioritizes housing and working families [S2]",
+            "Emphasizes services, infrastructure, and transparent government [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "kyle-wheeler",
+          "summary": "Wheeler is a small-business owner with animal-welfare and community experience emphasizing local tailoring, transparency, businesses, services, and pragmatic administration.",
+          "highlights": [
+            "Has small-business and community experience [S1][S2]",
+            "Emphasizes locally tailored and transparent administration [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "tim-toerber",
+          "summary": "The approved sources verify Toerber\u2019s candidacy but do not establish a detailed platform or governing record.",
+          "highlights": [
+            "Candidacy is verified by official and local sources [S1][S2]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "scott-brummer",
+          "summary": "Brummer is the incumbent commissioner and a former habitat biologist, farmer, business owner, and pastor emphasizing restraint, safety, housing, services, growth, and opposition to state overreach.",
+          "highlights": [
+            "Serves as incumbent commissioner [S1][S2]",
+            "Explicitly emphasizes spending restraint [S2]",
+            "Has regional transportation, flood, workforce, and economic-development assignments [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
           "scores": {
-            "experience": {
-              "score": 1,
+            "spending": {
+              "score": -1,
               "confidence": "medium",
               "citations": [
-                "S1",
                 "S2"
               ],
-              "basis": "CPA preparation is relevant, but no auditor-office or elected record is documented."
+              "basis": "Spending restraint is an explicit governing priority backed by an incumbent record.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Incumbency and a broad regional governing record establish the strongest proven-record pole."
+            }
+          }
+        },
+        {
+          "slug": "michael-hadaller",
+          "summary": "Hadaller is an elected PUD commissioner and business owner emphasizing fiscal responsibility, infrastructure, safety, and constituent service.",
+          "highlights": [
+            "Serves as an elected PUD commissioner [S2]",
+            "Emphasizes fiscal responsibility and infrastructure [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Fiscal responsibility supports a modest restraint orientation without a specific cut mechanism."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "PUD commission service supplies an elected local governing record, though not county-commission tenure."
             }
           }
         }
@@ -23259,6 +23856,275 @@
                 "S3"
               ],
               "basis": "Sixteen years as elected coroner provide a maximal proven office record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "lewis-lewis-county-sheriff",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/lewis/dossiers/lewis-lewis-county-sheriff/"
+      ],
+      "office_does": "The sheriff leads county law enforcement, patrol, investigations, jail and civil functions, staffing, training, budgeting, and public safety.",
+      "race_blurb": "Four law-enforcement candidates seek the open office, differing primarily in command experience and the specificity of their enforcement and management priorities.",
+      "candidates": [
+        {
+          "slug": "gabriel-j-frase",
+          "summary": "Frase is a county law-enforcement professional emphasizing deputy support, training, constitutional policing, trust, and public safety.",
+          "highlights": [
+            "Has Lewis County law-enforcement experience [S1][S2]",
+            "Emphasizes constitutional policing, training, and deputy support [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "His platform centers policing capacity and constitutional enforcement, supporting a modest enforcement lean."
+            }
+          }
+        },
+        {
+          "slug": "matt-mcknight",
+          "summary": "McKnight is a deputy police chief and former county deputy emphasizing accountability, safety, staff development, and operational and budget management.",
+          "highlights": [
+            "Serves as Chehalis deputy police chief [S1][S2]",
+            "Previously served as a county deputy and manages personnel, operations, and budgets [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Command leadership and public-safety emphasis support an enforcement lean without a maximal mechanism."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Deputy-chief command and prior sheriff-office service provide the strongest directly relevant management record in the field."
+            }
+          }
+        },
+        {
+          "slug": "danny-riordan",
+          "summary": "Riordan is a law-enforcement candidate emphasizing patrol visibility, safety, morale, training, and resident communication.",
+          "highlights": [
+            "Has policing experience [S2]",
+            "Prioritizes patrol visibility, morale, and training [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Patrol visibility and police capacity support an enforcement lean."
+            }
+          }
+        },
+        {
+          "slug": "tracy-murphy",
+          "summary": "Murphy is a former Centralia police officer and prior sheriff candidate emphasizing enforcement, constitutional rights, accountability, rural coverage, and deputy support.",
+          "highlights": [
+            "Previously served as a police officer [S1][S2]",
+            "Explicitly emphasizes enforcement and rural coverage [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Enforcement is explicit and paired with rural police coverage and deputy support.",
+              "adjusted_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "mason-mason-county-auditor",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/mason/dossiers/mason-mason-county-auditor/"
+      ],
+      "office_does": "The county auditor administers elections, records documents, licenses vehicles, and oversees county financial functions.",
+      "race_blurb": "Four candidates seek the office; the dossiers provide substantial record evidence for the incumbent but only filing-level information for three challengers.",
+      "candidates": [
+        {
+          "slug": "tamra-tam-ingwaldson",
+          "summary": "Democratic candidate whose reviewed dossier verifies her filing but provides no stable detailed platform.",
+          "highlights": [
+            "Filed for Mason County auditor [S1][S2]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "steve-duenkel",
+          "summary": "Incumbent auditor with a long finance, budgeting, accounting, and reporting background.",
+          "highlights": [
+            "Reports 37 years in finance and related fields [S2]",
+            "Emphasizes election audits, internal controls, deed-fraud prevention, and election security [S2][S3]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Incumbency and 37 years of finance, budgeting, accounting, and reporting experience establish a strongly record-based profile."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "His explicit emphasis on election audits, internal controls, and budget oversight supports a modest audit-and-accountability direction.",
+              "added_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "monika-balmer",
+          "summary": "Republican candidate whose reviewed dossier verifies her filing but provides no stable detailed platform.",
+          "highlights": [
+            "Filed for Mason County auditor [S1][S2]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "vivian-glass",
+          "summary": "No-party-preference candidate whose reviewed dossier verifies her filing but provides no stable detailed platform.",
+          "highlights": [
+            "Filed for Mason County auditor [S1][S2]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "mason-mason-county-clerk",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/mason/dossiers/mason-mason-county-clerk/"
+      ],
+      "office_does": "The county clerk maintains Superior Court records, receives filings, and administers court-related financial and public-service functions.",
+      "race_blurb": "Incumbent Charles Rhodes faces Tammy Clark, whose background includes more than 20 years in the legal field.",
+      "candidates": [
+        {
+          "slug": "charles-g-rhodes",
+          "summary": "Incumbent Mason County clerk with direct administration of the office.",
+          "highlights": [
+            "Listed by Washington Courts as the serving county clerk [S2]",
+            "Runs the office but has no detailed reelection platform in the dossier [S2][S3]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Current service as county clerk supports a record-based profile, but the dossier does not establish tenure or accomplishments warranting the maximum."
+            }
+          }
+        },
+        {
+          "slug": "tammy-clark",
+          "summary": "Legal-field professional with local treasurer and dispute-resolution experience.",
+          "highlights": [
+            "Has a business-administration degree and more than 20 years in the legal field [S2]",
+            "Emphasizes accurate records, prompt service, and accessible administration [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "More than 20 years in the legal field and local treasurer experience support a record-oriented, though non-incumbent, profile."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "mason-mason-county-treasurer",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/mason/dossiers/mason-mason-county-treasurer/"
+      ],
+      "office_does": "The county treasurer collects and distributes taxes, manages public funds and investments, and provides taxpayer services.",
+      "race_blurb": "Appointed incumbent Brittany Pearson faces Randy Lewis, for whom the dossier contains filing information but no identity-safe professional biography or platform.",
+      "candidates": [
+        {
+          "slug": "randy-lewis",
+          "summary": "Republican candidate whose dossier verifies his filing but provides no identity-safe professional biography or detailed platform.",
+          "highlights": [
+            "Filed for Mason County treasurer [S1][S2]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "brittany-a-pearson",
+          "summary": "Appointed treasurer with 25 years of experience in the Treasurer's Office.",
+          "highlights": [
+            "Had worked in the office for 25 years when she announced [S2]",
+            "Emphasizes continuity of taxpayer service [S2][S3]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Appointment as treasurer after 25 years in the office establishes a maximal proven-record profile."
             }
           }
         }
@@ -24156,6 +25022,137 @@
       ]
     },
     {
+      "contest_slug": "stevens-stevens-county-auditor",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/stevens/dossiers/stevens-stevens-county-auditor/"
+      ],
+      "office_does": "The auditor administers elections, records, licensing, county finances, and public-facing statutory services.",
+      "race_blurb": "Incumbent Lori Larsen offers direct auditor administration, while Eric Simpson presents an explicitly outsider case rooted in industry and household experience.",
+      "candidates": [
+        {
+          "slug": "eric-simpson",
+          "summary": "Simpson has more than 20 years in welding and logging and emphasizes budgeting, spending priorities, and election-process change.",
+          "highlights": [
+            "Has long industry experience but acknowledges no auditor-duty background [S2]",
+            "Opposes Washington vote by mail and proposes election-process changes [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "He explicitly presents an outsider case without professional experience in the office\u2019s statutory duties."
+            }
+          }
+        },
+        {
+          "slug": "lori-larsen",
+          "summary": "Larsen is the incumbent auditor with eight years of administration emphasizing elections, reporting, compliance, records, and responsible public-dollar management.",
+          "highlights": [
+            "Serves as incumbent auditor with eight years of administration [S1][S2]",
+            "Emphasizes reporting, compliance, and responsible management [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Financial reporting and responsible management support an accountability orientation."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Incumbency and direct elections, records, and financial-administration experience establish a proven record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "stevens-stevens-county-commissioner-district-2-commissioner-2",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/stevens/dossiers/stevens-stevens-county-commissioner-district-2-commissioner-2/"
+      ],
+      "office_does": "County commissioners adopt budgets and policy, oversee departments and infrastructure, and represent county residents.",
+      "race_blurb": "The approved dossiers verify both candidates but provide no sufficiently detailed professional biographies, policy mechanisms, or governing records.",
+      "candidates": [
+        {
+          "slug": "jack-griffin-jr",
+          "summary": "Official and local records verify Griffin\u2019s candidacy but do not establish a detailed platform or county governing record.",
+          "highlights": [
+            "Candidacy is verified [S1][S2]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "mark-burrows",
+          "summary": "Official and local records verify Burrows\u2019s candidacy but do not establish a detailed platform or county governing record.",
+          "highlights": [
+            "Candidacy is verified [S1][S2]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "stevens-stevens-county-coroner",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/stevens/dossiers/stevens-stevens-county-coroner/"
+      ],
+      "office_does": "The coroner investigates reportable deaths, determines cause and manner, coordinates examinations, and serves families and partner agencies.",
+      "race_blurb": "The race contrasts current coroner-office employee Johnathan Waldrop with Roseanne Ennis Jezerinac, whose approved dossier contains no detailed professional record.",
+      "candidates": [
+        {
+          "slug": "johnathan-waldrop",
+          "summary": "Waldrop has about three and a half years in the coroner office and emphasizes professional education, compassionate service, and partner-agency coordination.",
+          "highlights": [
+            "Has direct current coroner-office experience [S1][S2]",
+            "Emphasizes education, integrity, and interagency partnerships [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Current multi-year coroner-office service supplies a directly relevant institutional record, though no elected tenure."
+            }
+          }
+        },
+        {
+          "slug": "roseanne-ennis-jezerinac",
+          "summary": "Official and local records verify Jezerinac\u2019s candidacy but do not establish a detailed professional biography or coroner record.",
+          "highlights": [
+            "Candidacy is verified [S1][S2]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
       "contest_slug": "thurston-thurston-county-assessor",
       "scored_at": "2026-07-17",
       "derived_from": [
@@ -24507,6 +25504,158 @@
       ]
     },
     {
+      "contest_slug": "walla-walla-walla-walla-county-commissioner-district-3-county-commissioner-district-3",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/walla-walla/dossiers/walla-walla-walla-walla-county-commissioner-district-3-county-commissioner-district-3/"
+      ],
+      "office_does": "County commissioners set county policy and budgets, oversee departments, and represent the county on regional bodies.",
+      "race_blurb": "Incumbent Gunner Fulmer faces Rikki Wescott and Troy Woody; Woody proposes a structural charter overhaul while Wescott emphasizes public services and state funding.",
+      "candidates": [
+        {
+          "slug": "troy-woody",
+          "summary": "Local business owner proposing a charter-county restructuring of county government.",
+          "highlights": [
+            "Proposes professional administration and five lower-paid part-time commissioners [S2]",
+            "Would convert five technical elected offices to appointed roles and lower operating costs [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The platform explicitly seeks lower county operating costs through structural consolidation and lower-paid commissioners."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "A business-owner challenger proposing wholesale structural change presents a renewal-oriented profile."
+            },
+            "reform": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Charter-county conversion, a professional administrator, and replacement of the current elected-office structure are explicit structural reforms."
+            }
+          }
+        },
+        {
+          "slug": "gunner-fulmer",
+          "summary": "Incumbent commissioner with county, regional transportation, and statewide county-association responsibilities.",
+          "highlights": [
+            "Former police and fire sergeant with more than 27 years of service [S2]",
+            "Serves in regional transportation and statewide county-association roles [S2][S3]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Incumbency plus extensive public-safety and intergovernmental service establish a maximal proven-record profile."
+            }
+          }
+        },
+        {
+          "slug": "rikki-p-wescott",
+          "summary": "Management and financial-analysis professional emphasizing services, infrastructure, health care, and state funding.",
+          "highlights": [
+            "Background includes financial planning, management, organizing, and advocacy [S2]",
+            "Emphasizes roads, EMS, schools, health care, community centers, and obtaining state funds [S2]",
+            "Also identifies small-business reuse and ecological protection [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "The platform emphasizes multiple public services and obtaining state funding as the principal lever."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "walla-walla-walla-walla-county-sheriff",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/walla-walla/dossiers/walla-walla-walla-walla-county-sheriff/"
+      ],
+      "office_does": "The county sheriff leads law enforcement in unincorporated areas, operates county public-safety functions, and manages the sheriff's office.",
+      "race_blurb": "Two sheriff-office veterans compete, with Richard Schram presenting the longer command record and Ashley Daschofsky emphasizing proactive intelligence-led policing.",
+      "candidates": [
+        {
+          "slug": "richard-schram",
+          "summary": "Chief deputy with more than 23 years in the department and agency-management experience.",
+          "highlights": [
+            "Has command experience across patrol, incidents, training, and agency management [S2][S3]",
+            "Emphasizes budgeting, employee development, collaboration, and current constitutional policies [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "More than 23 years in the department and current chief-deputy command responsibilities establish a maximal record-based profile."
+            }
+          }
+        },
+        {
+          "slug": "ashley-daschofsky",
+          "summary": "County deputy with dispatch, investigation, K9, training, and leadership experience.",
+          "highlights": [
+            "Served in dispatch, collision investigation, K9, field training, and leadership roles [S2][S3]",
+            "Emphasizes proactive intelligence-led policing, visibility, accountability, and rural service [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Explicit emphasis on proactive intelligence-led policing, visibility, and officer accountability aligns with the enforcement pole."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Multiple operational and training roles in the sheriff's office establish a substantial record, though not Schram's command tenure."
+            }
+          }
+        }
+      ]
+    },
+    {
       "contest_slug": "whatcom-whatcom-county-prosecuting-attorney",
       "scored_at": "2026-07-17",
       "derived_from": [
@@ -24637,6 +25786,65 @@
                 "S3"
               ],
               "basis": "She has direct criminal-deputy leadership and prosecution experience."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "whitman-whitman-county-auditor",
+      "scored_at": "2026-07-18",
+      "derived_from": [
+        "data/washington-state/counties/whitman/dossiers/whitman-whitman-county-auditor/"
+      ],
+      "office_does": "The auditor administers elections, records, licensing, county finances, and public-facing statutory services.",
+      "race_blurb": "Senior deputy auditor and councilmember Crystn Guenthner offers direct office and elected experience; county IT employee Kenneth Millar emphasizes systems security and stewardship.",
+      "candidates": [
+        {
+          "slug": "crystn-guenthner",
+          "summary": "Guenthner is the senior deputy auditor and a Colfax councilmember emphasizing secure elections, records, licensing, accuracy, accountability, and steady service.",
+          "highlights": [
+            "Serves as senior deputy auditor [S1][S2]",
+            "Has served on the Colfax City Council since 2018 [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Accountability and accurate financial administration support an oversight orientation."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Direct senior auditor-office work plus elected council service establish a strong proven record."
+            }
+          }
+        },
+        {
+          "slug": "kenneth-millar",
+          "summary": "Millar works in county information technology and has poll-worker and Census recruiting experience, emphasizing security, accuracy, transparency, and stewardship.",
+          "highlights": [
+            "Has county IT and poll-worker experience [S1][S2]",
+            "Emphasizes system security, accurate finances, and taxpayer stewardship [S2]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Taxpayer stewardship and financial accountability support a modest oversight lean."
             }
           }
         }

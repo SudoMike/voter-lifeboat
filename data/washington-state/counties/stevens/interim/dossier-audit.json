@@ -1,0 +1,21 @@
+{
+  "script": "pipeline/verify_dossiers.py",
+  "derived_from": [
+    "data/washington-state/counties/stevens/interim/research-plan.json",
+    "data/washington-state/counties/stevens/dossiers/"
+  ],
+  "missing": [],
+  "no_frontmatter": [],
+  "invalid_evidence_levels": [],
+  "evidence_levels": {
+    "rich": 1,
+    "moderate": 2,
+    "pamphlet-only": 3
+  },
+  "contest_overviews_missing": [],
+  "untouched_contests": [
+    "stevens-congressional-district-5-u-s-representative",
+    "stevens-legislative-district-7-state-senator"
+  ],
+  "untouched_measures": []
+}
