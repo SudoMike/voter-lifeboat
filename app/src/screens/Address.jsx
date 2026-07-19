@@ -145,10 +145,14 @@ export default function Address({ data, onBack, onFound }) {
       </nav>
       <section style={{ padding: '6px 24px 0' }}>
         <h1 className="display display--lg">Where do you call home port?</h1>
-        <p className="copy" style={{ marginTop: 12 }}>
-          Washington ballots differ street by street. Your address finds your
-          county and districts — then it's forgotten. We never store it.
-        </p>
+        <div className="dashed-note" style={{ marginTop: 12 }}>
+          <strong>We do not store your address.</strong> It's only used to
+          find your county and districts, then it's forgotten — see{' '}
+          <a href="https://github.com/SudoMike/voter-lifeboat" target="_blank" rel="noopener noreferrer">
+            the source code
+          </a>
+          .
+        </div>
       </section>
       <form onSubmit={go} autoComplete="off">
         <section style={{ padding: '22px 24px 0' }}>
