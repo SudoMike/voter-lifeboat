@@ -6,6 +6,7 @@ import test from 'node:test'
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { COUNTY_IDS, COUNTY_LAYERS, KING_LAYERS } from './geo.js'
+import { DISTRICT_LABELS, describeDistrict } from './districts.js'
 
 const data = JSON.parse(
   readFileSync(new URL('../../public/data/app-data.json', import.meta.url), 'utf8')
@@ -112,5 +113,39 @@ test('researched county measures are present in the shipped app data', () => {
     assert.ok(measure.pro_summary, `${measure.slug}: missing pro_summary`)
     assert.ok(measure.con_summary, `${measure.slug}: missing con_summary`)
     assert.equal(typeof measure.lean_mappings, 'object', `${measure.slug}: bad lean_mappings`)
+  }
+})
+
+// CITY is deliberately absent from DISTRICT_LABELS: describeDistrict renders it
+// as 'City of X' rather than a numbered district.
+const UNLABELED_BY_DESIGN = new Set(['CITY'])
+
+test('every district layer a voter can be placed in has a voter-facing label', () => {
+  const configured = new Set([
+    ...Object.keys(KING_LAYERS),
+    ...Object.values(COUNTY_LAYERS).flatMap((layers) => layers.map((l) => l.key)),
+  ])
+  for (const item of [...data.contests, ...data.measures]) {
+    if (item.scope?.kind === 'DISTRICT') configured.add(item.scope.layer)
+  }
+  for (const layer of configured) {
+    if (UNLABELED_BY_DESIGN.has(layer)) continue
+    assert.ok(
+      DISTRICT_LABELS[layer],
+      `layer ${layer} has no entry in DISTRICT_LABELS, so voters would see the raw key`
+    )
+  }
+})
+
+test('every district value in the shipped data renders as readable text', () => {
+  for (const item of [...data.contests, ...data.measures]) {
+    const scope = item.scope
+    if (scope?.kind !== 'DISTRICT') continue
+    const text = describeDistrict(scope.layer, scope.value)
+    assert.ok(text, `${item.slug}: ${scope.layer}=${scope.value} produced no label`)
+    assert.ok(
+      !/^[A-Z_]+ /.test(text) || DISTRICT_LABELS[scope.layer],
+      `${item.slug}: ${scope.layer} fell through to the raw-key fallback`
+    )
   }
 })

@@ -1,6 +1,14 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import { lookupBallotContext, scopeMatches, hasZip, withZip } from './geo.js'
+import {
+  lookupBallotContext,
+  scopeMatches,
+  hasZip,
+  withZip,
+  shouldAskForZip,
+  coverageAdvice,
+  suggestAddresses,
+} from './geo.js'
 
 const kingContext = {
   coverageStatus: 'full_county',
@@ -251,4 +259,96 @@ test('withZip appends a state and ZIP the Census geocoder can use', () => {
 test('a line rebuilt by withZip reads as having a ZIP, so the prompt is not repeated', () => {
   const once = withZip('19019 SE 128th Street', '98059')
   assert.equal(hasZip(once), true)
+})
+
+// --- suggest dropdown -------------------------------------------------------
+// suggestAddresses hand-builds a SQL where clause against the King County
+// address layer, so these lock down the clause itself as much as the output.
+
+function mockArcgis(features) {
+  const calls = []
+  global.fetch = async (url) => {
+    calls.push(String(url))
+    return { ok: true, async json() { return { features } } }
+  }
+  return calls
+}
+
+const whereOf = (url) => new URL(url).searchParams.get('where')
+
+test('suggestAddresses asks for a left-anchored prefix match on ADDR_FULL', async () => {
+  const calls = mockArcgis([])
+  await suggestAddresses('19019 SE 128th')
+  assert.equal(whereOf(calls[0]), "ADDR_FULL LIKE '19019 SE 128th%'")
+})
+
+test('the typed text reaches the query verbatim, abbreviations and all', async () => {
+  // The layer stores 'ST', never 'STREET', so a spelled-out street type matches
+  // nothing. Nothing normalizes it — the ZIP recovery prompt is what rescues
+  // this case. If that ever changes, this expectation should change with it.
+  const calls = mockArcgis([])
+  await suggestAddresses('19019 SE 128th Street')
+  assert.equal(whereOf(calls[0]), "ADDR_FULL LIKE '19019 SE 128th Street%'")
+})
+
+test('apostrophes are escaped so real street names cannot break the clause', async () => {
+  // King County really has addresses like 140 LEO'S PL.
+  const calls = mockArcgis([])
+  await suggestAddresses("140 LEO'S PL")
+  assert.equal(whereOf(calls[0]), "ADDR_FULL LIKE '140 LEO''S PL%'")
+})
+
+test('a suggestion with no city is labeled unincorporated, keeping its ZIP', async () => {
+  mockArcgis([{ attributes: { ADDR_FULL: '19019 SE 128TH ST', CTYNAME: null, ZIP5: '98059' } }])
+  const [s] = await suggestAddresses('19019 SE 128th St')
+  assert.equal(s.full, '19019 SE 128TH ST')
+  assert.equal(s.label, '19019 SE 128TH ST, Unincorporated King County, WA 98059')
+})
+
+test('a suggestion inside a city is labeled with that city', async () => {
+  mockArcgis([{ attributes: { ADDR_FULL: '1900 5TH AVE', CTYNAME: 'Seattle', ZIP5: '98101' } }])
+  const [s] = await suggestAddresses('1900 5th Ave')
+  assert.equal(s.label, '1900 5TH AVE, Seattle, WA 98101')
+})
+
+test('queries too short to be useful never reach the network', async () => {
+  let called = false
+  global.fetch = async () => {
+    called = true
+    return { ok: true, async json() { return { features: [] } } }
+  }
+  assert.deepEqual(await suggestAddresses('1900'), [])
+  assert.deepEqual(await suggestAddresses('   '), [])
+  assert.equal(called, false, 'short queries must not hit the address layer')
+})
+
+test('a failed or malformed suggest response yields no dropdown, not an error', async () => {
+  global.fetch = async () => ({ ok: false, async json() { return {} } })
+  assert.deepEqual(await suggestAddresses('19019 SE 128th'), [])
+  global.fetch = async () => ({ ok: true, async json() { return { error: { code: 400 } } } })
+  assert.deepEqual(await suggestAddresses('19019 SE 128th'), [])
+  global.fetch = async () => ({ ok: true, async json() { return {} } })
+  assert.deepEqual(await suggestAddresses('19019 SE 128th'), [])
+})
+
+// --- screen decisions -------------------------------------------------------
+
+test('shouldAskForZip fires only for an unplaceable line carrying no ZIP', () => {
+  assert.equal(shouldAskForZip({ kind: 'no-match' }, '19019 SE 128th Street'), true)
+  // Already has one and still failed: a second prompt would just loop.
+  assert.equal(shouldAskForZip({ kind: 'no-match' }, '19019 SE 128th Street, WA 98059'), false)
+  // A ZIP cannot fix these.
+  assert.equal(shouldAskForZip({ kind: 'outside-wa' }, '1600 Pennsylvania Ave'), false)
+  assert.equal(shouldAskForZip({ kind: 'network' }, '19019 SE 128th Street'), false)
+  assert.equal(shouldAskForZip({ kind: 'no-districts' }, '19019 SE 128th Street'), false)
+  assert.equal(shouldAskForZip(null, '19019 SE 128th Street'), false)
+})
+
+test('coverageAdvice reports degraded coverage from either cause', () => {
+  assert.equal(coverageAdvice({ coverageStatus: 'full_county', missingLayers: [] }), null)
+  assert.equal(coverageAdvice({ coverageStatus: 'partial_county', missingLayers: [] }), 'degraded')
+  // A full package whose live layer lookup failed reads the same to a voter.
+  assert.equal(coverageAdvice({ coverageStatus: 'full_county', missingLayers: ['DISTCRT'] }), 'degraded')
+  assert.equal(coverageAdvice({ coverageStatus: 'statewide_only', missingLayers: [] }), 'statewide-only')
+  assert.equal(coverageAdvice(null), null)
 })

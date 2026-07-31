@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { lookupBallotContext, suggestAddresses, hasZip, withZip, GeoError } from '../lib/geo.js'
+import { lookupBallotContext, suggestAddresses, shouldAskForZip, withZip, GeoError } from '../lib/geo.js'
 
 // 'no-match' means we could not place the line, which is nearly always a
 // fixable typo — keep it distinct from the out-of-coverage headline so it does
@@ -71,10 +71,7 @@ export default function Address({ data, onBack, onFound }) {
     go(null, suggestion.label)
   }
 
-  // A no-match on a line with no ZIP is usually a missing city, not a typo, so
-  // ask for the one piece that fixes it instead of sending them back to a blank
-  // box. If the retry fails too, the standard error screen takes over.
-  const askedForZip = err?.kind === 'no-match' && !hasZip(tried)
+  const askedForZip = shouldAskForZip(err, tried)
 
   const retryWithZip = (e) => {
     e?.preventDefault()

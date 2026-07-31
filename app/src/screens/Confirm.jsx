@@ -7,24 +7,27 @@
 
 import React from 'react'
 import { describeDistricts } from '../lib/districts.js'
+import { coverageAdvice } from '../lib/geo.js'
 
 function CoverageNote({ context }) {
-  const { coverageStatus, missingLayers, county } = context
-  if (coverageStatus === 'statewide_only')
-    return (
-      <div className="dashed-note" style={{ marginTop: 16, textAlign: 'left' }}>
-        <strong>{county.name} isn't covered yet.</strong> You'll get every
-        statewide contest, but not local races or levies.
-      </div>
-    )
-  if (coverageStatus === 'partial_county' || missingLayers?.length)
-    return (
-      <div className="dashed-note" style={{ marginTop: 16, textAlign: 'left' }}>
-        <strong>Some local districts didn't answer.</strong> Your ballot may be
-        missing a contest or two. Going back and trying again often clears it.
-      </div>
-    )
-  return null
+  const advice = coverageAdvice(context)
+  if (!advice) return null
+  return (
+    <div className="dashed-note" style={{ marginTop: 16, textAlign: 'left' }}>
+      {advice === 'statewide-only' ? (
+        <>
+          <strong>{context.county.name} isn't covered yet.</strong> You'll get
+          every statewide contest, but not local races or levies.
+        </>
+      ) : (
+        <>
+          <strong>Some local districts didn't answer.</strong> Your ballot may
+          be missing a contest or two. Going back and trying again often clears
+          it.
+        </>
+      )}
+    </div>
+  )
 }
 
 export default function Confirm({ data, context, ballot, onProceed, onRetry }) {
