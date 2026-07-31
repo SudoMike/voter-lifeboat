@@ -1,6 +1,6 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import { lookupBallotContext, scopeMatches } from './geo.js'
+import { lookupBallotContext, scopeMatches, hasZip, withZip } from './geo.js'
 
 const kingContext = {
   coverageStatus: 'full_county',
@@ -230,4 +230,25 @@ test('King County honors a partial data package even when every GIS layer resolv
     '400 Broad St Seattle WA 98109'
   )
   assert.equal(context.coverageStatus, 'partial_county')
+})
+
+test('hasZip ignores a five-digit house number and only trusts a trailing ZIP', () => {
+  assert.equal(hasZip('19019 SE 128th St'), false)
+  assert.equal(hasZip('19019 SE 128th Street'), false)
+  assert.equal(hasZip('19019 SE 128th St, Renton, WA 98059'), true)
+  assert.equal(hasZip('19019 SE 128th St, Renton, WA 98059-1234'), true)
+  assert.equal(hasZip('  4218 SW Othello St, Seattle  '), false)
+  assert.equal(hasZip(''), false)
+  assert.equal(hasZip(undefined), false)
+})
+
+test('withZip appends a state and ZIP the Census geocoder can use', () => {
+  assert.equal(withZip('19019 SE 128th Street', '98059'), '19019 SE 128th Street, WA 98059')
+  assert.equal(withZip('19019 SE 128th Street,', '98059'), '19019 SE 128th Street, WA 98059')
+  assert.equal(withZip('  19019 SE 128th Street  ', ' 98059 '), '19019 SE 128th Street, WA 98059')
+})
+
+test('a line rebuilt by withZip reads as having a ZIP, so the prompt is not repeated', () => {
+  const once = withZip('19019 SE 128th Street', '98059')
+  assert.equal(hasZip(once), true)
 })

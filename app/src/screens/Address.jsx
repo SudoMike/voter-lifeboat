@@ -1,5 +1,16 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { lookupBallotContext, suggestAddresses, GeoError } from '../lib/geo.js'
+import { lookupBallotContext, suggestAddresses, hasZip, withZip, GeoError } from '../lib/geo.js'
+
+// 'no-match' means we could not place the line, which is nearly always a
+// fixable typo — keep it distinct from the out-of-coverage headline so it does
+// not read as "your town is not supported".
+const ERROR_HEADLINES = {
+  'no-match': "We couldn't find that address",
+  'outside-wa': "We're off the map",
+  'unsupported-county': "We're off the map",
+  'no-districts': 'That one puzzled us',
+  network: 'Rough seas',
+}
 
 export default function Address({ data, onBack, onFound }) {
   const [addr, setAddr] = useState('')
@@ -8,6 +19,10 @@ export default function Address({ data, onBack, onFound }) {
   const [suggestions, setSuggestions] = useState([])
   const [open, setOpen] = useState(false)
   const [activeIndex, setActiveIndex] = useState(-1)
+  // The exact line we submitted, so a ZIP retry rebuilds from it rather than
+  // from whatever the voter has since typed into the retry box.
+  const [tried, setTried] = useState('')
+  const [zip, setZip] = useState('')
   const blurTimer = useRef(null)
 
   useEffect(() => {
@@ -35,6 +50,7 @@ export default function Address({ data, onBack, onFound }) {
     setOpen(false)
     setBusy(true)
     setErr(null)
+    setTried(address)
     try {
       const context = await lookupBallotContext(data, address)
       onFound(context)
@@ -53,6 +69,22 @@ export default function Address({ data, onBack, onFound }) {
     setSuggestions([])
     setOpen(false)
     go(null, suggestion.label)
+  }
+
+  // A no-match on a line with no ZIP is usually a missing city, not a typo, so
+  // ask for the one piece that fixes it instead of sending them back to a blank
+  // box. If the retry fails too, the standard error screen takes over.
+  const askedForZip = err?.kind === 'no-match' && !hasZip(tried)
+
+  const retryWithZip = (e) => {
+    e?.preventDefault()
+    const z = zip.trim()
+    if (!/^\d{5}$/.test(z)) return
+    const composed = withZip(tried, z)
+    // Keep the visible box in step, so if this retry also fails the voter is
+    // editing the line we actually sent.
+    setAddr(composed)
+    go(null, composed)
   }
 
   const onKeyDown = (e) => {
@@ -86,6 +118,62 @@ export default function Address({ data, onBack, onFound }) {
       </main>
     )
 
+  if (askedForZip)
+    return (
+      <main className="screen screen--app rise" style={{ padding: '44px 24px 40px', textAlign: 'center' }}>
+        <div
+          style={{
+            width: 64, height: 64, margin: '0 auto', borderRadius: '50%',
+            background: 'var(--seafoam-tint)', display: 'flex', alignItems: 'center',
+            justifyContent: 'center', fontSize: 28, color: 'var(--seafoam)', fontWeight: 800,
+          }}
+        >
+          ⌖
+        </div>
+        <h1 className="display display--md" style={{ marginTop: 14 }}>
+          Almost — what's your ZIP?
+        </h1>
+        <p className="copy" style={{ margin: '10px auto 0', maxWidth: 320 }}>
+          A street on its own can sit in a dozen towns, so we couldn't place{' '}
+          <strong>{tried}</strong>. Your ZIP code is usually all it needs.
+        </p>
+        <form onSubmit={retryWithZip}>
+          <div className="input" style={{ margin: '20px auto 0', maxWidth: 150, textAlign: 'left' }}>
+            <input
+              type="text"
+              inputMode="numeric"
+              maxLength={5}
+              placeholder="98059"
+              aria-label="ZIP code"
+              value={zip}
+              onChange={(e) => setZip(e.target.value.replace(/\D/g, ''))}
+              autoFocus
+            />
+          </div>
+          <button
+            className="btn btn--coral btn--sm"
+            style={{ marginTop: 16, opacity: zip.trim().length === 5 ? 1 : 0.5 }}
+            type="submit"
+            disabled={zip.trim().length !== 5}
+          >
+            Find my ballot
+          </button>
+        </form>
+        <button
+          onClick={() => {
+            setErr(null)
+            setZip('')
+          }}
+          style={{
+            marginTop: 18, fontFamily: 'var(--font-display)', fontWeight: 700,
+            fontSize: 14, color: 'var(--muted)',
+          }}
+        >
+          ← edit the address instead
+        </button>
+      </main>
+    )
+
   if (err)
     return (
       <main className="screen screen--app rise" style={{ padding: '44px 24px 40px', textAlign: 'center' }}>
@@ -99,11 +187,11 @@ export default function Address({ data, onBack, onFound }) {
           ?
         </div>
         <h1 className="display display--md" style={{ marginTop: 14 }}>
-          {err.kind === 'outside-wa' || err.kind === 'unsupported-county' ? "We're off the map" : err.kind === 'network' ? 'Rough seas' : "Hmm, we're off the map"}
+          {ERROR_HEADLINES[err.kind] || "We couldn't find that address"}
         </h1>
         <p className="copy" style={{ margin: '10px auto 0', maxWidth: 300 }}>
           {err.kind === 'no-match' &&
-            "We couldn't match that address. Check the spelling, or try adding your city or ZIP."}
+            "We couldn't match that address, even with the ZIP. Check the street number and name, or try a neighbor's address — any address on your block finds the same ballot."}
           {err.kind === 'outside-wa' &&
             'That address looks like it is outside Washington State. This guide supports Washington elections only.'}
           {err.kind === 'unsupported-county' &&
