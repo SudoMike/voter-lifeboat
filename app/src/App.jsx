@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import Landing from './screens/Landing.jsx'
 import Address from './screens/Address.jsx'
+import Confirm from './screens/Confirm.jsx'
 import Interview from './screens/Interview.jsx'
 import Snapshot from './screens/Snapshot.jsx'
 import Results from './screens/Results.jsx'
@@ -116,7 +117,20 @@ export default function App() {
           data={data}
           onFound={(context) => {
             setBallotContext(context)
-            setStage('interview')
+            setStage('confirm')
+          }}
+        />
+      )
+    case 'confirm':
+      return (
+        <Confirm
+          data={data}
+          context={ballotContext}
+          ballot={ballot}
+          onProceed={() => setStage('interview')}
+          onRetry={() => {
+            setBallotContext(null)
+            setStage('address')
           }}
         />
       )
