@@ -1,0 +1,43 @@
+# Runs on every push to main and on every pull request.
+#
+# Both suites are offline by design: the app tests stub global.fetch, and the
+# data-consistency tests read the shipped JSON out of the repo. Nothing here
+# touches the Census geocoder or a county GIS service, so a flaky third-party
+# boundary server can never redden the build.
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  app:
+    name: App (node)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: app
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+      - run: npm ci
+      - run: npm test
+      # The suite never renders a component, so the build is what catches a
+      # broken screen.
+      - run: npm run build
+
+  pipeline:
+    name: Pipeline (python)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      # Pipeline modules are stdlib-only, so there is nothing to install.
+      - run: python -m unittest discover -s pipeline -p "test_*.py" -v
