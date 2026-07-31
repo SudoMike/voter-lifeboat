@@ -344,6 +344,27 @@ function countyFromMatch(match) {
   }
 }
 
+// The Census geocoder places a street address only when the line also carries a
+// city or a ZIP; a bare street returns zero matches no matter how it is spelled.
+// A ZIP is the cheaper thing to ask a voter for, so these two support the
+// recovery prompt on the Address screen. The trailing anchor matters: a house
+// number is often five digits too ("19019 SE 128th St" has no ZIP).
+export function hasZip(address) {
+  return /\b\d{5}(-\d{4})?\s*$/.test(String(address || '').trim())
+}
+
+export function withZip(address, zip) {
+  const base = String(address || '').trim().replace(/[,\s]+$/, '')
+  return `${base}, WA ${String(zip || '').trim()}`
+}
+
+// A no-match on a line carrying no ZIP is a missing city, not a typo, so it is
+// worth one targeted question instead of a dead end. Once the retry has a ZIP
+// and still fails, this returns false and the standard error screen takes over.
+export function shouldAskForZip(err, address) {
+  return err?.kind === 'no-match' && !hasZip(address)
+}
+
 export async function geocode(address) {
   const url = `/api/geocode?address=${encodeURIComponent(address)}`
   let res
@@ -543,6 +564,18 @@ export async function lookupBallotContext(data, address) {
     missingLayers,
     matched: pt.matched,
   }
+}
+
+// Which caveat, if any, a resolved ballot context deserves. Returns a kind
+// rather than a sentence so the wording stays with the screen that shows it.
+// 'degraded' covers both a data package that is knowingly partial and a county
+// GIS layer that failed to answer this time — from the voter's side both mean
+// the same thing: the ballot below may be missing something.
+export function coverageAdvice(context) {
+  if (!context) return null
+  if (context.coverageStatus === 'statewide_only') return 'statewide-only'
+  if (context.coverageStatus === 'partial_county' || context.missingLayers?.length) return 'degraded'
+  return null
 }
 
 export function scopeMatches(scope, context) {
