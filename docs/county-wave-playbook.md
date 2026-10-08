@@ -428,13 +428,13 @@ DOR GIS layer, a PDF-only map, a layer that is not public), the rule is:
 Never scope a district race `COUNTY` to make it appear: that shows it to
 voters outside the district.
 
-As of the builder runs on 2026-10-08 (#22, #28, #29, #30), the shipped
+As of the builder runs on 2026-10-08 (#22, #28, #29, #30, #31), the shipped
 general packages that are `partial_county` are Spokane and Okanogan (both
 `PUDDST`). Benton,
 Clark, Kitsap, Pierce, Snohomish (since #27), Thurston, Whatcom, Yakima,
 Skagit, Cowlitz, Grant, Island, Lewis, Franklin, Chelan, Clallam, Grays
-Harbor, Mason, Walla Walla, Stevens, Whitman and Douglas are
-`full_county`; all twenty-three ship with King. A PUD
+Harbor, Mason, Walla Walla, Stevens, Whitman, Douglas, Jefferson and
+Kittitas are `full_county`; all twenty-five ship with King. A PUD
 commissioner is nominated by district but elected by the whole PUD in the
 general (RCW 54.12.010(3)), so a countywide PUD's seat is scoped `COUNTY`
 (Clark, Kitsap, Thurston), not `PUDDST`.
@@ -664,6 +664,29 @@ District Court seats are county-wide in the general. Shared races (4): CD
 4 with Benton's scoring, LD 7 Senate and House with Spokane's; its Court
 of Appeals III-1 Pos. 2 seat is its own information-only copy. Okanogan
 prints no pamphlet and links its VoteWA guide.
+
+Jefferson and Kittitas shipped on 2026-10-08 (#31) as `full_county`.
+Jefferson's two measures belong to Clallam-based districts that reach into
+its West End: Quillayute Valley SD 402's bonds read DOR SCH2025 (`402`), and
+Clallam County Fire District 1's levy reads DOR FIR2025, which numbers the
+district's Jefferson part `9` (Jefferson's own Fire District 1 is `1`, so
+the scope cannot be `1`). Each copy is scoped to its own county, so Clallam
+voters see Clallam's copies and West End voters Jefferson's. Jefferson's
+commissioner layer host (`gisweb.jeffcowa.us`) answered 503 on every
+request on 2026-10-08; `COUNTY_LAYERS.jefferson` now reads the county's
+hosted `FindMyDistrictsInstantApp_WFL1/FeatureServer/1` (`DISTID`, the same
+three districts). Only the archived primary's District 3 race uses that key.
+Kittitas elects its Upper and Lower District Court judges by district (KCC
+2.08.010-.020): `DISTCRT` reads the Auditor's precinct-built
+`Court_Districts/FeatureServer/0` `court_district_name` (`Upper District
+Court`, `Lower District Court`), and `districts.js` names them as the ballot
+does (`Lower Kittitas County District Court`). Both counties' commissioner
+and PUD seats are elected county-wide in the general. Shared races (8):
+Jefferson's CD 6 with Pierce's scoring and LD 24 with Clallam's; Kittitas's
+CD 8 with King's and LD 13 Senate and House with Grant's. Each county's
+Court of Appeals seat is its own information-only copy. Both link their
+local pamphlet at the cited page (PDF page = printed page) and their VoteWA
+guide otherwise.
 
 ## 13. Reference
 

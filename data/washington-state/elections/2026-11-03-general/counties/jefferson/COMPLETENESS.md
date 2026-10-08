@@ -3,8 +3,23 @@
 Election: 2026 Washington general election, November 3, 2026 (VoteWA
 election 899, county code 16).
 
-Research package for #31 (county wave 6); not yet declared in
-`APP_PACKAGES`. Contests and measures are built by
+Status (#31): shipped at Full County Coverage in
+`APP_PACKAGES["2026-11-03-general"]["counties"]`, with its elections office
+(`https://www.co.jefferson.wa.us/1266/Elections`), its local pamphlet
+(`pamphletPdfs['jefferson/local-voters-pamphlet']`, PDF page = printed page)
+and its VoteWA guide (`countyGuides.jefferson`, `c=16`).
+`COUNTY_LAYERS.jefferson` reads `SCHDST` (DOR SCH2025) beside `CEMDST` and
+`FIRDST`, and its `COUNTY_COUNCIL` now reads the hosted
+`FindMyDistrictsInstantApp_WFL1/FeatureServer/1` proposed below (the
+gisweb host answered 503). CD 6 ships with Pierce's research, LD 24 Pos. 1
+and 2 with Clallam's. Live ballots on 2026-10-08, each `full_county` with no
+missing layer: 1820 Jefferson St, Port Townsend (commissioner district 1; no
+local measure); 1993 Dowans Creek Rd, Forks (`FIRDST` `9`, `SCHDST` `402`:
+both West End measures, Jefferson's copies); 18113 Upper Hoh Rd, Forks
+(`SCHDST` `402`: the bond only). The paragraphs below describe the package
+as researched.
+
+Research package for #31 (county wave 6). Contests and measures are built by
 `pipeline/build_votewa_lite_data.py --county jefferson` from the VoteWA
 candidate list (`raw/votewa/candidate-list.csv.url`, 28 rows) and the
 overrides and measures in that script's

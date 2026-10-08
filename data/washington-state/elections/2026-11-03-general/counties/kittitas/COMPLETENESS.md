@@ -3,8 +3,22 @@
 Election: 2026 Washington general election, November 3, 2026 (VoteWA
 election 899, county code 19).
 
-Research package for #31 (county wave 6). Not yet shipped: the county is
-not in `APP_PACKAGES["2026-11-03-general"]["counties"]`. Contests are built
+Status (#31): shipped at Full County Coverage in
+`APP_PACKAGES["2026-11-03-general"]["counties"]`, with its elections office
+(`https://www.co.kittitas.wa.us/auditor/elections/default.aspx`), its local
+pamphlet (`pamphletPdfs['kittitas/local-voters-pamphlet']`, PDF page =
+printed page) and its VoteWA guide (`countyGuides.kittitas`, `c=19`).
+`COUNTY_LAYERS.kittitas` reads `DISTCRT` (the Auditor's `Court_Districts`
+`court_district_name`, proposed below) beside `COUNTY_COUNCIL` and
+`FIRDST`; `districts.js` names the values `Lower Kittitas County District
+Court` and `Upper Kittitas County District Court`. CD 8 ships with King's
+research, LD 13 Senate and House with Grant's. Live ballots on 2026-10-08,
+each `full_county` with no missing layer: 205 W 5th Ave, Ellensburg (Lower
+District Court seat, no Upper) and 719 E 3rd St, Cle Elum (Upper seat, no
+Lower); neither has a local measure. The paragraphs below describe the
+package as researched.
+
+Research package for #31 (county wave 6). Contests are built
 by `pipeline/build_votewa_lite_data.py --county kittitas` from the VoteWA
 candidate list (`raw/votewa/candidate-list.csv.url`) and the overrides in
 that script's `ELECTION_MEASURES["2026-11-03-general"]["kittitas"]`. Every
