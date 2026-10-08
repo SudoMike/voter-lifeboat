@@ -53,6 +53,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?election_year=2026&legislative_district=29
     page: https://my.pdc.wa.gov/registration/public/-/#/public/registration/67661
     accessed: 2026-10-08
+photo:
+  url: https://www.joebushnell.com/wp-content/uploads/2026/01/Head-Shot-Wapato-1200x800.png
+  page: https://www.joebushnell.com/
+  kind: campaign-website
 ---
 
 ## Background

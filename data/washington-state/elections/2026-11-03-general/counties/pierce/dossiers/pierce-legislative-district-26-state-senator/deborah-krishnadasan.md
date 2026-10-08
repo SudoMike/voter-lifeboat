@@ -126,6 +126,10 @@ sources:
     url: https://leg.wa.gov/legislators/member/deborah-krishnadasan
     accessed: 2026-07-17
     carried_from: data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-26-state-senator/deborah-krishnadasan.md S2
+photo:
+  url: https://leg.wa.gov/memberphoto/35470.jpg
+  page: https://leg.wa.gov/memberphoto/35470.jpg
+  kind: government
 ---
 
 ## Background

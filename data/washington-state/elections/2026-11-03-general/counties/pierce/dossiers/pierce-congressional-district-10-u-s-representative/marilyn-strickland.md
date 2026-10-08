@@ -146,6 +146,10 @@ sources:
     url: https://clerk.house.gov/evs/2026/roll085.xml
     page: https://clerk.house.gov/Votes/202685
     accessed: 2026-10-08
+photo:
+  url: https://strickland.house.gov/wp-content/themes/marilynstrickland/assets/images/MS_Official_Photo_0-removebg.png
+  page: https://strickland.house.gov/
+  kind: government
 ---
 
 ## Background

@@ -140,6 +140,10 @@ sources:
     outlet: Washington State Legislature, House floor amendment 2538 to ESSB 6346 (Orcutt)
     url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/6346-S.E%20AMH%20ORCU%20REIN%20513.htm
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/29103.jpg
+  page: https://leg.wa.gov/memberphoto/29103.jpg
+  kind: government
 ---
 
 ## Background

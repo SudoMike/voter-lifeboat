@@ -183,6 +183,10 @@ sources:
     outlet: Rep. Randall press-release index (release titles, pages 0-7)
     url: https://randall.house.gov/media/press-releases
     accessed: 2026-10-08
+photo:
+  url: https://randall.house.gov/sites/evo-subsites/randall.house.gov/files/evo-media-image/2024_randall_emily_official.jpg
+  page: https://randall.house.gov/
+  kind: government
 ---
 
 ## Background

@@ -62,6 +62,10 @@ sources:
     outlet: Washington Courts court directory, Pierce County courts (District Court judges listing)
     url: https://www.courts.wa.gov/court_dir/orgs/286.html
     accessed: 2026-10-08
+photo:
+  url: https://svennelsonforjudge.com/__l5e/assets-v1/3378f390-fd6d-4fa9-b713-588038f615b7/sven-headshot-440.webp
+  page: https://svennelsonforjudge.com/
+  kind: campaign-website
 ---
 
 ## Background

@@ -76,6 +76,10 @@ sources:
     outlet: Washington Courts court directory, Pierce County courts (District Court judges listing)
     url: https://www.courts.wa.gov/court_dir/orgs/286.html
     accessed: 2026-10-08
+photo:
+  url: https://sommerfeld4judge.com/wp-content/uploads/2026/05/mike-headshot.png
+  page: https://sommerfeld4judge.com/
+  kind: campaign-website
 ---
 
 ## Background

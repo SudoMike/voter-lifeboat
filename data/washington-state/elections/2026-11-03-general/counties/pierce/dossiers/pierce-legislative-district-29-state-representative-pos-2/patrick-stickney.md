@@ -46,6 +46,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?election_year=2026&legislative_district=29
     page: https://my.pdc.wa.gov/registration/public/-/#/public/registration/67982
     accessed: 2026-10-08
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/69727a6f1e45ff563d84718a/2f2b49a5-266e-4dfd-ba9b-0ab1125b31d7/Patrick065.jpg
+  page: https://www.votestickney.com/meetpatrick
+  kind: campaign-website
 ---
 
 ## Background

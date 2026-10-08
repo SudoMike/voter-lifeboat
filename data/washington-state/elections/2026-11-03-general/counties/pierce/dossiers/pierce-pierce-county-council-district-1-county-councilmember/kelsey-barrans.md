@@ -74,6 +74,10 @@ sources:
     url: https://voter.votewa.gov/elections/candidate.ashx?e=899&r=186807&b=0&la=en&c=27
     pointer: counties/pierce/raw/votewa/candidate-statements/race-186807.json.meta.json
     accessed: 2026-10-08
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/68636f9343427448505ed634/46c6035b-a222-44cd-b55f-95123fdf712c/Kelsey+in+front+of+barn.JPG
+  page: https://www.votekelseybarrans.com/
+  kind: campaign-website
 ---
 
 ## Background

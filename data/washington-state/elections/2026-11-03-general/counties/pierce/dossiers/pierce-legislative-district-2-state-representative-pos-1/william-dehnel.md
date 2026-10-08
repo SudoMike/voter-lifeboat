@@ -76,6 +76,10 @@ sources:
     outlet: Washington Secretary of State, August 4, 2026 primary results (official, as of 2026-09-11)
     url: https://results.vote.wa.gov/
     accessed: 2026-10-08
+photo:
+  url: https://electwilliamdehnel.org/wp-content/uploads/2026/05/ddca6238-ef73-4de9-b591-90953abda4f2-240x300.jpg
+  page: https://electwilliamdehnel.org/
+  kind: campaign-website
 ---
 
 ## Background

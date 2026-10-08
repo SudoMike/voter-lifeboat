@@ -105,6 +105,10 @@ sources:
     url: https://voter.votewa.gov/elections/candidate.ashx?e=899&r=186809&b=0&la=en&c=27
     pointer: counties/pierce/raw/votewa/candidate-statements/race-186809.json.meta.json
     accessed: 2026-10-08
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/69bb277175d66a391cd39115/c8ddc210-2877-4ffe-9b51-9de15a74d0d3/Brenda50.jpg
+  page: https://www.electbrendalykins.com/about
+  kind: campaign-website
 ---
 
 ## Background

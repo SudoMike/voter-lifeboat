@@ -95,6 +95,10 @@ sources:
     title: Mike Sommerfeld for Judge home page (opponent's endorsement list)
     url: https://sommerfeld4judge.com/
     accessed: 2026-10-08
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/69fe8ac021b27f092834ed29/c22cc9d5-62be-414b-8ed8-a7fbc30edccf/pam.jfif
+  page: https://www.pamforjudge.com/about-pam
+  kind: campaign-website
 ---
 
 ## Background

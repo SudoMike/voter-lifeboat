@@ -74,6 +74,10 @@ sources:
     url: https://results.votewa.gov/results/public/api/elections/san-juan-county-wa/20260804/ballot-items
     pointer: counties/san-juan/raw/san-juan/votewa-results-20260804-ballot-items.json.url
     accessed: 2026-10-08
+photo:
+  url: https://content.campaignpartner.net/images/150530/JS_-_white_shirt_cropped.jpg
+  page: https://jswanson4council.com/
+  kind: campaign-website
 ---
 
 ## Background

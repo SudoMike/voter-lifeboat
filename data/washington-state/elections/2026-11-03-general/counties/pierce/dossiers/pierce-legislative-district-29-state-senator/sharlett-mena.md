@@ -168,6 +168,10 @@ sources:
     outlet: Fuse Washington, 2026 general election endorsements (updated 2026-09-29)
     url: https://fusewashington.org/news/blog/fuses-2026-general-election-endorsements
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/27494.jpg
+  page: https://leg.wa.gov/memberphoto/27494.jpg
+  kind: government
 ---
 
 ## Background

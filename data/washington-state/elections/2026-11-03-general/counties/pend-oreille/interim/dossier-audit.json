@@ -1,0 +1,27 @@
+{
+  "script": "pipeline/verify_dossiers.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/pend-oreille/interim/research-plan.json",
+    "data/washington-state/elections/2026-11-03-general/counties/pend-oreille/dossiers/"
+  ],
+  "missing": [],
+  "no_frontmatter": [],
+  "invalid_evidence_levels": [],
+  "invalid_source_formats": [],
+  "evidence_levels": {
+    "rich": 1,
+    "moderate": 3
+  },
+  "contest_overviews_missing": [],
+  "untouched_contests": [],
+  "untouched_measures": [],
+  "invalid_photos": [],
+  "photos": {
+    "present": 1,
+    "missing": 3
+  },
+  "researched_elsewhere": [
+    "pend-oreille-congressional-district-5-u-s-representative -> spokane/spokane-congressional-district-5-u-s-representative",
+    "pend-oreille-legislative-district-7-state-senator -> spokane/spokane-legislative-district-7-state-senator"
+  ]
+}

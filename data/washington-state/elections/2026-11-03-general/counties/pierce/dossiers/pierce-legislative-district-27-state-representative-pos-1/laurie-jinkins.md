@@ -253,6 +253,10 @@ sources:
     outlet: Washington State Legislature, House floor amendment 384 to SHB 1296 (2025; text lists Representative Schmidt)
     url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/1296-S%20AMH%20SCHM%20MOET%20391.htm
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/15817.jpg
+  page: https://leg.wa.gov/memberphoto/15817.jpg
+  kind: government
 ---
 
 ## Background

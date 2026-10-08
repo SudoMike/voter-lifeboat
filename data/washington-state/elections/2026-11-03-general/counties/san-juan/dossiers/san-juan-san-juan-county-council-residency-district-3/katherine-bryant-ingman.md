@@ -81,6 +81,10 @@ sources:
     url: https://results.votewa.gov/results/public/api/elections/san-juan-county-wa/20260804/ballot-items
     pointer: counties/san-juan/raw/san-juan/votewa-results-20260804-ballot-items.json.url
     accessed: 2026-10-08
+photo:
+  url: https://katherinebryantingman.com/wp-content/uploads/2026/07/Katherine-Bryant-Ingman-SJC-No-3.jpg
+  page: https://katherinebryantingman.com/
+  kind: campaign-website
 ---
 
 ## Background

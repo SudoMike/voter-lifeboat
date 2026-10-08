@@ -55,6 +55,10 @@ sources:
     url: https://voter.votewa.gov/elections/candidate.ashx?e=899&r=186808&b=0&la=en&c=27
     pointer: counties/pierce/raw/votewa/candidate-statements/race-186808.json.meta.json
     accessed: 2026-10-08
+photo:
+  url: https://www.backbettina.com/assets/headshot-bettina-cutout-transparent.png
+  page: https://www.backbettina.com/
+  kind: campaign-website
 ---
 
 ## Background
