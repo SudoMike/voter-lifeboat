@@ -1,0 +1,140 @@
+{
+  "contest_slug": "snohomish-congressional-district-2-u-s-representative",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/snohomish/dossiers/snohomish-congressional-district-2-u-s-representative/"],
+  "office_does": "A U.S. Representative writes and votes on federal law and spending, oversees the executive branch, and serves constituents for a two-year term; the 2nd District covers part of Snohomish County and all of Skagit, Whatcom, Island and San Juan counties.",
+  "race_blurb": "Thirteen-term Democratic incumbent Rick Larsen, the lead Democrat on the Transportation & Infrastructure Committee, faces first-time Republican candidate Edwin H. Feller. The race contrasts Larsen's ICE-accountability, climate and abortion-rights positions with Feller's lower-tax, enforcement-first and sex-based Title IX platform.",
+  "candidates": [
+    {
+      "slug": "rick-larsen",
+      "summary": "Thirteen-term incumbent and lead Democrat on the House Transportation & Infrastructure Committee, running on lowering costs, health care access, ICE accountability, abortion rights and infrastructure funding.",
+      "highlights": [
+        "Will not vote for full-year DHS and ICE funding without oversight; voted against the Laken Riley Act [S2][S7]",
+        "Calls health care a right and backs universal coverage, with a record of ACA and Medicare cost measures [S2]",
+        "Voted for the Inflation Reduction Act and calls climate mitigation a top priority [S2][S8]",
+        "Supports the Women's Health Protection Act and cites a 100% voting record on choice [S2]",
+        "Voted for the 2024 Israel and Ukraine security supplementals [S9][S10]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S2", "S6"],
+          "basis": "Supports scrapping the cap on income subject to Social Security taxes and voted against the 2025 One Big Beautiful Bill Act; no broader wealth-tax position stated."
+        },
+        "spending": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S2", "S5", "S8"],
+          "basis": "Backs expanded child care, a $17 minimum wage, Medicare hearing benefits and infrastructure investment; voted for the Inflation Reduction Act."
+        },
+        "safety": {
+          "score": 0,
+          "confidence": "medium",
+          "citations": ["S1", "S2"],
+          "basis": "On fentanyl pairs 'addiction is a disease' and prevention/recovery funding with strengthening law enforcement against traffickers."
+        },
+        "climate": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S2", "S8"],
+          "basis": "Says mitigating climate change must be a top priority, supports clean energy, and voted for the Inflation Reduction Act."
+        },
+        "experience": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S5"],
+          "basis": "Thirteenth-term incumbent and lead Democrat on Transportation & Infrastructure, facing a first-time candidate."
+        },
+        "immigration": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S2", "S7"],
+          "basis": "Conditions DHS/ICE funding on oversight, wants ICE body cameras and visible ID, supports ending family detention and private detention, and voted against the Laken Riley Act."
+        },
+        "healthcare": {
+          "score": 0,
+          "confidence": "medium",
+          "citations": ["S2"],
+          "basis": "States universal coverage as a goal but his record and proposals work through ACA and Medicare; no single-payer proposal."
+        },
+        "social": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S2", "S3"],
+          "basis": "Supports suspending the filibuster to pass the Women's Health Protection Act, cites a 100% pro-choice record, endorsed by Planned Parenthood Action Fund and Stonewall Democrats."
+        },
+        "tech": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S4"],
+          "basis": "Calls for 'strong guardrails' on data centers so their power and water costs are not passed to ratepayers."
+        },
+        "defense": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S2", "S9", "S10"],
+          "basis": "Voted for the 2024 Israel and Ukraine security supplementals while opposing 'reckless foreign wars.'"
+        }
+      }
+    },
+    {
+      "slug": "edwin-h-feller",
+      "summary": "First-time Republican candidate and retired HVAC professional from Whatcom County, running on lower taxes, smaller government, enforcement-first immigration and public safety, energy deregulation and sex-based Title IX eligibility.",
+      "highlights": [
+        "Blames the affordability crisis on high taxes and a government grown too large; supports balanced budgets [S1]",
+        "Proposes ending sanctuary policies, designating cartels as terrorist organizations and merit-based immigration [S2]",
+        "Would dismantle environmental mandates and repeal federal carbon taxes while expanding nuclear and hydro [S2]",
+        "Supports defining sex in Title IX as biological sex and a federal ban on irreversible medical procedures for minors [S2]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "Says the affordability crisis comes from taxes being too high and proposes repealing federal carbon taxes."
+        },
+        "spending": {
+          "score": -2,
+          "confidence": "medium",
+          "citations": ["S1", "S2"],
+          "basis": "Supports balanced budgets, says government has grown too large, and lists fiscal responsibility as a priority."
+        },
+        "safety": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "Supports robust law enforcement and a federal Safe Streets mandate tying grants to local cooperation and ending sanctuary policies."
+        },
+        "climate": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S2"],
+          "basis": "Proposes dismantling 'radical environmental mandates', repealing federal carbon taxes and expanding nuclear and hydro capacity."
+        },
+        "experience": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1"],
+          "basis": "Has never held public office and runs explicitly against a long-serving incumbent."
+        },
+        "immigration": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "Supports secure borders, ending sanctuary policies and a merit-based system that ends chain migration."
+        },
+        "social": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "Supports codifying Title IX 'sex' as biological sex in athletics and a federal ban on irreversible medical procedures for minors."
+        }
+      }
+    }
+  ]
+}
