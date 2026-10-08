@@ -16,7 +16,9 @@ posts the whole form back. This script replays that post non-interactively:
 The CSV is cached verbatim in data/.cache/votewa/candidatelist-c<code>-e<e>.csv
 (gitignored). The committed raw source is the pointer pair
 counties/<county>/raw/votewa/candidate-list.csv.url + .meta.json, whose
-sha256 pins the export the interim files were built from. This is the method
+sha256 pins the export the interim files were built from (and whose
+sha256_case_normalized accepts a re-fetch that differs only in the case of
+the District Type and District columns, which VoteWA varies between fetches). This is the method
 issue #5 recorded for the statewide export (c=99&e=899).
 
 Usage:
@@ -38,6 +40,7 @@ import urllib.request
 from html.parser import HTMLParser
 
 import election
+import votewa
 from election import ROOT, rel
 
 BASE = "https://voter.votewa.gov/candidatelist.aspx"
@@ -185,6 +188,9 @@ def write_pointer(county: str, election_id: str, path) -> None:
         "cache_file": rel(path),
         "bytes": len(data),
         "sha256": hashlib.sha256(data).hexdigest(),
+        # VoteWA flips the case of District Type/District between fetches;
+        # the builders accept a cache matching either digest (votewa.py).
+        "sha256_case_normalized": votewa.case_normalized_sha256(data),
         **csv_summary(data),
         "notes": src["notes"],
     }

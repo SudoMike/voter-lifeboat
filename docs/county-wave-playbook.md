@@ -96,10 +96,25 @@ county exports, 1,435 rows; #5 recorded the same for the State list):
   (the statewide package owns them). PCO rows (District Type `Precinct`)
   are dropped too.
 
-The builders read the cache and refuse to run if its `sha256` differs from
-the committed meta. If VoteWA changed (a withdrawal, a correction), re-run
+The builders read the cache and refuse to run if it matches neither digest
+in the committed meta. If VoteWA changed (a withdrawal, a correction), re-run
 the command above, read the diff of the meta and the interim files, and
 commit both.
+
+**The export is not byte-reproducible.** Between two fetches of the same
+list, VoteWA flips the case of the `District Type` and `District` values row
+by row (`"LEGISLATIVE","LEGISLATIVE DISTRICT 10"` in one fetch,
+`"Legislative","Legislative District 10"` in the next; Snohomish, 2026-10-08,
+same 15,065 bytes, different `sha256`). The parsers upper-case those two
+columns before matching, so the meta also records `sha256_case_normalized`:
+the sha256 of the parsed rows as compact JSON with those two columns
+upper-cased and every other value verbatim (`votewa.case_normalized_sha256`).
+The builders accept a cache that matches either `sha256` or
+`sha256_case_normalized`; a different name, a dropped row or a reordered row
+still stops them. A meta written before this field existed (every county's
+as of 2026-10-08) still needs the exact bytes: re-run `--write-pointer` once
+on a cache that matches its `sha256` to add the field. The primary keeps its
+CSVs verbatim in the package and is not affected.
 
 ## 3. Step 2: Build the county package
 
@@ -351,14 +366,25 @@ are counted as `researched_elsewhere` and must have no copy in your
    that address's official sample ballot. To check before declaring, run
    steps 3 and 4 and then `git checkout -- data/final app/public/data`.
 
-   Known issue (2026-10-08): the Census geocoder's `Current` vintage now
-   names its layers `120th Congressional Districts` and `2026 State
-   Legislative Districts - Lower/Upper`, while `geo.js`
-   `lookupCensusDistricts` looks for `119th` and `2024`. Until that is
-   fixed, every non-King address reports `missing=["CONGDST","LEGDST"]`,
-   `partial_county`, and no congressional or legislative contests. Do not
-   ship a non-King county before the fix.
-5. `cd app && npm ci && npm test && npm run build`. `data-consistency.test.js`
+   The Census geocoder's `Current` vintage renamed its layers to `120th
+   Congressional Districts` and `2026 State Legislative Districts -
+   Lower/Upper` on 2026-10-08; `geo.js` matches them by suffix since #26,
+   so non-King addresses resolve `CONGDST` and `LEGDST` again (Snohomish
+   live checks, #21).
+5. **Declare the adapter's layers.** Add the county to
+   `election.DISTRICT_ADAPTER_LAYERS`: `CONGDST`, `LEGDST`, `CITY` plus every
+   `key` in `geo.js` `COUNTY_LAYERS[<county>]` (`test_general_app_data.py`
+   checks the two agree). The assembler then marks the county
+   `partial_county` if any shipped DISTRICT scope uses another layer, even
+   if the package claims `full_county`, and prints each such scope.
+6. **Pamphlet links.** Add the county's general pamphlet PDF to
+   `app/src/lib/officialLinks.js` `pamphletPdfs` as
+   `'<county>/<edition>'` (edition = the raw pointer's name, e.g.
+   `local-voters-pamphlet`), checked live (200, a PDF, PDF pages equal the
+   cited pages). Candidate pages come from the county's own dossiers'
+   pamphlet citations; `pamphlet_refs.PAMPHLET_REF` must recognize the
+   edition id.
+7. `cd app && npm ci && npm test && npm run build`. `data-consistency.test.js`
    fails if a shipped DISTRICT scope uses a layer the county's adapter lacks
    and is not in `UNRESOLVABLE_SCOPES` (section 12).
 
@@ -396,6 +422,15 @@ are `partial_county` for: Kitsap `PUDDST` (PUD No. 1 District 2), Pierce
 Pierce `Election_Precincts` layer's `KING_DISTRICT` attribute could resolve
 it), Snohomish `DISTCRT` (District Court electoral districts), Spokane
 `PUDDST`. Clark and Thurston are `full_county`.
+
+Snohomish shipped on 2026-10-08 (#21) as `partial_county` for `DISTCRT`
+alone (`snohomish/DISTCRT` is in `UNRESOLVABLE_SCOPES`): its nine District
+Court seats (Cascade, Everett, Evergreen, South) stay hidden. Its South
+County Fire RFA measure (`RFADST` `SCRFA`) resolves: `geo.js` reads DOR
+FIR2025 (layer 7) `DISTATTRIB` with `where DISTATTRIB = 'SCRFA'`, because
+that layer mixes fire-district numbers and RFA codes (see
+`counties/snohomish/COMPLETENESS.md`). A layer config may carry such a
+`where` when a shared layer holds more than the key means.
 
 ## 13. Reference
 

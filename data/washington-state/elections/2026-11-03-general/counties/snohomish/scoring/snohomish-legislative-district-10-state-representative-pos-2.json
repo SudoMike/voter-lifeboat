@@ -1,0 +1,115 @@
+{
+  "contest_slug": "snohomish-legislative-district-10-state-representative-pos-2",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/snohomish/dossiers/snohomish-legislative-district-10-state-representative-pos-2/"],
+  "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, including ferry funding, school funding, tax structure and criminal-justice statutes.",
+  "race_blurb": "Four-term Democratic incumbent Dave Paul, chair of House Postsecondary Education & Workforce, faces Republican Tim Hazelo, a Navy veteran and contractor from Oak Harbor. They split on the income tax over $1 million, electric ferries and state spending.",
+  "candidates": [
+    {
+      "slug": "dave-paul",
+      "summary": "Incumbent State Representative seeking a fifth term, a Skagit Valley College administrator who chairs the House Postsecondary Education & Workforce Committee.",
+      "highlights": [
+        "Voted for the 2026 tax on income over $1 million and the 2025 gas-tax package; voted against the 2025 services sales tax and B&O increases [S5][S7][S8][S9]",
+        "Says he is \"fighting to fix our upside-down tax code\" [S1]",
+        "Prioritizes funding three more electric ferries; voted for the 2025 clean fuel standard bill [S15][S11]",
+        "States he is pro-choice; voted for ESHB 1296 [S1][S6]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": 1,
+          "confidence": "high",
+          "citations": ["S1", "S5", "S7", "S8", "S9"],
+          "basis": "Voted for the income tax over $1M and the gas-tax package and backs fixing the 'upside-down tax code', but voted against the 2025 services sales tax and B&O increases."
+        },
+        "spending": {
+          "score": 1,
+          "confidence": "low",
+          "citations": ["S12"],
+          "basis": "Voted for the 2025-27 operating budget; no stated spending philosophy beyond protecting college grant funding."
+        },
+        "housing": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S10", "S2"],
+          "basis": "Voted for the 2025 rent-increase limits and names affordable housing a priority."
+        },
+        "climate": {
+          "score": 1,
+          "confidence": "high",
+          "citations": ["S11", "S15", "S3"],
+          "basis": "Voted for the 2025 clean fuel standard bill and prioritizes electric-ferry funding; endorsed by Sierra Club."
+        },
+        "experience": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S15"],
+          "basis": "Seeking a fifth term, committee chair, with enacted bills; opponent has never held public office."
+        },
+        "social": {
+          "score": 1,
+          "confidence": "high",
+          "citations": ["S1", "S14"],
+          "basis": "Pamphlet states he is pro-choice; endorsed by Planned Parenthood Alliance Advocates; no record on gender or sports policy."
+        },
+        "parental-rights": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S6"],
+          "basis": "Voted for ESHB 1296, which amended and narrowed parts of the I-2081 parents' rights list; no campaign statement on the topic."
+        }
+      }
+    },
+    {
+      "slug": "tim-hazelo",
+      "summary": "Republican Navy veteran, contractor and truck driver from Oak Harbor and former Island County Republican chair, running against income taxes and electric ferries and for spending audits.",
+      "highlights": [
+        "\"No income taxes on Washington State residents!\" [S3]",
+        "Calls for audits and transparency of every dollar spent [S3]",
+        "Opposes electric ferries as less dependable and costlier; favors diesel-electric boats [S6]",
+        "Would end cashless bail and cut housing regulations [S1]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S3", "S6"],
+          "basis": "Platform opposes any income tax; Herald reports he opposes the millionaires' tax and any tax not approved by voters."
+        },
+        "spending": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S3", "S6", "S1"],
+          "basis": "Calls for audits of every dollar, blames unsustainable spending for taxes, and questions social-program spending."
+        },
+        "housing": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S1", "S3"],
+          "basis": "Would cut red tape and regulations he says drive up housing costs; no other housing proposals."
+        },
+        "safety": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S1", "S6"],
+          "basis": "Would end cashless bail and 'catch and release'; no broader public-safety program."
+        },
+        "climate": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S6"],
+          "basis": "Opposes the state's electric ferries in favor of diesel-electric on cost and reliability grounds."
+        },
+        "experience": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1"],
+          "basis": "No elected public office beyond precinct committee officer, challenging a four-term incumbent."
+        }
+      }
+    }
+  ]
+}

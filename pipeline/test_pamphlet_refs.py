@@ -52,6 +52,19 @@ class PamphletRefsTest(unittest.TestCase):
             "2026-08-04-primary/counties/king/interim/pamphlet-text/edition-2/page-080.txt)"))
         self.assertEqual([], pages("edition-1 page 30"))
 
+    def test_a_county_local_voters_pamphlet_resolves(self):
+        # Snohomish's (and the other county builders') pamphlet pointer is
+        # raw/<county>/local-voters-pamphlet.pdf.url; a ref naming it must not
+        # fall through to "no edition".
+        editions = ["local-voters-pamphlet", "sample-ballot"]
+        self.assertEqual([{"edition": "local-voters-pamphlet", "page": 33}], ref_pages(
+            "local-voters-pamphlet page 33 (2026 General Election Voters' Pamphlet, Snohomish County edition, "
+            "state candidate statement)", editions))
+        self.assertEqual([{"edition": "local-voters-pamphlet", "page": 26}],
+                         ref_pages("local-voters-pamphlet page 26", editions))
+        # King's editions do not include it, so it gives nothing there.
+        self.assertEqual([], pages("local-voters-pamphlet page 26"))
+
     def test_sources_pages_reads_only_pamphlet_sources_and_dedupes(self):
         sources = [
             {"id": "S1", "type": "pamphlet", "ref": "local-edition page 41"},

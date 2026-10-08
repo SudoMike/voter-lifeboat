@@ -65,7 +65,7 @@ const STATE_MEASURES = [
   'initiative-measure-no-il26-638',
 ]
 
-test('the general ships King at full county coverage with its elections office', () => {
+test('the general ships King at full county coverage and Snohomish at partial, with their elections offices', () => {
   assert.equal(data.election.id, '2026-11-03-general')
   assert.deepEqual(data.coverage, {
     statewide_complete: true,
@@ -78,8 +78,36 @@ test('the general ships King at full county coverage with its elections office',
         coverage: 'full_county',
         elections_url: 'https://kingcounty.gov/en/dept/elections',
       },
+      {
+        // Partial: Snohomish District Court seats are scoped to electoral
+        // districts (DISTCRT) no GIS layer resolves (#21).
+        id: 'snohomish',
+        name: 'Snohomish County',
+        state: 'WA',
+        fips: '53061',
+        coverage: 'partial_county',
+        elections_url: 'https://www.snohomishcountywa.gov/224/Elections-Voter-Registration',
+      },
     ],
   })
+})
+
+test('a Snohomish ballot: statewide races once, its districts, South County Fire only inside the RFA', () => {
+  const SNOHOMISH = { id: 'snohomish', fips: '53061', name: 'Snohomish County' }
+  const sno = (districts) => ({ coverageStatus: 'partial_county', county: SNOHOMISH, districts, missingLayers: [] })
+  // 19100 44th Ave W, Lynnwood (live 2026-10-08, see geo.js RFADST).
+  const lynnwood = ballotFor(sno({ CONGDST: '2', LEGDST: '32', CITY: 'Lynnwood', RFADST: 'SCRFA' }))
+  const slugs = lynnwood.contests.map((c) => c.slug)
+  assert.equal(new Set(slugs).size, slugs.length)
+  for (const slug of SUPREME_COURT) assert.ok(slugs.includes(slug), slug)
+  assert.ok(slugs.includes('snohomish-legislative-district-32-state-senator'))
+  // No District Court seat: DISTCRT never resolves, so they stay hidden.
+  assert.ok(!slugs.some((s) => s.includes('district-court')), slugs.join())
+  assert.ok(lynnwood.measures.some((m) => m.slug.includes('south-snohomish-county-fire-rescue')))
+  const monroe = ballotFor(sno({ CONGDST: '1', LEGDST: '12', CITY: 'Monroe', HOSPDST: 'Hospital District 1' }))
+  assert.ok(!monroe.measures.some((m) => m.slug.includes('south-snohomish-county-fire-rescue')))
+  assert.ok(monroe.measures.some((m) => m.slug === 'snohomish-public-hospital-district-no-1-proposition-no-1'))
+  assert.equal(coverageAdvice(sno({})), 'degraded')
 })
 
 test('each Supreme Court contest ships once, owned by the statewide package', () => {

@@ -15,7 +15,10 @@ Inputs (E = data/washington-state/elections/<id>):
     pamphlet-index}.json with owner/scope/uncontested per record, pamphlet
     pages from its dossiers' pamphlet citations (pamphlet_refs.py), and
     full_county coverage only when election.DISTRICT_ADAPTER_LAYERS["king"]
-    resolves every scope
+    resolves every scope. Any other declared county ships its app-*.json
+    with candidate pamphlet pages from its own dossiers' citations, and is
+    full_county only when its package says so and, when it has an
+    election.DISTRICT_ADAPTER_LAYERS entry, that entry resolves every scope
   data/final/<id>/{scores,measures,rubric,interview}.json
   dossiers/** of the packages above
 
@@ -532,14 +535,47 @@ shared_scores = shared_score_index(scores)
 # its statewide-normalized index above.
 COUNTY_OWNED = PACKAGES["district_contests"] == "county"
 researched_elsewhere = shared_contests.researched_index([STATE] + DECLARED_DIRS) if COUNTY_OWNED else {}
+
+
+def county_editions(county_dir):
+    """Edition ids of a county package's pamphlet pointers
+    (raw/<source>/<edition>.pdf.url: 'local-voters-pamphlet')."""
+    return sorted(p.name[: -len(".pdf.url")] for p in county_dir.glob("raw/*/*.pdf.url"))
+
+
+def county_candidate_pages(contest, dossier_slug, editions):
+    """From the general on, a county candidate's pamphlet pages come from its
+    own dossier's pamphlet citations, as for King. A race shipped with
+    another package's research (dossier_slug differs) gets none: that
+    package's pages are in its own pamphlet, not this county's."""
+    for cand in contest.get("candidates", []):
+        pages = []
+        if dossier_slug == contest["slug"] and dossier_exists(dossier_slug, cand["slug"]):
+            pages = dossier_pamphlet_pages(dossier_slug, cand["slug"], editions)
+        cand["pamphlet_pages"] = pages
+
+
 for county_dir in COUNTY_DIRS:
     cfile = county_dir / "interim/app-contests.json"
     mfile = county_dir / "interim/app-measures.json"
     package_coverages = []
+    # A county with a declared District Adapter (election.DISTRICT_ADAPTER_LAYERS)
+    # is checked here too: a DISTRICT scope on a layer the adapter lacks makes
+    # it partial_county even if its package claims full_county.
+    adapter = election.DISTRICT_ADAPTER_LAYERS.get(county_dir.name)
+    unresolved = []
+    editions = county_editions(county_dir) if COUNTY_OWNED else []
+
+    def check_county_scope(item):
+        scope = item.get("scope") or {}
+        if adapter is not None and scope.get("kind") == "DISTRICT" and scope.get("layer") not in adapter:
+            unresolved.append(f"{item['slug']} ({scope.get('layer')})")
+
     if cfile.exists():
         pack = json.load(open(cfile))
         package_coverages.append(pack.get("coverage", "partial_county"))
         for contest in pack.get("contests", []):
+            check_county_scope(contest)
             scored = scores.get(contest["slug"])
             dossier_slug = contest["slug"]
             if COUNTY_OWNED:
@@ -550,17 +586,25 @@ for county_dir in COUNTY_DIRS:
                 shared = shared_scores.get(shared_contest_key(contest))
                 if shared:
                     scored, dossier_slug = shared
-            out_contests.append(apply_scoring(contest, scored, dossier_slug))
+            contest = apply_scoring(contest, scored, dossier_slug)
+            if COUNTY_OWNED:
+                county_candidate_pages(contest, dossier_slug, editions)
+            out_contests.append(contest)
     if mfile.exists():
         pack = json.load(open(mfile))
         package_coverages.append(pack.get("coverage", "partial_county"))
         for measure in pack.get("measures", []):
+            check_county_scope(measure)
             out_measures.append(apply_measure_scoring(
                 measure, measures_scored.get(measure["slug"])
             ))
+    for item in unresolved:
+        print(f"{county_dir.name} scope its District Adapter cannot resolve: {item}")
     if cfile.exists() or mfile.exists():
         name, fips = COUNTY_NAMES.get(county_dir.name, (county_dir.name.title(), None))
-        coverage = "full_county" if package_coverages and all(c == "full_county" for c in package_coverages) else "partial_county"
+        coverage = "full_county" if (
+            package_coverages and all(c == "full_county" for c in package_coverages) and not unresolved
+        ) else "partial_county"
         supported_counties.append({"id": county_dir.name, "name": name, "state": "WA", "fips": fips, "coverage": coverage})
     elif PACKAGES["counties"] is not None:
         raise SystemExit(f"declared county package {county_dir.name} has no interim/app-*.json")

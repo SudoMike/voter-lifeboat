@@ -10,8 +10,11 @@ The raw source per election is declared in election.VOTEWA_SOURCES:
 * the general commits a pointer pair, counties/<county>/raw/votewa/
   candidate-list.csv.url + .meta.json, whose sha256 pins the export. The CSV
   itself is cached in data/.cache/votewa/ by fetch_votewa_candidate_list.py
-  (fetched on a cache miss). A cached or re-fetched export whose sha256
-  differs from the pointer's stops the build: re-run the fetcher with
+  (fetched on a cache miss). VoteWA flips the case of the District Type and
+  District columns between fetches, so the meta also records
+  `sha256_case_normalized` (case_normalized_sha256) and either digest
+  accepts the cache. A cached or re-fetched export that matches neither
+  stops the build: re-run the fetcher with
   --refresh --write-pointer, then rebuild, so a changed filing list is a
   visible commit rather than a silent drift.
 
@@ -97,6 +100,38 @@ def has_source(election_id: str, county: str) -> bool:
     return source_path(election_id, county).exists()
 
 
+# VoteWA's export does not reproduce byte for byte: between two fetches of the
+# same list, the case of the 'District Type' and 'District' values flips row by
+# row ("LEGISLATIVE","LEGISLATIVE DISTRICT 10" in one fetch, "Legislative",
+# "Legislative District 10" in the next; seen 2026-10-08 on Snohomish, c=34,
+# same 15,065 bytes). The parsers upper-case those columns before matching
+# (classify, the county overrides), so the pointer also pins the export by a
+# hash of its rows with those two columns upper-cased and every other value
+# verbatim.
+CASE_NORMALIZED_COLUMNS = ("District Type", "District")
+
+
+def case_normalized_sha256(data: bytes) -> str:
+    """sha256 of the export's rows (header included) as compact JSON, with
+    CASE_NORMALIZED_COLUMNS upper-cased. Insensitive to VoteWA's case flips,
+    sensitive to any other change (a name, a row, the row order)."""
+    rows = list(csv.reader(io.StringIO(data.decode("utf-8-sig"))))
+    if rows:
+        idx = [i for i, name in enumerate(rows[0]) if name in CASE_NORMALIZED_COLUMNS]
+        rows = [rows[0]] + [[v.upper() if i in idx else v for i, v in enumerate(r)] for r in rows[1:]]
+    payload = json.dumps(rows, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
+    return hashlib.sha256(payload).hexdigest()
+
+
+def export_matches(data: bytes, meta: dict) -> bool:
+    """True when `data` is the export `meta` pins: the verbatim sha256, or,
+    when the meta records one, the case-normalized sha256."""
+    if hashlib.sha256(data).hexdigest() == meta["sha256"]:
+        return True
+    pinned = meta.get("sha256_case_normalized")
+    return bool(pinned) and case_normalized_sha256(data) == pinned
+
+
 def csv_text(election_id: str, county: str) -> str:
     """The county's export as text: verbatim file, or the sha256-checked cache."""
     src = election.VOTEWA_SOURCES[election_id]
@@ -109,11 +144,13 @@ def csv_text(election_id: str, county: str) -> str:
         import fetch_votewa_candidate_list
         fetch_votewa_candidate_list.fetch(county, election_id)
     data = cache.read_bytes()
-    digest = hashlib.sha256(data).hexdigest()
-    if digest != meta["sha256"]:
+    if not export_matches(data, meta):
+        normalized = (f", case-normalized {case_normalized_sha256(data)} vs "
+                      f"{meta['sha256_case_normalized']}" if meta.get("sha256_case_normalized") else
+                      " (the meta records no sha256_case_normalized, so a case-only difference also stops here)")
         raise SystemExit(
-            f"{county}: {meta['cache_file']} sha256 {digest} does not match "
-            f"{meta_path.relative_to(ROOT)} ({meta['sha256']}). The VoteWA export changed: run "
+            f"{county}: {meta['cache_file']} sha256 {hashlib.sha256(data).hexdigest()} does not match "
+            f"{meta_path.relative_to(ROOT)} ({meta['sha256']}){normalized}. The VoteWA export changed: run "
             f"python3 pipeline/fetch_votewa_candidate_list.py --election {election_id} "
             f"--refresh --write-pointer {county}, review the diff, and rebuild."
         )

@@ -24,6 +24,7 @@ test('values that already read as a name stand alone', () => {
   assert.equal(describeDistrict('PUDDST', 'PUD Commissioner District 1'), 'PUD Commissioner District 1')
   assert.equal(describeDistrict('LIBDST', 'Sno - Isle Library District'), 'Sno - Isle Library District')
   assert.equal(describeDistrict('FIRE_AUTH', 'S.E. Thurston Fire Authority'), 'S.E. Thurston Fire Authority')
+  assert.equal(describeDistrict('RFADST', 'SCRFA'), 'South Snohomish County Fire & Rescue Regional Fire Authority')
 })
 
 test('codes are tidied without mangling initialisms', () => {

@@ -2,12 +2,440 @@
   "county": "snohomish",
   "script": "pipeline/build_snohomish_lite_data.py",
   "derived_from": [
-    "data/washington-state/elections/2026-11-03-general/counties/snohomish/raw/votewa/candidate-list.csv.url"
+    "data/washington-state/elections/2026-11-03-general/counties/snohomish/raw/votewa/candidate-list.csv.url",
+    "data/washington-state/elections/2026-11-03-general/counties/snohomish/raw/snohomish/sample-ballot.pdf.url",
+    "data/washington-state/elections/2026-11-03-general/counties/snohomish/raw/snohomish/local-voters-pamphlet.pdf.url"
   ],
   "coverage": "partial_county",
   "notes": [
-    "Measures not curated yet for this election: app-measures.json is empty because no one has transcribed this county's local measures, not because the ballot has none.",
     "Unresolvable district scopes (no queryable official boundary): DISTCRT. Contests/measures scoped to them are hidden rather than shown to the wrong voters."
   ],
-  "measures": []
+  "measures": [
+    {
+      "slug": "snohomish-snohomish-county-proposition-no-1",
+      "owner": "snohomish",
+      "jurisdiction": "Snohomish County",
+      "proposition": "Proposition No. 1",
+      "title": "Adoption of a Foundational Government Services Policy",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "snohomish"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 64
+        },
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 65
+        }
+      ],
+      "what_it_does": "This proposition would require the county legislature and executive branch to prioritize and protect funding for the offices of county Assessor, Auditor, Clerk, Executive, Prosecuting Attorney, Sheriff, Treasurer, and the District and Superior Court Judges. This proposition would add a new section to Article 6 of the County Charter.",
+      "cost_line": "No tax or rate in the ballot title; amends the county charter.",
+      "pro_summary": "Brian Sullivan: fund essential county services before expanding discretionary programs; it does not raise taxes or set spending levels.",
+      "con_summary": "Christine Eck and Janice Green: the named offices are already required by law; 'foundational' is undefined, inviting litigation and weakening the Council's budget authority.",
+      "lean_mappings": {}
+    },
+    {
+      "slug": "snohomish-snohomish-county-proposition-no-2",
+      "owner": "snohomish",
+      "jurisdiction": "Snohomish County",
+      "proposition": "Proposition No. 2",
+      "title": "Prioritize Funding of Budget Stabilization Funds",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "snohomish"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 66
+        },
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 67
+        }
+      ],
+      "what_it_does": "This proposition would require the county legislature and executive branch to prioritize the funding of the county budget stabilization funds. The purpose of these funds is to help mitigate the impacts of catastrophic economic downturns and revenue shortfalls and provide resources for emergencies and catastrophic events. This proposition would add a new section to Article 6 of the County Charter.",
+      "cost_line": "No tax or rate in the ballot title; amends the county charter.",
+      "pro_summary": "Brian Sullivan: builds emergency savings with a catastrophic fund, a replenishment plan and a supermajority to spend, without a new tax.",
+      "con_summary": "Hans Dunshee and Janice R. Greene: unnecessary and rigid; diverts money from services, too small for a real disaster, and lets a Council minority block spending.",
+      "lean_mappings": {}
+    },
+    {
+      "slug": "snohomish-snohomish-county-proposition-no-3",
+      "owner": "snohomish",
+      "jurisdiction": "Snohomish County",
+      "proposition": "Proposition No. 3",
+      "title": "Converting All Elected County Offices to Non-partisan Offices",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "snohomish"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 68
+        },
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 69
+        }
+      ],
+      "what_it_does": "This proposition would require that all candidates for a Snohomish County elected office appear on the ballot without a political party designation and that all elected county offices be non-partisan offices. This proposition would amend Section 4.15 and Section 4.80 of the County Charter.",
+      "cost_line": "No tax or rate in the ballot title; amends the county charter.",
+      "pro_summary": "Todd Welch, Mark James and Shawn O'Donnell: county services are not partisan; extends the nonpartisan approach of other county offices and every city, widening the candidate pool.",
+      "con_summary": "Anna Maria Jackson Laurence, Janice R. Greene and James Kenny: removing party labels hides information voters use; keep the disclosure voters chose in I-872.",
+      "lean_mappings": {}
+    },
+    {
+      "slug": "snohomish-snohomish-county-proposition-no-4",
+      "owner": "snohomish",
+      "jurisdiction": "Snohomish County",
+      "proposition": "Proposition No. 4",
+      "title": "Increasing Public Access to County Financial Transparency",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "snohomish"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 70
+        },
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 71
+        }
+      ],
+      "what_it_does": "This proposition would add a new section to Article 6 of the Snohomish County Charter. This proposition requires Snohomish County to make available, where reasonably practicable through existing systems or future modernization efforts, all financial information legally available within the county.",
+      "cost_line": "No tax or rate in the ballot title; amends the county charter.",
+      "pro_summary": "Danny Perkins and Janelle M. Cass: searchable, free online access to county budget, contract, grant and audit data, built into future systems.",
+      "con_summary": "Doris Fulton and Janice R. Greene: 'reasonably practicable' has no force; a portal is outside the current system overhaul and should come by funded ordinance instead.",
+      "lean_mappings": {}
+    },
+    {
+      "slug": "snohomish-snohomish-county-proposition-no-5",
+      "owner": "snohomish",
+      "jurisdiction": "Snohomish County",
+      "proposition": "Proposition No. 5",
+      "title": "Requiring a 4/5 Supermajority Council Vote to Increase Taxes",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "snohomish"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 72
+        },
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 73
+        }
+      ],
+      "what_it_does": "This proposition would require a 4/5 supermajority council vote to assess, levy, or increase any councilmanic tax. This proposition would amend Section 2.20 of the County Charter.",
+      "cost_line": "No tax or rate in the ballot title; amends the county charter.",
+      "pro_summary": "Todd Welch, Dan Perkins and Janelle Cass: requires broad Council agreement before taxes rise without a public vote, protecting fixed-income and struggling households.",
+      "con_summary": "Paula Rhyne, John Lovick and Mike Sells: lets two of five councilmembers block routine levies for law enforcement, courts, roads and veterans services; minority rule.",
+      "lean_mappings": {}
+    },
+    {
+      "slug": "snohomish-city-of-bothell-proposition-no-1",
+      "owner": "snohomish",
+      "jurisdiction": "City of Bothell",
+      "proposition": "Proposition No. 1",
+      "title": "Annexation Into Shoreline Fire Department Regional Fire Authority",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "CITY",
+        "value": "Bothell"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 80
+        }
+      ],
+      "what_it_does": "The Bothell City Council adopted Resolution No. 1784, approving annexation into the Shoreline Fire Department Regional Fire Authority and related plan amendment. To maintain current fire and emergency medical service levels and provide long-term financial and operational sustainability for such services within Bothell, should Bothell be annexed into and become a part of the Shoreline Fire Department Regional Fire Authority, effective March 1, 2027, pursuant to the plan amendment, as provided in Resolution No. 1784?",
+      "cost_line": "No tax or rate in the ballot title; the RFA's levy and fire benefit charge would apply to Bothell property from 2028.",
+      "pro_summary": "Wesley Wang, Brandon Keith and Mason Thompson: regional fire service shares resources and future facility costs; Bothell keeps three of nine RFA board seats; endorsed by IAFF Local 2099.",
+      "con_summary": "No statement against was filed; the pamphlet says no one in the jurisdiction contacted the Auditor's office to write one.",
+      "lean_mappings": {}
+    },
+    {
+      "slug": "snohomish-city-of-everett-proposition-no-261",
+      "owner": "snohomish",
+      "jurisdiction": "City of Everett",
+      "proposition": "Proposition No. 261",
+      "title": "Amendment to Everett City Charter Sections 2.2 and 4.10",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "CITY",
+        "value": "Everett"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 81
+        }
+      ],
+      "what_it_does": "The amendment to Section 2.2 would require candidates for Mayor and City Council to have registered to vote in the City of Everett and resided in the City (and district if applicable) for at least one year before the deadline for filing for office; and would prohibit elected officials from holding other elected offices simultaneously. Finally, Section 4.10 would be amended to only require elected officials to take an official oath of office.",
+      "cost_line": "No tax or rate in the ballot title; amends the city charter.",
+      "pro_summary": "Todd Welch, Randy Bolerjack and Jonathan Peebles: one-year residency and one elected office at a time keep representatives rooted in and focused on Everett.",
+      "con_summary": "No statement against was filed; the pamphlet says no one in the jurisdiction contacted the Auditor's office to write one.",
+      "lean_mappings": {}
+    },
+    {
+      "slug": "snohomish-city-of-everett-proposition-no-262",
+      "owner": "snohomish",
+      "jurisdiction": "City of Everett",
+      "proposition": "Proposition No. 262",
+      "title": "Amendment to Everett City Charter Section 3.2",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "CITY",
+        "value": "Everett"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 82
+        }
+      ],
+      "what_it_does": "The amendment to Section 3.2 would require the City to have at least two council meetings per month and at least 36 meetings per year; require the City to publish a schedule of those meetings every year in January and revise the procedures for determining who will preside over meetings when the Council President is absent.",
+      "cost_line": "No tax or rate in the ballot title; amends the city charter.",
+      "pro_summary": "Alan Rubio, Alice Hedges and Marcus Nunez: replaces the decades-old 48-meeting minimum with a flexible 36 that avoids meetings held only to meet a count.",
+      "con_summary": "No statement against was filed; the pamphlet says no one in the jurisdiction contacted the Auditor's office to write one.",
+      "lean_mappings": {}
+    },
+    {
+      "slug": "snohomish-city-of-everett-proposition-no-263",
+      "owner": "snohomish",
+      "jurisdiction": "City of Everett",
+      "proposition": "Proposition No. 263",
+      "title": "Amendment to Everett City Charter Section 8.3",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "CITY",
+        "value": "Everett"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 83
+        }
+      ],
+      "what_it_does": "The amendment to Section 8.3 would revise the City's Civil Service rules so that the Civil Service Commission's responsibilities are consistent with the requirements of state law.",
+      "cost_line": "No tax or rate in the ballot title; amends the city charter.",
+      "pro_summary": "Randy Bolerjack and Brent Terry: replaces years-old eligibility lists with hiring for specific openings, keeping civil service for police and fire hiring.",
+      "con_summary": "No statement against was filed; the pamphlet says no one in the jurisdiction contacted the Auditor's office to write one.",
+      "lean_mappings": {}
+    },
+    {
+      "slug": "snohomish-city-of-everett-proposition-no-264",
+      "owner": "snohomish",
+      "jurisdiction": "City of Everett",
+      "proposition": "Proposition No. 264",
+      "title": "Amendment to Four Sections of the Everett City Charter",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "CITY",
+        "value": "Everett"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 84
+        }
+      ],
+      "what_it_does": "The amendment to Sections 11.1, 11.2, 11.3 and 11.5 would require an initiative or referendum petition be signed by qualified electors in a number equal to ten percent of the total number of votes cast at the last preceding Mayoral election; would allow for 10 days to correct faulty signatures; would streamline the initiative process; and would require the City to prepare a Fiscal Analysis of the measure that would be made available to voters.",
+      "cost_line": "No tax or rate in the ballot title; amends the city charter.",
+      "pro_summary": "Mason Rutledge and Brent Terry: one uniform signature standard, clearer petition procedures and a fiscal impact statement for voters.",
+      "con_summary": "No statement against was filed; the pamphlet says no one in the jurisdiction contacted the Auditor's office to write one.",
+      "lean_mappings": {}
+    },
+    {
+      "slug": "snohomish-city-of-everett-proposition-no-265",
+      "owner": "snohomish",
+      "jurisdiction": "City of Everett",
+      "proposition": "Proposition No. 265",
+      "title": "Amendment to Eight Sections of the Everett City Charter",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "CITY",
+        "value": "Everett"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 85
+        }
+      ],
+      "what_it_does": "The Amendments to Sections 3.4, 3.5, 4.13, 11.6, 13.9, 15.5, 16.2, and 16.3 would modernize how the City provides the public notice by allowing the City to publish those notices, appointments, ordinances and proposed ordinances, proposed initiatives and referenda, bid advertisements, and franchise on City's website instead of requiring this information to be published in a newspaper, while also having this information available in the office of the City Clerk for examination by the public.",
+      "cost_line": "No tax or rate in the ballot title; amends the city charter.",
+      "pro_summary": "Alice Hedges, Mason Rutledge and Todd Welch: online notices are easier to find around the clock and cut print costs.",
+      "con_summary": "No statement against was filed; the pamphlet says no one in the jurisdiction contacted the Auditor's office to write one.",
+      "lean_mappings": {}
+    },
+    {
+      "slug": "snohomish-monroe-school-district-no-103-proposition-no-1",
+      "owner": "snohomish",
+      "jurisdiction": "Monroe School District No. 103",
+      "proposition": "Proposition No. 1",
+      "title": "Capital Projects Levy for Safety and Facility Improvements",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "SCHDST",
+        "value": "Monroe School District 103"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 87
+        }
+      ],
+      "what_it_does": "The Board of Directors of Monroe School District No. 103 adopted Resolution No. 3-2026 authorizing a levy proposition for facility improvements. This proposition would authorize the District to levy the following excess taxes to fund major maintenance projects, safety and security improvements, and construction projects at select schools. Collection Year 2027 2028 2029 2030 Approximate Levy Rate/$1000 Assessed Value $0.95 $0.90 $0.86 $0.82 Levy Amount $12,282,731 $12,282,731 $12,282,731 $12,282,731",
+      "cost_line": "Excess levy of $12,282,731 a year for 2027-2030, an estimated $0.95 to $0.82 per $1,000 of assessed value.",
+      "pro_summary": "Kyle Fisher and Molly Barnes: a smaller four-year levy (about $49 million, down from a $152 million bond that failed in February) for secure entrances, fire and security systems, roofs and HVAC.",
+      "con_summary": "No statement against was filed; the pamphlet says no one in the jurisdiction contacted the Auditor's office to write one.",
+      "lean_mappings": {}
+    },
+    {
+      "slug": "snohomish-mukilteo-school-district-no-6-proposition-no-1",
+      "owner": "snohomish",
+      "jurisdiction": "Mukilteo School District No. 6",
+      "proposition": "Proposition No. 1",
+      "title": "General Obligation Bonds - $400,000,000",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "SCHDST",
+        "value": "Mukilteo School District 6"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 88
+        },
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 89
+        }
+      ],
+      "what_it_does": "The Board of Directors of Mukilteo School District No. 6 adopted Resolution #12/2025-26 concerning a proposition for bonds. This proposition would authorize the District to add to and replace portions of Mukilteo, Serene Lake and Olivia Park Elementaries and Explorer Middle School; expand the Kamiak High School gymnasium; replace and improve track, field and athletic facilities; update technology systems; make safety and security upgrades; and upgrade building components, by issuing $400,000,000 of general obligation bonds maturing within 21 years; and to levy excess property taxes annually to repay the bonds, as described in Resolution #12/2025-26.",
+      "cost_line": "$400,000,000 in bonds over up to 21 years; the district estimates an average excess levy of $0.57 per $1,000 of assessed value.",
+      "pro_summary": "Judith M. Schwab, Nhi Pham and Angela Gottula: replaces failing pre-1970s infrastructure before emergencies and unlocks about $30 million in state matching funds.",
+      "con_summary": "Howard Damoff: the same bond failed in February 2026; enrollment is down, debt and interest are high; use interest-free capital levies instead.",
+      "lean_mappings": {}
+    },
+    {
+      "slug": "snohomish-sultan-school-district-no-311-proposition-no-1",
+      "owner": "snohomish",
+      "jurisdiction": "Sultan School District No. 311",
+      "proposition": "Proposition No. 1",
+      "title": "Bonds To Modernize Community Schools, Construct New High School and Improve Safety",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "SCHDST",
+        "value": "Sultan School District 311"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 90
+        }
+      ],
+      "what_it_does": "The Board of Directors of Sultan School District No. 311 adopted Resolution No. 25-13, concerning bonds to relieve student overcrowding and provide safe, modern schools. This proposition would authorize the District to: modernize Gold Bar Elementary (pre-K; grades K-2), Sultan Middle (grades 3-5) and Sultan High (grades 6-8) sites; construct a new high school (grades 9-12, expanded career/technical education); repurpose Sultan Elementary (Parent Partnership, educational supports, turf field for student/community use); issue $160,000,000 of general obligation bonds maturing within 21 years; and levy annual excess property taxes to repay the bonds, all as provided in Resolution No. 25-13.",
+      "cost_line": "$160,000,000 in bonds over up to 21 years, repaid by excess property taxes; the pamphlet gives no rate.",
+      "pro_summary": "No statement for was filed; the pamphlet says no one contacted the Auditor's office to write one.",
+      "con_summary": "No statement against was filed; the pamphlet says no one in the jurisdiction contacted the Auditor's office to write one.",
+      "lean_mappings": {}
+    },
+    {
+      "slug": "snohomish-fire-protection-district-no-10-proposition-no-1",
+      "owner": "snohomish",
+      "jurisdiction": "Fire Protection District No. 10",
+      "proposition": "Proposition No. 1",
+      "title": "Annexation Into Shoreline Fire Department Regional Fire Authority",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "FIRDST",
+        "value": "Fire District 10"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 91
+        }
+      ],
+      "what_it_does": "The Board of Commissioners of Snohomish County Fire Protection District No. 10 has approved Resolution No. 2026-02 concerning an annexation into Shoreline Fire Department Regional Fire Authority. This proposition would authorize Snohomish County Fire Protection District No. 10 to annex into Shoreline Fire Department Regional Fire Authority to provide fire and emergency medical services effective March 1, 2027, as described in the Shoreline Fire Department Regional Fire Authority plan amendment attached to Snohomish County Fire Protection District No. 10 Resolution No. 2026-02.",
+      "cost_line": "The RFA levy (estimated $0.45 per $1,000, from 2028) replaces the district's levy (about $0.90), plus a fire benefit charge set in 2028.",
+      "pro_summary": "Morris Parrish, Jack Barnes and Craig Bishop: the Bothell-area fire service has not grown with population; a regional authority shares resources and training; endorsed by the Bothell firefighters' union.",
+      "con_summary": "No statement against was filed; the pamphlet says no one in the jurisdiction contacted the Auditor's office to write one.",
+      "lean_mappings": {}
+    },
+    {
+      "slug": "snohomish-south-snohomish-county-fire-rescue-regional-fire-authority-proposition-no-1",
+      "owner": "snohomish",
+      "jurisdiction": "South Snohomish County Fire & Rescue Regional Fire Authority",
+      "proposition": "Proposition No. 1",
+      "title": "Fire and Emergency Medical Services Construction General Obligation Bonds - $420,000,000",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "RFADST",
+        "value": "SCRFA"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 92
+        },
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 93
+        }
+      ],
+      "what_it_does": "The Board of Fire Commissioners of the South Snohomish County Fire & Rescue Regional Fire Authority adopted Resolution No. 06092026- 13 concerning financing for its capital facilities plan. This proposition would authorize South County Fire to replace, renovate and/or make seismic upgrades to aging fire stations, build additional fire stations, and construct, improve, acquire and/or equip facilities to meet the community's emergency response needs, enhance reliability, reduce coverage gaps, and support operations; issue up to $420,000,000 of general obligation bonds maturing within a maximum of 25 years; and levy annual excess property taxes to repay the bonds, as provided in Resolution No. 06092026-13.",
+      "cost_line": "$420,000,000 in bonds over up to 25 years; levies expected to average about $0.194 per $1,000 of assessed value.",
+      "pro_summary": "Shannon Sessions, Alex Johnson and Steve Barnes: two-thirds of stations need major work and nearly half could fail in a major earthquake; calls are up more than 30% in a decade.",
+      "con_summary": "Melinda Goforth, Mary Jane Goss and Jim Landers: over half a billion dollars with interest is too much in an affordability crisis; fund the six high-risk station replacements ($136.7 million) first.",
+      "lean_mappings": {}
+    },
+    {
+      "slug": "snohomish-public-hospital-district-no-1-proposition-no-1",
+      "owner": "snohomish",
+      "jurisdiction": "Public Hospital District No. 1",
+      "proposition": "Proposition No. 1",
+      "title": "Bonds for New Replacement Hospital",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "HOSPDST",
+        "value": "Hospital District 1"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 94
+        }
+      ],
+      "what_it_does": "The Commission of Public Hospital District No. 1, Snohomish County, Washington (EvergreenHealth Monroe), adopted Resolution No. 2026-04 concerning a proposition for a replacement hospital and related healthcare facilities. If approved, this proposition would authorize the District to construct and equip a new replacement hospital and carry out other capital improvements deemed necessary or advisable by the Commission to address the healthcare needs of the community; issue no more than $382,000,000.00 of general obligation bonds maturing within 30 years; and levy annual excess property taxes to repay the bonds, all as provided in Resolution 2026-04.",
+      "cost_line": "Up to $382,000,000 in bonds over up to 30 years; estimated average $0.437 per $1,000, about $40.75 a month for a $745,000 home.",
+      "pro_summary": "Dianne Forth, Michael Eickerman and Ernie Walters: the hospital is aging and overcrowded; a replacement adds capacity and keeps care local, with audits and local oversight.",
+      "con_summary": "No statement against was filed; the pamphlet says no one in the jurisdiction contacted the Auditor's office to write one.",
+      "lean_mappings": {}
+    }
+  ]
 }

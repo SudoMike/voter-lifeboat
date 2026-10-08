@@ -1,0 +1,10 @@
+{
+  "url": "https://data.wa.gov/resource/3h9x-7bvm.json?election_year=2026&$where=upper(jurisdiction) like '%EVERETT%' AND upper(filer_type)='CO'&$limit=200",
+  "retrieved_at": "2026-10-08",
+  "stage": "raw",
+  "method": "curl -L (cached verbatim at data/.cache/snoco/pdc-everett-co-2026.json, gitignored)",
+  "bytes": 1699,
+  "sha256": "58647a9266f1c52955acee55ddaacb3e9d251007f20336453e421be4ef3b133a",
+  "notes": "PDC Campaign Finance Summary (data.wa.gov 3h9x-7bvm): 2026 political committees with a jurisdiction containing 'EVERETT'. Returned only Citizens for Everett Public Schools (Everett SD); none for or against the Everett charter propositions as of 2026-10-08.",
+  "cited_by": "data/washington-state/elections/2026-11-03-general/counties/snohomish/dossiers/measures/snohomish-city-of-everett-proposition-no-262.md"
+}
