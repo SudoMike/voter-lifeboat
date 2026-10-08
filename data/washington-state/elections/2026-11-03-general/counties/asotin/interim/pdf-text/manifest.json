@@ -1,0 +1,16 @@
+{
+  "county": "asotin",
+  "script": "pipeline/extract_pdf_text.mjs",
+  "files": [
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/asotin/raw/asotin/local-voters-pamphlet.pdf.url",
+      "url": "https://www.asotincountywa.gov/DocumentCenter/View/18054/2026GeneralElectionLocalVotersPamphlet-_Asotin-82726",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/asotin/interim/pdf-text/local-voters-pamphlet.txt"
+    },
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/asotin/raw/asotin/sample-ballot.pdf.url",
+      "url": "https://www.asotincountywa.gov/DocumentCenter/View/18053/2026-Asotin-County-General-Election-Sample-Ballot",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/asotin/interim/pdf-text/sample-ballot.txt"
+    }
+  ]
+}

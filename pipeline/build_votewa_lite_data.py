@@ -601,6 +601,64 @@ COUNTY_CONFIG = {
 # its measures are not curated yet, so it can never pass for "no measures".
 ELECTION_MEASURES = {
     "2026-11-03-general": {
+        # Asotin (#31): checked against the Asotin County Auditor's general
+        # sample ballot (precinct 001.02 Anatone) and local voters' pamphlet
+        # (counties/asotin/raw/asotin/{sample-ballot,local-voters-pamphlet}.pdf.url,
+        # linked from asotincountywa.gov/186/Current-Election) and VoteWA's
+        # online guide for county 02 (raw/votewa/voter-guide/guide.json.url),
+        # which list one local measure (guide record 7276; pamphlet PDF page 12).
+        # Overrides: County Commissioner 3 is nominated by district and elected
+        # county-wide in the general (RCW 36.32.040, 36.32.050(1)): the SOS
+        # precinct exports put Commissioner 1, 2 and 3 (2020) on all 26
+        # precincts, while the 2026 primary's District No. 3 race reported 7
+        # units (raw/asotin/). It keeps the primary's contest name so its slug
+        # matches. The District Court is one county-wide court. Asotin County
+        # PUD No. 1 is not the whole county: its commissioners are elected
+        # PUD-wide (RCW 54.12.010(3)) by 22 of 26 precincts (SOS exports for
+        # Commissioner 1 in 2020, 3 in 2022 and 2 in 2024; Anatone, Asotin #1
+        # and #2 and Rural Asotin are outside), so the seat is scoped PUDDST
+        # '1' read from WA DOR PUD2025 (layer 17), whose single Asotin polygon
+        # ('1') covers Clarkston and the Clarkston Heights tax code areas:
+        # '1' at 829 5th St, Clarkston and 1406 16th Ave, Clarkston; no
+        # feature in the City of Asotin (-117.0482, 46.3393) or at Anatone
+        # (-117.1335, 46.1347).
+        # Measure scope: Rural EMS District No. 2 is not DOR EMS2025's
+        # Asotin '1' polygon (that is EMS District #1, the Fire District 1
+        # area: '1' at 1406 16th Ave, Clarkston; no feature at Anatone). The
+        # county's 2025 tax rates by tax code area and DOR's 2025 levy detail
+        # ('EMS Dist #1 Special', $0.12084) put the rural EMS levy in TCAs 25,
+        # 30 and 30F, the Anatone and Rural Asotin precinct parts that voted
+        # on it in 2020 and August 2026. It is scoped RURALEMSDST '2', read
+        # from DOR TCA2025 (layer 23) with where COUNTYNAME = 'ASOTIN' AND
+        # DISTATTRIB IN ('0025','0030','0030F') (see counties/asotin/COMPLETENESS.md).
+        "asotin": {
+            "overrides": {
+                ("COUNTY", "COUNTY COMMISSIONER 3"): (
+                    "County", "Asotin County Commissioner District 3", "County Commissioner 3", ("COUNTY", None)),
+                ("COUNTY", "DISTRICT COURT JUDGE"): (
+                    "Judicial", "Asotin County District Court", "District Court Judge", ("COUNTY", None)),
+                ("PUBLIC UTILITY DISTRICT", "PUBLIC UTILITY COMMISSIONER 1"): (
+                    "PublicUtility", "Asotin County Public Utility District", "Commissioner District No. 1",
+                    ("PUDDST", "1")),
+            },
+            "measures": [
+                m("Asotin County Rural EMS District No. 2", "Proposition No. 1",
+                  "Emergency Medical Services Regular Property Tax Levy",
+                  ("RURALEMSDST", "2"),
+                  "Authorizes Asotin County Rural Emergency Medical Service District No. 2 (the Anatone and rural southern county area) to levy a regular property tax for six years starting in 2027 to pay for contracted emergency medical services, replacing the levy that expires at the end of 2026 (Resolution No. 26-27; RCW 84.52.069). The same proposition failed in the August 4, 2026 primary.",
+                  "Up to $0.28 per $1,000 of assessed value a year for 2027-2032, up from a current limit of $0.15 (the 2025 rate was about $0.12).",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7276&e=899&la=en&c=02",
+                  pages=(12,)),
+            ],
+            "extra_notes": [
+                "Asotin County Rural EMS District No. 2 Proposition No. 1 is scoped RURALEMSDST '2': the district is tax code areas "
+                "0025, 0030 and 0030F (WA DOR TCA2025, layer 23), the Anatone and rural southern county area; it is not the DOR "
+                "EMS2025 Asotin '1' polygon, which is EMS District #1 (the Fire District 1 area around Clarkston Heights).",
+                "Asotin County Commissioner District 3 is nominated by district and elected county-wide in the general "
+                "(RCW 36.32.040, RCW 36.32.050(1)); Asotin County PUD No. 1 covers Clarkston and the Clarkston Heights area, not "
+                "the whole county, and every PUD voter elects each commissioner (RCW 54.12.010(3)): scoped PUDDST '1' (WA DOR PUD2025, layer 17).",
+            ],
+        },
         # Benton (#28): the three local measures on the Benton County Auditor's
         # general sample ballot (counties/benton/raw/benton/sample-ballot.pdf.url),
         # transcribed from VoteWA's online voters' guide records (e=899, c=03).
