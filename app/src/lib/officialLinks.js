@@ -223,6 +223,15 @@ const ELECTIONS = {
       // District No. 1; PDF p. 18 is printed p. 56, Sacheen Lake W/S District).
       'pend-oreille/local-voters-pamphlet':
         'https://www.pendoreille.gov/sites/g/files/vyhlif14901/files/media/auditor/file/34071/final_vp_general_2026_pend_oreille.pdf',
+      // Columbia County Local Voters' Pamphlet (#32), from the package's
+      // pointer counties/columbia/raw/columbia/local-voters-pamphlet.pdf.url.
+      // Checked 2026-10-08: redirects to .../8822/2026_General_New_Covers_LVP_,
+      // then 200 application/pdf with the pointer's sha256; 12 PDF pages.
+      // Citations are PDF pages, which run 1 ahead of the printed numbers (the
+      // cover is unnumbered): PDF p. 7 is printed p. 6, Commissioner No. 3;
+      // PDF p. 10 is printed p. 9, the Pool District levy; PDF p. 11 the
+      // Prescott levy. It prints local races and measures only.
+      'columbia/local-voters-pamphlet': 'https://www.columbiaco.com/DocumentCenter/View/8822',
     },
     // Counties whose research cites VoteWA's online voters' guide, which has
     // no page numbers, instead of a printed pamphlet: their records carry no
@@ -329,6 +338,13 @@ const ELECTIONS = {
       // elections page) is the county's only official listing. #32; 200
       // text/html, 2026-10-08.
       wahkiakum: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=35',
+      // Columbia's dossiers cite its local pamphlet and VoteWA's guide
+      // records; the guide links any record without a page (CD, LD and Court
+      // of Appeals seats). Garfield prints no pamphlet the research could
+      // reach (garfieldcountywa.gov answers 403 to scripts); its dossiers cite
+      // VoteWA only. #32; each 200 text/html, 2026-10-08.
+      columbia: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=07',
+      garfield: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=12',
     },
     pamphletIndex: `${SOS_GENERAL_2026}/2026-voters-pamphlet-pdfs`,
   },

@@ -368,6 +368,18 @@ COUNTY_ELECTIONS_URLS = {
         # the general's sample ballot, DocumentCenter/View/3637, but on
         # 2026-10-08 still linked the primary's VoteWA guide, e=898).
         "wahkiakum": "https://www.co.wahkiakum.wa.us/419/Elections",
+        # Columbia County Auditor, 2026 General Election (200 text/html with a
+        # bare and a browser User-Agent, 2026-10-08; links the general's local
+        # voters' pamphlet, DocumentCenter/View/8822, the sample ballot and
+        # VoteWA's guide).
+        "columbia": "https://www.columbiaco.com/616/2026-General-Election",
+        # Garfield County Auditor: the "Location Website" the Secretary of
+        # State's county elections offices directory
+        # (sos.wa.gov/elections/voters/voter-registration/county-elections-offices)
+        # gives for Garfield (789 Main St, Pomeroy). garfieldcountywa.gov
+        # answers 403 (Cloudflare challenge) to every scripted request, browser
+        # User-Agent included (2026-10-08), so its 200 is unchecked here.
+        "garfield": "https://www.garfieldcountywa.gov/auditor",
     },
 }
 
