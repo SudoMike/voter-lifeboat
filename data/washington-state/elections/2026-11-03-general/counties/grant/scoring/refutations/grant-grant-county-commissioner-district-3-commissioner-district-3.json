@@ -1,0 +1,38 @@
+{
+  "contest_slug": "grant-grant-county-commissioner-district-3-commissioner-district-3",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/grant/dossiers/grant-grant-county-commissioner-district-3-commissioner-district-3/",
+    "data/washington-state/elections/2026-11-03-general/counties/grant/scoring/grant-grant-county-commissioner-district-3-commissioner-district-3.json"
+  ],
+  "verdicts": [
+    {
+      "candidate": "kelly-raap",
+      "axis": "experience",
+      "verdict": "upheld"
+    },
+    {
+      "candidate": "kelly-raap",
+      "axis": "spending",
+      "verdict": "upheld"
+    },
+    {
+      "candidate": "shannon-durfee",
+      "axis": "experience",
+      "verdict": "adjust",
+      "adjusted_score": 1,
+      "adjusted_confidence": "low",
+      "note": "The basis relies on her calling her background 'not career politics', but that quote appears only in the dossier's uncited scoring notes. It is not in her Positions section or in any cited source text in the dossier. What remains is profile alone. She has never held county office [S1], which supports a lean toward renewal. She is also a sitting elected school board director, Rotary president, hospital-foundation director and a 10-year State Patrol employee [S1][S2][S4], and she runs on 'practical, accountable leadership that focuses on doing the basics well' [S4] rather than on an outsider or generational-change pitch. +1 holds relative to Raap (+2, no office of any kind), but at low confidence."
+    }
+  ],
+  "missing": [
+    {
+      "candidate": "shannon-durfee",
+      "axis": "spending",
+      "proposed_score": -1,
+      "confidence": "low",
+      "citations": ["S1", "S2", "S4"],
+      "basis": "Three of her own sources point the same way toward restraint: 'I believe in fiscal responsibility' [S1], a campaign theme of 'fiscal stewardship' [S2], and 'practical, accountable leadership that focuses on doing the basics well' [S4]. She makes no investment or expansion proposals. The language is generic and has no specific restraint proposal, so low confidence, and weaker than Raap's -1/high."
+    }
+  ]
+}

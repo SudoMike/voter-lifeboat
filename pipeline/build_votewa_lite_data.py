@@ -657,6 +657,73 @@ ELECTION_MEASURES = {
                   "https://voter.votewa.gov/elections/measure.ashx?m=7372&e=899&la=en&c=08"),
             ],
         },
+        # Grant (#28). Measures: Grant County Elections' November 2026 sample
+        # ballot (raw/grant/sample-ballot.pdf.url, DocumentCenter 16964, linked
+        # from grantcountywa.gov/1374/Current-Election) and VoteWA's online
+        # voters' guide (voterguide.ashx?e=899&c=13, read 2026-10-08) both list
+        # five local measures. Scopes point-checked 2026-10-08 (Census
+        # geocoder, Current vintage; WA DOR 2025 layers 3 CEM, 7 FIR, 11 HSP):
+        # 321 S Balsam St, Moses Lake -> CITY 'Moses Lake'; 127 Main Ave E,
+        # Soap Lake -> HSP2025 DISTATTRIB '4'; 34875 Park Lake Rd NE, Coulee
+        # City -> FIR2025 '7'; 103 Railroad St, Wilson Creek -> CEM2025 '2'.
+        # Overrides: VoteWA files the commissioner race as Countywide (elected
+        # county-wide in the general, RCW 36.32.040); it keeps the primary's
+        # contest name so primary dossiers carry forward. The District Court
+        # seats (District Type Countywide) are judicial seats of one
+        # county-wide court. Grant County PUD (Public Utility District No. 2
+        # of Grant County) is county-wide (DOR PUD2025 layer 17 has a single
+        # Grant polygon, DISTATTRIB '2', at Moses Lake, Soap Lake, Coulee
+        # City, Grand Coulee and Wilson Creek alike) and the whole PUD elects
+        # each commissioner in the general (RCW 54.12.010(3)), so its rows
+        # (District 'Grant County PUD All', which classify() cannot number)
+        # are scoped COUNTY.
+        "grant": {
+            "overrides": {
+                ("COUNTY", "COMMISSIONER DISTRICT #3"): (
+                    "County", "Grant County Commissioner District 3", "Commissioner District #3", ("COUNTY", None)),
+                ("COUNTY", "DISTRICT COURT JUDGE #1"): (
+                    "Judicial", "Grant County District Court", "Judge Position No. 1", ("COUNTY", None)),
+                ("COUNTY", "DISTRICT COURT JUDGE #2"): (
+                    "Judicial", "Grant County District Court", "Judge Position No. 2", ("COUNTY", None)),
+                ("COUNTY", "DISTRICT COURT JUDGE #3"): (
+                    "Judicial", "Grant County District Court", "Judge Position No. 3", ("COUNTY", None)),
+                ("GRANT COUNTY PUD ALL", "COMMISSIONER DIST #3"): (
+                    "PublicUtility", "Public Utility District No. 2 of Grant County", "Commissioner District 3",
+                    ("COUNTY", None)),
+                ("GRANT COUNTY PUD ALL", "COMMISSIONER DIST #B AL"): (
+                    "PublicUtility", "Public Utility District No. 2 of Grant County", "Commissioner District B (At Large)",
+                    ("COUNTY", None)),
+            },
+            "measures": [
+                m("Grant County", "Advisory Vote Only - Proposition No. 1",
+                  "Sales and Use Tax for Mental Health or Chemical Dependency Treatment or Therapeutic Courts",
+                  ("COUNTY", None),
+                  "Advisory vote: asks whether the county commissioners should adopt a 0.1% sales and use tax (RCW 82.14.460) for chemical dependency and mental health treatment and therapeutic courts. The vote does not itself impose the tax; the board may decide afterwards.",
+                  "If the board later adopts it: 0.1% sales and use tax (one cent on a $10 purchase), county-wide.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7349&e=899&la=en&c=13"),
+                m("Grant County Public Hospital District No. 4 (McKay Healthcare & Rehabilitation)", "Proposition No. 1",
+                  "Bonds for Expansion of McKay Healthcare & Rehabilitation Center",
+                  ("HOSPDST", "4"),
+                  "Authorizes up to $9,940,000 of general obligation bonds, maturing within 30 years and repaid by an excess property tax levy, to add a 16-bed assisted living unit, a 16-bed memory care unit and other capital improvements at McKay Healthcare & Rehabilitation Center in Soap Lake.",
+                  "Estimated $0.61 per $1,000 of assessed value (about $15.27 a month on a $300,000 home); up to $9,940,000 in bonds.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7343&e=899&la=en&c=13"),
+                m("City of Moses Lake", "Proposition No. 1", "Public Safety Sales and Use Tax",
+                  ("CITY", "Moses Lake"),
+                  "Raises the city's sales and use tax by 0.1% (RCW 82.14.450) for public safety: police staffing and retention, operations, maintenance and capital, and other criminal justice services.",
+                  "0.1% sales and use tax (one cent on a $10 purchase); about $1.2 million in 2027.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7347&e=899&la=en&c=13"),
+                m("Grant County Fire Protection District No. 7", "Proposition No. 1", "Emergency Medical Service Property Tax Levy",
+                  ("FIRDST", "7"),
+                  "Replaces the last two years of the district's 2022 EMS levy (up to $0.25, suspended in 2024) with a six-year EMS levy first levied in 2026 for collection from 2027.",
+                  "Up to $0.50 per $1,000 of assessed value (no more than $150 a year on a $300,000 home).",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7348&e=899&la=en&c=13"),
+                m("Grant County Cemetery District No. 2 (Wilson Creek)", "Proposition No. 1", "Special Levy for Maintenance and Operations",
+                  ("CEMDST", "2"),
+                  "Authorizes the cemetery district's yearly one-year special levy for maintenance and operations of the Wilson Creek cemetery, collected in 2027.",
+                  "$12,000, approximately $0.18 per $1,000 of assessed value, collected in 2027.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7346&e=899&la=en&c=13"),
+            ],
+        },
         # Skagit: the four measures the Auditor's Ballot Measures page lists
         # for the general (counties/skagit/raw/skagit/ballot-measures.html.url),
         # text from the local voters' pamphlet pages 18-21 and VoteWA

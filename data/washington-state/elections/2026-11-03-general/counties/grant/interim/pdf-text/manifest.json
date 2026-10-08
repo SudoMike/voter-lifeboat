@@ -1,0 +1,31 @@
+{
+  "county": "grant",
+  "script": "pipeline/extract_pdf_text.mjs",
+  "files": [
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/grant/raw/grant/resolution-cemetery-district-2.pdf.url",
+      "url": "https://www.grantcountywa.gov/DocumentCenter/View/16836/Cemetery-District-2-Resolution---Nov-2026",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/grant/interim/pdf-text/resolution-cemetery-district-2.txt"
+    },
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/grant/raw/grant/resolution-city-of-moses-lake.pdf.url",
+      "url": "https://www.grantcountywa.gov/DocumentCenter/View/16835/City-of-ML-Resolution---Nov-2026",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/grant/interim/pdf-text/resolution-city-of-moses-lake.txt"
+    },
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/grant/raw/grant/resolution-fire-district-7.pdf.url",
+      "url": "https://www.grantcountywa.gov/DocumentCenter/View/16834/Fire-District-7-Resolution---Nov-2026",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/grant/interim/pdf-text/resolution-fire-district-7.txt"
+    },
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/grant/raw/grant/resolution-grant-county.pdf.url",
+      "url": "https://www.grantcountywa.gov/DocumentCenter/View/16838/Grant-County-Resolution---Nov-2026",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/grant/interim/pdf-text/resolution-grant-county.txt"
+    },
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/grant/raw/grant/sample-ballot.pdf.url",
+      "url": "https://www.grantcountywa.gov/DocumentCenter/View/16964/November-2026-SAMPLE-BALLOT",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/grant/interim/pdf-text/sample-ballot.txt"
+    }
+  ]
+}
