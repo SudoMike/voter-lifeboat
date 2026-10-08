@@ -69,7 +69,8 @@ APP_PACKAGES = {
         "statewide_ballot": True,
         "counties": ["king", "snohomish", "spokane", "pierce", "clark", "kitsap", "thurston", "yakima", "whatcom",
                      "benton", "skagit", "cowlitz", "grant", "island", "lewis", "franklin", "chelan", "clallam",
-                     "grays-harbor", "mason", "walla-walla", "stevens", "whitman", "douglas", "okanogan"],
+                     "grays-harbor", "mason", "walla-walla", "stevens", "whitman", "douglas", "okanogan",
+                     "jefferson", "kittitas"],
         "district_contests": "county",
     },
 }
@@ -111,6 +112,8 @@ DISTRICT_ADAPTER_LAYERS = {
     # app/src/lib/data-consistency.test.js UNRESOLVABLE_SCOPES), so the
     # county ships partial_county.
     "okanogan": ("CONGDST", "LEGDST", "CITY", "FIRDST", "HOSPDST", "EMSDST"),
+    "jefferson": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "CEMDST", "FIRDST", "SCHDST"),
+    "kittitas": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "FIRDST", "DISTCRT"),
 }
 
 
@@ -284,6 +287,13 @@ COUNTY_ELECTIONS_URLS = {
         # Okanogan County, WA", 2026-10-08; the package's
         # raw/okanogan/elections-page.html.url).
         "okanogan": "https://www.okanogancounty.gov/337/Elections",
+        # Jefferson County Auditor, Elections (200 text/html, 2026-10-08; the
+        # page that links the general's local voters' pamphlet, sample ballot
+        # and measure resolutions; the package's raw/jefferson/elections.html.url).
+        "jefferson": "https://www.co.jefferson.wa.us/1266/Elections",
+        # Kittitas County Auditor, Elections (200 text/html, 2026-10-08; the
+        # page that links the general's "General Pamphlet" and sample ballot).
+        "kittitas": "https://www.co.kittitas.wa.us/auditor/elections/default.aspx",
     },
 }
 

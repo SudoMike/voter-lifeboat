@@ -76,6 +76,13 @@ const NAMED_VALUES = {
     POK2: 'Port of Kahlotus Commissioner District 2',
     POK3: 'Port of Kahlotus Commissioner District 3',
   },
+  // Kittitas DISTCRT reads the Auditor's Court_Districts court_district_name
+  // (geo.js), which leaves out the county; the ballot names the seats
+  // 'Lower Kittitas County District Court' and 'Upper ...'.
+  DISTCRT: {
+    'LOWER DISTRICT COURT': 'Lower Kittitas County District Court',
+    'UPPER DISTRICT COURT': 'Upper Kittitas County District Court',
+  },
   // Island UNINC reads the DOR tax code area's county name outside the
   // incorporated tax code areas (geo.js).
   UNINC: {

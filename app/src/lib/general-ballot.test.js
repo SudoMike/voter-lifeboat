@@ -4,7 +4,7 @@
 // coverage (#22), Yakima, Whatcom, Benton, Skagit, Cowlitz and Grant at full
 // coverage (#28), Island, Lewis, Franklin, Chelan, Clallam and Grays Harbor at
 // full coverage (#29), Mason, Walla Walla, Stevens, Whitman and Douglas at full coverage and Okanogan at
-// partial coverage (#30), every other Washington address a Statewide-Only Guide (issue #9). These run the app's own ballot, interview, lean and Ballot Brief
+// partial coverage (#30), Jefferson and Kittitas at full coverage (#31), every other Washington address a Statewide-Only Guide (issue #9). These run the app's own ballot, interview, lean and Ballot Brief
 // code against public/data/2026-11-03-general.
 import test from 'node:test'
 import assert from 'node:assert/strict'
@@ -70,7 +70,7 @@ const STATE_MEASURES = [
   'initiative-measure-no-il26-638',
 ]
 
-test('the general ships twenty-three counties at full county coverage, Spokane and Okanogan at partial, with their elections offices', () => {
+test('the general ships twenty-five counties at full county coverage, Spokane and Okanogan at partial, with their elections offices', () => {
   assert.equal(data.election.id, '2026-11-03-general')
   assert.deepEqual(data.coverage, {
     statewide_complete: true,
@@ -322,6 +322,26 @@ test('the general ships twenty-three counties at full county coverage, Spokane a
         fips: '53047',
         coverage: 'partial_county',
         elections_url: 'https://www.okanogancounty.gov/337/Elections',
+      },
+      {
+        // Full: the West End Quillayute Valley SD 402 bonds and Clallam FD 1
+        // levy read DOR SCH2025 ('402') and FIR2025 ('9') (#31).
+        id: 'jefferson',
+        name: 'Jefferson County',
+        state: 'WA',
+        fips: '53031',
+        coverage: 'full_county',
+        elections_url: 'https://www.co.jefferson.wa.us/1266/Elections',
+      },
+      {
+        // Full: the Upper and Lower District Court seats read the Auditor's
+        // Court_Districts layer (DISTCRT, #31).
+        id: 'kittitas',
+        name: 'Kittitas County',
+        state: 'WA',
+        fips: '53037',
+        coverage: 'full_county',
+        elections_url: 'https://www.co.kittitas.wa.us/auditor/elections/default.aspx',
       },
     ],
   })
@@ -1056,6 +1076,73 @@ test('an Okanogan ballot: Benton\'s and Spokane\'s research for the shared races
   assert.deepEqual(ownLocal(or, 'okanogan'), ['okanogan-okanogan-county-fire-protection-district-no-1-proposition-no-1'])
   // The partial package tells every Okanogan voter the ballot may be incomplete.
   assert.equal(coverageAdvice(ok({})), 'degraded')
+})
+
+test('a Jefferson ballot: Pierce\'s and Clallam\'s research for the shared races, the West End measures only in the West End', () => {
+  const JEFFERSON = { id: 'jefferson', fips: '53031', name: 'Jefferson County' }
+  const jf = (districts) => ({ coverageStatus: 'full_county', county: JEFFERSON, districts, missingLayers: [] })
+  const QVSD = 'jefferson-quillayute-valley-school-district-no-402-proposition-no-1'
+  const CCFD1 = 'jefferson-clallam-county-fire-protection-district-no-1-proposition-no-1'
+  // Districts as the live District Adapter resolved them on 2026-10-08.
+  // 1820 Jefferson St, Port Townsend: county races, no local measure.
+  const pt = ballotFor(jf({ CONGDST: '6', LEGDST: '24', CITY: 'Port Townsend', COUNTY_COUNCIL: '1', FIRDST: '1', SCHDST: '50' }))
+  const ps = pt.contests.map((c) => c.slug)
+  assert.equal(new Set(ps).size, ps.length)
+  assert.equal(ps.length, 13 + SUPREME_COURT.length)
+  for (const slug of SUPREME_COURT) assert.ok(ps.includes(slug), slug)
+  assert.deepEqual(pt.measures.map((m) => m.slug), STATE_MEASURES)
+  sameScoring(pt, 'jefferson-congressional-district-6-u-s-representative', 'pierce-congressional-district-6-u-s-representative')
+  for (const pos of [1, 2])
+    sameScoring(pt, `jefferson-legislative-district-24-state-representative-pos-${pos}`, `clallam-legislative-district-24-state-representative-pos-${pos}`)
+  assert.ok(!pt.contests.some((c) => c.owner !== 'jefferson' && c.owner !== 'statewide'))
+  // Commissioner District 3 and the PUD seat are elected county-wide.
+  assert.ok(ps.includes('jefferson-jefferson-county-commissioner-district-3-district-3'))
+  assert.ok(ps.includes('jefferson-public-utility-district-no-1-of-jefferson-county-commissioner-district-2'))
+  // 1993 Dowans Creek Rd, Forks (Jefferson side): both West End measures,
+  // Jefferson's copies, not Clallam's.
+  const dc = ballotFor(jf({ CONGDST: '6', LEGDST: '24', COUNTY_COUNCIL: '3', FIRDST: '9', SCHDST: '402' }))
+  assert.deepEqual(ownLocal(dc, 'jefferson'), [QVSD, CCFD1])
+  assert.deepEqual(ownLocal(dc, 'clallam'), [])
+  // 18113 Upper Hoh Rd, Forks: the bond only.
+  const uh = ballotFor(jf({ CONGDST: '6', LEGDST: '24', COUNTY_COUNCIL: '3', SCHDST: '402' }))
+  assert.deepEqual(ownLocal(uh, 'jefferson'), [QVSD])
+  // 620 Cedar Ave, Port Hadlock: East Jefferson Fire Rescue is FIRDST '1', not Clallam's district.
+  const ph = ballotFor(jf({ CONGDST: '6', LEGDST: '24', COUNTY_COUNCIL: '2', FIRDST: '1', SCHDST: '49' }))
+  assert.deepEqual(ownLocal(ph, 'jefferson'), [])
+  assert.equal(coverageAdvice(jf({})), null)
+})
+
+test('a Kittitas ballot: King\'s and Grant\'s research for the shared races, one District Court seat per district', () => {
+  const KITTITAS = { id: 'kittitas', fips: '53037', name: 'Kittitas County' }
+  const kt = (districts) => ({ coverageStatus: 'full_county', county: KITTITAS, districts, missingLayers: [] })
+  const LOWER = 'kittitas-lower-kittitas-county-district-court-district-court-judge'
+  const UPPER = 'kittitas-upper-kittitas-county-district-court-district-court-judge'
+  // Districts as the live District Adapter resolved them on 2026-10-08.
+  // 205 W 5th Ave, Ellensburg: Lower District Court.
+  const el = ballotFor(kt({ CONGDST: '8', LEGDST: '13', CITY: 'Ellensburg', COUNTY_COUNCIL: '3', FIRDST: '2', DISTCRT: 'Lower District Court' }))
+  const es = el.contests.map((c) => c.slug)
+  assert.equal(new Set(es).size, es.length)
+  assert.equal(es.length, 15 + SUPREME_COURT.length)
+  for (const slug of SUPREME_COURT) assert.ok(es.includes(slug), slug)
+  assert.ok(es.includes(LOWER))
+  assert.ok(!es.includes(UPPER))
+  assert.deepEqual(el.measures.map((m) => m.slug), STATE_MEASURES)
+  sameScoring(el, 'kittitas-congressional-district-8-u-s-representative', 'congressional-district-8-united-states-representative')
+  sameScoring(el, 'kittitas-legislative-district-13-state-senator', 'grant-legislative-district-13-state-senator')
+  for (const pos of [1, 2])
+    sameScoring(el, `kittitas-legislative-district-13-state-representative-pos-${pos}`, `grant-legislative-district-13-state-representative-pos-${pos}`)
+  assert.ok(!el.contests.some((c) => c.owner !== 'kittitas' && c.owner !== 'statewide'))
+  // 719 E 3rd St, Cle Elum: Upper District Court.
+  const ce = ballotFor(kt({ CONGDST: '8', LEGDST: '13', CITY: 'Cle Elum', COUNTY_COUNCIL: '2', DISTCRT: 'Upper District Court' }))
+  const cs = ce.contests.map((c) => c.slug)
+  assert.equal(cs.length, 15 + SUPREME_COURT.length)
+  assert.ok(cs.includes(UPPER))
+  assert.ok(!cs.includes(LOWER))
+  // Commissioner 3 and the PUD seat are elected county-wide.
+  for (const slug of ['kittitas-kittitas-county-commissioner-district-3-commissioner-3',
+    'kittitas-public-utility-district-no-1-of-kittitas-county-commissioner-district-1-commissioner-1'])
+    assert.ok(es.includes(slug) && cs.includes(slug), slug)
+  assert.equal(coverageAdvice(kt({})), null)
 })
 
 test('a Spokane ballot: its own districts, school and fire measures by name, no PUD seat', () => {

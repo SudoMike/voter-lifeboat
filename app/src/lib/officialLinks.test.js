@@ -553,6 +553,48 @@ test('shipped Okanogan records link the county\'s VoteWA guide', () => {
   })
 })
 
+test('shipped Jefferson and Kittitas records link their local pamphlet at the cited page, else the county\'s VoteWA guide', () => {
+  const id = general.election.id
+  for (const [county, name, pdf, guide, office, counts] of [
+    ['jefferson', 'Jefferson County', 'https://www.co.jefferson.wa.us/DocumentCenter/View/25551',
+      'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=16', 'https://www.co.jefferson.wa.us/1266/Elections', [13, 7]],
+    ['kittitas', 'Kittitas County',
+      'https://www.co.kittitas.wa.us/uploads/auditor/elections/voters-pamphlet//General%20Pamphlet.pdf',
+      'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=19',
+      'https://www.co.kittitas.wa.us/auditor/elections/default.aspx', [14, 8]],
+  ]) {
+    let paged = 0
+    let guided = 0
+    for (const item of [...general.contests, ...general.measures]) {
+      if (item.owner !== county) continue
+      const pages = item.candidates ? item.candidates.map((c) => c.pamphlet_pages) : [item.pamphlet_pages]
+      for (const p of pages) {
+        if (p?.length) {
+          // PDF page = printed page in both pamphlets.
+          assert.equal(pamphletLink(p, county, id), `${pdf}#page=${p[0].page}`, item.slug)
+          paged++
+        } else {
+          // CD, LD and Court of Appeals seats: another package's research or VoteWA.
+          assert.equal(pamphletLink(p, county, id), guide, item.slug)
+          guided++
+        }
+      }
+    }
+    assert.deepEqual([paged, guided], counts, county)
+    assert.deepEqual(countyElectionsOffice(general, { id: county, name }), {
+      name: `${name} Elections`,
+      url: office,
+      direct: true,
+    })
+  }
+  // Jefferson's Quillayute Valley SD 402 bonds, pamphlet p. 14; Kittitas's
+  // District Court judges, p. 10.
+  assert.equal(pamphletLink([{ edition: 'local-voters-pamphlet', page: 14 }], 'jefferson', id),
+    'https://www.co.jefferson.wa.us/DocumentCenter/View/25551#page=14')
+  assert.equal(pamphletLink([{ edition: 'local-voters-pamphlet', page: 10 }], 'kittitas', id),
+    'https://www.co.kittitas.wa.us/uploads/auditor/elections/voters-pamphlet//General%20Pamphlet.pdf#page=10')
+})
+
 test('the shipped general links Snohomish County Elections directly', () => {
   assert.deepEqual(countyElectionsOffice(general, { id: 'snohomish', name: 'Snohomish County' }), {
     name: 'Snohomish County Elections',

@@ -123,6 +123,19 @@ test('Douglas proposed Rimrock fire district reads as its name; other county fir
     ['Proposed Rimrock Meadows Fire Protection District No. 9', 'School District 209'])
 })
 
+test('Kittitas Upper and Lower District Court read with the county name', () => {
+  // Live 2026-10-08 (#31): Court_Districts court_district_name 'Lower
+  // District Court' at 205 W 5th Ave, Ellensburg; 'Upper District Court' at
+  // 719 E 3rd St, Cle Elum. Clallam's DISTCRT reads '1'/'2'.
+  assert.equal(describeDistrict('DISTCRT', 'Lower District Court'), 'Lower Kittitas County District Court')
+  assert.equal(describeDistrict('DISTCRT', 'Upper District Court'), 'Upper Kittitas County District Court')
+  assert.equal(describeDistrict('DISTCRT', '1'), 'District Court 1')
+  assert.equal(layerLabel('DISTCRT'), 'District Court')
+  assert.deepEqual(describeDistricts({ CONGDST: '8', LEGDST: '13', DISTCRT: 'Upper District Court', CITY: 'Cle Elum' })
+    .map((d) => d.text),
+  ['City of Cle Elum', 'Congressional District 8', 'Legislative District 13', 'Upper Kittitas County District Court'])
+})
+
 test('codes are tidied without mangling initialisms', () => {
   assert.equal(describeDistrict('FIRDST', 'TACOMA'), 'Fire District Tacoma')
   assert.equal(describeDistrict('SCCDST', 'SCC5'), 'Seattle City Council District 5')

@@ -1587,3 +1587,97 @@ test('Okanogan resolves the Methow Valley EMS District, FD 1 and Three Rivers Ho
   assert.ok(!scopeMatches(threeRivers, context))
   assert.ok(!scopeMatches(pud, context))
 })
+
+// Jefferson and Kittitas (#31, wave 6). Live point queries 2026-10-08 at the
+// Census-geocoded points of the addresses below.
+const jeffCommissioner = (value) => ({
+  path: 'FindMyDistrictsInstantApp_WFL1/FeatureServer/1/query', attributes: { DISTID: value },
+})
+
+test('Jefferson reads commissioner districts from the hosted FindMyDistricts layer, not the dead gisweb host', async () => {
+  // 1820 Jefferson St, Port Townsend: commissioner '1', FD '1', SCH2025 '50'.
+  const calls = mockWave2('1820 JEFFERSON ST, PORT TOWNSEND, WA, 98368', '031', 'Jefferson County', [
+    jeffCommissioner('1'), dorLayer(7, '1'), dorLayer(20, '50'),
+  ])
+  const context = await lookupBallotContext(wave2Data('jefferson'), '1820 Jefferson St Port Townsend WA 98368')
+  assert.equal(context.county.id, 'jefferson')
+  assert.equal(context.coverageStatus, 'full_county')
+  assert.deepEqual(context.missingLayers, [])
+  assert.equal(context.districts.COUNTY_COUNCIL, '1')
+  assert.ok(!calls.some((u) => u.includes('gisweb.jeffcowa.us')))
+  const comm = calls.find((u) => u.includes('FindMyDistrictsInstantApp_WFL1/FeatureServer/1/query'))
+  assert.equal(new URL(comm).searchParams.get('outFields'), 'DISTID')
+  // The archived primary's District 3 race.
+  assert.ok(!scopeMatches({ kind: 'DISTRICT', county: 'jefferson', layer: 'COUNTY_COUNCIL', value: '3' }, context))
+})
+
+test('Jefferson resolves the West End Quillayute Valley SD 402 bonds and Clallam FD 1 levy (DOR 9)', async () => {
+  const qvsd = { kind: 'DISTRICT', county: 'jefferson', layer: 'SCHDST', value: '402' }
+  const ccfd1 = { kind: 'DISTRICT', county: 'jefferson', layer: 'FIRDST', value: '9' }
+  // Clallam's own copies are scoped to Clallam and must not match here.
+  const clallamQvsd = { kind: 'DISTRICT', county: 'clallam', layer: 'SCHDST', value: '402' }
+  const clallamFd1 = { kind: 'DISTRICT', county: 'clallam', layer: 'FIRDST', value: '1' }
+  // 1993 Dowans Creek Rd, Forks (Jefferson side): commissioner '3', FIR2025
+  // '9', SCH2025 '402'.
+  const calls = mockWave2('1993 DOWANS CREEK RD, FORKS, WA, 98331', '031', 'Jefferson County', [
+    jeffCommissioner('3'), dorLayer(7, '9'), dorLayer(20, '402'),
+  ])
+  let context = await lookupBallotContext(wave2Data('jefferson'), '1993 Dowans Creek Rd Forks WA 98331')
+  assert.equal(context.county.id, 'jefferson')
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(scopeMatches(qvsd, context))
+  assert.ok(scopeMatches(ccfd1, context))
+  assert.ok(!scopeMatches(clallamQvsd, context))
+  assert.ok(!scopeMatches(clallamFd1, context))
+  const sch = calls.find((u) => u.includes('WADOR_PropertyTax/MapServer/20/query'))
+  assert.equal(new URL(sch).searchParams.get('outFields'), 'DISTATTRIB')
+  // 18113 Upper Hoh Rd, Forks: SCH2025 '402', no fire district.
+  mockWave2('18113 UPPER HOH RD, FORKS, WA, 98331', '031', 'Jefferson County', [
+    jeffCommissioner('3'), dorLayer(20, '402'),
+  ])
+  context = await lookupBallotContext(wave2Data('jefferson'), '18113 Upper Hoh Rd Forks WA 98331')
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(scopeMatches(qvsd, context))
+  assert.ok(!scopeMatches(ccfd1, context))
+  // 620 Cedar Ave, Port Hadlock: East Jefferson Fire Rescue '1', SCH2025 '49'.
+  mockWave2('620 CEDAR AVE, PORT HADLOCK, WA, 98339', '031', 'Jefferson County', [
+    jeffCommissioner('2'), dorLayer(7, '1'), dorLayer(20, '49'),
+  ])
+  context = await lookupBallotContext(wave2Data('jefferson'), '620 Cedar Ave Port Hadlock WA 98339')
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(!scopeMatches(qvsd, context))
+  assert.ok(!scopeMatches(ccfd1, context))
+})
+
+const kittitasCommissioner = (value) => ({
+  path: 'Commissioner_Districts/FeatureServer/7/query', attributes: { commissioner_district_nbr: value },
+})
+const kittitasCourt = (value) => ({
+  path: 'Court_Districts/FeatureServer/0/query', attributes: { court_district_name: value },
+})
+
+test('Kittitas resolves the Upper and Lower District Court from the Auditor Court_Districts layer', async () => {
+  const lower = { kind: 'DISTRICT', county: 'kittitas', layer: 'DISTCRT', value: 'Lower District Court' }
+  const upper = { kind: 'DISTRICT', county: 'kittitas', layer: 'DISTCRT', value: 'Upper District Court' }
+  // 205 W 5th Ave, Ellensburg: commissioner 3 (an integer), FIR2025 '2', Lower.
+  const calls = mockWave2('205 W 5TH AVE, ELLENSBURG, WA, 98926', '037', 'Kittitas County', [
+    kittitasCommissioner(3), dorLayer(7, '2'), kittitasCourt('Lower District Court'),
+  ])
+  let context = await lookupBallotContext(wave2Data('kittitas'), '205 W 5th Ave Ellensburg WA 98926')
+  assert.equal(context.county.id, 'kittitas')
+  assert.equal(context.coverageStatus, 'full_county')
+  assert.deepEqual(context.missingLayers, [])
+  assert.equal(context.districts.COUNTY_COUNCIL, '3')
+  assert.ok(scopeMatches(lower, context))
+  assert.ok(!scopeMatches(upper, context))
+  const court = calls.find((u) => u.includes('Court_Districts/FeatureServer/0/query'))
+  assert.equal(new URL(court).searchParams.get('outFields'), 'court_district_name')
+  // 719 E 3rd St, Cle Elum: commissioner 2, no fire district, Upper.
+  mockWave2('719 E 3RD ST, CLE ELUM, WA, 98922', '037', 'Kittitas County', [
+    kittitasCommissioner(2), kittitasCourt('Upper District Court'),
+  ])
+  context = await lookupBallotContext(wave2Data('kittitas'), '719 E 3rd St Cle Elum WA 98922')
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(scopeMatches(upper, context))
+  assert.ok(!scopeMatches(lower, context))
+})

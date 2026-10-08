@@ -1,0 +1,36 @@
+{
+  "contest_slug": "measures",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/jefferson/scoring/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/jefferson/dossiers/measures/",
+    "data/final/2026-11-03-general/rubric.json"
+  ],
+  "verdicts": [
+    {
+      "candidate": "jefferson-quillayute-valley-school-district-no-402-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Hardest attack: the board chair called it a replacement for the outgoing high school bond that 'will not increase the tax level' [S5], and replacement levies usually map to 1. The attack fails on the dossier's numbers and term: the district's later estimate is $1.94 per $1,000 [S3][S4], above the outgoing bond's 2025 rate of $1.34 [S6], and a yes vote commits a further 25 years of excess property tax for $34 million [S1][S2] after the high school bond ends in 2028 [S3][S4]. Matches Clallam's upheld +2 for the same measure. S1, S3, S4, S5 and S6 support the basis. Spending was considered and not proposed: the bond replaces a 1952 building [S3][S4][S5] rather than adding capacity. Parental-rights does not apply: nothing concerns curricula, notification, records or opt-outs."
+    },
+    {
+      "candidate": "jefferson-quillayute-valley-school-district-no-402-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1, S2, S4, S8 and S9 ($34 million, up to 25 years, replaces the 1952 school with one secure entrance, about $21 million in state aid if passed in November, a voter-approved bond needed to collect timber revenue, 60% plus minimum turnout, the district reaching into Jefferson's West End). cost_line matches S3, S4 and S6, including the same $1.34 rate in both counties. pro_summary correctly notes no statement was filed and attributes the case to the district [S3][S4][S5]. con_summary matches S1, S2 and S7. Minor: sources_note omits S8 (state constitution) and S9 (GIS), which the line does not need."
+    },
+    {
+      "candidate": "jefferson-clallam-county-fire-protection-district-no-1-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked on strength: the lid lift stays under the $1.50 cap [S1] and the district frames it as maintaining current service [S1][S4]. But a yes vote more than doubles the rate, from about $0.47 [S5] to $1.00 [S1], and adds a nine-year CPI escalator above the 1% limit [S1][S2]. A near-doubling maps 2, matching Clallam's upheld mapping for the same measure. S1 and S5 support the basis. Spending was considered and not proposed: the money maintains current fire and EMS service and firefighter safety [S1]."
+    },
+    {
+      "candidate": "jefferson-clallam-county-fire-protection-district-no-1-proposition-no-1",
+      "axis": "_display",
+      "verdict": "adjust",
+      "note": "One unsupported claim: what_it_does ends 'Simple majority.', but nothing in this Jefferson dossier states the approval threshold (S1-S7 cover the levy terms, rates, GIS and PDC only). Either drop the sentence or have the dossier cite the threshold. Minor: cost_line's 'Inflation-based increases follow through 2035' follows the dossier's wording about the 'maximum allowable 2035 levy' [S1][S2], but the line mixes calendars, since $1.00 is a 2027 collection figure and the nine escalator years run to 2036 collection; 'for the next nine years' would avoid the ambiguity. Otherwise what_it_does matches S1, S2, S3, S5 and S6; the $141 to $300 on a $300,000 property and the $2,663 Jefferson share are correct from S1 and S5; pro_summary attributes the case to the district [S1][S4]; con_summary matches S1, S2 and S7."
+    }
+  ],
+  "missing": []
+}
