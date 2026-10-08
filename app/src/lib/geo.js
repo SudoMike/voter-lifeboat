@@ -412,7 +412,12 @@ const COUNTY_LAYERS = {
     { key: 'EMSDST', url: `${DOR_TAX_DISTRICTS}/6/query`, attr: 'DISTATTRIB' },
   ],
   franklin: [
-    { key: 'COUNTY_COUNCIL', url: 'https://services3.arcgis.com/S61OMZovc3AIomN2/arcgis/rest/services/Districts/FeatureServer/8/query', attr: 'DISTRICT_CODE' },
+    // County portal MapServer. The earlier ArcGIS Online copy
+    // (services3.arcgis.com/S61OMZovc3AIomN2/.../Districts/FeatureServer/8)
+    // went dead (400 "Invalid URL", 2026-10-09 hotfix). Values are 'COM1'..
+    // 'COM3', the same form the primary's Franklin scopes use. Live
+    // 2026-10-08: 1016 N 4th Ave, Pasco -> 'COM2'; 5600 N Rd 68, Pasco -> 'COM3'.
+    { key: 'COUNTY_COUNCIL', url: 'https://gisportal.franklin.co.franklin.wa.us/arcgis2/rest/services/districts/Commissioner_Districts/MapServer/0/query', attr: 'DISTRICT_CODE' },
   ],
   garfield: [],
   grant: [

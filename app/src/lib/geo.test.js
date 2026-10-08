@@ -832,6 +832,36 @@ const wave2Data = (id) => ({
   coverage: { statewide_complete: true, supported_counties: [{ id, coverage: 'full_county' }] },
 })
 
+test('Franklin commissioner districts resolve from the county portal MapServer', async () => {
+  // The ArcGIS Online copy (services3.arcgis.com/S61OMZovc3AIomN2,
+  // Districts/FeatureServer/8) answered 400 "Invalid URL" (2026-10-09
+  // hotfix). Live 2026-10-08: 1016 N 4th Ave, Pasco -> 'COM2'; 5600 N Rd 68,
+  // Pasco -> 'COM3'. The primary's Franklin race is scoped COUNTY_COUNCIL 'COM3'.
+  const portal = 'https://gisportal.franklin.co.franklin.wa.us/arcgis2/rest/services/districts/Commissioner_Districts/MapServer/0/query?'
+  const layer = { path: '/arcgis2/rest/services/districts/Commissioner_Districts/MapServer/0' }
+  const com3 = { kind: 'DISTRICT', county: 'franklin', layer: 'COUNTY_COUNCIL', value: 'COM3' }
+  let calls = mockWave2('5600 N RD 68, PASCO, WA, 99301', '021', 'Franklin County', [
+    { ...layer, attributes: { DISTRICT_CODE: 'COM3' } },
+  ])
+  let context = await lookupBallotContext(wave2Data('franklin'), '5600 N Rd 68 Pasco WA 99301')
+  assert.equal(context.coverageStatus, 'full_county')
+  assert.equal(context.districts.COUNTY_COUNCIL, 'COM3')
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(scopeMatches(com3, context))
+  const layerCalls = calls.filter((u) => !u.startsWith('/api/geocode'))
+  assert.equal(layerCalls.length, 1)
+  assert.ok(layerCalls[0].startsWith(portal), layerCalls[0])
+  assert.equal(new URL(layerCalls[0]).searchParams.get('outFields'), 'DISTRICT_CODE')
+
+  calls = mockWave2('1016 N 4TH AVE, PASCO, WA, 99301', '021', 'Franklin County', [
+    { ...layer, attributes: { DISTRICT_CODE: 'COM2' } },
+  ])
+  context = await lookupBallotContext(wave2Data('franklin'), '1016 N 4th Ave Pasco WA 99301')
+  assert.equal(context.districts.COUNTY_COUNCIL, 'COM2')
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(!scopeMatches(com3, context))
+})
+
 test('Clark resolves its school district from the county SchoolDistrict layer', async () => {
   // 109 SW 1st St, Battle Ground: SCHDST is an integer field (119).
   mockWave2('109 SW 1ST ST, BATTLE GROUND, WA, 98604', '011', 'Clark County', [
