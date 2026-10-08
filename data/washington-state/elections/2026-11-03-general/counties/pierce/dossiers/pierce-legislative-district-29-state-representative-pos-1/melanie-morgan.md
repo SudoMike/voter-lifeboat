@@ -109,6 +109,37 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?election_year=2026&legislative_district=29
     page: https://my.pdc.wa.gov/registration/public/-/#/public/registration/68870
     accessed: 2026-10-08
+  - id: S16
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature roll calls, ESSB 5801 (2025, transportation resources)
+    url: https://wslwebservices.leg.wa.gov/LegislationService.asmx/GetRollCalls?biennium=2025-26&billNumber=5801
+    page: https://app.leg.wa.gov/billsummary?BillNumber=5801&Year=2025
+    accessed: 2026-10-08
+  - id: S17
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, ESSB 5801 final bill report
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Pdf/Bill%20Reports/Senate/5801-S.E%20SBR%20FBR%2025.pdf
+    accessed: 2026-10-08
+  - id: S18
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, House floor amendment 2569 to ESSB 6346 (Orcutt)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/6346-S.E%20AMH%20ORCU%20HARA%20470.htm
+    accessed: 2026-10-08
+  - id: S19
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, House floor amendment 2582 to ESSB 6346 (Corry)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/6346-S.E%20AMH%20CORR%20KRNG%20185.htm
+    accessed: 2026-10-08
+  - id: S20
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, House floor amendment 2538 to ESSB 6346 (Orcutt)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/6346-S.E%20AMH%20ORCU%20REIN%20513.htm
+    accessed: 2026-10-08
 ---
 
 ## Background
@@ -123,7 +154,9 @@ Melanie Morgan (prefers Democratic Party) is the incumbent 29th District State R
 ### Taxes
 - Voted nay on House final passage of ESSB 6346, the millionaires' tax, on 2026-03-09; the bill passed 51-46 [S4].
 - Voted yea on the 2021 capital gains tax (ESSB 5096) and on three 2025 revenue bills: ESSB 5813 (higher capital gains and estate tax rates), ESSB 5814 (excise taxes on select services) and ESHB 2081 (B&O tax changes and a surcharge on large companies) [S7][S8][S9][S10].
-- No public statement explaining the ESSB 6346 vote was found as of 2026-10-08.
+- On 2026-03-09 the House took 71 recorded votes on floor amendments to ESSB 6346 [S4]. On the 51 votes on Republican-sponsored amendments she voted nay 46 times, each on an amendment that failed, and yea five times [S4][S14]. Two of those five were adopted almost unanimously (amendment 2563, 93-0; amendment 2572, 93-1) [S4]. The other three failed: amendment 2569, which would have exempted income of small forestland owners from the tax (44-52) [S4][S18]; amendment 2582, which would have waived penalties and interest on certain excise taxes due before July 1, 2026 (47-49) [S4][S19]; and amendment 2538, which would have removed the bill's necessity clause and sent the act to voters at the next general election (43-50) [S4][S20]. On the 20 votes on Democratic-sponsored amendments she voted yea 14 times and nay six times [S4][S14].
+- Voted nay on House final passage of ESSB 5801 (transportation resources) on 2025-04-24; it passed 51-47 [S16]. The enacted bill raised the state fuel tax by $0.06 per gallon starting July 1, 2025, added a 2 percent annual inflation adjustment from July 1, 2026, and raised passenger vehicle weight fees [S17].
+- No public statement explaining the ESSB 6346 or ESSB 5801 votes was found as of 2026-10-08.
 
 ### Gender, LGBTQ+ and reproductive policy
 - No statement found; see her ESSB 5599 vote under Record [S6].
@@ -138,7 +171,8 @@ Melanie Morgan (prefers Democratic Party) is the incumbent 29th District State R
 
 ## Record
 - Prime sponsor credits in her caucus biography: the CROWN Act on natural-hair discrimination (HB 2602, 2020), the Juneteenth state holiday (HB 1016, 2021) and the state dinosaur bill (2023). It also says she led the 2022-2023 creation of the $200 million Community Reinvestment Account for homeownership, small-business support, legal services, violence prevention and reentry [S3].
-- ESSB 6346 (2026, tax on income over $1 million): nay on House final passage [S4].
+- ESSB 6346 (2026, tax on income over $1 million): nay on House final passage [S4]; on floor amendments, nay on 46 of 51 Republican-sponsored amendment votes and yea on 14 of 20 Democratic-sponsored amendment votes [S4][S14].
+- ESSB 5801 (2025, transportation resources, including a $0.06 per gallon fuel tax increase): nay on House final passage, which passed 51-47 [S16][S17].
 - ESSB 5096 (2021, capital gains tax): yea on all three House final-passage votes [S7].
 - ESSB 5813, ESSB 5814 and ESHB 2081 (2025 revenue package): yea on House final passage [S8][S9][S10].
 - EHB 1217 (2025, limits on rent and fee increases): yea on House passage and on the conference report [S11].
@@ -153,6 +187,6 @@ Melanie Morgan (prefers Democratic Party) is the incumbent 29th District State R
 
 ## Scoring notes
 - Four-term incumbent facing a first-time candidate who has the 29th LD Democrats' endorsement [S1].
-- Split from her seatmate Sharlett Mena on ESSB 6346, voting nay, but voted for the 2021 capital gains tax and the 2025 revenue bills [S4][S7][S8][S9][S10].
+- Split from her seatmate Sharlett Mena on ESSB 6346, voting nay, but voted for the 2021 capital gains tax and the 2025 revenue bills ESSB 5813, ESSB 5814 and ESHB 2081 [S4][S7][S8][S9][S10]. Voted against the 2025 transportation revenue bill ESSB 5801 [S16][S17].
 - Voted for EHB 1217 rent limits and E2SHB 1110 middle housing, matching her pamphlet claims [S1][S11][S12].
 - Runs on independence from "political pressure or ideology" [S1].

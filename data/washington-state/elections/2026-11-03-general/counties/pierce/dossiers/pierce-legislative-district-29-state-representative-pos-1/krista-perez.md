@@ -65,6 +65,9 @@ Krista Perez (prefers Democratic Party) has not held elected office [S1]. She is
 - Would expand the Working Families Tax Credit and Working Connections Child Care eligibility, and raise childcare-worker pay [S4].
 - Says fixing the tax structure is "about unlocking the revenue we need to make all of these investments possible" [S4].
 
+### Healthcare
+- Says she will "advocate for state investments that bring down the cost of healthcare and prescription drugs for everyday Washingtonians" and "strengthen consumer protections against price gouging" [S4].
+
 ### Housing
 - Would expand state funding for affordable housing construction and preservation, strengthen tenant protections, and add shelter and transitional-housing capacity [S4].
 - Would reform the Growth Management Act "to remove barriers to mixed-use and middle-density development" [S4].
