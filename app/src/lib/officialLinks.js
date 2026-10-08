@@ -230,6 +230,9 @@ const ELECTIONS = {
       // #30; each 200 text/html, 2026-10-08.
       whitman: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=38',
       douglas: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=09',
+      // Okanogan prints no local pamphlet; its dossiers cite VoteWA only.
+      // #30; 200 text/html, 2026-10-08.
+      okanogan: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=24',
     },
     pamphletIndex: `${SOS_GENERAL_2026}/2026-voters-pamphlet-pdfs`,
   },

@@ -3,7 +3,8 @@
 // (#21), Snohomish at full coverage (#27), Clark, Kitsap and Thurston at full
 // coverage (#22), Yakima, Whatcom, Benton, Skagit, Cowlitz and Grant at full
 // coverage (#28), Island, Lewis, Franklin, Chelan, Clallam and Grays Harbor at
-// full coverage (#29), Mason, Walla Walla, Stevens, Whitman and Douglas at full coverage (#30), every other Washington address a Statewide-Only Guide (issue #9). These run the app's own ballot, interview, lean and Ballot Brief
+// full coverage (#29), Mason, Walla Walla, Stevens, Whitman and Douglas at full coverage and Okanogan at
+// partial coverage (#30), every other Washington address a Statewide-Only Guide (issue #9). These run the app's own ballot, interview, lean and Ballot Brief
 // code against public/data/2026-11-03-general.
 import test from 'node:test'
 import assert from 'node:assert/strict'
@@ -69,7 +70,7 @@ const STATE_MEASURES = [
   'initiative-measure-no-il26-638',
 ]
 
-test('the general ships twenty-three counties at full county coverage, Spokane at partial, with their elections offices', () => {
+test('the general ships twenty-three counties at full county coverage, Spokane and Okanogan at partial, with their elections offices', () => {
   assert.equal(data.election.id, '2026-11-03-general')
   assert.deepEqual(data.coverage, {
     statewide_complete: true,
@@ -310,6 +311,17 @@ test('the general ships twenty-three counties at full county coverage, Spokane a
         fips: '53017',
         coverage: 'full_county',
         elections_url: 'https://www.douglascountywa.gov/206/Current-Election',
+      },
+      {
+        // Partial: the Okanogan County PUD seat (247 of 248 precincts) and
+        // Ferry County PUD No. 1's (the other 8) are PUDDST, which no public
+        // layer separates (#30).
+        id: 'okanogan',
+        name: 'Okanogan County',
+        state: 'WA',
+        fips: '53047',
+        coverage: 'partial_county',
+        elections_url: 'https://www.okanogancounty.gov/337/Elections',
       },
     ],
   })
@@ -1003,6 +1015,47 @@ test('a Douglas ballot: Benton\'s, Spokane\'s and Grant\'s research for the shar
   const shipped = cd8.contests.find((c) => c.slug === 'douglas-congressional-district-8-u-s-representative')
   assert.deepEqual(shipped.candidates.map((c) => [c.slug, c.scores]), owner.candidates.map((c) => [c.slug, c.scores]))
   assert.equal(coverageAdvice(dg({})), null)
+})
+
+test('an Okanogan ballot: Benton\'s and Spokane\'s research for the shared races, EMS levies by district or town, no PUD seat', () => {
+  const OKANOGAN = { id: 'okanogan', fips: '53047', name: 'Okanogan County' }
+  const ok = (districts) => ({ coverageStatus: 'partial_county', county: OKANOGAN, districts, missingLayers: [] })
+  const THREE_RIVERS = 'okanogan-public-hospital-district-no-1-okanogan-and-douglas-counties-proposition-no-1'
+  // Districts as the live District Adapter resolved them on 2026-10-08.
+  // 50 Lost River Rd, Mazama: Methow Valley EMS District, Three Rivers Hospital.
+  const mz = ballotFor(ok({ CONGDST: '4', LEGDST: '7', FIRDST: '6', HOSPDST: '1J', EMSDST: 'MV' }))
+  const ms = mz.contests.map((c) => c.slug)
+  assert.equal(new Set(ms).size, ms.length)
+  assert.equal(ms.length, 16 + SUPREME_COURT.length)
+  for (const slug of SUPREME_COURT) assert.ok(ms.includes(slug), slug)
+  assert.deepEqual(mz.measures.slice(0, 3).map((m) => m.slug), STATE_MEASURES)
+  sameScoring(mz, 'okanogan-congressional-district-4-u-s-representative', 'benton-congressional-district-4-u-s-representative')
+  sameScoring(mz, 'okanogan-legislative-district-7-state-senator', 'spokane-legislative-district-7-state-senator')
+  for (const pos of [1, 2])
+    sameScoring(mz, `okanogan-legislative-district-7-state-representative-pos-${pos}`, `spokane-legislative-district-7-state-representative-pos-${pos}`)
+  assert.ok(!mz.contests.some((c) => c.owner !== 'okanogan' && c.owner !== 'statewide'))
+  // Both PUD seats stay hidden: PUDDST is unresolvable (data-consistency.test.js).
+  assert.ok(!ms.some((s) => s.includes('public-utility-district')), ms.join())
+  assert.ok(data.contests.some((c) => c.owner === 'okanogan' && c.scope.layer === 'PUDDST'))
+  assert.deepEqual(ownLocal(mz, 'okanogan'),
+    [THREE_RIVERS, 'okanogan-methow-valley-emergency-medical-services-district-proposition-no-1'])
+  // 206 Riverside Ave, Winthrop and 118 S Glover St, Twisp: each town's own EMS levy.
+  const wi = ballotFor(ok({ CONGDST: '4', LEGDST: '7', CITY: 'Winthrop', FIRDST: '6', HOSPDST: '1J', EMSDST: 'WC' }))
+  assert.deepEqual(ownLocal(wi, 'okanogan'), [THREE_RIVERS, 'okanogan-town-of-winthrop-proposition-no-1'])
+  const tw = ballotFor(ok({ CONGDST: '4', LEGDST: '7', CITY: 'Twisp', FIRDST: '6', HOSPDST: '1J', EMSDST: 'TC' }))
+  assert.deepEqual(ownLocal(tw, 'okanogan'), [THREE_RIVERS, 'okanogan-town-of-twisp-proposition-no-1'])
+  // 415 Hospital Way, Brewster.
+  const br = ballotFor(ok({ CONGDST: '4', LEGDST: '7', CITY: 'Brewster', HOSPDST: '1J', EMSDST: 'BC' }))
+  assert.deepEqual(ownLocal(br, 'okanogan'), [THREE_RIVERS, 'okanogan-city-of-brewster-proposition-no-1'])
+  // 2 S Ash St, Omak: county races only.
+  const om = ballotFor(ok({ CONGDST: '4', LEGDST: '7', CITY: 'Omak', HOSPDST: '3' }))
+  assert.deepEqual(ownLocal(om, 'okanogan'), [])
+  assert.equal(om.contests.length, 16 + SUPREME_COURT.length)
+  // 38 Swanson Mill Rd, Oroville: Fire District 1's lid lift.
+  const or = ballotFor(ok({ CONGDST: '4', LEGDST: '7', FIRDST: '1', HOSPDST: '4', EMSDST: 'OR' }))
+  assert.deepEqual(ownLocal(or, 'okanogan'), ['okanogan-okanogan-county-fire-protection-district-no-1-proposition-no-1'])
+  // The partial package tells every Okanogan voter the ballot may be incomplete.
+  assert.equal(coverageAdvice(ok({})), 'degraded')
 })
 
 test('a Spokane ballot: its own districts, school and fire measures by name, no PUD seat', () => {

@@ -49,13 +49,15 @@
     "data/washington-state/elections/2026-11-03-general/counties/whitman/scoring/*.json",
     "data/washington-state/elections/2026-11-03-general/counties/whitman/scoring/refutations/*.json",
     "data/washington-state/elections/2026-11-03-general/counties/douglas/scoring/*.json",
-    "data/washington-state/elections/2026-11-03-general/counties/douglas/scoring/refutations/*.json"
+    "data/washington-state/elections/2026-11-03-general/counties/douglas/scoring/refutations/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/okanogan/scoring/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/okanogan/scoring/refutations/*.json"
   ],
   "script": "pipeline/merge_scores.py",
   "verdict_stats": {
-    "upheld": 2158,
-    "adjust": 186,
-    "refuted": 11,
+    "upheld": 2185,
+    "adjust": 188,
+    "refuted": 13,
     "missing_added": 30,
     "missing_dropped_low": 12
   },
@@ -34418,6 +34420,593 @@
             "Elected water commissioner in 2017 and re-elected unopposed in 2023 [S3][S4]"
           ],
           "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "okanogan-okanogan-county-assessor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/okanogan/dossiers/okanogan-okanogan-county-assessor/"
+      ],
+      "office_does": "The Assessor appraises all taxable property in Okanogan County at market value under state law, calculates levies and runs the property tax exemption programs.",
+      "race_blurb": "Uncontested: Assessor Larry D Gilman (Prefers Republican Party), in office since 2019, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "larry-d-gilman",
+          "summary": "Okanogan County Assessor since 2019 after 31 years in the office, starting as a residential appraiser; the only candidate.",
+          "highlights": [
+            "Assessor since 2019; 31 years in the Assessor's office [S1]",
+            "Says the office's role is 'to represent all citizens of Okanogan County equally and fairly' [S1]",
+            "Unopposed in the 2022 general [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "okanogan-okanogan-county-auditor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/okanogan/dossiers/okanogan-okanogan-county-auditor/"
+      ],
+      "office_does": "The Auditor records documents, accounts for county spending, licenses vehicles, issues marriage licenses and runs voter registration and elections in Okanogan County.",
+      "race_blurb": "Uncontested: Auditor Cari L Hall (Prefers Republican Party), elected in 2018 and 2022, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "cari-l-hall",
+          "summary": "Okanogan County Auditor since 2019 and a Certified Elections Administrator, formerly the office's finance manager; the only candidate.",
+          "highlights": [
+            "Elected Auditor in 2018 and 2022; finance manager in the office from 2015 [S1]",
+            "Cites cameras with a public live feed in the ballot-processing room and online recorded documents [S1]",
+            "Unopposed in the 2022 general [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "okanogan-okanogan-county-clerk",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/okanogan/dossiers/okanogan-okanogan-county-clerk/"
+      ],
+      "office_does": "The County Clerk is clerk of the Okanogan County Superior Court, filing and keeping its records, dockets, orders and judgments.",
+      "race_blurb": "Uncontested: Clerk Susan Speiker (Prefers Republican Party), in office since 2023, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "susan-speiker",
+          "summary": "Okanogan County Clerk since 2023 and former chief deputy clerk; 2025 Clerk of the Year of the state county clerks' association; the only candidate.",
+          "highlights": [
+            "Clerk since 2023; with the county since 2009 [S1]",
+            "Named Clerk of the Year by the Washington State Association of County Clerks in 2025 [S1]",
+            "Unopposed in the 2022 general [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "okanogan-okanogan-county-commissioner-district-3-commissioner-district-3",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/okanogan/dossiers/okanogan-okanogan-county-commissioner-district-3-commissioner-district-3/"
+      ],
+      "office_does": "Okanogan County's three commissioners set the county budget and property tax levy, pass ordinances and run county government; candidates are nominated by district and elected countywide.",
+      "race_blurb": "Two Republicans. Incumbent Jon Neal, a former Oroville mayor, voted with the board to send a levy lid lift to the August ballot and accepted cuts when it failed; Farm Bureau leader Trinity Hightower Stucker, endorsed by the county Republican Party, opposed the lid lift and proposes cuts first, including commissioner pay. Stucker led the District 3 primary 51% to 48%.",
+      "candidates": [
+        {
+          "slug": "jon-r-neal",
+          "summary": "Okanogan County Commissioner for District 3 since 2023, former Oroville mayor and council member, and 34-year owner of an Oroville auto body shop.",
+          "highlights": [
+            "Voted 'reluctantly' with the full board to put the levy lid lift on the August ballot, then said 'I honestly am not in support of the levy lid lift either' [S2][S5]",
+            "After its defeat: 'time for some cuts, I guess. The people have spoken' [S4]",
+            "Pledges to 'fight Olympia against state government overreach regarding excessive taxation and over regulation' [S1]",
+            "Puts state unfunded mandates at about $3.5 million a year for the county [S3][S5]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S9"
+              ],
+              "basis": "Incumbent commissioner since the 2022 election, with prior service as Oroville mayor and council member."
+            },
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2",
+                "S5",
+                "S6"
+              ],
+              "basis": "Opposes state taxation and lobbied against the millionaire's tax, but voted to send the county levy lid lift to voters while saying he did not personally support it."
+            }
+          }
+        },
+        {
+          "slug": "trinity-hightower-stucker",
+          "summary": "Tonasket farm owner, Washington State Farm Bureau board director and former state Senate session aide, running for her first county office with the county Republican Party's endorsement.",
+          "highlights": [
+            "Opposed the 2026 levy lid lift as 'a Band-Aid': 'My plan is for that levy to fail' [S5][S6]",
+            "Backs a volunteer review's more than $3 million in proposed cuts, including 10% pay cuts for commissioners and department heads [S5][S6]",
+            "Platform: lower taxes, efficiency audits, faster permitting and year-round wildfire fuel reduction [S1][S3]",
+            "Endorsed by the Okanogan County Republican Party [S7]",
+            "Won 51.0% in the District 3 primary [S8]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S5",
+                "S6"
+              ],
+              "basis": "Campaigns on 'lower taxes' and worked for the county's levy lid lift to fail."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S5",
+                "S6"
+              ],
+              "basis": "Proposes more than $3 million in cuts, 10% pay cuts for commissioners and department heads, and efficiency audits before new revenue."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S4"
+              ],
+              "basis": "First run for county office, challenging the incumbent; brings Farm Bureau and legislative-aide experience rather than an elected record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "okanogan-okanogan-county-coroner",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/okanogan/dossiers/okanogan-okanogan-county-coroner/"
+      ],
+      "office_does": "The coroner investigates sudden, unexpected and violent deaths in Okanogan County, determines cause and manner of death and works with families, law enforcement and medical providers.",
+      "race_blurb": "Open seat: Coroner Dave Rodriguez is retiring. Chief Deputy Coroner Gene Davis, a former sheriff's detective sergeant, says the job is investigative; nurse practitioner Cindy Jensen (Prefers Independent Party) argues medical experience matters and pledges cost control in the office.",
+      "candidates": [
+        {
+          "slug": "gene-davis",
+          "summary": "Okanogan County chief deputy coroner since 2023 and a state-certified death investigator, after about 25 years at the sheriff's office as a K-9 handler, sergeant and detective sergeant.",
+          "highlights": [
+            "Chief deputy coroner since 2023; investigated homicides and suspicious deaths at the sheriff's office [S1]",
+            "'You don't have to be a doctor, nurse or EMT. The primary thing is to be an investigator' [S3]",
+            "Promises 'a seamless transition within the Coroner's Office' [S1]",
+            "Won the August primary with 63.6% [S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The retiring coroner's chief deputy with a long investigative career, running on continuity in the office."
+            }
+          }
+        },
+        {
+          "slug": "cindy-jensen",
+          "summary": "Nurse practitioner who owns a practice in Oroville and retired from the VA in 2025, running as an Independent with a medical rather than law-enforcement background.",
+          "highlights": [
+            "Registered nurse since 1989 and nurse practitioner for 24 years; former VA home-based primary care provider [S1][S2]",
+            "'I am fiscally conservative'; says she has a plan to control the office's costs while maintaining services [S1]",
+            "Proposes more deputy coroners or volunteers to cut rural response times [S3]",
+            "Received 36.0% in the August primary [S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "No public-office or coroner record; runs as an outsider from health care ('I don't think you have to be a deputy to be a coroner').",
+              "adjusted_by_refutation": true
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Calls herself fiscally conservative and promises to control the office's costs, citing the county deficit; details unpublished."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "okanogan-okanogan-county-district-court-judge-position-no-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/okanogan/dossiers/okanogan-okanogan-county-district-court-judge-position-no-1/"
+      ],
+      "office_does": "Okanogan County District Court hears misdemeanor and gross-misdemeanor criminal cases, traffic infractions, limited-value civil cases, small claims and protection orders; its two judges are elected countywide for four years.",
+      "race_blurb": "Byron Moore, appointed by the county commissioners in October 2025 to replace Judge Chancey Crowell, must win to keep the seat (short and full term). Winthrop Mayor Robert W. Grim, a former District Court and Superior Court judge who resigned from the Superior Court in 2025, wants to return to the District Court bench.",
+      "candidates": [
+        {
+          "slug": "byron-moore",
+          "summary": "Okanogan County District Court judge since November 2025 (appointed), previously a Ferry County District Court judge pro tem, an Okanogan County deputy prosecutor and a private attorney.",
+          "highlights": [
+            "Appointed by the county commissioners in October 2025 from four applicants [S3]",
+            "Calls his judicial philosophy 'one of restraint' and himself a 'constitutional originalist' [S2][S3]",
+            "Judge pro tem in Ferry County District Court from 2023; deputy prosecutor in Okanogan County 2022-23 [S3][S4]",
+            "Says community service matters more as recent court decisions limit financial penalties [S5]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "judicial": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Describes his philosophy as 'restraint', applying the law 'as written' and 'rather than legislating from the bench', and calls himself a 'constitutional originalist'."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "The sitting judge, but by appointment since November 2025; his longer record is as pro tem, prosecutor and defense lawyer."
+            }
+          }
+        },
+        {
+          "slug": "robert-w-grim",
+          "summary": "Mayor of Winthrop and former Okanogan County District Court and Superior Court judge, who resigned from the Superior Court in 2025 and now seeks a District Court seat.",
+          "highlights": [
+            "Lists District Court (2015-2022) and Superior Court (2022-2025) service and about 70 jury trials [S1]",
+            "Appointed to the Superior Court in 2022 and elected unopposed in 2022 and 2024 [S2][S6]",
+            "Resigned from the Superior Court effective July 1, 2025 to run for Winthrop mayor; would need to resign as mayor if elected [S2][S4]",
+            "Did not attend the July 2026 Oroville candidate forum [S7]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2",
+                "S6"
+              ],
+              "basis": "About a decade as an elected District and Superior Court judge by his account, the longer judicial record in the race."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "okanogan-okanogan-county-district-court-judge-position-no-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/okanogan/dossiers/okanogan-okanogan-county-district-court-judge-position-no-2/"
+      ],
+      "office_does": "Okanogan County District Court hears misdemeanor and gross-misdemeanor criminal cases, traffic infractions, limited-value civil cases, small claims and protection orders; its two judges are elected countywide for four years.",
+      "race_blurb": "Presiding Judge Charles Short, on the bench since 2013 and dean of the Washington State Judicial College, is endorsed by both county party central committees; felony deputy prosecutor John Andrew Bangerter runs on a 'fresh perspective', efficiency and holding convicted offenders accountable.",
+      "candidates": [
+        {
+          "slug": "charles-short",
+          "summary": "Okanogan County District Court judge since 2013 and its presiding judge; dean of the Washington State Judicial College.",
+          "highlights": [
+            "District Court judge since 2013; retained in 2014, 2018 and 2022 [S1][S4]",
+            "Dean of the Washington State Judicial College and past president of the District and Municipal Court Judges' Association [S1][S2]",
+            "2024 David A. Steiner Judicial Leadership Award [S1][S2]",
+            "Endorsed by the Okanogan County Democratic and Republican central committees, the Washington Farm Bureau and more than 100 judicial officers [S3]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S4"
+              ],
+              "basis": "Thirteen-year incumbent and presiding judge with statewide judicial-education leadership."
+            }
+          }
+        },
+        {
+          "slug": "john-andrew-bangerter",
+          "summary": "Okanogan County felony deputy prosecutor, formerly a prosecutor in Chelan and Grays Harbor counties and a Microsoft security operations manager, seeking his first judgeship.",
+          "highlights": [
+            "Felony deputy prosecutor in Okanogan County; earlier handled District Court cases [S1][S2]",
+            "'It is time for a fresh perspective and a positive change' [S1]",
+            "Pledges convicted offenders 'will be held responsible' in 'a fair, firm, and consistent manner' [S1][S3]",
+            "Endorsed by Chelan County's prosecuting attorney, a former Chelan District Court judge and victim advocates [S4]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "No judicial experience; runs explicitly on 'a fresh perspective and a positive change' against a 13-year incumbent."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3",
+                "S4"
+              ],
+              "basis": "Prosecutor formation and endorsers, with accountability language for convicted offenders alongside due process and victim protection."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "okanogan-okanogan-county-prosecuting-attorney",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/okanogan/dossiers/okanogan-okanogan-county-prosecuting-attorney/"
+      ],
+      "office_does": "The Prosecuting Attorney prosecutes crimes in Okanogan County, represents the county in civil cases and advises county officers and school districts.",
+      "race_blurb": "Uncontested: Prosecuting Attorney Albert Lin (Prefers Republican Party), appointed in 2022 and elected that November, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "albert-lin",
+          "summary": "Okanogan County Prosecuting Attorney since his February 2022 appointment, previously a deputy prosecutor in Grant and Franklin counties; the only candidate.",
+          "highlights": [
+            "Appointed by the county commissioners on Feb. 23, 2022 [S6]",
+            "Ten years as a Grant County and five as a Franklin County deputy prosecutor [S1]",
+            "Unopposed in the 2022 general [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "okanogan-okanogan-county-sheriff",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/okanogan/dossiers/okanogan-okanogan-county-sheriff/"
+      ],
+      "office_does": "The sheriff is Okanogan County's chief law enforcement officer, running patrol, investigations, search and rescue, 911 dispatch and the county jail, elected countywide for four years.",
+      "race_blurb": "Both candidates prefer the Republican Party. Jodie Barcus, appointed sheriff in April 2026 after Paul Budrow resigned, runs on continuity, staffing gains and a jail re-entry program; deputy Gisberth (Giz) Gonzalez says trust in the office has deteriorated and wants incarceration used as a deterrent and contract inmates revived. The ballot carries both the short term and the full term.",
+      "candidates": [
+        {
+          "slug": "jodie-barcus",
+          "summary": "Okanogan County Sheriff since April 2026 (appointed), previously chief criminal deputy and a Colville Tribal Police narcotics officer; first woman to serve as the county's sheriff.",
+          "highlights": [
+            "Appointed sheriff by the county commissioners on March 31, 2026, after serving as chief criminal deputy from 2023 [S5][S6]",
+            "Backs diversion, drug court and a jail re-entry program linking inmates to treatment: 'The jail is not a psych ward' [S5][S9]",
+            "Priorities include drugs, crimes against children and jail staffing; calls the aging jail the most pressing problem [S7][S9]",
+            "Says the office must 'be very budget conscious and stay within our budget' [S7]",
+            "Won the August primary with 65.4% [S11]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S5",
+                "S6"
+              ],
+              "basis": "Sitting (appointed) sheriff with command experience as chief criminal deputy, though only six months in the top job."
+            },
+            "safety": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S5",
+                "S7",
+                "S9"
+              ],
+              "basis": "Pairs enforcement priorities (drugs, crimes against children, jail capacity) with explicit support for diversion, drug court and treatment-based re-entry."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S7",
+                "S9"
+              ],
+              "basis": "Stresses staying within the office's budget, buying used patrol vehicles and treating grants as not 'free money'."
+            }
+          }
+        },
+        {
+          "slug": "gisberth-giz-gonzalez",
+          "summary": "Okanogan County sheriff's deputy since 2007 (corrections officer, then patrol, Special Response Team and field training officer), running for his first elected office.",
+          "highlights": [
+            "Calls jail staffing 'the number one issue facing the sheriff's office' [S2]",
+            "'Incarceration should be used as a deterrent even though there are other alternatives'; blames state laws for 'alternatives to incarceration' [S2]",
+            "Says trust in the office 'has deteriorated' and proposes servant leadership and transparency [S1][S2]",
+            "Proposes reviving contract inmates for revenue [S1][S2]",
+            "Received 31.7% in the August primary [S7]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Long-serving line deputy with no supervisory or elected record, running as the change candidate against the appointed sheriff."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Wants incarceration used as a deterrent, proactive policing, and criticizes state 'alternatives to incarceration'.",
+              "adjusted_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "okanogan-okanogan-county-treasurer",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/okanogan/dossiers/okanogan-okanogan-county-treasurer/"
+      ],
+      "office_does": "The Treasurer collects property taxes and other county revenue, pays county warrants and serves as treasurer for local taxing districts.",
+      "race_blurb": "Uncontested: Treasurer Pam Johnson (Prefers Republican Party), in office since 2023, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "pam-johnson",
+          "summary": "Okanogan County Treasurer since 2023, in the Treasurer's office since 1995; the only candidate.",
+          "highlights": [
+            "Treasurer since 2023; in the office since 1995 [S1]",
+            "Cites 'a strong commitment to efficiency and transparency' [S1]",
+            "Unopposed in the 2022 general [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "okanogan-okanogan-superior-court-judge-position-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/okanogan/dossiers/okanogan-okanogan-superior-court-judge-position-2/"
+      ],
+      "office_does": "Okanogan County Superior Court is the county's general-jurisdiction trial court for felonies, civil disputes, family and dependency cases; its two judges are elected countywide.",
+      "race_blurb": "Uncontested: Judge Rachel Hong, appointed by Gov. Bob Ferguson in July 2025 after Judge Robert Grim resigned, is the only candidate for the two years left in the term.",
+      "candidates": [
+        {
+          "slug": "rachel-hong",
+          "summary": "Okanogan County Superior Court judge since July 2025 (appointed), after nearly 15 years as law clerk to U.S. District Judge Barbara Rothstein and work as a litigator; the only candidate.",
+          "highlights": [
+            "Appointed by Gov. Bob Ferguson effective July 3, 2025, from six applicants [S2][S4][S5]",
+            "Clerked for U.S. District Judge Barbara J. Rothstein for more than a decade [S1][S3]",
+            "Litigated civil and criminal cases in state and federal courts [S1][S3]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "okanogan-public-utility-district-commissioner-district-1-okanogan-commissioner-dist-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/okanogan/dossiers/okanogan-public-utility-district-commissioner-district-1-okanogan-commissioner-dist-1/"
+      ],
+      "office_does": "An Okanogan County PUD commissioner sits on the three-member elected board that sets rates, the budget and policy for the public electric and wholesale broadband utility; the seat is nominated by district and elected by the whole PUD for six years.",
+      "race_blurb": "Incumbent Scott Vejraska, an 11-year commissioner, board president and lineman, runs on rate restraint; assistant state auditor Steven Gadd, a former Okanogan City Council member, says twelve years is long enough and promises closer oversight. Nonpartisan.",
+      "candidates": [
+        {
+          "slug": "scott-vejraska",
+          "summary": "Okanogan County PUD commissioner for 11 years and current board president, a lineman for 27 years and a rancher.",
+          "highlights": [
+            "Says he has opposed unnecessary rate increases 'with a firm NO VOTE, whenever possible' [S1]",
+            "Says reserves were strengthened after wildfire damage without added burden on ratepayers [S1]",
+            "Re-elected unopposed in 2020 [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "steven-gadd",
+          "summary": "Assistant state auditor for 14 years and former Okanogan City Council member, with an MBA and management-accounting certifications.",
+          "highlights": [
+            "'It's time for a change. Twelve years is long enough in any elected position!' [S1]",
+            "Promises 'thorough oversite' and openness to public and employee input [S1]",
+            "Served four years on the Okanogan City Council [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "okanogan-public-utility-district-commissioner-district-3-public-utility-commissioner-3",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/okanogan/dossiers/okanogan-public-utility-district-commissioner-district-3-public-utility-commissioner-3/"
+      ],
+      "office_does": "A Ferry County PUD No. 1 commissioner sits on the three-member board that runs the electric utility serving Ferry County; on Okanogan's ballot the race appears only for about 325 northeastern voters who are inside Ferry PUD.",
+      "race_blurb": "Incumbent Doug Aubertin, seeking a fourth term, cites $5 million in grants and opposes state electric-vehicle mandates; retired mining executive and former Colville Tribal Enterprise Corporation COO Andrew Pooler pledges dependable, low-cost power. Nonpartisan.",
+      "candidates": [
+        {
+          "slug": "doug-aubertin",
+          "summary": "Ferry County PUD No. 1 commissioner (Position 3) since 2009 by his account, a Keller logger and rancher seeking a fourth term.",
+          "highlights": [
+            "Says he helped the PUD win $5 million in grants for line extensions and underground line [S1]",
+            "Says state electric-vehicle mandates 'do not fit well in our rural environment' [S1]",
+            "Unopposed in 2020 [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "andrew-pooler",
+          "summary": "Retired mining executive and former chief operating officer of Colville Tribal Enterprise Corporation, running for his first elected office.",
+          "highlights": [
+            "35 years as a mining executive responsible for 16 large-scale mines [S1]",
+            "Pledges 'dependable and low-cost electricity to all PUD customers' [S1]",
+            "Cites experience with high-voltage line construction and budget management [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
           "withdrawn": false,
           "scores": {}
         }

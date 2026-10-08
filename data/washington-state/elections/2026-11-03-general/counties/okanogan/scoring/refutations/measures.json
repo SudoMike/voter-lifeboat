@@ -1,0 +1,108 @@
+{
+  "contest_slug": "measures",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/okanogan/scoring/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/okanogan/dossiers/measures/",
+    "data/final/2026-11-03-general/rubric.json"
+  ],
+  "verdicts": [
+    {
+      "candidate": "okanogan-public-hospital-district-no-1-okanogan-and-douglas-counties-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Up to $48 million in new general obligation bonds repaid by a new 30-year excess property tax levy, estimated at $0.73 per $1,000 (S1, S2). The dossier says explicitly that this is a new bond levy, not a renewal (S1). +2 is the new-tax tier, the same as Mason's McCleary bond."
+    },
+    {
+      "candidate": "okanogan-public-hospital-district-no-1-okanogan-and-douglas-counties-proposition-no-1",
+      "axis": "spending",
+      "verdict": "upheld",
+      "note": "Attacked as a maintenance project, since the 77-year-old building needs its systems replaced (S2). But the project also expands capacity: expanded operating rooms and radiology, a two-story addition and a new ambulance bay (S2). The statement against is explicitly a study-before-spending restraint case (S1). +1 is a modest, supported lean."
+    },
+    {
+      "candidate": "okanogan-city-of-brewster-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "A continuation of the EMS levy first approved in 2020, at the same $0.50 maximum for six years (S1, S2). That is the renewal tier, +1, and nothing in the dossier suggests a rate increase. No spending mapping is right: the existing contract continues unchanged (S1)."
+    },
+    {
+      "candidate": "okanogan-town-of-twisp-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "A new one-year $0.10 excess levy on top of the regular 50-cent EMS levy that Twisp renewed in February 2026 (S1, S4). It is new money, not a renewal (S2), so +2 holds even though it lasts only one year. Aero Methow expects to ask every year (S2)."
+    },
+    {
+      "candidate": "okanogan-town-of-twisp-proposition-no-1",
+      "axis": "spending",
+      "verdict": "upheld",
+      "note": "The ballot language frames it as preventing 'the reduction' of services (S1). But the actual use is three more paramedics and a year-round second advanced-life-support ambulance instead of a seasonal one (S2, S3), which is expansion. +1 fits."
+    },
+    {
+      "candidate": "okanogan-town-of-winthrop-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "A new one-year $0.10 excess levy on top of Winthrop's regular 50-cent EMS levy, which was renewed in 2022 (S1, S3, S4). It is new money, so +2."
+    },
+    {
+      "candidate": "okanogan-town-of-winthrop-proposition-no-1",
+      "axis": "spending",
+      "verdict": "upheld",
+      "note": "It would move the second ambulance from seasonal (April to October 2026, with a $310,000 overrun) to year-round, with three more paramedics (S2). That is service expansion, despite the ballot title's 'prevent the reduction' wording (S1). +1 holds."
+    },
+    {
+      "candidate": "okanogan-methow-valley-emergency-medical-services-district-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "A new one-year excess levy on top of a regular levy already at the 50-cent legal maximum (S1, S2). The dossier calls it new money, not a renewal (S2). +2 holds."
+    },
+    {
+      "candidate": "okanogan-methow-valley-emergency-medical-services-district-proposition-no-1",
+      "axis": "spending",
+      "verdict": "upheld",
+      "note": "Three paramedics and year-round second-ambulance staffing (S2, S3, S4) are an expansion of service. +1 holds."
+    },
+    {
+      "candidate": "okanogan-okanogan-county-fire-protection-district-no-1-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "A levy lid lift from about $0.22 to $0.50 per $1,000, more than doubling the rate and resetting the base (S1, S2). Pole_b names cap lifts, and this is an increase, not a same-rate renewal, so +2. No spending mapping is right: the stated purpose is maintaining service and replacing equipment (S1)."
+    },
+    {
+      "candidate": "okanogan-public-hospital-district-no-1-okanogan-and-douglas-counties-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches the ballot title (S1) and the hospital's project list (S2). The 60% threshold is confirmed by S3 and S4. cost_line matches S1 ($0.73; $18 a month on $300,000), which agrees with S2's $219 a year. pro_summary attributes the arguments to Michael Pruett, the filer of the statement for and the board chair (S1, S2). con_summary accurately condenses Melvin Sorensen's statement and rebuttal (S1)."
+    },
+    {
+      "candidate": "okanogan-city-of-brewster-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does and cost_line match S1: a continuation, first approved in 2020, six years from 2027, $0.50 or less, the same rate, and the Fire District 15 contract. pro_summary and con_summary correctly say no statements were filed (S1) and no committee exists (S5)."
+    },
+    {
+      "candidate": "okanogan-town-of-twisp-proposition-no-1",
+      "axis": "_display",
+      "verdict": "adjust",
+      "note": "Two problems in pro_summary. (1) Nothing in the Twisp dossier supports the '$310,000 over cost in 2026' figure. It appears in the Winthrop and Methow Valley EMS dossiers (Winthrop S2; MVEMS S2-S4), drawn from the same MVN 2026-07-09 article that is Twisp's S3, so it is probably accurate, but this measure's dossier does not document it. Either add it to the Twisp dossier or drop it. (2) No statement for was filed (S1), but the summary attributes arguments to 'Aero Methow and the Town Council' without saying so, so it reads as if they filed one. Suggested: 'No statement for was filed. Aero Methow says calls rose from 531 in 2015 to 911 in 2025 and the valley is over an hour from a hospital; the Town Council endorsed the request (S2, S3).' what_it_does, cost_line ($0.10, 2027 only, about $25,000) and con_summary match S1, S2 and S8."
+    },
+    {
+      "candidate": "okanogan-town-of-winthrop-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does, cost_line ($0.10, 2027 only, about $20,000) and con_summary match S1, S2, S3 and S8. pro_summary paraphrases Van Marter's remarks to the council accurately (S2). Optional improvement: say that no statement for was filed (S1), as the Brewster entry does, so the attribution does not read as an official statement."
+    },
+    {
+      "candidate": "okanogan-methow-valley-emergency-medical-services-district-proposition-no-1",
+      "axis": "_display",
+      "verdict": "adjust",
+      "note": "pro_summary says calls 'nearly doubled in ten years'. The dossier's figures are 531 in 2015 and 911 in 2025 (S2, S4), a rise of about 72%, not nearly double. Also, no statement for was filed (S1), and the summary does not say so. Suggested: 'No statement for was filed. Aero Methow says calls rose from 531 in 2015 to 911 in 2025 and its regular levy, already at the 50-cent maximum, covers about 60% of operations; county commissioners placed it on the ballot unanimously (S2, S3).' what_it_does and cost_line match S1-S4: three paramedics, year-round second ambulance, $0.10, about $47 on $500,000 per Aero Methow."
+    },
+    {
+      "candidate": "okanogan-okanogan-county-fire-protection-district-no-1-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does and cost_line match S1 and S2: Resolution No. 97, $0.50 for 2027 collection, about $0.22 now, and a new base. pro_summary attributes the statement for to Denise Dhane accurately (S1). con_summary matches S1 and S5."
+    }
+  ],
+  "missing": []
+}

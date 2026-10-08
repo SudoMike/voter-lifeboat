@@ -1,0 +1,13 @@
+{
+  "url": "https://data.wa.gov/resource/3h9x-7bvm.json?$where=election_year='2026' AND filer_type='CO' AND (upper(filer_name) like '%THREE RIVERS%' OR upper(filer_name) like '%AERO%' OR upper(filer_name) like '%METHOW%' OR upper(filer_name) like '%OKANOGAN%' OR upper(filer_name) like '%BREWSTER%' OR upper(filer_name) like '%OROVILLE%' OR upper(filer_name) like '%HOSPITAL%' OR upper(filer_name) like '%TWISP%' OR upper(filer_name) like '%WINTHROP%')&$limit=200",
+  "retrieved_at": "2026-10-08",
+  "method": "curl/urllib GET (User-Agent 'Mozilla/5.0') (cached verbatim at data/.cache/okanogan/pdc/committees-2026-query.json, gitignored)",
+  "stage": "raw",
+  "source_type": "pdc",
+  "tier": 1,
+  "outlet": "PDC campaign finance summaries (data.wa.gov 3h9x-7bvm)",
+  "cache_file": "data/.cache/okanogan/pdc/committees-2026-query.json",
+  "bytes": 9893,
+  "sha256": "99e08ce9117f532cfe339a671adbe3e42364811b379dd94fc2e5158216c95ea4",
+  "notes": "8 committees returned; none is a committee for or against any of the six Okanogan measures (county party committees, statewide hospital/hospitality PACs, a Methow aquatic center committee and a Pend Oreille hospital committee)."
+}

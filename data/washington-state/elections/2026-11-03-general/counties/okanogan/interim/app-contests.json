@@ -1,0 +1,618 @@
+{
+  "county": "okanogan",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/okanogan/raw/votewa/candidate-list.csv.url",
+    "https://voter.votewa.gov/elections/measure.ashx?e=899&m=7278&la=en&c=24",
+    "https://voter.votewa.gov/elections/measure.ashx?e=899&m=7279&la=en&c=24",
+    "https://voter.votewa.gov/elections/measure.ashx?e=899&m=7280&la=en&c=24",
+    "https://voter.votewa.gov/elections/measure.ashx?e=899&m=7281&la=en&c=24",
+    "https://voter.votewa.gov/elections/measure.ashx?e=899&m=7282&la=en&c=24",
+    "https://voter.votewa.gov/elections/measure.ashx?e=899&m=7283&la=en&c=24"
+  ],
+  "coverage": "partial_county",
+  "notes": [
+    "The Okanogan County PUD Commissioner District 1 seat is elected by the whole PUD, which is Okanogan County except about 325 registered voters in the northeast who are in Ferry County PUD No. 1 (Commissioner #3 race); no public GIS layer separates the two, so both PUD seats are scoped PUDDST and hidden (partial_county).",
+    "The Methow Valley EMS levy is scoped EMSDST 'MV' (WA DOR EMS2025, layer 6, DISTATTRIB); the Fire District 1 levy FIRDST '1' (layer 7) and the Three Rivers hospital bonds HOSPDST '1J' (layer 11).",
+    "Unresolvable district scopes (no queryable official boundary): PUDDST. Contests/measures scoped to them are hidden rather than shown to the wrong voters."
+  ],
+  "contests": [
+    {
+      "slug": "okanogan-congressional-district-4-u-s-representative",
+      "owner": "okanogan",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 4",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "okanogan",
+        "layer": "CONGDST",
+        "value": "4"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Okanogan County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "amanda-mckinney",
+          "name": "Amanda McKinney",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "john-duresky",
+          "name": "John Duresky",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "okanogan-legislative-district-7-state-senator",
+      "owner": "okanogan",
+      "category": "State",
+      "office": "State Senator",
+      "district": "Legislative District 7",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "okanogan",
+        "layer": "LEGDST",
+        "value": "7"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Okanogan County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "shelly-short",
+          "name": "Shelly Short",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "ronald-l-mccoy",
+          "name": "Ronald L McCoy",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "okanogan-legislative-district-7-state-representative-pos-1",
+      "owner": "okanogan",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 7",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "okanogan",
+        "layer": "LEGDST",
+        "value": "7"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Okanogan County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "andrew-engell",
+          "name": "Andrew Engell",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "okanogan-legislative-district-7-state-representative-pos-2",
+      "owner": "okanogan",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 7",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "okanogan",
+        "layer": "LEGDST",
+        "value": "7"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Okanogan County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "hunter-abell",
+          "name": "Hunter Abell",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "okanogan-okanogan-county-assessor",
+      "owner": "okanogan",
+      "category": "County",
+      "office": "Assessor",
+      "district": "Okanogan County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "okanogan"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Okanogan County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "larry-d-gilman",
+          "name": "Larry D Gilman",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "okanogan-okanogan-county-auditor",
+      "owner": "okanogan",
+      "category": "County",
+      "office": "Auditor",
+      "district": "Okanogan County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "okanogan"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Okanogan County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "cari-l-hall",
+          "name": "Cari L Hall",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "okanogan-okanogan-county-clerk",
+      "owner": "okanogan",
+      "category": "County",
+      "office": "Clerk",
+      "district": "Okanogan County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "okanogan"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Okanogan County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "susan-speiker",
+          "name": "Susan Speiker",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "okanogan-okanogan-county-commissioner-district-3-commissioner-district-3",
+      "owner": "okanogan",
+      "category": "County",
+      "office": "Commissioner District 3",
+      "district": "Okanogan County Commissioner District 3",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "okanogan"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Okanogan County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "trinity-hightower-stucker",
+          "name": "Trinity Hightower Stucker",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "jon-r-neal",
+          "name": "Jon R Neal",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "okanogan-okanogan-county-coroner",
+      "owner": "okanogan",
+      "category": "County",
+      "office": "Coroner",
+      "district": "Okanogan County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "okanogan"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Okanogan County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "gene-davis",
+          "name": "Gene Davis",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "cindy-jensen",
+          "name": "Cindy Jensen",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "okanogan-okanogan-county-prosecuting-attorney",
+      "owner": "okanogan",
+      "category": "County",
+      "office": "Prosecuting Attorney",
+      "district": "Okanogan County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "okanogan"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Okanogan County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "albert-lin",
+          "name": "Albert Lin",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "okanogan-okanogan-county-sheriff",
+      "owner": "okanogan",
+      "category": "County",
+      "office": "Sheriff",
+      "district": "Okanogan County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "okanogan"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Okanogan County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "jodie-barcus",
+          "name": "Jodie Barcus",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "gisberth-giz-gonzalez",
+          "name": "Gisberth (Giz) Gonzalez",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "okanogan-okanogan-county-treasurer",
+      "owner": "okanogan",
+      "category": "County",
+      "office": "Treasurer",
+      "district": "Okanogan County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "okanogan"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Okanogan County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "pam-johnson",
+          "name": "Pam Johnson",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "okanogan-court-of-appeals-division-3-district-1-judge-position-2",
+      "owner": "okanogan",
+      "category": "Judicial",
+      "office": "Judge Position 2",
+      "district": "Court of Appeals, Division 3, District 1",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "okanogan"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Okanogan County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "tracy-arlene-staab",
+          "name": "Tracy Arlene Staab",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "okanogan-okanogan-county-district-court-judge-position-no-1",
+      "owner": "okanogan",
+      "category": "Judicial",
+      "office": "Judge Position No. 1",
+      "district": "Okanogan County District Court",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "okanogan"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Okanogan County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "byron-moore",
+          "name": "Byron Moore",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "robert-w-grim",
+          "name": "Robert W. Grim",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "okanogan-okanogan-county-district-court-judge-position-no-2",
+      "owner": "okanogan",
+      "category": "Judicial",
+      "office": "Judge Position No. 2",
+      "district": "Okanogan County District Court",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "okanogan"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Okanogan County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "charles-short",
+          "name": "Charles Short",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "john-andrew-bangerter",
+          "name": "John Andrew Bangerter",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "okanogan-public-utility-district-commissioner-district-1-okanogan-commissioner-dist-1",
+      "owner": "okanogan",
+      "category": "PublicUtility",
+      "office": "Okanogan Commissioner Dist. #1",
+      "district": "Public Utility District Commissioner District 1",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "okanogan",
+        "layer": "PUDDST",
+        "value": "1"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Okanogan County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "scott-vejraska",
+          "name": "Scott Vejraska",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "steven-gadd",
+          "name": "Steven Gadd",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "okanogan-public-utility-district-commissioner-district-3-public-utility-commissioner-3",
+      "owner": "okanogan",
+      "category": "PublicUtility",
+      "office": "Public Utility Commissioner #3",
+      "district": "Public Utility District Commissioner District 3",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "okanogan",
+        "layer": "PUDDST",
+        "value": "3"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Okanogan County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "andrew-pooler",
+          "name": "Andrew Pooler",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "doug-aubertin",
+          "name": "Doug Aubertin",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "okanogan-okanogan-superior-court-judge-position-2",
+      "owner": "okanogan",
+      "category": "Judicial",
+      "office": "Judge Position 2",
+      "district": "Okanogan Superior Court",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "okanogan"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Okanogan County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "rachel-hong",
+          "name": "Rachel Hong",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    }
+  ]
+}

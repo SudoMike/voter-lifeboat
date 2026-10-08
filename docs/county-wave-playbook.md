@@ -428,8 +428,9 @@ DOR GIS layer, a PDF-only map, a layer that is not public), the rule is:
 Never scope a district race `COUNTY` to make it appear: that shows it to
 voters outside the district.
 
-As of the builder runs on 2026-10-08 (#22, #28, #29, #30), the only shipped
-general package that is `partial_county` is Spokane (`PUDDST`). Benton,
+As of the builder runs on 2026-10-08 (#22, #28, #29, #30), the shipped
+general packages that are `partial_county` are Spokane and Okanogan (both
+`PUDDST`). Benton,
 Clark, Kitsap, Pierce, Snohomish (since #27), Thurston, Whatcom, Yakima,
 Skagit, Cowlitz, Grant, Island, Lewis, Franklin, Chelan, Clallam, Grays
 Harbor, Mason, Walla Walla, Stevens, Whitman and Douglas are
@@ -644,6 +645,25 @@ Douglas's CD 4 with Benton's, CD 8 with King's, LD 7 Senate and House with
 Spokane's, LD 13 Senate and House with Grant's. Whitman links its local
 pamphlet at the cited page and its VoteWA guide otherwise; Douglas prints no
 pamphlet and links its VoteWA guide.
+
+Okanogan shipped on 2026-10-08 (#30) as `partial_county` for `PUDDST`
+alone (`okanogan/PUDDST` is in `UNRESOLVABLE_SCOPES`). Okanogan County PUD
+elects its commissioner PUD-wide, but the PUD is the county minus eight
+northeastern precincts (Bodie, Buckhorn Mtn, Chesaw, Myers Creek, San Poil,
+Sourdough, Toroda, Wauconda; about 325 voters), which are in Ferry County
+PUD No. 1 and vote in its Commissioner #3 race instead (SOS precinct
+exports 2020-2024). DOR PUD2025 has one Okanogan polygon over the whole
+county and no Auditor precinct layer is public, so both seats keep their
+true `PUDDST` scopes and stay hidden; scoping the Okanogan PUD seat
+`COUNTY` would show it to the Ferry PUD voters. Its Methow Valley EMS
+District levy reads DOR EMS2025 (layer 6, `MV`; the towns of Twisp `TC`
+and Winthrop `WC` are outside it and run their own levies, scoped `CITY`),
+its Fire District 1 lid lift DOR FIR2025 (`1`) and the Three Rivers
+Hospital bonds DOR HSP2025 (`1J`). Commissioner District 3 and both
+District Court seats are county-wide in the general. Shared races (4): CD
+4 with Benton's scoring, LD 7 Senate and House with Spokane's; its Court
+of Appeals III-1 Pos. 2 seat is its own information-only copy. Okanogan
+prints no pamphlet and links its VoteWA guide.
 
 ## 13. Reference
 

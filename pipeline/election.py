@@ -69,7 +69,7 @@ APP_PACKAGES = {
         "statewide_ballot": True,
         "counties": ["king", "snohomish", "spokane", "pierce", "clark", "kitsap", "thurston", "yakima", "whatcom",
                      "benton", "skagit", "cowlitz", "grant", "island", "lewis", "franklin", "chelan", "clallam",
-                     "grays-harbor", "mason", "walla-walla", "stevens", "whitman", "douglas"],
+                     "grays-harbor", "mason", "walla-walla", "stevens", "whitman", "douglas", "okanogan"],
         "district_contests": "county",
     },
 }
@@ -107,6 +107,10 @@ DISTRICT_ADAPTER_LAYERS = {
     "stevens": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "FIRDST", "LIBDST", "SCHDST"),
     "whitman": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "FIRDST", "PARKDST", "CEMDST", "LIBDST", "SCHDST"),
     "douglas": ("CONGDST", "LEGDST", "CITY", "FIRDST", "HOSPDST", "SCHDST", "CEMDST", "PROPFIRDST"),
+    # Okanogan's two PUD seats stay PUDDST, which no layer resolves (see
+    # app/src/lib/data-consistency.test.js UNRESOLVABLE_SCOPES), so the
+    # county ships partial_county.
+    "okanogan": ("CONGDST", "LEGDST", "CITY", "FIRDST", "HOSPDST", "EMSDST"),
 }
 
 
@@ -276,6 +280,10 @@ COUNTY_ELECTIONS_URLS = {
         # Douglas County Auditor, Current Election (200, 2026-10-08; the page
         # that links the general's sample ballot and measure resolutions).
         "douglas": "https://www.douglascountywa.gov/206/Current-Election",
+        # Okanogan County Auditor, Elections (200 text/html, "Elections |
+        # Okanogan County, WA", 2026-10-08; the package's
+        # raw/okanogan/elections-page.html.url).
+        "okanogan": "https://www.okanogancounty.gov/337/Elections",
     },
 }
 
