@@ -1066,6 +1066,69 @@ ELECTION_MEASURES = {
                   "https://voter.votewa.gov/elections/measure.ashx?m=7306&e=899&la=en&c=15"),
             ],
         },
+        # Kittitas (#31): no local measures. The Kittitas County Auditor's
+        # general sample ballot and local voters' pamphlet (counties/kittitas/
+        # raw/kittitas/{sample-ballot,local-voters-pamphlet}.pdf.url) list only
+        # the three statewide measures, the elections page's Ballot Measures &
+        # Resolutions table lists no resolution for the general, and VoteWA's
+        # online guide for county 19 (raw/votewa/voter-guide/guide.json.url)
+        # lists no local measure.
+        # Overrides (all checked against the sample ballot):
+        # - Commissioner 3: Kittitas is a non-charter county, so commissioners
+        #   are nominated by district (RCW 36.32.040) and elected county-wide in
+        #   the general (RCW 36.32.050(1)); VoteWA files the race as
+        #   'Countywide', and the SOS precinct exports show the 2022 Commissioner
+        #   3 race on all 48 precincts and the 2020/2024 Commissioner 1 and 2
+        #   races on all 62/48 (raw/kittitas/sos-results-*.csv.url). It keeps
+        #   the primary's contest name so its slug matches the primary's.
+        # - District Court: two electoral districts, one judge each (Kittitas
+        #   County Code 2.08.010-.020), Upper (Cle Elum, Roslyn, Easton, Hyak
+        #   precincts) and Lower (Ellensburg, Kittitas, Thorp, Vantage); in 2022 each
+        #   race was on its own precincts only (Lower 35 units, Upper 15).
+        #   Scoped DISTCRT to the Auditor's precinct-built Court_Districts layer
+        #   (services.arcgis.com/eSnyVpqwqWBADfzp/.../Court_Districts/
+        #   FeatureServer/0, court_district_name), point-checked 2026-10-08:
+        #   'Lower District Court' at 205 W 5th Ave, Ellensburg, 207 Main St,
+        #   Kittitas and 10700 Thorp Hwy N, Thorp; 'Upper District Court' at 719
+        #   E 3rd St, Cle Elum, 201 S 1st St, Roslyn, 523 Lincoln Ave, South
+        #   Cle Elum and 1893 Railroad St, Easton.
+        # - PUD No. 1 of Kittitas County covers the whole county (WA DOR
+        #   PUD2025, layer 17: one Kittitas polygon, DISTATTRIB '1', area equal
+        #   to the sum of Kittitas's SCH2025 polygons; '1' at Ellensburg, Cle
+        #   Elum, Kittitas, Roslyn, South Cle Elum, Thorp and Easton) and the
+        #   whole PUD elects each commissioner in the general (RCW
+        #   54.12.010(3); the 2020 Commissioner 1 race was on all 62 precincts,
+        #   the 2022 Commissioner 3 and 2024 Commissioner 2 races on all 48).
+        #   Scoped COUNTY.
+        "kittitas": {
+            "overrides": {
+                ("COUNTY", "COMMISSIONER 3"): (
+                    "County", "Kittitas County Commissioner District 3", "Commissioner 3", ("COUNTY", None)),
+                ("LOWER COUNTY DISTRICT COURT", "DISTRICT COURT JUDGE"): (
+                    "Judicial", "Lower Kittitas County District Court", "District Court Judge",
+                    ("DISTCRT", "Lower District Court")),
+                ("UPPER COUNTY DISTRICT COURT", "DISTRICT COURT JUDGE"): (
+                    "Judicial", "Upper Kittitas County District Court", "District Court Judge",
+                    ("DISTCRT", "Upper District Court")),
+                ("PUBLIC UTILITY DISTRICT 1", "COMMISSIONER 1"): (
+                    "PublicUtility", "Public Utility District No. 1 of Kittitas County Commissioner District 1",
+                    "Commissioner 1", ("COUNTY", None)),
+            },
+            "measures": [],
+            "extra_notes": [
+                "No local measures on the November 3, 2026 ballot: the Kittitas County sample ballot "
+                "(https://www.co.kittitas.wa.us/uploads/documents/auditor/elections/election-files/71/sample-ballot.pdf) "
+                "and local voters' pamphlet list only the statewide measures IP26-645, IL26-001 and IL26-638, and the "
+                "Auditor's Ballot Measures & Resolutions table (https://www.co.kittitas.wa.us/auditor/elections/current/default.aspx) "
+                "lists no resolution for the general.",
+                "Kittitas County Commissioner District 3 is nominated by district and elected county-wide in the general "
+                "(RCW 36.32.040, RCW 36.32.050(1)); Public Utility District No. 1 of Kittitas County covers the whole county "
+                "(WA DOR PUD2025, layer 17) and every PUD voter elects each commissioner (RCW 54.12.010(3)). Both are scoped COUNTY.",
+                "The Upper and Lower Kittitas County District Court judges are elected by their own district court "
+                "district (Kittitas County Code 2.08.010, 2.08.020): scoped DISTCRT, read from the Auditor's Court_Districts layer "
+                "(court_district_name 'Upper District Court' / 'Lower District Court').",
+            ],
+        },
         # Lewis (#29): checked against the Lewis County Auditor's general sample
         # ballot (counties/lewis/raw/lewis/sample-ballot.pdf.url) and VoteWA's
         # online guide for county 21 (raw/votewa/voter-guide/guide.json.url),

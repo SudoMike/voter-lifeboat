@@ -1,0 +1,14 @@
+{
+  "county": "kittitas",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/kittitas/raw/votewa/candidate-list.csv.url"
+  ],
+  "coverage": "full_county",
+  "notes": [
+    "No local measures on the November 3, 2026 ballot: the Kittitas County sample ballot (https://www.co.kittitas.wa.us/uploads/documents/auditor/elections/election-files/71/sample-ballot.pdf) and local voters' pamphlet list only the statewide measures IP26-645, IL26-001 and IL26-638, and the Auditor's Ballot Measures & Resolutions table (https://www.co.kittitas.wa.us/auditor/elections/current/default.aspx) lists no resolution for the general.",
+    "Kittitas County Commissioner District 3 is nominated by district and elected county-wide in the general (RCW 36.32.040, RCW 36.32.050(1)); Public Utility District No. 1 of Kittitas County covers the whole county (WA DOR PUD2025, layer 17) and every PUD voter elects each commissioner (RCW 54.12.010(3)). Both are scoped COUNTY.",
+    "The Upper and Lower Kittitas County District Court judges are elected by their own district court district (Kittitas County Code 2.08.010, 2.08.020): scoped DISTCRT, read from the Auditor's Court_Districts layer (court_district_name 'Upper District Court' / 'Lower District Court')."
+  ],
+  "measures": []
+}
