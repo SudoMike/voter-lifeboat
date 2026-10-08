@@ -91,9 +91,10 @@ test('every statewide contest and measure in the shipped general gets a paged SO
     // Spokane's, Pierce's, Kitsap's, Whatcom's, Benton's, Grant's, Island's,
     // Lewis's, Grays Harbor's, Stevens's, Douglas's, Okanogan's, Pacific's and Adams's measures cite
     // VoteWA's unpaged online guide (countyGuides), as do Whitman's eight that
-    // filed hardship waivers (not in its printed pamphlet).
+    // filed hardship waivers (not in its printed pamphlet). Wahkiakum's two
+    // cite its sample ballot (no pamphlet) and link its guide (#32).
     if (['spokane', 'pierce', 'kitsap', 'whatcom', 'benton', 'grant', 'island', 'lewis', 'grays-harbor', 'stevens', 'douglas', 'okanogan',
-      'pacific', 'adams'].includes(m.owner)) continue
+      'pacific', 'adams', 'wahkiakum'].includes(m.owner)) continue
     if (m.owner === 'whitman' && !m.pamphlet_pages.length) continue
     assert.match(pamphletLink(m.pamphlet_pages, m.owner, general.election.id), /#page=\d+$/, m.slug)
     n++
@@ -726,6 +727,36 @@ test('shipped Lincoln and Pend Oreille records link their pamphlet at the cited 
     'https://www.lincolncountywa.com/DocumentCenter/View/2055#page=4')
   assert.equal(pamphletLink([{ edition: 'local-voters-pamphlet', page: 18 }], 'pend-oreille', id),
     'https://www.pendoreille.gov/sites/g/files/vyhlif14901/files/media/auditor/file/34071/final_vp_general_2026_pend_oreille.pdf#page=18')
+})
+
+test('shipped Ferry and Wahkiakum records link the county\'s VoteWA guide; their offices are the Auditors\' pages', () => {
+  const id = general.election.id
+  // Neither county prints a general pamphlet (#32): every record, its own and
+  // those shipped with Spokane's, Okanogan's, Clark's and Thurston's research,
+  // is unpaged. Wahkiakum's guide carries no county race; its sample ballot
+  // is the official listing.
+  for (const [county, name, guide, office, count] of [
+    ['ferry', 'Ferry County', 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=10',
+      'https://www.ferry-county.com/departments/auditor/index.php', 21],
+    ['wahkiakum', 'Wahkiakum County', 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=35',
+      'https://www.co.wahkiakum.wa.us/419/Elections', 18],
+  ]) {
+    let n = 0
+    for (const item of [...general.contests, ...general.measures]) {
+      if (item.owner !== county) continue
+      const pages = item.candidates ? item.candidates.map((c) => c.pamphlet_pages) : [item.pamphlet_pages]
+      for (const p of pages) {
+        assert.equal(pamphletLink(p, county, id), guide, item.slug)
+        n++
+      }
+    }
+    assert.equal(n, count, county)
+    assert.deepEqual(countyElectionsOffice(general, { id: county, name }), {
+      name: `${name} Elections`,
+      url: office,
+      direct: true,
+    })
+  }
 })
 
 test('shipped Pacific records link the county\'s VoteWA guide; its office falls back to the statewide list', () => {

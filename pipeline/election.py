@@ -71,7 +71,7 @@ APP_PACKAGES = {
                      "benton", "skagit", "cowlitz", "grant", "island", "lewis", "franklin", "chelan", "clallam",
                      "grays-harbor", "mason", "walla-walla", "stevens", "whitman", "douglas", "okanogan",
                      "jefferson", "kittitas", "klickitat", "pacific", "asotin", "adams",
-                     "skamania", "san-juan", "lincoln", "pend-oreille"],
+                     "skamania", "san-juan", "lincoln", "pend-oreille", "ferry", "wahkiakum"],
         "district_contests": "county",
     },
 }
