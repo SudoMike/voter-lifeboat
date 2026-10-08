@@ -1,0 +1,51 @@
+{
+  "contest_slug": "pierce-legislative-district-25-state-representative-pos-2",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-legislative-district-25-state-representative-pos-2/"],
+  "office_does": "One of the 25th District's two members of the Washington House, voting on state law and the state budgets for a two-year term.",
+  "race_blurb": "Republican Cyndy Jacobsen, in the House since 2021, faces Democrat Jenn Marie Strickling, a Pierce County charter review commissioner, after a primary decided by under two points. They differ on taxes, public safety and tech regulation.",
+  "candidates": [
+    {
+      "slug": "cyndy-jacobsen",
+      "summary": "State representative since 2021, former Puyallup councilmember, math instructor and accountant, running against new taxes and for police funding and offender accountability.",
+      "highlights": [
+        "Says Washington outspends its revenues and opposes taking 'more of your money' [S1]",
+        "Voted against ESSB 6346 and offered amendments to exempt pass-through income and sunset the tax [S4][S6][S7]",
+        "Would fund police and pass measures for officer recruitment and retention [S2]",
+        "Voted against ESHB 1296 (2025) and ESSB 5599 (2023) [S10][S12]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": -2, "confidence": "high", "citations": ["S1", "S2", "S4", "S6", "S8", "S9"], "basis": "Stands 'firm against new taxes'; voted against ESSB 6346, ESHB 2081 and ESSB 5814 and sought to narrow or sunset the income tax."},
+        "spending": {"score": -2, "confidence": "medium", "citations": ["S1"], "basis": "Says the state outspends its revenues every year and calls for budgets that do not take more money."},
+        "safety": {"score": -2, "confidence": "medium", "citations": ["S1", "S2"], "basis": "Prioritizes police funding, recruitment and retention and holding offenders accountable."},
+        "experience": {"score": -2, "confidence": "high", "citations": ["S1", "S3"], "basis": "In the House since 2021 after three years on the Puyallup City Council, against a first-time legislative candidate."},
+        "social": {"score": -1, "confidence": "medium", "citations": ["S12", "S13"], "basis": "Voted against ESSB 5599; no campaign statement on the topic."},
+        "parental-rights": {"score": -1, "confidence": "medium", "citations": ["S10", "S11"], "basis": "Voted against ESHB 1296's changes to the I-2081 parental-rights list; no campaign statement."}
+      }
+    },
+    {
+      "slug": "jenn-marie-strickling",
+      "summary": "Pierce County Charter Review Commissioner, small-business owner and former laborers' union member, running on cost of living, labor rights and checks on big tech.",
+      "highlights": [
+        "Wants the wealthiest to 'pay their share' while cutting wasteful spending [S4]",
+        "Would ban Flock surveillance cameras and limit corporate data harvesting [S4]",
+        "Cites a charter amendment on housing stability and manufactured-home protections [S1][S6]",
+        "Endorsed by the WSLC and Planned Parenthood Alliance Advocates [S7][S8]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": 1, "confidence": "medium", "citations": ["S4"], "basis": "Calls the tax code upside-down and wants the wealthiest to pay their share, with relief for working households."},
+        "spending": {"score": 0, "confidence": "medium", "citations": ["S4"], "basis": "Pairs cutting wasteful spending with full K-12 funding, special education and infrastructure investment."},
+        "housing": {"score": 1, "confidence": "medium", "citations": ["S1", "S4", "S6"], "basis": "Cites housing protections to keep seniors and veterans housed and would incentivize affordable and workforce housing."},
+        "safety": {"score": 0, "confidence": "medium", "citations": ["S4"], "basis": "Pairs police, fire and EMS staffing with community-based crime prevention."},
+        "experience": {"score": 1, "confidence": "medium", "citations": ["S1"], "basis": "First legislative run after election as a charter review commissioner, against an incumbent in the House since 2021."},
+        "local-control": {"score": -1, "confidence": "medium", "citations": ["S3"], "basis": "Favors bottom-up local solutions and opposes 'top-down mandates' that ignore rural communities."},
+        "tech": {"score": 2, "confidence": "medium", "citations": ["S4"], "basis": "Would curb corporate data harvesting, ban Flock cameras, and make data centers pay for the grid costs they impose."},
+        "social": {"score": 1, "confidence": "medium", "citations": ["S4", "S8"], "basis": "Would 'protect reproductive freedom'; endorsed by Planned Parenthood Alliance Advocates."}
+      }
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "contest_slug": "pierce-legislative-district-27-state-representative-pos-1",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-legislative-district-27-state-representative-pos-1/"],
+  "office_does": "State Representatives write and vote on state laws and the state budgets; this seat is one of two House seats for Tacoma-area District 27.",
+  "race_blurb": "House Speaker Laurie Jinkins, a Democrat elected in 2010, faces Republican Carole Sue Braaten, a Fife precinct committee officer who ran for State Senate in 2024. They split on taxes, public safety, reproductive and gender policy, and parental rights.",
+  "candidates": [
+    {
+      "slug": "laurie-jinkins",
+      "summary": "Speaker of the House since 2020 and a public health lawyer, running on the Legislature's record in housing, health care, school funding and tax changes.",
+      "highlights": [
+        "Voted for ESSB 6346 (2026 tax on income over $1 million) and the 2025 capital gains, B&O, services sales tax and gas tax bills [S6][S12][S14][S16][S20]",
+        "Says she has worked on \"fixing our regressive tax system\" [S1]",
+        "Voted for the 2025 rent-increase limit (EHB 1217) and campaigns on tenant protections [S3][S18]",
+        "Pledges to keep reproductive rights \"legal and safe\"; voted for ESHB 1296 and ESSB 5599 [S1][S8][S10]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": 2, "confidence": "high", "citations": ["S1", "S6", "S12", "S14", "S16"], "basis": "Voted for ESSB 6346 and every 2025 revenue bill reviewed, and calls the tax system regressive."},
+        "spending": {"score": 2, "confidence": "medium", "citations": ["S1"], "basis": "Runs on 'historic' K-12 and housing investment, expanded childcare and free college for low-income families."},
+        "housing": {"score": 2, "confidence": "high", "citations": ["S3", "S18", "S19"], "basis": "Voted for the 2025 rent-increase limit and calls for tenant protections, supportive housing and low-income construction."},
+        "safety": {"score": 1, "confidence": "medium", "citations": ["S1", "S2", "S3"], "basis": "Cites public-safety improvements and gun-violence reduction alongside a pledge to 'transform our policing systems, increase accountability' (undated site)."},
+        "climate": {"score": 1, "confidence": "medium", "citations": ["S3"], "basis": "Undated campaign site calls climate change an existential threat and says she kept the House moving on climate policy."},
+        "experience": {"score": -2, "confidence": "high", "citations": ["S1", "S4", "S5"], "basis": "In the House since her 2010 election and Speaker since 2020."},
+        "social": {"score": 2, "confidence": "high", "citations": ["S1", "S3", "S10", "S11"], "basis": "Pledges to keep reproductive rights legal, backs bodily-autonomy rights for women and LGBTQ people, and voted for ESSB 5599."},
+        "parental-rights": {"score": 1, "confidence": "high", "citations": ["S8", "S9", "S10", "S11"], "basis": "Voted for ESHB 1296's changes to the I-2081 parental-rights list and for ESSB 5599's shelter non-notification provision; no statements on the topic."}
+      }
+    },
+    {
+      "slug": "carole-sue-braaten",
+      "summary": "Fife precinct committee officer with a background in code enforcement, forestry and caregiving, running on no income tax, tough-on-crime policing and parents' rights.",
+      "highlights": [
+        "Lists \"Balance the budget yearly, No Income tax\" among her priorities [S1]",
+        "Says \"Support our Law enforcement and tough on crime\" [S1]",
+        "Opposes \"biological boy/men\" in girls' and women's restrooms, sports and prisons [S1]",
+        "Ran for the 27th District Senate seat in 2024 and received about 28 percent in the general [S3]"
+      ],
+      "evidence_level": "pamphlet-only",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": -2, "confidence": "medium", "citations": ["S1"], "basis": "Pamphlet statement says 'No Income tax.'"},
+        "spending": {"score": -1, "confidence": "medium", "citations": ["S1"], "basis": "Calls for balancing the budget yearly, with no further detail."},
+        "safety": {"score": -2, "confidence": "medium", "citations": ["S1"], "basis": "Supports law enforcement and being 'tough on crime.'"},
+        "experience": {"score": 2, "confidence": "high", "citations": ["S1", "S2", "S3"], "basis": "Only office is precinct committee officer; lost a 2024 State Senate race."},
+        "social": {"score": -2, "confidence": "medium", "citations": ["S1"], "basis": "Opposes 'biological boy/men' in girls' and women's restrooms, sports and prisons."},
+        "parental-rights": {"score": -1, "confidence": "medium", "citations": ["S1"], "basis": "States 'Support Parents Rights' without specifics."}
+      }
+    }
+  ]
+}

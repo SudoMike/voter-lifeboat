@@ -670,3 +670,83 @@ test('a Spokane city with its own fire department matches no fire district measu
     assert.ok(!scopeMatches({ kind: 'DISTRICT', county: 'spokane', layer: 'FIRDST', value: `Fire District ${n}` }, context))
   }
 })
+
+// Pierce's King County District Court (Southeast), Pierce Transit benefit
+// area and school district are attributes of the Election_Precincts layer
+// that DISTCRT already reads: KING_DISTRICT, PIERCE_TRANSIT, SCHOOL (live
+// 2026-10-08, #21: 1402 Lake Tapps Pkwy SE, Auburn -> KING_DISTRICT 'YES',
+// PC_DISTRICT 'NO', PIERCE_TRANSIT 'YES', SCHOOL 'AUBURN SCHOOL DISTRICT NO.
+// 408'; 121 Washington St, South Prairie -> PIERCE_TRANSIT 'NO').
+function mockPierce(matchedAddress, precinct) {
+  const calls = []
+  global.fetch = async (url) => {
+    calls.push(String(url))
+    if (String(url).startsWith('/api/geocode')) {
+      return {
+        ok: true,
+        async json() {
+          return {
+            result: {
+              addressMatches: [{
+                matchedAddress,
+                coordinates: { x: -122.2, y: 47.25 },
+                geographies: {
+                  Counties: [{ STATE: '53', COUNTY: '053', NAME: 'Pierce County' }],
+                  '120th Congressional Districts': [{ BASENAME: '8' }],
+                  '2026 State Legislative Districts - Lower': [{ BASENAME: '31' }],
+                },
+              }],
+            },
+          }
+        },
+      }
+    }
+    const u = new URL(String(url))
+    const field = u.searchParams.get('outFields')
+    const attrs = u.pathname.includes('Election_Precincts') && field in precinct
+      ? { [field]: precinct[field] }
+      : null
+    return { ok: true, async json() { return { features: attrs ? [{ attributes: attrs }] : [] } } }
+  }
+  return calls
+}
+
+const pierceData = {
+  coverage: { statewide_complete: true, supported_counties: [{ id: 'pierce', coverage: 'full_county' }] },
+}
+
+test('Pierce resolves King District Court, Pierce Transit and school district from Election_Precincts', async () => {
+  const calls = mockPierce('1402 LAKE-TAPPS PKWY SE, AUBURN, WA, 98092', {
+    PC_DISTRICT: 'NO', KING_DISTRICT: 'YES', PIERCE_TRANSIT: 'YES', SCHOOL: 'AUBURN SCHOOL DISTRICT NO. 408',
+  })
+  const context = await lookupBallotContext(pierceData, '1402 Lake Tapps Pkwy SE Auburn WA 98092')
+  assert.equal(context.coverageStatus, 'full_county')
+  assert.equal(context.districts.KCDISTCRT, 'YES')
+  assert.equal(context.districts.PTBA, 'YES')
+  assert.equal(context.districts.SCHDST, 'AUBURN SCHOOL DISTRICT NO. 408')
+  assert.equal(context.districts.DISTCRT, 'NO')
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(scopeMatches({ kind: 'DISTRICT', county: 'pierce', layer: 'KCDISTCRT', value: 'YES' }, context))
+  assert.ok(scopeMatches({ kind: 'DISTRICT', county: 'pierce', layer: 'PTBA', value: 'YES' }, context))
+  assert.ok(scopeMatches({ kind: 'DISTRICT', county: 'pierce', layer: 'SCHDST', value: 'AUBURN SCHOOL DISTRICT NO. 408' }, context))
+  assert.ok(!scopeMatches({ kind: 'DISTRICT', county: 'pierce', layer: 'DISTCRT', value: 'YES' }, context))
+  // King's copy of the same races is scoped to King's county, not Pierce.
+  assert.ok(!scopeMatches({ kind: 'DISTRICT', county: 'king', layer: 'JUDDST', value: 'SE' }, context))
+  // Each key is its own query of the shared layer, one field each.
+  const fields = calls
+    .filter((u) => u.includes('Election_Precincts'))
+    .map((u) => new URL(u).searchParams.get('outFields'))
+    .sort()
+  assert.deepEqual(fields, ['KING_DISTRICT', 'PC_DISTRICT', 'PIERCE_TRANSIT', 'SCHOOL'])
+})
+
+test('a Pierce point outside Pierce Transit and King District Court matches neither', async () => {
+  mockPierce('121 WASHINGTON ST, SOUTH PRAIRIE, WA, 98385', {
+    PC_DISTRICT: 'YES', KING_DISTRICT: 'NO', PIERCE_TRANSIT: 'NO', SCHOOL: 'WHITE RIVER SCHOOL DISTRICT NO. 416',
+  })
+  const context = await lookupBallotContext(pierceData, '121 Washington St South Prairie WA 98385')
+  assert.ok(!scopeMatches({ kind: 'DISTRICT', county: 'pierce', layer: 'PTBA', value: 'YES' }, context))
+  assert.ok(!scopeMatches({ kind: 'DISTRICT', county: 'pierce', layer: 'KCDISTCRT', value: 'YES' }, context))
+  assert.ok(!scopeMatches({ kind: 'DISTRICT', county: 'pierce', layer: 'SCHDST', value: 'AUBURN SCHOOL DISTRICT NO. 408' }, context))
+  assert.ok(scopeMatches({ kind: 'DISTRICT', county: 'pierce', layer: 'DISTCRT', value: 'YES' }, context))
+})

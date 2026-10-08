@@ -15,6 +15,7 @@ const DISTRICT_LABELS = {
   COUNTY_COUNCIL: 'County Council District',
   JUDDST: 'King County District Court Electoral District',
   DISTCRT: 'District Court',
+  KCDISTCRT: 'King County District Court, Southeast Electoral District',
   PORTDST: 'Port Commissioner District',
   PUDDST: 'Public Utility District',
   FIRDST: 'Fire District',
@@ -65,7 +66,7 @@ const NAMED_VALUES = {
 // Districts that decide which candidates a voter sees come first, then the
 // special districts that only ever carry levies.
 const ORDER = [
-  'CITY', 'CONGDST', 'LEGDST', 'KCCDST', 'SCCDST', 'COUNTY_COUNCIL', 'JUDDST', 'DISTCRT',
+  'CITY', 'CONGDST', 'LEGDST', 'KCCDST', 'SCCDST', 'COUNTY_COUNCIL', 'JUDDST', 'DISTCRT', 'KCDISTCRT',
   'PORTDST', 'PUDDST', 'FIRDST', 'FIRE_AUTH', 'RFADST', 'EMSDST', 'SCHDST', 'HOSPDST', 'LIBDST',
   'PARKDST', 'CEMDST', 'WATDST', 'PTBA', 'AQUIFER',
 ]
@@ -73,6 +74,9 @@ const ORDER = [
 // Presence flags, not district numbers. '1' is deliberately absent — it is a
 // real district number nearly everywhere.
 const PRESENCE_FLAGS = new Set(['yes', 'y', 'true'])
+// Their negatives: Pierce's Election_Precincts flags (DISTCRT, KCDISTCRT,
+// PTBA) read 'NO' outside the district, which names no district at all.
+const ABSENCE_FLAGS = new Set(['no', 'false'])
 
 // Washington counties are governed by a council in some places and a board of
 // commissioners in others, so there is no single correct label for
@@ -114,6 +118,7 @@ export function describeDistrict(key, value, bodyName = null) {
   // An unconfigured layer is still worth showing; a bare key beats dropping it.
   if (!label) return `${key} ${tidy(raw)}`
   if (PRESENCE_FLAGS.has(raw.toLowerCase())) return label
+  if (ABSENCE_FLAGS.has(raw.toLowerCase())) return null
   if (/^\d+$/.test(raw)) return `${label} ${raw}`
   // Codes that carry a service prefix ('SCC5') still have the number we want.
   const numbered = raw.match(/^[A-Za-z]+(\d+)$/)
@@ -121,8 +126,9 @@ export function describeDistrict(key, value, bodyName = null) {
   // Spokane's school layer names districts 'Spokane #81'.
   const hashed = key === 'SCHDST' && raw.match(/^(.*\S)\s*#(\d+)$/)
   if (hashed) return `${hashed[1]} School District No. ${hashed[2]}`
-  // Values that already read as a proper name stand on their own.
-  if (/district|authority|area|county/i.test(raw)) return tidy(raw)
+  // Values that already read as a proper name stand on their own (Pierce's
+  // school field also reads 'YELM COMMUNITY SCHOOLS').
+  if (/district|authority|area|county|schools$/i.test(raw)) return tidy(raw)
   return `${label} ${tidy(raw)}`
 }
 

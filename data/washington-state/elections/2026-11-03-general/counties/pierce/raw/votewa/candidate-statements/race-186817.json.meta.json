@@ -1,0 +1,19 @@
+{
+  "url": "https://voter.votewa.gov/elections/candidate.ashx?e=899&r=186817&b=0&la=en&c=27",
+  "retrieved_at": "2026-10-08",
+  "stage": "raw",
+  "method": "GET (no auth) of the JSON endpoint behind VoteWA's online voter guide; committed alongside this file with only the base64 \"Photo\" field of each record removed (every other field verbatim, re-serialized with indent=1)",
+  "listed_on": "https://voter.votewa.gov/GenericVoterGuide.aspx?e=899&c=27",
+  "file": "data/washington-state/elections/2026-11-03-general/counties/pierce/raw/votewa/candidate-statements/race-186817.json",
+  "sha256_of_committed_file": "3a5a570c0c6298cd2e167e88ab823dfb72979d41605800e710800af65f2ccc7c",
+  "race": {
+    "RaceID": "186817",
+    "Name": "District Court No. 8",
+    "Jurisdiction": "District Court"
+  },
+  "candidates": [
+    "Sven Nelson",
+    "James Armstrong"
+  ],
+  "statement_field": "Each record's \"Statement\" field holds the candidate's statement (HTML) as entered for the general election; \"CandidateStatementText\" is empty and \"IsApprovedForPost\" is \"False\" on 2026-10-08, so the VoteWA page may not display it yet. Cite as the candidate's own submitted statement (Tier 1), not as the printed pamphlet."
+}

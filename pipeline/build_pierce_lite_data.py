@@ -5,7 +5,8 @@ environment, so this package is keyed to the official sample ballot URL
 pointer and cross-validated against the official VoteWA PRIMARY 2026
 candidate list export (data/washington-state/elections/<id>/statewide/raw). Scopes cover
 CONGDST, LEGDST, CITY, COUNTY_COUNCIL, FIRDST, DISTCRT, and countywide via
-the Pierce district adapter in app/src/lib/geo.js. PCO races are excluded
+the Pierce district adapter in app/src/lib/geo.js (the general adds KCDISTCRT,
+PTBA and SCHDST). PCO races are excluded
 (statewide convention).
 """
 
@@ -34,8 +35,118 @@ OUT = COUNTY / "interim"
 # sample-ballot transcription, frozen byte-identical.
 PRIMARY = "2026-08-04-primary"
 
-GENERAL_CFG = {"name": "Pierce County"}
-GENERAL_MEASURES = {"2026-11-03-general": None}
+GENERAL_CFG = {
+    "name": "Pierce County",
+    # Measure scopes resolve through geo.js COUNTY_LAYERS.pierce (#21): SCHDST
+    # and PTBA read the Election_Precincts layer's SCHOOL (school district
+    # name) and PIERCE_TRANSIT ('YES'/'NO'), the layer DISTCRT reads
+    # PC_DISTRICT from (live point queries 2026-10-08, values in the comments
+    # below).
+    "unresolvable_layers": (),
+}
+
+_GENERAL_RAW = "data/washington-state/elections/2026-11-03-general/counties/pierce/raw"
+
+
+def _general_measure(slug, votewa_id, jurisdiction, proposition, title, scope, what_it_does, cost_line):
+    # Ballot titles, explanatory statements and pro/con statements are kept
+    # verbatim in raw/measures/<slug>/votewa-measure-<id>.json (VoteWA online
+    # voter guide, the county's own pamphlet text); display text and lean
+    # mappings come from scoring/measures.json at assembly.
+    return {
+        "slug": slug,
+        "owner": "pierce",
+        "jurisdiction": jurisdiction,
+        "proposition": proposition,
+        "title": title,
+        "votewa_measure_id": votewa_id,
+        "scope": scope,
+        "pamphlet_pages": [],
+        "what_it_does": what_it_does,
+        "cost_line": cost_line,
+        "pro_summary": None,
+        "con_summary": None,
+        "lean_mappings": {},
+    }
+
+
+def _charter(n, votewa_id, title, what_it_does):
+    return _general_measure(
+        f"pierce-pierce-county-charter-amendment-no-{n}", votewa_id, "Pierce County", f"Charter Amendment No. {n}",
+        title, {"kind": "COUNTY", "county": "pierce"}, what_it_does,
+        "No tax or levy on the ballot; any cost is in county operations.",
+    )
+
+
+def _district(layer, value):
+    return {"kind": "DISTRICT", "county": "pierce", "layer": layer, "value": value}
+
+
+GENERAL_MEASURES = {"2026-11-03-general": {
+    "sources": [
+        f"{_GENERAL_RAW}/votewa/voter-guide.json.url",
+        f"{_GENERAL_RAW}/measures/",
+    ],
+    "measures": [
+        # Charter amendments 52-58 (2026 Charter Review Commission): county-wide.
+        _charter(52, "7313", "County Council Meetings",
+                 "Requires the County Council to meet at least 45 times a year (instead of at least once in each of 50 weeks) and to offer remote attendance and public comment at meetings where public comment is required."),
+        _charter(53, "7314", "Appointed Sheriff and Termination of Elected Sheriff",
+                 "Makes Sheriff an appointed office: the Executive appoints and a Council majority confirms; the current elected Sheriff's term ends January 1, 2027."),
+        _charter(54, "7315", "Public Safety Ombuds",
+                 "Creates an executive department of Public Safety Ombuds, appointed by the Council from a panel's list, to oversee the Sheriff's Office, plus a Community Advisory Committee."),
+        _charter(55, "7316", "Initiative Procedures",
+                 "Gives county initiative sponsors 180 days instead of 120 to collect signatures."),
+        _charter(56, "7317", "Four Year Budget Outlook",
+                 "Requires the Chief Financial Officer to prepare a four-year budget outlook showing projected Current Expense Fund spending will not exceed projected available funds."),
+        _charter(57, "7318", "Nondiscrimination",
+                 "Rewrites the Charter's nondiscrimination clause to list sex, race, color, national origin or ancestry, creed, disability, sexual orientation, gender identity or expression, age, genetic testing results, family caregiver status, pregnancy, childbirth or lactation, and military or veteran status."),
+        _charter(58, "7319", "Juvenile Detention",
+                 "Creates a Juvenile Detention Advocate Office to take complaints and monitor conditions, and requires an independent audit or accreditation review of juvenile detention at least every five years."),
+        # Census place (geo.js CITY): 1000 Laurel St, Milton -> 'Milton city'
+        # (Pierce side; Milton also lies in King, whose package has the same
+        # measure as city-of-milton-proposition-no-1).
+        _general_measure("pierce-city-of-milton-proposition-no-1", "7310", "City of Milton", "Proposition No. 1",
+                         "Additional Sales and Use Tax for Police and Public Safety", _district("CITY", "Milton"),
+                         "Raises Milton's sales and use tax by 0.1% from 2027 for public safety purposes allowed by RCW 82.14.450, such as police staffing.",
+                         "Sales and use tax up 0.1% (one cent on $10) from 2027; 15% of proceeds go to the county."),
+        # 121 Washington St, South Prairie -> Census 'South Prairie town'.
+        _general_measure("pierce-town-of-south-prairie-proposition-no-1", "7311", "Town of South Prairie", "Proposition No. 1",
+                         "Public Safety and Town Operations and Services Levy", _district("CITY", "South Prairie"),
+                         "Lifts South Prairie's regular property tax levy for police, fire, EMS, parks, roads and other town services.",
+                         "About $1.33 per $1,000 more (to a maximum $2.90 per $1,000) for 2027, then up to 6% a year through 2032."),
+        # Pierce Transit's benefit area: Election_Precincts PIERCE_TRANSIT
+        # 'YES' at 930 Tacoma Ave S, Tacoma; 'NO' at 121 Washington St, South
+        # Prairie (2026-10-08). geo.js PTBA reads PIERCE_TRANSIT.
+        _general_measure("pierce-pierce-transit-proposition-no-1", "7308", "Pierce Transit", "Proposition No. 1",
+                         "Maintaining and Expanding Local Transit Service Sales and Use Tax Increase", _district("PTBA", "YES"),
+                         "Adds a 0.3% sales and use tax from April 1, 2027 to maintain and expand Pierce Transit bus service and fund fare-free rides for seniors and youth.",
+                         "Sales and use tax up 0.3% (three cents on $10) within Pierce Transit's service area."),
+        _general_measure("pierce-city-of-tacoma-initiative-no-1", "7309", "City of Tacoma", "Initiative No. 1",
+                         "Safe Homes for All Initiative Measure No. 1", _district("CITY", "Tacoma"),
+                         "Amends Tacoma's rental housing code: tenant unions and good-faith bargaining, landlord licensing with per-unit fees, City and private enforcement, penalties and business-license revocation.",
+                         "No tax; landlords pay new per-unit rental licensing fees, and the City takes on new enforcement and program costs."),
+        # Fire_Districts FIRE_DIS at the interior point (-122.36, 47.215):
+        # 'FPD #014 RIVERSIDE' (2026-10-08).
+        _general_measure("pierce-fire-protection-district-no-14-proposition-no-1", "7312", "Fire Protection District No. 14", "Proposition No. 1",
+                         "Emergency Medical Services Property Tax Levy", _district("FIRDST", "FPD #014 RIVERSIDE"),
+                         "Renews Riverside Fire & Rescue's EMS property tax levy for six years from 2027.",
+                         "Up to $0.50 per $1,000 of assessed value (at most $50 a year per $100,000), the same rate as the expiring 2020 levy."),
+        # Election_Precincts SCHOOL at 1402 Lake Tapps Pkwy SE, Auburn:
+        # 'AUBURN SCHOOL DISTRICT NO. 408' (2026-10-08). The same measure is in
+        # King's package (auburn-school-district-no-408-proposition-no-1).
+        _general_measure("pierce-auburn-school-district-no-408-proposition-no-1", "7259", "Auburn School District No. 408", "Proposition No. 1",
+                         "School Construction and Replacement Bonds", _district("SCHDST", "AUBURN SCHOOL DISTRICT NO. 408"),
+                         "Authorizes up to $491 million in 20-year bonds to build a new middle school and replace Cascade Middle School and Alpac Elementary.",
+                         "Up to $491,000,000 in bonds repaid by excess property taxes."),
+        # Election_Precincts SCHOOL at the interior point (-122.55764,
+        # 46.93652), precinct 02095: 'YELM COMMUNITY SCHOOLS' (2026-10-08).
+        _general_measure("pierce-yelm-community-schools-proposition-no-1", "7370", "Yelm Community Schools", "Proposition No. 1",
+                         "Educational Programs and Operations Maintenance Levy", _district("SCHDST", "YELM COMMUNITY SCHOOLS"),
+                         "Two-year levy (2027-2028) to maintain Yelm Community Schools programs and operations not funded by the State.",
+                         "Up to $11,194,449 in 2027 and $12,278,072 in 2028, an estimated $1.50 per $1,000 of assessed value."),
+    ],
+}}
 
 
 def general_override(r, unresolvable):
@@ -53,9 +164,8 @@ def general_override(r, unresolvable):
         # races as King's package, on the ballot in the Pierce precincts whose
         # Election_Precincts KING_DISTRICT is 'YES' (Pierce-side Auburn:
         # 1402 Lake Tapps Pkwy SE returned KING_DISTRICT YES, PC_DISTRICT NO,
-        # 2026-10-08). geo.js has no layer for that field yet.
+        # 2026-10-08). geo.js KCDISTCRT reads KING_DISTRICT.
         n = votewa.district_number(race)
-        unresolvable.add("KCDISTCRT")
         return ("Judicial", "King County District Court, Southeast Electoral District", f"Judge Position No. {n}",
                 ("KCDISTCRT", "YES"))
     return None

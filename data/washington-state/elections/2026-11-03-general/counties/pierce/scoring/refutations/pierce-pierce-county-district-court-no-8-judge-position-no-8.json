@@ -1,0 +1,36 @@
+{
+  "contest_slug": "pierce-pierce-county-district-court-no-8-judge-position-no-8",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-pierce-county-district-court-no-8-judge-position-no-8/",
+    "data/washington-state/elections/2026-11-03-general/counties/pierce/scoring/pierce-pierce-county-district-court-no-8-judge-position-no-8.json"
+  ],
+  "verdicts": [
+    {
+      "candidate": "sven-nelson",
+      "axis": "experience",
+      "verdict": "upheld",
+      "note": "About 30 years as a deputy prosecutor with three team-chief roles, pro tem service since 2019, the TPCBA EWQ rating and the retiring incumbent's endorsement [S1][S2][S3][S5]. That is a record pitch, and -1/medium matches King's Walls and Tse."
+    },
+    {
+      "candidate": "sven-nelson",
+      "axis": "safety",
+      "verdict": "upheld",
+      "note": "Formation is about 30 years of prosecution with a victim-focused specialty [S1][S2][S3], plus a board seat on the Washington Council of Police and Sheriffs [S1][S3]. He accepts community-court and treatment options but says restorative justice 'should never minimize accountability or pressure victims' [S3]. That is -1, not -2, because he has no bail statement and his stated openness to treatment is explicit. Union and party endorsements are correctly kept out of the basis."
+    },
+    {
+      "candidate": "james-armstrong",
+      "axis": "experience",
+      "verdict": "upheld",
+      "note": "Identity check: a judge in this court must be a Washington lawyer [S12], and the cached WSBA last-name search (38 'Armstrong' results) contains exactly one James: James Wesley Armstrong, No. 30408, admitted 2000. His profile records 'WA Municipal Court' judicial service from 1/27/2025 to 12/31/2025 [S4]. His firm site matches the Marine Corps service and the 2000 Seattle University J.D. in the candidate's statement [S1][S5]. A Kent/Auburn office alongside a Lakewood campaign address and LD28 residence [S2][S9] is consistent. The identification is sound. He runs explicitly on 'proven experience': 26 years of practice, a year as presiding judge and pro tem service [S1]. That makes -1/medium right, and the same score as Nelson is fair, since both run on a record of a different type. Wording flag, not a score change: the basis and _contest.md call it 'a year as a full-time presiding municipal judge.' The dossier establishes that Bremerton is a single-judge court and that he was its presiding judge in 2025 [S1][S2][S4], but no cited source says 'full-time.' Drop 'full-time' or cite a source for it."
+    },
+    {
+      "candidate": "james-armstrong",
+      "axis": "safety",
+      "verdict": "upheld",
+      "note": "The score rests on his stated positions, not on formation. A civil (workers' compensation and disability) formation is uninformative on this axis, as the King Barker refutation notes, so the 'civil rather than prosecutorial formation' clause in the basis adds nothing. The positions carry +1/medium on their own. He says his priority is 'accountability and rehabilitation in the form of substance use treatment, mental health counseling, anger management, DV-MRT.' He supports restorative justice and addressing underlying issues over 'just the imposition of an in-custody sentence,' and he criticizes legal financial obligations [S2]. He also reports presiding over Bremerton's Therapeutic Court [S2]. This matches King's Merfeld (+1/medium). It all comes from a single questionnaire to an endorsing club, with no bail statement, so +2 or high would be overstated."
+    }
+  ],
+  "missing": [],
+  "review_notes": "Missing judicial scores considered and declined. Nelson says decisions must come from 'the facts, the law, and the record ... not from politics, public pressure, personal preference' and that 'equity in the courts does not mean favoring one side.' He also supports implicit-bias awareness, court data and reducing financial barriers [S3]. That is mixed, at most 0/low. Armstrong says judges can ensure equal justice for BIPOC 'without Judicial reforms' and stresses sentencing consistency [S2], which leans toward the as-written pole. But it is one line set against his rehabilitation and LFO-reform positions, so at most -1/low. Neither would enter alignment math, and _contest.md correctly calls the judicial evidence thin. Leaving judicial unscored is consistent with the evidence. (Sommerfeld's +1/low in Position 7 rests on comparable equity content; both are low and neither affects alignment.) Checks passed: no social, parental-rights, initiative or party content in any score. Initiative sections say 'Not researched' per the judicial rules. Nelson's endorsement list, including both county parties, unions and '29 of 31 Pierce County judges', is framed as campaign claims [S1]. The '7 of the 8 sitting District Court judges' line in _contest.md checks out against the courts.wa.gov directory (Buttorff, Christopher, Lineberry, McCann, Oaks, Padula and Sussman; Williams is not listed). Armstrong's JAJEC EWQ rating and his absence from the TPCBA list are reported neutrally. VoteWA citations: the Statement-field text in both records (cache data/.cache/pierce-dc78/votewa-candidate-186817-*.json; committed copy P/raw/votewa/candidate-statements/race-186817.json) matches every quoted or paraphrased claim. Examples: Nelson's Elder Abuse Multidisciplinary Team, Thurston District and Olympia Municipal pro tem courts, and the endorsement line; Armstrong's 'veteran trial attorney, Judge Pro Tempore, and Presiding Judge', 'command a fair, orderly, and efficient courtroom' and 'restore public trust'. Citing them as the candidate's own submitted statement follows the meta.json guidance. Dossier and scoring flags: (a) 'full-time' for Armstrong's Bremerton service appears in the scoring basis and the _contest.md experience bullet, but no source supports it (see verdict note). (b) The race_blurb says 'Judge Jeanette Lineberry is retiring' as fact. The only sources are Nelson's campaign and statement [S1][S2], and the court directory still lists her as sitting [S9]. Suggested wording: 'Judge Jeanette Lineberry, who is not seeking re-election to Position 8, endorses...' (supported by the two-candidate filing), or attribute 'retiring' to Nelson's campaign. (c) Minor: sven-nelson.md line 76 lists 'Elder at University Place Presbyterian Church' as a civic role. It is cited and neutral and plays no part in scoring, but a religious affiliation is irrelevant to the judicial axes and could be dropped."
+}
