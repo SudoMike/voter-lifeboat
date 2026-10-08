@@ -99,6 +99,21 @@ KCE_SOURCES = {
     },
 }
 
+# Each Supported County's elections office site, per election, carried into
+# app data as `coverage.supported_counties[].elections_url` (the results
+# footer links it). Checked live (HTTP 200) when added. Add counties as their
+# packages ship; the primary predates this field and is left without it.
+COUNTY_ELECTIONS_URLS = {
+    "2026-11-03-general": {
+        "king": "https://kingcounty.gov/en/dept/elections",
+    },
+}
+
+
+def county_elections_url(election_id: str, county_id: str) -> str | None:
+    return COUNTY_ELECTIONS_URLS.get(election_id, {}).get(county_id)
+
+
 # The election whose dossiers an election's research plan carries forward
 # (build_research_plan.py matches contest slug + candidate name).
 PREDECESSOR = {
