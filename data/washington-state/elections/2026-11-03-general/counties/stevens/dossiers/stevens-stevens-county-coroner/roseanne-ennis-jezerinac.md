@@ -40,6 +40,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?election_year=2026&jurisdiction_county=STEVENS&$limit=200
     pointer: counties/stevens/raw/stevens/pdc-stevens-2026.json.url
     accessed: 2026-10-08
+photo:
+  url: https://static.wixstatic.com/media/a0f65d_90ab485aa69d43a18d419daad67b6c2d%7Emv2.jpg/v1/fit/w_2500,h_1330,al_c/a0f65d_90ab485aa69d43a18d419daad67b6c2d%7Emv2.jpg
+  page: https://www.roseanneforcoroner.com/
+  kind: campaign-website
 ---
 
 ## Background

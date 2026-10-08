@@ -98,6 +98,10 @@ sources:
     url: https://www.voteforwes.com/copy-of-home
     pointer: counties/grays-harbor/raw/candidates/grays-harbor-grays-harbor-county-treasurer/cormier-campaign-background.html.url
     accessed: 2026-10-08
+photo:
+  url: https://static.wixstatic.com/media/11cc43_2ac8a50c0c4647338e93649d7b595512~mv2.jpg/v1/fill/w_276,h_406,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Candidate%20Picture.jpg
+  page: https://www.voteforwes.com/
+  kind: campaign-website
 ---
 
 ## Background

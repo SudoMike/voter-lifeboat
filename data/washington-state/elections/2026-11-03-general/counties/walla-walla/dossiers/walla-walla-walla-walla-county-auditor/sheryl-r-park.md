@@ -74,6 +74,10 @@ sources:
     url: https://results.votewa.gov/results/public/api/elections/walla-walla-county-wa/20260804/ballot-items
     pointer: counties/walla-walla/raw/candidates/walla-walla-walla-walla-county-auditor/votewa-2026-08-04-primary-results.json.url
     accessed: 2026-10-08
+photo:
+  url: https://www.votesherylpark.com/public/images/sheryl-portrait.jpg
+  page: https://www.votesherylpark.com/
+  kind: campaign-website
 ---
 
 ## Background

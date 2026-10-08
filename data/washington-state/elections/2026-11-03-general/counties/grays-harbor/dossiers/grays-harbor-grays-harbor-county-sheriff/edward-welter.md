@@ -97,6 +97,10 @@ sources:
     url: https://www.thedailyworld.com/2026/07/28/sheriff-wallace-walks-back-succession-plan-revelation/
     pointer: counties/grays-harbor/raw/candidates/grays-harbor-grays-harbor-county-sheriff/dw-2026-07-28-succession-plan.html.url
     accessed: 2026-10-08
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/69fa3a4eb2cce8197e0aa347/672994d2-a1fc-4713-9491-51b7b0a1d5ec/IMG_0450.jpeg
+  page: https://www.graysharborsheriff.com/
+  kind: campaign-website
 ---
 
 ## Background

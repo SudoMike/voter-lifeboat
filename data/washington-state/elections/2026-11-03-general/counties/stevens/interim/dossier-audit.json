@@ -1,0 +1,29 @@
+{
+  "script": "pipeline/verify_dossiers.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/stevens/interim/research-plan.json",
+    "data/washington-state/elections/2026-11-03-general/counties/stevens/dossiers/"
+  ],
+  "missing": [],
+  "no_frontmatter": [],
+  "invalid_evidence_levels": [],
+  "invalid_source_formats": [],
+  "evidence_levels": {
+    "rich": 1,
+    "moderate": 6,
+    "pamphlet-only": 1
+  },
+  "contest_overviews_missing": [],
+  "untouched_contests": [],
+  "untouched_measures": [],
+  "invalid_photos": [],
+  "photos": {
+    "present": 2,
+    "missing": 6
+  },
+  "researched_elsewhere": [
+    "stevens-congressional-district-5-u-s-representative -> spokane/spokane-congressional-district-5-u-s-representative",
+    "stevens-public-utility-district-no-1-of-stevens-county-commissioner-district-2-pud-commissioner -> spokane/spokane-public-utility-district-no-1-of-stevens-county-commissioner-district-2-pud-commissioner",
+    "stevens-legislative-district-7-state-senator -> spokane/spokane-legislative-district-7-state-senator"
+  ]
+}

@@ -52,6 +52,10 @@ sources:
     url: https://www.union-bulletin.com/news/local/elections/walla-walla-county-candidates-address-voters-at-aauw-forum/article_c5d8919b-cf8f-42a9-a78b-216cb74481c8.html
     pointer: counties/walla-walla/raw/candidates/walla-walla-walla-walla-county-district-court-district-court-judge-part-time/ub-2026-06-19-aauw-forum.html.url
     accessed: 2026-10-08
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/6a370f3d13a9081fd4556c34/ec9bb785-97ea-4dd3-b9e1-06de2af90c2f/_V2A7014.jpg
+  page: https://www.electjcw.org/candidate-profile
+  kind: campaign-website
 ---
 
 ## Background

@@ -82,6 +82,10 @@ sources:
     url: https://www.gcj.news/grant-county-officials-certify-aug-4-primary-election-tallies/
     pointer: counties/grant/raw/candidates/grant-grant-county-county-auditor/gcj-grant-county-officials-certify-aug-4-primary-election-tallies.url
     accessed: 2026-10-08
+photo:
+  url: https://www.votedarci.org/og-image.jpg
+  page: https://www.votedarci.org/
+  kind: campaign-website
 ---
 
 ## Background

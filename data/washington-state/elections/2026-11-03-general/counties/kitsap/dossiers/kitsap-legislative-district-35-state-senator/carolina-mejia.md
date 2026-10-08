@@ -82,6 +82,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3391797
     pointer: counties/kitsap/raw/candidates/kitsap-legislative-district-35-state-senator/pdc-mejia.url
     accessed: 2026-10-08
+photo:
+  url: https://s3.us-west-2.amazonaws.com/thurstoncountywa.gov.if-us-west-2/s3fs-public/styles/max_width_800/public/2024-03/Carolina.jpg?itok=B4z3ryIr
+  page: https://www.thurstoncountywa.gov/departments/board-county-commissioners/commissioner-district-1
+  kind: government
 ---
 
 ## Background

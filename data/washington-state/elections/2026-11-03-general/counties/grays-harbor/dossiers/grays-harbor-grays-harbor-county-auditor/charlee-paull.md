@@ -76,6 +76,10 @@ sources:
     url: https://www.thedailyworld.com/2026/07/28/sheriff-wallace-walks-back-succession-plan-revelation/
     pointer: counties/grays-harbor/raw/candidates/grays-harbor-grays-harbor-county-auditor/dw-2026-07-28-gop-forum.html.url
     accessed: 2026-10-08
+photo:
+  url: https://img1.wsimg.com/isteam/ip/f406bcf6-1a10-4944-91c9-fbf76173d9e7/1W2A3885%20(1).jpeg
+  page: https://charleeforgraysharbor.com/
+  kind: campaign-website
 ---
 
 ## Background

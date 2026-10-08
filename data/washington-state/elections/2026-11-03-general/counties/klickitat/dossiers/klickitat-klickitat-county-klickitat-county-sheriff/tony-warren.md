@@ -69,6 +69,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3382087
     pointer: counties/klickitat/raw/candidates/klickitat-klickitat-county-klickitat-county-sheriff/pdc-warren.url
     accessed: 2026-10-08
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/6933307223a7ef50eb4e441b/ba5b3517-70b5-42a0-9d4a-32b6596a0a6d/20251202_134429.jpg
+  page: https://www.tonywarrenforsheriff.com/
+  kind: campaign-website
 ---
 
 ## Background

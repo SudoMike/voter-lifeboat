@@ -47,6 +47,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3391275
     pointer: counties/kitsap/raw/candidates/kitsap-kitsap-county-prosecuting-attorney/pdc-lombardi.url
     accessed: 2026-10-08
+photo:
+  url: https://i0.wp.com/www.joeforprosecutor.com/wp-content/uploads/2026/02/DSC0982.png?fit=768%2C1152&ssl=1
+  page: https://www.joeforprosecutor.com/
+  kind: campaign-website
 ---
 
 ## Background

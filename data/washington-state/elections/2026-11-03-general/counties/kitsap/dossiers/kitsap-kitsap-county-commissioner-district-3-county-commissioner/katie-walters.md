@@ -89,6 +89,10 @@ sources:
     url: https://www.kitsapdailynews.com/2026/06/25/kitsap-considering-tax-increase-staff-layoffs-to-cut-budget-deficit/
     pointer: counties/kitsap/raw/candidates/kitsap-kitsap-county-commissioner-district-3-county-commissioner/kdn-2026-06-25-budget-deficit.url
     accessed: 2026-10-08
+photo:
+  url: https://kitsap.gov/BOC_p/PublishingImages/Walters%20full%20body%20March%202025.jpg
+  page: https://kitsap.gov/BOC_p/Pages/Dist3home.aspx
+  kind: government
 ---
 
 ## Background

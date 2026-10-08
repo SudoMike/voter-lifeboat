@@ -1,0 +1,29 @@
+{
+  "script": "pipeline/verify_dossiers.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/island/interim/research-plan.json",
+    "data/washington-state/elections/2026-11-03-general/counties/island/dossiers/"
+  ],
+  "missing": [],
+  "no_frontmatter": [],
+  "invalid_evidence_levels": [],
+  "invalid_source_formats": [],
+  "evidence_levels": {
+    "moderate": 7,
+    "rich": 5
+  },
+  "contest_overviews_missing": [],
+  "untouched_contests": [],
+  "untouched_measures": [],
+  "invalid_photos": [],
+  "photos": {
+    "present": 3,
+    "missing": 9
+  },
+  "researched_elsewhere": [
+    "island-congressional-district-2-u-s-representative -> snohomish/snohomish-congressional-district-2-u-s-representative",
+    "island-legislative-district-10-state-representative-pos-1 -> snohomish/snohomish-legislative-district-10-state-representative-pos-1",
+    "island-legislative-district-10-state-representative-pos-2 -> snohomish/snohomish-legislative-district-10-state-representative-pos-2",
+    "island-public-utility-district-no-1-commissioner-district-1 -> snohomish/snohomish-public-utility-district-no-1-commissioner-district-1"
+  ]
+}

@@ -61,6 +61,10 @@ sources:
     url: https://results.vote.wa.gov/results/20221108/graysharbor/
     pointer: counties/grays-harbor/raw/sos/results-20221108-grays-harbor.html.url
     accessed: 2026-10-08
+photo:
+  url: https://media-001-us.cdn.govstack.com/graysharbor-003-us/media/gi4cpddu/wallace-sheriff-use.jpg
+  page: https://www.graysharbor.gov/government/sheriff/
+  kind: government
 ---
 
 ## Background

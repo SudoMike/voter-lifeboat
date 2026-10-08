@@ -70,6 +70,10 @@ sources:
     url: https://klickitatcounty.gov/643/Board-of-County-Commissioners
     carried_from: data/washington-state/elections/2026-08-04-primary/counties/klickitat/dossiers/klickitat-klickitat-county-commissioner-district-2-county-commissioner-2/lori-zoller.md S2
     accessed: 2026-07-18
+photo:
+  url: https://www.klickitatcounty.gov/ImageRepository/Document?documentID=22751
+  page: https://www.klickitatcounty.gov/643/Board-of-County-Commissioners
+  kind: government
 ---
 
 ## Background

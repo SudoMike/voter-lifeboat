@@ -74,6 +74,10 @@ sources:
     url: https://results.votewa.gov/results/public/api/elections/walla-walla-county-wa/20260804/ballot-items
     pointer: counties/walla-walla/raw/candidates/walla-walla-walla-walla-county-sheriff/votewa-2026-08-04-primary-results.json.url
     accessed: 2026-10-08
+photo:
+  url: https://schramforsheriff.com/assets/schram-portrait-BCkWOiuu.jpg
+  page: https://schramforsheriff.com/
+  kind: campaign-website
 ---
 
 ## Background

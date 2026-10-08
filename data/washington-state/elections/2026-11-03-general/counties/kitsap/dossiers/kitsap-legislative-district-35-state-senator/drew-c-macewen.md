@@ -130,6 +130,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3253583
     pointer: counties/kitsap/raw/candidates/kitsap-legislative-district-35-state-senator/pdc-macewen.url
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/MemberPhoto/17221.jpg
+  page: https://leg.wa.gov/MemberPhoto/17221.jpg
+  kind: government
 ---
 
 ## Background

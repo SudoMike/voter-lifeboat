@@ -100,6 +100,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3393502
     pointer: counties/jefferson/raw/jefferson/pdc-jefferson-2026-filers.json.url
     accessed: 2026-10-08
+photo:
+  url: https://static.wixstatic.com/media/317482_f9017abc5749401eb5295e5e6e06d314~mv2.jpg
+  page: https://www.nieman4commissioner.com/
+  kind: campaign-website
 ---
 
 ## Background
