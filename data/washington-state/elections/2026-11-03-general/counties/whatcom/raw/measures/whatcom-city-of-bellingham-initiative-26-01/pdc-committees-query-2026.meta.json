@@ -1,0 +1,13 @@
+{
+  "url": "https://data.wa.gov/resource/3h9x-7bvm.json?$where=election_year=2026 AND (upper(filer_name) like '%COMMUNITY FIRST%' OR upper(filer_name) like '%LYNDEN%' OR upper(filer_name) like '%FIRE%' OR upper(filer_name) like '%PRICE%' OR upper(filer_name) like '%RENT%' OR upper(jurisdiction) like '%BELLINGHAM%' OR upper(jurisdiction) like '%LYNDEN%' OR upper(jurisdiction) like '%WHATCOM%')&$limit=500",
+  "retrieved_at": "2026-10-08",
+  "method": "curl -sL -A \"Mozilla/5.0 ...\" during Whatcom dossier research for issue #28; cached verbatim at data/.cache/whatcom/whatcom-city-of-bellingham-initiative-26-01/pdc-2026-whatcom-measures.json",
+  "stage": "raw",
+  "source_type": "pdc",
+  "tier": 1,
+  "outlet": "Washington Public Disclosure Commission (data.wa.gov)",
+  "cache_file": "data/.cache/whatcom/whatcom-city-of-bellingham-initiative-26-01/pdc-2026-whatcom-measures.json",
+  "bytes": 98932,
+  "sha256": "b85477f42a77a808f6ae5c06f98f2569f375edc8a373d8aea9d5f38a1153d6f8",
+  "notes": "PDC campaign finance summary, 2026 filers whose name mentions Community First, Lynden, fire, price or rent, or whose jurisdiction is Bellingham, Lynden or Whatcom County (74 rows)."
+}

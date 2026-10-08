@@ -1,0 +1,151 @@
+{
+  "county": "whatcom",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/whatcom/raw/votewa/candidate-list.csv.url",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7295&e=899&la=en&c=37",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7297&e=899&la=en&c=37",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7298&e=899&la=en&c=37",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7299&e=899&la=en&c=37",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7300&e=899&la=en&c=37"
+  ],
+  "coverage": "full_county",
+  "notes": [],
+  "measures": [
+    {
+      "slug": "whatcom-city-of-bellingham-proposition-2026-06",
+      "owner": "whatcom",
+      "jurisdiction": "City of Bellingham",
+      "proposition": "Proposition 2026-06",
+      "title": "Authorizing the City's Salary Commission to Set the Mayor's Salary",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whatcom",
+        "layer": "CITY",
+        "value": "Bellingham"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Charter amendment: removes the rule that the mayor's salary is never less than the highest-paid city official or employee, and has the city's independent salary commission set it.",
+      "cost_line": "No tax or fee; changes how the mayor's salary is set.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7295&e=899&la=en&c=37"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whatcom-city-of-bellingham-proposition-2026-07",
+      "owner": "whatcom",
+      "jurisdiction": "City of Bellingham",
+      "proposition": "Proposition 2026-07",
+      "title": "Streamlining the City's Contract Review Process to Allow Electronic Signatures",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whatcom",
+        "layer": "CITY",
+        "value": "Bellingham"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Charter amendment: lets the mayor's designee sign city contracts, allows electronic signatures, and drops the finance director's attestation and seal.",
+      "cost_line": "No tax or fee; changes how city contracts are signed.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7297&e=899&la=en&c=37"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whatcom-city-of-bellingham-initiative-26-01",
+      "owner": "whatcom",
+      "jurisdiction": "City of Bellingham",
+      "proposition": "Initiative 26-01",
+      "title": "Prohibition of Algorithmic Price-Fixing in the Rental Market",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whatcom",
+        "layer": "CITY",
+        "value": "Bellingham"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Citizen initiative: bans landlord rent-setting agreements and paid algorithmic services that recommend rents or terms to multiple landlords, with a private right of action, tenant and employee anti-retaliation protections, and civil and criminal penalties.",
+      "cost_line": "No tax or fee; enforcement by the City Attorney and private lawsuits.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7298&e=899&la=en&c=37"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whatcom-city-of-lynden-proposition-2026-05",
+      "owner": "whatcom",
+      "jurisdiction": "City of Lynden",
+      "proposition": "Proposition 2026-05",
+      "title": "Levy Lid Lift for Public Safety and Essential Community Services",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whatcom",
+        "layer": "CITY",
+        "value": "Lynden"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Lifts Lynden's regular property tax levy for police, fire, streets, parks, the Community/Senior Center, restored staff positions and Friday City Hall hours, with 3% annual increases for 2027-2035.",
+      "cost_line": "Up to $1.54304 per $1,000 of assessed value for 2027 collection, $0.50 per $1,000 more than the 2025 levy rate.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7299&e=899&la=en&c=37"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whatcom-whatcom-county-fire-protection-district-no-1-proposition-2026-08",
+      "owner": "whatcom",
+      "jurisdiction": "Whatcom County Fire Protection District No. 1",
+      "proposition": "Proposition 2026-08",
+      "title": "Regular Property Tax Levy Lid Lift",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whatcom",
+        "layer": "FIRDST",
+        "value": "1"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Resets the fire district's regular levy for fire and EMS (Everson/Nooksack area) with a 106% limit factor for the following nine years.",
+      "cost_line": "Up to $1.48 per $1,000 of assessed value for 2027 collection; the district says its current rate is $1.12.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7300&e=899&la=en&c=37"
+          ]
+        }
+      }
+    }
+  ]
+}
