@@ -15,9 +15,10 @@ active election, so every ballot context also gets the statewide contests.
 ## How it fits together
 
 ```
-data/washington-state/statewide/      state-level sources, dossiers, scores
-data/washington-state/counties/*/     one local package per WA county
-data/final/                           generated app data
+data/washington-state/elections/<id>/statewide/   state-level sources, dossiers, scores
+data/washington-state/elections/<id>/counties/*/  one local package per WA county
+data/washington-state/elections/ACTIVE            id of the Active Election
+data/final/<id>/                      generated app data (plus elections.json index)
 pipeline/                             package parsing, scoring merge, assembly
 app/                                  Vite + React SPA + zero-dep server.js
 design-mockup/                        the "Harbor" design system
@@ -46,13 +47,15 @@ npm test
 node server.js          # feedback + geocode proxy; serves dist/ after `npm run build`
 ```
 
-Rebuilding data:
+Rebuilding data (each script takes `--election <id>`; the default is the id in
+`data/washington-state/elections/ACTIVE`):
 
 ```bash
 python3 pipeline/build_votewa_lite_data.py   # most counties, from VoteWA CSV exports
 python3 pipeline/merge_scores.py
-python3 pipeline/assemble_app_data.py
+python3 pipeline/assemble_app_data.py        # also rewrites app/public/data/elections.json
 python3 pipeline/validate_scoring.py         # sanity-check the merged data
+python3 -m unittest discover -s pipeline -p "test_*.py"
 ```
 
 King and the six original counties (clark, kitsap, pierce, snohomish, spokane,
@@ -65,5 +68,6 @@ The repo ships a `Dockerfile` that builds the SPA and runs `server.js` on
 `:5000`; feedback and anonymous report JSONL files land on the persistent
 `/app/data` mount.
 
-Data corrections: edit package dossiers/scoring under `data/washington-state/`,
+Data corrections: edit package dossiers/scoring under
+`data/washington-state/elections/<id>/`,
 then re-run `pipeline/merge_scores.py` and `pipeline/assemble_app_data.py`.
