@@ -1475,6 +1475,44 @@ ELECTION_MEASURES = {
                 "scoped PUDDST '1' (WA DOR PUD2025, layer 17, DISTATTRIB '1'), which COUNTY_LAYERS.lewis reads.",
             ],
         },
+        # Lincoln (#32): checked against the Lincoln County Auditor's general
+        # sample ballot and Local Voters' Pamphlet (counties/lincoln/raw/lincoln/
+        # {sample-ballot,local-voters-pamphlet}.pdf.url, linked from
+        # lincolncountywa.com/312/Current-Future-Elections) and VoteWA's online
+        # guide for county 22 (raw/votewa/voter-guide/guide.json.url): the same
+        # 12 non-Supreme-Court races as the candidate list and no local measure.
+        # The pamphlet's contents list (p. 2) has county offices and the District
+        # Court only, the sample ballot has no "Local Issues" section, and the
+        # guide's Measures category holds only the three statewide initiatives.
+        # (The primary's sample ballot, a county-wide composite, did print the
+        # Sprague-only Cemetery District 7 levy under "Local Issues".)
+        # Overrides: Lincoln is a non-charter county under 400,000, so its
+        # commissioners are nominated by district (RCW 36.32.040) and elected by
+        # the voters of the whole county (RCW 36.32.050(1)). VoteWA's general
+        # export lists the race as 'Countywide'; the SOS precinct exports show
+        # the 2022 District No. 3 general race and the 2020 and 2024 District
+        # No. 1 and 2 races on all 46 precincts, while the 2026 primary's
+        # District No. 3 race reported 16 of 46 units (raw/lincoln/). It keeps
+        # the primary's contest name so its slug matches. The District Court is
+        # one county-wide court with one judge (2022 SOS export: all 46
+        # precincts).
+        "lincoln": {
+            "overrides": {
+                ("COUNTY", "COUNTY COMMISSIONER DISTRICT NO. 3"): (
+                    "County", "Lincoln County Commissioner District 3", "County Commissioner District No. 3",
+                    ("COUNTY", None)),
+                ("COUNTY", "DISTRICT COURT JUDGE"): (
+                    "Judicial", "Lincoln County District Court", "District Court Judge", ("COUNTY", None)),
+            },
+            "measures": [],
+            "extra_notes": [
+                "No local measures on Lincoln County's November 3, 2026 general ballot: the Auditor's sample ballot and "
+                "Local Voters' Pamphlet (https://www.lincolncountywa.com/312/Current-Future-Elections) and VoteWA's online "
+                "guide for the county (https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=22) list none.",
+                "Lincoln County Commissioner District 3 is nominated by district and elected county-wide in the general "
+                "(RCW 36.32.040, RCW 36.32.050(1)); it is scoped COUNTY.",
+            ],
+        },
         # Mason (#30): checked against the Mason County Auditor's Local Voters'
         # Pamphlet (counties/mason/raw/mason/local-voters-pamphlet.pdf.url, which
         # "contains all races and measures throughout Mason County", pp. 10-30)
