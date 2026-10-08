@@ -20,6 +20,8 @@ derived_from:
   - data/washington-state/elections/2026-11-03-general/counties/king/raw/candidates/rebecca-salda-a/data-wa-gov-a340aa6e.url
   - data/washington-state/elections/2026-11-03-general/counties/king/raw/candidates/rebecca-salda-a/data-wa-gov-60987d51.url
   - data/washington-state/elections/2026-11-03-general/counties/king/raw/candidates/rebecca-salda-a/cdn-kingcounty-gov-89ef4897.url
+  - data/washington-state/elections/2026-11-03-general/counties/king/raw/candidates/rebecca-salda-a/no645-com-d4398028.url
+  - data/washington-state/elections/2026-11-03-general/counties/king/raw/candidates/rebecca-salda-a/nohateinwastate-org-24460aca.url
 sources:
   - id: S1
     tier: 1
@@ -96,6 +98,18 @@ sources:
     outlet: King County Elections, August 4, 2026 primary final results (certified August 18, 2026)
     url: https://cdn.kingcounty.gov/-/media/king-county/depts/elections/results/2026/08/webresults-20260818-final.csv
     accessed: 2026-10-08
+  - id: S14
+    tier: 2
+    type: endorsement
+    outlet: Vote No on Initiative 645 campaign, "Our Coalition" page (Elected Leaders list)
+    url: https://no645.com/our-coalition
+    accessed: 2026-10-08
+  - id: S15
+    tier: 2
+    type: endorsement
+    outlet: NO HATE in WA State, endorsement page ("Elected Officials and Candidates Opposing I-001 & I-638")
+    url: https://nohateinwastate.org/endorse
+    accessed: 2026-10-08
 ---
 
 ## Background
@@ -143,9 +157,9 @@ District 2 is open. Former Councilmember Girmay Zahilay became King County Execu
 
 ## Positions on the 2026 initiatives
 
-- **I-645 (repeal of the income tax on income over $1 million):** At the July 23 forum, asked about the county's $150 million general-fund shortfall, she "said she would push to defeat ballot initiatives she said would undercut a wealth tax" (Northwest Asian Weekly's paraphrase; the article does not name the initiatives) [S7]. She was a sponsor of and voted for the tax I-645 would repeal [S4][S5]. No statement naming I-645 found as of 2026-10-08.
-- **I-1 (IL26-001, parental rights in schools):** No public position found as of 2026-10-08. She voted for ESHB 1296, the 2025 law whose rewrite of the parents' rights statute I-1 would repeal [S6].
-- **I-638 (IL26-638, girls' sports eligibility):** No public position found as of 2026-10-08.
+- **I-645 (repeal of the income tax on income over $1 million):** At the July 23 forum, asked about the county's $150 million general-fund shortfall, she "said she would push to defeat ballot initiatives she said would undercut a wealth tax" (Northwest Asian Weekly's paraphrase; the article does not name the initiatives) [S7]. She was a sponsor of and voted for the tax I-645 would repeal [S4][S5]. The No on 645 campaign lists her ("State Senator, LD 37") among its elected leaders [S14]. No statement of her own naming I-645 found as of 2026-10-08.
+- **I-1 (IL26-001, parental rights in schools):** Listed ("State Senator 37th LD, Candidate for King County Council District 2") on the NO HATE in WA State page of elected officials and candidates opposing I-001 and I-638 [S15]. No statement of her own found as of 2026-10-08. She voted for ESHB 1296, the 2025 law whose rewrite of the parents' rights statute I-1 would repeal [S6].
+- **I-638 (IL26-638, girls' sports eligibility):** Listed as opposing I-638 on the same NO HATE in WA State page [S15]. No statement of her own found as of 2026-10-08.
 
 ## Endorsements
 

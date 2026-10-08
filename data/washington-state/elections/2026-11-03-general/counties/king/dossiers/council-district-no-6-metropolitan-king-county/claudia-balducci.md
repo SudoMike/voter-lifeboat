@@ -11,6 +11,8 @@ derived_from:
   - data/washington-state/elections/2026-11-03-general/counties/king/raw/candidates/claudia-balducci/kingcounty-gov-13af75a2.url
   - data/washington-state/elections/2026-11-03-general/counties/king/raw/candidates/claudia-balducci/data-wa-gov-c9873f65.url
   - data/washington-state/elections/2026-11-03-general/counties/king/raw/candidates/claudia-balducci/no645-com-d4398028.url
+  - data/washington-state/elections/2026-11-03-general/counties/king/raw/candidates/claudia-balducci/webapi-legistar-com-449d2c1c.url
+  - data/washington-state/elections/2026-11-03-general/counties/king/raw/candidates/claudia-balducci/app-leg-wa-gov-aedfc579.url
 sources:
   - id: S1
     tier: 1
@@ -34,6 +36,19 @@ sources:
     outlet: Vote No on Initiative 645 campaign, "Our Coalition" page (Elected Leaders list)
     url: https://no645.com/our-coalition
     accessed: 2026-10-08
+  - id: S5
+    tier: 1
+    type: official-record
+    outlet: King County Council, Proposed Ordinance 2026-0086 (enacted as Ordinance 20142), legislative history and Oct. 6, 2026 roll call (Legistar)
+    url: https://webapi.legistar.com/v1/kingcounty/eventitems/343813/votes
+    accessed: 2026-10-08
+    note: minutes at https://webapi.legistar.com/v1/kingcounty/events/12800/eventitems?MinutesNote=1 (item 343813); sponsors at https://webapi.legistar.com/v1/kingcounty/matters/26465/sponsors
+  - id: S6
+    tier: 1
+    type: official-record
+    outlet: RCW 82.14.542, sales and use tax for additional services assisting children and their families (effective Jan. 1, 2027)
+    url: https://app.leg.wa.gov/RCW/default.aspx?cite=82.14.542
+    accessed: 2026-10-08
 ---
 
 ## Background
@@ -55,6 +70,7 @@ Her general-election pamphlet statement:
 - Proposed the early opening of the Eastside 2 Line "starter line" and championed Vision Zero policies [S2].
 - Chairs the Regional Water Quality Committee [S2].
 - The county's page credits her "Doors Open" legislation with nearly $800 million for arts, science and heritage programs, and her work implementing the Puget Sound Taxpayer Accountability Account for education [S2].
+- Oct. 6, 2026: voted yes on Ordinance 2026-0086 (enacted as Ordinance 20142), which imposes the 0.01 percent sales and use tax authorized by RCW 82.14.542 for services for children and families, including child care, shelter and rental assistance. It passed 6-3 (Dunn, Perry and von Reichbauer voting no); a Dunn amendment to the striking amendment failed 2-7 [S5][S6].
 
 ## Endorsements
 

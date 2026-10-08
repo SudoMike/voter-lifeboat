@@ -20,6 +20,8 @@ derived_from:
   - data/washington-state/elections/2026-11-03-general/counties/king/raw/candidates/toshiko-grace-hasegawa/data-wa-gov-991955d0.url
   - data/washington-state/elections/2026-11-03-general/counties/king/raw/candidates/toshiko-grace-hasegawa/cdn-kingcounty-gov-89ef4897.url
   - data/washington-state/elections/2026-11-03-general/counties/king/raw/candidates/toshiko-grace-hasegawa/data-wa-gov-1aa993b8.url
+  - data/washington-state/elections/2026-11-03-general/counties/king/raw/candidates/toshiko-grace-hasegawa/no645-com-d4398028.url
+  - data/washington-state/elections/2026-11-03-general/counties/king/raw/candidates/toshiko-grace-hasegawa/nohateinwastate-org-24460aca.url
 sources:
   - id: S1
     tier: 1
@@ -94,6 +96,18 @@ sources:
     outlet: PDC campaign finance summary (data.wa.gov 3h9x-7bvm), 2025 Port Commissioner Position 4 candidacy
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2025-567437
     accessed: 2026-10-08
+  - id: S14
+    tier: 2
+    type: endorsement
+    outlet: Vote No on Initiative 645 campaign, "Our Coalition" page (Elected Leaders list)
+    url: https://no645.com/our-coalition
+    accessed: 2026-10-08
+  - id: S15
+    tier: 2
+    type: endorsement
+    outlet: NO HATE in WA State, endorsement page ("Elected Officials and Candidates Opposing I-001 & I-638")
+    url: https://nohateinwastate.org/endorse
+    accessed: 2026-10-08
 ---
 
 ## Background
@@ -146,9 +160,9 @@ District 2 is open after Girmay Zahilay became County Executive; interim Council
 
 ## Positions on the 2026 initiatives
 
-- **I-645 (repeal of the income tax on income over $1 million):** No public position found as of 2026-10-08. Her platform supports "high-earner excise taxes" at the county level [S4].
-- **I-1 (IL26-001, parental rights in schools):** No public position found as of 2026-10-08.
-- **I-638 (IL26-638, girls' sports eligibility):** No public position found as of 2026-10-08.
+- **I-645 (repeal of the income tax on income over $1 million):** The No on 645 campaign lists her ("Port of Seattle Commission") among its elected leaders [S14]. No statement of her own found as of 2026-10-08. Her platform supports "high-earner excise taxes" at the county level [S4].
+- **I-1 (IL26-001, parental rights in schools):** Listed ("Port of Seattle Commissioner, Candidate for King County Council District 2") on the NO HATE in WA State page of elected officials and candidates opposing I-001 and I-638 [S15]. No statement of her own found as of 2026-10-08.
+- **I-638 (IL26-638, girls' sports eligibility):** Listed as opposing I-638 on the same NO HATE in WA State page [S15]. No statement of her own found as of 2026-10-08.
 
 ## Endorsements
 

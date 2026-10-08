@@ -25,6 +25,8 @@ derived_from:
   - data/washington-state/elections/2026-11-03-general/counties/king/raw/candidates/teresa-mosqueda/vashonbeachcomber-com-352e55dc.url
   - data/washington-state/elections/2026-11-03-general/counties/king/raw/candidates/teresa-mosqueda/vashonbeachcomber-com-2b8eeb46.url
   - data/washington-state/elections/2026-11-03-general/counties/king/raw/candidates/teresa-mosqueda/publicola-com-a50e7b12.url
+  - data/washington-state/elections/2026-11-03-general/counties/king/raw/candidates/teresa-mosqueda/webapi-legistar-com-449d2c1c.url
+  - data/washington-state/elections/2026-11-03-general/counties/king/raw/candidates/teresa-mosqueda/app-leg-wa-gov-aedfc579.url
 sources:
   - id: S1
     tier: 1
@@ -129,6 +131,19 @@ sources:
     outlet: PubliCola (Josh Feit, Aug. 17, 2026)
     url: https://publicola.com/2026/08/17/greater-seattle-junk-fees-recalling-wilson-and-ron-davis-post-election-fixation/
     accessed: 2026-10-08
+  - id: S19
+    tier: 1
+    type: official-record
+    outlet: King County Council, Proposed Ordinance 2026-0086 (enacted as Ordinance 20142), legislative history and Oct. 6, 2026 roll call (Legistar)
+    url: https://webapi.legistar.com/v1/kingcounty/eventitems/343813/votes
+    accessed: 2026-10-08
+    note: minutes at https://webapi.legistar.com/v1/kingcounty/events/12800/eventitems?MinutesNote=1 (item 343813); sponsors at https://webapi.legistar.com/v1/kingcounty/matters/26465/sponsors
+  - id: S20
+    tier: 1
+    type: official-record
+    outlet: RCW 82.14.542, sales and use tax for additional services assisting children and their families (effective Jan. 1, 2027)
+    url: https://app.leg.wa.gov/RCW/default.aspx?cite=82.14.542
+    accessed: 2026-10-08
 ---
 
 ## Background
@@ -176,6 +191,7 @@ Teresa Mosqueda is the incumbent Metropolitan King County Councilmember for Dist
   - Co-sponsored the ordinance for the county council to assume governance of the King County transportation district (introduced Sept. 1, 2026) [S10].
   - Sponsored a motion approving the 2025 mental illness and drug dependency (MIDD) annual report (introduced Oct. 6, 2026) [S10].
   - As Board of Health chair, convened the Sept. 17 hearing on HR1 Medicaid cuts [S5].
+  - Oct. 6, 2026: voted yes on Ordinance 2026-0086 (enacted as Ordinance 20142), which imposes the 0.01 percent sales and use tax authorized by RCW 82.14.542 for services for children and families, including child care, shelter and rental assistance. It passed 6-3 (Dunn, Perry and von Reichbauer voting no); a Dunn amendment to the striking amendment failed 2-7 [S19][S20].
   - Her 2026 press releases since July cover Sound Transit's Ballard timeline, flood-reduction grants, habitat restoration in District 8, and Welcoming Week [S4].
 - **Earlier record (from the primary dossier):** sponsored the county ban on rent price-fixing algorithms (September 2025); procurement labor-standards legislation (May 2025); housing impact-fee legislation (August 2025); co-sponsored Strategic Climate Action Plan updates (October 2025). On the Seattle City Council she led the JumpStart payroll tax [S2].
 
