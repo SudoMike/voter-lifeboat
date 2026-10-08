@@ -315,6 +315,10 @@ COUNTY_ELECTIONS_URLS = {
         # the page that links the general's local voters' pamphlet and sample
         # ballot; the package's raw/asotin/current-election.html.url).
         "asotin": "https://www.asotincountywa.gov/186/Current-Election",
+        # Adams County Auditor, Elections/Elecciones (200 text/html, "Elections
+        # | Adams County, WA", 2026-10-08; the page that links the general's
+        # sample ballot; the package's raw/adams/elections-page.html.url).
+        "adams": "https://www.co.adams.wa.gov/162/Elections-Elecciones",
     },
 }
 
