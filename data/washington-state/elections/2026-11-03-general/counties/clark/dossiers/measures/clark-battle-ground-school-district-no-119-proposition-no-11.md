@@ -61,9 +61,9 @@ The ballot title says Proposition No. 11 would authorize the district "to levy t
 - The statement against says a home assessed at $650,000 would pay about $1,144 a year [S1].
 
 ## Fiscal mechanics / What it replaces
-- The district's previous EP&O levy expired at the end of 2025 [S1][S5].
-- In April 2025 the district asked for a four-year replacement levy at an estimated $1.95 per $1,000 ($38.3 million in 2026 rising to $44.975 million in 2029) [S5]; it failed, 49.05% yes [S6]. A February 2025 district proposition (No. 8) also failed, 49.85% yes [S7].
-- The statement against says the levy "has failed 3 times in the last 2 years" and that "the last failure had asked for $189,510,000" [S1]. This research did not locate the third result.
+- The district's previous EP&O levy expired at the end of 2025 [S1][S4].
+- In April 2025 the district asked for a four-year replacement levy at an estimated $1.95 per $1,000 ($38.3 million in 2026 rising to $44.975 million in 2029) [S4]; it failed, 49.05% yes [S5]. That proposal's statement against said the expiring four-year levy "will have collected $115,700,000" and the new one would collect $166,275,000 [S4]. A February 2025 district proposition (No. 8) also failed, 49.85% yes [S6].
+- The statement against says the levy "has failed 3 times in the last 2 years" and that "the last failure had asked for $189,510,000" [S1]. The $189,510,000 figure does not match the April 2025 request ($166,275,000 over four years [S4]); this research did not locate the third failure or the measure that figure describes.
 - The statement in favor says that if the levy fails "the district is at risk of undergoing financial oversight, giving the state control over all financial decisions" [S1].
 
 ## Arguments for

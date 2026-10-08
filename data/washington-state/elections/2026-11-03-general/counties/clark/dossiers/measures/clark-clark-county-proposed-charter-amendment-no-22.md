@@ -51,7 +51,7 @@ No tax or rate in the ballot title; no fiscal statement was published [S1][S2]. 
 The statement in favor (Cathie Garber, chair; Jennifer Wendel; Dorothy Gasque) says [S1]:
 - City, fire-district and school-board races already skip the primary with one or two candidates; state law does the same for nonpartisan races.
 - "In 2021, more than 64% of voters chose to make all county offices nonpartisan," but every county candidate still appears on the primary ballot.
-- Five races on the August 2026 primary ballot had two or fewer candidates.
+- "Five races on your current ballot had two or fewer candidates file but still appeared on the primary ballot."
 
 ## Arguments against
 The statement against (Ann Donnelly, chair; Peter Silliman; Liz Cline) says [S1]:

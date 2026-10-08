@@ -127,13 +127,13 @@ GENERAL_MEASURES = {"2026-11-03-general": {
         _charter(27, "Concerning Legislative Branch Performance Audits", [80, 81],
                  "The Clark County Charter Review Commission adopted Resolution No. 26-14 proposing an amendment to the Clark County Home Rule Charter, concerning legislative branch performance audits. If approved, the amendment would permit the County Council to conduct, or cause to be conducted, performance and program audits to review the effectiveness and efficiency of the programs and operations of the County. Also, if approved, this amendment would require the County Council to establish by ordinance within the legislative branch an independent county auditing process.",
                  "Peter Silliman, Liz Cline and Ann Donnelly: the body that approves department budgets should be able to commission performance audits, as other charter counties allow.",
-                 "John Latta, Dijana Katan and Janet Landesberg: councilors and residents can already request audits and the State Auditor reviews for free; outside audits would add at least $100,000 a year."),
+                 "John Latta, Dijana Katan and Janet Landesberg: councilors and residents can already request audits and the State Auditor reviews for free; the measure's fiscal analysis says it could cost at least $100,000 more a year."),
         # 7342
         general_measure("Clark County", "Proposition No. 12", "Bonds for Public Safety and Criminal Justice Capital Infrastructure",
                         _COUNTY, [82],
                         "The Clark County Council adopted Resolution 2026-07-08, concerning public safety and criminal justice infrastructure. This proposition would allow Clark County to acquire, construct, remodel, and equip public safety and criminal justice infrastructure in Clark County, including the remodel and expansion of the Clark County Jail and courtrooms and a new or remodeled Sheriff's Office Headquarters; issue no more than $366,204,000 of general obligation bonds maturing within 31 years; and levy annual excess property taxes on all taxable property within Clark County to pay the bonds, pursuant to Resolution 2026-07-08.",
                         "Up to $366,204,000 in general obligation bonds maturing within 31 years, repaid by annual excess property taxes countywide; the statement for puts the cost at about $86 a year per median home.",
-                        "Ann Donnelly, Sue Marshall and John Horch: the 40-year-old jail is overcrowded and unsafe; expansion would add treatment and reentry space and cut the cost of housing inmates elsewhere.",
+                        "Ann Donnelly, Sue Marshall and John Horch: the jail, built more than 40 years ago, is overcrowded and unsafe; expansion would add treatment and reentry space and cut the cost of housing inmates elsewhere.",
                         _NO_CON),
         # 7344
         general_measure("Clark County", "Proposition No. 13", "Levy Lid Lift for Public Safety and Criminal Justice Services",
@@ -149,7 +149,7 @@ GENERAL_MEASURES = {"2026-11-03-general": {
                         ("SCHDST", "119"), [86, 87],
                         "The Board of Directors of Battle Ground School District No. 119 adopted Resolution No. I-26, concerning funding for student safety, academic support, educational programs and operations. If approved, this proposition would authorize the District to levy the following excess taxes, replacing an expired levy, on all taxable property within the District for programs not funded by the State, including student safety, smaller classes, special education, reading and math support, curriculum, student activities, and preparing students for postsecondary education, employment, or military: 2027, estimated $1.76 per $1,000 assessed value, $37,025,000; 2028, $1.76, $38,690,000; 2029, $1.76, $40,430,000; as provided in Resolution No. I-26.",
                         "Estimated $1.76 per $1,000 of assessed value: $37,025,000 (2027), $38,690,000 (2028), $40,430,000 (2029).",
-                        "Terry Dotson and Sabrena Worthy: replaces the levy that expired in 2025 at a lower amount the community asked for; failure risks state financial oversight.",
+                        "Terry Dotson and Sabrena Worthy: replaces the levy that expired in 2025, lowering the amount from the failed proposals as the community asked; failure risks state financial oversight.",
                         "Richard Rylander: the fourth attempt after three failures; about $1,144 a year on a $650,000 home, with no line-item commitment on how the general-fund money is spent."),
     ],
 }}
