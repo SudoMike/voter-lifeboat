@@ -18,6 +18,7 @@ import {
   interviewItemsForBallot,
 } from './lib/scoring.js'
 import { readHash, clearHash } from './lib/codec.js'
+import { reconcileContext } from './lib/compare.js'
 import { ElectionNotFound, electionIdFromPath, loadElection } from './lib/elections.js'
 
 const BASE = import.meta.env.BASE_URL
@@ -77,7 +78,9 @@ export default function App() {
     if (!data) return
     const p = readHash()
     if (p) {
-      setBallotContext(p.context)
+      // A link made on another election's page (the archived comparison) may
+      // carry a context this election's coverage reads differently.
+      setBallotContext(reconcileContext(p.context, data))
       setAnswers(p.answers)
       setRestored(p)
       setStage('results')
@@ -199,6 +202,8 @@ export default function App() {
           <Results
             data={data}
             election={site.election}
+            index={site.index}
+            base={BASE}
             ballotContext={ballotContext}
             answers={answers}
             restored={restored}

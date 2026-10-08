@@ -20,6 +20,13 @@ import {
   pamphletLink,
 } from '../lib/officialLinks.js'
 import { shortDay } from '../lib/elections.js'
+import {
+  answersInRubric,
+  comparisonHref,
+  comparisonLinkText,
+  comparisonNote,
+  comparisonTarget,
+} from '../lib/compare.js'
 import { copyText } from '../lib/clipboard.js'
 import { postReport, shouldRecordReport } from '../lib/reports.js'
 import GitHubLink from './GitHubLink.jsx'
@@ -645,7 +652,12 @@ function Footer({ data, county, archived }) {
   )
 }
 
-export default function Results({ data, election, ballotContext, answers, restored, onStartOver }) {
+export default function Results({ data, election, index, base, ballotContext, answers, restored, onStartOver }) {
+  // Scoring and the brief use only axes this election's rubric defines; a
+  // link from another election can carry more (see compare.js). The link
+  // written back to the address bar keeps every answer.
+  const scored = useMemo(() => answersInRubric(answers, data), [answers, data])
+  const fromElectionId = restored?.fromElectionId
   const contests = useMemo(
     () => contestsOnBallot(data, ballotContext, scopeMatches),
     [data, ballotContext]
@@ -659,8 +671,8 @@ export default function Results({ data, election, ballotContext, answers, restor
 
   // Auto-update the address bar so the report is bookmarkable/sharable.
   useEffect(() => {
-    setShareUrl(writeHash(data, ballotContext, answers))
-  }, [data, ballotContext, answers])
+    setShareUrl(writeHash(data, ballotContext, answers, { from: fromElectionId }))
+  }, [data, ballotContext, answers, fromElectionId])
 
   // Record fresh completions in the public dataset — once, never for reports
   // someone else shared, and never for an archived election (see reports.js).
@@ -685,6 +697,8 @@ export default function Results({ data, election, ballotContext, answers, restor
     ((restored.dataVersion && restored.dataVersion !== data.data_version) ||
       (restored.electionId && restored.electionId !== data.election?.id))
   const archived = election?.status === 'archived'
+  const compareTo = comparisonTarget({ index, election, context: ballotContext, restored })
+  const compareNote = comparisonNote(data, answers, fromElectionId)
   const { resultsNote } = electionGuide(data.election)
   const coverageLabel =
     ballotContext.coverageStatus === 'statewide_only'
@@ -711,6 +725,13 @@ export default function Results({ data, election, ballotContext, answers, restor
             start over
           </button>
         </div>
+        {compareTo && (
+          <p className="compare-link" style={{ margin: '8px 0 0', fontSize: 12.5, fontWeight: 700 }}>
+            <a href={comparisonHref(base, compareTo, data.election?.id, ballotContext, answers)}>
+              {comparisonLinkText(compareTo)}
+            </a>
+          </p>
+        )}
         {!archived && data.election?.day && (
           <p className="return-by" style={{ margin: '8px 0 0', fontSize: 12.5, fontWeight: 700 }}>
             Return your ballot by 8 p.m. {shortDay(data.election.day)} — drop box locator:{' '}
@@ -735,7 +756,19 @@ export default function Results({ data, election, ballotContext, answers, restor
             and other local contests are not included.
           </div>
         )}
-        {ballotContext.coverageStatus === 'partial_county' && (
+        {compareNote && (
+          <p className="note compare-note" style={{ margin: '8px 0 0', fontSize: 12 }}>
+            {compareNote}
+          </p>
+        )}
+        {ballotContext.coverageStatus === 'partial_county' && ballotContext.districtsNotLookedUp && (
+          <div className="banner-tcc" style={{ marginTop: 10 }}>
+            Partial county guide: your districts were not looked up for this
+            election, so only statewide and countywide contests are shown. Start over and enter your address to see this
+            election's district contests.
+          </div>
+        )}
+        {ballotContext.coverageStatus === 'partial_county' && !ballotContext.districtsNotLookedUp && (
           <div className="banner-tcc" style={{ marginTop: 10 }}>
             Partial county guide: some local ballot items are not covered or
             could not be matched to your address, so local contests may be
@@ -747,7 +780,7 @@ export default function Results({ data, election, ballotContext, answers, restor
         )}
       </header>
 
-      <BriefSection data={data} context={ballotContext} answers={answers} contests={contests} measures={measures} shareUrl={shareUrl} />
+      <BriefSection data={data} context={ballotContext} answers={scored} contests={contests} measures={measures} shareUrl={shareUrl} />
 
       <div style={{ margin: '32px 24px 0' }}>
         <h2 className="display" style={{ fontSize: 25, margin: 0 }}>Report</h2>
@@ -762,14 +795,14 @@ export default function Results({ data, election, ballotContext, answers, restor
       </div>
 
       {contests.map((c) => (
-        <ContestCard key={c.slug} data={data} contest={c} answers={answers} />
+        <ContestCard key={c.slug} data={data} contest={c} answers={scored} />
       ))}
 
       {measures.length > 0 && (
         <>
           <h2 className="display" style={{ fontSize: 19, margin: '22px 24px 0' }}>Measures</h2>
           {measures.map((m) => (
-            <MeasureCard key={m.slug} data={data} measure={m} answers={answers} />
+            <MeasureCard key={m.slug} data={data} measure={m} answers={scored} />
           ))}
         </>
       )}
