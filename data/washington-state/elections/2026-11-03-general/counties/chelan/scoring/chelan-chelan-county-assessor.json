@@ -1,0 +1,63 @@
+{
+  "contest_slug": "chelan-chelan-county-assessor",
+  "scored_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/chelan/dossiers/chelan-chelan-county-assessor/"
+  ],
+  "office_does": "The assessor values all taxable real and personal property in Chelan County and runs the property tax exemption programs. The assessor does not set tax rates.",
+  "race_blurb": "Appointed in 2023 and elected that November, Assessor Wes Cornelius faces real estate broker Britini Port, who led the primary 53% to 47%. Port says high-value properties are under-assessed and modest homes over-assessed. Cornelius's campaign disputes her data and points to his 19 years in the office and his work on exemptions for seniors, disabled residents and veterans.",
+  "candidates": [
+    {
+      "slug": "britini-port",
+      "summary": "Real estate broker and first-time candidate, running on a claim that luxury, second-home and corporate properties are under-assessed while modest homes are over-assessed.",
+      "highlights": [
+        "Says high-value properties are assessed below market while working-class homes are assessed at or above it [S1]",
+        "Says she is not seeking higher taxes but 'accurate' ones [S5]",
+        "Pledges published methodology, tiered sale-to-assessment ratio reports and per-parcel valuation worksheets [S7]",
+        "Would promote senior, disabled-veteran and fixed-income exemptions and deferrals [S1][S7]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "experience": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S5"],
+          "basis": "First-time candidate from private real estate, running on a critique of the office's methods against a 19-year insider."
+        },
+        "taxes": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S5", "S6"],
+          "basis": "Would move the existing tax burden toward luxury, second-home and corporate-owned properties, while saying she does not seek higher overall taxes."
+        }
+      }
+    },
+    {
+      "slug": "wes-cornelius",
+      "summary": "Assessor since 2023 and in the office since 2007, running on experience, property tax relief for seniors, disabled residents and veterans, and modernized operations.",
+      "highlights": [
+        "Joined the Assessor's Office in 2007; chief deputy 2012-2023; appointed assessor in 2023 and elected that November [S5][S7]",
+        "Says he is 'not interested in taxing people out of their homes' and lobbied for a higher senior exemption income limit [S6]",
+        "Says he worked with legislators on ESSB 6162 and HB 2375 expanding exemption programs [S7][S8]",
+        "Says Port's examples misread state mass-appraisal law and the office's software [S9]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "experience": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S5", "S7", "S9"],
+          "basis": "Incumbent with about 19 years in the office, including more than a decade as chief deputy; argues that experience is the deciding qualification."
+        },
+        "taxes": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S6", "S7", "S8"],
+          "basis": "Pushes property tax relief and expanded exemptions for seniors, disabled residents and veterans, and says he is not interested in taxing people out of their homes."
+        }
+      }
+    }
+  ]
+}
