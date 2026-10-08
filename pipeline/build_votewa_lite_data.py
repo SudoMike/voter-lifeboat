@@ -624,6 +624,39 @@ ELECTION_MEASURES = {
                   "https://voter.votewa.gov/elections/measure.ashx?m=7273&e=899&la=en&c=03"),
             ],
         },
+        # Cowlitz (#28). Measures: the county's general sample ballot and
+        # local voters' pamphlet (counties/cowlitz/raw/cowlitz/
+        # {sample-ballot,local-voters-pamphlet}.pdf.url, pamphlet pp. 57-58)
+        # list one local measure; VoteWA's online guide for county 08 agrees.
+        # CITY 'Longview': Census place at 1525 Broadway, Longview.
+        # Overrides: the Commissioner, District Court and PUD seats are voted
+        # county-wide in the general (RCW 36.32.040, RCW 54.12.010(3); SOS
+        # results: 2024 Commissioner D2 56,821 votes of 59,822 ballots, 2022
+        # District Court and PUD D3 about 30,400 each; DOR PUD2025 has one
+        # Cowlitz polygon, DISTATTRIB '1'). The commissioner keeps the
+        # primary's contest name so primary dossiers carry forward.
+        "cowlitz": {
+            "overrides": {
+                ("COUNTY", "COMMISSIONER DISTRICT 3"): (
+                    "County", "Cowlitz County Commissioner District 3", "Commissioner District 3", ("COUNTY", None)),
+                ("DISTRICT COURT", "JUDGE POSITION 1"): (
+                    "Judicial", "Cowlitz County District Court", "Judge Position No. 1", ("COUNTY", None)),
+                ("DISTRICT COURT", "JUDGE POSITION 2"): (
+                    "Judicial", "Cowlitz County District Court", "Judge Position No. 2", ("COUNTY", None)),
+                ("DISTRICT COURT", "JUDGE POSITION 3"): (
+                    "Judicial", "Cowlitz County District Court", "Judge Position No. 3", ("COUNTY", None)),
+                ("PUBLIC UTILITY DISTRICT ALL", "COMMISSIONER DISTRICT 1"): (
+                    "PublicUtility", "Public Utility District No. 1 of Cowlitz County", "Commissioner District 1",
+                    ("COUNTY", None)),
+            },
+            "measures": [
+                m("City of Longview", "Proposition 1", "Levy Lid Lift (Fire and Emergency Medical Services)",
+                  ("CITY", "Longview"),
+                  "Lifts Longview's regular property tax levy to hire firefighter paramedics/EMTs, replace aging equipment, buy a fire engine and build a third fire station; the 2027 levy becomes the base for future levy limits.",
+                  "Raises the city's regular levy rate by $1.15 per $1,000 of assessed value beginning in 2027 (opponents: from $1.955 to $3.105).",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7372&e=899&la=en&c=08"),
+            ],
+        },
         # Skagit: the four measures the Auditor's Ballot Measures page lists
         # for the general (counties/skagit/raw/skagit/ballot-measures.html.url),
         # text from the local voters' pamphlet pages 18-21 and VoteWA
