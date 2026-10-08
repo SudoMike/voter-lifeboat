@@ -16,7 +16,7 @@ sources:
   - id: S1
     tier: 1
     type: pamphlet
-    ref: "local-voters-pamphlet page 6 (Columbia County Official Local Voters' Pamphlet, November 3, 2026 General Election, Prosecutor (Short & Full) candidate statement; PDF page 6 = printed page 5)"
+    ref: "local-voters-pamphlet page 6 (Columbia County Official Local Voters' Pamphlet, November 3, 2026 General Election, Prosecutor [Short & Full] candidate statement; PDF page 6 = printed page 5)"
     url: "https://www.columbiaco.com/DocumentCenter/View/8822"
     pointer: counties/columbia/raw/columbia/local-voters-pamphlet.pdf.url
     accessed: 2026-10-08
