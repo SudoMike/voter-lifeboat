@@ -96,10 +96,25 @@ county exports, 1,435 rows; #5 recorded the same for the State list):
   (the statewide package owns them). PCO rows (District Type `Precinct`)
   are dropped too.
 
-The builders read the cache and refuse to run if its `sha256` differs from
-the committed meta. If VoteWA changed (a withdrawal, a correction), re-run
+The builders read the cache and refuse to run if it matches neither digest
+in the committed meta. If VoteWA changed (a withdrawal, a correction), re-run
 the command above, read the diff of the meta and the interim files, and
 commit both.
+
+**The export is not byte-reproducible.** Between two fetches of the same
+list, VoteWA flips the case of the `District Type` and `District` values row
+by row (`"LEGISLATIVE","LEGISLATIVE DISTRICT 10"` in one fetch,
+`"Legislative","Legislative District 10"` in the next; Snohomish, 2026-10-08,
+same 15,065 bytes, different `sha256`). The parsers upper-case those two
+columns before matching, so the meta also records `sha256_case_normalized`:
+the sha256 of the parsed rows as compact JSON with those two columns
+upper-cased and every other value verbatim (`votewa.case_normalized_sha256`).
+The builders accept a cache that matches either `sha256` or
+`sha256_case_normalized`; a different name, a dropped row or a reordered row
+still stops them. A meta written before this field existed (every county's
+as of 2026-10-08) still needs the exact bytes: re-run `--write-pointer` once
+on a cache that matches its `sha256` to add the field. The primary keeps its
+CSVs verbatim in the package and is not affected.
 
 ## 3. Step 2: Build the county package
 
