@@ -95,6 +95,21 @@ test('Island PUD, port and unincorporated codes and Lewis districts read as name
   assert.equal(describeDistrict('LIBDST', 'L'), 'Library District L')
 })
 
+test('Franklin port and commissioner codes and Clallam PUD membership read as names', () => {
+  // Live 2026-10-08 (#29): 5600 N Rd 68, Pasco (Special_tax_districts/7
+  // 'PoP3', Commissioner_Districts 'COM3'); Forks (PUDALL '1', PUDDST '3').
+  assert.equal(describeDistrict('PORTDST', 'PoP3'), 'Port of Pasco Commissioner District 3')
+  assert.equal(describeDistrict('PORTDST', 'PoK1'), 'Port of Kahlotus Commissioner District 1')
+  const contests = [
+    { scope: { layer: 'COUNTY_COUNCIL', county: 'franklin' }, district: 'Franklin County Commissioner District 3' },
+  ]
+  assert.equal(describeDistricts({ COUNTY_COUNCIL: 'COM2' }, { contests, county: 'franklin' })[0].text,
+    'Franklin County Commissioner District 2')
+  assert.equal(describeDistrict('PUDALL', '1'), 'Public Utility District No. 1')
+  assert.deepEqual(describeDistricts({ PUDALL: '1', PUDDST: '3' }).map((d) => d.text),
+    ['Public Utility District 3', 'Public Utility District No. 1'])
+})
+
 test('codes are tidied without mangling initialisms', () => {
   assert.equal(describeDistrict('FIRDST', 'TACOMA'), 'Fire District Tacoma')
   assert.equal(describeDistrict('SCCDST', 'SCC5'), 'Seattle City Council District 5')

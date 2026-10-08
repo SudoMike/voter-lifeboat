@@ -390,12 +390,44 @@ const COUNTY_LAYERS = {
     },
   ],
   chelan: [
-    { key: 'COUNTY_COUNCIL', url: 'https://atlas.co.chelan.wa.us/arcgis/rest/services/PW/Commissioner_Districts/MapServer/0/query', attr: 'DIST_NO' },
+    // GIS/CM_districts, the same three districts with the commissioner's
+    // name. The PW/Commissioner_Districts MapServer and FeatureServer it
+    // replaced answer their metadata but every query 500s or times out
+    // (#29, 2026-10-08). Live: 316 Washington St, Wenatchee -> '1'; 101
+    // Woodring St, Cashmere and 700 US Hwy 2, Leavenworth -> '2'; 135 E
+    // Johnson Ave, Chelan -> '3'. No general scope uses it (the commissioner
+    // race is county-wide); the primary's District 2 race does.
+    { key: 'COUNTY_COUNCIL', url: 'https://atlas.co.chelan.wa.us/arcgis/rest/services/GIS/CM_districts/MapServer/0/query', attr: 'DIST_NO' },
+    // WA DOR SCH2025 (#29): Wenatchee School District No. 246's bonds. Live
+    // 2026-10-08: 316 Washington St, Wenatchee -> '246'; Cashmere '222',
+    // Leavenworth '228', Chelan '129J'.
+    { key: 'SCHDST', url: `${DOR_TAX_DISTRICTS}/20/query`, attr: 'DISTATTRIB' },
   ],
   clallam: [
     { key: 'COUNTY_COUNCIL', url: 'https://services8.arcgis.com/noCZ2SM2C0rVag8y/arcgis/rest/services/Commissioner_Districts/FeatureServer/0/query', attr: 'COM_DIST' },
     { key: 'PUDDST', url: 'https://services8.arcgis.com/noCZ2SM2C0rVag8y/arcgis/rest/services/PUD_Commissioner_District_dissolve/FeatureServer/0/query', attr: 'Comm_Dist' },
     { key: 'FIRDST', url: `${DOR_TAX_DISTRICTS}/7/query`, attr: 'DISTATTRIB' },
+    // The Auditor's District Court electoral districts (#29): District Court 1
+    // and 2 are elected separately. Live 2026-10-08: 223 E 4th St, Port
+    // Angeles and 152 W Cedar St, Sequim -> '1'; 500 E Division St, Forks
+    // and 7764 La Push Rd -> '2'.
+    { key: 'DISTCRT', url: 'https://services8.arcgis.com/noCZ2SM2C0rVag8y/arcgis/rest/services/District_Court/FeatureServer/0/query', attr: 'DISTRICT' },
+    // WA DOR SCH2025 (#29): Quillayute Valley School District No. 402 bonds.
+    // Live 2026-10-08: Forks -> '402'; Port Angeles '121'; Sequim '323'.
+    { key: 'SCHDST', url: `${DOR_TAX_DISTRICTS}/20/query`, attr: 'DISTATTRIB' },
+    {
+      // PUD No. 1 membership (#29). The whole PUD elects each commissioner in
+      // the general, but the City of Port Angeles is outside the PUD, so
+      // neither the county nor PUDDST (the commissioner district) is the
+      // electorate. Any feature of the commissioner-district layer means
+      // the address is in the PUD: `value` reports '1' whatever Comm_Dist
+      // reads. Live 2026-10-08: 223 E 4th St, Port Angeles -> no feature;
+      // Forks, Sequim and 3851 S Mount Angeles Rd -> a feature.
+      key: 'PUDALL',
+      url: 'https://services8.arcgis.com/noCZ2SM2C0rVag8y/arcgis/rest/services/PUD_Commissioner_District_dissolve/FeatureServer/0/query',
+      attr: 'Comm_Dist',
+      value: '1',
+    },
   ],
   columbia: [
     { key: 'COUNTY_COUNCIL', url: 'https://services9.arcgis.com/zq1Ay6bxXC1T1CBk/arcgis/rest/services/CommissionerDistricts/FeatureServer/0/query', attr: 'District' },
@@ -418,6 +450,14 @@ const COUNTY_LAYERS = {
     // 'COM3', the same form the primary's Franklin scopes use. Live
     // 2026-10-08: 1016 N 4th Ave, Pasco -> 'COM2'; 5600 N Rd 68, Pasco -> 'COM3'.
     { key: 'COUNTY_COUNCIL', url: 'https://gisportal.franklin.co.franklin.wa.us/arcgis2/rest/services/districts/Commissioner_Districts/MapServer/0/query', attr: 'DISTRICT_CODE' },
+    // Port of Pasco commissioner districts (#29; the port elects by district
+    // from 2026). The county layer also holds the Port of Kahlotus's
+    // 'PoK1'..'PoK3'. Live 2026-10-08: 525 N 3rd Ave, Pasco -> 'PoP1'; 2108 N
+    // Rd 84, Pasco -> 'PoP2'; 5600 N Rd 68, Pasco, Mesa and Connell -> 'PoP3'.
+    { key: 'PORTDST', url: 'https://gisportal.franklin.co.franklin.wa.us/arcgis2/rest/services/districts/Special_tax_districts/MapServer/7/query', attr: 'DISTRICT_CODE' },
+    // WA DOR FIR2025 (#29): Fire Protection District No. 3's levy. Live
+    // 2026-10-08: 5600 N Rd 68, Pasco -> '3'; downtown Pasco and Connell none.
+    { key: 'FIRDST', url: `${DOR_TAX_DISTRICTS}/7/query`, attr: 'DISTATTRIB' },
   ],
   garfield: [],
   grant: [
@@ -432,7 +472,17 @@ const COUNTY_LAYERS = {
     { key: 'CEMDST', url: `${DOR_TAX_DISTRICTS}/3/query`, attr: 'DISTATTRIB' },
   ],
   'grays-harbor': [
+    // Live 2026-10-08: 110 Main St, Oakville -> '1'; 500 Wynoochee Valley Rd,
+    // Montesano -> '2'.
     { key: 'FIRDST', url: `${DOR_TAX_DISTRICTS}/7/query`, attr: 'DISTATTRIB' },
+    // WA DOR LIB2025 (#29): Timberland Regional Library ('L'). Ocean Shores
+    // runs its own library and is outside it. Live 2026-10-08: Aberdeen,
+    // McCleary, Oakville and Montesano -> 'L'; 585 Point Brown Ave NW, Ocean
+    // Shores -> none.
+    { key: 'LIBDST', url: `${DOR_TAX_DISTRICTS}/12/query`, attr: 'DISTATTRIB' },
+    // WA DOR SCH2025 (#29): McCleary School District No. 65's bonds. Live
+    // 2026-10-08: 100 S 3rd St, McCleary -> '65'; Aberdeen '5'; Montesano '66'.
+    { key: 'SCHDST', url: `${DOR_TAX_DISTRICTS}/20/query`, attr: 'DISTATTRIB' },
   ],
   island: [
     { key: 'COUNTY_COUNCIL', url: 'https://maps.islandcountywa.gov/arcgis/rest/services/Geocortex/Elections/MapServer/0/query', attr: 'COMM__DIST___' },
@@ -692,6 +742,10 @@ async function queryArcgisLayer(layer, x, y) {
   const data = await res.json()
   if (data.error) throw new GeoError(`District lookup failed (${layer.key}).`, 'network', { layer: layer.key })
   const feat = data.features?.[0]
+  // Optional constant for a presence layer: any feature (after `where`) means
+  // the address is in the district, whatever `attr` reads (Clallam PUDALL:
+  // the PUD's commissioner-district polygons, which leave out Port Angeles).
+  if (layer.value != null) return feat ? String(layer.value) : null
   const value = readAttr(feat?.attributes, layer.attr)
   return value == null || value === '' ? null : String(value).trim()
 }

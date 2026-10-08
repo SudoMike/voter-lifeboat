@@ -1,0 +1,12 @@
+{
+  "url": "https://data.wa.gov/resource/3h9x-7bvm.json?$where=election_year=2026%20AND%20jurisdiction_county=%27FRANKLIN%27&$select=filer_name,office,jurisdiction,position,contributions_amount,expenditures_amount,filer_id,url&$limit=100",
+  "retrieved_at": "2026-10-08",
+  "method": "curl (data.wa.gov Socrata API, PDC campaign finance summary dataset 3h9x-7bvm)",
+  "stage": "raw",
+  "source_type": "campaign-finance",
+  "tier": 1,
+  "bytes": 4969,
+  "sha256": "a1a2175dc5bc05dfb0642de8bdbc9e9f95006a8c88a4430ecdef4d35f3446d6e",
+  "cache_file": "data/.cache/franklin/web/pdc-summary-franklin-2026.json",
+  "notes": "PDC campaign finance summaries for every 2026 Franklin County filer (as published on data.wa.gov, read 2026-10-08): contributions and expenditures to date per candidate and committee."
+}

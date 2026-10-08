@@ -1,0 +1,18 @@
+{
+  "url": "https://data.wa.gov/resource/3h9x-7bvm.json?$where=election_year=2026 AND (upper(filer_name) like '%CLALLAM%' OR upper(filer_name) like '%FORKS%' OR upper(filer_name) like '%QUILLAYUTE%' OR upper(filer_name) like '%CHARTER%' OR upper(filer_name) like '%PORT ANGELES%' OR upper(filer_name) like '%EMS%' OR upper(filer_name) like '%FIRE%' OR upper(jurisdiction) like '%CLALLAM%' OR upper(jurisdiction) like '%QUILLAYUTE%')&$limit=500",
+  "retrieved_at": "2026-10-09",
+  "method": "curl -sL -G with --data-urlencode for $where and $limit; cached at data/.cache/clallam/clallam-clallam-county-fire-protection-district-no-6-proposition-no-1/pdc-committees-query-2026.json",
+  "stage": "raw",
+  "source_type": "pdc",
+  "tier": 1,
+  "outlet": "PDC Campaign Finance Summary (data.wa.gov 3h9x-7bvm)",
+  "cache_file": "data/.cache/clallam/clallam-clallam-county-fire-protection-district-no-6-proposition-no-1/pdc-committees-query-2026.json",
+  "bytes": 108929,
+  "sha256": "eecb296468366886abea95a6d832f3f8b8927ffc49acba421a49ccc461b72326",
+  "cited_by": [
+    {
+      "dossier": "data/washington-state/elections/2026-11-03-general/counties/clallam/dossiers/measures/clallam-clallam-county-fire-protection-district-no-6-proposition-no-1.md",
+      "source_id": "S6"
+    }
+  ]
+}

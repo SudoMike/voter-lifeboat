@@ -1,0 +1,309 @@
+{
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/clallam/interim/contests.json",
+    "data/washington-state/elections/2026-11-03-general/counties/clallam/interim/measures.json"
+  ],
+  "script": "pipeline/build_research_plan.py",
+  "contests": [
+    {
+      "contest_slug": "clallam-congressional-district-6-u-s-representative",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 6",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "emily-randall",
+          "name": "Emily Randall",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-6-u-s-representative/emily-randall.md"
+        },
+        {
+          "slug": "teresa-fox",
+          "name": "Teresa Fox",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-6-u-s-representative/teresa-fox.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "pierce",
+          "contest_slug": "pierce-congressional-district-6-u-s-representative",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/pierce/scoring/pierce-congressional-district-6-u-s-representative.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "pierce",
+          "kitsap",
+          "grays-harbor"
+        ]
+      }
+    },
+    {
+      "contest_slug": "clallam-legislative-district-24-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 24",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "adam-bernbaum",
+          "name": "Adam Bernbaum",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-24-state-representative-position-1/adam-bernbaum.md"
+        },
+        {
+          "slug": "eric-w-pratt",
+          "name": "Eric W. Pratt",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-24-state-representative-position-1/eric-w-pratt.md"
+        }
+      ],
+      "shared": {
+        "researched_in": null,
+        "also_listed_by": [
+          "grays-harbor"
+        ]
+      }
+    },
+    {
+      "contest_slug": "clallam-legislative-district-24-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 24",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "marcia-kelbon",
+          "name": "Marcia Kelbon",
+          "party_preference": "States No Party Preference",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-24-state-representative-position-2/marcia-kelbon.md"
+        },
+        {
+          "slug": "kaylee-kuehn",
+          "name": "Kaylee Kuehn",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-24-state-representative-position-2/kaylee-kuehn.md"
+        }
+      ],
+      "shared": {
+        "researched_in": null,
+        "also_listed_by": [
+          "grays-harbor"
+        ]
+      }
+    },
+    {
+      "contest_slug": "clallam-clallam-county-assessor",
+      "category": "County",
+      "office": "Assessor",
+      "district": "Clallam County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "lee-hancock",
+          "name": "Lee Hancock",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        },
+        {
+          "slug": "antonio-price",
+          "name": "Antonio Price",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        }
+      ]
+    },
+    {
+      "contest_slug": "clallam-clallam-county-auditor",
+      "category": "County",
+      "office": "Auditor",
+      "district": "Clallam County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "virginia-shogren",
+          "name": "Virginia Shogren",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        },
+        {
+          "slug": "shoona-riggs",
+          "name": "Shoona Riggs",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        }
+      ]
+    },
+    {
+      "contest_slug": "clallam-clallam-county-commissioner-district-3-county-commissioner-dist-no-3",
+      "category": "County",
+      "office": "County Commissioner Dist. No. 3",
+      "district": "Clallam County Commissioner District 3",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "jake-seegers",
+          "name": "Jake Seegers",
+          "party_preference": "Prefers Independent Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/clallam/dossiers/clallam-clallam-county-commissioner-district-3-county-commissioner-dist-no-3/jake-seegers.md"
+        },
+        {
+          "slug": "mike-french",
+          "name": "Mike French",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/clallam/dossiers/clallam-clallam-county-commissioner-district-3-county-commissioner-dist-no-3/mike-french.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "clallam-clallam-county-district-court-1-judge",
+      "category": "Judicial",
+      "office": "Judge",
+      "district": "Clallam County District Court 1",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "alex-schodowski",
+          "name": "Alex Schodowski",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        },
+        {
+          "slug": "patrick-david-murphy",
+          "name": "Patrick David Murphy",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        }
+      ]
+    },
+    {
+      "contest_slug": "clallam-public-utility-district-no-1-of-clallam-county-commissioner-district-no-2",
+      "category": "PublicUtility",
+      "office": "Commissioner District No. 2",
+      "district": "Public Utility District No. 1 of Clallam County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "rick-paschall",
+          "name": "Rick Paschall",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        },
+        {
+          "slug": "randy-brackett",
+          "name": "Randy Brackett",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        }
+      ]
+    }
+  ],
+  "measures": [
+    {
+      "jurisdiction": "Clallam County",
+      "proposition": "Proposed Charter Amendment No. 1",
+      "title": "Charter Amendment Requiring County Commissioner District Town Hall Meetings",
+      "slug": "clallam-clallam-county-proposed-charter-amendment-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Clallam County",
+      "proposition": "Proposed Charter Amendment No. 2",
+      "title": "Charter Amendment Establishing an Ethics Review Board",
+      "slug": "clallam-clallam-county-proposed-charter-amendment-no-2",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Clallam County",
+      "proposition": "Proposed Charter Amendment No. 3",
+      "title": "Charter Amendment Requiring Printing of the Full Text of Proposed Charter Amendments in the Local Voters' Pamphlet",
+      "slug": "clallam-clallam-county-proposed-charter-amendment-no-3",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Quillayute Valley School District No. 402",
+      "proposition": "Proposition No. 1",
+      "title": "Bonds to Rebuild Forks Middle School",
+      "slug": "clallam-quillayute-valley-school-district-no-402-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Clallam County Fire Protection District No. 1",
+      "proposition": "Proposition No. 1",
+      "title": "Property Tax Levy for Fire Protection and Emergency Medical Services",
+      "slug": "clallam-clallam-county-fire-protection-district-no-1-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Clallam County Fire Protection District No. 2",
+      "proposition": "Proposition No. 1",
+      "title": "Property Tax Levy For Emergency Medical Services",
+      "slug": "clallam-clallam-county-fire-protection-district-no-2-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Clallam County Fire Protection District No. 6",
+      "proposition": "Proposition No. 1",
+      "title": "Property Tax Levy For Fire Protection and Emergency Services",
+      "slug": "clallam-clallam-county-fire-protection-district-no-6-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    }
+  ],
+  "carry_forward_from": "2026-08-04-primary"
+}

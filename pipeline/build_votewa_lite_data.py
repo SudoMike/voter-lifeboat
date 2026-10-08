@@ -627,6 +627,167 @@ ELECTION_MEASURES = {
                   "https://voter.votewa.gov/elections/measure.ashx?m=7273&e=899&la=en&c=03"),
             ],
         },
+        # Chelan (#29). Measures: Chelan County Elections' general sample
+        # ballot and Local Voters' Pamphlet (counties/chelan/raw/chelan/
+        # {sample-ballot,local-voters-pamphlet}.pdf.url, pamphlet pp. 16-18,
+        # linked from co.chelan.wa.us/elections/pages/november-3-2026-general-
+        # election) list two local measures; VoteWA's online guide for county
+        # 04 (raw/votewa/voter-guide/voterguide.json.url) agrees. Scopes
+        # point-checked 2026-10-08 (Census geocoder, Current vintage; WA DOR
+        # 2025 layer 20 SCH2025): 101 Woodring St, Cashmere -> CITY
+        # 'Cashmere'; 350 Orondo Ave, Wenatchee -> SCH2025 DISTATTRIB '246'
+        # (101 Woodring St, Cashmere -> '222', not in the district).
+        # Cost and purpose wording also draws on the measure dossiers'
+        # sources (counties/chelan/raw/measures/): the district's bond page,
+        # City of Cashmere Ordinance 1345 and the Assessor's 2026 levy book.
+        # Overrides: VoteWA files the commissioner race as Countywide; it is
+        # nominated by district and elected county-wide in the general (RCW
+        # 36.32.040; SOS 2022 general: Commissioner District No. 2 drew 33,392
+        # votes of 34,530 Chelan ballots) and keeps the primary's contest name
+        # so primary dossiers carry forward. The District Court seats
+        # (District Type County) are judicial seats of one county-wide court
+        # (2022 Judge #1: 29,039 votes). Chelan County PUD (Public Utility
+        # District No. 1 of Chelan County) is county-wide (DOR PUD2025 layer
+        # 17 DISTATTRIB '1' at Wenatchee, Cashmere, Leavenworth, Chelan and
+        # Stehekin alike) and the whole PUD elects each commissioner in the
+        # general (RCW 54.12.010(3); 2022 District 3: 28,626 votes), so its
+        # rows (District 'PUD ALL', which classify() cannot number) are
+        # scoped COUNTY.
+        "chelan": {
+            "overrides": {
+                ("COUNTY", "COMMISSIONER DISTRICT NO. 2"): (
+                    "County", "Chelan County Commissioner District 2", "Commissioner District No. 2", ("COUNTY", None)),
+                ("CHELAN COUNTY", "DISTRICT COURT JUDGE POSITION 1"): (
+                    "Judicial", "Chelan County District Court", "Judge Position No. 1", ("COUNTY", None)),
+                ("CHELAN COUNTY", "DISTRICT COURT JUDGE POSITION 2"): (
+                    "Judicial", "Chelan County District Court", "Judge Position No. 2", ("COUNTY", None)),
+                ("PUD ALL", "PUBLIC UTILITY DIST COMMISSIONER DIST 1"): (
+                    "PublicUtility", "Public Utility District No. 1 of Chelan County", "Commissioner District 1",
+                    ("COUNTY", None)),
+                ("PUD ALL", "PUBLIC UTILITY DIST COMMISSIONER DIST B"): (
+                    "PublicUtility", "Public Utility District No. 1 of Chelan County", "Commissioner District B (At Large)",
+                    ("COUNTY", None)),
+            },
+            "measures": [
+                m("Wenatchee School District No. 246", "Proposition No. 1",
+                  "Bonds to Replace Deteriorating Wenatchee High School and Improve School Air Quality Districtwide",
+                  ("SCHDST", "246"),
+                  "Authorizes $275,000,000 of general obligation bonds, repaid by excess property taxes over up to 20 years, to replace most of Wenatchee High School with new classrooms on its campus (renovating the gyms, pool and auditorium) and replace HVAC at four elementary and three middle schools; it would also qualify the district for an estimated $83,000,000 in state matching funds. Needs 60% yes.",
+                  "$275,000,000 in bonds over up to 20 years; the district estimates $1.46 per $1,000 of assessed value a year (about $584 on a $400,000 home), on top of the current $2.77 school rate, and about $444 million repaid including interest.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7302&e=899&la=en&c=04",
+                  pages=(16, 17)),
+                m("City of Cashmere", "Proposition No. 1", "Public Safety and Government Services Levy Lid Lift",
+                  ("CITY", "Cashmere"),
+                  "Lifts Cashmere's regular property tax levy to continue city services, which Ordinance 1345 names as law enforcement, fire protection and disaster mitigation, and lets the levy rise up to 9% a year from 2028 to 2032; the 2032 levy becomes the base for future levy limits.",
+                  "$1.5737 per $1,000 of assessed value in 2027, up from $1.4441 in 2026 (about $52 more a year on a $400,000 home), then up to 9% more a year through 2032.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7301&e=899&la=en&c=04",
+                  pages=(18,)),
+            ],
+        },
+        # Clallam (#29). Measures: the Auditor's general sample ballot and local
+        # voters' pamphlet (counties/clallam/raw/clallam/{sample-ballot,
+        # local-voters-pamphlet}.pdf.url, linked from clallamcountywa.gov/2002/
+        # 2026-November-General-Election) list seven local measures; VoteWA's
+        # online guide for county 05 (measures 7289-7294, 7296) agrees. Scopes
+        # point-checked 2026-10-09 (Census geocoder, Current vintage; WA DOR
+        # 2025 layers 7 FIR and 20 SCH): 500 E Division St, Forks -> FIR2025
+        # '1', SCH2025 '402'; 3851 S Mount Angeles Rd, Port Angeles -> FIR2025
+        # '2'; 7764 La Push Rd, Forks -> FIR2025 '6'. The county's own
+        # Fire_Districts and Precinct_Splits layers agree at each address.
+        # Overrides:
+        # - Commissioner District 3: nominated by district, elected county-wide
+        #   (Home Rule Charter Section 2.20, as amended 2015 and 2020; 2022
+        #   general: 39,943 votes in the D3 race vs 37,120 for the county-wide
+        #   DCD Director). Keeps the primary's contest name so primary dossiers
+        #   carry forward.
+        # - District Court 1 and 2 are separate electoral districts (2022
+        #   general: 23,704 votes for District Court 1, 1,940 for District
+        #   Court 2), scoped DISTCRT to the Auditor's District_Court layer
+        #   (services8.arcgis.com/noCZ2SM2C0rVag8y/.../District_Court/
+        #   FeatureServer/0, DISTRICT '1' at Port Angeles and Sequim, '2' at
+        #   Forks), which COUNTY_LAYERS.clallam reads since #29.
+        # - PUD No. 1 Commissioner District No. 2: elected by the whole PUD in
+        #   the general (RCW 54.12.010(3)), but the PUD's electorate is not the
+        #   county: the City of Port Angeles precincts are in none of the PUD's
+        #   commissioner districts (PUD_Commissioner_District_dissolve has no
+        #   feature at 223 E 4th St, Port Angeles; 2022 general PUD D1 race
+        #   28,129 votes vs 39,943 county-wide). COUNTY would show it to Port
+        #   Angeles voters, and the PUDDST key reads the commissioner district
+        #   number (1-3), not PUD membership, so the seat is scoped to the
+        #   layer PUDALL '1'. COUNTY_LAYERS.clallam resolves it since #29: any
+        #   feature of PUD_Commissioner_District_dissolve reads as the
+        #   constant '1' (geo.js layer `value`).
+        "clallam": {
+            "overrides": {
+                ("COUNTY", "COUNTY COMMISSIONER DIST. NO. 3"): (
+                    "County", "Clallam County Commissioner District 3", "County Commissioner Dist. No. 3",
+                    ("COUNTY", None)),
+                ("DISTRICT COURT 1", "JUDGE - DISTRICT COURT 1"): (
+                    "Judicial", "Clallam County District Court 1", "Judge", ("DISTCRT", "1")),
+                ("DISTRICT COURT 2", "JUDGE - DISTRICT COURT 2"): (
+                    "Judicial", "Clallam County District Court 2", "Judge", ("DISTCRT", "2")),
+                ("PUBLIC UTILITY DISTRICT NO. 1", "COMMISSIONER DISTRICT NO. 2"): (
+                    "PublicUtility", "Public Utility District No. 1 of Clallam County", "Commissioner District No. 2",
+                    ("PUDALL", "1")),
+            },
+            "measures": [
+                m("Clallam County", "Proposed Charter Amendment No. 1",
+                  "Charter Amendment Requiring County Commissioner District Town Hall Meetings",
+                  ("COUNTY", None),
+                  "Amends Article II of the county charter: each commissioner must hold at least one town hall a year in their own district, and the three commissioners together at least one a year in each district, all outside normal business hours with 30 days' notice.",
+                  "No tax or fee; no fiscal statement was filed.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7289&e=899&la=en&c=05",
+                  pages=(42, 43)),
+                m("Clallam County", "Proposed Charter Amendment No. 2",
+                  "Charter Amendment Establishing an Ethics Review Board",
+                  ("COUNTY", None),
+                  "Amends Article VIII of the county charter to create a three-member, unpaid ethics review board (one member per commissioner district, appointed by elected county officials) that reviews complaints that elected county officials broke the county code of ethics and publishes written findings; it cannot impose penalties.",
+                  "No tax or fee; board members serve without pay (opponents cite staff and process costs; no fiscal statement was filed).",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7290&e=899&la=en&c=05",
+                  pages=(44, 45)),
+                m("Clallam County", "Proposed Charter Amendment No. 3",
+                  "Charter Amendment Requiring Printing of the Full Text of Proposed Charter Amendments in the Local Voters' Pamphlet",
+                  ("COUNTY", None),
+                  "Amends Article XI of the county charter to require the full text of every proposed charter amendment to be printed in the local voters' pamphlet.",
+                  "No tax or fee; affects what the Auditor prints in future pamphlets.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7291&e=899&la=en&c=05",
+                  pages=(46, 47)),
+                m("Quillayute Valley School District No. 402", "Proposition No. 1", "Bonds to Rebuild Forks Middle School",
+                  ("SCHDST", "402"),
+                  "Authorizes $34,000,000 of general obligation bonds, maturing within 25 years and repaid by excess property taxes, to build a new Forks Middle School replacing three existing buildings on the site.",
+                  "$34,000,000 in bonds repaid over up to 25 years; the district estimates about $1.94 per $1,000 of assessed value from 2028, as its high school bond ends.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7296&e=899&la=en&c=05",
+                  pages=(58,)),
+                m("Clallam County Fire Protection District No. 1", "Proposition No. 1",
+                  "Property Tax Levy for Fire Protection and Emergency Medical Services",
+                  ("FIRDST", "1"),
+                  "Sets the Forks-area fire district's regular levy at $1.00 per $1,000 for 2027 collection and lets it grow each year for nine more years by the greater of 1% or West Region CPI-U; the 2035 maximum becomes the base for later limits.",
+                  "$1.00 per $1,000 of assessed value for 2027 collection, up from about $0.47, then CPI-based growth (at least 1%) through 2035.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7292&e=899&la=en&c=05",
+                  pages=(59,)),
+                m("Clallam County Fire Protection District No. 2", "Proposition No. 1", "Property Tax Levy For Emergency Medical Services",
+                  ("FIRDST", "2"),
+                  "Authorizes a ten-year EMS property tax levy for the fire district around Port Angeles, collected from 2027, used only for emergency medical services (the district says it would end transport bills for district residents). Needs 60% yes and minimum turnout; the same levy fell short in the August primary.",
+                  "Up to $0.50 per $1,000 of assessed value a year for ten years, starting with 2027 collection.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7293&e=899&la=en&c=05",
+                  pages=(60, 61)),
+                m("Clallam County Fire Protection District No. 6", "Proposition No. 1",
+                  "Property Tax Levy For Fire Protection and Emergency Services",
+                  ("FIRDST", "6"),
+                  "Restores the regular levy of the all-volunteer Three Rivers fire district (La Push Road, Quillayute Prairie, Mora) to up to $1.50 per $1,000 for 2027 collection; the amount levied becomes the base for future levy limits.",
+                  "Up to $1.50 per $1,000 of assessed value for 2027 collection; the amount levied becomes the base for later years.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7294&e=899&la=en&c=05",
+                  pages=(62, 63)),
+            ],
+            "extra_notes": [
+                "Public Utility District No. 1 of Clallam County Commissioner District No. 2 is scoped PUDALL '1': the whole "
+                "PUD votes in the general (RCW 54.12.010(3)), and the City of Port Angeles is outside the PUD's commissioner "
+                "districts; COUNTY_LAYERS.clallam reads PUD membership as any feature of the Auditor's "
+                "PUD_Commissioner_District_dissolve layer.",
+                "District Court 1 and District Court 2 are separate electoral districts, scoped DISTCRT '1' and '2' to the "
+                "Auditor's District_Court layer, which COUNTY_LAYERS.clallam reads.",
+            ],
+        },
         # Cowlitz (#28). Measures: the county's general sample ballot and
         # local voters' pamphlet (counties/cowlitz/raw/cowlitz/
         # {sample-ballot,local-voters-pamphlet}.pdf.url, pamphlet pp. 57-58)
@@ -659,6 +820,56 @@ ELECTION_MEASURES = {
                   "Raises the city's regular levy rate by $1.15 per $1,000 of assessed value beginning in 2027 (opponents: from $1.955 to $3.105).",
                   "https://voter.votewa.gov/elections/measure.ashx?m=7372&e=899&la=en&c=08",
                   pages=(57, 58)),
+            ],
+        },
+        # Franklin (#29). Ballot checked against the Auditor's general sample
+        # ballot and local voters' pamphlet (counties/franklin/raw/franklin/
+        # sample-ballot.pdf.url, local-voters-pamphlet.pdf.url): one local
+        # measure, Fire Protection District No. 3 Proposition No. 1.
+        # FIRDST: WA DOR FIR2025 (layer 7) DISTATTRIB '3' at 5600 N Rd 68,
+        # Pasco (2026-10-08); the Auditor's precinct-split layer
+        # (gisportal.franklin.co.franklin.wa.us/arcgis2/rest/services/districts/
+        # Voting_Precinct_Group/FeatureServer/12) agrees there (FIRE 'FPD3').
+        # Commissioner District 3 keeps the generic scope (COUNTY_COUNCIL
+        # 'COM3'): Franklin elects commissioners by district in the general
+        # since 2024 (SOS 2024 general precinct export: District 1 on 48 and
+        # District 2 on 31 of 123 precincts; the 2026 primary's District 3 on
+        # 44 of 123 reporting units). Overrides: the District Court seat is a
+        # single county-wide judicial seat (VoteWA District Type 'Countywide');
+        # Franklin PUD No. 1 covers the whole county and the whole PUD elects
+        # each commissioner (its 2024 District 3 race was on all 123
+        # precincts; RCW 54.12.010(3)), so the seat is COUNTY; the Port of
+        # Pasco moved to by-district general elections from 2026 (NonStop
+        # Local, 2025-10-03; Port Resolution 1577 on the county's port layer),
+        # so its seat is PORTDST 'PoP3' (Special_tax_districts/MapServer/7
+        # DISTRICT_CODE; 5600 N Rd 68, Pasco and 103 Franklin St, Mesa ->
+        # 'PoP3'; 1016 N 4th Ave, Pasco -> 'PoP1'). The Port of Pasco is not
+        # the whole county: the Port of Kahlotus covers the east end.
+        "franklin": {
+            "overrides": {
+                ("COUNTY", "DISTRICT COURT JUDGE"): (
+                    "Judicial", "Franklin County District Court", "Judge", ("COUNTY", None)),
+                ("PUD DISTRICT 2", "COMMISSIONER DISTRICT 2"): (
+                    "PublicUtility", "Public Utility District No. 1 of Franklin County", "Commissioner District 2",
+                    ("COUNTY", None)),
+                ("PASCO PORT DISTRICT 3", "COMMISSIONER, DISTRICT 3"): (
+                    "Port", "Port of Pasco", "Commissioner District 3", ("PORTDST", "PoP3")),
+            },
+            "measures": [
+                m("Franklin County Fire Protection District No. 3", "Proposition No. 1",
+                  "Authorization for a Single-Year Permanent Levy Lid Lift",
+                  ("FIRDST", "3"),
+                  "Raises the fire district's regular property tax levy to fund district operations, including emergency medical (ambulance) services; the 2027 levy becomes the base for later years' limits.",
+                  "$1.24 per $1,000 of assessed value for assessment in 2026 and collection in 2027 (the district says its current rate is $0.86).",
+                  "https://www.franklincountywa.gov/DocumentCenter/View/4553/2611-Franklin-County-Voters-Pamphlet-",
+                  pages=(16,)),
+            ],
+            "extra_notes": [
+                "Franklin County Commissioner District 3 is elected by district in the general (VoteWA District "
+                "'COUNTY COMMISSION DISTRICT 3'; SOS 2024 general precinct results; 2026 primary results on 44 of "
+                "123 reporting units).",
+                "The Port of Pasco Commissioner District 3 race is elected by district from 2026 (Port of Pasco "
+                "by-district elections, NonStop Local 2025-10-03).",
             ],
         },
         # Grant (#28). Measures: Grant County Elections' November 2026 sample
@@ -726,6 +937,75 @@ ELECTION_MEASURES = {
                   "Authorizes the cemetery district's yearly one-year special levy for maintenance and operations of the Wilson Creek cemetery, collected in 2027.",
                   "$12,000, approximately $0.18 per $1,000 of assessed value, collected in 2027.",
                   "https://voter.votewa.gov/elections/measure.ashx?m=7346&e=899&la=en&c=13"),
+            ],
+        },
+        # Grays Harbor (#29). Measures: VoteWA's online voters' guide for county
+        # 14 (voterguide.ashx?e=899&c=14, read 2026-10-08; raw pointers under
+        # counties/grays-harbor/raw/votewa/voter-guide/) lists five local
+        # measures. The Auditor's Current Election page links no printed local
+        # pamphlet or sample ballot, only VoteWA and a District Court
+        # supplement. Scopes point-checked 2026-10-08 (Census geocoder,
+        # Current vintage; WA DOR 2025 layers 7 FIR, 12 LIB, 20 SCH):
+        # 112 N Main St, Montesano -> CITY 'Montesano'; 200 W Market St,
+        # Aberdeen, 609 8th St, Hoquiam, 112 N Main St, Montesano, 100 S 3rd
+        # St, McCleary and 506 S Montesano St, Westport -> LIB2025 'L'
+        # (Timberland), but 585 Point Brown Ave NW, Ocean Shores -> none (the
+        # city runs its own library), so the TRL levy is LIBDST, not COUNTY;
+        # 100 S 3rd St, McCleary -> SCH2025 '65'; 110 Main St, Oakville ->
+        # FIR2025 '1'; 500 Wynoochee Valley Rd, Montesano -> FIR2025 '2'.
+        # COUNTY_LAYERS['grays-harbor'] reads LIB2025 and SCH2025 since #29.
+        # Overrides: the commissioner race (District Type Countywide) is
+        # elected county-wide in the general (RCW 36.32.040; SOS 2024 results:
+        # Commissioner #1 36,166 votes of 38,102 ballots); it keeps the
+        # primary's contest name so primary dossiers carry forward. District
+        # Court #1 and #2 are seats of one county-wide court (2022: #1 24,257
+        # votes of 29,916 ballots). Grays Harbor PUD No. 1 covers the county
+        # (DOR PUD2025 layer 17 has one Grays Harbor polygon, DISTATTRIB '1',
+        # at Aberdeen, Hoquiam, Montesano, McCleary, Ocean Shores and
+        # Westport) and the whole PUD elects each commissioner in the general
+        # (RCW 54.12.010(3); 2022 uncontested PUD Comm (2) 18,505 votes, as
+        # many as the uncontested county-wide District Court #2's 18,521).
+        "grays-harbor": {
+            "overrides": {
+                ("COUNTY", "COMMISSIONER #3"): (
+                    "County", "Grays Harbor County Commissioner District 3", "Commissioner #3", ("COUNTY", None)),
+                ("COUNTY", "DISTRICT COURT #1"): (
+                    "Judicial", "Grays Harbor County District Court", "Judge Position No. 1", ("COUNTY", None)),
+                ("COUNTY", "DISTRICT COURT #2"): (
+                    "Judicial", "Grays Harbor County District Court", "Judge Position No. 2", ("COUNTY", None)),
+                ("PUD DISTRICT", "PUD COMM (3)"): (
+                    "PublicUtility", "Public Utility District No. 1 of Grays Harbor County", "Commissioner District 3",
+                    ("COUNTY", None)),
+            },
+            "measures": [
+                m("Timberland Regional Library District", "Proposition No. 1",
+                  "Regular Property Tax Levy Lid Lift for Library Services, Operations and Maintenance",
+                  ("LIBDST", "L"),
+                  "Restores the library district's regular property tax levy from about $0.22 to $0.35 per $1,000 of assessed value for 2027 and 2028; the 2028 amount becomes the base for later levy limits.",
+                  "$0.35 per $1,000 of assessed value (about $40 a year more on a $334,000 home, per the explanatory statement).",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7284&e=899&la=en&c=14"),
+                m("City of Montesano", "Proposition No. 1",
+                  "Levy to Maintain Essential Services, Public Safety and Emergency Services, Operations and Capital Improvements",
+                  ("CITY", "Montesano"),
+                  "Lifts Montesano's regular property tax levy to a total rate of up to $3.22 per $1,000 from 2027, with up to 5% yearly increases for six years, to keep current General Fund and public safety and emergency service levels.",
+                  "Total city regular levy up to $3.22 per $1,000 of assessed value for 2027 collection.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7377&e=899&la=en&c=14"),
+                m("McCleary School District No. 65", "Proposition No. 1",
+                  "Bonds to Improve Safety, Security and School Facilities",
+                  ("SCHDST", "65"),
+                  "Authorizes $12,800,000 of general obligation bonds, maturing within 21 years and repaid by excess property taxes, for a secure entry vestibule, locks and keycard access, fire alarm, HVAC, exterior, drainage, parking and playground work at McCleary School.",
+                  "$12,800,000 in bonds repaid by an excess property tax levy over up to 21 years.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7385&e=899&la=en&c=14"),
+                m("Grays Harbor County Fire Protection District No. 1", "Proposition No. 1", "Emergency Medical Services Levy",
+                  ("FIRDST", "1"),
+                  "Authorizes a permanent regular property tax levy for emergency medical services.",
+                  "Up to $0.50 per $1,000 of assessed value, permanent.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7387&e=899&la=en&c=14"),
+                m("Grays Harbor County Fire Protection District No. 2", "Proposition No. 1", "Two Year Levy Lid Lift",
+                  ("FIRDST", "2"),
+                  "Restores the fire district's regular property tax levy to $1.50 per $1,000 (from about $1.40 in 2026) for 2026 and 2027 levies; the 2027 amount becomes the base for later levy limits.",
+                  "$1.50 per $1,000 of assessed value.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7386&e=899&la=en&c=14"),
             ],
         },
         # Island (#29). Measures: the Island County Auditor's general sample

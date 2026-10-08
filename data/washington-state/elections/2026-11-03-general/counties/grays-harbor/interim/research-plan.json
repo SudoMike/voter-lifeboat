@@ -1,0 +1,437 @@
+{
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/grays-harbor/interim/contests.json",
+    "data/washington-state/elections/2026-11-03-general/counties/grays-harbor/interim/measures.json"
+  ],
+  "script": "pipeline/build_research_plan.py",
+  "contests": [
+    {
+      "contest_slug": "grays-harbor-congressional-district-6-u-s-representative",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 6",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "emily-randall",
+          "name": "Emily Randall",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-6-u-s-representative/emily-randall.md"
+        },
+        {
+          "slug": "teresa-fox",
+          "name": "Teresa Fox",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-6-u-s-representative/teresa-fox.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "pierce",
+          "contest_slug": "pierce-congressional-district-6-u-s-representative",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/pierce/scoring/pierce-congressional-district-6-u-s-representative.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "pierce",
+          "kitsap",
+          "clallam"
+        ]
+      }
+    },
+    {
+      "contest_slug": "grays-harbor-legislative-district-19-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 19",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "jim-walsh",
+          "name": "Jim Walsh",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-19-state-representative-position-1/jim-walsh.md"
+        },
+        {
+          "slug": "kevin-moynihan",
+          "name": "Kevin Moynihan",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-19-state-representative-position-1/kevin-moynihan.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "thurston",
+          "contest_slug": "thurston-legislative-district-19-state-representative-pos-1",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/thurston/scoring/thurston-legislative-district-19-state-representative-pos-1.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "thurston",
+          "cowlitz",
+          "lewis"
+        ]
+      }
+    },
+    {
+      "contest_slug": "grays-harbor-legislative-district-19-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 19",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "terry-carlson",
+          "name": "Terry Carlson",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-19-state-representative-position-2/terry-carlson.md"
+        },
+        {
+          "slug": "joel-mcentire",
+          "name": "Joel McEntire",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-19-state-representative-position-2/joel-mcentire.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "thurston",
+          "contest_slug": "thurston-legislative-district-19-state-representative-pos-2",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/thurston/scoring/thurston-legislative-district-19-state-representative-pos-2.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "thurston",
+          "cowlitz",
+          "lewis"
+        ]
+      }
+    },
+    {
+      "contest_slug": "grays-harbor-legislative-district-24-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 24",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "adam-bernbaum",
+          "name": "Adam Bernbaum",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-24-state-representative-position-1/adam-bernbaum.md"
+        },
+        {
+          "slug": "eric-w-pratt",
+          "name": "Eric W. Pratt",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-24-state-representative-position-1/eric-w-pratt.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "clallam",
+          "contest_slug": "clallam-legislative-district-24-state-representative-pos-1",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/clallam/scoring/clallam-legislative-district-24-state-representative-pos-1.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "clallam"
+        ]
+      }
+    },
+    {
+      "contest_slug": "grays-harbor-legislative-district-24-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 24",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "marcia-kelbon",
+          "name": "Marcia Kelbon",
+          "party_preference": "States No Party Preference",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-24-state-representative-position-2/marcia-kelbon.md"
+        },
+        {
+          "slug": "kaylee-kuehn",
+          "name": "Kaylee Kuehn",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-24-state-representative-position-2/kaylee-kuehn.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "clallam",
+          "contest_slug": "clallam-legislative-district-24-state-representative-pos-2",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/clallam/scoring/clallam-legislative-district-24-state-representative-pos-2.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "clallam"
+        ]
+      }
+    },
+    {
+      "contest_slug": "grays-harbor-grays-harbor-county-assessor",
+      "category": "County",
+      "office": "Assessor",
+      "district": "Grays Harbor County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "dan-lindgren",
+          "name": "Dan Lindgren",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/grays-harbor/dossiers/grays-harbor-grays-harbor-county-assessor/dan-lindgren.md"
+        },
+        {
+          "slug": "josh-nuxoll",
+          "name": "Josh Nuxoll",
+          "party_preference": "Prefers Independent Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/grays-harbor/dossiers/grays-harbor-grays-harbor-county-assessor/josh-nuxoll.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "grays-harbor-grays-harbor-county-auditor",
+      "category": "County",
+      "office": "Auditor",
+      "district": "Grays Harbor County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "charlee-paull",
+          "name": "Charlee Paull",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/grays-harbor/dossiers/grays-harbor-grays-harbor-county-auditor/charlee-paull.md"
+        },
+        {
+          "slug": "brielle-s-joyce",
+          "name": "Brielle S Joyce",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/grays-harbor/dossiers/grays-harbor-grays-harbor-county-auditor/brielle-s-joyce.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "grays-harbor-grays-harbor-county-prosecutor",
+      "category": "County",
+      "office": "Prosecutor",
+      "district": "Grays Harbor County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "jason-f-walker",
+          "name": "Jason F. Walker",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/grays-harbor/dossiers/grays-harbor-grays-harbor-county-prosecutor/jason-f-walker.md"
+        },
+        {
+          "slug": "daniel-crawford",
+          "name": "Daniel Crawford",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/grays-harbor/dossiers/grays-harbor-grays-harbor-county-prosecutor/daniel-crawford.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "grays-harbor-grays-harbor-county-sheriff",
+      "category": "County",
+      "office": "Sheriff",
+      "district": "Grays Harbor County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "darrin-e-wallace",
+          "name": "Darrin E. Wallace",
+          "party_preference": "States No Party Preference",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/grays-harbor/dossiers/grays-harbor-grays-harbor-county-sheriff/darrin-e-wallace.md"
+        },
+        {
+          "slug": "edward-welter",
+          "name": "Edward Welter",
+          "party_preference": "States No Party Preference",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/grays-harbor/dossiers/grays-harbor-grays-harbor-county-sheriff/edward-welter.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "grays-harbor-grays-harbor-county-treasurer",
+      "category": "County",
+      "office": "Treasurer",
+      "district": "Grays Harbor County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "shawn-d-hill",
+          "name": "Shawn D. Hill",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/grays-harbor/dossiers/grays-harbor-grays-harbor-county-treasurer/shawn-d-hill.md"
+        },
+        {
+          "slug": "wes-cormier",
+          "name": "Wes Cormier",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/grays-harbor/dossiers/grays-harbor-grays-harbor-county-treasurer/wes-cormier.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "grays-harbor-grays-harbor-county-commissioner-district-3-commissioner-3",
+      "category": "County",
+      "office": "Commissioner #3",
+      "district": "Grays Harbor County Commissioner District 3",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "stan-sturgeon",
+          "name": "Stan Sturgeon",
+          "party_preference": "States No Party Preference",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/grays-harbor/dossiers/grays-harbor-grays-harbor-county-commissioner-district-3-commissioner-3/stan-sturgeon.md"
+        },
+        {
+          "slug": "jr-streifel",
+          "name": "JR Streifel",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/grays-harbor/dossiers/grays-harbor-grays-harbor-county-commissioner-district-3-commissioner-3/jr-streifel.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "grays-harbor-grays-harbor-county-district-court-judge-position-no-2",
+      "category": "Judicial",
+      "office": "Judge Position No. 2",
+      "district": "Grays Harbor County District Court",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "david-mistachkin",
+          "name": "David Mistachkin",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        },
+        {
+          "slug": "megan-valentine",
+          "name": "Megan Valentine",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        }
+      ]
+    }
+  ],
+  "measures": [
+    {
+      "jurisdiction": "Timberland Regional Library District",
+      "proposition": "Proposition No. 1",
+      "title": "Regular Property Tax Levy Lid Lift for Library Services, Operations and Maintenance",
+      "slug": "grays-harbor-timberland-regional-library-district-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "City of Montesano",
+      "proposition": "Proposition No. 1",
+      "title": "Levy to Maintain Essential Services, Public Safety and Emergency Services, Operations and Capital Improvements",
+      "slug": "grays-harbor-city-of-montesano-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "McCleary School District No. 65",
+      "proposition": "Proposition No. 1",
+      "title": "Bonds to Improve Safety, Security and School Facilities",
+      "slug": "grays-harbor-mccleary-school-district-no-65-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Grays Harbor County Fire Protection District No. 1",
+      "proposition": "Proposition No. 1",
+      "title": "Emergency Medical Services Levy",
+      "slug": "grays-harbor-grays-harbor-county-fire-protection-district-no-1-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Grays Harbor County Fire Protection District No. 2",
+      "proposition": "Proposition No. 1",
+      "title": "Two Year Levy Lid Lift",
+      "slug": "grays-harbor-grays-harbor-county-fire-protection-district-no-2-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    }
+  ],
+  "carry_forward_from": "2026-08-04-primary"
+}

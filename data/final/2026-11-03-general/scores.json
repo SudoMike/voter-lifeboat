@@ -31,15 +31,23 @@
     "data/washington-state/elections/2026-11-03-general/counties/island/scoring/*.json",
     "data/washington-state/elections/2026-11-03-general/counties/island/scoring/refutations/*.json",
     "data/washington-state/elections/2026-11-03-general/counties/lewis/scoring/*.json",
-    "data/washington-state/elections/2026-11-03-general/counties/lewis/scoring/refutations/*.json"
+    "data/washington-state/elections/2026-11-03-general/counties/lewis/scoring/refutations/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/franklin/scoring/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/franklin/scoring/refutations/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/chelan/scoring/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/chelan/scoring/refutations/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/clallam/scoring/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/clallam/scoring/refutations/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/grays-harbor/scoring/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/grays-harbor/scoring/refutations/*.json"
   ],
   "script": "pipeline/merge_scores.py",
   "verdict_stats": {
-    "upheld": 1927,
-    "adjust": 163,
-    "refuted": 7,
-    "missing_added": 26,
-    "missing_dropped_low": 10
+    "upheld": 2054,
+    "adjust": 181,
+    "refuted": 9,
+    "missing_added": 27,
+    "missing_dropped_low": 12
   },
   "contests": [
     {
@@ -29427,6 +29435,2786 @@
             "Former long-time PUD employee and former president of the Lewis County Broadband Action Committee [S2]",
             "Wants PUD decisions made with transparency and ratepayers at the center [S1]",
             "Prioritizes broadband expansion, infrastructure investment and affordable power while meeting the Clean Energy Transformation Act [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "franklin-franklin-county-assessor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/franklin/dossiers/franklin-franklin-county-assessor/"
+      ],
+      "office_does": "The assessor values every taxable property in Franklin County at market value, calculates levy rates from the budgets taxing districts set, and runs property tax exemptions.",
+      "race_blurb": "Two Republicans: incumbent John A. Rosenau, assessor since 2021, against state-certified appraiser Chris Hollingsworth, who led the August primary with 54.1% to Rosenau's 44.7%. Both promise fair, consistent assessments; the race turns on record versus a practitioner's critique of the office.",
+      "candidates": [
+        {
+          "slug": "chris-hollingsworth",
+          "summary": "State-certified residential appraiser with about 20 years in private practice and a Republican precinct committee officer, challenging the incumbent assessor.",
+          "highlights": [
+            "Appraiser licensed since 2004 who owns a practice covering four counties [S1][S2]",
+            "Says he ran after helping residents at Board of Equalization hearings and promises to 'restore confidence' in the office [S1]",
+            "Promises appraisal training, strict professional standards and open communication with owners [S1]",
+            "Endorsed by the Tri-Cities Association of Realtors; Realtors' PAC gave $1,200 [S1][S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Challenger who has never held county office, running on outside professional appraisal experience to change how the office works."
+            }
+          }
+        },
+        {
+          "slug": "john-a-rosenau",
+          "summary": "Franklin County Assessor since 2021, a former bank regional manager and police chief who chairs a regional assessors' group and sits on the state assessors' executive board.",
+          "highlights": [
+            "Assessor since 2021; re-elected in 2022 [S1]",
+            "Cites stronger training, consistent valuations and clear standards in the office [S1]",
+            "Has pushed at the state assessors' association for tax relief through exemptions for seniors, people with disabilities, farmers and small businesses [S1]",
+            "Endorsed by more than 30 county assessors and the office's AFSCME appraisers' local [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Incumbent seeking a further term on his record in office, with statewide association roles and peer endorsements."
+            },
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Advocates property tax relief through broader exemptions; otherwise stresses that the assessor does not set tax levels."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "franklin-franklin-county-auditor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/franklin/dossiers/franklin-franklin-county-auditor/"
+      ],
+      "office_does": "The auditor runs county elections and voter registration, records documents such as deeds, issues vehicle and vessel licenses, and keeps the county's financial records.",
+      "race_blurb": "Uncontested: Auditor Matt Beaton (Prefers Republican Party), in office since 2011, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "matt-beaton",
+          "summary": "Franklin County Auditor since 2011 and a former real estate appraiser; the only candidate on the ballot.",
+          "highlights": [
+            "Auditor since 2011; earlier owned an appraisal firm [S1]",
+            "Consolidated the Elections Division at a new Pasco location [S1]",
+            "Wants state cooperation with federal voter-roll checks: 'Trust but verify' [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "franklin-franklin-county-clerk",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/franklin/dossiers/franklin-franklin-county-clerk/"
+      ],
+      "office_does": "The county clerk is clerk of the Superior Court, keeping its case files and records, managing court funds and supporting courtroom operations.",
+      "race_blurb": "Uncontested: Chief Deputy Clerk Ruby Ochoa (Prefers Republican Party), in the office since 2014, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "ruby-ochoa",
+          "summary": "Chief Deputy Clerk of Franklin County since 2014 after 25 years as a paralegal; the only candidate on the ballot.",
+          "highlights": [
+            "Chief Deputy Clerk since 2014 [S1]",
+            "Earlier 25 years as a paralegal in private practice [S1]",
+            "Board president of Benton Franklin Legal Aid [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "franklin-franklin-county-commissioner-district-3-commissioner-district-3",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/franklin/dossiers/franklin-franklin-county-commissioner-district-3-commissioner-district-3/"
+      ],
+      "office_does": "The three county commissioners set Franklin County's budget and taxes, maintain county roads and buildings, pass county ordinances and run the departments without an elected head.",
+      "race_blurb": "Only District 3 voters choose between incumbent Clint Didier and planning commissioner Joel Prantle, both Republicans. Didier, who took 57.5% in the primary, runs on opposing any tax increase and limited government; Prantle runs on responsible growth and listening to constituents.",
+      "candidates": [
+        {
+          "slug": "clint-didier",
+          "summary": "Incumbent District 3 commissioner and 2025 board chairman, a farmer running on no tax increases, private property rights and resisting state mandates.",
+          "highlights": [
+            "'I oppose any tax increases'; wants a government that 'lives within its means' [S1]",
+            "As chairman, ended the human services deal with Benton County over its cost in 2025 [S3]",
+            "Backed seeking the Attorney General opinion that former commissioners raised their own pay unconstitutionally [S4]",
+            "Says he started recording and preserving all commissioner meetings [S1]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "States flatly that he opposes any tax increase and campaigns for lower taxes."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3",
+                "S4"
+              ],
+              "basis": "Calls for government that lives within its means; record of ending a costly interlocal agreement and pursuing past commissioners' pay."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Sitting commissioner and 2025 chairman running on his record in office."
+            }
+          }
+        },
+        {
+          "slug": "joel-prantle",
+          "summary": "Railway-supply business vice president and volunteer county planning commissioner, a 50-year resident running on responsible growth and listening to constituents.",
+          "highlights": [
+            "Vice president of family-owned PF&S Railway Supply; volunteer planning commissioner [S1]",
+            "Promises 'responsible growth' and to make sure constituents' voices are heard [S1]",
+            "Describes himself as a conservative Republican who supports President Trump [S1]",
+            "Raised about $7,300, mostly from himself and family [S2][S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "No elected record; challenges a sitting commissioner from a volunteer planning commission seat."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "franklin-franklin-county-coroner",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/franklin/dossiers/franklin-franklin-county-coroner/"
+      ],
+      "office_does": "The coroner investigates unattended, sudden or unnatural deaths in Franklin County and determines their cause and manner.",
+      "race_blurb": "Uncontested: Coroner Curtis McGary (Prefers Republican Party), coroner for eight years, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "curtis-mcgary",
+          "summary": "Franklin County Coroner for eight years, trained in mortuary science; the only candidate on the ballot.",
+          "highlights": [
+            "Coroner for eight years [S1]",
+            "Completed the county's first stand-alone morgue in October 2025, on time and under budget, by his account [S1]",
+            "Uses grants and CT scanning amid a forensic pathologist shortage [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "franklin-franklin-county-district-court-judge",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/franklin/dossiers/franklin-franklin-county-district-court-judge/"
+      ],
+      "office_does": "The District Court judge hears misdemeanors, gross misdemeanors and traffic cases in Franklin County, holds preliminary hearings and sets bail.",
+      "race_blurb": "Nonpartisan: presiding Judge Trinity Orosco, a former defense attorney who started the court's Therapeutic Court, seeks a second term against public defender Michael Nguyen. Nguyen argues bail at first appearances and pledges neutral, efficient courtrooms and cost parity with neighboring courts.",
+      "candidates": [
+        {
+          "slug": "michael-nguyen",
+          "summary": "Public defense attorney with five years in Benton and Franklin County courts, including as the county's preliminary appearance attorney.",
+          "highlights": [
+            "Five years as a public defender; 'hundreds of bail arguments' as preliminary appearance attorney [S1]",
+            "Pledges to act as 'a neutral officiant of the law rather than imposing my beliefs from the bench' [S1]",
+            "Would focus on rehabilitation through therapeutic courts while requiring accountability [S1]",
+            "Wants court costs in line with Benton County and Pasco Municipal courts [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "First run for the bench after five years of practice, challenging a sitting judge."
+            },
+            "safety": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Public-defense formation with heavy bail-hearing practice; pledges a rehabilitation focus through therapeutic courts, paired with accountability."
+            },
+            "judicial": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Commits to applying the law as a neutral officiant rather than imposing personal beliefs from the bench.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "trinity-orosco",
+          "summary": "Presiding judge of Franklin County District Court in her first term, after 14 years as a defense attorney in Tri-Cities-area courts.",
+          "highlights": [
+            "Presiding District Court judge; earlier 14 years of defense practice [S1]",
+            "Created the court's Therapeutic Court; plans a Veterans Court track [S1][S2]",
+            "Expanded the work crew program as an alternative to jail [S2]",
+            "Says she brought more than $1 million in state funding and grants to the county [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Sitting presiding judge running on her first-term record, with long prior trial practice and broad judicial endorsements."
+            },
+            "safety": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Defense formation; built a therapeutic court and expanded work-crew alternatives to incarceration, framed as accountability plus treatment."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "franklin-franklin-county-prosecuting-attorney",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/franklin/dossiers/franklin-franklin-county-prosecuting-attorney/"
+      ],
+      "office_does": "The prosecuting attorney prosecutes crimes in Franklin County and is the legal adviser to county officials and boards.",
+      "race_blurb": "Uncontested: Prosecuting Attorney Shawn P. Sant (Prefers Republican Party), in office since 2011, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "shawn-p-sant",
+          "summary": "Franklin County Prosecuting Attorney since 2011, a former deputy prosecutor, police officer and Air Force veteran; the only candidate on the ballot.",
+          "highlights": [
+            "Prosecutor since 2011; earlier deputy prosecutor and police officer [S1]",
+            "Backs therapeutic courts alongside offender accountability [S1]",
+            "Says budget cuts and reduced staffing strain the office as cases rise [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "franklin-franklin-county-sheriff",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/franklin/dossiers/franklin-franklin-county-sheriff/"
+      ],
+      "office_does": "The sheriff runs the Franklin County Sheriff's Office, the county's chief law-enforcement agency, which patrols the unincorporated county, makes arrests and serves court orders and warrants.",
+      "race_blurb": "Open seat after Sheriff J.D. Raymond's retirement. Undersheriff Monty Huber (47.8% in the primary) runs on continuity and a behavioral health recovery center; Connell Police Chief Chris Lee (30.6%) runs on law and order, fiscal discipline and refocusing the office. Both prefer the Republican Party.",
+      "candidates": [
+        {
+          "slug": "monty-huber",
+          "summary": "Franklin County undersheriff with 23-plus years in the office, a 12-year Army Ranger veteran and former Connell council member.",
+          "highlights": [
+            "Second in command; former SWAT, investigations and training commander [S1]",
+            "Helped lead the office to full accreditation and set up continuous deputy training [S1]",
+            "Would spend political capital funding the Behavioral Health Recovery Center as an alternative to jail or the ER [S3]",
+            "Endorsed by the sheriff's command staff guild, a retired sheriff and several Washington sheriffs [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Career inside the office he seeks to lead, now undersheriff, running explicitly on experience and continuity."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Enforcement career and proactive-patrol platform, tempered by his signature push for a behavioral health center as an alternative to jail."
+            }
+          }
+        },
+        {
+          "slug": "christopher-chris-lee",
+          "summary": "Connell police chief and Marine Corps veteran with 25-plus years in several Tri-Cities agencies, running from outside the sheriff's office.",
+          "highlights": [
+            "Connell police chief; earlier Pasco and Richland police and Hanford Patrol; FBI National Academy graduate [S1]",
+            "Promises to enforce the law, defend victims and 'keep dangerous criminals off our streets' [S1]",
+            "Pledges transparency and fiscal discipline [S1]",
+            "Wants the office 'realigned' with its mission in his first year [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Senior police executive, but has never served in the sheriff's office and runs on refocusing it."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Statement centers on law and order: enforce the law, back deputies, defend victims and keep dangerous criminals off the streets.",
+              "adjusted_by_refutation": true
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Says taxpayers deserve accountability and government should operate with fiscal discipline."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "franklin-franklin-county-treasurer",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/franklin/dossiers/franklin-franklin-county-treasurer/"
+      ],
+      "office_does": "The treasurer collects property taxes, receives and invests county and district money, and pays out funds on authorized warrants.",
+      "race_blurb": "Uncontested: Treasurer Josie Koelzer (Prefers Republican Party), in office since 2011, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "josie-koelzer",
+          "summary": "Franklin County Treasurer since 2011 and a longtime north-county farmer; the only candidate on the ballot.",
+          "highlights": [
+            "Treasurer since 2011; farm and business financial manager before that [S1]",
+            "Says office spending has stayed mostly flat as the county grew [S1]",
+            "Serves on the State Treasurer's investment pool advisory board [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "franklin-port-of-pasco-commissioner-district-3",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/franklin/dossiers/franklin-port-of-pasco-commissioner-district-3/"
+      ],
+      "office_does": "Port of Pasco commissioners govern the port district, which runs the Tri-Cities Airport, the Big Pasco and Reimann industrial centers and other economic development property.",
+      "race_blurb": "Uncontested: Port Commission President Hans-Joachim Engelke, appointed in January 2025 and elected to a one-year term in November 2025, is the only candidate. Only District 3 voters see this race, the first by-district port election.",
+      "candidates": [
+        {
+          "slug": "hans-joachim-engelke",
+          "summary": "Basin City farmer appointed to the Port of Pasco commission in 2025 and its president since January 2026; the only candidate on the ballot.",
+          "highlights": [
+            "Commission president since January 2026; appointed January 2025 [S1]",
+            "Basin City farmer since 1989 [S1]",
+            "Backs growth around the airport and industrial centers [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "franklin-public-utility-district-no-1-of-franklin-county-commissioner-district-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/franklin/dossiers/franklin-public-utility-district-no-1-of-franklin-county-commissioner-district-2/"
+      ],
+      "office_does": "Franklin PUD's three commissioners set electric rates and policy for the county's public utility district and hire its general manager.",
+      "race_blurb": "Uncontested: former Franklin PUD general manager Tim Nies is the only candidate.",
+      "candidates": [
+        {
+          "slug": "tim-nies",
+          "summary": "Former Franklin PUD general manager and state audit manager; the only candidate on the ballot.",
+          "highlights": [
+            "Former Franklin PUD general manager; earlier state audit manager [S1]",
+            "Five years at Energy Northwest [S1]",
+            "Priorities: keeping the Snake River dams, reliable power at reasonable cost, local control [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "chelan-chelan-county-assessor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/chelan/dossiers/chelan-chelan-county-assessor/"
+      ],
+      "office_does": "The assessor values all taxable real and personal property in Chelan County and runs the property tax exemption programs. The assessor does not set tax rates.",
+      "race_blurb": "Appointed in 2023 and elected that November, Assessor Wes Cornelius faces real estate broker Britini Port, who led the primary 53% to 47%. Port says high-value properties are under-assessed and modest homes over-assessed. Cornelius's campaign disputes her data and points to his 19 years in the office and his work on exemptions for seniors, disabled residents and veterans.",
+      "candidates": [
+        {
+          "slug": "britini-port",
+          "summary": "Real estate broker and first-time candidate, running on a claim that luxury, second-home and corporate properties are under-assessed while modest homes are over-assessed.",
+          "highlights": [
+            "Says high-value properties are assessed below market while working-class homes are assessed at or above it [S1]",
+            "Says she is not seeking higher taxes but 'accurate' ones [S5]",
+            "Pledges published methodology, tiered sale-to-assessment ratio reports and per-parcel valuation worksheets [S7]",
+            "Would promote senior, disabled-veteran and fixed-income exemptions and deferrals [S1][S7]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S5"
+              ],
+              "basis": "First-time candidate from private real estate, running on a critique of the office's methods against a 19-year insider."
+            }
+          }
+        },
+        {
+          "slug": "wes-cornelius",
+          "summary": "Assessor since 2023 and in the office since 2007, running on experience, property tax relief for seniors, disabled residents and veterans, and modernized operations.",
+          "highlights": [
+            "Joined the Assessor's Office in 2007; chief deputy 2012-2023; appointed assessor in 2023 and elected that November [S5][S7]",
+            "Says he is 'not interested in taxing people out of their homes' and lobbied for a higher senior exemption income limit [S6]",
+            "Says he worked with legislators on ESSB 6162 and HB 2375 expanding exemption programs [S7][S8]",
+            "Says Port's examples misread state mass-appraisal law and the office's software [S9]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S5",
+                "S7",
+                "S9"
+              ],
+              "basis": "Incumbent with about 19 years in the office, including more than a decade as chief deputy; argues that experience is the deciding qualification."
+            },
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S6",
+                "S7",
+                "S8"
+              ],
+              "basis": "Pushes property tax relief and expanded exemptions for seniors, disabled residents and veterans, and says he is not interested in taxing people out of their homes."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "chelan-chelan-county-auditor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/chelan/dossiers/chelan-chelan-county-auditor/"
+      ],
+      "office_does": "The county auditor runs elections and handles document recording, vehicle and vessel licensing, marriage licenses, and county payroll, accounts payable and financial reporting.",
+      "race_blurb": "Acting Auditor Brandt Cappell, appointed in June to finish retired Auditor Skip Moore's term, faces retiring Wenatchee Valley Fire Chief Brian Brett, a CPA, for a short and full four-year term. Both prefer the Republican Party, and Brett led the primary about 61% to 39%.",
+      "candidates": [
+        {
+          "slug": "brian-brett",
+          "summary": "Retiring Wenatchee Valley Fire Chief with a 34-year fire-service career and a CPA credential, running for his first elected office on fiscal responsibility and stronger audit and finance functions.",
+          "highlights": [
+            "34-year fire-service career, including 8 years as Wenatchee Valley Fire Chief [S1]",
+            "Washington State CPA, former senior accountant at Cordell, Neher & Co., with a graduate certificate in governmental financial management [S1]",
+            "Says his background 'will strengthen the audit and finance functions while supporting the efficient use of taxpayer dollars' [S1]",
+            "Led the certified August primary with 12,073 votes (60.92%) [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S5"
+              ],
+              "basis": "Has never held elected office and comes from outside the auditor's office, though with long public-agency leadership as a fire chief."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Frames his candidacy around fiscal responsibility, a stronger audit function and efficient use of taxpayer dollars, all in one pamphlet statement."
+            }
+          }
+        },
+        {
+          "slug": "brandt-cappell",
+          "summary": "Acting Chelan County Auditor, appointed in June 2026 after serving as the office's first chief deputy, and a former legislative aide to 12th District legislators.",
+          "highlights": [
+            "Appointed acting auditor in June 2026 after Skip Moore retired; hired as the office's first chief deputy auditor in 2025 [S5][S6]",
+            "Former legislative assistant to 12th District legislators, most recently Rep. Keith Goehner [S5][S11]",
+            "Priorities include election integrity and accuracy, timely payroll and accounts payable, and protecting 'taxpayer dollars through responsible financial oversight and transparency' [S1]",
+            "Announced the restoration of recording services after the 2026 Memorial Day weekend system failure [S7]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S5",
+                "S6"
+              ],
+              "basis": "Appointed incumbent and former chief deputy who runs on continuity with the outgoing auditor; his time leading the office is short."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Lists protecting taxpayer dollars through responsible financial oversight and transparency as a priority, in one pamphlet statement."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "chelan-chelan-county-clerk",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/chelan/dossiers/chelan-chelan-county-clerk/"
+      ],
+      "office_does": "The county clerk is clerk of the Superior Court, keeping its case records and running jury administration, the family-law facilitator program and passport processing.",
+      "race_blurb": "A rematch of 2022, when Republican Marty Young beat independent Sandra Arechiga by under 500 votes. Arechiga, a 12-year Clerk's Office employee who calls the office nonpartisan, led the August primary; Young runs on his first term and his management background.",
+      "candidates": [
+        {
+          "slug": "sandra-arechiga",
+          "summary": "Family-law court facilitator and former jury administrator with 12 years in the Clerk's Office, running as an independent who says the office 'is not about party politics.'",
+          "highlights": [
+            "Twelve years in the Clerk's Office, including six as Jury Administrator; now a Family Law Court Facilitator [S1]",
+            "Pledges transparency, bilingual service and 'working in good faith with Chelan County Commissioners' [S8]",
+            "Endorsed by retired Judge Chip Small, former Commissioner Bob Bugert and former Superior Court Commissioner Bart Vandegrift [S9]",
+            "Led the August primary with 8,553 votes (37.99%) [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S5",
+                "S8"
+              ],
+              "basis": "Non-incumbent who has never held elected office and is challenging the incumbent, though she argues from 12 years of work inside the office."
+            }
+          }
+        },
+        {
+          "slug": "marty-young",
+          "summary": "Chelan County Clerk since his 2022 election, a former operations manager with an MBA and an engineering degree, and a Republican precinct committee officer.",
+          "highlights": [
+            "Elected clerk in 2022, 16,456 to 15,978 over Arechiga [S5]",
+            "Cites court-record confidentiality, retention standards, grant processing and monthly quality-control reports [S1]",
+            "Led the office through a backlog of more than 6,000 filings after the 2026 county malware outage [S8]",
+            "Campaigns on 'common-sense conservative experience & retained knowledge' [S9]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S5",
+                "S9"
+              ],
+              "basis": "One-term elected incumbent who asks to be re-elected on his record and 'retained knowledge'; his tenure is a single term."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "chelan-chelan-county-commissioner-district-2-commissioner-district-no-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/chelan/dossiers/chelan-chelan-county-commissioner-district-2-commissioner-district-no-2/"
+      ],
+      "office_does": "The three county commissioners set Chelan County's budget and pass county ordinances and land-use rules; District 2 candidates are nominated by District 2 voters, and the whole county elects the winner.",
+      "race_blurb": "First-term Commissioner Shon Smith (prefers Republican), board chair since 2025, faces Leavenworth City Council member Clint Strand (prefers Democrat) after a primary decided by 120 votes. Smith runs on experience and representing rural unincorporated areas. Strand runs on trust in county operations, housing partnerships and ending reserve draws to balance the budget.",
+      "candidates": [
+        {
+          "slug": "shon-d-smith",
+          "summary": "Cashmere restaurant owner elected commissioner in 2022 and board chair since 2025, running for a second term on experience, rural representation and keeping taxes low.",
+          "highlights": [
+            "Says the county must keep 'taxes low while also keeping the roads paved and the bridges in good repair' [S5]",
+            "Voted for the 2024 ordinance letting deputies trespass people camping on county property [S12]",
+            "Voted in 2023 to strike denser zoning from Leavenworth's growth area, citing rural character; reversed in 2024 after a state board ruling [S10][S11]",
+            "Says he is taking no campaign donations and that 'campaign spending is out of control' [S5]",
+            "Placed first in the District 2 primary, 4,368 to 4,248 [S7]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Incumbent commissioner and board chair whose campaign is built on 'Chelan County Needs an Experienced Commissioner.'"
+            },
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S5"
+              ],
+              "basis": "Lists 'Responsible taxation' and says the county is 'always concerned about keeping taxes low'; no proposal to cut specific taxes."
+            },
+            "spending": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S5",
+                "S13",
+                "S15"
+              ],
+              "basis": "States a spend-less-than-you-have goal and backed permit fees that end a general-fund subsidy, but describes planned deficit budgets, and a colleague's balanced-budget goal motions died without his support."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S12"
+              ],
+              "basis": "Voted for the encampment trespass ordinance and lists support for the sheriff and first responders; also cites a four-county diversion facility."
+            },
+            "reform": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S5",
+                "S6"
+              ],
+              "basis": "Says he refuses campaign donations because spending is 'out of control' and donations misrepresent voter support; PDC mini-reporting registration is consistent with that."
+            }
+          }
+        },
+        {
+          "slug": "clint-strand",
+          "summary": "Leavenworth City Council member since 2017 and Finance Committee chair, executive director of the Wenatchee Valley College Foundation, running on trust in county operations, housing and a balanced budget.",
+          "highlights": [
+            "Says the county 'can't keep dipping into our reserve funds to make the math work' [S1]",
+            "Proposes regional partnerships and incentives for builders to create starter and ownership housing [S1][S6]",
+            "Calls trust the county's most pressing issue and promises expectations and accountability for county services [S3][S6]",
+            "Raised $15,244.58 as of October 5 [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S6"
+              ],
+              "basis": "Challenger to the incumbent who promises a new approach to trust and accountability, though he has eight-plus years on a city council."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Criticizes reserve draws and pledges to adjust services so 'our books balance'; no proposals to expand programs."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S1",
+                "S3",
+                "S6"
+              ],
+              "basis": "Housing plan centers on incentives for builders and identifying areas for development to add ownership housing, not public housing or tenant protections.",
+              "adjusted_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "chelan-chelan-county-coroner",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/chelan/dossiers/chelan-chelan-county-coroner/"
+      ],
+      "office_does": "The coroner has jurisdiction over sudden, unexplained, violent or suspicious deaths in Chelan County; the office conducts 100 to 150 death investigations a year.",
+      "race_blurb": "Uncontested: appointed coroner Earl J. Crowe (Prefers Republican Party), who replaced retiring coroner Wayne Harris in January 2026, is the only candidate for the short and full terms.",
+      "candidates": [
+        {
+          "slug": "earl-j-crowe",
+          "summary": "Chelan County's appointed coroner since January 2026, after 13 years as chief deputy coroner; the only candidate on the ballot.",
+          "highlights": [
+            "Appointed by the county commissioners on Dec. 22, 2025 to replace retiring coroner Wayne Harris [S3]",
+            "22 years in death investigations, including 13 as Chelan County chief deputy coroner [S1]",
+            "Board certified by the American Board of Medicolegal Death Investigators; eight years active duty in the U.S. Navy [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "chelan-chelan-county-district-court-judge-position-no-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/chelan/dossiers/chelan-chelan-county-district-court-judge-position-no-1/"
+      ],
+      "office_does": "A district court judge hears misdemeanors, gross misdemeanors, city-ordinance violations, traffic infractions and preliminary hearings in Chelan County.",
+      "race_blurb": "Uncontested: Presiding Judge Jon Volyn, who won the open seat in 2022, is the only candidate for a four-year term.",
+      "candidates": [
+        {
+          "slug": "jon-volyn",
+          "summary": "Presiding judge of Chelan County District Court, elected in 2022 after four years as a part-time judge; the only candidate on the ballot.",
+          "highlights": [
+            "Elected in 2022 with 52.29% over Allen F. Blackmon; part-time judge 2018-2022 [S1][S4]",
+            "Says he has more than 25 years of legal experience and has presided over more than 30 jury trials [S1]",
+            "Described the court's 2024 therapeutic court as a way for some defendants to get help and avoid a conviction [S6]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "chelan-chelan-county-district-court-judge-position-no-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/chelan/dossiers/chelan-chelan-county-district-court-judge-position-no-2/"
+      ],
+      "office_does": "A district court judge hears misdemeanors, gross misdemeanors, city-ordinance violations, traffic infractions and preliminary hearings in Chelan County.",
+      "race_blurb": "Uncontested: Judge Allen F. Blackmon, appointed in 2022 and elected in 2024 over Jay Eyestone, is the only candidate for a four-year term.",
+      "candidates": [
+        {
+          "slug": "allen-f-blackmon",
+          "summary": "Chelan County District Court judge since his 2022 appointment, re-elected in 2024; a county deputy prosecutor from 1996 to 2022. The only candidate on the ballot.",
+          "highlights": [
+            "Appointed in 2022 to replace Judge Kyle Mott [S3][S4]",
+            "Won the 2024 election with 60.27% over Jay Eyestone [S7]",
+            "Chelan County deputy prosecutor from 1996 to 2022, mostly handling juvenile cases [S1][S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "chelan-chelan-county-prosecuting-attorney",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/chelan/dossiers/chelan-chelan-county-prosecuting-attorney/"
+      ],
+      "office_does": "The prosecuting attorney prosecutes criminal and civil cases for the state and county and is legal adviser to county officers and school directors.",
+      "race_blurb": "Uncontested: incumbent Robert W. Sealby (Prefers Republican Party), appointed in 2021 and elected unopposed in 2022, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "robert-w-sealby",
+          "summary": "Chelan County Prosecuting Attorney since his 2021 appointment, elected unopposed in 2022; a Wenatchee attorney licensed since 1991. The only candidate on the ballot.",
+          "highlights": [
+            "Appointed in 2021 to replace retiring prosecutor Doug Shae; elected in 2022 [S1][S4]",
+            "In 2023 found police use of force legally justified in two fatal 2022 Wenatchee police shootings and filed no charges [S6][S7]",
+            "Former U.S. Army; past president of the Wenatchee School Board [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "chelan-chelan-county-sheriff",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/chelan/dossiers/chelan-chelan-county-sheriff/"
+      ],
+      "office_does": "The sheriff runs county law enforcement in Chelan County, including patrol, marine patrol, traffic, the drug task force and a behavioral health unit, and leads the response to wildfires, floods and other critical incidents.",
+      "race_blurb": "First-term Sheriff Mike Morrison faces Stan Langlow, a patrol deputy in his own office who came from the Kitsap County Sheriff's Office; both prefer the Republican Party. Morrison took about 76% of the primary vote, and the race turns mainly on his record against Langlow's pitch for new leadership centered on deputy support and accountability.",
+      "candidates": [
+        {
+          "slug": "mike-morrison",
+          "summary": "Incumbent sheriff, first elected in 2022, with more than 20 years in law enforcement, running on staffing, training, equipment, grant funding and incident response.",
+          "highlights": [
+            "Says the Marine Patrol, Traffic Unit, Drug Task Force and Behavioral Health Unit have become more visible, proactive and effective under his leadership [S1]",
+            "Announced $713,000 in federal funding for less-lethal and de-escalation tools, after $660,000 for body-worn cameras in 2024 [S7]",
+            "Called Flock camera technology 'outstanding' but said the company has damaged its relationship with Chelan County residents [S8]",
+            "Won the August primary with 75.94% of the vote [S5]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3",
+                "S6"
+              ],
+              "basis": "Incumbent sheriff since the 2022 election with 20+ years in law enforcement and a seat on the WASPC executive board, running on his record."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S7"
+              ],
+              "basis": "Emphasizes staffing and 'visible, proactive' enforcement units, alongside a behavioral health unit and de-escalation tools; no diversion or non-police-response proposals."
+            }
+          }
+        },
+        {
+          "slug": "stan-langlow",
+          "summary": "Chelan County patrol deputy and former Kitsap County patrol and training sergeant and SWAT assistant commander, running on leadership, deputy support and community connection.",
+          "highlights": [
+            "About 10 years in law enforcement, most of it at the Kitsap County Sheriff's Office [S1][S3]",
+            "Wants an office that is 'accountable, results-driven, and honest about its performance' with measurable outcomes [S4]",
+            "Would give frontline deputies 'real pathways for input' and invest in training beyond minimum requirements [S4]",
+            "Promises 'fiscal responsibility' and 'value and accountability to taxpayers' [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3",
+                "S8"
+              ],
+              "basis": "Deputy with about a decade in law enforcement, never elected to public office, recently hired by the office and challenging his own sheriff.",
+              "adjusted_by_refutation": true
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S4"
+              ],
+              "basis": "Pitches fiscal responsibility, measurable performance outcomes and value and accountability to taxpayers; general statements, no specific budget proposals."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "chelan-chelan-county-treasurer",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/chelan/dossiers/chelan-chelan-county-treasurer/"
+      ],
+      "office_does": "The treasurer collects property taxes and safeguards, invests and accounts for county and district funds. The treasurer does not set tax rates.",
+      "race_blurb": "Open seat. Wealth advisor Rick Viall, a first-time candidate, led the primary 53% to 47% over Doug Miller, a former assistant fire chief who has served on the Wenatchee City Council, school board and a fire commission. Both stress safeguarding public funds and accountability.",
+      "candidates": [
+        {
+          "slug": "richard-rick-viall",
+          "summary": "Chelan County wealth advisor and business owner, a first-time candidate running on fiduciary stewardship, audit preparation and modern financial systems.",
+          "highlights": [
+            "Would improve coordination with the Auditor, strengthen audit preparation and update financial software [S1]",
+            "Says the treasurer collects, safeguards and accounts for taxes but does not decide them [S5]",
+            "Campaign site offers property-tax lookup tools and a stress test of the port authority's Malaga bond plan [S5][S7]",
+            "Endorsed by Assessor Wes Cornelius [S6]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S5"
+              ],
+              "basis": "Has never held elected office; runs on private-sector fiduciary and compliance experience.",
+              "adjusted_by_refutation": true
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S5",
+                "S7"
+              ],
+              "basis": "Stresses audit preparation, strict investment-policy compliance and fiduciary controls, and questions whether the port needs new revenue tools rather than better use of existing assets."
+            }
+          }
+        },
+        {
+          "slug": "doug-miller",
+          "summary": "Former assistant fire chief and airline pilot with a long record in local elected office, including the Wenatchee City Council, running on his public-office experience and protection of public funds.",
+          "highlights": [
+            "Has served on the Wenatchee School District board, the Wenatchee City Council and a county fire commission [S1]",
+            "Elected unopposed to Wenatchee City Council District 2 in 2025 [S6][S9]",
+            "Says 'accountability upgrades and cybersecurity' will be his first priority [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S6",
+                "S9"
+              ],
+              "basis": "Long-serving local elected official who runs on his years in public office, though not an incumbent in this office."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "chelan-court-of-appeals-division-3-district-3-judge-position-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/chelan/dossiers/chelan-court-of-appeals-division-3-district-3-judge-position-1/"
+      ],
+      "office_does": "A Court of Appeals judge reviews trial-court decisions on appeal; Division III, District 3 elects two judges from Chelan, Douglas, Kittitas, Klickitat and Yakima counties.",
+      "race_blurb": "Uncontested: Judge Megan K. Murphy, appointed by Gov. Inslee in January 2025 and elected unopposed in 2025 to finish the term, is the only candidate for a six-year term.",
+      "candidates": [
+        {
+          "slug": "megan-k-murphy",
+          "summary": "Court of Appeals, Division III judge since January 2025; previously a Yakima County deputy prosecutor and civil litigator. The only candidate on the ballot.",
+          "highlights": [
+            "Appointed by Gov. Jay Inslee to replace Judge Rebecca Pennell [S2]",
+            "Yakima County deputy prosecutor from 2001, then civil litigation in private practice, latest as a partner at Fox Ballard [S1][S2]",
+            "Unopposed in the Nov. 2025 election for the seat [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "chelan-public-utility-district-no-1-of-chelan-county-commissioner-district-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/chelan/dossiers/chelan-public-utility-district-no-1-of-chelan-county-commissioner-district-1/"
+      ],
+      "office_does": "Chelan PUD's five elected commissioners set policy, approve plans and budgets, and set rates for the county's public utility, which owns the Rock Island hydropower project now up for federal relicensing.",
+      "race_blurb": "Open seat: Commissioner Garry Arseneault, who has held District 1 since 2015, is not on the ballot. Water and agricultural lawyer Colleen Frei and Malaga orchardist and EMT Aaron Young are running for the six-year term, and all of Chelan County votes in the general.",
+      "candidates": [
+        {
+          "slug": "colleen-frei",
+          "summary": "Managing partner of JDSA Law, practicing agricultural and water law, and a consultant to growers' and winegrowers' associations, running for her first elected office on Rock Island relicensing, water stewardship and affordable rates.",
+          "highlights": [
+            "Calls federal relicensing of the Rock Island project 'an incredibly important negotiation' for local power rights [S4]",
+            "Would advocate grid modernization that protects rates for local families and small businesses as tech demand grows [S4]",
+            "Pledges to protect local control and public ownership of the PUD [S1]",
+            "Endorsers listed on her site include Linda Evans Parlette and Frank Kuntz [S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "aaron-young",
+          "summary": "Malaga tree-fruit grower, general contractor and part-time EMT with 18 years as a volunteer firefighter, running on rate protection, data-center cost allocation and south-county representation.",
+          "highlights": [
+            "Says he 'will stand firm against rate hikes that burden families, farms, and businesses' [S3]",
+            "Would ensure data centers and other large users don't shift costs onto residents and agriculture [S3]",
+            "Says he is the only candidate living south of downtown Wenatchee [S1]",
+            "Lists eight years on the Chelan County Republican Central Committee executive board and a seat on the county Boundary Review Board [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "chelan-public-utility-district-no-1-of-chelan-county-commissioner-district-b-at-large",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/chelan/dossiers/chelan-public-utility-district-no-1-of-chelan-county-commissioner-district-b-at-large/"
+      ],
+      "office_does": "Chelan PUD's five commissioners set policy, approve budgets and expenditures, and set electric rates and charges; at-large District B is elected by all Chelan County voters.",
+      "race_blurb": "Uncontested: incumbent Kelly Allen, elected unopposed in 2022 and board president as of May 2026, is the only candidate for a four-year term.",
+      "candidates": [
+        {
+          "slug": "kelly-allen",
+          "summary": "Chelan PUD commissioner for at-large District B since January 2023 and board president as of May 2026; a Chelan insurance-agency owner and former Chelan City Council member. The only candidate on the ballot.",
+          "highlights": [
+            "Elected unopposed in 2022 to the seat Dennis Bolz held for 16 years [S4][S5][S6]",
+            "Chelan City Council, 2016-2020 [S3]",
+            "Owns the Kelly Allen Agency, an insurance agency in Chelan [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "clallam-clallam-county-assessor",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/clallam/dossiers/clallam-clallam-county-assessor/"
+      ],
+      "office_does": "The assessor values every taxable property in Clallam County each year for property taxes; levy rates are set by taxing districts and voters.",
+      "race_blurb": "Open seat; current Assessor Pam Rushton is not on the ballot. The office's lead appraiser, Lee Hancock, faces Antonio Price, a diesel mechanic and farmer making his first run for office.",
+      "candidates": [
+        {
+          "slug": "lee-hancock",
+          "summary": "Lead appraiser in the Clallam County Assessor's Office after 16 years there, with prior careers in mortgage banking and residential contracting.",
+          "highlights": [
+            "16 years as a residential and commercial appraiser in the assessor's office, now lead appraiser [S1]",
+            "13 years in mortgage banking and real estate finance; four years as a self-employed residential contractor [S1]",
+            "Running 'to help make the office as efficient as possible' with fair, respectful service [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Runs on 16 years inside the assessor's office as an appraiser and lead appraiser, though he has never held elected office."
+            }
+          }
+        },
+        {
+          "slug": "antonio-price",
+          "summary": "Sequim diesel mechanic, farmer and tow truck driver making his first run for office, who says he wants to help the community.",
+          "highlights": [
+            "First run for office; describes himself as 'a blue-collar' young man who has worked the farmland [S1]",
+            "Work experience as a diesel mechanic, farmer and tow truck driver; high school diploma [S1]",
+            "Said assessor 'was one thing I felt that I could actually understand and figure out what needs to be done' [S3]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "First-time candidate from outside government and the assessment field, running as a community member rather than on professional credentials."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "clallam-clallam-county-auditor",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/clallam/dossiers/clallam-clallam-county-auditor/"
+      ],
+      "office_does": "The auditor runs county elections, records deeds and other documents, licenses vehicles and vessels, and keeps the county's financial accounts and reports.",
+      "race_blurb": "Auditor Shoona Riggs, in office since 2015 after decades in the Clallam and Jefferson auditor's offices, faces Sequim attorney Virginia Shogren, who runs on election integrity and cutting waste. They disagree over the state of the voter rolls and ballot chain of custody.",
+      "candidates": [
+        {
+          "slug": "virginia-shogren",
+          "summary": "Sequim attorney and former U.S. Patent and Trademark Office attorney running to 'restore trust in our elections' with hand-countable paper ballots and to cut county waste.",
+          "highlights": [
+            "Calls for 'paper ballots you can watch and count' and says the county voter list 'is a mess' [S1][S5]",
+            "Pledges to watch 'every county expense closely' and cut waste; cited DOGE in her forum opening [S1][S5]",
+            "Opposes ranked-choice voting; supports consolidating elections to once a year [S5]",
+            "Sanctioned by the state Supreme Court in 2022 over a petition alleging noncitizen voter registration [S6]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S5"
+              ],
+              "basis": "Pledges to watch every county expense, cut waste and spend less so 'more money stays in your pocket,' and frames waste through DOGE."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S5"
+              ],
+              "basis": "Challenger from private legal practice with no county administrative experience, running to change how elections are run."
+            }
+          }
+        },
+        {
+          "slug": "shoona-riggs",
+          "summary": "Clallam County Auditor since 2015, formerly chief deputy auditor and elections supervisor, with 36 years in the Clallam and Jefferson auditor's offices.",
+          "highlights": [
+            "36 years in county auditor's offices; Washington State Certified Election Administrator since 1999 [S1]",
+            "Endorsed by Secretary of State Steve Hobbs and county auditors; cites support from former Secretary of State Kim Wyman [S1]",
+            "Disputed her opponent's voter-roll and chain-of-custody claims; supports once-a-year consolidated elections [S7]",
+            "In 2017 took responsibility for 125 uncounted 2016 ballots and changed drop-box procedures [S4][S5]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3",
+                "S7"
+              ],
+              "basis": "Incumbent since 2015 with 36 years in county auditor's offices, 25 in elections administration."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "clallam-clallam-county-commissioner-district-3-county-commissioner-dist-no-3",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/clallam/dossiers/clallam-clallam-county-commissioner-district-3-county-commissioner-dist-no-3/"
+      ],
+      "office_does": "The three Clallam County commissioners hold the county's legislative and executive power: they adopt the budget and ordinances, levy taxes, adopt the comprehensive plan and oversee county departments. They are nominated by district and elected countywide.",
+      "race_blurb": "First-term incumbent Mike French (Prefers Democratic Party) faces first-time candidate Jake Seegers (Prefers Independent Party), who led the District 3 primary 52.7% to 47.1%. All county voters choose in November. The two differ most on harm reduction and homelessness, taxes and fees, land use, and climate policy.",
+      "candidates": [
+        {
+          "slug": "jake-seegers",
+          "summary": "Port Angeles investment consultant and real estate investor making his first run for office, on public safety, economic development, affordability and asking of every program 'Is it essential? Is it effective?'",
+          "highlights": [
+            "Pledges to grow county revenue 'without increasing taxes or fees' and to reduce permit fees [S3][S13]",
+            "Says the county is 'enabling' with harm reduction; favors a one-for-one syringe exchange and transitional over permanent supportive housing [S13]",
+            "Says the state has restricted property rights and land use 'far beyond what is necessary' and the county should not add to it [S17]",
+            "Led the District 3 primary with 52.7% of the vote [S7]",
+            "PDC found a violation over blog sponsor identification; $250 penalty suspended on conditions [S14]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S9",
+                "S13"
+              ],
+              "basis": "Repeated pledges to fund priorities without raising taxes or fees, to lower fees, and to back a new sales tax only if another ends."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3",
+                "S13"
+              ],
+              "basis": "Runs on restoring budget oversight and testing every program for whether it is essential and effective; criticizes 'more grants, more government spending and more money to NGOs.'"
+            },
+            "housing": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S13",
+                "S17"
+              ],
+              "basis": "Wants lower permit fees, pushback on state mandates, and land use left to property owners; favors transitional over permanent supportive housing."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3",
+                "S13"
+              ],
+              "basis": "Calls public safety his top priority. Supports OPNET and equipping officers to address encampments, says the county's harm reduction is 'enabling,' and wants recovery measured as an outcome; also backs co-response programs.",
+              "adjusted_by_refutation": true
+            },
+            "climate": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S13",
+                "S17"
+              ],
+              "basis": "Says the county climate vulnerability assessment uses extreme assumptions and was not required, and opposes carbon-credit-only management that would stop timber harvests; no broader energy-policy statements."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S8",
+                "S17"
+              ],
+              "basis": "First-time candidate with no elected experience, running to change the 'culture of county government.'"
+            }
+          }
+        },
+        {
+          "slug": "mike-french",
+          "summary": "First-term District 3 commissioner and former Port Angeles City Councilmember and downtown business owner, running on economic development (he led the $35.6 million Recompete effort), housing, public safety and climate.",
+          "highlights": [
+            "Chaired the coalition that won $35.6 million in federal Recompete funds for jobs and workforce training [S1][S5]",
+            "Pushed for the local 0.1% affordable-housing sales tax, now about $1.5 million a year countywide [S6][S18]",
+            "Supports harm reduction alongside treatment and law enforcement; backs co-response, OPNET and more sheriff positions on the sheriff's recommendation [S7][S18]",
+            "Calls climate change 'the most important and urgent political issue of our time'; worked on the 2023 Climate Action Plan update [S8]",
+            "Describes himself as an advocate of 'conservative budgeting,' avoiding debt and protecting reserves [S1]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S6",
+                "S14",
+                "S15"
+              ],
+              "basis": "Advanced a local affordable-housing sales tax and says he would support a county public-safety sales tax, while acknowledging voter resistance to more property tax and calling for conservative fiscal management."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S5",
+                "S6",
+                "S15"
+              ],
+              "basis": "Runs on public investment (Recompete, Opportunity Fund infrastructure, affordable-housing seed money), tempered by stated conservative budgeting and the county's 7% cut exercise."
+            },
+            "housing": {
+              "score": 0,
+              "confidence": "high",
+              "citations": [
+                "S6",
+                "S12"
+              ],
+              "basis": "Genuinely mixed: a record of deregulation (MFTE, infill SEPA exemption, ADUs, park models, fewer parking requirements) alongside public funding for affordable and permanent supportive housing."
+            },
+            "safety": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S7",
+                "S13",
+                "S18"
+              ],
+              "basis": "Favors harm reduction, co-response, sanctioned camping and transitional housing, and says criminalizing homelessness doesn't work; also supports OPNET, more deputies and enforcing boundaries."
+            },
+            "climate": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S8",
+                "S19"
+              ],
+              "basis": "Calls climate the most urgent issue, updated the county Climate Action Plan, pushed fleet electrification and defended the climate vulnerability assessment."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Incumbent commissioner since 2023 after five years on the Port Angeles City Council, running on an enacted record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "clallam-clallam-county-director-of-community-development",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/clallam/dossiers/clallam-clallam-county-director-of-community-development/"
+      ],
+      "office_does": "The elected Director of Community Development runs county planning, zoning, permitting, building codes and code enforcement, and drafts the comprehensive plan and development rules for the commissioners to adopt.",
+      "race_blurb": "Uncontested: incumbent Bruce Emery, elected in 2022, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "bruce-emery",
+          "summary": "Director of Community Development since December 2022, a former county senior planner (1993-2007) and construction project manager (2007-2022); the only candidate on the ballot.",
+          "highlights": [
+            "Names economic development and more housing, including multifamily, as his top priorities [S3]",
+            "Cites expanded agricultural accessory uses and stronger code enforcement; 87 cases closed in the second quarter of 2026 [S1][S4]",
+            "Led the comprehensive plan update now before the commissioners [S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "clallam-clallam-county-district-court-1-judge",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/clallam/dossiers/clallam-clallam-county-district-court-1-judge/"
+      ],
+      "office_does": "The District Court 1 judge, the court's only judge, hears misdemeanor and gross-misdemeanor criminal cases, traffic infractions, small claims, civil cases and protection-order petitions for central and eastern Clallam County, including Port Angeles and Sequim, and sets bail and release conditions; elected by District Court 1 voters to a four-year term.",
+      "race_blurb": "Open seat after Judge David Neupert's retirement. Alex Schodowski, the court's judge pro tem since 2016 and Neupert's choice, faces deputy prosecutor Patrick David Murphy, who says the court needs a new direction and stricter release conditions for violent offenses. No bar rating was found.",
+      "candidates": [
+        {
+          "slug": "alex-schodowski",
+          "summary": "Clallam County District Court 1 judge pro tem since 2016 and Superior Court commissioner since 2019; a former Clallam deputy prosecutor now in private defense and personal-injury practice in Port Townsend.",
+          "highlights": [
+            "District Court 1 judge pro tem since 2016; Superior Court commissioner since 2019 [S1][S3]",
+            "Former Clallam County deputy prosecutor; now a defense and personal-injury lawyer [S2][S4]",
+            "Would continue the Mental Health Court and Veterans Court [S2][S3]",
+            "On release: the law requires the least restrictive alternative, without disregarding public safety [S4]",
+            "Endorsed by retiring Judge David Neupert and District Court 2 Judge Bruce Hanify [S2][S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3",
+                "S4"
+              ],
+              "basis": "Not the incumbent, but about ten years as the court's pro tem judge plus a superior court commissionership, endorsed by the retiring judge, running on continuity and readiness."
+            },
+            "safety": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S4"
+              ],
+              "basis": "Formation spans five-plus years of prosecution and a defense practice; she cites the least-restrictive-alternative release standard and backs therapeutic courts while listing community safety as a priority."
+            }
+          }
+        },
+        {
+          "slug": "patrick-david-murphy",
+          "summary": "Clallam County deputy prosecuting attorney since 2019, practicing mainly in District Court 1, after five years of private practice in Kitsap County; has no judicial service.",
+          "highlights": [
+            "Deputy prosecutor in District Court 1 since 2019; reports 3,000+ cases and 75+ jury trials [S1][S2]",
+            "Says release conditions for violent offenses have been insufficient [S6][S7]",
+            "Pairs accountability with restorative justice and therapeutic courts that sanction violations [S1][S3]",
+            "Wants the court to apply public-defender eligibility rules strictly [S7]",
+            "Endorsed by retired Sheriff Bill Benedict and retired law-enforcement officers [S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3",
+                "S6"
+              ],
+              "basis": "No judicial service; runs explicitly on a 'new, more effective direction' for the court, against the outgoing judge's pick."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S6",
+                "S7"
+              ],
+              "basis": "Career District Court prosecutor who repeatedly calls for firmer release conditions and bail for violent offenses and a victims-first approach, while also backing restorative justice and therapeutic courts."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "clallam-clallam-county-district-court-2-judge",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/clallam/dossiers/clallam-clallam-county-district-court-2-judge/"
+      ],
+      "office_does": "The District Court 2 judge, based in Forks, hears misdemeanor criminal cases and small-claims civil matters arising on Clallam County's West End; elected by District Court 2 voters to a four-year term.",
+      "race_blurb": "Uncontested: Judge Bruce Hanify, appointed in 2021 and elected unopposed in 2022, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "bruce-hanify",
+          "summary": "District Court 2 judge since January 2021; previously a deputy prosecutor for 15 years and a criminal defense attorney for 17. A Forks High School graduate and the only candidate on the ballot.",
+          "highlights": [
+            "Appointed District Court 2 judge in 2021; elected unopposed in 2022 [S3][S4]",
+            "Deputy prosecutor for 15 years, then criminal defense attorney for 17 years [S1][S2]",
+            "Names mental health and addiction cases as the court's main challenge [S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "clallam-clallam-county-prosecuting-attorney",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/clallam/dossiers/clallam-clallam-county-prosecuting-attorney/"
+      ],
+      "office_does": "The prosecuting attorney charges and prosecutes crimes in Clallam County and is the county's civil lawyer.",
+      "race_blurb": "Uncontested: Mark Nichols, prosecuting attorney since his election in 2014, is seeking a fourth term with no opponent.",
+      "candidates": [
+        {
+          "slug": "mark-nichols",
+          "summary": "Clallam County Prosecuting Attorney since his election in 2014 and a former park ranger and deputy prosecutor, seeking a fourth term focused on violent and repeat offenders and victims' rights.",
+          "highlights": [
+            "Says public safety remains his top priority, with focus on violent offenders and repeat offenders [S1]",
+            "Helped stand up a mental health court now run by District Court 1 [S3]",
+            "Criticized proposed bail-rule changes and unfunded public-defense caseload limits [S4]",
+            "Publishes quarterly prosecutor data and wants a case dashboard [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "clallam-clallam-county-sheriff",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/clallam/dossiers/clallam-clallam-county-sheriff/"
+      ],
+      "office_does": "The sheriff is Clallam County's chief law enforcement officer, running patrol, investigations and the county jail.",
+      "race_blurb": "Uncontested: Sheriff Brian King, completing his first term, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "brian-king",
+          "summary": "Clallam County Sheriff since 2023 and a 31-year law enforcement veteran who previously commanded patrol, investigations and the regional narcotics team; the only candidate on the ballot.",
+          "highlights": [
+            "Calls for more well-trained officers, 'not fewer,' plus stronger behavioral health systems and drug enforcement [S1][S5]",
+            "Cites jail re-entry and treatment services, body-worn cameras and a digital forensics lab from his first term [S5]",
+            "Opposed SB 5974, which would let a state commission decertify elected sheriffs; supported HB 2387 [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "clallam-clallam-county-treasurer",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/clallam/dossiers/clallam-clallam-county-treasurer/"
+      ],
+      "office_does": "The treasurer collects property taxes and other county revenue, pays county warrants and invests county funds.",
+      "race_blurb": "Uncontested: Treasurer Jennifer L. White, in office since 2023, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "jennifer-l-white",
+          "summary": "Clallam County Treasurer since 2023 and former chief deputy treasurer, with earlier court, corrections and law enforcement roles; the only candidate on the ballot.",
+          "highlights": [
+            "Says invested funds rose 240% and interest earnings grew more than eightfold under a conservative approach [S1]",
+            "Began a review of the county's banking relationship for lower fees and stronger fraud protection [S1]",
+            "Pledges expanded secure electronic payments and property-fraud safeguards [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "clallam-court-of-appeals-division-2-district-2-judge-position-1",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/clallam/dossiers/clallam-court-of-appeals-division-2-district-2-judge-position-1/"
+      ],
+      "office_does": "A Court of Appeals judge reviews appeals from superior-court cases; District 2 judges are elected for six-year terms by voters in Clallam, Grays Harbor, Jefferson, Kitsap, Mason and Thurston counties.",
+      "race_blurb": "Uncontested: Judge Erik D. Price, on the Court of Appeals since 2021 and now Division II's acting chief judge, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "erik-d-price",
+          "summary": "Court of Appeals judge since 2021 and Division II's acting chief judge; previously a Thurston County Superior Court judge (2012-2021) and a civil litigator for 19 years. The only candidate on the ballot.",
+          "highlights": [
+            "Court of Appeals judge since 2021; acting chief judge of Division II [S1]",
+            "Thurston County Superior Court judge 2012-2021, including presiding judge and drug court chief judge [S1]",
+            "Unopposed on the 2022 ballot, with 98.6% of the Clallam vote [S2]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "clallam-legislative-district-24-state-representative-pos-1",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/clallam/dossiers/clallam-legislative-district-24-state-representative-pos-1/"
+      ],
+      "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering the tax structure, natural-resource and timber policy, K-12 policy and funding, and criminal-justice statutes.",
+      "race_blurb": "First-term Democratic Rep. Adam Bernbaum faces Republican Eric Pratt, a Quilcene field-installation supervisor making his first legislative run. A September forum report described both as wary of raising taxes and wanting local say on road projects; they split most sharply on the 2026 tax on income over $1 million, which Bernbaum voted for and Pratt opposes.",
+      "candidates": [
+        {
+          "slug": "adam-bernbaum",
+          "summary": "First-term state representative from Port Angeles and Vice Chair of the House Transportation Committee, a former legislative assistant and policy analyst with a Ph.D. in political science.",
+          "highlights": [
+            "Voted for the 2026 9.9% tax on income over $1 million and defended it as shifting the burden toward high earners [S5][S8]",
+            "Prime sponsor of enacted bills on childcare capacity, prescribed-fire insurance and rural middle housing [S11][S13][S14]",
+            "Plans a bill to freeze the state energy code for six years, citing housing costs [S5]",
+            "Voted for ESHB 1296, which narrowed several parental notification and records rights from Initiative 2081 [S9][S10]",
+            "Platform pledges to protect abortion access; endorsed by Planned Parenthood [S1][S3]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S8",
+                "S5"
+              ],
+              "basis": "Voted yes on ESSB 6346 and defended it at a forum as shifting the tax burden toward high earners, while saying he won spending limits in exchange."
+            },
+            "spending": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S5",
+                "S2",
+                "S3"
+              ],
+              "basis": "Points to the budget-spending limits he won and a balanced budget, alongside calls for infrastructure investment and protecting K-12 from cuts."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S11",
+                "S5",
+                "S3"
+              ],
+              "basis": "Sponsored a law easing sewer requirements for rural middle housing, plans an energy-code freeze to cut building costs, and backs permitting reform."
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S1",
+                "S5"
+              ],
+              "basis": "Platform says climate change is real and the region should be part of the solution, endorsed by Washington Conservation Action; tempered by his proposed energy-code freeze."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "One-term incumbent and committee vice chair with several enacted bills, running on that record."
+            },
+            "local-control": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S5"
+              ],
+              "basis": "Said communities rather than Olympia should decide on projects like Highway 101 roundabouts; a single forum statement."
+            },
+            "healthcare": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Focuses on rural hospital funding, affordable insulin and mental-health access within the existing system; no single-payer position."
+            },
+            "social": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S1"
+              ],
+              "basis": "Platform commits to protecting abortion access, contraception and IVF; endorsed by Planned Parenthood.",
+              "adjusted_by_refutation": true
+            },
+            "parental-rights": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S9",
+                "S10"
+              ],
+              "basis": "Recorded yes votes on ESHB 1296, which eliminated or narrowed several Initiative 2081 parental notification, records and opt-out rights and added student privacy priorities."
+            }
+          }
+        },
+        {
+          "slug": "eric-w-pratt",
+          "summary": "Quilcene single father and sports-field installation supervisor, a Precinct Committee Officer who has testified on tax bills in Olympia, making his first run for the Legislature.",
+          "highlights": [
+            "Opposed the 2026 tax on income over $1 million and would oppose all new taxes until the state accounts for current revenue [S6]",
+            "Testified in 2024 for Initiative 2111, a ban on state and local income taxes [S5]",
+            "Pledges to increase housing supply and oppose regulations that inflate costs [S3]",
+            "Says Olympia should not decide local projects such as Highway 101 roundabouts [S6]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S5",
+                "S6",
+                "S3"
+              ],
+              "basis": "Statement, website, 2024 testimony for an income-tax ban and forum remarks all oppose new taxes, including the 2026 income tax."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S6",
+                "S7"
+              ],
+              "basis": "Calls the budget 'a little reckless' and an 'ever-increasing spending problem' and wants accounting for current revenue before any new tax."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S1"
+              ],
+              "basis": "Pledges to increase housing supply and oppose regulations that inflate costs; opposes over-regulation that impedes housing.",
+              "adjusted_by_refutation": true
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Stands behind law enforcement and supports community policing funding; no specific enforcement proposals.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S6"
+              ],
+              "basis": "No office beyond Precinct Committee Officer; presents himself as a citizen 'not as a politician' against a sitting incumbent."
+            },
+            "local-control": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S6",
+                "S1",
+                "S3"
+              ],
+              "basis": "Says it is not Olympia's role to tell communities what road projects they need and that local voices should shape policy.",
+              "adjusted_by_refutation": true
+            },
+            "healthcare": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Would lower drug costs, protect pre-existing-condition coverage and expand rural access, with decisions left to patients and doctors."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "clallam-legislative-district-24-state-representative-pos-2",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/clallam/dossiers/clallam-legislative-district-24-state-representative-pos-2/"
+      ],
+      "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering the tax structure, natural-resource and timber policy, K-12 policy and funding, and criminal-justice statutes.",
+      "race_blurb": "An open seat, vacated by retiring Rep. Steve Tharinger, between independent Marcia Kelbon, a Quilcene fire commissioner and former biotech executive who led the primary, and Democrat Kaylee Kuehn, a Sequim former teacher and legislative aide. Kelbon stresses spending restraint, deregulation and opposition to the income tax; Kuehn stresses a less regressive tax code, climate investments and LGBTQ+ rights, and questions how an independent would be effective.",
+      "candidates": [
+        {
+          "slug": "marcia-kelbon",
+          "summary": "Quilcene fire commissioner, engineer and patent attorney who spent 19 years as a biotech general counsel and executive; ran for state Senate as a Republican in 2024 and now runs as an independent.",
+          "highlights": [
+            "Opposes the 2026 tax on income over $1 million and calls the state's finances a spending problem [S5]",
+            "Would revise the Growth Management Act and roll back energy-code costs to spur starter homes [S2][S7]",
+            "Would restore felony drug possession to push people into treatment [S5][S7]",
+            "Opposes transgender girls on girls' sports teams while backing marriage equality [S4]",
+            "Says she could caucus with either party and no party will drive her vote [S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S5",
+                "S2"
+              ],
+              "basis": "Opposes the 2026 income tax and pledges the state will not tax income, but said she could see a voter-approved graduated income tax paired with sales and property tax cuts."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S5",
+                "S8",
+                "S1"
+              ],
+              "basis": "Repeatedly calls it a spending problem, wants the budget reined in and essentials funded first with accountability requirements."
+            },
+            "housing": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S4",
+                "S7"
+              ],
+              "basis": "Statement, website and two forums call for trimming housing regulations, revising the Growth Management Act and rolling back the energy code."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S5",
+                "S7",
+                "S2"
+              ],
+              "basis": "At two forums called for restoring felony drug possession to steer people into treatment, and wants law enforcement empowered.",
+              "adjusted_by_refutation": true
+            },
+            "climate": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S7",
+                "S2",
+                "S4"
+              ],
+              "basis": "Said she would repeal the Climate Commitment Act (July) and later that it should at least be modified; calls warming serious and favors incentives over penalties."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S5"
+              ],
+              "basis": "No legislative service; local fire commissioner running as an independent outside the party caucuses, with long private-sector experience."
+            },
+            "local-control": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Would reduce unfunded state mandates on counties."
+            },
+            "reform": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S5",
+                "S2"
+              ],
+              "basis": "Runs as an independent, says neither a party nor special interests will drive her vote and she would caucus case by case."
+            },
+            "healthcare": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Said that nationally she supports getting insurance companies 'out of the mix completely'; also seeks critical-access status for Olympic Medical Center."
+            },
+            "social": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Opposes transgender girls on girls' sports teams and supports women's 'safe spaces,' while backing marriage equality and anti-discrimination on sexuality."
+            }
+          }
+        },
+        {
+          "slug": "kaylee-kuehn",
+          "summary": "Sequim native, former high school teacher and state Senate legislative aide, and pulp and paper workers' advocate, making her first run for office as a Democrat.",
+          "highlights": [
+            "Calls Washington's tax system regressive and wants a fairer one with spending accountability [S2][S8]",
+            "Supports emission-reduction policy and keeping Climate Commitment Act revenue for climate and rural projects [S2][S3]",
+            "Supports trans individuals and '100% bodily autonomy' [S2][S3]",
+            "Opposes unconstitutional ICE actions [S2]",
+            "Endorsed by the State Labor Council, the WEA and the district's Democratic legislators [S1][S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S8"
+              ],
+              "basis": "Wants a fairer tax system that shifts burden from working people and fixed incomes; names no specific new tax."
+            },
+            "spending": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3",
+                "S8"
+              ],
+              "basis": "Pairs spending accountability and 'throwing more money at education is not the answer' with calls to fully fund schools, special education and Medicaid rates."
+            },
+            "housing": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S6"
+              ],
+              "basis": "Backs Housing Trust Fund investment and also pledges to streamline permitting and cut bureaucracy."
+            },
+            "safety": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S6",
+                "S2"
+              ],
+              "basis": "Treats addiction as a health issue while wanting to revisit a sentencing grid she says limits accountability, and backs law enforcement."
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S3",
+                "S6"
+              ],
+              "basis": "Supports emission-reduction policies and protecting Climate Commitment Act investments, with attention to leakage and in-state industrial jobs."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "First-time candidate with legislative-staff experience, endorsed by the retiring incumbent and sitting district legislators."
+            },
+            "immigration": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Platform opposes unconstitutional ICE actions and calls for due process; no further immigration proposals."
+            },
+            "healthcare": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Proposals work within the current system (higher Medicaid and Medicare reimbursement, rural recruitment), though she has praised other countries' systems.",
+              "adjusted_by_refutation": true
+            },
+            "social": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Platform defends '100% bodily autonomy' and marriage rights; at a forum supported trans individuals and nonbinary athletes."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "clallam-public-utility-district-no-1-of-clallam-county-commissioner-district-no-2",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/clallam/dossiers/clallam-public-utility-district-no-1-of-clallam-county-commissioner-district-no-2/"
+      ],
+      "office_does": "A Clallam PUD commissioner is one of three board members who set policy and rates and hire the general manager for the public electric, water, wastewater and wholesale broadband utility serving Clallam County outside the City of Port Angeles; six-year term.",
+      "race_blurb": "Open seat; appointee John Purvis is not running. Former commissioner Rick Paschall, who resigned in 2023 and led the District 2-only primary, faces first-time candidate Randy Brackett, a public-works engineer. Every PUD voter, which excludes the City of Port Angeles, can vote in November. Both put rates first; they differ on the base charge and on hydropower's future.",
+      "candidates": [
+        {
+          "slug": "rick-paschall",
+          "summary": "Former District 2 commissioner (elected 2020, resigned 2023), with 31 years in power supply, trading and compliance, including at BPA and the Pacific Northwest Generating Cooperative. Led the primary with 43.5%.",
+          "highlights": [
+            "Won the seat in 2020; resigned in early 2023, later citing a stroke he has recovered from [S10][S6][S2]",
+            "Voted for the 2021 resolution opposing Snake River dam removal and for 2022-23 rate increases [S8][S7]",
+            "Top goal: keep rates as low as possible, citing BPA and compliance cost pressures [S1][S2]",
+            "Calls the fixed base charge high but fair; strongly supports hydropower [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "randy-brackett",
+          "summary": "Licensed professional engineer with 34 years in public works management in Northwest Washington and Alaska; first run for office. Second in the primary with 30.6%.",
+          "highlights": [
+            "Says rates cannot keep rising 3.5% a year; criticizes the fixed base charge [S1][S5]",
+            "Warns a warming climate threatens hydropower; backs local generation and the Sequim microgrid [S1][S5]",
+            "Wants to keep pursuing grants and work collaboratively with BPA [S1]",
+            "Founding chair of Habitat for Humanity in Jefferson County [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "grays-harbor-court-of-appeals-division-2-district-2-judge-position-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/grays-harbor/dossiers/grays-harbor-court-of-appeals-division-2-district-2-judge-position-1/"
+      ],
+      "office_does": "A Court of Appeals judge hears and decides appeals from the superior courts; this District 2 seat covers Grays Harbor and five other western Washington counties.",
+      "race_blurb": "Uncontested: incumbent Judge Erik D. Price, on the Court of Appeals since 2021, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "erik-d-price",
+          "summary": "Court of Appeals judge since 2021 and Acting Chief Judge of Division II since 2026; Thurston County Superior Court judge from 2012 to 2021. The only candidate on the ballot.",
+          "highlights": [
+            "Court of Appeals judge since 2021; Acting Chief Judge since 2026 [S1]",
+            "Thurston County Superior Court judge 2012-2021, including presiding judge and three years as Adult Drug Court chief judge [S1]",
+            "Nineteen years in civil litigation in private practice [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "grays-harbor-grays-harbor-county-assessor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/grays-harbor/dossiers/grays-harbor-grays-harbor-county-assessor/"
+      ],
+      "office_does": "The assessor values all taxable property in the county under state law and calculates the levies set by taxing districts and voters; the office does not set tax amounts.",
+      "race_blurb": "Assessor Dan Lindgren, in office since 2015 and now running as a Republican after earlier terms as a Democrat, faces Josh Nuxoll, an independent and senior appraiser in Lindgren's office. Lindgren led the primary about 55% to 45%.",
+      "candidates": [
+        {
+          "slug": "dan-lindgren",
+          "summary": "Grays Harbor County Assessor since 2015 and an appraiser in the office since 2007, running on modernized records and mapping systems, fair assessments and state-level assessor leadership.",
+          "highlights": [
+            "Brought in the Taxsifter records site, an upgraded mass-appraisal system and the MapGeo mapping platform [S1][S2]",
+            "Says he does not support unnecessary tax increases [S1]",
+            "Has worked against property-tax-increase bills on the state assessors' legislative committee [S2]",
+            "Changed party preference from Democratic to Republican for 2026 and says the office remains nonpartisan [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S4"
+              ],
+              "basis": "Assessor since 2015, in the office since 2007, re-elected in 2022, and on the WACO executive board; runs on his record."
+            },
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "States he does not support unnecessary tax increases, and his release says he fought bills that would increase property taxes; the office itself does not set taxes."
+            }
+          }
+        },
+        {
+          "slug": "josh-nuxoll",
+          "summary": "Senior appraiser in the Grays Harbor County Assessor's Office and former county custodian and California wildland firefighter, running as an independent on fair, equitable assessments and customer service.",
+          "highlights": [
+            "Says the assessor's most important role is to assess all properties fairly and equitably [S1]",
+            "Says core office duties have been neglected in recent years, causing unfair tax burdens [S2]",
+            "Promises to be first in and last out of the office each day [S1]",
+            "Four years as an appraiser in the office; no elected experience [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Staff appraiser with no elected experience who argues the office needs new leadership to restore public trust; has four years of inside experience."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "grays-harbor-grays-harbor-county-auditor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/grays-harbor/dossiers/grays-harbor-grays-harbor-county-auditor/"
+      ],
+      "office_does": "The county auditor runs elections, records deeds and other documents, keeps the county's financial accounts and reports, and can serve as the state's vehicle and vessel licensing agent.",
+      "race_blurb": "An open seat after incumbent Joe MacLean chose not to run, following the state's termination of the office's vehicle-licensing contract and a commissioner's call for his resignation. Two first-time candidates with banking backgrounds both promise timely audits and the return of licensing; Republican Charlee Paull led Democrat Brielle Joyce 55% to 44% in the primary.",
+      "candidates": [
+        {
+          "slug": "charlee-paull",
+          "summary": "Oakville native with 19 years in banking and mortgage lending, seeking her first public office on accountability, accurate audits and secure elections.",
+          "highlights": [
+            "Would bring Department of Licensing services back under the auditor's office [S6]",
+            "Promises timely, accurate audits and more efficient, transparent fiscal reporting [S6]",
+            "Says election administration must follow state and federal law 'exactly as written', run 'not for any party or political agenda' [S6]",
+            "Endorsed by the county Republican Party, AFSCME Council 2, Commissioner Georgia Miller and former Commissioner Vickie Raines [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S6"
+              ],
+              "basis": "First-time candidate who has never held elected office, presenting 19 years of banking and mortgage work as preparation."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3",
+                "S6"
+              ],
+              "basis": "Centers her campaign on timely audits, financial oversight and transparent fiscal reporting."
+            }
+          }
+        },
+        {
+          "slug": "brielle-s-joyce",
+          "summary": "Bank employee and former Verizon manager who moved to Grays Harbor during the pandemic, running a grassroots campaign to restore licensing and strengthen the office's staffing.",
+          "highlights": [
+            "Priorities: clean and timely audits, restoring licensing, expanded staff training and election services [S4]",
+            "Would ensure elections and licensing have dedicated staff, with cross-training and back-up across the office [S2][S4]",
+            "Proposes Grays Harbor College internships to build a pipeline of qualified staff [S4]",
+            "Says 'it's time to get money out of politics' [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S4"
+              ],
+              "basis": "Has not held elected office and frames her run as everyday citizens stepping up to change government.",
+              "adjusted_by_refutation": true
+            },
+            "spending": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S4"
+              ],
+              "basis": "Pairs clean, timely audits and budget reporting with added staffing, training and back-up capacity in the office."
+            },
+            "reform": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S5"
+              ],
+              "basis": "Calls for getting money out of politics and describes a grassroots, community-funded campaign; one statement, no specific reform proposal."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "grays-harbor-grays-harbor-county-clerk",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/grays-harbor/dossiers/grays-harbor-grays-harbor-county-clerk/"
+      ],
+      "office_does": "The county clerk is clerk of the superior court and keeps its case files, dockets, juror records, and the court's orders and judgments.",
+      "race_blurb": "Uncontested: incumbent Kym Foster (Prefers Practical Democrat Party), clerk since 2019, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "kym-foster",
+          "summary": "Grays Harbor County Clerk since 2019, re-elected unopposed in 2022; the only candidate on the ballot.",
+          "highlights": [
+            "Won the office in 2018 by 771 votes over the then-chief deputy clerk [S2]",
+            "Says her office brought electronic filing in-house and cut processing times [S2]",
+            "Kept summoning District Court juries in 2025 after a dispute, with District Court reimbursing the costs [S4][S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "grays-harbor-grays-harbor-county-commissioner-district-3-commissioner-3",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/grays-harbor/dossiers/grays-harbor-grays-harbor-county-commissioner-district-3-commissioner-3/"
+      ],
+      "office_does": "The three county commissioners are the county's legislative body: they adopt the budget and ordinances, set county taxes and manage county property, roads, buildings and jails.",
+      "race_blurb": "Appointed incumbent JR Streifel (R), named to the seat in May after Vickie Raines resigned, faces Stan Sturgeon (no party preference), a former North Beach School Board member endorsed by Raines. Sturgeon led the District 3-only primary 54% to 31%; in November all county voters choose.",
+      "candidates": [
+        {
+          "slug": "stan-sturgeon",
+          "summary": "North Beach School District facilities supervisor and business owner who served 12 years on the North Beach School Board and chairs the new Ocean City Drainage District.",
+          "highlights": [
+            "Priorities: fiscal responsibility, family-wage jobs and affordable housing [S1]",
+            "Would support the Coastal Community Action Program and the county housing authority on affordable housing [S2]",
+            "Supports community policing and the Resident Officer Program [S2]",
+            "Endorsed by former Commissioner Raines, Mainstream Republicans of Washington and three labor organizations; recommended by the county Democrats [S2][S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3",
+                "S7"
+              ],
+              "basis": "Not a county incumbent, but runs on 12 years of school-board service (nine as president) and chairing the drainage district."
+            },
+            "housing": {
+              "score": 1,
+              "confidence": "low",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Housing plank relies on continued support for the community action program and the public housing authority; he is also endorsed by a builders' housing council.",
+              "adjusted_by_refutation": true
+            },
+            "spending": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Pairs a commitment to a balanced budget with continued investment in infrastructure."
+            },
+            "safety": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Community policing and a resident-officer program alongside investment in crime-prevention programs and mental-health services."
+            }
+          }
+        },
+        {
+          "slug": "jr-streifel",
+          "summary": "Appointed District 3 commissioner since May 2026, a former Aberdeen fire captain and Cosmopolis School Board member running on public safety, economic development and responsible budgeting.",
+          "highlights": [
+            "Calls public safety one of his highest priorities, with leadership that supports law enforcement and first responders [S1]",
+            "Would address homelessness 'with compassion while maintaining accountability and protecting our neighborhoods' [S1]",
+            "Supports economic development that creates good-paying jobs and encourages local investment [S1]",
+            "Appointed by the board in May 2026 to the seat Vickie Raines vacated, until the 2026 general election is certified [S6]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S6"
+              ],
+              "basis": "Appointed incumbent with about five months in office and a long fire-service career, asking voters to let him continue."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Emphasizes supporting law enforcement and pairs compassion on homelessness with accountability and protecting neighborhoods."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "General references to responsible budgeting and efficient use of taxpayer dollars, with no specific proposals."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "grays-harbor-grays-harbor-county-coroner",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/grays-harbor/dossiers/grays-harbor-grays-harbor-county-coroner/"
+      ],
+      "office_does": "The county coroner investigates sudden, unexpected, violent or suspicious deaths and determines their cause.",
+      "race_blurb": "Uncontested: incumbent George J Kelley (States No Party Preference), coroner since January 2023, is the only candidate. He submitted no voters'-guide statement.",
+      "candidates": [
+        {
+          "slug": "george-j-kelley",
+          "summary": "Grays Harbor County Coroner since January 2023 after about 36 years in law enforcement; the only candidate on the ballot.",
+          "highlights": [
+            "Elected in 2022 over Bob Kegel with 61% of the vote [S5]",
+            "About 36 years in law enforcement after serving as a Marine Corps military policeman [S2]",
+            "Moved the office to accreditation-ready space and added three staff in 2023 [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "grays-harbor-grays-harbor-county-district-court-judge-position-no-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/grays-harbor/dossiers/grays-harbor-grays-harbor-county-district-court-judge-position-no-1/"
+      ],
+      "office_does": "A Grays Harbor County District Court judge, elected countywide, hears misdemeanors and gross misdemeanors, traffic infractions and preliminary hearings, and sets bail.",
+      "race_blurb": "Uncontested: incumbent Judge Andrea Vingo, on the District Court bench for four years, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "andrea-vingo",
+          "summary": "Grays Harbor District Court judge for four years and former Hoquiam Municipal Court judge; reports 30 years as an attorney, including as a prosecutor. The only candidate on the ballot.",
+          "highlights": [
+            "Won the seat in 2022 over Geoff Arnold with 54% of the vote [S4]",
+            "Hoquiam Municipal Court judge by 2017 appointment; earlier a prosecutor and Attorney General's Office civil rights attorney [S3]",
+            "Pledges fair, efficient and accessible justice and modernized court processes [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "grays-harbor-grays-harbor-county-district-court-judge-position-no-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/grays-harbor/dossiers/grays-harbor-grays-harbor-county-district-court-judge-position-no-2/"
+      ],
+      "office_does": "A Grays Harbor County District Court judge, elected countywide, hears misdemeanors and gross misdemeanors, traffic infractions, protection orders, small claims and other limited civil cases, and sets bail.",
+      "race_blurb": "Incumbent Megan Valentine, appointed in 2021 and the court's presiding judge for three and a half years, faces former District and Superior Court judge David Mistachkin, who lost his Superior Court seat in 2024. The race centers on the court's operations: Valentine runs on the programs she started, and Mistachkin on restoring staff morale and relations with the clerk, commissioners and other justice partners. No bar rating was found for either.",
+      "candidates": [
+        {
+          "slug": "megan-valentine",
+          "summary": "Grays Harbor District Court judge since her 2021 appointment, elected in 2022, and presiding judge for three and a half years; previously a prosecutor, private attorney and foster-youth advocate.",
+          "highlights": [
+            "Founded the DUI Therapeutic Court, which pairs treatment with intensive supervision [S1][S5]",
+            "Added pretrial monitoring to District Court probation services [S1]",
+            "Led the court's 2025 Blake refund effort covering about 2,500 eligible cases [S6][S7]",
+            "Presided over the court during its 2025 disputes with the county clerk over jury administration and with the commissioners over staffing [S8][S10]",
+            "Says a judge should not substitute their judgment for that of the elected prosecutor or jurors [S3]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3",
+                "S4"
+              ],
+              "basis": "Sitting judge since 2021 and presiding judge for three and a half years, running on her record of court programs and administration."
+            },
+            "safety": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3",
+                "S5"
+              ],
+              "basis": "Prosecutor background and accountability framing, alongside founding a treatment-based DUI court and adding pretrial monitoring; she presents both as accountability plus treatment."
+            }
+          }
+        },
+        {
+          "slug": "david-mistachkin",
+          "summary": "Former Grays Harbor District Court judge (2015-2016) and Superior Court judge (2018 until his 2024 defeat); before that a criminal defense and family law attorney and partner at an Aberdeen firm.",
+          "highlights": [
+            "District Court judge 2015-2016 by appointment; Superior Court judge from 2018 until losing re-election in 2024 [S1][S6][S8]",
+            "About 15 years in private practice, mostly criminal defense and family law [S3][S4]",
+            "Top priorities: public confidence in the court, staff morale, and relationships with justice partners and the commissioners [S3]",
+            "As a judge in 2016, described using deferred prosecution and sentences aimed at underlying issues to reduce reoffending [S4]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3",
+                "S8"
+              ],
+              "basis": "About eight years of prior judicial service plus commissioner and pro tem work, but he is the challenger, has been off the bench since his 2024 defeat, and pitches a change in how the court is run."
+            },
+            "safety": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S4"
+              ],
+              "basis": "Formation mostly in criminal defense; as a District Court judge he described using deferred prosecution and sentences that address underlying issues to prevent reoffending."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "grays-harbor-grays-harbor-county-prosecutor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/grays-harbor/dossiers/grays-harbor-grays-harbor-county-prosecutor/"
+      ],
+      "office_does": "The prosecuting attorney prosecutes crimes in Grays Harbor County on behalf of the state and is the county's civil legal counsel.",
+      "race_blurb": "Interim Prosecutor Jason Walker (D), appointed by the commissioners effective March 17, 2026, faces his own chief criminal deputy, Daniel Crawford (R), after leading the primary by 38 votes. Both promise to hold offenders accountable and support victims, and the race centers on turnover and stability in the office.",
+      "candidates": [
+        {
+          "slug": "daniel-crawford",
+          "summary": "Chief criminal deputy prosecutor and Marine Corps veteran with more than 100 jury trials, running on aggressive prosecution and accountability.",
+          "highlights": [
+            "Will 'aggressively pursue' violent offenders, child predators, drug traffickers and domestic abusers [S2]",
+            "Says repeat offenders are 'too often released only to offend again' [S2]",
+            "Wants the worst offenders out and therapeutic courts for 'the people we can help' [S8]",
+            "Argued in 2025 for raises for three prosecutors and for filling vacant positions [S7][S8]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3",
+                "S6"
+              ],
+              "basis": "Career prosecutor and the office's current chief criminal deputy who has never held elected office and runs as the challenger; insider and outsider elements balance."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S8"
+              ],
+              "basis": "Repeated enforcement framing (aggressive prosecution, repeat offenders, pushing more trials) with therapeutic courts reserved for those who can be helped."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "low",
+              "citations": [
+                "S7",
+                "S8"
+              ],
+              "basis": "Asked the commissioners for about $89,376 a year in raises and said three more prosecutors were needed.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "jason-f-walker",
+          "summary": "Interim prosecutor since March 2026, formerly the office's chief criminal deputy and a statewide prosecutor trainer, running on restoring stability to the office.",
+          "highlights": [
+            "Says turnover rose sharply while he was away and that provable charges were reduced or dismissed [S1]",
+            "Will prioritize repeat, violent and sex offenders [S4]",
+            "Calls himself an early champion of diversion and therapeutic courts, with 'real consequences for failure' [S4]",
+            "Opposed proposed court rules capping misdemeanor bail in a 2026 letter to the Supreme Court [S9]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3",
+                "S6"
+              ],
+              "basis": "Appointed incumbent with 11 years in the office and four at the statewide prosecutors' association, running on 'proven experience'; no prior elected office.",
+              "adjusted_by_refutation": true
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S4",
+                "S9"
+              ],
+              "basis": "Prioritizes repeat and violent offenders and opposed looser misdemeanor bail, while explicitly championing diversion and therapeutic courts.",
+              "adjusted_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "grays-harbor-grays-harbor-county-sheriff",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/grays-harbor/dossiers/grays-harbor-grays-harbor-county-sheriff/"
+      ],
+      "office_does": "The sheriff runs county law enforcement and the county jail, and in Grays Harbor also oversees emergency management and court security.",
+      "race_blurb": "First-term Sheriff Darrin Wallace, who led the primary about 60% to 40%, faces Ed Welter, a detective in his office and the mayor of Westport; neither states a party preference. Wallace is running on falling crime figures and a new criminal justice center, and Welter on public engagement and adding deputies.",
+      "candidates": [
+        {
+          "slug": "darrin-e-wallace",
+          "summary": "Incumbent sheriff since 2023 with 20 years in the sheriff's office and 20 in the Coast Guard, running on falling crime figures and a new jail.",
+          "highlights": [
+            "Calls a new criminal justice center his #1 priority; says modular units could cut its estimated cost to about $50 million [S1][S4]",
+            "Says he has been 'tough on crime' and will keep aggressively investigating and arresting offenders [S1]",
+            "Will keep funding a sheriff's position on the Drug Task Force [S4]",
+            "Said at a July forum he would retire once the new jail was under contract, then pledged to serve the full four years [S5]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S4",
+                "S7"
+              ],
+              "basis": "Incumbent sheriff with 20 years in the office who runs on his first-term record."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2",
+                "S4"
+              ],
+              "basis": "Enforcement framing ('tough on crime', aggressive investigation and arrests, Drug Task Force); treatment appears only as expanded rehabilitation services in a new jail."
+            },
+            "spending": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Pushes a roughly $50 million jail (grant, bond or partnership) while stressing he stayed under budget and halved the estimated jail cost."
+            }
+          }
+        },
+        {
+          "slug": "edward-welter",
+          "summary": "Sheriff's office detective and mayor of Westport, running on public engagement, more deputies and working with state legislators.",
+          "highlights": [
+            "Says staffing has stayed flat since 2000 while the unincorporated population grew almost 30% [S4]",
+            "Says all crimes, including property crime, should be 'investigated to their fullest' [S4]",
+            "Backs therapeutic courts as part of accountability, provided cases carry enough consequences [S6]",
+            "Would attend public meetings countywide and seek regular updates on the commissioners' agenda [S4]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3",
+                "S8"
+              ],
+              "basis": "Detective with about 12 years in law enforcement and a sitting mayor, never in county office, who pitches 'a new perspective.'",
+              "adjusted_by_refutation": true
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S6"
+              ],
+              "basis": "Enforce all laws and fully investigate property crime, with proactive drug enforcement; therapeutic courts and community policing alongside."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S8"
+              ],
+              "basis": "Argues for more deputies and better facilities as population grows, while acknowledging budget constraints."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "grays-harbor-grays-harbor-county-treasurer",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/grays-harbor/dossiers/grays-harbor-grays-harbor-county-treasurer/"
+      ],
+      "office_does": "The treasurer is custodian of county funds and banker for local districts: collecting property and other taxes, distributing revenue, investing idle cash, administering debt and overseeing banking.",
+      "race_blurb": "Shawn Hill, a longtime chief deputy appointed treasurer in July 2025, is seeking his first election against Wes Cormier, a former two-term county commissioner and appraiser. Hill led the primary about 53% to 47%.",
+      "candidates": [
+        {
+          "slug": "shawn-d-hill",
+          "summary": "Appointed Grays Harbor County Treasurer since July 2025 after nearly nine years as chief deputy treasurer, running on trust, nonpartisan administration and continuity.",
+          "highlights": [
+            "Chief deputy treasurer from 2016 until his appointment as treasurer in July 2025 [S3][S5]",
+            "Wants monthly payment options for taxpayers without escrow and more help with electronic payments [S5]",
+            "Calls for healthy reserves and responsible debt management [S5]",
+            "Endorsed by former Treasurer Ken Albert, AFSCME Local #275 and the Grays Harbor Democrats [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3",
+                "S5"
+              ],
+              "basis": "About a decade inside the treasurer's office as chief deputy and appointed treasurer; runs on continuity, but has not yet won election to the office."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S5"
+              ],
+              "basis": "Single explicit statement of fiscal caution: careful stewardship, healthy reserves, responsible debt management, no unnecessary burdens on future generations."
+            }
+          }
+        },
+        {
+          "slug": "wes-cormier",
+          "summary": "Former two-term Grays Harbor County commissioner and former senior real estate appraiser, running on budget and levy experience, accessibility and a streamlined office.",
+          "highlights": [
+            "Says he never voted to raise property taxes and led repeal of the county admission tax [S3]",
+            "As commissioner, voted against filling positions not in the adopted budget [S6]",
+            "Kept a pledge to serve no more than two terms as commissioner [S3]",
+            "Wants a streamlined, cost-effective treasurer's department [S5]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S5",
+                "S6"
+              ],
+              "basis": "Runs on eight years of elected commissioner budget oversight and seven years as an appraiser, though as a challenger new to the treasurer's office."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S5",
+                "S6",
+                "S8"
+              ],
+              "basis": "Record of voting against unbudgeted positions, 'every budget is negotiable', 2020 call to cut state spending with priority-based budgeting, and a 2026 'cost effective' office pledge."
+            },
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S8"
+              ],
+              "basis": "Says he never voted to raise property taxes and led the admission-tax repeal; in 2020 called any new tax 'a slap in the face'."
+            },
+            "reform": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S8"
+              ],
+              "basis": "Kept a self-imposed two-term limit and in 2020 refused PAC, special-interest and lobbyist money and endorsements; no current-cycle statement."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "grays-harbor-public-utility-district-no-1-of-grays-harbor-county-commissioner-district-3",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/grays-harbor/dossiers/grays-harbor-public-utility-district-no-1-of-grays-harbor-county-commissioner-district-3/"
+      ],
+      "office_does": "Grays Harbor PUD commissioners appoint the general manager, set electricity rates, approve budgets and set policy for the public utility; District 3 is nominated by district but elected by voters of the whole PUD.",
+      "race_blurb": "Uncontested: incumbent Commissioner Jon Martin, appointed in 2021 and elected in 2022, is the only candidate. He submitted no voters'-guide statement.",
+      "candidates": [
+        {
+          "slug": "jon-martin",
+          "summary": "Grays Harbor PUD commissioner for District 3 since his 2021 appointment and board president; former Ocean Shores city council president. The only candidate on the ballot.",
+          "highlights": [
+            "Appointed in 2021 to replace Russ Skolrood; elected unopposed in 2022 [S2][S4]",
+            "As board president, backed a 3% rate increase in 2025 and a no-increase 2026 budget that used reserves [S6][S7]",
+            "Wrote in 2026 that small modular nuclear reactors could add reliable power, with cost questions unresolved [S8]"
           ],
           "evidence_level": "moderate",
           "withdrawn": false,

@@ -1,0 +1,9 @@
+{
+  "url": "https://gisportal.franklin.co.franklin.wa.us/arcgis2/rest/services/districts/Commissioner_Districts/MapServer/0/query?where=1%3D1&outFields=DISTRICT_CODE,RES_ORD_AUTH,LABEL&returnGeometry=false&f=json",
+  "retrieved_at": "2026-10-08",
+  "method": "curl -L (User-Agent 'Mozilla/5.0')",
+  "stage": "raw",
+  "source_type": "gis",
+  "tier": 1,
+  "notes": "Franklin County GIS (FRIS), Commissioner Districts: DISTRICT_CODE COM1, COM2, COM3, RES_ORD_AUTH 2022-082. Point queries 2026-10-08 (Census geocoder, Current vintage): 1016 N 4th Ave, Pasco -> COM2; 5600 N Rd 68, Pasco -> COM3; 6600 Burden Blvd, Pasco -> COM3; 103 Franklin St, Mesa -> COM2; 2108 N Rd 84, Pasco -> COM1. The same codes are on the Auditor's precinct-split layer (Voting_Precinct_Group/FeatureServer/12, COMMISS). The layer app/src/lib/geo.js COUNTY_LAYERS.franklin reads (services3.arcgis.com/S61OMZovc3AIomN2/arcgis/rest/services/Districts/FeatureServer/8) answered 'Invalid URL' on 2026-10-08; the org's only service is now FCID_boundary."
+}

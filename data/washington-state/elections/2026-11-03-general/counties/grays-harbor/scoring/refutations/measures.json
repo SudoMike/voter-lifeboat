@@ -1,0 +1,72 @@
+{
+  "contest_slug": "measures",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/grays-harbor/scoring/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/grays-harbor/dossiers/measures/",
+    "data/final/2026-11-03-general/rubric.json"
+  ],
+  "verdicts": [
+    {
+      "candidate": "grays-harbor-timberland-regional-library-district-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Hardest attack: the ballot title says 'restore', it raises an existing levy rather than creating a new tax (S2, S3), and the cost per home is small ($34 a year on the median, S2), which is the profile FD2 got 1 for. The attack fails on size and kind. The rate rises by more than half, from $0.228924 (S1; $0.2244042 charged in Grays Harbor, S8) to $0.35, adding about $14 million districtwide in 2027 (S2, S4). The 'restore' is to a rate last held around 2001 (S2, S6), and the last voter-approved lid lift was 1987 (S2, S3), so unlike FD2 this is not re-approving a rate voters set recently. The rubric's pole names levy-cap lifts, and Thurston maps the same measure at 2. Minor basis wording: 'about 13 cents per $1,000' uses the rounded $0.22; from S1's $0.228924 it is about 12.1 cents and from the Grays Harbor rate about 12.6 cents. Close enough, but '12 to 13 cents' would be exact. Spending was considered: the statement against argues restraint and audit first (S1) and the statement for mentions expanding collections and programs (S1), but the measure mainly restores hours and staffing cut in 2026 (S1, S2, S4), so not mapping it is defensible. Local-control: a five-county district deciding by combined vote (S2) is the existing structure, not something the measure changes. Not mapped."
+    },
+    {
+      "candidate": "grays-harbor-timberland-regional-library-district-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1 ($0.22 to $0.35 for 2027 and 2028, 2028 amount as base), S4/S7 ($3.8 million deficit), S2/S4 (combined five-county vote) and the dossier's S8 computation placing Ocean Shores outside the district. cost_line: '$34 a year on $263,570, per the library' is S2's own figure and correctly attributed. Recomputing from the rates gives about $33 ((0.35 - 0.2244042) x 263.57 = $33.10) or about $32 from S1's $0.228924, so the library's $34 runs slightly high, but the attribution is right. '$40 a year on a $334,000 home' checks: (0.35 - 0.228924) x 334 = $40.44, matching S1. '$14 million more districtwide in 2027' matches S2 and S4. pro_summary matches S1 ('hasn't increased in 25 years', about 96% of revenue, 'long overdue cost-of-living raise', restore hours and staffing) and S6 (four former trustees; several branches could go unstaffed). con_summary paraphrases S1 accurately; 'crowd out' stands in for 'put future investments in schools and emergency services at risk', which is fair."
+    },
+    {
+      "candidate": "grays-harbor-city-of-montesano-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Hardest attack: the ballot title and the city call this a 'renewal' that restores the $3.22 rate voters approved for the 2018 levy (S1, S2), the same restore-a-prior-rate shape that earns FD2 a 1. The attack fails on size. The rate goes from $1.7038417 (S9) to up to $3.22 (S1), an 89% increase of about $1.52 per $1,000 ($455 a year on a $300,000 home), about $960,000 more a year for the city (computed from S9), and it adds a 5% annual limit factor for up to six years instead of 1% (S1). King's scale gives 2 for a near-doubling, and Grant's FD7 kept 2 despite its replacement form for the same reason. Citations S1, S2 and S9 support the basis. Spending was considered and not proposed: the fire department says the levy would add two firefighter/EMTs and staff a two-person crew around the clock (S2), which goes beyond the ballot title's 'current service levels' (S1), but much of the stated case is covering 36% cost growth and deferred maintenance (S2), so the expansion evidence is mixed, as in Grant FD7. Local-control: a city setting its own levy. Not mapped."
+    },
+    {
+      "candidate": "grays-harbor-city-of-montesano-proposition-no-1",
+      "axis": "_display",
+      "verdict": "adjust",
+      "note": "One arithmetic error in cost_line. The $309,000 figure is wrong: (3.22 - 1.7038417) x 309 = $468.49, which rounds to $468. With the rounded $1.52 increase it is $469.68, about $470. Either way '$469' is off; the dossier carries the same figure (computed for the dossier, not the city's own number, since the city's worked example is an image the research could not read, S2). The other figures check: $1.5161583 x 300 = $454.85 (about $455); 3.22 x $635,112,199 / 1,000 = $2,045,061, minus $1,082,131 = $962,930 (about $960,000). Suggested cost_line: \"About $1.52 more per $1,000, about $455 a year on a $300,000 home ($468 on the city's $309,000 example). Roughly $960,000 more a year for the city at 2026 values.\" what_it_does: 'lets the levy grow up to 5% a year for six years' should read 'for up to six years' to match S1. Otherwise it matches S1 and S2 (renewal of the 2018 levy approved at $3.22, now about $1.70; two firefighter/EMTs; 24/7 two-person crew; equipment; deferred building repairs such as City Hall and fire station HVAC). pro_summary matches S1 (no statement), S2 (36% in five years, two responders) and S5 (6-0). con_summary matches S1 and paraphrases S4/S5 (Roth: 'can be very difficult'; McLean: 'a hard decision for the voters') accurately."
+    },
+    {
+      "candidate": "grays-harbor-mccleary-school-district-no-65-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Hardest attack: the district's current bond tax of $1.1868891 (S8) appears to end after 2026 (S7), so on a bill-to-bill basis the new bond is only about $0.23 per $1,000 more, about $70 a year on a $300,000 home. That resembles Issaquah's park bond, mapped 1 as a replacement at a similar rate. The attack fails because the lean measures a YES vote against the NO outcome. A no vote leaves no McCleary bond tax from 2027, so a yes vote imposes the full $1.42 per $1,000 for up to 21 years to repay $12.8 million (S1, S2). Unlike Issaquah, the district does not frame or size this as a replacement, and the expiry itself is an inference from S7 and S8. A brand-new 21-year bond levy matches the 2 given to new bond levies in Grant (McKay) and King (FD20). The basis states the expiry fact openly, and S1, S2, S7 and S8 support it. Spending: capital repair and security work with no expand-versus-audit dispute (S2). Parental-rights: nothing about curricula, notification, records or opt-outs (S1, S2). Neither mapped, correctly."
+    },
+    {
+      "candidate": "grays-harbor-mccleary-school-district-no-65-proposition-no-1",
+      "axis": "_display",
+      "verdict": "adjust",
+      "note": "pro_summary overstates the survey result. The dossier says a summer 2025 community survey 'ranked safety and security as a high priority' (S2, S5), not 'the top priority'. Suggested pro_summary: \"No statement in favor was filed. The district says aging roof, HVAC and drainage systems have caused water damage, and that community surveys ranked safety and security as a high priority.\" what_it_does matches S1 ($12.8 million, up to 21 years, vestibule, door locks, keycard access, fire alarm, HVAC, drainage, parking, playgrounds), S2 (roof), S4/S6 ($19.3 million February bond failed) and S5/S6 (60%). 'A new fire alarm' slightly embellishes S1's 'the fire alarm system', which is fine. cost_line matches S2 ($1.42, $426 on $300,000: 1.42 x 300 = $426) and S7/S8 (about $1.19 ending after 2026, framed as 'appears', matching the dossier's inference). con_summary matches S1 and S6 (43.45% in Grays Harbor)."
+    },
+    {
+      "candidate": "grays-harbor-grays-harbor-county-fire-protection-district-no-1-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked on strength: the district is small and volunteer-run, and it says rising values push its levy rate down (S2), which could make this look like restoring lost capacity. But the measure creates a tax the district does not levy today (S9 lists only an expense levy for FD1, with no EMS line), at up to $0.50 per $1,000, permanently, with no end date (S1). Revenue of about $157,000 a year would add more than half again to the district's $268,255 levy (S9). A brand-new permanent tax is the clearest case for 2. S1, S9 and S11 support the basis. Spending: the money sustains in-house ambulance service started in 2025 (S6) and volunteer EMS (S2), with no published budget and no audit dispute. Not mapped, correctly."
+    },
+    {
+      "candidate": "grays-harbor-grays-harbor-county-fire-protection-district-no-1-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1 (permanent, up to 50 cents), S6/S7 (about 3,000 people, one full-time employee and volunteers, own transports from June 2025), S9 (no EMS levy now) and S11 (60%; referendum petition of 15% of registered voters). cost_line arithmetic checks: 0.50 x 300 = $150; 0.50 x $313,212,928 / 1,000 = $156,606 (about $157,000). pro_summary paraphrases S2 accurately. con_summary matches S1 and S12. One omission, not an error: the dossier records that the board voted to move forward with both a fire lid lift and this EMS levy (S4, S5), and the district's own page still advertises both (S2), but only the EMS measure is on the ballot (S1). Voters reading the district's page could expect two measures; a short clause in what_it_does would help but is not required."
+    },
+    {
+      "candidate": "grays-harbor-grays-harbor-county-fire-protection-district-no-2-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked from both sides. Upward: the reset is permanent, with the 2028 amount becoming the base for later years (S1, S2), and it raises the rate rather than renewing a lapsing levy. Downward: it is tiny. The 1 holds. The increase is about $0.10 per $1,000 (from $1.3997717, S10, to $1.50), about 7%, about $30 a year on a $300,000 home and about $112,000 a year for the district (computed from S10). It restores a rate voters set in 2020 and again in 2023 (S3, S4, S6, S7), so a yes vote keeps a recently approved rate rather than lifting the district to a new one. That fits the 1 King gives replacement and restoration levies (Kent, Highline Prop. 2) and contrasts with TRL, where the restored rate dates to about 2001. S1, S3 and S10 support the basis. Spending: maintains staffing, apparatus and stations (S1, S2). Not mapped, correctly."
+    },
+    {
+      "candidate": "grays-harbor-grays-harbor-county-fire-protection-district-no-2-proposition-no-1",
+      "axis": "_display",
+      "verdict": "adjust",
+      "note": "Two small fixes. (1) what_it_does says the district 'covers the Brady and Wynoochee areas'. The dossier says it is headquartered on Olympic Highway outside Aberdeen with stations in Brady and the Wynoochee Valley (S9) and covers more than 300 square miles (S2). As written it understates the district's reach, and voters near the headquarters outside Aberdeen may think they are not in it. Suggested: \"The district, which covers more than 300 square miles outside Aberdeen including Brady and the Wynoochee Valley, says the money keeps career and volunteer staffing, apparatus and equipment.\" (2) pro_summary ends 'the levy keeps emergency services dependable'; 'dependable' is not in the dossier. The statement says the district 'strengthened emergency response' and that 'A strong fire district protects lives, homes, and businesses' (S1). Suggested ending: \"...renovated the Brady station and strengthened emergency response, and that a strong fire district protects lives, homes and businesses.\" The rest checks: 'for 2027 and 2028 collections' with the 2028 amount as base matches S2 (S1 states it as levy years 2026 and 2027); cost_line arithmetic is right ((1.50 - 1.3997717) x 300 = $30.07); 'last set at $1.50 in 2023' matches S3 and S7. con_summary matches S1 and S12."
+    }
+  ],
+  "missing": []
+}

@@ -1,0 +1,26 @@
+{
+  "county": "chelan",
+  "script": "pipeline/extract_pdf_text.mjs",
+  "files": [
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/chelan/raw/chelan/legal-notice.pdf.url",
+      "url": "https://www.co.chelan.wa.us/files/elections/documents/election/Legal%20Notice%20NOV%202026.pdf",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/chelan/interim/pdf-text/legal-notice.txt"
+    },
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/chelan/raw/chelan/local-voters-pamphlet.pdf.url",
+      "url": "https://www.co.chelan.wa.us/files/elections/documents/election/2026%20November%203%20General%20Election%20LVP.pdf",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/chelan/interim/pdf-text/local-voters-pamphlet.txt"
+    },
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/chelan/raw/chelan/primary-official-results.pdf.url",
+      "url": "https://www.co.chelan.wa.us/files/elections/documents/election/2026%20Primary%20Official%20Results%20and%20Oath%20of%20Certification.pdf",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/chelan/interim/pdf-text/primary-official-results.txt"
+    },
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/chelan/raw/chelan/sample-ballot.pdf.url",
+      "url": "https://www.co.chelan.wa.us/files/elections/documents/election/2026%20November%203%20General%20Sample%20Ballot.pdf",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/chelan/interim/pdf-text/sample-ballot.txt"
+    }
+  ]
+}

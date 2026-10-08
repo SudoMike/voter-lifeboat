@@ -2,7 +2,8 @@
 // Coverage (issue #16), Spokane at partial coverage, Pierce at full coverage
 // (#21), Snohomish at full coverage (#27), Clark, Kitsap and Thurston at full
 // coverage (#22), Yakima, Whatcom, Benton, Skagit, Cowlitz and Grant at full
-// coverage (#28), Island and Lewis at full coverage (#29), every other Washington address a Statewide-Only Guide (issue #9). These run the app's own ballot, interview, lean and Ballot Brief
+// coverage (#28), Island, Lewis, Franklin, Chelan, Clallam and Grays Harbor at
+// full coverage (#29), every other Washington address a Statewide-Only Guide (issue #9). These run the app's own ballot, interview, lean and Ballot Brief
 // code against public/data/2026-11-03-general.
 import test from 'node:test'
 import assert from 'node:assert/strict'
@@ -68,7 +69,7 @@ const STATE_MEASURES = [
   'initiative-measure-no-il26-638',
 ]
 
-test('the general ships fourteen counties at full county coverage, Spokane at partial, with their elections offices', () => {
+test('the general ships eighteen counties at full county coverage, Spokane at partial, with their elections offices', () => {
   assert.equal(data.election.id, '2026-11-03-general')
   assert.deepEqual(data.coverage, {
     statewide_complete: true,
@@ -219,6 +220,45 @@ test('the general ships fourteen counties at full county coverage, Spokane at pa
         fips: '53041',
         coverage: 'full_county',
         elections_url: 'https://elections.lewiscountywa.gov/',
+      },
+      {
+        // Full: the Port of Pasco seat reads the county's port layer, the FPD 3
+        // levy DOR FIR2025 (#29).
+        id: 'franklin',
+        name: 'Franklin County',
+        state: 'WA',
+        fips: '53021',
+        coverage: 'full_county',
+        elections_url: 'https://www.franklincountywa.gov/Elections',
+      },
+      {
+        // Full: Wenatchee SD 246 reads DOR SCH2025 (#29).
+        id: 'chelan',
+        name: 'Chelan County',
+        state: 'WA',
+        fips: '53007',
+        coverage: 'full_county',
+        elections_url: 'https://www.co.chelan.wa.us/elections',
+      },
+      {
+        // Full: District Court 1 and 2 read the Auditor's District_Court layer,
+        // the PUD seat PUDALL (any feature of the PUD's district layer), QVSD
+        // DOR SCH2025 (#29).
+        id: 'clallam',
+        name: 'Clallam County',
+        state: 'WA',
+        fips: '53009',
+        coverage: 'full_county',
+        elections_url: 'https://www.clallamcountywa.gov/162/Elections-Voter-Registration',
+      },
+      {
+        // Full: the Timberland levy and McCleary SD 65 read DOR LIB2025 and SCH2025 (#29).
+        id: 'grays-harbor',
+        name: 'Grays Harbor County',
+        state: 'WA',
+        fips: '53027',
+        coverage: 'full_county',
+        elections_url: 'https://www.graysharbor.us/government/Auditors/elections.php',
       },
     ],
   })
@@ -573,6 +613,145 @@ test('a Lewis ballot: Clark\'s research for CD 3 and LD 20, Thurston\'s for LD 1
   assert.ok(pe.contests.some((c) => c.slug === PUD))
   assert.deepEqual(ownLocal(pe, 'lewis'), [])
   assert.equal(coverageAdvice(lew({})), null)
+})
+
+test('a Franklin ballot: Benton\'s, Spokane\'s and Yakima\'s research for the shared seats, port and commissioner seats by district', () => {
+  const FRANKLIN = { id: 'franklin', fips: '53021', name: 'Franklin County' }
+  const fra = (districts) => ({ coverageStatus: 'full_county', county: FRANKLIN, districts, missingLayers: [] })
+  const COM3 = 'franklin-franklin-county-commissioner-district-3-commissioner-district-3'
+  const PORT = 'franklin-port-of-pasco-commissioner-district-3'
+  const FPD3 = 'franklin-franklin-county-fire-protection-district-no-3-proposition-no-1'
+  // Districts as the live District Adapter resolved them on 2026-10-08.
+  // 525 N 3rd Ave, Pasco: CD 4, LD 14, COM2, PoP1.
+  const pa = ballotFor(fra({ CONGDST: '4', LEGDST: '14', CITY: 'Pasco', COUNTY_COUNCIL: 'COM2', PORTDST: 'PoP1' }))
+  const ps = pa.contests.map((c) => c.slug)
+  assert.equal(new Set(ps).size, ps.length)
+  for (const slug of SUPREME_COURT) assert.ok(ps.includes(slug), slug)
+  sameScoring(pa, 'franklin-congressional-district-4-u-s-representative', 'benton-congressional-district-4-u-s-representative')
+  for (const pos of [1, 2])
+    sameScoring(pa, `franklin-legislative-district-14-state-representative-pos-${pos}`, `yakima-legislative-district-14-state-representative-pos-${pos}`)
+  assert.ok(!pa.contests.some((c) => c.owner !== 'franklin' && c.owner !== 'statewide'))
+  assert.ok(ps.includes('franklin-public-utility-district-no-1-of-franklin-county-commissioner-district-2'))
+  assert.ok(!ps.includes(COM3) && !ps.includes(PORT))
+  assert.deepEqual(ownLocal(pa, 'franklin'), [])
+  // 5600 N Rd 68, Pasco (unincorporated): COM3, PoP3, Fire District 3.
+  const rd68 = ballotFor(fra({ CONGDST: '4', LEGDST: '16', COUNTY_COUNCIL: 'COM3', PORTDST: 'PoP3', FIRDST: '3' }))
+  assert.ok(rd68.contests.some((c) => c.slug === COM3))
+  assert.ok(rd68.contests.some((c) => c.slug === PORT))
+  for (const pos of [1, 2])
+    sameScoring(rd68, `franklin-legislative-district-16-state-representative-pos-${pos}`, `benton-legislative-district-16-state-representative-pos-${pos}`)
+  assert.deepEqual(ownLocal(rd68, 'franklin'), [FPD3])
+  // 104 E Adams St, Connell: CD 5 (Spokane's research), PoP3, no fire district.
+  const co = ballotFor(fra({ CONGDST: '5', LEGDST: '16', CITY: 'Connell', COUNTY_COUNCIL: 'COM2', PORTDST: 'PoP3' }))
+  sameScoring(co, 'franklin-congressional-district-5-u-s-representative', 'spokane-congressional-district-5-u-s-representative')
+  assert.ok(co.contests.some((c) => c.slug === PORT))
+  assert.deepEqual(ownLocal(co, 'franklin'), [])
+  // 2108 N Rd 84, Pasco: LD 8 (Benton's research), PoP2.
+  const r84 = ballotFor(fra({ CONGDST: '4', LEGDST: '8', CITY: 'Pasco', COUNTY_COUNCIL: 'COM1', PORTDST: 'PoP2' }))
+  sameScoring(r84, 'franklin-legislative-district-8-state-senator', 'benton-legislative-district-8-state-senator')
+  assert.ok(!r84.contests.some((c) => c.slug === PORT))
+  assert.equal(coverageAdvice(fra({})), null)
+})
+
+test('a Chelan ballot: King\'s research for CD 8 and LD 12, Wenatchee SD 246 and Cashmere Prop 1 by district', () => {
+  const CHELAN = { id: 'chelan', fips: '53007', name: 'Chelan County' }
+  const che = (districts) => ({ coverageStatus: 'full_county', county: CHELAN, districts, missingLayers: [] })
+  const SD246 = 'chelan-wenatchee-school-district-no-246-proposition-no-1'
+  // Districts as the live District Adapter resolved them on 2026-10-08.
+  // 316 Washington St, Wenatchee: district 1, Wenatchee SD 246.
+  const we = ballotFor(che({ CONGDST: '8', LEGDST: '12', CITY: 'Wenatchee', COUNTY_COUNCIL: '1', SCHDST: '246' }))
+  const ws = we.contests.map((c) => c.slug)
+  assert.equal(new Set(ws).size, ws.length)
+  for (const slug of SUPREME_COURT) assert.ok(ws.includes(slug), slug)
+  sameScoring(we, 'chelan-congressional-district-8-u-s-representative', 'congressional-district-8-united-states-representative')
+  for (const pos of [1, 2])
+    sameScoring(we, `chelan-legislative-district-12-state-representative-pos-${pos}`, `state-representative-position-no-${pos}-legislative-district-no-12`)
+  assert.ok(!we.contests.some((c) => c.owner === 'king'))
+  // The commissioner and PUD seats are elected countywide in the general.
+  assert.ok(ws.includes('chelan-chelan-county-commissioner-district-2-commissioner-district-no-2'))
+  assert.ok(ws.includes('chelan-public-utility-district-no-1-of-chelan-county-commissioner-district-1'))
+  assert.deepEqual(ownLocal(we, 'chelan'), [SD246])
+  // 101 Woodring St, Cashmere: Cashmere SD 222, the city's levy.
+  const ca = ballotFor(che({ CONGDST: '8', LEGDST: '12', CITY: 'Cashmere', COUNTY_COUNCIL: '2', SCHDST: '222' }))
+  assert.deepEqual(ownLocal(ca, 'chelan'), ['chelan-city-of-cashmere-proposition-no-1'])
+  // 700 US Hwy 2, Leavenworth: no local measure.
+  const le = ballotFor(che({ CONGDST: '8', LEGDST: '12', CITY: 'Leavenworth', COUNTY_COUNCIL: '2', SCHDST: '228' }))
+  assert.deepEqual(le.measures.map((m) => m.slug), STATE_MEASURES)
+  assert.equal(coverageAdvice(che({})), null)
+})
+
+test('a Clallam ballot: District Court by district, the PUD seat outside Port Angeles, school and fire measures by district', () => {
+  const CLALLAM = { id: 'clallam', fips: '53009', name: 'Clallam County' }
+  const cll = (districts) => ({ coverageStatus: 'full_county', county: CLALLAM, districts, missingLayers: [] })
+  const PUD = 'clallam-public-utility-district-no-1-of-clallam-county-commissioner-district-no-2'
+  const DC1 = 'clallam-clallam-county-district-court-1-judge'
+  const DC2 = 'clallam-clallam-county-district-court-2-judge'
+  const CHARTER = [1, 2, 3].map((n) => `clallam-clallam-county-proposed-charter-amendment-no-${n}`)
+  // Districts as the live District Adapter resolved them on 2026-10-08.
+  // 223 E 4th St, Port Angeles: District Court 1, outside the PUD.
+  const pa = ballotFor(cll({ CONGDST: '6', LEGDST: '24', CITY: 'Port Angeles', COUNTY_COUNCIL: '2', DISTCRT: '1', SCHDST: '121' }))
+  const ps = pa.contests.map((c) => c.slug)
+  assert.equal(new Set(ps).size, ps.length)
+  for (const slug of SUPREME_COURT) assert.ok(ps.includes(slug), slug)
+  sameScoring(pa, 'clallam-congressional-district-6-u-s-representative', 'pierce-congressional-district-6-u-s-representative')
+  assert.ok(ps.includes(DC1) && !ps.includes(DC2) && !ps.includes(PUD))
+  assert.ok(ps.includes('clallam-legislative-district-24-state-representative-pos-1'))
+  assert.deepEqual(ownLocal(pa, 'clallam'), CHARTER)
+  // 500 E Division St, Forks: District Court 2, the PUD seat, QVSD 402, Fire District 1.
+  const fo = ballotFor(cll({
+    CONGDST: '6', LEGDST: '24', CITY: 'Forks', COUNTY_COUNCIL: '3', PUDDST: '3', FIRDST: '1', DISTCRT: '2', SCHDST: '402', PUDALL: '1',
+  }))
+  const fs = fo.contests.map((c) => c.slug)
+  assert.ok(fs.includes(DC2) && !fs.includes(DC1) && fs.includes(PUD))
+  assert.deepEqual(ownLocal(fo, 'clallam'), [
+    ...CHARTER,
+    'clallam-quillayute-valley-school-district-no-402-proposition-no-1',
+    'clallam-clallam-county-fire-protection-district-no-1-proposition-no-1',
+  ])
+  // 3851 S Mount Angeles Rd, Port Angeles (outside the city): Fire District 2 and the PUD seat.
+  const ma = ballotFor(cll({ CONGDST: '6', LEGDST: '24', COUNTY_COUNCIL: '2', PUDDST: '3', FIRDST: '2', DISTCRT: '1', SCHDST: '121', PUDALL: '1' }))
+  assert.ok(ma.contests.some((c) => c.slug === PUD))
+  assert.deepEqual(ownLocal(ma, 'clallam'), [...CHARTER, 'clallam-clallam-county-fire-protection-district-no-2-proposition-no-1'])
+  // 7764 La Push Rd: Fire District 6.
+  const lp = ballotFor(cll({ CONGDST: '6', LEGDST: '24', COUNTY_COUNCIL: '3', PUDDST: '3', FIRDST: '6', DISTCRT: '2', SCHDST: '402', PUDALL: '1' }))
+  assert.deepEqual(ownLocal(lp, 'clallam'), [
+    ...CHARTER,
+    'clallam-quillayute-valley-school-district-no-402-proposition-no-1',
+    'clallam-clallam-county-fire-protection-district-no-6-proposition-no-1',
+  ])
+  assert.equal(coverageAdvice(cll({})), null)
+})
+
+test('a Grays Harbor ballot: Clallam\'s research for LD 24, Thurston\'s for LD 19, Timberland outside Ocean Shores', () => {
+  const GRAYS_HARBOR = { id: 'grays-harbor', fips: '53027', name: 'Grays Harbor County' }
+  const gh = (districts) => ({ coverageStatus: 'full_county', county: GRAYS_HARBOR, districts, missingLayers: [] })
+  const TRL = 'grays-harbor-timberland-regional-library-district-proposition-no-1'
+  // Districts as the live District Adapter resolved them on 2026-10-08.
+  // 200 W Market St, Aberdeen: LD 19, Timberland only.
+  const ab = ballotFor(gh({ CONGDST: '6', LEGDST: '19', CITY: 'Aberdeen', LIBDST: 'L', SCHDST: '5' }))
+  const as = ab.contests.map((c) => c.slug)
+  assert.equal(new Set(as).size, as.length)
+  for (const slug of SUPREME_COURT) assert.ok(as.includes(slug), slug)
+  sameScoring(ab, 'grays-harbor-congressional-district-6-u-s-representative', 'pierce-congressional-district-6-u-s-representative')
+  for (const pos of [1, 2])
+    sameScoring(ab, `grays-harbor-legislative-district-19-state-representative-pos-${pos}`, `thurston-legislative-district-19-state-representative-pos-${pos}`)
+  assert.ok(!ab.contests.some((c) => c.owner !== 'grays-harbor' && c.owner !== 'statewide'))
+  assert.deepEqual(ownLocal(ab, 'grays-harbor'), [TRL])
+  // 100 S 3rd St, McCleary: McCleary SD 65.
+  const mc = ballotFor(gh({ CONGDST: '6', LEGDST: '19', CITY: 'McCleary', LIBDST: 'L', SCHDST: '65' }))
+  assert.deepEqual(ownLocal(mc, 'grays-harbor'), [TRL, 'grays-harbor-mccleary-school-district-no-65-proposition-no-1'])
+  // 110 Main St, Oakville: Fire District 1.
+  const ok = ballotFor(gh({ CONGDST: '6', LEGDST: '19', CITY: 'Oakville', FIRDST: '1', LIBDST: 'L', SCHDST: '400' }))
+  assert.deepEqual(ownLocal(ok, 'grays-harbor'), [TRL, 'grays-harbor-grays-harbor-county-fire-protection-district-no-1-proposition-no-1'])
+  // 200 N Main St, Montesano: LD 24 (Clallam's research), Montesano Prop 1.
+  const mo = ballotFor(gh({ CONGDST: '6', LEGDST: '24', CITY: 'Montesano', LIBDST: 'L', SCHDST: '66' }))
+  for (const pos of [1, 2])
+    sameScoring(mo, `grays-harbor-legislative-district-24-state-representative-pos-${pos}`, `clallam-legislative-district-24-state-representative-pos-${pos}`)
+  assert.deepEqual(ownLocal(mo, 'grays-harbor'), [TRL, 'grays-harbor-city-of-montesano-proposition-no-1'])
+  // 585 Point Brown Ave NW, Ocean Shores: outside Timberland.
+  const os = ballotFor(gh({ CONGDST: '6', LEGDST: '24', CITY: 'Ocean Shores', SCHDST: '64' }))
+  assert.deepEqual(os.measures.map((m) => m.slug), STATE_MEASURES)
+  assert.equal(coverageAdvice(gh({})), null)
 })
 
 test('a Spokane ballot: its own districts, school and fire measures by name, no PUD seat', () => {

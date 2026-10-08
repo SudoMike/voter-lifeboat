@@ -431,8 +431,8 @@ voters outside the district.
 As of the builder runs on 2026-10-08 (#22, #28, #29), the only shipped
 general package that is `partial_county` is Spokane (`PUDDST`). Benton,
 Clark, Kitsap, Pierce, Snohomish (since #27), Thurston, Whatcom, Yakima,
-Skagit, Cowlitz, Grant, Island and Lewis are `full_county`; all fourteen
-ship with King. A PUD
+Skagit, Cowlitz, Grant, Island, Lewis, Franklin, Chelan, Clallam and Grays
+Harbor are `full_county`; all eighteen ship with King. A PUD
 commissioner is nominated by district but elected by the whole PUD in the
 general (RCW 54.12.010(3)), so a countywide PUD's seat is scoped `COUNTY`
 (Clark, Kitsap, Thurston), not `PUDDST`.
@@ -554,6 +554,37 @@ link their VoteWA guide. A `NAMED` shared-race key such as Island's
 `("public utility district 1", "commissioner district 1")` matches any
 package that names a PUD seat exactly that way, so check a new county's
 research plan for an unintended match.
+
+Franklin, Chelan, Clallam and Grays Harbor shipped on 2026-10-08 (#29, part
+2) as `full_county`. Franklin's Port of Pasco elects by district from 2026:
+its District 3 seat is `PORTDST` `PoP3`, read from the county portal's
+`districts/Special_tax_districts/MapServer/7` `DISTRICT_CODE` (which also
+holds the Port of Kahlotus's `PoK1`-`PoK3`); its commissioner race is
+`COUNTY_COUNCIL` `COM3`, the value form of the `Commissioner_Districts`
+layer the hotfix moved to, and its FPD 3 levy reads DOR FIR2025. Chelan's
+Wenatchee SD 246 bonds read DOR SCH2025. Chelan's commissioner layer
+(`PW/Commissioner_Districts`, used by the primary only) answered its
+metadata but 500ed or timed out on every query on 2026-10-08, so
+`COUNTY_LAYERS.chelan` reads `GIS/CM_districts/MapServer/0` (`DIST_NO`, the
+same three districts) instead: re-probe every existing layer of a county you
+ship. Clallam's District Court 1 and 2 are separate electorates
+(`DISTCRT`, the Auditor's `District_Court/FeatureServer/0` `DISTRICT`); its
+PUD No. 1 is elected PUD-wide but leaves out the City of Port Angeles, so
+the seat is scoped `PUDALL` `1`, and `geo.js` reads it with a layer
+`value`: any feature of `PUD_Commissioner_District_dissolve` reports the
+constant `'1'`, no feature is no district (not a missing layer). Use
+`value` for any presence-only district whose layer has no single attribute
+for membership. Grays Harbor's Timberland levy reads DOR LIB2025 (Ocean
+Shores is outside) and McCleary SD 65 SCH2025. Shared races (17):
+Franklin's CD 4, LD 8 Senate and LD 16 with Benton's scoring, CD 5 with
+Spokane's, LD 14 with Yakima's; Chelan's CD 8 and LD 12 with King's, LD 7
+Senate with Spokane's; Clallam's and Grays Harbor's CD 6 with Pierce's;
+Grays Harbor's LD 19 with Thurston's and LD 24 with Clallam's (Clallam owns
+LD 24). Franklin, Chelan and Clallam link their local pamphlets at the cited
+PDF page and their VoteWA guides otherwise; Grays Harbor posts no pamphlet
+and links its guide. The archived primary scoped Clallam's PUD District 2
+race `PUDDST` `1` (the generic parse), which the adapter reads as
+commissioner district 1; the primary is frozen, so that stays.
 
 ## 13. Reference
 
