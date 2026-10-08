@@ -27,14 +27,12 @@ PRIMARY = "2026-08-04-primary"
 
 GENERAL_CFG = {
     "name": "Kitsap County",
-    # SCHDST (South Kitsap School District Prop 1) has no layer in geo.js
-    # COUNTY_LAYERS["kitsap"] yet. Proposed (#22): Kitsap County GIS
+    # Every scope resolves through geo.js COUNTY_LAYERS["kitsap"] (#22).
+    # SCHDST (South Kitsap School District Prop 1) reads Kitsap County GIS
     # services6.arcgis.com/qt3UCV9x5kB4CwRA/arcgis/rest/services/
     # School_District_Outlines/FeatureServer/0, attr DISTRICT (values 100-C,
     # 303, 400, 401, 402, 403; raw/kitsap/school-district-outlines.json.url).
-    # Until the director adds it, the measure is hidden and the package is
-    # partial_county.
-    "unresolvable_layers": ["SCHDST"],
+    "unresolvable_layers": (),
 }
 
 # The general's local measures, transcribed 2026-10-08 from Kitsap County's
@@ -120,9 +118,6 @@ if ELECTION.id != PRIMARY:
         override=general_override,
         measures=CURATED["measures"] if CURATED else None,
         measure_sources=CURATED["sources"] if CURATED else (),
-        notes=("SCHDST has a public layer that the District Adapter does not read yet: Kitsap County GIS "
-               "School_District_Outlines/FeatureServer/0, attribute DISTRICT ('402' at 2689 Hoover Ave SE, "
-               "Port Orchard, 2026-10-08; raw/kitsap/school-district-outlines.json.url).",),
     )
     raise SystemExit(0)
 

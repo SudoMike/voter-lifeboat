@@ -53,6 +53,17 @@ test('Pierce Election_Precincts values read as names; NO flags drop out', () => 
   assert.deepEqual(lines, ['CITY', 'CONGDST', 'LEGDST', 'COUNTY_COUNCIL', 'KCDISTCRT', 'SCHDST', 'PTBA'])
 })
 
+test('Clark, Kitsap and Thurston school and WTRFA values read as names', () => {
+  // Live 2026-10-08 (#22): Battle Ground (Clark, integer 119), Port Orchard
+  // and Bremerton (Kitsap), Lacey and Rochester (Thurston).
+  assert.equal(describeDistrict('SCHDST', '119'), 'School District 119')
+  assert.equal(describeDistrict('SCHDST', '402'), 'School District 402')
+  assert.equal(describeDistrict('SCHDST', '100-C'), 'School District 100-C')
+  assert.equal(describeDistrict('SCHDST', 'NORTH THURSTON'), 'North Thurston School District')
+  assert.equal(describeDistrict('SCHDST', 'YELM'), 'Yelm School District')
+  assert.equal(describeDistrict('RFADST', 'FD01'), 'West Thurston Regional Fire Authority')
+})
+
 test('codes are tidied without mangling initialisms', () => {
   assert.equal(describeDistrict('FIRDST', 'TACOMA'), 'Fire District Tacoma')
   assert.equal(describeDistrict('SCCDST', 'SCC5'), 'Seattle City Council District 5')

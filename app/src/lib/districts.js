@@ -44,9 +44,11 @@ const NAMED_VALUES = {
     W: 'King County District Court, West Electoral District',
     SH: 'King County District Court, Shoreline Electoral District',
   },
-  // Snohomish RFADST reads the WA DOR fire layer's RFA code (geo.js).
+  // Snohomish RFADST reads the WA DOR fire layer's RFA code; Thurston's reads
+  // the county fire layer's CONSOL_NUM, filtered to the WTRFA polygons (geo.js).
   RFADST: {
     SCRFA: 'South Snohomish County Fire & Rescue Regional Fire Authority',
+    FD01: 'West Thurston Regional Fire Authority',
   },
   // Spokane FIRDST reads the county fire layer's NAME (geo.js). Districts
   // read 'Fire District 9'; these other polygons are cities with their own
@@ -119,7 +121,8 @@ export function describeDistrict(key, value, bodyName = null) {
   if (!label) return `${key} ${tidy(raw)}`
   if (PRESENCE_FLAGS.has(raw.toLowerCase())) return label
   if (ABSENCE_FLAGS.has(raw.toLowerCase())) return null
-  if (/^\d+$/.test(raw)) return `${label} ${raw}`
+  // Kitsap's school layer numbers Bremerton '100-C'; keep its suffix as printed.
+  if (/^\d+(-[A-Za-z])?$/.test(raw)) return `${label} ${raw}`
   // Codes that carry a service prefix ('SCC5') still have the number we want.
   const numbered = raw.match(/^[A-Za-z]+(\d+)$/)
   if (numbered) return `${label} ${numbered[1]}`
@@ -129,6 +132,8 @@ export function describeDistrict(key, value, bodyName = null) {
   // Values that already read as a proper name stand on their own (Pierce's
   // school field also reads 'YELM COMMUNITY SCHOOLS').
   if (/district|authority|area|county|schools$/i.test(raw)) return tidy(raw)
+  // Thurston's school layer gives the bare place name ('NORTH THURSTON').
+  if (key === 'SCHDST' && /^[A-Za-z][A-Za-z .'-]*$/.test(raw)) return `${tidy(raw)} ${label}`
   return `${label} ${tidy(raw)}`
 }
 

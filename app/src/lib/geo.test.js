@@ -212,7 +212,9 @@ test('configured non-King county layers produce full county coverage', async () 
       ? { BOCCDistrict: 1 }
       : String(url).includes('CPUCommissionerDistrict')
         ? { DISTRICT: 3 }
-        : { FIREDST: 10 }
+        : String(url).includes('SchoolDistrict')
+          ? { SCHDST: 37 }
+          : { FIREDST: 10 }
     return {
       ok: true,
       async json() {
@@ -232,6 +234,7 @@ test('configured non-King county layers produce full county coverage', async () 
     COUNTY_COUNCIL: '1',
     PUDDST: '3',
     FIRDST: '10',
+    SCHDST: '37',
   })
   assert.deepEqual(context.missingLayers, [])
 })
@@ -778,4 +781,128 @@ test('a Pierce point outside Pierce Transit and King District Court matches neit
   assert.ok(!scopeMatches({ kind: 'DISTRICT', county: 'pierce', layer: 'KCDISTCRT', value: 'YES' }, context))
   assert.ok(!scopeMatches({ kind: 'DISTRICT', county: 'pierce', layer: 'SCHDST', value: 'AUBURN SCHOOL DISTRICT NO. 408' }, context))
   assert.ok(scopeMatches({ kind: 'DISTRICT', county: 'pierce', layer: 'DISTCRT', value: 'YES' }, context))
+})
+
+// Clark, Kitsap and Thurston school districts and Thurston's West Thurston
+// RFA (#22). Live point queries 2026-10-08 at the Census-geocoded points of
+// the addresses below; the mock answers like the server, dropping a feature
+// a request's `where` excludes (the Thurston fire layer's polygons carry
+// CONSOL_DIS 'WTRFA - South Btn'/'WTRFA - North Btn' only inside the RFA).
+function mockWave2(matchedAddress, countyFips, countyName, features) {
+  const calls = []
+  global.fetch = async (url) => {
+    calls.push(String(url))
+    if (String(url).startsWith('/api/geocode')) {
+      return {
+        ok: true,
+        async json() {
+          return {
+            result: {
+              addressMatches: [{
+                matchedAddress,
+                coordinates: { x: -122.9, y: 46.9 },
+                geographies: {
+                  Counties: [{ STATE: '53', COUNTY: countyFips, NAME: countyName }],
+                  '120th Congressional Districts': [{ BASENAME: '10' }],
+                  '2026 State Legislative Districts - Lower': [{ BASENAME: '2' }],
+                },
+              }],
+            },
+          }
+        },
+      }
+    }
+    const u = new URL(String(url))
+    const field = u.searchParams.get('outFields')
+    const where = u.searchParams.get('where')
+    const hit = features.find((f) => u.pathname.includes(f.path))
+    let attrs = hit && field in hit.attributes ? { [field]: hit.attributes[field] } : null
+    if (attrs && where === "CONSOL_DIS LIKE 'WTRFA%'" && !String(hit.attributes.CONSOL_DIS).startsWith('WTRFA')) attrs = null
+    return { ok: true, async json() { return { features: attrs ? [{ attributes: attrs }] : [] } } }
+  }
+  return calls
+}
+
+const wave2Data = (id) => ({
+  coverage: { statewide_complete: true, supported_counties: [{ id, coverage: 'full_county' }] },
+})
+
+test('Clark resolves its school district from the county SchoolDistrict layer', async () => {
+  // 109 SW 1st St, Battle Ground: SCHDST is an integer field (119).
+  mockWave2('109 SW 1ST ST, BATTLE GROUND, WA, 98604', '011', 'Clark County', [
+    { path: 'BoardofCountyCouncilorsDistrict', attributes: { BOCCDistrict: 5 } },
+    { path: 'CPUCommissionerDistrict', attributes: { District: 1 } },
+    { path: 'FireDistrictBoundary', attributes: { FIREDST: 3 } },
+    { path: 'ClarkView_Public/SchoolDistrict/MapServer/0', attributes: { SCHDST: 119 } },
+  ])
+  const context = await lookupBallotContext(wave2Data('clark'), '109 SW 1st St Battle Ground WA 98604')
+  assert.equal(context.coverageStatus, 'full_county')
+  assert.equal(context.districts.SCHDST, '119')
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(scopeMatches({ kind: 'DISTRICT', county: 'clark', layer: 'SCHDST', value: '119' }, context))
+  assert.ok(!scopeMatches({ kind: 'DISTRICT', county: 'kitsap', layer: 'SCHDST', value: '119' }, context))
+})
+
+test('Kitsap resolves its school district from School_District_Outlines', async () => {
+  // 1700 SE Mile Hill Dr, Port Orchard -> '402'; Bremerton reads '100-C'.
+  mockWave2('1700 SE MILE HILL DR, PORT ORCHARD, WA, 98366', '035', 'Kitsap County', [
+    { path: 'County_Commissioner_District_Outlines', attributes: { DISTRICT: '2' } },
+    { path: 'Fire_District_Outlines', attributes: { DISTRICT: '7' } },
+    { path: 'School_District_Outlines', attributes: { DISTRICT: '402' } },
+  ])
+  let context = await lookupBallotContext(wave2Data('kitsap'), '1700 SE Mile Hill Dr Port Orchard WA 98366')
+  assert.equal(context.districts.SCHDST, '402')
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(scopeMatches({ kind: 'DISTRICT', county: 'kitsap', layer: 'SCHDST', value: '402' }, context))
+  mockWave2('345 6TH ST, BREMERTON, WA, 98337', '035', 'Kitsap County', [
+    { path: 'School_District_Outlines', attributes: { DISTRICT: '100-C' } },
+  ])
+  context = await lookupBallotContext(wave2Data('kitsap'), '345 6th St Bremerton WA 98337')
+  assert.ok(!scopeMatches({ kind: 'DISTRICT', county: 'kitsap', layer: 'SCHDST', value: '402' }, context))
+})
+
+const thurstonFire = (attrs) => ({ path: 'Thurston_FireDistricts_TCOMM/FeatureServer/0', attributes: attrs })
+
+test('Thurston resolves WTRFA and its school district; fire district and RFA share one layer', async () => {
+  // 18346 Albany St SW, Rochester.
+  const calls = mockWave2('18346 ALBANY ST SW, ROCHESTER, WA, 98579', '067', 'Thurston County', [
+    { path: 'Thurston_CommissionerDistricts', attributes: { CommissionerDistrictNumber: 2 } },
+    { path: 'Jurisdictions/FeatureServer/15', attributes: { CommissionerDistrictNumber: 1 } },
+    thurstonFire({ DISPATCH_G: 'FD01', CONSOL_DIS: 'WTRFA - South Btn', CONSOL_NUM: 'FD01' }),
+    { path: 'Jurisdictions/FeatureServer/10', attributes: { SchoolDistrictName: 'ROCHESTER' } },
+  ])
+  const context = await lookupBallotContext(wave2Data('thurston'), '18346 Albany St SW Rochester WA 98579')
+  assert.equal(context.coverageStatus, 'full_county')
+  assert.equal(context.districts.RFADST, 'FD01')
+  assert.equal(context.districts.FIRDST, 'FD01')
+  assert.equal(context.districts.FIRE_AUTH, 'WTRFA - South Btn')
+  assert.equal(context.districts.SCHDST, 'ROCHESTER')
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(scopeMatches({ kind: 'DISTRICT', county: 'thurston', layer: 'RFADST', value: 'FD01' }, context))
+  assert.ok(!scopeMatches({ kind: 'DISTRICT', county: 'thurston', layer: 'SCHDST', value: 'YELM' }, context))
+  // Three queries of the fire layer (FIRDST, FIRE_AUTH, RFADST); only RFADST filters.
+  const fire = calls.filter((u) => u.includes('Thurston_FireDistricts_TCOMM')).map((u) => new URL(u).searchParams)
+  assert.deepEqual(fire.map((p) => p.get('outFields')).sort(), ['CONSOL_DIS', 'CONSOL_NUM', 'DISPATCH_G'])
+  assert.deepEqual(fire.map((p) => p.get('where')).filter(Boolean), ["CONSOL_DIS LIKE 'WTRFA%'"])
+})
+
+test('a Thurston point outside WTRFA keeps its fire district and gets no RFA', async () => {
+  // 420 College St SE, Lacey: Lacey Fire District 3, North Thurston.
+  mockWave2('420 COLLEGE ST SE, LACEY, WA, 98503', '067', 'Thurston County', [
+    thurstonFire({ DISPATCH_G: 'FD03', CONSOL_DIS: 'Lacey', CONSOL_NUM: 'FD03' }),
+    { path: 'Jurisdictions/FeatureServer/10', attributes: { SchoolDistrictName: 'NORTH THURSTON' } },
+  ])
+  let context = await lookupBallotContext(wave2Data('thurston'), '420 College St SE Lacey WA 98503')
+  assert.equal(context.districts.FIRDST, 'FD03')
+  assert.equal('RFADST' in context.districts, false)
+  assert.ok(scopeMatches({ kind: 'DISTRICT', county: 'thurston', layer: 'FIRDST', value: 'FD03' }, context))
+  assert.ok(!scopeMatches({ kind: 'DISTRICT', county: 'thurston', layer: 'RFADST', value: 'FD01' }, context))
+  // 105 W Yelm Ave, Yelm: Yelm Community Schools, SE Thurston Fire Authority.
+  mockWave2('105 W YELM AVE, YELM, WA, 98597', '067', 'Thurston County', [
+    thurstonFire({ DISPATCH_G: 'FD02', CONSOL_DIS: 'S.E. Thurston Fire Authority', CONSOL_NUM: 'FD02' }),
+    { path: 'Jurisdictions/FeatureServer/10', attributes: { SchoolDistrictName: 'YELM' } },
+  ])
+  context = await lookupBallotContext(wave2Data('thurston'), '105 W Yelm Ave Yelm WA 98597')
+  assert.ok(scopeMatches({ kind: 'DISTRICT', county: 'thurston', layer: 'SCHDST', value: 'YELM' }, context))
+  assert.ok(!scopeMatches({ kind: 'DISTRICT', county: 'thurston', layer: 'RFADST', value: 'FD01' }, context))
 })

@@ -25,9 +25,8 @@ OUT = COUNTY / "interim"
 # sample-ballot transcription, frozen byte-identical.
 PRIMARY = "2026-08-04-primary"
 
-# SCHDST and RFADST are not in app/src/lib/geo.js COUNTY_LAYERS["thurston"]
-# (2026-10-08, #22), so the two measures scoped to them make the package
-# partial_county until the director adds a layer for each:
+# Every scope resolves through app/src/lib/geo.js COUNTY_LAYERS["thurston"]
+# (#22), which reads the two measure layers the general added:
 # - SCHDST: Thurston County Elections' school director districts,
 #   https://tconline.co.thurston.wa.us/server/rest/services/Common_Layers/Jurisdictions/FeatureServer/10,
 #   attr SchoolDistrictName ('YELM' at 105 Yelm Ave W, Yelm; 'OLYMPIA',
@@ -38,11 +37,11 @@ PRIMARY = "2026-08-04-primary"
 #   (ThurstonExt/Thurston_FireDistricts_TCOMM/FeatureServer/0) splits it into
 #   two polygons (DISPATCH_G 'FD01'/'FD11', CONSOL_DIS 'WTRFA - South Btn'/
 #   'WTRFA - North Btn'); both carry CONSOL_NUM 'FD01', and no other polygon
-#   does. A layer entry on that service with attr CONSOL_NUM and
-#   where "CONSOL_DIS LIKE 'WTRFA%'" resolves it ('FD01' at 18346 Albany St
-#   SW, Rochester and 10828 Littlerock Rd SW, Olympia). DOR FIR2025 has two
+#   does. geo.js RFADST reads that service's CONSOL_NUM with
+#   where "CONSOL_DIS LIKE 'WTRFA%'" ('FD01' at 18346 Albany St SW,
+#   Rochester and 10828 Littlerock Rd SW, Olympia). DOR FIR2025 has two
 #   values ('1/WTRFA/1B', '11/WTRFA/11B'), so it cannot match one scope value.
-GENERAL_CFG = {"name": "Thurston County", "unresolvable_layers": ["SCHDST", "RFADST"]}
+GENERAL_CFG = {"name": "Thurston County", "unresolvable_layers": ()}
 
 _GEN = "data/washington-state/elections/2026-11-03-general/counties/thurston"
 _PAGE = f"{_GEN}/raw/thurston/general-election.html.url"
@@ -97,7 +96,7 @@ GENERAL_MEASURES = {"2026-11-03-general": {
                     "Levy lid lift from $0.22 to $0.35 per $1,000 of assessed value for 2027 and 2028; the 2028 amount becomes the base for later limits (about $40 a year on a $334,000 home, per the explanatory statement).",
                     "TimberStrong Libraries Committee: the levy has not risen in 25 years; restores hours, staffing and collections at Thurston's eight branches (about $69 a year on a median $530,959 home).",
                     "Sean Swope (Citizens for Accountable TR Libraries): property owners already face rising bills; the library should cut costs and show prudent management before asking for more."),
-        # Scope: SCHDST (unresolvable today, see GENERAL_CFG). 105 Yelm Ave W,
+        # Scope: SCHDST (geo.js, see GENERAL_CFG). 105 Yelm Ave W,
         # Yelm (Census-geocoded -122.60775, 46.94251) -> Jurisdictions/10
         # SchoolDistrictName 'YELM' (2026-10-08).
         gen_measure("Yelm Community Schools", "Proposition No. 1",
@@ -116,7 +115,7 @@ GENERAL_MEASURES = {"2026-11-03-general": {
                     "Up to $98,300,000 in bonds maturing within 20 years, repaid by excess property taxes at an approximate $0.23 per $1,000 of assessed value (about $9.60 a month on a $500,000 home).",
                     "Steve Brooks and Tom Carroll: calls are up 43% in ten years and only one of five stations is north of I-5; a new station and a replaced Station 32 cut response times.",
                     _NO_CON),
-        # Scope: RFADST (unresolvable today, see GENERAL_CFG). 18346 Albany St
+        # Scope: RFADST (geo.js, see GENERAL_CFG). 18346 Albany St
         # SW, Rochester (-123.09698, 46.82062) and 10828 Littlerock Rd SW,
         # Olympia (-122.99209, 46.93043) -> fire layer CONSOL_NUM 'FD01'
         # (CONSOL_DIS 'WTRFA - South Btn' / 'WTRFA - North Btn') (2026-10-08).

@@ -27,14 +27,13 @@ PRIMARY = "2026-08-04-primary"
 
 GENERAL_CFG = {
     "name": "Clark County",
-    # SCHDST is not in geo.js COUNTY_LAYERS["clark"] (#22): Battle Ground
-    # School District Prop 11 stays hidden until the director adds a layer.
-    # Clark's own ClarkView_Public/SchoolDistrict/MapServer/0 (attribute
-    # SCHDST, values 37 Vancouver ... 119 Battle Ground ... 122 Ridgefield)
-    # returns SCHDST 119 at 109 SW 1st St, Battle Ground (Census-geocoded
-    # -122.53766, 45.78008) on 2026-10-08; DOR SCH2025 (layer 20) returns
-    # DISTATTRIB '119' at the same point.
-    "unresolvable_layers": ["SCHDST"],
+    # Every scope resolves through geo.js COUNTY_LAYERS["clark"] (#22).
+    # SCHDST (Battle Ground School District Prop 11) reads Clark's own
+    # ClarkView_Public/SchoolDistrict/MapServer/0, attribute SCHDST (values
+    # 37 Vancouver ... 119 Battle Ground ... 122 Ridgefield): 119 at 109 SW
+    # 1st St, Battle Ground (Census-geocoded -122.53766, 45.78008), live
+    # 2026-10-08; DOR SCH2025 (layer 20) returns DISTATTRIB '119' there too.
+    "unresolvable_layers": (),
 }
 
 # The general's local measures, transcribed 2026-10-08 from Clark County's
