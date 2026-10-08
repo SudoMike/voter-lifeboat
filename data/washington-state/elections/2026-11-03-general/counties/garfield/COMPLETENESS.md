@@ -178,7 +178,7 @@ except Dixon (full reporting, $0).
   Dansereau `experience` -1 high. Neither states an enforcement or
   prevention agenda, so `safety` is not scored.
 - **Treasurer** (contested). Incumbent Tereasa Summers (`moderate`) faces
-  former chief deputy Katie Nagle (`pamphlet-only`, write-in in the
+  Katie Nagle, who has served as chief deputy (`pamphlet-only`, write-in in the
   primary). Scores: Summers `experience` -2 high; Nagle `experience` +1
   medium.
 - **Six uncontested contests ship information-only** (scoring files with
@@ -187,6 +187,13 @@ except Dixon (full reporting, $0).
   (`moderate`), Prosecutor Newberg (`moderate`), District Court Judge Cox
   (`moderate`), Court of Appeals III-2 Pos. 1 Tyson R. Hill (`moderate`).
 - Refutations for the four contested races are in `scoring/refutations/`.
+  A second agent upheld 10 of 11 scores. It adjusted Blachly's `experience`
+  to +1 low, because his statement pitches a long career and budget
+  management rather than outsider renewal. It proposed no missing scores.
+  It flagged display wording that the scoring files now fix: an unsupported
+  "former" for Mulrony's career and for Nagle's chief-deputy post, Taylor's
+  "biggest challenge" (his words are "one of the biggest"), the hiring-freeze
+  blurb, and basis quotes not in the dossiers (Dixon, Summers).
 
 ## Known gaps
 

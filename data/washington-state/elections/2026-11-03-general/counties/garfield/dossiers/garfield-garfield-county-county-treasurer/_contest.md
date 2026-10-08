@@ -73,7 +73,7 @@ The county treasurer receives and disburses the county's money and collects prop
 
 ## Race dynamics
 
-- **Write-in challenge.** Treasurer Tereasa Summers (Prefers Democratic Party) was the only candidate on the primary ballot. Katie Nagle (Prefers Republican Party), a former chief deputy treasurer, ran as a write-in [S1][S4]. Summers drew 593 votes and write-ins 230 [S3]; Nagle advanced and was added to the general candidate list on Aug. 19, 2026 [S5].
+- **Write-in challenge.** Treasurer Tereasa Summers (Prefers Democratic Party) was the only candidate on the primary ballot. Katie Nagle (Prefers Republican Party), who has served as chief deputy treasurer, ran as a write-in [S1][S4]. Summers drew 593 votes and write-ins 230 [S3]; Nagle advanced and was added to the general candidate list on Aug. 19, 2026 [S5].
 - **Incumbent.** Summers won the office in 2018, 940 to 386 over Karen S. Roosevelt [S6].
 - **Money.** Both chose the PDC's mini-reporting option [S7].
 

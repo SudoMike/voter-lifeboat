@@ -82,7 +82,7 @@ The sheriff is the county's chief executive officer and conservator of the peace
 
 - **Open seat.** Sheriff Drew W. Hyer, re-elected in 2022 over Kurt Miller, 705 to 570 [S4], is not on the ballot [S1]. The race is between his undersheriff, Calvin Dansereau, and deputy Kristopher Lee Taylor, president of the deputies' union [S1].
 - **Primary.** Taylor led the August primary 533 to 415, with 7 write-ins, in 11 of 11 units [S3].
-- **Staffing.** The county has a county-wide hiring freeze. In July the commissioners let Sheriff Hyer fill two of three open deputy positions [S6]; in August he asked for more after four deputies resigned, leaving himself and two deputies available for patrol [S5]. Taylor names retaining qualified deputies as the office's biggest challenge [S1].
+- **Staffing.** The county has a county-wide hiring freeze. In July the commissioners let Sheriff Hyer fill two of three open deputy positions [S6]; in August he asked for more after four deputies resigned, leaving himself and two deputies available for patrol [S5]. Taylor names retaining qualified deputies as one of the office's biggest challenges [S1].
 - **Forum.** At a June 28 forum both were asked about budget management, deputy training and retention, their qualifications and the sheriff's authority; the paper did not report their answers [S7].
 - **Money.** Both chose the PDC's mini-reporting option [S8].
 
