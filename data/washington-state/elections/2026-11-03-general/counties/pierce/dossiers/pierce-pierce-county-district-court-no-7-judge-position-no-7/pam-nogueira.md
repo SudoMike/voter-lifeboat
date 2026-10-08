@@ -89,6 +89,12 @@ sources:
     outlet: Washington Courts court directory, Pierce County courts (District Court judges listing)
     url: https://www.courts.wa.gov/court_dir/orgs/286.html
     accessed: 2026-10-08
+  - id: S14
+    tier: 1
+    type: campaign-website
+    title: Mike Sommerfeld for Judge home page (opponent's endorsement list)
+    url: https://sommerfeld4judge.com/
+    accessed: 2026-10-08
 ---
 
 ## Background
@@ -155,7 +161,7 @@ Court funding and fees:
   - Washington Director of Public Defense Larry Jefferson and House Speaker Laurie Jinkins.
   - Prosecutors and defense attorneys.
   - Organizations: Pierce County Democrats; the 2nd, 27th, 29th and 31st LD Democrats; Indivisible Tacoma; and Democrats for Diversity and Inclusion.
-- Several names (Judges Evans, Henderson and Penalver, and Speaker Jinkins) also appear on Mike Sommerfeld's endorsement list [S2].
+- Several names (Judges Evans, Henderson and Penalver, and Speaker Jinkins) appear on her list [S2] and also on Mike Sommerfeld's campaign endorsement list [S14].
 - Party and club endorsements are recorded as organizational support in a nonpartisan race, not as evidence of judicial philosophy.
 
 ## Campaign finance
