@@ -3,8 +3,18 @@
 Election: 2026 Washington general election, November 3, 2026 (VoteWA
 election 899, county code 12).
 
-Status (#32): research package, not yet shipped. Garfield is not in
-`APP_PACKAGES["2026-11-03-general"]["counties"]`; the ship pass declares it.
+Status (#32): shipped at Full County Coverage in
+`APP_PACKAGES["2026-11-03-general"]["counties"]`, the last county with
+Columbia. Its records link its VoteWA guide (`countyGuides.garfield`,
+`c=12`); no pamphlet. Its elections office is
+`https://www.garfieldcountywa.gov/auditor`, the link the Secretary of State's
+county elections offices directory gives (the site answers 403 to scripts,
+so the URL is unchecked). No layer was added: `COUNTY_LAYERS.garfield` stays
+empty and the adapter is the Census keys alone. CD 5 and LD 9 Pos. 1/2 ship
+with Spokane's research. Live ballots on 2026-10-08, each `full_county` with
+no missing layer, the 13 contests and no local measure: 789 W Main St and
+120 E Main St, Pomeroy, and the Pataha point (-117.5175, 46.4706). The
+paragraphs below describe the package as researched.
 
 Contests are built by `pipeline/build_votewa_lite_data.py --county garfield`
 from the VoteWA candidate list (`raw/votewa/candidate-list.csv.url`) and

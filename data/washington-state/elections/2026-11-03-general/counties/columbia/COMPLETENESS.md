@@ -3,8 +3,21 @@
 Election: 2026 Washington general election, November 3, 2026 (VoteWA
 election 899, county code 07).
 
-Research package for #32 (county wave 7). Not shipped yet: the county is
-not in `APP_PACKAGES["2026-11-03-general"]["counties"]`. Contests and
+Status (#32): shipped at Full County Coverage in
+`APP_PACKAGES["2026-11-03-general"]["counties"]`, with its elections office
+(`https://www.columbiaco.com/616/2026-General-Election`), its local pamphlet
+(`pamphletPdfs['columbia/local-voters-pamphlet']`, PDF pages) and its VoteWA
+guide (`countyGuides.columbia`, `c=07`). `COUNTY_LAYERS.columbia` gained
+`PARKDST` (DOR PKR2025, layer 14) as proposed below; `COUNTY_COUNCIL` was
+re-probed. CD 5 and LD 9 Pos. 1/2 ship with Spokane's research. The ship
+pass rewrote the Prosecutor ref's nested parenthesis, which had added a
+wrong PDF p. 5 to Ward's pages. Live ballots on 2026-10-08, each
+`full_county` with no missing layer and the 12 contests: 341 E Main St,
+Dayton (Pool District levy), 101 Main St, Starbuck (no local measure) and
+the Prescott district point (-118.21, 46.40) (Columbia's Prescott levy). The
+paragraphs below describe the package as researched.
+
+Research package for #32 (county wave 7). Contests and
 measures are built by `pipeline/build_votewa_lite_data.py --county columbia`
 from the VoteWA candidate list (`raw/votewa/candidate-list.csv.url`) and the
 overrides and measures in that script's
