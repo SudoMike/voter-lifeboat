@@ -1288,6 +1288,64 @@ ELECTION_MEASURES = {
                 "(court_district_name 'Upper District Court' / 'Lower District Court').",
             ],
         },
+        # Klickitat (#31): checked against the Auditor's general sample ballot
+        # and the combined state/local voters' pamphlet (counties/klickitat/raw/
+        # klickitat/{sample-ballot,local-voters-pamphlet}.pdf.url; local section
+        # pp. 39-57, measure p. 56) and VoteWA's online guide for county 20
+        # (raw/votewa/voter-guide/voterguide.json.url): the same 18 non-Supreme
+        # Court contests and one local measure; the pamphlet's participating
+        # jurisdictions are the State, the County, PUD No. 1 and EMS District
+        # No. 1. Overrides: Commissioner 2 (VoteWA District 'County') is
+        # nominated by district and elected county-wide in the general (RCW
+        # 36.32.040; SOS precinct exports: the 2018 and 2022 Commissioner 2
+        # races on all 29 precincts, the 2024 Commissioner 1 and 3 races on all
+        # 33); named as in the primary so its dossiers carry forward. PUD No. 1
+        # covers the whole county (Auditor's 2025 Votes by District: 16,421
+        # registered voters, the county total; DOR PUD2025 layer 17 has one
+        # Klickitat polygon, DISTATTRIB '1', at Goldendale, White Salmon,
+        # Bingen, Lyle, Bickleton, Trout Lake and Klickitat) and the whole PUD
+        # elects each commissioner (RCW 54.12.010(3); 2022 Pos. 2 and 2024
+        # Pos. 1 on every precinct), so the seat is COUNTY; the generic rule
+        # misreads District 'PUBLIC UTILITY DISTRICT # 1' as commissioner
+        # district 1, and the primary's names are kept. The East and West
+        # District Courts are separate electorates that partition the county
+        # (2025 Votes by District: 7,550 + 8,871 = 16,421; SOS 2022: East on 18
+        # and West on 16 of 29 precincts, several split): scoped DISTCRT
+        # 'East'/'West'. No county, DOR or ArcGIS Online layer of those
+        # districts was found (see counties/klickitat/COMPLETENESS.md), so
+        # DISTCRT is unresolvable and the county stays partial_county.
+        # Measure scope: EMSDST '1' is DOR EMS2025 (layer 6), one Klickitat
+        # polygon: '1' at Goldendale, White Salmon, Bingen, Lyle, Trout Lake and
+        # Klickitat, no feature at 100 E Market St, Bickleton (the district has
+        # 16,105 of the county's 16,421 voters). 2026-10-08.
+        "klickitat": {
+            "overrides": {
+                ("COUNTY", "COUNTY COMMISSIONER 2"): (
+                    "County", "Klickitat County Commissioner District 2", "County Commissioner 2", ("COUNTY", None)),
+                ("PUBLIC UTILITY DISTRICT # 1", "PUBLIC UTILITY DISTRICT #1 COMMISSIONER POS. 3"): (
+                    "PublicUtility", "Public Utility District Commissioner District 3",
+                    "Public Utility District #1 Commissioner Pos. 3", ("COUNTY", None)),
+                ("EAST DISTRICT COURT", "KLICKITAT COUNTY EAST DISTRICT COURT JUDGE"): (
+                    "Judicial", "Klickitat County East District Court", "Judge", ("DISTCRT", "East")),
+                ("WEST DISTRICT COURT", "KLICKITAT COUNTY WEST DISTRICT COURT JUDGE"): (
+                    "Judicial", "Klickitat County West District Court", "Judge", ("DISTCRT", "West")),
+            },
+            "measures": [
+                m("Emergency Medical Services District No. 1, Klickitat County", "Proposition No. 1",
+                  "Permanent Regular Emergency Medical Services Property Tax Levy",
+                  ("EMSDST", "1"),
+                  "Makes the EMS district's property tax levy permanent, at up to $0.50 per $1,000 of assessed value, first levied in 2026 for collection in 2027, in place of the six-year renewal voters approved in 2024 (collected 2025-2030). The money pays only for emergency medical services: ambulances, paramedics and EMTs, training, equipment and stations. The district covers the whole county except the Bickleton area.",
+                  "Up to $0.50 per $1,000 of assessed value every year with no end date (about $250 a year on a $500,000 home at the full rate); the district's 2026 rate under its current levy is about $0.48, raising $2.56 million.",
+                  "https://www.klickitatcounty.gov/DocumentCenter/View/23954",
+                  pages=(56,)),
+            ],
+            "extra_notes": [
+                "The East and West District Court judge seats are scoped DISTCRT 'East' and 'West': the two courts are "
+                "separate electorates and no queryable boundary layer for them was found, so both stay hidden.",
+                "EMS District No. 1 Proposition No. 1 is scoped EMSDST '1' (WA DOR EMS2025, layer 6); the Bickleton area "
+                "is outside the district.",
+            ],
+        },
         # Lewis (#29): checked against the Lewis County Auditor's general sample
         # ballot (counties/lewis/raw/lewis/sample-ballot.pdf.url) and VoteWA's
         # online guide for county 21 (raw/votewa/voter-guide/guide.json.url),
