@@ -1,0 +1,95 @@
+{
+  "contest_slug": "mason-mason-county-commissioner-district-3-county-commissioner-district-no-3",
+  "scored_at": "2026-10-09",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/mason/dossiers/mason-mason-county-commissioner-district-3-county-commissioner-district-no-3/"
+  ],
+  "office_does": "The three county commissioners are Mason County's legislative body: they adopt the budget, pass ordinances and oversee roads, property and county services. Commissioners are nominated by district and elected county-wide.",
+  "race_blurb": "Open seat: Commissioner Sharon Trask did not run and resigned in September. Two Shelton City Council members who split on a 2024 homeless-housing sales tax meet again after a five-vote council race in 2021. Democrat Miguel Gutierrez campaigns on housing, health care and living wages; Republican George Blush on cracking down on encampments and blight and ending wasteful spending.",
+  "candidates": [
+    {
+      "slug": "miguel-gutierrez",
+      "summary": "Shelton City Council member since 2022 and former special education teacher, campaigning on 'Housing, Healthcare, and Hope' for Mason County.",
+      "highlights": [
+        "Calls for living wages, child care, elder care, affordable housing and security from medical bankruptcy [S1]",
+        "Voted for a 0.1% city sales tax to house people who are homeless and fund their services, rejected 4-3 [S9]",
+        "Voted to give the downtown homeless shelter's operator $20,000 and sits on its board [S1][S10]",
+        "Moved to pause the city's Flock license-plate camera contract [S12]",
+        "Endorsed by former county auditors and commissioners and by the Mason County Democrats [S5]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "housing": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S9"],
+          "basis": "Voted for a city sales tax to house people who are homeless and lists affordable housing among his goals: public investment in housing."
+        },
+        "taxes": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S9"],
+          "basis": "Voted for a new 0.1% city sales tax (about $310,000 a year) for homeless housing and services."
+        },
+        "spending": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S2"],
+          "basis": "Platform of new public programs (living wages, child care, elder care, security from medical bankruptcy) delivered through government."
+        },
+        "safety": {
+          "score": 1,
+          "confidence": "low",
+          "citations": ["S9", "S10", "S12"],
+          "basis": "Backed homeless shelter funding and a homeless-services tax, and moved to pause the city's license-plate camera contract; no stated policing platform."
+        },
+        "experience": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S7", "S8"],
+          "basis": "Second-term city council member (elected 2021, re-elected 2025) with an elected record, though new to county office."
+        }
+      }
+    },
+    {
+      "slug": "george-blush",
+      "summary": "Shelton City Council member, park board president and Mason County Housing Authority chair who runs a downtown restaurant, campaigning for a 'cleaner, safer, and more prosperous' county.",
+      "highlights": [
+        "Would unite code enforcement with the Sheriff's Office against illegal dumping, encampments and blight [S1]",
+        "Promises to end wasteful spending and live within the county's means [S1]",
+        "Voted against a 0.1% city sales tax for homeless housing and services [S6]",
+        "Would restore animal control and expand water access for wildfire fighting [S1]",
+        "Endorsed by the Mason County Republican Party; first of the party's three nominees for the vacant seat [S1][S8]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "safety": {
+          "score": -2,
+          "confidence": "medium",
+          "citations": ["S1", "S2"],
+          "basis": "Enforcement-first platform: code enforcement working with the sheriff against encampments, dumping and blight, and 'cracking down on crime and encampments.'"
+        },
+        "spending": {
+          "score": -2,
+          "confidence": "medium",
+          "citations": ["S1", "S2"],
+          "basis": "Explicit commitment to 'ending wasteful spending and living within our means' and fiscal responsibility."
+        },
+        "taxes": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S6"],
+          "basis": "Voted against a new 0.1% city sales tax for homeless housing and services."
+        },
+        "experience": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S1", "S5"],
+          "basis": "Runs on 'proven government, business, and nonprofit leadership experience': city council since 2024, park board president and housing authority chair."
+        }
+      }
+    }
+  ]
+}
