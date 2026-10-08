@@ -404,7 +404,9 @@ def pamphlet_page_texts(editions):
 def legislative_heading(con):
     """The SOS pamphlet's statement heading for a King legislative contest:
     'State Representative | District 36 Position 2 |', 'State Senator | District 33 |'."""
-    seat = con["district"].strip()
+    # Schema 2 puts the seat in `office` since #20; earlier King files had it
+    # in `district`.
+    seat = next(s.strip() for s in (con["office"], con["district"]) if s.strip().startswith("State "))
     office = "State Senator" if seat.startswith("State Senator") else "State Representative"
     pos = re.search(r"Position No\.\s*(\d+)", seat)
     return f"{office} | District {con['scope']['value']}" + (f" Position {pos.group(1)}" if pos else "") + " |"

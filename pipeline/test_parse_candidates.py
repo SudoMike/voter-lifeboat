@@ -90,6 +90,45 @@ class GeneralBuildTest(unittest.TestCase):
         self.assertEqual(len(cs), len({c["slug"] for c in cs}))
         self.assertTrue(all(c["uncontested"] == (len(c["candidates"]) == 1) for c in cs))
 
+    def test_office_is_the_seat_and_district_the_jurisdiction(self):
+        # KCE prints the jurisdiction first for most groups ("Legislative
+        # District No.  46" / "State Senator"); schema 2 stores office = seat,
+        # district = jurisdiction, whitespace collapsed (#20, from #25).
+        # Slugs keep KCE's order so scoring files and dossiers still match.
+        by_slug = {c["slug"]: c for c in self.contests["contests"]}
+
+        def heading(slug):
+            return by_slug[slug]["office"], by_slug[slug]["district"]
+
+        self.assertEqual(("State Representative Position No. 1", "Legislative District 1"),
+                         heading("state-representative-position-no-1-legislative-district-no-1"))
+        self.assertEqual(("State Senator", "Legislative District 46"),
+                         heading("state-senator-legislative-district-no-46"))
+        self.assertEqual(("Council District No. 2", "Metropolitan King County"),
+                         heading("council-district-no-2-metropolitan-king-county"))
+        self.assertEqual(("Judge Position No. 1", "King County District Court, Southeast Electoral District"),
+                         heading("judge-position-no-1-southeast-electoral-district"))
+        self.assertEqual(("Council District No. 5", "City of Seattle"),
+                         heading("council-district-no-5-city-of-seattle"))
+        self.assertEqual(("Justice Position No. 1", "Supreme Court"),
+                         heading("justice-position-no-1-supreme-court"))
+        # Already seat-first: unchanged.
+        self.assertEqual(("United States Representative", "Congressional District 9"),
+                         heading("congressional-district-9-united-states-representative"))
+        self.assertEqual(("Judge Position No. 5", "Court of Appeals, Division 1, District 1"),
+                         heading("court-of-appeals-division-1-district-1-judge-position-no-5"))
+        self.assertEqual(("Assessor", ""), heading("assessor"))
+        for con in self.contests["contests"]:
+            self.assertNotIn("  ", con["office"] + con["district"], con["slug"])
+
+    def test_scopes_survive_the_heading_fix(self):
+        by_slug = {c["slug"]: c for c in self.contests["contests"]}
+        d = pc.district_scope
+        self.assertEqual(d("LEGDST", 46), by_slug["state-senator-legislative-district-no-46"]["scope"])
+        self.assertEqual(d("KCCDST", 2), by_slug["council-district-no-2-metropolitan-king-county"]["scope"])
+        self.assertEqual(d("JUDDST", "SE"), by_slug["judge-position-no-1-southeast-electoral-district"]["scope"])
+        self.assertEqual(d("SCCDST", "SCC5"), by_slug["council-district-no-5-city-of-seattle"]["scope"])
+
     def test_supreme_court_is_statewide_owned_with_statewide_slugs(self):
         owned = [c for c in self.contests["contests"] if c["owner"] == "statewide"]
         self.assertEqual(
