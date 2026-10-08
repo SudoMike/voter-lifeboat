@@ -1,0 +1,37 @@
+{
+  "contest_slug": "measures",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/adams/scoring/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/adams/dossiers/measures/",
+    "data/washington-state/elections/2026-11-03-general/counties/adams/interim/app-measures.json",
+    "data/final/2026-11-03-general/rubric.json"
+  ],
+  "verdicts": [
+    {
+      "candidate": "adams-adams-county-fire-protection-district-no-4-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "The textbook +1 case. DOR shows the same $11,000 special levy for taxes due in 2024 ($0.56492) and 2025 ($0.48995) [S7][S8]. Voters approved it every November 2022-2025, including 6-1 in 2025 [S3]-[S6], so a 2026 collection follows from the 2025 vote. The request is the same dollar amount at a lower estimated rate ($0.42) [S1]. The builder default in interim/app-measures.json (+2, 'YES approves a local tax...') is correctly overridden. Not mapping spending is right: the measure only maintains existing pumper equipment [S1]."
+    },
+    {
+      "candidate": "adams-adams-county-fire-protection-district-no-4-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1/S2 (pumper equipment, 2027). 'Harder-McCall' matches the DOR name (S7) and the Ritzville Rural SE precinct matches S2, S3 and S6. 'Needs 60% yes' is the statutory rule the dossier states; the ballot title does not restate it. cost_line matches S1 ($11,000, $0.42), $126 on $300,000 is correct arithmetic, and the same-amount claim matches S7/S8. The pro_summary vote tallies (7-0, 4-0, 9-0, 6-1) match S3-S6, and 'no statement for' matches S1. con_summary matches S1 and S9."
+    },
+    {
+      "candidate": "adams-adams-county-park-and-recreation-district-no-2-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "The closest call in the package, tested hard toward +2. For: DOR's last confirmed Washtucna levy is $50,000 at $0.52748 for 2024 [S8]. None was collected in 2025 after the November 2024 vote fell short (57.1%) [S6][S9]. Against the last DOR-confirmed figure, $85,000 at $0.83 is about 70% more [S1], and the levy has lapsed before (2022, 2024) and failed again in the August 2026 primary at 57.4% [S3][S4]. Against: the August 2025 levy passed at 68.2% (73-34) [S7], well above 60%, so a 2026 collection of about $80,000 [S10] follows unless validation failed, and the dossier gives no sign that it did. $85,000 is about 6% above that, and at the estimated rate it is a similar per-$1,000 burden. Under the convention this continues a levy collected the prior year at about the same level, so +1. This differs from Whitman's Tekoa and Garfield Park 2 (+2), where the dossier showed no prior-year levy. The basis needs two wording fixes. (a) 'the district's recurring one-year pool levy' overstates continuity: it failed in 2022, 2024 and August 2026, and DOR shows none for 2025. The +1 rests on the August 2025 approval implying a 2026 levy, which the dossier says is not yet confirmed in a DOR release. (b) S10 describes the 2025 levy as paying for $80,000 of repairs, while this one is maintenance and operation [S1], a change of stated purpose for the same pool. That is not enough to make it a new tax, as with Whitman's Palouse Prop 3. Cite S10 alongside S7 for the $80,000. If the 2026 levy roll shows no Washtucna levy, this should move to +2."
+    },
+    {
+      "candidate": "adams-adams-county-park-and-recreation-district-no-2-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1/S2 ($85,000, Washtucna Pool, 2027). The 57.4% in the August 2026 primary matches S3 (70-52). cost_line matches S1 ($85,000, $0.83), and $249 on $300,000 is correct. pro_summary: 60.5% in November 2023 (78-51, S5) and 68.2% in August 2025 (73-34, S7) are correct, and the about-$98,000 to reopen a leaking pool that had been empty about five years matches S10 (said by the pool board president). con_summary: 51.4% (S4), 57.1% (S6) and 57.4% (S3) are correct, and 'no statement against' and 'no committee' match S1/S11. Optional, not errors: (1) cost_line could add the prior context, as Fire District 4's does: a $50,000 levy collected in 2024 (S8), none in 2025 (S9), $80,000 approved in August 2025 (S7, S10). (2) The $98,000 repair figure sits next to a measure the ballot title calls maintenance and operation, not repair (S1). 'in 2025' dates it, but readers may still take this levy as the repair money."
+    }
+  ],
+  "missing": []
+}
