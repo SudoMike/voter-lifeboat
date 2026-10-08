@@ -1,0 +1,36 @@
+{
+  "county": "pend-oreille",
+  "script": "pipeline/extract_pdf_text.mjs",
+  "files": [
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/pend-oreille/raw/pend-oreille/elected-offices-officials-april-2026.pdf.url",
+      "url": "https://www.pendoreille.gov/sites/g/files/vyhlif14901/files/media/auditor/file/32211/elected_offices_officials_april_2026.pdf",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/pend-oreille/interim/pdf-text/elected-offices-officials-april-2026.txt"
+    },
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/pend-oreille/raw/pend-oreille/hospital-district-1-resolution-2026-primary.pdf.url",
+      "url": "https://www.pendoreille.gov/sites/g/files/vyhlif14901/files/media/auditor/file/32336/poc_public_hospital_district_1_resolution_2026_primary.pdf",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/pend-oreille/interim/pdf-text/hospital-district-1-resolution-2026-primary.txt"
+    },
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/pend-oreille/raw/pend-oreille/local-voters-pamphlet.pdf.url",
+      "url": "https://www.pendoreille.gov/sites/g/files/vyhlif14901/files/media/auditor/file/34071/final_vp_general_2026_pend_oreille.pdf",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/pend-oreille/interim/pdf-text/local-voters-pamphlet.txt"
+    },
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/pend-oreille/raw/pend-oreille/riverside-sd-levy-resolution-06-26-03.pdf.url",
+      "url": "https://www.pendoreille.gov/sites/g/files/vyhlif14901/files/media/auditor/file/33991/riverside_signed_levy_resolution_06-26-03_for_collection_years_2027-2029.pdf",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/pend-oreille/interim/pdf-text/riverside-sd-levy-resolution-06-26-03.txt"
+    },
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/pend-oreille/raw/pend-oreille/sacheen-lake-mo-levy-resolution-2026.pdf.url",
+      "url": "https://www.pendoreille.gov/sites/g/files/vyhlif14901/files/media/auditor/file/33986/sacheen_mo_2026_approved.pdf",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/pend-oreille/interim/pdf-text/sacheen-lake-mo-levy-resolution-2026.txt"
+    },
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/pend-oreille/raw/pend-oreille/sample-ballot.pdf.url",
+      "url": "https://www.pendoreille.gov/sites/g/files/vyhlif14901/files/media/auditor/file/34366/sample_ballot-general-2026.pdf",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/pend-oreille/interim/pdf-text/sample-ballot.txt"
+    }
+  ]
+}

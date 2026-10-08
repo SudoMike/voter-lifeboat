@@ -1,0 +1,125 @@
+{
+  "county": "pend-oreille",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/pend-oreille/raw/votewa/candidate-list.csv.url",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7245&e=899&la=en&c=26",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7307&e=899&la=en&c=26",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7332&e=899&la=en&c=26"
+  ],
+  "coverage": "full_county",
+  "notes": [
+    "Pend Oreille County Commissioner District 2 is nominated by district and elected county-wide in the general (RCW 36.32.040, RCW 36.32.050(1)); Public Utility District No. 1 of Pend Oreille County covers the whole county (WA DOR PUD2025, layer 17) and every PUD voter elects each commissioner (RCW 54.12.010(3)). Both are scoped COUNTY.",
+    "The hospital bonds are scoped HOSPDST '1' (WA DOR HSP2025, layer 11; Ione and Metaline Falls are in Hospital District No. 2, outside), the Riverside levy SCHDST '62' (SCH2025, layer 20, the district's Pend Oreille part) and the Sacheen Lake levy SEWDST '3' (SEW2025, layer 21), DISTATTRIB."
+  ],
+  "measures": [
+    {
+      "slug": "pend-oreille-pend-oreille-county-public-hospital-district-no-1-proposition-no-1",
+      "owner": "pend-oreille",
+      "jurisdiction": "Pend Oreille County Public Hospital District No. 1",
+      "proposition": "Proposition No. 1",
+      "title": "Bonds for Expansion and Renovation of Newport Community Hospital",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pend-oreille",
+        "layer": "HOSPDST",
+        "value": "1"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 14
+        },
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 15
+        }
+      ],
+      "what_it_does": "Authorizes up to $51,000,000 of general obligation bonds, repaid within 30 years by an annual excess property tax, to expand and renovate Newport Community Hospital: a relocated main entrance and admitting area and larger imaging, laboratory, rehabilitation therapy, surgical, emergency, trauma and behavioral health services (Resolution No. 2026-06). The same bonds failed in the August 4 primary. Needs 60% approval.",
+      "cost_line": "Estimated $1.47 per $1,000 of assessed value a year for up to 30 years; about $441 a year ($36.75 a month) on a $300,000 home, per the explanatory statement.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7307&e=899&la=en&c=26"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "pend-oreille-riverside-school-district-no-416-62-proposition-no-1",
+      "owner": "pend-oreille",
+      "jurisdiction": "Riverside School District No. 416-62",
+      "proposition": "Proposition No. 1",
+      "title": "Replacement of Expiring Educational Programs and Operations Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pend-oreille",
+        "layer": "SCHDST",
+        "value": "62"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 16
+        },
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 17
+        }
+      ],
+      "what_it_does": "Replaces Riverside School District's educational programs and operations levy, which expires at the end of 2027, with a three-year levy (2028-2030) for programs, services and staff the state does not fund: elective and advanced courses, vocational education, nurses, counselors, technology support, safety, security, performing arts, athletics and extracurricular activities (Resolution No. 6-26-03).",
+      "cost_line": "Estimated $1.58 per $1,000 of assessed value: $3,996,811 in 2028, $4,116,715 in 2029 and $4,240,217 in 2030.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7332&e=899&la=en&c=26"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "pend-oreille-sacheen-lake-water-and-sewer-district-proposition-no-1",
+      "owner": "pend-oreille",
+      "jurisdiction": "Sacheen Lake Water and Sewer District",
+      "proposition": "Proposition No. 1",
+      "title": "One Year Excess Levy for Maintenance & Operation",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pend-oreille",
+        "layer": "SEWDST",
+        "value": "3"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 18
+        },
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 19
+        }
+      ],
+      "what_it_does": "Levies a one-year excess property tax for the district's general fund: aquatic weed control (milfoil and water shield), lake-level management including beaver-dam clearing on the West Branch of the Little Spokane River, upkeep of the Myers/Harter sanctuary, and insurance for volunteers, the park and the board. The district has run the same levy every two years. Needs 60% approval.",
+      "cost_line": "About $0.75 per $1,000 of assessed value, $113,827 in total, collected in 2027 only.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7245&e=899&la=en&c=26"
+          ]
+        }
+      }
+    }
+  ]
+}

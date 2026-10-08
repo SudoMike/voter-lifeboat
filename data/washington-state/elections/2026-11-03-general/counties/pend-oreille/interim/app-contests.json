@@ -1,0 +1,474 @@
+{
+  "county": "pend-oreille",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/pend-oreille/raw/votewa/candidate-list.csv.url",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7245&e=899&la=en&c=26",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7307&e=899&la=en&c=26",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7332&e=899&la=en&c=26"
+  ],
+  "coverage": "full_county",
+  "notes": [
+    "Pend Oreille County Commissioner District 2 is nominated by district and elected county-wide in the general (RCW 36.32.040, RCW 36.32.050(1)); Public Utility District No. 1 of Pend Oreille County covers the whole county (WA DOR PUD2025, layer 17) and every PUD voter elects each commissioner (RCW 54.12.010(3)). Both are scoped COUNTY.",
+    "The hospital bonds are scoped HOSPDST '1' (WA DOR HSP2025, layer 11; Ione and Metaline Falls are in Hospital District No. 2, outside), the Riverside levy SCHDST '62' (SCH2025, layer 20, the district's Pend Oreille part) and the Sacheen Lake levy SEWDST '3' (SEW2025, layer 21), DISTATTRIB."
+  ],
+  "contests": [
+    {
+      "slug": "pend-oreille-congressional-district-5-u-s-representative",
+      "owner": "pend-oreille",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 5",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pend-oreille",
+        "layer": "CONGDST",
+        "value": "5"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pend Oreille County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "michael-baumgartner",
+          "name": "Michael Baumgartner",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "carmela-conroy",
+          "name": "Carmela Conroy",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pend-oreille-legislative-district-7-state-senator",
+      "owner": "pend-oreille",
+      "category": "State",
+      "office": "State Senator",
+      "district": "Legislative District 7",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pend-oreille",
+        "layer": "LEGDST",
+        "value": "7"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pend Oreille County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "shelly-short",
+          "name": "Shelly Short",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "ronald-l-mccoy",
+          "name": "Ronald L McCoy",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pend-oreille-legislative-district-7-state-representative-pos-1",
+      "owner": "pend-oreille",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 7",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pend-oreille",
+        "layer": "LEGDST",
+        "value": "7"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pend Oreille County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "andrew-engell",
+          "name": "Andrew Engell",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pend-oreille-legislative-district-7-state-representative-pos-2",
+      "owner": "pend-oreille",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 7",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pend-oreille",
+        "layer": "LEGDST",
+        "value": "7"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pend Oreille County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "hunter-abell",
+          "name": "Hunter Abell",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pend-oreille-pend-oreille-county-county-assessor",
+      "owner": "pend-oreille",
+      "category": "County",
+      "office": "County Assessor",
+      "district": "Pend Oreille County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "pend-oreille"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pend Oreille County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "nathan-j-longly",
+          "name": "Nathan J Longly",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pend-oreille-pend-oreille-county-county-auditor",
+      "owner": "pend-oreille",
+      "category": "County",
+      "office": "County Auditor",
+      "district": "Pend Oreille County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "pend-oreille"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pend Oreille County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "marianne-nichols",
+          "name": "Marianne Nichols",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pend-oreille-pend-oreille-county-county-clerk",
+      "owner": "pend-oreille",
+      "category": "County",
+      "office": "County Clerk",
+      "district": "Pend Oreille County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "pend-oreille"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pend Oreille County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "tammie-ownbey",
+          "name": "Tammie Ownbey",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pend-oreille-pend-oreille-county-county-prosecutor",
+      "owner": "pend-oreille",
+      "category": "County",
+      "office": "County Prosecutor",
+      "district": "Pend Oreille County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "pend-oreille"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pend Oreille County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "dolly-hunt",
+          "name": "Dolly Hunt",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pend-oreille-pend-oreille-county-county-sheriff",
+      "owner": "pend-oreille",
+      "category": "County",
+      "office": "County Sheriff",
+      "district": "Pend Oreille County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "pend-oreille"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pend Oreille County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "glenn-blakeslee",
+          "name": "Glenn Blakeslee",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pend-oreille-pend-oreille-county-county-treasurer",
+      "owner": "pend-oreille",
+      "category": "County",
+      "office": "County Treasurer",
+      "district": "Pend Oreille County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "pend-oreille"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pend Oreille County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "nicole-dice",
+          "name": "Nicole Dice",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pend-oreille-pend-oreille-county-commissioner-district-2-county-commissioner-2",
+      "owner": "pend-oreille",
+      "category": "County",
+      "office": "County Commissioner 2",
+      "district": "Pend Oreille County Commissioner District 2",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "pend-oreille"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pend Oreille County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "robert-rosencrantz",
+          "name": "Robert Rosencrantz",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "brandy-parker-warren",
+          "name": "Brandy Parker Warren",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pend-oreille-pend-oreille-county-district-court-district-court-judge",
+      "owner": "pend-oreille",
+      "category": "Judicial",
+      "office": "District Court Judge",
+      "district": "Pend Oreille County District Court",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "pend-oreille"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pend Oreille County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "robin-r-mccroskey",
+          "name": "Robin R. McCroskey",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pend-oreille-court-of-appeals-division-3-district-1-judge-position-2",
+      "owner": "pend-oreille",
+      "category": "Judicial",
+      "office": "Judge Position 2",
+      "district": "Court of Appeals, Division 3, District 1",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "pend-oreille"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pend Oreille County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "tracy-arlene-staab",
+          "name": "Tracy Arlene Staab",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pend-oreille-public-utility-district-commissioner-district-2-public-utility-commissioner-2",
+      "owner": "pend-oreille",
+      "category": "PublicUtility",
+      "office": "Public Utility Commissioner #2",
+      "district": "Public Utility District Commissioner District 2",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "pend-oreille"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pend Oreille County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "gerry-david-bradbury",
+          "name": "Gerry David Bradbury",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "ernie-hood",
+          "name": "Ernie Hood",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pend-oreille-ferry-pend-oreille-stevens-superior-court-judge-position-2",
+      "owner": "pend-oreille",
+      "category": "Judicial",
+      "office": "Judge Position 2",
+      "district": "Ferry, Pend Oreille, Stevens Superior Court",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "pend-oreille"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pend Oreille County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "thomas-franklin-webster",
+          "name": "Thomas Franklin Webster",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
