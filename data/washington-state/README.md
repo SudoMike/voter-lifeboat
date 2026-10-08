@@ -75,7 +75,7 @@ before it can be added to `coverage.supported_counties`.
 | `pipeline/build_<county>_lite_data.py` | county pdf-text → `E/counties/<county>/interim/app-{contests,measures}.json` (clark, kitsap, pierce, snohomish, spokane, thurston) |
 | `pipeline/parse_candidates.py` | King raw KCE HTML/CSV → `E/counties/king/interim/{contests,measures}.json` |
 | `pipeline/build_pamphlet_index.py` | King contests/measures/page text → `E/counties/king/interim/pamphlet-index.json` |
-| `pipeline/normalize_research_inputs.py` | county `app-*.json` → county `interim/{contests,measures}.json` + `E/statewide/interim/contests.json` |
+| `pipeline/normalize_research_inputs.py` | county `app-*.json` → county `interim/{contests,measures}.json` + `E/statewide/interim/contests.json` (see below for hand-built statewide files) |
 | `pipeline/build_research_plan.py` | package contests/measures/index → `interim/research-plan.json` |
 | `pipeline/verify_dossiers.py` | package dossiers + plan → `interim/dossier-audit.json` |
 | `pipeline/extract_axis_notes.py` | package `_contest.md` files + measures → `E/counties/king/interim/axis-notes.md` |
@@ -86,6 +86,25 @@ before it can be added to `coverage.supported_counties`.
 
 `F/rubric.json`, `F/interview.json` and `F/rubric-derivation.md` are
 hand-authored per election, not generated.
+
+`normalize_research_inputs.py` never replaces an interim file whose `script`
+field names another script (or is `null`, as in hand-built files):
+
+- Statewide `interim/contests.json` that it generated (the primary's) is
+  regenerated in full. A hand-built one (the general's Supreme Court contests)
+  keeps its contests verbatim and first; deduplicated congressional and
+  legislative contests from county `app-contests.json` files are appended
+  unless a hand-built contest has the same slug. The appended slugs and their
+  sources go in a `normalized` block and the sources are added to
+  `derived_from`, so a rerun replaces only that part. If nothing would change,
+  the file is not rewritten.
+- Statewide `interim/measures.json` that is hand-built is left untouched.
+- A county `interim/{contests,measures}.json` written by another script stops
+  the run before anything is written.
+
+King has no `app-contests.json`, so its contests never feed the statewide
+merge. The general currently has no other county packages, so running the
+normalizer for it changes no file.
 
 ## Election Facts
 
