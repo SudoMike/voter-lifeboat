@@ -1,0 +1,151 @@
+{
+  "county": "grays-harbor",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/grays-harbor/raw/votewa/candidate-list.csv.url",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7284&e=899&la=en&c=14",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7377&e=899&la=en&c=14",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7385&e=899&la=en&c=14",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7386&e=899&la=en&c=14",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7387&e=899&la=en&c=14"
+  ],
+  "coverage": "full_county",
+  "notes": [],
+  "measures": [
+    {
+      "slug": "grays-harbor-timberland-regional-library-district-proposition-no-1",
+      "owner": "grays-harbor",
+      "jurisdiction": "Timberland Regional Library District",
+      "proposition": "Proposition No. 1",
+      "title": "Regular Property Tax Levy Lid Lift for Library Services, Operations and Maintenance",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "grays-harbor",
+        "layer": "LIBDST",
+        "value": "L"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Restores the library district's regular property tax levy from about $0.22 to $0.35 per $1,000 of assessed value for 2027 and 2028; the 2028 amount becomes the base for later levy limits.",
+      "cost_line": "$0.35 per $1,000 of assessed value (about $40 a year more on a $334,000 home, per the explanatory statement).",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7284&e=899&la=en&c=14"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "grays-harbor-city-of-montesano-proposition-no-1",
+      "owner": "grays-harbor",
+      "jurisdiction": "City of Montesano",
+      "proposition": "Proposition No. 1",
+      "title": "Levy to Maintain Essential Services, Public Safety and Emergency Services, Operations and Capital Improvements",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "grays-harbor",
+        "layer": "CITY",
+        "value": "Montesano"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Lifts Montesano's regular property tax levy to a total rate of up to $3.22 per $1,000 from 2027, with up to 5% yearly increases for six years, to keep current General Fund and public safety and emergency service levels.",
+      "cost_line": "Total city regular levy up to $3.22 per $1,000 of assessed value for 2027 collection.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7377&e=899&la=en&c=14"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "grays-harbor-mccleary-school-district-no-65-proposition-no-1",
+      "owner": "grays-harbor",
+      "jurisdiction": "McCleary School District No. 65",
+      "proposition": "Proposition No. 1",
+      "title": "Bonds to Improve Safety, Security and School Facilities",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "grays-harbor",
+        "layer": "SCHDST",
+        "value": "65"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Authorizes $12,800,000 of general obligation bonds, maturing within 21 years and repaid by excess property taxes, for a secure entry vestibule, locks and keycard access, fire alarm, HVAC, exterior, drainage, parking and playground work at McCleary School.",
+      "cost_line": "$12,800,000 in bonds repaid by an excess property tax levy over up to 21 years.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7385&e=899&la=en&c=14"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "grays-harbor-grays-harbor-county-fire-protection-district-no-1-proposition-no-1",
+      "owner": "grays-harbor",
+      "jurisdiction": "Grays Harbor County Fire Protection District No. 1",
+      "proposition": "Proposition No. 1",
+      "title": "Emergency Medical Services Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "grays-harbor",
+        "layer": "FIRDST",
+        "value": "1"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Authorizes a permanent regular property tax levy for emergency medical services.",
+      "cost_line": "Up to $0.50 per $1,000 of assessed value, permanent.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7387&e=899&la=en&c=14"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "grays-harbor-grays-harbor-county-fire-protection-district-no-2-proposition-no-1",
+      "owner": "grays-harbor",
+      "jurisdiction": "Grays Harbor County Fire Protection District No. 2",
+      "proposition": "Proposition No. 1",
+      "title": "Two Year Levy Lid Lift",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "grays-harbor",
+        "layer": "FIRDST",
+        "value": "2"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Restores the fire district's regular property tax levy to $1.50 per $1,000 (from about $1.40 in 2026) for 2026 and 2027 levies; the 2027 amount becomes the base for later levy limits.",
+      "cost_line": "$1.50 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7386&e=899&la=en&c=14"
+          ]
+        }
+      }
+    }
+  ]
+}
