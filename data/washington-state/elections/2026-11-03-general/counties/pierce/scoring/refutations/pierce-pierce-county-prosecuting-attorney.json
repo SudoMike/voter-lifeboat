@@ -1,0 +1,24 @@
+{
+  "contest_slug": "pierce-pierce-county-prosecuting-attorney",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-pierce-county-prosecuting-attorney/",
+    "data/washington-state/elections/2026-11-03-general/counties/pierce/scoring/pierce-pierce-county-prosecuting-attorney.json"
+  ],
+  "verdicts": [
+    {"candidate": "coreen-schnepf", "axis": "safety", "verdict": "upheld",
+     "note": "S1/S3 support violent-crime prosecution and 'more focus' on stolen cars and organized retail theft. Leavitt's 'compassion' quote [S5] and the absence of any diversion position justify -1 rather than -2."},
+    {"candidate": "coreen-schnepf", "axis": "experience", "verdict": "upheld",
+     "note": "Career prosecutor since 2006, chief criminal deputy since 2024 and the incumbent's chosen successor [S2][S5]. Robnett's 'next generation' quote does not make her a renewal candidate. -1 is right because she has never held elected office."},
+    {"candidate": "bryan-chushcoff", "axis": "safety", "verdict": "adjust", "adjusted_score": -1, "adjusted_confidence": "medium",
+     "note": "S3 is enforcement-leaning: it criticizes the rising decline-to-charge rate and falling felony filings. But it frames them as management failures, and in the same post he names defendants' delays and 'fair representation' as costs. No dossier source has him opposing diversion, seeking harsher sentences or taking a bail position (dossier line 90 says none was found). What separates -2 from Schnepf's -1 is his Republican Party and police-union endorsements [S4][S5], which is inference from affiliation. Stated positions support -1."},
+    {"candidate": "bryan-chushcoff", "axis": "experience", "verdict": "upheld",
+     "note": "Seven elected terms and 28 years on the Superior Court, presiding judge and statewide judicial-administration roles [S2] are the maximal proven-record profile. Medium is right because the tenure is campaign-sourced and not independently verified."},
+    {"candidate": "bryan-chushcoff", "axis": "spending", "verdict": "adjust", "adjusted_score": -1, "adjusted_confidence": "medium",
+     "note": "S3 answers the axis's question ('under-invests' vs 'doesn't manage what it already spends') directly: 'The core failure is management.' It says taxpayers absorb higher costs from the backlog, that the office must use 'public resources effectively', and that 'performance data ... should drive strategy, accountability'. That is the oversight and performance-standards pole. The one counterweight is a single S1 line, 'advocate for increased funding to retain experienced staff', a narrow staffing request rather than an invest-and-expand program. The evidence leans to pole_a, so 0 (genuinely mixed) overstates the balance."}
+  ],
+  "missing": [
+    {"candidate": "coreen-schnepf", "axis": "spending", "proposed_score": -1, "confidence": "low", "citations": ["S3"],
+     "basis": "S3 pledges she 'will show you what the office delivers for every dollar' and will attend town halls: an accountability and transparency pledge with no call for new spending. A single short statement, so low."}
+  ]
+}
