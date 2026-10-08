@@ -30,11 +30,12 @@ const data = JSON.parse(
 const KING = { id: 'king', fips: '53033', name: 'King County' }
 
 // What lookupBallotContext returns for a Washington address in a county the
-// general does not ship (geo.test.js covers the lookup itself). Garfield
-// since #30 shipped Walla Walla.
-const garfield = {
+// general does not ship (geo.test.js covers the lookup itself). Since #32
+// every Washington county ships, so this is a synthetic county no package
+// owns: the Statewide-Only Guide is still the app's answer for one.
+const unshipped = {
   coverageStatus: 'statewide_only',
-  county: { id: 'garfield', fips: '53023', name: 'Garfield County' },
+  county: { id: 'test-unshipped', fips: '53999', name: 'Test County' },
   districts: {},
   missingLayers: [],
 }
@@ -1702,10 +1703,10 @@ test('each Supreme Court contest ships once, owned by the statewide package', ()
 })
 
 test('outside the shipped counties, an address gets all five court races and all three initiatives only', () => {
-  const { contests, measures } = ballotFor(garfield)
+  const { contests, measures } = ballotFor(unshipped)
   assert.deepEqual(contests.map((c) => c.slug), SUPREME_COURT)
   assert.deepEqual(measures.map((m) => m.slug), STATE_MEASURES)
-  assert.equal(coverageAdvice(garfield), 'statewide-only')
+  assert.equal(coverageAdvice(unshipped), 'statewide-only')
 })
 
 test('every King ballot carries the statewide races once, the countywide races and its district races', () => {
@@ -1770,7 +1771,7 @@ test('uncontested King contests ship information-only, with no scores', () => {
 const STATEWIDE_AXES = ['experience', 'judicial', 'local-control', 'parental-rights', 'safety', 'social', 'spending', 'taxes']
 
 test('the statewide-only interview asks only about axes on the statewide ballot', () => {
-  const { axes, items } = ballotFor(garfield)
+  const { axes, items } = ballotFor(unshipped)
   assert.deepEqual([...axes].sort(), STATEWIDE_AXES)
   assert.deepEqual(items.map((i) => i.id), [
     'card-taxes',
@@ -1800,7 +1801,7 @@ const agreeWithEverything = (items) =>
   )
 
 test('a voter who answers the interview gets a lean on every measure on the ballot', () => {
-  for (const context of [garfield, ...Object.values(ADDRESSES)]) {
+  for (const context of [unshipped, ...Object.values(ADDRESSES)]) {
     const { measures, items } = ballotFor(context)
     const answers = agreeWithEverything(items)
     for (const m of measures) {
@@ -1830,11 +1831,11 @@ const briefFor = (context) => {
 }
 
 test('the statewide-only Ballot Brief carries the warning and every contest and measure', () => {
-  const { contests, measures, text } = briefFor(garfield)
+  const { contests, measures, text } = briefFor(unshipped)
   assert.match(text, /November 3, 2026 General Election/)
   assert.match(text, /Coverage: STATEWIDE-ONLY GUIDE/)
   assert.match(text, /omits county, city, school, fire, judicial district, and other local contests/)
-  assert.match(text, /Resolved county: Garfield County/)
+  assert.match(text, /Resolved county: Test County/)
   for (const c of contests) assert.ok(text.includes(`## SUPREME COURT — ${c.district}`), c.slug)
   assert.match(text, /## BALLOT MEASURES/)
   for (const m of measures) {
@@ -1863,7 +1864,7 @@ test('a King Ballot Brief is a full county guide naming every contest once and e
 })
 
 test('the general Ballot Brief names election day, terms and SOS pamphlet pages, never the primary', () => {
-  const { text } = briefFor(garfield)
+  const { text } = briefFor(unshipped)
   assert.match(text, /^# MY BALLOT BRIEF — Washington State, November 3, 2026 General Election$/m)
   assert.match(text, /^Election day: Tuesday, November 3, 2026\.$/m)
   assert.match(text, /statewide contests on the November 3, 2026 General Election ballot/)

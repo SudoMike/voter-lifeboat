@@ -115,12 +115,35 @@ class HandBuiltStatewidePackageTest(unittest.TestCase):
     def tearDown(self):
         self._tmp.cleanup()
 
-    def add_county(self, name, source_county="garfield"):
-        """Give the temp general a county with VoteWA-lite app contests."""
-        source = PRIMARY.county(source_county) / "interim/app-contests.json"
+    # A county no real package uses, so no shipped county's general interim
+    # files (which copy_inputs copies into the temp root) can collide with it.
+    COUNTY = "testcounty"
+
+    def add_county(self, name=COUNTY):
+        """Give the temp general a county with hand-built VoteWA-lite app
+        contests: one congressional, one legislative and one county race."""
+        def contest(slug, category, office, district, scope):
+            return {
+                "slug": f"{name}-{slug}", "owner": name, "category": category, "office": office,
+                "district": district,
+                "scope": ({"kind": "DISTRICT", "county": name, **scope} if scope
+                          else {"kind": "COUNTY", "county": name}),
+                "uncontested": False,
+                "candidates": [{"slug": s, "name": n, "party": "Prefers Test Party"}
+                               for s, n in (("ann-test", "Ann Test"), ("bob-test", "Bob Test"))],
+            }
+        doc = {"county": name, "script": "pipeline/build_votewa_lite_data.py", "derived_from": [],
+               "coverage": "full_county", "notes": [], "contests": [
+                   contest("congressional-district-5-u-s-representative", "Federal", "U.S. Representative",
+                           "Congressional District 5", {"layer": "CONGDST", "value": "5"}),
+                   contest("legislative-district-9-state-representative-pos-2", "State",
+                           "State Representative Pos. 2", "Legislative District 9",
+                           {"layer": "LEGDST", "value": "9"}),
+                   contest("test-county-sheriff", "County", "Sheriff", "Test County", None),
+               ]}
         target = self.root / "counties" / name / "interim/app-contests.json"
         target.parent.mkdir(parents=True)
-        shutil.copyfile(source, target)
+        target.write_text(json.dumps(doc, indent=2) + "\n")
 
     def test_general_package_is_left_in_place(self):
         normalize_research_inputs.normalize(GENERAL.id, package_root=self.root)
@@ -134,18 +157,18 @@ class HandBuiltStatewidePackageTest(unittest.TestCase):
     # legislative contests are county-owned; the statewide package holds only
     # Statewide Contests, so county app-contests.json never reaches it.
     def test_county_district_contests_never_reach_the_general_statewide_file(self):
-        self.add_county("garfield")
+        self.add_county()
         normalize_research_inputs.normalize(GENERAL.id, package_root=self.root)
         real = GENERAL.state / "interim"
         self.assertEqual((real / "contests.json").read_text(), self.contests.read_text())
         self.assertEqual((real / "measures.json").read_text(), self.measures.read_text())
-        county = read(self.root / "counties/garfield/interim/contests.json")["contests"]
+        county = read(self.root / f"counties/{self.COUNTY}/interim/contests.json")["contests"]
         self.assertTrue(any(c["category"] in {"Federal", "State"} for c in county))
 
     def test_general_without_statewide_files_gets_none_written(self):
         self.contests.unlink()
         self.measures.unlink()
-        self.add_county("garfield")
+        self.add_county()
         normalize_research_inputs.normalize(GENERAL.id, package_root=self.root)
         self.assertFalse(self.contests.exists())
         self.assertFalse(self.measures.exists())
@@ -161,8 +184,8 @@ class HandBuiltStatewidePackageTest(unittest.TestCase):
             self.assertEqual(before, {p: p.read_text() for p in root.glob("**/interim/*.json")})
 
     def test_refuses_to_overwrite_a_county_file_it_did_not_write(self):
-        self.add_county("garfield")
-        foreign = self.root / "counties/garfield/interim/contests.json"
+        self.add_county()
+        foreign = self.root / f"counties/{self.COUNTY}/interim/contests.json"
         foreign.write_text(json.dumps({"script": "pipeline/parse_candidates.py", "contests": []}))
         before = foreign.read_text()
         with self.assertRaises(SystemExit):

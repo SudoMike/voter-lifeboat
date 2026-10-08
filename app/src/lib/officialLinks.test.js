@@ -842,9 +842,11 @@ test('a known county without its own URL gets the SOS county offices directory',
     url: COUNTY_OFFICES_URL,
     direct: false,
   })
-  // Garfield does not ship in the general (Walla Walla does since #30).
-  assert.deepEqual(countyElectionsOffice(general, { id: 'garfield', name: 'Garfield County' }), {
-    name: 'Garfield County Elections',
+  // A county the general does not ship. Every Washington county ships since
+  // #32, so this is a synthetic county no package owns.
+  assert.ok(!general.coverage.supported_counties.some((c) => c.id === 'test-unshipped'))
+  assert.deepEqual(countyElectionsOffice(general, { id: 'test-unshipped', name: 'Test County' }), {
+    name: 'Test County Elections',
     url: COUNTY_OFFICES_URL,
     direct: false,
   })

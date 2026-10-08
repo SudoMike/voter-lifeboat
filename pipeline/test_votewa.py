@@ -1,6 +1,7 @@
 import hashlib
 import json
 import unittest
+from unittest import mock
 
 import build_votewa_lite_data as bv
 import election
@@ -121,10 +122,20 @@ class ParseTest(unittest.TestCase):
         self.assertEqual(("KCDISTCRT", "YES"), contests[0]["scope"])
 
     def test_general_without_curated_measures_says_so(self):
-        cfg, curated = bv.config_for("garfield", GENERAL.id)
+        # Every real county curates its general measures since #32, so the
+        # uncurated case is a synthetic county with geography but no
+        # ELECTION_MEASURES block.
+        geography = {"name": "Test County", "fips": "53999", "commissioner": None, "measures": []}
+        with mock.patch.dict(bv.COUNTY_CONFIG, {"testcounty": geography}):
+            self.assertNotIn("testcounty", bv.ELECTION_MEASURES[GENERAL.id])
+            cfg, curated = bv.config_for("testcounty", GENERAL.id)
         self.assertFalse(curated)
         self.assertEqual([], cfg["measures"])
         self.assertIn("not curated", votewa.MEASURES_NOT_CURATED)
+        # A curated county with no measures is not the uncurated case.
+        cfg, curated = bv.config_for("garfield", GENERAL.id)
+        self.assertTrue(curated)
+        self.assertEqual([], cfg["measures"])
 
 
 class GeneralPackagesTest(unittest.TestCase):
