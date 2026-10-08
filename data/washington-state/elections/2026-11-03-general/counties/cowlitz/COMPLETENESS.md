@@ -3,9 +3,13 @@
 Election: 2026 Washington general election, November 3, 2026 (VoteWA
 election 899, county code 08).
 
-As of 2026-10-09 (#28) this package is researched and ready for the director
-to declare. It is not yet in `pipeline/election.py`
-`APP_PACKAGES["2026-11-03-general"]["counties"]`. Its builder output is
+Shipped (#28): the package is declared in
+`APP_PACKAGES["2026-11-03-general"]["counties"]` and ships at Full County
+Coverage, with the elections office link
+`https://www.co.cowlitz.wa.us/2357/Elections`, the local pamphlet
+(`officialLinks.js` `pamphletPdfs['cowlitz/local-voters-pamphlet']`) and the
+county's VoteWA guide (`countyGuides.cowlitz`) for any record without a
+page. Its builder output is
 `coverage: "full_county"`. Every contest and measure scope is one the
 Cowlitz District Adapter resolves: Census `CONGDST`/`LEGDST`/`CITY`, or
 `COUNTY`. `interim/app-contests.json` and `interim/app-measures.json` are
@@ -82,7 +86,10 @@ LD 20, `Woodland`, district 1. `pipeline/live_ballot.mjs` was run on a
 scratch copy of the general app data with this package appended (not
 written to the repo). Longview and Kelso each got `full_county`,
 `missing=[]` and 21 contests; Longview got Prop 1 and Kelso did not.
-Woodland got LD 20 and no Prop 1.
+Woodland got LD 20 and no Prop 1. Re-run against the shipped data on
+2026-10-08 (#28): Longview and Woodland both `full_county`, `missing=[]`,
+21 contests; LD 19 ships with Thurston's scoring, CD 3 and LD 20 with
+Clark's.
 
 `COUNTY_LAYERS.cowlitz` in `app/src/lib/geo.js` lists only `COUNTY_COUNCIL`.
 No Cowlitz scope uses it in the general, and no new layer is needed.
@@ -93,10 +100,12 @@ The dossiers cite the county's printed pamphlet by page
 (`raw/cowlitz/local-voters-pamphlet.pdf.url`, edition id
 `local-voters-pamphlet`; the combined SOS and local edition, 72 PDF pages).
 Superior Court is on p. 37; the county offices are on pp. 45-52; District
-Court on pp. 53-55; PUD on p. 56; Longview Prop 1 on pp. 57-58. The
-director can add `'cowlitz/local-voters-pamphlet'` to `officialLinks.js`
-`pamphletPdfs` after the usual live check. The URL is
-https://www.co.cowlitz.wa.us/DocumentCenter/View/39451/G126-Combined-Voters-Pamplet_SOS.
+Court on pp. 53-55; PUD on p. 56; Longview Prop 1 on pp. 57-58.
+`officialLinks.js` `pamphletPdfs['cowlitz/local-voters-pamphlet']` links
+https://www.co.cowlitz.wa.us/DocumentCenter/View/39451/G126-Combined-Voters-Pamplet_SOS
+(checked 2026-10-08: 200 application/pdf, 72 pages, sha256 as in the
+pointer's meta). Longview Prop 1 ships `pamphlet_pages` 57-58, set by
+`pages=` in the builder block.
 The county elections page https://www.co.cowlitz.wa.us/2357/Elections
 answered HTTP 200 to scripted requests on 2026-10-09.
 

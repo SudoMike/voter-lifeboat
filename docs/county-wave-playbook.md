@@ -430,8 +430,8 @@ voters outside the district.
 
 As of the builder runs on 2026-10-08 (#22, #28), the only shipped general
 package that is `partial_county` is Spokane (`PUDDST`). Benton, Clark,
-Kitsap, Pierce, Snohomish (since #27), Thurston, Whatcom and Yakima are
-`full_county`; all nine ship with King. A PUD
+Kitsap, Pierce, Snohomish (since #27), Thurston, Whatcom, Yakima, Skagit,
+Cowlitz and Grant are `full_county`; all twelve ship with King. A PUD
 commissioner is nominated by district but elected by the whole PUD in the
 general (RCW 54.12.010(3)), so a countywide PUD's seat is scoped `COUNTY`
 (Clark, Kitsap, Thurston), not `PUDDST`.
@@ -510,6 +510,24 @@ Court seats under category `County` (VoteWA District Type `Countywide`);
 the category is display-only and `validate_scoring.py` treats the seats as
 judicial by slug. Whatcom's override hook in `ELECTION_MEASURES` could
 rename them `Judicial`.
+
+Skagit, Cowlitz and Grant shipped on 2026-10-08 (#28, second half) as
+`full_county`. Skagit's levies read the DOR layers `COUNTY_LAYERS.skagit`
+already listed (FIR2025 `5` at Bow, SCH2025 `311` at La Conner); its PUD No.
+1 and Commissioner District 3 seats are countywide in the general. Cowlitz
+needs only Census layers (its one measure is Longview's); its commissioner,
+District Court and PUD seats are countywide. Grant gained DOR FIR2025
+(`FIRDST`, `7` at Coulee City) and CEM2025 (`CEMDST`, `2` at Wilson Creek)
+next to HSP2025 (`4` at Soap Lake). Shared races (15): Skagit's CD 2, LD
+10 and LD 39 with Snohomish's scoring and LD 40 with Whatcom's; Cowlitz's
+CD 3 and LD 20 with Clark's and LD 19 with Thurston's; Grant's CD 4 and LD
+16 with Benton's. Grant ships its own county-scoped information-only copy
+of the uncontested Court of Appeals III-2 Pos. 1, as Benton does. Skagit's
+and Cowlitz's measure records carry their local pamphlet's PDF pages
+through the builder's `m(..., pages=)` argument (the bulk builder otherwise
+ships measures with no pages); Grant prints no pamphlet and links its
+VoteWA guide. Skagit's District Court seats keep category `County`;
+Cowlitz's and Grant's overrides make theirs `Judicial`.
 
 ## 13. Reference
 

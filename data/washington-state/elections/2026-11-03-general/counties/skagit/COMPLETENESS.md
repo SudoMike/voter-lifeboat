@@ -3,9 +3,13 @@
 Election: 2026 Washington general election, November 3, 2026 (VoteWA
 election 899, county code 29).
 
-Researched in #28 (county wave 3); not yet declared in
-`pipeline/election.py` `APP_PACKAGES`, so nothing here ships until the
-director adds it. The builder output is `full_county`: every contest and
+Shipped (#28): the package is declared in
+`APP_PACKAGES["2026-11-03-general"]["counties"]` and ships at Full County
+Coverage, with the elections office link
+`https://www.skagitcountywa.gov/government/auditor-s-office/elections-and-voting/`,
+the local pamphlet (`officialLinks.js` `pamphletPdfs['skagit/local-voters-pamphlet']`,
+PDF pages) and the county's VoteWA guide (`countyGuides.skagit`) for any
+record without a page. The builder output is `full_county`: every contest and
 measure scope is `COUNTY`, Census `CONGDST`/`LEGDST`/`CITY`, or a layer
 already in `app/src/lib/geo.js` `COUNTY_LAYERS.skagit` (`SCHDST`,
 `FIRDST`). Assembly reads `interim/app-contests.json` and
@@ -24,7 +28,7 @@ package.
 |---|---|---|---|---|---|
 | U.S. Representative (CD 2) | 1 | 1 | 0 | `CONGDST` | Snohomish package |
 | State Representative LD 10 and LD 39, Pos. 1 and 2 | 4 | 4 | 0 | `LEGDST` | Snohomish package |
-| State Representative LD 40, Pos. 1 and 2 | 2 | 2 | 0 | `LEGDST` | Whatcom (not on main yet; not researched here) |
+| State Representative LD 40, Pos. 1 and 2 | 2 | 2 | 0 | `LEGDST` | Whatcom package |
 | County Commissioner District 3 (short and full term) | 1 | 1 | 0 | `COUNTY` | here |
 | Auditor, Clerk, Coroner, Sheriff, Treasurer | 5 | 5 | 0 | `COUNTY` | here |
 | Assessor, Prosecuting Attorney | 2 | 0 | 2 | `COUNTY` | here (info-only) |
@@ -42,7 +46,8 @@ District No. 311 Prop. 1, facility modernization and technology levy
 (`SCHDST` `311`); Skagit County Fire Protection District No. 5 Prop. 1,
 regular levy restoration (`FIRDST` `5`). The Auditor's Ballot Measures page
 (`raw/skagit/ballot-measures.html.url`) lists exactly these four for the
-general.
+general. Each ships `pamphlet_pages` for the PDF page its dossier cites
+(18-21), set by `pages=` in the builder block.
 
 ## Sources
 
@@ -99,15 +104,20 @@ general.
 ## Shared races
 
 `build_research_plan.py` finds CD 2 and LD 10 / LD 39 (both positions)
-researched in `snohomish` (no candidates missing); they ship with
-Snohomish's scoring and dossiers. LD 40 Pos. 1 and 2 are assigned to the
-Whatcom package (#28), which is not on main yet, so the plan lists them as
-unresearched here and `verify_dossiers.py` counts them as untouched. Once
-Whatcom's research lands, the plan will show them `researched_in whatcom`.
+researched in `snohomish` and LD 40 Pos. 1 and 2 researched in `whatcom`
+(rebuilt after the #28 merges; no candidates missing). All seven ship with
+the owning package's scoring and dossiers and carry no pamphlet pages.
+
+Live ballots on 2026-10-08 (`pipeline/live_ballot.mjs`, `full_county`,
+`missing=[]`): 700 S 2nd St, Mount Vernon (LD 10, Mount Vernon Prop 1);
+5800 Main St, Bow (LD 40, FD 5 Prop 1); 305 N 6th St, La Conner (LD 10,
+La Conner SD Prop 1).
 
 ## Known gaps
 
-- LD 40 (above): no research in this package by design.
+- LD 40 (above): no research in this package by design; Whatcom's ships.
+- PUD seat number (above): Position 1 per VoteWA and the pamphlet, Position
+  3 on the sample ballot; not confirmed with the Auditor before shipping.
 - Treasurer: neither candidate has a campaign website or itemized PDC
   reports; evidence is pamphlet, party slates and write-in coverage.
 - Some Skagit Valley Herald forum stories (Auditor and PUD forums on

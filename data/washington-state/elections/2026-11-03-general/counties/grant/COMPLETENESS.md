@@ -3,14 +3,17 @@
 Election: 2026 Washington general election, November 3, 2026 (VoteWA
 election 899, county code 13).
 
-As of 2026-10-08 (#28) this package is researched, scored and refuted but
-not yet shipped: the director declares it in `pipeline/election.py`
-`APP_PACKAGES["2026-11-03-general"]["counties"]` at ship time. The builder
+Shipped (#28): the package is declared in
+`APP_PACKAGES["2026-11-03-general"]["counties"]` and ships at Full County
+Coverage, with the elections office link
+`https://www.grantcountywa.gov/270/Elections` and the county's VoteWA guide
+(`officialLinks.js` `countyGuides.grant`). The builder
 (`pipeline/build_votewa_lite_data.py --county grant`) writes
 `interim/app-contests.json` and `interim/app-measures.json` with
 `coverage: "full_county"`: every contest and measure scope is `CONGDST`,
-`LEGDST`, `CITY`, `COUNTY` or a DOR layer. Two of those DOR layers are not
-yet in `app/src/lib/geo.js` `COUNTY_LAYERS.grant` (see District scoping).
+`LEGDST`, `CITY`, `COUNTY` or a DOR layer in `app/src/lib/geo.js`
+`COUNTY_LAYERS.grant` (`FIRDST` and `CEMDST` added at ship time, see District
+scoping).
 
 ## Sources
 
@@ -51,16 +54,15 @@ statewide package.
 | Prosecutor (short and full term) | Guernsey | uncontested | Grant, info-only |
 | Sheriff | Gregg, Kriete | contested | Grant |
 | Treasurer (short and full term) | Heston | uncontested | Grant, info-only |
-| Court of Appeals Div. 3, Dist. 2, Pos. 1 | Hill | uncontested | Benton's package (#28) |
+| Court of Appeals Div. 3, Dist. 2, Pos. 1 | Hill | uncontested | Grant, info-only (county-scoped copy; Benton ships its own) |
 | Superior Court Pos. 3 (unexpired) | Chadwick, Bevier | contested | Grant |
 | District Court Pos. 1, 2, 3 | Middleton, Wallace, Gwinn | uncontested | Grant, info-only |
 | Grant PUD Commissioner District 3 | Schaapman | uncontested | Grant, info-only |
 | Grant PUD Commissioner District B (At Large) | Cox | uncontested | Grant, info-only |
 
-On this branch the research plan still lists CD 4 and LD 16 Pos. 1 and 2
-as Grant's (`verify_dossiers.py` counts them `untouched_contests=3`)
-because Benton's package is not on main yet; once it is, re-running
-`build_research_plan.py grant` shows them `researched_in` Benton.
+After the #28 merges `build_research_plan.py grant` shows CD 4 and LD 16
+Pos. 1 and 2 `researched_in` Benton with no candidates missing; they ship
+with Benton's scoring and dossiers.
 
 Measures (all five researched, scored and refuted):
 
@@ -110,13 +112,20 @@ Point queries, 2026-10-08 (Census geocoder, Current vintage; DOR
 | `CEMDST` `2` | DOR CEM2025 (3), **not** in `COUNTY_LAYERS.grant` | 103 Railroad St, Wilson Creek | `2` |
 | PUD county-wide | DOR PUD2025 (17) | five towns above | `2` everywhere |
 
-At ship time the director needs to add `FIRDST` (`${DOR_TAX_DISTRICTS}/7`,
-`DISTATTRIB`) and `CEMDST` (`${DOR_TAX_DISTRICTS}/3`, `DISTATTRIB`) to
-`COUNTY_LAYERS.grant` and `election.DISTRICT_ADAPTER_LAYERS["grant"]`;
-otherwise the assembler marks Grant `partial_county` for those two
-measures. Both layers already serve other counties (Benton, Adams).
-`COUNTY_COUNCIL` (the county's commissioner layer) is no longer needed for
-the general, since the commissioner race is county-wide.
+At ship time (#28) `FIRDST` (`${DOR_TAX_DISTRICTS}/7`, `DISTATTRIB`) and
+`CEMDST` (`${DOR_TAX_DISTRICTS}/3`, `DISTATTRIB`) were added to
+`COUNTY_LAYERS.grant` and `election.DISTRICT_ADAPTER_LAYERS["grant"]`, each
+re-verified by the same point queries; both layers already serve other
+counties (Benton, Adams). `COUNTY_COUNCIL` (the county's commissioner layer)
+stays in the adapter but no general scope uses it, since the commissioner
+race is county-wide.
+
+Live ballots on 2026-10-08 (`pipeline/live_ballot.mjs`, `full_county`,
+`missing=[]`): 321 S Balsam St, Moses Lake (LD 13, advisory vote, Moses
+Lake Prop 1); 127 Main Ave E, Soap Lake (Hospital District 4 bonds); 103
+Railroad St, Wilson Creek (Hospital District 4, Cemetery District 2); 34875
+Park Lake Rd NE, Coulee City (Hospital District 4, FD 7). The Coulee City
+point lies inside DOR HSP2025 district 4, so it gets the McKay bonds too.
 
 ## Known gaps
 
