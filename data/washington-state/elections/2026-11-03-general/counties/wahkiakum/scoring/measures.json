@@ -1,0 +1,47 @@
+{
+  "scored_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/wahkiakum/dossiers/measures/",
+    "data/washington-state/elections/2026-11-03-general/counties/wahkiakum/interim/measures.json",
+    "data/final/2026-11-03-general/rubric.json"
+  ],
+  "measures": [
+    {
+      "slug": "wahkiakum-wahkiakum-county-ballot-measure",
+      "what_it_does": "Renews Wahkiakum County's six-year emergency medical services property tax (Resolution No. 87-26) for collection 2027 through 2032, to pay EMS operating and equipment costs. Voters last renewed it in 2020 with 63%; county officials say it has been in place for more than 35 years.",
+      "cost_line": "Up to $0.40 per $1,000 of assessed value a year for six years, the same maximum as now: up to $120 a year on a $300,000 home. The 2025 rate was about $0.30.",
+      "pro_summary": "County officials say it continues a levy in place for over 35 years at an unchanged rate; the county EMS and Trauma Care Council recommended it unanimously.",
+      "con_summary": "No statement against was published and no opposition committee is registered.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "A yes vote continues an existing county EMS property tax for six more years at the same $0.40 maximum approved in 2020; a renewal, not an increase, so +1.",
+          "citations": [
+            "S1",
+            "S2",
+            "S3"
+          ]
+        }
+      },
+      "sources_note": "Sample ballot (S1); Eagle report on Resolution 87-26 (S2); SOS 2020 results (S3); county 2025 levy-rate sheet (S4); RCW 84.52.069 (S5); PDC (S6). Wahkiakum prints no local pamphlet."
+    },
+    {
+      "slug": "wahkiakum-wahkiakum-county-fire-protection-district-no-2-skamokawa-ballot-measure",
+      "what_it_does": "Replaces Skamokawa's Fire District 2 emergency medical services levy with a ten-year property tax (Resolution #2026-01) collected from 2027, for EMS operating and equipment costs; after the first year, growth is limited and tied to the Consumer Price Index.",
+      "cost_line": "Up to $1.00 per $1,000 of assessed value a year for ten years: up to $300 a year on a $300,000 property. The ballot does not give the current rate.",
+      "pro_summary": "No statement for was published; the district calls it a replacement of its existing EMS levy.",
+      "con_summary": "No statement against was published and no opposition committee is registered. The published state EMS-levy statute caps such levies at $0.50 and limits district levies where the county has one; the ballot does not explain the $1.00 rate.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "A yes vote authorizes a ten-year EMS property tax of up to $1.00 per $1,000 that the ballot describes as replacing an existing levy; whether it raises the current rate is not established, so it maps at the renewal tier (+1).",
+          "citations": [
+            "S1",
+            "S2"
+          ]
+        }
+      },
+      "sources_note": "Sample ballot (S1); county 2025 levy-rate sheet (S2); RCW 84.52.069 (S3); district budget-hearing notice (S4); SOS 2025 results (S5); PDC (S6). Wahkiakum prints no local pamphlet."
+    }
+  ]
+}

@@ -1,0 +1,391 @@
+{
+  "county": "wahkiakum",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/wahkiakum/raw/votewa/candidate-list.csv.url",
+    "https://www.co.wahkiakum.wa.us/DocumentCenter/View/3637"
+  ],
+  "coverage": "full_county",
+  "notes": [
+    "Wahkiakum County prints no local voters' pamphlet for the general and its VoteWA online guide carries no county races or local measures; the sample ballot (co.wahkiakum.wa.us DocumentCenter 3637) is the official listing.",
+    "Wahkiakum County Commissioner District 3 is nominated by district and elected county-wide in the general (RCW 36.32.040, 36.32.050(1); SOS 2022 and 2024 general precinct results: on all 11 precincts).",
+    "Public Utility District No. 1 of Wahkiakum County covers the whole county (WA DOR PUD2025 has one Wahkiakum polygon) and elects its commissioners PUD-wide in the general (RCW 54.12.010(3)).",
+    "The Fire Protection District No. 2 (Skamokawa) measure is scoped FIRDST '2' (WA DOR FIR2025, layer 7, DISTATTRIB)."
+  ],
+  "contests": [
+    {
+      "slug": "wahkiakum-public-utility-district-no-1-of-wahkiakum-county-commissioner-1",
+      "owner": "wahkiakum",
+      "category": "PublicUtility",
+      "office": "Commissioner #1",
+      "district": "Public Utility District No. 1 of Wahkiakum County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "wahkiakum"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Wahkiakum County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "gene-healy",
+          "name": "Gene Healy",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "wahkiakum-congressional-district-3-u-s-representative",
+      "owner": "wahkiakum",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 3",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "wahkiakum",
+        "layer": "CONGDST",
+        "value": "3"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Wahkiakum County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "john-braun",
+          "name": "John Braun",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "marie-gluesenkamp-perez",
+          "name": "Marie Gluesenkamp Perez",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "wahkiakum-legislative-district-19-state-representative-pos-1",
+      "owner": "wahkiakum",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 19",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "wahkiakum",
+        "layer": "LEGDST",
+        "value": "19"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Wahkiakum County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "jim-walsh",
+          "name": "Jim Walsh",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "kevin-moynihan",
+          "name": "Kevin Moynihan",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "wahkiakum-legislative-district-19-state-representative-pos-2",
+      "owner": "wahkiakum",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 19",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "wahkiakum",
+        "layer": "LEGDST",
+        "value": "19"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Wahkiakum County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "terry-carlson",
+          "name": "Terry Carlson",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "joel-mcentire",
+          "name": "Joel McEntire",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "wahkiakum-wahkiakum-county-county-assessor",
+      "owner": "wahkiakum",
+      "category": "County",
+      "office": "County Assessor",
+      "district": "Wahkiakum County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "wahkiakum"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Wahkiakum County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "drew-jenkins",
+          "name": "Drew Jenkins",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "justin-moriarty",
+          "name": "Justin Moriarty",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "wahkiakum-wahkiakum-county-county-auditor",
+      "owner": "wahkiakum",
+      "category": "County",
+      "office": "County Auditor",
+      "district": "Wahkiakum County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "wahkiakum"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Wahkiakum County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "nicci-bergseng",
+          "name": "Nicci Bergseng",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "wahkiakum-wahkiakum-county-county-clerk",
+      "owner": "wahkiakum",
+      "category": "County",
+      "office": "County Clerk",
+      "district": "Wahkiakum County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "wahkiakum"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Wahkiakum County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "jess-reddon",
+          "name": "Jess Reddon",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "wahkiakum-wahkiakum-county-commissioner-district-3-commissioner-3",
+      "owner": "wahkiakum",
+      "category": "County",
+      "office": "Commissioner #3",
+      "district": "Wahkiakum County Commissioner District 3",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "wahkiakum"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Wahkiakum County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "mark-d-letham",
+          "name": "Mark D. Letham",
+          "party": "Prefers Ind Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "wahkiakum-wahkiakum-county-county-sheriff",
+      "owner": "wahkiakum",
+      "category": "County",
+      "office": "County Sheriff",
+      "district": "Wahkiakum County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "wahkiakum"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Wahkiakum County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "john-mason",
+          "name": "John Mason",
+          "party": "States No Party Preference",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "wahkiakum-wahkiakum-county-county-treasurer",
+      "owner": "wahkiakum",
+      "category": "County",
+      "office": "County Treasurer",
+      "district": "Wahkiakum County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "wahkiakum"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Wahkiakum County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "marissa-longtain",
+          "name": "Marissa Longtain",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "wahkiakum-wahkiakum-county-prosecuting-attorney",
+      "owner": "wahkiakum",
+      "category": "County",
+      "office": "Prosecuting Attorney",
+      "district": "Wahkiakum County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "wahkiakum"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Wahkiakum County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "dan-bigelow",
+          "name": "Dan Bigelow",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "wahkiakum-wahkiakum-county-district-court-district-court-judge",
+      "owner": "wahkiakum",
+      "category": "Judicial",
+      "office": "District Court Judge",
+      "district": "Wahkiakum County District Court",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "wahkiakum"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Wahkiakum County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "heidi-heywood",
+          "name": "Heidi Heywood",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    }
+  ]
+}

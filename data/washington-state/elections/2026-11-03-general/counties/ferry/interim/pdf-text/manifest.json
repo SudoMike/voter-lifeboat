@@ -1,0 +1,16 @@
+{
+  "county": "ferry",
+  "script": "pipeline/extract_pdf_text.mjs",
+  "files": [
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/ferry/raw/ferry/primary-local-voters-pamphlet.pdf.url",
+      "url": "https://www.ferry-county.com/ferry%20county%20primary%202026.pdf",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/ferry/interim/pdf-text/primary-local-voters-pamphlet.txt"
+    },
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/ferry/raw/ferry/sample-ballot.pdf.url",
+      "url": "https://www.ferry-county.com/SampleBallot.pdf",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/ferry/interim/pdf-text/sample-ballot.txt"
+    }
+  ]
+}

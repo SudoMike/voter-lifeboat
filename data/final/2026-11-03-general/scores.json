@@ -71,12 +71,16 @@
     "data/washington-state/elections/2026-11-03-general/counties/lincoln/scoring/*.json",
     "data/washington-state/elections/2026-11-03-general/counties/lincoln/scoring/refutations/*.json",
     "data/washington-state/elections/2026-11-03-general/counties/pend-oreille/scoring/*.json",
-    "data/washington-state/elections/2026-11-03-general/counties/pend-oreille/scoring/refutations/*.json"
+    "data/washington-state/elections/2026-11-03-general/counties/pend-oreille/scoring/refutations/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/ferry/scoring/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/ferry/scoring/refutations/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/wahkiakum/scoring/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/wahkiakum/scoring/refutations/*.json"
   ],
   "script": "pipeline/merge_scores.py",
   "verdict_stats": {
-    "upheld": 2289,
-    "adjust": 199,
+    "upheld": 2300,
+    "adjust": 201,
     "refuted": 24,
     "missing_added": 31,
     "missing_dropped_low": 12
@@ -35003,7 +35007,7 @@
       "derived_from": [
         "data/washington-state/elections/2026-11-03-general/counties/okanogan/dossiers/okanogan-public-utility-district-commissioner-district-3-public-utility-commissioner-3/"
       ],
-      "office_does": "A Ferry County PUD No. 1 commissioner sits on the three-member board that runs the electric utility serving Ferry County; on Okanogan's ballot the race appears only for about 325 northeastern voters who are inside Ferry PUD.",
+      "office_does": "A Ferry County PUD No. 1 commissioner sits on the three-member board that runs the electric utility serving Ferry County.",
       "race_blurb": "Incumbent Doug Aubertin, seeking a fourth term, cites $5 million in grants and opposes state electric-vehicle mandates; retired mining executive and former Colville Tribal Enterprise Corporation COO Andrew Pooler pledges dependable, low-cost power. Nonpartisan.",
       "candidates": [
         {
@@ -35020,7 +35024,7 @@
         },
         {
           "slug": "andrew-pooler",
-          "summary": "Retired mining executive and former chief operating officer of Colville Tribal Enterprise Corporation, running for his first elected office.",
+          "summary": "Retired mining executive and former chief operating officer of Colville Tribal Enterprise Corporation; ran for Ferry County Commissioner #3 in 2024 and lost, 1,129 votes to 2,439.",
           "highlights": [
             "35 years as a mining executive responsible for 16 large-scale mines [S1]",
             "Pledges 'dependable and low-cost electricity to all PUD customers' [S1]",
@@ -38616,6 +38620,590 @@
             "Wants efficiency, caution about unnecessary spending and independent oversight [S3]",
             "Asks for greater transparency in how major spending decisions are made [S3]",
             "Wants the PUD to meet CETA's 2030 requirement while limiting the effect on ratepayers [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "ferry-court-of-appeals-division-3-district-1-judge-position-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/ferry/dossiers/ferry-court-of-appeals-division-3-district-1-judge-position-2/"
+      ],
+      "office_does": "A Court of Appeals judge decides appeals from superior-court cases; District 1 of Division III is elected by voters in Ferry, Lincoln, Okanogan, Pend Oreille, Spokane and Stevens counties.",
+      "race_blurb": "Uncontested: Judge Tracy Arlene Staab, who won the seat in 2020, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "tracy-arlene-staab",
+          "summary": "Court of Appeals judge since winning the seat in 2020; a former Spokane Municipal Court judge and federal appellate defender.",
+          "highlights": [
+            "Won the open seat in 2020 against Marshall Casey [S2][S3]",
+            "Spokane Municipal Court judge from 2009; earlier an appellate attorney for the Federal Defenders [S3]",
+            "Submitted no statement to the 2026 voters' guide [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "ferry-ferry-county-commissioner-district-2-county-commissioner-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/ferry/dossiers/ferry-ferry-county-commissioner-district-2-county-commissioner-2/"
+      ],
+      "office_does": "Ferry County's three commissioners set the county budget and policy; each lives in and is nominated by a district, but the whole county elects every commissioner in the general.",
+      "race_blurb": "One-term Commissioner Bob Dean, a retired Air Force and commercial flight engineer who runs on fiscal responsibility, faces Army veteran and long-haul trucker Kevin J. Berry, who runs on local jobs, small businesses and roads; both prefer the Republican Party. Berry led the District 2 primary with 539 votes to Dean's 294.",
+      "candidates": [
+        {
+          "slug": "kevin-j-berry",
+          "summary": "Army veteran and 25-year truck driver who grew up around Curlew and returned to Ferry County in 2006; first run for office.",
+          "highlights": [
+            "Nine years in the Army from 1985; RV dealership manager; 25 years as a truck driver [S1]",
+            "Would support local jobs and small businesses and maintain roads and critical infrastructure [S1]",
+            "Promises 'responsible, transparent budgeting for taxpayers' [S1]",
+            "Led the District 2 primary with 539 votes to Dean's 294 [S2]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "First-time candidate with no elected experience, challenging the incumbent as a 'hands-on problem solver'; he does not frame the race as a call for change, so the case is partial."
+            }
+          }
+        },
+        {
+          "slug": "robert-bob-dean",
+          "summary": "District 2 commissioner since winning the seat in 2022; a U.S. Army and Air Force veteran and former commercial flight engineer who sits on several regional boards.",
+          "highlights": [
+            "Won the seat in 2022, 1,632 to 1,571; asks voters to 'continue the progress made' [S1][S3]",
+            "Says he focuses on contract negotiations and fiscal responsibility and backs 'government efficiency' [S1]",
+            "County member of the EMS District No. 1 board and of health, economic-development and risk boards [S1][S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "One-term incumbent running explicitly on continuity ('continue the progress made'); a single term is a shorter record than a long-tenure case."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Stresses 'the importance of every taxpayer dollar', fiscal responsibility and 'government efficiency that respects ... your tax dollars', without proposing specific cuts."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "ferry-ferry-county-county-assessor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/ferry/dossiers/ferry-ferry-county-county-assessor/"
+      ],
+      "office_does": "The assessor values Ferry County property for taxation and keeps the county's ownership and parcel records.",
+      "race_blurb": "Uncontested: Assessor Rachel D. Siracuse, in the office since 2000 and elected Assessor six times by her account, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "rachel-d-siracuse",
+          "summary": "Ferry County Assessor, in the office since 2000; an accredited appraiser and former Republic City Council member.",
+          "highlights": [
+            "Elected Assessor six times by her account; in the office since 2000 [S1]",
+            "Elected to the Republic City Council in 2017 and 2021 [S1]",
+            "Stresses explaining property taxes and assessments to residents [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "ferry-ferry-county-county-auditor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/ferry/dossiers/ferry-ferry-county-county-auditor/"
+      ],
+      "office_does": "The auditor runs Ferry County's elections and handles recording, licensing and the county's accounts and payroll.",
+      "race_blurb": "Uncontested: Auditor Dianna L. Galvan, in office since 2007, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "dianna-l-galvan",
+          "summary": "Ferry County Auditor since 2007 and a former deputy auditor.",
+          "highlights": [
+            "Auditor since 2007; earlier deputy auditor [S1]",
+            "Her office runs county elections, recording and licensing [S3]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "ferry-ferry-county-county-clerk",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/ferry/dossiers/ferry-ferry-county-county-clerk/"
+      ],
+      "office_does": "The county clerk is clerk of the Superior Court: the office keeps the court's case files and records and supports its operations.",
+      "race_blurb": "Clerk Melanie Breezee, appointed in 2021 and elected unopposed in 2022, faces Sheri L. Mott, who reports 30 years of business management and more than a decade in the Pierce County court system; both prefer the Republican Party. Breezee led the August primary 1,200 to 851.",
+      "candidates": [
+        {
+          "slug": "melanie-breezee",
+          "summary": "Ferry County Clerk since an August 2021 appointment, elected in 2022, after starting as a deputy clerk in 2020.",
+          "highlights": [
+            "Deputy clerk from November 2020, appointed clerk in August 2021, elected in 2022 [S1][S3]",
+            "Promises 'professional, accurate, and dependable service' and transparency in the office [S1]",
+            "Led the August primary, 1,200 to 851 [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Sitting clerk since 2021 who asks to 'continue serving' on her record in the office.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "sheri-l-mott",
+          "summary": "Business owner and mediator who reports more than 10 years in the Pierce County court system; sits on the state Wolf Advisory Group and two Ferry County advisory boards.",
+          "highlights": [
+            "Reports 30 years of management, including a real-estate company and a domestic-law mediation company [S1]",
+            "Bachelor's degree in law and justice; more than 10 years in the Pierce County court system [S1]",
+            "Member of the state Wolf Advisory Group (livestock producer) and the county Civil Service and Solid Waste advisory groups [S1][S2]",
+            "Promises 'steady leadership, accountability, and common-sense administration' [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Never held elected office and challenges the incumbent, but brings management and court-system experience, so the outsider case is partial."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "ferry-ferry-county-county-sheriff",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/ferry/dossiers/ferry-ferry-county-county-sheriff/"
+      ],
+      "office_does": "The sheriff runs county law enforcement and the county jail for all of Ferry County.",
+      "race_blurb": "Three-term Sheriff Ray Maycumber, a Ferry County peace officer for more than 25 years who is suing the State over its new sheriff-qualification law, faces former Ferry County deputy and 20-year Border Patrol agent Sam Olson of Curlew; both prefer the Republican Party. Olson led the August primary 1,281 to 995.",
+      "candidates": [
+        {
+          "slug": "sam-olson",
+          "summary": "Former Ferry County deputy and narcotics detective who spent 20 years with the U.S. Border Patrol, most of them in Curlew; first run for office.",
+          "highlights": [
+            "Marine Corps 1993-1997; Ferry County deputy and task-force narcotics detective 1998-2005 [S1]",
+            "U.S. Border Patrol 2005-2025, a K9 handler in Yuma and Curlew [S1]",
+            "Promises 'an aggressive approach towards theft and drug abuse' [S1]",
+            "Led the August primary, 1,281 to 995 [S2]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Has never held elected office and challenges a three-term sheriff, offering 'a fresh set of eyes', but brings 27 years in law enforcement, so the outsider case is partial."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "His one stated operational priority is 'an aggressive approach towards theft and drug abuse' to protect homes and property; no treatment or diversion agenda.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "ray-maycumber",
+          "summary": "Ferry County Sheriff since January 2015 and a county peace officer for more than 25 years; a plaintiff in the sheriffs' lawsuit against the State's 2026 sheriff-qualification law.",
+          "highlights": [
+            "Sheriff since 2015, after serving as Republic police officer, deputy and chief criminal deputy [S1]",
+            "Says the county cannot fund competitive hiring, hurting recruitment and retention [S1]",
+            "Respondent in the four sheriffs' suit against SSSB 5974; a court enjoined parts of the law [S1][S2]",
+            "Unopposed in 2022; trailed Olson in the August primary [S3][S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Three-term incumbent sheriff with more than 25 years as a Ferry County peace officer, running on that record."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Frames the office's needs as deputy hiring and retention and the funding to attract applicants; no prevention or diversion agenda, but no specific enforcement program either."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "ferry-ferry-county-county-treasurer",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/ferry/dossiers/ferry-ferry-county-county-treasurer/"
+      ],
+      "office_does": "The treasurer collects Ferry County's property taxes and safeguards and invests county funds.",
+      "race_blurb": "Uncontested: Treasurer Shannon Jensen, elected in 2021 after two decades as a deputy treasurer and deputy auditor, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "shannon-jensen",
+          "summary": "Ferry County Treasurer since 2021, after 22 years as a deputy treasurer and deputy auditor.",
+          "highlights": [
+            "Treasurer since 2021 [S1]",
+            "Deputy treasurer 1998-2008, deputy auditor 2008-2020 [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "ferry-ferry-county-district-court-district-court-judge",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/ferry/dossiers/ferry-ferry-county-district-court-district-court-judge/"
+      ],
+      "office_does": "The District Court judge hears misdemeanors, traffic infractions and small civil cases for all of Ferry County.",
+      "race_blurb": "Uncontested: Judge Sarah Cuellar, elected in 2024, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "sarah-cuellar",
+          "summary": "Ferry County District Court Judge since 2024 and a Republic lawyer in private practice from 2015.",
+          "highlights": [
+            "Elected in 2024 over Nick Force, 1,957 to 1,529 [S2]",
+            "Reviving the county's Drug Court as a Therapeutic Court [S1]",
+            "Secured state grants for post-conviction compliance; seeks funding for pre-trial services [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "ferry-ferry-county-prosecuting-attorney",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/ferry/dossiers/ferry-ferry-county-prosecuting-attorney/"
+      ],
+      "office_does": "The prosecuting attorney prosecutes crimes in Ferry County's Superior and District Courts and advises the county's commissioners and officials.",
+      "race_blurb": "Uncontested: Prosecuting Attorney Michael Golden, the office's only attorney since November 2024 and a Ferry County lawyer since 2011, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "michael-golden",
+          "summary": "Ferry County Prosecuting Attorney since November 2024; a former deputy prosecutor and defense attorney in the county since 2011.",
+          "highlights": [
+            "Prosecuting Attorney since November 2024 and the office's only attorney [S1]",
+            "Deputy prosecutor and defense attorney in Ferry County since 2011 [S1]",
+            "Emphasizes victims' rights and holding defendants accountable [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "ferry-ferry-pend-oreille-stevens-superior-court-judge-position-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/ferry/dossiers/ferry-ferry-pend-oreille-stevens-superior-court-judge-position-2/"
+      ],
+      "office_does": "Superior Court judges hear felonies, civil suits and family, juvenile and probate cases for Ferry, Pend Oreille and Stevens counties.",
+      "race_blurb": "Uncontested: Judge Thomas Webster, appointed in January 2026, is the only candidate for the two-year unexpired term.",
+      "candidates": [
+        {
+          "slug": "thomas-franklin-webster",
+          "summary": "Superior Court judge appointed in January 2026 after 25 years in private practice, mostly civil litigation in Colville.",
+          "highlights": [
+            "Appointed and sworn in January 23, 2026, succeeding retiring Judge Jessica Taylor Reeves [S1][S2]",
+            "Ran Webster Law Office in Colville from 2009 to 2025 [S1]",
+            "Stresses his civil-litigation experience [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "wahkiakum-public-utility-district-no-1-of-wahkiakum-county-commissioner-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/wahkiakum/dossiers/wahkiakum-public-utility-district-no-1-of-wahkiakum-county-commissioner-1/"
+      ],
+      "office_does": "The PUD commissioners govern Wahkiakum County's county-wide public utility district; each is nominated in a district and elected by all PUD voters.",
+      "race_blurb": "Uncontested: Commissioner Gene Healy, elected unopposed in 2020, is the only candidate for a six-year term.",
+      "candidates": [
+        {
+          "slug": "gene-healy",
+          "summary": "PUD No. 1 Commissioner #1 since at least 2020; the only candidate.",
+          "highlights": [
+            "Elected unopposed in 2020 with 98.04% of the vote [S3]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "wahkiakum-wahkiakum-county-commissioner-district-3-commissioner-3",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/wahkiakum/dossiers/wahkiakum-wahkiakum-county-commissioner-district-3-commissioner-3/"
+      ],
+      "office_does": "The three county commissioners adopt the budget, set policy and approve contracts; a District 3 commissioner is nominated in the district and elected county-wide.",
+      "race_blurb": "Uncontested: Commissioner Mark D. Letham (Prefers IND Party), appointed in January 2026 to succeed the retiring Gene Strong, is the only candidate for the rest of the term and the next four years.",
+      "candidates": [
+        {
+          "slug": "mark-d-letham",
+          "summary": "Appointed District 3 commissioner in January 2026 after Gene Strong retired; the only candidate.",
+          "highlights": [
+            "Appointed by Resolution No. 05-26 in January 2026 [S3]",
+            "Voted with the board to put the county EMS levy on the November ballot [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "wahkiakum-wahkiakum-county-county-assessor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/wahkiakum/dossiers/wahkiakum-wahkiakum-county-county-assessor/"
+      ],
+      "office_does": "The assessor values all taxable real and personal property in the county every year so property taxes are spread fairly among owners.",
+      "race_blurb": "A rematch of 2025, when Drew Jenkins won the rest of a vacated term with 57% over Justin Moriarty; Jenkins also led the August primary 1,052 to 619. Both are state-accredited appraisers.",
+      "candidates": [
+        {
+          "slug": "drew-jenkins",
+          "summary": "The sitting assessor, elected in 2025, after seven years as an appraiser in the office and 13 years appraising in Chicago.",
+          "highlights": [
+            "Won the 2025 election for the rest of the term, 57.32% to 42.52% [S5]",
+            "Appraiser in the Assessor's Office 2016-2023; 13 years as a Chicago residential appraiser [S3]",
+            "DOR-accredited appraiser since 2018 [S4]",
+            "Says he aims to help people understand the valuation process [S3]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S4",
+                "S5"
+              ],
+              "basis": "Sitting assessor with a decade-plus documented appraisal record in the office and in Chicago, accredited since 2018."
+            }
+          }
+        },
+        {
+          "slug": "justin-moriarty",
+          "summary": "A DOR-accredited appraiser since 2024 who lost the 2025 race and campaigns on fresh ideas, better tools and an open-door policy.",
+          "highlights": [
+            "DOR-accredited appraiser since October 2024 [S2]",
+            "Said in 2025 he was working in the Assessor's Office [S3]",
+            "Promises \"fresh ideas, better tools\" and an open-door policy on tax questions [S4]",
+            "Lost the 2025 race with 42.52% [S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S4"
+              ],
+              "basis": "Challenger accredited only since 2024 who runs on \"fresh ideas, better tools\" against the incumbent, while citing appraisal credentials of his own."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "wahkiakum-wahkiakum-county-county-auditor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/wahkiakum/dossiers/wahkiakum-wahkiakum-county-county-auditor/"
+      ],
+      "office_does": "The auditor keeps the county's financial records and budget, audits bills, runs elections, handles vehicle licensing and marriage licenses, and records deeds.",
+      "race_blurb": "Uncontested: incumbent Nicci Bergseng (Prefers Independent Party), auditor since at least 2022, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "nicci-bergseng",
+          "summary": "Wahkiakum County Auditor, elected unopposed in 2022; the only candidate.",
+          "highlights": [
+            "Elected unopposed in 2022 with 1,910 votes [S4]",
+            "Unopposed in the August 2026 primary [S6]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "wahkiakum-wahkiakum-county-county-clerk",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/wahkiakum/dossiers/wahkiakum-wahkiakum-county-county-clerk/"
+      ],
+      "office_does": "The county clerk is clerk of the Wahkiakum County Superior Court: keeping its record, issuing court orders, handling court money and managing juries.",
+      "race_blurb": "Uncontested: incumbent Jess Reddon (Prefers Independent Party), elected in 2025 to the rest of the previous term, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "jess-reddon",
+          "summary": "Wahkiakum County Clerk since the November 2025 election; the only candidate.",
+          "highlights": [
+            "Elected unopposed in November 2025 with 1,445 votes [S4]",
+            "Unopposed in the August 2026 primary [S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "wahkiakum-wahkiakum-county-county-sheriff",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/wahkiakum/dossiers/wahkiakum-wahkiakum-county-county-sheriff/"
+      ],
+      "office_does": "The sheriff runs the county's patrol, investigations, 911 dispatch, jail and emergency management.",
+      "race_blurb": "Uncontested: Sheriff John Mason (States No Party Preference), appointed in 2024 and elected in 2025, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "john-mason",
+          "summary": "Wahkiakum County Sheriff since a July 2024 appointment, elected in 2025; with the Sheriff's Office since 2013.",
+          "highlights": [
+            "Appointed sheriff in July 2024 on Mark Howie's retirement [S5]",
+            "Won the 2025 election with 87.44% of the vote [S7]",
+            "Says he keeps \"a conservative budget within our current means\" and promotes officer wellness [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "wahkiakum-wahkiakum-county-county-treasurer",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/wahkiakum/dossiers/wahkiakum-wahkiakum-county-county-treasurer/"
+      ],
+      "office_does": "The treasurer collects property and excise taxes and acts as the bank for the county and its districts: investing, disbursing and accounting for their money.",
+      "race_blurb": "Uncontested open seat: Treasurer Tammy Peterson did not file; Chief Deputy Treasurer Marissa Longtain (Prefers Independent Party) is the only candidate.",
+      "candidates": [
+        {
+          "slug": "marissa-longtain",
+          "summary": "The Treasurer's Chief Deputy and Investment Officer, running for the open seat unopposed.",
+          "highlights": [
+            "Chief Deputy Treasurer and Investment Officer [S3]",
+            "Presented the county Finance Committee report in August 2026 [S6]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "wahkiakum-wahkiakum-county-district-court-district-court-judge",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/wahkiakum/dossiers/wahkiakum-wahkiakum-county-district-court-district-court-judge/"
+      ],
+      "office_does": "The district court judge hears the county's misdemeanor, traffic, small claims and civil cases and protection-order petitions.",
+      "race_blurb": "Uncontested: Judge Heidi Heywood, elected unopposed in 2022, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "heidi-heywood",
+          "summary": "Wahkiakum County District Court judge since the 2022 election; the only candidate.",
+          "highlights": [
+            "Elected unopposed in 2022 with 1,855 votes [S4]",
+            "Presides over the county's only district court [S3]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "wahkiakum-wahkiakum-county-prosecuting-attorney",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/wahkiakum/dossiers/wahkiakum-wahkiakum-county-prosecuting-attorney/"
+      ],
+      "office_does": "The prosecuting attorney prosecutes criminal and civil cases for the state and county and is legal adviser to county officials.",
+      "race_blurb": "Uncontested: incumbent Dan Bigelow (Prefers Democratic Party), who won a close race in 2022, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "dan-bigelow",
+          "summary": "Wahkiakum County Prosecuting Attorney; won the 2022 election by 75 votes and is unopposed this year.",
+          "highlights": [
+            "Won in 2022, 51.43% to 48.41% [S3]",
+            "Unopposed in the August 2026 primary [S4]"
           ],
           "evidence_level": "moderate",
           "withdrawn": false,

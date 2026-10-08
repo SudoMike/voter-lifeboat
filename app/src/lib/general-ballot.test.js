@@ -5,7 +5,7 @@
 // coverage (#28), Island, Lewis, Franklin, Chelan, Clallam and Grays Harbor at
 // full coverage (#29), Mason, Walla Walla, Stevens, Whitman and Douglas at full coverage and Okanogan at
 // partial coverage (#30), Jefferson, Kittitas, Asotin and Adams at full coverage and Klickitat and Pacific at
-// partial coverage (#31), Skamania, San Juan, Lincoln and Pend Oreille at full coverage (#32), every other Washington address a Statewide-Only Guide (issue #9). These run the app's own ballot, interview, lean and Ballot Brief
+// partial coverage (#31), Skamania, San Juan, Lincoln, Pend Oreille, Ferry and Wahkiakum at full coverage (#32), every other Washington address a Statewide-Only Guide (issue #9). These run the app's own ballot, interview, lean and Ballot Brief
 // code against public/data/2026-11-03-general.
 import test from 'node:test'
 import assert from 'node:assert/strict'
@@ -71,7 +71,7 @@ const STATE_MEASURES = [
   'initiative-measure-no-il26-638',
 ]
 
-test('the general ships thirty-one counties at full county coverage, Spokane, Okanogan, Klickitat and Pacific at partial, with their elections offices', () => {
+test('the general ships thirty-three counties at full county coverage, Spokane, Okanogan, Klickitat and Pacific at partial, with their elections offices', () => {
   assert.equal(data.election.id, '2026-11-03-general')
   assert.deepEqual(data.coverage, {
     statewide_complete: true,
@@ -422,6 +422,25 @@ test('the general ships thirty-one counties at full county coverage, Spokane, Ok
         fips: '53051',
         coverage: 'full_county',
         elections_url: 'https://www.pendoreille.gov/auditor/page/elections',
+      },
+      {
+        // Full: every scope is county-wide or a Census layer; the Ferry
+        // County PUD No. 1 seat is county-wide (#32).
+        id: 'ferry',
+        name: 'Ferry County',
+        state: 'WA',
+        fips: '53019',
+        coverage: 'full_county',
+        elections_url: 'https://www.ferry-county.com/departments/auditor/index.php',
+      },
+      {
+        // Full: the Fire District 2 EMS levy reads DOR FIR2025 (FIRDST, #32).
+        id: 'wahkiakum',
+        name: 'Wahkiakum County',
+        state: 'WA',
+        fips: '53069',
+        coverage: 'full_county',
+        elections_url: 'https://www.co.wahkiakum.wa.us/419/Elections',
       },
     ],
   })
@@ -1462,6 +1481,65 @@ test('a Pend Oreille ballot: Spokane\'s CD 5 and LD 7, Stevens\'s Superior Court
   assert.equal(ione.contests.length, 15 + SUPREME_COURT.length)
   assert.deepEqual(ownLocal(ione, 'pend-oreille'), [])
   assert.equal(coverageAdvice(po({})), null)
+})
+
+test('a Ferry ballot: Spokane\'s CD 5 and LD 7, Okanogan\'s research for the county-wide PUD seat, no local measure', () => {
+  const FERRY = { id: 'ferry', fips: '53019', name: 'Ferry County' }
+  const fe = (districts) => ({ coverageStatus: 'full_county', county: FERRY, districts, missingLayers: [] })
+  const PUD = 'ferry-public-utility-district-commissioner-district-3-public-utility-commissioner-3'
+  // Districts as the live District Adapter resolved them on 2026-10-08:
+  // 350 E Delaware Ave, Republic and 39 Shortcut Rd, Inchelium (outside DOR
+  // PUD2025, inside Ferry PUD No. 1 by the SOS precinct results). The same
+  // 15 county contests, the PUD seat included.
+  for (const districts of [
+    { CONGDST: '5', LEGDST: '7', CITY: 'Republic', COUNTY_COUNCIL: '2', EMSDST: 'REP' },
+    { CONGDST: '5', LEGDST: '7', COUNTY_COUNCIL: '3' },
+  ]) {
+    const b = ballotFor(fe(districts))
+    const slugs = b.contests.map((c) => c.slug)
+    assert.equal(new Set(slugs).size, slugs.length)
+    assert.equal(slugs.length, 15 + SUPREME_COURT.length)
+    for (const slug of SUPREME_COURT) assert.ok(slugs.includes(slug), slug)
+    assert.deepEqual(b.measures.map((m) => m.slug), STATE_MEASURES)
+    assert.ok(!b.contests.some((c) => c.owner !== 'ferry' && c.owner !== 'statewide'))
+    sameScoring(b, 'ferry-congressional-district-5-u-s-representative', 'spokane-congressional-district-5-u-s-representative')
+    sameScoring(b, 'ferry-legislative-district-7-state-senator', 'spokane-legislative-district-7-state-senator')
+    for (const pos of [1, 2])
+      sameScoring(b, `ferry-legislative-district-7-state-representative-pos-${pos}`, `spokane-legislative-district-7-state-representative-pos-${pos}`)
+    sameScoring(b, PUD, 'okanogan-public-utility-district-commissioner-district-3-public-utility-commissioner-3')
+    assert.ok(slugs.includes('ferry-ferry-county-commissioner-district-2-county-commissioner-2'))
+  }
+  assert.equal(coverageAdvice(fe({})), null)
+})
+
+test('a Wahkiakum ballot: Clark\'s CD 3, Thurston\'s LD 19, the county EMS levy everywhere and Fire District 2\'s in Skamokawa', () => {
+  const WAHKIAKUM = { id: 'wahkiakum', fips: '53069', name: 'Wahkiakum County' }
+  const wa = (districts) => ({ coverageStatus: 'full_county', county: WAHKIAKUM, districts, missingLayers: [] })
+  const COUNTY_EMS = 'wahkiakum-wahkiakum-county-ballot-measure'
+  const FD2 = 'wahkiakum-wahkiakum-county-fire-protection-district-no-2-skamokawa-ballot-measure'
+  // Districts as the live District Adapter resolved them on 2026-10-08.
+  // 1391 State Rte 4, Skamokawa: Fire District 2.
+  const sk = ballotFor(wa({ CONGDST: '3', LEGDST: '19', COUNTY_COUNCIL: '3', FIRDST: '2' }))
+  const slugs = sk.contests.map((c) => c.slug)
+  assert.equal(new Set(slugs).size, slugs.length)
+  assert.equal(slugs.length, 12 + SUPREME_COURT.length)
+  for (const slug of SUPREME_COURT) assert.ok(slugs.includes(slug), slug)
+  assert.ok(!sk.contests.some((c) => c.owner !== 'wahkiakum' && c.owner !== 'statewide'))
+  sameScoring(sk, 'wahkiakum-congressional-district-3-u-s-representative', 'clark-congressional-district-3-u-s-representative')
+  for (const pos of [1, 2])
+    sameScoring(sk, `wahkiakum-legislative-district-19-state-representative-pos-${pos}`, `thurston-legislative-district-19-state-representative-pos-${pos}`)
+  assert.deepEqual(sk.measures.map((m) => m.slug), [...STATE_MEASURES, COUNTY_EMS, FD2])
+  // 64 Main St, Cathlamet (town, no fire district) and 222 E Sunny Sands Rd
+  // (Puget Island, Fire District 1): the county levy only.
+  for (const districts of [
+    { CONGDST: '3', LEGDST: '19', CITY: 'Cathlamet', COUNTY_COUNCIL: '2' },
+    { CONGDST: '3', LEGDST: '19', COUNTY_COUNCIL: '1', FIRDST: '1' },
+  ]) {
+    const b = ballotFor(wa(districts))
+    assert.equal(b.contests.length, 12 + SUPREME_COURT.length)
+    assert.deepEqual(ownLocal(b, 'wahkiakum'), [COUNTY_EMS])
+  }
+  assert.equal(coverageAdvice(wa({})), null)
 })
 
 test('an Adams ballot: Benton\'s, Spokane\'s and Grant\'s research for CD 4/5, LD 9 and LD 13, the pool and fire levies by district', () => {

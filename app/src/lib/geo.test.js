@@ -1943,3 +1943,41 @@ test('Pend Oreille resolves hospital, school and Sacheen Lake sewer districts fr
   assert.equal(context.districts.HOSPDST, '2')
   for (const s of [hosp1, riverside, sacheen]) assert.ok(!scopeMatches(s, context), s.layer)
 })
+
+// Wahkiakum (#32, wave 7). Live point queries 2026-10-08 at the
+// Census-geocoded points of the addresses below: DOR FIR2025 (7, the new
+// FIRDST entry) and the county's commissioner layer, which no general scope
+// uses.
+test('Wahkiakum resolves Fire District 2 (Skamokawa) from DOR FIR2025', async () => {
+  const commish = { path: '/Commissioner_Districts1/FeatureServer/1' }
+  const fd2 = { kind: 'DISTRICT', county: 'wahkiakum', layer: 'FIRDST', value: '2' }
+  const countyLevy = { kind: 'COUNTY', county: 'wahkiakum' }
+  // 1391 State Rte 4, Skamokawa: FIR '2'.
+  mockWave2('1391 STATE RTE 4, SKAMOKAWA, WA, 98647', '069', 'Wahkiakum County', [
+    { ...commish, attributes: { District_Number: '3' } }, dorLayer(7, '2'),
+  ])
+  let context = await lookupBallotContext(wave2Data('wahkiakum'), '1391 State Rte 4 Skamokawa WA 98647')
+  assert.equal(context.county.id, 'wahkiakum')
+  assert.equal(context.coverageStatus, 'full_county')
+  assert.deepEqual(context.missingLayers, [])
+  assert.equal(context.districts.FIRDST, '2')
+  for (const s of [fd2, countyLevy]) assert.ok(scopeMatches(s, context), s.kind)
+  // 222 E Sunny Sands Rd, Cathlamet (Puget Island): FIR '1'.
+  mockWave2('222 E SUNNY SANDS RD, CATHLAMET, WA, 98612', '069', 'Wahkiakum County', [
+    { ...commish, attributes: { District_Number: '1' } }, dorLayer(7, '1'),
+  ])
+  context = await lookupBallotContext(wave2Data('wahkiakum'), '222 E Sunny Sands Rd Cathlamet WA 98612')
+  assert.deepEqual(context.missingLayers, [])
+  assert.equal(context.districts.FIRDST, '1')
+  assert.ok(!scopeMatches(fd2, context))
+  assert.ok(scopeMatches(countyLevy, context))
+  // 64 Main St, inside the Town of Cathlamet: no fire district feature.
+  mockWave2('64 MAIN ST, CATHLAMET, WA, 98612', '069', 'Wahkiakum County', [
+    { ...commish, attributes: { District_Number: '2' } },
+  ])
+  context = await lookupBallotContext(wave2Data('wahkiakum'), '64 Main St Cathlamet WA 98612')
+  assert.deepEqual(context.missingLayers, [])
+  assert.equal('FIRDST' in context.districts, false)
+  assert.ok(!scopeMatches(fd2, context))
+  assert.ok(scopeMatches(countyLevy, context))
+})

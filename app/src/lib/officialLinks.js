@@ -319,6 +319,16 @@ const ELECTIONS = {
       // text/html, 2026-10-08.
       lincoln: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=22',
       'pend-oreille': 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=26',
+      // Ferry prints no general pamphlet; its dossiers cite this guide
+      // (candidate.ashx, no pages). #32; 200 text/html, 2026-10-08.
+      ferry: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=10',
+      // Wahkiakum prints no local pamphlet, and its guide carries only the
+      // statewide measures, CD 3, LD 19 and the Supreme Court (no county race
+      // or local measure); the Auditor's sample ballot
+      // (co.wahkiakum.wa.us/DocumentCenter/View/3637, linked from the
+      // elections page) is the county's only official listing. #32; 200
+      // text/html, 2026-10-08.
+      wahkiakum: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=35',
     },
     pamphletIndex: `${SOS_GENERAL_2026}/2026-voters-pamphlet-pdfs`,
   },

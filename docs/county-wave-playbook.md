@@ -434,8 +434,8 @@ general packages that are `partial_county` are Spokane and Okanogan (both
 Clark, Kitsap, Pierce, Snohomish (since #27), Thurston, Whatcom, Yakima,
 Skagit, Cowlitz, Grant, Island, Lewis, Franklin, Chelan, Clallam, Grays
 Harbor, Mason, Walla Walla, Stevens, Whitman, Douglas, Jefferson, Kittitas,
-Asotin, Adams, Skamania, San Juan, Lincoln and Pend Oreille are
-`full_county`; all thirty-four ship with King. A PUD
+Asotin, Adams, Skamania, San Juan, Lincoln, Pend Oreille, Ferry and
+Wahkiakum are `full_county`; all thirty-six ship with King. A PUD
 commissioner is nominated by district but elected by the whole PUD in the
 general (RCW 54.12.010(3)), so a countywide PUD's seat is scoped `COUNTY`
 (Clark, Kitsap, Thurston), not `PUDDST`.
@@ -778,6 +778,29 @@ commissioner and PUD No. 1 seats are elected county-wide (the PUD is the
 whole county). CD 5 and LD 7 Senate and Pos. 1/2 ship with Spokane's
 scoring, the Superior Court (Ferry, Pend Oreille, Stevens) Pos. 2 seat with
 Stevens's. Its pamphlet's PDF pages run 38 behind the printed ones.
+
+Ferry and Wahkiakum shipped on 2026-10-08 (#32) as `full_county`. Ferry
+needs no county layer: every scope is `COUNTY`, CD 5 or LD 7, and its
+`COUNTY_COUNCIL` and `EMSDST` layers were re-probed and stay for the
+archived primary. Its Ferry County PUD No. 1 #3 seat is scoped `COUNTY`
+although DOR PUD2025 leaves out part of Inchelium (tax code area `8888`,
+no taxing district): the SOS precinct exports put every PUD race on all 19
+precincts. The seat's contest names are Okanogan's, so it ships with
+Okanogan's research (where the same seat stays `PUDDST` and hidden); the
+ship pass rewrote two display lines of that scoring that spoke of
+Okanogan's ballot, so a shared race's `office_does` and candidate summaries
+must read right on every ballot that shows them. CD 5 and LD 7 Senate and
+Pos. 1/2 ship with Spokane's scoring; its Superior Court (Ferry, Pend
+Oreille, Stevens) Pos. 2 and Court of Appeals seats are its own
+information-only copies (a package's own scoring file wins over the shared
+key). `COUNTY_LAYERS.wahkiakum` gained `FIRDST` (DOR FIR2025, layer 7) for
+Fire District 2 (Skamokawa)'s EMS levy (`2`; the Town of Cathlamet has no
+fire district feature); the county-wide EMS levy is `COUNTY`. Its
+commissioner, PUD No. 1 and District Court seats are elected county-wide.
+CD 3 ships with Clark's scoring and LD 19 Pos. 1/2 with Thurston's. Neither
+county prints a general pamphlet; both link their VoteWA guide, though
+Wahkiakum's carries no county race (its Auditor's sample ballot is the only
+official listing).
 
 ## 13. Reference
 

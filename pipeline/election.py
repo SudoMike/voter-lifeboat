@@ -71,7 +71,7 @@ APP_PACKAGES = {
                      "benton", "skagit", "cowlitz", "grant", "island", "lewis", "franklin", "chelan", "clallam",
                      "grays-harbor", "mason", "walla-walla", "stevens", "whitman", "douglas", "okanogan",
                      "jefferson", "kittitas", "klickitat", "pacific", "asotin", "adams",
-                     "skamania", "san-juan", "lincoln", "pend-oreille"],
+                     "skamania", "san-juan", "lincoln", "pend-oreille", "ferry", "wahkiakum"],
         "district_contests": "county",
     },
 }
@@ -131,6 +131,11 @@ DISTRICT_ADAPTER_LAYERS = {
     # Pend Oreille's Sacheen Lake levy reads SEWDST, DOR SEW2025 (layer 21;
     # see geo.js).
     "pend-oreille": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "HOSPDST", "SCHDST", "SEWDST"),
+    # Ferry's general scopes are all COUNTY, CD 5 or LD 7; its PUD No. 1 seat
+    # is COUNTY because DOR PUD2025 misses part of Inchelium (see geo.js).
+    "ferry": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "EMSDST"),
+    # Wahkiakum's Fire District 2 EMS levy reads FIRDST, DOR FIR2025 (layer 7).
+    "wahkiakum": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "FIRDST"),
 }
 
 
@@ -349,6 +354,14 @@ COUNTY_ELECTIONS_URLS = {
         # the page that links the general's local voters' pamphlet and sample
         # ballot; pendoreilleco.org redirects to pendoreille.gov).
         "pend-oreille": "https://www.pendoreille.gov/auditor/page/elections",
+        # Ferry County Auditor (200 text/html, 2026-10-08; the page carries the
+        # Auditor's elections links. The general's sample ballot is linked from
+        # the Auditor's public records page as ferry-county.com/SampleBallot.pdf).
+        "ferry": "https://www.ferry-county.com/departments/auditor/index.php",
+        # Wahkiakum County Auditor, Elections (200 text/html, 2026-10-08; links
+        # the general's sample ballot, DocumentCenter/View/3637, but on
+        # 2026-10-08 still linked the primary's VoteWA guide, e=898).
+        "wahkiakum": "https://www.co.wahkiakum.wa.us/419/Elections",
     },
 }
 

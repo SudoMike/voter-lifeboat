@@ -17,7 +17,7 @@ Elections:
 | id | Election | Status |
 |---|---|---|
 | `2026-08-04-primary` | August 4, 2026 Primary and Special Election | archived, served at `/washington-state/2026-08-04-primary` |
-| `2026-11-03-general` | November 3, 2026 General Election | active (`ACTIVE`); King, Snohomish, Pierce, Clark, Kitsap, Thurston, Yakima, Whatcom, Benton, Skagit, Cowlitz, Grant, Island, Lewis, Franklin, Chelan, Clallam, Grays Harbor, Mason, Walla Walla, Stevens, Whitman, Douglas, Jefferson, Kittitas, Asotin, Adams, Skamania, San Juan, Lincoln and Pend Oreille Counties at Full County Coverage, Spokane County at partial coverage (Stevens County PUD seat unresolvable), Okanogan County at partial coverage (Okanogan PUD and Ferry County PUD No. 1 seats unresolvable), Klickitat and Pacific Counties at partial coverage (District Court seats unresolvable), every other county a Statewide-Only Guide (5 Supreme Court contests, 3 initiatives) |
+| `2026-11-03-general` | November 3, 2026 General Election | active (`ACTIVE`); King, Snohomish, Pierce, Clark, Kitsap, Thurston, Yakima, Whatcom, Benton, Skagit, Cowlitz, Grant, Island, Lewis, Franklin, Chelan, Clallam, Grays Harbor, Mason, Walla Walla, Stevens, Whitman, Douglas, Jefferson, Kittitas, Asotin, Adams, Skamania, San Juan, Lincoln, Pend Oreille, Ferry and Wahkiakum Counties at Full County Coverage, Spokane County at partial coverage (Stevens County PUD seat unresolvable), Okanogan County at partial coverage (Okanogan PUD and Ferry County PUD No. 1 seats unresolvable), Klickitat and Pacific Counties at partial coverage (District Court seats unresolvable), every other county a Statewide-Only Guide (5 Supreme Court contests, 3 initiatives) |
 
 Every pipeline script takes `--election <id>`; without it the script uses the
 id in `elections/ACTIVE`. Outputs land in `data/final/<id>/` and the app copy
@@ -140,7 +140,7 @@ A declared non-King county (Snohomish, Spokane and Pierce, from #21; Clark,
 Kitsap and Thurston, from #22; Yakima, Whatcom, Benton, Skagit, Cowlitz and
 Grant, from #28; Island, Lewis, Franklin, Chelan, Clallam and Grays Harbor,
 from #29; Mason, Walla Walla, Stevens, Whitman, Douglas and Okanogan, from #30; Jefferson, Kittitas,
-Klickitat, Pacific, Asotin and Adams, from #31; Skamania, San Juan, Lincoln and Pend Oreille, from #32) ships its
+Klickitat, Pacific, Asotin and Adams, from #31; Skamania, San Juan, Lincoln, Pend Oreille, Ferry and Wahkiakum, from #32) ships its
 `interim/app-{contests,measures}.json`. Its candidates' `pamphlet_pages` come
 from its own dossiers' `type: pamphlet` citations (`pamphlet_refs.py`; edition
 ids are the package's `raw/*/<edition>.pdf.url` pointer names, such as
@@ -208,7 +208,7 @@ cowlitz and grant, shipped in #28, island, lewis, franklin, chelan,
 clallam and grays-harbor, shipped in #29, and mason, walla-walla,
 stevens, whitman, douglas and okanogan, shipped in #30, and jefferson,
 kittitas, klickitat, pacific, asotin and adams, shipped in #31, and
-skamania, san-juan, lincoln and pend-oreille, shipped in #32.
+skamania, san-juan, lincoln, pend-oreille, ferry and wahkiakum, shipped in #32.
 
 ## Election Facts
 
@@ -238,7 +238,7 @@ skamania, san-juan, lincoln and pend-oreille, shipped in #32.
   provenance is in the `.meta.json` siblings and the interview's
   `derived_from`. Intended measure axes: I-645 → `taxes`, `local-control`;
   I-1 → `parental-rights`; I-638 → `social`.
-- Coverage today: `coverage.statewide_complete: true` and thirty-five Supported
+- Coverage today: `coverage.statewide_complete: true` and thirty-seven Supported
   Counties: King at `full_county` (#16; 92 contests, 41 uncontested and
   information-only, 15 measures), Pierce at `full_county` and Spokane at
   `partial_county` (#21), Snohomish at `full_county` (shipped partial in
@@ -249,8 +249,9 @@ skamania, san-juan, lincoln and pend-oreille, shipped in #32.
   Stevens, Whitman and Douglas at `full_county` and Okanogan at
   `partial_county` (#30), and Jefferson, Kittitas, Asotin and Adams at
   `full_county` and Klickitat and Pacific at `partial_county` (#31), and
-  Skamania, San Juan, Lincoln and Pend Oreille at `full_county` (#32). 734
-  contests (5 statewide Supreme Court contests included) and 196 measures. Every other Washington address gets the
+  Skamania, San Juan, Lincoln, Pend Oreille, Ferry and Wahkiakum at
+  `full_county` (#32). 761
+  contests (5 statewide Supreme Court contests included) and 198 measures. Every other Washington address gets the
   Statewide-Only Guide. `docs/county-wave-playbook.md` is the procedure for
   taking a county from research to shipped.
 - District (congressional and legislative) contests are county-owned
