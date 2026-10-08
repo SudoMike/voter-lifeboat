@@ -8,14 +8,26 @@ const root = path.resolve(new URL('..', import.meta.url).pathname)
 const cacheDir = path.join(root, 'data/.cache/pdf')
 
 function usage() {
-  console.error('usage: node pipeline/extract_pdf_text.mjs <county-id>')
+  console.error('usage: node pipeline/extract_pdf_text.mjs <county-id> [--election <id>]')
   process.exit(2)
 }
 
-const county = process.argv[2]
+// --election <id> selects the election package; default is the one-line
+// data/washington-state/elections/ACTIVE file (same rule as pipeline/election.py).
+const args = process.argv.slice(2)
+let electionId = null
+const electionAt = args.indexOf('--election')
+if (electionAt !== -1) {
+  electionId = args[electionAt + 1]
+  if (!electionId) usage()
+  args.splice(electionAt, 2)
+}
+const county = args[0]
 if (!county) usage()
 
-const countyRoot = path.join(root, 'data/washington-state/counties', county)
+const electionsRoot = path.join(root, 'data/washington-state/elections')
+electionId ||= (await fs.readFile(path.join(electionsRoot, 'ACTIVE'), 'utf8')).trim()
+const countyRoot = path.join(electionsRoot, electionId, 'counties', county)
 const outDir = path.join(countyRoot, 'interim/pdf-text')
 
 async function walk(dir) {

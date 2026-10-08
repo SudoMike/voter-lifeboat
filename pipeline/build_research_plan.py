@@ -3,23 +3,24 @@
 Depth rule: 3+ candidates are ``deep``, 2 are ``light``, and uncontested
 single-candidate contests are omitted because everyone advances.
 
-Pass a county slug, ``statewide``, or ``--all`` (the default).
+Pass a county slug, ``statewide``, or ``--all`` (the default), plus an optional
+``--election <id>`` (default: the active election).
 """
 
 import argparse
 import json
-from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+import election
+from election import ROOT
 
 
-def interim_for(package):
-    base = ROOT / "data/washington-state"
+def interim_for(package, election_id=None):
+    base = election.Election(election_id).root
     return base / ("statewide/interim" if package == "statewide" else f"counties/{package}/interim")
 
 
-def build(package):
-    interim = interim_for(package)
+def build(package, election_id=None):
+    interim = interim_for(package, election_id)
     rel = interim.relative_to(ROOT)
     contests = json.loads((interim / "contests.json").read_text())["contests"]
     measures = json.loads((interim / "measures.json").read_text())["measures"]
@@ -56,17 +57,19 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("package", nargs="?")
     parser.add_argument("--all", action="store_true", help="build every normalized package")
+    election.add_election_arg(parser)
     args = parser.parse_args()
+    e = election.Election(args.election)
     if args.all and args.package:
         parser.error("provide either a package or --all")
     if args.all or args.package is None:
         packages = sorted(path.parent.parent.name for path in
-                          (ROOT / "data/washington-state/counties").glob("*/interim/contests.json"))
+                          e.counties.glob("*/interim/contests.json"))
         packages.append("statewide")
     else:
         packages = [args.package]
     for package in packages:
-        build(package)
+        build(package, e.id)
 
 
 if __name__ == "__main__":

@@ -1,14 +1,16 @@
 """Stage: raw -> interim. Parse official candidate CSVs and the eid=54 contest pages.
 
-Inputs:
-  data/washington-state/counties/king/raw/kce/2026-primary-candidates.csv
-  data/washington-state/counties/king/raw/kce/2026-candidates.csv
-  data/washington-state/counties/king/raw/kce/candidates-eid54.html
-  data/washington-state/counties/king/raw/kce/ballotmeasures-eid54.html
+Usage: python3 pipeline/parse_candidates.py [--election <id>]
+
+Inputs (K = data/washington-state/elections/<id>/counties/king):
+  K/raw/kce/2026-primary-candidates.csv
+  K/raw/kce/2026-candidates.csv
+  K/raw/kce/candidates-eid54.html
+  K/raw/kce/ballotmeasures-eid54.html
 
 Outputs:
-  data/washington-state/counties/king/interim/contests.json
-  data/washington-state/counties/king/interim/measures.json
+  K/interim/contests.json
+  K/interim/measures.json
 
 Every output record carries `derived_from` pointing at its raw sources.
 """
@@ -17,10 +19,11 @@ import csv
 import json
 import re
 from html import unescape
-from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-KING = ROOT / "data/washington-state/counties/king"
+import election
+from election import rel
+
+KING = election.Election(election.from_argv()).county("king")
 RAW = KING / "raw/kce"
 OUT = KING / "interim"
 OUT.mkdir(parents=True, exist_ok=True)
@@ -144,8 +147,8 @@ while i < len(m_lines) - 1:
 
 out = {
     "derived_from": [
-        "data/washington-state/counties/king/raw/kce/candidates-eid54.html",
-        "data/washington-state/counties/king/raw/kce/2026-primary-candidates.csv",
+        rel(RAW / "candidates-eid54.html"),
+        rel(RAW / "2026-primary-candidates.csv"),
     ],
     "script": "pipeline/parse_candidates.py",
     "election": {"name": "August 4, 2026 Primary and Special Election", "kce_eid": 54},
@@ -154,7 +157,7 @@ out = {
 (OUT / "contests.json").write_text(json.dumps(out, indent=2))
 
 mout = {
-    "derived_from": ["data/washington-state/counties/king/raw/kce/ballotmeasures-eid54.html"],
+    "derived_from": [rel(RAW / "ballotmeasures-eid54.html")],
     "script": "pipeline/parse_candidates.py",
     "measures": measures,
 }

@@ -1,5 +1,7 @@
 """Stage: QA. Audit dossier frontmatter for one or every research package.
 
+Usage: python3 pipeline/verify_dossiers.py [<package> | --all] [--election <id>]
+
 Research plans are incremental work queues, so untouched contests/measures are
 reported but do not fail the command. A started contest directory must contain
 its overview and every planned candidate dossier.
@@ -11,10 +13,8 @@ import re
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-WA = ROOT / "data/washington-state"
-STATE = WA / "statewide"
-COUNTIES = WA / "counties"
+import election
+from election import ROOT
 
 
 def frontmatter(path: Path):
@@ -22,8 +22,8 @@ def frontmatter(path: Path):
     return match.group(1) if match else None
 
 
-def package_path(name: str) -> Path:
-    return STATE if name == "statewide" else COUNTIES / name
+def package_path(e: election.Election, name: str) -> Path:
+    return e.state if name == "statewide" else e.county(name)
 
 
 def audit_package(package: Path):
@@ -95,8 +95,10 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("package", nargs="?", default="king", help="county id, statewide, or --all")
     parser.add_argument("--all", action="store_true", help="audit every package with a research plan")
+    election.add_election_arg(parser)
     args = parser.parse_args()
-    packages = [STATE] + sorted(path for path in COUNTIES.iterdir() if path.is_dir()) if args.all else [package_path(args.package)]
+    e = election.Election(args.election)
+    packages = e.packages() if args.all else [package_path(e, args.package)]
     failed = False
     for package in packages:
         if not (package / "interim/research-plan.json").exists():

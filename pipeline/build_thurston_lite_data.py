@@ -2,10 +2,12 @@
 
 import json
 import re
-from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-COUNTY = ROOT / "data/washington-state/counties/thurston"
+import election
+from election import rel
+
+# Usage: python3 pipeline/build_thurston_lite_data.py [--election <id>]
+COUNTY = election.Election(election.from_argv()).county("thurston")
 OUT = COUNTY / "interim"
 
 
@@ -179,8 +181,8 @@ OUT.mkdir(parents=True, exist_ok=True)
     "county": "thurston",
     "script": "pipeline/build_thurston_lite_data.py",
     "derived_from": [
-        "data/washington-state/counties/thurston/interim/pdf-text/sample-ballot.txt",
-        "data/washington-state/counties/thurston/interim/pdf-text/primary-candidates-ballot-order.txt",
+        rel(COUNTY / "interim/pdf-text/sample-ballot.txt"),
+        rel(COUNTY / "interim/pdf-text/primary-candidates-ballot-order.txt"),
     ],
     "coverage": "full_county",
     "contests": contests,
@@ -188,7 +190,7 @@ OUT.mkdir(parents=True, exist_ok=True)
 (OUT / "app-measures.json").write_text(json.dumps({
     "county": "thurston",
     "script": "pipeline/build_thurston_lite_data.py",
-    "derived_from": ["data/washington-state/counties/thurston/interim/pdf-text/sample-ballot.txt"],
+    "derived_from": [rel(COUNTY / "interim/pdf-text/sample-ballot.txt")],
     "coverage": "full_county",
     "measures": [
         measure("S.E. Thurston Fire Authority", "Proposition No. 1", "Bonds to Improve Fire Stations and Acquire Apparatus", dist_scope("FIRE_AUTH", "S.E. Thurston Fire Authority"), 66, "Authorizes bonds to renovate and improve Yelm, Lake Lawrence, Rainier, and McIntosh Ridge fire stations and acquire firefighting and emergency response apparatus.", "Authorizes up to $21,010,000 in general obligation bonds maturing within 25 years, repaid through annual excess property taxes."),

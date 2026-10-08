@@ -1,17 +1,19 @@
 import json
 import unittest
-from pathlib import Path
 
 import build_research_plan
+import election
 import normalize_research_inputs
 
 
-ROOT = Path(__file__).resolve().parent.parent
+# These assertions pin the Aug 4 primary's counts, so they read that package
+# explicitly rather than whichever election is active.
+PRIMARY = election.Election("2026-08-04-primary")
 
 
 class ResearchInputTest(unittest.TestCase):
     def test_all_counties_have_normalized_king_compatible_shape(self):
-        packages = list((ROOT / "data/washington-state/counties").glob("*/interim/contests.json"))
+        packages = list(PRIMARY.counties.glob("*/interim/contests.json"))
         self.assertEqual(39, len(packages))
         for path in packages:
             for contest in json.loads(path.read_text())["contests"]:
@@ -20,7 +22,7 @@ class ResearchInputTest(unittest.TestCase):
                     self.assertTrue({"slug", "name", "party_preference"} <= candidate.keys())
 
     def test_statewide_is_deduped_district_races(self):
-        path = ROOT / "data/washington-state/statewide/interim/contests.json"
+        path = PRIMARY.state / "interim/contests.json"
         contests = json.loads(path.read_text())["contests"]
         self.assertEqual(94, len(contests))
         self.assertEqual(276, sum(len(c["candidates"]) for c in contests))
@@ -46,8 +48,8 @@ class ResearchInputTest(unittest.TestCase):
         self.assertEqual(["alpha"], [c["slug"] for c in first["candidates"]])
 
     def test_research_plan_omits_uncontested(self):
-        build_research_plan.build("statewide")
-        plan = json.loads((ROOT / "data/washington-state/statewide/interim/research-plan.json").read_text())
+        build_research_plan.build("statewide", PRIMARY.id)
+        plan = json.loads((PRIMARY.state / "interim/research-plan.json").read_text())
         self.assertTrue(all(len(c["candidates"]) >= 2 for c in plan["contests"]))
         self.assertTrue(all(c["depth"] == ("deep" if len(c["candidates"]) >= 3 else "light")
                             for c in plan["contests"]))

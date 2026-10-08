@@ -16,17 +16,17 @@ the electorate served (federal/state use fixed district sizes; local races
 use an approximate county population, discounted for sub-county districts).
 Populations are coarse ordering weights, not published figures.
 
-Input:  data/final/app-data.json
-Output: data/final/dossier-batches.json
+Usage:  python3 pipeline/build_dossier_batches.py [--election <id>]
+Input:  data/final/<id>/app-data.json
+Output: data/final/<id>/dossier-batches.json
 """
 
+import argparse
 import json
 import re
-from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-APP_DATA = ROOT / "data/final/app-data.json"
-OUT = ROOT / "data/final/dossier-batches.json"
+import election
+from election import rel
 
 BATCH_SIZE = 50
 FEDERAL_REACH = 800_000   # ~1 congressional district
@@ -65,8 +65,10 @@ def fed_state_key(c):
     return None
 
 
-def build():
-    d = json.load(open(APP_DATA))
+def build(election_id=None):
+    final = election.Election(election_id).final
+    app_data = final / "app-data.json"
+    d = json.load(open(app_data))
     units = {}
     for c in d["contests"]:
         if c["owner"] in ("king", "statewide"):
@@ -122,7 +124,7 @@ def build():
         batches.append((cur, cur_n))
 
     out = {
-        "derived_from": ["data/final/app-data.json"],
+        "derived_from": [rel(app_data)],
         "script": "pipeline/build_dossier_batches.py",
         "batch_size_target": BATCH_SIZE,
         "total_units": len(ordered),
@@ -145,7 +147,7 @@ def build():
             for i, (b, n) in enumerate(batches, 1)
         ],
     }
-    OUT.write_text(json.dumps(out, indent=2))
+    (final / "dossier-batches.json").write_text(json.dumps(out, indent=2))
     print(f"units: {out['total_units']}  dossiers: {out['total_dossiers']}  batches: {out['total_batches']}")
     for bt in out["batches"]:
         shared = sum(1 for u in bt["units"] if u["kind"] == "shared")
@@ -153,4 +155,6 @@ def build():
 
 
 if __name__ == "__main__":
-    build()
+    parser = argparse.ArgumentParser()
+    election.add_election_arg(parser)
+    build(parser.parse_args().election)
