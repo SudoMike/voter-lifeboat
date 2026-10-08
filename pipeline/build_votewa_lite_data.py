@@ -1565,6 +1565,56 @@ ELECTION_MEASURES = {
               "https://voter.votewa.gov/elections/measure.ashx?m=7429&e=899&la=en&c=29",
               pages=(21,)),
         ]},
+        # Skamania (#32): no local measures. The Skamania County Auditor's general
+        # sample ballot and local voters' pamphlet (counties/skamania/raw/skamania/
+        # {sample-ballot,local-voters-pamphlet}.pdf.url, linked from
+        # skamaniacounty.gov/departments-offices/auditor/elections/current-election)
+        # list only the three statewide measures; the pamphlet names the
+        # participating jurisdictions as the State, Skamania County and Skamania
+        # County PUD only, and VoteWA's online guide for county 30
+        # (raw/votewa/voter-guide/guide.json.url) lists no local measure. The
+        # sample ballot is one ballot style for the whole county.
+        # Overrides (checked against the sample ballot):
+        # - Commissioner No. 3: Skamania is a non-charter county under 400,000,
+        #   so commissioners are nominated by district (RCW 36.32.040) and
+        #   elected by the voters of the whole county (RCW 36.32.050(1)); the
+        #   sample ballot prints 'Skamania County Commissioner District No. 3'
+        #   under 'ONLY REGISTERED VOTERS IN COUNTY ARE ELIGIBLE'. SOS precinct
+        #   exports: 2022 Commissioner #3 and 2020/2024 Commissioner #1 and #2 on
+        #   all 23 precincts, while the 2026 primary's District No. 3 race
+        #   reported 8 of 23 units (raw/skamania/sos-results-*.csv.url,
+        #   votewa-2026-08-04-primary-results.json.url). It keeps the primary's
+        #   contest name so its slug matches the primary's.
+        # - District Court: one county-wide judge (2022: on all 23 precincts).
+        # - Public Utility District No. 1 of Skamania County covers the whole
+        #   county (WA DOR PUD2025, layer 17: one Skamania polygon, DISTATTRIB
+        #   '1', area 9,058,178,385 equal to the sum of Skamania's six SCH2025
+        #   polygons; '1' at Stevenson, North Bonneville, Carson and Underwood)
+        #   and the whole PUD elects each commissioner in the general (RCW
+        #   54.12.010(3); the 2020 Commissioner #3, 2022 #2 and 2024 #1 races were
+        #   on all 23 precincts). Scoped COUNTY.
+        "skamania": {
+            "overrides": {
+                ("COUNTY", "COMMISSIONER NO. 3"): (
+                    "County", "Skamania County Commissioner District 3", "Commissioner No. 3", ("COUNTY", None)),
+                ("COUNTY", "DISTRICT COURT JUDGE"): (
+                    "Judicial", "Skamania County District Court", "District Court Judge", ("COUNTY", None)),
+                ("PUBLIC UTILITY DISTRICT", "COMMISSIONER #3"): (
+                    "PublicUtility", "Public Utility District No. 1 of Skamania County Commissioner District 3",
+                    "Commissioner #3", ("COUNTY", None)),
+            },
+            "measures": [],
+            "extra_notes": [
+                "No local measures on the November 3, 2026 ballot: the Skamania County sample ballot "
+                "(https://www.skamaniacounty.gov/home/showpublisheddocument/19606/639256882368200000) and local voters' "
+                "pamphlet (https://www.skamaniacounty.gov/home/showpublisheddocument/19600/639253463106470000) list only "
+                "the statewide measures IP26-645, IL26-001 and IL26-638, and VoteWA's online voters' guide for county 30 "
+                "lists no local measure.",
+                "Skamania County Commissioner District 3 is nominated by district and elected county-wide in the general "
+                "(RCW 36.32.040, RCW 36.32.050(1)); Public Utility District No. 1 of Skamania County covers the whole county "
+                "(WA DOR PUD2025, layer 17) and every PUD voter elects each commissioner (RCW 54.12.010(3)). Both are scoped COUNTY.",
+            ],
+        },
         # Stevens (#30). Stevens County's own site (stevenscountywa.gov) answers
         # 403 to scripted requests, so contests and measures were checked against
         # VoteWA's online voters' guide for county 33 (voterguide.ashx?e=899&c=33,

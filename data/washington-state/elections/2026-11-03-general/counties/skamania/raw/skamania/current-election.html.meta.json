@@ -1,0 +1,13 @@
+{
+  "url": "https://www.skamaniacounty.gov/departments-offices/auditor/elections/current-election",
+  "retrieved_at": "2026-10-08",
+  "method": "curl -sSL --compressed with browser request headers (Chrome User-Agent, Accept, Accept-Language, Sec-Fetch-*): skamaniacounty.gov's Akamai front answers 403 to a bare scripted User-Agent and 200 to these headers",
+  "stage": "raw",
+  "source_type": "official-election-material",
+  "tier": 1,
+  "outlet": "Skamania County Auditor, Elections, Current Election page",
+  "cache_file": "data/.cache/skamania/county/current-election.html",
+  "bytes": 155717,
+  "sha256": "72436d2740cf7db854e37dbc0875437d8f54114d269a0c968c93f26351099b91",
+  "notes": "HTTP 200 with browser headers (403 to a bare scripted User-Agent). Links 'Sample Ballot - November 3, 2026 General Election' (showpublisheddocument/19606), 'Online Voters' Guide - November 3, 2026 General Election' (voter.votewa.gov/GenericVoterGuide.aspx?e=899&c=30), 'Local Voters' Pamphlet' (showpublisheddocument/19600), a Logic and Accuracy Test notice (19608) and election results (app.enhancedvoting.com/results/public/skamania-county-wa/elections/20261103). No measure resolution or local-measure page is linked. The page is dynamic, so the sha256 pins this fetch only."
+}
