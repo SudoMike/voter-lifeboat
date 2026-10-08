@@ -1,0 +1,69 @@
+{
+  "county": "wahkiakum",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/wahkiakum/raw/votewa/candidate-list.csv.url",
+    "https://www.co.wahkiakum.wa.us/DocumentCenter/View/3637"
+  ],
+  "coverage": "full_county",
+  "notes": [
+    "Wahkiakum County prints no local voters' pamphlet for the general and its VoteWA online guide carries no county races or local measures; the sample ballot (co.wahkiakum.wa.us DocumentCenter 3637) is the official listing.",
+    "Wahkiakum County Commissioner District 3 is nominated by district and elected county-wide in the general (RCW 36.32.040, 36.32.050(1); SOS 2022 and 2024 general precinct results: on all 11 precincts).",
+    "Public Utility District No. 1 of Wahkiakum County covers the whole county (WA DOR PUD2025 has one Wahkiakum polygon) and elects its commissioners PUD-wide in the general (RCW 54.12.010(3)).",
+    "The Fire Protection District No. 2 (Skamokawa) measure is scoped FIRDST '2' (WA DOR FIR2025, layer 7, DISTATTRIB)."
+  ],
+  "measures": [
+    {
+      "slug": "wahkiakum-wahkiakum-county-ballot-measure",
+      "owner": "wahkiakum",
+      "jurisdiction": "Wahkiakum County",
+      "proposition": "Ballot Measure",
+      "title": "Countywide Emergency Medical Services Levy - Replacement of Existing Levy",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "wahkiakum"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Renews the county's six-year emergency medical services levy (Resolution No. 87-26, RCW 84.52.069) for collection 2027 through 2032, funding EMS operational and equipment costs. Qualifying seniors, veterans and disabled persons can be exempt.",
+      "cost_line": "Up to $0.40 per $1,000 of assessed value a year for six years, the same maximum voters approved in 2020 (the 2025 rate was about $0.30).",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.co.wahkiakum.wa.us/DocumentCenter/View/3637"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "wahkiakum-wahkiakum-county-fire-protection-district-no-2-skamokawa-ballot-measure",
+      "owner": "wahkiakum",
+      "jurisdiction": "Wahkiakum County Fire Protection District No. 2 (Skamokawa)",
+      "proposition": "Ballot Measure",
+      "title": "Emergency Medical Services Levy - Replacement of Existing Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "wahkiakum",
+        "layer": "FIRDST",
+        "value": "2"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Replaces Fire District 2's existing emergency medical services levy with a ten-year levy (Resolution #2026-01, RCW 84.52.069) collected from 2027, funding EMS operational and equipment costs; increases in years two through ten are limited under chapter 84.55 RCW and linked to the Consumer Price Index.",
+      "cost_line": "Up to $1.00 per $1,000 of assessed value a year for ten years starting with 2027 collection.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.co.wahkiakum.wa.us/DocumentCenter/View/3637"
+          ]
+        }
+      }
+    }
+  ]
+}
