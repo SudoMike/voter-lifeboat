@@ -25,7 +25,7 @@ August statewide measure.
 Primary sources:
 
 - VoteWA PRIMARY 2026 Candidate List:
-  `data/washington-state/statewide/raw/votewa-primary-2026-candidate-list.url`
+  `data/washington-state/elections/2026-08-04-primary/statewide/raw/votewa-primary-2026-candidate-list.url`
 - Washington Secretary of State, Current Election Information:
   https://www.sos.wa.gov/elections/voters/helpful-information/current-election-information
 - Washington Secretary of State, 2026 Primary Election Voters' Guide:
