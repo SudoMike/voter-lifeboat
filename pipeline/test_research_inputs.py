@@ -115,7 +115,7 @@ class HandBuiltStatewidePackageTest(unittest.TestCase):
     def tearDown(self):
         self._tmp.cleanup()
 
-    def add_county(self, name, source_county="adams"):
+    def add_county(self, name, source_county="garfield"):
         """Give the temp general a county with VoteWA-lite app contests."""
         source = PRIMARY.county(source_county) / "interim/app-contests.json"
         target = self.root / "counties" / name / "interim/app-contests.json"
@@ -134,18 +134,18 @@ class HandBuiltStatewidePackageTest(unittest.TestCase):
     # legislative contests are county-owned; the statewide package holds only
     # Statewide Contests, so county app-contests.json never reaches it.
     def test_county_district_contests_never_reach_the_general_statewide_file(self):
-        self.add_county("adams")
+        self.add_county("garfield")
         normalize_research_inputs.normalize(GENERAL.id, package_root=self.root)
         real = GENERAL.state / "interim"
         self.assertEqual((real / "contests.json").read_text(), self.contests.read_text())
         self.assertEqual((real / "measures.json").read_text(), self.measures.read_text())
-        county = read(self.root / "counties/adams/interim/contests.json")["contests"]
+        county = read(self.root / "counties/garfield/interim/contests.json")["contests"]
         self.assertTrue(any(c["category"] in {"Federal", "State"} for c in county))
 
     def test_general_without_statewide_files_gets_none_written(self):
         self.contests.unlink()
         self.measures.unlink()
-        self.add_county("adams")
+        self.add_county("garfield")
         normalize_research_inputs.normalize(GENERAL.id, package_root=self.root)
         self.assertFalse(self.contests.exists())
         self.assertFalse(self.measures.exists())
@@ -161,8 +161,8 @@ class HandBuiltStatewidePackageTest(unittest.TestCase):
             self.assertEqual(before, {p: p.read_text() for p in root.glob("**/interim/*.json")})
 
     def test_refuses_to_overwrite_a_county_file_it_did_not_write(self):
-        self.add_county("adams")
-        foreign = self.root / "counties/adams/interim/contests.json"
+        self.add_county("garfield")
+        foreign = self.root / "counties/garfield/interim/contests.json"
         foreign.write_text(json.dumps({"script": "pipeline/parse_candidates.py", "contests": []}))
         before = foreign.read_text()
         with self.assertRaises(SystemExit):

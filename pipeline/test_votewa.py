@@ -121,7 +121,7 @@ class ParseTest(unittest.TestCase):
         self.assertEqual(("KCDISTCRT", "YES"), contests[0]["scope"])
 
     def test_general_without_curated_measures_says_so(self):
-        cfg, curated = bv.config_for("adams", GENERAL.id)
+        cfg, curated = bv.config_for("garfield", GENERAL.id)
         self.assertFalse(curated)
         self.assertEqual([], cfg["measures"])
         self.assertIn("not curated", votewa.MEASURES_NOT_CURATED)
