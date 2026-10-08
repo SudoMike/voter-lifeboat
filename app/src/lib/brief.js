@@ -95,6 +95,8 @@ export function buildBrief(data, context, answers, contests, measures, shareUrl,
       if (urls.length) L.push(`Sources: ${urls.join(' · ')}`)
       const pam = pamphletLink(c.pamphlet_pages, contest.owner, data.election?.id)
       if (pam) L.push(`Official pamphlet statement: ${pam}`)
+      // The Candidate Photo, verified by the pipeline; the AI Report hotlinks it.
+      if (c.photo?.url) L.push(`Photo: ${c.photo.url} (from ${c.photo.page || c.photo.url})`)
     }
     L.push('')
   }
@@ -154,7 +156,7 @@ Search the web for every serious contender above: news coverage, endorsements, d
 
 ## REPORT STRUCTURE — one self-contained HTML file
 Match the REFERENCE DESIGN at the bottom of these instructions: a warm editorial layout — cream page, deep-navy masthead with decorative ballot-bubble circles, big tightly-tracked headlines, rounded card sections, and a candidate portrait beside every race. Reuse the reference stylesheet as your <style> and keep its class names; fill it with my actual races.
-"Self-contained" means no external stylesheets, scripts, or web fonts (use the system font stack in the reference). Images ARE wanted, but every image MUST be embedded as a base64 data: URI — never hotlink a remote URL — so the single file works offline.
+"Self-contained" means no external stylesheets, scripts, or web fonts (use the system font stack in the reference). Candidate photos are the one exception: hotlink them from the "Photo:" URLs given in this brief, which Voter Lifeboat verified; every other image is inline SVG.
 1. Masthead: title, election and date, my districts.
 2. The no-web-access banner, if that applies.
 3. "Verdicts at a glance", subtitled "What I recommend for each contested race": one small chip per race and measure — race, your pick, verdict color — each anchor-linked to its section below. Directly above the chips, a one-line legend spelling out what the two colors mean.
@@ -164,8 +166,9 @@ Match the REFERENCE DESIGN at the bottom of these instructions: a warm editorial
 
 ## CANDIDATE PHOTOS — include a portrait for EVERY race
 - Lay each race out as two columns: text on the left, a portrait of MY recommended candidate on the right (it stacks above the text on narrow screens). This is the feature I care most about — do not skip it.
-- Find a real photo of that candidate from an official, campaign, party, or government page; fetch it and embed it as a base64 data: URI so the file stays self-contained. Add a small caption crediting the source page. A photo is an identity aid, never evidence of qualification — say so once in the glance subtitle and once in the footer.
-- If you cannot find or reliably embed a real photo, DO NOT leave a gap: render the fallback "initials portrait" from the reference skeleton — an inline SVG in the same frame, navy background with the candidate's initials. For a ballot measure, use a simple inline-SVG illustration (see the reference measure example) instead of a portrait.
+- When this brief gives a "Photo:" line for your recommended candidate, use that URL as the img src (loading="lazy", referrerpolicy="no-referrer", alt = the candidate's name) and credit the "(from …)" page in the figcaption. Do not search for a different photo when one is given. A photo is an identity aid, never evidence of qualification — say so once in the glance subtitle and once in the footer.
+- When no "Photo:" line exists for that candidate, you may look for one on an official, campaign, party, or government page and link it the same way, with a caption crediting the page. Never use a news photo, a logo, or a group shot.
+- If you cannot find a reliable photo, DO NOT leave a gap: render the fallback "initials portrait" from the reference skeleton — an inline SVG in the same frame, navy background with the candidate's initials. For a ballot measure, use a simple inline-SVG illustration (see the reference measure example) instead of a portrait.
 - The frame gets rounded corners and an offset shadow tinted to the race's verdict color; the reference CSS handles this via .candidate-photo — just add the clear/nuanced class to the race card.
 
 ## EACH RACE SECTION MUST CONTAIN
@@ -474,8 +477,8 @@ footer ul{margin:0;padding-left:1.2em}
           <!-- if your pick differs from the brief: <div class="difference"><strong>Where I differ from the brief:</strong> [why].</div> -->
         </div>
         <figure class="candidate-photo">
-          <img src="data:image/jpeg;base64,[EMBED REAL PHOTO HERE]" alt="[name]" width="250" height="282">
-          <figcaption>Photo: <a href="[source page]" target="_blank" rel="noopener noreferrer">[source name]</a></figcaption>
+          <img src="[Photo URL from the brief]" alt="[name]" width="250" height="282" loading="lazy" referrerpolicy="no-referrer">
+          <figcaption>Photo: <a href="[from page]" target="_blank" rel="noopener noreferrer">[from page's site]</a></figcaption>
         </figure>
         <!-- NO reliable photo? Replace the <img> above with this initials-portrait fallback:
         <svg viewBox="0 0 800 800" width="250" height="282" role="img" aria-label="[name]" style="display:block;border-radius:26px">
@@ -549,7 +552,7 @@ footer ul{margin:0;padding-left:1.2em}
   <footer>
     <div class="footer-grid">
       <section><h2>Sources consulted</h2><ul><li>[sources].</li></ul></section>
-      <section><h2>Use this correctly</h2><p>Verify the linked sources before voting. This report is an argument, not an authority: the vote is mine, not a tool's.</p><p>Photos were embedded from official, campaign, party, or government pages where a clear source was available. No photo was used as evidence of qualification.</p></section>
+      <section><h2>Use this correctly</h2><p>Verify the linked sources before voting. This report is an argument, not an authority: the vote is mine, not a tool's.</p><p>Photos are linked from the official, campaign, party, or government pages listed in the brief; each caption names its source. No photo was used as evidence of qualification.</p></section>
     </div>
     <p class="disclaimer">Regenerate the underlying Voter Lifeboat brief: <a class="regenerate" href="[regenerate link from the top of this brief]">[link]</a></p>
   </footer>

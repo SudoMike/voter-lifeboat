@@ -2094,5 +2094,44 @@ class GeneralRefutationsAppliedTest(unittest.TestCase):
         self.assertEqual({"upheld": 2315, "adjust": 204, "refuted": 24, "missing_added": 31, "missing_dropped_low": 12}, stats)
 
 
+class CandidatePhotosTest(unittest.TestCase):
+    """Issue #33: a candidate's optional Candidate Photo ships as
+    {url, page, kind} from its dossier's photo block; the key is absent,
+    never null, for a candidate without one."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.app = read(GENERAL.final / "app-data.json")
+        cls.candidates = [
+            (contest["slug"], cand) for contest in cls.app["contests"] for cand in contest["candidates"]
+        ]
+
+    def test_every_photo_is_well_formed(self):
+        photos = [(slug, cand["photo"]) for slug, cand in self.candidates if "photo" in cand]
+        self.assertTrue(photos, "no candidate in the general carries a Candidate Photo")
+        for slug, photo in photos:
+            self.assertEqual({"url", "page", "kind"}, set(photo), slug)
+            self.assertTrue(photo["url"].startswith("https://"), (slug, photo["url"]))
+            self.assertTrue(photo["page"].startswith("https://"), (slug, photo["page"]))
+            self.assertIn(photo["kind"], ("pamphlet", "government", "campaign-website", "other"), slug)
+
+    def test_no_candidate_ships_a_null_photo(self):
+        for slug, cand in self.candidates:
+            if "photo" in cand:
+                self.assertIsInstance(cand["photo"], dict, (slug, cand["slug"]))
+
+    def test_hand_filled_statewide_photo_ships(self):
+        melody = next(
+            cand for slug, cand in self.candidates
+            if slug == "justice-position-no-1-supreme-court" and cand["slug"] == "colleen-melody"
+        )
+        self.assertEqual(
+            {"url": "https://www.courts.wa.gov/images/JusticeMelody2025.png",
+             "page": "https://www.courts.wa.gov/appellate_trial_courts/SupremeCourt/?fa=supremecourt.justices",
+             "kind": "government"},
+            melody["photo"],
+        )
+
+
 if __name__ == "__main__":
     unittest.main()

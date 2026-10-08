@@ -42,6 +42,7 @@ import json
 import re
 import subprocess
 
+import dossier_photo
 import election
 import pamphlet_refs
 import shared_contests
@@ -162,6 +163,9 @@ def apply_scoring(contest, scored, dossier_slug=None):
         candidate["sources"] = parse_sources(
             dossier_slug or scored["contest_slug"], candidate["slug"]
         )
+        photo = parse_photo(dossier_slug or scored["contest_slug"], candidate["slug"])
+        if photo:
+            candidate["photo"] = photo
     contest["office_does"] = scored.get("office_does")
     contest["race_blurb"] = scored.get("race_blurb")
     return contest
@@ -196,9 +200,27 @@ def shared_score_index(all_scores):
     return result
 
 
+def dossier_file(contest_slug: str, cand_slug: str):
+    """The dossier for a candidate, wherever its package keeps it, or None."""
+    return next((d / contest_slug / f"{cand_slug}.md" for d in DOSSIER_DIRS if (d / contest_slug / f"{cand_slug}.md").exists()), None)
+
+
+def parse_photo(contest_slug: str, cand_slug: str):
+    """The Candidate Photo ``{url, page, kind}`` of a dossier, or None when
+    the dossier has none (the app shows an Initials Portrait). An invalid
+    block is a verify_dossiers.py error and ships nothing."""
+    f = dossier_file(contest_slug, cand_slug)
+    if f is None:
+        return None
+    fm = dossier_photo.frontmatter(f.read_text())
+    if fm is None:
+        return None
+    return dossier_photo.shipped_photo(dossier_photo.parse_photo_block(fm))
+
+
 def parse_sources(contest_slug: str, cand_slug: str):
     """Parse the frontmatter sources list of a dossier into dicts."""
-    f = next((d / contest_slug / f"{cand_slug}.md" for d in DOSSIER_DIRS if (d / contest_slug / f"{cand_slug}.md").exists()), None)
+    f = dossier_file(contest_slug, cand_slug)
     if f is None:
         return []
     fm_m = re.match(r"^---\n(.*?)\n---", f.read_text(), re.S)
@@ -210,6 +232,8 @@ def parse_sources(contest_slug: str, cand_slug: str):
         return []
     out, cur = [], None
     for line in m.group(1).split("\n"):
+        if line and not line[0].isspace():
+            break  # the next top-level key (e.g. photo:) ends the sources list
         if re.match(r"\s*-\s+id:", line):
             if cur:
                 out.append(cur)
@@ -266,7 +290,7 @@ def assembled_candidates(con, sc, pamphlet_pages):
     cands = []
     for c in con["candidates"]:
         s = scored_by_slug[c["slug"]]
-        cands.append({
+        cand = {
             "slug": c["slug"],
             "name": c["name"],
             "party": c.get("party_preference"),
@@ -279,7 +303,13 @@ def assembled_candidates(con, sc, pamphlet_pages):
             "highlights": s.get("highlights", []),
             "scores": s.get("scores", {}),
             "sources": parse_sources(con["slug"], c["slug"]),
-        })
+        }
+        # The Candidate Photo is optional end to end: the key is present only
+        # when the dossier carries a valid block (issue #33).
+        photo = parse_photo(con["slug"], c["slug"])
+        if photo:
+            cand["photo"] = photo
+        cands.append(cand)
     cands.sort(key=lambda x: (x["ballot_order"] or 99))
     return cands
 

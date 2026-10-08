@@ -138,6 +138,11 @@ sources:
     outlet: The Spokesman-Review (July 10, 2026)
     url: https://www.spokesman.com/stories/2026/jul/10/spokane-native-colleen-melody-seeks-to-retain-supr/
     accessed: 2026-07-16
+photo:
+  url: https://www.courts.wa.gov/images/JusticeMelody2025.png
+  page: https://www.courts.wa.gov/appellate_trial_courts/SupremeCourt/?fa=supremecourt.justices
+  kind: government
+
 ---
 
 ## Background

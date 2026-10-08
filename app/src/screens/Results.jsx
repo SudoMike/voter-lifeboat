@@ -32,6 +32,7 @@ import {
 import { copyText } from '../lib/clipboard.js'
 import { postReport, shouldRecordReport } from '../lib/reports.js'
 import GitHubLink from './GitHubLink.jsx'
+import CandidatePhoto from './CandidatePhoto.jsx'
 
 const EVIDENCE = {
   rich: { marks: '◆◆◆', cls: 'evidence--rich', label: 'Rich record' },
@@ -247,6 +248,10 @@ function MarkerLegend() {
         <div className="gauge--dashed gauge--legend">?</div>
         <span><strong>Dashed square</strong> — no confident score: a rough read from thin evidence (shows a faint number), a candidate we couldn't score (<b>?</b>), or one who withdrew (<b>—</b>).</span>
       </div>
+      <div className="marker-legend__item">
+        <CandidatePhoto name="Ballot Charted" size={34} />
+        <span><strong>Photos</strong> are identity aids, not evidence. They link from pamphlet, government, or campaign pages; initials stand in where we have none.</span>
+      </div>
     </div>
   )
 }
@@ -262,9 +267,12 @@ function ContestCard({ data, contest, answers }) {
     return (
       <section className="panel panel--sand" style={{ margin: '12px 20px 0' }}>
         <div className="eyebrow eyebrow--sm eyebrow--muted">{heading}</div>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 2 }}>
-          <div style={{ fontWeight: 800, fontSize: 15 }}>{c.name}</div>
-          <div style={{ fontSize: 12, fontWeight: 800, color: 'var(--muted)' }}>uncontested · info only</div>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 10, marginTop: 4 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10, minWidth: 0 }}>
+            <CandidatePhoto photo={c.photo} name={c.name} size={40} />
+            <div style={{ fontWeight: 800, fontSize: 15 }}>{c.name}</div>
+          </div>
+          <div style={{ fontSize: 12, fontWeight: 800, color: 'var(--muted)', textAlign: 'right' }}>uncontested · info only</div>
         </div>
         {contest.term && (
           <div className="note" style={{ marginTop: 2, fontSize: 11.5 }}>
@@ -337,7 +345,8 @@ function ContestCard({ data, contest, answers }) {
                   <b>{r.score}</b>
                 </div>
               )}
-              <div style={{ flex: 1 }}>
+              <CandidatePhoto photo={c.photo} name={c.name} size={46} />
+              <div style={{ flex: 1, minWidth: 0 }}>
                 <div className={`cand-name${r.score != null && r.score < STRONG_MATCH ? ' cand-name--dim' : ''}`}>
                   {c.name}{' '}
                   {r.best && <span className="best-tag">★ Best match for you</span>}

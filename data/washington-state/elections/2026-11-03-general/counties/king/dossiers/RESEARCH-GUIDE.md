@@ -73,6 +73,38 @@ Who endorsed them, per [Sn]. Omit if none found.
 this race. Neutral wording.
 ```
 
+### Photo (the Candidate Photo)
+
+A candidate dossier may carry one optional top-level `photo` block (after
+`sources:` or anywhere in the frontmatter):
+
+```yaml
+photo:
+  url: https://www.courts.wa.gov/images/JusticeMelody2025.png            # direct https image URL
+  page: https://www.courts.wa.gov/appellate_trial_courts/SupremeCourt/?fa=supremecourt.justices   # the page a human sees it on
+  kind: government                                                        # pamphlet | government | campaign-website | other
+```
+
+- `url` is a direct `https://` image URL (served with an `image/*` content
+  type), never an HTML page and never a PDF. Pamphlet PDFs cannot be linked
+  as a photo; `kind: pamphlet` is for a county or SOS web page that serves
+  the pamphlet headshot as an image file.
+- `page` is the `https://` page where a human can see the photo (the credit
+  caption). It may equal `url` when the image is served standalone.
+- When several exist, prefer `pamphlet` > `government` (an official bio page:
+  legislature, courts, city or county site) > `campaign-website` > `other`.
+  `other` means a party page or similar. Never a news photo (licensing),
+  and never a logo, group shot, or ballot-measure graphic: a single-person
+  headshot of the right candidate only.
+- The photo is an identity aid, never evidence of qualification; it is not
+  a source and gets no `[Sn]`.
+- Measure dossiers (`dossiers/measures/*.md`) and `_contest.md` never carry
+  `photo`.
+- `pipeline/propose_candidate_photos.py` proposes photos from campaign
+  sites into `interim/photo-proposals.json` for a human or agent to accept;
+  `pipeline/verify_dossiers.py` checks the block (`--check-photos` fetches
+  each URL).
+
 ## Rules
 
 - Every factual claim must cite a listed source. No source, no claim.

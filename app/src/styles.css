@@ -200,6 +200,10 @@ button { font: inherit; border: 0; background: none; color: inherit; cursor: poi
 
 /* ---------- candidates & evidence ---------- */
 .cand { display: flex; align-items: center; gap: 12px; }
+/* Candidate Photo on a row, or the Initials Portrait in its place; sized to the gauge */
+.cand-photo-wrap { flex: none; display: block; width: 46px; height: 46px; }
+.cand-photo { display: block; width: 100%; height: 100%; border-radius: 50%; object-fit: cover; background: var(--sand); }
+.cand-photo--initials { display: flex; align-items: center; justify-content: center; background: var(--navy); color: var(--cream); font-family: var(--font-display); font-weight: 800; font-size: 16px; letter-spacing: .5px; line-height: 1; user-select: none; }
 .cand-name { font-weight: 800; font-size: 16px; }
 .cand-name--dim { color: var(--muted-deep); }
 .evidence { font-size: 11.5px; font-weight: 700; }
