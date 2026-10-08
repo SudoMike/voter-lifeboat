@@ -158,6 +158,13 @@ const ELECTIONS = {
       // numbers equal the printed ones (candidates pp. 11-20, measures pp.
       // 22-25).
       'walla-walla/local-voters-pamphlet': 'https://www.wwcowa.gov/November%20General%202026-%20Final.pdf',
+      // Whitman general Official Local Voters' Pamphlet (#30), from the
+      // package's pointer counties/whitman/raw/whitman/local-voters-pamphlet.pdf.url.
+      // Checked 2026-10-08: redirect to .../12618/Whitman-County-LVP-NOV-2026-WebV1,
+      // then 200 application/pdf with the pointer's sha256; 32 PDF pages, PDF
+      // page numbers equal the printed ones (candidates pp. 5-11, measures
+      // pp. 12-31).
+      'whitman/local-voters-pamphlet': 'https://www.whitmancounty.gov/DocumentCenter/View/12618',
     },
     // Counties whose research cites VoteWA's online voters' guide, which has
     // no page numbers, instead of a printed pamphlet: their records carry no
@@ -217,6 +224,12 @@ const ELECTIONS = {
       // 2026-10-08.
       'walla-walla': 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=36',
       stevens: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=33',
+      // Whitman's eight measures that filed hardship waivers, and its records
+      // whose candidates printed no statement, appear only in VoteWA's guide;
+      // Douglas prints no local pamphlet and its dossiers cite VoteWA only.
+      // #30; each 200 text/html, 2026-10-08.
+      whitman: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=38',
+      douglas: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=09',
     },
     pamphletIndex: `${SOS_GENERAL_2026}/2026-voters-pamphlet-pdfs`,
   },
