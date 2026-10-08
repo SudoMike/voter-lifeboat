@@ -1,0 +1,13 @@
+{
+  "url": "https://services.arcgis.com/PNkCg7xWnaf90qde/arcgis/rest/services/Voter_Precincts/FeatureServer/0/query?where=1%3D1&outFields=St_Code,Sub_Code,Precinct,NAME&returnGeometry=false&f=json",
+  "retrieved_at": "2026-10-08",
+  "method": "curl -sL -A 'Mozilla/5.0' (cached verbatim at data/.cache/san-juan/gis/voter-precincts-attributes.json, gitignored)",
+  "stage": "raw",
+  "source_type": "gis",
+  "tier": 1,
+  "outlet": "San Juan County GIS (ArcGIS Online org PNkCg7xWnaf90qde), Voter_Precincts",
+  "cache_file": "data/.cache/san-juan/gis/voter-precincts-attributes.json",
+  "bytes": 4950,
+  "sha256": "7c6035825e113f1cff769e2e79c687a493a799778a49f7d32c87e7b4f8fc7ee9",
+  "notes": "40 polygons, 23 distinct St_Code values (SJ011-SJ017, SJ020-SJ028, SJ030-SJ033, SJ041, SJ101, SJ102), matching the 23 reporting units of the 2026 primary. Lopez: SJ030 Lopez Northwest, SJ031 Lopez North, SJ032 Lopez South (with sub-precinct MacKayeHWD); SJ033 Decatur & Outer Islands. Layer last edited 2024-02-16."
+}
