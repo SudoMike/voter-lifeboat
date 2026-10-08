@@ -107,6 +107,17 @@ The compiled evidence about one Candidate or Measure: pamphlet statement plus
 public record such as votes, endorsements, news, or prior statements.
 _Avoid_: Research file, candidate profile
 
+**Candidate Photo**:
+A verified link to a headshot of a Candidate on a pamphlet, government, or
+campaign page, carried in the Dossier. It is an identity aid and never
+evidence of qualification.
+_Avoid_: Portrait, headshot, thumbnail, image
+
+**Initials Portrait**:
+The stand-in shown wherever a Candidate Photo would appear but none exists,
+so a Candidate is never represented by a gap.
+_Avoid_: Placeholder, fallback avatar
+
 **Issue Axis**:
 One dimension of the scoring rubric, such as housing density or taxation.
 Candidates are scored on axes; voters are interviewed on axes.
@@ -175,6 +186,17 @@ The trust class of a dossier source. Tier 1 includes pamphlet statements,
 candidate-owned sources, filings, and voting records; Tier 2 includes
 endorsements and established news.
 _Avoid_: Source quality, citation class
+
+**Report**:
+The page showing one voter's Covered Ballot ranked against their Values
+Profile, headlined "Your ballot, charted". It is what a Report Link opens and
+what an Anonymous Report Record records.
+_Avoid_: Results page, results screen, final report
+
+**AI Report**:
+The HTML page a voter's own chatbot builds from the Ballot Brief, outside
+Voter Lifeboat.
+_Avoid_: HTML report, chatbot report, final report
 
 **Report Link**:
 The URL of a finished report, containing the voter's Values Profile and
