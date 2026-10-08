@@ -163,6 +163,96 @@ sources:
     outlet: Washington State Labor Council, AFL-CIO, 2026 election endorsements (May 16 COPE convention)
     url: https://wslc.org/wp-content/uploads/2026/05/2026-WSLC-election-endorsements.pdf
     accessed: 2026-10-08
+  - id: S25
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, Senate Ways & Means striking amendment S-2802.1 to EHB 1217 (2025; adopted as amended 2025-04-10)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/Senate/1217.E%20AMS%20WM%20S2802.1.htm
+    accessed: 2026-10-08
+  - id: S26
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, Senate floor amendment 345 to EHB 1217 (2025; text lists Senator Shewmake; adopted 2025-04-10)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/Senate/1217.E%20AMS%20SHEW%20S3013.1.htm
+    accessed: 2026-10-08
+  - id: S27
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, Senate floor amendment 312 to EHB 1217 (2025; text lists Senator Liias; adopted 2025-04-10)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/Senate/1217.E%20AMS%20LIIA%20S2858.1.htm
+    accessed: 2026-10-08
+  - id: S28
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, House floor amendment 382 to SHB 1296 (2025; text lists Representative Burnett)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/1296-S%20AMH%20BURN%20MOET%20394.htm
+    accessed: 2026-10-08
+  - id: S29
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, House floor amendment 435 to SHB 1296 (2025; text lists Representative Marshall)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/1296-S%20AMH%20MARS%20MORI%20173.htm
+    accessed: 2026-10-08
+  - id: S30
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, House floor amendment 442 to SHB 1296 (2025; text lists Representative Marshall)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/1296-S%20AMH%20MARS%20MORI%20176.htm
+    accessed: 2026-10-08
+  - id: S31
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, House floor amendment 396 to SHB 1296 (2025; text lists Representative Walsh)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/1296-S%20AMH%20WALJ%20MORI%20182.htm
+    accessed: 2026-10-08
+  - id: S32
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, House floor amendment 420 to SHB 1296 (2025; text lists Representative Steele)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/1296-S%20AMH%20STEE%20MORI%20179.htm
+    accessed: 2026-10-08
+  - id: S33
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, House floor amendment 448 to SHB 1296 (2025; text lists Representative Caldier)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/1296-S%20AMH%20CALD%20MORI%20185.htm
+    accessed: 2026-10-08
+  - id: S34
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, House floor amendment 428 to SHB 1296 (2025; text lists Representative Couture)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/1296-S%20AMH%20COUT%20MOET%20434.htm
+    accessed: 2026-10-08
+  - id: S35
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, House floor amendment 444 to SHB 1296 (2025; text lists Representative Couture)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/1296-S%20AMH%20COUT%20REIN%20401.htm
+    accessed: 2026-10-08
+  - id: S36
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, House floor amendment 437 to SHB 1296 (2025; text lists Representative Ley)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/1296-S%20AMH%20LEYJ%20MOET%20396.htm
+    accessed: 2026-10-08
+  - id: S37
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, House floor amendment 462 to SHB 1296 (2025; text lists Representative Barkis)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/1296-S%20AMH%20BARK%20REIN%20388.htm
+    accessed: 2026-10-08
+  - id: S38
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, House floor amendment 383 to SHB 1296 (2025; text lists Representative Keaton)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/1296-S%20AMH%20KEAT%20REIN%20390.htm
+    accessed: 2026-10-08
+  - id: S39
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, House floor amendment 384 to SHB 1296 (2025; text lists Representative Schmidt)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/1296-S%20AMH%20SCHM%20MOET%20391.htm
+    accessed: 2026-10-08
 ---
 
 ## Background
@@ -184,6 +274,17 @@ Laurie Jinkins (prefers Democratic Party) is the 27th District State Representat
 
 ### Parents and schools
 - Voted yea on ESHB 1296 at House third reading (2025-03-12) and final passage as amended by the Senate (2025-04-24) [S8]; the bill modified the list of parental rights enacted by Initiative 2081 and states those rights create no private right of action [S9].
+- On 2025-03-12, before the third-reading vote, she voted nay on ten recorded floor amendments that the House rejected, which would have [S8]:
+  - added at least monthly evening and weekend opportunities for parents to examine curriculum, textbooks and instructional materials (382) [S28];
+  - added medical or health records (435) and mental health counseling records (442), to the extent federal law permits, to the education records parents may inspect [S29][S30];
+  - restored parental notification when medical services or medications given to a child could affect the parent's health insurance payments or copays (396) [S31];
+  - restored prior notification when medical services, or medications the parent had not authorized, are offered to a child (420) [S32];
+  - restored notification when the school arranges medical treatment or unauthorized medications that result in follow-up care beyond school hours (448) [S33];
+  - restored immediate notification if a child is taken from campus without parental permission, including to a youth shelter or host home (444) [S35];
+  - added a parental right not to have a child under 18 authorize excused absences (437) [S36];
+  - required certificated school staff to work with families to support implementation of the Initiative 2081 parents' bill of rights (383) [S38];
+  - removed the provision that the listed parental rights do not create a private right of action (384) [S39].
+- She voted yea on the two amendments the House adopted that day: a right to immediate notification when a criminal act is alleged against a child, including alleged sexual misconduct by a school employee (428; adopted 93-0) [S34], and a right to request enrollment in a charter school (462; adopted 92-1) [S8][S37].
 - The ESSB 5599 vote above also concerns parental notification [S10][S11].
 
 ## Positions on the 2026 initiatives
@@ -195,7 +296,7 @@ Laurie Jinkins (prefers Democratic Party) is the 27th District State Representat
 - As Speaker she cast recorded floor votes on each bill below [S6][S8][S10][S12][S14][S16][S18][S20].
 - ESSB 6346 (2026, tax on income over $1 million, beginning 2028): yea on House final passage as amended (2026-03-09; passed 51-46); nay on 64 of the 65 floor amendments the House rejected [S6][S7].
 - 2025 revenue bills: yea on House passage of ESHB 2081 (business and occupation tax rate increases and surcharges), ESSB 5813 (capital gains tax of 9.9 percent above $1 million and estate tax changes), ESSB 5814 (sales tax extended to select services) and ESSB 5801 (motor vehicle fuel tax up 6 cents per gallon) [S12][S13][S14][S15][S16][S17][S20][S21].
-- EHB 1217 (2025, limits annual rent increases to the lesser of 7 percent plus CPI or 10 percent): yea on House passage (2025-03-10) and on final passage of the conference report (2025-04-27) [S18][S19].
+- EHB 1217 (2025, limits annual rent increases to the lesser of 7 percent plus CPI or 10 percent): yea on House passage (2025-03-10) and on final passage of the conference report (2025-04-27) [S18][S19]. In between, on 2025-04-23, she voted nay on the motion to concur in the Senate's amendments, which failed 48-50 [S18][S19]. The Senate version, as amended on the Senate floor, raised the annual limit for residential tenancies from seven percent to 10 percent plus the consumer price index [S26], set a 5 percent limit for manufactured/mobile home lots, lengthened the new-construction exemption from 12 to 15 years after the certificate of occupancy [S25], and exempted single-family homes not owned by a real estate investment trust, a corporation or an LLC with a corporate member [S27].
 - ESHB 1296 (2025) and ESSB 5599 (2023): yea [S8][S10].
 - Campaign finance (PDC, data updated 2026-10-04): $216,725.44 raised and $283,517.53 spent for 2026 [S22].
 
@@ -205,6 +306,6 @@ Laurie Jinkins (prefers Democratic Party) is the 27th District State Representat
 ## Scoring notes
 - Elected to the House in 2010 and Speaker since 2020, against a candidate whose elected experience is precinct committee officer [S1][S4].
 - Voted for ESSB 6346 and for every 2025 revenue bill reviewed, and describes the tax system as regressive [S1][S6][S12][S14][S16].
-- Voted for the 2025 rent-increase limit and campaigns on tenant protections [S3][S18].
+- Voted for the 2025 rent-increase limit at House passage and final passage, and against concurring in the Senate version with its higher limit; campaigns on tenant protections [S3][S18][S26].
 - Voted for ESHB 1296 and ESSB 5599 and pledges to keep reproductive rights legal [S1][S8][S10].
 - Her campaign site appears not to have been updated since about 2020-2021 [S2][S3].
