@@ -1,0 +1,47 @@
+{
+  "county": "asotin",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/asotin/raw/votewa/candidate-list.csv.url",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7276&e=899&la=en&c=02"
+  ],
+  "coverage": "full_county",
+  "notes": [
+    "Asotin County Rural EMS District No. 2 Proposition No. 1 is scoped RURALEMSDST '2': the district is tax code areas 0025, 0030 and 0030F (WA DOR TCA2025, layer 23), the Anatone and rural southern county area; it is not the DOR EMS2025 Asotin '1' polygon, which is EMS District #1 (the Fire District 1 area around Clarkston Heights).",
+    "Asotin County Commissioner District 3 is nominated by district and elected county-wide in the general (RCW 36.32.040, RCW 36.32.050(1)); Asotin County PUD No. 1 covers Clarkston and the Clarkston Heights area, not the whole county, and every PUD voter elects each commissioner (RCW 54.12.010(3)): scoped PUDDST '1' (WA DOR PUD2025, layer 17)."
+  ],
+  "measures": [
+    {
+      "slug": "asotin-asotin-county-rural-ems-district-no-2-proposition-no-1",
+      "owner": "asotin",
+      "jurisdiction": "Asotin County Rural EMS District No. 2",
+      "proposition": "Proposition No. 1",
+      "title": "Emergency Medical Services Regular Property Tax Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "asotin",
+        "layer": "RURALEMSDST",
+        "value": "2"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 12
+        }
+      ],
+      "what_it_does": "Authorizes Asotin County Rural Emergency Medical Service District No. 2 (the Anatone and rural southern county area) to levy a regular property tax for six years starting in 2027 to pay for contracted emergency medical services, replacing the levy that expires at the end of 2026 (Resolution No. 26-27; RCW 84.52.069). The same proposition failed in the August 4, 2026 primary.",
+      "cost_line": "Up to $0.28 per $1,000 of assessed value a year for 2027-2032, up from a current limit of $0.15 (the 2025 rate was about $0.12).",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7276&e=899&la=en&c=02"
+          ]
+        }
+      }
+    }
+  ]
+}
