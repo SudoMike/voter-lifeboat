@@ -1,0 +1,10 @@
+{
+  "url": "https://data.wa.gov/resource/3h9x-7bvm.json?election_year=2026&$where=upper(jurisdiction) like 'SNOHOMISH CO%' AND upper(filer_type)='CO'&$limit=200",
+  "retrieved_at": "2026-10-08",
+  "stage": "raw",
+  "method": "curl -L (cached verbatim at data/.cache/snoco/pdc-snoco-co-2026.json, gitignored)",
+  "bytes": 4777,
+  "sha256": "11c81bc9101e7e000fbb99a48d37edc45a84be8a54895e44a5cf2b1aca7af279",
+  "notes": "PDC Campaign Finance Summary (data.wa.gov 3h9x-7bvm): 2026 political committees (filer_type CO) with jurisdiction starting 'SNOHOMISH CO'. Returned 3 committees (Sno-Isle libraries, Fair Pay Lynnwood, Little Bear incorporation); none for or against the county charter propositions as of 2026-10-08.",
+  "cited_by": "data/washington-state/elections/2026-11-03-general/counties/snohomish/dossiers/measures/snohomish-snohomish-county-proposition-no-1.md"
+}
