@@ -748,8 +748,8 @@ ELECTION_MEASURES = {
         #   0300, 112 2nd St (Langley) 0700; 5476 Harbor Rd, Freeland 0760, 2795
         #   Heller Rd, Oak Harbor (unincorporated) 0110, 848 N Sunrise Blvd,
         #   Camano 0590.
-        # COUNTY_LAYERS.island has neither PORTDST nor UNINC yet; both are
-        # proposed in counties/island/COMPLETENESS.md.
+        # COUNTY_LAYERS.island reads PUDDST, PORTDST and UNINC with exactly
+        # these configs since #29 (live-checked again 2026-10-08).
         # Overrides: the PUD race is Snohomish County PUD No. 1's District 1
         # seat, which Camano Island voters elect with all of Snohomish County
         # (RCW 54.12.010(3)). It keeps the Snohomish package's names, so it ships
@@ -795,19 +795,20 @@ ELECTION_MEASURES = {
         # 'Countywide'; the SOS 2020-11-03 Lewis precinct export has the District
         # 1 and 2 races in all 96 precincts). Named as in the primary so its
         # dossiers carry forward. District Court: one county-wide district, two
-        # departments. The PUD seat stays on the generic rule (PUDDST '1',
-        # unresolvable): Lewis County PUD No. 1 is the county minus the City of
-        # Centralia (the PUD races of 2020, 2022 and 2024 were on no Centralia
-        # precinct; DOR PUD2025 layer 17 and the county's VotingTaxingDistricts
-        # MapServer layer 8 both return no feature at 118 W Maple St,
-        # Centralia, and DISTATTRIB '1' at 351 NW North St, Chehalis), and
-        # COUNTY_LAYERS.lewis has no PUDDST key.
+        # departments. The PUD seat (District 'PUD DISTRICT-AT-LARGE') keeps the
+        # generic rule's names, so its slug and dossiers are unchanged, and is
+        # scoped PUDDST '1': Lewis County PUD No. 1 is the county minus the City
+        # of Centralia (the PUD races of 2020, 2022 and 2024 were on no
+        # Centralia precinct; DOR PUD2025 layer 17 and the county's
+        # VotingTaxingDistricts MapServer layer 8 both return no feature at 118
+        # W Maple St, Centralia, and DISTATTRIB '1' at 351 NW North St,
+        # Chehalis). COUNTY_LAYERS.lewis reads DOR PUD2025 since #29.
         # Measure scopes, point-checked 2026-10-09 (Census geocoder, Current):
         # LIBDST 'L': DOR LIB2025 (layer 12) at Chehalis, Centralia, Morton,
         # Toledo, Winlock and 2152 Jackson Hwy (unincorporated); Pe Ell (200 S
         # Main St), Mossyrock (243 E State St), Napavine (105 2nd Ave NW) and
         # Vader (509 A St) return no feature, so the measure is not county-wide.
-        # COUNTY_LAYERS.lewis has no LIBDST key: unresolvable until one is added.
+        # COUNTY_LAYERS.lewis reads DOR LIB2025 since #29.
         # CITY 'Chehalis': Census place at 351 NW North St (the TBD's board is the
         # Chehalis City Council). FIRDST '6': DOR FIR2025 (layer 7) DISTATTRIB
         # '6' at 2152 Jackson Hwy, Chehalis (county Precinct Splits layer 12:
@@ -821,6 +822,9 @@ ELECTION_MEASURES = {
                     "Judicial", "Lewis County District Court", "District Court Judge, Dept 1", ("COUNTY", None)),
                 ("DISTRICT COURT", "DISTRICT COURT JUDGE, DEPT 2"): (
                     "Judicial", "Lewis County District Court", "District Court Judge, Dept 2", ("COUNTY", None)),
+                ("PUD DISTRICT-AT-LARGE", "COMMISSIONER DISTRICT 1"): (
+                    "PublicUtility", "Public Utility District Commissioner District 1", "Commissioner District 1",
+                    ("PUDDST", "1")),
             },
             "measures": [
                 m("Timberland Regional Library District", "Proposition No. 1",
@@ -843,10 +847,10 @@ ELECTION_MEASURES = {
             ],
             "extra_notes": [
                 "Timberland Regional Library District Proposition No. 1 is scoped LIBDST 'L' (WA DOR LIB2025, layer 12). "
-                "Pe Ell, Mossyrock, Napavine and Vader are outside the district, so it is not county-wide, and COUNTY_LAYERS.lewis has "
-                "no LIBDST key yet: the measure is hidden until the layer is added.",
+                "Pe Ell, Mossyrock, Napavine and Vader are outside the district, so it is not county-wide; "
+                "COUNTY_LAYERS.lewis reads LIB2025.",
                 "Lewis County PUD No. 1 excludes the City of Centralia; its at-large Commissioner District 1 seat is "
-                "scoped PUDDST '1' (WA DOR PUD2025, layer 17, DISTATTRIB '1'), which COUNTY_LAYERS.lewis does not read yet.",
+                "scoped PUDDST '1' (WA DOR PUD2025, layer 17, DISTATTRIB '1'), which COUNTY_LAYERS.lewis reads.",
             ],
         },
         # Skagit: the four measures the Auditor's Ballot Measures page lists
