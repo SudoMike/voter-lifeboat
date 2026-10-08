@@ -15,15 +15,21 @@
     "data/washington-state/elections/2026-11-03-general/counties/kitsap/scoring/*.json",
     "data/washington-state/elections/2026-11-03-general/counties/kitsap/scoring/refutations/*.json",
     "data/washington-state/elections/2026-11-03-general/counties/thurston/scoring/*.json",
-    "data/washington-state/elections/2026-11-03-general/counties/thurston/scoring/refutations/*.json"
+    "data/washington-state/elections/2026-11-03-general/counties/thurston/scoring/refutations/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/yakima/scoring/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/yakima/scoring/refutations/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/whatcom/scoring/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/whatcom/scoring/refutations/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/benton/scoring/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/benton/scoring/refutations/*.json"
   ],
   "script": "pipeline/merge_scores.py",
   "verdict_stats": {
-    "upheld": 1568,
-    "adjust": 127,
+    "upheld": 1789,
+    "adjust": 149,
     "refuted": 6,
-    "missing_added": 22,
-    "missing_dropped_low": 6
+    "missing_added": 24,
+    "missing_dropped_low": 9
   },
   "contests": [
     {
@@ -22416,6 +22422,3843 @@
             "Former Lacey City Councilmember (2011-2017) [S1]"
           ],
           "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "yakima-court-of-appeals-division-3-district-3-judge-position-1",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/yakima/dossiers/yakima-court-of-appeals-division-3-district-3-judge-position-1/"
+      ],
+      "office_does": "A Court of Appeals judge decides appeals from superior court cases; Division III's District 3 (Chelan, Douglas, Kittitas, Klickitat and Yakima counties) elects two of its five judges for six-year terms.",
+      "race_blurb": "Uncontested: Judge Megan K. Murphy, appointed to the court in January 2025, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "megan-k-murphy",
+          "summary": "Court of Appeals, Division III judge since her January 2025 appointment; former Yakima County deputy prosecutor and civil litigator; the only candidate on the ballot.",
+          "highlights": [
+            "Appointed to Division III in January 2025, replacing Judge Rebecca Pennell [S1][S2]",
+            "Yakima County deputy prosecutor for about five years from 2001, then civil litigation in private practice [S1][S2]",
+            "Partner at Fox Ballard in Seattle; earlier a Yakima practice in medical-malpractice defense [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "yakima-legislative-district-14-state-representative-pos-1",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/yakima/dossiers/yakima-legislative-district-14-state-representative-pos-1/"
+      ],
+      "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering school funding, tax structure, housing rules, labor law and criminal-justice statutes.",
+      "race_blurb": "A 2024 rematch: Republican Rep. Gloria Mendoza, a former Grandview mayor, faces Democrat Chelsea Dimas of Sunnyside. They split on taxes, the Climate Commitment Act, school funding, data centers and state cooperation with federal immigration enforcement.",
+      "candidates": [
+        {
+          "slug": "gloria-mendoza",
+          "summary": "One-term State Representative, former Grandview mayor and founder of a vocational-training business, running on lower taxes, budget restraint and repeal of the Climate Commitment Act.",
+          "highlights": [
+            "Voted against the 2026 tax on income over $1 million and the 2025 B&O, services and transportation revenue bills [S4][S5][S6][S7]",
+            "Would \"get rid of the Climate Commitment Act\"; voted against the 2025 clean fuels bill [S16][S9]",
+            "Voted against the 2025 amendments to the parental-rights law and wrote in support of parents' record-access and notification rights [S8][S18]",
+            "Says she is \"in the middle\" on data centers and wants more study [S15]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S4",
+                "S5",
+                "S6",
+                "S7",
+                "S18",
+                "S20"
+              ],
+              "basis": "No votes on ESSB 6346, ESHB 2081, ESSB 5814 and ESSB 5801; statements opposing new taxes and calling for eliminating taxes on food and diapers."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S15",
+                "S18",
+                "S2"
+              ],
+              "basis": "Says the state should keep what it has without increasing the budget, voted no on the 2025 operating budget, and pledges to stop runaway government spending."
+            },
+            "climate": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S16",
+                "S17",
+                "S9"
+              ],
+              "basis": "Calls for repealing the Climate Commitment Act over fuel costs; voted against the 2025 clean fuels program bill."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S10",
+                "S16"
+              ],
+              "basis": "Voted against the 2025 limits on rent and fee increases; blames energy policies imposed on developers for home prices."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S20",
+                "S2"
+              ],
+              "basis": "Called to 'finally fund the police' and for tougher theft and fentanyl penalties; campaigns on safer streets. She voted against the 2025 public safety funding bill, which carried a local option tax (S13).",
+              "adjusted_by_refutation": true
+            },
+            "immigration": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S11"
+              ],
+              "basis": "Voted twice against the 2026 immigrant worker protections bill; no statement on immigration found."
+            },
+            "tech": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S15",
+                "S14"
+              ],
+              "basis": "Undecided on data centers and open to their local benefits; voted against the 2026 bill addressing large energy use facilities.",
+              "adjusted_by_refutation": true
+            },
+            "social": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S12",
+                "S1"
+              ],
+              "basis": "Voted against the 2026 bill improving access to abortion medications; statement says she defends family values."
+            },
+            "parental-rights": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S8",
+                "S18",
+                "S19"
+              ],
+              "basis": "Voted against ESHB 1296 twice and wrote that she fought for parents' access to records, review of materials and notifications."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S16"
+              ],
+              "basis": "Incumbent legislator and Assistant Minority Whip with eight prior years as a Grandview council member and mayor."
+            }
+          }
+        },
+        {
+          "slug": "chelsea-dimas",
+          "summary": "Sunnyside nonprofit worker and former state commissioner on human rights and Hispanic affairs, running a second time on affordability, school funding, workers' rights and protection of immigrant families.",
+          "highlights": [
+            "Calls the millionaire's tax \"a great path forward\" [S5]",
+            "\"Completely against data centers\" until regulations are in place [S4]",
+            "Would keep state and local resources out of federal immigration enforcement [S2]",
+            "Supports more school funding, universal childcare and collective bargaining for farmworkers [S4][S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S5"
+              ],
+              "basis": "Calls the millionaire's tax a great path forward while wanting tax relief for working people.",
+              "adjusted_by_refutation": true
+            },
+            "spending": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S4",
+                "S5",
+                "S2"
+              ],
+              "basis": "Fully supports $2 billion more for schools, more mental-health and support staff, and universal childcare."
+            },
+            "housing": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S5",
+                "S6"
+              ],
+              "basis": "Would build affordable housing, strengthen renter protections and expand down-payment assistance, while also citing more supply."
+            },
+            "safety": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Pairs officer recruitment with behavioral-health and crisis response and prevention of violence and addiction."
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S5"
+              ],
+              "basis": "Supports clean-energy investment and climate preparedness; withdrew support for the 2025 gas tax over costs to working people."
+            },
+            "immigration": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S4"
+              ],
+              "basis": "Would bar state and local resources from federal immigration enforcement and supports labor rights regardless of immigration status."
+            },
+            "tech": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Completely against data centers; wants a ban until regulations protect water and utility ratepayers."
+            },
+            "social": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Would protect access to reproductive health care and care regardless of gender identity; no further positions found."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S5"
+              ],
+              "basis": "No prior public office beyond precinct committee officer; criticizes 30 years of 'recycled leadership' in the district."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "yakima-legislative-district-14-state-representative-pos-2",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/yakima/dossiers/yakima-legislative-district-14-state-representative-pos-2/"
+      ],
+      "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering school funding, tax structure, housing rules, labor law and criminal-justice statutes.",
+      "race_blurb": "Republican Rep. Deb Manjarrez, a Wapato CPA and orchardist, faces Democrat Ezequiel Morfin, a Toppenish electrician and former city council member. They split on taxes and spending, farmworker collective bargaining, data centers and state cooperation with federal immigration enforcement.",
+      "candidates": [
+        {
+          "slug": "deb-manjarrez",
+          "summary": "One-term State Representative, CPA and Wapato orchardist running on limiting state spending, tighter grant audits and redirecting Climate Commitment Act revenue.",
+          "highlights": [
+            "Voted against the 2026 tax on income over $1 million and the 2025 B&O, services and transportation revenue bills [S5][S6][S7][S8]",
+            "Wants tighter grant auditing and accounting standards [S17]",
+            "Supports data centers and doubts the Legislature should regulate them [S16]",
+            "Voted against the 2025 amendments to the parental-rights law and wrote in support of parents' record-access and notification rights [S9][S19]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S5",
+                "S6",
+                "S7",
+                "S8",
+                "S19"
+              ],
+              "basis": "No votes on ESSB 6346, ESHB 2081, ESSB 5814 and ESSB 5801; co-wrote that she stood against 'aggressive new taxes'."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S17",
+                "S19"
+              ],
+              "basis": "Runs on fighting runaway government spending and tighter grant audits; voted no on the 2025 operating budget.",
+              "adjusted_by_refutation": true
+            },
+            "climate": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S17",
+                "S18",
+                "S10"
+              ],
+              "basis": "Blames the 'green agenda' and Climate Commitment Act for utility and fuel costs and voted against the clean fuels bill, but proposes redirecting CCA revenue rather than repeal."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S11",
+                "S17"
+              ],
+              "basis": "Voted against the 2025 limits on rent and fee increases; attributes homelessness to drugs and mental illness rather than economics."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S17",
+                "S19"
+              ],
+              "basis": "Frames homelessness as drug and mental illness, wants children kept from drug-addicted parents, and opposed new firearm requirements; she also sponsored an overdose-mapping bill.",
+              "adjusted_by_refutation": true
+            },
+            "immigration": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S12"
+              ],
+              "basis": "Voted twice against the 2026 immigrant worker protections bill; no statement on immigration found."
+            },
+            "tech": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S16"
+              ],
+              "basis": "Supports data centers, opposes a 'knee-jerk' ban and is not sure the Legislature should act."
+            },
+            "social": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S13"
+              ],
+              "basis": "Voted against the 2026 bill improving access to abortion medications; no statement found."
+            },
+            "parental-rights": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S9",
+                "S19"
+              ],
+              "basis": "Voted against ESHB 1296 and co-wrote that she fought for parents' access to records, review of materials and notifications."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3",
+                "S4"
+              ],
+              "basis": "One House term, two terms as county Republican chair and 16 years as a precinct committee officer, against a former city council member."
+            }
+          }
+        },
+        {
+          "slug": "ezequiel-morfin",
+          "summary": "Toppenish electrician, Yakama Nation electrical inspector and former city council member running on affordability, farmworker collective bargaining and protection of immigrant families.",
+          "highlights": [
+            "Would limit state cooperation with federal immigration enforcement [S3]",
+            "Calls farmworker collective bargaining his \"largest work\" [S5]",
+            "Opposes data centers until there is more research [S5]",
+            "Supports renter protections, down-payment relief and \"fair taxation\" [S3][S6]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Supports 'fair taxation so working people aren't carrying the load alone' and says tax systems favor those at the top; no specific revenue proposal."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S5",
+                "S6"
+              ],
+              "basis": "Supports $2 billion more for schools and more funding for childcare and preschool."
+            },
+            "housing": {
+              "score": 1,
+              "confidence": "low",
+              "citations": [
+                "S3",
+                "S6"
+              ],
+              "basis": "Would work on renter protections and down-payment relief, alongside tiny homes and expanded city boundaries.",
+              "adjusted_by_refutation": true
+            },
+            "immigration": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3",
+                "S6"
+              ],
+              "basis": "Supports state protections limiting cooperation with federal immigration enforcement; repeatedly criticizes federal enforcement."
+            },
+            "tech": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S5"
+              ],
+              "basis": "Says no to data centers pending more research and wants oversight and community investment from builders."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S5"
+              ],
+              "basis": "Former Toppenish council member and planning commissioner making a first run for the Legislature against an incumbent."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "yakima-legislative-district-15-state-representative-pos-1",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/yakima/dossiers/yakima-legislative-district-15-state-representative-pos-1/"
+      ],
+      "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering school funding, tax structure, housing rules, health funding and criminal-justice statutes.",
+      "race_blurb": "Republican Rep. Chris Corry, the House Republican Deputy Minority Leader, faces Democrat Jack McEntire, a Selah sculptor making his third run for a 15th District House seat. Corry has a long voting record against new taxes and the Climate Commitment Act; McEntire's platform centers on universal health care and need-based access to education.",
+      "candidates": [
+        {
+          "slug": "chris-corry",
+          "summary": "Four-term State Representative and House Republican Deputy Minority Leader who campaigns on limited government, lower taxes and parental rights.",
+          "highlights": [
+            "Voted against the 2026 tax on income over $1 million and the 2025 B&O and services tax bills [S6][S7][S8]",
+            "Says an income tax should require a constitutional amendment and a vote of the people [S4]",
+            "Voted for 2023 middle-housing legalization and against the 2025 rent-increase cap [S10][S11]",
+            "Voted against the Climate Commitment Act (2021) and ESHB 1296 (2025) [S9][S12]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S4",
+                "S5",
+                "S6",
+                "S7",
+                "S8"
+              ],
+              "basis": "Voted no on ESSB 6346, EHB 2081 and ESSB 5814, and issued repeated statements opposing the income tax and calling for lower tax burdens."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S4",
+                "S5"
+              ],
+              "basis": "Repeatedly argues the operating budget has doubled in a decade and the state should manage existing revenue before asking for more."
+            },
+            "housing": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S10",
+                "S11"
+              ],
+              "basis": "Voted for middle-housing legalization (supply) and against the 2025 cap on residential rent increases."
+            },
+            "safety": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S5",
+                "S13",
+                "S14"
+              ],
+              "basis": "Voted against the 2021 police-tactics and use-of-force bills; criticizes the Legislature for not holding repeat offenders accountable."
+            },
+            "climate": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S12"
+              ],
+              "basis": "Voted against the Climate Commitment Act in 2021; no campaign statement on climate.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "In the House since 2019 and now Deputy Minority Leader, facing a challenger with no government-office record."
+            },
+            "social": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S15"
+              ],
+              "basis": "Voted against ESHB 1469 on access to reproductive and gender-affirming care; lists Life Choices of Yakima among his community service."
+            },
+            "parental-rights": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S5",
+                "S9"
+              ],
+              "basis": "Campaigns on parental rights, voted against ESHB 1296 twice, and criticized the Legislature for not acting on the parental-rights initiative."
+            },
+            "immigration": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S16"
+              ],
+              "basis": "Voted against the 2019 Keep Washington Working Act limiting state cooperation with federal immigration enforcement; one vote, no statement."
+            }
+          }
+        },
+        {
+          "slug": "jack-mcentire",
+          "summary": "Selah sculptor and Yakima County Democrats vice-chair, in his third run for a 15th District House seat, campaigning on universal health care and need-based access to education.",
+          "highlights": [
+            "Says \"We deserve universal health care\" [S1]",
+            "Says college or vocational education should be based on ability and need, not money [S1]",
+            "Called climate change an existential threat in 2020 [S2]",
+            "Argues voters have seen \"the same faces and ideas\" for years [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "healthcare": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Calls for universal health care and says Washington could provide it, criticizing job-based coverage."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Calls investment the way to transform the region and backs universal education and youth skills programs."
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "low",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Called climate change an existential threat and urged listening to science (2020); no specific policy stated.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "No government-office record; argues voters have seen the same faces and ideas for years."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "yakima-legislative-district-15-state-representative-pos-2",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/yakima/dossiers/yakima-legislative-district-15-state-representative-pos-2/"
+      ],
+      "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering school funding, tax structure, housing rules, health funding and criminal-justice statutes.",
+      "race_blurb": "An open seat left by Rep. Jeremie Dufault, who is running for the Senate. Republican Reedy Berg, Yakima's deputy mayor and a middle-school teacher, led the primary with 48%; attorney Liz Hallock, running under a \"No Kings\" party preference, advanced with 30%.",
+      "candidates": [
+        {
+          "slug": "reedy-berg",
+          "summary": "Yakima deputy mayor and Toppenish middle-school history teacher running on lower taxes, Climate Commitment Act repeal and parental rights.",
+          "highlights": [
+            "Opposes the state's new income tax and proposes a 0.1% sales-tax cut [S2]",
+            "Would repeal the Climate Commitment Act [S2]",
+            "Makes parents' right to know what children are taught and what medical decisions are made his first plank [S2]",
+            "On the city council, voted against sending a property-tax levy to voters and against a Pride Month proclamation [S6][S7]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S3",
+                "S7"
+              ],
+              "basis": "Opposes the income tax and new fees and taxes, proposes a sales-tax cut, and voted against placing a city property-tax levy on the ballot."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S3",
+                "S5"
+              ],
+              "basis": "Pledges to cut wasteful spending and administrative overhead; says he would have cut more rather than use one-time money on city facilities."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Supports permitting reform to lower housing costs and says the Housing First model is not working."
+            },
+            "safety": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S5"
+              ],
+              "basis": "Backs fully funding police, opposes criminal-justice rollbacks, and would require treatment as a condition of housing assistance."
+            },
+            "climate": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Would repeal the Climate Commitment Act and reduce fuel taxes and regulations on energy production."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Two years on the Yakima City Council and now deputy mayor, while also presenting himself as 'not a career politician'."
+            },
+            "social": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S6"
+              ],
+              "basis": "Voted against a Pride Month proclamation, stating there are two genders and that science does not support expanding gender identities."
+            },
+            "parental-rights": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Platform says parents have the right to know what children are taught and what medical decisions are made, and that government has overstepped."
+            },
+            "local-control": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "In the 2026-07-16 Herald-Republic interview he says Olympia's 'excessive taxes, regulations and mandates' stifle local schools and businesses, calls for 'local control over levies and spending priorities' and pledges to block state mandates 'that drain resources' from districts [S3]. This is about state fiscal mandates on local governments (levies, spending priorities), not curricula, notification or opt-outs, so it is local-control evidence under the 2026-10-08 addendum.",
+              "added_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "liz-hallock",
+          "summary": "Yakima family and public-disclosure attorney and repeat candidate, running under a \"No Kings\" party preference on economic inequality, reproductive rights and opposition to President Trump.",
+          "highlights": [
+            "Says \"Reproductive rights are being gutted\" [S1]",
+            "Ran in 2022 to \"protect abortion rights and safe abortion access\" [S4]",
+            "Says Christian teachings are being used \"to terrorize immigrants\" [S1]",
+            "Wants to protect Yakima residents \"from the King in the White House\" [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "social": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S4"
+              ],
+              "basis": "Says reproductive rights are being gutted; ran in 2022 on protecting abortion rights and access."
+            },
+            "immigration": {
+              "score": 1,
+              "confidence": "low",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Objects to immigrants being terrorized; no specific enforcement policy stated.",
+              "adjusted_by_refutation": true
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S5"
+              ],
+              "basis": "Says the environment and children's futures are being destroyed; worked with Citizens' Climate Lobby (2020)."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Has not held government office; runs outside both major parties under a No Kings label."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "yakima-legislative-district-15-state-senator",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/yakima/dossiers/yakima-legislative-district-15-state-senator/"
+      ],
+      "office_does": "A State Senator writes and votes on Washington state law and the operating, capital and transportation budgets for a four-year term, and the Senate confirms the governor's appointments.",
+      "race_blurb": "Uncontested: Republican State Rep. Jeremie Dufault of Selah is the only candidate for the 15th District Senate seat.",
+      "candidates": [
+        {
+          "slug": "jeremie-dufault",
+          "summary": "Republican State Representative for the 15th District, former Selah City Council member and Army Reserve JAG officer; the only candidate on the ballot.",
+          "highlights": [
+            "State Representative, 15th District Position 2; former Selah City Council member [S1][S2]",
+            "Voted against the 2026 tax on income over $1 million, saying \"these taxes start small and grow\" [S3][S5]",
+            "Voted against ESHB 1296 (2025), the changes to the parental-rights law that I-1 would undo [S4]",
+            "Lieutenant colonel in the U.S. Army Reserve JAG Corps; served in Kuwait and Afghanistan [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "yakima-yakima-county-assessor",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/yakima/dossiers/yakima-yakima-county-assessor/"
+      ],
+      "office_does": "The county assessor sets the market value of every taxable property each year and applies property-tax exemptions; taxing districts, not the assessor, decide how much tax is collected.",
+      "race_blurb": "Two Republicans: incumbent Jacob Tate, a 30-year veteran of the office seeking a second term, faces first-time candidate Keith Effler, a photographer and developer endorsed by the county Republican Party. Tate stresses accurate, equitable appraisal and modernization; Effler pledges customer service, an online valuation data portal and cutting the tax burden as far as the law allows.",
+      "candidates": [
+        {
+          "slug": "jacob-tate",
+          "summary": "Incumbent assessor with more than 30 years in the office, including as chief deputy under two predecessors, holding the IAAO Mass Appraisal Specialist designation.",
+          "highlights": [
+            "More than 30 years in the assessor's office; assessor since 2022 [S1][S2]",
+            "Says the office shrank from 34 employees to 24 positions through modernization [S2]",
+            "Says the assessor's job is accurate, equitable values, not raising or lowering taxes [S2]",
+            "Plans online exemption applications for seniors and people with disabilities [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Incumbent assessor with more than 30 years in the office, including as chief deputy."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Cites cutting the office from 34 employees to 24 positions and doing more with fewer people through modernization."
+            }
+          }
+        },
+        {
+          "slug": "keith-effler",
+          "summary": "Commercial photographer, developer and Republican precinct committee officer making a first run for office on a taxpayer-first, customer-service platform.",
+          "highlights": [
+            "Pledges to cut the tax burden 'as far as the law allows' and make the county 'the cheapest tax base in Washington' [S1]",
+            "Would launch an online 'data-depot' explaining valuations, comparable sales and parcel tax coefficients [S2][S3]",
+            "Would put all forms, including senior exemption forms, online [S2][S4]",
+            "Endorsed by the Yakima County Republican Party [S1][S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "First run for county office from a business background, against a 30-year office veteran; says he won't befriend state officials."
+            },
+            "taxes": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Statement pledges to 'only collect an absolute minimum,' cut the tax burden as far as the law allows and make the county the cheapest tax base in the state."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "yakima-yakima-county-auditor",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/yakima/dossiers/yakima-yakima-county-auditor/"
+      ],
+      "office_does": "The county auditor runs elections and voter registration, records deeds and other public documents, issues licenses and passports, and keeps the county's accounts and payroll.",
+      "race_blurb": "Republican Charles Ross, auditor since 2014 and a former state representative, seeks a fourth term against Democrat Maria Cuevas, a retired Yakima Valley College instructor. Ross runs on fair, efficient administration; Cuevas on raising the county's low turnout, Spanish-language service and an independent review of the office.",
+      "candidates": [
+        {
+          "slug": "charles-ross",
+          "summary": "Three-term Yakima County Auditor, former 14th District state representative and former Naches mayor.",
+          "highlights": [
+            "Auditor since 2014; state representative 2006-2014; Naches councilman and mayor 1997-2006 [S1]",
+            "Says he implements laws he does not always agree with in a fair, professional manner [S1]",
+            "Says county plans focus on quality services 'while living within our means' [S3]",
+            "Led the August primary with 37.7% [S7]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Three-term incumbent auditor with eight years in the Legislature and nine as a town official."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Describes county planning focused on 'living within our means and being accountable to taxpayers'."
+            }
+          }
+        },
+        {
+          "slug": "maria-cuevas",
+          "summary": "Retired Yakima Valley College sociology instructor making her first run for office, focused on turnout, bilingual service and public reporting.",
+          "highlights": [
+            "Says the county's turnout is the lowest in the state and would expand outreach to reduce ballot rejections [S1][S2]",
+            "Would publish signature challenges and cures by precinct [S2]",
+            "Would commission an independent operational review of the office and publish a spending dashboard [S2]",
+            "Calls vote-by-mail 'the most democratic way to ensure that everyone participates' [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "No prior elected office; runs to 'change the standard' of an office she says has not served the full community."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Proposes a year-one independent operational review, public payroll and expenditure dashboards and internal controls against waste."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "yakima-yakima-county-clerk",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/yakima/dossiers/yakima-yakima-county-clerk/"
+      ],
+      "office_does": "The County Clerk runs the Clerk's Office and is the executive officer of the Superior Court: it processes and keeps court records and exhibits and collects and pays out court fees, fines and restitution.",
+      "race_blurb": "Uncontested: incumbent Clerk Billie A. Maggard (Prefers Republican Party), in office since 2023, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "billie-a-maggard",
+          "summary": "Yakima County Clerk since January 2023, previously an in-court clerk and a longtime legal assistant; the only candidate on the ballot.",
+          "highlights": [
+            "Clerk since January 2023; earlier an in-court clerk for about four years and a legal assistant for almost 20 years [S3]",
+            "Named rebuilding relationships within the office and with other departments as her biggest project [S3]",
+            "Set electronic filing of court documents as a priority [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "yakima-yakima-county-commissioner-district-1-county-commissioner-district-1",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/yakima/dossiers/yakima-yakima-county-commissioner-district-1-county-commissioner-district-1/"
+      ],
+      "office_does": "Yakima County's three commissioners adopt the county budget, pass ordinances, set land-use and permitting rules, and oversee roads and the county landfill; District 1 is elected by its own voters.",
+      "race_blurb": "An open seat between two Republicans: retiring Sheriff Bob Udell, who won 65% in the primary and stresses budget restructuring and partnerships, and contractor Kristoffer Strutner, who would cut regulation and staff and end the county's well-metering program. Coverage of Strutner centers on the Caton Landfill he operated.",
+      "candidates": [
+        {
+          "slug": "robert-udell",
+          "summary": "Two-term Yakima County Sheriff with 36 years in the sheriff's office, running on budget restructuring, partnerships and fiscal responsibility.",
+          "highlights": [
+            "36 years in the sheriff's office, sheriff since his 2018 election [S1][S2]",
+            "Says taxes are a last resort; would restructure county operations and seek revenue through growth [S4]",
+            "Priorities: public safety, agriculture, water rights and the budget [S3]",
+            "Won 65% in the August primary [S5]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "36 years in county law enforcement, eight as the elected sheriff managing one of the county's largest departments."
+            },
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Calls taxes 'a last resort' and would rely on growth for new revenue."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S4"
+              ],
+              "basis": "Backs the county's hiring freezes and long-term restructuring, and stresses fiscal responsibility, while supporting public money for an animal shelter."
+            }
+          }
+        },
+        {
+          "slug": "kristoffer-strutner",
+          "summary": "Heavy civil construction manager and former Caton Landfill operator promising sweeping cuts to county regulation, permitting and staff.",
+          "highlights": [
+            "Would end the county's well-metering Water Resource System and sell its water rights [S1][S4]",
+            "Would cut permitting to state minimums, with 30-minute approvals for stamped plans [S2][S3]",
+            "Would reduce county staff as regulation is cut [S4]",
+            "Operated the Caton Landfill, which lost its permit; disputes misdemeanor tire-dumping charges [S3]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "First-time candidate running on 'experience outside the political system' against a 36-year county official."
+            },
+            "housing": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Would strip permitting to state minimums, speed approvals, allow rural clustering and end water metering to cut the cost to build."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Would reduce county staff, cut infrastructure costs through contracting changes and liquidate water-rights assets into the general fund."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "yakima-yakima-county-coroner",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/yakima/dossiers/yakima-yakima-county-coroner/"
+      ],
+      "office_does": "The County Coroner investigates sudden, unexpected, violent or unnatural deaths in Yakima County, oversees autopsies and may testify in court about a death.",
+      "race_blurb": "Uncontested: Coroner Marshall Slight (Prefers Republican Party), appointed in 2025 and elected in a 2025 special election, is the only candidate for the full term.",
+      "candidates": [
+        {
+          "slug": "marshall-slight",
+          "summary": "Yakima County Coroner since his 2025 appointment and chief deputy coroner from 2009; the only candidate on the ballot.",
+          "highlights": [
+            "Chief deputy coroner 2009-2025; appointed coroner in May 2025 after his predecessor resigned [S1][S2]",
+            "Won the November 2025 special election with about 70% in election-night returns [S3]",
+            "Names aging vehicles and equipment and a tight $600,000 budget as the office's main problems [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "yakima-yakima-county-prosecuting-attorney",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/yakima/dossiers/yakima-yakima-county-prosecuting-attorney/"
+      ],
+      "office_does": "The prosecuting attorney decides which crimes are charged and what plea offers are made in Yakima County, tries criminal cases for the state, and serves as the county government's lawyer.",
+      "race_blurb": "An open seat between two Republicans who both prosecuted in the office's special assault unit: Tyler Haueter, endorsed by the county Republican Party, pledges no plea-downs for gang violence; Quinn Dalan, endorsed by the Mainstream Republicans, the deputies' guild and retired judges, stresses experience as prosecutor, defender and pro tem judge. The county party ran a months-long campaign against Dalan.",
+      "candidates": [
+        {
+          "slug": "tyler-haueter",
+          "summary": "Kennewick assistant city attorney and former Yakima County special-assault prosecutor running on an enforcement-first platform with the county Republican Party's endorsement.",
+          "highlights": [
+            "Pledges no plea-downs for gang violence and every available sentencing enhancement [S2]",
+            "Would end 'soft-on-crime' plea deals for repeat and violent offenders [S2][S3]",
+            "Air Force paralegal, defense investigator, then special-assault prosecutor; now prosecutes in Kennewick [S1][S2]",
+            "Endorsed by the Yakima County Republican Party [S1]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Repeated explicit pledges: no plea-downs for gang violence, full prosecution of repeat offenders, every sentencing enhancement, 'enforce the law firmly ... without apology'."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Nearly 19 years in the criminal-justice system and current trial work, but a first-time candidate with a shorter career as a lawyer."
+            }
+          }
+        },
+        {
+          "slug": "quinn-dalan",
+          "summary": "Yakima lawyer since 2008: former deputy prosecutor and unit supervisor, public defender, legal-aid director and current municipal prosecutor for Wapato, Granger and Zillah.",
+          "highlights": [
+            "Former special-assault prosecutor and District Court unit supervisor; cites 65+ trials [S1]",
+            "Has also worked as a public defender and pro tem judge [S2][S4]",
+            "Endorsed by the Mainstream Republicans, the sheriff's deputies' guild and retired judges [S3]",
+            "Target of a months-long county Republican Party campaign questioning her party loyalty [S4]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Prioritizes violent crime and drug trafficking, accountability and law-enforcement partnerships, while citing a balanced view from defense and judicial work."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2",
+                "S4"
+              ],
+              "basis": "Eighteen years practicing in Yakima County across prosecution, supervision, defense, civil legal aid, pro tem judging and current municipal prosecution.",
+              "adjusted_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "yakima-yakima-county-sheriff",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/yakima/dossiers/yakima-yakima-county-sheriff/"
+      ],
+      "office_does": "The sheriff runs the Yakima County Sheriff's Office, which patrols unincorporated areas, runs search and rescue, monitors sex offenders and serves civil court papers.",
+      "race_blurb": "An open seat: retiring Sheriff Bob Udell endorsed his lieutenant Jake Church, who runs on 26 years in law enforcement, against West Richland police officer and business owner Roman Kilinkaridis, who runs as an outsider. Both prefer the Republican Party; they differ on keeping Flock license-plate cameras.",
+      "candidates": [
+        {
+          "slug": "jake-church",
+          "summary": "Yakima County sheriff's lieutenant with 26 years in law enforcement, endorsed by retiring Sheriff Bob Udell.",
+          "highlights": [
+            "Administrative lieutenant handling internal investigations, policy and budgets; 10 years in the sheriff's office after 16 in Toppenish [S1][S4]",
+            "Would use analytics to aim limited staff at violent, gang, drug and property crime [S4]",
+            "Would keep Flock license-plate cameras under existing audits, but follow a public vote if one is held [S4]",
+            "Endorsed by Sheriff Bob Udell [S3]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S4"
+              ],
+              "basis": "26 years in law enforcement, 10 inside the sheriff's office as deputy, sergeant and lieutenant, endorsed by the incumbent.",
+              "adjusted_by_refutation": true
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S4"
+              ],
+              "basis": "Centers staffing, analytics-directed enforcement, prosecution follow-through and license-plate cameras, alongside promised prevention programs."
+            }
+          }
+        },
+        {
+          "slug": "roman-kilinkaridis",
+          "summary": "West Richland police officer since 2021 and Yakima business owner running as an outsider focused on youth, domestic-violence victims and seniors.",
+          "highlights": [
+            "First-year priorities: youth, domestic-violence victims and fraud against seniors [S1]",
+            "Would start a countywide Police Athletic League to steer youth away from gangs [S3]",
+            "Would switch off the new Flock cameras until voters weigh in through an advisory vote [S2][S3]",
+            "West Richland police demoted him from sergeant in his probationary period; he attributes it to department politics [S4]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Seven years in policing and none in the sheriff's office; describes himself as an outsider bringing a new perspective.",
+              "adjusted_by_refutation": true
+            },
+            "safety": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Leads with youth programs, domestic-violence victim support, community engagement and limits on camera surveillance rather than enforcement."
+            },
+            "reform": {
+              "score": 1,
+              "confidence": "low",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Proposes an advisory public vote on Flock cameras and a public ledger of campaign promises."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Would trade in the sheriff's $130,000 Ford Bronco, questions year-end spend-down of budgets and presents the 9.2% rise in the 2026 sheriff budget as something voters should question [S2][S3]; restraint-and-scrutiny proposals (pole_a), tempered by wanting grant-funded deputies.",
+              "added_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "yakima-yakima-county-treasurer",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/yakima/dossiers/yakima-yakima-county-treasurer/"
+      ],
+      "office_does": "The county treasurer collects property and other taxes and acts as the bank for the county, schools and special districts, investing and accounting for their funds.",
+      "race_blurb": "Open seat after Treasurer Ilene Thomson's retirement: Republican Stephanie Patterson, the office's investments and banking manager and Thomson's endorsed successor, faces independent Sam Johnson, a state credit-union examiner supervisor. Both propose centralized receipting and stronger internal controls; the contrast is inside experience versus an outside perspective.",
+      "candidates": [
+        {
+          "slug": "stephanie-patterson",
+          "summary": "Senior manager for investments and banking in the Yakima County Treasurer's Office since 2014, endorsed by the retiring treasurer.",
+          "highlights": [
+            "In the treasurer's office since 2014; manages the county's investment portfolio and banking [S1][S3]",
+            "Endorsed by retiring Treasurer Ilene Thomson [S3]",
+            "Would expand centralized receipting and tighten controls over banking and e-commerce [S2][S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Twelve years inside the treasurer's office and the retiring incumbent's endorsed successor, though not herself an officeholder."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Stresses internal controls and 'rigorous oversight of county funds'.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "sam-johnson",
+          "summary": "Independent candidate and state Department of Financial Institutions examiner supervisor who pitches an outside, oversight-focused perspective.",
+          "highlights": [
+            "Supervises credit-union examinations at the state Department of Financial Institutions [S2][S3]",
+            "Would strengthen internal controls to prevent fraud and reduce risk [S2]",
+            "Would build a single countywide receipting system and real-time public financial information [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "No office record; says the treasurer's office benefits from fresh ideas and a broader financial perspective, while citing regulatory experience."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Platform centers on internal controls, oversight and 'disciplined financial leadership that protects taxpayer dollars'.",
+              "adjusted_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "yakima-yakima-county-yakima-county-district-court-judge-position-1",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/yakima/dossiers/yakima-yakima-county-yakima-county-district-court-judge-position-1/"
+      ],
+      "office_does": "A Yakima County District Court judge hears misdemeanor and gross-misdemeanor criminal cases, traffic infractions, civil cases up to $100,000, small claims and protection orders; the four judges are elected countywide.",
+      "race_blurb": "Uncontested: incumbent Judge Gary Hintze is the only candidate.",
+      "candidates": [
+        {
+          "slug": "gary-hintze",
+          "summary": "Yakima County District Court judge since 2022 and a county deputy prosecutor for 22 years before that; the only candidate on the ballot.",
+          "highlights": [
+            "District Court judge since March 2022; won the 2022 election with about 66% [S1][S2]",
+            "Yakima County deputy prosecutor 2000-2022, including supervising the Special Assault Unit [S1]",
+            "Judge pro tem in four municipal courts 2011-2022; DMCJA Rules Committee member [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "yakima-yakima-county-yakima-county-district-court-judge-position-2",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/yakima/dossiers/yakima-yakima-county-yakima-county-district-court-judge-position-2/"
+      ],
+      "office_does": "A Yakima County District Court judge hears misdemeanor and gross-misdemeanor criminal cases, traffic infractions, civil cases up to $100,000, small claims and protection orders; the four judges are elected countywide.",
+      "race_blurb": "Uncontested: incumbent Judge Brian Sanderson is the only candidate.",
+      "candidates": [
+        {
+          "slug": "brian-sanderson",
+          "summary": "Yakima County District Court judge since 2010, previously Selah Municipal Court judge, assistant attorney general and public defender; the only candidate on the ballot.",
+          "highlights": [
+            "District Court judge since his 2010 election; unopposed in 2022 [S1][S3]",
+            "Earlier Selah Municipal Court judge, special prosecutor, public defender and assistant attorney general [S1]",
+            "Has taught continuing legal education and served on courtroom-technology workgroups [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "yakima-yakima-county-yakima-county-district-court-judge-position-3",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/yakima/dossiers/yakima-yakima-county-yakima-county-district-court-judge-position-3/"
+      ],
+      "office_does": "A Yakima County District Court judge hears misdemeanor and gross-misdemeanor criminal cases, traffic infractions, civil cases up to $100,000, small claims and protection orders; the four judges are elected countywide.",
+      "race_blurb": "Uncontested: appointed Judge Julia A. Davis is the only candidate for both the short and full terms.",
+      "candidates": [
+        {
+          "slug": "julia-a-davis",
+          "summary": "Yakima County District Court judge since her 2025 appointment, after 13 years as a county deputy prosecutor; the only candidate on the ballot for the short and full terms.",
+          "highlights": [
+            "Appointed by county commissioners in March 2025; on the bench since April 2025 [S1][S2]",
+            "Deputy prosecutor 2011-2025; supervised the Special Assault Unit [S1][S2]",
+            "On the ballot for both the unexpired short term and the full four-year term [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "yakima-yakima-county-yakima-county-district-court-judge-position-4",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/yakima/dossiers/yakima-yakima-county-yakima-county-district-court-judge-position-4/"
+      ],
+      "office_does": "A Yakima County District Court judge hears misdemeanor and gross-misdemeanor criminal cases, traffic infractions, civil cases up to $100,000, small claims and protection orders; the four judges are elected countywide.",
+      "race_blurb": "Uncontested: incumbent Judge Alfred G. Schweppe is the only candidate.",
+      "candidates": [
+        {
+          "slug": "alfred-g-schweppe",
+          "summary": "Yakima County District Court judge since 2013 and its presiding judge; former deputy prosecutor and civil attorney; the only candidate on the ballot.",
+          "highlights": [
+            "District Court judge since 2013 and presiding judge [S1][S2]",
+            "Presides over DUI Court for repeat DUI offenders [S1]",
+            "Deputy prosecutor 1995-2001, then partner in a Yakima law firm 2002-2012 [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "whatcom-legislative-district-40-state-representative-pos-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/whatcom/dossiers/whatcom-legislative-district-40-state-representative-pos-1/"
+      ],
+      "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering school funding, tax structure, housing rules, ferries, health funding and criminal-justice statutes.",
+      "race_blurb": "Eight-year Democratic incumbent Debra Lekanoff faces Republican Cindy Carter of Orcas Island, whose campaign centers on repealing the 2026 tax on income over $1 million that Lekanoff voted for. Carter also campaigns on spending accountability and cutting the carbon tax; neither candidate has stated a position on the 2026 initiatives.",
+      "candidates": [
+        {
+          "slug": "debra-lekanoff",
+          "summary": "Eight-year State Representative and vice chair of the House Health Care and Wellness Committee, campaigning on affordability, ferries, salmon and the Salish Sea, unions and reproductive freedom.",
+          "highlights": [
+            "Voted for the 2026 tax on income over $1 million and the 2025 B&O and services tax bills [S3][S5][S6]",
+            "Co-sponsored and voted for the 2025 limit on residential rent and fee increases [S7]",
+            "Voted for ESHB 1296, the 2025 changes to the parental-rights law that I-1 would undo [S4]",
+            "Says she helped fund three new ferries and accelerated ferry hiring [S1]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S5",
+                "S6"
+              ],
+              "basis": "Voted yes on ESSB 6346 and on the 2025 B&O (EHB 2081) and services excise (ESSB 5814) tax bills."
+            },
+            "housing": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S7",
+                "S8"
+              ],
+              "basis": "Co-sponsored and voted for the EHB 1217 rent-increase limit and backs low-income housing investment, alongside support for middle housing and zoning plans."
+            },
+            "climate": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S8"
+              ],
+              "basis": "Pledges to protect salmon, forests and the Salish Sea; 2024 website calls for green-building standards, retrofit and renewable incentives and climate planning."
+            },
+            "social": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S8"
+              ],
+              "basis": "Pledges to defend reproductive freedom and the right to choose; no stated position on LGBTQ+ policy or school sports."
+            },
+            "parental-rights": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Voted for ESHB 1296 on House passage and final passage; no statement on notification or opt-outs."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Eight years in the House, committee vice chair, facing a challenger with no elected office."
+            }
+          }
+        },
+        {
+          "slug": "cindy-carter",
+          "summary": "Orcas Island former hospital laboratory technologist and Republican Party officer campaigning as \"No Income Tax Carter\" to repeal the 2026 income tax and restrain state spending.",
+          "highlights": [
+            "Central pledge is to repeal the 2026 tax on income over $1 million [S1][S4]",
+            "Says the state has a spending problem and cites unaudited child-care spending [S3]",
+            "Would eliminate the carbon tax to lower gas and food prices [S3]",
+            "Opposes a universal health-care system and favors catastrophic plans and interstate insurance competition [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3",
+                "S4"
+              ],
+              "basis": "Pledges to repeal the income tax, says there is no need to increase any taxes and would cut existing ones."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Says Washington has a spending problem, cites audit findings and lists eliminating fraud and ineffective programs as priorities."
+            },
+            "climate": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Would eliminate the 'Carbon Emissions Tax' to lower gasoline and food prices."
+            },
+            "healthcare": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Argues against a universal health-care system; favors catastrophic insurance, interstate competition and private practice."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Says the best way to improve safety is to get criminals off the streets through joint enforcement, while also listing drug treatment."
+            },
+            "immigration": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Favors 'coming into compliance with federal law' and working with federal authorities; does not name immigration enforcement directly."
+            },
+            "local-control": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Calls one-size-fits-all state water rules damaging to the district and wants to roll back state regulation.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S5"
+              ],
+              "basis": "No elected office; long service as a county and state Republican Party officer."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "whatcom-legislative-district-40-state-representative-pos-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/whatcom/dossiers/whatcom-legislative-district-40-state-representative-pos-2/"
+      ],
+      "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering school funding, tax structure, housing rules, energy policy, health funding and criminal-justice statutes.",
+      "race_blurb": "Third-term Democratic incumbent and House Majority Whip Alex Ramel faces Orcas Island stone mason Joseph Segault, a newcomer with no party preference, after Ramel took 68% of the primary vote in Whatcom County. Ramel voted for the 2026 income tax and is voting no on all statewide initiatives; Segault opposes rising taxes and wants the income tax put to a public vote.",
+      "candidates": [
+        {
+          "slug": "alex-ramel",
+          "summary": "Third-term State Representative and House Majority Whip, a former clean-energy organizer focused on climate, housing and progressive revenue.",
+          "highlights": [
+            "Voted for the 2026 tax on income over $1 million and the 2025 B&O and services tax bills [S3][S5][S6]",
+            "Co-sponsored and voted for the 2025 limit on residential rent and fee increases [S7]",
+            "Says he is voting no on all statewide initiatives, including I-645, I-1 and I-638 [S1]",
+            "Names building decarbonization and rent stabilization among his proudest accomplishments [S8]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3",
+                "S5",
+                "S6",
+                "S8"
+              ],
+              "basis": "Voted yes on ESSB 6346, EHB 2081 and ESSB 5814; supports the high-earner tax, opposes I-645 and requires any new tax to be progressive."
+            },
+            "housing": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S7",
+                "S8"
+              ],
+              "basis": "Co-sponsored and voted for the EHB 1217 rent cap, calls rent stabilization a top accomplishment and cites affordable-housing funding."
+            },
+            "climate": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S8",
+                "S11"
+              ],
+              "basis": "Campaigns on 'bold climate action'; record on building decarbonization and clean-energy siting."
+            },
+            "social": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Says he is '100% pro-choice' and is voting no on all statewide initiatives, including I-638."
+            },
+            "parental-rights": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S4"
+              ],
+              "basis": "Voted for ESHB 1296 on House passage and final passage and is voting no on I-1."
+            },
+            "tech": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S8"
+              ],
+              "basis": "Would allow data-center construction while keeping energy costs off the state and neighboring ratepayers."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Third term and House Majority Whip, facing a political newcomer."
+            }
+          }
+        },
+        {
+          "slug": "joseph-segault",
+          "summary": "Orcas Island stone mason and political newcomer with no party preference, running against rising taxes and cost of living.",
+          "highlights": [
+            "Says increased taxes and living costs are pushing people out of local communities [S1][S2]",
+            "Says the income tax on millionaire households should go to a vote of the people [S2]",
+            "Says restrictive zoning makes housing less affordable and more homes are needed [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Opposes rising taxes on families and would put the income tax to a public vote; does not state a position on repeal."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Says it is unclear why state budgets are 'totally bloated'; no specific proposals."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Blames restrictive zoning for housing costs and says more homes need to be built."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Political newcomer with no listed elected or professional experience, running as an independent."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "whatcom-legislative-district-42-state-representative-pos-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/whatcom/dossiers/whatcom-legislative-district-42-state-representative-pos-1/"
+      ],
+      "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering school funding, tax structure, housing rules, health funding and criminal-justice statutes.",
+      "race_blurb": "Third-term Democrat Alicia Rule, who voted against the 2026 income tax and the 2025 tax bills, faces Republican Party chair Misty Flowers, who pledges lower property, sales and income taxes and more jail capacity. Rule won 56% in the primary; she campaigns on her pro-choice positions and her votes for rent-increase limits and against masked law enforcement.",
+      "candidates": [
+        {
+          "slug": "alicia-rule",
+          "summary": "Third-term State Representative, social worker and former Blaine councilmember who broke with most House Democrats to vote against the 2026 tax on income over $1 million.",
+          "highlights": [
+            "Voted against ESSB 6346 (2026 income tax) and the 2025 B&O and services tax bills [S6][S8][S9]",
+            "States she is \"100% pro-choice\" and introduced a bill to protect IVF access [S1]",
+            "Voted for the 2025 rent-increase limits and the 2026 law-enforcement mask bill [S11][S12]",
+            "Voted for ESHB 1296, the parental-rights rewrite I-1 would undo [S7]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S6",
+                "S8",
+                "S9",
+                "S13"
+              ],
+              "basis": "Voted no on ESSB 6346, EHB 2081 and ESSB 5814 and campaigns on voting no on tax increases, while calling the state's tax system regressive and objecting to the income tax's specifics rather than all new revenue."
+            },
+            "housing": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S11"
+              ],
+              "basis": "Voted for and campaigns on the EHB 1217 rent-increase limits, alongside zoning changes to add supply."
+            },
+            "immigration": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S12"
+              ],
+              "basis": "Voted for SB 5855 on law-enforcement face coverings and cites laws stopping masked ICE agents and limiting state data sharing with federal authorities."
+            },
+            "social": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S4"
+              ],
+              "basis": "States she is 100% pro-choice, introduced an IVF access bill and replaced Planned Parenthood funding; endorsed by Planned Parenthood in 2024."
+            },
+            "parental-rights": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S7"
+              ],
+              "basis": "Voted yes on final passage of ESHB 1296, which amended the I-2081 parental-rights law; no statement on notification or opt-outs."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S5"
+              ],
+              "basis": "Third House term, committee vice chair and former Blaine councilmember, facing a challenger who has not held office."
+            }
+          }
+        },
+        {
+          "slug": "misty-flowers",
+          "summary": "Small-business owner and Whatcom County Republican Party chair running on lower taxes, spending restraint and expanded jail capacity after a 2025 county council run.",
+          "highlights": [
+            "Pledges to lower property, sales and state income taxes [S2]",
+            "Calls the state budget bloated and unaccountable and pledges spending restraint [S1][S2]",
+            "Would expand jail capacity for violent offenders and back recovery programs focused on personal responsibility [S2]",
+            "Lost the 2025 Whatcom County Council at-large race, 37% to 63% [S9]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3",
+                "S5"
+              ],
+              "basis": "Statement and website pledge to lower property, sales and state income taxes and say Washington is 'taxed out'; opposed regular county tax increases in 2025."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S5"
+              ],
+              "basis": "Calls for restraining Olympia's spending and a less 'bloated' budget, and for performance requirements in county nonprofit contracts."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Blames strict building rules and taxes for housing costs and pledges code changes to cut delays; also proposed rent subsidies in 2025."
+            },
+            "safety": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S5"
+              ],
+              "basis": "Pledges expanded jail capacity for violent offenders, criticizes drug decriminalization and housing-first programs, and backs jail time as part of breaking addiction-driven crime."
+            },
+            "immigration": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S6"
+              ],
+              "basis": "Asked about protecting immigrants from unconstitutional enforcement, said immigration is a federal matter and pointed to federal immigration law."
+            },
+            "reform": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S6"
+              ],
+              "basis": "Opposes ranked-choice voting as confusing and costly."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S5",
+                "S9"
+              ],
+              "basis": "Has never held public office and runs as 'fresh leadership', though she has chaired the county Republican Party and ran for county council in 2025."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "whatcom-legislative-district-42-state-representative-pos-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/whatcom/dossiers/whatcom-legislative-district-42-state-representative-pos-2/"
+      ],
+      "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering school funding, tax structure, housing rules, health funding and criminal-justice statutes.",
+      "race_blurb": "Second-term Democrat Joe Timmons, who voted against the 2026 income tax but sees merit in a millionaires' tax, faces first-time Republican candidate Justin Pike, a sheriff's detective running on budget accountability and lower taxes. Timmons won 54% in the primary, and the two have raised similar amounts.",
+      "candidates": [
+        {
+          "slug": "joe-timmons",
+          "summary": "Second-term State Representative, Assistant Speaker Pro Tempore and former aide to Gov. Inslee, focused on state investment in Whatcom County, higher-education funding and housing supply.",
+          "highlights": [
+            "Voted against ESSB 6346 (2026 income tax) and the 2025 B&O and services tax bills, citing too little relief from other taxes [S7][S9][S10][S14]",
+            "Prime sponsor of HB 2070 for Western Washington University funding parity [S11]",
+            "States he is \"100% Pro-Choice\" and supports continued emissions reductions [S3]",
+            "Voted for ESHB 1296, the parental-rights rewrite I-1 would undo [S8]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S7",
+                "S9",
+                "S10",
+                "S14"
+              ],
+              "basis": "Voted no on ESSB 6346, EHB 2081 and ESSB 5814; says he sees merit in a millionaires' tax but wants drastic cuts to sales, B&O and property taxes alongside any new revenue."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2",
+                "S11",
+                "S16"
+              ],
+              "basis": "Campaigns on securing state funding for local projects and sponsors WWU funding parity; also cited state spending levels in his income-tax vote."
+            },
+            "housing": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S12"
+              ],
+              "basis": "Website centers building more housing near transit, while he voted for the EHB 1217 rent-increase limits.",
+              "adjusted_by_refutation": true
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S5"
+              ],
+              "basis": "Says climate change is real and supports continued emissions reductions and the clean-energy economy; endorsed by Sierra Club and Washington Conservation Action; no stated position on carbon pricing."
+            },
+            "healthcare": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S11"
+              ],
+              "basis": "Cites work to lower EpiPen and inhaler costs and a medical-debt bill, measures within the existing insurance system."
+            },
+            "immigration": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S13"
+              ],
+              "basis": "Voted yes on SB 5855 limiting face coverings worn by law enforcement; no campaign statement on immigration."
+            },
+            "social": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S5"
+              ],
+              "basis": "States he is 100% pro-choice and that abortion decisions belong to patients and providers; endorsed by Planned Parenthood Advocates."
+            },
+            "parental-rights": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S8"
+              ],
+              "basis": "Voted yes on ESHB 1296, which amended the I-2081 parental-rights law, on House passage and final passage; no statement on notification or opt-outs."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S4",
+                "S17"
+              ],
+              "basis": "Second House term, Assistant Speaker Pro Tempore and 15 years in government, facing a first-time candidate."
+            }
+          }
+        },
+        {
+          "slug": "justin-pike",
+          "summary": "Whatcom County Sheriff's detective, National Guard soldier and Ferndale small-business owner running for office for the first time on affordability, budget accountability and public safety.",
+          "highlights": [
+            "Opposes tax increases and calls for rebalancing the state tax structure [S3][S7]",
+            "Would speed permitting, reassess energy-efficiency mandates and let Growth Management Act boundaries expand with growth [S3]",
+            "Supports enforcement and repeat-offender accountability alongside behavioral-health treatment [S2][S3]",
+            "Criticizes the Climate Commitment Act's cost and reporting [S8]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S7",
+                "S8"
+              ],
+              "basis": "Platform says excessive taxation holds back business; opposed raising taxes at a May town hall and says the Climate Commitment Act taxed people out of their homes."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S3",
+                "S7",
+                "S8"
+              ],
+              "basis": "Starts accountability with the budget, criticizes one-time funding of ongoing programs and overspending, and calls for measurable results."
+            },
+            "housing": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Housing platform is faster permitting, fewer energy-efficiency mandates and easier boundary expansion under the Growth Management Act."
+            },
+            "local-control": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Wants the Growth Management Act changed so municipal boundaries expand with local growth rather than on state multi-decade schedules."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Supports effective law enforcement and accountability for repeat offenders, combined with shelter, treatment and community service for minor offenses."
+            },
+            "climate": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S8"
+              ],
+              "basis": "Criticizes the Climate Commitment Act's cost and would reassess energy-efficiency mandates on homeowners."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S6"
+              ],
+              "basis": "First-time candidate for public office facing a second-term incumbent."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "whatcom-legislative-district-42-state-senator",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/whatcom/dossiers/whatcom-legislative-district-42-state-senator/"
+      ],
+      "office_does": "A State Senator writes and votes on Washington state law and the operating, capital and transportation budgets, covering school funding, tax structure, housing rules, health funding and criminal-justice statutes, for a four-year term.",
+      "race_blurb": "Open seat after Democratic Sen. Sharon Shewmake's retirement. Republican Erika Creydt, a Blaine School Board director, led the primary with about 45%; Democrat Michael Shepard, a Port of Bellingham commissioner, took second by four votes over Eamonn Collins after a hand recount. Creydt campaigns on repealing the 2026 income tax and auditing state spending; Shepard on education funding, abortion rights and limits on federal immigration enforcement.",
+      "candidates": [
+        {
+          "slug": "erika-creydt",
+          "summary": "Clinical psychologist, counseling-clinic founder and Blaine School Board director running as a Republican on affordability, tax restraint and state spending accountability.",
+          "highlights": [
+            "Calls for repealing the 9.9% tax on income over $1 million enacted under SB 6346 [S5]",
+            "Says Washington has a spending problem and programs without measurable results should be reformed or eliminated [S4][S5]",
+            "Supports streamlining permitting to increase housing supply while protecting farmland and water [S5]",
+            "Opposes the state water adjudication covering about 30,000 Whatcom landowners [S7]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S4",
+                "S5",
+                "S6"
+              ],
+              "basis": "Repeated explicit opposition to a state income tax and a call to repeal the SB 6346 tax; also criticizes the 2025 services sales tax."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S4",
+                "S5"
+              ],
+              "basis": "Says the state has a spending problem; would review, reform or eliminate programs without measurable return before any new revenue."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S5",
+                "S9"
+              ],
+              "basis": "Supply-side approach of streamlining permitting and removing barriers, bounded by infrastructure and farmland protection."
+            },
+            "healthcare": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S9",
+                "S15"
+              ],
+              "basis": "Focuses on keeping people insured after federal cuts and addressing provider shortages within the current system.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S15"
+              ],
+              "basis": "School board director with no legislative record, running to 'challenge the policies and politicians' in Olympia, against a commissioner backed by the retiring senator."
+            }
+          }
+        },
+        {
+          "slug": "michael-alvarez-shepard",
+          "summary": "Three-term Port of Bellingham commissioner and Western Washington University anthropology faculty member running as a Democrat, endorsed by the retiring senator.",
+          "highlights": [
+            "Voted for a port resolution limiting civil immigration detentions on port property [S14]",
+            "Describes himself as \"100% pro-choice\" and pledges to protect reproductive care providers and health data [S1][S11]",
+            "Pledges increased K-12 and early-learning funding [S8]",
+            "Proposes a state self-insurance model for Medicare and Medicaid [S4][S15]",
+            "Opposes \"defund the police\" and says law enforcement needs more resources [S6]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "immigration": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S14",
+                "S15"
+              ],
+              "basis": "Voted to bar warrantless civil immigration detentions and detention facilities on port property and says he is proud of that vote."
+            },
+            "social": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S11"
+              ],
+              "basis": "Says he is '100% pro-choice' and backs abortion and birth-control access and protections for providers; no LGBTQ+ position found."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S8"
+              ],
+              "basis": "Pledges increased K-12 and early childhood funding and investment from Pre-K through postsecondary education."
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S10"
+              ],
+              "basis": "Adopted a port net-zero-by-2050 Climate Action Plan and says the state must keep reducing emissions, while avoiding extra costs on families."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S6"
+              ],
+              "basis": "Opposes 'defund the police' and says law enforcement needs more resources; also backs homelessness prevention."
+            },
+            "housing": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S4"
+              ],
+              "basis": "Combines cutting red tape and density near transit with workforce-housing incentives and support for a low-income housing project."
+            },
+            "healthcare": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S15"
+              ],
+              "basis": "Would lower drug prices and expand coverage options and proposes state self-insurance for Medicare and Medicaid, not single-payer."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3",
+                "S12"
+              ],
+              "basis": "Nine years as an elected port commissioner, endorsed by the retiring senator and Democratic legislative leaders; no legislative record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "whatcom-port-of-bellingham-commissioner-district-4-commissioner-district-4",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/whatcom/dossiers/whatcom-port-of-bellingham-commissioner-district-4-commissioner-district-4/"
+      ],
+      "office_does": "A Port of Bellingham commissioner sits on the newly expanded five-member board that sets policy for the county-wide port's shipping terminal, airport, marinas and waterfront property; all Whatcom County voters elect the District 4 seat in November.",
+      "race_blurb": "This is one of two new seats created when voters expanded the commission in 2025. Whichever new commissioner draws more votes gets a three-year term and the other a one-year term, though VoteWA lists both as one year. Lynden longtime commercial fisherman and seafood-trucking owner Paul Burrill, the port's marina advisory chair since 2018, faces Bellingham financial planner and ship-logistics coordinator Tor Benson.",
+      "candidates": [
+        {
+          "slug": "paul-burrill",
+          "summary": "Lynden longtime commercial fisherman (30-plus years), seafood-company shareholder and trucking-company owner who has chaired the port's marina advisory committee since 2018; first-time candidate.",
+          "highlights": [
+            "Placed first of six in the primary with 30.2% in late returns [S8]",
+            "Wants some waterfront land kept permanently industrial and growth built on seafood, cold storage and logistics [S5]",
+            "Proposes a heavy-industry advisory committee and changing how major port contracts are awarded so qualified local contractors can compete [S5][S6]",
+            "Endorsed by Commissioner Bobby Briscoe, two former commissioners, the Realtors and Firefighters Local 106 [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "tor-benson",
+          "summary": "Bellingham Certified Financial Planner and former Alaska fishing-boat skipper who coordinates cargo and tanker port calls; first-time candidate in Whatcom with past planning-board service in Petersburg, Alaska.",
+          "highlights": [
+            "Placed second of six in the primary with 24.2% in late returns [S10]",
+            "Says the airport and shipping terminal are budgeted at a loss for a third year; backs a 5% airport marketing budget [S1][S5]",
+            "Calls for better public communication after ABC Recycling and a review of port-owned property [S2][S5]",
+            "Endorsed by the Whatcom Commercial Fishermen's Association and the Nooksack Indian Tribe [S8]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "whatcom-port-of-bellingham-commissioner-district-5-commissioner-district-5",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/whatcom/dossiers/whatcom-port-of-bellingham-commissioner-district-5-commissioner-district-5/"
+      ],
+      "office_does": "A Port of Bellingham commissioner sits on the newly expanded five-member board that sets policy for the county-wide port's shipping terminal, airport, marinas and waterfront property; all Whatcom County voters elect the District 5 (east county) seat in November.",
+      "race_blurb": "This is one of two new seats created when voters expanded the commission in 2025. Whichever new commissioner draws more votes gets a three-year term and the other a one-year term, though VoteWA lists both as one year. Acme farmer and natural-resource planner Chris Elder, endorsed by Democratic officials and environmental and labor groups, faces Deming refinery foreman and Air Force Reserve veteran Shawn Ensley, whose endorsement page shows Whatcom County Association of Realtors and BUILD PAC logos.",
+      "candidates": [
+        {
+          "slug": "chris-elder",
+          "summary": "Acme farmer and natural-resource planner who worked on farmland preservation and watershed planning for Whatcom County and now manages King County's farmland program; first-time candidate.",
+          "highlights": [
+            "Placed first of six in the primary with 41.4% [S8]",
+            "Wants port investment in agriculture, forestry, tribal communities and flood-affected east-county towns [S6]",
+            "Supports legacy-contamination cleanup and high standards for new development given rising seas [S1]",
+            "Endorsed by Sen. Shewmake, Reps. Ramel and Timmons, Whatcom Democrats, Sierra Club, Lummi Nation and Firefighters Local 106 [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "shawn-ensley",
+          "summary": "Lifelong Whatcom County resident raised in Acme and Deming, instrumentation and electrical shop foreman at BP Cherry Point and 21-year Air Force Reserve logistics veteran; first-time candidate.",
+          "highlights": [
+            "Placed second of six in the primary with 21.4% [S9]",
+            "Wants the port focused on its mission statement and living-wage jobs, including at the shipping terminal [S1][S2]",
+            "Says the working waterfront should stay working and backs expanded air service [S5]",
+            "Endorsement page shows Realtors and BUILD PAC logos [S7]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "whatcom-public-utility-district-no-1-of-whatcom-county-commissioner-district-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/whatcom/dossiers/whatcom-public-utility-district-no-1-of-whatcom-county-commissioner-district-1/"
+      ],
+      "office_does": "A Whatcom PUD commissioner sits on the three-member board of the county-wide public utility, which supplies industrial water and electricity and partners on broadband; the board sets rates and policy and serves six-year terms.",
+      "race_blurb": "All Whatcom County voters elect the District 1 seat, and there was no primary. Commission President Eddy Ury, elected in 2024 to finish the term, seeks a full six-year term. His opponent, Frank Imhof, submitted no statement, and the PDC lists his campaign as discontinued, though his name stays on the ballot.",
+      "candidates": [
+        {
+          "slug": "eddy-ury",
+          "summary": "Incumbent District 1 commissioner and 2026 commission president, elected in 2024 to a two-year unexpired term, with a background in nonprofit clean-energy policy.",
+          "highlights": [
+            "Won the 2024 special election with 59.3% in the late count [S4]",
+            "Says the commission approved a non-potable water plant, transmission lines and a substation [S1]",
+            "Pledges to keep the PUD from levying taxes [S1]",
+            "Pledges to sustain freshwater supplies for farms, fisheries, industries and households [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "frank-imhof",
+          "summary": "On the ballot but submitted no voters'-guide statement; the PDC has listed his campaign as discontinued since May 15, 2026.",
+          "highlights": [
+            "Voters'-guide entry reads \"No information submitted\" [S1]",
+            "PDC status: \"Candidate discontinued campaign,\" no reports filed [S3]",
+            "Filing email is at the domain of IMCO Construction, which lists a Frank Imhof as a founder [S2][S5]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "whatcom-whatcom-county-district-court-judge-position-no-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/whatcom/dossiers/whatcom-whatcom-county-district-court-judge-position-no-1/"
+      ],
+      "office_does": "A District Court judge presides over most criminal misdemeanor cases in Whatcom County, plus protection orders, small claims and therapeutic courts such as Mental Health Court.",
+      "race_blurb": "Uncontested: incumbent Judge Angela Anderson, on the bench since October 2021, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "angela-anderson",
+          "summary": "District Court judge since October 2021 and a Whatcom County public defender for 13 years before that; the only candidate on the ballot.",
+          "highlights": [
+            "District Court judge since October 2021; Whatcom County public defender 2006-2019 [S1]",
+            "Presides over Mental Health Court and cites creating Family Justice Court for domestic-violence cases [S1][S2]",
+            "Received 123 DUI cases in 2023 after a Superior Court writ removed them from Judge Rands [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "whatcom-whatcom-county-district-court-judge-position-no-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/whatcom/dossiers/whatcom-whatcom-county-district-court-judge-position-no-2/"
+      ],
+      "office_does": "A District Court judge presides over most criminal misdemeanor cases in Whatcom County, plus traffic infractions, small claims and other civil disputes.",
+      "race_blurb": "Uncontested: incumbent Judge Jonathan Rands, elected in 2022 and now presiding judge, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "jonathan-rands",
+          "summary": "District Court judge since January 2023 and the court's presiding judge, after 20 years as a trial attorney focused largely on DUI defense; the only candidate on the ballot.",
+          "highlights": [
+            "Elected in 2022 over a deputy prosecutor, with 62% in the election-night count; presiding judge in 2026 [S3][S6]",
+            "20 years as a trial attorney with over 200 cases tried to verdict [S1][S2]",
+            "In 2023 a Superior Court ruling removed him from 123 DUI cases after the prosecutor's office filed affidavits of prejudice [S5]",
+            "Opened Zoom viewing of court hearings to the public in 2026 with the Superior Court presiding judge [S6]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "whatcom-whatcom-county-prosecuting-attorney",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/whatcom/dossiers/whatcom-whatcom-county-prosecuting-attorney/"
+      ],
+      "office_does": "The prosecuting attorney decides which crimes are charged and who is offered diversion, negotiates pleas and sentencing recommendations, and is the county's lawyer in lawsuits and its legal adviser.",
+      "race_blurb": "Open seat after Eric Richey's two terms. Defense attorney Ryan Swinburnson (no party preference), who led the primary, faces Democrat Jesse Corkern, a senior deputy prosecutor; both campaign on fixing staff turnover and case delays in the office.",
+      "candidates": [
+        {
+          "slug": "ryan-swinburnson",
+          "summary": "Defense attorney who directs Whatcom County's conflict defense office and is Blaine School Board president, running with no party preference on accountability for violent and repeat offenders and on rebuilding the office.",
+          "highlights": [
+            "More than 26 years as a prosecutor, defense attorney and county civil counsel; began as a Benton County prosecutor [S1][S6]",
+            "Would hold violent offenders, repeat offenders and drug dealers accountable with consistent charging [S2][S4]",
+            "Would strengthen Recovery Court and Mental Health Court and create a Veterans Court [S4]",
+            "Wants supervisors in court, mentorship for deputies and early plea offers to cut the backlog [S4][S6]",
+            "Led the four-way primary with 38.4% as of the Thursday count [S8]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2",
+                "S4"
+              ],
+              "basis": "Leads with accountability and deterrence for violent and repeat offenders and drug dealers and support for law enforcement, while backing treatment courts that 'require accountability'."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3",
+                "S12"
+              ],
+              "basis": "Runs on 26-plus years of practice and 'experienced leadership'; holds elected office as Blaine School Board president, though not from inside the prosecutor's office."
+            }
+          }
+        },
+        {
+          "slug": "jesse-corkern",
+          "summary": "Senior deputy prosecutor and the county's civil litigator, a Democrat running for the first time on consistent charging standards, attorney specialization and ending staff turnover.",
+          "highlights": [
+            "Whatcom County deputy prosecutor since 2019 in the criminal and civil divisions; earlier a Snohomish County prosecutor and private practitioner [S1][S3]",
+            "Would set consistent charging standards and specialized case divisions to speed cases to trial [S1][S5]",
+            "Would adopt zero-tolerance policies for gun violence and create a Community Court for non-violent offenders [S1][S3]",
+            "Endorsed by Whatcom County Democrats, regional labor councils and several Democratic legislators [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Pairs zero-tolerance policies for gun violence and closer work with law enforcement with a Community Court and treatment partnerships for repeat contacts driven by addiction and mental illness."
+            },
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "First-time candidate running on 'A New Kind of Leadership' and merit over seniority, though a long-time deputy in the office.",
+              "adjusted_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-benton-county-assessor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/benton/dossiers/benton-benton-county-assessor/"
+      ],
+      "office_does": "The assessor values every taxable property in Benton County each year for property taxes; taxing districts and voters set the levies.",
+      "race_blurb": "Uncontested: incumbent Bill Spencer (Prefers Republican Party) is the only candidate and submitted no voters' guide statement.",
+      "candidates": [
+        {
+          "slug": "bill-spencer",
+          "summary": "Incumbent Benton County Assessor, re-elected without opposition in 2022; the only candidate on the ballot.",
+          "highlights": [
+            "Incumbent assessor; re-elected unopposed in 2022 with 97.4% [S2][S3]",
+            "Submitted no biography or statement to the 2026 voters' guide [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-benton-county-auditor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/benton/dossiers/benton-benton-county-auditor/"
+      ],
+      "office_does": "The auditor runs Benton County's elections and handles recording of documents, county accounting and vehicle licensing.",
+      "race_blurb": "Uncontested: incumbent Brenda Chilton (Prefers Republican Party), auditor since 2010, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "brenda-chilton",
+          "summary": "Benton County Auditor since 2010 and with the office since 1998; the only candidate on the ballot.",
+          "highlights": [
+            "Auditor since 2010; previously chief deputy auditor and office supervisor [S1]",
+            "Names election integrity and security among her top priorities and cites the new Benton County Elections Center [S1]",
+            "Endorsed by the Benton County Republican Party [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-benton-county-clerk",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/benton/dossiers/benton-benton-county-clerk/"
+      ],
+      "office_does": "The county clerk is clerk of the superior court, keeping its case records and managing juries, plus passport applications.",
+      "race_blurb": "Uncontested: incumbent Josie Delvin (Prefers Republican Party), clerk for 20 years, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "josie-delvin",
+          "summary": "Benton County Clerk for 20 years after 17 years at Benton County District Court; the only candidate on the ballot.",
+          "highlights": [
+            "Clerk for 20 years; earlier 17 years at Benton County District Court [S1]",
+            "Cites electronic filing, electronic juror response and digitized superior court case files [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-benton-county-commissioner-district-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/benton/dossiers/benton-benton-county-commissioner-district-2/"
+      ],
+      "office_does": "The three county commissioners are Benton County's legislative authority, setting county taxes and budgets; District 2 voters nominate, and the whole county elects, the District 2 commissioner (RCW 36.32.040).",
+      "race_blurb": "Uncontested: incumbent Michael Alvarez (Prefers Republican Party), board chair and former Richland mayor, is the only candidate. He was nominated by District 2 voters in August, and all Benton County voters elect him in November.",
+      "candidates": [
+        {
+          "slug": "michael-alvarez",
+          "summary": "Benton County Commissioner since 2023 and board chair, former Richland mayor and council member; the only candidate on the ballot.",
+          "highlights": [
+            "Commissioner since Jan. 2023 and board chair; Richland City Council 2018-2022, including as mayor [S1][S2]",
+            "Pledges no unnecessary tax increases and cites millions in taxpayer savings [S1][S3]",
+            "Wants a mental health and substance abuse treatment facility without raising taxes or fees [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-benton-county-coroner",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/benton/dossiers/benton-benton-county-coroner/"
+      ],
+      "office_does": "The coroner investigates unnatural, violent or suspicious deaths in Benton County and can hold inquests.",
+      "race_blurb": "Uncontested: incumbent William \"Bill\" Leach (Prefers Republican Party), coroner for two terms, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "william-bill-leach",
+          "summary": "Benton County Coroner for two terms; the only candidate on the ballot.",
+          "highlights": [
+            "Coroner for two terms; re-elected unopposed in 2022 [S1][S3]",
+            "Hired a staff forensic pathologist and contracts autopsies to other counties to offset costs [S1]",
+            "Office earned IACME national accreditation [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-benton-county-district-court-judge-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/benton/dossiers/benton-benton-county-district-court-judge-1/"
+      ],
+      "office_does": "A Benton County District Court judge, elected countywide for four years, hears misdemeanor and gross-misdemeanor cases, traffic and other infractions, small claims, anti-harassment matters and civil cases up to $100,000. The main discretion is in release, sentencing, probation and therapeutic-court supervision.",
+      "race_blurb": "Open seat: Judge Terry Tanner is not on the ballot. Longtime Tri-Cities contract prosecutor Mike Rio, endorsed by Tanner, the rest of the District Court bench, local prosecutors and police groups, faces attorney and King County pro tem judge Talesha Sams. Sams's career mixes prosecution, public defense and Adult Protective Services work, and she lost to Tanner for this seat in 2018.",
+      "candidates": [
+        {
+          "slug": "talesha-sams",
+          "summary": "Benton City attorney with 25 years of practice as a prosecutor, public defender, private practitioner and DSHS Adult Protective Services attorney; King County District Court judge pro tem since 2015 and an Army veteran.",
+          "highlights": [
+            "King County District Court judge pro tem since 2015 [S1][S2]",
+            "Former Adams County deputy prosecutor; has also worked as a public defender [S1][S2]",
+            "Says she \"would uphold the law and would not legislate any personal agenda\" [S1]",
+            "Lost the 2018 race for this seat to Judge Tanner, 34.5% to 65.5% [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Mixed formation: prosecutor in District and Superior Court, public defender, private practice, Adult Protective Services attorney and Veterans Court mentor; no bail or diversion position."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Not an incumbent, but runs on 25 years of varied practice and more than ten years as a District Court pro tem judge."
+            }
+          }
+        },
+        {
+          "slug": "michael-mike-rio",
+          "summary": "Tri-Cities contract city and district-court prosecutor since 2005 (Spokane County deputy prosecutor from 2002), Franklin County District Court judge pro tem and Benton City hearing examiner; campaigns on consistency and accountability.",
+          "highlights": [
+            "21 years prosecuting district-court cases for Tri-Cities-area cities and counties [S1][S3]",
+            "Franklin County District Court judge pro tem; Benton City hearing examiner since 2007 [S1][S3]",
+            "\"Without legal accountability, recidivism rates rise\" [S3]",
+            "Endorsed by incumbent Tanner, all Benton-Franklin Superior Court judges, local prosecutors and police groups [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3",
+                "S4"
+              ],
+              "basis": "Career formed almost entirely in prosecution, plus law-enforcement training; campaigns on accountability and lower recidivism with prosecutor and police endorsements; no bail or diversion position."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3",
+                "S4"
+              ],
+              "basis": "Not an incumbent, but runs on two decades of district-court prosecution and pro tem service, endorsed by the Position 1 incumbent and most local judges."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-benton-county-district-court-judge-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/benton/dossiers/benton-benton-county-district-court-judge-2/"
+      ],
+      "office_does": "A Benton County District Court judge, elected countywide for four years, hears misdemeanor and gross-misdemeanor cases, traffic and other infractions, small claims, anti-harassment matters and civil cases up to $100,000.",
+      "race_blurb": "Judge James \"Jim\" Bell, appointed to Position 2 in 2021 and elected in 2022, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "james-jim-bell",
+          "summary": "Benton County District Court judge since his 2021 appointment (elected 2022) and presiding judge for 2025-2026; former Franklin County deputy prosecutor and private-practice attorney. The only candidate on the ballot.",
+          "highlights": [
+            "Appointed to Position 2 in May 2021, elected in 2022 with 98.9% as the only named candidate [S1][S3]",
+            "Franklin County deputy prosecutor 1994-2002, then 19 years in private practice [S1][S2]",
+            "Oversees the court's Mental Health Court [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-benton-county-district-court-judge-3",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/benton/dossiers/benton-benton-county-district-court-judge-3/"
+      ],
+      "office_does": "A Benton County District Court judge, elected countywide for four years, hears misdemeanor and gross-misdemeanor cases, traffic and other infractions, small claims, anti-harassment matters and civil cases up to $100,000.",
+      "race_blurb": "Judge Dan Kathren, first elected in 2011, is the only candidate. He submitted no statement to the voters' guide.",
+      "candidates": [
+        {
+          "slug": "dan-kathren",
+          "summary": "Benton County District Court judge since 2011 after more than 12 years in private practice; submitted no voters'-guide statement. The only candidate on the ballot.",
+          "highlights": [
+            "Judge in Position 3 since he was first elected in 2011 [S2]",
+            "Unopposed in 2018; 98.4% as the only named candidate in 2022 [S3][S4]",
+            "Submitted no statement to the 2026 voters' guide [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-benton-county-district-court-judge-4",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/benton/dossiers/benton-benton-county-district-court-judge-4/"
+      ],
+      "office_does": "A Benton County District Court judge, elected countywide for four years, hears misdemeanor and gross-misdemeanor cases, traffic and other infractions, small claims, anti-harassment matters and civil cases up to $100,000.",
+      "race_blurb": "Judge John Ziobro, who has held Position 4 since his 2017 appointment and won it in 2022, is not on the 2026 ballot. District Court Commissioner Jennifer Johnson is the only candidate.",
+      "candidates": [
+        {
+          "slug": "jennifer-johnson",
+          "summary": "Benton County District Court commissioner since January 2025; former Benton County deputy prosecutor and defense attorney who sat as a judge pro tem for 10 years. The only candidate for the seat Judge John Ziobro holds.",
+          "highlights": [
+            "District Court commissioner since January 2025 [S1][S2]",
+            "Benton County deputy prosecutor from 2007, later a criminal defense attorney [S1][S2]",
+            "Judge pro tem for 10 years in Benton and Franklin District Courts and Pasco Municipal Court [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-benton-county-district-court-judge-5",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/benton/dossiers/benton-benton-county-district-court-judge-5/"
+      ],
+      "office_does": "A Benton County District Court judge, elected countywide for four years, hears misdemeanor and gross-misdemeanor cases, traffic and other infractions, small claims, anti-harassment matters and civil cases up to $100,000.",
+      "race_blurb": "Judge Jennifer (Lampson) Azure, appointed in 2021 and elected in 2022, is the only candidate. She submitted no statement to the voters' guide.",
+      "candidates": [
+        {
+          "slug": "jennifer-m-lampson-azure",
+          "summary": "Benton County District Court judge since her 2021 appointment (elected 2022); former Franklin County and city prosecutor and criminal-defense attorney; submitted no voters'-guide statement. The only candidate on the ballot.",
+          "highlights": [
+            "Judge in Position 5 since her 2021 appointment; 99.0% as the only named candidate in 2022 [S2][S3]",
+            "Former Franklin County and city prosecutor, then nearly ten years in private criminal-defense, civil and juvenile practice [S2]",
+            "Submitted no statement to the 2026 voters' guide [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-benton-county-prosecuting-attorney",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/benton/dossiers/benton-benton-county-prosecuting-attorney/"
+      ],
+      "office_does": "The prosecuting attorney decides which crimes are charged and prosecutes them, handles the county's civil cases and advises county officials.",
+      "race_blurb": "Two Republicans: incumbent Eric Eisinger, who took 54.1% in the primary, faces Julie Long, a 28-year trial prosecutor and former chief deputy. Both run on enforcement; they differ over the incumbent's record on the charging backlog and office staffing.",
+      "candidates": [
+        {
+          "slug": "eric-eisinger",
+          "summary": "Benton County Prosecuting Attorney since 2023 and former private-practice litigator and Kennewick city prosecutor, endorsed by the county Republican Party and Sheriff Mike Clark.",
+          "highlights": [
+            "Charges the highest provable offense, including firearm enhancements, and moves serious juvenile cases to adult court [S2]",
+            "Says prosecutor vacancies fell from five to one and the inherited felony backlog has been reduced [S4]",
+            "Says the office needs about twice its current number of criminal prosecutors and blames state underfunding [S4]",
+            "Supports veterans, drug, recovery and mental health courts for offenders willing to do the work [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Runs on aggressive charging, bail, juveniles tried as adults and encampment removal; therapeutic courts are a secondary element."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S4",
+                "S7"
+              ],
+              "basis": "Incumbent prosecutor since 2023 running on his first-term record, with 22+ years of litigation."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S4"
+              ],
+              "basis": "Argues the office needs roughly double its criminal prosecutors and more county money for victim services."
+            }
+          }
+        },
+        {
+          "slug": "julie-long",
+          "summary": "Career deputy prosecutor in Benton and Franklin counties for 28 years, including more than 15 as chief deputy, challenging the incumbent over the charging backlog.",
+          "highlights": [
+            "Pledges to prioritize a backlog of over 500 cases awaiting charging decisions [S1][S5]",
+            "Seeks high bail and no plea bargains with violent defendants; aggressive drug and gang prosecution [S1]",
+            "Supports therapeutic and veterans courts for appropriate candidates [S1]",
+            "Endorsed by former Sheriff Tom Croskrey, Sen. Nikki Torres, Commissioner Jerome Delvin and many retired officers [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S5"
+              ],
+              "basis": "Repeatedly stresses high bail, ending lenient plea bargains and aggressive prosecution, with therapeutic courts only for suitable defendants."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3",
+                "S5"
+              ],
+              "basis": "Long institutional career as a line and chief deputy prosecutor, but has never held elected office and is challenging the incumbent."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-benton-county-sheriff",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/benton/dossiers/benton-benton-county-sheriff/"
+      ],
+      "office_does": "The sheriff runs the Benton County Sheriff's Office, the county's chief law-enforcement agency, which patrols, makes arrests and serves court orders and warrants.",
+      "race_blurb": "Appointed Sheriff Mike Clark, picked by commissioners in November 2025 after Sheriff Tom Croskrey resigned mid-term, faces Republican deputy, former legislator and Kennewick council member Brad Klippert. The winner serves the short term left on Croskrey's term and then the full four-year term. Clark took 69.5% in the primary.",
+      "candidates": [
+        {
+          "slug": "michael-mike-clark",
+          "summary": "Benton County Sheriff since his November 2025 appointment, a 23-year veteran of the office who rose from corrections officer to lieutenant and SWAT incident commander.",
+          "highlights": [
+            "Appointed sheriff by county commissioners after Croskrey's resignation; earlier led community services, training and SWAT [S7][S8]",
+            "Promises to comb through the budget to stretch existing resources [S5][S3]",
+            "Runs on holding offenders accountable and proactive, data-driven policing with regional partners [S3]",
+            "Endorsed by the county Republican Party, all three commissioners, Tri-Cities mayors and 31 sitting Washington sheriffs [S4]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S8"
+              ],
+              "basis": "Sitting appointed sheriff with 23 years in the office and broad institutional backing."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S5"
+              ],
+              "basis": "Emphasizes combing through the budget, efficiency and responsible use of taxpayer resources rather than new spending."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3",
+                "S5"
+              ],
+              "basis": "Platform centers on offender accountability, case development, proactive policing and enforcement technology.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "brad-klippert",
+          "summary": "Benton County sheriff's deputy since 1999, former 14-year state representative, retired Washington State Guard colonel and Kennewick City Council member.",
+          "highlights": [
+            "Deputy since 1999 and school resource officer; 8th District state representative, 2008-2022 [S2][S4]",
+            "Says he will support, equip and 'invest in' deputies and keep Benton County safe [S1][S3]",
+            "Promises transparency, fairness and a sheriff who listens [S1]",
+            "As a legislator backed the death penalty for 'swift and sure justice' [S7]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2",
+                "S4"
+              ],
+              "basis": "Long service as deputy, legislator and Guard commander, but challenging the incumbent without having led the agency."
+            },
+            "safety": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3",
+                "S7"
+              ],
+              "basis": "Enforcement and officer-support platform, with a record of backing capital punishment as a legislator."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-benton-county-treasurer",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/benton/dossiers/benton-benton-county-treasurer/"
+      ],
+      "office_does": "The treasurer collects property taxes for the county and every local taxing district, banks and invests county funds, and pays county warrants.",
+      "race_blurb": "Uncontested: incumbent Kenneth Spencer Jr. (Prefers Republican Party), treasurer since 2017, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "kenneth-spencer-jr",
+          "summary": "Benton County Treasurer since 2017, a former college professor and longtime commercial appraiser; the only candidate on the ballot.",
+          "highlights": [
+            "Treasurer since 2017; precinct committee officer since 2012 [S1]",
+            "Calls safeguarding public funds the office's most important function and cites new efficiency software [S1]",
+            "Endorsed by the Benton County Republican Party [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-city-of-richland-council-pos-4",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/benton/dossiers/benton-city-of-richland-council-pos-4/"
+      ],
+      "office_does": "A Richland City Council member is one of the city's elected, nonpartisan legislators, setting city budgets, codes and priorities; this seat carries a three-year unexpired term.",
+      "race_blurb": "The seat is on the ballot because Donald Landsman, elected to it in 2025, died; interim appointee Todd Samuel finished third in the primary. Primary leader Kyle Saltz, a veteran and Hanford Patrol officer, calls for a surplus and lower taxes; PNNL scientist Mary Lipton stresses balancing growth with Richland's character.",
+      "candidates": [
+        {
+          "slug": "kyle-saltz",
+          "summary": "Army counterintelligence veteran, Army reservist and Hanford Patrol tactical officer who led the primary with 40%, running on lower taxes, a budget surplus, public safety and municipal-code cleanup.",
+          "highlights": [
+            "Calls for a budget surplus while reducing taxes on an overburdened population [S1]",
+            "Wants to cut outdated municipal codes and bureaucracy and pledges to donate his council pay [S1]",
+            "Campaign site cites rising crime and homelessness and backs Richland police [S3]",
+            "Lost a 2025 council race (Position 6) to Kurt Maier by about 4.5 points; led the 2026 primary with 40.4% [S6][S7]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Explicitly calls for a surplus 'while reducing taxes on an overburdened population.'"
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Promises responsible spending, a balanced budget with surplus, and removing unnecessary bureaucracy and inefficiencies."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Centers law-enforcement expertise, rising crime and gang activity, support for Richland police, and safety-first handling of homelessness."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S6"
+              ],
+              "basis": "Has never held public office; his leadership experience is in the VFW and he lost a 2025 council bid."
+            }
+          }
+        },
+        {
+          "slug": "mary-s-lipton",
+          "summary": "PNNL staff scientist, WSU adjunct professor and 30-year Richland resident who finished second in the primary, running on managing growth while preserving Richland's character, parks and riverfront.",
+          "highlights": [
+            "Says Richland is 'walking a fine line between growth and maintaining its identity' and favors a balanced approach [S2]",
+            "Lists responsible growth and infrastructure, workforce development, public safety, parks and riverfront access as priorities [S1]",
+            "Emphasizes evidence-based decisions, transparency and fiscal stewardship [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "No prior public office; experience is in science, teaching and school and community volunteering."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-congressional-district-4-u-s-representative",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/benton/dossiers/benton-congressional-district-4-u-s-representative/"
+      ],
+      "office_does": "The U.S. Representative for Washington's 4th District votes on federal law, taxes, spending and oversight for Central Washington, including all of Benton County.",
+      "race_blurb": "An open seat after Rep. Dan Newhouse's retirement: Trump-endorsed Republican Amanda McKinney, a Yakima County commissioner who took 34.9% in the primary, faces Democrat John Duresky, a retired Air Force major and former Hanford manager who took 29.9%. They split on immigration enforcement, energy and climate policy, health coverage, the Iran war and political reform.",
+      "candidates": [
+        {
+          "slug": "amanda-mckinney",
+          "summary": "Republican Yakima County commissioner and former mortgage banker, endorsed by President Trump, running on border enforcement, affordable energy, agriculture and water.",
+          "highlights": [
+            "Supports the administration's deportations and opposes any special path to legal status [S5][S12]",
+            "Backs dams, nuclear and LNG; opposes clean-energy mandates and state fuel taxes [S1][S2][S11]",
+            "Supports keeping women's sports for biological females and protecting life from conception [S3]",
+            "Pledges to rein in federal spending; flagged over $6 million in fraudulent COVID aid claims as commissioner [S2][S3]",
+            "Endorsed by Trump, Speaker Johnson and House GOP leaders [S4]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S11",
+                "S3"
+              ],
+              "basis": "Wants Washington to rethink its fuel taxes and the Climate Commitment Act and calls gun-purchase fees taxes on rights; no federal tax plan stated."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Says Washington 'spends too much and delivers too little', pledges to rein in spending, and cites a county fraud-screening record."
+            },
+            "safety": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Runs on law and order and dismantling fentanyl networks, and funded sheriff resources and emergency communications as commissioner."
+            },
+            "climate": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3",
+                "S5"
+              ],
+              "basis": "Opposes clean-energy mandates and the Horse Heaven wind project, campaigned for I-2066, and blames state energy policy for prices."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3",
+                "S9"
+              ],
+              "basis": "Second-term county commissioner with state and national county-association roles; has not served in Congress."
+            },
+            "reform": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S6",
+                "S8"
+              ],
+              "basis": "Built her campaign on party-leadership endorsements, PAC contributions and over $2 million in super PAC support; states no reform agenda on money in politics."
+            },
+            "immigration": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S5",
+                "S12"
+              ],
+              "basis": "Supports deportations and border enforcement, criticizes state sanctuary law, and opposes amnesty or a special path to legal status."
+            },
+            "social": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S3",
+                "S14"
+              ],
+              "basis": "Supports sex-based eligibility in women's sports and protecting life from conception, and has aligned with ending DEI programs."
+            },
+            "tech": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Frames AI as a race to win with more energy production and opposes 'heavy-handed regulation' of AI and cryptocurrency.",
+              "adjusted_by_refutation": true
+            },
+            "defense": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3",
+                "S5"
+              ],
+              "basis": "Pledges to rebuild and modernize the military and a strong national defense; says Congress has reason to keep supporting the president's actions on Iran."
+            }
+          }
+        },
+        {
+          "slug": "john-duresky",
+          "summary": "Democrat from West Richland, a retired Air Force major and former Hanford Field Office manager, running on affordability, rural health care and congressional reform.",
+          "highlights": [
+            "Signed the Take BAC Congress pledge: term limits, stock-trading ban, lobbying moratorium, overturning Citizens United [S4][S7]",
+            "Would restore ACA subsidies, keep rural hospitals funded and move toward universal coverage [S1][S2]",
+            "Calls the deportation program 'immoral and un-American' and backs a path to legal status [S7][S10]",
+            "Would raise the minimum wage, close stepped-up basis and carried-interest loopholes, and remove harmful tariffs [S2]",
+            "Calls the Iran war a violation of the Constitution [S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S8"
+              ],
+              "basis": "Would close stepped-up basis and carried-interest loopholes and favors tax reforms aimed at working people."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Pledges infrastructure and broadband investment, restored ACA subsidies, rural-hospital funding and protection of federal jobs.",
+              "adjusted_by_refutation": true
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S9",
+                "S6"
+              ],
+              "basis": "Says climate change is real and backs wind, solar and small modular nuclear; endorsed by the state Democrats' climate council."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Never held elected office; a long military and federal civil-service career."
+            },
+            "reform": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S4",
+                "S7",
+                "S15"
+              ],
+              "basis": "Repeatedly commits to term limits, a stock-trading ban, a lobbying moratorium, overturning Citizens United and Supreme Court ethics rules."
+            },
+            "immigration": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S7",
+                "S8",
+                "S10"
+              ],
+              "basis": "Opposes current deportation tactics and masked agents and backs a path to legal status, while saying he opposes open borders and wants asylum reform."
+            },
+            "healthcare": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Near-term agenda strengthens ACA, Medicare and Medicaid; names universal coverage as the eventual goal."
+            },
+            "defense": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S5"
+              ],
+              "basis": "Calls the Iran war unconstitutional and criticizes spending abroad; states no position on the defense budget or Israel."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-court-of-appeals-division-3-district-2-judge-position-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/benton/dossiers/benton-court-of-appeals-division-3-district-2-judge-position-1/"
+      ],
+      "office_does": "A Court of Appeals judge reviews trial-court decisions on appeal; Division III, District 2 elects one judge from Adams, Asotin, Benton, Columbia, Franklin, Garfield, Grant, Walla Walla and Whitman counties.",
+      "race_blurb": "Uncontested: Judge Tyson R. Hill, appointed by Gov. Ferguson effective Jan. 1, 2026 to replace retiring Judge George Fearing, is the only candidate for the remaining two years of the term.",
+      "candidates": [
+        {
+          "slug": "tyson-r-hill",
+          "summary": "Court of Appeals judge since his appointment effective Jan. 1, 2026; previously a Grant County Superior Court judge (from 2021) and District Court judge, and the Grant County Prosecutor's lead appellate attorney. The only candidate on the ballot.",
+          "highlights": [
+            "Appointed by Gov. Ferguson to replace retiring Judge George Fearing, effective Jan. 1, 2026 [S2]",
+            "More than 12 years as a Grant County District and Superior Court judge; co-founded Grant County's first therapeutic drug court [S1][S2]",
+            "Former lead appellate prosecutor and law clerk to Justice James M. Johnson [S1][S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-legislative-district-16-state-representative-pos-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/benton/dossiers/benton-legislative-district-16-state-representative-pos-1/"
+      ],
+      "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering school funding, tax structure, housing rules and criminal-justice statutes.",
+      "race_blurb": "Three-term Republican incumbent Mark Klicker faces first-time Democratic candidate Kyle Palmer, a former Richland Planning Commission chair, after a 60% to 40% primary. Klicker voted against the 2026 income tax and says it will spread to everyone; Palmer says he is not troubled by the rate on top earners but wants a lean budget before new taxes.",
+      "candidates": [
+        {
+          "slug": "mark-klicker",
+          "summary": "Three-term State Representative, farm-and-ranch realtor and timber producer who campaigns on tax relief, spending cuts and natural gas, hydro and nuclear power.",
+          "highlights": [
+            "Voted against the 2026 tax on income over $1 million and the 2025 B&O and services tax bills [S3][S4][S5]",
+            "Says the state should cut wasteful spending and decrease the size of government [S11]",
+            "Pledges to rectify \"harmful police reform bills\" and back natural gas, hydro and nuclear energy [S1]",
+            "Voted against ESHB 1296 and the 2025 clean fuels bill [S6][S7]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3",
+                "S4",
+                "S5",
+                "S12"
+              ],
+              "basis": "Voted no on ESSB 6346 and on the 2025 B&O (ESHB 2081) and services excise (ESSB 5814) tax bills; pledges tax relief and says the income tax will eventually reach everyone."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S11",
+                "S12"
+              ],
+              "basis": "Repeatedly calls for cutting wasteful spending, decreasing the size of government and stopping budget growth."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S8",
+                "S9"
+              ],
+              "basis": "Voted against the 2025 tenant housing-stability bill; sponsored a housing cost driver task force and small businesses in residential zones."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Pledges to work on rectifying harmful police reform bills."
+            },
+            "climate": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S7"
+              ],
+              "basis": "Backs natural gas, hydro and nuclear as reliable energy and voted against the 2025 clean fuels program bill."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S11"
+              ],
+              "basis": "Three House terms since 2021 with a ranking committee post, facing a first-time candidate."
+            },
+            "parental-rights": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S6"
+              ],
+              "basis": "Voted against ESHB 1296, the 2025 amendments to the parents' rights law, on House passage and final passage; no statement on notification or opt-outs."
+            },
+            "tech": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S11"
+              ],
+              "basis": "Says the district's data center is already under strict state rules on power, water, noise and environmental review; proposes no new limits."
+            }
+          }
+        },
+        {
+          "slug": "kyle-palmer",
+          "summary": "Richland small business owner, real-estate professional and former Richland Planning Commission chair running for office for the first time, focused on housing, water, reliable energy and outcome-based budgeting.",
+          "highlights": [
+            "Says the state should not make long-term spending commitments without a plan to pay for them and should judge programs by measurable outcomes [S2]",
+            "Says he is not concerned about the 9.9% rate on income over $1 million but wants a lean budget before new taxes [S3]",
+            "Would require data centers to disclose power and water use and pay for the infrastructure they need [S2]",
+            "Former chair of the Richland Planning Commission; no elected experience [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Not troubled by the 9.9% tax on income over $1 million, but does not want to 'tax first' and wants a lean budget before new taxes."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Calls for outcome-based program review, cutting administrative costs and no long-term commitments without a funding plan, while protecting core services."
+            },
+            "tech": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Would require data centers to disclose power and water use, pay for infrastructure and deliver local benefits."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "First run for office with appointed planning-commission experience, against a three-term incumbent."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-legislative-district-16-state-representative-pos-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/benton/dossiers/benton-legislative-district-16-state-representative-pos-2/"
+      ],
+      "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering school funding, tax structure, housing rules and criminal-justice statutes.",
+      "race_blurb": "Republican Skyler Rude, in the seat since 2019, faces Democrat Derek Sarley, a Walla Walla school-board member since 2015. Rude has announced he will resign effective October 31 to join the Secretary of State's office but remains on the ballot; if he wins, a Republican appointee would serve the term.",
+      "candidates": [
+        {
+          "slug": "skyler-rude",
+          "summary": "State Representative since 2019 and Assistant Minority Floor Leader focused on education and budget reform, who has announced his resignation effective October 31 while remaining on the ballot.",
+          "highlights": [
+            "Announced resignation effective October 31 to become legislative director for the Secretary of State; a win would lead to an appointed Republican successor [S17]",
+            "Voted against the 2026 tax on income over $1 million and calls himself a strong opponent of it [S3][S8]",
+            "Supports zero-based budgeting, expenditure limits and rolling back new programs [S5][S15]",
+            "Opposes statewide rent control and favors permitting and building-code streamlining [S4]",
+            "Voted against ESHB 1296 and the 2025 clean fuels bill [S11][S12]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S4",
+                "S8",
+                "S9",
+                "S10"
+              ],
+              "basis": "Voted no on ESSB 6346 and on the 2025 B&O (ESHB 2081) and services excise (ESSB 5814) tax bills; website says he was a strong opponent of the income tax and opposes new taxes."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S5",
+                "S15"
+              ],
+              "basis": "Supports zero-based budgeting and expenditure limits, calls new programs during a deficit inexcusable and would roll them back."
+            },
+            "housing": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S4",
+                "S13"
+              ],
+              "basis": "Opposes statewide rent control and new landlord-tenant rules, favors faster permitting and cheaper building codes; voted against the 2025 tenant housing-stability bill."
+            },
+            "climate": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S12"
+              ],
+              "basis": "Criticizes fuel-related taxes and prioritizes affordable energy; voted against the 2025 clean fuels program bill."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S17"
+              ],
+              "basis": "Four House terms since 2019 and Assistant Minority Floor Leader after prior legislative staff work."
+            },
+            "local-control": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S15"
+              ],
+              "basis": "Says local control is paramount in data-center siting and the Legislature should safeguard local decisions."
+            },
+            "parental-rights": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S11"
+              ],
+              "basis": "Voted against ESHB 1296, the 2025 amendments to the parents' rights law, on House passage and final passage; no statement on notification or opt-outs."
+            },
+            "tech": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S15"
+              ],
+              "basis": "Frames data-center policy around facilitating siting and adding energy and transmission rather than more regulation."
+            }
+          }
+        },
+        {
+          "slug": "derek-sarley",
+          "summary": "Walla Walla school-board member since 2015, past president of the state school directors' association and PR-firm executive, running on school funding, affordability and budget reform.",
+          "highlights": [
+            "Calls Washington's tax code the second-most regressive in the nation and recent progressive revenue steps important [S2][S6]",
+            "Opposes the 2026 K-12 and childcare cuts and wants the state to rebuild its rainy-day fund [S6][S8]",
+            "Wants more homes built faster with fewer building barriers, and a review of certificate-of-need health rules [S3][S7]",
+            "Endorsed by the Washington State Labor Council, WEA, WSNA, Planned Parenthood Advocates and the area Democratic parties [S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S6"
+              ],
+              "basis": "Calls the tax code regressive and the Legislature's recent taxes on capital gains and high incomes important steps, while warning of their volatility."
+            },
+            "spending": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S6",
+                "S8"
+              ],
+              "basis": "Opposes K-12 and childcare cuts but says Democrats expanded services beyond revenue and wants spending held below revenue to rebuild reserves."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S8"
+              ],
+              "basis": "Wants more homes built faster with fewer outdated barriers and says the state cannot subsidize its way out of scarcity."
+            },
+            "healthcare": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S7"
+              ],
+              "basis": "Focuses on cost and supply within the current system (middlemen, certificate-of-need review) rather than coverage expansion."
+            },
+            "tech": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S8"
+              ],
+              "basis": "Opposes special tax breaks for data centers and wants ratepayer protections and equal environmental and water rules, while cautioning against rules that block building."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S4"
+              ],
+              "basis": "Ten years on a school board but new to the Legislature; asks voters to choose 'someone different.'"
+            },
+            "social": {
+              "score": 1,
+              "confidence": "low",
+              "citations": [
+                "S5"
+              ],
+              "basis": "Endorsed by Planned Parenthood Advocates; no statement of his own on reproductive or LGBTQ+ policy."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-legislative-district-8-state-representative-pos-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/benton/dossiers/benton-legislative-district-8-state-representative-pos-1/"
+      ],
+      "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets.",
+      "race_blurb": "Uncontested: incumbent Stephanie Barnard (Prefers Republican Party) is the only candidate.",
+      "candidates": [
+        {
+          "slug": "stephanie-barnard",
+          "summary": "Two-term 8th District state representative and ranking member on the House technology and economic development committee; the only candidate on the ballot.",
+          "highlights": [
+            "Representative since 2022; ranking member of Technology, Economic Development and Veterans [S1]",
+            "Lists lower taxes and protecting parental rights among her commitments [S1]",
+            "Voted Nay on ESSB 6346 (2026 income tax) and on ESHB 1296 (2025) [S2][S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-legislative-district-8-state-representative-pos-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/benton/dossiers/benton-legislative-district-8-state-representative-pos-2/"
+      ],
+      "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets.",
+      "race_blurb": "Uncontested: incumbent April Connors (Prefers Republican Party) is the only candidate.",
+      "candidates": [
+        {
+          "slug": "april-connors",
+          "summary": "8th District state representative and House Republican Floor Leader, a Tri-Cities real-estate broker; the only candidate on the ballot.",
+          "highlights": [
+            "House Republican Floor Leader and assistant ranking member on Appropriations [S1]",
+            "Focuses on affordability, housing, public safety and Hanford jobs [S1]",
+            "Voted Nay on ESSB 6346 (2026 income tax) and on ESHB 1296 (2025) [S2][S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-legislative-district-8-state-senator",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/benton/dossiers/benton-legislative-district-8-state-senator/"
+      ],
+      "office_does": "A State Senator writes and votes on Washington state law and the operating, capital and transportation budgets for a four-year term.",
+      "race_blurb": "Two Republicans meet in the general for an open seat: Sen. Nikki Torres, who moved into the 8th after court-ordered redistricting, and Kennewick School Board President Gabe Galbraith. Their stated positions on taxes and public safety are close; the contrast is a Senate record and caucus leadership versus a local-roots challenger who centers parental rights.",
+      "candidates": [
+        {
+          "slug": "nikki-torres",
+          "summary": "Four-year 15th District state senator and Republican Deputy Floor Leader, a former Pasco council member and credit-union business lender, running in the 8th after redistricting.",
+          "highlights": [
+            "Voted against ESSB 6346, the 2026 tax on income over $1 million, and against the 2025 B&O, capital gains and services tax bills [S3][S4][S5][S6]",
+            "Voted for Initiative 2081 (2024) and against ESHB 1296 (2025), which amended the parents' bill of rights [S8][S9]",
+            "Prime sponsor of the 2025 school emergency-response law and the 2026 crash-prevention-zone law [S11][S12]",
+            "Pledges full police funding and changes to the 2021 police reform laws, including vehicle pursuits [S14]",
+            "Placed first in the primary with about 52% [S19]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S4",
+                "S5",
+                "S6",
+                "S1"
+              ],
+              "basis": "Voted no on ESSB 6346 and on the 2025 B&O (ESHB 2081), capital gains/estate (ESSB 5813) and services excise (ESSB 5814) tax bills; pledges to oppose 'unfair taxes'."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S7"
+              ],
+              "basis": "Voted against the 2025-27 operating budget and pledges conservative, responsible budgets and opposition to wasteful spending, while touting $500 million in regional capital funding."
+            },
+            "safety": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S14",
+                "S11"
+              ],
+              "basis": "Law-enforcement support is her lead accomplishment; pledges full police funding and rolling back 2021 police reform limits on pursuits; sponsored the school emergency-response law.",
+              "adjusted_by_refutation": true
+            },
+            "climate": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S14"
+              ],
+              "basis": "Opposes the fuel-price effect of the state carbon program and defends the Snake River dams, while saying dams and salmon recovery can coexist."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S10",
+                "S14"
+              ],
+              "basis": "Voted against EHB 1217 rent-increase limits; proposes working with home builders on costs."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Four-year senator in caucus leadership and former city council member, facing a first-time legislative candidate."
+            },
+            "parental-rights": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S8",
+                "S9"
+              ],
+              "basis": "Voted for Initiative 2081 (unanimous in the Senate) and against ESHB 1296; no stated position on I-1."
+            }
+          }
+        },
+        {
+          "slug": "gabe-galbraith",
+          "summary": "Kennewick School Board president, Marine veteran and Hanford security specialist making his first run for the Legislature on local roots and parental rights.",
+          "highlights": [
+            "Says he was lead plaintiff in a lawsuit challenging HB 1296, the 2025 amendments to the parents' bill of rights [S4]",
+            "Opposes higher taxes and fees and pledges oversight of state spending [S1][S3]",
+            "Backed a sex-based girls'-sports position as school board president [S4]",
+            "Supports legislative hearings for citizen initiatives and opposes shifting power from elected sheriffs [S3]",
+            "Endorsed by the Benton County Republican Party [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Opposes higher taxes on working families and pledges to reduce taxes, fees and regulations; cites a school levy-rate cut."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S4"
+              ],
+              "basis": "Calls for smarter spending, real oversight and responsible budgets; cites the school district's financial rating."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S4"
+              ],
+              "basis": "Pledges full law-enforcement funding and enforcement on homelessness, paired with root-causes and treatment language."
+            },
+            "climate": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "All-of-the-above energy with nuclear, opposes dam breaching, and wants environmental policy that does not raise costs."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Wants more housing built faster and cheaper by cutting red tape."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S7"
+              ],
+              "basis": "First legislative run, framed against a 'political opportunist' and Olympia's status quo, though he has five years of elected school-board service."
+            },
+            "local-control": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Opposes moving authority from elected sheriffs to state appointees and pairs housing supply with local control."
+            },
+            "reform": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Supports the initiative process and public hearings for citizen initiatives; opposes legislative delay of them."
+            },
+            "social": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Backed a school-district position that girls' sports eligibility be based on biological sex, including a federal complaint (self-reported)."
+            },
+            "parental-rights": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S4",
+                "S5"
+              ],
+              "basis": "Makes parental rights a central plank; says he was lead plaintiff against HB 1296 and introduced a resolution against a student COVID-19 vaccine mandate; Parents' Rights in Education listed as supporter."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-public-utility-district-commissioner-district-2-commissioner-pos-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/benton/dossiers/benton-public-utility-district-commissioner-district-2-commissioner-pos-2/"
+      ],
+      "office_does": "A Benton PUD commissioner sits on the three-member elected board of the public electric utility serving about 59,000 customers in Kennewick, Finley, Benton City, Prosser and rural Benton County, for a six-year term.",
+      "race_blurb": "Open seat: longtime Commissioner Jeff Hall is not on the ballot, and every Benton PUD voter, not just District 2, votes in November. Agricultural executive Dewey Holliday stresses financial oversight and weighing every power source on reliability and cost. Kennewick School Board member Micah Valentine runs against state clean-energy mandates and for dams, nuclear and low rates.",
+      "candidates": [
+        {
+          "slug": "roy-c-dewey-holliday",
+          "summary": "Prosser agricultural executive, irrigators-association president and appointed West Benton Fire and Rescue commissioner, running on financial oversight, infrastructure planning and reliable, affordable power.",
+          "highlights": [
+            "Managed more than $70 million a year in farm operating and capital budgets; president of the Columbia Snake River Irrigators Association [S1]",
+            "Wants hydropower to stay the backbone and would weigh every option, including small modular reactors, on reliability, cost and risk [S2][S3]",
+            "Says large new loads such as data centers should pay their own way without existing customers subsidizing them [S3]",
+            "Endorsed by the Washington and Benton County Farm Bureaus and Teamsters Local 839 [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "micah-valentine",
+          "summary": "Kennewick School Board member in his second term and local business owner, running against Olympia energy mandates and for dams, nuclear power and low rates.",
+          "highlights": [
+            "Second-term Kennewick School Board director; says he helped oversee a $330 million district budget [S1]",
+            "Opposes reliance on wind and solar and state energy mandates; supports protecting dams and expanding nuclear [S1][S2]",
+            "Would back a natural gas plant or small nuclear reactor and pledges hard questions before spending [S2]",
+            "Endorsed by the Benton County Republican Party; campaigns as a conservative in this nonpartisan race [S3][S4]"
+          ],
+          "evidence_level": "moderate",
           "withdrawn": false,
           "scores": {}
         }

@@ -1,8 +1,8 @@
 // The November 3, 2026 general as shipped: King County at Full County
 // Coverage (issue #16), Spokane at partial coverage, Pierce at full coverage
 // (#21), Snohomish at full coverage (#27), Clark, Kitsap and Thurston at full
-// coverage (#22), every other Washington address a Statewide-Only
-// Guide (issue #9). These run the app's own ballot, interview, lean and Ballot Brief
+// coverage (#22), Yakima, Whatcom and Benton at full coverage (#28), every
+// other Washington address a Statewide-Only Guide (issue #9). These run the app's own ballot, interview, lean and Ballot Brief
 // code against public/data/2026-11-03-general.
 import test from 'node:test'
 import assert from 'node:assert/strict'
@@ -27,10 +27,11 @@ const data = JSON.parse(
 const KING = { id: 'king', fips: '53033', name: 'King County' }
 
 // What lookupBallotContext returns for a Washington address in a county the
-// general does not ship (geo.test.js covers the lookup itself).
-const yakima = {
+// general does not ship (geo.test.js covers the lookup itself). Walla Walla
+// since #28 shipped Yakima.
+const wallaWalla = {
   coverageStatus: 'statewide_only',
-  county: { id: 'yakima', fips: '53077', name: 'Yakima County' },
+  county: { id: 'walla-walla', fips: '53071', name: 'Walla Walla County' },
   districts: {},
   missingLayers: [],
 }
@@ -67,7 +68,7 @@ const STATE_MEASURES = [
   'initiative-measure-no-il26-638',
 ]
 
-test('the general ships King, Snohomish, Pierce, Clark, Kitsap and Thurston at full county coverage, Spokane at partial, with their elections offices', () => {
+test('the general ships nine counties at full county coverage, Spokane at partial, with their elections offices', () => {
   assert.equal(data.election.id, '2026-11-03-general')
   assert.deepEqual(data.coverage, {
     statewide_complete: true,
@@ -139,6 +140,36 @@ test('the general ships King, Snohomish, Pierce, Clark, Kitsap and Thurston at f
         fips: '53067',
         coverage: 'full_county',
         elections_url: 'https://www.thurstoncountywa.gov/departments/auditor/elections',
+      },
+      {
+        // Full: Commissioner District 1 (elected by district) resolves from
+        // the county commissioner layer; no local measures (#28).
+        id: 'yakima',
+        name: 'Yakima County',
+        state: 'WA',
+        fips: '53077',
+        coverage: 'full_county',
+        elections_url: 'https://www.yakimacounty.us/170/Elections',
+      },
+      {
+        // Full: port and PUD seats are countywide; Fire District 1's levy
+        // resolves from DOR FIR2025 (#28).
+        id: 'whatcom',
+        name: 'Whatcom County',
+        state: 'WA',
+        fips: '53073',
+        coverage: 'full_county',
+        elections_url: 'https://www.whatcomcounty.us/2794/Elections',
+      },
+      {
+        // Full: the PUD seat (PUDDST) resolves from the Auditor's
+        // PrecinctSplits layer, the Ki-Be levy (SCHDST) from DOR SCH2025 (#28).
+        id: 'benton',
+        name: 'Benton County',
+        state: 'WA',
+        fips: '53005',
+        coverage: 'full_county',
+        elections_url: 'https://www.bentoncountywa.gov/government/elected_officials/auditor/elections/index.php',
       },
     ],
   })
@@ -253,6 +284,95 @@ test('a Thurston ballot: Pierce, Clark and Kitsap research for shared seats, WTR
   const lacey = ballotFor(thu({ CONGDST: '10', LEGDST: '22', CITY: 'Lacey', FIRDST: 'FD03', FIRE_AUTH: 'Lacey', SCHDST: 'NORTH THURSTON' }))
   assert.ok(ownLocal(lacey, 'thurston').includes('thurston-thurston-county-fire-protection-district-no-3-lacey-fire-district-3-proposition-no-1'))
   assert.equal(coverageAdvice(thu({})), null)
+})
+
+test('a Yakima ballot: Benton\'s research for CD 4, Commissioner District 1 only inside district 1', () => {
+  const YAKIMA = { id: 'yakima', fips: '53077', name: 'Yakima County' }
+  const yak = (districts) => ({ coverageStatus: 'full_county', county: YAKIMA, districts, missingLayers: [] })
+  // Districts as the live District Adapter resolved them on 2026-10-08.
+  // 128 N 2nd St, Yakima: commissioner district 2, no commissioner race.
+  const yakima = ballotFor(yak({ CONGDST: '4', LEGDST: '14', CITY: 'Yakima', COUNTY_COUNCIL: '2' }))
+  const ys = yakima.contests.map((c) => c.slug)
+  assert.equal(new Set(ys).size, ys.length)
+  for (const slug of SUPREME_COURT) assert.ok(ys.includes(slug), slug)
+  assert.deepEqual(yakima.measures.map((m) => m.slug), STATE_MEASURES)
+  sameScoring(yakima, 'yakima-congressional-district-4-u-s-representative', 'benton-congressional-district-4-u-s-representative')
+  assert.ok(!yakima.contests.some((c) => c.owner === 'benton'))
+  assert.ok(ys.includes('yakima-legislative-district-14-state-representative-pos-1'))
+  assert.ok(!ys.some((s) => s.includes('commissioner-district-1')), ys.join())
+  // 115 W Naches Ave, Selah: LD 15, Commissioner District 1.
+  const selah = ballotFor(yak({ CONGDST: '4', LEGDST: '15', CITY: 'Selah', COUNTY_COUNCIL: '1' }))
+  const ss = selah.contests.map((c) => c.slug)
+  assert.ok(ss.includes('yakima-yakima-county-commissioner-district-1-county-commissioner-district-1'))
+  assert.ok(ss.includes('yakima-legislative-district-15-state-representative-pos-2'))
+  assert.ok(!ss.some((s) => s.includes('district-14')), ss.join())
+  assert.equal(coverageAdvice(yak({})), null)
+})
+
+test('a Whatcom ballot: Snohomish\'s research for CD 2, Bellingham and Fire District 1 measures by district', () => {
+  const WHATCOM = { id: 'whatcom', fips: '53073', name: 'Whatcom County' }
+  const wha = (districts) => ({ coverageStatus: 'full_county', county: WHATCOM, districts, missingLayers: [] })
+  // 1101 Harris Ave, Bellingham.
+  const bellingham = ballotFor(wha({ CONGDST: '2', LEGDST: '40', CITY: 'Bellingham', PORTDST: '1' }))
+  const bs = bellingham.contests.map((c) => c.slug)
+  assert.equal(new Set(bs).size, bs.length)
+  for (const slug of SUPREME_COURT) assert.ok(bs.includes(slug), slug)
+  sameScoring(bellingham, 'whatcom-congressional-district-2-u-s-representative', 'snohomish-congressional-district-2-u-s-representative')
+  assert.ok(!bellingham.contests.some((c) => c.owner === 'snohomish'))
+  // Port and PUD seats are elected countywide in the general.
+  for (const slug of [
+    'whatcom-port-of-bellingham-commissioner-district-4-commissioner-district-4',
+    'whatcom-port-of-bellingham-commissioner-district-5-commissioner-district-5',
+    'whatcom-public-utility-district-no-1-of-whatcom-county-commissioner-district-1',
+    'whatcom-legislative-district-40-state-representative-pos-1',
+  ]) assert.ok(bs.includes(slug), slug)
+  assert.deepEqual(ownLocal(bellingham, 'whatcom'), [
+    'whatcom-city-of-bellingham-proposition-2026-06',
+    'whatcom-city-of-bellingham-proposition-2026-07',
+    'whatcom-city-of-bellingham-initiative-26-01',
+  ])
+  // 111 W Main St, Everson: LD 42, Fire District 1.
+  const everson = ballotFor(wha({ CONGDST: '2', LEGDST: '42', CITY: 'Everson', PORTDST: '4', FIRDST: '1' }))
+  assert.ok(everson.contests.some((c) => c.slug === 'whatcom-legislative-district-42-state-senator'))
+  assert.deepEqual(ownLocal(everson, 'whatcom'), ['whatcom-whatcom-county-fire-protection-district-no-1-proposition-2026-08'])
+  assert.equal(coverageAdvice(wha({})), null)
+})
+
+test('a Benton ballot: Yakima\'s research for LD 14/15, the PUD seat only inside the PUD, Ki-Be levy only in SD 52', () => {
+  const BENTON = { id: 'benton', fips: '53005', name: 'Benton County' }
+  const ben = (districts) => ({ coverageStatus: 'full_county', county: BENTON, districts, missingLayers: [] })
+  const PUD = 'benton-public-utility-district-commissioner-district-2-commissioner-pos-2'
+  // 210 W 6th Ave, Kennewick: LD 8, Benton PUD, Kennewick SD 17.
+  const kennewick = ballotFor(ben({ CONGDST: '4', LEGDST: '8', CITY: 'Kennewick', COUNTY_COUNCIL: '3', PUDDST: 'Benton PUD', SCHDST: '17' }))
+  const ks = kennewick.contests.map((c) => c.slug)
+  assert.equal(new Set(ks).size, ks.length)
+  for (const slug of SUPREME_COURT) assert.ok(ks.includes(slug), slug)
+  assert.ok(ks.includes('benton-congressional-district-4-u-s-representative'))
+  assert.ok(ks.includes('benton-legislative-district-8-state-senator'))
+  assert.ok(ks.includes(PUD))
+  assert.ok(!ks.includes('benton-city-of-richland-council-pos-4'))
+  assert.deepEqual(ownLocal(kennewick, 'benton'), [])
+  // 1009 Dale Ave, Benton City: LD 16, Benton City props, Ki-Be levy, PUD.
+  const bc = ballotFor(ben({
+    CONGDST: '4', LEGDST: '16', CITY: 'Benton City', COUNTY_COUNCIL: '2', FIRDST: '2', PUDDST: 'Benton PUD', SCHDST: '52',
+  }))
+  assert.ok(bc.contests.some((c) => c.slug === PUD))
+  assert.deepEqual(ownLocal(bc, 'benton'), [
+    'benton-city-of-benton-city-proposition-no-1',
+    'benton-city-of-benton-city-proposition-no-2',
+    'benton-kiona-benton-city-school-district-no-52-proposition-no-1',
+  ])
+  // 625 Swift Blvd, Richland: no PUD race; Richland Council Pos. 4.
+  const richland = ballotFor(ben({ CONGDST: '4', LEGDST: '16', CITY: 'Richland', COUNTY_COUNCIL: '1', SCHDST: '400' }))
+  const rs = richland.contests.map((c) => c.slug)
+  assert.ok(!rs.includes(PUD))
+  assert.ok(rs.includes('benton-city-of-richland-council-pos-4'))
+  // An LD 15 address: Yakima's research for the House seats.
+  const ld15 = ballotFor(ben({ CONGDST: '4', LEGDST: '15', COUNTY_COUNCIL: '3', PUDDST: 'Benton PUD' }))
+  for (const pos of [1, 2])
+    sameScoring(ld15, `benton-legislative-district-15-state-representative-pos-${pos}`, `yakima-legislative-district-15-state-representative-pos-${pos}`)
+  assert.ok(!ld15.contests.some((c) => c.owner === 'yakima'))
+  assert.equal(coverageAdvice(ben({})), null)
 })
 
 test('a Spokane ballot: its own districts, school and fire measures by name, no PUD seat', () => {
@@ -374,10 +494,10 @@ test('each Supreme Court contest ships once, owned by the statewide package', ()
 })
 
 test('outside the shipped counties, an address gets all five court races and all three initiatives only', () => {
-  const { contests, measures } = ballotFor(yakima)
+  const { contests, measures } = ballotFor(wallaWalla)
   assert.deepEqual(contests.map((c) => c.slug), SUPREME_COURT)
   assert.deepEqual(measures.map((m) => m.slug), STATE_MEASURES)
-  assert.equal(coverageAdvice(yakima), 'statewide-only')
+  assert.equal(coverageAdvice(wallaWalla), 'statewide-only')
 })
 
 test('every King ballot carries the statewide races once, the countywide races and its district races', () => {
@@ -442,7 +562,7 @@ test('uncontested King contests ship information-only, with no scores', () => {
 const STATEWIDE_AXES = ['experience', 'judicial', 'local-control', 'parental-rights', 'safety', 'social', 'spending', 'taxes']
 
 test('the statewide-only interview asks only about axes on the statewide ballot', () => {
-  const { axes, items } = ballotFor(yakima)
+  const { axes, items } = ballotFor(wallaWalla)
   assert.deepEqual([...axes].sort(), STATEWIDE_AXES)
   assert.deepEqual(items.map((i) => i.id), [
     'card-taxes',
@@ -472,7 +592,7 @@ const agreeWithEverything = (items) =>
   )
 
 test('a voter who answers the interview gets a lean on every measure on the ballot', () => {
-  for (const context of [yakima, ...Object.values(ADDRESSES)]) {
+  for (const context of [wallaWalla, ...Object.values(ADDRESSES)]) {
     const { measures, items } = ballotFor(context)
     const answers = agreeWithEverything(items)
     for (const m of measures) {
@@ -502,11 +622,11 @@ const briefFor = (context) => {
 }
 
 test('the statewide-only Ballot Brief carries the warning and every contest and measure', () => {
-  const { contests, measures, text } = briefFor(yakima)
+  const { contests, measures, text } = briefFor(wallaWalla)
   assert.match(text, /November 3, 2026 General Election/)
   assert.match(text, /Coverage: STATEWIDE-ONLY GUIDE/)
   assert.match(text, /omits county, city, school, fire, judicial district, and other local contests/)
-  assert.match(text, /Resolved county: Yakima County/)
+  assert.match(text, /Resolved county: Walla Walla County/)
   for (const c of contests) assert.ok(text.includes(`## SUPREME COURT — ${c.district}`), c.slug)
   assert.match(text, /## BALLOT MEASURES/)
   for (const m of measures) {
@@ -535,7 +655,7 @@ test('a King Ballot Brief is a full county guide naming every contest once and e
 })
 
 test('the general Ballot Brief names election day, terms and SOS pamphlet pages, never the primary', () => {
-  const { text } = briefFor(yakima)
+  const { text } = briefFor(wallaWalla)
   assert.match(text, /^# MY BALLOT BRIEF — Washington State, November 3, 2026 General Election$/m)
   assert.match(text, /^Election day: Tuesday, November 3, 2026\.$/m)
   assert.match(text, /statewide contests on the November 3, 2026 General Election ballot/)

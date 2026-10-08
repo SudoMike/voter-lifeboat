@@ -67,7 +67,8 @@ APP_PACKAGES = {
     },
     "2026-11-03-general": {
         "statewide_ballot": True,
-        "counties": ["king", "snohomish", "spokane", "pierce", "clark", "kitsap", "thurston"],
+        "counties": ["king", "snohomish", "spokane", "pierce", "clark", "kitsap", "thurston", "yakima", "whatcom",
+                     "benton"],
         "district_contests": "county",
     },
 }
@@ -88,6 +89,9 @@ DISTRICT_ADAPTER_LAYERS = {
     "clark": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "PUDDST", "FIRDST", "SCHDST"),
     "kitsap": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "FIRDST", "SCHDST"),
     "thurston": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "PUDDST", "FIRDST", "FIRE_AUTH", "RFADST", "SCHDST"),
+    "yakima": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "FIRDST"),
+    "whatcom": ("CONGDST", "LEGDST", "CITY", "PORTDST", "FIRDST", "HOSPDST"),
+    "benton": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "FIRDST", "PUDDST", "SCHDST"),
 }
 
 
@@ -197,6 +201,17 @@ COUNTY_ELECTIONS_URLS = {
         "kitsap": "https://www.kitsap.gov/auditor/Pages/Elections.aspx",
         # Thurston County Auditor, Elections (200, 2026-10-08).
         "thurston": "https://www.thurstoncountywa.gov/departments/auditor/elections",
+        # Yakima County Auditor, Elections (200, 2026-10-08; the old /149/Elections
+        # now redirects to District Court Probation).
+        "yakima": "https://www.yakimacounty.us/170/Elections",
+        # Whatcom County Auditor, Elections. whatcomcounty.us answers 403
+        # (Cloudflare) to scripted requests (2026-10-08), so its 200 is
+        # unchecked here; this is the Elections page the county's own primary
+        # measure listings were cited from (accessed 2026-07-17).
+        "whatcom": "https://www.whatcomcounty.us/2794/Elections",
+        # Benton County Auditor, Elections (200, 2026-10-08;
+        # bentoncountywa.gov/elections 302s here).
+        "benton": "https://www.bentoncountywa.gov/government/elected_officials/auditor/elections/index.php",
     },
 }
 
