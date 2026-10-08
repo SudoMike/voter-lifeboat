@@ -88,9 +88,9 @@ test('every statewide contest and measure in the shipped general gets a paged SO
         n++
       }
   for (const m of general.measures) {
-    // Spokane's, Pierce's, Kitsap's, Whatcom's and Benton's measures cite
-    // VoteWA's unpaged online guide (countyGuides).
-    if (['spokane', 'pierce', 'kitsap', 'whatcom', 'benton'].includes(m.owner)) continue
+    // Spokane's, Pierce's, Kitsap's, Whatcom's, Benton's and Grant's
+    // measures cite VoteWA's unpaged online guide (countyGuides).
+    if (['spokane', 'pierce', 'kitsap', 'whatcom', 'benton', 'grant'].includes(m.owner)) continue
     assert.match(pamphletLink(m.pamphlet_pages, m.owner, general.election.id), /#page=\d+$/, m.slug)
     n++
   }
@@ -282,6 +282,47 @@ test('shipped Yakima, Whatcom and Benton records link their VoteWA guide; their 
     ['yakima', 'Yakima County', 'https://www.yakimacounty.us/170/Elections'],
     ['whatcom', 'Whatcom County', 'https://www.whatcomcounty.us/2794/Elections'],
     ['benton', 'Benton County', 'https://www.bentoncountywa.gov/government/elected_officials/auditor/elections/index.php'],
+  ]) {
+    assert.deepEqual(countyElectionsOffice(general, { id: county, name }), { name: `${name} Elections`, url, direct: true })
+  }
+})
+
+test('shipped Skagit and Cowlitz records link their local pamphlet at the cited page, Grant its VoteWA guide', () => {
+  const id = general.election.id
+  const PDF = {
+    skagit: 'https://www.skagitcountywa.gov/media/nopbncyw/2026-11-03-vp-skagit.pdf',
+    cowlitz: 'https://www.co.cowlitz.wa.us/DocumentCenter/View/39451/G126-Combined-Voters-Pamplet_SOS',
+  }
+  const GUIDE = {
+    skagit: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=29',
+    cowlitz: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=08',
+    grant: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=13',
+  }
+  // Skagit PDF p. 18 is printed p. 56 (Mount Vernon Prop 1); Cowlitz p. 57 is Longview Prop 1.
+  assert.equal(pamphletLink([{ edition: 'local-voters-pamphlet', page: 18 }], 'skagit', id), `${PDF.skagit}#page=18`)
+  assert.equal(pamphletLink([{ edition: 'local-voters-pamphlet', page: 57 }], 'cowlitz', id), `${PDF.cowlitz}#page=57`)
+  const paged = { skagit: 0, cowlitz: 0 }
+  const guided = { skagit: 0, cowlitz: 0, grant: 0 }
+  for (const item of [...general.contests, ...general.measures]) {
+    if (!(item.owner in guided)) continue
+    const pages = item.candidates ? item.candidates.map((c) => c.pamphlet_pages) : [item.pamphlet_pages]
+    for (const p of pages) {
+      if (p?.length) {
+        assert.ok(item.owner in PDF, item.slug)
+        assert.equal(pamphletLink(p, item.owner, id), `${PDF[item.owner]}#page=${p[0].page}`, item.slug)
+        paged[item.owner]++
+      } else {
+        // Grant's records, and races shipped with another package's research.
+        assert.equal(pamphletLink(p, item.owner, id), GUIDE[item.owner], item.slug)
+        guided[item.owner]++
+      }
+    }
+  }
+  assert.ok(paged.skagit >= 20 && paged.cowlitz >= 10 && guided.grant >= 30, JSON.stringify({ paged, guided }))
+  for (const [county, name, url] of [
+    ['skagit', 'Skagit County', 'https://www.skagitcountywa.gov/government/auditor-s-office/elections-and-voting/'],
+    ['cowlitz', 'Cowlitz County', 'https://www.co.cowlitz.wa.us/2357/Elections'],
+    ['grant', 'Grant County', 'https://www.grantcountywa.gov/270/Elections'],
   ]) {
     assert.deepEqual(countyElectionsOffice(general, { id: county, name }), { name: `${name} Elections`, url, direct: true })
   }

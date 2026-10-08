@@ -19,7 +19,13 @@
     "data/washington-state/elections/2026-11-03-general/counties/whatcom/scoring/measures.json",
     "data/washington-state/elections/2026-11-03-general/counties/whatcom/scoring/refutations/measures.json",
     "data/washington-state/elections/2026-11-03-general/counties/benton/scoring/measures.json",
-    "data/washington-state/elections/2026-11-03-general/counties/benton/scoring/refutations/measures.json"
+    "data/washington-state/elections/2026-11-03-general/counties/benton/scoring/refutations/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/skagit/scoring/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/skagit/scoring/refutations/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/cowlitz/scoring/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/cowlitz/scoring/refutations/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/grant/scoring/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/grant/scoring/refutations/measures.json"
   ],
   "script": "pipeline/merge_scores.py",
   "measures": [
@@ -1774,6 +1780,222 @@
         }
       },
       "sources_note": "Sources: VoteWA voters' guide record 7273 (S1); district levy page (S2); Secretary of State results for February 2025, November 2025 and February 2023 (S3-S5); Department of Revenue levy detail for 2024-2025 (S6, S7); Apple Valley News Now, NBC Right Now and NewsTalk 870 coverage of cuts, state oversight and the lower rate (S8-S10); PDC committee query (S11). Tri-City Herald coverage could not be retrieved."
+    },
+    {
+      "slug": "skagit-city-of-mount-vernon-proposition-no-1",
+      "what_it_does": "Renews the Mount Vernon Transportation Benefit District's 0.2% sales and use tax for ten more years. The money can only pay for transportation work in the city: street repair and maintenance, road capital projects, and bike and pedestrian improvements. The current tax, approved by voters in 2016, ends in spring 2027 unless renewed.",
+      "cost_line": "Keeps the existing 0.2% (20 cents on a $100 purchase); Mount Vernon's combined sales tax stays at 9.0%. The city estimates $2.3 million a year.",
+      "pro_summary": "The statement in favor (Mount Vernon Transportation Benefit District Pro Committee, spokesperson LuAnne Gordan Burkhart) says the tax pays only for transportation, visitors share the cost, and the city is simply asking to continue it at the same rate. It credits the tax with matching grants and with work on the College Way/I-5 interchange, the Hoag Road/LaVenture signal, street overlays and 436 crosswalks and curbs.",
+      "con_summary": "No statement against this measure was filed; nobody contacted the Auditor to write one. Councilmember Andrew Vander Stoep voted to put it on the ballot but said he would not support the tax, calling sales tax 'a pretty regressive tax.'",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "A yes vote renews an existing 0.2% sales tax at the same rate for ten more years (about $2.3 million a year); the combined rate stays at 9.0%. This is a same-rate renewal, not a new tax.",
+          "citations": [
+            "S1",
+            "S4",
+            "S7"
+          ]
+        }
+      },
+      "sources_note": "Sources: Skagit County local voters' pamphlet page 18 (S1) and VoteWA record 7426 (S2); the city's ballot filing (S3); the city's Transportation Benefit District page and FAQ (S4); Skagit Valley Herald coverage of the council vote and the 10-year project summary (S5, S6); DOR sales tax rates (S7); 2016 election results (S8); a PDC query showing no committee (S9)."
+    },
+    {
+      "slug": "skagit-city-of-sedro-woolley-proposition-no-1",
+      "what_it_does": "Annexes the City of Sedro-Woolley into the Central Skagit Library District, which already runs the city's library under a contract. City residents would pay the library district's property tax directly instead of the city paying the district, and could vote on library district ballot measures starting in 2027.",
+      "cost_line": "Library district tax of about $0.232 per $1,000 starting in 2028 (about $517,000 from city property). The city says it will cut its own levy by up to $474,115 to offset most of this, for a net increase of about $11 a year on a $519,450 home.",
+      "pro_summary": "The statement in favor (spokesperson Millissa Macomber) says annexation simplifies library funding because residents already pay for the library through the city. It says the council has committed to lowering city property taxes, and that a yes vote gives residents a say on future library bonds or levies.",
+      "con_summary": "No statement against this measure was filed; nobody contacted the Auditor to write one.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "A yes vote puts a new library district property tax (about $0.232 per $1,000) on city property. The city's offsetting cut of up to $474,115 is its stated commitment for 2028, not part of a permanent rate, and leaves a net increase of about $11 a year on a $519,450 home. A small net increase, like other annexations into an existing taxing district.",
+          "citations": [
+            "S1",
+            "S4"
+          ]
+        },
+        "local-control": {
+          "direction": 1,
+          "basis": "A yes vote moves library funding from a city-negotiated contract into a separate district that sets its own levy, and gives city residents a vote in that district in exchange. Like the King County Fire District 43 annexation, it formalizes an existing service relationship rather than changing who provides the service.",
+          "citations": [
+            "S1",
+            "S4",
+            "S5"
+          ]
+        }
+      },
+      "sources_note": "Sources: Skagit County local voters' pamphlet page 19 (S1) and VoteWA record 7427 (S2); Resolution No. 1191-26 (S3); the city's library annexation page (S4); the Central Skagit Library annexation FAQ (S5); Skagit Valley Herald coverage (S6, S7); a PDC query showing no committee (S8). The city and the Herald link annexation to a possible future library levy lid lift; the library's FAQ says the two are unrelated."
+    },
+    {
+      "slug": "skagit-la-conner-school-district-no-311-proposition-no-1",
+      "what_it_does": "Authorizes a four-year capital levy (2027-2030) for La Conner School District to replace and upgrade technology systems and modernize existing buildings. The district's plans include replacing aging computers and iPads, improving classroom audio-visual systems and repairing facilities.",
+      "cost_line": "About $0.31 per $1,000 of assessed value each year: $350,000 in 2027 rising to $395,000 in 2030, $1.49 million in total. That is about $154 a year on a $500,000 property.",
+      "pro_summary": "No statement in favor was filed. Board President Susie Deyo has said the district has been conservative about raising taxes but that the levy is necessary. Board members say upgrading technology before it fails is more efficient.",
+      "con_summary": "No statement against this measure was filed; nobody contacted the Auditor to write one.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "A yes vote adds a four-year capital levy of about $0.31 per $1,000 ($1.49 million total). No expiring capital or technology levy is named; the last La Conner technology levy found on the ballot failed in 2016. It is a new line on current bills, but modest and temporary, like the King precedent for Highline's technology levy.",
+          "citations": [
+            "S1",
+            "S4",
+            "S7"
+          ]
+        }
+      },
+      "sources_note": "Sources: Skagit County local voters' pamphlet page 20 (S1) and VoteWA record 7428 (S2); Resolution No. 26-14 (S3); Skagit Valley Herald coverage of board meetings (S4-S6); February 2016 election results (S7); a PDC query showing no committee (S8)."
+    },
+    {
+      "slug": "skagit-skagit-county-fire-protection-district-no-5-proposition-no-1",
+      "what_it_does": "Raises Skagit County Fire District 5's regular property tax levy to $0.78 per $1,000 for 2027, up from about $0.34. It then allows revenue growth of up to 3% a year for five years, and the 2031 levy becomes the permanent base. The all-volunteer district serves Allen, Bow, Edison, Samish Island and Chuckanut Drive and plans to use the money mainly to replace aging fire apparatus.",
+      "cost_line": "$0.78 per $1,000 of assessed value in 2027, up from about $0.3363. The district estimates the increase at about $133 a year on a $300,000 home and $222 a year on a $500,000 home.",
+      "pro_summary": "The statement in favor (Citizens for District 5 Fire Levy, spokesperson Andrea Leebron-Clay) says the volunteer department faces rising engine, equipment, fuel and operating costs that the 1% limit has not kept up with. It says the levy protects the area's fire protection rating and helps homeowners avoid insurance premium spikes.",
+      "con_summary": "No statement against this measure was filed; nobody contacted the Auditor to write one.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "A yes vote more than doubles the district's regular levy rate (about $0.3363 to $0.78 per $1,000), allows 3% annual revenue growth for five years and makes the 2031 levy the permanent base. That is a large lid lift, like the Spokane Fire District 9 precedent.",
+          "citations": [
+            "S1",
+            "S3",
+            "S4"
+          ]
+        }
+      },
+      "sources_note": "Sources: Skagit County local voters' pamphlet page 21 (S1) and VoteWA record 7429 (S2); Resolution No. 2026-1 (S3); the district's levy fact sheet (S4); its Reports & Maps and Leadership pages (S5, S6); the PDC record for Citizens for District 5 Fire Levy (S7) and a 2026 PDC query (S8)."
+    },
+    {
+      "slug": "cowlitz-city-of-longview-proposition-1",
+      "what_it_does": "Lifts Longview's regular property tax levy to fund fire and EMS: a third fire station (Station 83 on Ocean Beach Highway), a fourth engine, eight more firefighter paramedic/EMTs and replacement equipment. The 2027 levy becomes the base for future years, with no end date.",
+      "cost_line": "Adds $1.15 per $1,000 of assessed value from 2027, about $32 a month for a median Longview home by the city's estimate; opponents say the city rate rises from $1.955 to $3.105.",
+      "pro_summary": "The statement in favor (chair Brad Hannig, the fire chief, with Karen Bergquist and Shannon McLain) says call volume has doubled in 20 years on the same two 1970s stations and staffing, seconds matter in fires and cardiac arrests, and the money is legally restricted to fire and EMS.",
+      "con_summary": "The statement against (chair Erik Wrzesinski) calls it a permanent 58.8% rate increase on top of a new school levy and higher water rates, and asks the city to return with firm costs and a limited-duration measure.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "A yes vote permanently raises the city's regular property tax rate by $1.15 per $1,000, a new increase rather than a renewal.",
+          "citations": [
+            "S1",
+            "S2",
+            "S8"
+          ]
+        },
+        "spending": {
+          "direction": 1,
+          "basis": "The levy funds an explicit expansion of fire and EMS service: a third station, a fourth engine, eight more firefighter paramedic/EMTs and daily staffing raised from nine to 12.",
+          "citations": [
+            "S1",
+            "S4"
+          ]
+        }
+      },
+      "sources_note": "Sources: Cowlitz County local voters' pamphlet pp. 57-58 (S1); VoteWA voters' guide record 7372 (S2); City of Longview Prop 1 page (S3); KLOG on the council vote, the open house and the 2025 fire-district proposal (S4-S6, S9); PDC SAFE Longview committee record (S7); sample ballot (S8)."
+    },
+    {
+      "slug": "grant-grant-county-advisory-vote-only-proposition-no-1",
+      "what_it_does": "Asks voters for their advice on whether the county commissioners should adopt a new 0.1% countywide sales tax for mental health and chemical dependency treatment and therapeutic courts (RCW 82.14.460). The vote does not impose the tax; the commissioners can adopt it by ordinance without a vote and will decide afterward.",
+      "cost_line": "If the commissioners later adopt it: 10 cents on a $100 purchase, raising Grant County rates from 8.2-8.5% to 8.3-8.6%. The county projects about $2.7 million a year.",
+      "pro_summary": "The statement in favor (no author listed) says a modest tax would expand mental health care, substance use treatment, therapeutic courts and crisis services. It says Grant County is the largest of only 10 counties not using this option, and that early treatment eases pressure on police, emergency services and courts.",
+      "con_summary": "No statement against this measure was filed, and no opposing committee is listed.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "A yes vote advises the commissioners to adopt a new 0.1% countywide sales tax raising about $2.7 million a year. The vote is advisory, which is the case for a weaker lean.",
+          "citations": [
+            "S1",
+            "S2",
+            "S4"
+          ]
+        }
+      },
+      "sources_note": "Sources: VoteWA voters' guide record 7349 (S1); county Resolution No. 26-046-CC (S2); the official sample ballot (S3); Columbia Basin Herald on the advisory vote and its $2.7 million estimate (S4); RCW 82.14.460 (S5); DOR Q4 2026 rates (S6); Source ONE News on Renew's mental health capacity (S7); PDC query showing no committee (S8)."
+    },
+    {
+      "slug": "grant-grant-county-public-hospital-district-no-4-mckay-healthcare-rehabilitation-proposition-no-1",
+      "what_it_does": "Lets the hospital district that runs McKay Healthcare & Rehabilitation in Soap Lake issue up to $9.94 million in bonds over as long as 30 years. The money helps build a 16-bed assisted living unit, a 16-bed memory care unit and a community wellness center with daycare. The district says grants and low-interest loans cover most of the cost. Needs 60% to pass.",
+      "cost_line": "About $0.61 per $1,000 of assessed value, roughly $15.27 a month ($183 a year) on a $300,000 home, for up to 30 years. The district has had no bond levy before.",
+      "pro_summary": "The statement in favor (no author listed; the Team McKay committee supports it) says most people over 65 will need skilled care. It says the bond keeps that care close to home, adds child daycare and elder respite, and creates jobs. It notes McKay has served the area since 1938 without a bond.",
+      "con_summary": "No statement against this measure was filed, and no opposing committee is listed.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "A yes vote adds a new excess property tax of about $0.61 per $1,000 for up to 30 years to repay up to $9.94 million in bonds. The district has no existing bond levy.",
+          "citations": [
+            "S1",
+            "S4"
+          ]
+        },
+        "spending": {
+          "direction": 1,
+          "basis": "A yes vote helps build new senior-care capacity, a 16-bed assisted living unit, a 16-bed memory care unit and a community wellness center with daycare, an expansion beyond the district's current services.",
+          "citations": [
+            "S1",
+            "S3",
+            "S4"
+          ],
+          "added_by_refutation": true
+        }
+      },
+      "sources_note": "Sources: VoteWA voters' guide record 7343 (S1); the official sample ballot (S2); McKay's expansion page (S3); Columbia Basin Herald coverage (S4); district commission minutes from February to June 2026 on Resolution 2026-4, the USDA loan and grant efforts (S5-S9); Fire District 7 minutes on the same-ballot timing (S10); RCW 70.44.110 and 84.52.056 (S11, S12); the PDC registration of Team McKay (S13)."
+    },
+    {
+      "slug": "grant-city-of-moses-lake-proposition-no-1",
+      "what_it_does": "Creates a new 0.1% city sales and use tax in Moses Lake for police and other public safety and criminal justice services (RCW 82.14.450), with no stated end date. The city says the money would keep current police staffing amid a budget deficit. The city keeps 85% and Grant County gets 15%.",
+      "cost_line": "Adds 10 cents to a $100 taxable purchase, raising Moses Lake's sales tax from 8.5% to 8.6%. The city estimates about $1.2 million in 2027.",
+      "pro_summary": "The statement in favor (no author listed) says the police department expects three vacancies in 2026 that it won't fill because of budget cuts. It calls a sales tax one of the most equitable ways to fund police because visitors, shoppers and people outside city limits share the cost, and it does not apply to groceries or gasoline.",
+      "con_summary": "No statement against this measure was filed, and no opposing committee is listed. During budget talks, two council members said they preferred cuts and efficiencies to new taxes.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "A yes vote creates a new 0.1% sales tax with no stated end date, raising the combined rate from 8.5% to 8.6% and about $1.2 million a year.",
+          "citations": [
+            "S1",
+            "S3",
+            "S8"
+          ]
+        }
+      },
+      "sources_note": "Sources: VoteWA voters' guide record 7347 (S1); the city's filed ballot resolution (S2); Columbia Basin Herald on the 7-0 council vote (S3); Source ONE News on the resolution, the city survey, the deficit and the budget plan (S4-S7); DOR Q4 2026 rates (S8); RCW 82.14.450 (S9); PDC query showing no committee (S10)."
+    },
+    {
+      "slug": "grant-grant-county-fire-protection-district-no-7-proposition-no-1",
+      "what_it_does": "Replaces the last two years of Fire District 7's 2022 EMS levy ($0.25, suspended since 2024) with a new six-year EMS levy of up to $0.50 per $1,000, collected 2027 through 2032. If it fails, the district resumes the $0.25 levy for 2027 and 2028. The money pays for ambulance staff and equipment in the Soap Lake area.",
+      "cost_line": "Up to $0.50 per $1,000, at most $150 a year on a $300,000 property, about $250,000 a year for the district. That is $75 a year more than the $0.25 levy that resumes if the measure fails.",
+      "pro_summary": "No statement in favor was filed. The fire chief says EMS calls nearly doubled since 2023, that two EMS positions lose their federal grant in 2027, and that the levy would keep both and add an ambulance.",
+      "con_summary": "No statement against this measure was filed. At a June board meeting one resident said he supports the levy but worried that it and the McKay bond on the same ballot could prompt no votes.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "A yes vote doubles the voter-approved EMS rate from $0.25 to $0.50 per $1,000 and extends it four years beyond the 2022 levy. The district had suspended EMS collections since 2024 after a 2023 lid lift. Legally a replacement levy, which is the case for +1.",
+          "citations": [
+            "S1",
+            "S2",
+            "S3",
+            "S5",
+            "S7"
+          ]
+        }
+      },
+      "sources_note": "Sources: VoteWA voters' guide record 7348 (S1); the district's Resolution No. 07082026-A (S2); Columbia Basin Herald coverage (S3, S4); VoteWA records and Secretary of State results for the 2022 EMS levy and 2023 lid lift (S5-S8); district board minutes from March to August 2026 (S9-S13); RCW 84.52.069 (S14); PDC query showing no committee (S15)."
+    },
+    {
+      "slug": "grant-grant-county-cemetery-district-no-2-wilson-creek-proposition-no-1",
+      "what_it_does": "Renews the Wilson Creek cemetery district's yearly maintenance levy for 2027, which pays its maintenance worker, utilities and mower costs. Voters have approved it every year. Needs 60% to pass.",
+      "cost_line": "$12,000 in 2027 at about 17.6 cents per $1,000 (about $53 on a $300,000 property). The 2024-2026 levies were $11,500 each.",
+      "pro_summary": "No statement in favor was filed. The district says the levy pays for its maintenance worker, electricity, mower fuel and repairs.",
+      "con_summary": "No statement against this measure was filed, and no opposing committee is listed.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "A yes vote renews a recurring one-year cemetery levy at about the same rate as 2026, with the amount up $500 to $12,000. It is a replacement, not a new tax.",
+          "citations": [
+            "S1",
+            "S3"
+          ]
+        }
+      },
+      "sources_note": "Sources: VoteWA voters' guide record 7346 (S1); district Resolution No. 26-1 (S2); VoteWA records for the 2024-2026 levies (S3-S5); Secretary of State results for 2022-2025 (S6-S9); RCW 68.52.310 and 84.52.052 (S10, S11); PDC query showing no committee (S12). No news coverage was found."
     }
   ]
 }

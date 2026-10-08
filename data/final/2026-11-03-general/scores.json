@@ -21,15 +21,21 @@
     "data/washington-state/elections/2026-11-03-general/counties/whatcom/scoring/*.json",
     "data/washington-state/elections/2026-11-03-general/counties/whatcom/scoring/refutations/*.json",
     "data/washington-state/elections/2026-11-03-general/counties/benton/scoring/*.json",
-    "data/washington-state/elections/2026-11-03-general/counties/benton/scoring/refutations/*.json"
+    "data/washington-state/elections/2026-11-03-general/counties/benton/scoring/refutations/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/skagit/scoring/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/skagit/scoring/refutations/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/cowlitz/scoring/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/cowlitz/scoring/refutations/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/grant/scoring/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/grant/scoring/refutations/*.json"
   ],
   "script": "pipeline/merge_scores.py",
   "verdict_stats": {
-    "upheld": 1789,
-    "adjust": 149,
+    "upheld": 1877,
+    "adjust": 160,
     "refuted": 6,
-    "missing_added": 24,
-    "missing_dropped_low": 9
+    "missing_added": 26,
+    "missing_dropped_low": 10
   },
   "contests": [
     {
@@ -26257,6 +26263,2067 @@
             "Opposes reliance on wind and solar and state energy mandates; supports protecting dams and expanding nuclear [S1][S2]",
             "Would back a natural gas plant or small nuclear reactor and pledges hard questions before spending [S2]",
             "Endorsed by the Benton County Republican Party; campaigns as a conservative in this nonpartisan race [S3][S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "skagit-public-utility-district-commissioner-district-1-commissioner-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/skagit/dossiers/skagit-public-utility-district-commissioner-district-1-commissioner-1/"
+      ],
+      "office_does": "Skagit PUD commissioners set water rates, budgets and capital projects for the county's public water utility and oversee its general manager. The whole county votes in the general election.",
+      "race_blurb": "Six-year incumbent Andrew Miller, the board's president, faces real estate broker Spencer Roozen, who says rates have risen too fast and calls for line-item cost transparency. Both oppose using Skagit water for data centers. The pamphlet calls this seat Position 1; the county sample ballot labels it Position 3.",
+      "candidates": [
+        {
+          "slug": "andrew-miller",
+          "summary": "Incumbent commissioner since 2020, CEO of United Way of Skagit County and Tulip Valley Farms co-founder, running on the board's record on affordability and farm water.",
+          "highlights": [
+            "Says the board forged a water-sharing agreement that keeps farms irrigated in drought while protecting instream flows [S1]",
+            "Pledges to use every funding tool so modernization costs don't fall solely on ratepayers [S1]",
+            "Told the county he is 'personally opposed to the development of large-scale data centers' [S9]",
+            "Introduced a draft Water Priority Policy putting agriculture first for untreated water-rights transfers [S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "spencer-roozen",
+          "summary": "Mount Vernon real estate broker with a WSU agriculture degree, running on rate restraint, transparency and putting Skagit water users first.",
+          "highlights": [
+            "Says rates rose 34% in six years; would treat rate hikes as a 'last resort' and publish line-item costs before rate votes [S3]",
+            "'Not One Drop' plank: Skagit water for Skagit users, not data centers; public hearings before major water deals [S3]",
+            "Proposes a district-wide hydrant and fire-flow review [S3]",
+            "Recommended by the Skagit County Democrats; endorsed by County Commissioners Browning and Wesen [S6][S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "skagit-skagit-county-assessor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/skagit/dossiers/skagit-skagit-county-assessor/"
+      ],
+      "office_does": "The assessor values all taxable property in Skagit County for property taxes, revaluing it every year and inspecting each property at least once every six years, and runs the senior and disability tax exemption program.",
+      "race_blurb": "Uncontested: incumbent Assessor Danny Hagen (Prefers Independent Party), elected in 2022, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "danny-hagen",
+          "summary": "Skagit County Assessor since 2022 after eight years in the Assessor's Office; the only candidate on the ballot.",
+          "highlights": [
+            "Elected Assessor in 2022 after eight years in the office; president of the state county assessors' association [S1]",
+            "Promotes the expanded senior and disability property tax exemption under ESSB 6162, raising the income limit to $78,000 [S1]",
+            "Says the assessor's office should not be partisan and runs as an Independent [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "skagit-skagit-county-auditor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/skagit/dossiers/skagit-skagit-county-auditor/"
+      ],
+      "office_does": "The county auditor runs elections and voter registration, vehicle and vessel licensing and document recording, and keeps the county's payroll, accounts and financial reports.",
+      "race_blurb": "Two-term Auditor Sandy Perkins is retiring and endorses Democrat Jeremy Harrison-Smith, the governor's regional representative. Former Mount Vernon councilmember Mark Hulst runs as an independent and is recommended by the county Republican Party, which he once chaired. Harrison-Smith led the primary 54% to 46%. The two gave the same answers on voter fraud, the 2020 election and mail voting, so the race mostly turns on partisanship and experience.",
+      "candidates": [
+        {
+          "slug": "jeremy-harrison-smith",
+          "summary": "Governor's Northwest Washington representative and former nonprofit director, running as a Democrat and first-time candidate who pitches 'a new generation of leadership.'",
+          "highlights": [
+            "Pledges to protect vote-by-mail and work with state partners on election security [S1]",
+            "Wants expanded language access, bilingual staff and a joint auditor-assessor-treasurer front desk [S1][S5]",
+            "Proposes exploring live-streamed ballot processing to build trust [S3]",
+            "Endorsed by Auditor Sandy Perkins and the Skagit County Democrats [S1][S6]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S5"
+              ],
+              "basis": "Pitches 'a new generation of leadership' and new ideas as a first-time candidate, while drawing on state-government ties and the outgoing auditor's endorsement."
+            }
+          }
+        },
+        {
+          "slug": "mark-hulst",
+          "summary": "Former 12-year Mount Vernon city councilmember and business owner running as an independent on management experience and nonpartisan administration.",
+          "highlights": [
+            "Chaired the Mount Vernon City Council's finance and public safety committees, 2012-2023 [S1][S5]",
+            "Says the office should be run 'without unnecessary rhetoric or partisanship' and in full compliance with state law [S1][S2]",
+            "Proposes regular audits of vehicle-licensing sub-agencies and a property-title fraud alert service [S5]",
+            "Former Skagit County Republican Party chair; the party now recommends him [S5][S6]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S5"
+              ],
+              "basis": "Runs as 'The Experienced Choice' on 12 years of city council and business management, but has not worked in an auditor's office."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "skagit-skagit-county-clerk",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/skagit/dossiers/skagit-skagit-county-clerk/"
+      ],
+      "office_does": "The county clerk keeps Superior Court records and exhibits, collects court fees, fines and restitution, and serves as the court's administrative and financial office.",
+      "race_blurb": "Clerk Melissa Beaton, a Democrat first elected in 2019 after two decades in Superior Court administration, faces independent Amanda Toscano, a real estate agent who qualified for the ballot with write-in votes in the primary. The race pairs long court experience with a first-time candidate who says she ran to give voters a choice.",
+      "candidates": [
+        {
+          "slug": "melissa-beaton",
+          "summary": "Incumbent clerk since 2019 and former Superior Court manager, also a Mount Vernon city councilmember, running on legal and court-administration expertise.",
+          "highlights": [
+            "Says she modernized services and implemented e-filing while running a $3 million, 19-person office [S1]",
+            "Past president of the state county clerks' association; certified court manager [S1][S2]",
+            "Warned of budget-driven staff losses for 2027 [S4]",
+            "Endorsed by the Skagit County Democrats and officials of both parties [S3][S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S4"
+              ],
+              "basis": "Incumbent clerk since 2019 with about two decades of Superior Court administration before that; runs on that expertise."
+            }
+          }
+        },
+        {
+          "slug": "amanda-toscano",
+          "summary": "Real estate agent and first-time candidate who qualified as a write-in and runs on customer service and document-handling experience.",
+          "highlights": [
+            "Says she will make court procedures 'clear, consistent, and customer friendly at the counter and online' [S1]",
+            "Pledges to be 'a careful steward of public resources, prioritizing needs over wants' [S1]",
+            "Said she entered the race to give voters a choice; of the court, she said 'Obviously, I've never been there' [S2]",
+            "Promoted on SkagitResidents.com as one of four 'constitutional' write-in candidates [S3][S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "First-time candidate with no court experience who ran to give voters a choice against a long-serving incumbent."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Single pamphlet pledge to be 'a careful steward of public resources, prioritizing needs over wants'; no specific budget position."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "skagit-skagit-county-commissioner-district-3",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/skagit/dossiers/skagit-skagit-county-commissioner-district-3/"
+      ],
+      "office_does": "The three county commissioners are Skagit County's legislative body: they adopt the county budget, set land-use and permitting policy, and run county services such as the Guemes Island ferry.",
+      "race_blurb": "Appointed Democratic Commissioner Joe Burns faces Republican state Sen. Keith Wagoner, who led the District 3 primary 45% to 40.7%; the whole county votes in the general. With a roughly $10 million deficit ahead, Wagoner runs on cutting spending and opposing tax increases while keeping his Senate seat, and Burns runs as a full-time commissioner focused on affordability and preserving services.",
+      "candidates": [
+        {
+          "slug": "keith-l-wagoner",
+          "summary": "39th District state senator and Senate Minority Whip since 2018, former Sedro-Woolley mayor and 23-year Navy and Marine Corps aviator; would keep his Senate seat through January 2029 if elected.",
+          "highlights": [
+            "Voted against the 2026 millionaires' income tax (ESSB 6346) and the 2025 capital gains/estate (ESSB 5813) and services excise (ESSB 5814) tax bills [S13][S15][S17]",
+            "Would scour the county budget to cut 'nice-to-have' spending and seek solutions that 'do not involve taking money out of our pockets' [S9][S12]",
+            "Wants faster county permitting for housing and fewer regulatory steps for building [S10][S12]",
+            "Supports Flock license-plate cameras with regulation; cites FOP Legislator of the Year award and co-responder legislation [S1][S4][S12]",
+            "Endorsed by the Skagit County Republican Party [S6]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S12",
+                "S13",
+                "S15",
+                "S17",
+                "S4"
+              ],
+              "basis": "Nay votes on ESSB 6346, ESSB 5813 and ESSB 5814, plus repeated statements opposing county tax increases and a platform of revenue-sharing bills framed as property-tax relief."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S9",
+                "S12"
+              ],
+              "basis": "Says he would reassess and reduce county spending, sorting expenditures into essential, valuable and nice-to-have, and close the deficit without raising taxes."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S10",
+                "S12"
+              ],
+              "basis": "Emphasizes removing regulatory steps and speeding housing permits; cites cutting taxes on multi-family housing."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S12"
+              ],
+              "basis": "Platform stresses standing with law enforcement and supports Flock cameras, though he also sponsored co-responder training legislation."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3",
+                "S10"
+              ],
+              "basis": "Runs on long tenure as councilmember, mayor and state senator (Minority Whip) and calls himself the most experienced candidate."
+            }
+          }
+        },
+        {
+          "slug": "joe-burns",
+          "summary": "Appointed District 3 commissioner since January 2026, former Sedro-Woolley council member and high school auto shop teacher, running as a full-time commissioner focused on affordability.",
+          "highlights": [
+            "Would preserve senior center and Meals on Wheels funding and warns against 'extreme cuts' in the 2027 deficit [S11]",
+            "Backs streamlined permitting, more housing types and first-time-buyer pathways [S3][S8]",
+            "Supported the county's data center moratorium, citing water, power and floodplain concerns [S12][S13][S14]",
+            "Now opposes Flock license-plate cameras; emphasizes behavioral health and the North Star initiative [S3][S11][S14]",
+            "Voted with the board to uphold 2025 Guemes ferry fares after a court ordered them recalculated [S15]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S11",
+                "S3"
+              ],
+              "basis": "Would protect discretionary services like senior centers and Meals on Wheels and invest in rural infrastructure, while also citing budget prioritization."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S8",
+                "S3"
+              ],
+              "basis": "Primary housing remedies are permit streamlining and zoning for more housing types, with a focus on homeownership rather than tenant protections or public housing."
+            },
+            "safety": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S11",
+                "S6"
+              ],
+              "basis": "Emphasizes behavioral health, substance-use prevention and overdose response through North Star, and says he will not approve Flock cameras."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S11",
+                "S6"
+              ],
+              "basis": "Nine-month appointed incumbent with four years on a city council who says he brings new ideas and creativity rather than decades of experience."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "skagit-skagit-county-coroner",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/skagit/dossiers/skagit-skagit-county-coroner/"
+      ],
+      "office_does": "The coroner investigates sudden, violent or unexplained deaths, determines cause and manner of death, and keeps families informed.",
+      "race_blurb": "Interim Coroner Alex Lathum, a Democrat appointed in September after Hayley Thompson resigned, faces Republican Derrill Fussell, who qualified as a write-in in the primary. Both say the accredited office is understaffed; the race contrasts in-office and laboratory experience with an outsider who says character and administration matter most.",
+      "candidates": [
+        {
+          "slug": "alex-lathum",
+          "summary": "Interim Skagit County Coroner and former lead microbiologist at the state Public Health Laboratory who volunteered and interned in the coroner's office before his appointment.",
+          "highlights": [
+            "Appointed interim coroner unanimously by commissioners in September 2026 [S3]",
+            "Pledges to respond to death scenes himself and follow national medicolegal investigation standards [S1][S4]",
+            "Would track and publish county death statistics [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S4"
+              ],
+              "basis": "The appointed interim incumbent with prior volunteer work in the office, though his tenure as coroner is weeks long."
+            }
+          }
+        },
+        {
+          "slug": "derrill-fussell",
+          "summary": "Former flower-bulb farm manager and technology company CEO who qualified as a write-in and campaigns on protecting coroner staffing, accreditation and state reimbursements.",
+          "highlights": [
+            "Qualified for the ballot with 1,197 write-in votes in the primary [S9]",
+            "Would claim every state autopsy reimbursement dollar and keep the office's IACME accreditation [S5]",
+            "Says the office is understaffed and he will lobby for full staffing [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S4",
+                "S9"
+              ],
+              "basis": "Has held no public office and repeatedly argues character and administrative judgment, not death-investigation experience, are the qualification.",
+              "adjusted_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "skagit-skagit-county-district-court-judge-position-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/skagit/dossiers/skagit-skagit-county-district-court-judge-position-1/"
+      ],
+      "office_does": "A Skagit County District Court judge hears misdemeanor and gross-misdemeanor criminal cases, traffic infractions, civil claims up to $100,000, small claims and protection orders; judges are elected countywide.",
+      "race_blurb": "Uncontested: Court Commissioner Patrick Eason is the only candidate for the seat of a retiring judge.",
+      "candidates": [
+        {
+          "slug": "patrick-eason",
+          "summary": "Skagit County District Court commissioner since 2021 and former Mount Vernon assistant city attorney; the only candidate on the ballot.",
+          "highlights": [
+            "District Court commissioner since July 2021, presiding over jury trials, sentencings and protection-order hearings [S1]",
+            "Former Mount Vernon assistant city attorney and deputy prosecutor in Skagit and Mason counties [S4]",
+            "Endorsed by more than 20 past and present Skagit County judges [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "skagit-skagit-county-district-court-judge-position-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/skagit/dossiers/skagit-skagit-county-district-court-judge-position-2/"
+      ],
+      "office_does": "A Skagit County District Court judge hears misdemeanor and gross-misdemeanor criminal cases, traffic infractions, civil claims up to $100,000, small claims and protection orders; judges are elected countywide.",
+      "race_blurb": "Uncontested: Judge Paul W Nielsen, appointed in 2024, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "paul-w-nielsen",
+          "summary": "Skagit County District Court judge since March 2024 and the court's presiding judge; the only candidate on the ballot.",
+          "highlights": [
+            "Appointed District Court judge by the county commissioners in February 2024; court commissioner 2021-2024 [S1]",
+            "Senior deputy prosecutor 2007-2020 handling felony cases [S1]",
+            "Listed as the court's presiding judge [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "skagit-skagit-county-district-court-judge-position-3",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/skagit/dossiers/skagit-skagit-county-district-court-judge-position-3/"
+      ],
+      "office_does": "A Skagit County District Court judge hears misdemeanor and gross-misdemeanor criminal cases, traffic infractions, civil claims up to $100,000, small claims and protection orders; judges are elected countywide.",
+      "race_blurb": "Uncontested: incumbent Judge Jenifer Howson is the only candidate.",
+      "candidates": [
+        {
+          "slug": "jenifer-howson",
+          "summary": "Skagit County District Court judge since 2021 and former presiding judge; the only candidate on the ballot.",
+          "highlights": [
+            "District Court judge since January 2021, court commissioner 2017-2020, presiding judge for four years [S1]",
+            "Led development of the county's Community Court network [S1]",
+            "Re-elected unopposed in 2022 with 98.4% of the vote [S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "skagit-skagit-county-prosecuting-attorney",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/skagit/dossiers/skagit-skagit-county-prosecuting-attorney/"
+      ],
+      "office_does": "The prosecuting attorney prosecutes crimes on behalf of the state and county, defends the county in lawsuits and is legal adviser to county officials and school directors.",
+      "race_blurb": "Uncontested: Chief Civil Deputy Erik Pedersen (Prefers Democratic Party) is the only candidate for the seat held by Rich Weyrich, who is not on the ballot.",
+      "candidates": [
+        {
+          "slug": "erik-pedersen",
+          "summary": "32-year deputy in the Skagit County Prosecuting Attorney's Office, most recently chief civil deputy; the only candidate on the ballot.",
+          "highlights": [
+            "Deputy prosecutor since 1994, appellate and senior deputy 1999-2021, chief civil deputy 2022-2026 [S1]",
+            "Says the office holds offenders responsible, especially violent ones, with \"compassionate accountability\" for drug use and mental illness [S1]",
+            "Said recall petitions against county officials cost over $100,000 in staff time [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "skagit-skagit-county-sheriff",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/skagit/dossiers/skagit-skagit-county-sheriff/"
+      ],
+      "office_does": "The sheriff runs the Skagit County Sheriff's Office, including patrol of unincorporated areas, investigations, the county jail and specialty units.",
+      "race_blurb": "This is an open race between the Sheriff's Office's chief of field operations, Chris Baldwin, and Cody Hart, a self-described 'Constitutional Sheriff' who made the ballot as a primary write-in. Both county parties recommend Baldwin. Hart runs as an outsider focused on government corruption.",
+      "candidates": [
+        {
+          "slug": "chris-baldwin",
+          "summary": "32-year Skagit County Sheriff's Office veteran and current chief of field operations, running on his command record. Both county parties recommend him.",
+          "highlights": [
+            "Chief of field operations since 2019; first commander of the North Cascades Regional SWAT Team [S4]",
+            "Promotes the mental-health co-response model and grant-funded additional patrol deputies [S5]",
+            "Priorities include retaining trained deputies and 'transparency and responsible use of tax dollars' [S1]",
+            "Recommended by both the Skagit County Democrats and the Skagit County Republican Party [S13][S14]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S4"
+              ],
+              "basis": "Runs on a 32-year Sheriff's Office career and his current command role, citing decisions 'based on experience.'"
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S5"
+              ],
+              "basis": "Pairs added deputies and a drug task force with mental-health co-response and respect for 'rights and dignity': a mixed enforcement and prevention record.",
+              "adjusted_by_refutation": true
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S7"
+              ],
+              "basis": "Lists 'ensuring transparency and responsible use of tax dollars' as a pamphlet priority (S1). He also acted on it: he declined a county-paid supplemental pamphlet mailing, saying 'I do not believe it is necessary to create additional expenses for taxpayers' (S7, also S10). His campaign further cites a Professional Standards and Accountability unit (S5). That is a restraint and oversight statement plus a matching action, the same evidence pattern as Toscano's upheld clerk-race spending -1 medium. Grant-funded deputies (S5) are outside revenue, not a county spending-expansion stance, so they do not pull the other way.",
+              "added_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "cody-hart",
+          "summary": "Navy veteran and self-described independent investigator running as a 'Constitutional Sheriff' and change-in-leadership candidate. He qualified as a write-in after the primary.",
+          "highlights": [
+            "Calls himself 'a change-in-leadership candidate, not someone who has been part of the current problems in the Sheriff's Office' [S1]",
+            "Campaigns on exposing 'waste, fraud, and abuse' and public corruption [S1][S3]",
+            "A judge ruled his January 2026 recall petition against county officials insufficient and fined him $5,348.22 [S9]",
+            "Ran against Rep. Rick Larsen for Congress in 2024 [S10]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Runs explicitly as an outsider 'change-in-leadership' candidate with no law enforcement career."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Campaign centers on confronting 'misuse of public funds' and reporting 'waste, fraud, and abuse' in government.",
+              "adjusted_by_refutation": true
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Promises to 'bring accountability and law and order back' and backs immigration-law enforcement, with no prevention or services platform."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "skagit-skagit-county-treasurer",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/skagit/dossiers/skagit-skagit-county-treasurer/"
+      ],
+      "office_does": "The county treasurer collects property and excise taxes, invests public money and pays debts for the county and about 80 local districts; it does not set tax rates.",
+      "race_blurb": "Treasurer Jackie Brunson, a 34-year county employee, faces Republican Timothy Garrison, an accountant who qualified as a write-in and runs as a political outsider focused on rooting out fraud. Coverage is thin: neither has a campaign website or has filed campaign finance reports.",
+      "candidates": [
+        {
+          "slug": "jackie-brunson",
+          "summary": "Incumbent treasurer since 2019 and longtime county finance administrator, running on office modernization and experience.",
+          "highlights": [
+            "Cites electronic excise filing, digitized records, cross-trained staff and lower banking costs since 2019 [S1]",
+            "Legislative chair of the state county treasurers' association, working on tools for delinquent property owners [S1]",
+            "Nearly 34 years in county government, including the Sheriff's Office and Auditor's Office [S1]",
+            "Endorsed by the Skagit County Democrats [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Incumbent treasurer since 2019 with nearly 34 years of county finance and administrative service."
+            }
+          }
+        },
+        {
+          "slug": "timothy-garrison",
+          "summary": "Small business owner and accountant who qualified as a write-in and runs as 'a political outsider' focused on eliminating fraud.",
+          "highlights": [
+            "Says he will focus on 'eliminating fraud and protecting every taxpayer dollar' by scrutinizing the office's transactions [S1]",
+            "Describes himself as 'a defender of the Constitution' who will not allow improper or unlawful transactions [S1]",
+            "Qualified for the general with 1,155 write-in votes, about 5% [S2]",
+            "Promoted on SkagitResidents.com as one of four 'constitutional' write-in candidates [S3][S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Runs explicitly as 'a political outsider' with private-sector experience against a 34-year county official."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Platform centers on reviewing and challenging how public money is handled to eliminate fraud (oversight pole); single pamphlet statement, no position on spending levels."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "cowlitz-cowlitz-county-assessor",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/cowlitz/dossiers/cowlitz-cowlitz-county-assessor/"
+      ],
+      "office_does": "The Assessor values all taxable property in Cowlitz County so property taxes can be apportioned among owners.",
+      "race_blurb": "Uncontested: Assessor Emily Wilcox (prefers Independent) is the only candidate.",
+      "candidates": [
+        {
+          "slug": "emily-wilcox",
+          "summary": "Incumbent Cowlitz County Assessor (prefers Independent) seeking another term; the only candidate.",
+          "highlights": [
+            "Lists fair and equitable assessments that comply with Washington law as the top priority [S1]",
+            "Says the office has modernized operations and technology to raise productivity and cut costs [S1]",
+            "Notifies residents in advance when appraisers will be working in their area [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "cowlitz-cowlitz-county-auditor",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/cowlitz/dossiers/cowlitz-cowlitz-county-auditor/"
+      ],
+      "office_does": "The Auditor runs Cowlitz County elections and voter registration, records documents and keeps the county's accounts.",
+      "race_blurb": "Uncontested: Auditor Carolyn Fundingsland (prefers Independent), formerly the county's elections manager, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "carolyn-fundingsland",
+          "summary": "Cowlitz County Auditor (prefers Independent), previously the county elections manager, with 20 years in the office; the only candidate.",
+          "highlights": [
+            "Twenty years in the office, first as Elections Manager and now as Auditor [S1]",
+            "Washington State Elections Employee of the Year (2017) and Auditor of the Year (2022) awards [S1]",
+            "Led a security-focused remodel of the elections facility; says she includes both political parties in election processes [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "cowlitz-cowlitz-county-clerk",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/cowlitz/dossiers/cowlitz-cowlitz-county-clerk/"
+      ],
+      "office_does": "The County Clerk keeps the Cowlitz County Superior Court's case records and runs the office that takes court filings from the public.",
+      "race_blurb": "Clerk Staci Myklebust, in office about 12 years, faces former lead deputy clerk Ashley White; both run as Independents on court-records administration.",
+      "candidates": [
+        {
+          "slug": "staci-myklebust",
+          "summary": "Cowlitz County Clerk for about 12 years, with 23 years in the office, seeking another term to add electronic filing and public services.",
+          "highlights": [
+            "Clerk for about 12 years, 23 years in the office combined [S1]",
+            "Goal: implement an electronic filing system and increase public services [S1]",
+            "Running as an Independent: 'this position is not about politics' [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Incumbent clerk for about 12 years, with 23 years in the office, running on continuity."
+            }
+          }
+        },
+        {
+          "slug": "ashley-white",
+          "summary": "Army veteran and former lead deputy clerk, now at Cowlitz County Juvenile Court, promising a more modern, responsive clerk's office.",
+          "highlights": [
+            "Five years in the Clerk's Office, the last two as a lead deputy clerk [S1]",
+            "Promises modernized operations, stronger customer service and transparency [S1]",
+            "U.S. Army veteran; works at Cowlitz County Juvenile Court [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "No elected office; challenges a long-serving incumbent on modernization while drawing on five years inside the office."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "cowlitz-cowlitz-county-commissioner-district-3-commissioner-district-3",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/cowlitz/dossiers/cowlitz-cowlitz-county-commissioner-district-3-commissioner-district-3/"
+      ],
+      "office_does": "The three Cowlitz County commissioners adopt the county budget, set county taxes and fees and pass county ordinances; the District 3 seat is nominated by district but elected by the whole county.",
+      "race_blurb": "One-term Commissioner Rick Dahl, who cast the lone vote against the county's 2026 public safety sales tax, faces middle-school teacher Chelsea Chandler, a first-time candidate who wants the county to pursue grants and outside investment.",
+      "candidates": [
+        {
+          "slug": "richard-dahl",
+          "summary": "District 3 commissioner since his 2022 election and a retired credit-union executive, running on opposition to tax increases and to new restrictions on property.",
+          "highlights": [
+            "Cast the lone vote against the county's 2026 0.1% public safety sales tax, saying the county should cut spending instead [S4]",
+            "Says he has opposed every suggestion of a tax increase and any new restrictions on what owners can do with property [S2]",
+            "Called homelessness spending 'enabling' before voting with the board to accept an $11.7 million state homeless grant [S5]",
+            "Retired from Fibre Federal Credit Union in 2022 after a 39-year banking career, latterly as senior vice president [S3]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S4"
+              ],
+              "basis": "Repeated statements against any tax increase and a recorded no vote on the 2026 public safety sales tax."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S5"
+              ],
+              "basis": "Argues the county should reduce spending rather than raise revenue and calls homelessness spending 'enabling', though he voted to accept the state homeless grant."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S6",
+                "S7"
+              ],
+              "basis": "Sitting commissioner seeking a second term after one term in office; long private-sector banking career."
+            }
+          }
+        },
+        {
+          "slug": "chelsea-chandler",
+          "summary": "Monticello Middle School science teacher and former county health-program worker, a first-time candidate running on outside investment, housing affordability and family-wage jobs.",
+          "highlights": [
+            "Says refusing outside funding leaves Cowlitz County behind and the county should compete for grants [S3]",
+            "Names affordable housing and family-wage jobs as the county's biggest challenges [S3]",
+            "Pledges decisions based on data and experts 'not on political ideology' [S3]",
+            "Former Peace Corps volunteer; managed Longview School District's Teen Parent Program [S2]",
+            "Endorsed by the Cowlitz County Democrats and the Cowlitz-Wahkiakum Central Labor Council [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Wants the county to pursue grants and outside investment and 'invest wisely', paired with stewardship language and no specific new programs."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2",
+                "S5"
+              ],
+              "basis": "First-time candidate with no prior elected office, running as a working parent and teacher against the incumbent.",
+              "adjusted_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "cowlitz-cowlitz-county-coroner",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/cowlitz/dossiers/cowlitz-cowlitz-county-coroner/"
+      ],
+      "office_does": "The Coroner investigates sudden, unexpected and unexplained deaths in Cowlitz County and determines cause and manner of death.",
+      "race_blurb": "Uncontested: Coroner Dana M. Tucker (prefers Republican) is the only candidate.",
+      "candidates": [
+        {
+          "slug": "dana-m-tucker",
+          "summary": "Incumbent Cowlitz County Coroner (prefers Republican) with 13 years of investigative experience; the only candidate.",
+          "highlights": [
+            "Thirteen years of death-investigation experience [S1]",
+            "Says the office has improved investigative practices and collaboration with local agencies [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "cowlitz-cowlitz-county-district-court-judge-position-no-1",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/cowlitz/dossiers/cowlitz-cowlitz-county-district-court-judge-position-no-1/"
+      ],
+      "office_does": "Cowlitz County District Court judges hear misdemeanor and gross misdemeanor criminal cases and some civil matters county-wide.",
+      "race_blurb": "Uncontested: Judge Kevin G. Blondin, who won Position 1 unopposed in 2022, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "kevin-g-blondin",
+          "summary": "District Court judge in Position 1, re-elected unopposed in 2022, after 23 years practicing law locally; the only candidate.",
+          "highlights": [
+            "Presides as a Cowlitz County District Court judge after practicing law locally for 23 years [S1]",
+            "Won Position 1 unopposed in the 2022 general election [S2]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "cowlitz-cowlitz-county-district-court-judge-position-no-2",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/cowlitz/dossiers/cowlitz-cowlitz-county-district-court-judge-position-no-2/"
+      ],
+      "office_does": "Cowlitz County District Court judges hear misdemeanor and gross misdemeanor criminal cases and some civil matters county-wide.",
+      "race_blurb": "Uncontested: Judge M. Jamie Imboden, who won Position 2 unopposed in 2022, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "m-jamie-imboden",
+          "summary": "District Court judge in Position 2, re-elected unopposed in 2022, seeking another term; the only candidate.",
+          "highlights": [
+            "Sitting Cowlitz County District Court judge seeking another term [S1]",
+            "Won Position 2 unopposed in the 2022 general election [S2]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "cowlitz-cowlitz-county-district-court-judge-position-no-3",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/cowlitz/dossiers/cowlitz-cowlitz-county-district-court-judge-position-no-3/"
+      ],
+      "office_does": "Cowlitz County District Court judges hear misdemeanor and gross misdemeanor criminal cases and some civil matters county-wide.",
+      "race_blurb": "Open seat: two District Court pro tem judges, Christopher Eastwood (nearly two decades as prosecutor, public defender and civil lawyer) and Longview lead prosecutor Nicole Knowles (nine years of Cowlitz prosecution; helped create the city's therapeutic court).",
+      "candidates": [
+        {
+          "slug": "christopher-eastwood",
+          "summary": "Longview attorney and District Court pro tem judge since 2022, with nearly two decades as a prosecutor, public defender and civil litigator.",
+          "highlights": [
+            "Former Kelso and Longview city prosecutor, Cowlitz County public defender and Thurston County deputy prosecutor [S2]",
+            "Pro tem judge in Cowlitz County District Court since 2022 [S1]",
+            "Taught First Amendment law as an adjunct at Gonzaga Law School [S1][S2]",
+            "Pledges to 'protect constitutional rights, and bring accountability with compassion' [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Runs on nearly two decades of practice and four years as a pro tem judge; not an incumbent."
+            },
+            "safety": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Balanced professional formation: prosecutor, public defender and civil litigator."
+            }
+          }
+        },
+        {
+          "slug": "nicole-g-knowles",
+          "summary": "Lead prosecutor for the City of Longview and District Court pro tem judge, formerly the county's child-abuse prosecutor, who helped found the Cowlitz Municipal Therapeutic Court.",
+          "highlights": [
+            "Five years as Cowlitz County's senior deputy prosecutor for child sexual abuse cases [S1][S3]",
+            "Helped create the Cowlitz Municipal Therapeutic Court in 2024 for addiction and mental health cases [S1][S3]",
+            "Endorsed by Presiding Superior Court Judge Patricia Fassett and other local judges [S4]",
+            "Chosen for appointment by 83.3% of respondents in a 2026 judicial evaluation poll [S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S4"
+              ],
+              "basis": "Runs on nine years of local prosecution, pro tem service and broad endorsements from the local bench; not an incumbent."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Professional formation entirely in prosecution, tempered by helping create a treatment-based therapeutic court."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "cowlitz-cowlitz-county-prosecuting-attorney",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/cowlitz/dossiers/cowlitz-cowlitz-county-prosecuting-attorney/"
+      ],
+      "office_does": "The Prosecuting Attorney prosecutes crimes under state law in Cowlitz County and is the legal adviser to county government.",
+      "race_blurb": "Uncontested: Prosecuting Attorney Ryan P. Jurvakainen (prefers Independent), in office 12 years, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "ryan-p-jurvakainen",
+          "summary": "Cowlitz County Prosecuting Attorney for 12 years (prefers Independent), seeking another term; the only candidate.",
+          "highlights": [
+            "Prosecuting Attorney for the last 12 years [S1]",
+            "Says the office aggressively holds violent and persistent offenders accountable [S1]",
+            "Supports drug court and mental health court when appropriate to reduce recidivism [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "cowlitz-cowlitz-county-sheriff",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/cowlitz/dossiers/cowlitz-cowlitz-county-sheriff/"
+      ],
+      "office_does": "The Sheriff runs the Cowlitz County Sheriff's Office, which patrols unincorporated Cowlitz County, investigates crimes and serves civil process.",
+      "race_blurb": "Uncontested open seat: Undersheriff Troy Brightbill (prefers Republican) is the only candidate after Sheriff Brad Thurman chose not to run again.",
+      "candidates": [
+        {
+          "slug": "troy-brightbill",
+          "summary": "Cowlitz County Undersheriff (prefers Republican) with 27 years in the Sheriff's Office, running unopposed to succeed retiring Sheriff Brad Thurman.",
+          "highlights": [
+            "27 years with the Sheriff's Office: deputy, sergeant, chief criminal deputy and undersheriff [S1][S2]",
+            "Commander of the Lower Columbia Major Crimes Team and assistant commander of Lower Columbia SWAT [S1]",
+            "Plans to develop the next generation of law enforcement leaders and give deputies training, tools and support [S1][S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "cowlitz-cowlitz-county-treasurer",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/cowlitz/dossiers/cowlitz-cowlitz-county-treasurer/"
+      ],
+      "office_does": "The Treasurer collects property taxes and holds and invests the money of the county and its junior taxing districts (schools, ports, fire districts).",
+      "race_blurb": "Uncontested: Treasurer Debra Gardner (prefers Independent), in office eight years, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "debra-gardner",
+          "summary": "Cowlitz County Treasurer for eight years (prefers Independent), seeking another term; the only candidate.",
+          "highlights": [
+            "Treasurer for the last eight years [S1]",
+            "Launched the Cowlitz County Investment Pool to raise interest earnings [S1]",
+            "Added fraud-prevention measures for the county and its junior taxing districts [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "cowlitz-cowlitz-superior-court-judge-position-4",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/cowlitz/dossiers/cowlitz-cowlitz-superior-court-judge-position-4/"
+      ],
+      "office_does": "Superior Court judges hear Cowlitz County's felony criminal cases, civil suits, family law, probate and juvenile matters; this seat is for a two-year unexpired term.",
+      "race_blurb": "Judge Jill Karmy, appointed in 2025 and endorsed by the whole local Superior Court bench, faces career felony prosecutor Jacob Lervold, who runs on trial experience and a 'follow the law, not make it' philosophy.",
+      "candidates": [
+        {
+          "slug": "jill-karmy",
+          "summary": "Superior Court judge since a September 2025 appointment, previously a court commissioner, civil litigator and municipal prosecutor.",
+          "highlights": [
+            "Appointed by Governor Ferguson in 2025 after three years as a Superior Court commissioner [S4]",
+            "Former civil litigator and Battle Ground municipal prosecutor; co-created a therapeutic court [S2][S4]",
+            "Endorsed by all sitting Cowlitz County Superior Court judges [S1][S3]",
+            "Chosen for appointment by 87.7% of 65 respondents in a 2026 judicial evaluation poll published by her campaign [S5]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S4"
+              ],
+              "basis": "Sitting judge, recently appointed, with prior commissioner service and the full local bench's backing."
+            },
+            "safety": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2",
+                "S4"
+              ],
+              "basis": "Mixed professional formation: civil litigation, municipal prosecution and co-creating a therapeutic diversion court."
+            }
+          }
+        },
+        {
+          "slug": "jacob-lervold",
+          "summary": "Senior Deputy Prosecuting Attorney in Cowlitz County whose whole legal career has been criminal prosecution, running on trial and appellate experience.",
+          "highlights": [
+            "Says he has handled 450+ felony cases and 50+ trials, including homicides and child sex crimes [S2]",
+            "Assigned prosecutor for the Longview Street Crimes Unit and the Sheriff's Crime Reduction Team [S1][S2]",
+            "Philosophy: 'follow the law, not make it' and 'apply the law as written' [S2]",
+            "Endorsed by the Lewis, Thurston and Wahkiakum county prosecutors and Rep. Ed Orcutt [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "No judicial service; challenges a sitting appointed judge on courtroom experience."
+            },
+            "judicial": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Campaign states a restraint philosophy: 'follow the law, not make it' and 'apply the law as written'."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Entire professional formation in prosecution, including drug-enforcement and crime-reduction team assignments.",
+              "adjusted_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "cowlitz-public-utility-district-no-1-of-cowlitz-county-commissioner-district-1",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/cowlitz/dossiers/cowlitz-public-utility-district-no-1-of-cowlitz-county-commissioner-district-1/"
+      ],
+      "office_does": "The three Cowlitz PUD commissioners set the public electric utility's budget, rates and power-supply strategy; each is nominated by district but elected by the whole PUD, which covers all of Cowlitz County.",
+      "race_blurb": "Uncontested: Commissioner Bruce Pollock, vice president of the Washington PUD Association, is the only candidate for a six-year term.",
+      "candidates": [
+        {
+          "slug": "bruce-pollock",
+          "summary": "Incumbent Cowlitz PUD commissioner and vice president of the Washington Public Utility Districts Association, seeking a six-year term; the only candidate.",
+          "highlights": [
+            "Represented Cowlitz PUD on the Energy Northwest Board of Directors [S1]",
+            "Elected vice president of the Washington PUD Association for 2026-2027 [S1][S2]",
+            "Cites forecast energy shortages and state regulation as the utility's main challenges [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "grant-grant-county-commissioner-district-3-commissioner-district-3",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/grant/dossiers/grant-grant-county-commissioner-district-3-commissioner-district-3/"
+      ],
+      "office_does": "The three county commissioners set and oversee the county budget, adopt ordinances for unincorporated areas, oversee roads and public works, and sit on regional boards.",
+      "race_blurb": "Open seat: Commissioner Cindy Carter is retiring after 20 years. District 3 voters nominated rancher and bookkeeper Kelly Raap and Quincy School Board director Shannon Durfee, both preferring the Republican Party, and all county voters choose between them in November. Both stress fiscal responsibility, infrastructure and planning for growth.",
+      "candidates": [
+        {
+          "slug": "kelly-raap",
+          "summary": "Rural Ephrata ranch co-owner and bookkeeper making her first run for office, who led the District 3 primary.",
+          "highlights": [
+            "'Just because you have money in the bank does not mean it has to be spent' [S6]",
+            "Pledges to protect the rural economy and support farmers, ranchers and businesses [S1]",
+            "Supports investing in public safety, roads and infrastructure [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S4"
+              ],
+              "basis": "First-time candidate for any elected office who runs on farm and bookkeeping experience and 'decisions based on facts, not politics'."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S6"
+              ],
+              "basis": "Repeated restraint language (balance a budget without wasting resources; money in the bank need not be spent), tempered by support for infrastructure investment."
+            }
+          }
+        },
+        {
+          "slug": "shannon-durfee",
+          "summary": "Quincy School Board director, Quincy Rotary president, small-business owner and hospital-foundation director running on practical leadership and responsible growth.",
+          "highlights": [
+            "Wants growth to benefit current residents 'not just outside interests' through responsible planning [S4]",
+            "Pledges fiscal responsibility, infrastructure, transparency and local voices in county decisions [S1]",
+            "Former Washington State Patrol communications officer for 10 years [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "low",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Holds one local elected office (school board) and presents her background as community leadership rather than career politics.",
+              "adjusted_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "grant-grant-county-county-assessor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/grant/dossiers/grant-grant-county-county-assessor/"
+      ],
+      "office_does": "The assessor values every taxable property in Grant County each year for property taxes; levy rates are set by the taxing districts and voters.",
+      "race_blurb": "Open seat after Assessor Melissa McKnight did not seek re-election. Clayton Johnson, the office's sales analyst running without a party preference, was alone on the primary ballot; Republican Anson Bartrand reached the general as a declared write-in who cleared the 1% primary threshold.",
+      "candidates": [
+        {
+          "slug": "clayton-johnson",
+          "summary": "Nine-year Grant County Assessor's Office appraiser and sales analyst, running without a party preference on integrity, transparency and fair valuations.",
+          "highlights": [
+            "Commercial/industrial appraiser and sales analyst in the assessor's office for nine years [S1]",
+            "Would track staff-owned properties and bar staff from appraisals where they have a personal or financial interest [S2]",
+            "Says assessments should be 'entirely free of politics' and runs as a non-partisan [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Runs on nine years inside the assessor's office as appraiser and analyst, though he has never held elected office."
+            }
+          }
+        },
+        {
+          "slug": "anson-bartrand",
+          "summary": "Republican precinct committee officer and CFO of a land investment company, 25, who reached the general ballot as a write-in from the primary.",
+          "highlights": [
+            "Filed as a declared Republican write-in in July and cleared the 1% primary threshold [S4][S6]",
+            "Pledges to reduce unnecessary spending and complete assessments on statutory deadlines [S1]",
+            "CFO of Sentinel Shores, LLC; accounting degree from CWU and law school at the University of Idaho [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S4"
+              ],
+              "basis": "25-year-old first-time candidate from outside the assessor's office whose public roles are party precinct and executive-board posts."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Statement pledges to find responsible ways to reduce unnecessary spending and to be a careful steward of taxpayers' money."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "grant-grant-county-county-auditor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/grant/dossiers/grant-grant-county-county-auditor/"
+      ],
+      "office_does": "The county auditor runs elections, records property documents, issues vehicle and marriage licenses, and manages the county's accounting and financial reporting.",
+      "race_blurb": "Two Republicans, both endorsed by the county GOP, compete for the short and full term after Auditor Michele Jaderlund retired in June. Appointed interim auditor Shannon Falstad, a 30-year county employee, led the primary 7,188 to 4,283 over Darci Homesley, who campaigns on fiscal responsibility and internal controls.",
+      "candidates": [
+        {
+          "slug": "shannon-falstad",
+          "summary": "Interim Grant County Auditor since July 2026 and 30-year county employee, including two decades in the auditor's recording, licensing, elections and accounting work.",
+          "highlights": [
+            "Appointed interim auditor by the county commissioners effective July 1, 2026 [S4][S6]",
+            "In the auditor's office from 1996 to 2016, then accounting deputy in the clerk's office [S1][S6]",
+            "Priorities: election continuity, finishing the new accounting system, cross-training and retaining staff [S4][S7]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S4",
+                "S6",
+                "S7"
+              ],
+              "basis": "Appointed incumbent with about 20 years in the auditor's office and 30 in county government, running on continuity and institutional knowledge."
+            }
+          }
+        },
+        {
+          "slug": "darci-homesley",
+          "summary": "Moses Lake business owner and county financial-services employee who runs on 35 years of accounting experience, fiscal responsibility and a non-partisan office.",
+          "highlights": [
+            "Pledges rigorous internal controls to prevent waste and audits of county expenditures [S3]",
+            "Says county government should live within a budget like families do [S3]",
+            "Pledges a 'strictly non-partisan approach' to financial and election oversight [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S5",
+                "S9"
+              ],
+              "basis": "First-time candidate for elective office who runs on business and accounting experience from outside the auditor's office."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Platform centers on preventing waste and unnecessary spending, auditing county expenditures and living within a budget, repeated across her statement and website."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "grant-grant-county-county-clerk",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/grant/dossiers/grant-grant-county-county-clerk/"
+      ],
+      "office_does": "The county clerk is clerk of the superior court and keeps its case files, dockets, juror records, and the court's orders and judgments.",
+      "race_blurb": "Uncontested: incumbent Kimberly A. Allen (Prefers Republican Party), clerk since her 2006 election, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "kimberly-a-allen",
+          "summary": "Grant County Clerk since 2006 and former law-firm office manager; the only candidate on the ballot.",
+          "highlights": [
+            "First elected County Clerk in 2006 [S1]",
+            "Serves on the state clerks' association education committee and mentors new county clerks [S1]",
+            "Office manager and legal secretary at Schultheis Tabler Wallace for 11 years before taking office [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "grant-grant-county-county-coroner",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/grant/dossiers/grant-grant-county-county-coroner/"
+      ],
+      "office_does": "The coroner has jurisdiction over sudden, unexplained, violent or suspicious deaths in Grant County, including cases needing an autopsy or inquest.",
+      "race_blurb": "Uncontested: incumbent Craig Morrison (Prefers Republican Party), coroner since November 2010, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "craig-morrison",
+          "summary": "Grant County Coroner since 2010 and a death-care professional for 43 years; the only candidate on the ballot.",
+          "highlights": [
+            "Coroner since November 2010 [S1]",
+            "Says the office earned international accreditation and medicolegal death-investigator certifications during his tenure [S1]",
+            "Executive board member of the Washington Association of Coroners and Medical Examiners [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "grant-grant-county-county-prosecutor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/grant/dossiers/grant-grant-county-county-prosecutor/"
+      ],
+      "office_does": "The prosecuting attorney prosecutes crimes in Grant County, represents the county in civil cases, and advises county officials and school boards.",
+      "race_blurb": "Uncontested: appointed Prosecuting Attorney Brandon K. Guernsey (Prefers Republican Party), in office since August 2025, is the only candidate for the short and full term.",
+      "candidates": [
+        {
+          "slug": "brandon-k-guernsey",
+          "summary": "Appointed Grant County Prosecuting Attorney since August 2025 and a Grant County deputy prosecutor from 2017 to early 2025; the only candidate on the ballot.",
+          "highlights": [
+            "Appointed prosecutor by the county commissioners in July 2025 and sworn in August 4, 2025 [S2]",
+            "Grant County deputy prosecutor from 2017, including major drug cases from the Interagency Narcotics Enforcement Team [S2]",
+            "Says his priorities are office culture, victim support, supporting law enforcement and modernizing the office [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "grant-grant-county-county-sheriff",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/grant/dossiers/grant-grant-county-county-sheriff/"
+      ],
+      "office_does": "The sheriff runs county law enforcement and the county jail, serves warrants and court orders, and in Grant County also directs emergency management.",
+      "race_blurb": "First-term Sheriff Joey Kriete faces Moses Lake police Sgt. Darrik Gregg, a former chief deputy who narrowly led the primary; both prefer the Republican Party. The race has turned on leadership inside the office, including a deputies' no-confidence vote, Kriete's demotion of a rival candidate and Gregg's pending lawsuit against the county.",
+      "candidates": [
+        {
+          "slug": "darrik-gregg",
+          "summary": "Moses Lake police patrol sergeant and former Grant County chief deputy with about 23 years in law enforcement, running on servant leadership, accountability and a fresh approach to the office.",
+          "highlights": [
+            "Says he is 'tough on crime while treating people with respect and dignity' and will hold criminals accountable [S1]",
+            "Would conduct a comprehensive review of staffing, policies, response times and spending in his first six months [S11]",
+            "Would continue his federal retaliation lawsuit against the county if elected [S8]",
+            "Endorsed by the Moses Lake Police Officer's Guild [S3]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S9",
+                "S13"
+              ],
+              "basis": "Career officer and former chief deputy who has never held elected office and argues the county needs a fresh approach to leadership.",
+              "adjusted_by_refutation": true
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2",
+                "S14"
+              ],
+              "basis": "Enforcement framing ('tough on crime', 'hold criminals accountable', support for Flock cameras) alongside community-partnership language; no specific treatment or diversion proposals."
+            }
+          }
+        },
+        {
+          "slug": "joey-kriete",
+          "summary": "Incumbent sheriff since 2023 with more than three decades in the Grant County Sheriff's Office, running on restaffing, proactive policing and state accreditation.",
+          "highlights": [
+            "Created a Crime Reduction Team targeting property crime and theft, including in rural farming areas [S1]",
+            "Cites expanded mental-health response and behavioral-health and opioid partnerships [S1][S12]",
+            "Would protect core services and keep operations financially sustainable as the new jail opens [S10]",
+            "Says the deputies' association gave no details behind its no-confidence vote by his deadline [S7]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S5",
+                "S12"
+              ],
+              "basis": "First-term incumbent with 32 years in the office before election, WASPC vice president, who asks voters to judge his record."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2",
+                "S7"
+              ],
+              "basis": "Proactive policing, a property-crime unit and federal cooperation on criminal cases, paired with expanded mental-health response and recovery pathways."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S10"
+              ],
+              "basis": "Says he will keep operations financially sustainable and may say no to programs, positions or equipment."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "grant-grant-county-county-treasurer",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/grant/dossiers/grant-grant-county-county-treasurer/"
+      ],
+      "office_does": "The treasurer collects property taxes and other county revenue, pays county warrants, and manages the county's investments.",
+      "race_blurb": "Uncontested: interim Treasurer Carrie Heston (States No Party Preference), appointed in July after Darryl Pheasant retired, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "carrie-heston",
+          "summary": "Interim Grant County Treasurer since July 2026 after 28 years in the treasurer's office, most recently as its investment and accounting officer; the only candidate on the ballot.",
+          "highlights": [
+            "Appointed interim treasurer effective July 1, 2026; endorsed by retiring Treasurer Darryl Pheasant [S3]",
+            "28 years in the treasurer's office, most recently as investment and accounting officer [S3]",
+            "Pledges conservative financial practices, responsible debt management, and stronger fraud-prevention and cybersecurity safeguards [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "grant-grant-county-district-court-judge-position-no-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/grant/dossiers/grant-grant-county-district-court-judge-position-no-1/"
+      ],
+      "office_does": "A Grant County District Court judge hears misdemeanor and gross-misdemeanor criminal cases and traffic infractions, sets bail and holds preliminary hearings; all three judges are elected countywide to four-year terms.",
+      "race_blurb": "Uncontested open seat: Superior Court Commissioner Tom Middleton is the only candidate to succeed retiring Judge Brian Barlow.",
+      "candidates": [
+        {
+          "slug": "tom-middleton",
+          "summary": "Grant County Superior Court commissioner since 2017, a former Ephrata lawyer, city council member and business owner; the only candidate on the ballot.",
+          "highlights": [
+            "Grant County Superior Court commissioner since 2017 [S1]",
+            "Associate and partner at Hansen and Middleton Law Firm, 1996-2004 [S1]",
+            "Ephrata City Council 2004-2008; ran the family pool and spa business 2004-2016 [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "grant-grant-county-district-court-judge-position-no-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/grant/dossiers/grant-grant-county-district-court-judge-position-no-2/"
+      ],
+      "office_does": "A Grant County District Court judge hears misdemeanor and gross-misdemeanor criminal cases and traffic infractions, sets bail and holds preliminary hearings; all three judges are elected countywide to four-year terms.",
+      "race_blurb": "Uncontested: incumbent Judge Nicholas L Wallace, on the bench since 2021, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "nicholas-l-wallace",
+          "summary": "Grant County District Court judge since 2021 and presiding judge, after 25 years as a trial lawyer and managing partner at Schultheis Tabler Wallace; the only candidate on the ballot.",
+          "highlights": [
+            "District Court judge since 2021 and presiding judge; Superior Court judge pro tem since 2022 [S1]",
+            "Says the court has expanded remote hearings and helped establish a therapeutic court [S1]",
+            "Elected unopposed in 2022 [S3]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "grant-grant-county-district-court-judge-position-no-3",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/grant/dossiers/grant-grant-county-district-court-judge-position-no-3/"
+      ],
+      "office_does": "A Grant County District Court judge hears misdemeanor and gross-misdemeanor criminal cases and traffic infractions, sets bail and holds preliminary hearings; all three judges are elected countywide to four-year terms.",
+      "race_blurb": "Uncontested: incumbent Judge Brian D. Gwinn, on the bench since 2021, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "brian-d-gwinn",
+          "summary": "Grant County District Court judge since 2021, previously a public defender for 21 years including District Court supervisor at the county Department of Public Defense; the only candidate on the ballot.",
+          "highlights": [
+            "District Court judge since 2021; Superior Court pro tem judge since 2024 [S1]",
+            "Public defense in Grant, Okanogan and Spokane counties 2000-2021 [S1]",
+            "Developed a therapeutic court for people with substance-use and mental-health disorders [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "grant-grant-superior-court-judge-position-03",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/grant/dossiers/grant-grant-superior-court-judge-position-03/"
+      ],
+      "office_does": "A Grant County Superior Court judge, elected countywide, hears felony criminal cases, civil disputes over $50,000, family, juvenile, probate and dependency matters, and appeals from district court; this seat is for an unexpired two-year term.",
+      "race_blurb": "Open contest after the appointed judge, Jennifer Richardson, was eliminated in the primary. Ken Chadwick, a senior law-firm partner and former police sergeant who has served as a pro tem commissioner, faces Trevor Bevier, a civil deputy prosecutor with about 12 years of private practice. No bar rating was found for either.",
+      "candidates": [
+        {
+          "slug": "kenneth-ken-chadwick",
+          "summary": "Senior partner at STW Law PLLC in Ephrata with 23 years of practice, mostly civil, after 15 years as a police officer and sergeant; has served as an arbitrator, mediator and pro tem superior court commissioner.",
+          "highlights": [
+            "Attorney since 2003; partner at STW Law PLLC since 2009 [S1][S3]",
+            "Pro tem commissioner, arbitrator and mediator in Grant County Superior Court (self-reported) [S1][S3]",
+            "Police officer and sergeant for 15 years before law school [S1][S3]",
+            "Proposes local court-rule changes and more courtroom space to cut litigation costs [S3]",
+            "Endorsed by retired Chief Justice Barbara Madsen, retired Judge John Knodell and District Court Judge Nicholas Wallace [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Not an incumbent, but runs on 23 years of practice and quasi-judicial service as arbitrator, mediator and pro tem commissioner."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Professional formation includes 15 years as a police officer and sergeant in patrol and detective units; his law practice is mostly civil and he has stated no bail or diversion position.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "trevor-bevier",
+          "summary": "Grant County civil deputy prosecuting attorney since 2025 after about 14 years as a legal intern and associate at a Moses Lake firm; earlier worked in title insurance and real estate. Has no judicial or pro tem service.",
+          "highlights": [
+            "Civil deputy prosecuting attorney for Grant County since 2025 [S1][S3]",
+            "Private civil practice in Moses Lake: litigation, real estate, probate, bankruptcy, family law [S1][S2]",
+            "Pledges timely decisions that explain their reasoning [S2][S3]",
+            "Endorsed by Prosecuting Attorney Brandon Guernsey and retired Judge Richard Fitterer [S1][S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Established legal career (about 12 years of practice, now a deputy prosecutor) but no judicial or quasi-judicial service; pitches community roots and real-world experience rather than tenure."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "grant-legislative-district-13-state-representative-pos-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/grant/dossiers/grant-legislative-district-13-state-representative-pos-1/"
+      ],
+      "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering the tax structure, water and agriculture policy, school and child-care funding, and criminal-justice statutes.",
+      "race_blurb": "Six-term Republican incumbent Tom Dent, a Moses Lake pilot and bison rancher, faces Democrat Juan \"Jerry\" Garcia, an Othello organizer making his first legislative bid. Dent runs on seniority, water and wildfire work and voted against the 2026 millionaires tax; Garcia runs on reforming what he calls a regressive tax system, refusing corporate PAC money and universal health care.",
+      "candidates": [
+        {
+          "slug": "tom-dent",
+          "summary": "Six-term Republican incumbent, ranking member on the House agriculture and natural resources committee, and owner of an aerial-application business and bison ranch near Moses Lake.",
+          "highlights": [
+            "Voted against ESSB 6346, the 2026 tax on income over $1 million, and called it an unconstitutional income tax [S5][S7]",
+            "Voted against the 2026 supplemental operating budget, saying the state has \"a spending problem\" [S6]",
+            "Names finishing the Odessa Groundwater Replacement Program as the district's top need [S16]",
+            "Voted against ESHB 1296, the 2025 changes to the I-2081 parental-rights law [S8]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S7",
+                "S5",
+                "S10",
+                "S12"
+              ],
+              "basis": "Voted against ESSB 6346 and issued a statement calling it an unconstitutional income tax; also voted against the 2025 B&O and capital-gains/estate tax increases."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S6",
+                "S5",
+                "S17"
+              ],
+              "basis": "Voted against the 2026 supplemental operating budget over spending growth, repeatedly says the state has a spending problem, and wants an audit of the day-care system."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S14",
+                "S15"
+              ],
+              "basis": "Voted against the 2025 rent and fee increase limits (EHB 1217); no other housing statements in the dossier."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S6"
+              ],
+              "basis": "Says current policies fail to hold repeat or violent offenders accountable and put victims second; a single statement."
+            },
+            "climate": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S6"
+              ],
+              "basis": "Sponsored the enacted Climate Commitment Act agricultural fuel exemption and attributes high fuel prices to the carbon tax; no call to repeal the CCA."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S4",
+                "S17"
+              ],
+              "basis": "In the House since 2015, third in seniority in his caucus, with a long list of enacted bills; campaigns explicitly on seniority."
+            },
+            "parental-rights": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S8",
+                "S9"
+              ],
+              "basis": "Voted against ESHB 1296, which modified and narrowed parts of the I-2081 parental-rights list; no direct campaign statement of his own on I-1."
+            }
+          }
+        },
+        {
+          "slug": "juan-jerry-garcia",
+          "summary": "Democrat from Othello, former corrections officer and founder of Indivisible Othello, making his first legislative run on tax reform, no corporate PAC money and universal health care.",
+          "highlights": [
+            "Wants to \"fix our regressive tax system\" and proposes taxing stock and bond wealth above about $100 million [S1][S2]",
+            "Accepts no corporate PAC money and backs ranked-choice voting [S1][S2]",
+            "Names universal health care and finishing the Odessa Groundwater Replacement Program as his top two issues [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Statement pledges to fix the regressive tax system and the Q&A proposes a property tax on stock and bond holdings above about $100 million.",
+              "adjusted_by_refutation": true
+            },
+            "reform": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Refuses corporate PAC money, backs ranked-choice voting and says getting big money out of politics is his consistent emphasis."
+            },
+            "healthcare": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Names championing universal health care as one of two issues he would spend political capital on; one explicit statement."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Never held elected office; a first-time legislative challenger to a six-term incumbent."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "grant-legislative-district-13-state-representative-pos-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/grant/dossiers/grant-legislative-district-13-state-representative-pos-2/"
+      ],
+      "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering the tax structure, water and agriculture policy, K-12 policy and funding, and criminal-justice statutes.",
+      "race_blurb": "An open seat, vacated by Rep. Alex Ybarra's Senate run, between two Republicans: former Moses Lake council member and nurse Deanna Martinez and Ellensburg council member Joshua Thompson. Both oppose the 2026 income tax; Martinez leads on repealing it and the Climate Commitment Act and on local control, while Thompson runs as a constitutional conservative with platform planks on parents' rights and girls' sports.",
+      "candidates": [
+        {
+          "slug": "deanna-martinez",
+          "summary": "Registered nurse of 30-plus years and former Moses Lake City Council member, raised in Warden, endorsed by several sitting Republican legislators.",
+          "highlights": [
+            "Top priority is abolishing the 2026 tax on income over $1 million, which she calls unconstitutional [S1]",
+            "Pledges to work to repeal the Climate Commitment Act [S1]",
+            "Puts returning local control first among her priorities and opposes the new sheriff-oversight board [S7][S10]",
+            "Would restore state Medicaid funding by redirecting budget dollars, without new taxes [S6]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S7"
+              ],
+              "basis": "Statement and questionnaire both make abolishing the income tax and cutting taxes her top priorities."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S9",
+                "S7",
+                "S4"
+              ],
+              "basis": "Wants to identify waste and get spending under control before any tax increase and to reallocate existing spending; also proposes restoring Medicaid funding."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S6",
+                "S4"
+              ],
+              "basis": "Would repeal regulations that add to building costs, naming shrub-steppe and urban growth area restrictions; describes 'state goals with local flexibility.'"
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S4",
+                "S10"
+              ],
+              "basis": "Lists public safety and law enforcement as priorities; no specific enforcement or prevention proposals.",
+              "adjusted_by_refutation": true
+            },
+            "climate": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Pledges to work to repeal the Climate Commitment Act, citing gas prices and rural costs; one explicit statement."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S5",
+                "S9"
+              ],
+              "basis": "No legislative service; former city council member and former campaign assistant to the seat's incumbent, endorsed by sitting legislators and stressing work with the majority."
+            },
+            "local-control": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S7",
+                "S8",
+                "S10"
+              ],
+              "basis": "Repeatedly names returning control to local governments as her first priority and opposes the state sheriff-oversight board as a local decision."
+            },
+            "healthcare": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S6"
+              ],
+              "basis": "Would restore state Medicaid funding and expand the nursing workforce through the RN compact, within the existing system."
+            },
+            "social": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Her priorities page says she will 'protect girls' sports'; a one-line plank."
+            }
+          }
+        },
+        {
+          "slug": "joshua-thompson",
+          "summary": "Ellensburg City Council member, technology and marketing consultant and Kittitas County Republican precinct officer, endorsed by the Grant, Kittitas and Douglas County Republican parties.",
+          "highlights": [
+            "Calls for cutting taxes \"dramatically\" and opposes new income taxes [S2][S3]",
+            "Says parents' rights \"are being dissolved\" and objects to boys competing in girls' sports [S2]",
+            "Blames regulation and \"green mandates\" for housing costs; backs duplexes, fourplexes and cottage housing [S2][S4]",
+            "Sees technology and AI industries as the district's biggest growth opportunity [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Pamphlet, website and questionnaire all call for reducing taxes and opposing an income tax; website says to cut taxes dramatically."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Says Washington has a spending problem and calls himself a fiscal hawk; no specific audit or cut proposals."
+            },
+            "housing": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S3",
+                "S4"
+              ],
+              "basis": "Attributes the housing shortage to regulation and green mandates, pledges to lower building costs, and backs more missing-middle housing types."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Repeatedly backs law enforcement and more officers per capita, while also naming the fentanyl and mental-health crises."
+            },
+            "climate": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Criticizes 'absurd green mandates' and calls for protecting dams and new energy policies; no specific climate-law pledge."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "No legislative service; a sitting city council member running to 'challenge and change the status quo' and 'not represent the system.'"
+            },
+            "local-control": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Says decisions should stay closer to local communities and pledges to protect local control; secondary in his platform."
+            },
+            "social": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Platform objects to boys competing in girls' sports and locker rooms."
+            },
+            "parental-rights": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Platform says parents' rights are being dissolved and limited in public schools and lists parents' rights as a family priority."
+            },
+            "tech": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Calls technology and AI industries the district's biggest economic opportunity, balanced with natural-resource protection.",
+              "adjusted_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "grant-legislative-district-13-state-senator",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/grant/dossiers/grant-legislative-district-13-state-senator/"
+      ],
+      "office_does": "A State Senator writes and votes on Washington state law and the operating, capital and transportation budgets for a four-year term, and the Senate confirms gubernatorial appointments.",
+      "race_blurb": "Uncontested: Rep. Alex Ybarra (Prefers Republican Party), who holds the district's House Position 2 seat, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "alex-ybarra",
+          "summary": "13th District State Representative (appointed, then elected in 2019), former Quincy School Board president and Grant County PUD analyst; the only candidate on the ballot.",
+          "highlights": [
+            "Appointed and then elected in 2019 as 13th District State Representative; ranking member on Postsecondary Education and Workforce [S1][S2]",
+            "Voted against ESSB 6346 and called it an unconstitutional income tax [S3][S4]",
+            "Voted against ESHB 1296, the 2025 changes to the I-2081 parental-rights law [S5]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "grant-public-utility-district-no-2-of-grant-county-commissioner-district-3",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/grant/dossiers/grant-public-utility-district-no-2-of-grant-county-commissioner-district-3/"
+      ],
+      "office_does": "Grant PUD's five elected commissioners set policy, review operations and approve the budget for the county's public electric and fiber-broadband utility, which owns the Priest Rapids and Wanapum dams.",
+      "race_blurb": "Uncontested: incumbent Larry Schaapman, board president and a Quincy-area farmer, is the only candidate for the six-year District 3 term; the whole county votes.",
+      "candidates": [
+        {
+          "slug": "larry-schaapman",
+          "summary": "Grant PUD commissioner since a 2012 appointment and current board president; owns and manages a family farm near Quincy. The only candidate on the ballot; no voters'-guide statement.",
+          "highlights": [
+            "Appointed in 2012, elected in 2013, re-elected unopposed in 2020 [S2][S4]",
+            "Board president; Quincy-area farmer on the Potato Growers of Washington board [S2]",
+            "Submitted no voters'-guide statement [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "grant-public-utility-district-no-2-of-grant-county-commissioner-district-b-at-large",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/grant/dossiers/grant-public-utility-district-no-2-of-grant-county-commissioner-district-b-at-large/"
+      ],
+      "office_does": "Grant PUD's five elected commissioners set policy, review operations and approve the budget for the county's public electric and fiber-broadband utility, which owns the Priest Rapids and Wanapum dams.",
+      "race_blurb": "Uncontested: incumbent Nelson Cox, board secretary and a Warden farmer, is the only candidate for the four-year at-large term; the whole county votes.",
+      "candidates": [
+        {
+          "slug": "nelson-cox",
+          "summary": "Grant PUD at-large commissioner since 2018 and current board secretary; has farmed his family's land near Warden for more than 45 years. The only candidate on the ballot; no voters'-guide statement.",
+          "highlights": [
+            "First elected in 2018; re-elected unopposed in 2022 [S2][S4]",
+            "Board secretary; Warden farmer active in agricultural organizations [S2]",
+            "Submitted no voters'-guide statement [S1]"
           ],
           "evidence_level": "moderate",
           "withdrawn": false,
