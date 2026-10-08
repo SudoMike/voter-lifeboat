@@ -70,8 +70,18 @@ interview and scores are unchanged.
 The general ballot carries two statewide initiatives that both touch the old
 `social` axis ("Social issues & schools"):
 
-- **I-1** (IL26-001): parental rights in public schools.
-- **I-638** (IL26-638): sex verification for girls' school sports.
+- **I-1** (IL26-001): parental rights in public schools. It would undo the
+  2025 Legislature's amendments to RCW 28A.605.005 and restore the list of
+  parent and guardian rights as enacted by I-2081 in 2024 (examining
+  curricula and materials, faster records access, notification and opt-out
+  rights).
+- **I-638** (IL26-638): would bar students it defines as "biologically
+  male" from certain girls' school athletics, with sex verified by the
+  student's healthcare provider.
+
+Sources: the Attorney General's explanatory statements, raw pointers at
+`data/washington-state/elections/2026-11-03-general/statewide/raw/sos/measures/{il26-001,il26-638,ip26-645}-explanatory-statement.pdf.url`,
+text in that package's `interim/pdf-text/`.
 
 On one axis, a voter who supports one and opposes the other averages to
 about zero, then gets a confident, wrong lean on both measures. The two
@@ -129,8 +139,8 @@ these mappings:
 
 | Measure | Axes |
 |---|---|
-| I-645 (IP26-645): repeal the 9.9% tax on household income over $1M and ban state and local income taxes | `taxes`, `local-control` |
-| I-1 (IL26-001): parental rights in schools | `parental-rights` |
+| I-645 (IP26-645): repeal the 9.9% tax on individual income over $1M and prohibit taxes on individual income | `taxes`, `local-control` |
+| I-1 (IL26-001): restore I-2081's parental rights in public schools | `parental-rights` |
 | I-638 (IL26-638): sex verification for girls' school sports | `social` |
 
 ### Judges
