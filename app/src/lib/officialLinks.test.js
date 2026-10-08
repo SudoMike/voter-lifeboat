@@ -640,6 +640,50 @@ test('shipped Klickitat and Asotin records link their pamphlet at the cited PDF 
     'https://www.asotincountywa.gov/DocumentCenter/View/18054/2026GeneralElectionLocalVotersPamphlet-_Asotin-82726#page=12')
 })
 
+test('shipped Skamania and San Juan records link their pamphlet at the cited PDF page, else the county\'s VoteWA guide', () => {
+  const id = general.election.id
+  for (const [county, name, pdf, guide, office, counts] of [
+    ['skamania', 'Skamania County',
+      'https://www.skamaniacounty.gov/home/showpublisheddocument/19600/639253463106470000',
+      'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=30',
+      'https://www.skamaniacounty.gov/departments-offices/auditor/elections/current-election', [13, 6]],
+    ['san-juan', 'San Juan County', 'https://www.sanjuancountywa.gov/DocumentCenter/View/36027',
+      'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=28',
+      'https://www.sanjuancountywa.gov/1292/Current-Election', [14, 6]],
+  ]) {
+    let paged = 0
+    let guided = 0
+    for (const item of [...general.contests, ...general.measures]) {
+      if (item.owner !== county) continue
+      const pages = item.candidates ? item.candidates.map((c) => c.pamphlet_pages) : [item.pamphlet_pages]
+      for (const p of pages) {
+        if (p?.length) {
+          // Citations are PDF pages (Skamania's run 34 behind the printed
+          // ones; San Juan's equal them).
+          assert.equal(pamphletLink(p, county, id), `${pdf}#page=${p[0].page}`, item.slug)
+          paged++
+        } else {
+          // CD and LD seats ship another package's research.
+          assert.equal(pamphletLink(p, county, id), guide, item.slug)
+          guided++
+        }
+      }
+    }
+    assert.deepEqual([paged, guided], counts, county)
+    assert.deepEqual(countyElectionsOffice(general, { id: county, name }), {
+      name: `${name} Elections`,
+      url: office,
+      direct: true,
+    })
+  }
+  // Skamania's Assessor, PDF p. 6 (printed p. 40); San Juan's Lopez Solid
+  // Waste levy, p. 56.
+  assert.equal(pamphletLink([{ edition: 'local-voters-pamphlet', page: 6 }], 'skamania', id),
+    'https://www.skamaniacounty.gov/home/showpublisheddocument/19600/639253463106470000#page=6')
+  assert.equal(pamphletLink([{ edition: 'local-voters-pamphlet', page: 56 }], 'san-juan', id),
+    'https://www.sanjuancountywa.gov/DocumentCenter/View/36027#page=56')
+})
+
 test('shipped Pacific records link the county\'s VoteWA guide; its office falls back to the statewide list', () => {
   const id = general.election.id
   const GUIDE = 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=25'

@@ -4,8 +4,8 @@
 // coverage (#22), Yakima, Whatcom, Benton, Skagit, Cowlitz and Grant at full
 // coverage (#28), Island, Lewis, Franklin, Chelan, Clallam and Grays Harbor at
 // full coverage (#29), Mason, Walla Walla, Stevens, Whitman and Douglas at full coverage and Okanogan at
-// partial coverage (#30), Jefferson, Kittitas and Asotin at full coverage and Klickitat and Pacific at
-// partial coverage (#31), every other Washington address a Statewide-Only Guide (issue #9). These run the app's own ballot, interview, lean and Ballot Brief
+// partial coverage (#30), Jefferson, Kittitas, Asotin and Adams at full coverage and Klickitat and Pacific at
+// partial coverage (#31), Skamania and San Juan at full coverage (#32), every other Washington address a Statewide-Only Guide (issue #9). These run the app's own ballot, interview, lean and Ballot Brief
 // code against public/data/2026-11-03-general.
 import test from 'node:test'
 import assert from 'node:assert/strict'
@@ -71,7 +71,7 @@ const STATE_MEASURES = [
   'initiative-measure-no-il26-638',
 ]
 
-test('the general ships twenty-seven counties at full county coverage, Spokane, Okanogan, Klickitat and Pacific at partial, with their elections offices', () => {
+test('the general ships twenty-nine counties at full county coverage, Spokane, Okanogan, Klickitat and Pacific at partial, with their elections offices', () => {
   assert.equal(data.election.id, '2026-11-03-general')
   assert.deepEqual(data.coverage, {
     statewide_complete: true,
@@ -383,6 +383,26 @@ test('the general ships twenty-seven counties at full county coverage, Spokane, 
         fips: '53001',
         coverage: 'full_county',
         elections_url: 'https://www.co.adams.wa.gov/162/Elections-Elecciones',
+      },
+      {
+        // Full: every scope is county-wide or a Census layer (#32).
+        id: 'skamania',
+        name: 'Skamania County',
+        state: 'WA',
+        fips: '53059',
+        coverage: 'full_county',
+        elections_url: 'https://www.skamaniacounty.gov/departments-offices/auditor/elections/current-election',
+      },
+      {
+        // Full: the fire, port and park measures read DOR FIR2025, PRT2025 and
+        // PKR2025; the Lopez Solid Waste levy SWDDST, a presence layer on the
+        // Port of Lopez polygon (#32).
+        id: 'san-juan',
+        name: 'San Juan County',
+        state: 'WA',
+        fips: '53055',
+        coverage: 'full_county',
+        elections_url: 'https://www.sanjuancountywa.gov/1292/Current-Election',
       },
     ],
   })
@@ -1299,6 +1319,68 @@ test('an Asotin ballot: Spokane\'s research for CD 5 and LD 9, the PUD seat in C
   assert.ok(!an.contests.map((c) => c.slug).includes(PUD))
   assert.deepEqual(ownLocal(an, 'asotin'), [RURAL_EMS])
   assert.equal(coverageAdvice(as({})), null)
+})
+
+test('a Skamania ballot: Clark\'s research for CD 3 and LD 17, every county seat county-wide, no local measure', () => {
+  const SKAMANIA = { id: 'skamania', fips: '53059', name: 'Skamania County' }
+  const sk = (districts) => ({ coverageStatus: 'full_county', county: SKAMANIA, districts, missingLayers: [] })
+  // Districts as the live District Adapter resolved them on 2026-10-08.
+  // 240 NW Vancouver Ave, Stevenson (Commissioner District 2) and 71 Cooper
+  // Ave, Underwood (District 3, unincorporated): the same 12 county contests.
+  for (const districts of [
+    { CONGDST: '3', LEGDST: '17', CITY: 'Stevenson', COUNTY_COUNCIL: '2' },
+    { CONGDST: '3', LEGDST: '17', COUNTY_COUNCIL: '3' },
+  ]) {
+    const b = ballotFor(sk(districts))
+    const slugs = b.contests.map((c) => c.slug)
+    assert.equal(new Set(slugs).size, slugs.length)
+    assert.equal(slugs.length, 12 + SUPREME_COURT.length)
+    for (const slug of SUPREME_COURT) assert.ok(slugs.includes(slug), slug)
+    assert.deepEqual(b.measures.map((m) => m.slug), STATE_MEASURES)
+    assert.ok(!b.contests.some((c) => c.owner !== 'skamania' && c.owner !== 'statewide'))
+    sameScoring(b, 'skamania-congressional-district-3-u-s-representative', 'clark-congressional-district-3-u-s-representative')
+    for (const pos of [1, 2])
+      sameScoring(b, `skamania-legislative-district-17-state-representative-pos-${pos}`, `clark-legislative-district-17-state-representative-pos-${pos}`)
+    // The commissioner and PUD seats are nominated by district, elected county-wide.
+    for (const slug of ['skamania-skamania-county-commissioner-district-3-commissioner-no-3',
+      'skamania-public-utility-district-no-1-of-skamania-county-commissioner-district-3-commissioner-3'])
+      assert.ok(slugs.includes(slug), slug)
+  }
+  assert.equal(coverageAdvice(sk({})), null)
+})
+
+test('a San Juan ballot: Snohomish\'s CD 2 and Whatcom\'s LD 40, the Lopez and Orcas measures by district', () => {
+  const SAN_JUAN = { id: 'san-juan', fips: '53055', name: 'San Juan County' }
+  const sj = (districts) => ({ coverageStatus: 'full_county', county: SAN_JUAN, districts, missingLayers: [] })
+  const FD4 = 'san-juan-san-juan-county-fire-protection-district-no-4-lopez-island-fire-ems-proposition-no-1'
+  const PORT = 'san-juan-port-of-lopez-proposition-no-1'
+  const PARK = 'san-juan-orcas-island-park-and-recreation-district-proposition-no-1'
+  const SWD = 'san-juan-lopez-solid-waste-disposal-district-proposition-no-1'
+  // Districts as the live District Adapter resolved them on 2026-10-08.
+  // 2225 Fisherman Bay Rd, Lopez Island: the three Lopez measures.
+  const lo = ballotFor(sj({ CONGDST: '2', LEGDST: '40', SCHDST: '144', FIRDST: '4', PORTDST: 'LOPEZ', SWDDST: 'LOPEZ' }))
+  const slugs = lo.contests.map((c) => c.slug)
+  assert.equal(new Set(slugs).size, slugs.length)
+  assert.equal(slugs.length, 11 + SUPREME_COURT.length)
+  for (const slug of SUPREME_COURT) assert.ok(slugs.includes(slug), slug)
+  assert.ok(!lo.contests.some((c) => c.owner !== 'san-juan' && c.owner !== 'statewide'))
+  assert.ok(slugs.includes('san-juan-san-juan-county-council-residency-district-3'))
+  sameScoring(lo, 'san-juan-congressional-district-2-u-s-representative', 'snohomish-congressional-district-2-u-s-representative')
+  for (const pos of [1, 2])
+    sameScoring(lo, `san-juan-legislative-district-40-state-representative-pos-${pos}`, `whatcom-legislative-district-40-state-representative-pos-${pos}`)
+  assert.deepEqual(lo.measures.map((m) => m.slug), [...STATE_MEASURES, FD4, PORT, SWD])
+  // 500 Rose St, Eastsound: the Orcas park levy only (Residency District 2,
+  // but the council seat is voted on county-wide).
+  const es = ballotFor(sj({ CONGDST: '2', LEGDST: '40', SCHDST: '137', FIRDST: '2', PORTDST: 'ORCAS', PARKDST: 'ORCAS' }))
+  assert.equal(es.contests.length, 11 + SUPREME_COURT.length)
+  assert.deepEqual(ownLocal(es, 'san-juan'), [PARK])
+  // 350 Court St, Friday Harbor: no local measure.
+  const fh = ballotFor(sj({
+    CONGDST: '2', LEGDST: '40', CITY: 'Friday Harbor', SCHDST: '149', FIRDST: '3', PORTDST: 'FRI HAR', PARKDST: 'S J',
+  }))
+  assert.equal(fh.contests.length, 11 + SUPREME_COURT.length)
+  assert.deepEqual(ownLocal(fh, 'san-juan'), [])
+  assert.equal(coverageAdvice(sj({})), null)
 })
 
 test('an Adams ballot: Benton\'s, Spokane\'s and Grant\'s research for CD 4/5, LD 9 and LD 13, the pool and fire levies by district', () => {

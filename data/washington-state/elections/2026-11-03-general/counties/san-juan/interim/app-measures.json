@@ -1,0 +1,163 @@
+{
+  "county": "san-juan",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/san-juan/raw/votewa/candidate-list.csv.url",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7285&e=899&la=en&c=28",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7286&e=899&la=en&c=28",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7287&e=899&la=en&c=28",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7288&e=899&la=en&c=28"
+  ],
+  "coverage": "full_county",
+  "notes": [
+    "San Juan County Council Residency District 3 is voted on county-wide in the primary and the general (the residency district is a candidate qualification): scoped COUNTY.",
+    "San Juan County Fire Protection District No. 4 Proposition No. 1 is scoped FIRDST '4' (WA DOR FIR2025, layer 7), Port of Lopez Proposition No. 1 PORTDST 'LOPEZ' (PRT2025, layer 16) and Orcas Island Park and Recreation District Proposition No. 1 PARKDST 'ORCAS' (PKR2025, layer 14), each DISTATTRIB.",
+    "Lopez Solid Waste Disposal District Proposition No. 1 is scoped SWDDST 'LOPEZ': no tax-district layer has the district; its levy is voted on in precincts Lopez North, Lopez Northwest and Lopez South (county Voter_Precincts St_Code SJ031, SJ030, SJ032)."
+  ],
+  "measures": [
+    {
+      "slug": "san-juan-san-juan-county-fire-protection-district-no-4-lopez-island-fire-ems-proposition-no-1",
+      "owner": "san-juan",
+      "jurisdiction": "San Juan County Fire Protection District No. 4 (Lopez Island Fire & EMS)",
+      "proposition": "Proposition No. 1",
+      "title": "Property Tax Levy for Fire Protection and Emergency Medical",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "san-juan",
+        "layer": "FIRDST",
+        "value": "4"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 50
+        },
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 51
+        }
+      ],
+      "what_it_does": "Restores the Lopez Island fire and EMS district's regular property tax levy to $0.74 per $1,000 for 2027 collection (Resolution No. 2026-02) and lets the levy grow up to 3% a year, instead of the usual 1%, for 2027 through 2035; the 2035 maximum becomes the base for later limits.",
+      "cost_line": "$0.74 per $1,000 of assessed value for 2027 collection, up from about $0.47, then up to 3% a year levy growth through 2035.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7286&e=899&la=en&c=28"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "san-juan-port-of-lopez-proposition-no-1",
+      "owner": "san-juan",
+      "jurisdiction": "Port of Lopez",
+      "proposition": "Proposition No. 1",
+      "title": "Term Length of Port Commissioners",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "san-juan",
+        "layer": "PORTDST",
+        "value": "LOPEZ"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 52
+        },
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 53
+        }
+      ],
+      "what_it_does": "Lengthens the term of Port of Lopez commissioners from four years to six (Resolution No. 2026-2). Current commissioners keep their terms; six-year terms apply to commissioners elected later.",
+      "cost_line": "No tax. The port says six-year terms would put one seat, not two, on the ballot every other cycle and lower its election costs.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7287&e=899&la=en&c=28"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "san-juan-orcas-island-park-and-recreation-district-proposition-no-1",
+      "owner": "san-juan",
+      "jurisdiction": "Orcas Island Park and Recreation District",
+      "proposition": "Proposition No. 1",
+      "title": "Six-Year Property Tax Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "san-juan",
+        "layer": "PARKDST",
+        "value": "ORCAS"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 54
+        },
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 55
+        }
+      ],
+      "what_it_does": "Renews the Orcas Island park and recreation district's regular property tax levy for six years at $0.15 per $1,000 (Resolution 2026-07-09), subject to the limits of chapter 84.55 RCW, to fund district programs, services and facilities such as Buck Park.",
+      "cost_line": "$0.15 per $1,000 of assessed value for 2027 collection (the 2025 rate was about $0.10), for six years; about $120 a year on an $800,000 home.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7288&e=899&la=en&c=28"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "san-juan-lopez-solid-waste-disposal-district-proposition-no-1",
+      "owner": "san-juan",
+      "jurisdiction": "Lopez Solid Waste Disposal District",
+      "proposition": "Proposition No. 1",
+      "title": "Excess Property Tax Levy for 2027",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "san-juan",
+        "layer": "SWDDST",
+        "value": "LOPEZ"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 56
+        },
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 57
+        }
+      ],
+      "what_it_does": "One-year excess property tax levy of $210,000 for the Lopez Island dump's operations and capital improvements in 2027 (Resolution No. 20-2026); the district may only levy one year at a time, so it asks every year. Needs 60% approval.",
+      "cost_line": "$210,000 for 2027 only, estimated at $0.091 per $1,000 of assessed value (about $45.50 on a $500,000 property), the same amount as the current levy.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7285&e=899&la=en&c=28"
+          ]
+        }
+      }
+    }
+  ]
+}

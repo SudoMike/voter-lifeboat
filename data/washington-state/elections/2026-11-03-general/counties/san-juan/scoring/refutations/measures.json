@@ -1,0 +1,54 @@
+{
+  "contest_slug": "measures",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/san-juan/scoring/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/san-juan/dossiers/measures/",
+    "data/final/2026-11-03-general/rubric.json"
+  ],
+  "verdicts": [
+    {
+      "candidate": "san-juan-san-juan-county-fire-protection-district-no-4-lopez-island-fire-ems-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked toward +1: the rate stays under the $1.50 cap and the $0.83 voters approved in 2013, and the district frames it as maintaining current service [S1]. The attack fails: a yes vote is a levy lid lift (a cap lift, explicitly pole_b in the rubric) that raises the rate about 55%, from $0.47611 [S4] to $0.74 [S1], about $1.06 million to $1.65 million at 2025 values, and swaps the 1% limit for a 3% factor for 2027-2035 [S1][S2]. Consistent with Jefferson's upheld +2 for a similar fire lid lift. Spending considered and not proposed: the dossier says the money maintains current service levels [S1]."
+    },
+    {
+      "candidate": "san-juan-san-juan-county-fire-protection-district-no-4-lopez-island-fire-ems-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1 and S2 ($0.74 for 2027 collection, up from about $0.47, 3% factor 2027-2035, current fire, EMS and firefighter safety); 'Majority vote' is supported by RCW 84.55.050 [S5]. cost_line arithmetic checks: $500,000 x $0.476/1,000 = $238 and x $0.74/1,000 = $370 [S1][S4]. pro_summary matches Ghiglione's argument (12 years since the last levy, loans, used vehicles, grants, EMS insurance billing, 3% to combat inflation) [S1][S2]. con_summary matches S1."
+    },
+    {
+      "candidate": "san-juan-port-of-lopez-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "Empty lean_mappings is correct: term length touches no tax, spending or local-versus-state authority, and reform does not apply to measures in the rubric. what_it_does matches S1 and S2 (four to six years, sitting commissioners keep their terms, one seat every other cycle against two at once every fourth year) and rightly states no threshold, which the pamphlet omits [S1]. cost_line matches S1 (lower election costs claimed, no figure). pro_summary matches Catlin and Aufderhar [S1][S2]. con_summary matches S1 and S3."
+    },
+    {
+      "candidate": "san-juan-orcas-island-park-and-recreation-district-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked toward +2 for consistency with the fire levy: the rate rises about 46%, $0.10259 [S3] to $0.15 [S1][S2], about $493,000 to $721,000 at 2025 values. The +1 survives on two distinctions: no growth factor beyond the chapter 84.55 limit [S1][S2], and the levy is a required six-year renewal of an existing tax with a small absolute cost (about $120 a year on an $800,000 home) [S1]. The dossier calls +1 and +2 both defensible with +1 fitting best. S1, S2 and S3 support the basis."
+    },
+    {
+      "candidate": "san-juan-orcas-island-park-and-recreation-district-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1 and S2 (six years at $0.15, renewal every six years, programs, services and facilities, Buck Park maintained by the district, 60% plus minimum turnout per the argument for). cost_line arithmetic checks: $800,000 x $0.15/1,000 = $120 [S1] and x $0.10259/1,000 = about $82 [S3]. pro_summary matches S1 and S2 (renewal, up to 3,000 islanders a year, cuts if it fails). con_summary matches Carter's argument [S1][S2]; 'narrower budgeted levy' fairly paraphrases 'a budgeted levy for earmarked recurring costs'."
+    },
+    {
+      "candidate": "san-juan-lopez-solid-waste-disposal-district-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "A same-amount one-year excess levy renewal: $210,000, the same as the 2025 levy [S5] and the same rate per the district [S3]; about $0.091 per $1,000 [S1][S2]. A renewal of a small levy with no increase maps 1; no case for 2. Spending considered and not proposed: it sustains current services [S1][S3]."
+    },
+    {
+      "candidate": "san-juan-lopez-solid-waste-disposal-district-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1-S4 (one-year $210,000 excess levy for 2027, operations and capital improvements, the Dump's free recycling and Take It Or Leave It, annual requests, 60% [S2]). cost_line arithmetic checks: $500,000 x $0.091/1,000 = $45.50 [S3]; same amount as the current $210,000 levy [S5]. pro_summary matches the argument for [S1][S2]. con_summary matches S1 and S7."
+    }
+  ],
+  "missing": []
+}

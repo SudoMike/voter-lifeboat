@@ -1,0 +1,239 @@
+{
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/skamania/interim/contests.json",
+    "data/washington-state/elections/2026-11-03-general/counties/skamania/interim/measures.json"
+  ],
+  "script": "pipeline/build_research_plan.py",
+  "contests": [
+    {
+      "contest_slug": "skamania-congressional-district-3-u-s-representative",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 3",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "john-braun",
+          "name": "John Braun",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-3-u-s-representative/john-braun.md"
+        },
+        {
+          "slug": "marie-gluesenkamp-perez",
+          "name": "Marie Gluesenkamp Perez",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-3-u-s-representative/marie-gluesenkamp-perez.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "clark",
+          "contest_slug": "clark-congressional-district-3-u-s-representative",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/clark/scoring/clark-congressional-district-3-u-s-representative.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "clark",
+          "thurston",
+          "cowlitz",
+          "lewis",
+          "pacific"
+        ]
+      }
+    },
+    {
+      "contest_slug": "skamania-legislative-district-17-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 17",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "ben-christly",
+          "name": "Ben Christly",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-17-state-representative-position-1/ben-christly.md"
+        },
+        {
+          "slug": "kevin-waters",
+          "name": "Kevin Waters",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-17-state-representative-position-1/kevin-waters.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "clark",
+          "contest_slug": "clark-legislative-district-17-state-representative-pos-1",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/clark/scoring/clark-legislative-district-17-state-representative-pos-1.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "clark",
+          "klickitat"
+        ]
+      }
+    },
+    {
+      "contest_slug": "skamania-legislative-district-17-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 17",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "diana-h-perez",
+          "name": "Diana H. Perez",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-17-state-representative-position-2/diana-h-perez.md"
+        },
+        {
+          "slug": "david-stuebe",
+          "name": "David Stuebe",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-17-state-representative-position-2/david-stuebe.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "clark",
+          "contest_slug": "clark-legislative-district-17-state-representative-pos-2",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/clark/scoring/clark-legislative-district-17-state-representative-pos-2.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "clark",
+          "klickitat"
+        ]
+      }
+    },
+    {
+      "contest_slug": "skamania-skamania-county-assessor",
+      "category": "County",
+      "office": "Assessor",
+      "district": "Skamania County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "cora-moser",
+          "name": "Cora Moser",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/skamania/dossiers/skamania-skamania-county-assessor/cora-moser.md"
+        },
+        {
+          "slug": "gabriel-p-spencer",
+          "name": "Gabriel P Spencer",
+          "party_preference": "Prefers Democrat Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/skamania/dossiers/skamania-skamania-county-assessor/gabriel-p-spencer.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "skamania-skamania-county-clerk",
+      "category": "County",
+      "office": "Clerk",
+      "district": "Skamania County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "grace-d-cross",
+          "name": "Grace D. Cross",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/skamania/dossiers/skamania-skamania-county-clerk/grace-d-cross.md"
+        },
+        {
+          "slug": "olivia-d-munsch",
+          "name": "Olivia D. Munsch",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/skamania/dossiers/skamania-skamania-county-clerk/olivia-d-munsch.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "skamania-skamania-county-commissioner-district-3-commissioner-no-3",
+      "category": "County",
+      "office": "Commissioner No. 3",
+      "district": "Skamania County Commissioner District 3",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "asa-leckie",
+          "name": "Asa Leckie",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/skamania/dossiers/skamania-skamania-county-commissioner-district-3-commissioner-no-3/asa-leckie.md"
+        },
+        {
+          "slug": "paul-h-mosbrucker",
+          "name": "Paul H. Mosbrucker",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/skamania/dossiers/skamania-skamania-county-commissioner-district-3-commissioner-no-3/paul-h-mosbrucker.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "skamania-public-utility-district-no-1-of-skamania-county-commissioner-district-3-commissioner-3",
+      "category": "PublicUtility",
+      "office": "Commissioner #3",
+      "district": "Public Utility District No. 1 of Skamania County Commissioner District 3",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "liz-green",
+          "name": "Liz Green",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        },
+        {
+          "slug": "addison-dillon",
+          "name": "Addison Dillon",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        }
+      ]
+    }
+  ],
+  "measures": [],
+  "carry_forward_from": "2026-08-04-primary"
+}

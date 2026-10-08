@@ -1788,6 +1788,89 @@ ELECTION_MEASURES = {
                 "(WA DOR FIR2025, layer 7), DISTATTRIB.",
             ],
         },
+        # San Juan (#32): checked against the San Juan County Auditor's
+        # sample ballot and its combined state and county voters' pamphlet
+        # (counties/san-juan/raw/san-juan/{sample-ballot,local-voters-pamphlet}
+        # .pdf.url; county section pp. 35-57, PDF page = printed page) and
+        # VoteWA's online guide for county 28 (raw/votewa/voter-guide/), which
+        # agree contest for contest: four local measures, text from the guide's
+        # measure records 7285-7288 and pamphlet pp. 50-57.
+        # Contests: the generic rules already fit. San Juan is a charter
+        # county whose three council members must live in their residency
+        # district but are voted on county-wide in the primary and the
+        # general: VoteWA types the race 'Countywide', the August 4, 2026
+        # primary counted Council Residency District 3 on all 23 units, and
+        # the SOS precinct exports put the 2022 District 3 and 2024 District 1
+        # and 2 races on all 23 precincts (raw/san-juan/sos-results-*.csv.url).
+        # The council seat stays COUNTY with the primary's contest name. The
+        # District Court is one county-wide judge; the override files it
+        # Judicial, keeping the generic slug.
+        # Measure scopes, point-checked 2026-10-08 (Census geocoder + DOR
+        # WADOR_PropertyTax 2025 layers; county Voter_Precincts layer):
+        # - FIRDST '4' (FIR2025, layer 7): 2225 Fisherman Bay Rd, 86 School Rd
+        #   and 4102 Mud Bay Rd, Lopez Island -> '4'; Friday Harbor '3';
+        #   Eastsound '2'; Shaw (interior point) '5'; Decatur none.
+        # - PORTDST 'LOPEZ' (PRT2025, layer 16): the same Lopez addresses ->
+        #   'LOPEZ'; 350 Court St, Friday Harbor -> 'FRI HAR'; Eastsound ->
+        #   'ORCAS'; Shaw and Decatur none.
+        # - PARKDST 'ORCAS' (PKR2025, layer 14): 500 Rose St, Eastsound, 5164
+        #   Deer Harbor Rd and 107 Doe Bay Rd, Olga -> 'ORCAS'; Friday Harbor
+        #   'S J'; Lopez, Shaw, Blakely and Waldron (interior points) none. The
+        #   district's levy and commissioner races were on the seven Orcas
+        #   precincts only, not Blakely or Waldron (SOS 2023, 2025 exports).
+        # - SWDDST 'LOPEZ': no DOR or county tax-district layer has the Lopez
+        #   Solid Waste Disposal District. Its annual levy was on precincts
+        #   Lopez North, Lopez Northwest and Lopez South only (SJ031, SJ030,
+        #   SJ032) in every general 2022-2025, the same precincts as Fire
+        #   District 4 and the Port of Lopez, never Decatur. The county's
+        #   Voter_Precincts layer (St_Code) holds those precincts; on a 425-point
+        #   grid over Lopez and Decatur every land point inside SJ030-SJ032 is
+        #   in DOR PRT2025 'LOPEZ' and FIR2025 '4', and every other land point
+        #   is in neither. See counties/san-juan/COMPLETENESS.md for the layer
+        #   proposal.
+        "san-juan": {
+            "overrides": {
+                ("COUNTY", "DISTRICT COURT JUDGE"): (
+                    "Judicial", "San Juan County District Court", "Judge", ("COUNTY", None)),
+            },
+            "measures": [
+                m("San Juan County Fire Protection District No. 4 (Lopez Island Fire & EMS)", "Proposition No. 1",
+                  "Property Tax Levy for Fire Protection and Emergency Medical",
+                  ("FIRDST", "4"),
+                  "Restores the Lopez Island fire and EMS district's regular property tax levy to $0.74 per $1,000 for 2027 collection (Resolution No. 2026-02) and lets the levy grow up to 3% a year, instead of the usual 1%, for 2027 through 2035; the 2035 maximum becomes the base for later limits.",
+                  "$0.74 per $1,000 of assessed value for 2027 collection, up from about $0.47, then up to 3% a year levy growth through 2035.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7286&e=899&la=en&c=28",
+                  pages=(50, 51)),
+                m("Port of Lopez", "Proposition No. 1", "Term Length of Port Commissioners",
+                  ("PORTDST", "LOPEZ"),
+                  "Lengthens the term of Port of Lopez commissioners from four years to six (Resolution No. 2026-2). Current commissioners keep their terms; six-year terms apply to commissioners elected later.",
+                  "No tax. The port says six-year terms would put one seat, not two, on the ballot every other cycle and lower its election costs.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7287&e=899&la=en&c=28",
+                  pages=(52, 53)),
+                m("Orcas Island Park and Recreation District", "Proposition No. 1", "Six-Year Property Tax Levy",
+                  ("PARKDST", "ORCAS"),
+                  "Renews the Orcas Island park and recreation district's regular property tax levy for six years at $0.15 per $1,000 (Resolution 2026-07-09), subject to the limits of chapter 84.55 RCW, to fund district programs, services and facilities such as Buck Park.",
+                  "$0.15 per $1,000 of assessed value for 2027 collection (the 2025 rate was about $0.10), for six years; about $120 a year on an $800,000 home.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7288&e=899&la=en&c=28",
+                  pages=(54, 55)),
+                m("Lopez Solid Waste Disposal District", "Proposition No. 1", "Excess Property Tax Levy for 2027",
+                  ("SWDDST", "LOPEZ"),
+                  "One-year excess property tax levy of $210,000 for the Lopez Island dump's operations and capital improvements in 2027 (Resolution No. 20-2026); the district may only levy one year at a time, so it asks every year. Needs 60% approval.",
+                  "$210,000 for 2027 only, estimated at $0.091 per $1,000 of assessed value (about $45.50 on a $500,000 property), the same amount as the current levy.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7285&e=899&la=en&c=28",
+                  pages=(56, 57)),
+            ],
+            "extra_notes": [
+                "San Juan County Council Residency District 3 is voted on county-wide in the primary and the general (the "
+                "residency district is a candidate qualification): scoped COUNTY.",
+                "San Juan County Fire Protection District No. 4 Proposition No. 1 is scoped FIRDST '4' (WA DOR FIR2025, layer 7), "
+                "Port of Lopez Proposition No. 1 PORTDST 'LOPEZ' (PRT2025, layer 16) and Orcas Island Park and Recreation District "
+                "Proposition No. 1 PARKDST 'ORCAS' (PKR2025, layer 14), each DISTATTRIB.",
+                "Lopez Solid Waste Disposal District Proposition No. 1 is scoped SWDDST 'LOPEZ': no tax-district layer has the "
+                "district; its levy is voted on in precincts Lopez North, Lopez Northwest and Lopez South (county Voter_Precincts "
+                "St_Code SJ031, SJ030, SJ032).",
+            ],
+        },
         # Skagit: the four measures the Auditor's Ballot Measures page lists
         # for the general (counties/skagit/raw/skagit/ballot-measures.html.url),
         # text from the local voters' pamphlet pages 18-21 and VoteWA
@@ -1827,6 +1910,56 @@ ELECTION_MEASURES = {
               "https://voter.votewa.gov/elections/measure.ashx?m=7429&e=899&la=en&c=29",
               pages=(21,)),
         ]},
+        # Skamania (#32): no local measures. The Skamania County Auditor's general
+        # sample ballot and local voters' pamphlet (counties/skamania/raw/skamania/
+        # {sample-ballot,local-voters-pamphlet}.pdf.url, linked from
+        # skamaniacounty.gov/departments-offices/auditor/elections/current-election)
+        # list only the three statewide measures; the pamphlet names the
+        # participating jurisdictions as the State, Skamania County and Skamania
+        # County PUD only, and VoteWA's online guide for county 30
+        # (raw/votewa/voter-guide/guide.json.url) lists no local measure. The
+        # sample ballot is one ballot style for the whole county.
+        # Overrides (checked against the sample ballot):
+        # - Commissioner No. 3: Skamania is a non-charter county under 400,000,
+        #   so commissioners are nominated by district (RCW 36.32.040) and
+        #   elected by the voters of the whole county (RCW 36.32.050(1)); the
+        #   sample ballot prints 'Skamania County Commissioner District No. 3'
+        #   under 'ONLY REGISTERED VOTERS IN COUNTY ARE ELIGIBLE'. SOS precinct
+        #   exports: 2022 Commissioner #3 and 2020/2024 Commissioner #1 and #2 on
+        #   all 23 precincts, while the 2026 primary's District No. 3 race
+        #   reported 8 of 23 units (raw/skamania/sos-results-*.csv.url,
+        #   votewa-2026-08-04-primary-results.json.url). It keeps the primary's
+        #   contest name so its slug matches the primary's.
+        # - District Court: one county-wide judge (2022: on all 23 precincts).
+        # - Public Utility District No. 1 of Skamania County covers the whole
+        #   county (WA DOR PUD2025, layer 17: one Skamania polygon, DISTATTRIB
+        #   '1', area 9,058,178,385 equal to the sum of Skamania's six SCH2025
+        #   polygons; '1' at Stevenson, North Bonneville, Carson and Underwood)
+        #   and the whole PUD elects each commissioner in the general (RCW
+        #   54.12.010(3); the 2020 Commissioner #3, 2022 #2 and 2024 #1 races were
+        #   on all 23 precincts). Scoped COUNTY.
+        "skamania": {
+            "overrides": {
+                ("COUNTY", "COMMISSIONER NO. 3"): (
+                    "County", "Skamania County Commissioner District 3", "Commissioner No. 3", ("COUNTY", None)),
+                ("COUNTY", "DISTRICT COURT JUDGE"): (
+                    "Judicial", "Skamania County District Court", "District Court Judge", ("COUNTY", None)),
+                ("PUBLIC UTILITY DISTRICT", "COMMISSIONER #3"): (
+                    "PublicUtility", "Public Utility District No. 1 of Skamania County Commissioner District 3",
+                    "Commissioner #3", ("COUNTY", None)),
+            },
+            "measures": [],
+            "extra_notes": [
+                "No local measures on the November 3, 2026 ballot: the Skamania County sample ballot "
+                "(https://www.skamaniacounty.gov/home/showpublisheddocument/19606/639256882368200000) and local voters' "
+                "pamphlet (https://www.skamaniacounty.gov/home/showpublisheddocument/19600/639253463106470000) list only "
+                "the statewide measures IP26-645, IL26-001 and IL26-638, and VoteWA's online voters' guide for county 30 "
+                "lists no local measure.",
+                "Skamania County Commissioner District 3 is nominated by district and elected county-wide in the general "
+                "(RCW 36.32.040, RCW 36.32.050(1)); Public Utility District No. 1 of Skamania County covers the whole county "
+                "(WA DOR PUD2025, layer 17) and every PUD voter elects each commissioner (RCW 54.12.010(3)). Both are scoped COUNTY.",
+            ],
+        },
         # Stevens (#30). Stevens County's own site (stevenscountywa.gov) answers
         # 403 to scripted requests, so contests and measures were checked against
         # VoteWA's online voters' guide for county 33 (voterguide.ashx?e=899&c=33,

@@ -70,7 +70,8 @@ APP_PACKAGES = {
         "counties": ["king", "snohomish", "spokane", "pierce", "clark", "kitsap", "thurston", "yakima", "whatcom",
                      "benton", "skagit", "cowlitz", "grant", "island", "lewis", "franklin", "chelan", "clallam",
                      "grays-harbor", "mason", "walla-walla", "stevens", "whitman", "douglas", "okanogan",
-                     "jefferson", "kittitas", "klickitat", "pacific", "asotin", "adams"],
+                     "jefferson", "kittitas", "klickitat", "pacific", "asotin", "adams",
+                     "skamania", "san-juan"],
         "district_contests": "county",
     },
 }
@@ -122,6 +123,10 @@ DISTRICT_ADAPTER_LAYERS = {
     "pacific": ("CONGDST", "LEGDST", "CITY", "FIRDST", "EMSDST"),
     "asotin": ("CONGDST", "LEGDST", "CITY", "EMSDST", "PUDDST", "RURALEMSDST"),
     "adams": ("CONGDST", "LEGDST", "CITY", "CEMDST", "PARKDST", "FIRDST"),
+    "skamania": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "WATDST"),
+    # San Juan's Lopez Solid Waste levy reads SWDDST, a presence layer on DOR
+    # PRT2025 (the Port of Lopez polygon; see geo.js).
+    "san-juan": ("CONGDST", "LEGDST", "CITY", "SCHDST", "FIRDST", "PORTDST", "PARKDST", "SWDDST"),
 }
 
 
@@ -319,6 +324,17 @@ COUNTY_ELECTIONS_URLS = {
         # | Adams County, WA", 2026-10-08; the page that links the general's
         # sample ballot; the package's raw/adams/elections-page.html.url).
         "adams": "https://www.co.adams.wa.gov/162/Elections-Elecciones",
+        # Skamania County Auditor, Current Election (the page that links the
+        # general's local voters' pamphlet and sample ballot; the package's
+        # raw/skamania/current-election.html.url). skamaniacounty.gov answers
+        # 403 to a bare scripted User-Agent and 200 text/html to full browser
+        # request headers (Chrome User-Agent, Accept, Accept-Language,
+        # Sec-Fetch-*), checked 2026-10-08; browsers load it.
+        "skamania": "https://www.skamaniacounty.gov/departments-offices/auditor/elections/current-election",
+        # San Juan County Auditor, Current Election (200 text/html, 2026-10-08;
+        # the page that links the general's voters' pamphlet, sample ballot and
+        # measure resolutions; the package's raw/san-juan/current-election.html.url).
+        "san-juan": "https://www.sanjuancountywa.gov/1292/Current-Election",
     },
 }
 

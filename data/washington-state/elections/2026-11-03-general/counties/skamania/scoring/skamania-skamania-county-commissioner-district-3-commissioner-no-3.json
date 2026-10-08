@@ -1,0 +1,77 @@
+{
+  "contest_slug": "skamania-skamania-county-commissioner-district-3-commissioner-no-3",
+  "scored_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/skamania/dossiers/skamania-skamania-county-commissioner-district-3-commissioner-no-3/",
+    "data/final/2026-11-03-general/rubric.json"
+  ],
+  "office_does": "The District 3 commissioner is one of three members of the Board of County Commissioners, which passes county ordinances, adopts the budget, sets land use and oversees county departments; nominated by District 3 (eastern county), elected county-wide, four-year term.",
+  "race_blurb": "Republican Asa Leckie, the board's chair and an Army Special Forces veteran elected in 2022, faces Democrat Paul H. Mosbrucker of Underwood, a former school board member. Leckie led the district primary 775 to 629 and runs on no new taxes, timber revenue and pushing back on state mandates; Mosbrucker points to housing costs, insurance premiums, school cuts and slow job growth and asks for new leadership.",
+  "candidates": [
+    {
+      "slug": "asa-leckie",
+      "summary": "District 3 commissioner, elected in 2022, and board chair; an Army Special Forces veteran of more than two decades from Carson, running for re-election as a Republican.",
+      "highlights": [
+        "Says he has never voted for or supported the county's annual 1% property tax increase [S1]",
+        "Wants core-services budgets 'without unnecessary tax increases' [S2]",
+        "Proposes logging along Gifford Pinchot roads and payments to counties for conservation set-asides [S3]",
+        "Voted to open about 400 acres in Underwood to 10-acre residential lots [S4]",
+        "Joined the board's opposition to 77,000 acres of new state legacy forests [S5]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "'We're taxed enough already': says he has never voted for the county's 1% levy increase and wants budgets without tax increases, stated in the pamphlet and the Chamber Q&A."
+        },
+        "spending": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S1", "S2"],
+          "basis": "Calls for 'fiscal discipline' and budgets that prioritize core services, while also backing public-private partnerships and business incentives where feasible."
+        },
+        "housing": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S2", "S4"],
+          "basis": "Treats the shortage of developable land as the housing constraint and voted to zone previously unzoned Underwood forest land for 10-acre residential lots over neighbors' objections; no public-housing or tenant position."
+        },
+        "climate": {
+          "score": -1,
+          "confidence": "low",
+          "citations": ["S2", "S3", "S5"],
+          "basis": "Wants to 'reduce energy costs' and expand timber harvest, and opposed state legacy-forest set-asides, but states no position on carbon pricing or clean-energy policy."
+        },
+        "experience": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S3", "S4"],
+          "basis": "Sitting commissioner and board chair running on his record in office."
+        }
+      }
+    },
+    {
+      "slug": "paul-h-mosbrucker",
+      "summary": "Underwood resident of 22 years and former White Salmon Valley School District board member; running as a Democrat on his first county campaign.",
+      "highlights": [
+        "Names scarce, unaffordable housing, insurance premiums, school cuts and slow job growth as the county's problems [S1]",
+        "Says the county budget is 'at the mercy of politicians who don't live here' [S1]",
+        "Calls for 'new leadership and innovative ideas' [S1]",
+        "Raised $4,971 by Sept. 28, including $1,500 from the county Democrats [S4][S5]"
+      ],
+      "evidence_level": "pamphlet-only",
+      "withdrawn": false,
+      "scores": {
+        "experience": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S2"],
+          "basis": "Runs explicitly for 'new leadership' against the board chair and has held no county office, though he cites management experience and past school board service."
+        }
+      }
+    }
+  ]
+}

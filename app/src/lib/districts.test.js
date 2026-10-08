@@ -135,6 +135,24 @@ test('Asotin Rural EMS District No. 2 reads as its name, after the EMS district'
     ['City of Clarkston', 'Public Utility District 1', 'Emergency Medical District 1'])
 })
 
+test('San Juan port, park and solid waste districts read as their names', () => {
+  // Live 2026-10-08 (#32): DOR PRT2025 'LOPEZ' at 2225 Fisherman Bay Rd,
+  // Lopez Island, 'ORCAS' at 500 Rose St, Eastsound, 'FRI HAR' at 350 Court
+  // St, Friday Harbor; PKR2025 'ORCAS' at Eastsound, 'S J' at Friday Harbor.
+  // geo.js reads SWDDST 'LOPEZ' as a presence layer on the Port of Lopez.
+  assert.equal(layerLabel('SWDDST'), 'Solid waste disposal district')
+  assert.equal(describeDistrict('SWDDST', 'LOPEZ'), 'Lopez Solid Waste Disposal District')
+  assert.equal(describeDistrict('PORTDST', 'LOPEZ'), 'Port of Lopez')
+  assert.equal(describeDistrict('PORTDST', 'ORCAS'), 'Port of Orcas')
+  assert.equal(describeDistrict('PORTDST', 'FRI HAR'), 'Port of Friday Harbor')
+  assert.equal(describeDistrict('PARKDST', 'ORCAS'), 'Orcas Island Park and Recreation District')
+  assert.equal(describeDistrict('PARKDST', 'S J'), 'San Juan Island Park and Recreation District')
+  assert.deepEqual(
+    describeDistricts({ SWDDST: 'LOPEZ', SCHDST: '144', FIRDST: '4', PORTDST: 'LOPEZ', CONGDST: '2' }).map((d) => d.text),
+    ['Congressional District 2', 'Port of Lopez', 'Fire District 4', 'School District 144',
+      'Lopez Solid Waste Disposal District'])
+})
+
 test('Kittitas Upper and Lower District Court read with the county name', () => {
   // Live 2026-10-08 (#31): Court_Districts court_district_name 'Lower
   // District Court' at 205 W 5th Ave, Ellensburg; 'Upper District Court' at
