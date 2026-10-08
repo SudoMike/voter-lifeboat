@@ -1,0 +1,47 @@
+{
+  "contest_slug": "pierce-legislative-district-28-state-representative-pos-2",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-legislative-district-28-state-representative-pos-2/"],
+  "office_does": "State Representatives write and vote on state laws and the state budgets; this seat is one of two House seats for District 28 in Pierce County.",
+  "race_blurb": "Democratic incumbent Dan Bronoske, a fire captain in the House since 2021, faces Kerry Hills, a probation officer who prefers the Nonpartisan Party. Hills was not on the primary ballot; filing dates and the 9.3 percent write-in share suggest a write-in qualification, but no by-name tally was found.",
+  "candidates": [
+    {
+      "slug": "dan-bronoske",
+      "summary": "West Pierce Fire & Rescue captain and chair of the House Health Care & Wellness Committee, in the House since 2021, running on lower costs, health care and public safety.",
+      "highlights": [
+        "One of eight House Democrats to vote against ESSB 6346; voted for the 2025 capital gains, B&O and gas tax bills [S5][S11][S13][S19][S25]",
+        "Voted against the final 2025 rent-increase limit and favors permit streamlining and more housing types [S2][S17]",
+        "Cites capping a 30-day insulin supply at $35 [S2]",
+        "Voted for ESHB 1296 and ESSB 5599 [S7][S9]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": 0, "confidence": "medium", "citations": ["S5", "S11", "S13", "S15", "S19"], "basis": "Split record: no on ESSB 6346 and ESSB 5814; yes on ESSB 5813, ESHB 2081 and ESSB 5801."},
+        "spending": {"score": 1, "confidence": "medium", "citations": ["S2"], "basis": "Cites investments in teachers, mental health, school nutrition, public transit and Medicaid reimbursement."},
+        "housing": {"score": -1, "confidence": "medium", "citations": ["S2", "S17", "S18"], "basis": "Favors more supply through permit streamlining and more housing types; voted against the 2025 rent-increase limit."},
+        "safety": {"score": 0, "confidence": "medium", "citations": ["S1", "S2"], "basis": "Pairs law enforcement training investment with accountability and behavioral health resources."},
+        "healthcare": {"score": -1, "confidence": "medium", "citations": ["S1", "S2"], "basis": "Works on cost caps such as $35 insulin and lower drug prices within the existing system; no single-payer position."},
+        "experience": {"score": -2, "confidence": "high", "citations": ["S1", "S4"], "basis": "In the House since 2021 and chair of the Health Care & Wellness Committee."},
+        "social": {"score": 1, "confidence": "medium", "citations": ["S9", "S10"], "basis": "Voted for ESSB 5599 on youth access to gender-affirming and reproductive care; no statements found."},
+        "parental-rights": {"score": 1, "confidence": "high", "citations": ["S7", "S8", "S9", "S10"], "basis": "Voted for ESHB 1296's changes to the I-2081 parental-rights list and for ESSB 5599; no statements on the topic."}
+      }
+    },
+    {
+      "slug": "kerry-hills",
+      "summary": "Lakewood probation officer and former clinical case manager who prefers the Nonpartisan Party, running on concern over tax increases and state spending.",
+      "highlights": [
+        "Has \"great concern about the increased taxes enacted\" [S1]",
+        "Says \"Olympia has a spending problem\" and lacks fiscal responsibility [S1]",
+        "Was not on the primary ballot; filing dates and write-in totals suggest a write-in qualification, though no by-name tally was found [S2][S3][S4]"
+      ],
+      "evidence_level": "pamphlet-only",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": -1, "confidence": "medium", "citations": ["S1"], "basis": "Expresses 'great concern about the increased taxes enacted' without naming a tax or pledge."},
+        "spending": {"score": -2, "confidence": "medium", "citations": ["S1"], "basis": "Says Olympia 'has a spending problem' and lacks fiscal responsibility."},
+        "experience": {"score": 2, "confidence": "high", "citations": ["S1"], "basis": "No public office; elected experience is a school parent board and an HOA presidency."}
+      }
+    }
+  ]
+}
