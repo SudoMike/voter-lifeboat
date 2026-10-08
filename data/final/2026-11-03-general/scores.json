@@ -1,17 +1,443 @@
 {
   "derived_from": [
     "data/washington-state/elections/2026-11-03-general/statewide/scoring/*.json",
-    "data/washington-state/elections/2026-11-03-general/statewide/scoring/refutations/*.json",
-    "data/washington-state/elections/2026-11-03-general/counties/king/scoring/*.json",
-    "data/washington-state/elections/2026-11-03-general/counties/king/scoring/refutations/*.json"
+    "data/washington-state/elections/2026-11-03-general/statewide/scoring/refutations/*.json"
   ],
   "script": "pipeline/merge_scores.py",
   "verdict_stats": {
-    "upheld": 0,
-    "adjust": 0,
+    "upheld": 24,
+    "adjust": 2,
     "refuted": 0,
-    "missing_added": 0,
+    "missing_added": 1,
     "missing_dropped_low": 0
   },
-  "contests": []
+  "contests": [
+    {
+      "contest_slug": "justice-position-no-1-supreme-court",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/statewide/dossiers/justice-position-no-1-supreme-court/"
+      ],
+      "office_does": "One of nine statewide-elected justices on Washington's court of last resort, deciding appeals, state constitutional questions, and the rules that govern every court in the state.",
+      "race_blurb": "A race for the two years left on retired Justice Mary Yu's term. Justice Colleen Melody, appointed by Governor Ferguson and on the court since January 2026, led the August primary with 53% against tax and constitutional attorney Scott Edwards (29%), who runs on applying the law \"as written\" and against the appointment pipeline.",
+      "candidates": [
+        {
+          "slug": "colleen-melody",
+          "summary": "Sitting justice since January 2026, appointed after leading the Attorney General's Civil Rights Division. She calls state law \"the backbone of a lot of our rights right now\" and is endorsed by every sitting justice.",
+          "highlights": [
+            "On the Supreme Court since January 2026; wrote the 5-4 majority in In re Marriage of Hauk (Child Relocation Act) and joined the 6-3 majority striking the natural-gas initiative [S6][S8]",
+            "Says \"State law is really the backbone of a lot of our rights right now\" and names Justice Kagan as a model for attention to rulings' practical effects [S9][S10]",
+            "Also told the Seattle Times the court should \"stay in its lane, and not veer into policy, unnecessarily\" [S12]",
+            "Led the AG's Civil Rights Division, including the travel-ban challenge [S18]",
+            "Endorsed by all sitting justices, Governors Ferguson, Inslee and Gregoire, and the State Labor Council; first in the primary with 53.03% [S1][S14]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "judicial": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S9",
+                "S10"
+              ],
+              "basis": "Repeatedly frames state law and state courts as rights guarantors and cites practical effects (Kagan model); her 'stay in its lane' remark and text-based Hauk opinion keep her off the pole. Down from +2 in the primary because the refreshed record adds those moderating items."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S18",
+                "S5",
+                "S4"
+              ],
+              "basis": "Incumbent with the full institutional roster behind her, but appointed and on the bench only since January 2026 after a government litigation career; evidence unchanged in substance from the primary."
+            }
+          }
+        },
+        {
+          "slug": "scott-edwards",
+          "summary": "Bainbridge Island tax and constitutional attorney with 30-plus years of practice, including more than a dozen Washington Supreme Court cases, and no judicial service. He runs on applying the constitution and laws \"as written\" and on electing rather than appointing justices.",
+          "highlights": [
+            "Pamphlet: \"The role of the Supreme Court is to apply the constitution and laws as written, not rewrite them\" [S1]",
+            "Says the court's century-old ruling against a progressive income tax \"got it right\"; has litigated against the capital gains and Seattle payroll taxes [S6][S8]",
+            "Says he wished the dissent in the natural-gas initiative case had been the majority [S5]",
+            "No judicial service; says justices \"should be responsible to the people, not to the governor\" [S2][S7]",
+            "Recommended by the state Republican Party; second in the primary with 29.46% [S6][S9]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "judicial": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S8",
+                "S6"
+              ],
+              "basis": "Repeated explicit as-written statements across the pamphlet, a June Q&A ('You cannot inject your policy views') and October interviews; evidence strengthened since the primary, score unchanged."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S7",
+                "S2"
+              ],
+              "basis": "Never held judicial office and runs against the appointment pipeline, but offers a 30-year litigation record rather than a pure renewal case; unchanged from the primary."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "justice-position-no-3-supreme-court",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/statewide/dossiers/justice-position-no-3-supreme-court/"
+      ],
+      "office_does": "One of nine statewide-elected justices on Washington's court of last resort, deciding appeals, state constitutional questions, and the rules that govern every court in the state.",
+      "race_blurb": "An open seat. Mason County Superior Court Judge David Stevens, a self-described textualist and originalist and critic of the court's criminal-procedure rules, finished first in the August primary (35.3%) against King County Superior Court Judge Jaime Hawk (33.4%), a former public defender and ACLU attorney backed by most sitting justices and the governor.",
+      "candidates": [
+        {
+          "slug": "david-stevens",
+          "summary": "Mason County Superior Court judge, elected in 2023 over an appointed incumbent, with a career spanning state, federal and international prosecution and public defense. He describes himself as a textualist and originalist and criticizes recent Supreme Court rules on criminal procedure.",
+          "highlights": [
+            "Site: the state constitution \"should be interpreted based on its text and original meaning and not on evolving societal standards\" [S3]",
+            "Criticizes the court's juvenile-warrant, arraignment-deadline and jury-selection rules and supports failure-to-appear warrants [S3][S10]",
+            "About a decade as a Spokane County deputy prosecutor, plus federal prosecutor and public-defender roles [S1][S8]",
+            "Argues appointment of judges \"leads to ideological and political decisions\"; reached the bench by defeating an appointed incumbent [S1][S4][S8]",
+            "First in the primary with 35.29%; endorsed by WACOPS and recommended by the state Republican Party [S7][S8]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "judicial": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S8",
+                "S1"
+              ],
+              "basis": "Self-described textualist/originalist; text-and-original-meaning reading of the constitution and 'not for the courts to lead the way'; unchanged from the primary, now with more statements."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S10",
+                "S9",
+                "S8"
+              ],
+              "basis": "Documented positions against the court's juvenile-warrant, arraignment-deadline and bail-related rule changes and for failure-to-appear warrants, on a prosecution-heavy career; public-defender years keep it off -2. Confidence raised from medium because the positions are now repeated across his site and news interviews."
+            },
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S4",
+                "S8"
+              ],
+              "basis": "A sitting elected trial judge who campaigns as the outsider to the appointment pipeline; unchanged from the primary."
+            }
+          }
+        },
+        {
+          "slug": "jaime-michelle-hawk",
+          "summary": "King County Superior Court judge since a 2022 appointment, formerly a state and federal public defender and ACLU of Washington attorney. She describes a text-first approach and focuses on court funding, juror pay and access to lawyers.",
+          "highlights": [
+            "Says her approach starts from the text, then legislative intent where the text is ambiguous [S9]",
+            "Says overturning precedent must meet the \"incorrect ... and harmful\" threshold, citing recent reversals tied to racial-justice concerns as examples [S10]",
+            "Former juvenile and federal public defender and Legal Strategy Director for the ACLU-WA Smart Justice campaign [S3][S9]",
+            "Endorsed by Governor Ferguson, Chief Justice Stephens and several justices, and the State Labor Council [S1][S4]",
+            "Second in the primary with 33.37%; leads in campaign fundraising (about $310,600 to about $62,200) [S6][S8][S9]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "judicial": {
+              "score": 1,
+              "confidence": "low",
+              "citations": [
+                "S10",
+                "S9",
+                "S13"
+              ],
+              "basis": "Text-first method, but her precedent answer holds up recent reversals of 'harmful and incorrect' precedent tied to racial justice as legitimate examples, and The Urbanist endorsed her as a 'reformer'. Raised from the primary's refutation-adjusted 0 on this new forum evidence; medium because it rests on one forum answer plus an endorser's characterization.",
+              "adjusted_by_refutation": true
+            },
+            "safety": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S9",
+                "S1"
+              ],
+              "basis": "Professional formation is defense and civil liberties (juvenile and federal public defender, ACLU-WA Smart Justice); no documented bail or diversion statements, so not +2. Evidence unchanged from the primary."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S4",
+                "S9",
+                "S5"
+              ],
+              "basis": "Sitting trial judge since a 2022 gubernatorial appointment, backed by the governor and most sitting justices; unchanged from the primary."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "justice-position-no-4-supreme-court",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/statewide/dossiers/justice-position-no-4-supreme-court/"
+      ],
+      "office_does": "One of nine statewide-elected justices on Washington's court of last resort, deciding appeals, state constitutional questions, and the rules that govern every court in the state.",
+      "race_blurb": "An open seat: Justice Charles W. Johnson must retire at 75, and only two candidates filed, so the race skipped the primary. Court of Appeals Judge Ian Birk, backed by most sitting justices and labor, faces King County Superior Court Judge Sean O'Donnell, a former prosecutor backed by the Seattle Times, law enforcement, the state Republican Party and Democratic officials including Gregoire; O'Donnell's Republican recommendation and Birk's fundraising emails about it have become a point of dispute.",
+      "candidates": [
+        {
+          "slug": "ian-birk",
+          "summary": "Division I Court of Appeals judge since a 2022 appointment, after 20 years as a civil litigator representing consumers and policyholders. He points to 200-plus appellate opinions and the backing of most sitting justices.",
+          "highlights": [
+            "Court of Appeals judge since April 2022 (appointed, then retained unopposed), with more than 200 authored opinions [S6][S3]",
+            "Wrote the published opinion letting the Attorney General subpoena Archdiocese of Seattle records on clergy abuse, within religion-clause limits [S8]",
+            "Says the state constitution is \"more important now than it ever has\" been and that he decides cases with \"respect for legal precedent\" [S11][S5]",
+            "Endorsed by seven sitting justices, AG Brown, the State Labor Council and King County Democrats; rated Exceptionally Well Qualified by Washington Women Lawyers [S4][S11][S1][S17]",
+            "His campaign's emails calling O'Donnell \"a Republican-affiliated judge\" drew a letter from 62 judges and a Seattle Times editorial [S14][S15]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S6",
+                "S1",
+                "S4"
+              ],
+              "basis": "Sitting appellate judge with institutional support from most of the court, but four years on the bench by appointment; new candidate, first scoring."
+            },
+            "safety": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S7"
+              ],
+              "basis": "In his own written questionnaire answers he reports taking a National Judicial College seminar on 'reducing disparity through nontraditional diversion' and says he intends to bring that to his work, alongside a call for judges to address the system's 'disproportionate impact on communities of color and people of limited means' [S7]. This is a single clear first-person statement favoring diversion, which the judicial safety rule accepts. Not higher, because he has no criminal-law formation and no bail or diversion rulings.",
+              "added_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "sean-odonnell",
+          "summary": "King County Superior Court judge since 2013 and former 12-year King County prosecutor, including the Green River Task Force. He emphasizes trial-court leadership and victims' voices and has a cross-partisan endorsement list.",
+          "highlights": [
+            "Superior Court judge since 2013; former Chief Criminal and Chief Unified Family Court judge and Superior Court Judges' Association president [S6][S3]",
+            "Prosecutor 2001-2013, including the Green River Task Force and the state's first human trafficking case [S1][S6]",
+            "Says judges can \"honor victims' rights while vigorously protecting defendants' constitutional guarantees\"; helped start a protection-order court [S4][S1]",
+            "Rated Exceptionally Well Qualified by the King County Bar Association; endorsed by the Seattle Times, Gregoire, Reps. Smith and Strickland, and law enforcement [S14][S1][S7]",
+            "The state Republican Party recommends him; he declined to disavow it, citing judicial-conduct limits [S10][S11]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S4",
+                "S6"
+              ],
+              "basis": "Twelve-year prosecution formation and a campaign centered on victims' voices and firearm surrender; his campaign-reported pretrial-release reform work keeps it off -2. No documented bail or diversion rulings."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S6",
+                "S1",
+                "S3"
+              ],
+              "basis": "Nearly 14 years as a trial judge with chief-judge and statewide association leadership, running on that record; new candidate, first scoring."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "justice-position-no-5-supreme-court",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/statewide/dossiers/justice-position-no-5-supreme-court/"
+      ],
+      "office_does": "One of nine statewide-elected justices on Washington's court of last resort, deciding appeals, state constitutional questions, and the rules that govern every court in the state.",
+      "race_blurb": "A race for the two years left on retired Justice Barbara Madsen's term. Justice Theo Angelis, appointed by Governor Ferguson in April 2026, led the August primary (35.9%) over retired Federal Way Municipal Court Judge Dave Larson (32.2%), who runs on trial-bench experience, applying the law \"as written\" and changing how justices are appointed.",
+      "candidates": [
+        {
+          "slug": "theo-angelis",
+          "summary": "Sitting justice appointed by Governor Ferguson in 2026 after 26 years at K&L Gates, where he led the appellate and IP practices, with pro bono immigration work. He has no authored opinions yet and the backing of all his colleagues.",
+          "highlights": [
+            "On the Supreme Court since April 4, 2026; no authored opinions found through October 1, 2026 [S3][S4]",
+            "Says the court's role is to \"apply the law fairly, independently, neutrally, and consistently\" and that he has ruled against his own view when the law required it [S10][S9]",
+            "26 years at K&L Gates; pro bono litigation over children without lawyers in immigration court [S1][S3]",
+            "Endorsed by the Seattle Times for the general, all of his colleagues, and Governors Ferguson and Gregoire; rated Exceptionally Well Qualified by two bar groups [S11][S1][S13][S14]",
+            "First in the primary with 35.92% [S16]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S1",
+                "S6"
+              ],
+              "basis": "Runs as the incumbent with the court's and governors' institutional backing, but six months on the bench by appointment; evidence unchanged in substance from the primary."
+            }
+          }
+        },
+        {
+          "slug": "dave-larson",
+          "summary": "Retired Federal Way Municipal Court presiding judge with 18 years on the bench and 23 as a trial lawyer, and a repeat Supreme Court candidate who lost the 2024 race by about 20,000 votes. He runs as a critic of the court's direction and the appointment process.",
+          "highlights": [
+            "Site: \"Apply the law as written, not as you wish it had been\" [S4]",
+            "Called the Blake decision \"motivated by ideology\" and opposed proposed bail rules he said would \"cripple\" trial courts [S2]",
+            "Served on the DMCJA Therapeutic Courts Committee 2019-2025 [S6]",
+            "Proposes a bipartisan Judicial Elections Commission to vet appointees [S8][S9]",
+            "Second in the primary with 32.24%; the one located 2026 bar rating is \"Qualified\" (Tacoma-Pierce County Bar) [S16][S11]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "judicial": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S3",
+                "S2"
+              ],
+              "basis": "New campaign-site statement 'Apply the law as written, not as you wish it had been' and 'not to impose ideology', on top of the primary's Blake-was-ideological criticism. Moved from -1 to -2; medium because it rests on campaign-site wording plus one earlier interview."
+            },
+            "safety": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S6",
+                "S1"
+              ],
+              "basis": "Genuinely mixed: opposed proposed bail rules and says court decisions weakened trial courts' response to crime, yet served six years on the Therapeutic Courts Committee and campaigns on 'compassion and accountability'; unchanged from the primary."
+            },
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S8",
+                "S9"
+              ],
+              "basis": "Long judicial tenure (18 years, municipal level) but campaigns as an outsider against the appointed incumbent and the appointment process; unchanged from the primary."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "justice-position-no-7-supreme-court",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/statewide/dossiers/justice-position-no-7-supreme-court/"
+      ],
+      "office_does": "One of nine statewide-elected justices on Washington's court of last resort, deciding appeals, state constitutional questions, and the rules that govern every court in the state.",
+      "race_blurb": "Chief Justice Debra Stephens, on the court since 2008, led the August primary with 54.5% against Tacoma tax attorney and Navy veteran Todd Bloom (27.2%), who has never held judicial office and criticizes the court's McCleary, Quinn and natural-gas initiative rulings.",
+      "candidates": [
+        {
+          "slug": "debra-l-stephens",
+          "summary": "Chief Justice and a justice since 2008, formerly a Court of Appeals judge and Gonzaga appellate lawyer and professor. She describes a text-and-structure method applied to a constitution written as a broad framework, and wrote McCleary.",
+          "highlights": [
+            "On the court since 2008, Chief Justice since January 2025 [S1][S7]",
+            "Wrote McCleary (2012), recognizing a positive constitutional right to amply funded K-12 education [S2][S6]",
+            "Wrote the 6-3 majority striking Initiative 2066 on single-subject grounds [S4][S10]",
+            "Describes \"respect for text and structure\" and admires Justice Brennan's view that \"rights without remedies are hollow\" [S9]",
+            "Endorsed by all other sitting justices and 150+ judges; first in the primary with 54.50% [S3][S7]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "judicial": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S9",
+                "S2",
+                "S6"
+              ],
+              "basis": "Constitution as a broad framework applied with fidelity to purposes, broader state protections, Brennan's 'rights without remedies are hollow', and authorship of McCleary; her stated respect for text and structure keeps it at +1. Unchanged from the primary."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S6",
+                "S3"
+              ],
+              "basis": "Eighteen years on the court, current Chief Justice, prior Court of Appeals service and the whole court's endorsement; unchanged from the primary."
+            }
+          }
+        },
+        {
+          "slug": "todd-a-bloom",
+          "summary": "Tacoma tax and business attorney, CPA and Navy veteran who serves on the WSBA Board of Governors and has never held judicial office. He runs on judicial restraint and criticizes several of the court's major rulings.",
+          "highlights": [
+            "Says judges should \"faithfully apply the law as written\" and exercise \"judicial restraint\" [S3][S10]",
+            "Says Quinn was \"wrongly decided\" and the McCleary contempt sanctions overstepped the separation of powers [S4][S7]",
+            "Also says judges must consider how rulings are received and give more weight to voter-approved measures [S7]",
+            "No judicial service; FINRA arbitrator 1999-2020 and active-duty Navy officer 2002-2013 [S1]",
+            "Recommended by the state Republican Party; second in the primary with 27.20% [S5][S8]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "judicial": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S10",
+                "S4",
+                "S3"
+              ],
+              "basis": "Repeated restraint and as-written statements and criticism of McCleary and Quinn; medium, not high, because he also says judges must weigh how rulings will be received. Unchanged from the primary.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S4",
+                "S7"
+              ],
+              "basis": "No judicial service and frames the race as a choice to 'give someone new your vote'; unchanged from the primary."
+            }
+          }
+        }
+      ]
+    }
+  ]
 }

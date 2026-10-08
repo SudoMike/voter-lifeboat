@@ -130,54 +130,35 @@ class HandBuiltStatewidePackageTest(unittest.TestCase):
         self.assertEqual(self.SUPREME_COURT, [c["slug"] for c in read(self.contests)["contests"]])
         self.assertEqual(self.MEASURES, [m["slug"] for m in read(self.measures)["measures"]])
 
-    def test_district_contests_merge_after_hand_built_ones(self):
-        original = read(self.contests)
+    # Ownership decision (issue #9): in the general, congressional and
+    # legislative contests are county-owned; the statewide package holds only
+    # Statewide Contests, so county app-contests.json never reaches it.
+    def test_county_district_contests_never_reach_the_general_statewide_file(self):
         self.add_county("adams")
         normalize_research_inputs.normalize(GENERAL.id, package_root=self.root)
-        merged = read(self.contests)
-        self.assertEqual(original["contests"], merged["contests"][:5])
-        added = merged["contests"][5:]
-        self.assertTrue(added)
-        self.assertTrue(all(c["category"] in {"Federal", "State"} for c in added))
-        self.assertTrue(all(c["counties"] == ["adams"] for c in added))
-        self.assertEqual(original["method"], merged["method"])
-        self.assertIsNone(merged["script"])
-        source = "data/washington-state/elections/2026-11-03-general/counties/adams/interim/app-contests.json"
-        self.assertEqual(original["derived_from"] + [source], merged["derived_from"])
-        self.assertEqual({
-            "script": "pipeline/normalize_research_inputs.py",
-            "derived_from": [source],
-            "contests": [c["slug"] for c in added],
-        }, merged["normalized"])
-        self.assertEqual((GENERAL.state / "interim/measures.json").read_text(), self.measures.read_text())
+        real = GENERAL.state / "interim"
+        self.assertEqual((real / "contests.json").read_text(), self.contests.read_text())
+        self.assertEqual((real / "measures.json").read_text(), self.measures.read_text())
+        county = read(self.root / "counties/adams/interim/contests.json")["contests"]
+        self.assertTrue(any(c["category"] in {"Federal", "State"} for c in county))
 
-    def test_merge_is_idempotent_and_drops_stale_district_contests(self):
-        original = self.contests.read_text()
+    def test_general_without_statewide_files_gets_none_written(self):
+        self.contests.unlink()
+        self.measures.unlink()
         self.add_county("adams")
         normalize_research_inputs.normalize(GENERAL.id, package_root=self.root)
-        once = self.contests.read_text()
-        normalize_research_inputs.normalize(GENERAL.id, package_root=self.root)
-        self.assertEqual(once, self.contests.read_text())
-        shutil.rmtree(self.root / "counties/adams")
-        normalize_research_inputs.normalize(GENERAL.id, package_root=self.root)
-        self.assertEqual(json.loads(original), read(self.contests))
+        self.assertFalse(self.contests.exists())
+        self.assertFalse(self.measures.exists())
 
-    def test_hand_built_contest_wins_slug_collision(self):
-        self.add_county("adams")
-        normalize_research_inputs.normalize(GENERAL.id, package_root=self.root)
-        slug = read(self.contests)["normalized"]["contests"][0]
-        self._tmp.cleanup()
-        self.setUp()
-        hand = read(self.contests)
-        hand["contests"].append({"category": "Federal", "office": "Hand", "district": "Hand",
-                                 "slug": slug, "candidates": []})
-        self.contests.write_text(json.dumps(hand, indent=2, ensure_ascii=False) + "\n")
-        self.add_county("adams")
-        normalize_research_inputs.normalize(GENERAL.id, package_root=self.root)
-        merged = read(self.contests)
-        winners = [c for c in merged["contests"] if c["slug"] == slug]
-        self.assertEqual([hand["contests"][-1]], winners)
-        self.assertNotIn(slug, merged["normalized"]["contests"])
+    def test_statewide_owned_districts_refuse_a_hand_built_statewide_file(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = copy_inputs(PRIMARY, tmp)
+            contests = root / "statewide/interim/contests.json"
+            contests.write_text(json.dumps({"script": None, "contests": []}))
+            before = {p: p.read_text() for p in root.glob("**/interim/*.json")}
+            with self.assertRaises(SystemExit):
+                normalize_research_inputs.normalize(PRIMARY.id, package_root=root)
+            self.assertEqual(before, {p: p.read_text() for p in root.glob("**/interim/*.json")})
 
     def test_refuses_to_overwrite_a_county_file_it_did_not_write(self):
         self.add_county("adams")

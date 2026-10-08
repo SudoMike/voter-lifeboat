@@ -37,6 +37,8 @@ export default function Confirm({ data, context, ballot, onProceed, onRetry }) {
   })
   const races = ballot.contests.length
   const measures = ballot.measures.length
+  // Statewide initiatives are not "local" measures.
+  const localOnly = ballot.measures.every((m) => m.scope?.kind !== 'STATEWIDE')
 
   return (
     <main className="screen screen--app rise" style={{ padding: '40px 24px 40px', textAlign: 'center' }}>
@@ -88,7 +90,7 @@ export default function Confirm({ data, context, ballot, onProceed, onRetry }) {
           <>
             , plus{' '}
             <strong>
-              {measures} local {measures === 1 ? 'measure' : 'measures'}
+              {measures} {localOnly ? 'local ' : ''}{measures === 1 ? 'measure' : 'measures'}
             </strong>
             .
           </>

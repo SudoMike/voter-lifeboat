@@ -2,19 +2,23 @@
 
 County app files retain presentation and scope fields.  Research only needs
 contest identity plus candidate identity, so this produces the same core shape
-as King County's ``parse_candidates.py`` output.  Congressional and legislative
-contests are additionally deduplicated into one statewide research package.
+as King County's ``parse_candidates.py`` output.
+
+Who owns congressional and legislative (district) contests is declared per
+election in ``election.APP_PACKAGES[<id>]["district_contests"]``:
+
+* ``"statewide"`` (the primary): they are also deduplicated into the statewide
+  package's ``interim/contests.json``, which this script then owns. A
+  hand-built statewide contests.json for such an election is a conflict.
+* ``"county"`` (the general onward): they stay in the county packages. The
+  statewide ``interim/contests.json`` holds only Statewide Contests and is
+  never written here, whoever wrote it.
 
 Files this script did not write (their ``script`` is not this script) are
 never replaced:
 
-* A hand-built statewide ``interim/contests.json`` (e.g. the general's Supreme
-  Court contests, issue #5) keeps its contests verbatim and first; normalized
-  district contests are appended unless a hand-built contest has the same slug.
-  The appended slugs and their sources are recorded under ``normalized`` and
-  the sources are added to ``derived_from``, so a rerun replaces exactly that
-  part. If nothing changes the file is not rewritten.
-* A hand-built statewide ``interim/measures.json`` is left untouched.
+* A hand-built statewide ``interim/{contests,measures}.json`` (e.g. the
+  general's, issue #5) is left untouched.
 * A county ``interim/{contests,measures}.json`` written by another script is a
   conflict: the script exits before writing anything.
 
@@ -108,32 +112,6 @@ def _merge_shared_contest(shared, key, contest, county):
     )
 
 
-def _merge_hand_built(hand, district_contests, sources):
-    """Hand-built statewide contests plus normalized district contests.
-
-    ``hand`` may carry a previous merge (its ``normalized`` block); that part
-    is dropped and rebuilt, so reruns are idempotent. Hand-built contests win
-    a slug collision.
-    """
-    previous = hand.get("normalized", {})
-    stale_slugs = set(previous.get("contests", []))
-    stale_sources = set(previous.get("derived_from", []))
-    merged = {key: value for key, value in hand.items() if key not in ("normalized", "contests")}
-    kept = [c for c in hand["contests"] if c["slug"] not in stale_slugs]
-    hand_slugs = {c["slug"] for c in kept}
-    added = [c for c in district_contests if c["slug"] not in hand_slugs]
-    merged["derived_from"] = [d for d in hand.get("derived_from", []) if d not in stale_sources]
-    if added:
-        merged["derived_from"] += [d for d in sources if d not in merged["derived_from"]]
-        merged["normalized"] = {
-            "script": SCRIPT,
-            "derived_from": sources,
-            "contests": [c["slug"] for c in added],
-        }
-    merged["contests"] = kept + added
-    return merged
-
-
 def normalize(election_id=None, package_root=None):
     """Normalize one election package.
 
@@ -179,10 +157,18 @@ def normalize(election_id=None, package_root=None):
                 continue
             _merge_shared_contest(shared, key, contest, county_dir.name)
 
+    statewide_owns_districts = e.app_packages["district_contests"] == "statewide"
+    contests_path = statewide_interim / "contests.json"
+    measures_path = statewide_interim / "measures.json"
+
     conflicts = [rel(path) for path, _ in county_outputs if _foreign(path) is not None]
+    if statewide_owns_districts and _foreign(contests_path) is not None:
+        # Hand-built Statewide Contests and normalized district contests never
+        # share a file (statewide/COMPLETENESS.md, issue #9).
+        conflicts.append(rel(contests_path))
     if conflicts:
         raise SystemExit(
-            "refusing to overwrite county files written by another script: "
+            "refusing to overwrite files written by another script: "
             + ", ".join(conflicts)
         )
 
@@ -209,24 +195,17 @@ def normalize(election_id=None, package_root=None):
     for path, value in county_outputs:
         _write(path, value)
 
-    contests_path = statewide_interim / "contests.json"
-    hand_contests = _foreign(contests_path)
-    if hand_contests is None:
-        _write(contests_path, {
-            "derived_from": sources,
-            "script": SCRIPT,
-            "contests": statewide_contests,
-        })
-        statewide_note = f"statewide shared contests: {len(statewide_contests)}"
-    else:
-        merged = _merge_hand_built(hand_contests, statewide_contests, sources)
-        if merged != hand_contests:
-            _write(contests_path, merged, ensure_ascii=False)
-        added = len(merged.get("normalized", {}).get("contests", []))
-        statewide_note = (f"statewide contests: kept {len(merged['contests']) - added} hand-built, "
-                          f"merged {added} shared district contests")
+    if not statewide_owns_districts:
+        print(f"normalized counties: {len(county_outputs) // 2}; statewide package not written: "
+              f"{len(statewide_contests)} district contests stay county-owned in {e.id}")
+        return
 
-    measures_path = statewide_interim / "measures.json"
+    _write(contests_path, {
+        "derived_from": sources,
+        "script": SCRIPT,
+        "contests": statewide_contests,
+    })
+    statewide_note = f"statewide shared contests: {len(statewide_contests)}"
     if _foreign(measures_path) is None:
         _write(measures_path, {
             "derived_from": [],

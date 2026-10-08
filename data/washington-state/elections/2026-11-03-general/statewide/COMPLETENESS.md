@@ -37,7 +37,10 @@ owned by the county packages. A congressional or legislative district that
 crosses county lines is still county-owned in this architecture. The August
 primary's statewide package held deduplicated congressional and legislative
 contests produced by `pipeline/normalize_research_inputs.py`; the general
-package does not.
+package does not. Issue #9 recorded this as the ownership rule from the general
+onward: `pipeline/election.py` declares `district_contests: "county"` for this
+election, and `pipeline/normalize_research_inputs.py` never writes this
+package's `interim/` files, so county district contests cannot be merged in.
 
 ## Sources
 
@@ -53,4 +56,8 @@ package does not.
   `raw/sos/2026-voters-pamphlet-pdfs.html.url`, transcribed to
   `interim/pamphlet-editions.json`
 
-Dossiers (`dossiers/`) and scoring (`scoring/`) are not built yet.
+Dossiers (`dossiers/`), scoring (`scoring/`) and refutations
+(`scoring/refutations/`) exist for all ten justice candidates (#8) and all
+three measures (#6, #7). Since #9 this package is the general's whole shipped
+ballot: `data/final/2026-11-03-general/app-data.json` has
+`coverage.statewide_complete: true` and no supported counties.
