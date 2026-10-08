@@ -1,0 +1,34 @@
+{
+  "scored_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/statewide/dossiers/measures/",
+    "data/final/2026-11-03-general/rubric.json"
+  ],
+  "measures": [
+    {
+      "slug": "initiative-measure-no-ip26-645",
+      "what_it_does": "Repeals the 9.9% tax on Washington taxable income above $1 million that the Legislature passed in 2026 (ESSB 6346), which would first apply to 2028 income, and adds a state law barring the state, counties, cities and all other local governments from taxing individual income or taxing by a measure of it. The sales tax, B&O tax and Working Families Tax Credit changes passed with the tax are not repealed.",
+      "cost_line": "OFM estimates $11.4 billion less state revenue over fiscal years 2027-2031, mostly from the general fund that pays for K-12, higher education and human services, including $377 million that would have gone to child care and early learning; agency savings of about $150 million; no effect on local revenue.",
+      "pro_summary": "The statement in favor (State Sen. Chris Gildon, a retired Seattle firefighter/paramedic and small business owners) says voters have rejected an income tax ten times, that lawmakers left the door open to extend this one below $1 million, and that the Legislature has repeatedly shifted dedicated funds; it says the tax relief passed with the tax would stay in place.",
+      "con_summary": "The statement against (Washington Education Association President Janie White, Washington State Labor Council President April Sims, a nurse, a teacher, a brewery owner and a Planned Parenthood Advocates representative) says the repeal is a tax break for the top 1% that would cut funding for schools, health care and childcare, and that the tax cuts for working families and small businesses depend on this revenue.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": -2,
+          "basis": "YES repeals a 9.9% tax on income over $1 million (OFM: $11.4 billion in state revenue over SFY 2027-2031) and bars any future state or local income tax by statute: the rubric's 'limit & cut taxes' pole against its named 'millionaires tax' example of the other pole.",
+          "citations": ["S1", "S3", "S5", "S8"]
+        },
+        "local-control": {
+          "direction": 1,
+          "basis": "YES writes one statewide rule that binds 'the state, counties, cities, and all other local jurisdictions', taking the income-tax option away from every local government (a state limit on local authority, the regional/state-standards pole). Strength 1, not 2: RCW 1.90.100 (I-2111) already bars local income taxes and ESSB 6346 left that ban in place for local governments, so the change for cities and counties is a re-enactment in broader terms.",
+          "citations": ["S5", "S9", "S7"]
+        },
+        "spending": {
+          "direction": -1,
+          "basis": "The yes case rests on fiscal restraint and accountability (fund transfers, unkept spending commitments, 'demonstrate they can keep the commitments') while the no case and OFM tie the revenue to K-12, health care, childcare and free school meals; YES removes revenue the Legislature meant for those expansions. Strength 1 because the measure itself contains no audit or spending rule and the effect runs through revenue.",
+          "citations": ["S4", "S3", "S8"]
+        }
+      },
+      "sources_note": "Pamphlet ballot title, AG explanatory statement, OFM fiscal impact statement, pro/con statements and complete text (S1-S5); AG public investment impact disclosure (S6); House Office of Program Research summary (S7); ESSB 6346 session law (S8); RCW 1.90.100 (S9); PDC committee and contribution data for No on 645, Vote Yes Repeal the Income Tax and Let's Go Washington (S11-S14); litigation coverage (S15-S18); endorsements (S19-S24)."
+    }
+  ]
+}

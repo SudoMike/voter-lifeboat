@@ -1,0 +1,12 @@
+{
+  "url": "https://data.wa.gov/resource/kv7h-kjye.json?committee_id=42237&$where=amount>=50000&$select=contributor_name,amount,receipt_date,cash_or_in_kind&$order=amount%20DESC",
+  "retrieved_at": "2026-10-08",
+  "stage": "raw",
+  "method": "source pointer; HTTP GET (curl), cached copy under data/.cache/ip26-645 (gitignored)",
+  "cache_file": "data/.cache/ip26-645/pdc-yes-50k.json",
+  "bytes": 1426,
+  "sha256": "ff90f51165091f73255d66760ab22f8ab03ab570fa29cee959f1c00efa47bb98",
+  "publisher": "Washington Public Disclosure Commission (PDC), Contributions to Candidates and Political Committees dataset on data.wa.gov",
+  "tier": 1,
+  "notes": "Itemized contributions of $50,000 or more to 'Vote Yes Repeal the Income Tax' (committee 42237). Committee totals query (count 137, sum 1586970.00, latest receipt 2026-10-04) cached as pdc-yes-total.json."
+}

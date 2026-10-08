@@ -1,0 +1,12 @@
+{
+  "url": "https://data.wa.gov/resource/3h9x-7bvm.json?$where=committee_id%20in%20('42211','42237')&$select=filer_name,committee_id,for_or_against,ballot_number,contributions_amount,expenditures_amount,updated_at,election_year",
+  "retrieved_at": "2026-10-08",
+  "stage": "raw",
+  "method": "source pointer; HTTP GET (curl), cached copy under data/.cache/ip26-645 (gitignored)",
+  "cache_file": "data/.cache/ip26-645/pdc-summary.json",
+  "bytes": 488,
+  "sha256": "8164f80f2c512d5dbc37aeeff8161a9c4e09c37fb89e68509d49e1e648459154",
+  "publisher": "Washington Public Disclosure Commission (PDC), Campaign Finance Summary dataset on data.wa.gov",
+  "tier": 1,
+  "notes": "Committee totals. 'No on 645' (committee 42211, against, ballot_number '645'): contributions_amount 11522533.97, expenditures_amount 429686.81, updated_at 2026-10-05T21:42:24. 'Vote Yes Repeal the Income Tax' (committee 42237, for, ballot_number registered as 'IL26-645'): contributions_amount 1586970.00, expenditures_amount 269085.14, updated_at 2026-10-05T10:56:53. PDC registration pages: https://my.pdc.wa.gov/registration/public/-/#/public/registration/69832 (No) and https://my.pdc.wa.gov/registration/public/-/#/public/registration/69894 (Yes), not fetched (JavaScript app)."
+}
