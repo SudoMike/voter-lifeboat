@@ -125,6 +125,11 @@ for scoring_dir in SCORING_DIRS:
             stats["missing_added"] += 1
     measures_out.extend(meas["measures"])
 
+if not measure_sources:
+    # An election with no researched measures yet still records where they
+    # would come from, so the empty output has provenance.
+    measure_sources = [f"{d.relative_to(ROOT).as_posix()}/measures.json" for d in SCORING_DIRS]
+
 FINAL.mkdir(parents=True, exist_ok=True)
 (FINAL / "scores.json").write_text(json.dumps({
     "derived_from": [source for scoring_dir in SCORING_DIRS for source in (
