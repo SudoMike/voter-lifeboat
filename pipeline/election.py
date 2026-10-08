@@ -70,7 +70,7 @@ APP_PACKAGES = {
         "counties": ["king", "snohomish", "spokane", "pierce", "clark", "kitsap", "thurston", "yakima", "whatcom",
                      "benton", "skagit", "cowlitz", "grant", "island", "lewis", "franklin", "chelan", "clallam",
                      "grays-harbor", "mason", "walla-walla", "stevens", "whitman", "douglas", "okanogan",
-                     "jefferson", "kittitas", "klickitat", "pacific", "asotin"],
+                     "jefferson", "kittitas", "klickitat", "pacific", "asotin", "adams"],
         "district_contests": "county",
     },
 }
