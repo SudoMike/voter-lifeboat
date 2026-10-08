@@ -1,0 +1,18 @@
+{
+  "url": "https://data.wa.gov/resource/kv7h-kjye.json?$select=contributor_name%2csum%28amount%29+as+total&$where=filer_name+like+%27%25Parshley%25%27+AND+election_year%3d%272026%27&$group=contributor_name&$order=total+DESC&$limit=15",
+  "retrieved_at": "2026-10-08",
+  "method": "curl -sL -A \"Mozilla/5.0\" during dossier research for issue #22; cached at data/.cache/thurston/thurston-legislative-district-22-state-representative-pos-2/pdc-top-contributors-parshley-2026.json (gitignored)",
+  "stage": "raw",
+  "source_type": "campaign-finance",
+  "tier": 1,
+  "outlet": "Washington State Public Disclosure Commission (open data, contributions dataset kv7h-kjye, 2026 top contributors)",
+  "cache_file": "data/.cache/thurston/thurston-legislative-district-22-state-representative-pos-2/pdc-top-contributors-parshley-2026.json",
+  "bytes": 909,
+  "sha256": "aca13a5f5b968d00ad1953a83058fa259ee732cd377797ae1e65ce3e461527c8",
+  "cited_by": [
+    {
+      "dossier": "data/washington-state/elections/2026-11-03-general/counties/thurston/dossiers/thurston-legislative-district-22-state-representative-pos-2/lisa-parshley.md",
+      "source_id": "S22"
+    }
+  ]
+}

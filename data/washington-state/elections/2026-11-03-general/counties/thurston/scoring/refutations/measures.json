@@ -1,0 +1,91 @@
+{
+  "contest_slug": "measures",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/thurston/scoring/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/thurston/dossiers/measures/",
+    "data/washington-state/elections/2026-11-03-general/counties/thurston/interim/app-measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/thurston/interim/pdf-text/local-voters-pamphlet.txt",
+    "data/final/2026-11-03-general/rubric.json"
+  ],
+  "verdicts": [
+    {
+      "candidate": "thurston-timberland-regional-library-district-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked on strength. The closest case for 1 is Spokane FD11, a restoration of a rate eroded by the 1% limit, scored 1. It does not carry over. FD11 restored a rate voters had approved in 2021, while TRL's last voter-approved lid lift was in 1987 and the 2009 attempt failed (S1, S3, S4). This is a permanent reset: the 2028 amount becomes the base for later limits (S1). The rate rises about 53% ($0.228924 to $0.35) and revenue about $14 million in 2027 (S1, S4, S7). King scored permanent or multi-year lid lifts of similar or smaller size at 2 (Clyde Hill, Kenmore, Lake Forest Park, up $0.22). The rubric's pole_b names 'levy-cap lifts'. S1, S4 and S7 support the basis; the $14 million figure is verbatim in the cached TRL levy page (S4)."
+    },
+    {
+      "candidate": "thurston-timberland-regional-library-district-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches the ballot title on pamphlet page 24 ($0.22 to $0.35, 2027 and 2028, 2028 amount as base under chapter 84.55 RCW). The 96% figure appears in the statement for (S1) and in the cached TRL levy page (S4). The five-county combined vote matches S4 and the Daily World ('50% plus one of all voters in the five counties', S9). 'Restore open hours, staffing, collections and programs' is attributed to TRL and matches S5's priority list. The explanatory statement says 'maintain' rather than 'restore', but the restoration wording is TRL's own and is attributed to it. cost_line: $0.228924, $40.44 on $334,000 (S1), $59 on $457,400 (S4, verified in cache), $69 on $530,959 (S1) and about $14 million (S4) all check. pro_summary names the TimberStrong Libraries Committee and quotes 'a long overdue cost-of-living raise' verbatim. The '25 years' claim is the statement's own, and the summary attributes it. con_summary names Sean Swope and Citizens for Accountable TR Libraries and quotes 'is not a vote against libraries or literacy' verbatim (pamphlet page 25). Neutral, with balanced length."
+    },
+    {
+      "candidate": "thurston-yelm-community-schools-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked on direction of baseline and strength. The case for 1: this is the district's long-standing EP&O levy at a lower rate than the $2.50 asked in 2024-25 (S8), and the explanatory statement frames it as maintaining programs (S1). It does not prevail. No Yelm EP&O levy was collected in 2025 or 2026 ('We will have no levy dollars for 2025 and 2026', S7, verified in cache; S4: 'functioned without a local levy for the last two years'). Against current bills, a yes vote adds about $1.50 per $1,000, about $11.2M to $12.3M a year (S1). That is the 'brand-new tax' case, and the rate is higher than Snohomish's Monroe levy ($0.88 average), which was adjusted to 2. S1, S4 and S7 support the basis."
+    },
+    {
+      "candidate": "thurston-yelm-community-schools-proposition-no-1",
+      "axis": "_display",
+      "verdict": "adjust",
+      "note": "One neutrality fix. what_it_does states as fact that the levy would 'let the board restore a limited number of cut programs'. That is the district's claim (S4: 'a limited amount of additional local funding that would allow the school board to reinstate a selection of instructional programs and student activities'). The statement against says it restores 'none of the programs already cut' (S1), and Director Ryan Jewell voted no because it 'doesn't add back programs' (S5). Attribute it. Corrected what_it_does: 'Authorizes a two-year educational programs and operations (EP&O) levy for Yelm Community Schools, which has had no local levy for 2025 and 2026 after four failed attempts. It would keep the programs in place in 2025-26, such as current class sizes, AP and electives, athletics, activities, nurses, security and school resource officers. The district says a limited amount would also let the board bring back some cut programs, and that if the levy fails the state would move it into financial oversight.' The rest checks out. The cost_line amounts and $1.50 match the ballot title (pamphlet page 26), and the 'lowest rate for full equalization' claim matches S4 ('at least $1.50 ... to be eligible for the full amount'). pro_summary (Yelm Kids First) and con_summary (Martin Miller and Frank Vance, 'paramount duty') match pamphlet page 27."
+    },
+    {
+      "candidate": "thurston-thurston-county-fire-protection-district-no-3-lacey-fire-district-3-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "adjust",
+      "adjusted_score": 2,
+      "note": "Strength is out of line with precedent. This is a new 20-year bond authorization, not a renewal (dossier: 'This is a new bond authorization, not a renewal'; S1). JOLT reports it 'would raise the tax rate by an estimated $0.22 to $0.25 per $1,000' (S6, verified in cache). Nothing in the dossier shows an expiring bond offsetting it: the 2017 bond's remaining term was not found. New fire-district bonds in the other packages were scored 2: King FD20 ($16M at about $0.28), Spokane FD9 Prop 2 ($70M at $0.39), and Snohomish's Hospital ($0.437) and Mukilteo (+20 cents) bonds. Only Snohomish South County Fire ($0.194 average) got 1. At about $0.23 and $98.3M for 20 years (about $115 a year on $500,000), this sits with FD20, not below it. The scoring's rationale ('a capital bond, not an operating levy') is not a strength criterion in any package. It is also internally inconsistent: TRL's smaller increase (about $0.12 per $1,000) gets 2 while this new $0.23 tax gets 1. Corrected basis: 'A yes vote adds a new excess property tax of about $0.23 per $1,000 (about $9.60 a month on a $500,000 home) for up to 20 years to repay $98.3 million in bonds; no expiring bond is shown to offset it.' Citations S1, S5 and S6."
+    },
+    {
+      "candidate": "thurston-thurston-county-fire-protection-district-no-3-lacey-fire-district-3-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches the ballot title and explanatory statement on pamphlet page 28: up to $98,300,000, 20 years, Britton Pkwy station, Station 32 replacement on the Yelm Highway, regional live fire training facility, logistics warehouse, property and apparatus. The 18,000 calls and one-of-five-stations-north-of-I-5 figures are from the statement for and the district (S1, S5, S6), and the summary attributes them to the district. cost_line: $0.23 and $9.60 match the explanatory statement, and $0.22 to $0.25 ($8 to $11) matches S5 and S6 (verified in the cached JOLT article). 'Bond money cannot pay salaries or operations' matches S1. pro_summary names Steve Brooks and Tom Carroll; the 43% and 'avoid higher construction costs later' points are verbatim in S1. con_summary matches the pamphlet notice. The cost_line could optionally add that this adds to any existing bond rate (JOLT: 'raise the tax rate by'), but the omission does not mislead."
+    },
+    {
+      "candidate": "thurston-west-thurston-regional-fire-authority-rochester-littlerock-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked on strength. The case for 2: no excess M&O levy has been on bills since the 2022 failure, so this is new against current bills (S3, S6), and $0.36 is above Snohomish South County Fire's $0.194 (scored 1). It does not prevail, because the levy lasts one year only (S1). The total is $1,547,228, and the cost is at most $180 a year on $500,000 (S1). Spokane scored the new six-year Nine Mile Falls levy at 38 cents as 1, and a one-year levy is smaller still. 1 fits. S1, S3 and S6 support the basis. Spending is not mapped, and that is correct: the money replaces aging apparatus and maintains facilities to 'maintain current service levels' (S1)."
+    },
+    {
+      "candidate": "thurston-west-thurston-regional-fire-authority-rochester-littlerock-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches pamphlet page 29: a one-year excess levy collected in 2027, a ballot title for M&O 'to maintain the current level' of service, and the explanatory statement's apparatus failures, facility water system and aging fleet. The narrower commitment ('All levy revenue will be dedicated to apparatus replacement and facility maintenance') is correctly attributed to the statement for. The levy failures in 2022 and 2024 match S3 to S6. The August 2026 election-night figures (51.6% Rochester, 59.16% Littlerock, against a 60% requirement) were verified in the cached Chronicle article (S8). cost_line: $1,547,228, $0.36 and '$15.00 monthly' maximum on $500,000 match S1, and $180 a year is correct arithmetic. pro_summary names Tyler Mason and Cathe Linn and paraphrases S1 accurately. con_summary matches the pamphlet notice."
+    }
+  ],
+  "missing": [
+    {
+      "candidate": "thurston-thurston-county-fire-protection-district-no-3-lacey-fire-district-3-proposition-no-1",
+      "axis": "spending",
+      "proposed_score": 1,
+      "confidence": "medium",
+      "citations": [
+        "S1",
+        "S5",
+        "S6",
+        "S7"
+      ],
+      "basis": "A yes vote funds new public capital beyond current service: a new station north of I-5 to close a response coverage gap, plus a new regional live fire training facility and a logistics warehouse, sized for 20 years of growth.",
+      "note": "The dossier declines spending because the money 'funds new capital ... rather than programs' and no opposing case was filed. Neither reason is a criterion in other packages. Snohomish mapped spending +2 on South County Fire's capital program with four new stations, and King mapped +1 on Auburn's fifth middle school, an added-capacity bond. Spokane left FD9's bond unmapped because its 'No. 1 focus' was replacing a temporary station and renovating existing ones, and King FD20 (renovation) is likewise unmapped. Lacey differs: the explanatory statement names 'a response coverage gap north of the interstate' and a new community fire station, and cites inadequate live fire training and storage, which the new training facility and warehouse address (S1, S5). Schmidt says the projects are sized for 20 years of growth (S6, S7). The Station 32 replacement is like-for-like, so strength 1, not 2."
+    },
+    {
+      "candidate": "thurston-timberland-regional-library-district-proposition-no-1",
+      "axis": "spending",
+      "proposed_score": 1,
+      "confidence": "medium",
+      "citations": [
+        "S1",
+        "S4",
+        "S5"
+      ],
+      "basis": "A yes vote funds more open hours, staffing, collections and programs after recent cuts, against an opposing case that the library should first cut costs and prove prudent management.",
+      "note": "Judgment call; the coordinator may decline it. The dossier skips spending under the Spokane convention for operating levies, but those Spokane levies were same-service renewals. Here TRL's stated priority order is more open hours and staffing, more collections spending, then more programs (S5), and the statement for says it would 'restore hours and staffing' and 'expand' collections and programs (S1). Staffing has fallen from about 251 FTE in 2016 to 182 (S4). The statement against is a direct pole-A case: 'Before asking taxpayers for additional revenue, the library should demonstrate that it has fully explored opportunities to reduce costs, improve operational efficiency' (S1). Against strength 2: the explanatory statement frames the money as maintaining services (S1), and much of it restores rather than adds service. Yelm is correctly left unmapped by contrast: the board and opponents agree it maintains current reduced programs (S1, S5)."
+    }
+  ]
+}
