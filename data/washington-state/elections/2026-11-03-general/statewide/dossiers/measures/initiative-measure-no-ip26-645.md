@@ -255,7 +255,7 @@ As of PDC records updated October 5, 2026 [S11]:
 - Let's Go Washington petitioned Thurston County Superior Court on July 27, 2026, arguing the disclosure "is inaccurate and would create prejudice against the measure" and that the initiative would in fact increase budget funding [S15]. Separately, Arthur West sued in the same court seeking an injunction to keep the disclosure off ballots [S15].
 - On August 7, 2026, Judge Chris Lanese upheld the statute in West's case, concluding the statement "ensures voters are aware of trade-offs" [S18][S17][S16]. The Center Square reported that this ruling pre-empted Let's Go Washington's separate challenge, whose hearing was canceled [S16].
 - State Supreme Court Commissioner Michael Johnston denied West's request for a preliminary injunction; the Washington State Republican Party, Tim Eyman and the Citizens in Charge Foundation filed briefs supporting West, and the Washington State Budget and Policy Center and the Economic Opportunity Institute filed a brief opposing him [S17].
-- On September 3, 2026, the state Supreme Court deadlocked 4-4 on West's emergency motion, so the motion was denied and the disclosure stays on the ballot [S18]. Justice Theo Angelis voted to grant the motion and Chief Justice Debra Stephens and Justice Colleen Melody voted to deny it; all three are candidates on this November ballot [S18]. West's broader challenge to the disclosure law was still pending as of that report [S18].
+- On September 3, 2026, the state Supreme Court deadlocked 4-4 on West's emergency motion, so the motion was denied and the disclosure stays on the ballot [S18]. West's broader challenge to the disclosure law was still pending as of that report [S18].
 - The ballot title and disclosure appear as the Attorney General drafted them [S1][S6].
 
 ## Endorsements
@@ -272,7 +272,7 @@ Opposing I-645 (no):
 - The Seattle Times editorial board recommended a no vote on September 6, 2026 [S21].
 - Washington State Democratic Party, Washington State Nurses Association, Washington State Medical Association and Washington State Association of Head Start and ECEAP are listed on the opposition campaign's coalition page [S22].
 - Gov. Bob Ferguson spoke at a "NO on I-645" event in July [S26].
-- Unions are the main funders of the No committee (see PDC figures above) [S12].
+- Nine of the ten largest contributors to No on 645 by total are labor unions or union funds (see PDC figures above) [S12].
 
 ## Axis notes
 
