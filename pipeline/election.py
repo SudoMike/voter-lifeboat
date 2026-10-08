@@ -121,6 +121,7 @@ DISTRICT_ADAPTER_LAYERS = {
     "klickitat": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "FIRDST", "EMSDST"),
     "pacific": ("CONGDST", "LEGDST", "CITY", "FIRDST", "EMSDST"),
     "asotin": ("CONGDST", "LEGDST", "CITY", "EMSDST", "PUDDST", "RURALEMSDST"),
+    "adams": ("CONGDST", "LEGDST", "CITY", "CEMDST", "PARKDST", "FIRDST"),
 }
 
 
