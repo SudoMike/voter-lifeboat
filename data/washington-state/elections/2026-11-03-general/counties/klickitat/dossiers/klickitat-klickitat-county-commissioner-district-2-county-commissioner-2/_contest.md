@@ -57,5 +57,5 @@ The three-member Board of County Commissioners adopts the county budget and ordi
 
 - `experience`: Zoller is the incumbent with decades of county project work; Kallinen has no elected county office.
 - `safety`: Kallinen is more explicit about adding deputies, dispatchers and a crisis responder; Zoller's record is the jail takeover and compliance.
-- `spending`: Zoller runs on lean reorganization and a stable budget; Kallinen on "limited" government. Both lean toward restraint.
+- `spending`: Zoller runs on lean reorganization and a stable budget; Kallinen on "limited" government while proposing more deputies, dispatchers and a crisis responder.
 - `taxes`, `housing`, `climate`, `reform`: little direct evidence from either.
