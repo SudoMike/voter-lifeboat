@@ -1,0 +1,92 @@
+{
+  "contest_slug": "measures",
+  "reviewed_at": "2026-10-09",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/clallam/scoring/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/clallam/dossiers/measures/",
+    "data/final/2026-11-03-general/rubric.json"
+  ],
+  "verdicts": [
+    {
+      "candidate": "clallam-clallam-county-proposed-charter-amendment-no-1",
+      "axis": "_display",
+      "verdict": "adjust",
+      "note": "what_it_does, cost_line and con_summary match S1-S3, S5 and S8. One wording point in pro_summary: 'Required evening town halls' adds a word the dossier does not support. The amendment requires meetings 'outside normal business hours' (S1, S5), which could include weekends, and Stoffer's objection that 'normal working hours' is undefined (S2, S8) makes the distinction matter. Suggested: 'Required town halls outside working hours would let people get answers and build confidence in county government.' Otherwise the Richards attribution and the claims about courthouse meetings and unanswered public-comment questions match S2. Lean mappings: the empty mapping holds. A yes vote adds no tax, fee or spending authority (S1, S3). Local-control was considered: the resolution says rural and outlying residents feel 'disconnected' (S5), and the statement for stresses meetings 'far removed from the people in the outlying areas' (S2). That concerns where and when the same county board meets the public, not moving decisions between levels of government, regional bodies or state mandates, which is what local-control covers under the 2026-10-08 addendum. The closest axis, reform, does not apply to measures."
+    },
+    {
+      "candidate": "clallam-clallam-county-proposed-charter-amendment-no-2",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1 and S5 (three unpaid members, one per district; appointed in rotation by the Auditor, Treasurer, Assessor and DCD; first-hand complaints certified under penalty of perjury; written findings posted online; no penalties; no conduct before the effective date). cost_line matches S1 and S3 and attributes the cost concern to opponents (S2, S8). pro_summary matches S2 ('while not illegal, can be unethical'; 'investigative and advisory'; guidance on best practices). The parenthetical on the withdrawal request is accurate to S4 and neutral; strictly she asked whether the statement could be withdrawn, then chose to keep it, which the wording fairly captures. con_summary matches S2 (Kelly) and S8 (Fane). Lean mappings: the empty mapping holds. Spending was the strongest candidate, since pole_a reads 'Oversight, audits, performance standards'. But the board reviews ethics complaints about officials' conduct; it does not audit spending, set performance standards or restrain budgets (S1, S5), and it cannot impose sanctions (S5). The cost argument comes only from opponents' speculation (S2, S8), not from the measure. No local-control angle: authority stays inside county government. Reform does not apply to measures."
+    },
+    {
+      "candidate": "clallam-clallam-county-proposed-charter-amendment-no-3",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1, S5 and S8. cost_line matches S3 and S7 and attributes both cost claims. pro_summary matches S2 ('has not always included the full text'; 'the devil is in the details'; 14-0, attributed to the statement since no minutes were reviewed). con_summary matches S2 ('precautionary, not established Washington law'; the charter should not dictate pamphlet printing). Lean mappings: the empty mapping holds. The amendment changes what the local pamphlet must print for future charter amendments (S1, S5). It sets no tax or spending and moves no authority between local and state government; matching the state pamphlet's treatment of statewide measures (S1) is a printing rule, not a regional-standards mandate. No measure axis covers election-pamphlet content."
+    },
+    {
+      "candidate": "clallam-quillayute-valley-school-district-no-402-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Hardest attack: the board chair called it a replacement for the outgoing high school bond that 'will not increase the tax level' (S6), and replacement levies usually map to 1. The attack fails on the dossier's numbers and term. The district's later estimate is $1.94 per $1,000 (S4, S5), above the outgoing bond's 2025 rate of $1.34 (S7), and a yes vote commits a further 25 years of excess property tax for $34 million (S1, S3) after the existing bond ends in 2028 (S4, S5); without it the district's bond levy ends. Grant's McKay bond and King and Spokane new bonds map 2. S1, S4, S5, S6 and S7 support the basis. Spending was considered and not proposed: the bond replaces an existing 1952 building (S1, S5, S6) rather than adding capacity, unlike the new-capacity bonds King mapped +1. Parental-rights does not apply: nothing concerns curricula, notification, records or opt-outs."
+    },
+    {
+      "candidate": "clallam-quillayute-valley-school-district-no-402-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1, S3, S4 and S5 ($34 million, up to 25 years, replaces the 1952 building, about $21 million in state aid if passed in November per S5, a bond needed to collect timber revenue per S5, 60% plus validation per S3). cost_line matches S4, S5 and S7, and the $1.34 comparison is fair; strictly that rate is for the Clallam County portion of the district (S7), which a short line can omit. pro_summary correctly notes no statement was filed and attributes the case to the district (S4, S5). con_summary matches S1, S2 and S8."
+    },
+    {
+      "candidate": "clallam-clallam-county-fire-protection-district-no-1-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked on strength: the lid lift restores room under the $1.50 cap (S1, S3), and the district frames it as maintaining current service (S1, S4). But a yes vote more than doubles the rate, from about $0.47 (S3, S5) to $1.00 (S1), roughly $296,000 to about $630,000 a year at 2025 values, and adds a nine-year CPI escalator above the 1% limit (S1, S3). King's scale gives a near-doubling 2. S1, S3 and S5 support the basis. Spending was considered and not proposed: the resolution lists staffing, apparatus and stations (S3), but the pamphlet frames the money as maintaining current fire, EMS and firefighter safety (S1), so there is no clear expansion."
+    },
+    {
+      "candidate": "clallam-clallam-county-fire-protection-district-no-1-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1 and S3 ($1.00 for 2027 collection; greater of 1% or West Region CPI-U for nine years; $1.50 cap; simple majority). cost_line figures are correct arithmetic from S1 and S5. Minor: 'through 2035' mixes calendars, since the line uses a collection year (2027) and 2035 is the last levy year, collected 2036 (S1, S3); 'through 2036 collection' would be cleaner. pro_summary notes no statement was filed and attributes the case to the district (S1, S4). con_summary matches S1, S2 and S6."
+    },
+    {
+      "candidate": "clallam-clallam-county-fire-protection-district-no-2-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked on strength: the district has paid for paramedic care from its regular levy since 2012 (S2, S5, S7), so part of the levy shifts an existing cost. That does not lower the tax direction: the measure creates the district's first dedicated EMS levy, a new property tax of up to $0.50 per $1,000 for ten years, about $1.2 million a year (S1, S4, S7, S8), on top of a regular levy already at the $1.50 maximum (S11). A brand-new tax maps 2. S1, S7 and S11 support the basis."
+    },
+    {
+      "candidate": "clallam-clallam-county-fire-protection-district-no-2-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1, S4 and S9 (ten years, collected 2027-2036; EMS uses; 54.2% in August, short of 60%). Small omission: uninsured-transport coverage applies 'to the extent the law allows' (S1, S4), which the line states without the qualifier; acceptable in a summary. cost_line matches S1, S4, S7 and S8 ($150 on $300,000 is correct arithmetic from Patterson's $300 on $600,000). pro_summary matches S2 (paramedic care from the fire levy since 2012; calls up 42%; overlapping calls; 'can't hire additional personnel'; end out-of-pocket transport costs) with authors named. con_summary matches S2, S3, S6, S9 and S12."
+    },
+    {
+      "candidate": "clallam-clallam-county-fire-protection-district-no-6-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked on strength: it restores rate authority eroded under the 1% limit (S1), it is a one-year lid lift within the statutory cap (S1, S4), and the dollars are small (about $38,000 to $119,000, S2, S5). But a yes vote allows roughly a tripling of the rate, from $0.48 to up to $1.50 (S1, S5), and the new amount becomes the base for later years (S1, S4). A tripling is above King's near-doubling threshold for 2. S1, S2 and S5 support the basis. Spending was considered and not proposed: the money keeps a volunteer department equipped and trained under rising standards (S1, S2), not an expansion."
+    },
+    {
+      "candidate": "clallam-clallam-county-fire-protection-district-no-6-proposition-no-1",
+      "axis": "_display",
+      "verdict": "adjust",
+      "note": "Two accuracy points. (1) what_it_does says 'its first lid lift since 2010'. The dossier says only that the district 'last asked for a levy lid lift in 2010' (S2); it does not say that request passed. Suggested: 'its first lid-lift request since 2010.' (2) pro_summary says 'safety-standard costs have more than doubled since 2010 while tax revenue rose 25%'. Per S2, the district's overall expenses rose more than 100% over 15 years against 25% revenue growth; the NFPA standards point is separate, illustrated by turnout gear rising from $2,000 to $5,000. Suggested: 'write that expenses have more than doubled since 2010, partly because of safety-standard costs such as turnout gear, while tax revenue rose 25%.' cost_line figures are correct arithmetic from S1 and S5; con_summary matches S2, S3 and S6; authors and commissioner roles match S2 and S4."
+    }
+  ],
+  "missing": [
+    {
+      "candidate": "clallam-clallam-county-fire-protection-district-no-2-proposition-no-1",
+      "axis": "spending",
+      "proposed_score": 1,
+      "confidence": "medium",
+      "citations": [
+        "S2",
+        "S7",
+        "S8"
+      ],
+      "basis": "A yes vote funds added EMS staffing and a new resident benefit: the statement for says that without the levy 'the district can't hire additional personnel' (S2), the money would staff two response units around the clock and build a capital fund for ambulances and cardiac monitors (S7), and it would end billing residents for uninsured transport costs (S2, S7, S8).",
+      "note": "The dossier declines spending only 'consistent with other fire-district EMS levies in this election', which is a consistency argument, not an evidence one. Grant's FD7 refutation declined spending because that money mainly kept two lapsing grant-funded positions, so the expansion evidence was mixed. Here the filed statement ties the levy to hiring 'additional personnel' amid a 42% rise in calls and 32% overlap (S2, S7), plus a service residents do not get now (no out-of-pocket transport costs, S2). The primary-election scoring of the same levy mapped spending +1 and its refutation upheld it. Strength 1 at medium, because part of the levy shifts paramedic costs off the regular fire levy (S1, S7) rather than adding new service."
+    }
+  ]
+}
