@@ -23,7 +23,7 @@ below) before the county can ship at full coverage.
 
 ## What is on the ballot
 
-16 contests (5 contested, 11 uncontested) and no local measures. The five
+16 contests (6 contested, 10 uncontested) and no local measures. The five
 Supreme Court contests and the three statewide initiatives ship from the
 statewide package.
 
