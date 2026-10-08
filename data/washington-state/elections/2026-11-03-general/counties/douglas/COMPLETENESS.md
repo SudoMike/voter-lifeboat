@@ -3,8 +3,24 @@
 Election: 2026 Washington general election, November 3, 2026 (VoteWA
 election 899, county code 09).
 
-Status (#30): researched, scored and refuted; not yet declared in
-`APP_PACKAGES["2026-11-03-general"]["counties"]`. The builder
+Status (#30): shipped at Full County Coverage in
+`APP_PACKAGES["2026-11-03-general"]["counties"]`, with its elections office
+(`https://www.douglascountywa.gov/206/Current-Election`) and its VoteWA
+guide (`countyGuides.douglas`, `c=09`). `COUNTY_LAYERS.douglas` reads
+`SCHDST` (DOR SCH2025), `CEMDST` (DOR CEM2025) and `PROPFIRDST` (the
+county's `All_Districts_Temporary/MapServer/4` `FireNumber`) beside
+`FIRDST` and `HOSPDST`, as proposed below; `districts.js` names only
+`PROPFIRDST` `009`. CD 4 ships with Benton's research, CD 8 with King's, LD
+7 with Spokane's, LD 13 with Grant's. Live ballots on 2026-10-08, each
+`full_county` with no missing layer: 100 Eastmont Ave, East Wenatchee
+(Eastmont bonds); 213 S Chelan Ave, Waterville (Hospital District 2 and
+Cemetery District 2 levies); 1206 Columbia Ave, Bridgeport (Three Rivers
+bonds); 1005 Ashcroft Dr, Ephrata (LD 13; Rimrock formation and its three
+commissioner seats); 448 Belmont Pl, Ephrata (LD 7; no Rimrock items;
+Hospital District 2 and Cemetery District 2 levies). The paragraphs below
+describe the package as researched.
+
+Research status (#30): researched, scored and refuted. The builder
 (`pipeline/build_votewa_lite_data.py --county douglas`) writes
 `interim/app-contests.json` and `interim/app-measures.json` with
 `coverage: "full_county"`, but three scope layers are not yet in

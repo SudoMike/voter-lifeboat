@@ -3,8 +3,22 @@
 Election: 2026 Washington general election, November 3, 2026 (VoteWA
 election 899, county code 38).
 
-Research package for #30 (county wave 5), not yet shipped: the county is
-not in `APP_PACKAGES["2026-11-03-general"]["counties"]`. Contests and
+Status (#30): shipped at Full County Coverage in
+`APP_PACKAGES["2026-11-03-general"]["counties"]`, with its elections office
+(`https://www.whitmancounty.gov/172/Current-Election`), its local pamphlet
+(`pamphletPdfs['whitman/local-voters-pamphlet']`, PDF page = printed page)
+and its VoteWA guide (`countyGuides.whitman`, `c=38`). `COUNTY_LAYERS.whitman`
+reads `CEMDST` (DOR CEM2025), `LIBDST` (DOR LIB2025) and `SCHDST` (DOR
+SCH2025) beside `COUNTY_COUNCIL`, `FIRDST` and `PARKDST`, as proposed below.
+CD 5 and LD 9 Pos. 1 and 2 ship with Spokane's research. Live ballots on
+2026-10-08, each `full_county` with no missing layer: 325 SE Paradise St,
+Pullman (no local measure); 101 Steptoe Ave, Oakesdale (library, Oakesdale
+Props. 1 and 2, Park District 4, Cemetery District 1); 110 S Montgomery St,
+Uniontown (Uniontown Prop. 1, FD 14); 200 S Mill St, Colfax (library); the
+interior point (-117.70, 47.24) (library, Cheney SD Props. 1 and 2). The
+paragraphs below describe the package as researched.
+
+Research package for #30 (county wave 5). Contests and
 measures are built by `pipeline/build_votewa_lite_data.py --county whitman`
 from the VoteWA candidate list (`raw/votewa/candidate-list.csv.url`) and the
 overrides and measures in that script's
