@@ -1,0 +1,18 @@
+{
+  "url": "https://data.wa.gov/resource/3h9x-7bvm.json?$where=election_year='2026' AND (upper(filer_name) like '%CHARTER%' OR upper(filer_name) like '%SHERIFF%' OR upper(filer_name) like '%PIERCE COUNTY%' OR upper(jurisdiction) like '%PIERCE CO%')&$limit=200",
+  "retrieved_at": "2026-10-08",
+  "stage": "raw",
+  "method": "Socrata SoQL GET (curl); JSON response cached (51 rows)",
+  "cited_by": {
+    "dossier": "data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/measures/pierce-pierce-county-charter-amendment-no-57.md",
+    "source_id": "S5"
+  },
+  "tier": 1,
+  "type": "pdc",
+  "outlet": "Washington Public Disclosure Commission (data.wa.gov Campaign Finance Summary 3h9x-7bvm)",
+  "title": "2026 committee registrations, Pierce County jurisdiction and charter/sheriff-named filers",
+  "published": "2026-10-08",
+  "cache_file": "data/.cache/pierce-charter/pdc-committees-2026-pierce.json",
+  "bytes": 79204,
+  "sha256": "d9c97e4e8cf78cc8ac06b6faa1528973223e0b63e7a7ad083b66ccea977fe6a5"
+}

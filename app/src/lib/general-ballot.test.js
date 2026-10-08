@@ -1,6 +1,7 @@
 // The November 3, 2026 general as shipped: King County at Full County
-// Coverage (issue #16), Snohomish and Spokane at partial coverage (#21),
-// every other Washington address a Statewide-Only Guide (issue #9). These run the app's own ballot, interview, lean and Ballot Brief
+// Coverage (issue #16), Snohomish and Spokane at partial coverage and Pierce
+// at full coverage (#21), every other Washington address a Statewide-Only
+// Guide (issue #9). These run the app's own ballot, interview, lean and Ballot Brief
 // code against public/data/2026-11-03-general.
 import test from 'node:test'
 import assert from 'node:assert/strict'
@@ -65,7 +66,7 @@ const STATE_MEASURES = [
   'initiative-measure-no-il26-638',
 ]
 
-test('the general ships King at full county coverage, Snohomish and Spokane at partial, with their elections offices', () => {
+test('the general ships King and Pierce at full county coverage, Snohomish and Spokane at partial, with their elections offices', () => {
   assert.equal(data.election.id, '2026-11-03-general')
   assert.deepEqual(data.coverage, {
     statewide_complete: true,
@@ -98,6 +99,16 @@ test('the general ships King at full county coverage, Snohomish and Spokane at p
         coverage: 'partial_county',
         elections_url: 'https://www.spokanecounty.gov/elections',
       },
+      {
+        // Full: every Pierce scope resolves, KCDISTCRT, PTBA and SCHDST from
+        // the Election_Precincts layer (#21).
+        id: 'pierce',
+        name: 'Pierce County',
+        state: 'WA',
+        fips: '53053',
+        coverage: 'full_county',
+        elections_url: 'https://www.piercecountywa.gov/elections',
+      },
     ],
   })
 })
@@ -126,6 +137,62 @@ test('a Spokane ballot: its own districts, school and fire measures by name, no 
   assert.ok(mm.includes('spokane-spokane-county-fire-protection-district-no-9-proposition-no-2'))
   assert.ok(!mm.some((s) => s.includes('school-district')), mm.join())
   assert.equal(coverageAdvice(spo({})), 'degraded')
+})
+
+test('a Pierce ballot: its own districts, King\'s research for shared races, transit and school measures by flag and name', () => {
+  const PIERCE = { id: 'pierce', fips: '53053', name: 'Pierce County' }
+  const pie = (districts) => ({ coverageStatus: 'full_county', county: PIERCE, districts, missingLayers: [] })
+  const local = (ballot) => ballot.measures.filter((m) => m.owner === 'pierce' && !m.slug.includes('charter')).map((m) => m.slug)
+  // Districts as the live District Adapter resolved them on 2026-10-08.
+  // 930 Tacoma Ave S, Tacoma.
+  const tacoma = ballotFor(pie({
+    CONGDST: '6', LEGDST: '27', CITY: 'Tacoma', COUNTY_COUNCIL: '4', FIRDST: 'TACOMA', DISTCRT: 'YES',
+    KCDISTCRT: 'NO', PTBA: 'YES', SCHDST: 'TACOMA SCHOOL DISTRICT NO. 10',
+  }))
+  const ts = tacoma.contests.map((c) => c.slug)
+  assert.equal(new Set(ts).size, ts.length)
+  for (const slug of SUPREME_COURT) assert.ok(ts.includes(slug), slug)
+  assert.deepEqual(tacoma.measures.slice(0, 3).map((m) => m.slug), STATE_MEASURES)
+  assert.ok(ts.includes('pierce-congressional-district-6-u-s-representative'))
+  assert.ok(ts.includes('pierce-pierce-county-district-court-no-7-judge-position-no-7'))
+  assert.equal(ts.filter((s) => s.startsWith('pierce-city-of-tacoma-tacoma-municipal-court-')).length, 3)
+  // No council seat is up in District 4; no King District Court seat.
+  assert.ok(!ts.some((s) => s.includes('county-council') || s.includes('king-county-district-court')), ts.join())
+  assert.deepEqual(local(tacoma), ['pierce-pierce-transit-proposition-no-1', 'pierce-city-of-tacoma-initiative-no-1'])
+  assert.equal(tacoma.measures.filter((m) => m.slug.includes('charter-amendment')).length, 7)
+  // 1402 Lake Tapps Pkwy SE, Auburn: CD 10 (Census and the precinct layer
+  // agree), LD 31 and King County District Court's Southeast seats, with
+  // King's research; Auburn SD 408's Pierce copy, never King's.
+  const auburn = ballotFor(pie({
+    CONGDST: '10', LEGDST: '31', CITY: 'Auburn', COUNTY_COUNCIL: '1', FIRDST: 'VALLEY REGIONAL FIRE AUTHORITY',
+    DISTCRT: 'NO', KCDISTCRT: 'YES', PTBA: 'YES', SCHDST: 'AUBURN SCHOOL DISTRICT NO. 408',
+  }))
+  const as = auburn.contests.map((c) => c.slug)
+  assert.equal(as.filter((s) => s.startsWith('pierce-king-county-district-court-southeast-')).length, 6)
+  assert.ok(!as.some((s) => s.startsWith('pierce-pierce-county-district-court-')), as.join())
+  assert.ok(as.includes('pierce-pierce-county-council-district-1-county-councilmember'))
+  assert.ok(!auburn.contests.some((c) => c.owner === 'king'))
+  const sec5 = auburn.contests.find((c) => c.slug === 'pierce-king-county-district-court-southeast-electoral-district-judge-position-no-5')
+  const king5 = data.contests.find((c) => c.slug === 'judge-position-no-5-southeast-electoral-district')
+  assert.deepEqual(sec5.candidates.map((c) => c.scores), king5.candidates.map((c) => c.scores))
+  assert.deepEqual(local(auburn), ['pierce-pierce-transit-proposition-no-1', 'pierce-auburn-school-district-no-408-proposition-no-1'])
+  assert.ok(!auburn.measures.some((m) => m.owner === 'king'))
+  // 811 Main St, Buckley: CD 8 with King's scoring; outside Pierce Transit.
+  const buckley = ballotFor(pie({
+    CONGDST: '8', LEGDST: '31', CITY: 'Buckley', COUNTY_COUNCIL: '1', FIRDST: 'BUCKLEY', DISTCRT: 'YES',
+    KCDISTCRT: 'NO', PTBA: 'NO', SCHDST: 'WHITE RIVER SCHOOL DISTRICT NO. 416',
+  }))
+  const cd8 = buckley.contests.find((c) => c.slug === 'pierce-congressional-district-8-u-s-representative')
+  const kingCd8 = data.contests.find((c) => c.slug === 'congressional-district-8-united-states-representative')
+  assert.deepEqual(cd8.candidates.map((c) => c.scores), kingCd8.candidates.map((c) => c.scores))
+  assert.deepEqual(local(buckley), [])
+  // 3510 Grandview St, Gig Harbor: Council District 7.
+  const gigHarbor = ballotFor(pie({
+    CONGDST: '6', LEGDST: '26', CITY: 'Gig Harbor', COUNTY_COUNCIL: '7', FIRDST: 'FPD #005 GIG HARBOR', DISTCRT: 'YES',
+    KCDISTCRT: 'NO', PTBA: 'YES', SCHDST: 'PENINSULA SCHOOL DISTRICT NO. 401',
+  }))
+  assert.ok(gigHarbor.contests.some((c) => c.slug === 'pierce-pierce-county-council-district-7-county-councilmember'))
+  assert.equal(coverageAdvice(pie({})), null)
 })
 
 test('a Snohomish ballot: statewide races once, its districts, South County Fire only inside the RFA', () => {

@@ -1,0 +1,164 @@
+{
+  "contest_slug": "measures",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/pierce/scoring/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/measures/",
+    "data/washington-state/elections/2026-11-03-general/counties/pierce/raw/measures/",
+    "data/final/2026-11-03-general/rubric.json"
+  ],
+  "review_notes": "Strength scale applied (same as the King refutation): 2 = brand-new tax or district, near-doubling, or large permanent lid lift; 1 = renewal or replacement at a similar or moderately higher rate, or a temporary or minor increase. Measure-applicable axes per rubric.json applies_to: taxes, spending, local-control, social, parental-rights (housing, safety, reform and climate do not list measures). All 11 lean mappings upheld. Taxes-2 set: Milton (new tax; matches King), South Prairie (~+85% lid lift with a permanent 2032 base), Pierce Transit (+50% permanent rate increase; matches Kenmore and Seattle Prop 1), Auburn (new bond; matches King), Yelm (closest call: two-year levy, but $0 to $1.50 on current bills with an explicitly anti-tax con). Taxes-1: FPD14 (same-rate renewal). Spending +1: Pierce Transit, Auburn, Tacoma Initiative 1. Spending -1: Charter 56 (weak but correctly signed). Social +1: Charter 57. Tacoma Initiative 1 housing removal is correct under applies_to; it leaves the measure's main dimension unmapped, a rubric-scope question for the coordinator. Charters 52, 53, 54, 55 and 58 are correctly empty: their substance is safety/reform/participation, none of which list measures, and spending on 54/58 points both ways (new office vs. oversight pole A). Missing mappings considered and rejected: spending on Milton, South Prairie, FPD14 and Yelm (maintenance, not expansion; consistent with King); local-control on Yelm (both sides invoke it, the measure changes no governance), Charter 53 (authority moves within county government, not between levels), Charters 54/58 and Tacoma I-1; taxes on Tacoma I-1 (cost-capped license fee, no tax) and Charter 56 (no tax provision); social on Charter 53 (the sheriff's statements are context, not measure text); parental-rights on Yelm and Auburn (not addressed). Two _display adjustments (Yelm attribution of 'restore some cut programs'; FPD14 committee-name formatting) and several optional precision notes. Data note: in every Pierce VoteWA record with rebuttals (Yelm, Auburn, Tacoma I-1, Pierce Transit, Charters 53-58) RebuttalFor holds the con side's rebuttal of the statement for, and RebuttalAgainst the pro side's; this looks like VoteWA's field convention rather than a data error, and every dossier attributes rebuttals by content correctly.",
+  "verdicts": [
+    {
+      "candidate": "pierce-pierce-county-charter-amendment-no-52",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches the ballot title and explanatory statement (50 weeks -> 45 meetings; remote attendance and comment wherever public comment is required by law or rule, S1). cost_line is right: VoteWA has no fiscal statement (S1). pro_summary names the committee and all three members correctly, and the 'rigid scheduling rule with a more practical standard' quote and the 'zero votes in opposition' claim are in the statement (S1). con_summary matches VoteWA's 'No statement was submitted against this issue' (S1). Empty lean_mappings is right: no measure-applicable axis is touched (reform, the closest fit, does not list measures)."
+    },
+    {
+      "candidate": "pierce-pierce-county-charter-amendment-no-53",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches the ballot title (appointed by the Executive, confirmed by a council majority; current term ends January 1, 2027, S1). 'Two years early' is supported: Swank took office January 2025 (S6) and his term would otherwise run to January 1, 2029 (S4). cost_line matches S1 (no fiscal statement, neither side argues cost). pro_summary (Pierce County for a Professional Sheriff: Lawver, Hunter, Quasim) and con_summary (Pierce County Citizens for Accountable Public Safety: Sonntag, Dammeier, Pastor) have the right committees and members, and each point paraphrases the statement or rebuttal fairly (S1). Empty lean_mappings checked and correct: the measure is squarely about safety/reform, neither of which lists measures in applies_to; local-control does not fit because authority moves from county voters to county officials inside the same government, not between local and regional/state levels (dossier axis notes); the sheriff's statements on transgender people are context, not measure text, so social does not apply."
+    },
+    {
+      "candidate": "pierce-pierce-county-charter-amendment-no-54",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1 (executive department, independent oversight, publish findings, refer complaints, council appoints from a panel's list, Community Advisory Committee) and correctly attributes subpoena power and the finalist mechanism to the commission draft (S4, S5). cost_line attributes the ~$1 million Spokane figure to an opponent (Rogge, S6) and the litigation-savings claim to supporters (S1, S3), and correctly notes the Charter leaves the budget to ordinance (S1). Committees and members on both sides are correct (S1). Empty lean_mappings checked and correct: safety does not list measures; spending points both ways (a new funded department vs. the rubric's own 'oversight' pole A) so no confident direction; local-control does not fit (authority stays in county government)."
+    },
+    {
+      "candidate": "pierce-pierce-county-charter-amendment-no-55",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1 (120 -> 180 days) and S2 (10% threshold unchanged); '~41,000' is attributed to supporters (S1). cost_line matches S1 (no fiscal statement; supporters' 'won't cost you a penny'). pro_summary paraphrases 'Pierce County has never completed an initiative because it allows only 120 days' fairly. con_summary names the Committee to Protect Our Initiative Process with Lantz, Leighton and Serad, and its points (well-funded interests, several referendums qualified in 120 days, voters rejected such changes before) come from the statement and rebuttal (S1). Note: VoteWA stores the con rebuttal in RebuttalFor; the dossier and summaries attribute it by content, which is right. Empty lean_mappings is correct: reform is the only fitting axis and does not list measures."
+    },
+    {
+      "candidate": "pierce-pierce-county-charter-amendment-no-56",
+      "axis": "spending",
+      "verdict": "upheld",
+      "note": "Direction checked: YES writes into the Charter a requirement that projected expenditures not exceed projected available funds over four years (S1), and the pro case is affordability, avoiding 'rushed tax and fee increases' and protecting the credit rating (S1). That is the rubric's pole A (audit and restrain), so -1 is the right sign. Tried to refute on the ground that the opposition also argues from restraint ('hide bloated spending', 'Local Budget Control', S1), so a NO vote is not a pro-spending vote. That weakens the signal but does not reverse it: the measure itself adds a standing fiscal-discipline test, and the con objects to an unfunded, duplicative duty, not to restraint. Strength 1 is right because no enforcement mechanism is described (S1, S2). Kept rather than dropped as a weak mapping because the balanced-outlook requirement is the measure's whole content. S1 and S2 support the basis (S2 for the council 'consider the outlook' detail)."
+    },
+    {
+      "candidate": "pierce-pierce-county-charter-amendment-no-56",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches the ballot title and explanatory statement (CFO, four-year outlook, Current Expense Fund, projected spending not exceeding available funds, S1); the 'Council must consider it' detail is from Gig Harbor Now's reading of the text (S2), acceptable. cost_line attributes both cost positions correctly (S1). Optional tightening: the pro rebuttal says the Finance Director 'already prepares many elements of a four-year outlook'; cost_line's 'much of the outlook' is a slight paraphrase. pro_summary (Wolf Opitz, Doug Richardson) and con_summary (Pierce County for Local Budget Control: Cameron Severns) are correct; the O-1 companion and 'position that does not exist' points are in the con statement (S1). VoteWA's RebuttalFor field holds the con side's rebuttal; summaries attribute by content, which is right."
+    },
+    {
+      "candidate": "pierce-pierce-county-charter-amendment-no-57",
+      "axis": "social",
+      "verdict": "upheld",
+      "note": "Direction and strength checked. YES adds 'sexual orientation' and 'gender identity or expression' plus pregnancy, childbirth and lactation to the Charter's nondiscrimination clause (S1), the rubric's named pole-B case ('broad anti-discrimination law'). The opposition frames it as imposing 'values that represent the few' (S1), and the most visible opponent, the sheriff, objected specifically to the gender-identity language (S2, S4), so the vote does carry this axis. Tried 2: rejected, because the measure bundles many categories outside the axis (genetic testing, caregiver, veteran status, national origin, disability), Washington law already covers these classes so the pro side presents it as alignment (S1), and the con statement's text argues vagueness and charter neutrality rather than opposing LGBTQ+ protections by name. 1 is right. S1, S2 and S4 support the basis."
+    },
+    {
+      "candidate": "pierce-pierce-county-charter-amendment-no-57",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does lists the new categories exactly as the explanatory statement does and includes the constitutional savings clause (S1). Two optional precision points: (1) the current clause also ends with a catch-all, 'or any other basis not reasonably related to the accomplishment of a legitimate government purpose', which Gig Harbor Now reports the new text keeps (S2), so 'which now lists race, creed, color, sex, age and handicap' is the explanatory statement's summary, not the full clause; (2) the new list says 'age except by minimum age and retirement provision', shortened to 'age'. Neither misleads. pro_summary (Pierce County for Aligned Employment Practices: Rydel-Kelly, Palmer, Colman) and con_summary (Common Sense for Pierce County: Fletcher, Rogge, Joseph) are correct; the veterans'-preference claim is attributed to the con rebuttal and flagged as unverified, which is right (S1)."
+    },
+    {
+      "candidate": "pierce-pierce-county-charter-amendment-no-58",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches the ballot title and explanatory statement (office within Juvenile Detention; complaints, conditions, mandatory-reporter rules; data for the Superior Court's annual publications; outside audit or accreditation review every five years, S1). cost_line matches S1 (no figures on either side). pro_summary (Committee for Safe Youth, Strong Oversight: Leighton, Talbert, George) and con_summary (Brenda Milewski) are correct; the 'executive influence over a court function' point and the rebuttal's existing-reforms point are in the con text (S1). Empty lean_mappings checked and correct: safety does not list measures, and spending points both ways (a new office vs. the rubric's oversight/audit pole A, with the con arguing against 'government expansion' and for spending on a new facility instead, S1), so no confident direction."
+    },
+    {
+      "candidate": "pierce-city-of-milton-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked on strength: 0.1% and about $200,000 a year is small (S2). But it is a brand-new, open-ended tax that neither King nor Pierce County now levies (S1, S2), and the scale puts a brand-new tax at 2. This is the same measure as King's city-of-milton-proposition-no-1, which the King refutation upheld at 2 on the same reasoning; the two packages must agree. S1 and S2 support the basis."
+    },
+    {
+      "candidate": "pierce-city-of-milton-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1 (0.001, effective 2027, RCW 82.14.450, 15% to the county, 'ongoing' with no end date). cost_line attributes the ~$200,000 to the city (S2) and the 10.2%/10.3% current rates to DOR (S4); the +0.1 arithmetic is plain. pro_summary (Dave Strader, Jacki Strader) quotes 'maintain its current budget and high-quality services' exactly (S1). con_summary matches VoteWA's no-statement notice (S1). Optional: the mayor's August 3 remark was that there was 'nobody yet for the \"Against\" statement' (S3); 'no one had volunteered for the Against committee' is a fair paraphrase but could add 'yet'."
+    },
+    {
+      "candidate": "pierce-town-of-south-prairie-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Checked against the scale's 'large permanent lid lift'. Size: +$1.33 on an implied ~$1.57 town rate (max $2.90, S1) is roughly +85%, close to the near-doubling case; the town's own example is about $50 a month on a $450,000 home (S1). Permanence: the ballot title 'authorizes the 2032 levy amount as the basis to calculate subsequent levies (RCW 84.55)' (S1), so the higher amount stays in the base after the six-year 6% period; the pro statement's 'limited six-year measure' describes the growth factor, not a reversion. That differs from King's Lake Forest Park (temporary, levy reverts, about +33%), which was cut to 1, and matches Clyde Hill and Kenmore (large, permanent base) at 2. Caveat for confidence: the $1.57 current rate is the dossier's arithmetic, not a published figure, and no con statement frames the vote as a tax fight. 2 stands; S1 supports it."
+    },
+    {
+      "candidate": "pierce-town-of-south-prairie-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does, cost_line and pro_summary match S1 ($1.33 increase, $2.90 maximum for 2027, 6% limit factor 2028-2032, 2032 base, ~$50/month on $450,000; 'limited six-year measure', 'not about expanding government'; Brubaker and Moerer). The '$1.57' current rate is correctly framed as implied. Optional: the ballot title lists 'emergency management', not EMS; EMS appears in the explanatory statement's list of services the town provides, so 'EMS' is defensible. con_summary matches VoteWA's no-statement notice (S1)."
+    },
+    {
+      "candidate": "pierce-pierce-transit-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked on strength: 0.6% -> 0.9% is +50%, not a near-doubling, and it raises an existing tax rather than creating one. Upheld because it is a large, permanent increase with no end date (S1, S2): it matches King's Kenmore (~+51% with a permanent base, 2) and is the same instrument and size as Seattle Prop 1's 0.3% transit sales tax (2), and the con statement opposes the tax increase itself ('The sales tax is too high', S1). Not comparable to the renewal-at-similar-rate cases scored 1. S1 and S2 support the basis."
+    },
+    {
+      "candidate": "pierce-pierce-transit-proposition-no-1",
+      "axis": "spending",
+      "verdict": "upheld",
+      "note": "Checked against King's rule that maintenance or replacement is not expansion. Here the revenue funds a 47% service increase, four new routes, later hours, expanded paratransit, and new fare-free service for seniors (S1, S2, S3), with 56 more buses and 139 more operators projected (S3). The explanatory statement does also cite preservation ('would begin planning service reductions' if rejected, S1), but expansion is the main use. 1 matches Seattle Prop 1 and Auburn; nothing in either package carries spending above 1."
+    },
+    {
+      "candidate": "pierce-pierce-transit-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1/S2 (0.6% -> 0.9%, April 1, 2027, first increase since 2002, 47%, new routes, later hours, special events, paratransit, seniors free). cost_line's exemptions list is Pierce Transit's own claim (S2) and is accurate for Washington sales tax; Tacoma 10.5% -> 10.8% is DOR-based (S6) and agrees with the con statement's 10.8% (S1). pro_summary names Alice Phillips, Faaluaina Pritchard and Krystal Monteros correctly (VoteWA gives 'Faaluaina (Lua) Pritchard'). con_summary (John Miles) is accurate, including that he agrees more service is needed (rebuttal: 'The \"for\" statement is 100% correct', S1)."
+    },
+    {
+      "candidate": "pierce-city-of-tacoma-initiative-no-1",
+      "axis": "spending",
+      "verdict": "upheld",
+      "note": "Direction checked: YES requires the City to 'develop and implement new tenant programs', a tiered rental licensing program for all landlords, complaint investigation and adjudication, inspections and a public database (S1, S5). That is a new public program, pole B, even though it is fee-funded. Strength 1 is right: the program's size is disputed (opponents cite an $8-10M city estimate, supporters $0.7-1.5M, S1, S3) and no published city estimate exists. On the removed housing mapping: removing it was correct. rubric.json's housing applies_to is ['State','County','City'] with no 'measures', and validate_scoring rejects measure lean mappings on axes outside applies_to, so it could not stand regardless of merit. This loses the measure's main dimension (tenant protections vs. supply, S1, S6) from the lean display; that is a rubric-scope question for the coordinator, not a scoring error. Nothing else applies: taxes does not fit (no tax is levied; the per-unit license fee is capped at regulatory cost, S1, S5); local-control does not fit (city code only, no shift between levels of government); social and parental-rights are not addressed."
+    },
+    {
+      "candidate": "pierce-city-of-tacoma-initiative-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches the ballot title, explanatory statement and posted text (tenant unions and good-faith bargaining, with small landlords of 4 or fewer units exempt, so 'most landlords' is right; city complaints or suits; penalties of $500 up to five times monthly rent paid to tenants; licensing for all landlords; database; revocation for violations posing 'a serious threat of loss of life or serious bodily injury', S1, S5). cost_line attributes the $8-10M and $191 figures to opponents and the $10-35 per-unit figure to supporters, and states that no city estimate was found (S1, S3). pro_summary (Tyron Moore, Kiss'Shonna Curtis, Bill Hanawalt) and con_summary (Michael Mirra, Ben Lackey, Mark Melsness) are correct (S1). VoteWA's RebuttalFor field holds the con side's rebuttal (and RebuttalAgainst the pro side's); the dossier attributes them by content, which is right."
+    },
+    {
+      "candidate": "pierce-fire-protection-district-no-14-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Renewal of the expiring 2020 EMS levy at the same $0.50 maximum for six years (S1). That is the scale's 'renewal at a similar rate' case, 1. Considered 0 (no change in rate) and rejected: a yes vote still continues a tax that would otherwise lapse at the end of 2026, which is how King scored its renewals. S1 supports it."
+    },
+    {
+      "candidate": "pierce-fire-protection-district-no-14-proposition-no-1",
+      "axis": "_display",
+      "verdict": "adjust",
+      "note": "One fix. pro_summary reads 'The statement in favor (Holly Leiter, Dustin Garrett, Ethan Longknife, Riverside Firefighters For EMS)', which lists the committee name as if it were a fourth person. Use the file's usual form: 'The statement in favor (Riverside Firefighters For EMS: Holly Leiter, Dustin Garrett, Ethan Longknife)' (S1). The rest is accurate: what_it_does and cost_line match the ballot title and explanatory statement ($0.50 maximum, 2027-2032, $50 a year or $4.17 a month per $100,000, S1); 'not a new tax' is quoted from the pro statement, which calls it the 'Maintenance and Operations levy' although the ballot title says EMS levy (the dossier flags this); con_summary matches VoteWA's no-statement notice (S1)."
+    },
+    {
+      "candidate": "pierce-auburn-school-district-no-408-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "New $491M bond authorization on its third attempt, not a renewal (S1, S4). The district's own tables show the combined bond rate going from $1.50 (2026) to $2.53 (2027-2031) per $1,000, about +69% (S4), and the con case is about tax burden (S1). Same measure as King's auburn-school-district-no-408-proposition-no-1, upheld at 2 there; the packages agree."
+    },
+    {
+      "candidate": "pierce-auburn-school-district-no-408-proposition-no-1",
+      "axis": "spending",
+      "verdict": "upheld",
+      "note": "Checked as requested. Middle School #5 adds capacity beyond replacing Cascade and Alpac, which are themselves rebuilt 'with enlarged capacity' (S1); the district cites 1,100+ middle schoolers in 43-45 portables (S3). That is investment beyond maintenance, pole B. Strength 1, not 2, because two of the three projects are replacements and the con objects to cost per school, not to adding capacity (S1). Matches the King verdict on the same measure. S1 and S3 support the basis."
+    },
+    {
+      "candidate": "pierce-auburn-school-district-no-408-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does already carries King's corrected wording on the 2024 package ('a larger $532.1 million package, 55%') and the 2025 $490 million / 54% result (S4, S6, S7). cost_line attributes $1.10 and the $55/month on $600,000 example to the district (S2, S3) and correctly adds that Pierce-side property is assessed by the Pierce County Assessor even though the VoteWA statement points to the King Assessor (S1, S3). pro_summary (Cari Manry, Terri Herren) and con_summary (Eric Petersen) match S1; the $1.93 is attributed to Petersen. The dossier notes $1.93 was the actual 2024 all-bond rate (S4); the summary does not need it."
+    },
+    {
+      "candidate": "pierce-yelm-community-schools-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Close call; the 2-year term argues for 1 under the scale's 'temporary' clause. Upheld at 2 because: the district has had no EP&O levy since 2024 and OSPI shows $0 local levy for 2026 (S3, S6), so a yes vote puts a $1.50 per $1,000 levy (about $11-12M a year, ~$600 a year on a $400,000 home) onto bills that carry none, which is a new tax in effect, not a replacement at a similar rate; the size is large in both rate and dollars; and the con case is explicitly a tax fight ('Stop making neighbors tax neighbors', 'Accountability must come before another tax', S1). King's Lake Forest Park was cut to 1 for being temporary, but it was also a +33% bump on an existing levy with a con side that supported taxes; neither condition holds here. 'Temporary' also has less force for school EP&O levies, which are capped at four years by law and are normally renewed. S1, S3 and S6 support the basis."
+    },
+    {
+      "candidate": "pierce-yelm-community-schools-proposition-no-1",
+      "axis": "_display",
+      "verdict": "adjust",
+      "note": "One fix. what_it_does states as fact that the levy 'would keep current programs, staff and athletics and restore some cut programs.' The restoration is the district's claim (S3); the explanatory statement only says it maintains the 2025-26 programs (S1), and the con statement says it restores 'none of the programs already cut' and that 'The board acknowledges this levy maintains the current reductions' (S1). The dossier flags this conflict. Reword to: 'this one would keep current programs, staff and athletics; the district says it would also restore some cut programs, which opponents dispute.' The rest is accurate: amounts and $1.50 rate (S1), no levy since 2024 (S3, S6), state-oversight warning attributed to the district (S3, S4); the $600 on a $400,000 home is plain arithmetic (S1); pro_summary (Yelm Kids First: Willis, Edwards, Cullum) and con_summary (Martin Miller, Frank Vance) match S1. VoteWA's RebuttalFor field holds the con side's rebuttal (and RebuttalAgainst the pro side's); the dossier attributes them by content, which is right."
+    }
+  ],
+  "missing": []
+}

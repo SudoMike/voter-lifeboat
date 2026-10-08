@@ -1,0 +1,22 @@
+{
+  "contest_slug": "pierce-congressional-district-10-u-s-representative",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-congressional-district-10-u-s-representative/",
+    "data/washington-state/elections/2026-11-03-general/counties/pierce/scoring/pierce-congressional-district-10-u-s-representative.json"
+  ],
+  "verdicts": [
+    {"candidate": "marilyn-strickland", "axis": "taxes", "verdict": "upheld", "note": "The evidence is one party-line vote (No on H.R. 1, roll 190) plus opposition to tariffs. Tariff opposition is not a progressive-revenue position. Treated like a lone floor vote, this gives magnitude 1 at medium, as scored."},
+    {"candidate": "marilyn-strickland", "axis": "spending", "verdict": "upheld", "note": "S8 confirms she backs preserving and expanding SNAP, WIC, LIHEAP and housing aid. Her 2023 Fiscal Responsibility Act vote (S10) points the other way, so +1 rather than +2."},
+    {"candidate": "marilyn-strickland", "axis": "safety", "verdict": "adjust", "adjusted_score": -1, "adjusted_confidence": "medium", "note": "0 means 'genuinely mixed', but every piece of safety evidence in the dossier points to pole_a. She voted Yea on the HALT Fentanyl Act (roll 33; Randall voted Nay), and her pamphlet cites securing funding for police and firefighters (S1). The dossier has no prevention, diversion or treatment-first evidence to offset these. A record vote plus a pamphlet claim support -1 at medium."},
+    {"candidate": "marilyn-strickland", "axis": "climate", "verdict": "upheld"},
+    {"candidate": "marilyn-strickland", "axis": "experience", "verdict": "upheld"},
+    {"candidate": "marilyn-strickland", "axis": "reform", "verdict": "adjust", "adjusted_score": -1, "adjusted_confidence": "low", "note": "The basis is role-based: Chief Deputy Whip, New Democrat Coalition Whip and chair of ASPIRE PAC (S2, S4 confirm all three). The dossier has no statement or vote from her on PAC money, campaign finance, term limits or other structural reform. Placing her from leadership roles is an affiliation inference. The King refutations treated establishment-endorsement-only reform scores the same way (direction kept, confidence lowered to low). Chairing a leadership PAC is concrete enough to keep the direction."},
+    {"candidate": "marilyn-strickland", "axis": "immigration", "verdict": "upheld", "note": "Roll 23 confirms her Nay on the Laken Riley Act. One vote, so +1 medium; no ICE statements in the dossier."},
+    {"candidate": "marilyn-strickland", "axis": "healthcare", "verdict": "upheld", "note": "S3 (cached) reads 'protect Medicare, and make health care more affordable'. At the S8 roundtable she backed reinstating ACA subsidies. Both are within existing structures, with no universal-coverage plank, so -1 medium holds."},
+    {"candidate": "marilyn-strickland", "axis": "social", "verdict": "upheld"},
+    {"candidate": "marilyn-strickland", "axis": "defense", "verdict": "upheld", "note": "Clerk records confirm Yea on the S. 1071 NDAA (roll 320), No on the Massie Israel-aid amendment (roll 243) and Nay on the Lebanon War Powers resolution (roll 201): pole_a. On the other side are her Yea on the Iran War Powers resolution (roll 85), her S6 call for diplomacy, and her S7 questioning of the Iran operations. Mixed evidence that leans pole_a fits -1. Medium rather than high is reasonable given the mix."},
+    {"candidate": "chris-d-chung", "axis": "experience", "verdict": "upheld", "note": "Fair as scored. He has never held office (S1), and his earlier bids drew 2.91% in 2024 (S3, confirmed in the cached SOS export) and 6.66% in early 2025 returns (S4, confirmed). He does not frame himself as a generational or outsider-renewal candidate, and he has run three times, so +1 rather than +2 is right. Nothing else should be added: his statement ('ease the burdens families are facing', 'improve access to education and healthcare', veterans 'treated with respect') names concerns without a direction on any axis. Healthcare is too general to place between protecting the ACA and universal coverage; spending and safety have no stance (his father's law-enforcement service is biography). Inferring from his Republican preference is barred, especially after his 2024 Democratic preference."}
+  ],
+  "missing": []
+}

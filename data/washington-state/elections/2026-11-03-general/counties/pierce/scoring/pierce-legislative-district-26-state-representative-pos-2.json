@@ -1,0 +1,47 @@
+{
+  "contest_slug": "pierce-legislative-district-26-state-representative-pos-2",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-legislative-district-26-state-representative-pos-2/"],
+  "office_does": "State Representatives write and vote on state law and the operating, capital and transportation budgets; each district elects two to two-year terms.",
+  "race_blurb": "Open seat: Republican Katy Cornell, a nonprofit leader and pastor endorsed by the outgoing incumbent, faces Democrat Renee Hernandez Greenfield, an educator and union faculty representative. They split on climate, taxes, housing regulation and reproductive policy.",
+  "candidates": [
+    {
+      "slug": "katy-cornell",
+      "summary": "Nonprofit leader, pastor and Gig Harbor planning commissioner running as a 'common-sense Republican' on affordability, public safety and smaller government.",
+      "highlights": [
+        "Would oppose the income tax and reverse ESSB 5814's sales tax on services [S3]",
+        "Would cut housing regulations, impact fees and red tape [S3][S7]",
+        "Would extend Clean Energy Transformation Act deadlines to 2040 [S6]",
+        "Supports court-mandated treatment for repeat offenders and stronger prosecution of property crime [S3][S5]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": -2, "confidence": "high", "citations": ["S1", "S3"], "basis": "Calls for 'smarter spending, not higher taxes', opposes the income tax and would reverse ESSB 5814."},
+        "spending": {"score": -1, "confidence": "high", "citations": ["S1", "S3"], "basis": "Wants to reduce waste and bureaucracy and streamline government, without cutting core services."},
+        "housing": {"score": -2, "confidence": "high", "citations": ["S3", "S7"], "basis": "Would reduce regulations, impact fees and mandates and streamline permitting to lower building costs."},
+        "safety": {"score": -2, "confidence": "medium", "citations": ["S3", "S5"], "basis": "Supports court-mandated treatment, stronger prosecution of repeat property crime, consequences for hard-drug possession and license plate readers."},
+        "climate": {"score": -1, "confidence": "medium", "citations": ["S6"], "basis": "Would extend CETA clean-energy deadlines to 2040 to limit utility costs."},
+        "experience": {"score": 1, "confidence": "medium", "citations": ["S1", "S4"], "basis": "First legislative run after service on the Gig Harbor Planning Commission; endorsers cite 'fresh energy'."}
+      }
+    },
+    {
+      "slug": "renee-hernandez-greenfield",
+      "summary": "First-time candidate, special educator and Tacoma Community College adjunct, running on schools, housing costs, climate and abortion rights.",
+      "highlights": [
+        "Calls herself 'a steadfast champion of strong climate policies'; endorsed by Washington Conservation Action [S1][S2]",
+        "Pledges to keep Washington '100 percent pro-choice'; endorsed by Planned Parenthood Alliance Advocates [S1][S2]",
+        "Would fight tax increases on working and middle-class families and cut wasteful state spending [S2]",
+        "Endorsed by the Washington State Labor Council and the Washington Education Association [S1]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "spending": {"score": 0, "confidence": "medium", "citations": ["S1", "S2"], "basis": "Wants to cut wasteful state spending while saying schools do more with less and childcare subsidies are underfunded."},
+        "climate": {"score": 2, "confidence": "high", "citations": ["S1", "S2"], "basis": "Champions clean energy, carbon reduction and polluter accountability; endorsed by Washington Conservation Action."},
+        "experience": {"score": 1, "confidence": "high", "citations": ["S1"], "basis": "First-time candidate whose only elected role is a union faculty representative."},
+        "social": {"score": 2, "confidence": "high", "citations": ["S1", "S2"], "basis": "Pledges a '100 percent pro-choice' Washington; endorsed by Planned Parenthood Alliance Advocates."}
+      }
+    }
+  ]
+}
