@@ -575,7 +575,24 @@ COUNTY_CONFIG = {
 # ballot; a county with no entry gets an empty measure list and a note saying
 # its measures are not curated yet, so it can never pass for "no measures".
 ELECTION_MEASURES = {
-    "2026-11-03-general": {},
+    "2026-11-03-general": {
+        # Yakima (#28): no local measures. The Auditor's "Election at a glance"
+        # (raw/yakima/election-at-a-glance-2026-general.pdf.url) lists only the
+        # three statewide measures, and so do the sample ballot and VoteWA's
+        # online guide for county 39 (raw/votewa/voter-guide/guide.json.url).
+        "yakima": {
+            "measures": [],
+            "extra_notes": [
+                "No local measures on the November 3, 2026 ballot: Yakima County's 'Election at a glance' "
+                "(https://www.yakimacounty.us/DocumentCenter/View/46553/2026-GENERAL-at-a-glance_ENG) and "
+                "sample ballot (https://www.yakimacounty.us/DocumentCenter/View/46525/Sample-Ballot-2026-General) "
+                "list only the statewide measures IP26-645, IL26-001 and IL26-638.",
+                "County Commissioner District 1 is elected by district in the general (candidates appear only on "
+                "ballots within their commissioner district; Aguilar et al. v. Yakima County, Final Order October "
+                "2021, RCW 36.32.040(3); 2026 Candidate & Election Guidebook p. 19).",
+            ],
+        },
+    },
 }
 
 
