@@ -9,18 +9,20 @@ Rules:
   measures: same verdict semantics against lean_mappings ("_display" verdicts
   are notes only)
 
-Outputs: data/final/scores.json, data/final/measures.json
+Usage:   python3 pipeline/merge_scores.py [--election <id>]
+Outputs: data/final/<id>/scores.json, data/final/<id>/measures.json
 Every output carries derived_from + the counts of applied verdicts.
 """
 
 import json
-from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-WA = ROOT / "data/washington-state"
-PACKAGES = [WA / "statewide"] + [p for p in sorted((WA / "counties").iterdir()) if p.is_dir()]
+import election
+from election import ROOT
+
+E = election.Election(election.from_argv())
+PACKAGES = E.packages()
 SCORING_DIRS = [p / "scoring" for p in PACKAGES if (p / "scoring").is_dir()]
-FINAL = ROOT / "data/final"
+FINAL = E.final
 
 stats = {"upheld": 0, "adjust": 0, "refuted": 0, "missing_added": 0, "missing_dropped_low": 0}
 
@@ -123,7 +125,7 @@ for scoring_dir in SCORING_DIRS:
             stats["missing_added"] += 1
     measures_out.extend(meas["measures"])
 
-FINAL.mkdir(exist_ok=True)
+FINAL.mkdir(parents=True, exist_ok=True)
 (FINAL / "scores.json").write_text(json.dumps({
     "derived_from": [source for scoring_dir in SCORING_DIRS for source in (
         f"{scoring_dir.relative_to(ROOT).as_posix()}/*.json",

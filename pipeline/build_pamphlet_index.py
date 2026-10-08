@@ -1,14 +1,16 @@
 """Stage: interim -> interim. Map every primary candidate and measure to the
 pamphlet pages that mention them.
 
-Inputs:
-  data/washington-state/counties/king/interim/contests.json
-  data/washington-state/counties/king/interim/measures.json
-  data/washington-state/counties/king/interim/pamphlet-text/edition-{1,2}/page-NNN.txt
+Usage: python3 pipeline/build_pamphlet_index.py [--election <id>]
+
+Inputs (K = data/washington-state/elections/<id>/counties/king):
+  K/interim/contests.json
+  K/interim/measures.json
+  K/interim/pamphlet-text/edition-{1,2}/page-NNN.txt
 
 Output:
-  data/washington-state/counties/king/interim/pamphlet-index.json  ({candidate_slug: [{edition, page}...]},
-                                     {measure_slug: [...]})
+  K/interim/pamphlet-index.json  ({candidate_slug: [{edition, page}...]},
+                                  {measure_slug: [...]})
 
 PDF extraction inserts soft breaks and ligature spaces, so matching is done on
 a whitespace-normalized, lowercased haystack.
@@ -16,10 +18,11 @@ a whitespace-normalized, lowercased haystack.
 
 import json
 import re
-from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-INTERIM = ROOT / "data/washington-state/counties/king/interim"
+import election
+from election import rel
+
+INTERIM = election.Election(election.from_argv()).county("king") / "interim"
 PAGES = INTERIM / "pamphlet-text"
 
 
@@ -43,9 +46,9 @@ contests = json.load(open(INTERIM / "contests.json"))
 measures = json.load(open(INTERIM / "measures.json"))
 
 index = {"derived_from": [
-            "data/washington-state/counties/king/interim/contests.json",
-            "data/washington-state/counties/king/interim/measures.json",
-            "data/washington-state/counties/king/interim/pamphlet-text/",
+            rel(INTERIM / "contests.json"),
+            rel(INTERIM / "measures.json"),
+            rel(PAGES) + "/",
          ],
          "script": "pipeline/build_pamphlet_index.py",
          "candidates": {}, "measures": {}, "unmatched": []}

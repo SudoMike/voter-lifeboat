@@ -4,15 +4,16 @@ County app files retain presentation and scope fields.  Research only needs
 contest identity plus candidate identity, so this produces the same core shape
 as King County's ``parse_candidates.py`` output.  Congressional and legislative
 contests are additionally deduplicated into one statewide research package.
+
+Usage: python3 pipeline/normalize_research_inputs.py [--election <id>]
 """
 
+import argparse
 import json
 import re
-from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-COUNTIES = ROOT / "data/washington-state/counties"
-STATEWIDE = ROOT / "data/washington-state/statewide/interim"
+import election
+from election import ROOT
 
 
 def _write(path, value):
@@ -85,10 +86,13 @@ def _merge_shared_contest(shared, key, contest, county):
     )
 
 
-def normalize():
+def normalize(election_id=None):
+    e = election.Election(election_id)
+    counties = e.counties
+    statewide_interim = e.state / "interim"
     shared = {}
     normalized_counties = 0
-    for county_dir in sorted(path for path in COUNTIES.iterdir() if path.is_dir()):
+    for county_dir in sorted(path for path in counties.iterdir() if path.is_dir()):
         interim = county_dir / "interim"
         app_contests = interim / "app-contests.json"
         app_measures = interim / "app-measures.json"
@@ -135,14 +139,14 @@ def normalize():
         statewide_contests.append(contest)
 
     sources = sorted(
-        str(path.relative_to(ROOT)) for path in COUNTIES.glob("*/interim/app-contests.json")
+        str(path.relative_to(ROOT)) for path in counties.glob("*/interim/app-contests.json")
     )
-    _write(STATEWIDE / "contests.json", {
+    _write(statewide_interim / "contests.json", {
         "derived_from": sources,
         "script": "pipeline/normalize_research_inputs.py",
         "contests": statewide_contests,
     })
-    _write(STATEWIDE / "measures.json", {
+    _write(statewide_interim / "measures.json", {
         "derived_from": [],
         "script": "pipeline/normalize_research_inputs.py",
         "measures": [],
@@ -151,4 +155,6 @@ def normalize():
 
 
 if __name__ == "__main__":
-    normalize()
+    parser = argparse.ArgumentParser()
+    election.add_election_arg(parser)
+    normalize(parser.parse_args().election)

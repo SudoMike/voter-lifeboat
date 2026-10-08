@@ -1,20 +1,22 @@
 """Stage: dossiers -> interim. Collect every contest's differentiating-axes
 section and every measure's axis notes into one file for rubric synthesis.
 
-Input:  data/washington-state/{statewide,counties/*}/dossiers/*/_contest.md,
-        data/washington-state/counties/*/dossiers/measures/*.md
-Output: data/washington-state/counties/king/interim/axis-notes.md
+Usage:  python3 pipeline/extract_axis_notes.py [--election <id>]
+Input:  E/{statewide,counties/*}/dossiers/*/_contest.md,
+        E/counties/*/dossiers/measures/*.md
+Output: E/counties/king/interim/axis-notes.md
+(E = data/washington-state/elections/<id>)
 """
 
 import json
 import re
-from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-STATE = ROOT / "data/washington-state/statewide"
-COUNTIES = ROOT / "data/washington-state/counties"
-KING = COUNTIES / "king"
-PACKAGES = [STATE] + [p for p in sorted(COUNTIES.iterdir()) if p.is_dir()]
+import election
+from election import rel
+
+E = election.Election(election.from_argv())
+KING = E.county("king")
+PACKAGES = E.packages()
 
 depth = {}
 for package in PACKAGES:
@@ -24,7 +26,7 @@ for package in PACKAGES:
         depth.update({c["contest_slug"]: c["depth"] for c in plan["contests"]})
 
 out = ["# Axis notes extracted from all contest overviews and measures",
-       "", "Derived from: data/washington-state/{statewide,counties/*}/dossiers/*/_contest.md and data/washington-state/counties/*/dossiers/measures/*.md",
+       "", f"Derived from: {rel(E.root)}/{{statewide,counties/*}}/dossiers/*/_contest.md and {rel(E.counties)}/*/dossiers/measures/*.md",
        "by pipeline/extract_axis_notes.py. Input to rubric design.", ""]
 
 def grab_axes(text: str) -> str | None:

@@ -4,20 +4,23 @@ the rubric, and the dossiers.
 Checks: file/candidate completeness, integer scores in [-2,2], axis
 applicability (category + judicial restriction), citations exist in the
 cited dossier's frontmatter, evidence_level matches the dossier.
+
+Usage: python3 pipeline/validate_scoring.py [--election <id>]
 """
 
 import json
 import re
 import sys
-from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-STATE = ROOT / "data/washington-state/statewide"
-COUNTIES = ROOT / "data/washington-state/counties"
-PACKAGES = [STATE] + [p for p in sorted(COUNTIES.iterdir()) if p.is_dir()]
+import election
+
+E = election.Election(election.from_argv())
+STATE = E.state
+COUNTIES = E.counties
+PACKAGES = E.packages()
 SCORING_DIRS = [p / "scoring" for p in PACKAGES if (p / "scoring").is_dir()]
 
-rubric = json.load(open(ROOT / "data/final/rubric.json"))
+rubric = json.load(open(E.final / "rubric.json"))
 applies = {a["id"]: set(a["applies_to"]) for a in rubric["axes"]}
 
 JUDICIAL_OFFICES = re.compile(r"justice|judge|municipal-court")

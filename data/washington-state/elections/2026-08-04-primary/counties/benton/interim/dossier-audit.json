@@ -1,0 +1,28 @@
+{
+  "script": "pipeline/verify_dossiers.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-08-04-primary/counties/benton/interim/research-plan.json",
+    "data/washington-state/elections/2026-08-04-primary/counties/benton/dossiers/"
+  ],
+  "missing": [],
+  "no_frontmatter": [],
+  "invalid_evidence_levels": [],
+  "invalid_source_formats": [],
+  "evidence_levels": {
+    "moderate": 3,
+    "rich": 2,
+    "pamphlet-only": 4
+  },
+  "contest_overviews_missing": [],
+  "untouched_contests": [
+    "benton-congressional-district-4-u-s-representative",
+    "benton-legislative-district-8-state-senator",
+    "benton-legislative-district-14-state-representative-pos-1",
+    "benton-legislative-district-14-state-representative-pos-2",
+    "benton-legislative-district-15-state-representative-pos-1",
+    "benton-legislative-district-15-state-representative-pos-2",
+    "benton-legislative-district-16-state-representative-pos-1",
+    "benton-legislative-district-16-state-representative-pos-2"
+  ],
+  "untouched_measures": []
+}

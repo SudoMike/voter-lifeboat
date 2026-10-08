@@ -2,10 +2,12 @@
 
 import json
 import re
-from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-COUNTY = ROOT / "data/washington-state/counties/snohomish"
+import election
+from election import rel
+
+# Usage: python3 pipeline/build_snohomish_lite_data.py [--election <id>]
+COUNTY = election.Election(election.from_argv()).county("snohomish")
 TEXT = COUNTY / "interim/pdf-text/sample-ballot.txt"
 OUT = COUNTY / "interim"
 
@@ -154,14 +156,14 @@ OUT.mkdir(parents=True, exist_ok=True)
 (OUT / "app-contests.json").write_text(json.dumps({
     "county": "snohomish",
     "script": "pipeline/build_snohomish_lite_data.py",
-    "derived_from": ["data/washington-state/counties/snohomish/interim/pdf-text/sample-ballot.txt"],
+    "derived_from": [rel(COUNTY / "interim/pdf-text/sample-ballot.txt")],
     "coverage": "full_county",
     "contests": contests,
 }, indent=2))
 (OUT / "app-measures.json").write_text(json.dumps({
     "county": "snohomish",
     "script": "pipeline/build_snohomish_lite_data.py",
-    "derived_from": ["data/washington-state/counties/snohomish/interim/pdf-text/sample-ballot.txt"],
+    "derived_from": [rel(COUNTY / "interim/pdf-text/sample-ballot.txt")],
     "coverage": "full_county",
     "measures": measures,
 }, indent=2))

@@ -1,0 +1,23 @@
+{
+  "script": "pipeline/verify_dossiers.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-08-04-primary/counties/chelan/interim/research-plan.json",
+    "data/washington-state/elections/2026-08-04-primary/counties/chelan/dossiers/"
+  ],
+  "missing": [],
+  "no_frontmatter": [],
+  "invalid_evidence_levels": [],
+  "invalid_source_formats": [],
+  "evidence_levels": {
+    "moderate": 9,
+    "rich": 6
+  },
+  "contest_overviews_missing": [],
+  "untouched_contests": [
+    "chelan-congressional-district-8-u-s-representative",
+    "chelan-legislative-district-7-state-senator",
+    "chelan-legislative-district-12-state-representative-pos-1",
+    "chelan-legislative-district-12-state-representative-pos-2"
+  ],
+  "untouched_measures": []
+}

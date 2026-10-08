@@ -3,7 +3,7 @@
 Pierce County's DocumentCenter PDFs are Cloudflare-challenged from this data
 environment, so this package is keyed to the official sample ballot URL
 pointer and cross-validated against the official VoteWA PRIMARY 2026
-candidate list export (data/washington-state/statewide/raw). Scopes cover
+candidate list export (data/washington-state/elections/<id>/statewide/raw). Scopes cover
 CONGDST, LEGDST, CITY, COUNTY_COUNCIL, FIRDST, DISTCRT, and countywide via
 the Pierce district adapter in app/src/lib/geo.js. PCO races are excluded
 (statewide convention).
@@ -11,10 +11,12 @@ the Pierce district adapter in app/src/lib/geo.js. PCO races are excluded
 
 import json
 import re
-from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-COUNTY = ROOT / "data/washington-state/counties/pierce"
+import election
+from election import rel
+
+# Usage: python3 pipeline/build_pierce_lite_data.py [--election <id>]
+COUNTY = election.Election(election.from_argv()).county("pierce")
 OUT = COUNTY / "interim"
 
 
@@ -263,14 +265,14 @@ OUT.mkdir(parents=True, exist_ok=True)
 (OUT / "app-contests.json").write_text(json.dumps({
     "county": "pierce",
     "script": "pipeline/build_pierce_lite_data.py",
-    "derived_from": ["data/washington-state/counties/pierce/raw/pierce/sample-ballot.pdf.url"],
+    "derived_from": [rel(COUNTY / "raw/pierce/sample-ballot.pdf.url")],
     "coverage": "full_county",
     "contests": contests,
 }, indent=2))
 (OUT / "app-measures.json").write_text(json.dumps({
     "county": "pierce",
     "script": "pipeline/build_pierce_lite_data.py",
-    "derived_from": ["data/washington-state/counties/pierce/raw/pierce/sample-ballot.pdf.url"],
+    "derived_from": [rel(COUNTY / "raw/pierce/sample-ballot.pdf.url")],
     "coverage": "full_county",
     "measures": measures,
 }, indent=2))

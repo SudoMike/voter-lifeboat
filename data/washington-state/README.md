@@ -1,19 +1,38 @@
-# Data pipeline — Washington State August 4, 2026 Primary
+# Data pipeline — Washington State
 
-The Washington dataset is package-based:
+The Washington dataset is split by election, and each election is
+package-based:
 
 ```
-statewide/       Washington-wide contests and sources
-counties/king/   King County local package
-counties/*/      Other county packages, as they are ingested and supported
-../final/        generated app-facing JSON
+elections/ACTIVE                       one line: the Active Election's id
+elections/<id>/statewide/              Washington-wide contests and sources
+elections/<id>/counties/king/          King County local package
+elections/<id>/counties/*/             other county packages
+../final/<id>/                         generated app-facing JSON for <id>
+../final/elections.json                index of elections with app data
 ```
+
+Elections:
+
+| id | Election | Status |
+|---|---|---|
+| `2026-08-04-primary` | August 4, 2026 Primary and Special Election | active (`ACTIVE`) |
+| `2026-11-03-general` | November 3, 2026 General Election | skeleton only, no data yet |
+
+Every pipeline script takes `--election <id>`; without it the script uses the
+id in `elections/ACTIVE`. Outputs land in `data/final/<id>/` and the app copy
+in `app/public/data/<id>/app-data.json`. `assemble_app_data.py` also writes
+`elections.json` (to `data/final/` and `app/public/data/`), which lists every
+election whose `app-data.json` exists and names the active one; the app loads
+that index first, then the active election's file.
 
 Every file in `data/final/` must be traceable back through package `interim/`
 files to verbatim or pointer `raw/` sources. Large source artifacts should be
 stored as small `.url` pointer files plus metadata, not committed binaries.
 
 ## Packages
+
+Paths below are relative to `elections/<id>/`.
 
 ### `statewide/`
 
@@ -37,21 +56,33 @@ before it can be added to `coverage.supported_counties`.
 
 ## Transformations
 
+`E` is `data/washington-state/elections/<id>`; `F` is `data/final/<id>`.
+
 | Script | In → Out |
 |---|---|
-| `pipeline/extract_pamphlet_text.py` | King `.pdf.url` pointers → cached PDFs → `counties/king/interim/pamphlet-text/` |
-| `pipeline/parse_candidates.py` | King raw KCE HTML/CSV → `counties/king/interim/{contests,measures}.json` |
-| `pipeline/build_pamphlet_index.py` | King contests/measures/page text → `counties/king/interim/pamphlet-index.json` |
-| `pipeline/build_research_plan.py` | King contests/measures/index → `counties/king/interim/research-plan.json` |
-| `pipeline/verify_dossiers.py` | package dossiers + King plan → `counties/king/interim/dossier-audit.json` |
-| `pipeline/extract_axis_notes.py` | package `_contest.md` files + King measures → `counties/king/interim/axis-notes.md` |
-| `pipeline/validate_scoring.py` | package scoring + dossiers + rubric → validation report |
-| `pipeline/merge_scores.py` | state + King scoring/refutations → `data/final/{scores,measures}.json` |
-| `pipeline/assemble_app_data.py` | packages + final scores/rubric/interview → `data/final/app-data.json` and app copy |
+| `pipeline/extract_pamphlet_text.py` | King `.pdf.url` pointers → cached PDFs → `E/counties/king/interim/pamphlet-text/` |
+| `pipeline/extract_pdf_text.mjs <county>` | county `.pdf.url` pointers → `E/counties/<county>/interim/pdf-text/` |
+| `pipeline/build_votewa_lite_data.py` | VoteWA candidate-list CSVs → `E/counties/*/interim/app-{contests,measures}.json` |
+| `pipeline/build_<county>_lite_data.py` | county pdf-text → `E/counties/<county>/interim/app-{contests,measures}.json` (clark, kitsap, pierce, snohomish, spokane, thurston) |
+| `pipeline/parse_candidates.py` | King raw KCE HTML/CSV → `E/counties/king/interim/{contests,measures}.json` |
+| `pipeline/build_pamphlet_index.py` | King contests/measures/page text → `E/counties/king/interim/pamphlet-index.json` |
+| `pipeline/normalize_research_inputs.py` | county `app-*.json` → county `interim/{contests,measures}.json` + `E/statewide/interim/contests.json` |
+| `pipeline/build_research_plan.py` | package contests/measures/index → `interim/research-plan.json` |
+| `pipeline/verify_dossiers.py` | package dossiers + plan → `interim/dossier-audit.json` |
+| `pipeline/extract_axis_notes.py` | package `_contest.md` files + measures → `E/counties/king/interim/axis-notes.md` |
+| `pipeline/validate_scoring.py` | package scoring + dossiers + `F/rubric.json` → validation report |
+| `pipeline/merge_scores.py` | package scoring/refutations → `F/{scores,measures}.json` |
+| `pipeline/assemble_app_data.py` | packages + `F/{scores,measures,rubric,interview}.json` → `F/app-data.json`, `app/public/data/<id>/app-data.json`, `elections.json` |
+| `pipeline/build_dossier_batches.py` | `F/app-data.json` → `F/dossier-batches.json` |
+
+`F/rubric.json`, `F/interview.json` and `F/rubric-derivation.md` are
+hand-authored per election, not generated.
 
 ## Election Facts
 
-- Active election: August 4, 2026 Primary and Special Election.
+- Active election: August 4, 2026 Primary and Special Election
+  (`2026-08-04-primary`; its app-data `election.id` is
+  `2026-08-04-primary-special`, which report links carry).
 - Public route: `/washington-state`.
 - Supported counties: King County.
 - Coverage statuses emitted by the app: `full_county`, `partial_county`,

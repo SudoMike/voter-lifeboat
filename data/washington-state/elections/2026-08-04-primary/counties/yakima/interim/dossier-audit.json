@@ -1,0 +1,25 @@
+{
+  "script": "pipeline/verify_dossiers.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-08-04-primary/counties/yakima/interim/research-plan.json",
+    "data/washington-state/elections/2026-08-04-primary/counties/yakima/dossiers/"
+  ],
+  "missing": [],
+  "no_frontmatter": [],
+  "invalid_evidence_levels": [],
+  "invalid_source_formats": [],
+  "evidence_levels": {
+    "pamphlet-only": 7,
+    "rich": 3,
+    "moderate": 5
+  },
+  "contest_overviews_missing": [],
+  "untouched_contests": [
+    "yakima-congressional-district-4-u-s-representative",
+    "yakima-legislative-district-14-state-representative-pos-1",
+    "yakima-legislative-district-14-state-representative-pos-2",
+    "yakima-legislative-district-15-state-representative-pos-1",
+    "yakima-legislative-district-15-state-representative-pos-2"
+  ],
+  "untouched_measures": []
+}

@@ -2,10 +2,12 @@
 
 import json
 import re
-from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-COUNTY = ROOT / "data/washington-state/counties/spokane"
+import election
+from election import rel
+
+# Usage: python3 pipeline/build_spokane_lite_data.py [--election <id>]
+COUNTY = election.Election(election.from_argv()).county("spokane")
 OUT = COUNTY / "interim"
 
 
@@ -190,8 +192,8 @@ OUT.mkdir(parents=True, exist_ok=True)
     "county": "spokane",
     "script": "pipeline/build_spokane_lite_data.py",
     "derived_from": [
-        "data/washington-state/counties/spokane/interim/pdf-text/sample-ballot.txt",
-        "data/washington-state/counties/spokane/interim/pdf-text/local-voters-pamphlet.txt",
+        rel(COUNTY / "interim/pdf-text/sample-ballot.txt"),
+        rel(COUNTY / "interim/pdf-text/local-voters-pamphlet.txt"),
     ],
     "coverage": "partial_county",
     "contests": contests,
@@ -200,8 +202,8 @@ OUT.mkdir(parents=True, exist_ok=True)
     "county": "spokane",
     "script": "pipeline/build_spokane_lite_data.py",
     "derived_from": [
-        "data/washington-state/counties/spokane/interim/pdf-text/sample-ballot.txt",
-        "data/washington-state/counties/spokane/interim/pdf-text/local-voters-pamphlet.txt",
+        rel(COUNTY / "interim/pdf-text/sample-ballot.txt"),
+        rel(COUNTY / "interim/pdf-text/local-voters-pamphlet.txt"),
     ],
     "coverage": "partial_county",
     "measures": measures,

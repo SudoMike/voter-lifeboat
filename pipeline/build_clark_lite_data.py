@@ -2,10 +2,12 @@
 
 import json
 import re
-from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-COUNTY = ROOT / "data/washington-state/counties/clark"
+import election
+from election import rel
+
+# Usage: python3 pipeline/build_clark_lite_data.py [--election <id>]
+COUNTY = election.Election(election.from_argv()).county("clark")
 OUT = COUNTY / "interim"
 
 
@@ -185,14 +187,14 @@ OUT.mkdir(parents=True, exist_ok=True)
 (OUT / "app-contests.json").write_text(json.dumps({
     "county": "clark",
     "script": "pipeline/build_clark_lite_data.py",
-    "derived_from": ["data/washington-state/counties/clark/interim/pdf-text/sample-ballot.txt"],
+    "derived_from": [rel(COUNTY / "interim/pdf-text/sample-ballot.txt")],
     "coverage": "full_county",
     "contests": contests,
 }, indent=2))
 (OUT / "app-measures.json").write_text(json.dumps({
     "county": "clark",
     "script": "pipeline/build_clark_lite_data.py",
-    "derived_from": ["data/washington-state/counties/clark/interim/pdf-text/sample-ballot.txt"],
+    "derived_from": [rel(COUNTY / "interim/pdf-text/sample-ballot.txt")],
     "coverage": "full_county",
     "measures": measures,
 }, indent=2))

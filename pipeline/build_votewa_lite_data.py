@@ -1,7 +1,7 @@
 """Build lite county packages for the 32 counties covered from VoteWA data.
 
 Contests: parsed from the official VoteWA PRIMARY 2026 candidate list CSV in
-data/washington-state/counties/<county>/raw/votewa/candidate-list.csv.
+data/washington-state/elections/<id>/counties/<county>/raw/votewa/candidate-list.csv.
 Rows with Election Status 'In Primary' are exactly the races printed on the
 Aug 4, 2026 primary ballot (validated against the six hand-built county
 packages, which this parser reproduces contest-for-contest). PCO races and
@@ -18,15 +18,18 @@ its ballot carries a scope the resolver in app/src/lib/geo.js can produce.
 Counties with a commissioner/PUD race but no queryable district boundary
 stay partial_county and the affected contest is hidden rather than shown to
 the wrong voters.
+
+Usage: python3 pipeline/build_votewa_lite_data.py [--election <id>]
 """
 
 import csv
 import json
 import re
-from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-WA = ROOT / "data/washington-state/counties"
+import election
+from election import rel
+
+WA = election.Election(election.from_argv()).counties
 
 # DOR statewide taxing-district layer ids (2025 group) -> resolver layer key.
 DOR_LAYER_KEYS = {
@@ -734,7 +737,7 @@ def build_county(county, cfg):
         "county": county,
         "script": "pipeline/build_votewa_lite_data.py",
         "derived_from": [
-            f"data/washington-state/counties/{county}/raw/votewa/candidate-list.csv",
+            rel(WA / county / "raw/votewa/candidate-list.csv"),
             *sorted({mm["source_url"] for mm in cfg["measures"]}),
         ],
         "coverage": coverage,

@@ -1,8 +1,10 @@
 """Stage: raw -> interim. Extract per-page text from the voters pamphlet PDFs.
 
-Input:  data/washington-state/counties/king/raw/pamphlet/edition-{1,2}.pdf.url
-Output: data/washington-state/counties/king/interim/pamphlet-text/edition-{1,2}/page-NNN.txt
-        data/washington-state/counties/king/interim/pamphlet-text/extraction.meta.json
+Usage:  python3 pipeline/extract_pamphlet_text.py [--election <id>]
+Input:  K/raw/pamphlet/edition-{1,2}.pdf.url
+Output: K/interim/pamphlet-text/edition-{1,2}/page-NNN.txt
+        K/interim/pamphlet-text/extraction.meta.json
+(K = data/washington-state/elections/<id>/counties/king)
 """
 
 import json
@@ -12,11 +14,14 @@ from urllib.request import urlretrieve
 
 from pypdf import PdfReader
 
-ROOT = Path(__file__).resolve().parent.parent
-KING = ROOT / "data/washington-state/counties/king"
+import election
+from election import ROOT, rel
+
+E = election.Election(election.from_argv())
+KING = E.county("king")
 RAW = KING / "raw/pamphlet"
 OUT = KING / "interim/pamphlet-text"
-CACHE = ROOT / ".cache/voter-lifeboat/pamphlets/king"
+CACHE = ROOT / ".cache/voter-lifeboat/pamphlets" / E.id / "king"
 CACHE.mkdir(parents=True, exist_ok=True)
 
 manifest = {"stage": "interim", "script": "pipeline/extract_pamphlet_text.py",
@@ -44,7 +49,7 @@ for pointer in sorted([*RAW.glob("edition-*.pdf"), *RAW.glob("edition-*.pdf.url"
     reader = PdfReader(pdf)
     for i, page in enumerate(reader.pages, start=1):
         (outdir / f"page-{i:03d}.txt").write_text(page.extract_text() or "")
-    manifest["derived_from"].append(f"data/washington-state/counties/king/raw/pamphlet/{pointer.name}")
+    manifest["derived_from"].append(rel(pointer))
     manifest["editions"][name] = {"pages": len(reader.pages)}
     print(f"{name}: {len(reader.pages)} pages extracted")
 

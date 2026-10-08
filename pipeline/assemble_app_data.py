@@ -1,13 +1,17 @@
 """Stage: final assembly. Merge package data into the single JSON the app ships.
 
-Inputs:
-  data/washington-state/counties/king/interim/{contests,measures,pamphlet-index}.json
-  data/final/{scores,measures,rubric,interview}.json
-  data/washington-state/{statewide,counties/king}/dossiers/**
+Usage: python3 pipeline/assemble_app_data.py [--election <id>]
+
+Inputs (E = data/washington-state/elections/<id>):
+  E/counties/king/interim/{contests,measures,pamphlet-index}.json
+  data/final/<id>/{scores,measures,rubric,interview}.json
+  E/{statewide,counties/*}/dossiers/**
 
 Outputs:
-  data/final/app-data.json
-  app/public/data/app-data.json
+  data/final/<id>/app-data.json
+  app/public/data/<id>/app-data.json
+  data/final/elections.json and app/public/data/elections.json (index of
+    every election whose app-data exists; `active` from elections/ACTIVE)
 
 Scope model:
   {"kind": "STATEWIDE"}
@@ -18,16 +22,17 @@ Scope model:
 import json
 import re
 import subprocess
-from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-WA = ROOT / "data/washington-state"
-STATE = WA / "statewide"
-KING = WA / "counties/king"
+import election
+from election import ROOT, rel
+
+E = election.Election(election.from_argv())
+STATE = E.state
+KING = E.county("king")
 INTERIM = KING / "interim"
-FINAL = ROOT / "data/final"
+FINAL = E.final
 DOSSIER_DIRS = [STATE / "dossiers", KING / "dossiers"] + sorted(
-    p / "dossiers" for p in (WA / "counties").iterdir()
+    p / "dossiers" for p in E.counties.iterdir()
     if p.is_dir() and p.name != "king"
 )
 COUNTY_NAMES = {
@@ -266,7 +271,7 @@ for m in measures_meta:
 
 supported_counties = [{"id": "king", "name": "King County", "state": "WA", "fips": "53033", "coverage": "full_county"}]
 shared_scores = shared_score_index(scores)
-for county_dir in sorted((WA / "counties").iterdir()):
+for county_dir in sorted(E.counties.iterdir()):
     if county_dir.name == "king" or not county_dir.is_dir():
         continue
     cfile = county_dir / "interim/app-contests.json"
@@ -302,26 +307,27 @@ duplicate_measures = sorted({s for s in measure_slugs if measure_slugs.count(s) 
 if duplicate_contests or duplicate_measures:
     raise SystemExit(f"duplicate app slugs: contests={duplicate_contests} measures={duplicate_measures}")
 
+META = election.ELECTION_META[E.id]
 sha = subprocess.run(["git", "rev-parse", "--short", "HEAD"], capture_output=True,
                      text=True, cwd=ROOT).stdout.strip() or "dev"
 
 app_data = {
     "derived_from": [
-        "data/washington-state/statewide/**",
-        "data/washington-state/counties/king/**",
-        "data/washington-state/counties/*/interim/app-*.json",
-        "data/final/scores.json",
-        "data/final/measures.json",
-        "data/final/rubric.json",
-        "data/final/interview.json",
+        f"{rel(STATE)}/**",
+        f"{rel(KING)}/**",
+        f"{rel(E.counties)}/*/interim/app-*.json",
+        f"{rel(FINAL)}/scores.json",
+        f"{rel(FINAL)}/measures.json",
+        f"{rel(FINAL)}/rubric.json",
+        f"{rel(FINAL)}/interview.json",
     ],
     "script": "pipeline/assemble_app_data.py",
     "data_version": sha,
     "election": {
-        "id": "2026-08-04-primary-special",
-        "name": "August 4, 2026 Primary and Special Election",
-        "day": "2026-08-04",
-        "scope": "Washington State",
+        "id": META["app_id"],
+        "name": META["name"],
+        "day": META["day"],
+        "scope": META["scope"],
     },
     "coverage": {
         "statewide_complete": True,
@@ -334,11 +340,49 @@ app_data = {
 }
 
 payload = json.dumps(app_data, separators=(",", ":"))
-FINAL.mkdir(exist_ok=True)
+FINAL.mkdir(parents=True, exist_ok=True)
 (FINAL / "app-data.json").write_text(payload)
-appdir = ROOT / "app/public/data"
-appdir.mkdir(parents=True, exist_ok=True)
-(appdir / "app-data.json").write_text(payload)
+E.app_data_dir.mkdir(parents=True, exist_ok=True)
+(E.app_data_dir / "app-data.json").write_text(payload)
+
+
+def write_election_index():
+    """List every election whose app-data exists; the app loads the active one.
+
+    Elections without generated app-data are left out so the app can never be
+    pointed at a file that is not there.
+    """
+    active = election.active_election()
+    entries = []
+    for election_id, meta in sorted(election.ELECTION_META.items()):
+        app_data = election.FINAL_ROOT / election_id / "app-data.json"
+        if not app_data.exists():
+            continue
+        entries.append({
+            "id": election_id,
+            "name": meta["name"],
+            "day": meta["day"],
+            "scope": meta["scope"],
+            "status": "active" if election_id == active else "archived",
+            "data_version": json.loads(app_data.read_text()).get("data_version"),
+        })
+    if active not in {e["id"] for e in entries}:
+        raise SystemExit(f"active election {active!r} has no app-data; run with --election {active}")
+    index = {
+        "derived_from": [rel(election.ACTIVE_FILE)] + [
+            rel(election.FINAL_ROOT / e["id"] / "app-data.json") for e in entries
+        ],
+        "script": "pipeline/assemble_app_data.py",
+        "active": active,
+        "elections": entries,
+    }
+    text = json.dumps(index, indent=2) + "\n"
+    (election.FINAL_ROOT / "elections.json").write_text(text)
+    (election.APP_DATA_ROOT / "elections.json").write_text(text)
+    print(f"elections.json: active={active} listed={[e['id'] for e in entries]}")
+
+
+write_election_index()
 
 n_src = sum(len(c["sources"]) for con in out_contests for c in con["candidates"])
 no_src = [
