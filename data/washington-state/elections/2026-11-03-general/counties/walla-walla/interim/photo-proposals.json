@@ -1,0 +1,194 @@
+{
+  "script": "pipeline/propose_candidate_photos.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/walla-walla/interim/research-plan.json",
+    "data/washington-state/elections/2026-11-03-general/counties/walla-walla/dossiers/"
+  ],
+  "election": "2026-11-03-general",
+  "package": "walla-walla",
+  "review_copies": "data/.cache/photos/2026-11-03-general/walla-walla/",
+  "summary": {
+    "proposed": 5,
+    "no-website": 2,
+    "fetch-failed": 0,
+    "no-image-found": 1,
+    "images_ok": 7
+  },
+  "proposals": [
+    {
+      "contest_slug": "walla-walla-walla-walla-county-auditor",
+      "candidate_slug": "sheryl-r-park",
+      "name": "Sheryl R. Park",
+      "website": "https://www.votesherylpark.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://www.votesherylpark.com/public/images/sheryl-perry-dozier.jpg",
+          "page": "https://www.votesherylpark.com/",
+          "kind": "campaign-website",
+          "why": "img 700x933",
+          "width": 700,
+          "height": 933,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 203911,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/walla-walla/walla-walla-walla-walla-county-auditor/sheryl-r-park-1.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "walla-walla-walla-walla-county-auditor",
+      "candidate_slug": "tim-reeves",
+      "name": "Tim Reeves",
+      "website": "https://www.reevesforcountyauditor.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://static1.squarespace.com/static/69d93153a9f98d4149b02c1a/t/69eff48af760a43b47902806/1777333386894/Copy+of+TIM+REEVES+%28200+x+100+px%29+%281000+x+500+px%29.png?format=1500w",
+          "page": "https://www.reevesforcountyauditor.com/",
+          "kind": "campaign-website",
+          "why": "twitter:image",
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 30891,
+          "status": "ok",
+          "width": 1000,
+          "height": 500,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/walla-walla/walla-walla-walla-walla-county-auditor/tim-reeves-1.jpg"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/69d93153a9f98d4149b02c1a/d7d94a1b-1033-42b4-b2d6-0a127d54831b/Tim+Reeves+headshot.jpg",
+          "page": "https://www.reevesforcountyauditor.com/",
+          "kind": "campaign-website",
+          "why": "img 233x320",
+          "width": 233,
+          "height": 320,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 14835,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/walla-walla/walla-walla-walla-walla-county-auditor/tim-reeves-2.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "walla-walla-walla-walla-county-commissioner-district-3-county-commissioner-district-3",
+      "candidate_slug": "gunner-fulmer",
+      "name": "Gunner Fulmer",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    },
+    {
+      "contest_slug": "walla-walla-walla-walla-county-commissioner-district-3-county-commissioner-district-3",
+      "candidate_slug": "troy-woody",
+      "name": "Troy Woody",
+      "website": "https://woodyforwallawalla.com/",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "walla-walla-walla-walla-county-sheriff",
+      "candidate_slug": "richard-schram",
+      "name": "Richard Schram",
+      "website": "https://schramforsheriff.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://schramforsheriff.com/schram-share-2026.jpg",
+          "page": "https://schramforsheriff.com/",
+          "kind": "campaign-website",
+          "why": "twitter:image",
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 110193,
+          "status": "ok",
+          "width": 1200,
+          "height": 630,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/walla-walla/walla-walla-walla-walla-county-sheriff/richard-schram-1.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "walla-walla-walla-walla-county-sheriff",
+      "candidate_slug": "ashley-daschofsky",
+      "name": "Ashley Daschofsky",
+      "website": "https://daschofskyforsheriff.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://daschofskyforsheriff.com/assets/og-image.png",
+          "page": "https://daschofskyforsheriff.com/",
+          "kind": "campaign-website",
+          "why": "twitter:image",
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 1543553,
+          "status": "ok",
+          "width": 1588,
+          "height": 991,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/walla-walla/walla-walla-walla-walla-county-sheriff/ashley-daschofsky-1.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "walla-walla-walla-walla-county-district-court-district-court-judge-part-time",
+      "candidate_slug": "nicholas-holce",
+      "name": "Nicholas Holce",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    },
+    {
+      "contest_slug": "walla-walla-walla-walla-county-district-court-district-court-judge-part-time",
+      "candidate_slug": "janelle-carman-wagner",
+      "name": "Janelle Carman-Wagner",
+      "website": "https://www.electjcw.org/candidate-profile",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://static1.squarespace.com/static/6a370f3d13a9081fd4556c34/t/6a3c74f946ff39592d561bd5/1782347002047/6.15.26+JCW+logo+w+dots+-+RGB+%282%29.png?format=1500w",
+          "page": "https://www.electjcw.org/candidate-profile",
+          "kind": "campaign-website",
+          "why": "twitter:image",
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 52852,
+          "status": "ok",
+          "width": 743,
+          "height": 449,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/walla-walla/walla-walla-walla-walla-county-district-court-district-court-judge-part-time/janelle-carman-wagner-1.jpg"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/6a370f3d13a9081fd4556c34/ec9bb785-97ea-4dd3-b9e1-06de2af90c2f/_V2A7014.jpg",
+          "page": "https://www.electjcw.org/candidate-profile",
+          "kind": "campaign-website",
+          "why": "img 4000x6000",
+          "width": 2500,
+          "height": 3750,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 831169,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/walla-walla/walla-walla-walla-walla-county-district-court-district-court-judge-part-time/janelle-carman-wagner-2.jpg"
+        }
+      ]
+    }
+  ]
+}

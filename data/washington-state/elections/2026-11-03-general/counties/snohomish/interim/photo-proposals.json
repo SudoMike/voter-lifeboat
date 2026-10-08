@@ -1,0 +1,733 @@
+{
+  "script": "pipeline/propose_candidate_photos.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/snohomish/interim/research-plan.json",
+    "data/washington-state/elections/2026-11-03-general/counties/snohomish/dossiers/"
+  ],
+  "election": "2026-11-03-general",
+  "package": "snohomish",
+  "review_copies": "data/.cache/photos/2026-11-03-general/snohomish/",
+  "summary": {
+    "proposed": 15,
+    "no-website": 3,
+    "fetch-failed": 1,
+    "no-image-found": 9,
+    "images_ok": 31
+  },
+  "proposals": [
+    {
+      "contest_slug": "snohomish-congressional-district-2-u-s-representative",
+      "candidate_slug": "rick-larsen",
+      "name": "Rick Larsen",
+      "website": "https://ricklarsen.org/priorities/",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "snohomish-congressional-district-2-u-s-representative",
+      "candidate_slug": "edwin-h-feller",
+      "name": "Edwin H. Feller",
+      "website": "https://fellerforcongress.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://fellerforcongress.com/Feller-Logo-Web.png",
+          "page": "https://fellerforcongress.com/",
+          "kind": "campaign-website",
+          "why": "twitter:image",
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 744803,
+          "status": "ok",
+          "width": 1920,
+          "height": 768,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/snohomish/snohomish-congressional-district-2-u-s-representative/edwin-h-feller-1.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-10-state-representative-pos-1",
+      "candidate_slug": "clyde-shavers",
+      "name": "Clyde Shavers",
+      "website": "https://electclydeshavers.com/",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-10-state-representative-pos-1",
+      "candidate_slug": "robert-chili-hicks",
+      "name": "Robert (Chili) Hicks",
+      "website": "https://hicksforwa.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://hicksforwa.com/wp-content/uploads/2025/04/Hicks-Robert-Logo_Color-1.png",
+          "page": "https://hicksforwa.com/",
+          "kind": "campaign-website",
+          "why": "img 2336x1917",
+          "width": 2336,
+          "height": 1917,
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 315281,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/snohomish/snohomish-legislative-district-10-state-representative-pos-1/robert-chili-hicks-1.jpg"
+        },
+        {
+          "url": "https://hicksforwa.com/wp-content/uploads/2025/04/Grampa-Hicks-1024x1024.jpg",
+          "page": "https://hicksforwa.com/",
+          "kind": "campaign-website",
+          "why": "img 800x800",
+          "width": 1024,
+          "height": 1024,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 177435,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/snohomish/snohomish-legislative-district-10-state-representative-pos-1/robert-chili-hicks-2.jpg"
+        },
+        {
+          "url": "https://hicksforwa.com/wp-content/uploads/2025/04/Hicks-Family-1024x821.jpg",
+          "page": "https://hicksforwa.com/",
+          "kind": "campaign-website",
+          "why": "img 800x641",
+          "width": 1024,
+          "height": 821,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 242985,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/snohomish/snohomish-legislative-district-10-state-representative-pos-1/robert-chili-hicks-3.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-10-state-representative-pos-2",
+      "candidate_slug": "dave-paul",
+      "name": "Dave Paul",
+      "website": "https://www.votedavepaul.com/",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-10-state-representative-pos-2",
+      "candidate_slug": "tim-hazelo",
+      "name": "Tim Hazelo",
+      "website": "https://www.votehazelo.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://static.wixstatic.com/media/953fec_7203d548a61841fcbd0c5d50c4e74d09~mv2.jpg/v1/fill/w_2500,h_1666,al_c/953fec_7203d548a61841fcbd0c5d50c4e74d09~mv2.jpg",
+          "page": "https://www.votehazelo.com/",
+          "kind": "campaign-website",
+          "why": "twitter:image",
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 1115991,
+          "status": "ok",
+          "width": 2500,
+          "height": 1666,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/snohomish/snohomish-legislative-district-10-state-representative-pos-2/tim-hazelo-1.jpg"
+        },
+        {
+          "url": "https://static.wixstatic.com/media/11062b_44ba3dd3c3b34cf8ba9031c29e08934af000.jpg/v1/fill/w_150,h_84,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/11062b_44ba3dd3c3b34cf8ba9031c29e08934af000.jpg",
+          "page": "https://www.votehazelo.com/",
+          "kind": "campaign-website",
+          "why": "img 1000x1000",
+          "width": 150,
+          "height": 84,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 2047,
+          "status": "ok",
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/snohomish/snohomish-legislative-district-10-state-representative-pos-2/tim-hazelo-2.jpg"
+        },
+        {
+          "url": "https://static.wixstatic.com/media/13312d_2d650fd8253848899403790e58639625~mv2.jpg/v1/fill/w_80,h_46,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/13312d_2d650fd8253848899403790e58639625~mv2.jpg",
+          "page": "https://www.votehazelo.com/",
+          "kind": "campaign-website",
+          "why": "img 320x322",
+          "width": 80,
+          "height": 46,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 1454,
+          "status": "ok",
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/snohomish/snohomish-legislative-district-10-state-representative-pos-2/tim-hazelo-3.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-21-state-senator",
+      "candidate_slug": "marko-liias",
+      "name": "Marko Liias",
+      "website": "https://markoliias.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://markoliias.com/wp-content/uploads/2025/05/ml-home-25-crop.jpg",
+          "page": "https://markoliias.com/",
+          "kind": "campaign-website",
+          "why": "img 1500x1336",
+          "width": 1500,
+          "height": 1336,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 342277,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/snohomish/snohomish-legislative-district-21-state-senator/marko-liias-1.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-21-state-senator",
+      "candidate_slug": "riaz-khan",
+      "name": "Riaz Khan",
+      "website": "https://www.electriaz.com/",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-21-state-representative-pos-1",
+      "candidate_slug": "strom-peterson",
+      "name": "Strom Peterson",
+      "website": "https://votestrom.com/on-the-issues/",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-21-state-representative-pos-1",
+      "candidate_slug": "jason-moon",
+      "name": "Jason Moon",
+      "website": "https://hellojasonmoon.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://img1.wsimg.com/isteam/ip/47b99eae-d4d1-4d7e-b294-1894bb6e2012/1000121554.jpg",
+          "page": "https://hellojasonmoon.com/",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 592848,
+          "status": "ok",
+          "width": 2048,
+          "height": 1536,
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/snohomish/snohomish-legislative-district-21-state-representative-pos-1/jason-moon-1.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-21-state-representative-pos-2",
+      "candidate_slug": "lillian-ortiz-self",
+      "name": "Lillian Ortiz-Self",
+      "website": "https://www.electlillian.com/priorities",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://static1.squarespace.com/static/61be7f17a08d0e7eff6821a1/t/61c38ca2a18a9618ef59f6e2/1640205475041/36890690_1618431151616137_5647104497785241600_n.jpg?format=1500w",
+          "page": "https://www.electlillian.com/priorities",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "width": 1500,
+          "height": 1500,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 416858,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/snohomish/snohomish-legislative-district-21-state-representative-pos-2/lillian-ortiz-self-1.jpg"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/61be7f17a08d0e7eff6821a1/1641590223670-J8GM85PWKBG38HCXIDHZ/IMG_1320.jpeg",
+          "page": "https://www.electlillian.com/priorities",
+          "kind": "campaign-website",
+          "why": "img 2100x1500",
+          "width": 2100,
+          "height": 1500,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 406328,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/snohomish/snohomish-legislative-district-21-state-representative-pos-2/lillian-ortiz-self-2.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-21-state-representative-pos-2",
+      "candidate_slug": "bruce-guthrie",
+      "name": "Bruce Guthrie",
+      "website": "https://www.BruceGuthrie.com/",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-38-state-senator",
+      "candidate_slug": "june-robinson",
+      "name": "June Robinson",
+      "website": "https://junerobinson.org/",
+      "website_from": "dossier",
+      "status": "fetch-failed",
+      "candidates": [
+        {
+          "url": "https://junerobinson.org/app/uploads/2018/06/june-portrait-1.jpg",
+          "page": "https://junerobinson.org/",
+          "kind": "campaign-website",
+          "why": "img 228x292",
+          "width": 228,
+          "height": 292,
+          "http_status": 404,
+          "content_type": null,
+          "bytes": null,
+          "status": "fetch-failed"
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-38-state-senator",
+      "candidate_slug": "brad-bender",
+      "name": "Brad Bender",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-38-state-representative-pos-1",
+      "candidate_slug": "julio-cortes",
+      "name": "Julio Cortes",
+      "website": "https://www.electjuliocortes.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://electjuliocortes.com/wp-content/uploads/2022/02/Julio-flag-scaled.jpg",
+          "page": "https://electjuliocortes.com/",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "width": 2560,
+          "height": 1920,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 643543,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/snohomish/snohomish-legislative-district-38-state-representative-pos-1/julio-cortes-1.jpg"
+        },
+        {
+          "url": "https://electjuliocortes.com/wp-content/uploads/2026/05/20240210_123501ab-ZF-9306-09277-1-027-scaled-e1778735339605-762x1024.jpg",
+          "page": "https://electjuliocortes.com/",
+          "kind": "campaign-website",
+          "why": "img 762x1024",
+          "width": 762,
+          "height": 1024,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 155578,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/snohomish/snohomish-legislative-district-38-state-representative-pos-1/julio-cortes-2.jpg"
+        },
+        {
+          "url": "https://electjuliocortes.com/wp-content/uploads/2022/02/Julio-housebackgroundcrossed.jpg",
+          "page": "https://electjuliocortes.com/",
+          "kind": "campaign-website",
+          "why": "img 800x835",
+          "width": 800,
+          "height": 835,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 141398,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/snohomish/snohomish-legislative-district-38-state-representative-pos-1/julio-cortes-3.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-38-state-representative-pos-1",
+      "candidate_slug": "thomas-jeff-kelly",
+      "name": "Thomas (Jeff) Kelly",
+      "website": "https://jeffkellyfor38.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://static1.squarespace.com/static/69e146c04cca177b036dc263/t/69e91bba3af7d1473e749337/1776884666375/Jeff+headshot+meet+jeff.png?format=1500w",
+          "page": "https://www.jeffkellyfor38.com/",
+          "kind": "campaign-website",
+          "why": "twitter:image",
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 3062688,
+          "status": "ok",
+          "width": 1536,
+          "height": 1022,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/snohomish/snohomish-legislative-district-38-state-representative-pos-1/thomas-jeff-kelly-1.jpg"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/69e146c04cca177b036dc263/514ac381-9fa7-48ef-91b0-fb3655ead13b/jeff_hero_cropped.jpg",
+          "page": "https://www.jeffkellyfor38.com/",
+          "kind": "campaign-website",
+          "why": "img 1109x834",
+          "width": 1109,
+          "height": 834,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 93726,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/snohomish/snohomish-legislative-district-38-state-representative-pos-1/thomas-jeff-kelly-2.jpg"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/69e146c04cca177b036dc263/e2d15a68-9925-4377-b6c2-b23a7509de3f/home+from+Iraq.jpg",
+          "page": "https://www.jeffkellyfor38.com/",
+          "kind": "campaign-website",
+          "why": "img 604x453",
+          "width": 604,
+          "height": 453,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 43540,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/snohomish/snohomish-legislative-district-38-state-representative-pos-1/thomas-jeff-kelly-3.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-39-state-representative-pos-1",
+      "candidate_slug": "kathryn-lewandowsky",
+      "name": "Kathryn Lewandowsky",
+      "website": "https://kathryn4ld39.net/priorities/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://i0.wp.com/kathryn4ld39.net/wp-content/uploads/2026/06/Kathryn-volunteers-at-booth.webp?fit=800%2C600&ssl=1",
+          "page": "https://kathryn4ld39.net/priorities/",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "width": 800,
+          "height": 600,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 150424,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/snohomish/snohomish-legislative-district-39-state-representative-pos-1/kathryn-lewandowsky-1.jpg"
+        },
+        {
+          "url": "https://i0.wp.com/kathryn4ld39.net/wp-content/uploads/2026/06/Kathryn-volunteers-at-booth.webp?fit=800%2C600&ssl=1&w=640",
+          "page": "https://kathryn4ld39.net/priorities/",
+          "kind": "campaign-website",
+          "why": "twitter:image",
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 92601,
+          "status": "ok",
+          "width": 640,
+          "height": 480,
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/snohomish/snohomish-legislative-district-39-state-representative-pos-1/kathryn-lewandowsky-2.jpg"
+        },
+        {
+          "url": "https://kathryn4ld39.net/wp-content/uploads/2026/06/Kathryn-volunteers-at-booth.webp",
+          "page": "https://kathryn4ld39.net/priorities/",
+          "kind": "campaign-website",
+          "why": "img 800x600",
+          "width": 800,
+          "height": 600,
+          "http_status": 200,
+          "content_type": "image/webp",
+          "bytes": 270896,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/snohomish/snohomish-legislative-district-39-state-representative-pos-1/kathryn-lewandowsky-3.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-39-state-representative-pos-1",
+      "candidate_slug": "sam-low",
+      "name": "Sam Low",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-39-state-representative-pos-2",
+      "candidate_slug": "ida-keeley",
+      "name": "Ida Keeley",
+      "website": "https://idaforwa.com/priorities/",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-39-state-representative-pos-2",
+      "candidate_slug": "steve-ewing",
+      "name": "Steve Ewing",
+      "website": "https://electsteveewing.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://electsteveewing.com/wp-content/uploads/2025/03/steve-ewing-volunteering-1024x819.jpg",
+          "page": "https://electsteveewing.com/",
+          "kind": "campaign-website",
+          "why": "img 1024x819",
+          "width": 1024,
+          "height": 819,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 66969,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/snohomish/snohomish-legislative-district-39-state-representative-pos-2/steve-ewing-1.jpg"
+        },
+        {
+          "url": "https://electsteveewing.com/wp-content/uploads/Campaign-Photo-Backyard-39th-LD-1024x768.jpg",
+          "page": "https://electsteveewing.com/",
+          "kind": "campaign-website",
+          "why": "img 1024x768",
+          "width": 1024,
+          "height": 768,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 80665,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/snohomish/snohomish-legislative-district-39-state-representative-pos-2/steve-ewing-2.jpg"
+        },
+        {
+          "url": "https://electsteveewing.com/wp-content/uploads/2025/03/lake-stevens-day-shot-1024x743.jpg",
+          "page": "https://electsteveewing.com/",
+          "kind": "campaign-website",
+          "why": "img 1024x743",
+          "width": 1024,
+          "height": 743,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 67841,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/snohomish/snohomish-legislative-district-39-state-representative-pos-2/steve-ewing-3.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-44-state-senator",
+      "candidate_slug": "john-lovick",
+      "name": "John Lovick",
+      "website": "https://www.john-lovick.org/issues",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-44-state-senator",
+      "candidate_slug": "sherri-larkin",
+      "name": "Sherri Larkin",
+      "website": "https://www.sherrilarkinwa.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://static.wixstatic.com/media/8d135e_23ae7a81a8ad4c08b79fc1aafa456d77~mv2.jpg/v1/fill/w_67,h_100,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/8d135e_23ae7a81a8ad4c08b79fc1aafa456d77~mv2.jpg",
+          "page": "https://www.sherrilarkinwa.com/",
+          "kind": "campaign-website",
+          "why": "img 320x400",
+          "width": 67,
+          "height": 100,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 2188,
+          "status": "ok",
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/snohomish/snohomish-legislative-district-44-state-senator/sherri-larkin-1.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-44-state-representative-pos-1",
+      "candidate_slug": "brandy-donaghy",
+      "name": "Brandy Donaghy",
+      "website": "https://www.brandydonaghy.com/issues/",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-44-state-representative-pos-1",
+      "candidate_slug": "chris-elder",
+      "name": "Chris Elder",
+      "website": "https://www.electchriselder.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://static.wixstatic.com/media/eee579_6e4759303e78445e95ab30ab05bf082c~mv2.jpg/v1/fill/w_2500,h_1875,al_c/eee579_6e4759303e78445e95ab30ab05bf082c~mv2.jpg",
+          "page": "https://www.electchriselder.com/",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "width": 2500,
+          "height": 1875,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 344580,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/snohomish/snohomish-legislative-district-44-state-representative-pos-1/chris-elder-1.jpg"
+        },
+        {
+          "url": "https://static.wixstatic.com/media/11062b_450a1535de214490881b927be2c24a6b~mv2.jpg/v1/fill/w_80,h_53,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/11062b_450a1535de214490881b927be2c24a6b~mv2.jpg",
+          "page": "https://www.electchriselder.com/",
+          "kind": "campaign-website",
+          "why": "img 320x455",
+          "width": 80,
+          "height": 53,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 1630,
+          "status": "ok",
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/snohomish/snohomish-legislative-district-44-state-representative-pos-1/chris-elder-2.jpg"
+        },
+        {
+          "url": "https://static.wixstatic.com/media/eee579_25bd7e68d1fa4786b3f2f2609b781b85~mv2.jpg/v1/fill/w_80,h_54,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/eee579_25bd7e68d1fa4786b3f2f2609b781b85~mv2.jpg",
+          "page": "https://www.electchriselder.com/",
+          "kind": "campaign-website",
+          "why": "img 320x284",
+          "width": 80,
+          "height": 54,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 1831,
+          "status": "ok",
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/snohomish/snohomish-legislative-district-44-state-representative-pos-1/chris-elder-3.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-44-state-representative-pos-2",
+      "candidate_slug": "april-berg",
+      "name": "April Berg",
+      "website": "https://www.aprilberg.com/platform",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://static.wixstatic.com/media/d96175_38d5631beb6f4f9c98552da398632024%7Emv2.jpg/v1/fit/w_2500,h_1330,al_c/d96175_38d5631beb6f4f9c98552da398632024%7Emv2.jpg",
+          "page": "https://www.aprilberg.com/platform",
+          "kind": "campaign-website",
+          "why": "twitter:image",
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 344274,
+          "status": "ok",
+          "width": 2103,
+          "height": 1330,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/snohomish/snohomish-legislative-district-44-state-representative-pos-2/april-berg-1.jpg"
+        },
+        {
+          "url": "https://static.wixstatic.com/media/f1f347_703430a51304442184eeb0432a1eb8ef~mv2.jpg/v1/fill/w_80,h_51,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/f1f347_703430a51304442184eeb0432a1eb8ef~mv2.jpg",
+          "page": "https://www.aprilberg.com/platform",
+          "kind": "campaign-website",
+          "why": "img 320x277",
+          "width": 80,
+          "height": 51,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 1861,
+          "status": "ok",
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/snohomish/snohomish-legislative-district-44-state-representative-pos-2/april-berg-2.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-44-state-representative-pos-2",
+      "candidate_slug": "tonya-stadlman",
+      "name": "Tonya Stadlman",
+      "website": "https://tonyafor44.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://img1.wsimg.com/isteam/ip/4dbf041e-033e-4068-afa8-08a84b8d49d0/IMG_5204.png",
+          "page": "https://tonyafor44.com/",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 43715,
+          "status": "ok",
+          "width": 851,
+          "height": 315,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/snohomish/snohomish-legislative-district-44-state-representative-pos-2/tonya-stadlman-1.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-public-utility-district-no-1-commissioner-district-1",
+      "candidate_slug": "sid-logan",
+      "name": "Sid Logan",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    },
+    {
+      "contest_slug": "snohomish-public-utility-district-no-1-commissioner-district-1",
+      "candidate_slug": "janet-st-clair",
+      "name": "Janet St Clair",
+      "website": "https://stclairforsnopud.com/issues",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://run.imgix.net/27aa4619-f31b-4eb3-a44c-09b44dd388ae/61127819-8100-42d8-8fcf-e73d6b11a420/04aa8a87-e1cb-4152-abda-093ead92d1ec.webp?ixlib=js-3.8.0&bri=0&con=0&sat=0&high=0&shad=0&usm=0&rect=0%2C25%2C4096%2C2149",
+          "page": "https://www.stclairforsnopud.com/issues",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 348799,
+          "status": "ok",
+          "width": 4096,
+          "height": 2149,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/snohomish/snohomish-public-utility-district-no-1-commissioner-district-1/janet-st-clair-1.jpg"
+        }
+      ]
+    }
+  ]
+}

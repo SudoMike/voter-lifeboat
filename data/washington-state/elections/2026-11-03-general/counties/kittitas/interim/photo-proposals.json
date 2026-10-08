@@ -1,0 +1,189 @@
+{
+  "script": "pipeline/propose_candidate_photos.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/kittitas/interim/research-plan.json",
+    "data/washington-state/elections/2026-11-03-general/counties/kittitas/dossiers/"
+  ],
+  "election": "2026-11-03-general",
+  "package": "kittitas",
+  "review_copies": "data/.cache/photos/2026-11-03-general/kittitas/",
+  "summary": {
+    "proposed": 4,
+    "no-website": 1,
+    "fetch-failed": 0,
+    "no-image-found": 1,
+    "images_ok": 8
+  },
+  "proposals": [
+    {
+      "contest_slug": "kittitas-kittitas-county-coroner",
+      "candidate_slug": "cori-mckean",
+      "name": "Cori McKean",
+      "website": "https://www.mckeanforcoroner.com/about",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://irp.cdn-website.com/f8b26386/dms3rep/multi/opt/Cori+for+Coroner_0009-1920w.jpg",
+          "page": "https://www.mckeanforcoroner.com/about",
+          "kind": "campaign-website",
+          "why": "twitter:image",
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 255638,
+          "status": "ok",
+          "width": 1920,
+          "height": 1280,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/kittitas/kittitas-kittitas-county-coroner/cori-mckean-1.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "kittitas-kittitas-county-coroner",
+      "candidate_slug": "charlie-divine",
+      "name": "Charlie Divine",
+      "website": "https://www.choosecharlie.org/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://static1.squarespace.com/static/69b060ff214bca341f17db00/t/69b06e36fa1d730f13fbe282/1773170230479/qrCode.png?format=1500w",
+          "page": "https://www.choosecharlie.org/",
+          "kind": "campaign-website",
+          "why": "twitter:image",
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 1229,
+          "status": "ok",
+          "width": 164,
+          "height": 164,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/kittitas/kittitas-kittitas-county-coroner/charlie-divine-1.jpg"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/69b060ff214bca341f17db00/1773338838858-4E4DQ13AITHLQS1X79OF/unsplash-image-_tF3vug2FhQ.jpg",
+          "page": "https://www.choosecharlie.org/",
+          "kind": "campaign-website",
+          "why": "img 2500x1875",
+          "width": 2500,
+          "height": 1875,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 150592,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/kittitas/kittitas-kittitas-county-coroner/charlie-divine-2.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "kittitas-kittitas-county-prosecuting-attorney",
+      "candidate_slug": "jodi-hammond",
+      "name": "Jodi Hammond",
+      "website": "https://hammond4kcpa.com/",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "kittitas-kittitas-county-prosecuting-attorney",
+      "candidate_slug": "aaron-reiman",
+      "name": "Aaron Reiman",
+      "website": "https://reiman4prosecutor.com/about.html",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://reiman4prosecutor.com/images/portrait-flag.png",
+          "page": "https://reiman4prosecutor.com/about",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 158998,
+          "status": "ok",
+          "width": 731,
+          "height": 1024,
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/kittitas/kittitas-kittitas-county-prosecuting-attorney/aaron-reiman-1.jpg"
+        },
+        {
+          "url": "https://reiman4prosecutor.com/images/three-generation-military.png",
+          "page": "https://reiman4prosecutor.com/about",
+          "kind": "campaign-website",
+          "why": "img 1024x804",
+          "width": 1024,
+          "height": 804,
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 165948,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/kittitas/kittitas-kittitas-county-prosecuting-attorney/aaron-reiman-2.jpg"
+        },
+        {
+          "url": "https://reiman4prosecutor.com/images/community-peter-pan.png",
+          "page": "https://reiman4prosecutor.com/about",
+          "kind": "campaign-website",
+          "why": "img 640x853",
+          "width": 768,
+          "height": 1024,
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 207907,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/kittitas/kittitas-kittitas-county-prosecuting-attorney/aaron-reiman-3.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "kittitas-kittitas-county-sheriff",
+      "candidate_slug": "ben-kokjer",
+      "name": "Ben Kokjer",
+      "website": "https://www.electbenforsheriff.com/about",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://irp.cdn-website.com/7be7d437/dms3rep/multi/opt/86E4E2FC-BE3B-49AD-957D-617BCF01B7FC-32a55055-1920w.PNG",
+          "page": "https://www.electbenforsheriff.com/about",
+          "kind": "campaign-website",
+          "why": "twitter:image",
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 682582,
+          "status": "ok",
+          "width": 1920,
+          "height": 1280,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/kittitas/kittitas-kittitas-county-sheriff/ben-kokjer-1.jpg"
+        },
+        {
+          "url": "https://irp.cdn-website.com/7be7d437/dms3rep/multi/opt/JOY_6645+%281%29-bf511785-2304w.JPEG",
+          "page": "https://www.electbenforsheriff.com/about",
+          "kind": "campaign-website",
+          "why": "img 1920x1420",
+          "width": 1920,
+          "height": 1420,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 745419,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/kittitas/kittitas-kittitas-county-sheriff/ben-kokjer-2.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "kittitas-kittitas-county-sheriff",
+      "candidate_slug": "darryl-chepoda-jr",
+      "name": "Darryl Chepoda JR",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    }
+  ]
+}

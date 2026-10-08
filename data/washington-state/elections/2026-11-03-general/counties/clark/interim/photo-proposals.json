@@ -1,0 +1,869 @@
+{
+  "script": "pipeline/propose_candidate_photos.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/clark/interim/research-plan.json",
+    "data/washington-state/elections/2026-11-03-general/counties/clark/dossiers/"
+  ],
+  "election": "2026-11-03-general",
+  "package": "clark",
+  "review_copies": "data/.cache/photos/2026-11-03-general/clark/",
+  "summary": {
+    "proposed": 19,
+    "no-website": 2,
+    "fetch-failed": 1,
+    "no-image-found": 10,
+    "images_ok": 38
+  },
+  "proposals": [
+    {
+      "contest_slug": "clark-congressional-district-3-u-s-representative",
+      "candidate_slug": "john-braun",
+      "name": "John Braun",
+      "website": "https://www.votebraun.com/issues",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "clark-congressional-district-3-u-s-representative",
+      "candidate_slug": "marie-gluesenkamp-perez",
+      "name": "Marie Gluesenkamp Perez",
+      "website": "https://marieforcongress.com/issues/",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "clark-legislative-district-17-state-representative-pos-1",
+      "candidate_slug": "ben-christly",
+      "name": "Ben Christly",
+      "website": "https://www.electbenchristly.com/values",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://static1.squarespace.com/static/695467d08fbaf9350fe1c66f/t/69710f9ba85f581bd64c9947/1769017244000/25PAR024_CHRISTLY_LOGO_d7-01.jpg?format=1500w",
+          "page": "https://www.electbenchristly.com/values",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "width": 1500,
+          "height": 1129,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 98568,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/clark/clark-legislative-district-17-state-representative-pos-1/ben-christly-1.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "clark-legislative-district-17-state-representative-pos-1",
+      "candidate_slug": "kevin-waters",
+      "name": "Kevin Waters",
+      "website": "https://www.watersforhouse.com/",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "clark-legislative-district-17-state-representative-pos-2",
+      "candidate_slug": "diana-h-perez",
+      "name": "Diana H. Perez",
+      "website": "https://electdianaperez.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://static1.squarespace.com/static/67cf44c94a25b77ec76eb5d2/t/6997fd66e0b17e0e6102e228/1771568486979/Perez+for+17LD.png?format=1500w",
+          "page": "https://electdianaperez.com/",
+          "kind": "campaign-website",
+          "why": "twitter:image",
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 1085094,
+          "status": "ok",
+          "width": 2292,
+          "height": 1500,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/clark/clark-legislative-district-17-state-representative-pos-2/diana-h-perez-1.jpg"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/67cf44c94a25b77ec76eb5d2/0e3e08e8-2185-46e5-96ed-261fcfaaea71/16KSP_5065iP_pp.jpg",
+          "page": "https://electdianaperez.com/",
+          "kind": "campaign-website",
+          "why": "img 4703x6404",
+          "width": 2500,
+          "height": 3404,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 659501,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/clark/clark-legislative-district-17-state-representative-pos-2/diana-h-perez-2.jpg"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/67cf44c94a25b77ec76eb5d2/0422a629-e72c-49cd-8974-9e250f0d5ba7/IMG_5978.JPG",
+          "page": "https://electdianaperez.com/",
+          "kind": "campaign-website",
+          "why": "img 1365x2048",
+          "width": 1365,
+          "height": 2048,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 402358,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/clark/clark-legislative-district-17-state-representative-pos-2/diana-h-perez-3.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "clark-legislative-district-17-state-representative-pos-2",
+      "candidate_slug": "david-stuebe",
+      "name": "David Stuebe",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    },
+    {
+      "contest_slug": "clark-legislative-district-18-state-representative-pos-1",
+      "candidate_slug": "randi-l-knott",
+      "name": "Randi L. Knott",
+      "website": "https://www.electrandi.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://static.wixstatic.com/media/88e548_e7c5fb927e1742898e50408ce1add166%7Emv2.png/v1/fit/w_2500,h_1330,al_c/88e548_e7c5fb927e1742898e50408ce1add166%7Emv2.png",
+          "page": "https://www.electrandi.com/",
+          "kind": "campaign-website",
+          "why": "twitter:image",
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 316763,
+          "status": "ok",
+          "width": 1773,
+          "height": 1330,
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/clark/clark-legislative-district-18-state-representative-pos-1/randi-l-knott-1.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "clark-legislative-district-18-state-representative-pos-1",
+      "candidate_slug": "stephanie-mcclintock",
+      "name": "Stephanie McClintock",
+      "website": "https://www.vote4stephaniemcclintock.com/",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "clark-legislative-district-18-state-representative-pos-2",
+      "candidate_slug": "deken-letinich",
+      "name": "Deken Letinich",
+      "website": "https://www.electdeken.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://static1.squarespace.com/static/6611a639be78ab70ec5bbb40/t/69711169ffb39a20c16a2bb9/1769017705171/25PAR023_DEKEN_LOGO_UPDATE_d1+%281%29.png?format=1500w",
+          "page": "https://www.electdeken.com/",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "width": 1500,
+          "height": 1129,
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 47323,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/clark/clark-legislative-district-18-state-representative-pos-2/deken-letinich-1.jpg"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/6611a639be78ab70ec5bbb40/1f7c81c1-dd9d-4b76-a52a-789a84f8b11e/WSBCTC+logo.png",
+          "page": "https://www.electdeken.com/",
+          "kind": "campaign-website",
+          "why": "img 2702x2701",
+          "width": 2500,
+          "height": 2499,
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 1169460,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/clark/clark-legislative-district-18-state-representative-pos-2/deken-letinich-2.jpg"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/6611a639be78ab70ec5bbb40/2a37f4ff-c8ee-40b4-86ff-c80e2136755e/Image.jpeg",
+          "page": "https://www.electdeken.com/",
+          "kind": "campaign-website",
+          "why": "img 1532x1536",
+          "width": 1532,
+          "height": 1536,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 244652,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/clark/clark-legislative-district-18-state-representative-pos-2/deken-letinich-3.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "clark-legislative-district-18-state-representative-pos-2",
+      "candidate_slug": "john-ley",
+      "name": "John Ley",
+      "website": "https://electjohnley.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://electjohnley.com/wp-content/uploads/2024/06/John-Ley-Header-Image.jpg",
+          "page": "https://electjohnley.com/",
+          "kind": "campaign-website",
+          "why": "twitter:image",
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 228076,
+          "status": "ok",
+          "width": 1920,
+          "height": 952,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/clark/clark-legislative-district-18-state-representative-pos-2/john-ley-1.jpg"
+        },
+        {
+          "url": "https://electjohnley.com/wp-content/uploads/2022/05/State-Spending.jpg",
+          "page": "https://electjohnley.com/",
+          "kind": "campaign-website",
+          "why": "img 1200x1000",
+          "width": 1200,
+          "height": 1000,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 142394,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/clark/clark-legislative-district-18-state-representative-pos-2/john-ley-2.jpg"
+        },
+        {
+          "url": "https://electjohnley.com/wp-content/uploads/2022/05/Transportation.jpg",
+          "page": "https://electjohnley.com/",
+          "kind": "campaign-website",
+          "why": "img 1200x1000",
+          "width": 1200,
+          "height": 1000,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 257469,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/clark/clark-legislative-district-18-state-representative-pos-2/john-ley-3.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "clark-legislative-district-20-state-representative-pos-1",
+      "candidate_slug": "peter-abbarno",
+      "name": "Peter Abbarno",
+      "website": "https://electpeterabbarno.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://electpeterabbarno.com/wp-content/uploads/2021/05/Peter-Top-Photo_strong-families.png",
+          "page": "https://electpeterabbarno.com/",
+          "kind": "campaign-website",
+          "why": "img 691x560",
+          "width": 691,
+          "height": 560,
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 100005,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/clark/clark-legislative-district-20-state-representative-pos-1/peter-abbarno-1.jpg"
+        },
+        {
+          "url": "https://electpeterabbarno.com/wp-content/uploads/2025/04/20th-District-Map-2025.jpg",
+          "page": "https://electpeterabbarno.com/",
+          "kind": "campaign-website",
+          "why": "img 350x320",
+          "width": 350,
+          "height": 320,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 19473,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/clark/clark-legislative-district-20-state-representative-pos-1/peter-abbarno-2.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "clark-legislative-district-20-state-representative-pos-1",
+      "candidate_slug": "andy-zahn",
+      "name": "Andy Zahn",
+      "website": "https://andyzahn.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://s0.wp.com/i/blank.jpg",
+          "page": "https://andyzahn.com/",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "width": 200,
+          "height": 200,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 8554,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/clark/clark-legislative-district-20-state-representative-pos-1/andy-zahn-1.jpg"
+        },
+        {
+          "url": "https://i0.wp.com/andyzahn.com/wp-content/uploads/2026/08/DJI_0374-e1787082971890.jpg?resize=1200%2C900&ssl=1",
+          "page": "https://andyzahn.com/",
+          "kind": "campaign-website",
+          "why": "img 1200x900",
+          "width": 1200,
+          "height": 900,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 136093,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/clark/clark-legislative-district-20-state-representative-pos-1/andy-zahn-2.jpg"
+        },
+        {
+          "url": "https://i0.wp.com/andyzahn.com/wp-content/uploads/2026/06/Screenshot_20260622_131423_YouTube.jpg?resize=1200%2C900&ssl=1",
+          "page": "https://andyzahn.com/",
+          "kind": "campaign-website",
+          "why": "img 1200x900",
+          "width": 1200,
+          "height": 900,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 81358,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/clark/clark-legislative-district-20-state-representative-pos-1/andy-zahn-3.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "clark-legislative-district-20-state-representative-pos-2",
+      "candidate_slug": "ed-orcutt",
+      "name": "Ed Orcutt",
+      "website": "https://repedorcutt.com/",
+      "website_from": "dossier",
+      "status": "fetch-failed",
+      "candidates": [],
+      "error": "URLError: [Errno 104] Connection reset by peer"
+    },
+    {
+      "contest_slug": "clark-legislative-district-20-state-representative-pos-2",
+      "candidate_slug": "evan-jones",
+      "name": "Evan Jones",
+      "website": "https://voteevanjones.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://voteevanjones.com/assets/img/og-image.jpg",
+          "page": "https://voteevanjones.com/",
+          "kind": "campaign-website",
+          "why": "twitter:image",
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 46201,
+          "status": "ok",
+          "width": 1200,
+          "height": 629,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/clark/clark-legislative-district-20-state-representative-pos-2/evan-jones-1.jpg"
+        },
+        {
+          "url": "https://voteevanjones.com/assets/img/evan-jones-hero-image.webp",
+          "page": "https://voteevanjones.com/",
+          "kind": "campaign-website",
+          "why": "img 1807x1920",
+          "width": 1807,
+          "height": 1920,
+          "http_status": 200,
+          "content_type": "image/webp",
+          "bytes": 130082,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/clark/clark-legislative-district-20-state-representative-pos-2/evan-jones-2.jpg"
+        },
+        {
+          "url": "https://voteevanjones.com/assets/img/meet-evan-jones.webp",
+          "page": "https://voteevanjones.com/",
+          "kind": "campaign-website",
+          "why": "img 896x1190",
+          "width": 896,
+          "height": 1190,
+          "http_status": 200,
+          "content_type": "image/webp",
+          "bytes": 37256,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/clark/clark-legislative-district-20-state-representative-pos-2/evan-jones-3.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "clark-legislative-district-49-state-representative-pos-1",
+      "candidate_slug": "kim-d-harless",
+      "name": "Kim D. Harless",
+      "website": "https://www.votekimharless.com/priorities",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://static1.squarespace.com/static/680a6fa2799c13556eb8f887/t/6a49af46f8f57e1a9469ccc5/1783213894113/Harless.0098+copy.JPG?format=1500w",
+          "page": "https://votekimharless.com/priorities",
+          "kind": "campaign-website",
+          "why": "twitter:image",
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 553042,
+          "status": "ok",
+          "width": 2500,
+          "height": 1667,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/clark/clark-legislative-district-49-state-representative-pos-1/kim-d-harless-1.jpg"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/680a6fa2799c13556eb8f887/320f468f-9575-4a6f-8f8a-731e4ba9a51e/IMG_8020.png",
+          "page": "https://votekimharless.com/priorities",
+          "kind": "campaign-website",
+          "why": "img 1909x2546",
+          "width": 1909,
+          "height": 2546,
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 7206204,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/clark/clark-legislative-district-49-state-representative-pos-1/kim-d-harless-2.jpg"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/680a6fa2799c13556eb8f887/1783292793086-X68GP56NP5VMJUC5EDED/unsplash-image-G8CxFhKuPDU.jpg",
+          "page": "https://votekimharless.com/priorities",
+          "kind": "campaign-website",
+          "why": "img 2500x1875",
+          "width": 2500,
+          "height": 1875,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 420415,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/clark/clark-legislative-district-49-state-representative-pos-1/kim-d-harless-3.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "clark-legislative-district-49-state-representative-pos-1",
+      "candidate_slug": "sarah-mittelman",
+      "name": "Sarah Mittelman",
+      "website": "https://sarah4wa.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://sarah4wa.com/assets/hero.jpg",
+          "page": "https://sarah4wa.com/",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 353178,
+          "status": "ok",
+          "width": 1084,
+          "height": 1507,
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/clark/clark-legislative-district-49-state-representative-pos-1/sarah-mittelman-1.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "clark-legislative-district-49-state-representative-pos-2",
+      "candidate_slug": "monica-jurado-stonier",
+      "name": "Monica Jurado Stonier",
+      "website": "https://votemonicastonier.com/site-config.json",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "clark-legislative-district-49-state-representative-pos-2",
+      "candidate_slug": "derek-thompson",
+      "name": "Derek Thompson",
+      "website": "https://www.votederekthompson.com/",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "clark-clark-county-assessor",
+      "candidate_slug": "peter-van-nortwick",
+      "name": "Peter Van Nortwick",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    },
+    {
+      "contest_slug": "clark-clark-county-assessor",
+      "candidate_slug": "tyler-thoune",
+      "name": "Tyler Thoune",
+      "website": "https://votethoune.com/",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "clark-clark-county-auditor",
+      "candidate_slug": "eileen-quiring-o-brien",
+      "name": "Eileen Quiring O'Brien",
+      "website": "https://www.eileenforauditor.com/meet_eileen_quiring",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "clark-clark-county-auditor",
+      "candidate_slug": "mitchell-kelly",
+      "name": "Mitchell Kelly",
+      "website": "https://www.mitchellkellyforauditor.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://content.campaignpartner.net/images/151040/MitchellKellyforAuditor.png",
+          "page": "https://www.mitchellkellyforauditor.com/",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 404770,
+          "status": "ok",
+          "width": 2250,
+          "height": 1500,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/clark/clark-clark-county-auditor/mitchell-kelly-1.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "clark-clark-county-clerk",
+      "candidate_slug": "scott-g-weber",
+      "name": "Scott G Weber",
+      "website": "https://www.weber4clerk.com",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://static.wixstatic.com/media/9b093f_c4c7147a4f704c48b8b56da747b94214~mv2.png/v1/fill/w_250,h_250,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_0659.png",
+          "page": "https://www.weber4clerk.com/",
+          "kind": "campaign-website",
+          "why": "img 250x250",
+          "width": 250,
+          "height": 250,
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 153894,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/clark/clark-clark-county-clerk/scott-g-weber-1.jpg"
+        },
+        {
+          "url": "https://static.wixstatic.com/media/9b093f_753e1a738caf44188f84244e1d402230~mv2.png/v1/fill/w_250,h_250,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_0722.png",
+          "page": "https://www.weber4clerk.com/",
+          "kind": "campaign-website",
+          "why": "img 250x250",
+          "width": 250,
+          "height": 250,
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 134814,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/clark/clark-clark-county-clerk/scott-g-weber-2.jpg"
+        },
+        {
+          "url": "https://static.wixstatic.com/media/9b093f_03b9c844f8bb4618ba91a8667ce70aaf~mv2.jpeg/v1/fill/w_250,h_250,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_0605.jpeg",
+          "page": "https://www.weber4clerk.com/",
+          "kind": "campaign-website",
+          "why": "img 250x250",
+          "width": 250,
+          "height": 250,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 31813,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/clark/clark-clark-county-clerk/scott-g-weber-3.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "clark-clark-county-clerk",
+      "candidate_slug": "rachel-shapiro",
+      "name": "Rachel Shapiro",
+      "website": "https://www.voterachelshapiro.com/",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "clark-clark-county-council-district-1-county-councilor",
+      "candidate_slug": "glen-yung",
+      "name": "Glen Yung",
+      "website": "https://glen4council.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://glen4council.com/images/logos/GY-logo-600.jpg",
+          "page": "https://glen4council.com/",
+          "kind": "campaign-website",
+          "why": "twitter:image",
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 23587,
+          "status": "ok",
+          "width": 600,
+          "height": 305,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/clark/clark-clark-county-council-district-1-county-councilor/glen-yung-1.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "clark-clark-county-council-district-1-county-councilor",
+      "candidate_slug": "bryan-shull",
+      "name": "Bryan Shull",
+      "website": "https://www.electbryanshull.com",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/69d00e99069c2b17077372e3/62a1870f-9e8f-4163-aab6-fe256099fd84/QUACKENBUSH_1086+copy.png",
+          "page": "https://www.electbryanshull.com/",
+          "kind": "campaign-website",
+          "why": "img 2500x2500",
+          "width": 2500,
+          "height": 2500,
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 8007295,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/clark/clark-clark-county-council-district-1-county-councilor/bryan-shull-1.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "clark-clark-county-council-district-2-county-councilor",
+      "candidate_slug": "michelle-belkot",
+      "name": "Michelle Belkot",
+      "website": "https://www.electbelkot.com",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/699eadf9998edd5a8b3d32c0/4d0a226c-7995-40e9-aafa-26c737a18b5a/Story_Clark-County-Today-Michelle-Belkot.jpg",
+          "page": "https://www.electbelkot.com/",
+          "kind": "campaign-website",
+          "why": "img 638x786",
+          "width": 638,
+          "height": 786,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 81778,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/clark/clark-clark-county-council-district-2-county-councilor/michelle-belkot-1.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "clark-clark-county-council-district-2-county-councilor",
+      "candidate_slug": "john-zingale",
+      "name": "John Zingale",
+      "website": "https://www.zingaleforclarkcounty.com",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://static1.squarespace.com/static/688cfcd92519712b73632fa8/t/69d29d0eeb663151cf857a9e/1775410446541/Zingale+Digital+Logo+%282+x+1%29+2026+%282%29.png?format=1500w",
+          "page": "https://www.zingaleforclarkcounty.com/",
+          "kind": "campaign-website",
+          "why": "twitter:image",
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 127290,
+          "status": "ok",
+          "width": 1152,
+          "height": 576,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/clark/clark-clark-county-council-district-2-county-councilor/john-zingale-1.jpg"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/688cfcd92519712b73632fa8/1785442727106-1E7VM4IHGXHK1Q2NN8IW/image-asset.jpeg",
+          "page": "https://www.zingaleforclarkcounty.com/",
+          "kind": "campaign-website",
+          "why": "img 2936x2936",
+          "width": 2500,
+          "height": 2500,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 1561129,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/clark/clark-clark-county-council-district-2-county-councilor/john-zingale-2.jpg"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/688cfcd92519712b73632fa8/1785870671992-0EZZM6PMEJZ2QB4LETM0/image-asset.jpeg",
+          "page": "https://www.zingaleforclarkcounty.com/",
+          "kind": "campaign-website",
+          "why": "img 3072x2304",
+          "width": 2500,
+          "height": 1875,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 561782,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/clark/clark-clark-county-council-district-2-county-councilor/john-zingale-3.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "clark-clark-county-council-district-5-county-councilor",
+      "candidate_slug": "troy-mccoy",
+      "name": "Troy McCoy",
+      "website": "https://www.votetroymccoy.com",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://static.wixstatic.com/media/c99839_bd85ca91d3a8449690e05b3f1a2fb6fa~mv2.jpg/v1/fill/w_1404,h_670,al_c/c99839_bd85ca91d3a8449690e05b3f1a2fb6fa~mv2.jpg",
+          "page": "https://www.votetroymccoy.com/",
+          "kind": "campaign-website",
+          "why": "twitter:image",
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 446493,
+          "status": "ok",
+          "width": 1404,
+          "height": 670,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/clark/clark-clark-county-council-district-5-county-councilor/troy-mccoy-1.jpg"
+        },
+        {
+          "url": "https://static.wixstatic.com/media/c99839_012d4d7a2e1c45e8a61d753738c08527~mv2.jpg/v1/fill/w_74,h_94,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/c99839_012d4d7a2e1c45e8a61d753738c08527~mv2.jpg",
+          "page": "https://www.votetroymccoy.com/",
+          "kind": "campaign-website",
+          "why": "img 320x377",
+          "width": 74,
+          "height": 94,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 1953,
+          "status": "ok",
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/clark/clark-clark-county-council-district-5-county-councilor/troy-mccoy-2.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "clark-clark-county-council-district-5-county-councilor",
+      "candidate_slug": "peter-silliman",
+      "name": "Peter Silliman",
+      "website": "https://www.electpetersilliman.com/",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "clark-public-utility-district-no-1-of-clark-county-district-3-pud-commissioner",
+      "candidate_slug": "jane-a-van-dyke",
+      "name": "Jane A. Van Dyke",
+      "website": "https://janevandyke.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://janevandyke.com/vandyke_og.jpg",
+          "page": "https://janevandyke.com/",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "http_status": 404,
+          "content_type": null,
+          "bytes": null,
+          "status": "fetch-failed"
+        },
+        {
+          "url": "https://janevandyke.com/photos/Jane-Van-Dyke-1035.jpg",
+          "page": "https://janevandyke.com/",
+          "kind": "campaign-website",
+          "why": "img 400x400",
+          "width": 400,
+          "height": 400,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 36562,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/clark/clark-public-utility-district-no-1-of-clark-county-district-3-pud-commissioner/jane-a-van-dyke-2.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "clark-public-utility-district-no-1-of-clark-county-district-3-pud-commissioner",
+      "candidate_slug": "gordon-matthews",
+      "name": "Gordon Matthews",
+      "website": "https://www.matthewsforclarkpud.org/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://irp.cdn-website.com/73c81e74/dms3rep/multi/opt/Gordon-Matthews-social-1200x630-1920w.png",
+          "page": "https://www.matthewsforclarkpud.org/",
+          "kind": "campaign-website",
+          "why": "twitter:image",
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 1926469,
+          "status": "ok",
+          "width": 1920,
+          "height": 1008,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/clark/clark-public-utility-district-no-1-of-clark-county-district-3-pud-commissioner/gordon-matthews-1.jpg"
+        },
+        {
+          "url": "https://irp.cdn-website.com/73c81e74/dms3rep/multi/opt/Gordon+Matthews+Campaign+Photo-636h.png",
+          "page": "https://www.matthewsforclarkpud.org/",
+          "kind": "campaign-website",
+          "why": "img 600x900",
+          "width": 600,
+          "height": 900,
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 348907,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/clark/clark-public-utility-district-no-1-of-clark-county-district-3-pud-commissioner/gordon-matthews-2.jpg"
+        }
+      ]
+    }
+  ]
+}

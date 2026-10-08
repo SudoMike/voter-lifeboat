@@ -1,0 +1,128 @@
+{
+  "script": "pipeline/propose_candidate_photos.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/san-juan/interim/research-plan.json",
+    "data/washington-state/elections/2026-11-03-general/counties/san-juan/dossiers/"
+  ],
+  "election": "2026-11-03-general",
+  "package": "san-juan",
+  "review_copies": "data/.cache/photos/2026-11-03-general/san-juan/",
+  "summary": {
+    "proposed": 3,
+    "no-website": 0,
+    "fetch-failed": 0,
+    "no-image-found": 1,
+    "images_ok": 5
+  },
+  "proposals": [
+    {
+      "contest_slug": "san-juan-san-juan-county-auditor",
+      "candidate_slug": "heather-lee",
+      "name": "Heather Lee",
+      "website": "https://heatherlee4auditor.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://content.campaignpartner.net/images/154530/HL_-_Headshot_2.jpeg",
+          "page": "https://heatherlee4auditor.com/",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 295418,
+          "status": "ok",
+          "width": 1111,
+          "height": 1500,
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/san-juan/san-juan-san-juan-county-auditor/heather-lee-1.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "san-juan-san-juan-county-auditor",
+      "candidate_slug": "natasha-k-warmenhoven",
+      "name": "Natasha K Warmenhoven",
+      "website": "https://natashaforauditor.com/",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "san-juan-san-juan-county-council-residency-district-3",
+      "candidate_slug": "jennifer-swanson",
+      "name": "Jennifer Swanson",
+      "website": "https://jswanson4council.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://content.campaignpartner.net/images/150530/JS_-_white_shirt_cropped.jpg",
+          "page": "https://jswanson4council.com/",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 305326,
+          "status": "ok",
+          "width": 1536,
+          "height": 1500,
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/san-juan/san-juan-san-juan-county-council-residency-district-3/jennifer-swanson-1.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "san-juan-san-juan-county-council-residency-district-3",
+      "candidate_slug": "katherine-bryant-ingman",
+      "name": "Katherine Bryant Ingman",
+      "website": "https://katherinebryantingman.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://katherinebryantingman.com/wp-content/uploads/2026/03/kbi-small-bio-shot.jpg",
+          "page": "https://katherinebryantingman.com/",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "width": 480,
+          "height": 443,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 26741,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/san-juan/san-juan-san-juan-county-council-residency-district-3/katherine-bryant-ingman-1.jpg"
+        },
+        {
+          "url": "https://katherinebryantingman.com/wp-content/uploads/2026/07/Katherine-Bryant-Ingman-SJC-No-3.jpg",
+          "page": "https://katherinebryantingman.com/",
+          "kind": "campaign-website",
+          "why": "img 1500x1500",
+          "width": 1500,
+          "height": 1500,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 343968,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/san-juan/san-juan-san-juan-county-council-residency-district-3/katherine-bryant-ingman-2.jpg"
+        },
+        {
+          "url": "https://katherinebryantingman.com/wp-content/uploads/2024/06/Katherine-Bryant-Ingman-0326_r11-bki-website-logo-1.png",
+          "page": "https://katherinebryantingman.com/",
+          "kind": "campaign-website",
+          "why": "img 500x375",
+          "width": 500,
+          "height": 375,
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 7263,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/san-juan/san-juan-san-juan-county-council-residency-district-3/katherine-bryant-ingman-3.jpg"
+        }
+      ]
+    }
+  ]
+}

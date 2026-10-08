@@ -1,0 +1,181 @@
+{
+  "script": "pipeline/propose_candidate_photos.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/mason/interim/research-plan.json",
+    "data/washington-state/elections/2026-11-03-general/counties/mason/dossiers/"
+  ],
+  "election": "2026-11-03-general",
+  "package": "mason",
+  "review_copies": "data/.cache/photos/2026-11-03-general/mason/",
+  "summary": {
+    "proposed": 2,
+    "no-website": 6,
+    "fetch-failed": 0,
+    "no-image-found": 2,
+    "images_ok": 5
+  },
+  "proposals": [
+    {
+      "contest_slug": "mason-mason-county-auditor",
+      "candidate_slug": "tamra-tam-ingwaldson",
+      "name": "Tamra 'Tam' Ingwaldson",
+      "website": "https://www.tamraforauditor.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://static.wixstatic.com/media/16d2d5_63edf25be0cc46399776e2b91b0ba213%7Emv2.png/v1/fit/w_2500,h_1330,al_c/16d2d5_63edf25be0cc46399776e2b91b0ba213%7Emv2.png",
+          "page": "https://www.tamraforauditor.com/",
+          "kind": "campaign-website",
+          "why": "twitter:image",
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 53429,
+          "status": "ok",
+          "width": 1084,
+          "height": 672,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/mason/mason-mason-county-auditor/tamra-tam-ingwaldson-1.jpg"
+        },
+        {
+          "url": "https://static.wixstatic.com/media/16d2d5_52dea55d301c4f96a7759db7a8802aa9~mv2.jpg/v1/fill/w_301,h_240,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/_DSA3449-Edit-8IN.jpg",
+          "page": "https://www.tamraforauditor.com/",
+          "kind": "campaign-website",
+          "why": "img 301x240",
+          "width": 301,
+          "height": 240,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 10488,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/mason/mason-mason-county-auditor/tamra-tam-ingwaldson-2.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "mason-mason-county-auditor",
+      "candidate_slug": "steve-duenkel",
+      "name": "Steve Duenkel",
+      "website": "https://www.steve4auditor2026.com/",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "mason-mason-county-clerk",
+      "candidate_slug": "charles-g-rhodes",
+      "name": "Charles G. Rhodes",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    },
+    {
+      "contest_slug": "mason-mason-county-clerk",
+      "candidate_slug": "tammy-clark",
+      "name": "Tammy Clark",
+      "website": "https://www.clark-for-clerk.com/",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "mason-mason-county-commissioner-district-3-county-commissioner-district-no-3",
+      "candidate_slug": "miguel-gutierrez",
+      "name": "Miguel Gutierrez",
+      "website": "https://www.voteformiguel.org/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://static1.squarespace.com/static/67f4491b30e00c5e1261c4af/t/6812ebcb180f2c3056f61d97/1746070475260/18x24+Vote+for+Miguel.jpg?format=1500w",
+          "page": "https://www.voteformiguel.org/",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "width": 1500,
+          "height": 1199,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 72340,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/mason/mason-mason-county-commissioner-district-3-county-commissioner-district-no-3/miguel-gutierrez-1.jpg"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/67f4491b30e00c5e1261c4af/19d3f077-d2b1-4a4b-abb8-9769c1b74b5d/dude+singing.jpg",
+          "page": "https://www.voteformiguel.org/",
+          "kind": "campaign-website",
+          "why": "img 3024x3216",
+          "width": 2500,
+          "height": 2659,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 750789,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/mason/mason-mason-county-commissioner-district-3-county-commissioner-district-no-3/miguel-gutierrez-2.jpg"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/67f4491b30e00c5e1261c4af/9aafd178-894e-403f-87bd-7784954f9939/Untitled+design-2.png",
+          "page": "https://www.voteformiguel.org/",
+          "kind": "campaign-website",
+          "why": "img 2048x1536",
+          "width": 2048,
+          "height": 1536,
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 6017396,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/mason/mason-mason-county-commissioner-district-3-county-commissioner-district-no-3/miguel-gutierrez-3.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "mason-mason-county-commissioner-district-3-county-commissioner-district-no-3",
+      "candidate_slug": "george-blush",
+      "name": "George Blush",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    },
+    {
+      "contest_slug": "mason-mason-county-treasurer",
+      "candidate_slug": "brittany-a-pearson",
+      "name": "Brittany A Pearson",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    },
+    {
+      "contest_slug": "mason-mason-county-treasurer",
+      "candidate_slug": "randy-lewis",
+      "name": "Randy Lewis",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    },
+    {
+      "contest_slug": "mason-public-utility-district-no-3-of-mason-county-commissioner-district-2",
+      "candidate_slug": "mick-sprouffske",
+      "name": "Mick Sprouffske",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    },
+    {
+      "contest_slug": "mason-public-utility-district-no-3-of-mason-county-commissioner-district-2",
+      "candidate_slug": "randy-neatherlin",
+      "name": "Randy Neatherlin",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    }
+  ]
+}

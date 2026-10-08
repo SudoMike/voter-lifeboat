@@ -1,0 +1,165 @@
+{
+  "script": "pipeline/propose_candidate_photos.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/cowlitz/interim/research-plan.json",
+    "data/washington-state/elections/2026-11-03-general/counties/cowlitz/dossiers/"
+  ],
+  "election": "2026-11-03-general",
+  "package": "cowlitz",
+  "review_copies": "data/.cache/photos/2026-11-03-general/cowlitz/",
+  "summary": {
+    "proposed": 4,
+    "no-website": 2,
+    "fetch-failed": 0,
+    "no-image-found": 2,
+    "images_ok": 5
+  },
+  "proposals": [
+    {
+      "contest_slug": "cowlitz-cowlitz-county-clerk",
+      "candidate_slug": "staci-myklebust",
+      "name": "Staci Myklebust",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    },
+    {
+      "contest_slug": "cowlitz-cowlitz-county-clerk",
+      "candidate_slug": "ashley-white",
+      "name": "Ashley White",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    },
+    {
+      "contest_slug": "cowlitz-cowlitz-county-commissioner-district-3-commissioner-district-3",
+      "candidate_slug": "richard-dahl",
+      "name": "Richard Dahl",
+      "website": "https://www.votedahl.com",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "cowlitz-cowlitz-county-commissioner-district-3-commissioner-district-3",
+      "candidate_slug": "chelsea-chandler",
+      "name": "Chelsea Chandler",
+      "website": "https://www.chelseachandler4cowlitzcounty.com/blank",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "cowlitz-cowlitz-superior-court-judge-position-4",
+      "candidate_slug": "jill-karmy",
+      "name": "Jill Karmy",
+      "website": "https://www.retainjudgekarmy.com",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://www.retainjudgekarmy.com/wp-content/uploads/2026/05/IMG_4105-768x1024.jpeg",
+          "page": "https://www.retainjudgekarmy.com/",
+          "kind": "campaign-website",
+          "why": "img 768x1024",
+          "width": 768,
+          "height": 1024,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 71616,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/cowlitz/cowlitz-cowlitz-superior-court-judge-position-4/jill-karmy-1.jpg"
+        },
+        {
+          "url": "https://www.retainjudgekarmy.com/wp-content/uploads/2026/05/judge-gavel-about-strike-court-717x1024.jpg",
+          "page": "https://www.retainjudgekarmy.com/",
+          "kind": "campaign-website",
+          "why": "img 717x1024",
+          "width": 717,
+          "height": 1024,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 66029,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/cowlitz/cowlitz-cowlitz-superior-court-judge-position-4/jill-karmy-2.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "cowlitz-cowlitz-superior-court-judge-position-4",
+      "candidate_slug": "jacob-lervold",
+      "name": "Jacob Lervold",
+      "website": "https://lervoldforjudge.com",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://img1.wsimg.com/isteam/ip/85bd5be5-f74b-4c8d-b88e-99a3ec50f19a/Jacob%20Lervold%20photo.jpg",
+          "page": "https://lervoldforjudge.com/",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 58139,
+          "status": "ok",
+          "width": 640,
+          "height": 960,
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/cowlitz/cowlitz-cowlitz-superior-court-judge-position-4/jacob-lervold-1.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "cowlitz-cowlitz-county-district-court-judge-position-no-3",
+      "candidate_slug": "christopher-eastwood",
+      "name": "Christopher Eastwood",
+      "website": "https://www.eastwoodforjudge.com",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://eastwoodforjudge.com/wp-content/uploads/2026/04/Us-together-05491-768x890.jpg",
+          "page": "https://eastwoodforjudge.com/",
+          "kind": "campaign-website",
+          "why": "img 768x890",
+          "width": 768,
+          "height": 890,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 70888,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/cowlitz/cowlitz-cowlitz-county-district-court-judge-position-no-3/christopher-eastwood-1.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "cowlitz-cowlitz-county-district-court-judge-position-no-3",
+      "candidate_slug": "nicole-g-knowles",
+      "name": "Nicole G. Knowles",
+      "website": "https://knowlesforjudge.com",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/bdd5f40e-1843-4491-b416-0ab4dfe478ed/id-preview-ff600544--0b5c7c49-79ce-492f-8a2d-20aad050397d.lovable.app-1777860553084.png",
+          "page": "https://www.knowlesforjudge.com/",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 641901,
+          "status": "ok",
+          "width": 1920,
+          "height": 1080,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/cowlitz/cowlitz-cowlitz-county-district-court-judge-position-no-3/nicole-g-knowles-1.jpg"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "script": "pipeline/propose_candidate_photos.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/douglas/interim/research-plan.json",
+    "data/washington-state/elections/2026-11-03-general/counties/douglas/dossiers/"
+  ],
+  "election": "2026-11-03-general",
+  "package": "douglas",
+  "review_copies": "data/.cache/photos/2026-11-03-general/douglas/",
+  "summary": {
+    "proposed": 4,
+    "no-website": 3,
+    "fetch-failed": 2,
+    "no-image-found": 1,
+    "images_ok": 8
+  },
+  "proposals": [
+    {
+      "contest_slug": "douglas-douglas-county-clerk-of-superior-court",
+      "candidate_slug": "jenn-biggar",
+      "name": "Jenn Biggar",
+      "website": "https://biggarforclerk.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://biggarforclerk.com/UserFiles/image/Heidi.png",
+          "page": "https://biggarforclerk.com/",
+          "kind": "campaign-website",
+          "why": "img 1080x1080",
+          "width": 1080,
+          "height": 1080,
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 901945,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/douglas/douglas-douglas-county-clerk-of-superior-court/jenn-biggar-1.jpg"
+        },
+        {
+          "url": "https://biggarforclerk.com/UserFiles/image/Michelle.png",
+          "page": "https://biggarforclerk.com/",
+          "kind": "campaign-website",
+          "why": "img 1080x1080",
+          "width": 1080,
+          "height": 1080,
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 513295,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/douglas/douglas-douglas-county-clerk-of-superior-court/jenn-biggar-2.jpg"
+        },
+        {
+          "url": "https://biggarforclerk.com/UserFiles/image/DSC_5282.JPG",
+          "page": "https://biggarforclerk.com/",
+          "kind": "campaign-website",
+          "why": "img 761x1140",
+          "width": 761,
+          "height": 1140,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 129856,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/douglas/douglas-douglas-county-clerk-of-superior-court/jenn-biggar-3.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "douglas-douglas-county-clerk-of-superior-court",
+      "candidate_slug": "andrea-jester",
+      "name": "Andrea Jester",
+      "website": "https://www.votejester.com/profile",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://static1.squarespace.com/static/69bf11eaf985405915b39d0a/t/69cac3edb934b85d6edc5f73/1774896112987/IMG_8317.jpeg?format=1500w",
+          "page": "https://www.votejester.com/profile",
+          "kind": "campaign-website",
+          "why": "twitter:image",
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 123410,
+          "status": "ok",
+          "width": 1312,
+          "height": 784,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/douglas/douglas-douglas-county-clerk-of-superior-court/andrea-jester-1.jpg"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/69bf11eaf985405915b39d0a/238ba300-a92c-45f9-9708-a7e81ec581a7/official-facebook-icon-png-4.png",
+          "page": "https://www.votejester.com/profile",
+          "kind": "campaign-website",
+          "why": "img 1097x1097",
+          "width": 1097,
+          "height": 1097,
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 198783,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/douglas/douglas-douglas-county-clerk-of-superior-court/andrea-jester-2.jpg"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/69bf11eaf985405915b39d0a/131ec9f5-43eb-49f5-b983-6c733af7bc89/IMG_7353.jpeg",
+          "page": "https://www.votejester.com/profile",
+          "kind": "campaign-website",
+          "why": "img 864x1184",
+          "width": 864,
+          "height": 1184,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 114969,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/douglas/douglas-douglas-county-clerk-of-superior-court/andrea-jester-3.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "douglas-douglas-county-commissioner-district-3-commissioner-district-no-3",
+      "candidate_slug": "marc-s-straub",
+      "name": "Marc S. Straub",
+      "website": "https://www.marcstraub.com/",
+      "website_from": "dossier",
+      "status": "fetch-failed",
+      "candidates": [],
+      "error": "URLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:992)"
+    },
+    {
+      "contest_slug": "douglas-douglas-county-commissioner-district-3-commissioner-district-no-3",
+      "candidate_slug": "michael-s-lesky",
+      "name": "Michael S. Lesky",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    },
+    {
+      "contest_slug": "douglas-douglas-county-sheriff",
+      "candidate_slug": "tyler-i-caille",
+      "name": "Tyler I. Caille",
+      "website": "https://cailleforsheriff.com/",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "douglas-douglas-county-sheriff",
+      "candidate_slug": "adam-musgrove",
+      "name": "Adam Musgrove",
+      "website": "https://adammusgroveforsheriff.com/adams-focus",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://assets.tina.io/ce10529b-2aab-4ec1-a9f3-bca25617e552/brand/musgrove-open-graph-image-en-min.png",
+          "page": "https://www.adammusgroveforsheriff.com/adams-focus",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 199319,
+          "status": "ok",
+          "width": 1200,
+          "height": 630,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/douglas/douglas-douglas-county-sheriff/adam-musgrove-1.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "douglas-public-utility-district-no-1-of-douglas-county-commissioner-district-2",
+      "candidate_slug": "molly-doneen-simpson",
+      "name": "Molly Doneen Simpson",
+      "website": "https://molly4dcpud.com/",
+      "website_from": "dossier",
+      "status": "fetch-failed",
+      "candidates": [],
+      "error": "HTTPError: Forbidden"
+    },
+    {
+      "contest_slug": "douglas-public-utility-district-no-1-of-douglas-county-commissioner-district-2",
+      "candidate_slug": "nick-warner",
+      "name": "Nick Warner",
+      "website": "https://wewantwarner.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://static.showit.com/1200/SQ_wnBaqG4cFsgRUvPvY4Q/349195/screenshot_2026-05-29_at_5_03_19_pm.png",
+          "page": "https://wewantwarner.com/",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 550363,
+          "status": "ok",
+          "width": 1200,
+          "height": 786,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/douglas/douglas-public-utility-district-no-1-of-douglas-county-commissioner-district-2/nick-warner-1.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "douglas-proposed-rimrock-meadows-fire-protection-district-no-9-commissioner-no-1",
+      "candidate_slug": "ronald-ron-cabral",
+      "name": "Ronald \"Ron\" Cabral",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    },
+    {
+      "contest_slug": "douglas-proposed-rimrock-meadows-fire-protection-district-no-9-commissioner-no-1",
+      "candidate_slug": "carol-mayer",
+      "name": "Carol Mayer",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    }
+  ]
+}
