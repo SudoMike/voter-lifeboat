@@ -1,0 +1,16 @@
+{
+  "county": "kittitas",
+  "script": "pipeline/extract_pdf_text.mjs",
+  "files": [
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/kittitas/raw/kittitas/local-voters-pamphlet.pdf.url",
+      "url": "https://www.co.kittitas.wa.us/uploads/auditor/elections/voters-pamphlet//General%20Pamphlet.pdf",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/kittitas/interim/pdf-text/local-voters-pamphlet.txt"
+    },
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/kittitas/raw/kittitas/sample-ballot.pdf.url",
+      "url": "https://www.co.kittitas.wa.us/uploads/documents/auditor/elections/election-files/71/sample-ballot.pdf",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/kittitas/interim/pdf-text/sample-ballot.txt"
+    }
+  ]
+}
