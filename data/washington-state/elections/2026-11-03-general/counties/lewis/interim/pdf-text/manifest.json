@@ -1,0 +1,26 @@
+{
+  "county": "lewis",
+  "script": "pipeline/extract_pdf_text.mjs",
+  "files": [
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/lewis/raw/lewis/chehalis-tbd-resolution.pdf.url",
+      "url": "https://elections.lewiscountywa.gov/documents/755/Chehalis_TBD_with_PA_approval.pdf",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/lewis/interim/pdf-text/chehalis-tbd-resolution.txt"
+    },
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/lewis/raw/lewis/fire-district-6-resolution.pdf.url",
+      "url": "https://elections.lewiscountywa.gov/documents/756/Fire_Dist._6_with_PA_approval.pdf",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/lewis/interim/pdf-text/fire-district-6-resolution.txt"
+    },
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/lewis/raw/lewis/sample-ballot.pdf.url",
+      "url": "https://elections.lewiscountywa.gov/documents/760/Nov_2026_Sample_Ballot.pdf",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/lewis/interim/pdf-text/sample-ballot.txt"
+    },
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/lewis/raw/lewis/timberland-regional-library-resolution.pdf.url",
+      "url": "https://elections.lewiscountywa.gov/documents/757/TRL_Combined.pdf",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/lewis/interim/pdf-text/timberland-regional-library-resolution.txt"
+    }
+  ]
+}
