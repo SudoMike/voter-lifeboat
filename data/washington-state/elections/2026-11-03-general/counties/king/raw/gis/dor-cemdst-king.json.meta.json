@@ -1,0 +1,9 @@
+{
+  "url": "https://webgis.dor.wa.gov/arcgis/rest/services/Programs/WADOR_PropertyTax/MapServer/3/query?where=COUNTYNAME%3D%27KING%27&outFields=COUNTYNAME,DISTATTRIB,DESCRIPTIO&returnGeometry=false&f=json",
+  "retrieved_at": "2026-10-08T00:43:48Z",
+  "method": "curl (ArcGIS REST query)",
+  "stage": "raw",
+  "bytes": 475,
+  "sha256": "4d96cd02b98cede38e0275765001df08cfd7968a08ce619c30d9d0f75291b486",
+  "notes": "WA DOR tax-district layer 3 (CEMDST) features for KING: exactly one, DISTATTRIB \"1\" = King County Cemetery District No. 1 (Vashon). King's District Adapter has no CEMDST layer today (KING_LAYERS in app/src/lib/geo.js); other counties query this DOR layer as CEMDST."
+}
