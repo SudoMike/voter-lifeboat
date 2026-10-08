@@ -21,7 +21,7 @@ Richards voted against ESSB 6346 and against the major 2025 revenue bills, while
 
 ## Differentiating issue axes
 1. **Gender, LGBTQ+ and reproductive policy:** Richards campaigns on reproductive freedom and "who we love, or who we are"; Olson supports sex-based school sports.
-2. **Parents and schools:** Richards voted for ESHB 1296; Olson campaigns on parental rights to be informed and involved.
+2. **Parents and schools:** not a clean split. Richards voted for ESHB 1296, which amended the Initiative 2081 parental-rights list, but earlier the same day voted yea on all twelve recorded House floor amendments that would have added, restored or strengthened parent and guardian rights in it; ten failed and two were adopted (adison-richards.md S6, S7, S16-S27). Olson campaigns on parents' right to be informed and involved and on curriculum access, but has no legislative record (david-olson.md S2).
 3. **Spending:** Olson calls for spending cuts; Richards for pre-K and technical-school investment with "accountability and efficiency."
 4. **Record vs. renewal:** one-term incumbent vs. a long-serving school board member new to the Legislature.
 5. **Taxes and housing are closer than party labels suggest:** both oppose the 2025 B&O package and favor more housing supply; Olson goes further with opposition to rent caps and "broad-based taxes."
