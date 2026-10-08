@@ -85,7 +85,7 @@ sources:
 
 ## Background
 
-Rich Byrd prefers the Independent Party and was born and raised in South Bend [S1][S3]. He served in the U.S. Army from 1986 to 1990 [S3], then spent about 20 years in the Pacific County Sheriff's Office as a corrections officer, deputy, sergeant, narcotics investigator, search and rescue coordinator and lieutenant [S1][S4]. His campaign site says he retired in 2010; the Observer reports 2011, after then-Sheriff Bill Didion lost re-election [S3][S6]. Since then he has managed operations and budgets in the private sector, including for Astoria Ford and Dr. Roof Inc. [S3][S1]. He has named Heath Layman, a former Cosmopolis police chief and firearms instructor, as his undersheriff [S3][S6]. He has not held elected office [S1].
+Rich Byrd prefers the Independent Party and was born and raised in South Bend [S1][S3]. He served in the U.S. Army from 1986 to 1990 [S3], then spent about 20 years in the Pacific County Sheriff's Office as a corrections officer, deputy, sergeant, narcotics investigator, search and rescue coordinator and lieutenant [S1][S4]. His campaign site says he retired in 2010; the Observer reports 2011, after then-Sheriff Bill Didion lost re-election [S3][S6][S7]. Since then he has managed operations and budgets in the private sector, including for Astoria Ford and Dr. Roof Inc. [S3][S1]. He has named Heath Layman, a former Cosmopolis police chief and firearms instructor, as his undersheriff [S3][S6]. He has not held elected office [S1].
 
 He finished second in the August primary with 3,091 of 9,166 votes [S8].
 

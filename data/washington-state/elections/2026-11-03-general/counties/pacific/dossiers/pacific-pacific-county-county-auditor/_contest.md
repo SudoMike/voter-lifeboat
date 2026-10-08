@@ -49,7 +49,7 @@ The county auditor is the supervisor of elections and voter registration, record
 ## Race dynamics
 Both candidates work in the office and both prefer the Independent Party [S1][S3]. Auditor Alex Gerow resigned in September 2025; the county commission interviewed applicants and on Oct. 31, 2025 chose Nicole Deskins, then the office's accounting and office manager, over Dotsi Graves, its election administrator, by a 3-0 vote, with a commissioner calling the choice "extremely tough" because both were qualified [S2]. Deskins has served since Dec. 1, 2025 [S1][S2]. The primary was close: Graves 4,034, Deskins 4,012 [S4].
 
-Graves runs on election expertise (the county's only certified election administrator) and earlier service as chief deputy auditor (2003-2007) [S1]. Deskins runs on her first year as appointed auditor, including a new payroll system and a new county website [S1].
+Graves runs on election expertise (the county's only certified election administrator) and earlier service in the auditor's office (2003-2007, rising to chief deputy) [S1]. Deskins runs on her first year as appointed auditor, including a new payroll system and a new county website [S1].
 
 ## Differentiating issue axes
 1. **Experience:** both are insiders. Deskins holds the office by appointment; Graves has longer county service and the election certification.
