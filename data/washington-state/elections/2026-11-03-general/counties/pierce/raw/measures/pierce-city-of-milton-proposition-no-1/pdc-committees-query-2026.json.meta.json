@@ -1,0 +1,17 @@
+{
+  "url": "https://data.wa.gov/resource/3h9x-7bvm.json?$where=election_year=2026 AND filer_type='CO' AND (upper(jurisdiction) like '%TACOMA%' OR upper(filer_name) like '%TACOMA%' OR upper(filer_name) like '%RENTAL HOUSING%' OR upper(jurisdiction) like '%PIERCE%' OR upper(jurisdiction) like '%YELM%' OR upper(jurisdiction) like '%SOUTH PRAIRIE%' OR upper(jurisdiction) like '%MILTON%' OR upper(filer_name) like '%TRANSIT%' OR upper(filer_name) like '%YELM%' OR upper(filer_name) like '%RIVERSIDE%' OR upper(filer_name) like '%PRAIRIE%')&$limit=500",
+  "retrieved_at": "2026-10-08",
+  "stage": "raw",
+  "method": "source pointer; HTTP GET (curl), cached copy under data/.cache/measures/pierce-city-of-tacoma-initiative-no-1 (gitignored)",
+  "cited_by": {
+    "dossier": "data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/measures/pierce-city-of-milton-proposition-no-1.md",
+    "source_id": "S6"
+  },
+  "tier": 1,
+  "type": "pdc",
+  "publisher": "Washington Public Disclosure Commission (Campaign Finance Summary, data.wa.gov 3h9x-7bvm)",
+  "notes": "2026 committee query by jurisdiction/name covering the Pierce measures (29 rows, retrieved 2026-10-08). No committee registered for City of Milton Proposition 1.",
+  "cache_file": "data/.cache/measures/pierce-city-of-tacoma-initiative-no-1/pdc-committees-2026.json",
+  "bytes": 41049,
+  "sha256": "2d62913d9be5a1b71dd1c94ef6b89bebec02f081e49fb63a4b2730036a845ec8"
+}

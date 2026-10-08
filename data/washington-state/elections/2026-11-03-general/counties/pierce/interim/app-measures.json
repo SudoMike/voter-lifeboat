@@ -2,12 +2,280 @@
   "county": "pierce",
   "script": "pipeline/build_pierce_lite_data.py",
   "derived_from": [
-    "data/washington-state/elections/2026-11-03-general/counties/pierce/raw/votewa/candidate-list.csv.url"
+    "data/washington-state/elections/2026-11-03-general/counties/pierce/raw/votewa/candidate-list.csv.url",
+    "data/washington-state/elections/2026-11-03-general/counties/pierce/raw/votewa/voter-guide.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/pierce/raw/measures/"
   ],
   "coverage": "partial_county",
   "notes": [
-    "Measures not curated yet for this election: app-measures.json is empty because no one has transcribed this county's local measures, not because the ballot has none.",
-    "Unresolvable district scopes (no queryable official boundary): KCDISTCRT. Contests/measures scoped to them are hidden rather than shown to the wrong voters."
+    "Unresolvable district scopes (no queryable official boundary): KCDISTCRT, PTBA, SCHDST. Contests/measures scoped to them are hidden rather than shown to the wrong voters."
   ],
-  "measures": []
+  "measures": [
+    {
+      "slug": "pierce-pierce-county-charter-amendment-no-52",
+      "owner": "pierce",
+      "jurisdiction": "Pierce County",
+      "proposition": "Charter Amendment No. 52",
+      "title": "County Council Meetings",
+      "votewa_measure_id": "7313",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "pierce"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Requires the County Council to meet at least 45 times a year (instead of at least once in each of 50 weeks) and to offer remote attendance and public comment at meetings where public comment is required.",
+      "cost_line": "No tax or levy on the ballot; any cost is in county operations.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {}
+    },
+    {
+      "slug": "pierce-pierce-county-charter-amendment-no-53",
+      "owner": "pierce",
+      "jurisdiction": "Pierce County",
+      "proposition": "Charter Amendment No. 53",
+      "title": "Appointed Sheriff and Termination of Elected Sheriff",
+      "votewa_measure_id": "7314",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "pierce"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Makes Sheriff an appointed office: the Executive appoints and a Council majority confirms; the current elected Sheriff's term ends January 1, 2027.",
+      "cost_line": "No tax or levy on the ballot; any cost is in county operations.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {}
+    },
+    {
+      "slug": "pierce-pierce-county-charter-amendment-no-54",
+      "owner": "pierce",
+      "jurisdiction": "Pierce County",
+      "proposition": "Charter Amendment No. 54",
+      "title": "Public Safety Ombuds",
+      "votewa_measure_id": "7315",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "pierce"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Creates an executive department of Public Safety Ombuds, appointed by the Council from a panel's list, to oversee the Sheriff's Office, plus a Community Advisory Committee.",
+      "cost_line": "No tax or levy on the ballot; any cost is in county operations.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {}
+    },
+    {
+      "slug": "pierce-pierce-county-charter-amendment-no-55",
+      "owner": "pierce",
+      "jurisdiction": "Pierce County",
+      "proposition": "Charter Amendment No. 55",
+      "title": "Initiative Procedures",
+      "votewa_measure_id": "7316",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "pierce"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Gives county initiative sponsors 180 days instead of 120 to collect signatures.",
+      "cost_line": "No tax or levy on the ballot; any cost is in county operations.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {}
+    },
+    {
+      "slug": "pierce-pierce-county-charter-amendment-no-56",
+      "owner": "pierce",
+      "jurisdiction": "Pierce County",
+      "proposition": "Charter Amendment No. 56",
+      "title": "Four Year Budget Outlook",
+      "votewa_measure_id": "7317",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "pierce"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Requires the Chief Financial Officer to prepare a four-year budget outlook showing projected Current Expense Fund spending will not exceed projected available funds.",
+      "cost_line": "No tax or levy on the ballot; any cost is in county operations.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {}
+    },
+    {
+      "slug": "pierce-pierce-county-charter-amendment-no-57",
+      "owner": "pierce",
+      "jurisdiction": "Pierce County",
+      "proposition": "Charter Amendment No. 57",
+      "title": "Nondiscrimination",
+      "votewa_measure_id": "7318",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "pierce"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Rewrites the Charter's nondiscrimination clause to list sex, race, color, national origin or ancestry, creed, disability, sexual orientation, gender identity or expression, age, genetic testing results, family caregiver status, pregnancy, childbirth or lactation, and military or veteran status.",
+      "cost_line": "No tax or levy on the ballot; any cost is in county operations.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {}
+    },
+    {
+      "slug": "pierce-pierce-county-charter-amendment-no-58",
+      "owner": "pierce",
+      "jurisdiction": "Pierce County",
+      "proposition": "Charter Amendment No. 58",
+      "title": "Juvenile Detention",
+      "votewa_measure_id": "7319",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "pierce"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Creates a Juvenile Detention Advocate Office to take complaints and monitor conditions, and requires an independent audit or accreditation review of juvenile detention at least every five years.",
+      "cost_line": "No tax or levy on the ballot; any cost is in county operations.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {}
+    },
+    {
+      "slug": "pierce-city-of-milton-proposition-no-1",
+      "owner": "pierce",
+      "jurisdiction": "City of Milton",
+      "proposition": "Proposition No. 1",
+      "title": "Additional Sales and Use Tax for Police and Public Safety",
+      "votewa_measure_id": "7310",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "CITY",
+        "value": "Milton"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Raises Milton's sales and use tax by 0.1% from 2027 for public safety purposes allowed by RCW 82.14.450, such as police staffing.",
+      "cost_line": "Sales and use tax up 0.1% (one cent on $10) from 2027; 15% of proceeds go to the county.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {}
+    },
+    {
+      "slug": "pierce-town-of-south-prairie-proposition-no-1",
+      "owner": "pierce",
+      "jurisdiction": "Town of South Prairie",
+      "proposition": "Proposition No. 1",
+      "title": "Public Safety and Town Operations and Services Levy",
+      "votewa_measure_id": "7311",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "CITY",
+        "value": "South Prairie"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Lifts South Prairie's regular property tax levy for police, fire, EMS, parks, roads and other town services.",
+      "cost_line": "About $1.33 per $1,000 more (to a maximum $2.90 per $1,000) for 2027, then up to 6% a year through 2032.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {}
+    },
+    {
+      "slug": "pierce-pierce-transit-proposition-no-1",
+      "owner": "pierce",
+      "jurisdiction": "Pierce Transit",
+      "proposition": "Proposition No. 1",
+      "title": "Maintaining and Expanding Local Transit Service Sales and Use Tax Increase",
+      "votewa_measure_id": "7308",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "PTBA",
+        "value": "YES"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Adds a 0.3% sales and use tax from April 1, 2027 to maintain and expand Pierce Transit bus service and fund fare-free rides for seniors and youth.",
+      "cost_line": "Sales and use tax up 0.3% (three cents on $10) within Pierce Transit's service area.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {}
+    },
+    {
+      "slug": "pierce-city-of-tacoma-initiative-no-1",
+      "owner": "pierce",
+      "jurisdiction": "City of Tacoma",
+      "proposition": "Initiative No. 1",
+      "title": "Safe Homes for All Initiative Measure No. 1",
+      "votewa_measure_id": "7309",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "CITY",
+        "value": "Tacoma"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Amends Tacoma's rental housing code: tenant unions and good-faith bargaining, landlord licensing with per-unit fees, City and private enforcement, penalties and business-license revocation.",
+      "cost_line": "No tax; landlords pay new per-unit rental licensing fees, and the City takes on new enforcement and program costs.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {}
+    },
+    {
+      "slug": "pierce-fire-protection-district-no-14-proposition-no-1",
+      "owner": "pierce",
+      "jurisdiction": "Fire Protection District No. 14",
+      "proposition": "Proposition No. 1",
+      "title": "Emergency Medical Services Property Tax Levy",
+      "votewa_measure_id": "7312",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "FIRDST",
+        "value": "FPD #014 RIVERSIDE"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Renews Riverside Fire & Rescue's EMS property tax levy for six years from 2027.",
+      "cost_line": "Up to $0.50 per $1,000 of assessed value (at most $50 a year per $100,000), the same rate as the expiring 2020 levy.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {}
+    },
+    {
+      "slug": "pierce-auburn-school-district-no-408-proposition-no-1",
+      "owner": "pierce",
+      "jurisdiction": "Auburn School District No. 408",
+      "proposition": "Proposition No. 1",
+      "title": "School Construction and Replacement Bonds",
+      "votewa_measure_id": "7259",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "SCHDST",
+        "value": "AUBURN SCHOOL DISTRICT NO. 408"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Authorizes up to $491 million in 20-year bonds to build a new middle school and replace Cascade Middle School and Alpac Elementary.",
+      "cost_line": "Up to $491,000,000 in bonds repaid by excess property taxes.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {}
+    },
+    {
+      "slug": "pierce-yelm-community-schools-proposition-no-1",
+      "owner": "pierce",
+      "jurisdiction": "Yelm Community Schools",
+      "proposition": "Proposition No. 1",
+      "title": "Educational Programs and Operations Maintenance Levy",
+      "votewa_measure_id": "7370",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "SCHDST",
+        "value": "YELM COMMUNITY SCHOOLS"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Two-year levy (2027-2028) to maintain Yelm Community Schools programs and operations not funded by the State.",
+      "cost_line": "Up to $11,194,449 in 2027 and $12,278,072 in 2028, an estimated $1.50 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {}
+    }
+  ]
 }

@@ -1,0 +1,58 @@
+{
+  "contest_slug": "pierce-congressional-district-6-u-s-representative",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-congressional-district-6-u-s-representative/"],
+  "office_does": "The U.S. Representative votes on federal law and the federal budget for a two-year term, oversees the executive branch, and helps constituents with federal agencies.",
+  "race_blurb": "First-term Democratic incumbent Emily Randall, who took 58.8% in the primary, faces Republican Teresa Fox, a Bremerton safety manager who took 25.5%. The race splits on taxes and spending, public safety and immigration, abortion and girls' sports, and climate.",
+  "candidates": [
+    {
+      "slug": "emily-randall",
+      "summary": "First-term congresswoman and former state senator (2019-2024) running on lower costs, health-care access, abortion rights, a clean-energy transition and oversight of the Trump administration.",
+      "highlights": [
+        "Wants big business to pay its fair share and voted against H.R. 1, the One Big Beautiful Bill Act [S3][S17]",
+        "States a 100% lifetime pro-choice record; voted against the federal girls' sports and born-alive bills [S7][S18][S19]",
+        "Voted against the final FY2026 NDAA and for cutting $3.3 billion in military aid to Israel [S22][S23]",
+        "Calls for a just transition away from fossil fuels [S5]",
+        "Refuses corporate PAC money [S6]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": 2, "confidence": "high", "citations": ["S3", "S16", "S17"], "basis": "Wants big business to pay its fair share because 'there is too much wealth in too few hands,' faults tax breaks for billionaires, and voted against H.R. 1."},
+        "spending": {"score": 1, "confidence": "medium", "citations": ["S1", "S4", "S16"], "basis": "Backs expanded ACA credits and Medicaid coverage and cites $18 million in project funding; no stated restraint planks."},
+        "safety": {"score": 1, "confidence": "medium", "citations": ["S8", "S21"], "basis": "Voted against the HALT Fentanyl Act and lists gun reform as a priority; no stated policing agenda."},
+        "climate": {"score": 2, "confidence": "high", "citations": ["S2", "S5", "S24"], "basis": "Calls for a just transition away from fossil fuels, voted to keep California's vehicle-emission waiver, and is endorsed by LCV Action Fund."},
+        "experience": {"score": -1, "confidence": "high", "citations": ["S8", "S11"], "basis": "First-term House incumbent with six prior years in the state Senate."},
+        "reform": {"score": 1, "confidence": "medium", "citations": ["S2", "S6"], "basis": "Refuses corporate PAC money; no broader structural-reform agenda found."},
+        "immigration": {"score": 2, "confidence": "high", "citations": ["S15", "S20", "S27"], "basis": "Condemns ICE raids as bypassing due process, voted against the Laken Riley Act, and introduced bills limiting immigration enforcement during disasters and use of FAFSA data."},
+        "healthcare": {"score": 0, "confidence": "medium", "citations": ["S4", "S16"], "basis": "Platform centers on protecting and strengthening the ACA and Medicaid, but she calls the U.S. system 'sick care' and cites creating Washington's Universal Healthcare Commission."},
+        "social": {"score": 2, "confidence": "high", "citations": ["S4", "S7", "S18", "S19"], "basis": "States a 100% pro-choice record, supports access to gender-affirming care, and voted against H.R. 28 and H.R. 21."},
+        "defense": {"score": 1, "confidence": "high", "citations": ["S13", "S14", "S22", "S23", "S25"], "basis": "Voted for cutting offensive military aid to Israel, against the final FY2026 NDAA, and for Iran and Lebanon War Powers resolutions; also secures military-family and installation provisions."}
+      }
+    },
+    {
+      "slug": "teresa-fox",
+      "summary": "Bremerton safety and compliance manager and Kitsap County precinct committee officer running on public safety, lower taxes and spending, naval jobs and term limits.",
+      "highlights": [
+        "Proposes a federal 'Public Safety Floor' of incentives for local police hiring [S2]",
+        "Calls the state income tax and Climate Commitment Act burdens of 'big government' and pledges to stop runaway spending [S2]",
+        "Supports sex-based eligibility in girls' sports under Title IX [S2]",
+        "Signed the U.S. Term Limits pledge [S2]",
+        "Pledges 'Naval dominance' and maritime and timber jobs [S1]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": -2, "confidence": "medium", "citations": ["S2", "S3"], "basis": "Lists the income tax as a big-government burden, wants money kept 'in family pockets,' and cites voter concern about high taxes."},
+        "spending": {"score": -2, "confidence": "high", "citations": ["S1", "S2", "S3"], "basis": "Pledges to stop runaway government spending and the 'Government Growth Machine,' supports balanced budgets, and cites waste and mismanagement."},
+        "safety": {"score": -2, "confidence": "high", "citations": ["S1", "S2"], "basis": "Calls public safety a paramount duty and proposes federal incentives for local agencies to hire and retain officers."},
+        "climate": {"score": -1, "confidence": "medium", "citations": ["S1", "S2"], "basis": "Lists the Climate Commitment Act as a burden and opposes rapid electrification mandates, while backing 'science-based stewardship.'"},
+        "experience": {"score": 2, "confidence": "high", "citations": ["S1", "S2"], "basis": "No elected office beyond precinct committee officer; runs as a 'citizen volunteer' and not a career politician."},
+        "reform": {"score": 2, "confidence": "medium", "citations": ["S2"], "basis": "Signed the U.S. Term Limits pledge and says Congress should be a service, not a career."},
+        "healthcare": {"score": -1, "confidence": "medium", "citations": ["S2"], "basis": "Proposes telehealth, rural-doctor incentives and keeping local facilities open, all within the existing system."},
+        "social": {"score": -2, "confidence": "medium", "citations": ["S2"], "basis": "Says allowing biological males in girls' sports erases Title IX's progress and objects to shared locker rooms."},
+        "defense": {"score": -1, "confidence": "medium", "citations": ["S1", "S2"], "basis": "Pledges 'Naval dominance' and more funding for shipyard workers and fleet readiness."}
+      }
+    }
+  ]
+}

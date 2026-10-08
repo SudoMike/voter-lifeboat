@@ -2,12 +2,13 @@
   "county": "pierce",
   "script": "pipeline/build_pierce_lite_data.py",
   "derived_from": [
-    "data/washington-state/elections/2026-11-03-general/counties/pierce/raw/votewa/candidate-list.csv.url"
+    "data/washington-state/elections/2026-11-03-general/counties/pierce/raw/votewa/candidate-list.csv.url",
+    "data/washington-state/elections/2026-11-03-general/counties/pierce/raw/votewa/voter-guide.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/pierce/raw/measures/"
   ],
   "coverage": "partial_county",
   "notes": [
-    "Measures not curated yet for this election: app-measures.json is empty because no one has transcribed this county's local measures, not because the ballot has none.",
-    "Unresolvable district scopes (no queryable official boundary): KCDISTCRT. Contests/measures scoped to them are hidden rather than shown to the wrong voters."
+    "Unresolvable district scopes (no queryable official boundary): KCDISTCRT, PTBA, SCHDST. Contests/measures scoped to them are hidden rather than shown to the wrong voters."
   ],
   "contests": [
     {

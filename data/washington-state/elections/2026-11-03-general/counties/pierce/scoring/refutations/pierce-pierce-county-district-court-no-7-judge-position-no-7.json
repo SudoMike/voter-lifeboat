@@ -1,0 +1,50 @@
+{
+  "contest_slug": "pierce-pierce-county-district-court-no-7-judge-position-no-7",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-pierce-county-district-court-no-7-judge-position-no-7/",
+    "data/washington-state/elections/2026-11-03-general/counties/pierce/scoring/pierce-pierce-county-district-court-no-7-judge-position-no-7.json"
+  ],
+  "verdicts": [
+    {
+      "candidate": "pam-nogueira",
+      "axis": "experience",
+      "verdict": "upheld",
+      "note": "About two and a half years as Olympia Municipal Court judge and two and a half as a Thurston County Superior Court commissioner, plus pro tem service, rest on her campaign's dated list [S2] and the Thurston County 2025 result, a Tier 1 record [S12]. That is a documented bench record, so high confidence holds. It is not -2: she is not an incumbent of this court and her full-time service ended in February 2026."
+    },
+    {
+      "candidate": "pam-nogueira",
+      "axis": "safety",
+      "verdict": "upheld",
+      "note": "Formation evidence is documented: contracted public defense and drug court defense in Grays Harbor 2017 to 2021, conflict defense in Thurston 2020, and a current Grays Harbor public-defense contract [S2]. Her questionnaire supports diversion, treatment courts and community-based alternatives, with victim and community safety weighed case by case [S5]. Both match the King precedents (Martin +1/medium, Merfeld +1/medium). No bail statement exists, so +2 would be wrong."
+    },
+    {
+      "candidate": "pam-nogueira",
+      "axis": "judicial",
+      "verdict": "adjust",
+      "adjusted_score": 1,
+      "adjusted_confidence": "low",
+      "note": "The direction holds, but the evidence is about access to justice and court administration, not judicial philosophy. In context, the statement line 'our judiciary must reflect the values of the community it serves' [S4] goes with her Tacoma roots and bench record; it is a representation theme, not a statement about how to read law. The FAIR Court Project and Diversity Committee roles [S2][S5] are association work, not interpretive method. The 'data-driven evaluation of court practices to identify disparities' line [S5] is the only reform-leaning point. The same questionnaire repeatedly anchors her in 'judicial neutrality, due process, and the specific authority granted to the court' and in 'setting aside personal opinions, political pressures' [S5], which leans toward the as-written pole. Sommerfeld's questionnaire carries comparable equity content (awareness of historical inequities, representative juries, fee relief) [Sommerfeld S3] and is scored +1/low. Keeping her at medium would split the two candidates on equity and access language alone. The contest file also says 'the evidence for a philosophy split is thin.' King precedent: Trasen +1/low (a treatment plank with no interpretive statement). Rothstein's +1/medium rested on a 'people's court' framing plus explicit treatment and second-chances commitments, which is stronger than what is here."
+    },
+    {
+      "candidate": "mike-sommerfeld",
+      "axis": "experience",
+      "verdict": "upheld",
+      "note": "He runs on 31 years in the prosecutor's office, legal advisor to this court since 2010, pro tem service, the TPCBA EWQ rating and judicial endorsements [S2][S3]. That is a record pitch, not an outsider case, so -1/medium matches King's Tse and Walls (long prosecution plus pro tem, -1/medium). Considered and declined: 0, on the ground that his opponent has five years of full-time bench service and he has only pro tem. The axis measures the profile he runs on, not who has the longer record. He makes no renewal argument, so 0 (mixed) would misdescribe him. The two -1 scores in this race are therefore not identical profiles: Nogueira's is the bench record (high confidence) and Sommerfeld's the institutional one (medium). The confidence gap carries the difference."
+    },
+    {
+      "candidate": "mike-sommerfeld",
+      "axis": "safety",
+      "verdict": "upheld",
+      "note": "Formation is about 15 years of criminal prosecution followed by civil advice that included the Sheriff's Office [S2][S3]. His ballot statement leads with 'hold violent offenders accountable' [S4]. Counterweight considered: the questionnaire to the 31st LD Democrats is substantially treatment-forward [S3]. It says the District Court 'has considerable room for improvement' in treatment courts and behavioral-health services, that he intends to advance them, and that efficiency cannot come at the expense of constitutional rights or defense preparation. That pulls toward 0, but the public ballot statement pairs the two themes and the formation is prosecution. King's Newsom (34 years prosecution, supports diversion) is -1/medium. -1/medium stands; 0 would be defensible only if the ballot statement had matched the questionnaire. Endorsements from police and prosecutor groups are correctly kept out of the basis."
+    },
+    {
+      "candidate": "mike-sommerfeld",
+      "axis": "judicial",
+      "verdict": "upheld",
+      "note": "+1/low is correctly hedged. The questionnaire's equity content is the only signal [S3]: awareness of historical inequities and systemic barriers, representative juries, fee relief and language access. It contains no interpretive-method statement. Low confidence keeps it out of alignment math."
+    }
+  ],
+  "missing": [],
+  "review_notes": "Checks passed. (1) Applicability: only judicial, safety and experience are scored, with no social, parental-rights, initiative or party content. The initiative section in both dossiers says 'Not researched' per the judicial rules. (2) Partisan inference: the 31st LD Democrats endorsed both candidates, and Sommerfeld lists the Pierce County Republican Party. Both dossiers record these as organizational support and keep them out of every basis. Sommerfeld's Republican endorsement is correctly marked as unconfirmed beyond his campaign [Sommerfeld S2, S4]. (3) Endorsement lists are framed as 'Her/His campaign lists' and the 'majority of Pierce County Judges' / 'only EWQ' lines as his statement's claims. That is correct, and the TPCBA release confirms the EWQ rating and its unrated-means-no-interview rule [S5/S7]. (4) VoteWA citations: the S4 'Statement' field text for both candidates (cache data/.cache/pierce-dc78/votewa-candidate-186816-*.json; committed copy P/raw/votewa/candidate-statements/race-186816.json) matches every quoted phrase. Examples: Nogueira's 'reflect the values of the community it serves', the DMCJA Presidential Award and 'Former Full-Time Judge'; Sommerfeld's 'hold violent offenders accountable while expanding therapeutic and alternative programs', the Brady Committee and 'majority of Pierce County Judges'. Citing these as the candidate's own submitted statement (Tier 1) follows the meta.json guidance. (5) Spot checks against cached sources: Nogueira's public-defense contracts and the Evans, Henderson, Penalver and Jinkins endorsements (pamforjudge.com/about-pam); Sommerfeld's 1995 start, landmark controlled-substance DUI case, Traffic Safety Commission award and both-party endorsement list (sommerfeld4judge.com, LD31 questionnaire); the eight-judge directory listing (courts.wa.gov org 286). Dossier problems: (a) pam-nogueira.md line 158 says 'Several names ... also appear on Mike Sommerfeld's endorsement list [S2]'. S2 is Nogueira's own site and cannot support the Sommerfeld half. The overlap is true: sommerfeld4judge.com lists Evans, Henderson, Penalver and Jinkins. Fix by adding sommerfeld4judge.com as a source in Nogueira's dossier, or by rewording to point at the Sommerfeld dossier's S2. (b) Minor: in Nogueira's highlight 5, 'not on TPCBA's 2026 ratings list' could add 'TPCBA rates only candidates who request an interview' [S7] so it does not read as a negative rating. The dossier already says this."
+}

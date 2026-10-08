@@ -1,0 +1,19 @@
+{
+  "url": "https://voter.votewa.gov/elections/candidate.ashx?e=899&r=187018&b=0&la=en&c=27",
+  "retrieved_at": "2026-10-08",
+  "stage": "raw",
+  "method": "GET (no auth) of the JSON endpoint behind VoteWA's online voter guide; committed alongside this file with only the base64 \"Photo\" field of each record removed (every other field verbatim, re-serialized with indent=1)",
+  "listed_on": "https://voter.votewa.gov/GenericVoterGuide.aspx?e=899&c=27",
+  "file": "data/washington-state/elections/2026-11-03-general/counties/pierce/raw/votewa/candidate-statements/race-187018.json",
+  "sha256_of_committed_file": "884040559d9a27349424b3d7ca18a6da4afc00de0ef906a0baab2c9668a0b6e3",
+  "race": {
+    "RaceID": "187018",
+    "Name": "State Representative Pos. 1",
+    "Jurisdiction": "Legislative District 28"
+  },
+  "candidates": [
+    "Mari Leavitt",
+    "Kathy Richardson"
+  ],
+  "statement_field": "Each record's \"Statement\" field holds the candidate's statement (HTML) as entered for the general election; \"CandidateStatementText\" is empty and \"IsApprovedForPost\" is \"False\" on 2026-10-08, so the VoteWA page may not display it yet. Cite as the candidate's own submitted statement (Tier 1), not as the printed pamphlet."
+}

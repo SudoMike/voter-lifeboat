@@ -1,0 +1,50 @@
+{
+  "contest_slug": "pierce-legislative-district-29-state-representative-pos-2",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-legislative-district-29-state-representative-pos-2/"],
+  "office_does": "A State Representative is one of the 29th District's two members of the Washington House, voting on state law and budgets.",
+  "race_blurb": "An open seat, vacated by Rep. Sharlett Mena's Senate run, between two Democrats: Tacoma Deputy Mayor Joe Bushnell and state equity-policy advisor Patrick Stickney. They differ most on public safety and on record versus renewal.",
+  "candidates": [
+    {
+      "slug": "joe-bushnell",
+      "summary": "Tacoma Deputy Mayor and Marine Corps combat veteran, running on universal healthcare, affordability and community safety.",
+      "highlights": [
+        "Pledges to 'champion Universal Healthcare for all' [S1][S4]",
+        "Would make the rich pay their fair share while expanding the Working Families Tax Credit and the senior property-tax exemption [S4]",
+        "Calls for more community policing and says he led work to cut emergency response times [S4]",
+        "Co-sponsored Tacoma's 2026 ordinance barring civil immigration enforcement on city property [S6]",
+        "Endorsed by police and firefighter unions, the Association of Washington Business and Democratic officials [S1][S5]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": 1, "confidence": "medium", "citations": ["S4"], "basis": "Says the rich should pay their fair share while cutting taxes for regular people through tax credits and exemptions."},
+        "safety": {"score": -1, "confidence": "medium", "citations": ["S4"], "basis": "Calls for more community policing and touts crime and response-time reductions, alongside more mental-health and addiction treatment."},
+        "experience": {"score": -1, "confidence": "high", "citations": ["S1", "S3"], "basis": "Tacoma councilmember since 2021 and current Deputy Mayor, against a first-time candidate."},
+        "immigration": {"score": 2, "confidence": "medium", "citations": ["S1", "S6"], "basis": "Co-sponsored Tacoma's ordinance restricting civil immigration enforcement on city property and says 'we need to fight back.'"},
+        "healthcare": {"score": 2, "confidence": "high", "citations": ["S1", "S2", "S4"], "basis": "Repeatedly pledges to champion universal healthcare for all."},
+        "social": {"score": 1, "confidence": "medium", "citations": ["S4"], "basis": "Pledges to always vote to protect the right to choose and access to reproductive healthcare."}
+      }
+    },
+    {
+      "slug": "patrick-stickney",
+      "summary": "Lawyer and senior policy advisor at the state Office of Equity, running on housing, worker and civil-rights protections, and a prevention-first approach to public safety.",
+      "highlights": [
+        "Calls for co-response models, youth restorative justice and treatment to address root causes of crime [S4]",
+        "Would protect Apple Health and 'work toward real universal healthcare' [S4]",
+        "Former Department of Financial Institutions investor-protection examiner who would strengthen consumer protections [S1][S4]",
+        "Endorsed by the 29th LD and Pierce County Democrats, the Washington State Labor Council and Rep. Sharlett Mena [S1][S5]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "safety": {"score": 2, "confidence": "medium", "citations": ["S4"], "basis": "Root causes, early intervention, co-response and restorative justice, with no enforcement planks."},
+        "climate": {"score": 1, "confidence": "medium", "citations": ["S4"], "basis": "Would combat climate-protection rollbacks and support a just transition to clean energy."},
+        "experience": {"score": 1, "confidence": "high", "citations": ["S1", "S3"], "basis": "No elected office beyond precinct committee officer, but a state-agency policy professional, running against the Deputy Mayor."},
+        "immigration": {"score": 1, "confidence": "medium", "citations": ["S1", "S4"], "basis": "Supports resources and protections for immigrants and refugees and opposes federal overreach, in general terms."},
+        "healthcare": {"score": 1, "confidence": "medium", "citations": ["S4"], "basis": "Would protect Apple Health and 'work toward' universal healthcare."},
+        "tech": {"score": 1, "confidence": "medium", "citations": ["S4"], "basis": "Would protect the data privacy of Apple Health users."}
+      }
+    }
+  ]
+}

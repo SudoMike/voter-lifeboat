@@ -1,0 +1,19 @@
+{
+  "url": "https://voter.votewa.gov/elections/candidate.ashx?e=899&r=187019&b=0&la=en&c=27",
+  "retrieved_at": "2026-10-08",
+  "stage": "raw",
+  "method": "GET (no auth) of the JSON endpoint behind VoteWA's online voter guide; committed alongside this file with only the base64 \"Photo\" field of each record removed (every other field verbatim, re-serialized with indent=1)",
+  "listed_on": "https://voter.votewa.gov/GenericVoterGuide.aspx?e=899&c=27",
+  "file": "data/washington-state/elections/2026-11-03-general/counties/pierce/raw/votewa/candidate-statements/race-187019.json",
+  "sha256_of_committed_file": "95beab92e71dbe414822ade99e7baa6984f47b529f84451d803987655d10dd88",
+  "race": {
+    "RaceID": "187019",
+    "Name": "State Representative Pos. 2",
+    "Jurisdiction": "Legislative District 28"
+  },
+  "candidates": [
+    "Dan Bronoske",
+    "Kerry Hills"
+  ],
+  "statement_field": "Each record's \"Statement\" field holds the candidate's statement (HTML) as entered for the general election; \"CandidateStatementText\" is empty and \"IsApprovedForPost\" is \"False\" on 2026-10-08, so the VoteWA page may not display it yet. Cite as the candidate's own submitted statement (Tier 1), not as the printed pamphlet."
+}

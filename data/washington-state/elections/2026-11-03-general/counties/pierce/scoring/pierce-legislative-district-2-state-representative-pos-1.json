@@ -1,0 +1,50 @@
+{
+  "contest_slug": "pierce-legislative-district-2-state-representative-pos-1",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-legislative-district-2-state-representative-pos-1/"],
+  "office_does": "One of the 2nd District's two members of the Washington House, voting on state law and the operating, capital and transportation budgets for a two-year term.",
+  "race_blurb": "Ten-year Republican incumbent and Transportation ranking member Andrew Barkis faces first-time candidate William Dehnel, a Pierce Transit supervisor and union officer who prefers the Labor Democrat Party. They split most sharply on the 2026 millionaires' tax and on LGBTQ+ and school policy.",
+  "candidates": [
+    {
+      "slug": "andrew-barkis",
+      "summary": "State representative since 2016 and Lacey property-management owner, running on transportation maintenance, housing supply, and opposition to income and gas tax increases.",
+      "highlights": [
+        "Voted against ESSB 6346 (2026 tax on income over $1 million) and the 2025 B&O and services tax bills [S5][S8][S9]",
+        "Calls himself a vocal opponent of state income taxes and gas tax increases [S3]",
+        "Advocates more housing supply and fewer barriers to development; endorsed by realtor and rental-housing groups [S3][S4]",
+        "Voted against ESHB 1296 (2025) and ESSB 5599 (2023) [S10][S13]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": -2, "confidence": "high", "citations": ["S3", "S5", "S8", "S9"], "basis": "Voted against ESSB 6346, ESHB 2081 and ESSB 5814 and says he opposes state income taxes and gas tax increases."},
+        "spending": {"score": -1, "confidence": "medium", "citations": ["S1", "S2"], "basis": "Emphasizes fiscally responsible budgets and fighting deficit spending that outpaces revenue."},
+        "housing": {"score": -2, "confidence": "medium", "citations": ["S2", "S3", "S4"], "basis": "Advocates increased supply and removing bureaucratic barriers, opposed frequent building-code updates; backed by real-estate and rental-housing groups."},
+        "safety": {"score": -1, "confidence": "medium", "citations": ["S2", "S4"], "basis": "Says he worked to stop shortening sentences for serious crimes and to keep accountability for registered offenders; law-enforcement endorsements."},
+        "experience": {"score": -2, "confidence": "high", "citations": ["S1", "S14"], "basis": "In the House since 2016 and Transportation ranking member, against a first-time candidate."},
+        "social": {"score": -1, "confidence": "medium", "citations": ["S4", "S13"], "basis": "Voted against ESSB 5599 and is endorsed by Human Life PAC; no campaign statement on the topic."},
+        "parental-rights": {"score": -1, "confidence": "medium", "citations": ["S10", "S11", "S12"], "basis": "Voted against ESHB 1296's changes to the I-2081 parental-rights list and added a parental right to request charter-school enrollment; no campaign statement."}
+      }
+    },
+    {
+      "slug": "william-dehnel",
+      "summary": "Pierce Transit dispatch supervisor and ATU Local 758 officer in his first run for office, campaigning on progressive taxation, school and rural healthcare funding, and LGBTQ+ protections.",
+      "highlights": [
+        "Says he fully supports the 9.9% tax on income over $1 million and wants a system that asks more of those who have more [S4]",
+        "Opposes I-1 and I-638 by name [S7]",
+        "Would fully fund special education and restore early-learning funding cut in 2026 [S5]",
+        "Endorsed by the Washington State Labor Council and Planned Parenthood Alliance Advocates [S8][S9]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": 2, "confidence": "high", "citations": ["S2", "S4"], "basis": "Explicitly supports the millionaires' income tax and repeatedly calls for taxes that ask more of those who have more."},
+        "spending": {"score": 1, "confidence": "medium", "citations": ["S2", "S5", "S6"], "basis": "Calls for closing the special-education funding gap, restoring early learning, and more investment in rural clinics and infrastructure."},
+        "healthcare": {"score": -1, "confidence": "medium", "citations": ["S6"], "basis": "Proposals work within the existing system (protect Apple Health, fund clinics, drug-price negotiation); no single-payer plank."},
+        "experience": {"score": 2, "confidence": "high", "citations": ["S1", "S3"], "basis": "First-time candidate with union but no public office, running against a ten-year incumbent."},
+        "social": {"score": 2, "confidence": "high", "citations": ["S2", "S6", "S7", "S9"], "basis": "Opposes I-638, would protect gender-affirming care and anti-discrimination law, and pledges never to vote for legislation targeting LGBTQ+ people."},
+        "parental-rights": {"score": 2, "confidence": "medium", "citations": ["S7"], "basis": "Opposes I-1, citing student privacy and the risk of outing LGBTQ+ students to parents."}
+      }
+    }
+  ]
+}
