@@ -88,8 +88,9 @@ test('every statewide contest and measure in the shipped general gets a paged SO
         n++
       }
   for (const m of general.measures) {
-    // Spokane's, Pierce's and Kitsap's measures cite VoteWA's unpaged online guide (countyGuides).
-    if (m.owner === 'spokane' || m.owner === 'pierce' || m.owner === 'kitsap') continue
+    // Spokane's, Pierce's, Kitsap's, Whatcom's and Benton's measures cite
+    // VoteWA's unpaged online guide (countyGuides).
+    if (['spokane', 'pierce', 'kitsap', 'whatcom', 'benton'].includes(m.owner)) continue
     assert.match(pamphletLink(m.pamphlet_pages, m.owner, general.election.id), /#page=\d+$/, m.slug)
     n++
   }
@@ -259,6 +260,33 @@ test('shipped Clark, Kitsap and Thurston records link their own PDFs or guide; t
   }
 })
 
+test('shipped Yakima, Whatcom and Benton records link their VoteWA guide; their offices link directly', () => {
+  const id = general.election.id
+  const GUIDE = {
+    yakima: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=39',
+    whatcom: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=37',
+    benton: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=03',
+  }
+  const linked = { yakima: 0, whatcom: 0, benton: 0 }
+  for (const item of [...general.contests, ...general.measures]) {
+    if (!(item.owner in linked)) continue
+    const pages = item.candidates ? item.candidates.map((c) => c.pamphlet_pages) : [item.pamphlet_pages]
+    for (const p of pages) {
+      assert.deepEqual(p, [], item.slug)
+      assert.equal(pamphletLink(p, item.owner, id), GUIDE[item.owner], item.slug)
+      linked[item.owner]++
+    }
+  }
+  assert.ok(linked.yakima >= 30 && linked.whatcom >= 25 && linked.benton >= 40, JSON.stringify(linked))
+  for (const [county, name, url] of [
+    ['yakima', 'Yakima County', 'https://www.yakimacounty.us/170/Elections'],
+    ['whatcom', 'Whatcom County', 'https://www.whatcomcounty.us/2794/Elections'],
+    ['benton', 'Benton County', 'https://www.bentoncountywa.gov/government/elected_officials/auditor/elections/index.php'],
+  ]) {
+    assert.deepEqual(countyElectionsOffice(general, { id: county, name }), { name: `${name} Elections`, url, direct: true })
+  }
+})
+
 test('the shipped general links Snohomish County Elections directly', () => {
   assert.deepEqual(countyElectionsOffice(general, { id: 'snohomish', name: 'Snohomish County' }), {
     name: 'Snohomish County Elections',
@@ -298,8 +326,9 @@ test('a known county without its own URL gets the SOS county offices directory',
     url: COUNTY_OFFICES_URL,
     direct: false,
   })
-  assert.deepEqual(countyElectionsOffice(general, { id: 'yakima', name: 'Yakima County' }), {
-    name: 'Yakima County Elections',
+  // Walla Walla does not ship in the general (Yakima does since #28).
+  assert.deepEqual(countyElectionsOffice(general, { id: 'walla-walla', name: 'Walla Walla County' }), {
+    name: 'Walla Walla County Elections',
     url: COUNTY_OFFICES_URL,
     direct: false,
   })

@@ -152,8 +152,8 @@ class GeneralPackagesTest(unittest.TestCase):
                 self.assertTrue(c["slug"].startswith(f"{county}-"))
 
     def test_shipped_general_counties(self):
-        self.assertEqual(["king", "snohomish", "spokane", "pierce", "clark", "kitsap", "thurston"],
-                         election.APP_PACKAGES[GENERAL.id]["counties"])
+        self.assertEqual(["king", "snohomish", "spokane", "pierce", "clark", "kitsap", "thurston", "yakima", "whatcom",
+                          "benton"], election.APP_PACKAGES[GENERAL.id]["counties"])
 
     def test_wave2_builders_are_full_county(self):
         # Every Clark, Kitsap and Thurston scope resolves through geo.js
@@ -162,6 +162,16 @@ class GeneralPackagesTest(unittest.TestCase):
             for name in ("app-contests.json", "app-measures.json"):
                 doc = json.loads((GENERAL.county(county) / "interim" / name).read_text())
                 self.assertEqual(("full_county", []), (doc["coverage"], doc["notes"]), f"{county} {name}")
+
+    def test_wave3_builders_are_full_county(self):
+        # Yakima, Whatcom and Benton (#28): every scope resolves through
+        # geo.js COUNTY_LAYERS (Benton PUDDST and SCHDST since #28). Yakima
+        # keeps two informational notes (no local measures; Commissioner
+        # District 1 elected by district); the others carry none.
+        for county, notes in (("yakima", 2), ("whatcom", 0), ("benton", 0)):
+            for name in ("app-contests.json", "app-measures.json"):
+                doc = json.loads((GENERAL.county(county) / "interim" / name).read_text())
+                self.assertEqual(("full_county", notes), (doc["coverage"], len(doc["notes"])), f"{county} {name}")
 
 if __name__ == "__main__":
     unittest.main()

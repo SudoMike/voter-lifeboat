@@ -1,0 +1,13 @@
+{
+  "url": "https://webgis.dor.wa.gov/arcgis/rest/services/Programs/WADOR_PropertyTax/MapServer/16/query?where=COUNTYNAME%3D%27WHATCOM%27&outFields=*&returnGeometry=false&f=json",
+  "retrieved_at": "2026-10-08",
+  "method": "curl -sL -A \"Mozilla/5.0 ...\" during Whatcom dossier research for issue #28; cached verbatim at data/.cache/whatcom/scope/dor-16-whatcom.json",
+  "stage": "raw",
+  "source_type": "gis",
+  "tier": 1,
+  "outlet": "WA DOR property tax districts, PRT2025 (port districts), Whatcom features",
+  "cache_file": "data/.cache/whatcom/scope/dor-16-whatcom.json",
+  "bytes": 1096,
+  "sha256": "d6a1b8bab9ea84ceced9603497fd0e687cbc684e1c76d4c0dccbcaa2f5be14e0",
+  "notes": "One Whatcom feature, DISTATTRIB BELLINGHAM. Point queries 2026-10-08 at Point Roberts (-123.0640,48.9870), Glacier (-121.9440,48.8880), Newhalem (-121.2540,48.6720), Bellingham (-122.4790,48.7520), Sumas (-122.2650,49.0000) and Acme (-122.3450,48.7000) all return it: the Port of Bellingham is county-wide."
+}

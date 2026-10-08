@@ -1,0 +1,116 @@
+{
+  "contest_slug": "whatcom-legislative-district-42-state-senator",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/whatcom/dossiers/whatcom-legislative-district-42-state-senator/"],
+  "office_does": "A State Senator writes and votes on Washington state law and the operating, capital and transportation budgets, covering school funding, tax structure, housing rules, health funding and criminal-justice statutes, for a four-year term.",
+  "race_blurb": "Open seat after Democratic Sen. Sharon Shewmake's retirement. Republican Erika Creydt, a Blaine School Board director, led the primary with about 45%; Democrat Michael Shepard, a Port of Bellingham commissioner, took second by four votes over Eamonn Collins after a hand recount. Creydt campaigns on repealing the 2026 income tax and auditing state spending; Shepard on education funding, abortion rights and limits on federal immigration enforcement.",
+  "candidates": [
+    {
+      "slug": "erika-creydt",
+      "summary": "Clinical psychologist, counseling-clinic founder and Blaine School Board director running as a Republican on affordability, tax restraint and state spending accountability.",
+      "highlights": [
+        "Calls for repealing the 9.9% tax on income over $1 million enacted under SB 6346 [S5]",
+        "Says Washington has a spending problem and programs without measurable results should be reformed or eliminated [S4][S5]",
+        "Supports streamlining permitting to increase housing supply while protecting farmland and water [S5]",
+        "Opposes the state water adjudication covering about 30,000 Whatcom landowners [S7]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S4", "S5", "S6"],
+          "basis": "Repeated explicit opposition to a state income tax and a call to repeal the SB 6346 tax; also criticizes the 2025 services sales tax."
+        },
+        "spending": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S4", "S5"],
+          "basis": "Says the state has a spending problem; would review, reform or eliminate programs without measurable return before any new revenue."
+        },
+        "housing": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S5", "S9"],
+          "basis": "Supply-side approach of streamlining permitting and removing barriers, bounded by infrastructure and farmland protection."
+        },
+        "healthcare": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S9", "S15"],
+          "basis": "Focuses on keeping people insured after federal cuts and addressing provider shortages within the current system."
+        },
+        "experience": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S15"],
+          "basis": "School board director with no legislative record, running to 'challenge the policies and politicians' in Olympia, against a commissioner backed by the retiring senator."
+        }
+      }
+    },
+    {
+      "slug": "michael-alvarez-shepard",
+      "summary": "Three-term Port of Bellingham commissioner and Western Washington University anthropology faculty member running as a Democrat, endorsed by the retiring senator.",
+      "highlights": [
+        "Voted for a port resolution limiting civil immigration detentions on port property [S14]",
+        "Describes himself as \"100% pro-choice\" and pledges to protect reproductive care providers and health data [S1][S11]",
+        "Pledges increased K-12 and early-learning funding [S8]",
+        "Proposes a state self-insurance model for Medicare and Medicaid [S4][S15]",
+        "Opposes \"defund the police\" and says law enforcement needs more resources [S6]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "immigration": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S14", "S15"],
+          "basis": "Voted to bar warrantless civil immigration detentions and detention facilities on port property and says he is proud of that vote."
+        },
+        "social": {
+          "score": 2,
+          "confidence": "medium",
+          "citations": ["S1", "S11"],
+          "basis": "Says he is '100% pro-choice' and backs abortion and birth-control access and protections for providers; no LGBTQ+ position found."
+        },
+        "spending": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S8"],
+          "basis": "Pledges increased K-12 and early childhood funding and investment from Pre-K through postsecondary education."
+        },
+        "climate": {
+          "score": 1,
+          "confidence": "high",
+          "citations": ["S2", "S10"],
+          "basis": "Adopted a port net-zero-by-2050 Climate Action Plan and says the state must keep reducing emissions, while avoiding extra costs on families."
+        },
+        "safety": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S6"],
+          "basis": "Opposes 'defund the police' and says law enforcement needs more resources; also backs homelessness prevention."
+        },
+        "housing": {
+          "score": 0,
+          "confidence": "medium",
+          "citations": ["S2", "S4"],
+          "basis": "Combines cutting red tape and density near transit with workforce-housing incentives and support for a low-income housing project."
+        },
+        "healthcare": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S4", "S15"],
+          "basis": "Would lower drug prices and expand coverage options and proposes state self-insurance for Medicare and Medicaid, not single-payer."
+        },
+        "experience": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S1", "S3", "S12"],
+          "basis": "Nine years as an elected port commissioner, endorsed by the retiring senator and Democratic legislative leaders; no legislative record."
+        }
+      }
+    }
+  ]
+}

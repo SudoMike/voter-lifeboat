@@ -50,6 +50,10 @@ const NAMED_VALUES = {
     SCRFA: 'South Snohomish County Fire & Rescue Regional Fire Authority',
     FD01: 'West Thurston Regional Fire Authority',
   },
+  // Benton PUDDST reads the Auditor's PrecinctSplits PUD_District (geo.js).
+  PUDDST: {
+    'BENTON PUD': 'Benton County Public Utility District',
+  },
   // Spokane FIRDST reads the county fire layer's NAME (geo.js). Districts
   // read 'Fire District 9'; these other polygons are cities with their own
   // department, towns served by contract, and land outside every district.

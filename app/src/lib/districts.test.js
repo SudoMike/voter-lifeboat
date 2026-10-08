@@ -64,6 +64,14 @@ test('Clark, Kitsap and Thurston school and WTRFA values read as names', () => {
   assert.equal(describeDistrict('RFADST', 'FD01'), 'West Thurston Regional Fire Authority')
 })
 
+test('Benton PUD and Yakima, Whatcom and Benton district numbers read as names', () => {
+  // Live 2026-10-08 (#28): Kennewick (Benton PUD, SD 17), Benton City (SD 52),
+  // Everson (Whatcom FD 1).
+  assert.equal(describeDistrict('PUDDST', 'Benton PUD'), 'Benton County Public Utility District')
+  assert.equal(describeDistrict('SCHDST', '52'), 'School District 52')
+  assert.equal(describeDistrict('FIRDST', '1'), 'Fire District 1')
+})
+
 test('codes are tidied without mangling initialisms', () => {
   assert.equal(describeDistrict('FIRDST', 'TACOMA'), 'Fire District Tacoma')
   assert.equal(describeDistrict('SCCDST', 'SCC5'), 'Seattle City Council District 5')

@@ -1,0 +1,109 @@
+{
+  "contest_slug": "benton-legislative-district-16-state-representative-pos-1",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/benton/dossiers/benton-legislative-district-16-state-representative-pos-1/"],
+  "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering school funding, tax structure, housing rules and criminal-justice statutes.",
+  "race_blurb": "Three-term Republican incumbent Mark Klicker faces first-time Democratic candidate Kyle Palmer, a former Richland Planning Commission chair, after a 60% to 40% primary. Klicker voted against the 2026 income tax and says it will spread to everyone; Palmer says he is not troubled by the rate on top earners but wants a lean budget before new taxes.",
+  "candidates": [
+    {
+      "slug": "mark-klicker",
+      "summary": "Three-term State Representative, farm-and-ranch realtor and timber producer who campaigns on tax relief, spending cuts and natural gas, hydro and nuclear power.",
+      "highlights": [
+        "Voted against the 2026 tax on income over $1 million and the 2025 B&O and services tax bills [S3][S4][S5]",
+        "Says the state should cut wasteful spending and decrease the size of government [S11]",
+        "Pledges to rectify \"harmful police reform bills\" and back natural gas, hydro and nuclear energy [S1]",
+        "Voted against ESHB 1296 and the 2025 clean fuels bill [S6][S7]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S3", "S4", "S5", "S12"],
+          "basis": "Voted no on ESSB 6346 and on the 2025 B&O (ESHB 2081) and services excise (ESSB 5814) tax bills; pledges tax relief and says the income tax will eventually reach everyone."
+        },
+        "spending": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S11", "S12"],
+          "basis": "Repeatedly calls for cutting wasteful spending, decreasing the size of government and stopping budget growth."
+        },
+        "housing": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S8", "S9"],
+          "basis": "Voted against the 2025 tenant housing-stability bill; sponsored a housing cost driver task force and small businesses in residential zones."
+        },
+        "safety": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S1"],
+          "basis": "Pledges to work on rectifying harmful police reform bills."
+        },
+        "climate": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S1", "S7"],
+          "basis": "Backs natural gas, hydro and nuclear as reliable energy and voted against the 2025 clean fuels program bill."
+        },
+        "experience": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S2", "S11"],
+          "basis": "Three House terms since 2021 with a ranking committee post, facing a first-time candidate."
+        },
+        "parental-rights": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S6"],
+          "basis": "Voted against ESHB 1296, the 2025 amendments to the parents' rights law, on House passage and final passage; no statement on notification or opt-outs."
+        },
+        "tech": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S11"],
+          "basis": "Says the district's data center is already under strict state rules on power, water, noise and environmental review; proposes no new limits."
+        }
+      }
+    },
+    {
+      "slug": "kyle-palmer",
+      "summary": "Richland small business owner, real-estate professional and former Richland Planning Commission chair running for office for the first time, focused on housing, water, reliable energy and outcome-based budgeting.",
+      "highlights": [
+        "Says the state should not make long-term spending commitments without a plan to pay for them and should judge programs by measurable outcomes [S2]",
+        "Says he is not concerned about the 9.9% rate on income over $1 million but wants a lean budget before new taxes [S3]",
+        "Would require data centers to disclose power and water use and pay for the infrastructure they need [S2]",
+        "Former chair of the Richland Planning Commission; no elected experience [S1]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": 0,
+          "confidence": "medium",
+          "citations": ["S3"],
+          "basis": "Not troubled by the 9.9% tax on income over $1 million, but does not want to 'tax first' and wants a lean budget before new taxes."
+        },
+        "spending": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S2"],
+          "basis": "Calls for outcome-based program review, cutting administrative costs and no long-term commitments without a funding plan, while protecting core services."
+        },
+        "tech": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S2"],
+          "basis": "Would require data centers to disclose power and water use, pay for infrastructure and deliver local benefits."
+        },
+        "experience": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S2"],
+          "basis": "First run for office with appointed planning-commission experience, against a three-term incumbent."
+        }
+      }
+    }
+  ]
+}

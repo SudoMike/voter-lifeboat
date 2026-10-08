@@ -1,0 +1,437 @@
+{
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/benton/interim/contests.json",
+    "data/washington-state/elections/2026-11-03-general/counties/benton/interim/measures.json"
+  ],
+  "script": "pipeline/build_research_plan.py",
+  "contests": [
+    {
+      "contest_slug": "benton-congressional-district-4-u-s-representative",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 4",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "amanda-mckinney",
+          "name": "Amanda McKinney",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-4-u-s-representative/amanda-mckinney.md"
+        },
+        {
+          "slug": "john-duresky",
+          "name": "John Duresky",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-4-u-s-representative/john-duresky.md"
+        }
+      ],
+      "shared": {
+        "researched_in": null,
+        "also_listed_by": [
+          "yakima"
+        ]
+      }
+    },
+    {
+      "contest_slug": "benton-legislative-district-8-state-senator",
+      "category": "State",
+      "office": "State Senator",
+      "district": "Legislative District 8",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "nikki-torres",
+          "name": "Nikki Torres",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-8-state-senator/nikki-torres.md"
+        },
+        {
+          "slug": "gabe-galbraith",
+          "name": "Gabe Galbraith",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-8-state-senator/gabe-galbraith.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-legislative-district-14-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 14",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "gloria-mendoza",
+          "name": "Gloria Mendoza",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-14-state-representative-position-1/gloria-mendoza.md"
+        },
+        {
+          "slug": "chelsea-dimas",
+          "name": "Chelsea Dimas",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-14-state-representative-position-1/chelsea-dimas.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "yakima",
+          "contest_slug": "yakima-legislative-district-14-state-representative-pos-1",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/yakima/scoring/yakima-legislative-district-14-state-representative-pos-1.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "yakima"
+        ]
+      }
+    },
+    {
+      "contest_slug": "benton-legislative-district-14-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 14",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "deb-manjarrez",
+          "name": "Deb Manjarrez",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-14-state-representative-position-2/deb-manjarrez.md"
+        },
+        {
+          "slug": "ezequiel-morfin",
+          "name": "Ezequiel Morfin",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-14-state-representative-position-2/ezequiel-morfin.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "yakima",
+          "contest_slug": "yakima-legislative-district-14-state-representative-pos-2",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/yakima/scoring/yakima-legislative-district-14-state-representative-pos-2.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "yakima"
+        ]
+      }
+    },
+    {
+      "contest_slug": "benton-legislative-district-15-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 15",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "chris-corry",
+          "name": "Chris Corry",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-15-state-representative-position-1/chris-corry.md"
+        },
+        {
+          "slug": "jack-mcentire",
+          "name": "Jack McEntire",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-15-state-representative-position-1/jack-mcentire.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "yakima",
+          "contest_slug": "yakima-legislative-district-15-state-representative-pos-1",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/yakima/scoring/yakima-legislative-district-15-state-representative-pos-1.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "yakima"
+        ]
+      }
+    },
+    {
+      "contest_slug": "benton-legislative-district-15-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 15",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "reedy-berg",
+          "name": "Reedy Berg",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-15-state-representative-position-2/reedy-berg.md"
+        },
+        {
+          "slug": "liz-hallock",
+          "name": "Liz Hallock",
+          "party_preference": "Prefers No Kings Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-15-state-representative-position-2/liz-hallock.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "yakima",
+          "contest_slug": "yakima-legislative-district-15-state-representative-pos-2",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/yakima/scoring/yakima-legislative-district-15-state-representative-pos-2.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "yakima"
+        ]
+      }
+    },
+    {
+      "contest_slug": "benton-legislative-district-16-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 16",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "mark-klicker",
+          "name": "Mark Klicker",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-16-state-representative-position-1/mark-klicker.md"
+        },
+        {
+          "slug": "kyle-palmer",
+          "name": "Kyle Palmer",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-16-state-representative-position-1/kyle-palmer.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-legislative-district-16-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 16",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "skyler-rude",
+          "name": "Skyler Rude",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-16-state-representative-position-2/skyler-rude.md"
+        },
+        {
+          "slug": "derek-sarley",
+          "name": "Derek Sarley",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-16-state-representative-position-2/derek-sarley.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-benton-county-prosecuting-attorney",
+      "category": "County",
+      "office": "Prosecuting Attorney",
+      "district": "Benton County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "eric-eisinger",
+          "name": "Eric Eisinger",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/benton/dossiers/benton-benton-county-prosecuting-attorney/eric-eisinger.md"
+        },
+        {
+          "slug": "julie-long",
+          "name": "Julie Long",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/benton/dossiers/benton-benton-county-prosecuting-attorney/julie-long.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-benton-county-sheriff",
+      "category": "County",
+      "office": "Sheriff",
+      "district": "Benton County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "michael-mike-clark",
+          "name": "Michael (Mike) Clark",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/benton/dossiers/benton-benton-county-sheriff/michael-mike-clark.md"
+        },
+        {
+          "slug": "brad-klippert",
+          "name": "Brad Klippert",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/benton/dossiers/benton-benton-county-sheriff/brad-klippert.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-benton-county-district-court-judge-1",
+      "category": "County",
+      "office": "District Court Judge 1",
+      "district": "Benton County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "talesha-sams",
+          "name": "Talesha Sams",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        },
+        {
+          "slug": "michael-mike-rio",
+          "name": "Michael \"Mike\" Rio",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-public-utility-district-commissioner-district-2-commissioner-pos-2",
+      "category": "PublicUtility",
+      "office": "Commissioner Pos. 2",
+      "district": "Public Utility District Commissioner District 2",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "roy-c-dewey-holliday",
+          "name": "Roy C. \"Dewey\"  Holliday",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        },
+        {
+          "slug": "micah-valentine",
+          "name": "Micah Valentine",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-city-of-richland-council-pos-4",
+      "category": "City",
+      "office": "Council Pos. 4",
+      "district": "City Of Richland",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "kyle-saltz",
+          "name": "Kyle Saltz",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/benton/dossiers/benton-city-of-richland-council-pos-4/kyle-saltz.md"
+        },
+        {
+          "slug": "mary-s-lipton",
+          "name": "Mary S. Lipton",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/benton/dossiers/benton-city-of-richland-council-pos-4/mary-s-lipton.md"
+        }
+      ]
+    }
+  ],
+  "measures": [
+    {
+      "jurisdiction": "City of Benton City",
+      "proposition": "Proposition No. 1",
+      "title": "Adoption of the Council-Manager Form of Government",
+      "slug": "benton-city-of-benton-city-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "City of Benton City",
+      "proposition": "Proposition No. 2",
+      "title": "Community Safety Levy Lid Lift",
+      "slug": "benton-city-of-benton-city-proposition-no-2",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Kiona-Benton City School District No. 52",
+      "proposition": "Proposition No. 1",
+      "title": "Educational Programs and Operation Replacement Levy",
+      "slug": "benton-kiona-benton-city-school-district-no-52-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    }
+  ],
+  "carry_forward_from": "2026-08-04-primary"
+}

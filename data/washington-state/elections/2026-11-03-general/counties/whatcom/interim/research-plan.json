@@ -1,0 +1,333 @@
+{
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/whatcom/interim/contests.json",
+    "data/washington-state/elections/2026-11-03-general/counties/whatcom/interim/measures.json"
+  ],
+  "script": "pipeline/build_research_plan.py",
+  "contests": [
+    {
+      "contest_slug": "whatcom-congressional-district-2-u-s-representative",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 2",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "rick-larsen",
+          "name": "Rick Larsen",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-2-u-s-representative/rick-larsen.md"
+        },
+        {
+          "slug": "edwin-h-feller",
+          "name": "Edwin H. Feller",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-2-u-s-representative/edwin-h-feller.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "snohomish",
+          "contest_slug": "snohomish-congressional-district-2-u-s-representative",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/snohomish/scoring/snohomish-congressional-district-2-u-s-representative.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "snohomish"
+        ]
+      }
+    },
+    {
+      "contest_slug": "whatcom-legislative-district-40-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 40",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "debra-lekanoff",
+          "name": "Debra Lekanoff",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-40-state-representative-position-1/debra-lekanoff.md"
+        },
+        {
+          "slug": "cindy-carter",
+          "name": "Cindy Carter",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-40-state-representative-position-1/cindy-carter.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "whatcom-legislative-district-40-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 40",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "alex-ramel",
+          "name": "Alex Ramel",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-40-state-representative-position-2/alex-ramel.md"
+        },
+        {
+          "slug": "joseph-segault",
+          "name": "Joseph Segault",
+          "party_preference": "States No Party Preference",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-40-state-representative-position-2/joseph-segault.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "whatcom-legislative-district-42-state-senator",
+      "category": "State",
+      "office": "State Senator",
+      "district": "Legislative District 42",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "erika-creydt",
+          "name": "Erika Creydt",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-42-state-senator/erika-creydt.md"
+        },
+        {
+          "slug": "michael-alvarez-shepard",
+          "name": "Michael Alvarez Shepard",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-42-state-senator/michael-alvarez-shepard.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "whatcom-legislative-district-42-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 42",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "alicia-rule",
+          "name": "Alicia Rule",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-42-state-representative-position-1/alicia-rule.md"
+        },
+        {
+          "slug": "misty-flowers",
+          "name": "Misty Flowers",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-42-state-representative-position-1/misty-flowers.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "whatcom-legislative-district-42-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 42",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "joe-timmons",
+          "name": "Joe Timmons",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-42-state-representative-position-2/joe-timmons.md"
+        },
+        {
+          "slug": "justin-pike",
+          "name": "Justin Pike",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-42-state-representative-position-2/justin-pike.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "whatcom-whatcom-county-prosecuting-attorney",
+      "category": "County",
+      "office": "Prosecuting Attorney",
+      "district": "Whatcom County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "ryan-swinburnson",
+          "name": "Ryan Swinburnson",
+          "party_preference": "States No Party Preference",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/whatcom/dossiers/whatcom-whatcom-county-prosecuting-attorney/ryan-swinburnson.md"
+        },
+        {
+          "slug": "jesse-corkern",
+          "name": "Jesse Corkern",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/whatcom/dossiers/whatcom-whatcom-county-prosecuting-attorney/jesse-corkern.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "whatcom-port-of-bellingham-commissioner-district-4-commissioner-district-4",
+      "category": "Port",
+      "office": "Commissioner District 4",
+      "district": "Port of Bellingham Commissioner District 4",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "paul-burrill",
+          "name": "Paul Burrill",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/whatcom/dossiers/whatcom-port-of-bellingham-commissioner-district-4-commissioner-district-4/paul-burrill.md"
+        },
+        {
+          "slug": "tor-benson",
+          "name": "Tor Benson",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/whatcom/dossiers/whatcom-port-of-bellingham-commissioner-district-4-commissioner-district-4/tor-benson.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "whatcom-port-of-bellingham-commissioner-district-5-commissioner-district-5",
+      "category": "Port",
+      "office": "Commissioner District 5",
+      "district": "Port of Bellingham Commissioner District 5",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "chris-elder",
+          "name": "Chris Elder",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/whatcom/dossiers/whatcom-port-of-bellingham-commissioner-district-5-commissioner-district-5/chris-elder.md"
+        },
+        {
+          "slug": "shawn-ensley",
+          "name": "Shawn Ensley",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/whatcom/dossiers/whatcom-port-of-bellingham-commissioner-district-5-commissioner-district-5/shawn-ensley.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "whatcom-public-utility-district-no-1-of-whatcom-county-commissioner-district-1",
+      "category": "PublicUtility",
+      "office": "Commissioner District 1",
+      "district": "Public Utility District No. 1 of Whatcom County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "eddy-ury",
+          "name": "Eddy Ury",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        },
+        {
+          "slug": "frank-imhof",
+          "name": "Frank Imhof",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        }
+      ]
+    }
+  ],
+  "measures": [
+    {
+      "jurisdiction": "City of Bellingham",
+      "proposition": "Proposition 2026-06",
+      "title": "Authorizing the City's Salary Commission to Set the Mayor's Salary",
+      "slug": "whatcom-city-of-bellingham-proposition-2026-06",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "City of Bellingham",
+      "proposition": "Proposition 2026-07",
+      "title": "Streamlining the City's Contract Review Process to Allow Electronic Signatures",
+      "slug": "whatcom-city-of-bellingham-proposition-2026-07",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "City of Bellingham",
+      "proposition": "Initiative 26-01",
+      "title": "Prohibition of Algorithmic Price-Fixing in the Rental Market",
+      "slug": "whatcom-city-of-bellingham-initiative-26-01",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "City of Lynden",
+      "proposition": "Proposition 2026-05",
+      "title": "Levy Lid Lift for Public Safety and Essential Community Services",
+      "slug": "whatcom-city-of-lynden-proposition-2026-05",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Whatcom County Fire Protection District No. 1",
+      "proposition": "Proposition 2026-08",
+      "title": "Regular Property Tax Levy Lid Lift",
+      "slug": "whatcom-whatcom-county-fire-protection-district-no-1-proposition-2026-08",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    }
+  ],
+  "carry_forward_from": "2026-08-04-primary"
+}

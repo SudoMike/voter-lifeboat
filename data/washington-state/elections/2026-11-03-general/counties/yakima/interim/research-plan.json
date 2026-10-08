@@ -1,0 +1,343 @@
+{
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/yakima/interim/contests.json",
+    "data/washington-state/elections/2026-11-03-general/counties/yakima/interim/measures.json"
+  ],
+  "script": "pipeline/build_research_plan.py",
+  "contests": [
+    {
+      "contest_slug": "yakima-congressional-district-4-u-s-representative",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 4",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "amanda-mckinney",
+          "name": "Amanda McKinney",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-4-u-s-representative/amanda-mckinney.md"
+        },
+        {
+          "slug": "john-duresky",
+          "name": "John Duresky",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-4-u-s-representative/john-duresky.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "benton",
+          "contest_slug": "benton-congressional-district-4-u-s-representative",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/benton/scoring/benton-congressional-district-4-u-s-representative.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "benton"
+        ]
+      }
+    },
+    {
+      "contest_slug": "yakima-legislative-district-14-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 14",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "gloria-mendoza",
+          "name": "Gloria Mendoza",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-14-state-representative-position-1/gloria-mendoza.md"
+        },
+        {
+          "slug": "chelsea-dimas",
+          "name": "Chelsea Dimas",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-14-state-representative-position-1/chelsea-dimas.md"
+        }
+      ],
+      "shared": {
+        "researched_in": null,
+        "also_listed_by": [
+          "benton"
+        ]
+      }
+    },
+    {
+      "contest_slug": "yakima-legislative-district-14-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 14",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "deb-manjarrez",
+          "name": "Deb Manjarrez",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-14-state-representative-position-2/deb-manjarrez.md"
+        },
+        {
+          "slug": "ezequiel-morfin",
+          "name": "Ezequiel Morfin",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-14-state-representative-position-2/ezequiel-morfin.md"
+        }
+      ],
+      "shared": {
+        "researched_in": null,
+        "also_listed_by": [
+          "benton"
+        ]
+      }
+    },
+    {
+      "contest_slug": "yakima-legislative-district-15-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 15",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "chris-corry",
+          "name": "Chris Corry",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-15-state-representative-position-1/chris-corry.md"
+        },
+        {
+          "slug": "jack-mcentire",
+          "name": "Jack McEntire",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-15-state-representative-position-1/jack-mcentire.md"
+        }
+      ],
+      "shared": {
+        "researched_in": null,
+        "also_listed_by": [
+          "benton"
+        ]
+      }
+    },
+    {
+      "contest_slug": "yakima-legislative-district-15-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 15",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "reedy-berg",
+          "name": "Reedy Berg",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-15-state-representative-position-2/reedy-berg.md"
+        },
+        {
+          "slug": "liz-hallock",
+          "name": "Liz Hallock",
+          "party_preference": "Prefers No Kings Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-15-state-representative-position-2/liz-hallock.md"
+        }
+      ],
+      "shared": {
+        "researched_in": null,
+        "also_listed_by": [
+          "benton"
+        ]
+      }
+    },
+    {
+      "contest_slug": "yakima-yakima-county-assessor",
+      "category": "County",
+      "office": "Assessor",
+      "district": "Yakima County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "jacob-tate",
+          "name": "Jacob Tate",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/yakima/dossiers/yakima-yakima-county-assessor/jacob-tate.md"
+        },
+        {
+          "slug": "keith-effler",
+          "name": "Keith Effler",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/yakima/dossiers/yakima-yakima-county-assessor/keith-effler.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "yakima-yakima-county-auditor",
+      "category": "County",
+      "office": "Auditor",
+      "district": "Yakima County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "charles-ross",
+          "name": "Charles Ross",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/yakima/dossiers/yakima-yakima-county-auditor/charles-ross.md"
+        },
+        {
+          "slug": "maria-cuevas",
+          "name": "Maria Cuevas",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/yakima/dossiers/yakima-yakima-county-auditor/maria-cuevas.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "yakima-yakima-county-prosecuting-attorney",
+      "category": "County",
+      "office": "Prosecuting Attorney",
+      "district": "Yakima County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "tyler-haueter",
+          "name": "Tyler Haueter",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/yakima/dossiers/yakima-yakima-county-prosecuting-attorney/tyler-haueter.md"
+        },
+        {
+          "slug": "quinn-dalan",
+          "name": "Quinn Dalan",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/yakima/dossiers/yakima-yakima-county-prosecuting-attorney/quinn-dalan.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "yakima-yakima-county-sheriff",
+      "category": "County",
+      "office": "Sheriff",
+      "district": "Yakima County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "jake-church",
+          "name": "Jake Church",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/yakima/dossiers/yakima-yakima-county-sheriff/jake-church.md"
+        },
+        {
+          "slug": "roman-kilinkaridis",
+          "name": "Roman Kilinkaridis",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/yakima/dossiers/yakima-yakima-county-sheriff/roman-kilinkaridis.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "yakima-yakima-county-treasurer",
+      "category": "County",
+      "office": "Treasurer",
+      "district": "Yakima County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "stephanie-patterson",
+          "name": "Stephanie Patterson",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/yakima/dossiers/yakima-yakima-county-treasurer/stephanie-patterson.md"
+        },
+        {
+          "slug": "sam-johnson",
+          "name": "Sam Johnson",
+          "party_preference": "Prefers Independent Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/yakima/dossiers/yakima-yakima-county-treasurer/sam-johnson.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "yakima-yakima-county-commissioner-district-1-county-commissioner-district-1",
+      "category": "County",
+      "office": "County Commissioner; District 1",
+      "district": "Yakima County Commissioner District 1",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "robert-udell",
+          "name": "Robert Udell",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/yakima/dossiers/yakima-yakima-county-commissioner-district-1-county-commissioner-district-1/robert-udell.md"
+        },
+        {
+          "slug": "kristoffer-strutner",
+          "name": "Kristoffer Strutner",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/yakima/dossiers/yakima-yakima-county-commissioner-district-1-county-commissioner-district-1/kristoffer-strutner.md"
+        }
+      ]
+    }
+  ],
+  "measures": [],
+  "carry_forward_from": "2026-08-04-primary"
+}

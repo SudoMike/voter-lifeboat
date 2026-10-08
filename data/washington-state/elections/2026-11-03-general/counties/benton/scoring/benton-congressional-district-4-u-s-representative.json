@@ -1,0 +1,57 @@
+{
+  "contest_slug": "benton-congressional-district-4-u-s-representative",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/benton/dossiers/benton-congressional-district-4-u-s-representative/"],
+  "office_does": "The U.S. Representative for Washington's 4th District votes on federal law, taxes, spending and oversight for Central Washington, including all of Benton County.",
+  "race_blurb": "An open seat after Rep. Dan Newhouse's retirement: Trump-endorsed Republican Amanda McKinney, a Yakima County commissioner who took 34.9% in the primary, faces Democrat John Duresky, a retired Air Force major and former Hanford manager who took 29.9%. They split on immigration enforcement, energy and climate policy, health coverage, the Iran war and political reform.",
+  "candidates": [
+    {
+      "slug": "amanda-mckinney",
+      "summary": "Republican Yakima County commissioner and former mortgage banker, endorsed by President Trump, running on border enforcement, affordable energy, agriculture and water.",
+      "highlights": [
+        "Supports the administration's deportations and opposes any special path to legal status [S5][S12]",
+        "Backs dams, nuclear and LNG; opposes clean-energy mandates and state fuel taxes [S1][S2][S11]",
+        "Supports keeping women's sports for biological females and protecting life from conception [S3]",
+        "Pledges to rein in federal spending; flagged over $6 million in fraudulent COVID aid claims as commissioner [S2][S3]",
+        "Endorsed by Trump, Speaker Johnson and House GOP leaders [S4]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": -1, "confidence": "medium", "citations": ["S11", "S3"], "basis": "Wants Washington to rethink its fuel taxes and the Climate Commitment Act and calls gun-purchase fees taxes on rights; no federal tax plan stated."},
+        "spending": {"score": -2, "confidence": "medium", "citations": ["S2", "S3"], "basis": "Says Washington 'spends too much and delivers too little', pledges to rein in spending, and cites a county fraud-screening record."},
+        "safety": {"score": -2, "confidence": "high", "citations": ["S1", "S2", "S3"], "basis": "Runs on law and order and dismantling fentanyl networks, and funded sheriff resources and emergency communications as commissioner."},
+        "climate": {"score": -2, "confidence": "high", "citations": ["S1", "S2", "S3", "S5"], "basis": "Opposes clean-energy mandates and the Horse Heaven wind project, campaigned for I-2066, and blames state energy policy for prices."},
+        "experience": {"score": -1, "confidence": "high", "citations": ["S1", "S3", "S9"], "basis": "Second-term county commissioner with state and national county-association roles; has not served in Congress."},
+        "reform": {"score": -1, "confidence": "medium", "citations": ["S4", "S6", "S8"], "basis": "Built her campaign on party-leadership endorsements, PAC contributions and over $2 million in super PAC support; states no reform agenda on money in politics."},
+        "immigration": {"score": -2, "confidence": "high", "citations": ["S2", "S5", "S12"], "basis": "Supports deportations and border enforcement, criticizes state sanctuary law, and opposes amnesty or a special path to legal status."},
+        "social": {"score": -2, "confidence": "high", "citations": ["S2", "S3", "S14"], "basis": "Supports sex-based eligibility in women's sports and protecting life from conception, and has aligned with ending DEI programs."},
+        "tech": {"score": -2, "confidence": "high", "citations": ["S1", "S2"], "basis": "Frames AI as a race to win with more energy production and opposes 'heavy-handed regulation' of AI and cryptocurrency."},
+        "defense": {"score": -2, "confidence": "medium", "citations": ["S2", "S3", "S5"], "basis": "Pledges to rebuild and modernize the military and a strong national defense; says Congress has reason to keep supporting the president's actions on Iran."}
+      }
+    },
+    {
+      "slug": "john-duresky",
+      "summary": "Democrat from West Richland, a retired Air Force major and former Hanford Field Office manager, running on affordability, rural health care and congressional reform.",
+      "highlights": [
+        "Signed the Take BAC Congress pledge: term limits, stock-trading ban, lobbying moratorium, overturning Citizens United [S4][S7]",
+        "Would restore ACA subsidies, keep rural hospitals funded and move toward universal coverage [S1][S2]",
+        "Calls the deportation program 'immoral and un-American' and backs a path to legal status [S7][S10]",
+        "Would raise the minimum wage, close stepped-up basis and carried-interest loopholes, and remove harmful tariffs [S2]",
+        "Calls the Iran war a violation of the Constitution [S5]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": 1, "confidence": "medium", "citations": ["S2", "S8"], "basis": "Would close stepped-up basis and carried-interest loopholes and favors tax reforms aimed at working people."},
+        "spending": {"score": 2, "confidence": "medium", "citations": ["S1", "S2"], "basis": "Pledges infrastructure and broadband investment, restored ACA subsidies, rural-hospital funding and protection of federal jobs."},
+        "climate": {"score": 1, "confidence": "medium", "citations": ["S9", "S6"], "basis": "Says climate change is real and backs wind, solar and small modular nuclear; endorsed by the state Democrats' climate council."},
+        "experience": {"score": 1, "confidence": "high", "citations": ["S1", "S3"], "basis": "Never held elected office; a long military and federal civil-service career."},
+        "reform": {"score": 2, "confidence": "high", "citations": ["S4", "S7", "S15"], "basis": "Repeatedly commits to term limits, a stock-trading ban, a lobbying moratorium, overturning Citizens United and Supreme Court ethics rules."},
+        "immigration": {"score": 1, "confidence": "high", "citations": ["S7", "S8", "S10"], "basis": "Opposes current deportation tactics and masked agents and backs a path to legal status, while saying he opposes open borders and wants asylum reform."},
+        "healthcare": {"score": 1, "confidence": "medium", "citations": ["S1", "S2"], "basis": "Near-term agenda strengthens ACA, Medicare and Medicaid; names universal coverage as the eventual goal."},
+        "defense": {"score": 1, "confidence": "medium", "citations": ["S1", "S5"], "basis": "Calls the Iran war unconstitutional and criticizes spending abroad; states no position on the defense budget or Israel."}
+      }
+    }
+  ]
+}

@@ -15,7 +15,11 @@
     "data/washington-state/elections/2026-11-03-general/counties/kitsap/scoring/measures.json",
     "data/washington-state/elections/2026-11-03-general/counties/kitsap/scoring/refutations/measures.json",
     "data/washington-state/elections/2026-11-03-general/counties/thurston/scoring/measures.json",
-    "data/washington-state/elections/2026-11-03-general/counties/thurston/scoring/refutations/measures.json"
+    "data/washington-state/elections/2026-11-03-general/counties/thurston/scoring/refutations/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/whatcom/scoring/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/whatcom/scoring/refutations/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/benton/scoring/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/benton/scoring/refutations/measures.json"
   ],
   "script": "pipeline/merge_scores.py",
   "measures": [
@@ -1658,6 +1662,118 @@
         }
       },
       "sources_note": "Local voters' pamphlet page 29 (S1) and sample ballot (S2); Auditor's past-results list and SOS 2022/2024 results (S3-S5); WTRFA Strategic Plan 2026-2030 (S6); Chronicle coverage of the August 2026 levies (S7-S8); PDC query (S9). Certified August 2026 results were not retrieved."
+    },
+    {
+      "slug": "whatcom-city-of-bellingham-proposition-2026-06",
+      "what_it_does": "Amends the Bellingham city charter to drop the rule that the mayor must be paid at least as much as the highest-paid city employee, and has the city's independent salary commission set the mayor's salary instead. The commission already sets City Council pay.",
+      "cost_line": "No tax or rate. The commission would set the salary; no figure is stated. The mayor now makes just under $237,000 a year plus about $49,000 in benefits.",
+      "pro_summary": "The statement for (Mayor Kim Lund and Edwin \"Skip\" Williams) says the current formula ratchets the mayor's pay up as staff wages rise, that Bellingham is the 'lone outlier' among similar Washington cities, and that a commission is the same transparent process used for the council and county officials.",
+      "con_summary": "No statement against was filed and no committee against formed. In a March guest column written before the measure was proposed, Andrew Reding argued that salary commissions' decisions are final and lack public accountability, though he also urged repealing the mayor-pay formula.",
+      "lean_mappings": {},
+      "sources_note": "VoteWA voters' guide measure 7295 (S1); Cascadia Daily News on the proposal and the unanimous council vote (S2); March 2026 CDN guest columns on salary commissions by Andrew Reding (S3) and RB Tewksbury (S4). A change in who sets one official's pay; no rubric measure axis applies."
+    },
+    {
+      "slug": "whatcom-city-of-bellingham-proposition-2026-07",
+      "what_it_does": "Amends the Bellingham city charter so the mayor can name a designee to sign city contracts, ends the requirement that the finance director attest the mayor's signature and affix the city seal, and allows electronic signatures.",
+      "cost_line": "No tax or rate. The city says a paperless process would save time and money but gives no figure.",
+      "pro_summary": "The statement for (Mayor Kim Lund and Edwin \"Skip\" Williams) says every contract now has to be printed, mailed and hand-signed by at least four officials before the seal is crimped on, which 'adds time and cost to every contract without adding value or accountability.'",
+      "con_summary": "No statement against was filed, no committee against formed, and no published opposition was found.",
+      "lean_mappings": {},
+      "sources_note": "VoteWA voters' guide measure 7297 (S1); one paragraph of Cascadia Daily News coverage (S2). Administrative charter change; no rubric measure axis applies."
+    },
+    {
+      "slug": "whatcom-city-of-bellingham-initiative-26-01",
+      "what_it_does": "A citizen initiative that bans landlords in Bellingham from agreeing on rents or paying for software that pools rental data from multiple landlords to recommend rents, lease terms or occupancy. It lets injured tenants sue, lets the City Attorney enforce, sets fines and possible misdemeanor penalties, and protects whistleblowers. Hotels and short-term rentals are exempt.",
+      "cost_line": "No tax or fee. Penalties include up to $5,000 per violation, triple damages in civil suits, and up to 90 days in jail for willful or repeat violations.",
+      "pro_summary": "The statement for (Community First Whatcom: Seth Mangold, Eukia Lemaster, Finn Kurtz) says shared pricing software lets landlords raise rents together, which would be illegal price-fixing if people did it, and cites an average $70 a month more for algorithmically priced units. It says Seattle, Portland and other cities have similar bans.",
+      "con_summary": "No statement against was filed and no opposing committee was found. In a CDN guest column, Kevin Donnelly of the Real Estate Technology and Transformation Center argued that rents are high because housing supply is short, that the software often recommends lower rents, and that Bellingham should loosen zoning rules instead. The initiative's own findings say the practice 'is currently not known to be a common practice in Bellingham.'",
+      "lean_mappings": {},
+      "sources_note": "VoteWA voters' guide measure 7298 (S1); Community First Whatcom's page with the full initiative text (S2); Cascadia Daily News coverage of the signature drive (S3, S4) and an opposing guest column (S5); PDC record for the sponsoring committee (S6). A tenant and rental-market regulation; the rubric's housing axis does not apply to measures and no measure axis fits."
+    },
+    {
+      "slug": "whatcom-city-of-lynden-proposition-2026-05",
+      "what_it_does": "Raises the City of Lynden's regular property tax rate by about 50 cents, to $1.54304 per $1,000, for collection in 2027, then lets the levy grow 3% a year through 2035. The money would go to police and fire, street and park maintenance, the community/senior center, restoring cut staff, and reopening City Hall on Fridays.",
+      "cost_line": "Up from about $1.04 to $1.54304 per $1,000: about $300 a year more on a $600,000 home, raising about $2 million a year. After 2027 the levy may grow 3% a year through 2035.",
+      "pro_summary": "The statement for (Committee For Lynden Proposition #1: Kevin Pawlowski, Jonathan Abramson, Robert Libolt) says the city has already cut costs in every department, needs more police as it grows, and has a fire department handling over 2,700 calls a year; it calls the 50-cent increase 'a small additional amount.'",
+      "con_summary": "No statement against was filed and no committee against formed. Council member Nick Laninga voted against placing it on the ballot. Council member Gary Bode voted yes but noted the burden of rising state and federal taxes.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "A yes vote raises the city's levy rate by about 48%, from about $1.04 to $1.54304 per $1,000, then allows 3% annual growth through 2035 with a permanent new base. It is a new increase, not a renewal.",
+          "citations": [
+            "S1",
+            "S2",
+            "S3"
+          ]
+        }
+      },
+      "sources_note": "VoteWA voters' guide measure 7299 (S1); the City of Lynden's levy lid lift page and spending plan (S2); Cascadia Daily News (S3) and Lynden Tribune (S4, S5) coverage of the council vote; PDC query showing no committee (S6)."
+    },
+    {
+      "slug": "whatcom-whatcom-county-fire-protection-district-no-1-proposition-2026-08",
+      "what_it_does": "Raises Whatcom County Fire District 1's regular property tax rate to $1.48 per $1,000 for collection in 2027, then lets the levy grow up to 6% a year for nine years. The district serves Everson, Nooksack, Deming and the Nooksack Indian Tribe. Voters narrowly rejected the identical measure in August.",
+      "cost_line": "Up from about $1.12 to $1.48 per $1,000: about $180 a year more on a $500,000 property. After 2027 the levy may grow up to 6% a year for nine years.",
+      "pro_summary": "The statement for (Anne Isenhart) says the 1% growth limit has let the rate fall from the $1.40 voters approved in 2021 to $1.12 while calls and costs rise, that the district has 10 full-time staff for about 1,100 calls a year, and that 'a levy lid lift is not a new tax.'",
+      "con_summary": "No statement against was filed and no committee against formed. Voters rejected the same proposal in the Aug. 4 primary, 1,744 to 1,620; the fire chief said his impression is that times are tight and the levy would be 'just one more burden.'",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "A yes vote raises the regular levy rate from about $1.12 to $1.48 per $1,000, above the $1.40 voters approved in 2021, and allows up to 6% annual growth for nine years.",
+          "citations": [
+            "S1",
+            "S4",
+            "S7"
+          ]
+        }
+      },
+      "sources_note": "VoteWA voters' guide records for this measure (S1) and the August Proposition 2026-02 (S2); official August primary results (S3); Cascadia Daily News on the August lid lifts (S4-S6), the 2024 bond attempts (S8, S9) and the new chief (S10); Lynden Tribune on the November rerun (S7); PDC query showing no committee (S11)."
+    },
+    {
+      "slug": "benton-city-of-benton-city-proposition-no-1",
+      "what_it_does": "Changes Benton City from a mayor-council government, where the elected mayor runs the city, to a council-manager government, effective March 1, 2027. The elected council would hire a professional city manager as chief administrator and pick a mayor from among its members to chair meetings.",
+      "cost_line": "No tax. The statement for says the change adds payroll for a full-time manager, replacing the mayor's role; no salary or cost estimate was published.",
+      "pro_summary": "The statement for (credited to the City of Benton City) says past administrations mismanaged funds and lost development opportunities under growing state regulation, and that a professional manager under the council is needed. Mayor Len Burton says the council would gain oversight of the executive, and that the unpaid mayor's job averages over 50 hours a week.",
+      "con_summary": "No statement against was filed, and no opposition committee is registered with the PDC.",
+      "lean_mappings": {},
+      "sources_note": "Sources: VoteWA voters' guide record 7271 (S1); Apple Valley News Now coverage quoting Mayor Len Burton (S2); chapter 35A.13 RCW (S3); PDC committee query (S4). Resolution 2026-49 and council minutes were not found; the city website blocked automated access."
+    },
+    {
+      "slug": "benton-city-of-benton-city-proposition-no-2",
+      "what_it_does": "Lifts Benton City's property tax levy to $1.60 per $1,000 of assessed value in 2027 to pay for sheriff's patrol and code enforcement. It may then rise with inflation through 2036, never above $1.60, and the 2036 amount becomes the permanent base for later years.",
+      "cost_line": "$1.60 per $1,000 in 2027, about $480 a year on a $300,000 home (computed). In 2025 the city rate was $0.71 per $1,000 (about $214 on that home), so the increase is about $266 a year (computed from the 2025 rate). The city says it would raise about $400,000 more a year.",
+      "pro_summary": "The statement for says the 2027 sheriff and code enforcement costs exceed the city's roughly $301,000 in property tax revenue by about $398,000. It says the sheriff's contract rises 3% a year while property tax revenue can grow only 1%, and that the levy keeps current services without adding programs. A committee with Mayor Len Burton as treasurer supports it.",
+      "con_summary": "No statement against was filed, and no opposition committee is registered with the PDC.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "A yes vote is a levy lid lift that more than doubles the city's regular levy rate, from $0.71 (2025) to $1.60 per $1,000. It allows CPI growth through 2036 and keeps the higher amount as the base afterward.",
+          "citations": [
+            "S1",
+            "S2",
+            "S7"
+          ]
+        }
+      },
+      "sources_note": "Sources: VoteWA voters' guide record 7272 (S1); Department of Revenue levy detail for 2005, 2015, 2020, 2024 and 2025 (S2-S6); RCW 84.55.050 (S7); PDC committee query (S8); Apple Valley News Now identifying the mayor (S9). Resolution 2026-50 and the city budget were not found; no news coverage of the measure was found."
+    },
+    {
+      "slug": "benton-kiona-benton-city-school-district-no-52-proposition-no-1",
+      "what_it_does": "Restores Kiona-Benton City School District's expired educational programs and operations levy for 2027 and 2028. It pays for athletics, arts, technology support, class sizes, nurses, counselors, safety and security, advanced courses and activities. With the state matching money it unlocks, it is about 11% of the district budget.",
+      "cost_line": "Estimated $1.30 per $1,000 of assessed value: $2,208,341 in 2027 and $2,318,758 in 2028. That is about $390 a year on a $300,000 home (computed). The district puts it at $576 a year on an average $443,267 property. The levy collected in 2025 was $1.29 per $1,000.",
+      "pro_summary": "The school board says two levy failures led to more than $3 million in cuts and lost teachers. It says passage would bring back counselors, support staff and athletics transportation, and make the district eligible for about $804,000 in state matching funds. A committee, KiBe Kids Yes!, is registered in favor.",
+      "con_summary": "No statement against was filed, and no opposition committee is registered with the PDC. Voters rejected $1.50 versions of this levy twice in 2025, by 50 votes in February and 34 in November.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "A yes vote reinstates the expired EP&O levy at $1.30 per $1,000, close to the $1.29 collected in 2025 and below the $1.50 rejected twice in 2025. It is a replacement, not a new kind of tax.",
+          "citations": [
+            "S1",
+            "S6",
+            "S8"
+          ]
+        }
+      },
+      "sources_note": "Sources: VoteWA voters' guide record 7273 (S1); district levy page (S2); Secretary of State results for February 2025, November 2025 and February 2023 (S3-S5); Department of Revenue levy detail for 2024-2025 (S6, S7); Apple Valley News Now, NBC Right Now and NewsTalk 870 coverage of cuts, state oversight and the lower rate (S8-S10); PDC committee query (S11). Tri-City Herald coverage could not be retrieved."
     }
   ]
 }

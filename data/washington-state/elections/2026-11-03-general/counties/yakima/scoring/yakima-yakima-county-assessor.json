@@ -1,0 +1,63 @@
+{
+  "contest_slug": "yakima-yakima-county-assessor",
+  "scored_at": "2026-10-09",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/yakima/dossiers/yakima-yakima-county-assessor/"
+  ],
+  "office_does": "The county assessor sets the market value of every taxable property each year and applies property-tax exemptions; taxing districts, not the assessor, decide how much tax is collected.",
+  "race_blurb": "Two Republicans: incumbent Jacob Tate, a 30-year veteran of the office seeking a second term, faces first-time candidate Keith Effler, a photographer and developer endorsed by the county Republican Party. Tate stresses accurate, equitable appraisal and modernization; Effler pledges customer service, an online valuation data portal and cutting the tax burden as far as the law allows.",
+  "candidates": [
+    {
+      "slug": "jacob-tate",
+      "summary": "Incumbent assessor with more than 30 years in the office, including as chief deputy under two predecessors, holding the IAAO Mass Appraisal Specialist designation.",
+      "highlights": [
+        "More than 30 years in the assessor's office; assessor since 2022 [S1][S2]",
+        "Says the office shrank from 34 employees to 24 positions through modernization [S2]",
+        "Says the assessor's job is accurate, equitable values, not raising or lowering taxes [S2]",
+        "Plans online exemption applications for seniors and people with disabilities [S2]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "experience": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "Incumbent assessor with more than 30 years in the office, including as chief deputy."
+        },
+        "spending": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S2"],
+          "basis": "Cites cutting the office from 34 employees to 24 positions and doing more with fewer people through modernization."
+        }
+      }
+    },
+    {
+      "slug": "keith-effler",
+      "summary": "Commercial photographer, developer and Republican precinct committee officer making a first run for office on a taxpayer-first, customer-service platform.",
+      "highlights": [
+        "Pledges to cut the tax burden 'as far as the law allows' and make the county 'the cheapest tax base in Washington' [S1]",
+        "Would launch an online 'data-depot' explaining valuations, comparable sales and parcel tax coefficients [S2][S3]",
+        "Would put all forms, including senior exemption forms, online [S2][S4]",
+        "Endorsed by the Yakima County Republican Party [S1][S2]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "experience": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S3"],
+          "basis": "First run for county office from a business background, against a 30-year office veteran; says he won't befriend state officials."
+        },
+        "taxes": {
+          "score": -2,
+          "confidence": "medium",
+          "citations": ["S1", "S2"],
+          "basis": "Statement pledges to 'only collect an absolute minimum,' cut the tax burden as far as the law allows and make the county the cheapest tax base in the state."
+        }
+      }
+    }
+  ]
+}

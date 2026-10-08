@@ -121,6 +121,22 @@ COUNTY_CONFIG = {
     "benton": {
         "name": "Benton County", "fips": "53005",
         "commissioner": "{n}",
+        # Benton County PUD, general only (the primary's PUD rows are not
+        # 'In Primary', so the primary build never reads this). Nominated by
+        # commissioner district, elected by the whole PUD in the general (RCW
+        # 54.12.010(3); VoteWA's general District is 'Benton County PUD').
+        # The PUD is not the whole county: Richland and most of West Richland
+        # are in none of its districts (DOR PUD2025's single countywide Benton
+        # polygon is a tax layer and is not used). The Auditor's precinct
+        # layer PrecinctSplits (services7.arcgis.com/NURlY7V8UHl6XumF/arcgis/
+        # rest/services/PrecinctSplits/FeatureServer/6) has PUD_District
+        # 'Benton PUD' on exactly the precincts that voted in the 2024 PUD
+        # race (SOS 20241105 Benton precinct export), except 4017 (coded
+        # 'Yes'; no 2024 PUD vote). Kennewick, Prosser, Benton City: 'Benton
+        # PUD'; 625 Swift Blvd, Richland: null (2026-10-08, #28).
+        # COUNTY_LAYERS.benton reads that layer with where PUD_District =
+        # 'Benton PUD', so 4017's 'Yes' reads as no district.
+        "pud": "Benton PUD",
         "measures": [
             m("Benton County Fire Protection District No. 4", "Proposition No. 1", "Restoration of Regular Property Tax Levy",
               ("FIRDST", "4"),
@@ -575,7 +591,109 @@ COUNTY_CONFIG = {
 # ballot; a county with no entry gets an empty measure list and a note saying
 # its measures are not curated yet, so it can never pass for "no measures".
 ELECTION_MEASURES = {
-    "2026-11-03-general": {},
+    "2026-11-03-general": {
+        # Benton (#28): the three local measures on the Benton County Auditor's
+        # general sample ballot (counties/benton/raw/benton/sample-ballot.pdf.url),
+        # transcribed from VoteWA's online voters' guide records (e=899, c=03).
+        # CITY: Census place 'Benton City' at 1009 Dale Ave, Benton City.
+        # SCHDST: DOR SCH2025 (layer 20) DISTATTRIB '52' at the same address
+        # (2026-10-08), which COUNTY_LAYERS.benton reads; the PUD race's
+        # PUDDST reads the Auditor's PrecinctSplits layer (see COUNTY_CONFIG).
+        "benton": {
+            "measures": [
+                m("City of Benton City", "Proposition No. 1", "Adoption of the Council-Manager Form of Government",
+                  ("CITY", "Benton City"),
+                  "Changes Benton City from the mayor-council to the council-manager form of government, effective March 1, 2027: the council would hire a professional city manager and choose a mayor from among its members.",
+                  "No tax change; the city would pay a full-time manager in place of the elected mayor.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7271&e=899&la=en&c=03"),
+                m("City of Benton City", "Proposition No. 2", "Community Safety Levy Lid Lift",
+                  ("CITY", "Benton City"),
+                  "Restores Benton City's regular property tax levy to $1.60 per $1,000 for 2027 to fund law and code enforcement, with CPI-based increases through 2036 (never above $1.60).",
+                  "$1.60 per $1,000 of assessed value for 2027 collection.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7272&e=899&la=en&c=03"),
+                m("Kiona-Benton City School District No. 52", "Proposition No. 1", "Educational Programs and Operation Replacement Levy",
+                  ("SCHDST", "52"),
+                  "Authorizes a two-year educational programs and operation levy replacing an expired levy.",
+                  "Estimated $1.30 per $1,000 of assessed value: $2,208,341 in 2027 and $2,318,758 in 2028.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7273&e=899&la=en&c=03"),
+            ],
+        },
+        # Whatcom (#28). Measures: VoteWA's online voters' guide for Whatcom
+        # County (voterguide.ashx?e=899&c=37, read 2026-10-08) lists five local
+        # measures; whatcomcounty.us answered 403 (Cloudflare) to scripted
+        # requests, so the Auditor's own list could not be cross-checked.
+        # Scopes point-checked 2026-10-08 (Census geocoder, Current vintage;
+        # WA DOR FIR2025 layer 7): 210 Lottie St, Bellingham -> CITY
+        # 'Bellingham'; 300 4th St, Lynden -> CITY 'Lynden'; 111 W Main St,
+        # Everson -> FIR2025 DISTATTRIB '1'.
+        # Overrides: the Port of Bellingham and Whatcom PUD No. 1 are
+        # county-wide districts (DOR PRT2025/PUD2025 each have one Whatcom
+        # polygon, at Point Roberts, Glacier, Newhalem, Bellingham and Sumas
+        # alike), and the whole district elects each commissioner in the
+        # general (RCW 53.12.010(1), RCW 54.12.010(3)), so both are scoped
+        # COUNTY. The port seats keep the primary's contest names so primary
+        # dossiers carry forward. VoteWA files the District Court seats as
+        # District Type 'Countywide'; they are judicial seats of a single
+        # county-wide district, named as the other county builders name them.
+        "whatcom": {
+            "overrides": {
+                ("COUNTY", "DISTRICT COURT JUDGE POSITION 1"): (
+                    "Judicial", "Whatcom County District Court", "Judge Position No. 1", ("COUNTY", None)),
+                ("COUNTY", "DISTRICT COURT JUDGE POSITION 2"): (
+                    "Judicial", "Whatcom County District Court", "Judge Position No. 2", ("COUNTY", None)),
+                ("PORT OF BELLINGHAM", "COMMISSIONER DISTRICT 4"): (
+                    "Port", "Port of Bellingham Commissioner District 4", "Commissioner District 4", ("COUNTY", None)),
+                ("PORT OF BELLINGHAM", "COMMISSIONER DISTRICT 5"): (
+                    "Port", "Port of Bellingham Commissioner District 5", "Commissioner District 5", ("COUNTY", None)),
+                ("PUBLIC UTILITY DISTRICT NO. 1", "COMMISSIONER DISTRICT 1"): (
+                    "PublicUtility", "Public Utility District No. 1 of Whatcom County", "Commissioner District 1",
+                    ("COUNTY", None)),
+            },
+            "measures": [
+                m("City of Bellingham", "Proposition 2026-06", "Authorizing the City's Salary Commission to Set the Mayor's Salary",
+                  ("CITY", "Bellingham"),
+                  "Charter amendment: removes the rule that the mayor's salary is never less than the highest-paid city official or employee, and has the city's independent salary commission set it.",
+                  "No tax or fee; changes how the mayor's salary is set.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7295&e=899&la=en&c=37"),
+                m("City of Bellingham", "Proposition 2026-07", "Streamlining the City's Contract Review Process to Allow Electronic Signatures",
+                  ("CITY", "Bellingham"),
+                  "Charter amendment: lets the mayor's designee sign city contracts, allows electronic signatures, and drops the finance director's attestation and seal.",
+                  "No tax or fee; changes how city contracts are signed.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7297&e=899&la=en&c=37"),
+                m("City of Bellingham", "Initiative 26-01", "Prohibition of Algorithmic Price-Fixing in the Rental Market",
+                  ("CITY", "Bellingham"),
+                  "Citizen initiative: bans landlord rent-setting agreements and paid algorithmic services that recommend rents or terms to multiple landlords, with a private right of action, tenant and employee anti-retaliation protections, and civil and criminal penalties.",
+                  "No tax or fee; enforcement by the City Attorney and private lawsuits.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7298&e=899&la=en&c=37"),
+                m("City of Lynden", "Proposition 2026-05", "Levy Lid Lift for Public Safety and Essential Community Services",
+                  ("CITY", "Lynden"),
+                  "Lifts Lynden's regular property tax levy for police, fire, streets, parks, the Community/Senior Center, restored staff positions and Friday City Hall hours, with 3% annual increases for 2027-2035.",
+                  "Up to $1.54304 per $1,000 of assessed value for 2027 collection, $0.50 per $1,000 more than the 2025 levy rate.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7299&e=899&la=en&c=37"),
+                m("Whatcom County Fire Protection District No. 1", "Proposition 2026-08", "Regular Property Tax Levy Lid Lift",
+                  ("FIRDST", "1"),
+                  "Resets the fire district's regular levy for fire and EMS (Everson/Nooksack area) with a 106% limit factor for the following nine years.",
+                  "Up to $1.48 per $1,000 of assessed value for 2027 collection; the district says its current rate is $1.12.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7300&e=899&la=en&c=37"),
+            ],
+        },
+        # Yakima (#28): no local measures. The Auditor's "Election at a glance"
+        # (raw/yakima/election-at-a-glance-2026-general.pdf.url) lists only the
+        # three statewide measures, and so do the sample ballot and VoteWA's
+        # online guide for county 39 (raw/votewa/voter-guide/guide.json.url).
+        "yakima": {
+            "measures": [],
+            "extra_notes": [
+                "No local measures on the November 3, 2026 ballot: Yakima County's 'Election at a glance' "
+                "(https://www.yakimacounty.us/DocumentCenter/View/46553/2026-GENERAL-at-a-glance_ENG) and "
+                "sample ballot (https://www.yakimacounty.us/DocumentCenter/View/46525/Sample-Ballot-2026-General) "
+                "list only the statewide measures IP26-645, IL26-001 and IL26-638.",
+                "County Commissioner District 1 is elected by district in the general (candidates appear only on "
+                "ballots within their commissioner district; Aguilar et al. v. Yakima County, Final Order October "
+                "2021, RCW 36.32.040(3); 2026 Candidate & Election Guidebook p. 19).",
+            ],
+        },
+    },
 }
 
 
@@ -588,6 +706,7 @@ def config_for(county, election_id):
     per = ELECTION_MEASURES[election_id].get(county)
     cfg["measures"] = list(per["measures"]) if per else []
     cfg["extra_notes"] = list(per.get("extra_notes", [])) if per else []
+    cfg["overrides"] = dict(per.get("overrides", {})) if per else {}
     return cfg, per is not None
 
 
@@ -595,7 +714,10 @@ def county_docs(county, cfg, election_id, measures_curated=True):
     """(app-contests doc, app-measures doc, unresolvable layers) without writing."""
     unresolvable = set()
     rows = votewa.ballot_rows(election_id, county)
-    raw_contests = votewa.parse_contests(rows, county, cfg, unresolvable)
+    # Per-election overrides: {(District, Race) upper-cased: classify()-shaped tuple}.
+    overrides = cfg.get("overrides") or {}
+    override = (lambda r, _u: overrides.get((r["District"].strip().upper(), r["Race"].strip().upper()))) if overrides else None
+    raw_contests = votewa.parse_contests(rows, county, cfg, unresolvable, override)
     label = election.VOTEWA_SOURCES[election_id]["label"]
     out_contests = votewa.app_contests(
         county, raw_contests,

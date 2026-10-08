@@ -361,6 +361,30 @@ const COUNTY_LAYERS = {
   benton: [
     { key: 'COUNTY_COUNCIL', url: 'https://services7.arcgis.com/NURlY7V8UHl6XumF/arcgis/rest/services/CommissionerDistrict/FeatureServer/6/query', attr: 'District' },
     { key: 'FIRDST', url: `${DOR_TAX_DISTRICTS}/7/query`, attr: 'DISTATTRIB' },
+    {
+      // Benton County PUD, from the Auditor's precinct layer (#28). The PUD
+      // excludes Richland and most of West Richland, so DOR PUD2025's single
+      // countywide Benton polygon is not used. PUD_District reads 'Benton
+      // PUD', null, the string '<Null>' (Richland precinct 6322.1), or 'Yes'
+      // (West Richland precinct 4017 alone, which cast no 2024 PUD vote);
+      // `where` keeps only 'Benton PUD', so the last two read as no district
+      // and the PUD race stays hidden there. Live 2026-10-08: 210 W 6th Ave,
+      // Kennewick and 1009 Dale Ave, Benton City -> 'Benton PUD'; 625 Swift
+      // Blvd, Richland and 3801 W Van Giesen St, West Richland -> null.
+      key: 'PUDDST',
+      url: 'https://services7.arcgis.com/NURlY7V8UHl6XumF/arcgis/rest/services/PrecinctSplits/FeatureServer/6/query',
+      attr: 'PUD_District',
+      where: "PUD_District = 'Benton PUD'",
+    },
+    {
+      // WA DOR SCH2025 school district number (#28). Live 2026-10-08: 1009
+      // Dale Ave, Benton City -> '52' (Kiona-Benton City; PrecinctSplits
+      // agrees); 210 W 6th Ave, Kennewick -> '17'; 625 Swift Blvd, Richland
+      // and 3801 W Van Giesen St, West Richland -> '400'.
+      key: 'SCHDST',
+      url: `${DOR_TAX_DISTRICTS}/20/query`,
+      attr: 'DISTATTRIB',
+    },
   ],
   chelan: [
     { key: 'COUNTY_COUNCIL', url: 'https://atlas.co.chelan.wa.us/arcgis/rest/services/PW/Commissioner_Districts/MapServer/0/query', attr: 'DIST_NO' },
@@ -680,7 +704,9 @@ function lookupCensusDistricts(pt) {
   const districts = {}
   const cd = trimDistrictNumber(congressionalNumber(congressional))
   const ld = trimDistrictNumber(lower?.BASENAME || lower?.SLDL || upper?.BASENAME || upper?.SLDU)
-  const city = (place?.BASENAME || place?.NAME || '').replace(/\s+city$/i, '').trim()
+  // BASENAME is the bare place name and may itself end in 'City' ('Benton
+  // City', 'Coulee City'); only NAME carries the legal suffix ('Seattle city').
+  const city = place?.BASENAME ? String(place.BASENAME).trim() : (place?.NAME || '').replace(/\s+city$/i, '').trim()
   if (cd) districts.CONGDST = cd
   if (ld) districts.LEGDST = ld
   if (city) districts.CITY = city
