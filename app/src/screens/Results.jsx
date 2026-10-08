@@ -11,7 +11,15 @@ import {
   STRONG_MATCH,
 } from '../lib/scoring.js'
 import { writeHash } from '../lib/codec.js'
-import { buildBrief, pamphletLink } from '../lib/brief.js'
+import { buildBrief } from '../lib/brief.js'
+import {
+  DROP_BOX_URL,
+  VOTEWA_URL,
+  countyElectionsOffice,
+  electionGuide,
+  pamphletLink,
+} from '../lib/officialLinks.js'
+import { shortDay } from '../lib/elections.js'
 import { copyText } from '../lib/clipboard.js'
 import { postReport, shouldRecordReport } from '../lib/reports.js'
 import GitHubLink from './GitHubLink.jsx'
@@ -105,7 +113,7 @@ function CandidateExpanded({ data, contest, row, answers }) {
   const axes = Object.entries(c.scores || {})
     .filter(([axis]) => answers[axis])
     .sort((a, b) => answers[b[0]].w - answers[a[0]].w)
-  const pam = pamphletLink(c.pamphlet_pages, contest.owner)
+  const pam = pamphletLink(c.pamphlet_pages, contest.owner, data.election?.id)
   return (
     <div className="race-expand rise">
       {c.summary && (
@@ -249,6 +257,11 @@ function ContestCard({ data, contest, answers }) {
           <div style={{ fontWeight: 800, fontSize: 15 }}>{c.name}</div>
           <div style={{ fontSize: 12, fontWeight: 800, color: 'var(--muted)' }}>uncontested · info only</div>
         </div>
+        {contest.term && (
+          <div className="note" style={{ marginTop: 2, fontSize: 11.5 }}>
+            {contest.term}
+          </div>
+        )}
         {c.summary && (
           <p className="copy" style={{ fontSize: 12.5, marginTop: 6 }}>
             {c.summary}
@@ -264,6 +277,11 @@ function ContestCard({ data, contest, answers }) {
         <div className="eyebrow eyebrow--sm">
           {contest.office.toUpperCase()} · {(contest.district || (contest.scope?.kind === 'STATEWIDE' ? 'STATEWIDE' : 'COUNTYWIDE')).toUpperCase()}
         </div>
+        {contest.term && (
+          <div className="note" style={{ marginTop: 3, fontSize: 11.5, fontWeight: 800 }}>
+            {contest.term}
+          </div>
+        )}
         {contest.office_does && (
           <div className="note" style={{ marginTop: 3, fontSize: 11.5 }}>
             {contest.office_does}
@@ -343,7 +361,7 @@ function ContestCard({ data, contest, answers }) {
   )
 }
 
-function MeasureCard({ measure, answers }) {
+function MeasureCard({ data, measure, answers }) {
   const [open, setOpen] = useState(false)
   const { lean } = measureLean(measure, answers)
   const pill =
@@ -351,7 +369,7 @@ function MeasureCard({ measure, answers }) {
     : lean === 'no' ? { text: 'leans NO', bg: 'var(--coral)' }
     : lean === 'split' ? { text: 'genuinely split', bg: 'var(--muted-deep)' }
     : null
-  const pam = pamphletLink(measure.pamphlet_pages, measure.owner)
+  const pam = pamphletLink(measure.pamphlet_pages, measure.owner, data.election?.id)
   return (
     <section className="card" style={{ margin: '12px 20px 0', overflow: 'hidden' }}>
       <button className="cand" style={{ padding: '14px 18px' }} onClick={() => setOpen(!open)}>
@@ -409,7 +427,7 @@ function MeasureCard({ measure, answers }) {
                 read them unedited
               </a>
             ) : (
-              'see the county pamphlet'
+              'see the official pamphlet'
             )}
             .
           </p>
@@ -419,7 +437,12 @@ function MeasureCard({ measure, answers }) {
   )
 }
 
-const CONCERN_CHIPS = [
+const WHO_CAN_WIN = {
+  primary: 'For close matches, factor in who realistically has a shot of advancing past the primary.',
+  general: 'For close matches, factor in who realistically has a shot of winning.',
+}
+
+const concernChips = (kind) => [
   {
     label: '🚩 No extremists',
     text: "I don't want to support extremists in any direction, even if they match my values on paper. Check each candidate's record, endorsements, and donors for red flags.",
@@ -434,7 +457,7 @@ const CONCERN_CHIPS = [
   },
   {
     label: '🗳️ Who can win',
-    text: 'For close matches, factor in who realistically has a shot of advancing past the primary.',
+    text: WHO_CAN_WIN[kind] || WHO_CAN_WIN.general,
   },
 ]
 
@@ -448,6 +471,7 @@ function BriefSection({ data, context, answers, contests, measures, shareUrl }) 
     [data, context, answers, contests, measures, shareUrl, concerns]
   )
   const words = text.split(/\s+/).length
+  const chips = useMemo(() => concernChips(electionGuide(data.election).kind), [data])
   const copy = () => {
     // writeText rejects when the document loses focus mid-click; leave the
     // button in its resting state so the voter can simply try again.
@@ -484,7 +508,7 @@ function BriefSection({ data, context, answers, contests, measures, shareUrl }) 
           Anything you want the AI to know or check? <span style={{ fontWeight: 400 }}>(optional)</span>
         </label>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, margin: '10px 0' }}>
-          {CONCERN_CHIPS.map((chip) => (
+          {chips.map((chip) => (
             <button
               key={chip.label}
               type="button"
@@ -535,7 +559,30 @@ function BriefSection({ data, context, answers, contests, measures, shareUrl }) 
   )
 }
 
-function Footer() {
+function OfficialSources({ data, county }) {
+  const { statePamphlet } = electionGuide(data.election)
+  const office = countyElectionsOffice(data, county)
+  return (
+    <>
+      Official sources: {statePamphlet.label} at{' '}
+      <a href={statePamphlet.url} target="_blank" rel="noopener noreferrer">
+        {statePamphlet.site}
+      </a>
+      {office && (
+        <>
+          {' '}and{' '}
+          <a href={office.url} target="_blank" rel="noopener noreferrer">
+            {office.direct ? office.name : `your ${county.name} elections office`}
+          </a>
+          {!office.direct && ' (sos.wa.gov directory)'}
+        </>
+      )}
+      .
+    </>
+  )
+}
+
+function Footer({ data, county, archived }) {
   const [msg, setMsg] = useState('')
   const [state, setState] = useState(null)
   const send = () => {
@@ -555,12 +602,7 @@ function Footer() {
           Built and researched by AI — <strong style={{ color: 'var(--navy)' }}>we make no accuracy claims.</strong>{' '}
           Check every citation yourself. Not affiliated with Washington election
           officials, county election offices, or any campaign. English-only for
-          now — we know, and we're sorry. King County source pamphlets are
-          available at{' '}
-          <a href="https://kingcounty.gov/en/dept/elections/how-to-vote/voters-pamphlet" target="_blank" rel="noopener noreferrer">
-            kingcounty.gov
-          </a>
-          .
+          now — we know, and we're sorry. <OfficialSources data={data} county={county} />
         </p>
         <div className="panel" style={{ marginTop: 16 }}>
           {state === 'sent' ? (
@@ -590,9 +632,10 @@ function Footer() {
           )}
         </div>
         <p style={{ margin: '14px 0 0', fontSize: 11.5, fontWeight: 600, color: 'var(--muted-deep)' }}>
-          Your interview answers and ballot context (never your address) are
-          recorded anonymously and published as an open dataset —{' '}
-          <a href="#data">see what Washington voters value so far</a>.
+          {archived
+            ? 'This election has ended, so answers given here are not recorded. '
+            : 'Your interview answers and ballot context (never your address) are recorded anonymously and published as an open dataset — '}
+          <a href="#data">{archived ? 'See the open dataset' : 'see what Washington voters value so far'}</a>.
         </p>
         <p style={{ margin: '10px 0 0', fontSize: 11, fontWeight: 700, color: 'var(--muted)' }}>
           No accounts · no cookies · open methodology · open data
@@ -641,6 +684,8 @@ export default function Results({ data, election, ballotContext, answers, restor
     restored &&
     ((restored.dataVersion && restored.dataVersion !== data.data_version) ||
       (restored.electionId && restored.electionId !== data.election?.id))
+  const archived = election?.status === 'archived'
+  const { resultsNote } = electionGuide(data.election)
   const coverageLabel =
     ballotContext.coverageStatus === 'statewide_only'
       ? 'Statewide-only guide'
@@ -666,6 +711,14 @@ export default function Results({ data, election, ballotContext, answers, restor
             start over
           </button>
         </div>
+        {!archived && data.election?.day && (
+          <p className="return-by" style={{ margin: '8px 0 0', fontSize: 12.5, fontWeight: 700 }}>
+            Return your ballot by 8 p.m. {shortDay(data.election.day)} — drop box locator:{' '}
+            <a href={DROP_BOX_URL} target="_blank" rel="noopener noreferrer">state map</a>
+            {' · '}
+            <a href={VOTEWA_URL} target="_blank" rel="noopener noreferrer">VoteWA.gov</a>
+          </p>
+        )}
         <p className="note" style={{ margin: '8px 0 0', fontSize: 11 }}>
           This page's link holds your answers (never your address) — bookmark it
           to come back, share it only with people you'd show your values to.
@@ -716,16 +769,18 @@ export default function Results({ data, election, ballotContext, answers, restor
         <>
           <h2 className="display" style={{ fontSize: 19, margin: '22px 24px 0' }}>Measures</h2>
           {measures.map((m) => (
-            <MeasureCard key={m.slug} measure={m} answers={answers} />
+            <MeasureCard key={m.slug} data={data} measure={m} answers={answers} />
           ))}
         </>
       )}
 
-      <p className="note" style={{ margin: '16px 24px 0', textAlign: 'center', color: 'var(--muted)' }}>
-        WA primaries send the top 2 to November, regardless of party.
-      </p>
+      {resultsNote && (
+        <p className="note" style={{ margin: '16px 24px 0', textAlign: 'center', color: 'var(--muted)' }}>
+          {resultsNote}
+        </p>
+      )}
 
-      <Footer />
+      <Footer data={data} county={ballotContext.county} archived={archived} />
     </main>
   )
 }

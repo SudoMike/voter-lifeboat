@@ -1,12 +1,7 @@
 import React from 'react'
 import GitHubLink from './GitHubLink.jsx'
-import {
-  archivedElections,
-  ballotsMailBy,
-  electionHref,
-  formatElectionDay,
-  guideLinkText,
-} from '../lib/elections.js'
+import { archivedElections, electionHref, guideLinkText } from '../lib/elections.js'
+import { KeyDates } from './Landing.jsx'
 
 // The active election before any of its contests are researched: say what is
 // coming and point at the archived guide. No address form.
@@ -31,11 +26,10 @@ export default function ElectionNotice({ data, index, base }) {
       </header>
       <section style={{ padding: '34px 24px 8px' }}>
         <h1 className="display display--lg">{name}</h1>
-        <p className="lede" style={{ marginTop: 10 }}>{formatElectionDay(day)}</p>
+        <KeyDates day={day} />
         <p className="copy" style={{ marginTop: 16 }}>
-          Ballots mail by {ballotsMailBy(day)}; this guide is being researched
-          now and will appear here first for statewide measures, then King
-          County, then other counties.
+          This guide is being researched now and will appear here first for
+          statewide contests and measures, then county by county.
         </p>
       </section>
       {previous && (

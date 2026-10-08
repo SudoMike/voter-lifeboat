@@ -8,6 +8,9 @@ import {
   ElectionNotFound,
   formatElectionDay,
   ballotsMailBy,
+  registerOnlineBy,
+  shortDay,
+  longElectionDay,
   archivedElections,
   electionHref,
   guideLinkText,
@@ -152,6 +155,18 @@ test('election days read as long dates', () => {
 test('ballots mail 18 days before election day (RCW 29A.40.070)', () => {
   assert.equal(ballotsMailBy('2026-11-03'), 'Oct 16')
   assert.equal(ballotsMailBy('2026-08-04'), 'Jul 17')
+})
+
+test('online and mail registration closes 8 days before election day (RCW 29A.08.140)', () => {
+  assert.equal(registerOnlineBy('2026-11-03'), 'Oct 26')
+  assert.equal(registerOnlineBy('2026-08-04'), 'Jul 27')
+})
+
+test('short and long election day labels', () => {
+  assert.equal(shortDay('2026-11-03'), 'Nov 3')
+  assert.equal(shortDay('2026-08-04'), 'Aug 4')
+  assert.equal(longElectionDay('2026-11-03'), 'Tuesday, November 3, 2026')
+  assert.equal(longElectionDay('2026-08-04'), 'Tuesday, August 4, 2026')
 })
 
 test('archived elections are listed newest first, linking to their own route', () => {

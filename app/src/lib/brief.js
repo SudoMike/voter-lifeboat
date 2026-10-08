@@ -3,31 +3,10 @@
 // and sources. See ADR-0001 — this replaces any on-site chat.
 
 import { rankContest, measureLean } from './scoring.js'
+import { longElectionDay } from './elections.js'
+import { pamphletLink } from './officialLinks.js'
 
-const PAMPHLET_URLS = {
-  'king/edition-1':
-    'https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/08/english/edition-1.pdf',
-  'king/edition-2':
-    'https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/08/english/edition-2.pdf',
-  'clark/local-voters-pamphlet':
-    'https://clark.wa.gov/sites/default/files/media/document/2026-06/2026clarkcountyprimaryvp_web.pdf',
-  'kitsap/local-voters-pamphlet': 'https://www.kitsap.gov/auditor/Documents/LVP.pdf',
-  'pierce/local-voters-pamphlet':
-    'https://www.piercecountywa.gov/DocumentCenter/View/158538/Primary-2026-VP-Final',
-  'snohomish/local-voters-pamphlet':
-    'https://www.snohomishcountywa.gov/DocumentCenter/View/149774',
-  'spokane/local-voters-pamphlet':
-    'https://www.spokanecounty.gov/DocumentCenter/View/72507/August-4-2026-Primary-Election-Voters-Pamphlet-PDF',
-  'thurston/local-voters-pamphlet': 'https://www.thurstoncountywa.gov/media/33642',
-}
-
-export function pamphletLink(pages, owner) {
-  for (const p of pages || []) {
-    const url = PAMPHLET_URLS[`${owner}/${p.edition}`] || PAMPHLET_URLS[`king/${p.edition}`]
-    if (url) return `${url}#page=${p.page}`
-  }
-  return null
-}
+export { pamphletLink }
 
 function axisName(data, id) {
   return data.rubric.axes.find((a) => a.id === id)?.title || id
@@ -41,17 +20,18 @@ function axisPoleLabel(data, id, v) {
   return `${v <= -1.5 || v >= 1.5 ? 'strongly ' : 'leans '}"${pole.label}"`
 }
 
-function coverageText(context) {
+function coverageText(context, election) {
+  const ballot = election?.name ? ` on the ${election.name} ballot` : ''
   if (context.coverageStatus === 'statewide_only') {
     return [
       'Coverage: STATEWIDE-ONLY GUIDE.',
-      'This packet includes only Washington-wide contests currently covered by Voter Lifeboat. It omits county, city, school, fire, judicial district, and other local contests.',
+      `This packet includes only the statewide contests${ballot} that Voter Lifeboat covers. It omits county, city, school, fire, judicial district, and other local contests.`,
     ]
   }
   if (context.coverageStatus === 'partial_county') {
     const lines = [
       'Coverage: PARTIAL COUNTY GUIDE.',
-      'This packet includes statewide contests, countywide contests, and local contests whose district scope was resolved exactly. Some local contests may be missing because one or more district lookups failed or are not covered yet.',
+      `This packet includes statewide contests, countywide contests, and local contests${ballot} whose district scope was resolved exactly. Some local contests may be missing because one or more district lookups failed or are not covered yet.`,
     ]
     if (context.missingLayers?.length) {
       lines.push(
@@ -62,7 +42,7 @@ function coverageText(context) {
   }
   return [
     'Coverage: FULL COUNTY GUIDE.',
-    'This packet includes the contests Voter Lifeboat matched to the resolved ballot context for this supported county.',
+    `This packet includes the contests${ballot} that Voter Lifeboat matched to the resolved ballot context for this supported county.`,
   ]
 }
 
@@ -73,7 +53,8 @@ export function buildBrief(data, context, answers, contests, measures, shareUrl,
   L.push(
     'I used Voter Lifeboat (an AI-built, citation-first voter guide; it makes no accuracy claims and tells users to verify via sources). Below are MY values from its interview, and how the covered candidates and measures scored against them.'
   )
-  for (const line of coverageText(context)) L.push(line)
+  if (data.election?.day) L.push(`Election day: ${longElectionDay(data.election.day)}.`)
+  for (const line of coverageText(context, data.election)) L.push(line)
   if (context.county?.name) L.push(`Resolved county: ${context.county.name}`)
   L.push('')
   L.push('## MY VALUES (from the interview)')
@@ -88,6 +69,7 @@ export function buildBrief(data, context, answers, contests, measures, shareUrl,
     L.push(
       `## ${contest.office.toUpperCase()} — ${contest.district || (contest.scope?.kind === 'STATEWIDE' ? 'Statewide' : 'Countywide')}`
     )
+    if (contest.term) L.push(`Term: ${contest.term}`)
     if (contest.office_does) L.push(`(${contest.office_does})`)
     if (contest.uncontested) L.push('Uncontested — shown for information only.')
     if (tooClose)
@@ -110,7 +92,7 @@ export function buildBrief(data, context, answers, contests, measures, shareUrl,
         .filter(Boolean)
         .slice(0, 5)
       if (urls.length) L.push(`Sources: ${urls.join(' · ')}`)
-      const pam = pamphletLink(c.pamphlet_pages, contest.owner)
+      const pam = pamphletLink(c.pamphlet_pages, contest.owner, data.election?.id)
       if (pam) L.push(`Official pamphlet statement: ${pam}`)
     }
     L.push('')
@@ -133,7 +115,7 @@ export function buildBrief(data, context, answers, contests, measures, shareUrl,
       if (m.cost_line) L.push(`Cost: ${m.cost_line}`)
       if (m.pro_summary) L.push(`Pro: ${m.pro_summary}`)
       if (m.con_summary) L.push(`Con: ${m.con_summary}`)
-      const pam = pamphletLink(m.pamphlet_pages, m.owner)
+      const pam = pamphletLink(m.pamphlet_pages, m.owner, data.election?.id)
       if (pam) L.push(`Official pamphlet entry: ${pam}`)
     }
     L.push('')

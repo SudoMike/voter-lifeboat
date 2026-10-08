@@ -58,9 +58,30 @@ export function formatElectionDay(day) {
  * day (RCW 29A.40.070). '2026-11-03' -> 'Oct 16'
  */
 export function ballotsMailBy(day) {
+  return shortDay(day, -18)
+}
+
+/**
+ * Online and mail registration (and updates) close 8 days before election day
+ * (RCW 29A.08.140); in-person registration runs until 8 p.m. on the day.
+ * '2026-11-03' -> 'Oct 26'
+ */
+export function registerOnlineBy(day) {
+  return shortDay(day, -8)
+}
+
+/** '2026-11-03' -> 'Nov 3'; `offset` shifts by whole days. */
+export function shortDay(day, offset = 0) {
   const date = parseDay(day)
-  date.setUTCDate(date.getUTCDate() - 18)
+  date.setUTCDate(date.getUTCDate() + offset)
   return `${MONTHS[date.getUTCMonth()].slice(0, 3)} ${date.getUTCDate()}`
+}
+
+const WEEKDAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+
+/** '2026-11-03' -> 'Tuesday, November 3, 2026' */
+export function longElectionDay(day) {
+  return `${WEEKDAYS[parseDay(day).getUTCDay()]}, ${formatElectionDay(day)}`
 }
 
 /** 'Explore the August primary guide' for 2026-08-04-primary. */

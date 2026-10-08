@@ -1,16 +1,19 @@
 # Voter Lifeboat
 
 A free, public, transparently AI-built interactive voter guide. The current
-active election scope is **Washington State** for the **August 4, 2026 Primary
-and Special Election**, served under `/washington-state`.
+active election scope is **Washington State** for the **November 3, 2026
+General Election**, served under `/washington-state`. The archived **August 4,
+2026 Primary and Special Election** stays explorable at
+`/washington-state/2026-08-04-primary`.
 
 The app asks for a street address, derives county and district context, and
-shows the contests Voter Lifeboat can cover for that ballot context. All 39
-Washington counties are covered: 28 are `full_county` and 11 are
-`partial_county` (a county is partial when it has a commissioner or PUD race
-with no queryable official district boundary — those contests are hidden rather
-than shown to the wrong voters). The statewide package is complete for this
-active election, so every ballot context also gets the statewide contests.
+shows the contests Voter Lifeboat can cover for that ballot context. For the
+general, the statewide package (Supreme Court races and statewide initiatives)
+is complete and every Washington address gets a statewide-only guide; county
+packages join as they are researched. In the archived primary all 39 counties
+were covered: 28 `full_county` and 11 `partial_county` (a county is partial
+when it has a commissioner or PUD race with no queryable official district
+boundary — those contests are hidden rather than shown to the wrong voters).
 
 ## How it fits together
 

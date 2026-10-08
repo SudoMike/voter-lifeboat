@@ -274,7 +274,7 @@ def assembled_candidates(con, sc, pamphlet_pages):
 
 
 def assembled_contest(con, owner, scope, sc, cands):
-    return {
+    out = {
         "slug": con["slug"],
         "owner": owner,
         "category": con["category"],
@@ -286,6 +286,11 @@ def assembled_contest(con, owner, scope, sc, cands):
         "uncontested": len(cands) == 1,
         "candidates": cands,
     }
+    # The official term ("2-year unexpired term"), when the package records
+    # it. Omitted otherwise so older elections' app data is unchanged.
+    if con.get("term"):
+        out["term"] = con["term"]
+    return out
 
 
 def assembled_measure(m, owner, scope):
@@ -377,6 +382,11 @@ for county_dir in COUNTY_DIRS:
         supported_counties.append({"id": county_dir.name, "name": name, "state": "WA", "fips": fips, "coverage": coverage})
     elif PACKAGES["counties"] is not None:
         raise SystemExit(f"declared county package {county_dir.name} has no interim/app-*.json")
+
+for county in supported_counties:
+    url = election.county_elections_url(E.id, county["id"])
+    if url:
+        county["elections_url"] = url
 
 contest_slugs = [c["slug"] for c in out_contests]
 measure_slugs = [m["slug"] for m in out_measures]

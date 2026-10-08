@@ -8,6 +8,7 @@
 import React from 'react'
 import { describeDistricts } from '../lib/districts.js'
 import { coverageAdvice } from '../lib/geo.js'
+import { shortDay } from '../lib/elections.js'
 
 function CoverageNote({ context }) {
   const advice = coverageAdvice(context)
@@ -85,7 +86,7 @@ export default function Confirm({ data, context, ballot, onProceed, onRetry }) {
         <strong>
           {races} {races === 1 ? 'contest' : 'contests'}
         </strong>{' '}
-        on your ballot
+        on your {data.election?.day ? `${shortDay(data.election.day)} ` : ''}ballot
         {measures > 0 ? (
           <>
             , plus{' '}

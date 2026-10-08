@@ -24,6 +24,16 @@ class GeneralPackagesTest(unittest.TestCase):
         self.assertEqual([], election.APP_PACKAGES[GENERAL.id]["counties"])
         self.assertEqual([GENERAL.state], GENERAL.shipped_packages())
 
+    def test_county_elections_urls_are_per_election(self):
+        self.assertEqual("https://kingcounty.gov/en/dept/elections",
+                         election.county_elections_url(GENERAL.id, "king"))
+        self.assertIsNone(election.county_elections_url(GENERAL.id, "spokane"))
+        # The primary's shipped app data predates the field.
+        self.assertIsNone(election.county_elections_url("2026-08-04-primary", "king"))
+        for urls in election.COUNTY_ELECTIONS_URLS.values():
+            for url in urls.values():
+                self.assertTrue(url.startswith("https://"), url)
+
     def test_primary_keeps_every_package(self):
         primary = election.Election("2026-08-04-primary")
         self.assertEqual(primary.packages(), primary.shipped_packages())
@@ -61,6 +71,11 @@ class GeneralAppDataTest(unittest.TestCase):
                 self.assertEqual(by_slug[cand["slug"]]["ballot_order"], cand["ballot_order"])
                 self.assertEqual(by_slug[cand["slug"]]["pamphlet_pages"], cand["pamphlet_pages"])
                 self.assertTrue(cand["sources"], cand["slug"])
+
+    def test_contests_carry_the_package_term(self):
+        for contest, source in zip(self.app["contests"], self.contests):
+            self.assertTrue(source["term"], source["slug"])
+            self.assertEqual(source["term"], contest["term"], source["slug"])
 
     def test_every_measure_is_researched(self):
         for measure in self.app["measures"]:
