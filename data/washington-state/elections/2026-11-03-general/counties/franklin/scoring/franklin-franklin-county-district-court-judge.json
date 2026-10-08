@@ -1,0 +1,69 @@
+{
+  "contest_slug": "franklin-franklin-county-district-court-judge",
+  "scored_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/franklin/dossiers/franklin-franklin-county-district-court-judge/"
+  ],
+  "office_does": "The District Court judge hears misdemeanors, gross misdemeanors and traffic cases in Franklin County, holds preliminary hearings and sets bail.",
+  "race_blurb": "Nonpartisan: presiding Judge Trinity Orosco, a former defense attorney who started the court's Therapeutic Court, seeks a second term against public defender Michael Nguyen. Nguyen argues bail at first appearances and pledges neutral, efficient courtrooms and cost parity with neighboring courts.",
+  "candidates": [
+    {
+      "slug": "michael-nguyen",
+      "summary": "Public defense attorney with five years in Benton and Franklin County courts, including as the county's preliminary appearance attorney.",
+      "highlights": [
+        "Five years as a public defender; 'hundreds of bail arguments' as preliminary appearance attorney [S1]",
+        "Pledges to act as 'a neutral officiant of the law rather than imposing my beliefs from the bench' [S1]",
+        "Would focus on rehabilitation through therapeutic courts while requiring accountability [S1]",
+        "Wants court costs in line with Benton County and Pasco Municipal courts [S1]"
+      ],
+      "evidence_level": "pamphlet-only",
+      "withdrawn": false,
+      "scores": {
+        "experience": {
+          "score": 1,
+          "confidence": "high",
+          "citations": ["S1"],
+          "basis": "First run for the bench after five years of practice, challenging a sitting judge."
+        },
+        "safety": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1"],
+          "basis": "Public-defense formation with heavy bail-hearing practice; pledges a rehabilitation focus through therapeutic courts, paired with accountability."
+        },
+        "judicial": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S1"],
+          "basis": "Commits to applying the law as a neutral officiant rather than imposing personal beliefs from the bench."
+        }
+      }
+    },
+    {
+      "slug": "trinity-orosco",
+      "summary": "Presiding judge of Franklin County District Court in her first term, after 14 years as a defense attorney in Tri-Cities-area courts.",
+      "highlights": [
+        "Presiding District Court judge; earlier 14 years of defense practice [S1]",
+        "Created the court's Therapeutic Court; plans a Veterans Court track [S1][S2]",
+        "Expanded the work crew program as an alternative to jail [S2]",
+        "Says she brought more than $1 million in state funding and grants to the county [S1]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "experience": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "Sitting presiding judge running on her first-term record, with long prior trial practice and broad judicial endorsements."
+        },
+        "safety": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S2"],
+          "basis": "Defense formation; built a therapeutic court and expanded work-crew alternatives to incarceration, framed as accountability plus treatment."
+        }
+      }
+    }
+  ]
+}
