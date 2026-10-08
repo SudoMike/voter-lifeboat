@@ -92,7 +92,7 @@ sources:
 ---
 
 ## Background
-Terry Carlson (D-Longview) is president of the Cowlitz-Wahkiakum Central Labor Council and secretary of IAM Woodworkers Local W536 [S1]. He grew up in Granite Falls, holds a psychology degree from Washington State University, and spent 25 years in the timber industry [S1][S3]. Northwest Labor Press reports he worked as a non-union logger before joining Weyerhaeuser in Longview as a processor operator, and that after a multiple sclerosis diagnosis he took a job with American Income Life, represented by OPEIU Local 277 [S5]. His campaign site calls him a fourth-generation logger and says "culture wars occupy our leaders and keep them too busy to bother with our concerns" [S2]. He has not held public office [S1].
+Terry Carlson (D-Longview) is president of the Cowlitz-Wahkiakum Central Labor Council and secretary of IAM Woodworkers Local W536 [S1]. He grew up in Granite Falls, holds a psychology degree from Washington State University, and spent 25 years in the timber industry [S1][S3]. Northwest Labor Press reports he worked as a non-union logger before joining Weyerhaeuser in Longview as a processor operator, and that after a multiple sclerosis diagnosis he took a job with American Income Life, represented by OPEIU Local 277 [S5]. His campaign site calls him a fourth-generation logger and says "culture wars occupy our leaders and keep them too busy to bother with our concerns" [S2]. His pamphlet statement lists only union posts under elected experience [S1].
 
 He ran against McEntire in 2024 and lost with McEntire taking 62% [S7]. In the August 4, 2026 primary he placed first with 18,354 votes (43.23%) to McEntire's 17,670 (41.62%) [S8]; two other Republicans took about 15% combined [S6].
 
@@ -122,7 +122,7 @@ No public office record. As labor council president he joined unionists pressing
 PDC (updated 2026-10-04): $24,568.09 in contributions, $5,500 in loans, $15,846.45 spent and $3,717.26 in debts; $557.81 in independent expenditures reported in support [S11].
 
 ## Scoring notes
-- Labor council president and timber worker who has not held public office, in a rematch with a three-term incumbent [S1][S7].
+- Labor council president and timber worker whose pamphlet lists no public office, in a rematch with a three-term incumbent [S1][S7].
 - Supports the millionaires' income tax while pledging to oppose taxes on working families [S4].
 - Housing plank stresses cutting building costs and delays; energy plank stresses gas-pump costs [S4].
 - Runs on rural healthcare, infrastructure and labor protections [S4].
