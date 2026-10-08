@@ -65,7 +65,7 @@ sources:
   - id: S10
     tier: 1
     type: pdc
-    ref: PDC Campaign Finance Summary (data.wa.gov 3h9x-7bvm), committees 38851 and 30644, records updated 2026-10-05 and 2026-10-07
+    ref: PDC Campaign Finance Summary (data.wa.gov 3h9x-7bvm), 2026 committees whose registration lists IL26-001 and/or IL26-638, including 38851 and 30644 (records updated through 2026-10-07)
     url: https://data.wa.gov/resource/3h9x-7bvm.json
     pointer: statewide/raw/measures/il26-001/pdc-campaign-finance-summary-il26-001-il26-638-committees.json.url
     accessed: 2026-10-08
@@ -214,7 +214,7 @@ As of PDC records updated October 5-7, 2026 [S10]:
 
 - **Let's Go Washington (Sponsored by Brian Heywood)** (committee 30644) is registered for IL26-001, IL26-638 and the income-tax initiative together ("IL26-001, IL26-638, IL26-645"); it reports $3,876,110.50 in 2026 contributions and $3,613,312.13 in expenditures, not allocated by measure [S10]. Let's Go Washington sponsors all three initiatives on the November ballot; this one fact is shared with the IL26-638 and IP26-645 dossiers. Largest 2026 contributors by total, names as recorded [S12]: Heywood Brian $606,869 (of which $605,000 cash in seven gifts [S13]), Gordon Steve $250,000, Hughes Lawrence $250,000, Crow Robert $245,000, Kelley DevCom LLC $200,000, Gordon Larry $125,000, Gordon Virginia $125,000, Kemper Holdings LLC $100,000, Schlaepfer Phil $100,000. The sponsor's site lists its "TOP 5 Donors" as Brian Heywood, Steve Gordon, Washington Rising Inc., Kelley DevCom LLC and Lawrence Hughes [S19].
 - **No Hate in WA State** (committee 38851) is registered against IL26-001 and IL26-638: $2,293,942.22 in contributions, $821,814.18 in expenditures [S10]. Largest contributors by total [S11]: Washington Education Association $358,989.22 (18 gifts), Inatai Foundation $250,000, National Education Association $250,000, SEIU 775 Ballot Fund $200,500, ACLU of Washington $170,671.63, SEIU Initiative Fund $100,000, Social Justice Fund $65,000, Ross Boucher $50,000, Equal Rights for All Petition Committee $33,275, Gender Justice League $33,175.30, Rachel Gelman $30,000, Rebecca Liebman $30,000. Another $112,245.31 is reported as unitemized small contributions [S11].
-- No committee registered only for or only against IL26-001 was found in the PDC summary data; other multi-measure committees list it, for example Defend Washington (against IL26-001, IL26-638 and IP26-645) [S10].
+- No committee registered only for or only against IL26-001 was found in the PDC summary data. Other committees list it among several measures: against, Defend Washington ($352,407.33 in 2026 contributions, also against IL26-638 and IP26-645), Planned Parenthood Advocates of Greater Washington PAC, the Snohomish County Democratic Party, Permanent Defense PAC, Seattle DSA PAC, Seattle Indivisible and Salish Sea Democratic Women; for, the 47th District Republicans and Skagit Young Republicans [S10]. Their totals cover all their activity, not only this measure [S10].
 
 ## Endorsements
 

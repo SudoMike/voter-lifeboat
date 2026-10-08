@@ -1,12 +1,12 @@
 {
-  "url": "https://data.wa.gov/resource/3h9x-7bvm.json?$where=committee_id%20in%20('38851','30644')%20AND%20election_year=2026&$select=filer_name,committee_id,for_or_against,ballot_number,contributions_amount,expenditures_amount,updated_at,election_year",
+  "url": "https://data.wa.gov/resource/3h9x-7bvm.json?$where=election_year=2026%20AND%20committee_id%20in%20('38851','30644','35835','24155','18314','37184','15151','40553','91','28356','12205','42379')&$select=filer_name,committee_id,for_or_against,ballot_number,contributions_amount,expenditures_amount,updated_at,election_year&$order=committee_id",
   "retrieved_at": "2026-10-08",
   "stage": "raw",
   "method": "source pointer; HTTP GET (curl), cached copy under data/.cache/il26-001 (gitignored)",
   "cache_file": "data/.cache/il26-001/pdc-campaign-finance-summary-il26-001-il26-638-committees.json",
-  "bytes": 551,
-  "sha256": "8e5c723a1f4adc6f6c3cc8431614315de6c7c12a916ece536407f85b16eba4b2",
+  "bytes": 3419,
+  "sha256": "6bea4cf0d83960777c5342e35f4cf916178c492c4395a6077997d923093ccedb",
   "publisher": "Washington Public Disclosure Commission (PDC), Campaign Finance Summary dataset on data.wa.gov",
   "tier": 1,
-  "notes": "2026 summary rows for No Hate in WA State (committee 38851, against IL26-001 and IL26-638; contributions 2293942.22, expenditures 821814.18, updated 2026-10-07) and Let's Go Washington (Sponsored by Brian Heywood) (committee 30644, for IL26-001, IL26-638 and IP26-645 as 'IL26-645'; contributions 3876110.50, expenditures 3613312.13, updated 2026-10-05). A broader search of the same dataset (election_year=2026, ballot_number or filer_name matching 001/638/HATE/PARENT/GIRLS/SPORT/FAIR/YES/RIGHTS) found no single-measure committee registered for either measure; multi-measure committees listing both include Defend Washington (35835, against, 352407.33), Planned Parenthood Advocates of Greater Washington PAC (24155, against), Snohomish County Democratic Party (18314, against), Permanent Defense PAC (15151, against), Seattle DSA PAC (40553, against), 47th District Republicans (91, for) and Skagit Young Republicans (28356, for)."
+  "notes": "2026 summary rows for every committee whose registered ballot_number lists IL26-001 and/or IL26-638 (found by searching the dataset for election_year=2026 with ballot_number or filer_name matching 001, 638, HATE, PARENT, GIRLS, SPORT, FAIR, YES, RIGHTS). Main committees: No Hate in WA State (38851, against IL26-001 and IL26-638; contributions 2293942.22, expenditures 821814.18, updated 2026-10-07) and Let's Go Washington (Sponsored by Brian Heywood) (30644, for 'IL26-001, IL26-638, IL26-645'; contributions 3876110.50, expenditures 3613312.13, updated 2026-10-05). No committee registered for only one of the two measures was found. Contribution amounts are committee totals across all measures and activities the committee reports, not amounts spent on these measures."
 }
