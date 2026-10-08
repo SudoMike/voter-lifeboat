@@ -1,0 +1,302 @@
+{
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/pacific/interim/contests.json",
+    "data/washington-state/elections/2026-11-03-general/counties/pacific/interim/measures.json"
+  ],
+  "script": "pipeline/build_research_plan.py",
+  "contests": [
+    {
+      "contest_slug": "pacific-congressional-district-3-u-s-representative",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 3",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "john-braun",
+          "name": "John Braun",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-3-u-s-representative/john-braun.md"
+        },
+        {
+          "slug": "marie-gluesenkamp-perez",
+          "name": "Marie Gluesenkamp Perez",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-3-u-s-representative/marie-gluesenkamp-perez.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "clark",
+          "contest_slug": "clark-congressional-district-3-u-s-representative",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/clark/scoring/clark-congressional-district-3-u-s-representative.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "clark",
+          "thurston",
+          "cowlitz",
+          "lewis"
+        ]
+      }
+    },
+    {
+      "contest_slug": "pacific-legislative-district-19-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 19",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "jim-walsh",
+          "name": "Jim Walsh",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-19-state-representative-position-1/jim-walsh.md"
+        },
+        {
+          "slug": "kevin-moynihan",
+          "name": "Kevin Moynihan",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-19-state-representative-position-1/kevin-moynihan.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "thurston",
+          "contest_slug": "thurston-legislative-district-19-state-representative-pos-1",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/thurston/scoring/thurston-legislative-district-19-state-representative-pos-1.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "thurston",
+          "cowlitz",
+          "lewis",
+          "grays-harbor"
+        ]
+      }
+    },
+    {
+      "contest_slug": "pacific-legislative-district-19-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 19",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "terry-carlson",
+          "name": "Terry Carlson",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-19-state-representative-position-2/terry-carlson.md"
+        },
+        {
+          "slug": "joel-mcentire",
+          "name": "Joel McEntire",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-19-state-representative-position-2/joel-mcentire.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "thurston",
+          "contest_slug": "thurston-legislative-district-19-state-representative-pos-2",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/thurston/scoring/thurston-legislative-district-19-state-representative-pos-2.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "thurston",
+          "cowlitz",
+          "lewis",
+          "grays-harbor"
+        ]
+      }
+    },
+    {
+      "contest_slug": "pacific-pacific-county-county-assessor",
+      "category": "County",
+      "office": "County Assessor",
+      "district": "Pacific County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "bruce-walker",
+          "name": "Bruce Walker",
+          "party_preference": "States No Party Preference",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/pacific/dossiers/pacific-pacific-county-county-assessor/bruce-walker.md"
+        },
+        {
+          "slug": "jeffrey-phelan",
+          "name": "Jeffrey Phelan",
+          "party_preference": "States No Party Preference",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/pacific/dossiers/pacific-pacific-county-county-assessor/jeffrey-phelan.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "pacific-pacific-county-county-auditor",
+      "category": "County",
+      "office": "County Auditor",
+      "district": "Pacific County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "dotsi-graves",
+          "name": "Dotsi Graves",
+          "party_preference": "Prefers Independent Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/pacific/dossiers/pacific-pacific-county-county-auditor/dotsi-graves.md"
+        },
+        {
+          "slug": "nicole-deskins",
+          "name": "Nicole Deskins",
+          "party_preference": "Prefers Independent Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/pacific/dossiers/pacific-pacific-county-county-auditor/nicole-deskins.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "pacific-pacific-county-county-sheriff",
+      "category": "County",
+      "office": "County Sheriff",
+      "district": "Pacific County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "daniel-c-garcia",
+          "name": "Daniel C. Garcia",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/pacific/dossiers/pacific-pacific-county-county-sheriff/daniel-c-garcia.md"
+        },
+        {
+          "slug": "rich-byrd",
+          "name": "Rich Byrd",
+          "party_preference": "Prefers Independent Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/pacific/dossiers/pacific-pacific-county-county-sheriff/rich-byrd.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "pacific-pacific-county-prosecuting-attorney",
+      "category": "County",
+      "office": "Prosecuting Attorney",
+      "district": "Pacific County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "jennifer-zorn",
+          "name": "Jennifer Zorn",
+          "party_preference": "Prefers Independent Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/pacific/dossiers/pacific-pacific-county-prosecuting-attorney/jennifer-zorn.md"
+        },
+        {
+          "slug": "michael-s-turner",
+          "name": "Michael S. Turner",
+          "party_preference": "States No Party Preference",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/pacific/dossiers/pacific-pacific-county-prosecuting-attorney/michael-s-turner.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "pacific-pacific-county-commissioner-district-3-county-commissioner-03",
+      "category": "County",
+      "office": "County Commissioner #03",
+      "district": "Pacific County Commissioner District 3",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "pattie-gray",
+          "name": "Pattie Gray",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/pacific/dossiers/pacific-pacific-county-commissioner-district-3-county-commissioner-03/pattie-gray.md"
+        },
+        {
+          "slug": "jerry-doyle",
+          "name": "Jerry Doyle",
+          "party_preference": "Prefers Independent Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/pacific/dossiers/pacific-pacific-county-commissioner-district-3-county-commissioner-03/jerry-doyle.md"
+        }
+      ]
+    }
+  ],
+  "measures": [
+    {
+      "jurisdiction": "Timberland Regional Library District",
+      "proposition": "Proposition No. 1",
+      "title": "Regular Property Tax Levy Lid Lift for Library Services, Operations and Maintenance",
+      "slug": "pacific-timberland-regional-library-district-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "North Pacific County Emergency Medical Services District No. 1",
+      "proposition": "Proposition No. 1",
+      "title": "Ambulance and Emergency Medical Services Funding",
+      "slug": "pacific-north-pacific-county-emergency-medical-services-district-no-1-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Pacific County Fire Protection District No. 3",
+      "proposition": "Proposition No. 1",
+      "title": "Property Tax Levy Lid Lift for Fire Protection, Suppression and Prevention",
+      "slug": "pacific-pacific-county-fire-protection-district-no-3-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Pacific County Fire Protection District No. 6",
+      "proposition": "Proposition No. 1",
+      "title": "Authorizing Regular Property Tax Levy",
+      "slug": "pacific-pacific-county-fire-protection-district-no-6-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    }
+  ],
+  "carry_forward_from": "2026-08-04-primary"
+}
