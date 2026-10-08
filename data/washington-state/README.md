@@ -17,7 +17,7 @@ Elections:
 | id | Election | Status |
 |---|---|---|
 | `2026-08-04-primary` | August 4, 2026 Primary and Special Election | archived, served at `/washington-state/2026-08-04-primary` |
-| `2026-11-03-general` | November 3, 2026 General Election | active (`ACTIVE`); King, Snohomish, Pierce, Clark, Kitsap, Thurston, Yakima, Whatcom, Benton, Skagit, Cowlitz, Grant, Island, Lewis, Franklin, Chelan, Clallam and Grays Harbor Counties at Full County Coverage, Spokane County at partial coverage (Stevens County PUD seat unresolvable), every other county a Statewide-Only Guide (5 Supreme Court contests, 3 initiatives) |
+| `2026-11-03-general` | November 3, 2026 General Election | active (`ACTIVE`); King, Snohomish, Pierce, Clark, Kitsap, Thurston, Yakima, Whatcom, Benton, Skagit, Cowlitz, Grant, Island, Lewis, Franklin, Chelan, Clallam, Grays Harbor and Mason Counties at Full County Coverage, Spokane County at partial coverage (Stevens County PUD seat unresolvable), every other county a Statewide-Only Guide (5 Supreme Court contests, 3 initiatives) |
 
 Every pipeline script takes `--election <id>`; without it the script uses the
 id in `elections/ACTIVE`. Outputs land in `data/final/<id>/` and the app copy
@@ -139,7 +139,7 @@ and `assemble_app_data.py` ships that package's scoring and dossiers.
 A declared non-King county (Snohomish, Spokane and Pierce, from #21; Clark,
 Kitsap and Thurston, from #22; Yakima, Whatcom, Benton, Skagit, Cowlitz and
 Grant, from #28; Island, Lewis, Franklin, Chelan, Clallam and Grays Harbor,
-from #29) ships its
+from #29; Mason, from #30) ships its
 `interim/app-{contests,measures}.json`. Its candidates' `pamphlet_pages` come
 from its own dossiers' `type: pamphlet` citations (`pamphlet_refs.py`; edition
 ids are the package's `raw/*/<edition>.pdf.url` pointer names, such as
@@ -203,8 +203,8 @@ King has no `app-contests.json`, so its contests never feed the normalizer.
 In the general it normalizes the VoteWA-built county packages with a
 general export: the six of #20 (clark, kitsap, pierce, snohomish, spokane,
 thurston), shipped in #21 and #22, and yakima, whatcom, benton, skagit,
-cowlitz and grant, shipped in #28, and island, lewis, franklin, chelan,
-clallam and grays-harbor, shipped in #29.
+cowlitz and grant, shipped in #28, island, lewis, franklin, chelan,
+clallam and grays-harbor, shipped in #29, and mason, shipped in #30.
 
 ## Election Facts
 
@@ -234,15 +234,16 @@ clallam and grays-harbor, shipped in #29.
   provenance is in the `.meta.json` siblings and the interview's
   `derived_from`. Intended measure axes: I-645 → `taxes`, `local-control`;
   I-1 → `parental-rights`; I-638 → `social`.
-- Coverage today: `coverage.statewide_complete: true` and nineteen Supported
+- Coverage today: `coverage.statewide_complete: true` and twenty Supported
   Counties: King at `full_county` (#16; 92 contests, 41 uncontested and
   information-only, 15 measures), Pierce at `full_county` and Spokane at
   `partial_county` (#21), Snohomish at `full_county` (shipped partial in
   #21, District Court resolved in #27), Clark, Kitsap and Thurston at
   `full_county` (#22), and Yakima, Whatcom, Benton, Skagit, Cowlitz and
   Grant at `full_county` (#28), and Island, Lewis, Franklin, Chelan,
-  Clallam and Grays Harbor at `full_county` (#29). 497 contests (5
-  statewide Supreme Court contests included) and 126 measures. Every other Washington address gets the
+  Clallam and Grays Harbor at `full_county` (#29), and Mason at
+  `full_county` (#30). 513 contests (5 statewide Supreme Court contests
+  included) and 131 measures. Every other Washington address gets the
   Statewide-Only Guide. `docs/county-wave-playbook.md` is the procedure for
   taking a county from research to shipped.
 - District (congressional and legislative) contests are county-owned

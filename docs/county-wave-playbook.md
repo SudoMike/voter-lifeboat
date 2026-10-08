@@ -428,11 +428,11 @@ DOR GIS layer, a PDF-only map, a layer that is not public), the rule is:
 Never scope a district race `COUNTY` to make it appear: that shows it to
 voters outside the district.
 
-As of the builder runs on 2026-10-08 (#22, #28, #29), the only shipped
+As of the builder runs on 2026-10-08 (#22, #28, #29, #30), the only shipped
 general package that is `partial_county` is Spokane (`PUDDST`). Benton,
 Clark, Kitsap, Pierce, Snohomish (since #27), Thurston, Whatcom, Yakima,
-Skagit, Cowlitz, Grant, Island, Lewis, Franklin, Chelan, Clallam and Grays
-Harbor are `full_county`; all eighteen ship with King. A PUD
+Skagit, Cowlitz, Grant, Island, Lewis, Franklin, Chelan, Clallam, Grays
+Harbor and Mason are `full_county`; all nineteen ship with King. A PUD
 commissioner is nominated by district but elected by the whole PUD in the
 general (RCW 54.12.010(3)), so a countywide PUD's seat is scoped `COUNTY`
 (Clark, Kitsap, Thurston), not `PUDDST`.
@@ -585,6 +585,18 @@ PDF page and their VoteWA guides otherwise; Grays Harbor posts no pamphlet
 and links its guide. The archived primary scoped Clallam's PUD District 2
 race `PUDDST` `1` (the generic parse), which the adapter reads as
 commissioner district 1; the primary is frozen, so that stays.
+
+Mason shipped on 2026-10-08 (#30) as `full_county`. The county is split
+between two PUDs, each electing its commissioners PUD-wide in the general:
+PUD No. 1 (Hood Canal, Hoodsport) and PUD No. 3 (the rest). The seats are
+scoped `PUDDST` `1` and `3` and read DOR PUD2025 (layer 17) `DISTATTRIB`.
+Its Southside SD 42, McCleary SD 65 and Pioneer SD 402 measures read DOR
+SCH2025. McCleary SD 65 straddles the Grays Harbor line, so its bond ships
+twice, once per county, each copy scoped to its own county: a voter sees
+one. The commissioner and FIRDST layers re-probed alive; neither is used
+by a general scope. Shared races (5): CD 6 with Pierce's scoring, LD 35 and
+the Court of Appeals II-2 Pos. 1 seat with Kitsap's. Mason links its local
+pamphlet at the cited PDF page and its VoteWA guide otherwise.
 
 ## 13. Reference
 

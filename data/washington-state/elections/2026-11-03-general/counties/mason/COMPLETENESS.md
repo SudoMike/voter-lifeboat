@@ -3,7 +3,23 @@
 Election: 2026 Washington general election, November 3, 2026 (VoteWA
 election 899, county code 23).
 
-Research package for #30 (county wave 5), not yet shipped. Contests and
+Status (#30): shipped at Full County Coverage in
+`APP_PACKAGES["2026-11-03-general"]["counties"]`, with its elections office
+(`https://www.masoncountywa.gov/departments/auditor/elections/index.php`),
+its local voters' pamphlet (`pamphletPdfs['mason/local-voters-pamphlet']`)
+and its VoteWA guide (`countyGuides.mason`, `c=23`). `COUNTY_LAYERS.mason`
+reads `PUDDST` (DOR PUD2025) and `SCHDST` (DOR SCH2025) beside
+`COUNTY_COUNCIL` and `FIRDST`, as proposed below. CD 6 ships with Pierce's
+research, LD 35 and the Court of Appeals seat with Kitsap's. Live ballots
+on 2026-10-08, each `full_county` with no missing layer: 525 W Cota St,
+Shelton (PUD 3 seat, Timberland, Shelton Prop. 1); 24151 N US Hwy 101,
+Hoodsport (PUD 1 seat, Timberland); 23850 NE State Route 3, Belfair (PUD 3
+seat, Timberland); 281 W Bonnieview Dr, McCleary (PUD 3 seat, Timberland,
+McCleary SD 65); 112 E Spencer Lake Rd, Shelton (Pioneer SD 402); 161 SE
+Collier Rd, Shelton (Southside SD 42). The paragraphs below describe the
+package as researched.
+
+Research package for #30 (county wave 5). Contests and
 measures are built by `pipeline/build_votewa_lite_data.py --county mason`
 from the VoteWA candidate list (`raw/votewa/candidate-list.csv.url`) and the
 overrides and measures in that script's
