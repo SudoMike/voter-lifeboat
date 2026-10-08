@@ -69,7 +69,7 @@ APP_PACKAGES = {
         "statewide_ballot": True,
         "counties": ["king", "snohomish", "spokane", "pierce", "clark", "kitsap", "thurston", "yakima", "whatcom",
                      "benton", "skagit", "cowlitz", "grant", "island", "lewis", "franklin", "chelan", "clallam",
-                     "grays-harbor"],
+                     "grays-harbor", "mason"],
         "district_contests": "county",
     },
 }
@@ -252,6 +252,10 @@ COUNTY_ELECTIONS_URLS = {
         # Auditor's current_election.php, which links VoteWA's guide, sits
         # beside it).
         "grays-harbor": "https://www.graysharbor.us/government/Auditors/elections.php",
+        # Mason County Auditor, Elections (200, 2026-10-08;
+        # masoncountywa.gov/elections redirects here, and the Current Election
+        # page that links the pamphlet and VoteWA's guide sits beside it).
+        "mason": "https://www.masoncountywa.gov/departments/auditor/elections/index.php",
     },
 }
 

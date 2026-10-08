@@ -3,7 +3,7 @@
 // (#21), Snohomish at full coverage (#27), Clark, Kitsap and Thurston at full
 // coverage (#22), Yakima, Whatcom, Benton, Skagit, Cowlitz and Grant at full
 // coverage (#28), Island, Lewis, Franklin, Chelan, Clallam and Grays Harbor at
-// full coverage (#29), every other Washington address a Statewide-Only Guide (issue #9). These run the app's own ballot, interview, lean and Ballot Brief
+// full coverage (#29), Mason at full coverage (#30), every other Washington address a Statewide-Only Guide (issue #9). These run the app's own ballot, interview, lean and Ballot Brief
 // code against public/data/2026-11-03-general.
 import test from 'node:test'
 import assert from 'node:assert/strict'
@@ -69,7 +69,7 @@ const STATE_MEASURES = [
   'initiative-measure-no-il26-638',
 ]
 
-test('the general ships eighteen counties at full county coverage, Spokane at partial, with their elections offices', () => {
+test('the general ships nineteen counties at full county coverage, Spokane at partial, with their elections offices', () => {
   assert.equal(data.election.id, '2026-11-03-general')
   assert.deepEqual(data.coverage, {
     statewide_complete: true,
@@ -259,6 +259,16 @@ test('the general ships eighteen counties at full county coverage, Spokane at pa
         fips: '53027',
         coverage: 'full_county',
         elections_url: 'https://www.graysharbor.us/government/Auditors/elections.php',
+      },
+      {
+        // Full: the PUD No. 1 and No. 3 seats read DOR PUD2025, the school
+        // measures DOR SCH2025 (#30).
+        id: 'mason',
+        name: 'Mason County',
+        state: 'WA',
+        fips: '53045',
+        coverage: 'full_county',
+        elections_url: 'https://www.masoncountywa.gov/departments/auditor/elections/index.php',
       },
     ],
   })
@@ -752,6 +762,49 @@ test('a Grays Harbor ballot: Clallam\'s research for LD 24, Thurston\'s for LD 1
   const os = ballotFor(gh({ CONGDST: '6', LEGDST: '24', CITY: 'Ocean Shores', SCHDST: '64' }))
   assert.deepEqual(os.measures.map((m) => m.slug), STATE_MEASURES)
   assert.equal(coverageAdvice(gh({})), null)
+})
+
+test('a Mason ballot: Pierce\'s research for CD 6, Kitsap\'s for LD 35, PUD No. 1 or No. 3, school measures by district', () => {
+  const MASON = { id: 'mason', fips: '53045', name: 'Mason County' }
+  const ma = (districts) => ({ coverageStatus: 'full_county', county: MASON, districts, missingLayers: [] })
+  const TRL = 'mason-timberland-regional-library-district-proposition-no-1'
+  const PUD1 = 'mason-public-utility-district-no-1-of-mason-county-commissioner-district-2'
+  const PUD3 = 'mason-public-utility-district-no-3-of-mason-county-commissioner-district-2'
+  // Districts as the live District Adapter resolved them on 2026-10-08.
+  // 525 W Cota St, Shelton: PUD 3, Shelton SD 309 (no measure), the city's TBD.
+  const sh = ballotFor(ma({ CONGDST: '6', LEGDST: '35', CITY: 'Shelton', COUNTY_COUNCIL: '3', PUDDST: '3', SCHDST: '309' }))
+  const ss = sh.contests.map((c) => c.slug)
+  assert.equal(new Set(ss).size, ss.length)
+  for (const slug of SUPREME_COURT) assert.ok(ss.includes(slug), slug)
+  sameScoring(sh, 'mason-congressional-district-6-u-s-representative', 'pierce-congressional-district-6-u-s-representative')
+  sameScoring(sh, 'mason-legislative-district-35-state-senator', 'kitsap-legislative-district-35-state-senator')
+  for (const pos of [1, 2])
+    sameScoring(sh, `mason-legislative-district-35-state-representative-pos-${pos}`, `kitsap-legislative-district-35-state-representative-pos-${pos}`)
+  assert.ok(!sh.contests.some((c) => c.owner !== 'mason' && c.owner !== 'statewide'))
+  assert.ok(ss.includes(PUD3) && !ss.includes(PUD1))
+  // The commissioner seat is elected countywide in the general.
+  assert.ok(ss.includes('mason-mason-county-commissioner-district-3-county-commissioner-district-no-3'))
+  assert.deepEqual(ownLocal(sh, 'mason'), [TRL, 'mason-city-of-shelton-proposition-no-1'])
+  // 24151 N US Hwy 101, Hoodsport: PUD 1, Hood Canal SD 404.
+  const ho = ballotFor(ma({ CONGDST: '6', LEGDST: '35', COUNTY_COUNCIL: '2', FIRDST: '18', PUDDST: '1', SCHDST: '404' }))
+  const hs = ho.contests.map((c) => c.slug)
+  assert.ok(hs.includes(PUD1) && !hs.includes(PUD3))
+  assert.deepEqual(ownLocal(ho, 'mason'), [TRL])
+  // 23850 NE State Route 3, Belfair: PUD 3, North Mason SD 403.
+  const be = ballotFor(ma({ CONGDST: '6', LEGDST: '35', COUNTY_COUNCIL: '1', FIRDST: 'NMRFA', PUDDST: '3', SCHDST: '403' }))
+  assert.ok(be.contests.some((c) => c.slug === PUD3))
+  assert.deepEqual(ownLocal(be, 'mason'), [TRL])
+  // 281 W Bonnieview Dr, McCleary (Mason side): McCleary SD 65, Mason's copy only.
+  const mc = ballotFor(ma({ CONGDST: '6', LEGDST: '35', COUNTY_COUNCIL: '2', FIRDST: '13', PUDDST: '3', SCHDST: '65' }))
+  assert.deepEqual(mc.measures.filter((m) => m.slug.includes('mccleary')).map((m) => m.slug),
+    ['mason-mccleary-school-district-no-65-proposition-no-1'])
+  assert.deepEqual(ownLocal(mc, 'mason'), [TRL, 'mason-mccleary-school-district-no-65-proposition-no-1'])
+  // 112 E Spencer Lake Rd: Pioneer SD 402; 161 SE Collier Rd: Southside SD 42.
+  const pi = ballotFor(ma({ CONGDST: '6', LEGDST: '35', COUNTY_COUNCIL: '3', FIRDST: '5', PUDDST: '3', SCHDST: '402' }))
+  assert.deepEqual(ownLocal(pi, 'mason'), [TRL, 'mason-pioneer-school-district-no-402-proposition-no-1'])
+  const so = ballotFor(ma({ CONGDST: '6', LEGDST: '35', COUNTY_COUNCIL: '3', FIRDST: '4', PUDDST: '3', SCHDST: '42' }))
+  assert.deepEqual(ownLocal(so, 'mason'), [TRL, 'mason-southside-school-district-no-42-proposition-no-1'])
+  assert.equal(coverageAdvice(ma({})), null)
 })
 
 test('a Spokane ballot: its own districts, school and fire measures by name, no PUD seat', () => {

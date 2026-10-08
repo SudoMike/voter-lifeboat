@@ -37,7 +37,9 @@
     "data/washington-state/elections/2026-11-03-general/counties/clallam/scoring/measures.json",
     "data/washington-state/elections/2026-11-03-general/counties/clallam/scoring/refutations/measures.json",
     "data/washington-state/elections/2026-11-03-general/counties/grays-harbor/scoring/measures.json",
-    "data/washington-state/elections/2026-11-03-general/counties/grays-harbor/scoring/refutations/measures.json"
+    "data/washington-state/elections/2026-11-03-general/counties/grays-harbor/scoring/refutations/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/mason/scoring/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/mason/scoring/refutations/measures.json"
   ],
   "script": "pipeline/merge_scores.py",
   "measures": [
@@ -2379,6 +2381,98 @@
         }
       },
       "sources_note": "Sources: VoteWA voters' guide record 7386 (S1); the district's levy page (S2); VoteWA records for the 2023 lid lift, the 2020 levy and the 2024 EMS renewal (S3-S5); Secretary of State results for those votes (S6-S8); Daily World on the district's structure (S9); the county assessor's 2026 levy book (S10); RCW 84.55.050 (S11); PDC query showing no committee (S12)."
+    },
+    {
+      "slug": "mason-timberland-regional-library-district-proposition-no-1",
+      "what_it_does": "Lifts Timberland Regional Library's regular property tax levy from about $0.22 to $0.35 per $1,000 of assessed value for 2027 and 2028; the 2028 amount becomes the base for later limits. TRL says the money would maintain and restore open hours, staffing and collections after 2026 budget cuts. Mason County's branches are in Shelton, Belfair and Hoodsport, and voters in all five TRL counties decide the measure.",
+      "cost_line": "From $0.228924 to $0.35 per $1,000 of assessed value. TRL estimates $43 a year on the $333,773 median Mason County home; the explanatory statement gives about $40 a year on a $334,000 home.",
+      "pro_summary": "The TimberStrong Libraries Committee says the levy was last approved more than 25 years ago and has eroded to $0.22, and that approval would restore frontline staff, hours and programs; without it the Hoodsport branch could go unstaffed and Belfair and Shelton could face further cuts.",
+      "con_summary": "Citizens for Accountable TR Libraries (Sean Swope) says owners already face rising levy bills and the library should first cut costs, seek grants and manage existing money better; 'Voting No is not a vote against libraries or literacy.'",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "A yes vote is a levy lid lift, which the taxes pole_b names explicitly: TRL's regular levy rate rises by more than half, from $0.228924 to $0.35 per $1,000.",
+          "citations": [
+            "S1",
+            "S2",
+            "S3"
+          ]
+        }
+      },
+      "sources_note": "Mason local voters' pamphlet pp. 24-25 (S1) and VoteWA guide record 7284 (S2); TRL levy page (S3); Shelton-Mason County Journal coverage of TRL's 2026 deficit and layoffs, free previews only (S4-S6); PDC committee query (S7). The pamphlet's Mason statement for differs from the generic statement for in the VoteWA guide."
+    },
+    {
+      "slug": "mason-southside-school-district-no-42-proposition-no-1",
+      "what_it_does": "Replaces Southside School District's expiring educational programs and operations levy for four years (2027-2030). The money pays for staffing, health and safety, afterschool programs, curriculum, technology, nutrition and special education costs that state and federal funding do not cover.",
+      "cost_line": "$994,006 in 2027 rising to $1,217,701 in 2030, an estimated $1.97 per $1,000 of assessed value each year, the same maximum rate voters approved in 2022.",
+      "pro_summary": "Evelyn and James Huff: the community has long supported the school, founded in 1903 and now serving about 200 students, and 'the students deserve the best we can give them.'",
+      "con_summary": "No statement against was filed and no opposition committee was found.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "A yes vote continues a school operations levy at the same maximum rate voters approved in 2022 ($1.97 per $1,000); it renews an expiring tax rather than raising the rate, so +1, not +2.",
+          "citations": [
+            "S1",
+            "S2",
+            "S3"
+          ]
+        }
+      },
+      "sources_note": "Mason local voters' pamphlet pp. 26-27 (S1) and VoteWA guide record 7383 (S2); Shelton-Mason County Journal preview (S3); PDC committee query (S4)."
+    },
+    {
+      "slug": "mason-mccleary-school-district-no-65-proposition-no-1",
+      "what_it_does": "Authorizes McCleary School District to issue $12.8 million in general obligation bonds, repaid over up to 21 years by an excess property tax, for a security vestibule, door locks, keycard access and fire alarms, building, HVAC, drainage and parking repairs, and safer playgrounds at the McCleary School. Only the small part of the district inside Mason County votes on it here.",
+      "cost_line": "$12.8 million in bonds; the district estimates $1.42 per $1,000 of assessed value, about $426 a year on a $300,000 home.",
+      "pro_summary": "No statement for was filed. The district says the bond would pay for safety and security improvements and key facility repairs that state grants do not cover; a broader bond failed in February 2026.",
+      "con_summary": "No statement against was filed and no opposition committee was found.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "A yes vote authorizes new bonds repaid by a new excess property tax, estimated at $1.42 per $1,000 for up to 21 years.",
+          "citations": [
+            "S1",
+            "S3"
+          ]
+        }
+      },
+      "sources_note": "Mason local voters' pamphlet p. 28 (S1) and VoteWA guide record 7385 (S2); McCleary School District levy and bond pages (S3, S4); PDC committee query (S5)."
+    },
+    {
+      "slug": "mason-pioneer-school-district-no-402-proposition-no-1",
+      "what_it_does": "Replaces Pioneer School District's educational programs and operations levy, which expires after 2027, for four years (2028-2031). It pays for smaller classes, safety and security, mental health specialists, music and STEM, academic supports, athletics and activities the state does not fully fund.",
+      "cost_line": "$3,700,000 in 2028 rising to $4,043,090 in 2031, an estimated $1.18 to $1.15 per $1,000 of assessed value.",
+      "pro_summary": "No statement for was filed.",
+      "con_summary": "No statement against was filed and no opposition committee was found.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "A yes vote continues a school operations levy that would otherwise end after 2027; the ballot materials present it as a replacement and give no comparison with the current rate, so +1, not +2.",
+          "citations": [
+            "S1",
+            "S2"
+          ]
+        }
+      },
+      "sources_note": "Mason local voters' pamphlet p. 29 (S1) and VoteWA guide record 7382 (S2); Shelton-Mason County Journal preview (S3), whose levy details are paywalled; PDC committee query (S4). The district's website is script-rendered and its levy page could not be read."
+    },
+    {
+      "slug": "mason-city-of-shelton-proposition-no-1",
+      "what_it_does": "Raises the Shelton Transportation Benefit District's sales and use tax from 0.2% to 0.3% for ten years, for street and pedestrian maintenance, repair and construction: safety improvements, ADA compliance, resurfacing, bike and multimodal connections and grant matching. Anyone buying taxable goods in the city pays it.",
+      "cost_line": "Sales tax for transportation rises from 0.2% to 0.3%, one more cent on a $10 purchase, for ten years; no revenue estimate is given.",
+      "pro_summary": "No statement for was filed. The City Council voted unanimously in July 2026 to move the increase toward the ballot.",
+      "con_summary": "No statement against was filed and no opposition committee was found.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "A yes vote raises a local sales tax rate by half, from 0.2% to 0.3%, for ten years.",
+          "citations": [
+            "S1",
+            "S2"
+          ]
+        }
+      },
+      "sources_note": "Mason local voters' pamphlet p. 30 (S1) and VoteWA guide record 7384 (S2); Shelton-Mason County Journal previews on the council's July vote and the 2025 renewal (S3, S4); PDC committee query (S5). The explanatory statement dates the TBD's creation to 2016, the Journal to a November 2015 vote."
     }
   ]
 }

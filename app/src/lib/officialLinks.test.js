@@ -400,6 +400,36 @@ test('shipped Franklin, Chelan and Clallam records link their local pamphlet at 
   }
 })
 
+test('shipped Mason records link the local pamphlet at the cited page, else the county\'s VoteWA guide', () => {
+  const id = general.election.id
+  const PDF = 'https://www.masoncountywa.gov/Documents/Departments/Auditor/Elections/Current%20Election/General_2026_Local_Voters_Pamphlet.pdf'
+  const GUIDE = 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=23'
+  // City of Shelton Prop. 1 is PDF p. 30.
+  assert.equal(pamphletLink([{ edition: 'local-voters-pamphlet', page: 30 }], 'mason', id), `${PDF}#page=30`)
+  let paged = 0
+  let guided = 0
+  for (const item of [...general.contests, ...general.measures]) {
+    if (item.owner !== 'mason') continue
+    const pages = item.candidates ? item.candidates.map((c) => c.pamphlet_pages) : [item.pamphlet_pages]
+    for (const p of pages) {
+      if (p?.length) {
+        assert.equal(pamphletLink(p, 'mason', id), `${PDF}#page=${p[0].page}`, item.slug)
+        paged++
+      } else {
+        // CD 6, LD 35 and the Court of Appeals seat ship with another package's research.
+        assert.equal(pamphletLink(p, 'mason', id), GUIDE, item.slug)
+        guided++
+      }
+    }
+  }
+  assert.ok(paged >= 20 && guided >= 9, JSON.stringify({ paged, guided }))
+  assert.deepEqual(countyElectionsOffice(general, { id: 'mason', name: 'Mason County' }), {
+    name: 'Mason County Elections',
+    url: 'https://www.masoncountywa.gov/departments/auditor/elections/index.php',
+    direct: true,
+  })
+})
+
 test('the shipped general links Snohomish County Elections directly', () => {
   assert.deepEqual(countyElectionsOffice(general, { id: 'snohomish', name: 'Snohomish County' }), {
     name: 'Snohomish County Elections',
