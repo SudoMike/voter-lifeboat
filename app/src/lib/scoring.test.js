@@ -104,8 +104,9 @@ test('the general interview asks about parental-rights only when the ballot is s
     general.interview.items.some((i) => i.kind === 'statement' && i.axis === 'parental-rights'),
     'the general interview has a parental-rights statement card'
   )
-  // The general has no contests yet: an empty ballot asks nothing.
-  const empty = axesForBallot(general, general.contests, general.measures)
+  // An empty ballot asks nothing. (The shipped general ballot's interview is
+  // pinned in general-ballot.test.js.)
+  const empty = axesForBallot(general, [], [])
   assert.deepEqual(interviewItemsForBallot(general, empty), [])
 
   // A measure mapped only to `social` (I-638's intended axis) does not pull
