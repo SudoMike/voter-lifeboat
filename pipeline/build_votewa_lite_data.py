@@ -822,6 +822,96 @@ ELECTION_MEASURES = {
                   pages=(57, 58)),
             ],
         },
+        # Douglas (#30). Measures: the Auditor's general sample ballot
+        # (counties/douglas/raw/douglas/sample-ballot.pdf.url, DocumentCenter
+        # 13224, linked from douglascountywa.gov/206/Current-Election) lists
+        # five local measures; VoteWA's online guide for county 09 (measures
+        # 7283, 7320, 7321, 7425, 7322) agrees. Douglas prints no local
+        # voters' pamphlet. Scopes point-checked 2026-10-08 (Census geocoder,
+        # Current vintage; WA DOR 2025 layers 3 CEM, 11 HSP, 20 SCH):
+        # 1206 Columbia Ave, Bridgeport and 50 Main St, Mansfield -> HSP2025
+        # '1' (Three Rivers); 213 S Chelan Ave, Waterville -> HSP2025 '2' and
+        # CEM2025 '2'; 100 Eastmont Ave, East Wenatchee and 1 Rock Island Dr,
+        # Rock Island -> SCH2025 '206' (Waterville '209', Bridgeport '75').
+        # The proposed Rimrock Meadows Fire Protection District No. 9 has no
+        # DOR polygon (it does not exist until voters form it): FIRDST '009'
+        # is the county's own Fire Districts layer (gis.douglascountywa.gov/
+        # server/rest/services/All_Districts_Temporary/MapServer/4 FireNumber
+        # '009', 'Proposed Rimrock Meadows Fire District #9', edited
+        # 2026-08-19); 1005 Ashcroft Dr, 431 Murcur Pl and 9005 W Coyote Trl,
+        # Ephrata -> '009'; 448 Belmont Pl, Ephrata -> '001'. The formation
+        # vote and its three commissioner races share that scope (RCW
+        # 52.02.080).
+        # Overrides: the commissioner race (District Type Countywide) is
+        # nominated by district and elected county-wide in the general (RCW
+        # 36.32.040; Douglas is a non-charter county; SOS 2024 general precinct
+        # export: Commissioner 1 and 2 on all 49 precincts, 2022 Commissioner
+        # 3 on all 49); it keeps the primary's contest name so primary
+        # dossiers carry forward. The District Court seat is a single
+        # county-wide judicial seat (2022: on all 49 precincts). Douglas
+        # County PUD (Public Utility District No. 1 of Douglas County) covers
+        # the county (DOR PUD2025 layer 17 has one Douglas polygon,
+        # DISTATTRIB '1', at every point above) and the whole PUD elects each
+        # commissioner in the general (RCW 54.12.010(3); its 2024 Commissioner
+        # No. 1 race was on all 49 precincts), so the seat is COUNTY.
+        "douglas": {
+            "overrides": {
+                ("COUNTY", "COMMISSIONER DISTRICT NO. 3"): (
+                    "County", "Douglas County Commissioner District 3", "Commissioner District No. 3", ("COUNTY", None)),
+                ("COUNTY", "DISTRICT COURT JUDGE"): (
+                    "Judicial", "Douglas County District Court", "Judge", ("COUNTY", None)),
+                ("DOUGLAS COUNTY PUBLIC UTILITY DISTRICT", "COMMISSIONER NO. 2"): (
+                    "PublicUtility", "Public Utility District No. 1 of Douglas County", "Commissioner District 2",
+                    ("COUNTY", None)),
+                ("RIMROCK MEADOWS FIRE PROTECTION DISTRICT NO. 9", "COMMISSIONER NO. 1"): (
+                    "Local", "Proposed Rimrock Meadows Fire Protection District No. 9", "Commissioner No. 1",
+                    ("FIRDST", "009")),
+                ("RIMROCK MEADOWS FIRE PROTECTION DISTRICT NO. 9", "COMMISSIONER NO. 2"): (
+                    "Local", "Proposed Rimrock Meadows Fire Protection District No. 9", "Commissioner No. 2",
+                    ("FIRDST", "009")),
+                ("RIMROCK MEADOWS FIRE PROTECTION DISTRICT NO. 9", "COMMISSIONER NO. 3"): (
+                    "Local", "Proposed Rimrock Meadows Fire Protection District No. 9", "Commissioner No. 3",
+                    ("FIRDST", "009")),
+            },
+            "measures": [
+                m("Public Hospital District No. 1, Okanogan and Douglas Counties (Three Rivers Hospital)", "Proposition No. 1",
+                  "Bonds for Hospital Renovation and Improvement",
+                  ("HOSPDST", "1"),
+                  "Authorizes up to $48,000,000 of general obligation bonds, maturing within 30 years and repaid by an excess property tax levy, to remodel, renovate, equip and improve Three Rivers Hospital in Brewster. Needs 60% yes.",
+                  "Estimated $0.73 per $1,000 of assessed value (about $219 a year, or $18 a month, on a $300,000 home); up to $48,000,000 in bonds over up to 30 years.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7283&e=899&la=en&c=09"),
+                m("Douglas County Public Hospital District No. 2", "Proposition No. 1",
+                  "Special One-Year Excess Maintenance and Operations Levy",
+                  ("HOSPDST", "2"),
+                  "Authorizes a one-year excess levy for the Waterville-area hospital district, which runs its own ambulance service and a clinic contracted with Wenatchee Valley Medical Center.",
+                  "$80,000, approximately $0.36 per $1,000 of assessed value, collected in 2027.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7320&e=899&la=en&c=09"),
+                m("Eastmont School District No. 206", "Proposition No. 1",
+                  "Bonds to Rebuild and Modernize Deteriorating Schools and Improve Safety",
+                  ("SCHDST", "206"),
+                  "Authorizes $125,000,000 of general obligation bonds, repaid by excess property taxes over up to 20 years, to rebuild the oldest parts of Cascade, Kenroy and Lee elementary schools (replacing 15 portables with permanent classrooms) and fund districtwide roofing, HVAC, lighting, parking, pickup and athletic-facility upgrades; the district expects about $25 million in state construction assistance. Needs 60% yes.",
+                  "$125,000,000 in bonds over up to 20 years; the district estimates about $0.79 per $1,000 of assessed value (about $237 a year on a $300,000 home).",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7321&e=899&la=en&c=09"),
+                m("Proposed Rimrock Meadows Fire Protection District No. 9", "Proposition No. 1",
+                  "Formation of Rimrock Meadows Fire Protection District No. 9",
+                  ("FIRDST", "009"),
+                  "Forms a fire protection district (RCW 52.02) for the Rimrock Meadows area north of Ephrata, which has no fire district today, governed by three elected commissioners and financed by a property tax levy. The commissioner races on the same ballot fill its first board if it forms.",
+                  "No levy is set by this vote; once formed, the district's board may levy regular property taxes for fire protection (up to $0.50 per $1,000 under RCW 52.16.130, with further $0.50 levies under RCW 52.16.140 and .160 subject to the statutory limits).",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7425&e=899&la=en&c=09"),
+                m("Douglas County Cemetery District No. 2", "Proposition No. 1",
+                  "Special One-Year Excess Maintenance and Operations Levy",
+                  ("CEMDST", "2"),
+                  "Authorizes the cemetery district's one-year excess levy for maintenance, operations and irrigation of its seven cemeteries and one mausoleum around Waterville.",
+                  "$50,000, approximately $0.22 per $1,000 of assessed value, collected in 2027.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7322&e=899&la=en&c=09"),
+            ],
+            "extra_notes": [
+                "Douglas County prints no local voters' pamphlet for the general; candidate statements and measure "
+                "texts are in VoteWA's online voters' guide (genericvoterguide.aspx?e=899&c=09).",
+                "The proposed Rimrock Meadows Fire Protection District No. 9 and its commissioner races are scoped to "
+                "the county's Fire Districts layer (FireNumber '009'); DOR's 2025 fire layer has no such district.",
+            ],
+        },
         # Franklin (#29). Ballot checked against the Auditor's general sample
         # ballot and local voters' pamphlet (counties/franklin/raw/franklin/
         # sample-ballot.pdf.url, local-voters-pamphlet.pdf.url): one local

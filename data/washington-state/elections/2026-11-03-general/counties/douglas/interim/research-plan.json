@@ -1,0 +1,384 @@
+{
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/douglas/interim/contests.json",
+    "data/washington-state/elections/2026-11-03-general/counties/douglas/interim/measures.json"
+  ],
+  "script": "pipeline/build_research_plan.py",
+  "contests": [
+    {
+      "contest_slug": "douglas-congressional-district-4-u-s-representative",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 4",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "amanda-mckinney",
+          "name": "Amanda McKinney",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-4-u-s-representative/amanda-mckinney.md"
+        },
+        {
+          "slug": "john-duresky",
+          "name": "John Duresky",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-4-u-s-representative/john-duresky.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "benton",
+          "contest_slug": "benton-congressional-district-4-u-s-representative",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/benton/scoring/benton-congressional-district-4-u-s-representative.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "yakima",
+          "benton",
+          "grant",
+          "franklin"
+        ]
+      }
+    },
+    {
+      "contest_slug": "douglas-congressional-district-8-u-s-representative",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 8",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "kim-schrier",
+          "name": "Kim Schrier",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-8-u-s-representative/kim-schrier.md"
+        },
+        {
+          "slug": "spencer-meline",
+          "name": "Spencer Meline",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-8-u-s-representative/spencer-meline.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "king",
+          "contest_slug": "congressional-district-8-united-states-representative",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/king/scoring/congressional-district-8-united-states-representative.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "king",
+          "snohomish",
+          "pierce",
+          "chelan"
+        ]
+      }
+    },
+    {
+      "contest_slug": "douglas-legislative-district-7-state-senator",
+      "category": "State",
+      "office": "State Senator",
+      "district": "Legislative District 7",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "shelly-short",
+          "name": "Shelly Short",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-7-state-senator/shelly-short.md"
+        },
+        {
+          "slug": "ronald-l-mccoy",
+          "name": "Ronald L McCoy",
+          "party_preference": "Prefers Independent Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-7-state-senator/ronald-l-mccoy.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "spokane",
+          "contest_slug": "spokane-legislative-district-7-state-senator",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/spokane/scoring/spokane-legislative-district-7-state-senator.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "spokane",
+          "chelan"
+        ]
+      }
+    },
+    {
+      "contest_slug": "douglas-legislative-district-13-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 13",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "tom-dent",
+          "name": "Tom Dent",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-13-state-representative-position-1/tom-dent.md"
+        },
+        {
+          "slug": "juan-jerry-garcia",
+          "name": "Juan \"Jerry\" Garcia",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-13-state-representative-position-1/juan-jerry-garcia.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "grant",
+          "contest_slug": "grant-legislative-district-13-state-representative-pos-1",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/grant/scoring/grant-legislative-district-13-state-representative-pos-1.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "grant"
+        ]
+      }
+    },
+    {
+      "contest_slug": "douglas-legislative-district-13-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 13",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "deanna-martinez",
+          "name": "Deanna Martinez",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-13-state-representative-position-2/deanna-martinez.md"
+        },
+        {
+          "slug": "joshua-thompson",
+          "name": "Joshua Thompson",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-13-state-representative-position-2/joshua-thompson.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "grant",
+          "contest_slug": "grant-legislative-district-13-state-representative-pos-2",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/grant/scoring/grant-legislative-district-13-state-representative-pos-2.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "grant"
+        ]
+      }
+    },
+    {
+      "contest_slug": "douglas-douglas-county-clerk-of-superior-court",
+      "category": "County",
+      "office": "Clerk of Superior Court",
+      "district": "Douglas County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "jenn-biggar",
+          "name": "Jenn Biggar",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/douglas/dossiers/douglas-douglas-county-clerk-of-superior-court/jenn-biggar.md"
+        },
+        {
+          "slug": "andrea-jester",
+          "name": "Andrea Jester",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/douglas/dossiers/douglas-douglas-county-clerk-of-superior-court/andrea-jester.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "douglas-douglas-county-commissioner-district-3-commissioner-district-no-3",
+      "category": "County",
+      "office": "Commissioner District No. 3",
+      "district": "Douglas County Commissioner District 3",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "marc-s-straub",
+          "name": "Marc S. Straub",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/douglas/dossiers/douglas-douglas-county-commissioner-district-3-commissioner-district-no-3/marc-s-straub.md"
+        },
+        {
+          "slug": "michael-s-lesky",
+          "name": "Michael S. Lesky",
+          "party_preference": "Prefers Independent Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/douglas/dossiers/douglas-douglas-county-commissioner-district-3-commissioner-district-no-3/michael-s-lesky.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "douglas-douglas-county-sheriff",
+      "category": "County",
+      "office": "Sheriff",
+      "district": "Douglas County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "tyler-i-caille",
+          "name": "Tyler I. Caille",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/douglas/dossiers/douglas-douglas-county-sheriff/tyler-i-caille.md"
+        },
+        {
+          "slug": "adam-musgrove",
+          "name": "Adam Musgrove",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/douglas/dossiers/douglas-douglas-county-sheriff/adam-musgrove.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "douglas-public-utility-district-no-1-of-douglas-county-commissioner-district-2",
+      "category": "PublicUtility",
+      "office": "Commissioner District 2",
+      "district": "Public Utility District No. 1 of Douglas County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "molly-doneen-simpson",
+          "name": "Molly Doneen Simpson",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        },
+        {
+          "slug": "nick-warner",
+          "name": "Nick Warner",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        }
+      ]
+    },
+    {
+      "contest_slug": "douglas-proposed-rimrock-meadows-fire-protection-district-no-9-commissioner-no-1",
+      "category": "Local",
+      "office": "Commissioner No. 1",
+      "district": "Proposed Rimrock Meadows Fire Protection District No. 9",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "ronald-ron-cabral",
+          "name": "Ronald \"Ron\" Cabral",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        },
+        {
+          "slug": "carol-mayer",
+          "name": "Carol Mayer",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        }
+      ]
+    }
+  ],
+  "measures": [
+    {
+      "jurisdiction": "Public Hospital District No. 1, Okanogan and Douglas Counties (Three Rivers Hospital)",
+      "proposition": "Proposition No. 1",
+      "title": "Bonds for Hospital Renovation and Improvement",
+      "slug": "douglas-public-hospital-district-no-1-okanogan-and-douglas-counties-three-rivers-hospital-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Douglas County Public Hospital District No. 2",
+      "proposition": "Proposition No. 1",
+      "title": "Special One-Year Excess Maintenance and Operations Levy",
+      "slug": "douglas-douglas-county-public-hospital-district-no-2-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Eastmont School District No. 206",
+      "proposition": "Proposition No. 1",
+      "title": "Bonds to Rebuild and Modernize Deteriorating Schools and Improve Safety",
+      "slug": "douglas-eastmont-school-district-no-206-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Proposed Rimrock Meadows Fire Protection District No. 9",
+      "proposition": "Proposition No. 1",
+      "title": "Formation of Rimrock Meadows Fire Protection District No. 9",
+      "slug": "douglas-proposed-rimrock-meadows-fire-protection-district-no-9-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Douglas County Cemetery District No. 2",
+      "proposition": "Proposition No. 1",
+      "title": "Special One-Year Excess Maintenance and Operations Levy",
+      "slug": "douglas-douglas-county-cemetery-district-no-2-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    }
+  ],
+  "carry_forward_from": "2026-08-04-primary"
+}
