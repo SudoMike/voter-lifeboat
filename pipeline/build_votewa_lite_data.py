@@ -705,8 +705,7 @@ ELECTION_MEASURES = {
         #   Court 2), scoped DISTCRT to the Auditor's District_Court layer
         #   (services8.arcgis.com/noCZ2SM2C0rVag8y/.../District_Court/
         #   FeatureServer/0, DISTRICT '1' at Port Angeles and Sequim, '2' at
-        #   Forks). That layer is not in COUNTY_LAYERS.clallam yet (proposed in
-        #   counties/clallam/COMPLETENESS.md).
+        #   Forks), which COUNTY_LAYERS.clallam reads since #29.
         # - PUD No. 1 Commissioner District No. 2: elected by the whole PUD in
         #   the general (RCW 54.12.010(3)), but the PUD's electorate is not the
         #   county: the City of Port Angeles precincts are in none of the PUD's
@@ -715,8 +714,9 @@ ELECTION_MEASURES = {
         #   28,129 votes vs 39,943 county-wide). COUNTY would show it to Port
         #   Angeles voters, and the PUDDST key reads the commissioner district
         #   number (1-3), not PUD membership, so the seat is scoped to the
-        #   honest layer PUDALL '1' that no adapter resolves yet (the assembler
-        #   marks it; see COMPLETENESS.md for the proposed fix).
+        #   layer PUDALL '1'. COUNTY_LAYERS.clallam resolves it since #29: any
+        #   feature of PUD_Commissioner_District_dissolve reads as the
+        #   constant '1' (geo.js layer `value`).
         "clallam": {
             "overrides": {
                 ("COUNTY", "COUNTY COMMISSIONER DIST. NO. 3"): (
@@ -782,9 +782,10 @@ ELECTION_MEASURES = {
             "extra_notes": [
                 "Public Utility District No. 1 of Clallam County Commissioner District No. 2 is scoped PUDALL '1': the whole "
                 "PUD votes in the general (RCW 54.12.010(3)), and the City of Port Angeles is outside the PUD's commissioner "
-                "districts; no District Adapter layer reads PUD membership yet (counties/clallam/COMPLETENESS.md).",
+                "districts; COUNTY_LAYERS.clallam reads PUD membership as any feature of the Auditor's "
+                "PUD_Commissioner_District_dissolve layer.",
                 "District Court 1 and District Court 2 are separate electoral districts, scoped DISTCRT '1' and '2' to the "
-                "Auditor's District_Court layer (proposed for COUNTY_LAYERS.clallam).",
+                "Auditor's District_Court layer, which COUNTY_LAYERS.clallam reads.",
             ],
         },
         # Cowlitz (#28). Measures: the county's general sample ballot and
@@ -951,8 +952,7 @@ ELECTION_MEASURES = {
         # city runs its own library), so the TRL levy is LIBDST, not COUNTY;
         # 100 S 3rd St, McCleary -> SCH2025 '65'; 110 Main St, Oakville ->
         # FIR2025 '1'; 500 Wynoochee Valley Rd, Montesano -> FIR2025 '2'.
-        # LIBDST and SCHDST are not in geo.js COUNTY_LAYERS['grays-harbor']
-        # (FIRDST only) as of this commit: reported for the director.
+        # COUNTY_LAYERS['grays-harbor'] reads LIB2025 and SCH2025 since #29.
         # Overrides: the commissioner race (District Type Countywide) is
         # elected county-wide in the general (RCW 36.32.040; SOS 2024 results:
         # Commissioner #1 36,166 votes of 38,102 ballots); it keeps the
