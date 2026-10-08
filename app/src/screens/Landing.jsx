@@ -1,6 +1,30 @@
 import React from 'react'
 import GitHubLink from './GitHubLink.jsx'
-import { archivedElections, electionHref } from '../lib/elections.js'
+import {
+  archivedElections,
+  ballotsMailBy,
+  electionHref,
+  longElectionDay,
+  registerOnlineBy,
+  shortDay,
+} from '../lib/elections.js'
+import { VOTEWA_URL } from '../lib/officialLinks.js'
+
+// What a voter needs to know before election day, from the loaded election's
+// day: when ballots arrive, the return deadline, and the registration cutoff.
+export function KeyDates({ day }) {
+  return (
+    <p className="copy key-dates" style={{ marginTop: 10, fontSize: 13.5 }}>
+      <strong>Election day: {longElectionDay(day)}.</strong> Ballots mail by{' '}
+      {ballotsMailBy(day)}; return yours by 8 p.m. {shortDay(day)}. Register or
+      update online or by mail by {registerOnlineBy(day)} at{' '}
+      <a href={VOTEWA_URL} target="_blank" rel="noopener noreferrer">
+        VoteWA.gov
+      </a>
+      , or in person until 8 p.m. {shortDay(day)}.
+    </p>
+  )
+}
 
 // Archived elections from the index, each at its own route.
 function PastElections({ index, election, base }) {
@@ -25,6 +49,7 @@ function PastElections({ index, election, base }) {
 }
 
 export default function Landing({ data, index, election, base, onStart }) {
+  const archived = election?.status === 'archived'
   return (
     <main className="screen screen--app rise">
       <header
@@ -52,6 +77,7 @@ export default function Landing({ data, index, election, base, onStart }) {
           <em>your</em> covered ballot lines up with <em>your</em> values.
           {data.election.scope} · {data.election.name}.
         </p>
+        {!archived && data.election.day && <KeyDates day={data.election.day} />}
       </section>
       <section style={{ padding: '20px 24px 0' }}>
         <button className="btn btn--navy btn--lg" onClick={onStart}>
@@ -84,9 +110,18 @@ export default function Landing({ data, index, election, base, onStart }) {
           </div>
           <div>
             <strong>Anonymous &amp; open.</strong> Your address is used once to
-            find your ballot context, then discarded — never stored. Your
-            answers and ballot context are recorded anonymously and published as{' '}
-            <a href="#data">an open dataset</a>.
+            find your ballot context, then discarded — never stored.{' '}
+            {archived ? (
+              <>
+                This election has ended, so answers given here are not
+                recorded; earlier answers are in <a href="#data">the open dataset</a>.
+              </>
+            ) : (
+              <>
+                Your answers and ballot context are recorded anonymously and
+                published as <a href="#data">an open dataset</a>.
+              </>
+            )}
           </div>
         </div>
       </section>

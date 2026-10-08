@@ -67,6 +67,11 @@ export default function App() {
       .catch(setLoadErr)
   }, [])
 
+  // index.html carries a generic title; name the election being served.
+  useEffect(() => {
+    if (data?.election?.name) document.title = `Voter Lifeboat — ${data.election.name}`
+  }, [data])
+
   // Restore a shared/bookmarked report from the hash fragment.
   useEffect(() => {
     if (!data) return
