@@ -114,6 +114,22 @@ const ELECTIONS = {
       // Pos. 2 p. 36, Court of Appeals p. 46).
       'thurston/voters-pamphlet-edition-27-thurston':
         'https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2027%20-%20Thurston.pdf',
+      // Skagit County's general Local Voters' Pamphlet, from the package
+      // pointer counties/skagit/raw/skagit/local-voters-pamphlet.pdf.url
+      // (#28). Checked 2026-10-08: 200 application/pdf, 23 pages, sha256 as
+      // in the pointer's meta. Citations are PDF pages, which run 38 behind
+      // the printed numbers (PDF p. 6 is printed p. 44, the Assessor; PDF
+      // p. 18 is printed p. 56, Mount Vernon Prop 1).
+      'skagit/local-voters-pamphlet': 'https://www.skagitcountywa.gov/media/nopbncyw/2026-11-03-vp-skagit.pdf',
+      // Cowlitz County's general voters' pamphlet (Cowlitz's local section
+      // combined with the SOS edition), from the package pointer
+      // counties/cowlitz/raw/cowlitz/local-voters-pamphlet.pdf.url (#28).
+      // Checked 2026-10-08: 200 application/pdf (via a redirect to
+      // .../G126-Combined-Voters-Pamphlet_SOS), 72 pages, sha256 as in the
+      // pointer's meta; PDF pages equal the printed page numbers (Superior
+      // Court Pos. 4 p. 37, Clerk p. 47, Longview Prop 1 pp. 57-58).
+      'cowlitz/local-voters-pamphlet':
+        'https://www.co.cowlitz.wa.us/DocumentCenter/View/39451/G126-Combined-Voters-Pamplet_SOS',
     },
     // Counties whose research cites VoteWA's online voters' guide, which has
     // no page numbers, instead of a printed pamphlet: their records carry no
@@ -133,6 +149,10 @@ const ELECTIONS = {
     // publishes its general pamphlet only as this guide, whatcomcounty.us
     // answered 403 to scripted requests, and no Yakima dossier cites a page
     // of SOS Edition 01. Checked 2026-10-08: each 200 text/html.
+    // Grant dossiers cite VoteWA only (Grant prints no local pamphlet);
+    // every Skagit and Cowlitz dossier cites a page of its local pamphlet
+    // above, and their guides link any record without a page (#28).
+    // Checked 2026-10-08: each 200 text/html.
     countyGuides: {
       spokane: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=32',
       pierce: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=27',
@@ -141,6 +161,9 @@ const ELECTIONS = {
       yakima: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=39',
       whatcom: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=37',
       benton: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=03',
+      skagit: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=29',
+      cowlitz: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=08',
+      grant: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=13',
     },
     pamphletIndex: `${SOS_GENERAL_2026}/2026-voters-pamphlet-pdfs`,
   },
