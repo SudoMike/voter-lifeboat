@@ -1,0 +1,111 @@
+{
+  "contest_slug": "council-district-no-5-city-of-seattle",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/king/dossiers/council-district-no-5-city-of-seattle/"],
+  "office_does": "A Seattle City Councilmember votes on the city budget, taxes, zoning and city laws and oversees city departments including police and transportation; this seat is for a one-year unexpired term.",
+  "race_blurb": "Two first-time candidates are running for the North Seattle seat vacated in 2025: FairVote Washington's Nilu Jenks, who took 54% in the primary, and educator and community-bank co-founder Julie Kang, who took 33%. They differ most on Aurora Avenue enforcement tools, surveillance cameras and taxes.",
+  "candidates": [
+    {
+      "slug": "nilu-jenks",
+      "summary": "Political and Partnerships Director at FairVote Washington and Lake City parent; endorsed by King County Democrats, multiple unions and four sitting councilmembers.",
+      "highlights": [
+        "Proposes 1,000 new affordable housing units in District 5 and backs denser housing near transit [S3][S7]",
+        "Supports a 24/7 CARE Department, a community court and violence intervention; opposes SOAP and CCTV expansion while supporting a 1,200-officer target [S3][S5][S6]",
+        "Favors progressive revenue, including a proposed tax on AI data centers [S6][S7]",
+        "Prioritizes implementing ranked-choice voting in 2027 [S1]",
+        "Listed as opposing initiatives I-001 and I-638 [S11]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S6", "S7"],
+          "basis": "Reported to support progressive revenue restructuring and proposed a new tax on AI data centers; no broader tax platform on her site."
+        },
+        "spending": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S3"],
+          "basis": "Platform proposes new or expanded programs (fully funded 24/7 CARE Department, free transit for all students, 1,000 affordable units) without a restraint or audit plank."
+        },
+        "housing": {
+          "score": 2,
+          "confidence": "medium",
+          "citations": ["S2", "S3"],
+          "basis": "Affordable-housing unit target built through public land and nonprofit partnerships, plus rent stabilization, just-cause eviction and tenant right to counsel."
+        },
+        "safety": {
+          "score": 1,
+          "confidence": "high",
+          "citations": ["S3", "S5", "S6"],
+          "basis": "Leads with CARE Department, community court and violence intervention and opposes SOAP and camera expansion, while also supporting a 1,200-officer target and a North Seattle precinct."
+        },
+        "climate": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S7"],
+          "basis": "Pledges to 'move us toward meeting our climate goals' and is described as a climate advocate who ties density and transit to climate goals."
+        },
+        "experience": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S2"],
+          "basis": "Has not held elected office; brings advocacy and political-organizing experience and a prior run for this seat."
+        },
+        "reform": {
+          "score": 1,
+          "confidence": "high",
+          "citations": ["S1", "S3"],
+          "basis": "Works professionally on voting reform at FairVote Washington and lists implementing ranked-choice voting in 2027 as a priority."
+        }
+      }
+    },
+    {
+      "slug": "julie-kang",
+      "summary": "Seattle University director and faculty member, 30-year District 5 resident, and co-founder of a community bank; endorsed by the Seattle Times in the primary and by the 32nd LD Democrats.",
+      "highlights": [
+        "Supports rebuilding SPD staffing, a second District 5 precinct, the SOAP zone on Aurora and public-safety cameras, alongside on-demand addiction treatment [S3][S5][S6]",
+        "Opposes new taxes on residents and says the city imposes a 'heavy financial burden' through rising taxes [S3][S7]",
+        "Would shorten permit review and fund affordable housing from JumpStart revenue instead of MHA fees [S3]",
+        "Changed her position on public-safety cameras during the campaign, from opposed to supportive with safeguards [S5][S6]",
+        "Listed as opposing initiatives I-001 and I-638 [S10]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S3", "S7"],
+          "basis": "Opposes new taxes on residents and criticizes 'rising taxes' and 'another regressive sales tax hike'; earlier said she would pair cuts with selective new taxes, so not a full tax-cut position."
+        },
+        "spending": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S6", "S7"],
+          "basis": "Emphasizes return on investment before new revenue and budgeting for infrastructure within existing means."
+        },
+        "housing": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S1", "S3"],
+          "basis": "Housing plan leads with faster permitting and mixed-income housing near transit and calls MHA 'a tax on desperately needed housing,' while still directing JumpStart revenue to affordable housing."
+        },
+        "safety": {
+          "score": -1,
+          "confidence": "high",
+          "citations": ["S1", "S3", "S5", "S6"],
+          "basis": "Supports police staffing, a second precinct, SOAP, cameras and shutting open-air drug markets, paired with on-demand voluntary treatment and CARE coordination."
+        },
+        "experience": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S2"],
+          "basis": "Has not held elected office; brings education, banking and commission experience."
+        }
+      }
+    }
+  ]
+}
