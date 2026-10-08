@@ -82,6 +82,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json
     pointer: counties/mason/raw/mason/pdc-mason-2026-filers.json.url
     accessed: 2026-10-09
+photo:
+  url: https://cms2.revize.com/revize/masonwa/Documents/Departments/Auditor/Images/duenkel.jpg
+  page: https://www.masoncountywa.gov/departments/auditor/index.php
+  kind: government
 ---
 
 ## Background

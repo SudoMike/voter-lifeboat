@@ -131,6 +131,10 @@ sources:
     url: https://www.goskagit.com/news/local_news/skagit-county-commissioners-weigh-in-on-sedro-woolleys-baseball-field-relocation-plan/article_118515ff-37e4-40fe-ae7a-8aa4f695dd4f.html
     pointer: counties/skagit/raw/candidates/skagit-skagit-county-commissioner-district-3/svh-2026-07-09-ballfield.html.url
     accessed: 2026-10-08
+photo:
+  url: https://static.wixstatic.com/media/23b443_a2731bc02fd84be4bfe624660c6d9043~mv2.jpg
+  page: https://www.electjoeburns.com/
+  kind: campaign-website
 ---
 
 ## Background

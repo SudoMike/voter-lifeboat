@@ -108,6 +108,10 @@ sources:
     url: https://skagitrepublicans.com/informationforvoters
     pointer: counties/skagit/raw/candidates/skagit-skagit-county-sheriff/skagit-republicans-voters.html.url
     accessed: 2026-10-08
+photo:
+  url: https://img1.wsimg.com/isteam/ip/e8380fa6-53b7-46cd-9f61-323c480d94ab/Chris%20FInal%20Headshot.jpg
+  page: https://chrisbaldwinforsheriff.com/get-to-know-chris
+  kind: campaign-website
 ---
 
 ## Background

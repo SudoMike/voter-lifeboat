@@ -60,6 +60,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?election_year=2026&jurisdiction_county=PACIFIC&$limit=200
     pointer: counties/pacific/raw/pdc/pdc-candidates-2026.json.url
     accessed: 2026-10-08
+photo:
+  url: https://www.co.pacific.wa.us/assessor/Assessor%20Graphics/BruceWalker-W.jpg
+  page: https://www.co.pacific.wa.us/assessor
+  kind: government
 ---
 
 ## Background

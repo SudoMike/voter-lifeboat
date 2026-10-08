@@ -1,0 +1,32 @@
+{
+  "script": "pipeline/verify_dossiers.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/skagit/interim/research-plan.json",
+    "data/washington-state/elections/2026-11-03-general/counties/skagit/dossiers/"
+  ],
+  "missing": [],
+  "no_frontmatter": [],
+  "invalid_evidence_levels": [],
+  "invalid_source_formats": [],
+  "evidence_levels": {
+    "moderate": 12,
+    "rich": 2
+  },
+  "contest_overviews_missing": [],
+  "untouched_contests": [],
+  "untouched_measures": [],
+  "invalid_photos": [],
+  "photos": {
+    "present": 9,
+    "missing": 5
+  },
+  "researched_elsewhere": [
+    "skagit-congressional-district-2-u-s-representative -> snohomish/snohomish-congressional-district-2-u-s-representative",
+    "skagit-legislative-district-10-state-representative-pos-1 -> snohomish/snohomish-legislative-district-10-state-representative-pos-1",
+    "skagit-legislative-district-10-state-representative-pos-2 -> snohomish/snohomish-legislative-district-10-state-representative-pos-2",
+    "skagit-legislative-district-39-state-representative-pos-1 -> snohomish/snohomish-legislative-district-39-state-representative-pos-1",
+    "skagit-legislative-district-39-state-representative-pos-2 -> snohomish/snohomish-legislative-district-39-state-representative-pos-2",
+    "skagit-legislative-district-40-state-representative-pos-1 -> whatcom/whatcom-legislative-district-40-state-representative-pos-1",
+    "skagit-legislative-district-40-state-representative-pos-2 -> whatcom/whatcom-legislative-district-40-state-representative-pos-2"
+  ]
+}

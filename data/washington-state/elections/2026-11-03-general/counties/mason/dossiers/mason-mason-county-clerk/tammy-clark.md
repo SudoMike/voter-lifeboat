@@ -61,6 +61,10 @@ sources:
     url: https://www.masoncounty.com/story/2026/05/14/news/candidates-file-for-august-primary/7108.html
     pointer: counties/mason/raw/candidates/mason-mason-county-clerk/smcj-2026-05-14-candidates-file.html.url
     accessed: 2026-10-09
+photo:
+  url: https://static.wixstatic.com/media/326f3a_eb5d0879a85a4e06b1b3bebcf6fb6dfc~mv2.jpg/v1/fill/w_980,h_1225,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/tammy%202.jpg
+  page: https://www.clark-for-clerk.com/
+  kind: campaign-website
 ---
 
 ## Background

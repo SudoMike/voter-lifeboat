@@ -81,6 +81,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?election_year=2026&jurisdiction_county=PACIFIC&$limit=200
     pointer: counties/pacific/raw/pdc/pdc-candidates-2026.json.url
     accessed: 2026-10-08
+photo:
+  url: https://www.byrdforsheriff.com/wp-content/uploads/2026/01/4141f20f-35ab-437a-8290-9537b223570f-768x1024.jpg
+  page: https://www.byrdforsheriff.com/
+  kind: campaign-website
 ---
 
 ## Background

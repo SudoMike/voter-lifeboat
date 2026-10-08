@@ -75,6 +75,10 @@ sources:
     url: https://www.chronline.com/stories/races-for-county-commission-auditor-and-congress-get-crowded-as-filing-week-continues,401926
     pointer: counties/lewis/raw/candidates/lewis-lewis-county-auditor/chronline-2026-05-06-filing-week-auditor.html.url
     accessed: 2026-10-09
+photo:
+  url: https://static.wixstatic.com/media/0fbe60_b3911969a68e42abbbc0daa190b16663~mv2.jpg/v1/fill/w_280,h_373,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/270523ea-e908-4795-946f-247ba13c2b7b-md_edited.jpg
+  page: https://www.mitch4auditor.com/
+  kind: campaign-website
 ---
 
 ## Background

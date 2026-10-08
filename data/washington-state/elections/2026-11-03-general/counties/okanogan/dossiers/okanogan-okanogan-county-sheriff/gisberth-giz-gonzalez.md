@@ -65,6 +65,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?$where=jurisdiction_county='OKANOGAN'%20AND%20election_year='2026'&$limit=200
     pointer: counties/okanogan/raw/candidates/okanogan-okanogan-county-sheriff/pdc-okanogan-2026-county-races.json.url
     accessed: 2026-10-08
+photo:
+  url: https://gonzalez4sheriff.com/candidate-photo.jpg
+  page: https://gonzalez4sheriff.com/
+  kind: campaign-website
 ---
 
 ## Background

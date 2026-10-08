@@ -45,6 +45,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?$where=jurisdiction_county='OKANOGAN' AND election_year='2026'&$limit=200
     pointer: counties/okanogan/raw/candidates/okanogan-public-utility-district-commissioner-district-1-okanogan-commissioner-dist-1/pdc-okanogan-2026.json.url
     accessed: 2026-10-08
+photo:
+  url: https://www.okanoganpud.org/wp-content/uploads/Scott-Vejraska-.4x5.jpg
+  page: https://okanoganpud.org/about-your-pud/board-of-commissioners
+  kind: government
 ---
 
 ## Background

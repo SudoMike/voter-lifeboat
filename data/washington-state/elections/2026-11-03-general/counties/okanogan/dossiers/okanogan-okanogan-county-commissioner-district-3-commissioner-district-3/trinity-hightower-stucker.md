@@ -72,6 +72,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?$where=jurisdiction_county='OKANOGAN'%20AND%20election_year='2026'&$limit=200
     pointer: counties/okanogan/raw/candidates/okanogan-okanogan-county-commissioner-district-3-commissioner-district-3/pdc-okanogan-2026-county-races.json.url
     accessed: 2026-10-08
+photo:
+  url: https://trinity4okanogan.com/assets/trinity-profile-FHk24WTQ.png
+  page: https://trinity4okanogan.com/
+  kind: campaign-website
 ---
 
 ## Background

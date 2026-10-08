@@ -82,6 +82,10 @@ sources:
     url: https://www.chronline.com/stories/brummer-hadaller-lead-in-lewis-county-commissioner-race,406293
     pointer: counties/lewis/raw/candidates/lewis-lewis-county-commissioner-district-3-county-commissioner-district-3/chronline-2026-08-04-brummer-hadaller-lead.html.url
     accessed: 2026-10-09
+photo:
+  url: https://scottbrummer.com/wp-content/uploads/2026/02/official-portrait.jpeg
+  page: https://scottbrummer.com/
+  kind: campaign-website
 ---
 
 ## Background

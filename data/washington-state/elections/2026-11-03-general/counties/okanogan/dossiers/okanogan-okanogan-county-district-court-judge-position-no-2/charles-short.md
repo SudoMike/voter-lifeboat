@@ -52,6 +52,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?$where=jurisdiction_county='OKANOGAN' AND election_year='2026'&$limit=200
     pointer: counties/okanogan/raw/candidates/okanogan-okanogan-county-district-court-judge-position-no-2/pdc-okanogan-2026.json.url
     accessed: 2026-10-08
+photo:
+  url: https://img1.wsimg.com/isteam/ip/854f83f2-9352-40f5-9ce8-4a17e6dc039e/blob-d4eccc5.png
+  page: https://charlesshort.net/
+  kind: campaign-website
 ---
 
 ## Background

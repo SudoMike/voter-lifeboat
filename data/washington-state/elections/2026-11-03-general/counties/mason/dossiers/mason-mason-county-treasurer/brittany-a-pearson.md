@@ -68,6 +68,10 @@ sources:
     url: https://results.vote.wa.gov/results/20221108/export/20221108_MasonPrecincts.csv
     pointer: counties/mason/raw/candidates/mason-mason-county-treasurer/sos-results-20221108-mason-precincts.csv.url
     accessed: 2026-10-09
+photo:
+  url: https://cms2.revize.com/revize/masonwa/Images/Department/Treasurer/Brittany%20Pearson2.jpg
+  page: https://www.masoncountywa.gov/departments/treasurer/index.php
+  kind: government
 ---
 
 ## Background
