@@ -1,0 +1,47 @@
+{
+  "url": "https://voter.votewa.gov/candidatelist.aspx?c=99&e=899",
+  "retrieved_at": "2026-10-08",
+  "method": "CSV export of the official VoteWA candidate list (ASP.NET postback), election GENERAL 2026, county State",
+  "stage": "raw",
+  "election_dropdown": {
+    "value": "899",
+    "label": "GENERAL 2026 (11/03/2026) (General)"
+  },
+  "county_dropdown": {
+    "value": "99",
+    "label": "State"
+  },
+  "manual_export_steps": [
+    "Open https://voter.votewa.gov/candidatelist.aspx",
+    "Election dropdown: choose 'GENERAL 2026 (11/03/2026) (General)' (option value 899); the page posts back",
+    "County dropdown: choose 'State' (option value 99); the page posts back. Equivalent direct URL: https://voter.votewa.gov/candidatelist.aspx?c=99&e=899",
+    "Click the grid's 'Export to CSV' icon (input ctl00$ContentPlaceHolder1$grdCandidates$ctl00$ctl02$ctl00$ExportToCsvButton); the response is text/csv with Content-Disposition attachment;filename=\"CandidateList.csv\""
+  ],
+  "scripted_export": "Reproduced non-interactively on 2026-10-08 with Python urllib + a cookie jar: GET the direct URL, then POST the form back to its action ('./candidatelist.aspx?c=99&e=899') replaying every hidden input (including __VIEWSTATE__, __VIEWSTATE, __EVENTVALIDATION and the Telerik ClientState fields) and every <select> (selected option, or the first option when none is marked selected; ctl00$ddlLanguages must be 'en-us' or the server returns its generic error page), plus the field ctl00$ContentPlaceHolder1$grdCandidates$ctl00$ctl02$ctl00$ExportToCsvButton=' '.",
+  "cache_file": "data/.cache/votewa/candidatelist-c99-e899.csv",
+  "bytes": 60875,
+  "sha256": "abb10484047644b092a823964c5851cbb48e11af74c90e3264402b307bba6e27",
+  "csv_rows": 269,
+  "csv_columns": [
+    "District Type",
+    "District",
+    "Race",
+    "Term Type",
+    "Term Length",
+    "Name",
+    "Mailing Address",
+    "Email",
+    "Phone",
+    "Filing Date",
+    "Party Preference",
+    "Status",
+    "Election Status"
+  ],
+  "ballot_order_source": {
+    "note": "The CSV export omits the grid's 'Ballot Order' column. Ballot order for the Supreme Court rows was read from the HTML grid, page 3 of 3 (100 rows per page), reached by posting back __EVENTTARGET=ctl00$ContentPlaceHolder1$grdCandidates$ctl00$ctl03$ctl01$ctl09 with the same form replay.",
+    "cache_file": "data/.cache/votewa/candidatelist-c99-e899-grid-page-3.html",
+    "bytes": 163094,
+    "sha256": "ba45965f7a9e23f13e28040e34158515346489f8cbbee358ed2d3cf77ae23da6"
+  },
+  "notes": "Official statewide candidate filing data for the November 3, 2026 general. 269 rows: 20 Congressional, 225 Legislative, 24 Judicial (10 Supreme Court rows for Justice Positions #01, #03, #04, #05, #07; the rest Court of Appeals and multi-county Superior Court). The 'Election Status' column is blank for every row in this export. Used as state-level provenance for the statewide Supreme Court contests."
+}
