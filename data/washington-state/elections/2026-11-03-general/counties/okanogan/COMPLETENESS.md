@@ -3,8 +3,25 @@
 Election: 2026 Washington general election, November 3, 2026 (VoteWA
 election 899, county code 24).
 
-Research package for #30 (county wave 5). Not shipped: the director
-declares it. Contests and measures are built by
+Status (#30): shipped at partial coverage (`partial_county`) in
+`APP_PACKAGES["2026-11-03-general"]["counties"]`, with its elections office
+(`https://www.okanogancounty.gov/337/Elections`) and its VoteWA guide
+(`countyGuides.okanogan`, `c=24`). `COUNTY_LAYERS.okanogan` reads `EMSDST`
+(DOR EMS2025, layer 6) beside `FIRDST` and `HOSPDST`, as proposed below.
+`okanogan/PUDDST` is in `UNRESOLVABLE_SCOPES`
+(`app/src/lib/data-consistency.test.js`): both PUD seats ship with their
+`PUDDST` scopes and no address sees them, and every Okanogan voter gets the
+app's incomplete-ballot notice. CD 4 ships with Benton's research, LD 7
+Senate and House with Spokane's. Live ballots on 2026-10-08, each
+`partial_county` with no missing layer and no PUD seat: 50 Lost River Rd,
+Mazama (Three Rivers bonds, Methow Valley EMS levy); 206 Riverside Ave,
+Winthrop (Three Rivers bonds, Winthrop EMS levy); 118 S Glover St, Twisp
+(Three Rivers bonds, Twisp EMS levy); 415 Hospital Way, Brewster (Three
+Rivers bonds, Brewster EMS levy); 2 S Ash St, Omak (no local measure); 38
+Swanson Mill Rd, Oroville (Fire District 1 lid lift). The paragraphs below
+describe the package as researched.
+
+Research package for #30 (county wave 5). Contests and measures are built by
 `pipeline/build_votewa_lite_data.py --county okanogan` from the VoteWA
 candidate list (`raw/votewa/candidate-list.csv.url`) and the overrides and
 measures in that script's `ELECTION_MEASURES["2026-11-03-general"]["okanogan"]`,
