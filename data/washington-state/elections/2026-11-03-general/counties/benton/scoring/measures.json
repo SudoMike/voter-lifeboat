@@ -1,0 +1,49 @@
+{
+  "scored_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/benton/dossiers/measures/",
+    "data/washington-state/elections/2026-11-03-general/counties/benton/interim/measures.json",
+    "data/final/2026-11-03-general/rubric.json"
+  ],
+  "measures": [
+    {
+      "slug": "benton-city-of-benton-city-proposition-no-1",
+      "what_it_does": "Changes Benton City from a mayor-council government, where the elected mayor runs the city, to a council-manager government, effective March 1, 2027. The elected council would hire a professional city manager as chief administrator and pick a mayor from among its members to chair meetings.",
+      "cost_line": "No tax. The statement for says the change adds payroll for a full-time manager, replacing the mayor's role; no salary or cost estimate was published.",
+      "pro_summary": "The statement for (credited to the City of Benton City) says past administrations mismanaged funds and lost development opportunities under growing state regulation, and that a professional manager under the council is needed. Mayor Len Burton says the council would gain oversight of the executive, and that the unpaid mayor's job averages over 50 hours a week.",
+      "con_summary": "No statement against was filed, and no opposition committee is registered with the PDC.",
+      "lean_mappings": {},
+      "sources_note": "Sources: VoteWA voters' guide record 7271 (S1); Apple Valley News Now coverage quoting Mayor Len Burton (S2); chapter 35A.13 RCW (S3); PDC committee query (S4). Resolution 2026-49 and council minutes were not found; the city website blocked automated access."
+    },
+    {
+      "slug": "benton-city-of-benton-city-proposition-no-2",
+      "what_it_does": "Lifts Benton City's property tax levy to $1.60 per $1,000 of assessed value in 2027 to pay for sheriff's patrol and code enforcement. It may then rise with inflation through 2036, never above $1.60, and the 2036 amount becomes the permanent base for later years.",
+      "cost_line": "$1.60 per $1,000 in 2027, about $480 a year on a $300,000 home (computed). In 2025 the city rate was $0.71 per $1,000 (about $214 on that home), so the increase is about $266 a year (computed from the 2025 rate). The city says it would raise about $400,000 more a year.",
+      "pro_summary": "The statement for says the 2027 sheriff and code enforcement costs exceed the city's roughly $301,000 in property tax revenue by about $398,000. It says the sheriff's contract rises 3% a year while property tax revenue can grow only 1%, and that the levy keeps current services without adding programs. A committee with Mayor Len Burton as treasurer supports it.",
+      "con_summary": "No statement against was filed, and no opposition committee is registered with the PDC.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "A yes vote is a levy lid lift that more than doubles the city's regular levy rate, from $0.71 (2025) to $1.60 per $1,000. It allows CPI growth through 2036 and keeps the higher amount as the base afterward.",
+          "citations": ["S1", "S2", "S7"]
+        }
+      },
+      "sources_note": "Sources: VoteWA voters' guide record 7272 (S1); Department of Revenue levy detail for 2005, 2015, 2020, 2024 and 2025 (S2-S6); RCW 84.55.050 (S7); PDC committee query (S8); Apple Valley News Now identifying the mayor (S9). Resolution 2026-50 and the city budget were not found; no news coverage of the measure was found."
+    },
+    {
+      "slug": "benton-kiona-benton-city-school-district-no-52-proposition-no-1",
+      "what_it_does": "Restores Kiona-Benton City School District's expired educational programs and operations levy for 2027 and 2028. It pays for athletics, arts, technology support, class sizes, nurses, counselors, safety and security, advanced courses and activities. With the state matching money it unlocks, it is about 11% of the district budget.",
+      "cost_line": "Estimated $1.30 per $1,000 of assessed value: $2,208,341 in 2027 and $2,318,758 in 2028. That is about $390 a year on a $300,000 home (computed). The district puts it at $576 a year on an average $443,267 property. The levy collected in 2025 was $1.29 per $1,000.",
+      "pro_summary": "The school board says two levy failures led to more than $3 million in cuts and lost teachers. It says passage would bring back counselors, support staff and athletics transportation, and make the district eligible for about $804,000 in state matching funds. A committee, KiBe Kids Yes!, is registered in favor.",
+      "con_summary": "No statement against was filed, and no opposition committee is registered with the PDC. Voters rejected $1.50 versions of this levy twice in 2025, by 50 votes in February and 34 in November.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "A yes vote reinstates the expired EP&O levy at $1.30 per $1,000, close to the $1.29 collected in 2025 and below the $1.50 rejected twice in 2025. It is a replacement, not a new kind of tax.",
+          "citations": ["S1", "S6", "S8"]
+        }
+      },
+      "sources_note": "Sources: VoteWA voters' guide record 7273 (S1); district levy page (S2); Secretary of State results for February 2025, November 2025 and February 2023 (S3-S5); Department of Revenue levy detail for 2024-2025 (S6, S7); Apple Valley News Now, NBC Right Now and NewsTalk 870 coverage of cuts, state oversight and the lower rate (S8-S10); PDC committee query (S11). Tri-City Herald coverage could not be retrieved."
+    }
+  ]
+}
