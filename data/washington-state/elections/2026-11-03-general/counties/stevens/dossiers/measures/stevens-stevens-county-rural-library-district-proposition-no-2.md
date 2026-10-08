@@ -30,7 +30,7 @@ sources:
     type: news
     outlet: The Spokesman-Review, "Proposed $1.1 million Stevens County library district levy failing in first vote tally" (2026-04-29)
     url: https://www.spokesman.com/stories/2026/apr/29/proposed-11-million-stevens-county-library-distric/
-    pointer: counties/stevens/raw/measures/stevens-stevens-county-rural-library-district-proposition-no-2/sr-2026-04-29-proposed-library-bond.html.url
+    pointer: counties/stevens/raw/measures/stevens-stevens-county-rural-library-district-proposition-no-2/sr-2026-04-29-library-levy-failing.html.url
     accessed: 2026-10-08
   - id: S4
     tier: 1
