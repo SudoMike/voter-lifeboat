@@ -1,0 +1,12 @@
+{
+  "url": "https://services7.arcgis.com/NURlY7V8UHl6XumF/arcgis/rest/services/PrecinctSplits/FeatureServer/6/query?where=1%3D1&outFields=Precinct,PC,PUD_District,PUD_DistrictCommissioner,SchoolDistrict,Jurisdiction&returnGeometry=false&f=json&resultRecordCount=2000",
+  "retrieved_at": "2026-10-08",
+  "method": "curl -L (User-Agent 'Mozilla/5.0')",
+  "stage": "raw",
+  "source_type": "gis",
+  "tier": 1,
+  "bytes": 66204,
+  "sha256": "5a83be810012aeeae0a5b3e62745b80ab8f63bedba8f05d9ab7405d23f7794f6",
+  "cache_file": "data/.cache/benton/web/81e143a409b7185f3c14b942",
+  "notes": "Benton County Auditor/GIS 'PrecinctSplits' feature layer (Benton County ArcGIS org NURlY7V8UHl6XumF; 'Feature Layer of the splits within the Election Precincts'), attributes only: 349 precinct splits, PUD_District 'Benton PUD' on 244 splits (158 whole precincts + 1 split precinct), null on Richland/West Richland precincts, 'Yes' on 4017.1 only. Compared with the SOS 2024-11-05 Benton precinct export: every precinct with a 2024 Benton PUD race carries 'Benton PUD' and no other precinct does, except 4017. Basis for the PUDDST 'Benton PUD' scope of the PUD Commissioner Pos. 2 race."
+}

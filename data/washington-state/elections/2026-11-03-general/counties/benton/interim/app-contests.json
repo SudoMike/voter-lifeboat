@@ -9,7 +9,8 @@
   ],
   "coverage": "full_county",
   "notes": [
-    "Kiona-Benton City School District No. 52 Proposition No. 1 is scoped SCHDST '52' (WA DOR SCH2025, layer 20, DISTATTRIB), which app/src/lib/geo.js COUNTY_LAYERS.benton does not list yet; until that layer is added the measure cannot be matched to a Benton address."
+    "Kiona-Benton City School District No. 52 Proposition No. 1 is scoped SCHDST '52' (WA DOR SCH2025, layer 20, DISTATTRIB), which app/src/lib/geo.js COUNTY_LAYERS.benton does not list yet; until that layer is added the measure cannot be matched to a Benton address.",
+    "The Benton County PUD Commissioner Pos. 2 race is scoped PUDDST 'Benton PUD': the whole PUD votes in the general (RCW 54.12.010(3)), but the PUD excludes Richland and most of West Richland. The Benton County Auditor's PrecinctSplits layer (attribute PUD_District) resolves it; COUNTY_LAYERS.benton does not list that layer yet, so until it is added the race is hidden."
   ],
   "contests": [
     {
@@ -837,8 +838,10 @@
       "office": "Commissioner Pos. 2",
       "district": "Public Utility District Commissioner District 2",
       "scope": {
-        "kind": "COUNTY",
-        "county": "benton"
+        "kind": "DISTRICT",
+        "county": "benton",
+        "layer": "PUDDST",
+        "value": "Benton PUD"
       },
       "office_does": null,
       "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Benton County. Candidate scoring is not complete for this county yet.",

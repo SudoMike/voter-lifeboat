@@ -125,10 +125,17 @@ COUNTY_CONFIG = {
         # 'In Primary', so the primary build never reads this). Nominated by
         # commissioner district, elected by the whole PUD in the general (RCW
         # 54.12.010(3); VoteWA's general District is 'Benton County PUD').
-        # The PUD is the whole county: DOR PUD2025 (layer 17) has one Benton
-        # polygon, DISTATTRIB '1', hit by point queries in Richland,
-        # Kennewick, Prosser, West Richland and Benton City (2026-10-08, #28).
-        "pud": "{n}", "pud_layer_key": "COUNTY",
+        # The PUD is not the whole county: Richland and most of West Richland
+        # are in none of its districts (DOR PUD2025's single countywide Benton
+        # polygon is a tax layer and is not used). The Auditor's precinct
+        # layer PrecinctSplits (services7.arcgis.com/NURlY7V8UHl6XumF/arcgis/
+        # rest/services/PrecinctSplits/FeatureServer/6) has PUD_District
+        # 'Benton PUD' on exactly the precincts that voted in the 2024 PUD
+        # race (SOS 20241105 Benton precinct export), except 4017 (coded
+        # 'Yes'; no 2024 PUD vote). Kennewick, Prosser, Benton City: 'Benton
+        # PUD'; 625 Swift Blvd, Richland: null (2026-10-08, #28). The layer
+        # is not in COUNTY_LAYERS.benton yet (see the general's extra_notes).
+        "pud": "Benton PUD",
         "measures": [
             m("Benton County Fire Protection District No. 4", "Proposition No. 1", "Restoration of Regular Property Tax Levy",
               ("FIRDST", "4"),
@@ -612,6 +619,10 @@ ELECTION_MEASURES = {
                 "Kiona-Benton City School District No. 52 Proposition No. 1 is scoped SCHDST '52' (WA DOR "
                 "SCH2025, layer 20, DISTATTRIB), which app/src/lib/geo.js COUNTY_LAYERS.benton does not list "
                 "yet; until that layer is added the measure cannot be matched to a Benton address.",
+                "The Benton County PUD Commissioner Pos. 2 race is scoped PUDDST 'Benton PUD': the whole PUD "
+                "votes in the general (RCW 54.12.010(3)), but the PUD excludes Richland and most of West "
+                "Richland. The Benton County Auditor's PrecinctSplits layer (attribute PUD_District) resolves it; "
+                "COUNTY_LAYERS.benton does not list that layer yet, so until it is added the race is hidden.",
             ],
         },
     },
