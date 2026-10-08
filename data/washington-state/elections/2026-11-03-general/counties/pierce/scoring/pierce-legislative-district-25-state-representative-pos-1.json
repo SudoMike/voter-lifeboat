@@ -1,0 +1,49 @@
+{
+  "contest_slug": "pierce-legislative-district-25-state-representative-pos-1",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-legislative-district-25-state-representative-pos-1/"],
+  "office_does": "One of the 25th District's two members of the Washington House, voting on state law and the state budgets for a two-year term.",
+  "race_blurb": "Two Puyallup School Board veterans meet: first-term Republican Michael Keaton, a former F-16 pilot, and Democratic school director David Berg. Keaton runs against taxes and spending and pressed for the I-2081 parents' bill of rights; Berg runs on public education and workers' rights and is skeptical of AI and data centers.",
+  "candidates": [
+    {
+      "slug": "michael-keaton",
+      "summary": "First-term representative, Puyallup School Board member 2015-2023 and retired Air Force F-16 pilot, running against high taxes and spending.",
+      "highlights": [
+        "Pledges to keep fighting 'reckless government spending and high taxes' [S1]",
+        "Voted against ESSB 6346 and the 2025 B&O and services tax bills [S6][S9][S10]",
+        "Offered amendments to require schools to support the I-2081 parents' bill of rights [S13][S14]",
+        "Endorsed by the Association of Washington Business [S19]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": -2, "confidence": "high", "citations": ["S1", "S2", "S6", "S9", "S10"], "basis": "Campaigns against high taxes and for the no-new-taxes Save Washington plan; voted against ESSB 6346, ESHB 2081 and ESSB 5814."},
+        "spending": {"score": -2, "confidence": "medium", "citations": ["S1", "S2", "S3"], "basis": "Runs against 'reckless government spending' and promotes a budget that lives within its means."},
+        "housing": {"score": -1, "confidence": "medium", "citations": ["S3"], "basis": "Says unnecessary bureaucracy adds costs to building a home."},
+        "safety": {"score": -1, "confidence": "medium", "citations": ["S1", "S3"], "basis": "Emphasizes holding people accountable and the costs of shoplifting and crime."},
+        "experience": {"score": -1, "confidence": "high", "citations": ["S1", "S5"], "basis": "One term in the House plus eight years on the school board, against a challenger who also holds local office."},
+        "parental-rights": {"score": -2, "confidence": "high", "citations": ["S4", "S11", "S13", "S14", "S15"], "basis": "Sought to require schools to support I-2081 and to remove OSPI sanctions, voted against ESHB 1296, and cites parental engagement on the school board."}
+      }
+    },
+    {
+      "slug": "david-berg",
+      "summary": "Puyallup School District director since 2021 and longtime gifted-education and PTA advocate, running on public education, workers' rights and economic opportunity.",
+      "highlights": [
+        "Prioritizes public education, workers' rights and economic stability for working people [S1]",
+        "Calls himself an AI skeptic and wants data centers to pay the costs they create [S5]",
+        "Defended a teacher-recommended curriculum against board objections in 2021 [S7]",
+        "Endorsed by the WSLC, the Washington Education Association and Planned Parenthood Alliance Advocates [S3][S8][S9]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "tech": {"score": 2, "confidence": "medium", "citations": ["S5"], "basis": "AI skeptic who wants data centers to bear their power and water costs, bias review of classroom AI, and limits on AI in hiring decisions."},
+        "climate": {"score": 1, "confidence": "medium", "citations": ["S5"], "basis": "Wants to revisit requiring large data centers to use new renewable or non-emitting electricity."},
+        "experience": {"score": 1, "confidence": "medium", "citations": ["S1", "S4"], "basis": "School director challenging an incumbent legislator; has local but no legislative office."},
+        "social": {"score": 1, "confidence": "medium", "citations": ["S3", "S6", "S9"], "basis": "Defended DEI work including gender identity and LGBTQ+ inclusion; endorsed by Planned Parenthood and Stonewall Democrats."},
+        "parental-rights": {"score": 1, "confidence": "medium", "citations": ["S7"], "basis": "Defended teacher-led curriculum adoption against board objections, while acknowledging parents want more input."},
+        "housing": {"score": 1, "confidence": "low", "citations": ["S3"], "basis": "Endorsed by the Washington Housing Alliance; no stated housing position."}
+      }
+    }
+  ]
+}

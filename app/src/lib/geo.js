@@ -123,9 +123,9 @@ const COUNTY_LAYERS = {
     },
   ],
   // Re-verified 2026-10-08 (#20) at 930 Tacoma Ave S: District_Number 4,
-  // FIRE_DIS 'TACOMA', PC_DISTRICT 'YES'. The Election_Precincts layer also
-  // has KING_DISTRICT ('YES' in Pierce-side Auburn) for King County District
-  // Court's Southeast Electoral District, not configured here yet.
+  // FIRE_DIS 'TACOMA', PC_DISTRICT 'YES'. DISTCRT, KCDISTCRT, PTBA and SCHDST
+  // all read the same Election_Precincts feature; each key is its own query
+  // (the adapter has no shared-layer read), four small requests in parallel.
   pierce: [
     {
       key: 'COUNTY_COUNCIL',
@@ -141,6 +141,32 @@ const COUNTY_LAYERS = {
       key: 'DISTCRT',
       url: 'https://services2.arcgis.com/1UvBaQ5y1ubjUPmd/arcgis/rest/services/Election_Precincts/FeatureServer/0/query',
       attr: 'PC_DISTRICT',
+    },
+    {
+      // King County District Court, Southeast Electoral District, which takes
+      // in Pierce-side Auburn. KING_DISTRICT is 'YES'/'NO'. Live 2026-10-08
+      // (#21): 1402 Lake Tapps Pkwy SE, Auburn -> 'YES' (PC_DISTRICT 'NO');
+      // 930 Tacoma Ave S -> 'NO'.
+      key: 'KCDISTCRT',
+      url: 'https://services2.arcgis.com/1UvBaQ5y1ubjUPmd/arcgis/rest/services/Election_Precincts/FeatureServer/0/query',
+      attr: 'KING_DISTRICT',
+    },
+    {
+      // Pierce Transit's public transportation benefit area, 'YES'/'NO'.
+      // Live 2026-10-08 (#21): 930 Tacoma Ave S -> 'YES'; 121 Washington St,
+      // South Prairie -> 'NO'.
+      key: 'PTBA',
+      url: 'https://services2.arcgis.com/1UvBaQ5y1ubjUPmd/arcgis/rest/services/Election_Precincts/FeatureServer/0/query',
+      attr: 'PIERCE_TRANSIT',
+    },
+    {
+      // School district by its full name. Live 2026-10-08 (#21): 1402 Lake
+      // Tapps Pkwy SE, Auburn -> 'AUBURN SCHOOL DISTRICT NO. 408'; 930 Tacoma
+      // Ave S -> 'TACOMA SCHOOL DISTRICT NO. 10'; (-122.55764, 46.93652),
+      // precinct 02095 -> 'YELM COMMUNITY SCHOOLS'.
+      key: 'SCHDST',
+      url: 'https://services2.arcgis.com/1UvBaQ5y1ubjUPmd/arcgis/rest/services/Election_Precincts/FeatureServer/0/query',
+      attr: 'SCHOOL',
     },
   ],
   snohomish: [

@@ -1,0 +1,49 @@
+{
+  "contest_slug": "pierce-legislative-district-2-state-representative-pos-2",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-legislative-district-2-state-representative-pos-2/"],
+  "office_does": "One of the 2nd District's two members of the Washington House, voting on state law and the state budgets for a two-year term.",
+  "race_blurb": "First-term Republican Matt Marshall, a former Eatonville school director and Army veteran, faces Democrat Angela Taylor, a Yelm small-business owner in her first race. Marshall runs against new taxes and on parents' authority; Taylor on school funding, rural healthcare and limits on health-industry money.",
+  "candidates": [
+    {
+      "slug": "matt-marshall",
+      "summary": "First-term representative, former Eatonville school director, Army veteran and physician assistant, running against new taxes and the income tax and for parents' authority.",
+      "highlights": [
+        "Pledges to oppose new taxes and fight the income tax; voted against ESSB 6346 [S1][S3]",
+        "Voted against the 2025 B&O and services tax bills [S7][S8]",
+        "Offered amendments to let parents inspect school-held medical and counseling records [S11][S12]",
+        "Opposes a mega airport in the area and supports an elected sheriff [S1]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": -2, "confidence": "high", "citations": ["S1", "S3", "S7", "S8"], "basis": "Pamphlet pledge to oppose new taxes and the income tax, plus nay votes on ESSB 6346, ESHB 2081 and ESSB 5814."},
+        "spending": {"score": -2, "confidence": "medium", "citations": ["S1"], "basis": "Running to stop 'out of control government spending' and cut fees, regulations and hidden costs."},
+        "experience": {"score": -1, "confidence": "high", "citations": ["S1", "S2"], "basis": "First-term incumbent and former school director, against a candidate with no elected experience."},
+        "local-control": {"score": -1, "confidence": "medium", "citations": ["S1"], "basis": "Opposes siting any mega airport in the area and defends keeping an elected sheriff."},
+        "parental-rights": {"score": -2, "confidence": "high", "citations": ["S1", "S9", "S11", "S12"], "basis": "Pledges to defend parents' authority, voted against ESHB 1296, and sought parental access to school-held health and counseling records."}
+      }
+    },
+    {
+      "slug": "angela-taylor",
+      "summary": "Yelm small-business owner and caregiver in her first race, running on fully funded schools, rural healthcare access and a fairer tax system.",
+      "highlights": [
+        "Wants to correct a 'regressive tax system' and direct new revenue to property-tax relief [S2]",
+        "Pledges not to take contributions over $200 from health-industry executives, lobbyists or PACs [S2]",
+        "Calls for fully funded Pre-K-12 schools and a centralized rural hospital [S1][S2]",
+        "Endorsed by the Washington State Labor Council and Planned Parenthood Alliance Advocates [S3][S4]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": 1, "confidence": "medium", "citations": ["S2"], "basis": "Wants to correct a regressive tax system and redirect new revenue to property-tax relief, while also seeking B&O relief for small businesses."},
+        "spending": {"score": 1, "confidence": "medium", "citations": ["S1", "S2"], "basis": "Calls for fully funded Pre-K-12 education and a rural hospital, alongside 'responsible budgets'."},
+        "safety": {"score": -1, "confidence": "medium", "citations": ["S2"], "basis": "Would support legislation that expands resources for law enforcement and sheriff collaboration."},
+        "reform": {"score": 1, "confidence": "medium", "citations": ["S1", "S2"], "basis": "Pledges to cap contributions from health-industry interests and criticizes corporate and insurance influence in Olympia."},
+        "healthcare": {"score": 1, "confidence": "low", "citations": ["S1", "S2"], "basis": "Says she will 'fight for healthcare for all' and criticizes a profit-driven system, without naming a mechanism."},
+        "experience": {"score": 2, "confidence": "high", "citations": ["S1"], "basis": "No elected experience, running against an incumbent."},
+        "social": {"score": 1, "confidence": "low", "citations": ["S4"], "basis": "Endorsed by Planned Parenthood Alliance Advocates; no stated position."}
+      }
+    }
+  ]
+}

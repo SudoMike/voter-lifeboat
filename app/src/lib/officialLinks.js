@@ -82,6 +82,13 @@ const ELECTIONS = {
       // .../View/151457/Nov-3-2026-General-Pamphlet, then 200
       // application/pdf, 104 pages; PDF pages equal the printed page numbers.
       'snohomish/local-voters-pamphlet': 'https://www.snohomishcountywa.gov/DocumentCenter/View/151457',
+      // SOS Edition 09 (Pierce), from the package pointer counties/pierce/
+      // raw/sos/voters-pamphlet-edition-09-pierce.pdf.url; Pierce's dossiers
+      // cite its federal and legislative statements. Checked 2026-10-08: 200
+      // application/pdf, 64 pages, sha256 as in the pointer's meta; PDF
+      // pages equal the printed page numbers (CD 6 pp. 24-25, LD 29 p. 43).
+      'pierce/voters-pamphlet-edition-09-pierce':
+        'https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2009%20-%20Pierce.pdf',
     },
     // Counties whose research cites VoteWA's online voters' guide, which has
     // no page numbers, instead of a printed pamphlet: their records carry no
@@ -89,8 +96,13 @@ const ELECTIONS = {
     // dossiers cite voter.votewa.gov candidate.ashx / measure.ashx pages
     // (spokanecounty.gov answered 403 to scripted requests, so no local
     // pamphlet PDF was fetched). Checked 2026-10-08: 200 text/html.
+    // Pierce's county offices, District Court and local measures cite VoteWA
+    // too (piercecountywa.gov answered 403, so its local pamphlet was not
+    // fetched); its federal and legislative statements cite Edition 09
+    // above. Checked 2026-10-08: 200 text/html.
     countyGuides: {
       spokane: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=32',
+      pierce: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=27',
     },
     pamphletIndex: `${SOS_GENERAL_2026}/2026-voters-pamphlet-pdfs`,
   },

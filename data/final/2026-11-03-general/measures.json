@@ -7,7 +7,9 @@
     "data/washington-state/elections/2026-11-03-general/counties/snohomish/scoring/measures.json",
     "data/washington-state/elections/2026-11-03-general/counties/snohomish/scoring/refutations/measures.json",
     "data/washington-state/elections/2026-11-03-general/counties/spokane/scoring/measures.json",
-    "data/washington-state/elections/2026-11-03-general/counties/spokane/scoring/refutations/measures.json"
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/scoring/refutations/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/pierce/scoring/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/pierce/scoring/refutations/measures.json"
   ],
   "script": "pipeline/merge_scores.py",
   "measures": [
@@ -1129,6 +1131,230 @@
         }
       },
       "sources_note": "Sources: VoteWA voters' guide record 7364 (S1); the 2020 EMS levy record and result (S2, S3); RCW 84.52.069 (S4); Spokesman-Review mention of Fire District 12 (S5). No district website or news coverage specific to the measure was found."
+    },
+    {
+      "slug": "pierce-pierce-county-charter-amendment-no-52",
+      "what_it_does": "Changes the County Council's meeting rule from at least once in each of 50 weeks a year to at least 45 meetings a year. Every meeting where law or rule requires public comment must offer remote attendance and remote public comment.",
+      "cost_line": "No fiscal statement was published, and no source estimates a cost.",
+      "pro_summary": "The statement in favor (Committee for Flexible Council Meetings: Troy Serad, Dick Muri, Dave Morell) says the amendment replaces 'a rigid scheduling rule with a more practical standard' and that writing remote comment into the Charter helps residents who cannot attend in person take part. It notes the Charter Review Commission sent it to the ballot with zero votes in opposition.",
+      "con_summary": "No statement against this measure was submitted.",
+      "lean_mappings": {},
+      "sources_note": "VoteWA voter-guide record 7313: ballot title, explanatory statement and statement for, with no statement against (S1). Gig Harbor Now on the commission's seven proposals (S2) and on how the commission works (S3). Tacoma Weekly ballot roundup (S4) and its sheriff-oversight story, which identifies council members (S5). PDC committee query (S6). The Pierce County local pamphlet could not be read (piercecountywa.gov returned HTTP 403)."
+    },
+    {
+      "slug": "pierce-pierce-county-charter-amendment-no-53",
+      "what_it_does": "Makes the Sheriff an appointed office: the County Executive appoints and a council majority confirms. The current elected term, held by Sheriff Keith Swank since January 2025, would end on January 1, 2027, two years early.",
+      "cost_line": "No fiscal statement was published. Neither side makes a cost argument.",
+      "pro_summary": "The statement in favor (Pierce County for a Professional Sheriff: Nathe Lawver, Jake Hunter, Lyle Quasim) argues that a hiring process screens for credentials and a proven public-safety record rather than campaigning. It says an appointed sheriff can be put on leave or removed for serious misconduct, while an elected one stays until the next election.",
+      "con_summary": "The statement against (Pierce County Citizens for Accountable Public Safety: Brian Sonntag, Bruce Dammeier, Paul Pastor) says the measure takes away voters' right to elect the sheriff and cuts short the term voters gave the current sheriff. It argues an appointed sheriff answers first to the Executive, and that voters can already remove a sheriff through elections, recall or prosecution.",
+      "lean_mappings": {},
+      "sources_note": "VoteWA voter-guide record 7314: ballot title, explanatory statement, statements for and against, and rebuttals (S1). Gig Harbor Now (S2, S3), Seattle Times (S4), Center Square (S5, S8) and Tacoma Weekly (S6, S11, S13) on the commission's 12-9 vote, the sheriff's history and the controversy. MyNorthwest on the failed lawsuit (S7). Bolts (S9). KNKX on council candidates' positions (S10). PDC committees (S12). Axes considered and not mapped: safety and reform (the rubric does not apply them to measures) and local-control (authority stays inside county government)."
+    },
+    {
+      "slug": "pierce-pierce-county-charter-amendment-no-54",
+      "what_it_does": "Creates a Public Safety Ombuds department to oversee the Sheriff's Office independently. The ombuds would investigate complaints, publish findings, refer cases to other authorities, and have subpoena power under the commission draft. The County Council appoints the ombuds from finalists chosen by a nominating panel. The amendment also requires a Community Advisory Committee.",
+      "cost_line": "No fiscal statement was published. The Charter requires funding and staffing but leaves the budget to a later ordinance. An opponent cited a roughly $1 million budget for a similar office in Spokane. Supporters cite claimed litigation savings.",
+      "pro_summary": "The statement in favor (Pierce County for Community Safety Oversight: Kate Ginn, Kristy Gledhill, Lyle Quasim) says complaints about the Sheriff's Office now go through slow, hard-to-navigate systems. It argues an ombuds with power to investigate, obtain records and subpoena witnesses would add accountability and transparency and catch problems before they become costly.",
+      "con_summary": "The statement against (Pierce County Citizens for Accountable Public Safety: Brian Sonntag, Bruce Dammeier, Paul Pastor) says internal affairs, independent deadly-force teams, the state Office of Independent Investigations and the Criminal Justice Training Commission already provide oversight. It argues any new oversight should come by ordinance, not a permanent Charter department, and that resources should go to crime reduction and deputies.",
+      "lean_mappings": {},
+      "sources_note": "VoteWA voter-guide record 7315: ballot title, explanatory statement, statements for and against, and rebuttals (S1). NWPB (S2, S3) and Tacoma Weekly (S4) on the draft's selection panel, subpoena power and the positions of the sheriff and the guild. Gig Harbor Now (S5). Center Square for Rogge's cost claims (S6). KNKX (S7). Tacoma Weekly roundup (S8). PDC (S9). Bolts (S10). News Tribune headline only (S11). Spending was considered and not mapped: the new department is itself oversight machinery, which the rubric's spending axis puts on the restraint pole, so the direction is ambiguous."
+    },
+    {
+      "slug": "pierce-pierce-county-charter-amendment-no-55",
+      "what_it_does": "Gives county initiative sponsors 180 days instead of 120 to collect signatures. The signature requirement stays at 10% of the votes in the last County Executive election, about 41,000 according to supporters.",
+      "cost_line": "No fiscal statement was published. Supporters say there is no cost to the county because campaigns pay for signature gathering.",
+      "pro_summary": "The statement in favor (Sharon Hanek, Mike Lonnergan, Grant Pelesky) says no county initiative has ever reached the Pierce County ballot under the 120-day limit. It argues two more months to collect over 40,000 signatures is fair, allows more mail outreach, and reduces reliance on paid signature gatherers.",
+      "con_summary": "The statement against (Committee to Protect Our Initiative Process: Martha Lantz, Justin Leighton, Troy Serad) argues more time mainly helps well-funded interests pay for signature drives. It says the current system works, that several referendums have qualified within 120 days, and that voters have rejected such changes before.",
+      "lean_mappings": {},
+      "sources_note": "VoteWA voter-guide record 7316: ballot title, explanatory statement, statements for and against, and rebuttals (S1). Gig Harbor Now (S2, S3). Tacoma Weekly roundup (S4). PDC (S5). Seattle Times identifies Hanek as a commissioner (S6). Reform (direct democracy) is the natural axis but does not apply to measures in the rubric, and both sides claim the anti-special-interest position."
+    },
+    {
+      "slug": "pierce-pierce-county-charter-amendment-no-56",
+      "what_it_does": "Requires the county's Chief Financial Officer to prepare a four-year budget outlook for each biennial budget. The outlook covers revenues, expenditures, reserves and fund balances for the Current Expense Fund and must show that projected spending will not exceed projected available funds. The Council must consider it when adopting the budget.",
+      "cost_line": "No fiscal statement was published. Opponents call it an unfunded mandate with no staff assigned. Supporters say no new staff or funding is needed because the finance office already prepares much of the outlook.",
+      "pro_summary": "The statement in favor (Wolf Opitz, Doug Richardson) says a four-year outlook would make county leaders show whether today's commitments are affordable later. It argues this reduces the risk of sudden cuts or rushed tax and fee increases and supports the county's credit rating.",
+      "con_summary": "The statement against (Pierce County for Local Budget Control: Cameron Severns) says the amendment was meant to pair with companion proposal O-1, which was not sent to voters, so it assigns the duty to a position that does not exist. It calls the outlook duplicative of the existing biennial budget, six-year forecast and annual audit.",
+      "lean_mappings": {
+        "spending": {
+          "direction": -1,
+          "basis": "YES writes into the Charter a requirement that projected spending not exceed projected available funds over four years, framed by supporters as fiscal discipline (affordability, avoiding rushed tax and fee increases, protecting the credit rating). That is the rubric's audit-and-restrain pole. Strength is 1, not 2, because it is a planning and certification duty with no enforcement mechanism described, and the opposition also argues on restraint grounds.",
+          "citations": [
+            "S1",
+            "S2"
+          ]
+        }
+      },
+      "sources_note": "VoteWA voter-guide record 7317: ballot title, explanatory statement, statements for and against, and rebuttals (S1). Gig Harbor Now, which adds that the Council must 'consider the outlook' (S2). Tacoma Weekly roundup (S3). PDC: no committee found for or against (S4). Whether the Charter now has a Chief Financial Officer position could not be checked."
+    },
+    {
+      "slug": "pierce-pierce-county-charter-amendment-no-57",
+      "what_it_does": "Rewrites the Charter's nondiscrimination clause, which now lists race, creed, color, sex, age and handicap. The new list: sex, race, color, national origin or ancestry, creed, disability, sexual orientation, gender identity or expression, age, genetic testing results, family caregiver status, pregnancy, childbirth or lactation, and military or veteran status. It adds that the clause may not impair rights under the U.S. or state constitution.",
+      "cost_line": "No fiscal statement was published. Each side says the other's position invites litigation, and neither gives a figure.",
+      "pro_summary": "The statement in favor (Pierce County for Aligned Employment Practices: Devin Rydel-Kelly, Latasha Palmer, Ayanna Colman) says the section has not been updated since 1980. It argues that aligning it with current law protects workers such as veteran families and caregivers, gives clear direction to a county workforce of over 3,000, and prevents costly lawsuits.",
+      "con_summary": "The statement against (Common Sense for Pierce County: Mason Fletcher, Hollie Rogge, Jeff Joseph) says the existing clause already prohibits discrimination. It argues new terms such as genetic testing results and lactation are vague and invite litigation, and that the Charter should stay neutral rather than 'impose values that represent the few.' Its rebuttal also says the amendment removes veterans' preference, a claim this research could not verify.",
+      "lean_mappings": {
+        "social": {
+          "direction": 1,
+          "basis": "YES adds sexual orientation and gender identity or expression (plus pregnancy, childbirth and lactation) to the Charter's nondiscrimination clause, which is the rubric's pole B ('broad anti-discrimination law'). Opponents frame it as imposing values, and the sheriff testified against the gender-identity language. Strength is 1, not 2, because the measure bundles categories outside this axis and supporters present it as aligning with existing law rather than creating new protections.",
+          "citations": [
+            "S1",
+            "S2",
+            "S4"
+          ]
+        }
+      },
+      "sources_note": "VoteWA voter-guide record 7318: ballot title, explanatory statement, statements for and against, and rebuttals (S1). Gig Harbor Now for the current Charter text and the sheriff's testimony (S2). Tacoma Weekly roundup (S3). Center Square on the sheriff's pronoun statement (S4). PDC (S5). MyNorthwest on the con signers (S6). Bolts (S7). The full amendment text was not available, so the veterans'-preference claim is unverified."
+    },
+    {
+      "slug": "pierce-pierce-county-charter-amendment-no-58",
+      "what_it_does": "Creates a Juvenile Detention Advocate Office within Pierce County Juvenile Detention to take complaints from detained youth and their families, monitor conditions, and handle mandatory-reporter rules. It also contributes data on use of force, room confinement and other operations to the Superior Court's annual reports. Juvenile Detention would get an independent audit or accreditation review at least once every five years.",
+      "cost_line": "No fiscal statement was published. Opponents say the new office will raise costs and supporters say oversight failures are costly, but neither side gives a figure.",
+      "pro_summary": "The statement in favor (Committee for Safe Youth, Strong Oversight: Justin Leighton, Rick Talbert, Hunter George) says every child in county custody deserves protection from abuse. It cites News Tribune investigations showing oversight failures harmed youth and cost taxpayers, and argues that independent oversight, public reporting and regular outside reviews belong permanently in the Charter.",
+      "con_summary": "The statement against (Brenda Milewski) calls the office an unnecessary layer of government that adds cost. It argues Juvenile Detention has already improved and serves few youth, that the greatest need is a modern facility, and that the office could open the door to executive influence over a court function. Its rebuttal says existing Juvenile Court reforms already provide accountability.",
+      "lean_mappings": {},
+      "sources_note": "VoteWA voter-guide record 7319: ballot title, explanatory statement, statements for and against, and rebuttals (S1). Gig Harbor Now on how the office is appointed and supervised (S2) and on the commission (S9). Tacoma Weekly roundup (S3). PDC (S4). News Tribune and KING5 headlines on Remann Hall abuse claims (S5-S8), headline only because the articles could not be retrieved. Spending was considered and not mapped: oversight machinery versus new government, so the direction is ambiguous."
+    },
+    {
+      "slug": "pierce-city-of-milton-proposition-no-1",
+      "what_it_does": "Raises Milton's sales and use tax by 0.1% starting in 2027 to fund police and public safety under RCW 82.14.450. It has no expiration date, and 15% of the proceeds go to the county.",
+      "cost_line": "Increases the sales and use tax by one-tenth of one percent (0.001), or 10 cents on a $100 taxable purchase; the city estimates about $200,000 a year. The combined rate in the Pierce County part of Milton would go from 10.2% to 10.3% (King County part: 10.3% to 10.4%).",
+      "pro_summary": "The statement in favor (Dave Strader, Jacki Strader) says the tax will let the Milton Police Department 'maintain its current budget and high-quality services' as staffing, jail, court and other costs rise. It says the tax will ease pressure on the General Fund and protect funding for streets and parks.",
+      "con_summary": "No statement against this measure was submitted. The mayor told the council in August that no one had volunteered for the 'Against' committee.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "A yes vote creates a new, open-ended 0.1% public safety sales tax. The city's staff report says neither King nor Pierce County levies this tax now. This matches the King scoring of the same measure.",
+          "citations": [
+            "S1",
+            "S2"
+          ]
+        }
+      },
+      "sources_note": "Sources: VoteWA ballot title, explanatory statement and statement in favor (S1); Milton council packets with the staff report, budget figures, Resolution 26-2005 and the 6-0 vote (S2, S3); DOR Q4 2026 rates (S4); RCW 82.14.450 (S5); PDC query showing no committees (S6). Built from the King dossier of the same measure, with sources re-fetched. No news coverage was found, and the Pierce County pamphlet could not be read (HTTP 403)."
+    },
+    {
+      "slug": "pierce-town-of-south-prairie-proposition-no-1",
+      "what_it_does": "Lifts South Prairie's property tax levy limit so the town can raise its regular levy by about $1.33 per $1,000, to as much as $2.90 in 2027, for police, fire, EMS, parks, roads and other town services. It lets the levy grow up to 6% a year through 2032, and the 2032 amount becomes the base for later levies.",
+      "cost_line": "About $1.33 more per $1,000 of assessed value in 2027, or about $50 a month on a $450,000 home (town estimate), up to a maximum rate of $2.90 per $1,000. That implies a current town rate of about $1.57.",
+      "pro_summary": "The statement in favor (David Brubaker, Dean Moerer) says the levy keeps core public safety and town services running as costs rise. It calls it a 'limited six-year measure' that is 'not about expanding government.'",
+      "con_summary": "No statement against this measure was submitted.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "A yes vote raises the town's regular levy by about $1.33 per $1,000 from an implied $1.57, roughly an 85% increase. The ballot title keeps the 2032 levy amount as the base for later levies, so this is a large lid lift that carries forward.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Sources: VoteWA ballot title, explanatory statement and statement in favor (S1); 2018 Courier-Herald article on the town's permanent EMS levy (S2); PDC query showing no committees (S3). No 2026 news coverage was found, the town website has no levy material, and the Pierce County pamphlet could not be read (HTTP 403)."
+    },
+    {
+      "slug": "pierce-pierce-transit-proposition-no-1",
+      "what_it_does": "Raises Pierce Transit's dedicated sales tax from 0.6% to 0.9% starting April 1, 2027, its first increase since 2002. The money pays for a planned 47% service expansion: four new routes, more frequent buses, later hours, special event service, expanded paratransit, and free fares for seniors.",
+      "cost_line": "An additional 0.3% sales and use tax, 3 cents on a $10 taxable purchase, with no end date; it does not apply to groceries, rent, most healthcare, gas or utilities. In Tacoma the combined rate would go from 10.5% to 10.8%.",
+      "pro_summary": "The statement in favor (Alice Phillips, Faaluaina Pritchard, Krystal Monteros) says transit is how many people reach jobs and appointments. It says the measure is the first local transit investment since 2002, increases service by 47%, makes seniors ride free and keeps youth fares free.",
+      "con_summary": "The statement against (John Miles) says 'the sales tax is too high': Tacoma would reach 10.8%, higher sales taxes hit the poor hardest, and legislators should find another funding source. It agrees that more service is needed.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "A yes vote raises Pierce Transit's sales tax rate by half, from 0.6% to 0.9%, with no expiration. The opposition argues against the sales tax increase itself.",
+          "citations": [
+            "S1",
+            "S2"
+          ]
+        },
+        "spending": {
+          "direction": 1,
+          "basis": "The new revenue pays for a 47% service expansion with new routes, longer hours and new fare-free service for seniors, not only for preserving current service.",
+          "citations": [
+            "S1",
+            "S2",
+            "S3"
+          ]
+        }
+      },
+      "sources_note": "Sources: VoteWA ballot title, explanatory statement, statements and rebuttals (S1); Pierce Transit's ballot measure site and October 2026 presentation (S2, S3); Urbanist coverage of the board vote and the expansion plan (S4, S5); DOR Q4 2026 rates (S6); PDC records for Keep Pierce Moving, the only registered committee (S7-S9). No revenue estimate was found, and the Pierce County pamphlet could not be read (HTTP 403)."
+    },
+    {
+      "slug": "pierce-city-of-tacoma-initiative-no-1",
+      "what_it_does": "A citizen initiative that adds enforcement to Tacoma's tenant protection laws. It recognizes tenant unions and requires most landlords to bargain with them, lets tenants file city complaints or sue, and sets penalties of $500 to five times monthly rent that go to the affected tenants. It also requires all landlords to get rental licenses and pay per-unit fees, creates a public landlord database, and allows license revocation for dangerous violations.",
+      "cost_line": "No tax; the program is funded by a per-unit rental license fee capped at the city's enforcement costs, with higher fees for large landlords and repeat offenders. Opponents cite an $8-10 million annual city cost and a $191 per-unit fee; supporters say similar programs charge $10-35 per unit. No published city estimate was found.",
+      "pro_summary": "The statement in favor (Tyron Moore, Kiss'Shonna Curtis, Bill Hanawalt) says the measure holds 'outside corporate slumlords' accountable for illegal rent hikes and mold, protects renters from retaliation when they organize, and makes repeat violators and corporate landlords pay for enforcement instead of taxpayers.",
+      "con_summary": "The statement against (Michael Mirra, Ben Lackey, Mark Melsness) says the measure creates an $8-10 million licensing bureaucracy during a $40 million budget shortfall, that licensing fees will raise rents and make housing harder to build, and that Tacoma already has strong renter protections.",
+      "lean_mappings": {
+        "spending": {
+          "direction": 1,
+          "basis": "It requires the city to build a new enforcement program (complaint adjudication, inspections, licensing, a landlord database), funded by fees. Opponents object to its cost amid a budget shortfall.",
+          "citations": [
+            "S1",
+            "S5"
+          ]
+        }
+      },
+      "sources_note": "Sources: VoteWA ballot title, explanatory statement, statements and rebuttals (S1); Tacoma For All campaign pages, FAQ, endorsements and the initiative text it posts (S2-S5); KNKX and Cascade PBS coverage (S6, S7); City of Tacoma Ordinance 29086 release and the initiative process page (S8, S9); PDC records for Tacoma for All PAC, No on Initiative 1 and the Rental Housing Association PAC (S10-S16). The News Tribune and the Pierce County pamphlet could not be read, and no city fiscal estimate was found."
+    },
+    {
+      "slug": "pierce-fire-protection-district-no-14-proposition-no-1",
+      "what_it_does": "Renews Riverside Fire & Rescue's (Fire District 14) emergency medical services property tax levy for six more years, 2027 through 2032, at up to $0.50 per $1,000. The 2020 levy expires at the end of 2026.",
+      "cost_line": "Up to $0.50 per $1,000 of assessed value, the same maximum as the expiring levy: no more than $50 a year ($4.17 a month) per $100,000 of assessed value.",
+      "pro_summary": "The statement in favor (Riverside Firefighters For EMS: Holly Leiter, Dustin Garrett, Ethan Longknife) says the levy is 'not a new tax' but a continuation. It says call volume is rising and the levy keeps staffing, equipment and emergency care at current levels.",
+      "con_summary": "No statement against this measure was submitted.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "A yes vote renews an expiring EMS property tax at the same $0.50 maximum for six years. It is a renewal, not a new tax or a rate increase.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "Sources: VoteWA ballot title, explanatory statement and statement in favor (S1); the district's site with the Resolution 2026-416 notice and its service area (S2, S3); PDC query showing no committees (S4). The pro statement calls this an 'M&O levy' although the ballot describes an EMS levy. No news coverage was found, and the Pierce County pamphlet could not be read (HTTP 403)."
+    },
+    {
+      "slug": "pierce-auburn-school-district-no-408-proposition-no-1",
+      "what_it_does": "Authorizes Auburn School District to issue up to $491 million in 20-year bonds to build a new Middle School #5 and replace Cascade Middle School and Alpac Elementary with larger schools. The same three schools were in bonds that failed to reach the required 60% in 2024 (a larger $532.1 million package, 55%) and 2025 ($490 million, 54%).",
+      "cost_line": "Up to $491,000,000 in bonds repaid by excess property taxes. The district estimates an average of $1.10 per $1,000 of assessed value, about $55 a month on a $600,000 home. Pierce County property in the district is assessed by the Pierce County Assessor.",
+      "pro_summary": "The statement in favor (Cari Manry, Terri Herren) says the bond would end middle-school overcrowding (more than 1,100 students in 45 portables), replace aging buildings at about $1.10 per $1,000, and secure state matching funds, noting that a majority voted yes last time.",
+      "con_summary": "The statement in opposition (Eric Petersen) says $163 million per school is excessive next to Tacoma's costs. It says repaying principal plus $350+ million in interest pushes the real rate to $1.93 per $1,000, and it asks voters to make the district resubmit a smaller request.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "A yes vote authorizes a new $491 million bond, not a renewal. The district projects its combined bond rate rising from $1.50 (2026) to $2.53 (2027-2031) per $1,000, and the con case is about tax burden. This matches the King scoring of the same measure.",
+          "citations": [
+            "S1",
+            "S4"
+          ]
+        },
+        "spending": {
+          "direction": 1,
+          "basis": "Besides replacing two schools, the bond builds a fifth middle school to add capacity. The opposition argues for a smaller, cheaper request.",
+          "citations": [
+            "S1",
+            "S3"
+          ]
+        }
+      },
+      "sources_note": "Sources: VoteWA ballot title, explanatory statement, statements and rebuttals (S1; the two rebuttals are stored in swapped fields); district election page, Q&A (which refers exemptions to the King and Pierce assessors) and Election Information Book with the King/Pierce vote splits and rate tables (S2-S4); Auburn Reporter coverage of 2024-2026 (S5-S7); PDC records for Auburn Citizen's for Schools (S8, S9). Built from the King dossier of the same measure, with sources re-fetched."
+    },
+    {
+      "slug": "pierce-yelm-community-schools-proposition-no-1",
+      "what_it_does": "Authorizes Yelm Community Schools to collect a two-year educational programs and operations levy: $11.2 million in 2027 and $12.3 million in 2028. The district has had no local levy since 2024; this one would keep current programs, staff and athletics; the district says it would also restore some cut programs, which opponents dispute. The district says that if it fails, the state would take financial oversight of the district.",
+      "cost_line": "An estimated $1.50 per $1,000 of assessed value in 2027 and 2028 ($11,194,449 and $12,278,072), on tax bills that now carry no Yelm EP&O levy; about $600 a year on a $400,000 home.",
+      "pro_summary": "The statement in favor (Yelm Kids First: Judson Willis, Debbie Edwards, Kathryn Cullum) says repeated levy failures have already forced cuts to staff, programs and athletics. It says the state does not fully fund schools and the levy is needed to restore stability and keep student programs.",
+      "con_summary": "The statement against (Martin Miller, Frank Vance) says voters have said no four times and the district restores none of the cut programs. It says the district used one-time money for recurring costs, and argues for controlling expenses and taking the funding fight to Olympia instead of 'neighbors tax neighbors.'",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "A yes vote adds a $1.50 per $1,000 levy (about $11-12 million a year) where none has been collected since 2024; OSPI lists Yelm with $0 in local levy funding for 2026. This is a new levy, not a replacement, though it lasts only two years. The con case is explicitly about not raising taxes.",
+          "citations": [
+            "S1",
+            "S3",
+            "S6"
+          ]
+        }
+      },
+      "sources_note": "Sources: VoteWA ballot title, explanatory statement, statements and rebuttals (S1); the district's levy page, levy FAQ, fiscal-oversight FAQ and school-funding page (S2-S5); OSPI 2026 levy status data (S6); PDC records for Yelm Kids First and the 2026 committee query (S7-S9). Local news (Nisqually Valley News) and the Pierce County pamphlet could not be read (HTTP 403). No parental-rights content."
     }
   ]
 }

@@ -152,7 +152,7 @@ class GeneralPackagesTest(unittest.TestCase):
                 self.assertTrue(c["slug"].startswith(f"{county}-"))
 
     def test_shipped_general_counties(self):
-        self.assertEqual(["king", "snohomish", "spokane"], election.APP_PACKAGES[GENERAL.id]["counties"])
+        self.assertEqual(["king", "snohomish", "spokane", "pierce"], election.APP_PACKAGES[GENERAL.id]["counties"])
 
 if __name__ == "__main__":
     unittest.main()

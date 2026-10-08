@@ -67,7 +67,7 @@ APP_PACKAGES = {
     },
     "2026-11-03-general": {
         "statewide_ballot": True,
-        "counties": ["king", "snohomish", "spokane"],
+        "counties": ["king", "snohomish", "spokane", "pierce"],
         "district_contests": "county",
     },
 }
@@ -84,6 +84,7 @@ DISTRICT_ADAPTER_LAYERS = {
     "king": ("CONGDST", "LEGDST", "KCCDST", "SCCDST", "JUDDST", "FIRDST", "SCHDST", "CITY", "CEMDST"),
     "snohomish": ("CONGDST", "LEGDST", "CITY", "PUDDST", "SCHDST", "FIRDST", "HOSPDST", "LIBDST", "RFADST"),
     "spokane": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "PTBA", "LIBDST", "SCHDST", "FIRDST", "PARKDST"),
+    "pierce": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "FIRDST", "DISTCRT", "KCDISTCRT", "PTBA", "SCHDST"),
 }
 
 
@@ -180,6 +181,10 @@ COUNTY_ELECTIONS_URLS = {
         # 2026 primary voters' pamphlet prints. It answers 403 (Cloudflare) to
         # scripted requests (2026-10-08), so its 200 is unchecked here.
         "spokane": "https://www.spokanecounty.gov/elections",
+        # Pierce County Auditor, Elections. piercecountywa.gov answers 403
+        # (Cloudflare) to scripted requests (2026-10-08; http://piercecountywa.gov/elections
+        # 301s to this address), so its 200 is unchecked here.
+        "pierce": "https://www.piercecountywa.gov/elections",
     },
 }
 

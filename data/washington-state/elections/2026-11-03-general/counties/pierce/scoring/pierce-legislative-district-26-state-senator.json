@@ -1,0 +1,54 @@
+{
+  "contest_slug": "pierce-legislative-district-26-state-senator",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-legislative-district-26-state-senator/"],
+  "office_does": "The State Senator is the 26th District's single member of the Washington Senate, voting on state law and budgets and confirming gubernatorial appointments.",
+  "race_blurb": "Democratic Senator Deborah Krishnadasan, who won a 2025 special election, faces Republican Gary Parker, a Gig Harbor restaurant owner and former Intel executive making his first run. Both campaign against tax increases; they differ on spending, public safety, climate and reproductive policy.",
+  "candidates": [
+    {
+      "slug": "deborah-krishnadasan",
+      "summary": "Senator since 2025 and former Peninsula School Board president, running on lowering costs, school funding and reproductive rights.",
+      "highlights": [
+        "Voted against ESSB 6346 (2026 tax on millionaires) and the major 2025 revenue bills [S5][S10][S11]",
+        "Prime sponsor of SB 6162, expanding property tax relief for seniors and disabled veterans [S14]",
+        "Supports strong legal protections for abortion; endorsed by Planned Parenthood Alliance Advocates [S1][S3]",
+        "Voted for ESHB 1296 (2025), which amended the I-2081 parental-rights list [S6][S7]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": -2, "confidence": "high", "citations": ["S1", "S3", "S5", "S10", "S11", "S12", "S13"], "basis": "Voted nay on ESSB 6346 and on the 2025 gas, B&O, capital gains/estate and services tax bills; campaigns on voting no on tax increases and proposing a sales tax cut."},
+        "spending": {"score": 1, "confidence": "medium", "citations": ["S1", "S3"], "basis": "Cites new energy assistance, PreK Promise funding, and added support for healthcare and childcare programs."},
+        "housing": {"score": 1, "confidence": "medium", "citations": ["S3"], "basis": "Supports expanding affordable housing and protecting renters and first-time homebuyers."},
+        "safety": {"score": 0, "confidence": "medium", "citations": ["S3"], "basis": "Pairs funding for law enforcement officers with behavioral health and community-based violence prevention."},
+        "climate": {"score": 1, "confidence": "medium", "citations": ["S3"], "basis": "Supports 'bold but balanced climate action' and clean energy jobs."},
+        "experience": {"score": -1, "confidence": "high", "citations": ["S1", "S16", "S18"], "basis": "Sitting senator since 2025 and former school board president, against a first-time candidate."},
+        "immigration": {"score": 1, "confidence": "medium", "citations": ["S2"], "basis": "Campaign lists banning ICE from wearing face masks among her actions."},
+        "healthcare": {"score": -1, "confidence": "medium", "citations": ["S3"], "basis": "Supports capping drug prices and fair reimbursement within the current system and offsetting federal Medicaid cuts."},
+        "social": {"score": 2, "confidence": "high", "citations": ["S1", "S2", "S3"], "basis": "Supports strong legal protections for abortion and cites emergency-room reproductive care legislation; endorsed by Planned Parenthood Alliance Advocates."},
+        "parental-rights": {"score": 1, "confidence": "medium", "citations": ["S6", "S7"], "basis": "Voted yea on ESHB 1296's amendments to the I-2081 parental-rights list; her stated view that families should have a voice does not address notification or opt-outs."}
+      }
+    },
+    {
+      "slug": "gary-parker",
+      "summary": "Gig Harbor restaurant owner, former Intel engineer and executive, and Rotary president, running as 'Not a politician' on affordability and public safety.",
+      "highlights": [
+        "Lists tax relief and property tax among his priorities and wants seniors 'not taxed out of their homes' [S1][S2]",
+        "Criticizes 'out-of-control spending' and pledges responsible use of taxpayer dollars [S3]",
+        "Calls for fully funding law enforcement [S2][S3]",
+        "Would expand energy supply and remove regulatory barriers to housing [S3]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": -2, "confidence": "medium", "citations": ["S1", "S2", "S3"], "basis": "Campaigns on tax relief and fighting rising taxes, asking how much of what people earn 'belongs to the government'."},
+        "spending": {"score": -2, "confidence": "medium", "citations": ["S3"], "basis": "Criticizes 'out-of-control spending' and pledges transparency and responsible spending."},
+        "housing": {"score": -1, "confidence": "medium", "citations": ["S3"], "basis": "Would increase housing availability by removing regulatory barriers."},
+        "safety": {"score": -2, "confidence": "medium", "citations": ["S2", "S3"], "basis": "Calls for fully funding law enforcement and says state policies have made it easier for criminals to exploit the system."},
+        "climate": {"score": -1, "confidence": "medium", "citations": ["S3"], "basis": "Would expand energy supply to stabilize energy prices."},
+        "experience": {"score": 2, "confidence": "high", "citations": ["S1", "S2"], "basis": "No elected experience; campaigns as 'Not a politician' against a sitting senator."},
+        "reform": {"score": 1, "confidence": "medium", "citations": ["S1", "S2"], "basis": "Says serving means saying no to outside special interests; touts a campaign without paid consultants."}
+      }
+    }
+  ]
+}

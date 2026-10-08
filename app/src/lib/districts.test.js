@@ -36,6 +36,21 @@ test('Spokane school and fire layer values read as names', () => {
   assert.equal(describeDistrict('FIRDST', 'Unserved'), 'No fire district')
 })
 
+test('Pierce Election_Precincts values read as names; NO flags drop out', () => {
+  // Live 2026-10-08 (#21): 1402 Lake Tapps Pkwy SE, Auburn.
+  assert.equal(describeDistrict('SCHDST', 'AUBURN SCHOOL DISTRICT NO. 408'), 'Auburn School District No. 408')
+  assert.equal(describeDistrict('SCHDST', 'YELM COMMUNITY SCHOOLS'), 'Yelm Community Schools')
+  assert.equal(describeDistrict('KCDISTCRT', 'YES'), 'King County District Court, Southeast Electoral District')
+  assert.equal(describeDistrict('PTBA', 'YES'), 'Public Transportation Benefit Area')
+  assert.equal(describeDistrict('DISTCRT', 'NO'), null)
+  assert.equal(describeDistrict('KCDISTCRT', 'NO'), null)
+  const lines = describeDistricts({
+    CONGDST: '8', LEGDST: '31', COUNTY_COUNCIL: '1', DISTCRT: 'NO', KCDISTCRT: 'YES', PTBA: 'YES',
+    SCHDST: 'AUBURN SCHOOL DISTRICT NO. 408', CITY: 'Auburn',
+  }).map((d) => d.key)
+  assert.deepEqual(lines, ['CITY', 'CONGDST', 'LEGDST', 'COUNTY_COUNCIL', 'KCDISTCRT', 'SCHDST', 'PTBA'])
+})
+
 test('codes are tidied without mangling initialisms', () => {
   assert.equal(describeDistrict('FIRDST', 'TACOMA'), 'Fire District Tacoma')
   assert.equal(describeDistrict('SCCDST', 'SCC5'), 'Seattle City Council District 5')
