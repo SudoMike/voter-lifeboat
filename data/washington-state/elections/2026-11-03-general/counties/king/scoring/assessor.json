@@ -1,0 +1,75 @@
+{
+  "contest_slug": "assessor",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/king/dossiers/assessor/"],
+  "office_does": "The King County Assessor sets the property values that county property taxes are based on, keeps parcel records and runs exemption programs; the office does not set tax rates or levies.",
+  "race_blurb": "Open seat. City of Seattle appraiser Rob Foxcurran led the August primary with 47%; property-rights advocate Dominique Scarimbolo edged Shoreline Councilmember Christopher Roberts for second with 19%.",
+  "candidates": [
+    {
+      "slug": "rob-foxcurran",
+      "summary": "City of Seattle Senior Appraiser and former King County Board of Appeals and Equalization hearing examiner, running for his first elected office on accuracy, transparency and property-tax relief.",
+      "highlights": [
+        "Senior Appraiser for the City of Seattle and Certified General Real Estate Appraiser; formerly a hearing examiner on the county Board of Appeals and Equalization [S1]",
+        "Would push the Legislature for a homestead exemption and a renter's tax credit, and wants property taxes tied to income [S1][S3]",
+        "Says large corporate landowners use appeals experts to shift the tax burden onto homeowners and renters [S1][S3]",
+        "Would use the office's data to identify surplus public land for affordable housing [S3]",
+        "Endorsed by King County Democrats, Executive Zahilay, primary opponent Al Dams and the Seattle Times, Stranger and Urbanist (primary) [S1][S9][S10]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S2", "S3"],
+          "basis": "Wants corporations to pay their fair share and property taxes tied to income, and called for lifting the 1% levy cap in his primary statement; pairs this with targeted homeowner and renter relief rather than lower overall collections."
+        },
+        "housing": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S3"],
+          "basis": "Proposes using the Assessor's data to identify surplus public land for affordable housing and a state renter's tax credit."
+        },
+        "experience": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S1", "S4"],
+          "basis": "No elected office, but a professional record in the office's core work (appraisal, assessment appeals) and the backing of the county party, labor and the office's own chief deputy."
+        }
+      }
+    },
+    {
+      "slug": "dominique-m-scarimbolo",
+      "summary": "Small family business owner and King County chapter president of the Citizens Alliance for Property Rights, running as a taxpayer advocate who is \"not a politician.\"",
+      "highlights": [
+        "President of the King County chapter of the Citizens Alliance for Property Rights; small business owner [S1]",
+        "Calls for parcel-specific valuation breakdowns, timely appeals and due process for property owners [S1]",
+        "Submitted four audit requests to the County Auditor on assessment uniformity, valuation methods, levy stacking and appeals [S3]",
+        "Told KUOW she opposes property taxes and that residents are \"overtaxed\" [S6]",
+        "Rated \"Best Choice\" by the King County Republican Party; raised about $250 as of August [S6][S7]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S3", "S6"],
+          "basis": "Told KUOW she opposes property taxes and residents are overtaxed; campaigns on keeping people from being taxed out of their homes and asked for an audit of levy lid lifts as a workaround to the 1% limit."
+        },
+        "spending": {
+          "score": -2,
+          "confidence": "medium",
+          "citations": ["S1", "S3", "S6"],
+          "basis": "Platform centers on audits, open-books government and demanding fiscal responsibility, and she attributes funding gaps to waste and fraud."
+        },
+        "experience": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S3"],
+          "basis": "Runs explicitly as \"not a politician\" with no elected or assessment-office experience, offering a taxpayer and appellant's perspective."
+        }
+      }
+    }
+  ]
+}
