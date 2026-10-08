@@ -99,4 +99,4 @@ export function describeDistricts(districts = {}, { contests = [], county = null
     .filter((d) => d.text)
 }
 
-export { DISTRICT_LABELS }
+export { DISTRICT_LABELS, ORDER as DISTRICT_ORDER }
