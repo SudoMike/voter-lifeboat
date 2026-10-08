@@ -3,7 +3,20 @@
 Election: 2026 Washington general election, November 3, 2026 (VoteWA
 election 899, county code 36).
 
-Research package for #30 (county wave 5), not yet shipped. Contests and
+Status (#30): shipped at Full County Coverage in
+`APP_PACKAGES["2026-11-03-general"]["counties"]`, with its elections office
+(`https://www.wwcowa.gov/government/auditor/current_election.php`), its
+local voters' pamphlet (`pamphletPdfs['walla-walla/local-voters-pamphlet']`)
+and its VoteWA guide (`countyGuides['walla-walla']`, `c=36`).
+`COUNTY_LAYERS['walla-walla']` reads `SCHDST` (DOR SCH2025) and `PARKDST`
+(DOR PKR2025) beside `COUNTY_COUNCIL`, as proposed below. CD 5 ships with
+Spokane's research, LD 16 with Benton's. Live ballots on 2026-10-08, each
+`full_county` with no missing layer: 108 S D St, Prescott (Prescott park
+levy); 315 W Main St, Walla Walla and 106 Preston Ave, Waitsburg (no local
+measure); the interior point (-118.153, 46.140) in Dixie (Dixie SD 101
+levy). The paragraphs below describe the package as researched.
+
+Research package for #30 (county wave 5). Contests and
 measures are built by `pipeline/build_votewa_lite_data.py --county
 walla-walla` from the VoteWA candidate list (`raw/votewa/candidate-list.csv.url`)
 and the overrides and measures in that script's

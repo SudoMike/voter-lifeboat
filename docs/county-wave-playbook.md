@@ -432,7 +432,8 @@ As of the builder runs on 2026-10-08 (#22, #28, #29, #30), the only shipped
 general package that is `partial_county` is Spokane (`PUDDST`). Benton,
 Clark, Kitsap, Pierce, Snohomish (since #27), Thurston, Whatcom, Yakima,
 Skagit, Cowlitz, Grant, Island, Lewis, Franklin, Chelan, Clallam, Grays
-Harbor and Mason are `full_county`; all nineteen ship with King. A PUD
+Harbor, Mason, Walla Walla and Stevens are `full_county`; all twenty-one
+ship with King. A PUD
 commissioner is nominated by district but elected by the whole PUD in the
 general (RCW 54.12.010(3)), so a countywide PUD's seat is scoped `COUNTY`
 (Clark, Kitsap, Thurston), not `PUDDST`.
@@ -597,6 +598,26 @@ one. The commissioner and FIRDST layers re-probed alive; neither is used
 by a general scope. Shared races (5): CD 6 with Pierce's scoring, LD 35 and
 the Court of Appeals II-2 Pos. 1 seat with Kitsap's. Mason links its local
 pamphlet at the cited PDF page and its VoteWA guide otherwise.
+
+Walla Walla and Stevens shipped on 2026-10-08 (#30) as `full_county`.
+Walla Walla's Dixie SD 101 levy reads DOR SCH2025 (`101`; no Dixie street
+address geocodes, so the live check used the interior point -118.153,
+46.140) and its Prescott park levy DOR PKR2025 (`PRES`; the district is
+joint with Columbia County, which is not shipped). Its Commissioner
+District 3 race is elected county-wide in the general and its District
+Court is one county-wide district. CD 5 ships with Spokane's scoring, LD 16
+with Benton's. Stevens's library levy reads DOR LIB2025 (`L`; the Cities of
+Colville and Kettle Falls are outside the district), its Fire District 10
+levy DOR FIR2025 and its Nine Mile Falls SD measures DOR SCH2025 (`179J`,
+the district's Stevens side). Stevens PUD No. 1 covers the whole county, so
+Stevens's copy of the PUD seat is scoped `COUNTY` and ships with Spokane's
+research (no applicable axis); Spokane's own copy stays `PUDDST`. CD 5, LD
+7 Senate and the two uncontested LD 7 House seats ship with Spokane's
+research too. Each county's Court of Appeals seat is its own information-
+only copy. Walla Walla links its local pamphlet at the cited page and its
+VoteWA guide otherwise; Stevens links its VoteWA guide only.
+stevenscountywa.gov answers 403 to a bare scripted User-Agent and 200 to a
+browser one, so its elections URL was checked with a browser User-Agent.
 
 ## 13. Reference
 

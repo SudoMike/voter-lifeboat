@@ -3,8 +3,20 @@
 Election: 2026 Washington general election, November 3, 2026 (VoteWA
 election 899, county code 33).
 
-Research package for #30 (county wave 5). Not yet declared in
-`APP_PACKAGES["2026-11-03-general"]["counties"]`. Contests and measures are
+Status (#30): shipped at Full County Coverage in
+`APP_PACKAGES["2026-11-03-general"]["counties"]`, with its elections office
+(`https://www.stevenscountywa.gov/20911/Elections`, the page the SOS county
+elections offices directory links; 200 to a browser User-Agent, 403 to a
+bare scripted one) and its VoteWA guide (`countyGuides.stevens`, `c=33`).
+`COUNTY_LAYERS.stevens` reads `LIBDST` (DOR LIB2025) and `SCHDST` (DOR
+SCH2025) beside `COUNTY_COUNCIL` and `FIRDST`, as proposed below. CD 5, LD
+7 and the PUD seat ship with Spokane's research. Live ballots on
+2026-10-08, each `full_county` with no missing layer: 6015 State Route 291,
+Nine Mile Falls (library levy, Nine Mile Falls SD Props. 1 and 2); 2785
+Aladdin Rd, Colville (library levy, FD 10); 215 S Oak St, Colville (no
+local measure). The paragraphs below describe the package as researched.
+
+Research package for #30 (county wave 5). Contests and measures are
 built by `pipeline/build_votewa_lite_data.py --county stevens` from the
 VoteWA candidate list (`raw/votewa/candidate-list.csv.url`) and the
 overrides and measures in that script's
