@@ -41,14 +41,18 @@
     "data/washington-state/elections/2026-11-03-general/counties/grays-harbor/scoring/*.json",
     "data/washington-state/elections/2026-11-03-general/counties/grays-harbor/scoring/refutations/*.json",
     "data/washington-state/elections/2026-11-03-general/counties/mason/scoring/*.json",
-    "data/washington-state/elections/2026-11-03-general/counties/mason/scoring/refutations/*.json"
+    "data/washington-state/elections/2026-11-03-general/counties/mason/scoring/refutations/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/walla-walla/scoring/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/walla-walla/scoring/refutations/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/stevens/scoring/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/stevens/scoring/refutations/*.json"
   ],
   "script": "pipeline/merge_scores.py",
   "verdict_stats": {
-    "upheld": 2074,
-    "adjust": 182,
-    "refuted": 9,
-    "missing_added": 27,
+    "upheld": 2112,
+    "adjust": 185,
+    "refuted": 11,
+    "missing_added": 29,
     "missing_dropped_low": 12
   },
   "contests": [
@@ -32693,6 +32697,979 @@
             "Prioritizes PUD broadband competition, local service hubs and infrastructure for future growth [S1]"
           ],
           "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "walla-walla-court-of-appeals-division-3-district-2-judge-position-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/walla-walla/dossiers/walla-walla-court-of-appeals-division-3-district-2-judge-position-1/"
+      ],
+      "office_does": "A Court of Appeals judge reviews trial-court decisions on appeal; Division III, District 2 elects one judge from Adams, Asotin, Benton, Columbia, Franklin, Garfield, Grant, Walla Walla and Whitman counties.",
+      "race_blurb": "Uncontested: Judge Tyson R. Hill, appointed by Gov. Ferguson effective Jan. 1, 2026 to replace retiring Judge George Fearing, is the only candidate for the remaining two years of the term.",
+      "candidates": [
+        {
+          "slug": "tyson-r-hill",
+          "summary": "Court of Appeals judge since his appointment effective Jan. 1, 2026; previously a Grant County Superior Court judge (from 2021) and District Court judge, and the Grant County Prosecutor's lead appellate attorney.",
+          "highlights": [
+            "Appointed by Gov. Ferguson to replace retiring Judge George Fearing, effective Jan. 1, 2026 [S2]",
+            "More than 12 years as a Grant County District and Superior Court judge; co-founded Grant County's first therapeutic drug court [S1][S2]",
+            "Former lead appellate prosecutor and law clerk to Justice James M. Johnson [S1][S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "walla-walla-walla-walla-county-assessor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/walla-walla/dossiers/walla-walla-walla-walla-county-assessor/"
+      ],
+      "office_does": "The assessor values property for taxation and maintains the county's property tax rolls.",
+      "race_blurb": "Uncontested: Assessor Byron Burres, in office since 2023, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "byron-burres",
+          "summary": "Walla Walla County Assessor since 2023, seeking a second term unopposed.",
+          "highlights": [
+            "Assessor since 2023 [S1]",
+            "Promises a property tax system that is 'fair, transparent, and consistent' [S1]",
+            "Received 97.3% unopposed in the August primary [S5]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "walla-walla-walla-walla-county-auditor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/walla-walla/dossiers/walla-walla-walla-walla-county-auditor/"
+      ],
+      "office_does": "The auditor runs the county's elections, accounting, licensing and recording offices and prepares the county budget for the commissioners.",
+      "race_blurb": "Appointed Auditor Sheryl Park, a tax professional named in February after Karen Martin retired, faces retired economist and finance consultant Tim Reeves, who says the office's financial reporting is late and incomplete. Park (prefers Republican) led the primary 43.1% to 36.9% for Reeves (prefers Democrat).",
+      "candidates": [
+        {
+          "slug": "sheryl-r-park",
+          "summary": "Walla Walla County Auditor since her appointment in February 2026; an IRS Enrolled Agent and 20-year tax professional who owns a bookkeeping and tax business.",
+          "highlights": [
+            "Appointed auditor Feb. 2, 2026, after Karen Martin's retirement [S1][S3]",
+            "Says she is modernizing systems, improving customer service and strengthening staff morale [S1]",
+            "Focuses budgeting on internal controls, efficiency and timely financial information [S4]",
+            "Would follow the Secretary of State's direction on federal voter-data requests [S5]",
+            "Endorsed by the Walla Walla County Republican Party [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3",
+                "S4"
+              ],
+              "basis": "Appointed incumbent running to keep the seat and continue the changes she has made since February; her tenure is eight months."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S2"
+              ],
+              "basis": "Frames the office around strong internal controls, efficiency and accounting for 'every dollar'; proposes no new programs."
+            }
+          }
+        },
+        {
+          "slug": "tim-reeves",
+          "summary": "Retired economist, corporate facilitator and finance consultant running for his first elected office, saying the auditor's financial reporting needs to be timelier and more detailed.",
+          "highlights": [
+            "Says 'something is broken in the Auditor's office' and cites late reports and Workday transition delays [S1][S3]",
+            "Proposes actual-to-budget reporting, a public performance dashboard and quarterly 'State of the County' updates [S4]",
+            "Would refuse and report federal voter-data requests not authorized by the Secretary of State [S5]",
+            "BA and MA in economics and an MBA; serves on the city parks advisory board [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "First-time candidate who runs on changing how the office is led ('something is broken'), though he has a long professional career in finance."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S6"
+              ],
+              "basis": "Centers his platform on oversight tools: actual-to-budget reporting, performance dashboards, quarterly public updates and 10-day financial disclosure."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "walla-walla-walla-walla-county-clerk",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/walla-walla/dossiers/walla-walla-walla-walla-county-clerk/"
+      ],
+      "office_does": "The clerk keeps the superior court's records and exhibits, receives and pays out court-ordered money, runs the jury system and handles passports.",
+      "race_blurb": "Uncontested: longtime Clerk Kathy Martin is retiring, and Chief Deputy Clerk Becky Renwick is the only candidate.",
+      "candidates": [
+        {
+          "slug": "becky-renwick",
+          "summary": "Chief Deputy Clerk and a county employee since 1997, running unopposed to succeed retiring Clerk Kathy Martin.",
+          "highlights": [
+            "County employee since 1997, mostly in the Department of Court Services [S1]",
+            "District Court trial clerk, then Chief Deputy Clerk since 2024 [S1]",
+            "Only candidate after Clerk Kathy Martin (38 years) did not run [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "walla-walla-walla-walla-county-commissioner-district-3-county-commissioner-district-3",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/walla-walla/dossiers/walla-walla-walla-walla-county-commissioner-district-3-county-commissioner-district-3/"
+      ],
+      "office_does": "The three county commissioners set the county budget and property tax levies, make land-use and road decisions and oversee county departments.",
+      "race_blurb": "First-term Commissioner Gunner Fulmer, a former firefighter-paramedic and police sergeant, faces business owner Troy Woody, who wants a public vote on a charter government with five part-time commissioners and a hired administrator. Both prefer the Republican Party; District 3 voters chose the finalists in August, and the whole county votes in November.",
+      "candidates": [
+        {
+          "slug": "gunner-fulmer",
+          "summary": "District 3 commissioner since 2023 and incoming president of the Washington State Association of Counties, after nearly 30 years as a Walla Walla firefighter-paramedic and police officer.",
+          "highlights": [
+            "Says he voted against seeking relief from the property tax cap: 'I do not believe higher taxes are the solution' [S3]",
+            "Wants the state to pay more of the cost of indigent defense, which he calls the top issue facing residents [S3]",
+            "Opposed a data center moratorium, saying the county cannot treat one business differently [S4]",
+            "Would keep speeding up permitting and work with legislators on state barriers to building [S2]",
+            "Will be sworn in as WSAC president in January 2027 if reelected [S1][S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "First-term incumbent and former board chair who runs on his record and relationships, including a statewide counties' association leadership track."
+            },
+            "taxes": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S2",
+                "S7"
+              ],
+              "basis": "Reports voting 'No' on seeking relief from the property tax cap and repeatedly says higher taxes are not the answer to the deficit."
+            },
+            "reform": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S5",
+                "S1",
+                "S6"
+              ],
+              "basis": "Stresses building relationships and working through existing institutions (WSAC, legislators, cities, the Port) to get results."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Wants faster, more predictable permitting and fewer state barriers that make it 'difficult and expensive' to build."
+            }
+          }
+        },
+        {
+          "slug": "troy-woody",
+          "summary": "Burbank business owner and former Columbia (Burbank) School Board member running to put charter-county reform to a public vote and pledging to serve at most two terms.",
+          "highlights": [
+            "Would seek a charter-county vote: five part-time commissioners, a county administrator and appointed department heads [S1][S3]",
+            "Calls the deficit 'a structural problem, not a revenue problem' and proposes a zero-based budget review [S4]",
+            "Would extend permit-office hours and drop permits such as those for replacing windows [S3][S4]",
+            "Pledges a two-term maximum and a pay cut if reform passes [S1][S3]",
+            "The county Republican committee declined to endorse him over his charter platform [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "reform": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Core platform is structural reform: a charter-county vote that cuts elected offices and commissioner pay, plus a personal two-term limit."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Runs explicitly as an outsider ('I am not a politician') against entrenched incumbency, with only school board service in office."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S4",
+                "S1",
+                "S2"
+              ],
+              "basis": "Frames the deficit as overspending after 152% budget growth since 2008 and proposes a zero-based review of every department and contract plus salary cuts."
+            },
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Says the budget gap is 'not a revenue problem', implying cuts over new revenue, but makes no explicit tax pledge."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S4"
+              ],
+              "basis": "Would eliminate unnecessary permits, expand permit hours and online permits, and block new regulations without a public-safety justification."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "walla-walla-walla-walla-county-coroner",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/walla-walla/dossiers/walla-walla-walla-walla-county-coroner/"
+      ],
+      "office_does": "The coroner investigates sudden, unexpected and unattended deaths and determines cause and manner of death.",
+      "race_blurb": "Uncontested: Coroner Richard Greenwood is the only candidate.",
+      "candidates": [
+        {
+          "slug": "richard-greenwood",
+          "summary": "Incumbent Walla Walla County Coroner, unopposed; he submitted no voters' pamphlet statement.",
+          "highlights": [
+            "Incumbent coroner [S3]",
+            "No pamphlet statement submitted [S1]",
+            "Received 98.0% unopposed in the August primary [S5]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "walla-walla-walla-walla-county-district-court-district-court-judge-full-time",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/walla-walla/dossiers/walla-walla-walla-walla-county-district-court-district-court-judge-full-time/"
+      ],
+      "office_does": "The full-time District Court judge presides over the county's court for misdemeanors, traffic infractions, small claims, protection orders and smaller civil cases.",
+      "race_blurb": "Uncontested: Judge Kristian Hedine is retiring, and part-time Judge Jared N. Hawkins is the only candidate for the full-time seat.",
+      "candidates": [
+        {
+          "slug": "jared-n-hawkins",
+          "summary": "Walla Walla County District Court's part-time judge since winning the seat in 2022, running unopposed for the full-time seat.",
+          "highlights": [
+            "Won the part-time judgeship in 2022 over Nicholas Holce [S3]",
+            "Owned Hawkins Law; Air Force Reserve lieutenant colonel providing legal services (2022 reporting) [S3]",
+            "Unopposed for the seat Judge Hedine is vacating [S2][S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "walla-walla-walla-walla-county-district-court-district-court-judge-part-time",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/walla-walla/dossiers/walla-walla-walla-walla-county-district-court-district-court-judge-part-time/"
+      ],
+      "office_does": "The part-time District Court judge hears misdemeanors, traffic infractions, small claims, protection orders and smaller civil cases, and fills in for the full-time judge.",
+      "race_blurb": "Open seat: part-time Judge Jared Hawkins is moving to the full-time bench. Former deputy prosecutor and defense attorney Nicholas Holce, who lost this race to Hawkins in 2022, faces attorney and superior court judge pro tem Janelle Carman-Wagner.",
+      "candidates": [
+        {
+          "slug": "nicholas-holce",
+          "summary": "Walla Walla criminal and appellate defense attorney, a county deputy prosecutor from 2013 to 2020, who has served as a judge pro tempore.",
+          "highlights": [
+            "Deputy prosecuting attorney 2013-2020; criminal defense since 2020, appellate defense since 2025 [S2]",
+            "Has served as judge pro tempore in superior and district court [S2]",
+            "Wants a district court engaged with employment, housing and treatment pathways [S5]",
+            "Lost the 2022 race for this seat to Jared Hawkins [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S5",
+                "S3",
+                "S4"
+              ],
+              "basis": "Emphasizes treatment courts and connecting defendants with employment and housing as the way to improve justice; documented from his own statements in 2022 and 2026."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Not an incumbent, but runs on his courtroom record: deputy prosecutor 2013-2020, criminal and appellate defense since 2020, and judge pro tempore service in superior and district court. He cites his prosecution and defense work as his qualification. This matches the -1 given to similar non-incumbent profiles elsewhere.",
+              "added_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "janelle-carman-wagner",
+          "summary": "Owner of Carman Law Office since 2005 and a former Assistant Attorney General, appointed a superior court judge pro tempore more than 20 times since 2015.",
+          "highlights": [
+            "Civil, family, administrative and criminal practice since 2005; Assistant Attorney General 2001-2005 [S2][S3]",
+            "Superior court judge pro tem since 2015 and district court pro tem in 2026 [S2][S3]",
+            "Says the biggest change is to 'really hold people accountable' with substantive treatment [S5]",
+            "Submitted no pamphlet statement [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S5"
+              ],
+              "basis": "Leads with accountability ('the biggest change we can make is to really hold people accountable'), using court-mandated treatment rather than 'superficial' programs."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Not an incumbent, but runs on 25 years of practice (Assistant Attorney General 2001-2005, own firm since 2005), more than 20 superior court pro tem appointments since 2015 and a 2026 District Court pro tem appointment. This matches the -1 given to similar non-incumbent pro tem profiles in Benton and Spokane district court races.",
+              "added_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "walla-walla-walla-walla-county-prosecuting-attorney",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/walla-walla/dossiers/walla-walla-walla-walla-county-prosecuting-attorney/"
+      ],
+      "office_does": "The prosecuting attorney prosecutes crimes in the county and advises county government on legal matters.",
+      "race_blurb": "Uncontested: Prosecuting Attorney Gabriel (Gabe) Acosta is the only candidate.",
+      "candidates": [
+        {
+          "slug": "gabriel-acosta",
+          "summary": "Incumbent Walla Walla County Prosecuting Attorney, unopposed; he submitted no voters' pamphlet statement.",
+          "highlights": [
+            "Incumbent prosecuting attorney [S3][S4]",
+            "His office's disclosure committee maintains the Potential Impeachment Disclosure list [S4]",
+            "No pamphlet statement submitted [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "walla-walla-walla-walla-county-sheriff",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/walla-walla/dossiers/walla-walla-walla-walla-county-sheriff/"
+      ],
+      "office_does": "The sheriff runs the Walla Walla County Sheriff's Office, the county's law enforcement agency, which patrols, investigates and enforces state and local law.",
+      "race_blurb": "Sheriff Mark Crider is retiring, so the seat is open. Chief Deputy Richard Schram, endorsed by Crider and the deputies' association, faces Deputy Ashley Daschofsky, who says the command staff has failed to stop turnover. Both prefer the Republican Party; Schram led the primary 61.9% to 36.9%.",
+      "candidates": [
+        {
+          "slug": "richard-schram",
+          "summary": "Chief deputy of the Walla Walla County Sheriff's Office, with 23 years at the office and eight in command, endorsed by the retiring sheriff and the deputies' association.",
+          "highlights": [
+            "Rose from corrections deputy to chief deputy; SWAT commander and FBI National Academy graduate [S1][S5]",
+            "Calls the constrained budget and uncompetitive wages the office's critical issue [S5]",
+            "Promises 'disciplined budgeting' and community-oriented policing with foot patrols [S3]",
+            "Says the office will not carry out missions to detain people for ICE [S5]",
+            "Endorsed by Sheriff Crider, the Commissioned Deputies Association (22-0) and IAFF Local 404 [S2][S4]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S5"
+              ],
+              "basis": "Command-staff insider who runs on 23 years at the office, continuity with the retiring sheriff and the deputies' endorsement; he has never held elected office."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Promises to uphold the law and keep residents safe through visible, proactive deputies and community policing; conventional enforcement, not hardline."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Pledges every budget request will rest on real operational needs and every dollar be 'clearly justified'.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "ashley-daschofsky",
+          "summary": "Walla Walla County deputy since 2016, Marine Corps veteran and K9 handler, six-time state DUI enforcement award winner, running to replace the office's command staff.",
+          "highlights": [
+            "Says the office has lost employees as fast as it hires them and command staff has failed to fix it [S3]",
+            "Would cut command positions and fund victim advocates and code enforcement [S1][S3]",
+            "Promises proactive, intelligence-led policing and public reporting on crime and use of force [S2]",
+            "Would limit help to ICE to stopping violence [S3]",
+            "On the Prosecuting Attorney's impeachment-disclosure list over statements to a co-worker, which he disputes [S4]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Runs repeatedly on 'a change at the command staff level' against the current leadership, though he is a 10-year deputy of the same office."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Enforcement-oriented record and platform (DUI enforcement, proactive policing, 'holding criminals accountable'), adding victim advocates and code enforcement."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "walla-walla-walla-walla-county-treasurer",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/walla-walla/dossiers/walla-walla-walla-walla-county-treasurer/"
+      ],
+      "office_does": "The treasurer collects property taxes, invests county funds and manages the county's cash.",
+      "race_blurb": "Uncontested: Treasurer Gordon R. Heimbigner is the only candidate.",
+      "candidates": [
+        {
+          "slug": "gordon-r-heimbigner",
+          "summary": "Incumbent Walla Walla County Treasurer, unopposed; he submitted no voters' pamphlet statement.",
+          "highlights": [
+            "Incumbent treasurer [S3]",
+            "No pamphlet statement submitted [S1]",
+            "Received 97.9% unopposed in the August primary [S5]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "stevens-court-of-appeals-division-3-district-1-judge-position-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/stevens/dossiers/stevens-court-of-appeals-division-3-district-1-judge-position-2/"
+      ],
+      "office_does": "A Court of Appeals judge decides appeals from superior-court cases; District 1 of Division III is elected by voters in Ferry, Lincoln, Okanogan, Pend Oreille, Spokane and Stevens counties.",
+      "race_blurb": "Uncontested: Judge Tracy Arlene Staab, who won the seat in 2020, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "tracy-arlene-staab",
+          "summary": "Court of Appeals judge elected in 2020 and a former Spokane Municipal Court judge; the only candidate on the ballot.",
+          "highlights": [
+            "Won the open seat in 2020 against Marshall Casey [S2][S3]",
+            "Spokane Municipal Court judge from 2009; earlier an appellate attorney [S2]",
+            "Submitted no statement to the 2026 voters' guide [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "stevens-ferry-pend-oreille-stevens-superior-court-judge-position-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/stevens/dossiers/stevens-ferry-pend-oreille-stevens-superior-court-judge-position-2/"
+      ],
+      "office_does": "Superior Court judges hear felonies, civil suits and family, juvenile and probate cases for Ferry, Pend Oreille and Stevens counties.",
+      "race_blurb": "Uncontested: Judge Thomas Webster, appointed in January 2026, is the only candidate for the two-year unexpired term.",
+      "candidates": [
+        {
+          "slug": "thomas-franklin-webster",
+          "summary": "Superior Court judge appointed in January 2026 after 25 years in private practice, mostly civil litigation.",
+          "highlights": [
+            "Appointed and sworn in January 23, 2026, replacing retiring Judge Jessica Taylor Reeves [S1][S2]",
+            "Ran Webster Law Office in Colville from 2009 to 2025 [S1]",
+            "Says he will apply the law strictly and stay out of partisanship [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "stevens-stevens-county-assessor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/stevens/dossiers/stevens-stevens-county-assessor/"
+      ],
+      "office_does": "The assessor values all taxable property in Stevens County for property taxes.",
+      "race_blurb": "Uncontested: Assessor Rick Johnson, first elected in 2022, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "rick-johnson",
+          "summary": "Stevens County Assessor, elected in 2022; submitted no voters' guide statement.",
+          "highlights": [
+            "Won the office in 2022 with 58.6% [S2]",
+            "Submitted no statement to the voters' guide [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "stevens-stevens-county-auditor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/stevens/dossiers/stevens-stevens-county-auditor/"
+      ],
+      "office_does": "The county auditor runs Stevens County's elections and voter registration, records deeds and documents, licenses vehicles and vessels, and keeps the county's financial accounts.",
+      "race_blurb": "Two-term Auditor Lori Larsen faces Eric Simpson, a logger who chairs the county Republican Party's election integrity committee; both prefer the Republican Party. Simpson calls vote-by-mail a catastrophe and wants hand counts and voter-list cleaning; Larsen defends the current system and runs on her record. Larsen led the primary 58% to 40%.",
+      "candidates": [
+        {
+          "slug": "lori-larsen",
+          "summary": "Stevens County Auditor since 2018, with a doctorate in public policy, running on her record of election administration, records access and licensing changes.",
+          "highlights": [
+            "Auditor since 2018; won 61.6% in 2018 and was unopposed in 2022 [S11][S12]",
+            "Co-wrote a 2025 column defending Washington's vote-at-home system as secure and cost-effective [S6]",
+            "Says she administers election law as written and would implement any change the Legislature or Congress makes [S5]",
+            "Cites clean financial reports, online records access, deed-fraud alerts and licensing changes [S1][S4][S5]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S5",
+                "S11",
+                "S12"
+              ],
+              "basis": "Eight-year incumbent running on her record, qualifications and statewide auditor roles."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S4"
+              ],
+              "basis": "Says she keeps costs low with a conservative approach to taxpayer resources, though she also sought grant-funded new equipment.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "eric-simpson",
+          "summary": "Logger, welder and precinct committee officer who chairs the county Republican Party's election integrity committee, running to change how Stevens County runs elections.",
+          "highlights": [
+            "Calls vote-by-mail a 'catastrophe' and proposes hand counting ballots and proactive cleaning of the voter list [S2][S4]",
+            "Says he lacks professional background in the auditor's duties but would complete all training [S2][S4]",
+            "Promises 'responsible stewardship of your money' and alleges poor financial stewardship in the office [S1][S2]",
+            "Raised $38,740 through early October [S7]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S4"
+              ],
+              "basis": "First-time candidate for the office who says he does not have Larsen's experience and runs as a change from the current system."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Promises responsible stewardship and alleges poor financial stewardship in the office, without a specific audit program."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "stevens-stevens-county-clerk",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/stevens/dossiers/stevens-stevens-county-clerk/"
+      ],
+      "office_does": "The county clerk keeps Superior Court case records and court funds and manages juries and filings.",
+      "race_blurb": "Uncontested: Clerk Michelle Enright, in her fifth year in office, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "michelle-enright",
+          "summary": "Stevens County Clerk in her fifth year, with more than 32 years in county government.",
+          "highlights": [
+            "Digitized microfilmed records and implemented electronic filing [S1]",
+            "Working with the library district on remote e-filing and video appearances [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "stevens-stevens-county-commissioner-district-2-commissioner-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/stevens/dossiers/stevens-stevens-county-commissioner-district-2-commissioner-2/"
+      ],
+      "office_does": "The three county commissioners are Stevens County's legislative body: they adopt the budget, set county policy and oversee courthouses, the jail and county roads. District 2 is nominated by district but elected county-wide.",
+      "race_blurb": "Commissioner Mark Burrows, a retired Chewelah police chief seeking re-election, faces first-time candidate Jack Griffin Jr. of Valley, who states no party preference. Burrows won 77% in the district-only primary.",
+      "candidates": [
+        {
+          "slug": "mark-burrows",
+          "summary": "Stevens County commissioner for 5.5 years by his count and a retired Chewelah police chief and Air Force veteran, running to finish current projects and resist state overregulation.",
+          "highlights": [
+            "Won the seat in 2022 with 65.1% [S2]",
+            "Stresses efficiency and accountability, and competitive pay to retain county staff [S1]",
+            "Promises to work with other counties and sheriffs against 'overregulation' and 'unconstitutional legislation from the State' [S1]",
+            "Cast the lone vote against the county's 2025 veterans relief fund policy, calling it rushed [S4]",
+            "Did not answer questions at the July candidate forum [S6]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Incumbent commissioner with a 30-year law-enforcement career, running to see current projects through."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Frames stewardship as efficiency and accountability in county operations, while backing competitive pay for staff retention."
+            }
+          }
+        },
+        {
+          "slug": "jack-griffin-jr",
+          "summary": "First-time candidate from Valley who returned home after 40 years in corporate, tech, union and healthcare work.",
+          "highlights": [
+            "First run for public office; states no party preference [S1]",
+            "Says he has accomplished 'a great deal with limited resources' over his career [S1]",
+            "Did not answer questions at the July candidate forum [S3]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "First-time candidate offering private-sector experience in place of the incumbent; no generational-change argument."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "stevens-stevens-county-coroner",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/stevens/dossiers/stevens-stevens-county-coroner/"
+      ],
+      "office_does": "The coroner investigates sudden, violent, suspicious and unexplained deaths in Stevens County and determines cause and manner of death.",
+      "race_blurb": "Open seat: Coroner Ramona Colvin is not running. Chief Deputy Coroner Johnathan Waldrop runs on continuity with the office's recent accreditation and grants; Spokane County death investigator Roseanne Ennis Jezerinac runs on prevention, transparency and more autopsy funding. Both prefer the Republican Party; Waldrop led the primary 73% to 26%.",
+      "candidates": [
+        {
+          "slug": "johnathan-waldrop",
+          "summary": "Stevens County chief deputy coroner with 14 years in medical examiner and coroner work, running to build on the office's recent changes.",
+          "highlights": [
+            "Chief deputy coroner; never held public office [S1]",
+            "Credits the office with national accreditation, federal grants and repaired agency partnerships [S1][S2]",
+            "Says the office kept a balanced budget while minimizing taxpayer funds [S1]",
+            "Wants to expand its education program and recruit people into the field [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Current chief deputy running on continuity with the office's direction, though he has never held elected office."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Cites a balanced budget kept while minimizing the use of taxpayer funds."
+            },
+            "safety": {
+              "score": 1,
+              "confidence": "low",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Describes a community education initiative aimed at preventing avoidable deaths, a secondary theme of his campaign."
+            }
+          }
+        },
+        {
+          "slug": "roseanne-ennis-jezerinac",
+          "summary": "Spokane County medical examiner's death investigator and former Stevens deputy coroner, running on prevention, education and transparency.",
+          "highlights": [
+            "Says she has investigated more than 1,600 deaths; board-certified death investigator [S1][S2]",
+            "Would put prevention and education 'to the forefront': overdoses, suicide, mental health, missing and murdered Indigenous people [S1][S2]",
+            "Promises more transparency and more of the current budget for autopsies [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": 1,
+              "confidence": "low",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Platform centers on prevention and public-health education (overdose, suicide, mental health) drawn from death investigations.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Experienced investigator from outside the current office leadership promising changes in transparency and budget priorities."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "stevens-stevens-county-district-court-district-court-judge",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/stevens/dossiers/stevens-stevens-county-district-court-district-court-judge/"
+      ],
+      "office_does": "The District Court judge hears misdemeanors, DUIs, traffic infractions, small claims and protection orders for all of Stevens County.",
+      "race_blurb": "Judge Gina Tveit, on the bench since 2009, faces Colville attorney C. Olivia Irwin, who has practiced for 12 years and submitted no voters' guide statement.",
+      "candidates": [
+        {
+          "slug": "c-olivia-irwin",
+          "summary": "Colville attorney of 12 years seeking her first judicial office; she submitted no voters' guide statement.",
+          "highlights": [
+            "Says she has practiced law for 12 years [S2]",
+            "Wants to expand access to justice and advocate for the justice center [S2]",
+            "Submitted no statement to the voters' guide [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "First-time judicial candidate challenging a 17-year incumbent."
+            }
+          }
+        },
+        {
+          "slug": "gina-a-tveit",
+          "summary": "Stevens County District Court judge since 2009 and a former prosecutor, running on experience.",
+          "highlights": [
+            "Judge since 2009; re-elected in 2014, 2018 and unopposed in 2022 [S1][S3][S4][S5]",
+            "Helped develop the county's veterans court, therapeutic drug court, 24/7 alcohol monitoring and probation services [S1]",
+            "Says she holds offenders accountable while supporting rehabilitation [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3",
+                "S4",
+                "S5"
+              ],
+              "basis": "Seventeen-year incumbent re-elected three times who runs on experience."
+            },
+            "safety": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Pairs holding offenders accountable with therapeutic and veterans courts and probation services built for rehabilitation."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "stevens-stevens-county-prosecuting-attorney",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/stevens/dossiers/stevens-stevens-county-prosecuting-attorney/"
+      ],
+      "office_does": "The prosecuting attorney prosecutes crimes in Stevens County and advises county government.",
+      "race_blurb": "Uncontested: Prosecuting Attorney Erika George, first elected in 2022, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "erika-george",
+          "summary": "Stevens County Prosecuting Attorney since 2023 and a former felony deputy prosecutor.",
+          "highlights": [
+            "Prosecuting attorney since 2023; deputy prosecutor 2015-2022 [S1]",
+            "Won the office in 2022 with 60.2% [S2]",
+            "Says she refocused the office on prosecuting crime while addressing root causes [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "stevens-stevens-county-sheriff",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/stevens/dossiers/stevens-stevens-county-sheriff/"
+      ],
+      "office_does": "The sheriff runs the Stevens County Sheriff's Office and jail, the chief law-enforcement agency for unincorporated Stevens County.",
+      "race_blurb": "Uncontested: Sheriff Brad Manke, seeking a third term, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "brad-a-manke",
+          "summary": "Two-term Stevens County sheriff with 28 years in the office.",
+          "highlights": [
+            "Goals: more deputies, succession planning, and building and opening the new jail [S1]",
+            "Among four sheriffs suing over the state's 2026 sheriff eligibility law [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "stevens-stevens-county-treasurer",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/stevens/dossiers/stevens-stevens-county-treasurer/"
+      ],
+      "office_does": "The treasurer collects property taxes, invests and accounts for county and district funds, and pays county warrants.",
+      "race_blurb": "Uncontested: Chief Deputy Assessor Toni Graham is the only candidate for the open seat.",
+      "candidates": [
+        {
+          "slug": "tonia-toni-graham",
+          "summary": "Stevens County chief deputy assessor and Marine Corps veteran, running for the open treasurer's seat.",
+          "highlights": [
+            "Chief Deputy Assessor; formerly worked in the Treasurer's Office [S1]",
+            "Treasurer Leslie Valz, elected in 2022, is not on the ballot [S1][S2]"
+          ],
+          "evidence_level": "pamphlet-only",
           "withdrawn": false,
           "scores": {}
         }

@@ -89,9 +89,9 @@ test('every statewide contest and measure in the shipped general gets a paged SO
       }
   for (const m of general.measures) {
     // Spokane's, Pierce's, Kitsap's, Whatcom's, Benton's, Grant's, Island's,
-    // Lewis's and Grays Harbor's measures cite VoteWA's unpaged online guide
-    // (countyGuides).
-    if (['spokane', 'pierce', 'kitsap', 'whatcom', 'benton', 'grant', 'island', 'lewis', 'grays-harbor'].includes(m.owner)) continue
+    // Lewis's, Grays Harbor's and Stevens's measures cite VoteWA's unpaged
+    // online guide (countyGuides).
+    if (['spokane', 'pierce', 'kitsap', 'whatcom', 'benton', 'grant', 'island', 'lewis', 'grays-harbor', 'stevens'].includes(m.owner)) continue
     assert.match(pamphletLink(m.pamphlet_pages, m.owner, general.election.id), /#page=\d+$/, m.slug)
     n++
   }
@@ -430,6 +430,56 @@ test('shipped Mason records link the local pamphlet at the cited page, else the 
   })
 })
 
+test('shipped Walla Walla records link the local pamphlet at the cited page, else the county\'s VoteWA guide', () => {
+  const id = general.election.id
+  const PDF = 'https://www.wwcowa.gov/November%20General%202026-%20Final.pdf'
+  const GUIDE = 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=36'
+  // Prescott park levy, pamphlet pp. 24-25.
+  assert.equal(pamphletLink([{ edition: 'local-voters-pamphlet', page: 24 }], 'walla-walla', id), `${PDF}#page=24`)
+  let paged = 0
+  let guided = 0
+  for (const item of [...general.contests, ...general.measures]) {
+    if (item.owner !== 'walla-walla') continue
+    const pages = item.candidates ? item.candidates.map((c) => c.pamphlet_pages) : [item.pamphlet_pages]
+    for (const p of pages) {
+      if (p?.length) {
+        assert.equal(pamphletLink(p, 'walla-walla', id), `${PDF}#page=${p[0].page}`, item.slug)
+        paged++
+      } else {
+        // CD 5, LD 16 and the Court of Appeals seat cite VoteWA or another package.
+        assert.equal(pamphletLink(p, 'walla-walla', id), GUIDE, item.slug)
+        guided++
+      }
+    }
+  }
+  assert.ok(paged >= 16 && guided >= 7, JSON.stringify({ paged, guided }))
+  assert.deepEqual(countyElectionsOffice(general, { id: 'walla-walla', name: 'Walla Walla County' }), {
+    name: 'Walla Walla County Elections',
+    url: 'https://www.wwcowa.gov/government/auditor/current_election.php',
+    direct: true,
+  })
+})
+
+test('shipped Stevens records link the county\'s VoteWA guide', () => {
+  const id = general.election.id
+  const GUIDE = 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=33'
+  let n = 0
+  for (const item of [...general.contests, ...general.measures]) {
+    if (item.owner !== 'stevens') continue
+    const pages = item.candidates ? item.candidates.map((c) => c.pamphlet_pages) : [item.pamphlet_pages]
+    for (const p of pages) {
+      assert.equal(pamphletLink(p, 'stevens', id), GUIDE, item.slug)
+      n++
+    }
+  }
+  assert.ok(n >= 27, String(n))
+  assert.deepEqual(countyElectionsOffice(general, { id: 'stevens', name: 'Stevens County' }), {
+    name: 'Stevens County Elections',
+    url: 'https://www.stevenscountywa.gov/20911/Elections',
+    direct: true,
+  })
+})
+
 test('the shipped general links Snohomish County Elections directly', () => {
   assert.deepEqual(countyElectionsOffice(general, { id: 'snohomish', name: 'Snohomish County' }), {
     name: 'Snohomish County Elections',
@@ -469,9 +519,9 @@ test('a known county without its own URL gets the SOS county offices directory',
     url: COUNTY_OFFICES_URL,
     direct: false,
   })
-  // Walla Walla does not ship in the general (Yakima does since #28).
-  assert.deepEqual(countyElectionsOffice(general, { id: 'walla-walla', name: 'Walla Walla County' }), {
-    name: 'Walla Walla County Elections',
+  // Garfield does not ship in the general (Walla Walla does since #30).
+  assert.deepEqual(countyElectionsOffice(general, { id: 'garfield', name: 'Garfield County' }), {
+    name: 'Garfield County Elections',
     url: COUNTY_OFFICES_URL,
     direct: false,
   })

@@ -165,9 +165,9 @@ test('a live King context from the general opens the primary as a full county gu
 
 test('reconcileContext leaves same-election contexts alone and never overclaims', () => {
   // A statewide-only link on the general, for a county the general does not
-  // cover (Walla Walla; Yakima ships since #28): unchanged.
-  const wallaWalla = { ...liveGeneralContext, county: { id: 'walla-walla', fips: '53071', name: 'Walla Walla County' } }
-  assert.deepEqual(reconcileContext(wallaWalla, general), wallaWalla)
+  // cover (Garfield; Walla Walla ships since #30): unchanged.
+  const garfield = { ...liveGeneralContext, county: { id: 'garfield', fips: '53023', name: 'Garfield County' } }
+  assert.deepEqual(reconcileContext(garfield, general), garfield)
   // A King link made before King shipped in the general (#16) carries no
   // districts: it now reads as a partial King guide, never as full coverage.
   const old = reconcileContext(liveGeneralContext, general)
@@ -187,7 +187,7 @@ test('reconcileContext leaves same-election contexts alone and never overclaims'
   assert.deepEqual(reconcileContext(partial, primary), partial)
   // A county-level claim against data that does not cover the county
   // degrades to statewide-only.
-  const claimed = { coverageStatus: 'full_county', county: wallaWalla.county, districts: { LEGDST: '16' }, missingLayers: [] }
+  const claimed = { coverageStatus: 'full_county', county: garfield.county, districts: { LEGDST: '9' }, missingLayers: [] }
   assert.equal(reconcileContext(claimed, general).coverageStatus, 'statewide_only')
 })
 

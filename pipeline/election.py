@@ -69,7 +69,7 @@ APP_PACKAGES = {
         "statewide_ballot": True,
         "counties": ["king", "snohomish", "spokane", "pierce", "clark", "kitsap", "thurston", "yakima", "whatcom",
                      "benton", "skagit", "cowlitz", "grant", "island", "lewis", "franklin", "chelan", "clallam",
-                     "grays-harbor", "mason"],
+                     "grays-harbor", "mason", "walla-walla", "stevens"],
         "district_contests": "county",
     },
 }
@@ -258,6 +258,16 @@ COUNTY_ELECTIONS_URLS = {
         # masoncountywa.gov/elections redirects here, and the Current Election
         # page that links the pamphlet and VoteWA's guide sits beside it).
         "mason": "https://www.masoncountywa.gov/departments/auditor/elections/index.php",
+        # Walla Walla County Auditor, Current Election (200, 2026-10-08; the
+        # page that links the general's local voters' pamphlet and sample
+        # ballot).
+        "walla-walla": "https://www.wwcowa.gov/government/auditor/current_election.php",
+        # Stevens County Auditor, Elections: the page the SOS county elections
+        # offices directory links (vote.stevenscountywa.gov serves the same
+        # site). stevenscountywa.gov answers 403 to scripted requests with a
+        # bare User-Agent and 200 to a browser User-Agent (2026-10-08), so a
+        # plain scripted check cannot verify it.
+        "stevens": "https://www.stevenscountywa.gov/20911/Elections",
     },
 }
 

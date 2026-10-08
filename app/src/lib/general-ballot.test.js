@@ -3,7 +3,7 @@
 // (#21), Snohomish at full coverage (#27), Clark, Kitsap and Thurston at full
 // coverage (#22), Yakima, Whatcom, Benton, Skagit, Cowlitz and Grant at full
 // coverage (#28), Island, Lewis, Franklin, Chelan, Clallam and Grays Harbor at
-// full coverage (#29), Mason at full coverage (#30), every other Washington address a Statewide-Only Guide (issue #9). These run the app's own ballot, interview, lean and Ballot Brief
+// full coverage (#29), Mason, Walla Walla and Stevens at full coverage (#30), every other Washington address a Statewide-Only Guide (issue #9). These run the app's own ballot, interview, lean and Ballot Brief
 // code against public/data/2026-11-03-general.
 import test from 'node:test'
 import assert from 'node:assert/strict'
@@ -28,11 +28,11 @@ const data = JSON.parse(
 const KING = { id: 'king', fips: '53033', name: 'King County' }
 
 // What lookupBallotContext returns for a Washington address in a county the
-// general does not ship (geo.test.js covers the lookup itself). Walla Walla
-// since #28 shipped Yakima.
-const wallaWalla = {
+// general does not ship (geo.test.js covers the lookup itself). Garfield
+// since #30 shipped Walla Walla.
+const garfield = {
   coverageStatus: 'statewide_only',
-  county: { id: 'walla-walla', fips: '53071', name: 'Walla Walla County' },
+  county: { id: 'garfield', fips: '53023', name: 'Garfield County' },
   districts: {},
   missingLayers: [],
 }
@@ -69,7 +69,7 @@ const STATE_MEASURES = [
   'initiative-measure-no-il26-638',
 ]
 
-test('the general ships nineteen counties at full county coverage, Spokane at partial, with their elections offices', () => {
+test('the general ships twenty-one counties at full county coverage, Spokane at partial, with their elections offices', () => {
   assert.equal(data.election.id, '2026-11-03-general')
   assert.deepEqual(data.coverage, {
     statewide_complete: true,
@@ -269,6 +269,26 @@ test('the general ships nineteen counties at full county coverage, Spokane at pa
         fips: '53045',
         coverage: 'full_county',
         elections_url: 'https://www.masoncountywa.gov/departments/auditor/elections/index.php',
+      },
+      {
+        // Full: the Dixie SD 101 and Prescott park levies read DOR SCH2025
+        // and PKR2025 (#30).
+        id: 'walla-walla',
+        name: 'Walla Walla County',
+        state: 'WA',
+        fips: '53071',
+        coverage: 'full_county',
+        elections_url: 'https://www.wwcowa.gov/government/auditor/current_election.php',
+      },
+      {
+        // Full: the library, Fire District 10 and Nine Mile Falls SD measures
+        // read DOR LIB2025, FIR2025 and SCH2025 (#30).
+        id: 'stevens',
+        name: 'Stevens County',
+        state: 'WA',
+        fips: '53065',
+        coverage: 'full_county',
+        elections_url: 'https://www.stevenscountywa.gov/20911/Elections',
       },
     ],
   })
@@ -807,6 +827,70 @@ test('a Mason ballot: Pierce\'s research for CD 6, Kitsap\'s for LD 35, PUD No. 
   assert.equal(coverageAdvice(ma({})), null)
 })
 
+test('a Walla Walla ballot: Spokane\'s research for CD 5, Benton\'s for LD 16, levies by district', () => {
+  const WALLA_WALLA = { id: 'walla-walla', fips: '53071', name: 'Walla Walla County' }
+  const ww = (districts) => ({ coverageStatus: 'full_county', county: WALLA_WALLA, districts, missingLayers: [] })
+  const DIXIE = 'walla-walla-dixie-school-district-no-101-proposition-1'
+  const PRESCOTT = 'walla-walla-prescott-joint-park-and-recreation-district-proposition-no-1'
+  // Districts as the live District Adapter resolved them on 2026-10-08.
+  // 108 S D St, Prescott: Prescott SD 402, park district PRES.
+  const pr = ballotFor(ww({ CONGDST: '5', LEGDST: '16', CITY: 'Prescott', COUNTY_COUNCIL: '2', SCHDST: '402', PARKDST: 'PRES' }))
+  const ps = pr.contests.map((c) => c.slug)
+  assert.equal(new Set(ps).size, ps.length)
+  assert.equal(ps.length, 14 + SUPREME_COURT.length)
+  for (const slug of SUPREME_COURT) assert.ok(ps.includes(slug), slug)
+  sameScoring(pr, 'walla-walla-congressional-district-5-u-s-representative', 'spokane-congressional-district-5-u-s-representative')
+  for (const pos of [1, 2])
+    sameScoring(pr, `walla-walla-legislative-district-16-state-representative-pos-${pos}`, `benton-legislative-district-16-state-representative-pos-${pos}`)
+  assert.ok(!pr.contests.some((c) => c.owner !== 'walla-walla' && c.owner !== 'statewide'))
+  // Commissioner District 3 is elected countywide in the general.
+  assert.ok(ps.includes('walla-walla-walla-walla-county-commissioner-district-3-county-commissioner-district-3'))
+  assert.deepEqual(ownLocal(pr, 'walla-walla'), [PRESCOTT])
+  // 315 W Main St, Walla Walla (SD 140) and 106 Preston Ave, Waitsburg (SD
+  // 401, park district WAIT): no local measure.
+  const wa = ballotFor(ww({ CONGDST: '5', LEGDST: '16', CITY: 'Walla Walla', COUNTY_COUNCIL: '1', SCHDST: '140' }))
+  assert.equal(wa.contests.length, 14 + SUPREME_COURT.length)
+  assert.deepEqual(ownLocal(wa, 'walla-walla'), [])
+  const wb = ballotFor(ww({ CONGDST: '5', LEGDST: '16', CITY: 'Waitsburg', COUNTY_COUNCIL: '2', SCHDST: '401', PARKDST: 'WAIT' }))
+  assert.deepEqual(ownLocal(wb, 'walla-walla'), [])
+  // Dixie (interior point -118.153, 46.140): SD 101.
+  const dx = ballotFor(ww({ CONGDST: '5', LEGDST: '16', COUNTY_COUNCIL: '2', SCHDST: '101' }))
+  assert.deepEqual(ownLocal(dx, 'walla-walla'), [DIXIE])
+  assert.equal(coverageAdvice(ww({})), null)
+})
+
+test('a Stevens ballot: Spokane\'s research for CD 5, LD 7 and the PUD seat, library, fire and school measures by district', () => {
+  const STEVENS = { id: 'stevens', fips: '53065', name: 'Stevens County' }
+  const st = (districts) => ({ coverageStatus: 'full_county', county: STEVENS, districts, missingLayers: [] })
+  const LIBRARY = 'stevens-stevens-county-rural-library-district-proposition-no-2'
+  const FD10 = 'stevens-stevens-county-fire-protection-district-no-10-proposition-no-1'
+  const NMF = [1, 2].map((n) => `stevens-nine-mile-falls-school-district-no-325-179-proposition-no-${n}`)
+  const PUD = 'stevens-public-utility-district-no-1-of-stevens-county-commissioner-district-2-pud-commissioner'
+  // Districts as the live District Adapter resolved them on 2026-10-08.
+  // 6015 State Route 291, Nine Mile Falls: FD 1, library L, SD 179J.
+  const nm = ballotFor(st({ CONGDST: '5', LEGDST: '7', COUNTY_COUNCIL: '1', FIRDST: '1', LIBDST: 'L', SCHDST: '179J' }))
+  const ns = nm.contests.map((c) => c.slug)
+  assert.equal(new Set(ns).size, ns.length)
+  assert.equal(ns.length, 16 + SUPREME_COURT.length)
+  for (const slug of SUPREME_COURT) assert.ok(ns.includes(slug), slug)
+  sameScoring(nm, 'stevens-congressional-district-5-u-s-representative', 'spokane-congressional-district-5-u-s-representative')
+  sameScoring(nm, 'stevens-legislative-district-7-state-senator', 'spokane-legislative-district-7-state-senator')
+  for (const pos of [1, 2])
+    sameScoring(nm, `stevens-legislative-district-7-state-representative-pos-${pos}`, `spokane-legislative-district-7-state-representative-pos-${pos}`)
+  sameScoring(nm, PUD, 'spokane-public-utility-district-no-1-of-stevens-county-commissioner-district-2-pud-commissioner')
+  assert.ok(!nm.contests.some((c) => c.owner !== 'stevens' && c.owner !== 'statewide'))
+  assert.deepEqual(ownLocal(nm, 'stevens'), [LIBRARY, ...NMF])
+  // 2785 Aladdin Rd, Colville: FD 10, library L, SD 211.
+  const al = ballotFor(st({ CONGDST: '5', LEGDST: '7', COUNTY_COUNCIL: '3', FIRDST: '10', LIBDST: 'L', SCHDST: '211' }))
+  assert.deepEqual(ownLocal(al, 'stevens'), [LIBRARY, FD10])
+  // 215 S Oak St, Colville: outside the library district; the PUD seat is
+  // still on the ballot (PUD No. 1 covers the whole county).
+  const co = ballotFor(st({ CONGDST: '5', LEGDST: '7', CITY: 'Colville', COUNTY_COUNCIL: '3', SCHDST: '115' }))
+  assert.deepEqual(ownLocal(co, 'stevens'), [])
+  assert.ok(co.contests.some((c) => c.slug === PUD))
+  assert.equal(coverageAdvice(st({})), null)
+})
+
 test('a Spokane ballot: its own districts, school and fire measures by name, no PUD seat', () => {
   const SPOKANE = { id: 'spokane', fips: '53063', name: 'Spokane County' }
   const spo = (districts) => ({ coverageStatus: 'partial_county', county: SPOKANE, districts, missingLayers: [] })
@@ -926,10 +1010,10 @@ test('each Supreme Court contest ships once, owned by the statewide package', ()
 })
 
 test('outside the shipped counties, an address gets all five court races and all three initiatives only', () => {
-  const { contests, measures } = ballotFor(wallaWalla)
+  const { contests, measures } = ballotFor(garfield)
   assert.deepEqual(contests.map((c) => c.slug), SUPREME_COURT)
   assert.deepEqual(measures.map((m) => m.slug), STATE_MEASURES)
-  assert.equal(coverageAdvice(wallaWalla), 'statewide-only')
+  assert.equal(coverageAdvice(garfield), 'statewide-only')
 })
 
 test('every King ballot carries the statewide races once, the countywide races and its district races', () => {
@@ -994,7 +1078,7 @@ test('uncontested King contests ship information-only, with no scores', () => {
 const STATEWIDE_AXES = ['experience', 'judicial', 'local-control', 'parental-rights', 'safety', 'social', 'spending', 'taxes']
 
 test('the statewide-only interview asks only about axes on the statewide ballot', () => {
-  const { axes, items } = ballotFor(wallaWalla)
+  const { axes, items } = ballotFor(garfield)
   assert.deepEqual([...axes].sort(), STATEWIDE_AXES)
   assert.deepEqual(items.map((i) => i.id), [
     'card-taxes',
@@ -1024,7 +1108,7 @@ const agreeWithEverything = (items) =>
   )
 
 test('a voter who answers the interview gets a lean on every measure on the ballot', () => {
-  for (const context of [wallaWalla, ...Object.values(ADDRESSES)]) {
+  for (const context of [garfield, ...Object.values(ADDRESSES)]) {
     const { measures, items } = ballotFor(context)
     const answers = agreeWithEverything(items)
     for (const m of measures) {
@@ -1054,11 +1138,11 @@ const briefFor = (context) => {
 }
 
 test('the statewide-only Ballot Brief carries the warning and every contest and measure', () => {
-  const { contests, measures, text } = briefFor(wallaWalla)
+  const { contests, measures, text } = briefFor(garfield)
   assert.match(text, /November 3, 2026 General Election/)
   assert.match(text, /Coverage: STATEWIDE-ONLY GUIDE/)
   assert.match(text, /omits county, city, school, fire, judicial district, and other local contests/)
-  assert.match(text, /Resolved county: Walla Walla County/)
+  assert.match(text, /Resolved county: Garfield County/)
   for (const c of contests) assert.ok(text.includes(`## SUPREME COURT — ${c.district}`), c.slug)
   assert.match(text, /## BALLOT MEASURES/)
   for (const m of measures) {
@@ -1087,7 +1171,7 @@ test('a King Ballot Brief is a full county guide naming every contest once and e
 })
 
 test('the general Ballot Brief names election day, terms and SOS pamphlet pages, never the primary', () => {
-  const { text } = briefFor(wallaWalla)
+  const { text } = briefFor(garfield)
   assert.match(text, /^# MY BALLOT BRIEF — Washington State, November 3, 2026 General Election$/m)
   assert.match(text, /^Election day: Tuesday, November 3, 2026\.$/m)
   assert.match(text, /statewide contests on the November 3, 2026 General Election ballot/)
