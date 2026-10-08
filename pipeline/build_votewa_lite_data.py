@@ -892,6 +892,81 @@ ELECTION_MEASURES = {
               "https://voter.votewa.gov/elections/measure.ashx?m=7429&e=899&la=en&c=29",
               pages=(21,)),
         ]},
+        # Stevens (#30). Stevens County's own site (stevenscountywa.gov) answers
+        # 403 to scripted requests, so contests and measures were checked against
+        # VoteWA's online voters' guide for county 33 (voterguide.ashx?e=899&c=33,
+        # counties/stevens/raw/votewa/voter-guide/guide.json.url), which lists the
+        # same 16 non-Supreme-Court races as the candidate list and four local
+        # measures (7251, 7323, 7330, 7331).
+        # Overrides: Stevens is a non-charter county under 400,000, so its
+        # commissioners are nominated by district and elected by the voters of
+        # the whole county (RCW 36.32.040, RCW 36.32.050(1)); VoteWA's general
+        # export lists the race as 'Countywide' and the SOS 2020-11-03 Stevens
+        # precinct export has Commissioner #1 and #3 on all 58 precincts. It
+        # keeps the primary's contest name so primary dossiers carry forward.
+        # District Court: one county-wide court, one seat. PUD: Public Utility
+        # District No. 1 of Stevens County is one DOR PUD2025 (layer 17) polygon
+        # covering the whole county (DISTATTRIB '1'; its area equals the sum of
+        # the county's SCH2025 polygons; '1' at Colville, Chewelah, Kettle Falls,
+        # Northport, Springdale, Suncrest and Loon Lake), and the whole PUD elects
+        # each commissioner in the general (RCW 54.12.010(3); the 2020 PUD
+        # Commissioner #2 race was on all 58 Stevens precincts). Scoped COUNTY,
+        # and named as the Spokane package names it, so it ships with Spokane's
+        # research (Spokane voters in the PUD's Spokane County portion elect it
+        # too).
+        # Measure scopes, point-checked 2026-10-08 (Census geocoder, Current;
+        # WA DOR 2025 layers 7 FIR, 12 LIB, 20 SCH):
+        # - LIBDST 'L' (Stevens County Rural Library District): '1' polygon at
+        #   301 E Clay Ave, Chewelah; 406 Center Ave, Northport; 410 N Main St,
+        #   Springdale; 3998 State Hwy 292, Loon Lake; 6015 State Route 291,
+        #   Nine Mile Falls (Suncrest). No feature at 215 S Oak St, Colville or
+        #   605 Meyers St, Kettle Falls: the two cities are outside the district.
+        # - FIRDST '10': 2785 Aladdin Rd, Colville (the county's Fire Districts
+        #   layer, AdministrativeBoundaries/MapServer/15, reads 'Fire District
+        #   10' there too).
+        # - SCHDST '179J' (Nine Mile Falls School District No. 325-179, Stevens
+        #   side): 6015 State Route 291, Nine Mile Falls (county School Districts
+        #   layer 24: 'Nine Mile Falls SD 179').
+        "stevens": {
+            "overrides": {
+                ("COUNTY", "COMMISSIONER #2"): (
+                    "County", "Stevens County Commissioner District 2", "Commissioner #2", ("COUNTY", None)),
+                ("COUNTY", "DISTRICT COURT JUDGE"): (
+                    "Judicial", "Stevens County District Court", "District Court Judge", ("COUNTY", None)),
+                ("PUBLIC UTILITY DISTRICT 1", "COMMISSIONER #2"): (
+                    "PublicUtility", "Public Utility District No. 1 of Stevens County Commissioner District 2",
+                    "PUD Commissioner", ("COUNTY", None)),
+            },
+            "measures": [
+                m("Stevens County Rural Library District", "Proposition No. 2", "Levy Lift For Library Services",
+                  ("LIBDST", "L"),
+                  "Restores the Stevens County Rural Library District's (Libraries of Stevens County) regular property tax levy from $0.27 to $0.44 per $1,000 of assessed value for 2027 collection, to fund library operations, hours, staff and materials; that amount becomes the base for later limits (chapter 84.55 RCW). Colville and Kettle Falls are outside the district.",
+                  "From $0.27 to $0.44 per $1,000 of assessed value for 2027 collection; about $51 a year ($4.25 a month) on a $300,000 home, per the statement for.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7251&e=899&la=en&c=33"),
+                m("Stevens County Fire Protection District No. 10", "Proposition No. 1", "Property Tax Levy For Fire Protection Services",
+                  ("FIRDST", "10"),
+                  "Sets Fire District 10's regular property tax levy at $0.75 per $1,000 of assessed value for 2027 collection, to keep operating and maintaining its fire vehicles, stations, trained personnel and equipment; that amount becomes the base for later limits (Resolution No. 2-2026).",
+                  "$0.75 per $1,000 of assessed value for 2027 collection, up from the current $0.54: about $21 a year more per $100,000 of assessed value.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7323&e=899&la=en&c=33"),
+                m("Nine Mile Falls School District No. 325-179", "Proposition No. 1", "Replacement Educational Programs And Operations Levy",
+                  ("SCHDST", "179J"),
+                  "Replaces the district's educational programs and operations levy, which expires in 2027, with a three-year levy (2028-2030) for staffing, safety, arts, nurses, counselors, class size, athletics, transportation and other costs the state does not fund (Resolution No. 11-26).",
+                  "Estimated $2.10 per $1,000 of assessed value: $4,354,837 in 2028, $4,428,827 in 2029 and $4,504,075 in 2030.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7330&e=899&la=en&c=33"),
+                m("Nine Mile Falls School District No. 325-179", "Proposition No. 2", "Capital Levy for Safety, Security, and Infrastructure Improvements",
+                  ("SCHDST", "179J"),
+                  "Authorizes a six-year capital levy (2027-2032) to replace a failing roof and condemned portable classrooms at Lakeside High School and modernize security, fire systems, facilities and infrastructure district-wide (Resolution No. 12-26).",
+                  "Estimated $0.38 per $1,000 of assessed value: $774,853 in 2027 rising to $842,954 in 2032; the district says it matches the rate of a bond that expires January 1, 2027.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7331&e=899&la=en&c=33"),
+            ],
+            "extra_notes": [
+                "Stevens County Rural Library District Proposition No. 2 is scoped LIBDST 'L' (WA DOR LIB2025, layer 12): "
+                "the Cities of Colville and Kettle Falls are outside the district, so it is not county-wide.",
+                "Stevens County Commissioner District 2 is nominated by district and elected county-wide in the general "
+                "(RCW 36.32.040, RCW 36.32.050(1)); Public Utility District No. 1 of Stevens County covers the whole county "
+                "(WA DOR PUD2025, layer 17) and every PUD voter elects each commissioner (RCW 54.12.010(3)). Both are scoped COUNTY.",
+            ],
+        },
         # Whatcom (#28). Measures: VoteWA's online voters' guide for Whatcom
         # County (voterguide.ashx?e=899&c=37, read 2026-10-08) lists five local
         # measures; whatcomcounty.us answered 403 (Cloudflare) to scripted
