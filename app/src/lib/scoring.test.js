@@ -1,11 +1,13 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
+import { readFileSync } from 'node:fs'
 import {
   alignCandidate,
   rankContest,
   measureLean,
   buildProfile,
   axesForBallot,
+  interviewItemsForBallot,
   NOISE_MARGIN,
 } from './scoring.js'
 
@@ -89,4 +91,33 @@ test('axesForBallot unions candidate score axes and measure lean axes', () => {
   const contests = [{ candidates: [cand({ a: 1 })] }]
   const measures = [{ lean_mappings: { b: { direction: 2 } } }]
   assert.deepEqual([...axesForBallot({}, contests, measures)].sort(), ['a', 'b'])
+})
+
+// The Nov 3 general's shipped data, read the way the app reads it.
+const general = JSON.parse(
+  readFileSync(new URL('../../public/data/2026-11-03-general/app-data.json', import.meta.url), 'utf8')
+)
+const statementAxes = (items) => items.filter((i) => i.kind === 'statement').map((i) => i.axis)
+
+test('the general interview asks about parental-rights only when the ballot is scored on it', () => {
+  assert.ok(
+    general.interview.items.some((i) => i.kind === 'statement' && i.axis === 'parental-rights'),
+    'the general interview has a parental-rights statement card'
+  )
+  // The general has no contests yet: an empty ballot asks nothing.
+  const empty = axesForBallot(general, general.contests, general.measures)
+  assert.deepEqual(interviewItemsForBallot(general, empty), [])
+
+  // A measure mapped only to `social` (I-638's intended axis) does not pull
+  // in the parental-rights card, and vice versa (I-1's intended axis).
+  const socialOnly = axesForBallot(general, [], [{ lean_mappings: { social: { direction: 2 } } }])
+  assert.deepEqual(statementAxes(interviewItemsForBallot(general, socialOnly)), ['social'])
+  const parentalOnly = axesForBallot(general, [], [
+    { lean_mappings: { 'parental-rights': { direction: -2 } } },
+  ])
+  assert.deepEqual(statementAxes(interviewItemsForBallot(general, parentalOnly)), ['parental-rights'])
+
+  // A candidate scored on parental-rights also brings the card in.
+  const scored = axesForBallot(general, [{ candidates: [cand({ 'parental-rights': 1 })] }], [])
+  assert.deepEqual(statementAxes(interviewItemsForBallot(general, scored)), ['parental-rights'])
 })

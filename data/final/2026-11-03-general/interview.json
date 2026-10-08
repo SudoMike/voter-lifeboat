@@ -1,7 +1,7 @@
 {
-  "authored_by": "Hand-authored for this ballot from data/final/rubric.json axes; each item maps agree -> a signed axis value. Statement directions are deliberately mixed so 'agree' alternates poles across the interview (acquiescence-bias guard).",
+  "authored_by": "Hand-authored for this ballot from data/final/2026-11-03-general/rubric.json axes; each item maps agree -> a signed axis value. Statement directions are deliberately mixed so 'agree' alternates poles across the interview (acquiescence-bias guard).",
   "derived_from": ["data/final/2026-11-03-general/rubric.json", "data/final/2026-08-04-primary/interview.json"],
-  "notes": "value semantics: agree applies `value`, disagree applies `-value`, skip applies nothing. weight from care pulse: not-much=0.5, default=1, a-lot=2. Scenarios apply every effect listed for the chosen option.",
+  "notes": "value semantics: agree applies `value`, disagree applies `-value`, skip applies nothing. weight from care pulse: not-much=0.5, default=1, a-lot=2. Scenarios apply every effect listed for the chosen option. General-election changes (issue #4, 2026-10-08): card-social reworded to the narrowed social axis and flipped to value 2; card-parental-rights added with value -2 so agree keeps alternating poles (healthcare -2, social +2, parental-rights -2, tech +2, defense -2).",
   "items": [
     {
       "id": "card-taxes", "kind": "statement", "axis": "taxes", "pulse": true,
@@ -74,7 +74,12 @@
     },
     {
       "id": "card-social", "kind": "statement", "axis": "social", "pulse": true,
-      "text": "Parents should have more say over what public schools teach about gender and race.",
+      "text": "State law should protect transgender people's rights, including playing on school sports teams that match their gender identity.",
+      "value": 2
+    },
+    {
+      "id": "card-parental-rights", "kind": "statement", "axis": "parental-rights", "pulse": true,
+      "text": "Parents should be able to see their child's school records and opt their child out of lessons or school services they object to.",
       "value": -2
     },
     {

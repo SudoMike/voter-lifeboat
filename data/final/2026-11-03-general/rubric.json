@@ -1,10 +1,12 @@
 {
   "derived_from": [
-    "data/interim/axis-notes.md",
-    "data/dossiers/ (all _contest.md overviews and measure files)"
+    "data/final/2026-08-04-primary/rubric.json",
+    "data/washington-state/elections/2026-08-04-primary/counties/king/interim/axis-notes.md",
+    "data/washington-state/elections/2026-08-04-primary/counties/king/dossiers/ (all _contest.md overviews and measure files)",
+    "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/ (all _contest.md overviews)"
   ],
-  "method": "Manual synthesis from ballot-derived evidence; rationale recorded in data/final/2026-08-04-primary/rubric-derivation.md",
-  "election": "August 4, 2026 Primary and Special Election, King County, WA",
+  "method": "The primary's 14 axes, carried over, with social narrowed and parental-rights added for the general ballot (issue #4). Rationale recorded in data/final/2026-11-03-general/rubric-derivation.md",
+  "election": "November 3, 2026 General Election, Washington State",
   "scale": {
     "description": "Candidates and voters are positioned on each axis from -2 (fully pole_a) to +2 (fully pole_b); 0 = mixed/centrist on the axis. Voter weights per axis: 0 (don't care) to 2 (care a lot). Candidate scores must carry citations and a confidence level; low-confidence scores are excluded from alignment math.",
     "range": [-2, 2]
@@ -102,12 +104,21 @@
     },
     {
       "id": "social",
-      "title": "Social issues & schools",
-      "tension": "Progressive social policy (reproductive rights, LGBTQ+ protections, inclusive curricula) vs. traditional values and parental rights?",
-      "pole_a": {"label": "Traditional values & parental rights", "description": "Parental control of curricula, opposition to CRT/gender content, pro-life positions"},
-      "pole_b": {"label": "Progressive social policy", "description": "Reproductive and gender-affirming care as rights, inclusive schools, anti-discrimination law"},
-      "applies_to": ["Federal", "State"],
-      "salience": "LD47 P2 (sharpest: DEI removal vs Members of Color Caucus chair), LD45 P1, LD41 P1, LD33 P1 (three-way spread), LD12 P2, LD46 senate"
+      "title": "Gender, LGBTQ+ and reproductive policy",
+      "tension": "Should state law protect gender identity, LGBTQ+ rights and reproductive choice broadly (in school sports, medical care and anti-discrimination law), or set traditional sex-based and pro-life limits?",
+      "pole_a": {"label": "Traditional values", "description": "Sex-based eligibility for girls' and women's sports, limits on gender-affirming care for minors, pro-life positions, narrower anti-discrimination protections"},
+      "pole_b": {"label": "Progressive social policy", "description": "Trans participation in sports by gender identity, reproductive and gender-affirming care as rights, broad anti-discrimination law"},
+      "applies_to": ["Federal", "State", "measures"],
+      "salience": "General ballot: I-638 (sex verification for girls' school sports) maps here. Primary evidence: LD47 P2 (DEI removal vs Members of Color Caucus chair), LD45 P1, LD41 P1, LD33 P1 (three-way spread), LD12 P2, LD46 senate. Curricula and parental-rights evidence now belongs to parental-rights."
+    },
+    {
+      "id": "parental-rights",
+      "title": "Parents and public schools",
+      "tension": "Should parents have broad notification, record access and opt-out rights over what schools teach and provide, or should schools and students have discretion?",
+      "pole_a": {"label": "Parental notification and opt-out", "description": "Parents notified of and able to review curricula, materials, records and school-provided health services; broad opt-out rights"},
+      "pole_b": {"label": "School and student discretion", "description": "Educators set curricula under state standards; student privacy and confidentiality in some health and counseling matters; narrower opt-outs"},
+      "applies_to": ["State", "measures"],
+      "salience": "General ballot: I-1 (parental rights in schools) maps here. Applies to state legislative contests, school-district and other school-adjacent measures, and statewide initiatives; never to judicial contests. Split from social so a voter can support one of I-1 and I-638 and oppose the other."
     },
     {
       "id": "tech",
