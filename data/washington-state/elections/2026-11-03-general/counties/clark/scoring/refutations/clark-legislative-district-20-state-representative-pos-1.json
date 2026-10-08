@@ -1,0 +1,110 @@
+{
+  "contest_slug": "clark-legislative-district-20-state-representative-pos-1",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/clark/dossiers/clark-legislative-district-20-state-representative-pos-1/",
+    "data/washington-state/elections/2026-11-03-general/counties/clark/scoring/clark-legislative-district-20-state-representative-pos-1.json"
+  ],
+  "verdicts": [
+    {
+      "candidate": "peter-abbarno",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Not a lone-ESSB-6346 case: the no vote on ESSB 6346 is joined by a separate no vote on SB 5814 and explicit campaign-site statements against the 2025 tax package and the income tax [S2]. Both roll calls were checked against the cached House roll calls (Abbarno Nay on final passage of each). -2/high fits."
+    },
+    {
+      "candidate": "peter-abbarno",
+      "axis": "spending",
+      "verdict": "upheld"
+    },
+    {
+      "candidate": "peter-abbarno",
+      "axis": "housing",
+      "verdict": "upheld"
+    },
+    {
+      "candidate": "peter-abbarno",
+      "axis": "safety",
+      "verdict": "upheld",
+      "note": "S2 (law-enforcement funding, stronger repeat-offender penalties; cached home page confirms) and S3 (opposed 2021 police-reform bills) carry -2/high. S12 (no on SB 5855, law-enforcement face coverings) is weak safety evidence: the rubric lists masking bans under immigration, and it is proposed there under missing. His 'additional pathways for rehabilitation' line does not move the score off -2."
+    },
+    {
+      "candidate": "peter-abbarno",
+      "axis": "climate",
+      "verdict": "upheld"
+    },
+    {
+      "candidate": "peter-abbarno",
+      "axis": "parental-rights",
+      "verdict": "upheld",
+      "note": "Final-passage Nay on both ESHB 1296 and ESSB 5181 confirmed in the cached roll calls. -1/medium is consistent with how other packages scored a no vote on these bills without a campaign statement on I-1."
+    },
+    {
+      "candidate": "peter-abbarno",
+      "axis": "reform",
+      "verdict": "upheld"
+    },
+    {
+      "candidate": "peter-abbarno",
+      "axis": "experience",
+      "verdict": "upheld"
+    },
+    {
+      "candidate": "andy-zahn",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "The main quote is from S6, which was read via WebFetch and not cached, so the cache cannot confirm it. Cached S8 separately calls for higher taxes on data centers' energy use and operations, so the pole_b direction does not rest on S6 alone. He names no broad tax, so +1/medium is the right size."
+    },
+    {
+      "candidate": "andy-zahn",
+      "axis": "spending",
+      "verdict": "upheld",
+      "note": "S6 and S7 are uncached, but cached S8 calls for the government to 'implement aggressive programs to subsidize' energy efficiency, and the TDN body confirms he also wants a balanced budget. +1/medium holds."
+    },
+    {
+      "candidate": "andy-zahn",
+      "axis": "housing",
+      "verdict": "upheld",
+      "note": "The pole_b element (publicly built rent-to-own housing) rests only on uncached S6. The town-center/anti-sprawl element [S1][S4] says nothing about direction on this axis. Medium is at the edge; it is acceptable only because S6 is a Tier-1 own-site statement with a pointer."
+    },
+    {
+      "candidate": "andy-zahn",
+      "axis": "climate",
+      "verdict": "upheld",
+      "note": "Cached S8 confirms it verbatim: 'urgent and imperative that we cease the extraction, refining, transportation, and consumption of fossil fuels.' His skepticism of utility-scale solar and wind is about where projects go, not about how fast to act on climate. +2 holds; medium because there is one source."
+    },
+    {
+      "candidate": "andy-zahn",
+      "axis": "healthcare",
+      "verdict": "upheld",
+      "note": "This rests on one sentence in S6, which is uncached (WebFetch only). The pamphlet [S1] says only 'improve access to healthcare', which favors neither pole. Read as written, the S6 sentence endorses a government-paid universal system, which is pole_b, so +2/medium fits the single-clear-statement rule. It cannot be confirmed from cache; re-check if S6 is ever re-fetched."
+    },
+    {
+      "candidate": "andy-zahn",
+      "axis": "tech",
+      "verdict": "upheld",
+      "note": "High does not depend on the uncached pages. Cached S8 states the data-center moratorium, the ban on generative AI and cryptocurrency, and higher data-center taxes. The pamphlet [S1] says 'stop data centers', and the cached home page calls data centers an 'existential threat'. That is the same position repeated across sources, so +2/high holds."
+    },
+    {
+      "candidate": "andy-zahn",
+      "axis": "reform",
+      "verdict": "upheld",
+      "note": "Pamphlet [S1]: 'evict big money interests from our government.' The cached TDN body (S9) confirms the vow to refuse corporate contributions. Two explicit statements, so +2/high holds."
+    },
+    {
+      "candidate": "andy-zahn",
+      "axis": "experience",
+      "verdict": "upheld"
+    }
+  ],
+  "missing": [
+    {
+      "candidate": "peter-abbarno",
+      "axis": "immigration",
+      "proposed_score": -1,
+      "confidence": "medium",
+      "citations": ["S12"],
+      "basis": "Voted no on House final passage of SB 5855 (2026), the law-enforcement face-covering ban; the rubric's immigration pole_b names masking bans. One recorded vote and no statement, so magnitude 1 at medium."
+    }
+  ]
+}
