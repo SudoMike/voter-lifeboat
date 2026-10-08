@@ -5,10 +5,11 @@
     "data/washington-state/elections/2026-11-03-general/counties/klickitat/raw/votewa/candidate-list.csv.url",
     "https://www.klickitatcounty.gov/DocumentCenter/View/23954"
   ],
-  "coverage": "full_county",
+  "coverage": "partial_county",
   "notes": [
     "The East and West District Court judge seats are scoped DISTCRT 'East' and 'West': the two courts are separate electorates and no queryable boundary layer for them was found, so both stay hidden.",
-    "EMS District No. 1 Proposition No. 1 is scoped EMSDST '1' (WA DOR EMS2025, layer 6); the Bickleton area is outside the district."
+    "EMS District No. 1 Proposition No. 1 is scoped EMSDST '1' (WA DOR EMS2025, layer 6); the Bickleton area is outside the district.",
+    "Unresolvable district scopes (no queryable official boundary): DISTCRT. Contests/measures scoped to them are hidden rather than shown to the wrong voters."
   ],
   "measures": [
     {

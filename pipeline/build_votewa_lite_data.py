@@ -1388,6 +1388,10 @@ ELECTION_MEASURES = {
                 ("WEST DISTRICT COURT", "KLICKITAT COUNTY WEST DISTRICT COURT JUDGE"): (
                     "Judicial", "Klickitat County West District Court", "Judge", ("DISTCRT", "West")),
             },
+            # No layer of the East/West court districts exists (#31 ship):
+            # the package is partial_county, as app/src/lib/data-consistency.test.js
+            # UNRESOLVABLE_SCOPES 'klickitat/DISTCRT' records.
+            "unresolvable_layers": ["DISTCRT"],
             "measures": [
                 m("Emergency Medical Services District No. 1, Klickitat County", "Proposition No. 1",
                   "Permanent Regular Emergency Medical Services Property Tax Levy",
@@ -1691,6 +1695,10 @@ ELECTION_MEASURES = {
                     "PublicUtility", "Public Utility District No. 2 of Pacific County", "Commissioner District 1",
                     ("COUNTY", None)),
             },
+            # No layer of the North/South court districts exists (#31 ship):
+            # the package is partial_county, as app/src/lib/data-consistency.test.js
+            # UNRESOLVABLE_SCOPES 'pacific/DISTCRT' records.
+            "unresolvable_layers": ["DISTCRT"],
             "measures": [
                 m("Timberland Regional Library District", "Proposition No. 1",
                   "Regular Property Tax Levy Lid Lift for Library Services, Operations and Maintenance",
@@ -2227,6 +2235,10 @@ def config_for(county, election_id):
     cfg["measures"] = list(per["measures"]) if per else []
     cfg["extra_notes"] = list(per.get("extra_notes", [])) if per else []
     cfg["overrides"] = dict(per.get("overrides", {})) if per else {}
+    # Layers an override scopes a contest to that no District Adapter layer
+    # resolves (Klickitat's and Pacific's DISTCRT): the override hook cannot
+    # report them, so the block names them and the package says partial_county.
+    cfg["unresolvable_layers"] = tuple(per.get("unresolvable_layers", ())) if per else ()
     return cfg, per is not None
 
 
@@ -2238,6 +2250,13 @@ def county_docs(county, cfg, election_id, measures_curated=True):
     overrides = cfg.get("overrides") or {}
     override = (lambda r, _u: overrides.get((r["District"].strip().upper(), r["Race"].strip().upper()))) if overrides else None
     raw_contests = votewa.parse_contests(rows, county, cfg, unresolvable, override)
+    declared = set(cfg.get("unresolvable_layers", ()))
+    for c in raw_contests:
+        if c["scope"][0] in declared:
+            unresolvable.add(c["scope"][0])
+    for mm in cfg["measures"]:
+        if mm["scope"][0] in declared:
+            unresolvable.add(mm["scope"][0])
     label = election.VOTEWA_SOURCES[election_id]["label"]
     out_contests = votewa.app_contests(
         county, raw_contests,

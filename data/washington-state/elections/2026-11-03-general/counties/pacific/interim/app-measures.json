@@ -8,11 +8,12 @@
     "https://voter.votewa.gov/elections/measure.ashx?m=7389&e=899&la=en&c=25",
     "https://voter.votewa.gov/elections/measure.ashx?m=7391&e=899&la=en&c=25"
   ],
-  "coverage": "full_county",
+  "coverage": "partial_county",
   "notes": [
     "Pacific County's two District Court seats are elected by electoral district (North: the Willapa Harbor precincts; South: the Long Beach peninsula, Ilwaco, Chinook, Naselle and Nemah precincts) and are scoped DISTCRT 'North' and 'South'. No public GIS layer for these districts was found; until one is added the seats cannot be matched to an address.",
     "Pacific County PUD No. 2 and Timberland Regional Library District each cover all of Pacific County (WA DOR PUD2025 and LIB2025 each have one Pacific polygon with the county's area).",
-    "The EMS measure is scoped EMSDST '1' (WA DOR EMS2025, layer 6) and the fire measures FIRDST '3' and '6' (WA DOR FIR2025, layer 7), DISTATTRIB."
+    "The EMS measure is scoped EMSDST '1' (WA DOR EMS2025, layer 6) and the fire measures FIRDST '3' and '6' (WA DOR FIR2025, layer 7), DISTATTRIB.",
+    "Unresolvable district scopes (no queryable official boundary): DISTCRT. Contests/measures scoped to them are hidden rather than shown to the wrong voters."
   ],
   "measures": [
     {

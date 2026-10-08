@@ -236,6 +236,29 @@ class GeneralPackagesTest(unittest.TestCase):
             for item in doc.get("contests", doc.get("measures")):
                 if item["scope"]["kind"] == "DISTRICT" and item["scope"]["layer"] != "PUDDST":
                     self.assertIn(item["scope"]["layer"], election.DISTRICT_ADAPTER_LAYERS["okanogan"], item["slug"])
+        # Asotin (#31): PUDDST reads DOR PUD2025 and RURALEMSDST the Rural EMS
+        # District's DOR TCA2025 tax code areas, next to EMSDST.
+        for name in ("app-contests.json", "app-measures.json"):
+            doc = json.loads((GENERAL.county("asotin") / "interim" / name).read_text())
+            self.assertEqual("full_county", doc["coverage"], f"asotin {name}")
+            for item in doc.get("contests", doc.get("measures")):
+                if item["scope"]["kind"] == "DISTRICT":
+                    self.assertIn(item["scope"]["layer"], election.DISTRICT_ADAPTER_LAYERS["asotin"], item["slug"])
+        # Klickitat and Pacific (#31) are partial_county: their District Court
+        # seats are DISTCRT through an override, which the block's
+        # unresolvable_layers marks unresolvable (no layer exists); every other
+        # DISTRICT scope (EMSDST, FIRDST and the Census layers) resolves.
+        for county in ("klickitat", "pacific"):
+            for name in ("app-contests.json", "app-measures.json"):
+                doc = json.loads((GENERAL.county(county) / "interim" / name).read_text())
+                self.assertEqual("partial_county", doc["coverage"], f"{county} {name}")
+                self.assertIn(votewa.unresolvable_note({"DISTCRT"}), doc["notes"], f"{county} {name}")
+                for item in doc.get("contests", doc.get("measures")):
+                    if item["scope"]["kind"] == "DISTRICT" and item["scope"]["layer"] != "DISTCRT":
+                        self.assertIn(item["scope"]["layer"], election.DISTRICT_ADAPTER_LAYERS[county], item["slug"])
+            cfg, curated = bv.config_for(county, GENERAL.id)
+            _, _, unresolvable = bv.county_docs(county, cfg, GENERAL.id, curated)
+            self.assertEqual(["DISTCRT"], unresolvable, county)
         pud = json.loads((GENERAL.county("clallam") / "interim/app-contests.json").read_text())["contests"]
         pud = next(c for c in pud if c["slug"] == "clallam-public-utility-district-no-1-of-clallam-county-commissioner-district-no-2")
         self.assertEqual({"kind": "DISTRICT", "county": "clallam", "layer": "PUDALL", "value": "1"}, pud["scope"])
