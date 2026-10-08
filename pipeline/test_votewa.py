@@ -121,7 +121,7 @@ class ParseTest(unittest.TestCase):
         self.assertEqual(("KCDISTCRT", "YES"), contests[0]["scope"])
 
     def test_general_without_curated_measures_says_so(self):
-        cfg, curated = bv.config_for("adams", GENERAL.id)
+        cfg, curated = bv.config_for("garfield", GENERAL.id)
         self.assertFalse(curated)
         self.assertEqual([], cfg["measures"])
         self.assertIn("not curated", votewa.MEASURES_NOT_CURATED)
@@ -155,7 +155,7 @@ class GeneralPackagesTest(unittest.TestCase):
         self.assertEqual(["king", "snohomish", "spokane", "pierce", "clark", "kitsap", "thurston", "yakima", "whatcom",
                           "benton", "skagit", "cowlitz", "grant", "island", "lewis", "franklin", "chelan", "clallam",
                           "grays-harbor", "mason", "walla-walla", "stevens", "whitman", "douglas", "okanogan",
-                          "jefferson", "kittitas", "klickitat", "pacific", "asotin"],
+                          "jefferson", "kittitas", "klickitat", "pacific", "asotin", "adams"],
                          election.APP_PACKAGES[GENERAL.id]["counties"])
 
     def test_wave2_builders_are_full_county(self):

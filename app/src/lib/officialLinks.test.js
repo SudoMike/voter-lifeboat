@@ -89,11 +89,11 @@ test('every statewide contest and measure in the shipped general gets a paged SO
       }
   for (const m of general.measures) {
     // Spokane's, Pierce's, Kitsap's, Whatcom's, Benton's, Grant's, Island's,
-    // Lewis's, Grays Harbor's, Stevens's, Douglas's, Okanogan's and Pacific's measures cite
+    // Lewis's, Grays Harbor's, Stevens's, Douglas's, Okanogan's, Pacific's and Adams's measures cite
     // VoteWA's unpaged online guide (countyGuides), as do Whitman's eight that
     // filed hardship waivers (not in its printed pamphlet).
     if (['spokane', 'pierce', 'kitsap', 'whatcom', 'benton', 'grant', 'island', 'lewis', 'grays-harbor', 'stevens', 'douglas', 'okanogan',
-      'pacific'].includes(m.owner)) continue
+      'pacific', 'adams'].includes(m.owner)) continue
     if (m.owner === 'whitman' && !m.pamphlet_pages.length) continue
     assert.match(pamphletLink(m.pamphlet_pages, m.owner, general.election.id), /#page=\d+$/, m.slug)
     n++
@@ -659,6 +659,28 @@ test('shipped Pacific records link the county\'s VoteWA guide; its office falls 
     name: 'Pacific County Elections',
     url: COUNTY_OFFICES_URL,
     direct: false,
+  })
+})
+
+test('shipped Adams records link the county\'s VoteWA guide; its office is the Auditor\'s Elections page', () => {
+  const id = general.election.id
+  const GUIDE = 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=01'
+  // Adams prints no local pamphlet (#31): every record, its own and the CD, LD
+  // seats shipped with Benton's, Spokane's and Grant's research, is unpaged.
+  let n = 0
+  for (const item of [...general.contests, ...general.measures]) {
+    if (item.owner !== 'adams') continue
+    const pages = item.candidates ? item.candidates.map((c) => c.pamphlet_pages) : [item.pamphlet_pages]
+    for (const p of pages) {
+      assert.equal(pamphletLink(p, 'adams', id), GUIDE, item.slug)
+      n++
+    }
+  }
+  assert.equal(n, 28)
+  assert.deepEqual(countyElectionsOffice(general, { id: 'adams', name: 'Adams County' }), {
+    name: 'Adams County Elections',
+    url: 'https://www.co.adams.wa.gov/162/Elections-Elecciones',
+    direct: true,
   })
 })
 

@@ -71,7 +71,7 @@ const STATE_MEASURES = [
   'initiative-measure-no-il26-638',
 ]
 
-test('the general ships twenty-six counties at full county coverage, Spokane, Okanogan, Klickitat and Pacific at partial, with their elections offices', () => {
+test('the general ships twenty-seven counties at full county coverage, Spokane, Okanogan, Klickitat and Pacific at partial, with their elections offices', () => {
   assert.equal(data.election.id, '2026-11-03-general')
   assert.deepEqual(data.coverage, {
     statewide_complete: true,
@@ -373,6 +373,16 @@ test('the general ships twenty-six counties at full county coverage, Spokane, Ok
         fips: '53003',
         coverage: 'full_county',
         elections_url: 'https://www.asotincountywa.gov/186/Current-Election',
+      },
+      {
+        // Full: the Fire District 4 and Park District 2 levies read DOR
+        // FIR2025 and PKR2025 (#31).
+        id: 'adams',
+        name: 'Adams County',
+        state: 'WA',
+        fips: '53001',
+        coverage: 'full_county',
+        elections_url: 'https://www.co.adams.wa.gov/162/Elections-Elecciones',
       },
     ],
   })
@@ -1289,6 +1299,47 @@ test('an Asotin ballot: Spokane\'s research for CD 5 and LD 9, the PUD seat in C
   assert.ok(!an.contests.map((c) => c.slug).includes(PUD))
   assert.deepEqual(ownLocal(an, 'asotin'), [RURAL_EMS])
   assert.equal(coverageAdvice(as({})), null)
+})
+
+test('an Adams ballot: Benton\'s, Spokane\'s and Grant\'s research for CD 4/5, LD 9 and LD 13, the pool and fire levies by district', () => {
+  const ADAMS = { id: 'adams', fips: '53001', name: 'Adams County' }
+  const ad = (districts) => ({ coverageStatus: 'full_county', county: ADAMS, districts, missingLayers: [] })
+  const FD4 = 'adams-adams-county-fire-protection-district-no-4-proposition-no-1'
+  const POOL = 'adams-adams-county-park-and-recreation-district-no-2-proposition-no-1'
+  // Districts as the live District Adapter resolved them on 2026-10-08.
+  // 425 E Main St, Othello: CD 4, LD 9, no local measure.
+  const ot = ballotFor(ad({ CONGDST: '4', LEGDST: '9', CITY: 'Othello', CEMDST: '2', PARKDST: '1' }))
+  const os = ot.contests.map((c) => c.slug)
+  assert.equal(new Set(os).size, os.length)
+  assert.equal(os.length, 13 + SUPREME_COURT.length)
+  for (const slug of SUPREME_COURT) assert.ok(os.includes(slug), slug)
+  assert.deepEqual(ot.measures.map((m) => m.slug), STATE_MEASURES)
+  sameScoring(ot, 'adams-congressional-district-4-u-s-representative', 'benton-congressional-district-4-u-s-representative')
+  for (const pos of [1, 2])
+    sameScoring(ot, `adams-legislative-district-9-state-representative-pos-${pos}`, `spokane-legislative-district-9-state-representative-pos-${pos}`)
+  assert.ok(!ot.contests.some((c) => c.owner !== 'adams' && c.owner !== 'statewide'))
+  // The commissioner and both District Court seats are elected county-wide.
+  for (const slug of ['adams-adams-county-commissioner-district-3-county-commissioner-district-3',
+    'adams-adams-county-district-court-judge-position-no-1', 'adams-adams-county-district-court-judge-position-no-2'])
+    assert.ok(os.includes(slug), slug)
+  // 155 W Main St, Washtucna: CD 5, Park District 2's pool levy.
+  const wa = ballotFor(ad({ CONGDST: '5', LEGDST: '9', CITY: 'Washtucna', CEMDST: '1', PARKDST: '2' }))
+  assert.equal(wa.contests.length, 13 + SUPREME_COURT.length)
+  sameScoring(wa, 'adams-congressional-district-5-u-s-representative', 'spokane-congressional-district-5-u-s-representative')
+  assert.deepEqual(ownLocal(wa, 'adams'), [POOL])
+  // 210 W Broadway Ave, Ritzville: Park District 4, no local measure.
+  const rz = ballotFor(ad({ CONGDST: '5', LEGDST: '9', CITY: 'Ritzville', PARKDST: '4' }))
+  assert.deepEqual(ownLocal(rz, 'adams'), [])
+  // Interior point (-118.02, 47.15), Fire District 4 (no geocodable address).
+  const fd = ballotFor(ad({ CONGDST: '5', LEGDST: '9', FIRDST: '4' }))
+  assert.deepEqual(ownLocal(fd, 'adams'), [FD4])
+  // The LD 13 part of the county (rural; no live address identified): Grant's research.
+  const ld13 = ballotFor(ad({ CONGDST: '4', LEGDST: '13' }))
+  assert.equal(ld13.contests.length, 14 + SUPREME_COURT.length)
+  for (const pos of [1, 2])
+    sameScoring(ld13, `adams-legislative-district-13-state-representative-pos-${pos}`, `grant-legislative-district-13-state-representative-pos-${pos}`)
+  sameScoring(ld13, 'adams-legislative-district-13-state-senator', 'grant-legislative-district-13-state-senator')
+  assert.equal(coverageAdvice(ad({})), null)
 })
 
 test('a Spokane ballot: its own districts, school and fire measures by name, no PUD seat', () => {

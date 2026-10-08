@@ -1816,3 +1816,40 @@ test('Asotin resolves its PUD from DOR PUD2025 and Rural EMS District No. 2 from
   assert.ok(!scopeMatches(pud, context))
   assert.ok(!scopeMatches(primaryEms, context))
 })
+
+// Adams (#31, wave 6). Live point queries 2026-10-08 at the Census-geocoded
+// points of the addresses below; Fire District 4 has no geocodable street
+// address, so its check is an interior point (-118.05, 47.10).
+test('Adams resolves Park District 2 from DOR PKR2025 and Fire District 4 from DOR FIR2025', async () => {
+  const park2 = { kind: 'DISTRICT', county: 'adams', layer: 'PARKDST', value: '2' }
+  const fd4 = { kind: 'DISTRICT', county: 'adams', layer: 'FIRDST', value: '4' }
+  // 155 W Main St, Washtucna: cemetery '1', park '2', no fire district.
+  const calls = mockWave2('155 N MAIN ST, WASHTUCNA, WA, 99371', '001', 'Adams County', [
+    dorLayer(3, '1'), dorLayer(14, '2'),
+  ])
+  let context = await lookupBallotContext(wave2Data('adams'), '155 W Main St Washtucna WA 99371')
+  assert.equal(context.county.id, 'adams')
+  assert.equal(context.coverageStatus, 'full_county')
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(scopeMatches(park2, context))
+  assert.ok(!scopeMatches(fd4, context))
+  const fireCall = calls.find((u) => u.includes('WADOR_PropertyTax/MapServer/7/query'))
+  assert.equal(new URL(fireCall).searchParams.get('outFields'), 'DISTATTRIB')
+  // 210 W Broadway Ave, Ritzville: park '4', no cemetery or fire district.
+  mockWave2('210 W BROADWAY AVE, RITZVILLE, WA, 99169', '001', 'Adams County', [dorLayer(14, '4')])
+  context = await lookupBallotContext(wave2Data('adams'), '210 W Broadway Ave Ritzville WA 99169')
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(!scopeMatches(park2, context))
+  assert.ok(!scopeMatches(fd4, context))
+  // 1780 E Templin Rd, Ritzville: park '4', Fire District 1.
+  mockWave2('1780 E TEMPLIN RD, RITZVILLE, WA, 99169', '001', 'Adams County', [dorLayer(14, '4'), dorLayer(7, '1')])
+  context = await lookupBallotContext(wave2Data('adams'), '1780 E Templin Rd Ritzville WA 99169')
+  assert.equal(context.districts.FIRDST, '1')
+  assert.ok(!scopeMatches(fd4, context))
+  // Inside Fire District 4 (the interior point): park '4', fire '4'.
+  mockWave2('RITZVILLE RURAL SE, RITZVILLE, WA, 99169', '001', 'Adams County', [dorLayer(14, '4'), dorLayer(7, '4')])
+  context = await lookupBallotContext(wave2Data('adams'), 'Ritzville Rural SE WA 99169')
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(scopeMatches(fd4, context))
+  assert.ok(!scopeMatches(park2, context))
+})

@@ -1,0 +1,343 @@
+{
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/adams/interim/contests.json",
+    "data/washington-state/elections/2026-11-03-general/counties/adams/interim/measures.json"
+  ],
+  "script": "pipeline/build_research_plan.py",
+  "contests": [
+    {
+      "contest_slug": "adams-congressional-district-4-u-s-representative",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 4",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "amanda-mckinney",
+          "name": "Amanda McKinney",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-4-u-s-representative/amanda-mckinney.md"
+        },
+        {
+          "slug": "john-duresky",
+          "name": "John Duresky",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-4-u-s-representative/john-duresky.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "benton",
+          "contest_slug": "benton-congressional-district-4-u-s-representative",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/benton/scoring/benton-congressional-district-4-u-s-representative.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "yakima",
+          "benton",
+          "grant",
+          "franklin",
+          "douglas",
+          "okanogan",
+          "klickitat"
+        ]
+      }
+    },
+    {
+      "contest_slug": "adams-congressional-district-5-u-s-representative",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 5",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "michael-baumgartner",
+          "name": "Michael Baumgartner",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-5-u-s-representative/michael-baumgartner.md"
+        },
+        {
+          "slug": "carmela-conroy",
+          "name": "Carmela Conroy",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-5-u-s-representative/carmela-conroy.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "spokane",
+          "contest_slug": "spokane-congressional-district-5-u-s-representative",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/spokane/scoring/spokane-congressional-district-5-u-s-representative.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "spokane",
+          "franklin",
+          "walla-walla",
+          "stevens",
+          "whitman",
+          "asotin"
+        ]
+      }
+    },
+    {
+      "contest_slug": "adams-legislative-district-9-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 9",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "joe-schmick",
+          "name": "Joe Schmick",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-9-state-representative-position-2/joe-schmick.md"
+        },
+        {
+          "slug": "karina-wallace",
+          "name": "Karina Wallace",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-9-state-representative-position-2/karina-wallace.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "spokane",
+          "contest_slug": "spokane-legislative-district-9-state-representative-pos-2",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/spokane/scoring/spokane-legislative-district-9-state-representative-pos-2.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "spokane",
+          "whitman",
+          "asotin"
+        ]
+      }
+    },
+    {
+      "contest_slug": "adams-legislative-district-13-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 13",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "tom-dent",
+          "name": "Tom Dent",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-13-state-representative-position-1/tom-dent.md"
+        },
+        {
+          "slug": "juan-jerry-garcia",
+          "name": "Juan \"Jerry\" Garcia",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-13-state-representative-position-1/juan-jerry-garcia.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "grant",
+          "contest_slug": "grant-legislative-district-13-state-representative-pos-1",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/grant/scoring/grant-legislative-district-13-state-representative-pos-1.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "grant",
+          "douglas",
+          "kittitas"
+        ]
+      }
+    },
+    {
+      "contest_slug": "adams-legislative-district-13-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 13",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "deanna-martinez",
+          "name": "Deanna Martinez",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-13-state-representative-position-2/deanna-martinez.md"
+        },
+        {
+          "slug": "joshua-thompson",
+          "name": "Joshua Thompson",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-13-state-representative-position-2/joshua-thompson.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "grant",
+          "contest_slug": "grant-legislative-district-13-state-representative-pos-2",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/grant/scoring/grant-legislative-district-13-state-representative-pos-2.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "grant",
+          "douglas",
+          "kittitas"
+        ]
+      }
+    },
+    {
+      "contest_slug": "adams-adams-county-assessor",
+      "category": "County",
+      "office": "Assessor",
+      "district": "Adams County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "curtis-templin",
+          "name": "Curtis Templin",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/adams/dossiers/adams-adams-county-assessor/curtis-templin.md"
+        },
+        {
+          "slug": "veronica-rodriguez",
+          "name": "Veronica Rodriguez",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/adams/dossiers/adams-adams-county-assessor/veronica-rodriguez.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "adams-adams-county-auditor",
+      "category": "County",
+      "office": "Auditor",
+      "district": "Adams County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "jacque-laird",
+          "name": "Jacque Laird",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/adams/dossiers/adams-adams-county-auditor/jacque-laird.md"
+        },
+        {
+          "slug": "courtney-fannin",
+          "name": "Courtney Fannin",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/adams/dossiers/adams-adams-county-auditor/courtney-fannin.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "adams-adams-county-commissioner-district-3-county-commissioner-district-3",
+      "category": "County",
+      "office": "County Commissioner District 3",
+      "district": "Adams County Commissioner District 3",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "miguel-a-mike-garza",
+          "name": "Miguel A.\"Mike\" Garza",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/adams/dossiers/adams-adams-county-commissioner-district-3-county-commissioner-district-3/miguel-a-mike-garza.md"
+        },
+        {
+          "slug": "eleanor-brodahl",
+          "name": "Eleanor Brodahl",
+          "party_preference": "Prefers Democrat Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/adams/dossiers/adams-adams-county-commissioner-district-3-county-commissioner-district-3/eleanor-brodahl.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "adams-adams-county-sheriff",
+      "category": "County",
+      "office": "Sheriff",
+      "district": "Adams County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "dale-j-wagner",
+          "name": "Dale J. Wagner",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/adams/dossiers/adams-adams-county-sheriff/dale-j-wagner.md"
+        },
+        {
+          "slug": "matthew-carlson",
+          "name": "Matthew Carlson",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/adams/dossiers/adams-adams-county-sheriff/matthew-carlson.md"
+        }
+      ]
+    }
+  ],
+  "measures": [
+    {
+      "jurisdiction": "Adams County Fire Protection District No. 4",
+      "proposition": "Proposition No. 1",
+      "title": "Maintenance and Operation Levy",
+      "slug": "adams-adams-county-fire-protection-district-no-4-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Adams County Park and Recreation District No. 2",
+      "proposition": "Proposition No. 1",
+      "title": "Maintenance and Operation Levy (Washtucna Pool)",
+      "slug": "adams-adams-county-park-and-recreation-district-no-2-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    }
+  ],
+  "carry_forward_from": "2026-08-04-primary"
+}

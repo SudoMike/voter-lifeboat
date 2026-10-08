@@ -70,7 +70,7 @@ APP_PACKAGES = {
         "counties": ["king", "snohomish", "spokane", "pierce", "clark", "kitsap", "thurston", "yakima", "whatcom",
                      "benton", "skagit", "cowlitz", "grant", "island", "lewis", "franklin", "chelan", "clallam",
                      "grays-harbor", "mason", "walla-walla", "stevens", "whitman", "douglas", "okanogan",
-                     "jefferson", "kittitas", "klickitat", "pacific", "asotin"],
+                     "jefferson", "kittitas", "klickitat", "pacific", "asotin", "adams"],
         "district_contests": "county",
     },
 }
@@ -121,6 +121,7 @@ DISTRICT_ADAPTER_LAYERS = {
     "klickitat": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "FIRDST", "EMSDST"),
     "pacific": ("CONGDST", "LEGDST", "CITY", "FIRDST", "EMSDST"),
     "asotin": ("CONGDST", "LEGDST", "CITY", "EMSDST", "PUDDST", "RURALEMSDST"),
+    "adams": ("CONGDST", "LEGDST", "CITY", "CEMDST", "PARKDST", "FIRDST"),
 }
 
 
@@ -314,6 +315,10 @@ COUNTY_ELECTIONS_URLS = {
         # the page that links the general's local voters' pamphlet and sample
         # ballot; the package's raw/asotin/current-election.html.url).
         "asotin": "https://www.asotincountywa.gov/186/Current-Election",
+        # Adams County Auditor, Elections/Elecciones (200 text/html, "Elections
+        # | Adams County, WA", 2026-10-08; the page that links the general's
+        # sample ballot; the package's raw/adams/elections-page.html.url).
+        "adams": "https://www.co.adams.wa.gov/162/Elections-Elecciones",
     },
 }
 

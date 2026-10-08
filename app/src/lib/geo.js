@@ -355,8 +355,22 @@ const COUNTY_LAYERS = {
   // point queries on 2026-07-17; DOR layer ids re-verified 2026-10-08, see
   // DOR_TAX_DISTRICTS).
   adams: [
+    // Re-probed 2026-10-08 (#31): 155 W Main St, Washtucna (geocodes as 155 N
+    // Main St) -> '1'; 107 E 2nd St, Lind -> '3'; 425 E Main St, Othello ->
+    // '2'; 210 W Broadway Ave, Ritzville -> no feature. No general scope uses
+    // it (only the archived primary).
     { key: 'CEMDST', url: `${DOR_TAX_DISTRICTS}/3/query`, attr: 'DISTATTRIB' },
+    // Park and Recreation District No. 2's Washtucna Pool levy (#31), scoped
+    // '2'. Re-probed 2026-10-08: Washtucna -> '2'; Ritzville -> '4'; Lind ->
+    // '3'; Othello -> '1'.
     { key: 'PARKDST', url: `${DOR_TAX_DISTRICTS}/14/query`, attr: 'DISTATTRIB' },
+    // WA DOR FIR2025 (#31): Fire Protection District No. 4 (Harder-McCall)'s
+    // pumper levy, scoped '4' (seven Adams polygons, '1'-'7'). FD 4 has no
+    // Census-geocodable street address; live 2026-10-08: interior points
+    // (-118.02, 47.15) and (-118.05, 47.10) -> '4'; 1780 E Templin Rd,
+    // Ritzville -> '1'; the Ritzville, Lind, Washtucna and Othello addresses
+    // above -> no feature.
+    { key: 'FIRDST', url: `${DOR_TAX_DISTRICTS}/7/query`, attr: 'DISTATTRIB' },
   ],
   asotin: [
     // Re-probed 2026-10-08 (#31): 829 5th St and 1225 Highland Ave, Clarkston

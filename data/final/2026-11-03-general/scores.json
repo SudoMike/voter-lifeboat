@@ -61,11 +61,13 @@
     "data/washington-state/elections/2026-11-03-general/counties/pacific/scoring/*.json",
     "data/washington-state/elections/2026-11-03-general/counties/pacific/scoring/refutations/*.json",
     "data/washington-state/elections/2026-11-03-general/counties/asotin/scoring/*.json",
-    "data/washington-state/elections/2026-11-03-general/counties/asotin/scoring/refutations/*.json"
+    "data/washington-state/elections/2026-11-03-general/counties/asotin/scoring/refutations/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/adams/scoring/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/adams/scoring/refutations/*.json"
   ],
   "script": "pipeline/merge_scores.py",
   "verdict_stats": {
-    "upheld": 2241,
+    "upheld": 2256,
     "adjust": 197,
     "refuted": 24,
     "missing_added": 31,
@@ -36982,6 +36984,415 @@
             "Appointed by Gov. Ferguson to replace retiring Judge George Fearing, effective Jan. 1, 2026 [S4]",
             "More than 12 years as a Grant County District and Superior Court judge; co-founded Grant County's first therapeutic drug court [S1][S4]",
             "Former lead appellate prosecutor and law clerk to Justice James M. Johnson [S1][S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "adams-adams-county-assessor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/adams/dossiers/adams-adams-county-assessor/"
+      ],
+      "office_does": "The assessor values property for taxation, keeps assessments fair and equitable, and explains values and appeal rights to property owners.",
+      "race_blurb": "Assessor Veronica Rodriguez, in the office since 2015 and Assessor since a 2019 appointment, faces career appraiser and deputy assessor Curtis Templin; both prefer the Republican Party. Templin led the primary 1,295 to 1,039 and argues the office has lacked seasoned professional knowledge; Rodriguez cites timely assessments and compliance with state standards.",
+      "candidates": [
+        {
+          "slug": "veronica-rodriguez",
+          "summary": "Adams County Assessor since a 2019 appointment, elected in 2022, after starting in the office in 2015; seeking a second term on her record.",
+          "highlights": [
+            "In the Assessor's Office since 2015; appointed Assessor in 2019, elected unopposed in 2022 [S2][S3]",
+            "Cites timely assessments, better communication with owners and compliance with state assessment standards [S1]",
+            "The State Auditor's 2024 county accountability audit, which examined property tax valuations, reported no findings [S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Sitting Assessor with 11 years in the office who asks voters for continued support on her record."
+            }
+          }
+        },
+        {
+          "slug": "curtis-templin",
+          "summary": "Appraiser, appraiser analyst and deputy county assessor for more than 11 years, and a fourth-generation Adams County farmer near Ritzville; seeking his first elected office.",
+          "highlights": [
+            "Says recent years show 'the difficulties of operating without a foundation of seasoned professional knowledge' [S1]",
+            "Would improve response times, ensure equitable assessments and explain values and appeals clearly [S1]",
+            "Accredited appraiser in Adams and Lincoln counties; on an IAAO chapter education committee [S1]",
+            "Led the primary 1,295 to 1,039 [S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "First run for office, framed as a change in how the office is run, but built on a long appraisal and deputy-assessor career rather than an outsider profile."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "adams-adams-county-auditor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/adams/dossiers/adams-adams-county-auditor/"
+      ],
+      "office_does": "The auditor runs county elections, assembles the county budget, handles accounts payable and payroll, records documents and oversees vehicle licensing.",
+      "race_blurb": "Open seat: Auditor Heidi Hunt is retiring. Two deputies from her office are running, both preferring the Republican Party: Elections Administrator Jacque Laird, with 19 years in the office, and payroll deputy and Ritzville School Board member Courtney Fannin. Laird led the three-way primary with 1,060 votes to Fannin's 646.",
+      "candidates": [
+        {
+          "slug": "jacque-laird",
+          "summary": "Adams County Elections Administrator, with 19 years in the Auditor's office across recording, accounts payable, payroll and elections; a first-time candidate.",
+          "highlights": [
+            "Elections Administrator for 11 years; certified elections administrator [S1][S2]",
+            "Says her work across the office prepares her for 'a smooth and effective transition' [S1]",
+            "Led the primary with 1,060 votes [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Not an incumbent, but a 19-year insider who runs on continuity and a smooth transition in the office she would lead."
+            }
+          }
+        },
+        {
+          "slug": "courtney-fannin",
+          "summary": "Payroll deputy in the Auditor's office for about five years after eight years of medical-practice management, and an elected Ritzville School Board member.",
+          "highlights": [
+            "Says she implemented electronic recording and helped launch the county's new finance software [S1]",
+            "Would use technology to 'streamline operations, reduce costs' and be 'a careful steward of taxpayer dollars' [S1][S3]",
+            "Stresses election chain of custody, voter-roll accuracy and expanded voter outreach [S1][S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S4"
+              ],
+              "basis": "Mixed: an insider in the office and an elected school-board member, but with a shorter tenure there and a career largely outside government."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Explicit cost-reduction and stewardship framing for the office's budget and finance role."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "adams-adams-county-clerk",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/adams/dossiers/adams-adams-county-clerk/"
+      ],
+      "office_does": "The county clerk is clerk of the superior court and keeps the court's case files and records.",
+      "race_blurb": "Uncontested: Clerk Catherine R. Sloan (prefers Republican), appointed in 2021 and elected in 2022, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "catherine-r-sloan",
+          "summary": "Adams County Clerk since a 2021 appointment, elected in 2022, after working in Superior Court administration; the only candidate.",
+          "highlights": [
+            "Appointed Clerk in 2021 and elected in 2022 [S1][S2]",
+            "Previously worked in Superior Court administration [S1]",
+            "Says she modernized office processes and maintained accurate court records [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "adams-adams-county-commissioner-district-3-county-commissioner-district-3",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/adams/dossiers/adams-adams-county-commissioner-district-3-county-commissioner-district-3/"
+      ],
+      "office_does": "The three county commissioners adopt the county budget and set county policy; District 3's commissioner is nominated by the district and elected by the whole county.",
+      "race_blurb": "First-term Commissioner Mike Garza (prefers Republican), elected in 2022 by 58 votes, faces Eleanor Brodahl (prefers Democrat), a 16-year Othello City Council member who calls herself a conservative Democrat; both live in Othello. Both describe a tight county budget; Garza led the district primary 334 to 227.",
+      "candidates": [
+        {
+          "slug": "miguel-a-mike-garza",
+          "summary": "First-term Adams County commissioner and Othello insurance agent, formerly on the Othello School Board and the Columbia Basin Health Association board.",
+          "highlights": [
+            "Says every county office, the commissioners included, was told to cut operating costs as spending outpaced revenue [S2]",
+            "'Revenues need to exceed our expenditures \u2013 it's math' [S2]",
+            "Cites jail-remodel funding and irrigation bridges over the East-Lo canal [S1]",
+            "Wants growth from job-creating employers rather than housing [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S4"
+              ],
+              "basis": "First-term incumbent running on his record in office."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Describes across-the-board cuts to office operating costs and insists revenues exceed expenditures."
+            }
+          }
+        },
+        {
+          "slug": "eleanor-brodahl",
+          "summary": "Former 16-year Othello City Council member with 30 years in banking and finance, running as a conservative Democrat focused on fiscal responsibility.",
+          "highlights": [
+            "'We can't just keep taxing and taxing our citizenry' [S2]",
+            "Says the county must 'live within our means' with a tight budget [S2]",
+            "Would raise revenue through economic development, existing businesses and grants [S3]",
+            "Calls for better communication between the county, Othello and Ritzville [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Runs on a 16-year city-council record and 30 years in finance, though new to county office."
+            },
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Opposes further taxation in the current budget climate and looks to growth and grants for revenue."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Fiscal-responsibility framing: protect taxpayer dollars and live within the county's means."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "adams-adams-county-district-court-judge-position-no-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/adams/dossiers/adams-adams-county-district-court-judge-position-no-1/"
+      ],
+      "office_does": "District Court judges hear misdemeanor criminal cases, civil cases, small claims, infractions and protection orders for the county.",
+      "race_blurb": "Uncontested: Judge Andrea K. Russell, on the Adams County District Court since 2021, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "andrea-k-russell",
+          "summary": "Adams County District Court judge in Ritzville since 2021 and a former deputy prosecutor and assistant attorney general; the only candidate.",
+          "highlights": [
+            "District Court judge since 2021; unopposed in 2022 [S1][S2]",
+            "Former Adams County deputy prosecutor, assistant attorney general and Alaska victims' rights attorney [S1]",
+            "'All people should be treated equally under the law' [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "adams-adams-county-district-court-judge-position-no-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/adams/dossiers/adams-adams-county-district-court-judge-position-no-2/"
+      ],
+      "office_does": "District Court judges hear misdemeanor criminal cases, civil cases, small claims, infractions and protection orders for the county.",
+      "race_blurb": "Uncontested: Presiding Judge Carolyn J. Benzel, appointed in 2017 and elected in 2018 and 2022, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "carolyn-j-benzel",
+          "summary": "Adams County District Court presiding judge since a 2017 appointment, also Othello Municipal Court judge; the only candidate.",
+          "highlights": [
+            "Appointed 2017; elected 2018 and 2022 [S1][S2]",
+            "Othello Municipal Court judge since 2023 and pro tem Superior Court judge [S1]",
+            "Commits to access to justice and applying the law 'fairly and equally' [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "adams-adams-county-prosecutor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/adams/dossiers/adams-adams-county-prosecutor/"
+      ],
+      "office_does": "The prosecuting attorney prosecutes crimes for the state in the county and is legal advisor to the county commissioners and other county officials.",
+      "race_blurb": "Uncontested: Prosecuting Attorney Randy J. Flyckt (prefers Republican), in office since 2003, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "randy-j-flyckt",
+          "summary": "Adams County Prosecuting Attorney since 2003 and a former deputy prosecutor; the only candidate.",
+          "highlights": [
+            "Prosecuting Attorney since 2003; deputy prosecutor 1999-2002 [S1]",
+            "Unopposed in 2022 with 3,008 votes [S2]",
+            "Says he works to keep the criminal justice system 'fair, effective, and impartial' [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "adams-adams-county-sheriff",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/adams/dossiers/adams-adams-county-sheriff/"
+      ],
+      "office_does": "The sheriff runs county law enforcement countywide and the county jail, with its deputies, corrections staff and dispatchers.",
+      "race_blurb": "A rematch of 2022: Sheriff Dale Wagner, at the office since 1997 and sheriff since 2015 or 2016, faces Matthew Carlson, who spent 12 of his 29 years in law enforcement with the Ritzville police; both prefer the Republican Party. Wagner beat Carlson 2,180 to 1,710 in 2022 and led the August primary 1,329 to 1,060.",
+      "candidates": [
+        {
+          "slug": "dale-j-wagner",
+          "summary": "Adams County Sheriff since 2015 or 2016 (sources differ) and at the sheriff's office since 1997, running on staffing, training, equipment and the jail remodel.",
+          "highlights": [
+            "Would recruit and retain staff and give deputies, corrections officers and dispatchers training and modern equipment [S1]",
+            "Would keep seeking funding for jail improvements; coordinating the new jail work [S1][S4]",
+            "Backs youth-outreach programs and 'responsible technology, transparency, and accountability' [S1]",
+            "Supports lawful cooperation with federal immigration authorities on serious crimes; testified to a U.S. House subcommittee in 2025 [S2][S6]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Sheriff since 2015 or 2016 after a 28-year career rising through the same office, running on that record."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Priorities are staffing, training, equipment and jail capacity, with youth outreach and community-trust programs alongside; no diversion or treatment agenda."
+            }
+          }
+        },
+        {
+          "slug": "matthew-carlson",
+          "summary": "Ritzville law enforcement officer for 12 of his 29 years in policing, after Military Police and Killeen, Texas, service; runs on community presence and trust. Lost to Wagner in 2022.",
+          "highlights": [
+            "29 years in law enforcement: Military Police, Killeen (Texas) police and Ritzville police [S2]",
+            "Says leadership 'starts with showing up, listening to people, and staying connected to the community' [S1]",
+            "Says immigration enforcement is 'a federal job' for federal agencies [S2]",
+            "Applied to be Ritzville's police chief in 2024 [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Never held elected office and challenges the sitting sheriff, though he is a career police officer, so the outsider case is partial."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "adams-adams-county-treasurer",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/adams/dossiers/adams-adams-county-treasurer/"
+      ],
+      "office_does": "The county treasurer collects property taxes and safeguards and accounts for county funds.",
+      "race_blurb": "Uncontested: Treasurer Kayla Meise (prefers Republican), unopposed in 2022, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "kayla-meise",
+          "summary": "Adams County Treasurer with 19 years in banking, auditing and government treasury work; the only candidate.",
+          "highlights": [
+            "Elected unopposed in 2022 [S2]",
+            "Puts the security of tax dollars and fraud prevention first [S1]",
+            "Cites consecutive State Auditor audits of her office [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "adams-court-of-appeals-division-3-district-2-judge-position-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/adams/dossiers/adams-court-of-appeals-division-3-district-2-judge-position-1/"
+      ],
+      "office_does": "A Court of Appeals judge reviews trial-court decisions on appeal; Division III, District 2 elects one judge from Adams, Asotin, Benton, Columbia, Franklin, Garfield, Grant, Walla Walla and Whitman counties.",
+      "race_blurb": "Uncontested: Judge Tyson R. Hill, appointed by Gov. Ferguson effective Jan. 1, 2026 to replace retiring Judge George Fearing, is the only candidate for the remaining two years of the term.",
+      "candidates": [
+        {
+          "slug": "tyson-r-hill",
+          "summary": "Court of Appeals judge since his appointment effective Jan. 1, 2026; previously a Grant County Superior Court and District Court judge and the Grant County Prosecutor's lead appellate attorney. The only candidate.",
+          "highlights": [
+            "Appointed by Gov. Ferguson to replace retiring Judge George Fearing, effective Jan. 1, 2026 [S2]",
+            "More than 12 years as a Grant County District and Superior Court judge; co-founded Grant County's first therapeutic drug court [S1][S2]",
+            "Former lead appellate prosecutor and law clerk to Justice James M. Johnson [S1][S2]"
           ],
           "evidence_level": "moderate",
           "withdrawn": false,

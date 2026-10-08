@@ -433,8 +433,8 @@ general packages that are `partial_county` are Spokane and Okanogan (both
 `PUDDST`) and Klickitat and Pacific (both `DISTCRT`). Benton,
 Clark, Kitsap, Pierce, Snohomish (since #27), Thurston, Whatcom, Yakima,
 Skagit, Cowlitz, Grant, Island, Lewis, Franklin, Chelan, Clallam, Grays
-Harbor, Mason, Walla Walla, Stevens, Whitman, Douglas, Jefferson, Kittitas
-and Asotin are `full_county`; all twenty-nine ship with King. A PUD
+Harbor, Mason, Walla Walla, Stevens, Whitman, Douglas, Jefferson, Kittitas,
+Asotin and Adams are `full_county`; all thirty ship with King. A PUD
 commissioner is nominated by district but elected by the whole PUD in the
 general (RCW 54.12.010(3)), so a countywide PUD's seat is scoped `COUNTY`
 (Clark, Kitsap, Thurston), not `PUDDST`.
@@ -728,6 +728,22 @@ with Clark's and LD 19 with Thurston's; Asotin's CD 5 and LD 9 with
 Spokane's. Klickitat's and Asotin's Court of Appeals seats are their own
 information-only copies. Asotin links its local pamphlet by PDF page (the
 printed numbers run 36 ahead) and its VoteWA guide otherwise.
+
+Adams shipped on 2026-10-08 (#31) as `full_county`. `COUNTY_LAYERS.adams`
+gained `FIRDST` (DOR FIR2025, layer 7) for Fire District 4's levy beside
+`CEMDST` and `PARKDST` (Park District 2's Washtucna Pool levy reads
+PKR2025 `2`). Fire District 4 (Ritzville Rural SE) has no address the
+Census geocoder matches, so its live check is an interior point,
+(-118.02, 47.15), run through `lookupBallotContext` with the Census
+coordinates endpoint's geographies for that point. The commissioner and
+both District Court seats are elected county-wide. Shared races (7): CD 4
+with Benton's scoring, CD 5 and LD 9 Pos. 1/2 with Spokane's, LD 13
+Senator and Pos. 1/2 with Grant's; its Court of Appeals seat is its own
+information-only copy. Adams prints no local pamphlet, so every record
+links its VoteWA guide (`c=01`). Shipping it moved two pipeline fixtures
+that used Adams as "a county with no general package" to Garfield
+(`test_votewa`, `test_research_inputs`); pick a still-unshipped county
+for such fixtures.
 
 ## 13. Reference
 

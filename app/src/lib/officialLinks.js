@@ -272,6 +272,9 @@ const ELECTIONS = {
       klickitat: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=20',
       pacific: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=25',
       asotin: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=02',
+      // Adams prints no local pamphlet; its dossiers cite VoteWA only. #31;
+      // 200 text/html, 2026-10-08.
+      adams: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=01',
     },
     pamphletIndex: `${SOS_GENERAL_2026}/2026-voters-pamphlet-pdfs`,
   },
