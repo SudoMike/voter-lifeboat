@@ -1,0 +1,326 @@
+{
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/statewide/raw/votewa-general-2026-candidate-list.url",
+    "data/washington-state/elections/2026-11-03-general/statewide/raw/sos/voters-pamphlet-edition-06-king-south-southeast.pdf.url",
+    "data/washington-state/elections/2026-11-03-general/statewide/interim/pdf-text/voters-pamphlet-edition-06-king-south-southeast.txt"
+  ],
+  "script": null,
+  "method": "Built by hand-run extraction (issue #5): Supreme Court rows of the VoteWA GENERAL 2026 / State CSV (names, term), ballot order from the VoteWA grid (see the .meta.json ballot_order_source), and pamphlet page, printed term and printed website from Edition 06 pages 53-57. Pamphlet print order was checked against the VoteWA ballot order. U.S. House and legislative contests are deliberately absent: they are district-scoped and owned by county packages (see ../COMPLETENESS.md).",
+  "contests": [
+    {
+      "category": "StateSupremeCourt",
+      "office": "Supreme Court",
+      "district": "Justice Position No. 1",
+      "slug": "justice-position-no-1-supreme-court",
+      "scope": {
+        "kind": "STATEWIDE"
+      },
+      "term": "2-year unexpired term",
+      "uncontested": false,
+      "pamphlet_pages": [
+        {
+          "edition": "edition-06",
+          "page": 53
+        }
+      ],
+      "candidates": [
+        {
+          "slug": "colleen-melody",
+          "name": "Colleen Melody",
+          "party": "nonpartisan",
+          "party_preference": null,
+          "ballot_order": 1,
+          "campaign_website": "https://melodyforjustice.com/",
+          "pamphlet_name": "Colleen Melody",
+          "pamphlet_pages": [
+            {
+              "edition": "edition-06",
+              "page": 53
+            }
+          ],
+          "votewa": {
+            "race": "Justice Position #01",
+            "term_type": "Unexpired",
+            "term_length_years": 2,
+            "filing_date": "5/4/2026 10:34:39 AM",
+            "status": "Active"
+          }
+        },
+        {
+          "slug": "scott-edwards",
+          "name": "Scott Edwards",
+          "party": "nonpartisan",
+          "party_preference": null,
+          "ballot_order": 2,
+          "campaign_website": "votescottedwards.com",
+          "pamphlet_name": "Scott Edwards",
+          "pamphlet_pages": [
+            {
+              "edition": "edition-06",
+              "page": 53
+            }
+          ],
+          "votewa": {
+            "race": "Justice Position #01",
+            "term_type": "Unexpired",
+            "term_length_years": 2,
+            "filing_date": "5/4/2026 6:10:06 PM",
+            "status": "Active"
+          }
+        }
+      ]
+    },
+    {
+      "category": "StateSupremeCourt",
+      "office": "Supreme Court",
+      "district": "Justice Position No. 3",
+      "slug": "justice-position-no-3-supreme-court",
+      "scope": {
+        "kind": "STATEWIDE"
+      },
+      "term": "6-year term",
+      "uncontested": false,
+      "pamphlet_pages": [
+        {
+          "edition": "edition-06",
+          "page": 54
+        }
+      ],
+      "candidates": [
+        {
+          "slug": "david-stevens",
+          "name": "David Stevens",
+          "party": "nonpartisan",
+          "party_preference": null,
+          "ballot_order": 1,
+          "campaign_website": "JudgeStevensforWA.com",
+          "pamphlet_name": "David Stevens",
+          "pamphlet_pages": [
+            {
+              "edition": "edition-06",
+              "page": 54
+            }
+          ],
+          "votewa": {
+            "race": "Justice Position #03",
+            "term_type": "Regular",
+            "term_length_years": 6,
+            "filing_date": "5/4/2026 6:58:30 PM",
+            "status": "Active"
+          }
+        },
+        {
+          "slug": "jaime-michelle-hawk",
+          "name": "Jaime Michelle Hawk",
+          "party": "nonpartisan",
+          "party_preference": null,
+          "ballot_order": 2,
+          "campaign_website": "www.judgehawk.com",
+          "pamphlet_name": "Jaime Michelle Hawk",
+          "pamphlet_pages": [
+            {
+              "edition": "edition-06",
+              "page": 54
+            }
+          ],
+          "votewa": {
+            "race": "Justice Position #03",
+            "term_type": "Regular",
+            "term_length_years": 6,
+            "filing_date": "5/4/2026 10:08:05 AM",
+            "status": "Active"
+          }
+        }
+      ]
+    },
+    {
+      "category": "StateSupremeCourt",
+      "office": "Supreme Court",
+      "district": "Justice Position No. 4",
+      "slug": "justice-position-no-4-supreme-court",
+      "scope": {
+        "kind": "STATEWIDE"
+      },
+      "term": "6-year term",
+      "uncontested": false,
+      "pamphlet_pages": [
+        {
+          "edition": "edition-06",
+          "page": 55
+        }
+      ],
+      "candidates": [
+        {
+          "slug": "ian-birk",
+          "name": "Ian Birk",
+          "party": "nonpartisan",
+          "party_preference": null,
+          "ballot_order": 1,
+          "campaign_website": "www.ianbirk.com",
+          "pamphlet_name": "Ian Birk",
+          "pamphlet_pages": [
+            {
+              "edition": "edition-06",
+              "page": 55
+            }
+          ],
+          "votewa": {
+            "race": "Justice Position #04",
+            "term_type": "Regular",
+            "term_length_years": 6,
+            "filing_date": "5/4/2026 8:08:47 AM",
+            "status": "Active"
+          }
+        },
+        {
+          "slug": "sean-odonnell",
+          "name": "Sean O'Donnell",
+          "party": "nonpartisan",
+          "party_preference": null,
+          "ballot_order": 2,
+          "campaign_website": "odonnellforjustice.com",
+          "pamphlet_name": "Sean O’Donnell",
+          "pamphlet_pages": [
+            {
+              "edition": "edition-06",
+              "page": 55
+            }
+          ],
+          "votewa": {
+            "race": "Justice Position #04",
+            "term_type": "Regular",
+            "term_length_years": 6,
+            "filing_date": "5/4/2026 7:56:38 PM",
+            "status": "Active"
+          }
+        }
+      ]
+    },
+    {
+      "category": "StateSupremeCourt",
+      "office": "Supreme Court",
+      "district": "Justice Position No. 5",
+      "slug": "justice-position-no-5-supreme-court",
+      "scope": {
+        "kind": "STATEWIDE"
+      },
+      "term": "2-year unexpired term",
+      "uncontested": false,
+      "pamphlet_pages": [
+        {
+          "edition": "edition-06",
+          "page": 56
+        }
+      ],
+      "candidates": [
+        {
+          "slug": "theo-angelis",
+          "name": "Theo Angelis",
+          "party": "nonpartisan",
+          "party_preference": null,
+          "ballot_order": 1,
+          "campaign_website": "justiceangelis.com",
+          "pamphlet_name": "Theo Angelis",
+          "pamphlet_pages": [
+            {
+              "edition": "edition-06",
+              "page": 56
+            }
+          ],
+          "votewa": {
+            "race": "Justice Position #05",
+            "term_type": "Unexpired",
+            "term_length_years": 2,
+            "filing_date": "5/4/2026 8:11:46 AM",
+            "status": "Active"
+          }
+        },
+        {
+          "slug": "dave-larson",
+          "name": "Dave Larson",
+          "party": "nonpartisan",
+          "party_preference": null,
+          "ballot_order": 2,
+          "campaign_website": "www.larsonforjustice.com",
+          "pamphlet_name": "Dave Larson",
+          "pamphlet_pages": [
+            {
+              "edition": "edition-06",
+              "page": 56
+            }
+          ],
+          "votewa": {
+            "race": "Justice Position #05",
+            "term_type": "Unexpired",
+            "term_length_years": 2,
+            "filing_date": "5/4/2026 12:01:33 PM",
+            "status": "Active"
+          }
+        }
+      ]
+    },
+    {
+      "category": "StateSupremeCourt",
+      "office": "Supreme Court",
+      "district": "Justice Position No. 7",
+      "slug": "justice-position-no-7-supreme-court",
+      "scope": {
+        "kind": "STATEWIDE"
+      },
+      "term": "6-year term",
+      "uncontested": false,
+      "pamphlet_pages": [
+        {
+          "edition": "edition-06",
+          "page": 57
+        }
+      ],
+      "candidates": [
+        {
+          "slug": "debra-l-stephens",
+          "name": "Debra L. Stephens",
+          "party": "nonpartisan",
+          "party_preference": null,
+          "ballot_order": 1,
+          "campaign_website": "https://justicestephens.com",
+          "pamphlet_name": "Debra L. Stephens",
+          "pamphlet_pages": [
+            {
+              "edition": "edition-06",
+              "page": 57
+            }
+          ],
+          "votewa": {
+            "race": "Justice Position #07",
+            "term_type": "Regular",
+            "term_length_years": 6,
+            "filing_date": "5/4/2026 9:13:53 AM",
+            "status": "Active"
+          }
+        },
+        {
+          "slug": "todd-a-bloom",
+          "name": "Todd A. Bloom",
+          "party": "nonpartisan",
+          "party_preference": null,
+          "ballot_order": 2,
+          "campaign_website": null,
+          "pamphlet_name": "Todd A. Bloom",
+          "pamphlet_pages": [
+            {
+              "edition": "edition-06",
+              "page": 57
+            }
+          ],
+          "votewa": {
+            "race": "Justice Position #07",
+            "term_type": "Regular",
+            "term_length_years": 6,
+            "filing_date": "5/8/2026 10:50:18 AM",
+            "status": "Active"
+          }
+        }
+      ]
+    }
+  ]
+}

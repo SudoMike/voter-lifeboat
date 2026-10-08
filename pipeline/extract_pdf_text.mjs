@@ -8,7 +8,7 @@ const root = path.resolve(new URL('..', import.meta.url).pathname)
 const cacheDir = path.join(root, 'data/.cache/pdf')
 
 function usage() {
-  console.error('usage: node pipeline/extract_pdf_text.mjs <county-id> [--election <id>]')
+  console.error('usage: node pipeline/extract_pdf_text.mjs <county-id|statewide> [--election <id>]')
   process.exit(2)
 }
 
@@ -27,7 +27,10 @@ if (!county) usage()
 
 const electionsRoot = path.join(root, 'data/washington-state/elections')
 electionId ||= (await fs.readFile(path.join(electionsRoot, 'ACTIVE'), 'utf8')).trim()
-const countyRoot = path.join(electionsRoot, electionId, 'counties', county)
+// `statewide` selects the election's statewide package instead of a county.
+const countyRoot = county === 'statewide'
+  ? path.join(electionsRoot, electionId, 'statewide')
+  : path.join(electionsRoot, electionId, 'counties', county)
 const outDir = path.join(countyRoot, 'interim/pdf-text')
 
 async function walk(dir) {

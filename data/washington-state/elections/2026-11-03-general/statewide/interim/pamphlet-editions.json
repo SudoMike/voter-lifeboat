@@ -1,0 +1,676 @@
+{
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/statewide/raw/sos/2026-voters-pamphlet-pdfs.html.url"
+  ],
+  "script": null,
+  "method": "Transcribed from the cached SOS 2026 Voters' Pamphlet PDFs page (see the .meta.json sha256) by parsing its edition <ul>; URLs are the page's hrefs made absolute (some contain %C2%A0, a non-breaking space, exactly as SOS published them).",
+  "retrieved_at": "2026-10-08",
+  "source_page": "https://www.sos.wa.gov/elections/data-research/election-data-and-maps/election-results-and-voters-pamphlets/2026-general-election-voters-guide/2026-voters-pamphlet-pdfs",
+  "statewide_reference_edition": "edition-06",
+  "note": "Regional editions differ in their U.S. House and legislative district pages; the statewide pages (measures, Supreme Court, complete text of measures) are expected to match across editions, but only Edition 06 has been extracted and checked. Counties pick their edition here. King County has three English editions (04 Seattle, 05 North and Eastside, 06 South and Southeast); Edition 06's back cover (PDF page 72) lists the ZIP codes it was mailed to.",
+  "english_editions_by_county": {
+    "adams": [
+      "edition-01"
+    ],
+    "asotin": [
+      "edition-12"
+    ],
+    "benton": [
+      "edition-13"
+    ],
+    "chelan": [
+      "edition-02"
+    ],
+    "clallam": [
+      "edition-14"
+    ],
+    "clark": [
+      "edition-15"
+    ],
+    "columbia": [
+      "edition-03"
+    ],
+    "cowlitz": [
+      "edition-16"
+    ],
+    "douglas": [
+      "edition-02"
+    ],
+    "ferry": [
+      "edition-03"
+    ],
+    "franklin": [
+      "edition-17"
+    ],
+    "garfield": [
+      "edition-03"
+    ],
+    "grant": [
+      "edition-02"
+    ],
+    "grays-harbor": [
+      "edition-08"
+    ],
+    "island": [
+      "edition-18"
+    ],
+    "jefferson": [
+      "edition-07"
+    ],
+    "king": [
+      "edition-04",
+      "edition-05",
+      "edition-06"
+    ],
+    "kitsap": [
+      "edition-07"
+    ],
+    "kittitas": [
+      "edition-02"
+    ],
+    "klickitat": [
+      "edition-19"
+    ],
+    "lewis": [
+      "edition-08"
+    ],
+    "lincoln": [
+      "edition-03"
+    ],
+    "mason": [
+      "edition-07"
+    ],
+    "okanogan": [
+      "edition-20"
+    ],
+    "pacific": [
+      "edition-08"
+    ],
+    "pend-oreille": [
+      "edition-21"
+    ],
+    "pierce": [
+      "edition-09"
+    ],
+    "san-juan": [
+      "edition-22"
+    ],
+    "skagit": [
+      "edition-23"
+    ],
+    "skamania": [
+      "edition-24"
+    ],
+    "snohomish": [
+      "edition-25"
+    ],
+    "spokane": [
+      "edition-10"
+    ],
+    "stevens": [
+      "edition-26"
+    ],
+    "thurston": [
+      "edition-27"
+    ],
+    "wahkiakum": [
+      "edition-08"
+    ],
+    "walla-walla": [
+      "edition-03"
+    ],
+    "whatcom": [
+      "edition-11"
+    ],
+    "whitman": [
+      "edition-03"
+    ],
+    "yakima": [
+      "edition-01"
+    ]
+  },
+  "editions": [
+    {
+      "edition": 1,
+      "id": "edition-01",
+      "label": "Edition 01 - Adams, Yakima",
+      "counties": [
+        "adams",
+        "yakima"
+      ],
+      "statewide": false,
+      "region_note": null,
+      "files": [
+        {
+          "language": "English",
+          "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%201%20-%20Adams%2C%20Yakima%20-%20English.pdf"
+        },
+        {
+          "language": "Spanish",
+          "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%201%20-%20Adams%2C%20Yakima%20-%20Spanish.pdf"
+        }
+      ]
+    },
+    {
+      "edition": 2,
+      "id": "edition-02",
+      "label": "Edition 02 - Chelan, Douglas, Grant, Kittitas",
+      "counties": [
+        "chelan",
+        "douglas",
+        "grant",
+        "kittitas"
+      ],
+      "statewide": false,
+      "region_note": null,
+      "files": [
+        {
+          "language": "English",
+          "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2002%20-%20Chelan%2C%20Douglas%2C%20Grant%2C%20Kittitas.pdf"
+        }
+      ]
+    },
+    {
+      "edition": 3,
+      "id": "edition-03",
+      "label": "Edition 03 - Columbia, Ferry, Garfield, Lincoln, Walla Walla, Whitman",
+      "counties": [
+        "columbia",
+        "ferry",
+        "garfield",
+        "lincoln",
+        "walla-walla",
+        "whitman"
+      ],
+      "statewide": false,
+      "region_note": null,
+      "files": [
+        {
+          "language": "English",
+          "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2003%20-%20Columbia%2C%20Ferry%2C%20Garfield%2C%20Lincoln%2C%20Walla%20Walla%2C%20Whitman.pdf"
+        }
+      ]
+    },
+    {
+      "edition": 4,
+      "id": "edition-04",
+      "label": "Edition 04 - King - Seattle",
+      "counties": [
+        "king"
+      ],
+      "statewide": false,
+      "region_note": "Seattle",
+      "files": [
+        {
+          "language": "English",
+          "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2004%C2%A0-%20King%20-%20Seattle.pdf"
+        }
+      ]
+    },
+    {
+      "edition": 5,
+      "id": "edition-05",
+      "label": "Edition 05 - King - North and Eastside",
+      "counties": [
+        "king"
+      ],
+      "statewide": false,
+      "region_note": "North and Eastside",
+      "files": [
+        {
+          "language": "English",
+          "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2005%C2%A0-%20King%20-%20North%20and%20Eastside.pdf"
+        }
+      ]
+    },
+    {
+      "edition": 6,
+      "id": "edition-06",
+      "label": "Edition 06 - King - South and Southeast",
+      "counties": [
+        "king"
+      ],
+      "statewide": false,
+      "region_note": "South and Southeast",
+      "files": [
+        {
+          "language": "English",
+          "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2006%20-%20King%20-%20South%20and%20Southeast.pdf"
+        }
+      ]
+    },
+    {
+      "edition": 7,
+      "id": "edition-07",
+      "label": "Edition 07 - Jefferson, Kitsap, Mason",
+      "counties": [
+        "jefferson",
+        "kitsap",
+        "mason"
+      ],
+      "statewide": false,
+      "region_note": null,
+      "files": [
+        {
+          "language": "English",
+          "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2007%C2%A0-%20Jefferson%2C%20Kitsap%2C%20Mason.pdf"
+        }
+      ]
+    },
+    {
+      "edition": 8,
+      "id": "edition-08",
+      "label": "Edition 08 - Grays Harbor, Lewis, Pacific, Wahkiakum",
+      "counties": [
+        "grays-harbor",
+        "lewis",
+        "pacific",
+        "wahkiakum"
+      ],
+      "statewide": false,
+      "region_note": null,
+      "files": [
+        {
+          "language": "English",
+          "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2008%C2%A0-%20Grays%20Harbor%2C%20Lewis%2C%20Pacific%2C%20Wahkiakum.pdf"
+        }
+      ]
+    },
+    {
+      "edition": 9,
+      "id": "edition-09",
+      "label": "Edition 09 - Pierce",
+      "counties": [
+        "pierce"
+      ],
+      "statewide": false,
+      "region_note": null,
+      "files": [
+        {
+          "language": "English",
+          "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2009%20-%20Pierce.pdf"
+        }
+      ]
+    },
+    {
+      "edition": 10,
+      "id": "edition-10",
+      "label": "Edition 10 - Spokane",
+      "counties": [
+        "spokane"
+      ],
+      "statewide": false,
+      "region_note": null,
+      "files": [
+        {
+          "language": "English",
+          "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2010%20-%20Spokane.pdf"
+        }
+      ]
+    },
+    {
+      "edition": 11,
+      "id": "edition-11",
+      "label": "Edition 11 - Whatcom",
+      "counties": [
+        "whatcom"
+      ],
+      "statewide": false,
+      "region_note": null,
+      "files": [
+        {
+          "language": "English",
+          "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2011%20-%20Whatcom.pdf"
+        }
+      ]
+    },
+    {
+      "edition": 12,
+      "id": "edition-12",
+      "label": "Edition 12 - Asotin",
+      "counties": [
+        "asotin"
+      ],
+      "statewide": false,
+      "region_note": null,
+      "files": [
+        {
+          "language": "English",
+          "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2012%20-%20Asotin.pdf"
+        }
+      ]
+    },
+    {
+      "edition": 13,
+      "id": "edition-13",
+      "label": "Edition 13 - Benton",
+      "counties": [
+        "benton"
+      ],
+      "statewide": false,
+      "region_note": null,
+      "files": [
+        {
+          "language": "English",
+          "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2013%20-%20Benton.pdf"
+        }
+      ]
+    },
+    {
+      "edition": 14,
+      "id": "edition-14",
+      "label": "Edition 14 - Clallam",
+      "counties": [
+        "clallam"
+      ],
+      "statewide": false,
+      "region_note": null,
+      "files": [
+        {
+          "language": "English",
+          "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2014%20-%20Clallam.pdf"
+        }
+      ]
+    },
+    {
+      "edition": 15,
+      "id": "edition-15",
+      "label": "Edition 15 - Clark",
+      "counties": [
+        "clark"
+      ],
+      "statewide": false,
+      "region_note": null,
+      "files": [
+        {
+          "language": "English",
+          "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2015%20-%20Clark.pdf"
+        }
+      ]
+    },
+    {
+      "edition": 16,
+      "id": "edition-16",
+      "label": "Edition 16 - Cowlitz",
+      "counties": [
+        "cowlitz"
+      ],
+      "statewide": false,
+      "region_note": null,
+      "files": [
+        {
+          "language": "English",
+          "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2016%20-%20Cowlitz.pdf"
+        }
+      ]
+    },
+    {
+      "edition": 17,
+      "id": "edition-17",
+      "label": "Edition 17 - Franklin",
+      "counties": [
+        "franklin"
+      ],
+      "statewide": false,
+      "region_note": null,
+      "files": [
+        {
+          "language": "English",
+          "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2017%20-%20Franklin%20-%20English.pdf"
+        },
+        {
+          "language": "Spanish",
+          "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2017%20-%20Franklin%20-%20Spanish.pdf"
+        }
+      ]
+    },
+    {
+      "edition": 18,
+      "id": "edition-18",
+      "label": "Edition 18 - Island",
+      "counties": [
+        "island"
+      ],
+      "statewide": false,
+      "region_note": null,
+      "files": [
+        {
+          "language": "English",
+          "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2018%20-%20Island.pdf"
+        }
+      ]
+    },
+    {
+      "edition": 19,
+      "id": "edition-19",
+      "label": "Edition 19 - Klickitat",
+      "counties": [
+        "klickitat"
+      ],
+      "statewide": false,
+      "region_note": null,
+      "files": [
+        {
+          "language": "English",
+          "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2019%20-%20Klickitat.pdf"
+        }
+      ]
+    },
+    {
+      "edition": 20,
+      "id": "edition-20",
+      "label": "Edition 20 - Okanogan",
+      "counties": [
+        "okanogan"
+      ],
+      "statewide": false,
+      "region_note": null,
+      "files": [
+        {
+          "language": "English",
+          "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2020%20-%20Okanogan.pdf"
+        }
+      ]
+    },
+    {
+      "edition": 21,
+      "id": "edition-21",
+      "label": "Edition 21 - Pend Oreille",
+      "counties": [
+        "pend-oreille"
+      ],
+      "statewide": false,
+      "region_note": null,
+      "files": [
+        {
+          "language": "English",
+          "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2021%20-%20Pend%20Oreille.pdf"
+        }
+      ]
+    },
+    {
+      "edition": 22,
+      "id": "edition-22",
+      "label": "Edition 22 - San Juan",
+      "counties": [
+        "san-juan"
+      ],
+      "statewide": false,
+      "region_note": null,
+      "files": [
+        {
+          "language": "English",
+          "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2022%20-%20San%20Juan.pdf"
+        }
+      ]
+    },
+    {
+      "edition": 23,
+      "id": "edition-23",
+      "label": "Edition 23 - Skagit",
+      "counties": [
+        "skagit"
+      ],
+      "statewide": false,
+      "region_note": null,
+      "files": [
+        {
+          "language": "English",
+          "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2023%20-%20Skagit.pdf"
+        }
+      ]
+    },
+    {
+      "edition": 24,
+      "id": "edition-24",
+      "label": "Edition 24 - Skamania",
+      "counties": [
+        "skamania"
+      ],
+      "statewide": false,
+      "region_note": null,
+      "files": [
+        {
+          "language": "English",
+          "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2024%20-%20Skamania.pdf"
+        }
+      ]
+    },
+    {
+      "edition": 25,
+      "id": "edition-25",
+      "label": "Edition 25 - Snohomish",
+      "counties": [
+        "snohomish"
+      ],
+      "statewide": false,
+      "region_note": null,
+      "files": [
+        {
+          "language": "English",
+          "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2025%20-%20Snohomish.pdf"
+        }
+      ]
+    },
+    {
+      "edition": 26,
+      "id": "edition-26",
+      "label": "Edition 26 - Stevens",
+      "counties": [
+        "stevens"
+      ],
+      "statewide": false,
+      "region_note": null,
+      "files": [
+        {
+          "language": "English",
+          "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2026%20-%20Stevens.pdf"
+        }
+      ]
+    },
+    {
+      "edition": 27,
+      "id": "edition-27",
+      "label": "Edition 27 - Thurston",
+      "counties": [
+        "thurston"
+      ],
+      "statewide": false,
+      "region_note": null,
+      "files": [
+        {
+          "language": "English",
+          "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2027%20-%20Thurston.pdf"
+        }
+      ],
+      "errata": [
+        {
+          "label": "Page 63 update",
+          "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Page%2063%20update%20ED%2027.pdf"
+        }
+      ]
+    },
+    {
+      "edition": 28,
+      "id": "edition-28",
+      "label": "Edition 28 - King - Chinese",
+      "counties": [
+        "king"
+      ],
+      "statewide": false,
+      "region_note": null,
+      "files": [
+        {
+          "language": "Chinese",
+          "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2028%20-%20King%20-%20Chinese.pdf"
+        }
+      ]
+    },
+    {
+      "edition": 29,
+      "id": "edition-29",
+      "label": "Edition 29 - King - Vietnamese",
+      "counties": [
+        "king"
+      ],
+      "statewide": false,
+      "region_note": null,
+      "files": [
+        {
+          "language": "Vietnamese",
+          "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2029%20-%20King%20-%20Vietnamese.pdf"
+        }
+      ]
+    },
+    {
+      "edition": 30,
+      "id": "edition-30",
+      "label": "Edition 30 - King - Spanish",
+      "counties": [
+        "king"
+      ],
+      "statewide": false,
+      "region_note": null,
+      "files": [
+        {
+          "language": "Spanish",
+          "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2030%20-%20King%20-%20Spanish.pdf"
+        }
+      ]
+    },
+    {
+      "edition": 31,
+      "id": "edition-31",
+      "label": "Edition 31 - Statewide - Spanish",
+      "counties": [],
+      "statewide": true,
+      "region_note": null,
+      "files": [
+        {
+          "language": "Spanish",
+          "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2031%20-%20Statewide%20-%20Spanish.pdf"
+        }
+      ]
+    },
+    {
+      "edition": 32,
+      "id": "edition-32",
+      "label": "Edition 32 - Statewide - Chinese",
+      "counties": [],
+      "statewide": true,
+      "region_note": null,
+      "files": [],
+      "status": "coming soon (no PDF posted as of retrieval)"
+    },
+    {
+      "edition": 33,
+      "id": "edition-33",
+      "label": "Edition 33 - Statewide - Vietnamese",
+      "counties": [],
+      "statewide": true,
+      "region_note": null,
+      "files": [],
+      "status": "coming soon (no PDF posted as of retrieval)"
+    }
+  ]
+}
