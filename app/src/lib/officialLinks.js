@@ -153,6 +153,9 @@ const ELECTIONS = {
     // every Skagit and Cowlitz dossier cites a page of its local pamphlet
     // above, and their guides link any record without a page (#28).
     // Checked 2026-10-08: each 200 text/html.
+    // Island and Lewis dossiers cite VoteWA only (#29): neither county prints
+    // a general pamphlet, and each Auditor links this guide as its own.
+    // Checked 2026-10-08: both 200 text/html.
     countyGuides: {
       spokane: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=32',
       pierce: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=27',
@@ -164,6 +167,8 @@ const ELECTIONS = {
       skagit: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=29',
       cowlitz: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=08',
       grant: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=13',
+      island: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=15',
+      lewis: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=21',
     },
     pamphletIndex: `${SOS_GENERAL_2026}/2026-voters-pamphlet-pdfs`,
   },
