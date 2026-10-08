@@ -728,6 +728,76 @@ ELECTION_MEASURES = {
                   "https://voter.votewa.gov/elections/measure.ashx?m=7346&e=899&la=en&c=13"),
             ],
         },
+        # Grays Harbor (#29). Measures: VoteWA's online voters' guide for county
+        # 14 (voterguide.ashx?e=899&c=14, read 2026-10-08; raw pointers under
+        # counties/grays-harbor/raw/votewa/voter-guide/) lists five local
+        # measures. The Auditor's Current Election page links no printed local
+        # pamphlet or sample ballot, only VoteWA and a District Court
+        # supplement. Scopes point-checked 2026-10-08 (Census geocoder,
+        # Current vintage; WA DOR 2025 layers 7 FIR, 12 LIB, 20 SCH):
+        # 112 N Main St, Montesano -> CITY 'Montesano'; 200 W Market St,
+        # Aberdeen, 609 8th St, Hoquiam, 112 N Main St, Montesano, 100 S 3rd
+        # St, McCleary and 506 S Montesano St, Westport -> LIB2025 'L'
+        # (Timberland), but 585 Point Brown Ave NW, Ocean Shores -> none (the
+        # city runs its own library), so the TRL levy is LIBDST, not COUNTY;
+        # 100 S 3rd St, McCleary -> SCH2025 '65'; 110 Main St, Oakville ->
+        # FIR2025 '1'; 500 Wynoochee Valley Rd, Montesano -> FIR2025 '2'.
+        # LIBDST and SCHDST are not in geo.js COUNTY_LAYERS['grays-harbor']
+        # (FIRDST only) as of this commit: reported for the director.
+        # Overrides: the commissioner race (District Type Countywide) is
+        # elected county-wide in the general (RCW 36.32.040; SOS 2024 results:
+        # Commissioner #1 36,166 votes of 38,102 ballots); it keeps the
+        # primary's contest name so primary dossiers carry forward. District
+        # Court #1 and #2 are seats of one county-wide court (2022: #1 24,257
+        # votes of 29,916 ballots). Grays Harbor PUD No. 1 covers the county
+        # (DOR PUD2025 layer 17 has one Grays Harbor polygon, DISTATTRIB '1',
+        # at Aberdeen, Hoquiam, Montesano, McCleary, Ocean Shores and
+        # Westport) and the whole PUD elects each commissioner in the general
+        # (RCW 54.12.010(3); 2022 uncontested PUD Comm (2) 18,505 votes, as
+        # many as the uncontested county-wide District Court #2's 18,521).
+        "grays-harbor": {
+            "overrides": {
+                ("COUNTY", "COMMISSIONER #3"): (
+                    "County", "Grays Harbor County Commissioner District 3", "Commissioner #3", ("COUNTY", None)),
+                ("COUNTY", "DISTRICT COURT #1"): (
+                    "Judicial", "Grays Harbor County District Court", "Judge Position No. 1", ("COUNTY", None)),
+                ("COUNTY", "DISTRICT COURT #2"): (
+                    "Judicial", "Grays Harbor County District Court", "Judge Position No. 2", ("COUNTY", None)),
+                ("PUD DISTRICT", "PUD COMM (3)"): (
+                    "PublicUtility", "Public Utility District No. 1 of Grays Harbor County", "Commissioner District 3",
+                    ("COUNTY", None)),
+            },
+            "measures": [
+                m("Timberland Regional Library District", "Proposition No. 1",
+                  "Regular Property Tax Levy Lid Lift for Library Services, Operations and Maintenance",
+                  ("LIBDST", "L"),
+                  "Restores the library district's regular property tax levy from about $0.22 to $0.35 per $1,000 of assessed value for 2027 and 2028; the 2028 amount becomes the base for later levy limits.",
+                  "$0.35 per $1,000 of assessed value (about $40 a year more on a $334,000 home, per the explanatory statement).",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7284&e=899&la=en&c=14"),
+                m("City of Montesano", "Proposition No. 1",
+                  "Levy to Maintain Essential Services, Public Safety and Emergency Services, Operations and Capital Improvements",
+                  ("CITY", "Montesano"),
+                  "Lifts Montesano's regular property tax levy to a total rate of up to $3.22 per $1,000 from 2027, with up to 5% yearly increases for six years, to keep current General Fund and public safety and emergency service levels.",
+                  "Total city regular levy up to $3.22 per $1,000 of assessed value for 2027 collection.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7377&e=899&la=en&c=14"),
+                m("McCleary School District No. 65", "Proposition No. 1",
+                  "Bonds to Improve Safety, Security and School Facilities",
+                  ("SCHDST", "65"),
+                  "Authorizes $12,800,000 of general obligation bonds, maturing within 21 years and repaid by excess property taxes, for a secure entry vestibule, locks and keycard access, fire alarm, HVAC, exterior, drainage, parking and playground work at McCleary School.",
+                  "$12,800,000 in bonds repaid by an excess property tax levy over up to 21 years.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7385&e=899&la=en&c=14"),
+                m("Grays Harbor County Fire Protection District No. 1", "Proposition No. 1", "Emergency Medical Services Levy",
+                  ("FIRDST", "1"),
+                  "Authorizes a permanent regular property tax levy for emergency medical services.",
+                  "Up to $0.50 per $1,000 of assessed value, permanent.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7387&e=899&la=en&c=14"),
+                m("Grays Harbor County Fire Protection District No. 2", "Proposition No. 1", "Two Year Levy Lid Lift",
+                  ("FIRDST", "2"),
+                  "Restores the fire district's regular property tax levy to $1.50 per $1,000 (from about $1.40 in 2026) for 2026 and 2027 levies; the 2027 amount becomes the base for later levy limits.",
+                  "$1.50 per $1,000 of assessed value.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7386&e=899&la=en&c=14"),
+            ],
+        },
         # Skagit: the four measures the Auditor's Ballot Measures page lists
         # for the general (counties/skagit/raw/skagit/ballot-measures.html.url),
         # text from the local voters' pamphlet pages 18-21 and VoteWA
