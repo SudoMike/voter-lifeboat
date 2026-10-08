@@ -70,6 +70,10 @@ sources:
     url: https://www.rentonreporter.com/2026/05/11/legislative-races-to-watch-in-wa/
     accessed: 2026-07-16
     carried_from: data/washington-state/elections/2026-08-04-primary/counties/king/dossiers/state-representative-position-no-1-legislative-district-no-11/ashley-fedan.md S4
+photo:
+  url: https://electashleyfedan.com/wp-content/uploads/2026/07/DSC_8986-scaled-e1784137638213.jpg
+  page: https://electashleyfedan.com/
+  kind: campaign-website
 ---
 
 ## Background

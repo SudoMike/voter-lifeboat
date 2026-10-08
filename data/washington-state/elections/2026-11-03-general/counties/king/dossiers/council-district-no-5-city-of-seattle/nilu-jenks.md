@@ -86,6 +86,10 @@ sources:
     outlet: Vote No on Initiative 645 campaign, "Our Coalition" page (checked for her name; not listed)
     url: https://no645.com/our-coalition
     accessed: 2026-10-08
+photo:
+  url: https://static.wixstatic.com/media/88e548_ad268cf401b04d88aba33f171070b77d~mv2.jpeg
+  page: https://www.neighborsfornilu.org/
+  kind: campaign-website
 ---
 
 ## Background

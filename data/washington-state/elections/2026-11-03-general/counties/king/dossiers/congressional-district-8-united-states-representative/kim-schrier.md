@@ -160,6 +160,10 @@ sources:
     outlet: House Clerk roll call 243 (2026), Massie of Kentucky Part A Amendment No. 8 to H.R. 8595, July 15, 2026
     url: https://clerk.house.gov/evs/2026/roll243.xml
     accessed: 2026-10-08
+photo:
+  url: https://schrier.house.gov/sites/evo-subsites/schrier-evo.house.gov/files/evo-media-image/official-portrait-snipped.jpg
+  page: https://schrier.house.gov/about
+  kind: government
 ---
 
 ## Background

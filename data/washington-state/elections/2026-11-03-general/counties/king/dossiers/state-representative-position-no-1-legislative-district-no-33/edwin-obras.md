@@ -80,6 +80,10 @@ sources:
     url: https://seatacblog.com/2025/11/08/schilling-concedes-33rd-legislative-district-race-to-obras-thanks-supporters/
     accessed: 2026-07-16
     carried_from: data/washington-state/elections/2026-08-04-primary/counties/king/dossiers/state-representative-position-no-1-legislative-district-no-33/edwin-obras.md S4
+photo:
+  url: https://leg.wa.gov/memberphoto/35464.jpg
+  page: https://leg.wa.gov/memberphoto/35464.jpg
+  kind: government
 ---
 
 ## Background

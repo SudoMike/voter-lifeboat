@@ -55,6 +55,10 @@ sources:
     url: https://archive.clarkcountytoday.com/news/public-comment-prevails-no-action-taken-on-clerk-agenda-item-at-clark-county-council-meeting/
     pointer: counties/clark/raw/candidates/clark-clark-county-assessor/cct-2025-07-10-clerk-agenda.url
     accessed: 2026-10-08
+photo:
+  url: https://clark.wa.gov/sites/default/files/media/image/2023-04/Peter%20Van%20Nortwick_2023_2.jpg
+  page: https://clark.wa.gov/assessor/about-assessor
+  kind: government
 ---
 
 ## Background

@@ -73,6 +73,10 @@ sources:
     outlet: The Stranger Election Control Board, 2026 primary cheat sheet (July 2, 2026)
     url: https://www.thestranger.com/election/the-stranger-election-control-board-cheat-sheet/
     accessed: 2026-10-08
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/695c9e0e3824a57bf3aa39d0/1c8171a9-de57-45da-95a5-a959dbf7e29c/ROB+FOXCURRAN-43.jpg
+  page: https://voterobfoxcurran.com/bio
+  kind: campaign-website
 ---
 
 ## Background

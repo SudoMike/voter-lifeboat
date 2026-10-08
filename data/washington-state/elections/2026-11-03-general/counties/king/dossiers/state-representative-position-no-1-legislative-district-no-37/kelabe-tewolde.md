@@ -67,6 +67,10 @@ sources:
     ref: PDC campaign finance summary (data.wa.gov dataset 3h9x-7bvm), candidacy 3391532, record updated 2026-10-05
     url: https://data.wa.gov/resource/3h9x-7bvm.json?candidacy_id=3391532&election_year=2026
     accessed: 2026-10-08
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/697ba60894e0013efb11e920/a730bfaf-9103-480b-b767-3f2e5b81592e/KELABE_04_2026_0061.jpg
+  page: https://www.kelabeforwashington.com/
+  kind: campaign-website
 ---
 
 ## Background

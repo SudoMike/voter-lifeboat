@@ -152,6 +152,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3364793
     pointer: counties/clark/raw/candidates/clark-legislative-district-17-state-representative-pos-1/pdc-waters.url
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/34038.jpg
+  page: https://leg.wa.gov/memberphoto/34038.jpg
+  kind: government
 ---
 
 ## Background

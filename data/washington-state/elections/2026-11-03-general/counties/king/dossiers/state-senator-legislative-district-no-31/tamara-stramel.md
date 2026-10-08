@@ -57,6 +57,10 @@ sources:
     outlet: Auburn Reporter (2026-08-04)
     url: https://www.auburn-reporter.com/2026/08/04/most-auburn-area-incumbents-easily-advance-from-primary-races/
     accessed: 2026-10-08
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/683ff25dcefc1011d93cdb0a/83e8b994-bf1b-4952-9f11-904971ebedd8/TamaraStramelHeadshots2025-13.jpg
+  page: https://www.togetherwithtamara.com/
+  kind: campaign-website
 ---
 
 ## Background

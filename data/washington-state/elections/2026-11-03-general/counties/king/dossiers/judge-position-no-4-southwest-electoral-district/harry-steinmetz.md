@@ -96,6 +96,10 @@ sources:
     outlet: King County District Court judges roster
     url: https://kingcounty.gov/en/court/district-court/courts-jails-legal-system/court-calendars-locations-operations/judges
     accessed: 2026-10-08
+photo:
+  url: https://static.wixstatic.com/media/2c5766_e6ad16033d564da9bd6eb0526545328e~mv2.png/v1/fill/w_280,h_243,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Harry-Steinmetz-transparent.png
+  page: https://www.steinmetzforjudge.com/
+  kind: campaign-website
 ---
 
 ## Background

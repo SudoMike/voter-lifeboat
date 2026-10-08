@@ -61,6 +61,10 @@ sources:
     url: https://wslwebservices.leg.wa.gov/LegislationService.asmx/GetRollCalls?biennium=2025-26&billNumber=1644
     pointer: counties/clark/raw/candidates/clark-legislative-district-20-state-representative-pos-2/leg-rollcalls-hb-1644.url
     accessed: 2026-10-08
+photo:
+  url: https://voteevanjones.com/assets/img/meet-evan-jones.webp
+  page: https://voteevanjones.com/
+  kind: campaign-website
 ---
 
 ## Background

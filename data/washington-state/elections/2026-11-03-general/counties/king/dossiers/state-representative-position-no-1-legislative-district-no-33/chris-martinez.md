@@ -34,6 +34,10 @@ sources:
     outlet: King County Republican Party, 2026 general voters guide
     url: https://kcgop.org/votersguide/
     accessed: 2026-10-08
+photo:
+  url: https://electmartinezld33.com/20260418_190518%20(1).jpg
+  page: https://electmartinezld33.com/
+  kind: campaign-website
 ---
 
 ## Background

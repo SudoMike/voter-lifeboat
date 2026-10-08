@@ -180,6 +180,10 @@ sources:
     url: https://wslwebservices.leg.wa.gov/LegislationService.asmx/GetRollCalls?biennium=2025-26&billNumber=1971
     pointer: counties/clark/raw/candidates/clark-legislative-district-20-state-representative-pos-2/leg-rollcalls-hb-1971.url
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/7635.jpg
+  page: https://leg.wa.gov/memberphoto/7635.jpg
+  kind: government
 ---
 
 ## Background

@@ -51,6 +51,10 @@ sources:
     outlet: Kent Reporter (2026-08-04, election-night primary returns)
     url: https://www.kentreporter.com/2026/08/04/most-kent-area-incumbents-easily-advance-from-primary-races/
     accessed: 2026-10-08
+photo:
+  url: https://kristinaforsenate.com/wp-content/uploads/2026/04/pro-headshot.png
+  page: https://kristinaforsenate.com/
+  kind: campaign-website
 ---
 
 ## Background

@@ -102,6 +102,10 @@ sources:
     url: https://www.clarkcountytoday.com/uncategorized/battle-ground-city-manager-terminated-after-4-3-city-council-vote/
     pointer: counties/clark/raw/candidates/clark-clark-county-council-district-5-county-councilor/cct-2026-08-07-bg-city-manager.url
     accessed: 2026-10-08
+photo:
+  url: https://static.wixstatic.com/media/c99839_414a3833fb8448c5a95703e4f51b70a8~mv2.jpg
+  page: https://www.votetroymccoy.com/meet-troy
+  kind: campaign-website
 ---
 
 ## Background

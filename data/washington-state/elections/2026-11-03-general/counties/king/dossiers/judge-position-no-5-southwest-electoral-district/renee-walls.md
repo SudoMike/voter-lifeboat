@@ -79,6 +79,10 @@ sources:
     outlet: Washington State Public Disclosure Commission, contributions (data.wa.gov kv7h-kjye), filer_id WALLR  063
     url: https://data.wa.gov/resource/kv7h-kjye.json?filer_id=WALLR%20%20063&election_year=2026&$limit=2000
     accessed: 2026-10-08
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/69e52344634bb2320200f5d1/e1120abe-c0dd-4286-8396-716749765db9/rw_intro_image.jpg
+  page: https://www.reneewallsforjudge.com/
+  kind: campaign-website
 ---
 
 ## Background

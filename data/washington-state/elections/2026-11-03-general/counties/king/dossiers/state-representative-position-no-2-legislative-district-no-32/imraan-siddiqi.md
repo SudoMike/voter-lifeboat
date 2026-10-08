@@ -49,6 +49,10 @@ sources:
     outlet: 32nd District Democrats, 2026 endorsements
     url: https://32democrats.org/2026-endorsements/
     accessed: 2026-10-08
+photo:
+  url: https://peopleforimraan.com/wp-content/uploads/2026/08/Untitled-design.jpg
+  page: https://peopleforimraan.com/
+  kind: campaign-website
 ---
 
 ## Background

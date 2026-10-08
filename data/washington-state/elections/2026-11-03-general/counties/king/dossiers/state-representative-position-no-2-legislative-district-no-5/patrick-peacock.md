@@ -52,6 +52,10 @@ sources:
     outlet: Snoqualmie Valley Record ("Snoqualmie Valley state legislative candidates", 2026-05-13)
     url: https://www.valleyrecord.com/2026/05/13/snoqualmie-valley-state-legislative-candidates-election-2026/
     accessed: 2026-10-08
+photo:
+  url: https://electpeacock.org/assets/img/og-image.jpg
+  page: https://electpeacock.org/
+  kind: campaign-website
 ---
 
 ## Background

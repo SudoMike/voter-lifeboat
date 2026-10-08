@@ -71,6 +71,10 @@ sources:
     ref: King County Elections, August 4, 2026 primary results (certified 2026-08-18); vote counts from the results CSV linked there (https://election-results-01.kingcounty.gov/webresults.csv, read 2026-10-08)
     url: https://kingcounty.gov/en/dept/elections/results/2026/august-primary-election
     accessed: 2026-10-08
+photo:
+  url: https://willdreher.com/wp-content/uploads/2026/07/2.cropped-scaled.jpg
+  page: https://willdreher.com/
+  kind: campaign-website
 ---
 
 ## Background

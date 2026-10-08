@@ -88,6 +88,10 @@ sources:
     url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Pdf/Bill%20Reports/House/1404%20HBA%20APP%2025.pdf
     accessed: 2026-07-16
     carried_from: data/washington-state/elections/2026-08-04-primary/counties/king/dossiers/state-representative-position-no-2-legislative-district-no-33/mia-su-ling-gregerson.md S4
+photo:
+  url: https://leg.wa.gov/memberphoto/18264.jpg
+  page: https://leg.wa.gov/memberphoto/18264.jpg
+  kind: government
 ---
 
 ## Background

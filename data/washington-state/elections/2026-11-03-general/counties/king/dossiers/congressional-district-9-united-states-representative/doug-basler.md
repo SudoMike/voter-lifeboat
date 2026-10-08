@@ -57,6 +57,10 @@ sources:
     outlet: MyNorthwest (Frank Sumrall), "Adam Smith, Doug Basler to face off for sixth time in WA-9 race" (Aug. 4, 2026)
     url: https://mynorthwest.com/mynorthwest-politics/adam-smith-doug-basler/4263262
     accessed: 2026-10-08
+photo:
+  url: https://www.dougbasler.com/wp-content/uploads/2026/08/cropped-Doug-Outside-scaled-1.jpg
+  page: https://www.dougbasler.com/
+  kind: campaign-website
 ---
 
 ## Background

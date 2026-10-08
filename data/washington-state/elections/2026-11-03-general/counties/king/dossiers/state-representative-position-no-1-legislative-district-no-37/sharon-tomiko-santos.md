@@ -102,6 +102,10 @@ sources:
     ref: WA Legislature latest session documents page (2026 regular session January 12 - March 12, 2026; no 2026 special session listed)
     url: https://leg.wa.gov/bills-meetings-and-session/session/session-documents/latest-session-documents/
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/3483.jpg
+  page: https://leg.wa.gov/memberphoto/3483.jpg
+  kind: government
 ---
 
 ## Background

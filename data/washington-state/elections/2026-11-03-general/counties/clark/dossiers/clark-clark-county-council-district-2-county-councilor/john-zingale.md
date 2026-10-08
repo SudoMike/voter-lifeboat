@@ -60,6 +60,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3391624
     pointer: counties/clark/raw/candidates/clark-clark-county-council-district-2-county-councilor/pdc-zingale.url
     accessed: 2026-10-08
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/688cfcd92519712b73632fa8/21bb23a6-8cd8-4e9f-86e6-97962064d11f/IMG_8410.jpg
+  page: https://www.zingaleforclarkcounty.com/
+  kind: campaign-website
 ---
 
 ## Background

@@ -91,6 +91,10 @@ sources:
     outlet: Seattle Municipal Court, Hon. Willie Gregory profile
     url: https://www.seattle.gov/courts/about-us/seattle-municipal-court-judges/honorable-willie-gregory
     accessed: 2026-10-08
+photo:
+  url: https://newsomforjudge.com/wp-content/uploads/2026/10/20260622_Garmon_Newsom_005.jpg
+  page: https://newsomforjudge.com/
+  kind: campaign-website
 ---
 
 ## Background

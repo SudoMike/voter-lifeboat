@@ -79,6 +79,10 @@ sources:
     outlet: Vote No on Initiative 645 campaign, "Our Coalition" page (checked for her name; not listed)
     url: https://no645.com/our-coalition
     accessed: 2026-10-08
+photo:
+  url: https://julieforseattle.com/wp-content/uploads/2026/01/JulieCityCouncilPortrait-08_websize.jpg
+  page: https://julieforseattle.com/
+  kind: campaign-website
 ---
 
 ## Background

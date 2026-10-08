@@ -91,6 +91,10 @@ sources:
     outlet: Federal Way Mirror (2026-08-19)
     url: https://www.federalwaymirror.com/2026/08/19/final-primary-election-results-are-in-for-federal-way/
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/31530.jpg
+  page: https://leg.wa.gov/memberphoto/31530.jpg
+  kind: government
 ---
 
 ## Background

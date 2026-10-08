@@ -1,0 +1,31 @@
+{
+  "script": "pipeline/verify_dossiers.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/cowlitz/interim/research-plan.json",
+    "data/washington-state/elections/2026-11-03-general/counties/cowlitz/dossiers/"
+  ],
+  "missing": [],
+  "no_frontmatter": [],
+  "invalid_evidence_levels": [],
+  "invalid_source_formats": [],
+  "evidence_levels": {
+    "pamphlet-only": 2,
+    "rich": 2,
+    "moderate": 4
+  },
+  "contest_overviews_missing": [],
+  "untouched_contests": [],
+  "untouched_measures": [],
+  "invalid_photos": [],
+  "photos": {
+    "present": 4,
+    "missing": 4
+  },
+  "researched_elsewhere": [
+    "cowlitz-congressional-district-3-u-s-representative -> clark/clark-congressional-district-3-u-s-representative",
+    "cowlitz-legislative-district-19-state-representative-pos-1 -> thurston/thurston-legislative-district-19-state-representative-pos-1",
+    "cowlitz-legislative-district-19-state-representative-pos-2 -> thurston/thurston-legislative-district-19-state-representative-pos-2",
+    "cowlitz-legislative-district-20-state-representative-pos-1 -> clark/clark-legislative-district-20-state-representative-pos-1",
+    "cowlitz-legislative-district-20-state-representative-pos-2 -> clark/clark-legislative-district-20-state-representative-pos-2"
+  ]
+}

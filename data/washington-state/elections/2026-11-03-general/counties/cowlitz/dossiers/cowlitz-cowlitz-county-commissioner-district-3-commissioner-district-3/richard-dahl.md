@@ -82,6 +82,10 @@ sources:
     url: https://tdn.com/news/local/government-politics/elections/article_b1c35784-52c0-4abe-8d69-38f2a43ba371.html
     pointer: counties/cowlitz/raw/candidates/cowlitz-cowlitz-county-commissioner-district-3-commissioner-district-3/tdn-2026-07-21-commissioner-candidates.url
     accessed: 2026-10-09
+photo:
+  url: https://www.co.cowlitz.wa.us/ImageRepository/Document?documentId=32600
+  page: https://www.co.cowlitz.wa.us/2493/Meet-the-Commissioners
+  kind: government
 ---
 
 ## Background

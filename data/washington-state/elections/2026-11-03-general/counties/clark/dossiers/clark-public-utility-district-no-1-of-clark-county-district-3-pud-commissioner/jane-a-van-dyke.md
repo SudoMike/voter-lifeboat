@@ -26,6 +26,10 @@ sources:
     url: https://janevandyke.com/
     pointer: counties/clark/raw/candidates/clark-public-utility-district-no-1-of-clark-county-district-3-pud-commissioner/vandyke-campaign-home.url
     accessed: 2026-10-08
+photo:
+  url: https://janevandyke.com/photos/Jane-Van-Dyke-1035.jpg
+  page: https://janevandyke.com/
+  kind: campaign-website
 ---
 
 ## Background

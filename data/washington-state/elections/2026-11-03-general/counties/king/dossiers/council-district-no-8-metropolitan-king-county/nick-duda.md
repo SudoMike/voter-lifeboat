@@ -59,6 +59,10 @@ sources:
     outlet: NO HATE in WA State endorsement page opposing I-001 and I-638 (checked for his name; not listed)
     url: https://nohateinwastate.org/endorse
     accessed: 2026-10-08
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/5993d32eb8a79b8271e1975d/c93857b9-7265-44ee-9b91-04594ce33082/Headshot+on+grey.jpeg
+  page: https://www.nickduda.com/
+  kind: campaign-website
 ---
 
 ## Background

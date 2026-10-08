@@ -75,6 +75,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3391069
     pointer: counties/clark/raw/candidates/clark-legislative-district-18-state-representative-pos-2/pdc-letinich.url
     accessed: 2026-10-08
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/6611a639be78ab70ec5bbb40/e8b3baa6-57d4-42e1-a98a-1211c51cdfa9/Meet1.jpg
+  page: https://www.electdeken.com/meet
+  kind: campaign-website
 ---
 
 ## Background

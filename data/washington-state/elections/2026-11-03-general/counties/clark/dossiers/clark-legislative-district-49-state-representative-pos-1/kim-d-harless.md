@@ -75,6 +75,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3391140
     pointer: counties/clark/raw/candidates/clark-legislative-district-49-state-representative-pos-1/pdc-harless.url
     accessed: 2026-10-08
+photo:
+  url: https://static1.squarespace.com/static/680a6fa2799c13556eb8f887/t/6982883242a89a75364651f4/1770162226724/Harless+Headshot+Medium+Res.jpeg?format=1500w
+  page: https://www.votekimharless.com/
+  kind: campaign-website
 ---
 
 ## Background

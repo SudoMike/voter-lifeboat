@@ -118,6 +118,10 @@ sources:
     url: https://www.columbian.com/news/2026/sep/24/in-our-view-retain-scott-weber-as-clark-county-clerk/
     pointer: counties/clark/raw/candidates/clark-clark-county-clerk/columbian-2026-09-24-editorial-weber.url
     accessed: 2026-10-08
+photo:
+  url: https://www.voterachelshapiro.com/wp-content/uploads/go-x/u/43c288f6-ba35-49ad-b20b-c54d89ac7e2d/l0,t0,w1500,h1875/image-1366x1708.jpg
+  page: https://www.voterachelshapiro.com/meet-rachel-shapiro/
+  kind: campaign-website
 ---
 
 ## Background

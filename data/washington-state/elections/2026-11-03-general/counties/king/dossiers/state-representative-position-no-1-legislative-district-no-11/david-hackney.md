@@ -102,6 +102,10 @@ sources:
     url: https://housedemocrats.wa.gov/hackney/news/
     accessed: 2026-07-16
     carried_from: data/washington-state/elections/2026-08-04-primary/counties/king/dossiers/state-representative-position-no-1-legislative-district-no-11/david-hackney.md S4
+photo:
+  url: https://leg.wa.gov/memberphoto/31523.jpg
+  page: https://leg.wa.gov/memberphoto/31523.jpg
+  kind: government
 ---
 
 ## Background

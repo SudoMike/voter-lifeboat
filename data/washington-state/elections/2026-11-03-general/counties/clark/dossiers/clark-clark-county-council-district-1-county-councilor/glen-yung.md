@@ -130,6 +130,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3391224
     pointer: counties/clark/raw/candidates/clark-clark-county-council-district-1-county-councilor/pdc-yung.url
     accessed: 2026-10-08
+photo:
+  url: https://glen4council.com/images/photos/glen-bio-mug.jpg
+  page: https://glen4council.com/about
+  kind: campaign-website
 ---
 
 ## Background

@@ -76,6 +76,10 @@ sources:
     url: https://archive.clarkcountytoday.com/news/public-comment-prevails-no-action-taken-on-clerk-agenda-item-at-clark-county-council-meeting/
     pointer: counties/clark/raw/candidates/clark-clark-county-clerk/cct-2025-07-10-clerk-agenda.url
     accessed: 2026-10-08
+photo:
+  url: https://static.wixstatic.com/media/9b093f_5da55a2626b54288a5fc317058406c88~mv2.jpeg
+  page: https://www.weber4clerk.com
+  kind: campaign-website
 ---
 
 ## Background

@@ -138,6 +138,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3321587
     pointer: counties/clark/raw/candidates/clark-legislative-district-18-state-representative-pos-1/pdc-mcclintock.url
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/34032.jpg
+  page: https://leg.wa.gov/memberphoto/34032.jpg
+  kind: government
 ---
 
 ## Background

@@ -73,6 +73,10 @@ sources:
     outlet: PDC campaign finance summary (data.wa.gov 3h9x-7bvm)
     url: https://data.wa.gov/resource/3h9x-7bvm.json?election_year=2026&filer_id=ROTHG--269
     accessed: 2026-10-08
+photo:
+  url: https://static.wixstatic.com/media/88e548_9fa5e9baf01d48ad8137022470efcfe9~mv2.jpg
+  page: https://www.gabeforjudge.com/
+  kind: campaign-website
 ---
 
 ## Background

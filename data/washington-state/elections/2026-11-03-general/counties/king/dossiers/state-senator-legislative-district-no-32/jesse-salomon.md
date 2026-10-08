@@ -101,6 +101,10 @@ sources:
     url: https://www.shorelineareanews.com/2025/09/coffee-with-senator-jesse-salomon.html
     accessed: 2026-07-16
     carried_from: data/washington-state/elections/2026-08-04-primary/counties/king/dossiers/state-senator-legislative-district-no-32/jesse-salomon.md S6
+photo:
+  url: https://leg.wa.gov/memberphoto/29089.jpg
+  page: https://leg.wa.gov/memberphoto/29089.jpg
+  kind: government
 ---
 
 ## Background

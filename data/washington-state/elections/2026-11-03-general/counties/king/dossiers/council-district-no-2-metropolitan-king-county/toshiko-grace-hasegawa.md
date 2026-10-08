@@ -108,6 +108,10 @@ sources:
     outlet: NO HATE in WA State, endorsement page ("Elected Officials and Candidates Opposing I-001 & I-638")
     url: https://nohateinwastate.org/endorse
     accessed: 2026-10-08
+photo:
+  url: https://www.portseattle.org/sites/default/files/2025-12/20251205_POS_Comissioner_Headshot_Toshiko_Hasegawa_2_288x288_0.jpg
+  page: https://www.portseattle.org/contacts/hasegawa-toshiko-grace
+  kind: government
 ---
 
 ## Background

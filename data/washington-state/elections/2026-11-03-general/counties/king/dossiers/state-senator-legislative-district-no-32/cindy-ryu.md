@@ -114,6 +114,10 @@ sources:
     url: https://www.heraldnet.com/2026/07/08/32nd-district-senator-faces-2-challengers-including-longtime-house-member/
     accessed: 2026-07-16
     carried_from: data/washington-state/elections/2026-08-04-primary/counties/king/dossiers/state-senator-legislative-district-no-32/cindy-ryu.md S5
+photo:
+  url: https://leg.wa.gov/memberphoto/15736.jpg
+  page: https://leg.wa.gov/memberphoto/15736.jpg
+  kind: government
 ---
 
 ## Background

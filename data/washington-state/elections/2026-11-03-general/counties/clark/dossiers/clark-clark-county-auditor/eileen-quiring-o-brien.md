@@ -83,6 +83,10 @@ sources:
     url: https://www.columbian.com/news/2026/oct/01/clark-county-auditor-candidates-both-stress-election-integrity/
     pointer: counties/clark/raw/candidates/clark-clark-county-auditor/columbian-2026-10-01-auditor-candidates.url
     accessed: 2026-10-08
+photo:
+  url: https://content.campaignpartner.net/images/149020/Eileen_Pink_Close_crop.JPG
+  page: https://www.eileenforauditor.com/meet_eileen_quiring
+  kind: campaign-website
 ---
 
 ## Background

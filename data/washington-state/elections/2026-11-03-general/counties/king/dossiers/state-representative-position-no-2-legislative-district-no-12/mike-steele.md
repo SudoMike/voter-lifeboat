@@ -107,6 +107,10 @@ sources:
     url: https://www.heraldnet.com/2026/06/30/incumbent-seeks-sixth-term-against-two-primary-challengers/
     accessed: 2026-07-16
     carried_from: data/washington-state/elections/2026-08-04-primary/counties/king/dossiers/state-representative-position-no-2-legislative-district-no-12/mike-steele.md S4
+photo:
+  url: https://leg.wa.gov/memberphoto/10546.jpg
+  page: https://leg.wa.gov/memberphoto/10546.jpg
+  kind: government
 ---
 
 ## Background

@@ -90,6 +90,10 @@ sources:
     url: https://electlisacallan.org
     accessed: 2026-10-08
     note: JavaScript-only site; no readable content retrieved
+photo:
+  url: https://leg.wa.gov/memberphoto/29092.jpg
+  page: https://leg.wa.gov/memberphoto/29092.jpg
+  kind: government
 ---
 
 ## Background

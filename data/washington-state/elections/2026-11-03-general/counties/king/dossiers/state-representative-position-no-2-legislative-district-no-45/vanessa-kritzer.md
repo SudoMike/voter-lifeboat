@@ -58,6 +58,10 @@ sources:
     outlet: 45th District Democrats, endorsement guide for the 2026 November election (2026-09-05)
     url: https://www.45thdemocrats.org/2026/09/endorsement-guide-for-the-2026-november-election/
     accessed: 2026-10-08
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/5c576a9fd86cc937059ea68f/2d823117-e7e5-42a8-b48c-47b25d4fec89/headshots-23%281%29.jpg
+  page: https://electvanessakritzer.com/
+  kind: campaign-website
 ---
 
 ## Background

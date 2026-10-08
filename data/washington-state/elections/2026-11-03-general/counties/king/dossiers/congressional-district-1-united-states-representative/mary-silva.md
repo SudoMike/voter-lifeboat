@@ -75,6 +75,10 @@ sources:
     url: https://www.fec.gov/data/candidate/H4WA01282/
     accessed: 2026-10-08
     note: totals through 2026-09-30
+photo:
+  url: https://assets.nationbuilder.com/marysilva4congress/pages/29/attachments/original/1709837614/Mary_Silva_-_8.jpg
+  page: https://www.marysilvaforcongress.com/
+  kind: campaign-website
 ---
 
 ## Background

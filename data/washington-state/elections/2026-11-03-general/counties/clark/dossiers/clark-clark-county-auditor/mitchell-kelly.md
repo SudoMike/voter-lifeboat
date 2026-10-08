@@ -104,6 +104,10 @@ sources:
     pointer: counties/clark/raw/candidates/clark-clark-county-auditor/county-2026-03-25-council-time-minutes.url
     carried_from: data/washington-state/elections/2026-08-04-primary/counties/clark/dossiers/clark-clark-county-auditor/mitchell-kelly.md S2
     accessed: 2026-10-08
+photo:
+  url: https://content.campaignpartner.net/images/151040/MItchellKellyHeadshot.JPG
+  page: https://www.mitchellkellyforauditor.com/meet_mitchell
+  kind: campaign-website
 ---
 
 ## Background

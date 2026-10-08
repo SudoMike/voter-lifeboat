@@ -31,6 +31,10 @@ sources:
     ref: PDC campaign finance summary (data.wa.gov dataset 3h9x-7bvm), candidacy 3395475, record updated 2026-09-17
     url: https://data.wa.gov/resource/3h9x-7bvm.json?candidacy_id=3395475&election_year=2026
     accessed: 2026-10-08
+photo:
+  url: https://poppe4wa.org/assets/img/about.jpg
+  page: https://poppe4wa.org/
+  kind: campaign-website
 ---
 
 ## Background

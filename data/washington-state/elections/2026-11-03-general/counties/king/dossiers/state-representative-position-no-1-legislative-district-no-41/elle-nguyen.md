@@ -54,6 +54,10 @@ sources:
     ref: ESHB 2266 Final Bill Report (C 232 L 26)
     url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Pdf/Bill%20Reports/House/2266-S.E%20HBR%20FBR%2026.pdf
     accessed: 2026-10-08
+photo:
+  url: https://TheChoiceForChange.org/airo-assets/images/pages/home/intro-portrait
+  page: https://TheChoiceForChange.org/
+  kind: campaign-website
 ---
 
 ## Background

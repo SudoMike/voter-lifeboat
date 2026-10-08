@@ -72,6 +72,10 @@ sources:
     outlet: 45th District Democrats, endorsement guide for the 2026 November election (2026-09-05)
     url: https://www.45thdemocrats.org/2026/09/endorsement-guide-for-the-2026-november-election/
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/11999.jpg
+  page: https://leg.wa.gov/memberphoto/11999.jpg
+  kind: government
 ---
 
 ## Background

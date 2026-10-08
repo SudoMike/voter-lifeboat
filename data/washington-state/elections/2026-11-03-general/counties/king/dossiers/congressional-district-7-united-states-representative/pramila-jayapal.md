@@ -113,6 +113,10 @@ sources:
     outlet: NO HATE in WA State, endorsement page ("Elected Officials and Candidates Opposing I-001 & I-638")
     url: https://nohateinwastate.org/endorse
     accessed: 2026-10-08
+photo:
+  url: https://jayapal.house.gov/wp-content/uploads/2019/09/PJ-updated-headshot.jpg
+  page: https://jayapal.house.gov/about/
+  kind: government
 ---
 
 ## Background

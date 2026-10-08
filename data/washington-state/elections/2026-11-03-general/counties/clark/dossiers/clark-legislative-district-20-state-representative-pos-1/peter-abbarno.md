@@ -152,6 +152,10 @@ sources:
     url: https://tdn.com/news/local/government-politics/article_276d8e22-b240-4b74-8da1-de151fc6077c.html
     pointer: counties/clark/raw/candidates/clark-legislative-district-20-state-representative-pos-1/tdn-2026-08-01-orcutt-jones.url
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/31526.jpg
+  page: https://leg.wa.gov/memberphoto/31526.jpg
+  kind: government
 ---
 
 ## Background

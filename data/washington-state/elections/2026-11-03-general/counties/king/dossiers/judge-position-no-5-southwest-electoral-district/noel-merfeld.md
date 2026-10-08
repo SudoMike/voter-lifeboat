@@ -87,6 +87,10 @@ sources:
     outlet: Renee Walls campaign (opponent) endorsements list
     url: https://www.reneewallsforjudge.com/endorsements
     accessed: 2026-10-08
+photo:
+  url: https://merfeldforjudge.com/wp-content/uploads/2026/05/merfeld_1540_5x7_2.jpg
+  page: https://merfeldforjudge.com/
+  kind: campaign-website
 ---
 
 ## Background

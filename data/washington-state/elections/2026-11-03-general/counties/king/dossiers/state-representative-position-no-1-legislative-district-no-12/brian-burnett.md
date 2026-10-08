@@ -96,6 +96,10 @@ sources:
     url: https://brianburnett.houserepublicans.wa.gov/about/
     accessed: 2026-07-16
     carried_from: data/washington-state/elections/2026-08-04-primary/counties/king/dossiers/state-representative-position-no-1-legislative-district-no-12/brian-burnett.md S2
+photo:
+  url: https://leg.wa.gov/memberphoto/35408.jpg
+  page: https://leg.wa.gov/memberphoto/35408.jpg
+  kind: government
 ---
 
 ## Background
