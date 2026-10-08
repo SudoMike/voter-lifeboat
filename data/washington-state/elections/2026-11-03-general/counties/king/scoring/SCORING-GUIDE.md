@@ -4,20 +4,29 @@ How every file in this directory was produced. Scoring agents follow this
 spec exactly. Scoring is a **dossier-only** stage: no web access, no new
 facts. If the dossier doesn't support a score, the axis is omitted.
 
+This guide covers every package in the November 3, 2026 general election.
+Paths below use `E` = `data/washington-state/elections/2026-11-03-general`
+and `<package>` = `statewide` or `counties/<county>` (the package that owns
+the contest). As in the primary, the statewide package follows this guide
+rather than carrying its own copy.
+
 ## Inputs
 
-- `data/final/rubric.json` — the 14 axes, pole definitions, and which
-  contest categories each axis applies to. READ IT FIRST.
-- `data/dossiers/<contest-slug>/*.md` — the only permitted evidence.
-- `data/interim/contests.json` — candidate names/party/category per contest.
+- `data/final/2026-11-03-general/rubric.json` — the 15 axes, pole
+  definitions, and which contest categories each axis applies to. READ IT
+  FIRST. Its derivation and the intended statewide measure mappings are in
+  `data/final/2026-11-03-general/rubric-derivation.md`.
+- `E/<package>/dossiers/<contest-slug>/*.md` — the only permitted evidence.
+- `E/<package>/interim/contests.json` — candidate names/party/category per
+  contest.
 
-## Output — `data/scoring/<contest-slug>.json`
+## Output — `E/<package>/scoring/<contest-slug>.json`
 
 ```json
 {
   "contest_slug": "...",
   "scored_at": "2026-07-16",
-  "derived_from": ["data/dossiers/<contest-slug>/"],
+  "derived_from": ["E/<package>/dossiers/<contest-slug>/"],
   "office_does": "One plain sentence: what this office actually does.",
   "race_blurb": "1-2 neutral sentences on this race's dynamics.",
   "candidates": [
@@ -52,8 +61,20 @@ facts. If the dossier doesn't support a score, the axis is omitted.
   alone — that's what the evidence is supposed to show.
 - **Applicability:** score only axes whose `applies_to` includes the
   contest's category. Judicial candidates (StateSupremeCourt, DistrictCourt,
-  Municipal Court): ONLY `judicial`, `safety`, and `experience`, and `safety`
-  only from documented bail/diversion/professional-formation evidence.
+  Municipal Court, Court of Appeals): ONLY `judicial`, `safety`, and
+  `experience`, and `safety` only from documented
+  bail/diversion/professional-formation evidence. Judges are **never**
+  scored on `social` or `parental-rights`.
+- **`social` vs `parental-rights`** (split for the general; see
+  rubric-derivation.md): `social` is gender, LGBTQ+ and reproductive policy
+  (trans participation in sports, gender-affirming care, abortion,
+  anti-discrimination law). `parental-rights` is parents and public schools
+  (notification, record access, opt-outs over what schools teach and
+  provide). Score each from evidence about that topic only: a position on
+  curricula opt-outs is not evidence on `social`, and a position on abortion
+  is not evidence on `parental-rights`. Candidates scored on `social` in the
+  primary are re-checked against the narrowed definition during their
+  refresh, not copied over.
 - **Confidence:** high = record or repeated explicit statements; medium =
   single clear statement or strong endorsement pattern; low = indirect
   inference (use sparingly; the app excludes low from alignment math).
@@ -67,7 +88,7 @@ facts. If the dossier doesn't support a score, the axis is omitted.
 - Neutral wording everywhere. Summaries/highlights describe; they never
   evaluate.
 
-## Refutation pass — `data/scoring/refutations/<contest-slug>.json`
+## Refutation pass — `E/<package>/scoring/refutations/<contest-slug>.json`
 
 A second, independent agent re-reads the dossiers and tries to REFUTE each
 score: wrong direction, overstated confidence, citation doesn't support it,
@@ -95,10 +116,16 @@ Every scored candidate-axis pair gets a verdict. `pipeline/merge_scores.py`
 applies them: refuted scores are dropped, adjustments applied, well-supported
 missing scores added.
 
-## Measures — `data/scoring/measures.json`
+## Measures — `E/<package>/scoring/measures.json`
 
 For each measure: display content (what it does, cost line, pro/con
 one-liners with attribution) plus `lean_mappings`: axis directions a YES
 vote aligns with, e.g. `{"taxes": 2, "local-control": 2}` with basis +
 citations. Strength 1 or 2 (sign = pole direction). A measure with no
 confident mapping gets `"lean_mappings": {}` — the app shows no Lean.
+Measure refutations go in `E/<package>/scoring/refutations/measures.json`.
+
+Intended statewide mappings (confirm against the measure dossier): I-645 →
+`taxes` and `local-control`; I-1 → `parental-rights`; I-638 → `social`.
+School-district and other school-adjacent measures may map to
+`parental-rights` when the dossier supports it.
