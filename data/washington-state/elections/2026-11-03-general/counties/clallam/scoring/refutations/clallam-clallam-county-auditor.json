@@ -1,0 +1,49 @@
+{
+  "contest_slug": "clallam-clallam-county-auditor",
+  "reviewed_at": "2026-10-09",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/clallam/dossiers/clallam-clallam-county-auditor/",
+    "data/washington-state/elections/2026-11-03-general/counties/clallam/scoring/clallam-clallam-county-auditor.json"
+  ],
+  "verdicts": [
+    {
+      "candidate": "virginia-shogren",
+      "axis": "spending",
+      "verdict": "upheld"
+    },
+    {
+      "candidate": "virginia-shogren",
+      "axis": "experience",
+      "verdict": "upheld"
+    },
+    {
+      "candidate": "shoona-riggs",
+      "axis": "experience",
+      "verdict": "upheld"
+    }
+  ],
+  "missing": [
+    {
+      "candidate": "virginia-shogren",
+      "axis": "taxes",
+      "proposed_score": -1,
+      "confidence": "low",
+      "citations": [
+        "S1",
+        "S5"
+      ],
+      "basis": "Frames lower spending as tax relief ('When government spends less, there's more money left in your pocket') [S1] and lists 'increasing taxes' among the problems county residents face [S5]. No specific tax position or pledge, and the auditor sets no taxes, so low."
+    },
+    {
+      "candidate": "shoona-riggs",
+      "axis": "spending",
+      "proposed_score": -1,
+      "confidence": "low",
+      "citations": [
+        "S1",
+        "S7"
+      ],
+      "basis": "Cites 'responsible stewardship of public resources' [S1] and backs consolidating elections to once a year on cost grounds, noting an April fire district election cost the district $36,000 versus barely $1,000 at a primary or general [S7]. Generic stewardship language plus one cost-saving proposal, so low; milder than Shogren's -2."
+    }
+  ]
+}
