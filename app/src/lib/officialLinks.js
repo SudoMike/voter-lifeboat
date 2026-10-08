@@ -89,6 +89,31 @@ const ELECTIONS = {
       // pages equal the printed page numbers (CD 6 pp. 24-25, LD 29 p. 43).
       'pierce/voters-pamphlet-edition-09-pierce':
         'https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2009%20-%20Pierce.pdf',
+      // Clark County's general voters' pamphlet (the SOS state section and
+      // Clark's local section in one PDF), from the package pointer
+      // counties/clark/raw/clark/local-voters-pamphlet.pdf.url. Checked
+      // 2026-10-08: 200 application/pdf, 112 pages, sha256 as in the
+      // pointer's meta; PDF pages equal the printed page numbers (CD 3 p. 24,
+      // Battle Ground SD Prop 11 p. 86). The local section (pp. 41-99) has no
+      // text layer, so its pages were located by printed page number.
+      'clark/local-voters-pamphlet':
+        'https://clark.wa.gov/sites/default/files/media/document/2026-09/2026clarkcountygeneralvp_web.pdf',
+      // Thurston County's general Local Voters' Pamphlet, from the package
+      // pointer counties/thurston/raw/thurston/local-voters-pamphlet.pdf.url.
+      // Checked 2026-10-08: 200 application/pdf (via S3), 30 pages, sha256
+      // as in the pointer's meta. Citations are PDF pages, which run 46
+      // behind the printed numbers (PDF p. 11 is printed p. 57, the Auditor
+      // candidates; PDF p. 26 is printed p. 72, Yelm Prop 1).
+      'thurston/local-voters-pamphlet': 'https://www.thurstoncountywa.gov/media/34849',
+      // SOS Edition 27 (Thurston), from counties/thurston/raw/sos/
+      // voters-pamphlet-edition-27-thurston.pdf.url (also statewide/interim/
+      // pamphlet-editions.json); Thurston's dossiers cite its legislative and
+      // Court of Appeals statements. Checked 2026-10-08: 200
+      // application/pdf, 88 pages, sha256 as in the pointer's meta; PDF
+      // pages equal the printed page numbers (LD 19 Pos. 1 p. 31, LD 22
+      // Pos. 2 p. 36, Court of Appeals p. 46).
+      'thurston/voters-pamphlet-edition-27-thurston':
+        'https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2027%20-%20Thurston.pdf',
     },
     // Counties whose research cites VoteWA's online voters' guide, which has
     // no page numbers, instead of a printed pamphlet: their records carry no
@@ -100,9 +125,15 @@ const ELECTIONS = {
     // too (piercecountywa.gov answered 403, so its local pamphlet was not
     // fetched); its federal and legislative statements cite Edition 09
     // above. Checked 2026-10-08: 200 text/html.
+    // Kitsap's dossiers cite VoteWA only (kitsap.gov answered 403 to scripted
+    // requests for its pamphlet PDFs). A few Clark dossiers cite VoteWA
+    // records rather than the printed pamphlet; Clark's guide is their
+    // fallback. Checked 2026-10-08: both 200 text/html.
     countyGuides: {
       spokane: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=32',
       pierce: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=27',
+      kitsap: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=18',
+      clark: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=06',
     },
     pamphletIndex: `${SOS_GENERAL_2026}/2026-voters-pamphlet-pdfs`,
   },
