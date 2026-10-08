@@ -7,15 +7,17 @@
     "data/washington-state/elections/2026-11-03-general/counties/snohomish/scoring/*.json",
     "data/washington-state/elections/2026-11-03-general/counties/snohomish/scoring/refutations/*.json",
     "data/washington-state/elections/2026-11-03-general/counties/spokane/scoring/*.json",
-    "data/washington-state/elections/2026-11-03-general/counties/spokane/scoring/refutations/*.json"
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/scoring/refutations/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/pierce/scoring/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/pierce/scoring/refutations/*.json"
   ],
   "script": "pipeline/merge_scores.py",
   "verdict_stats": {
-    "upheld": 980,
-    "adjust": 78,
-    "refuted": 2,
-    "missing_added": 14,
-    "missing_dropped_low": 2
+    "upheld": 1233,
+    "adjust": 91,
+    "refuted": 4,
+    "missing_added": 18,
+    "missing_dropped_low": 3
   },
   "contests": [
     {
@@ -13716,6 +13718,3278 @@
           "evidence_level": "moderate",
           "withdrawn": false,
           "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "pierce-congressional-district-10-u-s-representative",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-congressional-district-10-u-s-representative/"
+      ],
+      "office_does": "The U.S. Representative votes on federal law and the federal budget for a two-year term, oversees the executive branch, and helps constituents with federal agencies.",
+      "race_blurb": "Democratic incumbent Marilyn Strickland, a former Tacoma mayor in Congress since 2021, took 47.3% in the primary. Republican Chris D. Chung, a Lakewood pharmacist who took 31.4%, has stated concerns but few specific positions.",
+      "candidates": [
+        {
+          "slug": "marilyn-strickland",
+          "summary": "Congresswoman since 2021, former Tacoma mayor and House Armed Services member, running on her local-project record, health-care and food-aid protections, and opposition to tariffs.",
+          "highlights": [
+            "Mayor of Tacoma 2010-2017; Chief Deputy Whip and New Democrat Coalition Whip [S1][S2][S4]",
+            "Voted for the final FY2026 NDAA and against cutting military aid to Israel [S17][S18]",
+            "Voted against H.R. 1 and opposes Trump's tariffs and health-care and food-aid cuts [S1][S12]",
+            "Voted against the federal girls' sports and born-alive bills; endorsed by Planned Parenthood [S1][S13][S14]",
+            "Voted for the HALT Fentanyl Act [S16]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S12"
+              ],
+              "basis": "Voted against H.R. 1 and opposes tariffs; no stated plank on progressive revenue."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S8",
+                "S10"
+              ],
+              "basis": "Backs preserving and expanding SNAP, WIC, LIHEAP and housing aid and touts $50 million in projects; voted for the 2023 Fiscal Responsibility Act."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S16"
+              ],
+              "basis": "Voted for the HALT Fentanyl Act and cites funding for police and firefighters; no stated enforcement or prevention agenda beyond that.",
+              "adjusted_by_refutation": true
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3",
+                "S19"
+              ],
+              "basis": "Works to 'boost renewable energy,' voted to keep California's vehicle-emission waiver, and is endorsed by LCV and Sierra Club."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S4"
+              ],
+              "basis": "In Congress since 2021 after two terms as Tacoma mayor; holds House whip and caucus leadership roles."
+            },
+            "reform": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S2",
+                "S4"
+              ],
+              "basis": "Chief Deputy Whip, New Democrat Coalition Whip and chair of ASPIRE PAC, working through party and caucus structures.",
+              "adjusted_by_refutation": true
+            },
+            "immigration": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S15"
+              ],
+              "basis": "Voted against the Laken Riley Act; no further immigration statements in the dossier."
+            },
+            "healthcare": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S8"
+              ],
+              "basis": "Pledges to protect Medicare and make care more affordable and backs reinstating ACA subsidies, all within the current system."
+            },
+            "social": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S4",
+                "S9",
+                "S13",
+                "S14"
+              ],
+              "basis": "Reproductive Freedom Caucus liaison, reintroduced the Abortion is Health Care Everywhere Act, and voted against H.R. 28 and H.R. 21."
+            },
+            "defense": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S5",
+                "S7",
+                "S17",
+                "S18",
+                "S21"
+              ],
+              "basis": "Voted for the FY2026 NDAA and against cutting Israel military aid and says Israel has the right to defend itself; also questioned the Iran operations and backed the Iran War Powers resolution."
+            }
+          }
+        },
+        {
+          "slug": "chris-d-chung",
+          "summary": "Lakewood pharmacist and pharmacy owner for 33 years, who ran in the 2024 and 2025 primaries; his statement names concerns rather than specific policies.",
+          "highlights": [
+            "Pharmacist and owner of a Tacoma (Lakewood) pharmacy for 33 years [S1]",
+            "Focus on easing family burdens, access to education and health care, and respect for veterans [S1]",
+            "Ran for Insurance Commissioner in 2024 as 'Prefers Democratic Party'; now 'Prefers Republican Party' [S3][S6]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3",
+                "S4"
+              ],
+              "basis": "No elected office; small-business pharmacist whose 2024 and 2025 primary bids drew under 7% each in reported returns."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "pierce-congressional-district-6-u-s-representative",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-congressional-district-6-u-s-representative/"
+      ],
+      "office_does": "The U.S. Representative votes on federal law and the federal budget for a two-year term, oversees the executive branch, and helps constituents with federal agencies.",
+      "race_blurb": "First-term Democratic incumbent Emily Randall, who took 58.8% in the primary, faces Republican Teresa Fox, a Bremerton safety manager who took 25.5%. The race splits on taxes and spending, public safety and immigration, abortion and girls' sports, and climate.",
+      "candidates": [
+        {
+          "slug": "emily-randall",
+          "summary": "First-term congresswoman and former state senator (2019-2024) running on lower costs, health-care access, abortion rights, a clean-energy transition and oversight of the Trump administration.",
+          "highlights": [
+            "Wants big business to pay its fair share and voted against H.R. 1, the One Big Beautiful Bill Act [S3][S17]",
+            "States a 100% lifetime pro-choice record; voted against the federal girls' sports and born-alive bills [S7][S18][S19]",
+            "Voted against the final FY2026 NDAA and for cutting $3.3 billion in military aid to Israel [S22][S23]",
+            "Calls for a just transition away from fossil fuels [S5]",
+            "Refuses corporate PAC money [S6]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S16",
+                "S17"
+              ],
+              "basis": "Wants big business to pay its fair share because 'there is too much wealth in too few hands,' faults tax breaks for billionaires, and voted against H.R. 1."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S4",
+                "S16"
+              ],
+              "basis": "Backs expanded ACA credits and Medicaid coverage and cites $18 million in project funding; no stated restraint planks."
+            },
+            "safety": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S8",
+                "S21"
+              ],
+              "basis": "Voted against the HALT Fentanyl Act and lists gun reform as a priority; no stated policing agenda."
+            },
+            "climate": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S5",
+                "S24"
+              ],
+              "basis": "Calls for a just transition away from fossil fuels, voted to keep California's vehicle-emission waiver, and is endorsed by LCV Action Fund."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S8",
+                "S11"
+              ],
+              "basis": "First-term House incumbent with six prior years in the state Senate."
+            },
+            "reform": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S6"
+              ],
+              "basis": "Refuses corporate PAC money; no broader structural-reform agenda found."
+            },
+            "immigration": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S15",
+                "S20",
+                "S27"
+              ],
+              "basis": "Condemns ICE raids as bypassing due process, voted against the Laken Riley Act, and introduced bills limiting immigration enforcement during disasters and use of FAFSA data."
+            },
+            "healthcare": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S16"
+              ],
+              "basis": "Platform centers on protecting and strengthening the ACA and Medicaid, but she calls the U.S. system 'sick care' and cites creating Washington's Universal Healthcare Commission."
+            },
+            "social": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S4",
+                "S7",
+                "S18",
+                "S19"
+              ],
+              "basis": "States a 100% pro-choice record, supports access to gender-affirming care, and voted against H.R. 28 and H.R. 21."
+            },
+            "defense": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S13",
+                "S14",
+                "S22",
+                "S23",
+                "S25"
+              ],
+              "basis": "Voted for cutting offensive military aid to Israel, against the final FY2026 NDAA, and for Iran and Lebanon War Powers resolutions; also secures military-family and installation provisions."
+            }
+          }
+        },
+        {
+          "slug": "teresa-fox",
+          "summary": "Bremerton safety and compliance manager and Kitsap County precinct committee officer running on public safety, lower taxes and spending, naval jobs and term limits.",
+          "highlights": [
+            "Proposes a federal 'Public Safety Floor' of incentives for local police hiring [S2]",
+            "Calls the state income tax and Climate Commitment Act burdens of 'big government' and pledges to stop runaway spending [S2]",
+            "Supports sex-based eligibility in girls' sports under Title IX [S2]",
+            "Signed the U.S. Term Limits pledge [S2]",
+            "Pledges 'Naval dominance' and maritime and timber jobs [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Lists the income tax as a big-government burden, wants money kept 'in family pockets,' and cites voter concern about high taxes."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Pledges to stop runaway government spending and the 'Government Growth Machine,' supports balanced budgets, and cites waste and mismanagement."
+            },
+            "safety": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Calls public safety a paramount duty and proposes federal incentives for local agencies to hire and retain officers."
+            },
+            "climate": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Lists the Climate Commitment Act as a burden and opposes rapid electrification mandates, while backing 'science-based stewardship.'"
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "No elected office beyond precinct committee officer; runs as a 'citizen volunteer' and not a career politician."
+            },
+            "reform": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Signed the U.S. Term Limits pledge and says Congress should be a service, not a career.",
+              "adjusted_by_refutation": true
+            },
+            "healthcare": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Proposes telehealth, rural-doctor incentives and keeping local facilities open, all within the existing system.",
+              "adjusted_by_refutation": true
+            },
+            "social": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Says allowing biological males in girls' sports erases Title IX's progress and objects to shared locker rooms."
+            },
+            "defense": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Pledges 'Naval dominance' and more funding for shipyard workers and fleet readiness."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "pierce-legislative-district-2-state-representative-pos-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-legislative-district-2-state-representative-pos-1/"
+      ],
+      "office_does": "One of the 2nd District's two members of the Washington House, voting on state law and the operating, capital and transportation budgets for a two-year term.",
+      "race_blurb": "Ten-year Republican incumbent and Transportation ranking member Andrew Barkis faces first-time candidate William Dehnel, a Pierce Transit supervisor and union officer who prefers the Labor Democrat Party. They split most sharply on the 2026 millionaires' tax and on LGBTQ+ and school policy.",
+      "candidates": [
+        {
+          "slug": "andrew-barkis",
+          "summary": "State representative since 2016 and Lacey property-management owner, running on transportation maintenance, housing supply, and opposition to income and gas tax increases.",
+          "highlights": [
+            "Voted against ESSB 6346 (2026 tax on income over $1 million) and the 2025 B&O and services tax bills [S5][S8][S9]",
+            "Calls himself a vocal opponent of state income taxes and gas tax increases [S3]",
+            "Advocates more housing supply and fewer barriers to development; endorsed by realtor and rental-housing groups [S3][S4]",
+            "Voted against ESHB 1296 (2025) and ESSB 5599 (2023) [S10][S13]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S5",
+                "S8",
+                "S9"
+              ],
+              "basis": "Voted against ESSB 6346, ESHB 2081 and ESSB 5814 and says he opposes state income taxes and gas tax increases."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Emphasizes fiscally responsible budgets and fighting deficit spending that outpaces revenue."
+            },
+            "housing": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3",
+                "S4"
+              ],
+              "basis": "Advocates increased supply and removing bureaucratic barriers, opposed frequent building-code updates; backed by real-estate and rental-housing groups."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S4"
+              ],
+              "basis": "Says he worked to stop shortening sentences for serious crimes and to keep accountability for registered offenders; law-enforcement endorsements."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S14"
+              ],
+              "basis": "In the House since 2016 and Transportation ranking member, against a first-time candidate."
+            },
+            "social": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S13"
+              ],
+              "basis": "Voted against ESSB 5599 and is endorsed by Human Life PAC; no campaign statement on the topic."
+            },
+            "parental-rights": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S10",
+                "S11",
+                "S12"
+              ],
+              "basis": "Voted against ESHB 1296's changes to the I-2081 parental-rights list and added a parental right to request charter-school enrollment; no campaign statement."
+            },
+            "climate": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Describes himself as \"a vocal opponent of ... gas tax increases\" [S3] and promotes storm-damage repair \"without forcing drivers to pay higher gas taxes\" [S2]; the rubric places opposition to gas taxes at climate pole_a. No statement on the Climate Commitment Act, so magnitude 1.",
+              "added_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "william-dehnel",
+          "summary": "Pierce Transit dispatch supervisor and ATU Local 758 officer in his first run for office, campaigning on progressive taxation, school and rural healthcare funding, and LGBTQ+ protections.",
+          "highlights": [
+            "Says he fully supports the 9.9% tax on income over $1 million and wants a system that asks more of those who have more [S4]",
+            "Opposes I-1 and I-638 by name [S7]",
+            "Would fully fund special education and restore early-learning funding cut in 2026 [S5]",
+            "Endorsed by the Washington State Labor Council and Planned Parenthood Alliance Advocates [S8][S9]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S4"
+              ],
+              "basis": "Explicitly supports the millionaires' income tax and repeatedly calls for taxes that ask more of those who have more."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S5",
+                "S6"
+              ],
+              "basis": "Calls for closing the special-education funding gap, restoring early learning, and more investment in rural clinics and infrastructure."
+            },
+            "healthcare": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S6"
+              ],
+              "basis": "Proposals work within the existing system (protect Apple Health, fund clinics, drug-price negotiation); no single-payer plank."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "First-time candidate with union but no public office, running against a ten-year incumbent."
+            },
+            "social": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S6",
+                "S7",
+                "S9"
+              ],
+              "basis": "Opposes I-638, would protect gender-affirming care and anti-discrimination law, and pledges never to vote for legislation targeting LGBTQ+ people."
+            },
+            "parental-rights": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S7"
+              ],
+              "basis": "Opposes I-1, citing student privacy and the risk of outing LGBTQ+ students to parents."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "pierce-legislative-district-2-state-representative-pos-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-legislative-district-2-state-representative-pos-2/"
+      ],
+      "office_does": "One of the 2nd District's two members of the Washington House, voting on state law and the state budgets for a two-year term.",
+      "race_blurb": "First-term Republican Matt Marshall, a former Eatonville school director and Army veteran, faces Democrat Angela Taylor, a Yelm small-business owner in her first race. Marshall runs against new taxes and on parents' authority; Taylor on school funding, rural healthcare and limits on health-industry money.",
+      "candidates": [
+        {
+          "slug": "matt-marshall",
+          "summary": "First-term representative, former Eatonville school director, Army veteran and physician assistant, running against new taxes and the income tax and for parents' authority.",
+          "highlights": [
+            "Pledges to oppose new taxes and fight the income tax; voted against ESSB 6346 [S1][S3]",
+            "Voted against the 2025 B&O and services tax bills [S7][S8]",
+            "Offered amendments to let parents inspect school-held medical and counseling records [S11][S12]",
+            "Opposes a mega airport in the area and supports an elected sheriff [S1]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3",
+                "S7",
+                "S8"
+              ],
+              "basis": "Pamphlet pledge to oppose new taxes and the income tax, plus nay votes on ESSB 6346, ESHB 2081 and ESSB 5814."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Running to stop 'out of control government spending' and cut fees, regulations and hidden costs."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "First-term incumbent and former school director, against a candidate with no elected experience."
+            },
+            "local-control": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Opposes siting any mega airport in the area and defends keeping an elected sheriff.",
+              "adjusted_by_refutation": true
+            },
+            "parental-rights": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S9",
+                "S11",
+                "S12"
+              ],
+              "basis": "Pledges to defend parents' authority, voted against ESHB 1296, and sought parental access to school-held health and counseling records."
+            }
+          }
+        },
+        {
+          "slug": "angela-taylor",
+          "summary": "Yelm small-business owner and caregiver in her first race, running on fully funded schools, rural healthcare access and a fairer tax system.",
+          "highlights": [
+            "Wants to correct a 'regressive tax system' and direct new revenue to property-tax relief [S2]",
+            "Pledges not to take contributions over $200 from health-industry executives, lobbyists or PACs [S2]",
+            "Calls for fully funded Pre-K-12 schools and a centralized rural hospital [S1][S2]",
+            "Endorsed by the Washington State Labor Council and Planned Parenthood Alliance Advocates [S3][S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Wants to correct a regressive tax system and redirect new revenue to property-tax relief, while also seeking B&O relief for small businesses."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Calls for fully funded Pre-K-12 education and a rural hospital, alongside 'responsible budgets'."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Would support legislation that expands resources for law enforcement and sheriff collaboration."
+            },
+            "reform": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Pledges to cap contributions from health-industry interests and criticizes corporate and insurance influence in Olympia."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "No elected experience, running against an incumbent."
+            },
+            "social": {
+              "score": 1,
+              "confidence": "low",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Endorsed by Planned Parenthood Alliance Advocates; no stated position."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "pierce-legislative-district-25-state-representative-pos-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-legislative-district-25-state-representative-pos-1/"
+      ],
+      "office_does": "One of the 25th District's two members of the Washington House, voting on state law and the state budgets for a two-year term.",
+      "race_blurb": "Two Puyallup School Board veterans meet: first-term Republican Michael Keaton, a former F-16 pilot, and Democratic school director David Berg. Keaton runs against taxes and spending and pressed for the I-2081 parents' bill of rights; Berg runs on public education and workers' rights and is skeptical of AI and data centers.",
+      "candidates": [
+        {
+          "slug": "michael-keaton",
+          "summary": "First-term representative, Puyallup School Board member 2015-2023 and retired Air Force F-16 pilot, running against high taxes and spending.",
+          "highlights": [
+            "Pledges to keep fighting 'reckless government spending and high taxes' [S1]",
+            "Voted against ESSB 6346 and the 2025 B&O and services tax bills [S6][S9][S10]",
+            "Offered amendments to require schools to support the I-2081 parents' bill of rights [S13][S14]",
+            "Endorsed by the Association of Washington Business [S19]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S6",
+                "S9",
+                "S10"
+              ],
+              "basis": "Campaigns against high taxes and for the no-new-taxes Save Washington plan; voted against ESSB 6346, ESHB 2081 and ESSB 5814."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Runs against 'reckless government spending' and promotes a budget that lives within its means."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Says unnecessary bureaucracy adds costs to building a home."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Emphasizes holding people accountable and the costs of shoplifting and crime."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S5"
+              ],
+              "basis": "One term in the House plus eight years on the school board, against a challenger who also holds local office."
+            },
+            "parental-rights": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S4",
+                "S11",
+                "S13",
+                "S14",
+                "S15"
+              ],
+              "basis": "Sought to require schools to support I-2081 and to remove OSPI sanctions, voted against ESHB 1296, and cites parental engagement on the school board."
+            }
+          }
+        },
+        {
+          "slug": "david-berg",
+          "summary": "Puyallup School District director since 2021 and longtime gifted-education and PTA advocate, running on public education, workers' rights and economic opportunity.",
+          "highlights": [
+            "Prioritizes public education, workers' rights and economic stability for working people [S1]",
+            "Calls himself an AI skeptic and wants data centers to pay the costs they create [S5]",
+            "Defended a teacher-recommended curriculum against board objections in 2021 [S7]",
+            "Endorsed by the WSLC, the Washington Education Association and Planned Parenthood Alliance Advocates [S3][S8][S9]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "tech": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S5"
+              ],
+              "basis": "AI skeptic who wants data centers to bear their power and water costs, bias review of classroom AI, and limits on AI in hiring decisions."
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S5"
+              ],
+              "basis": "Wants to revisit requiring large data centers to use new renewable or non-emitting electricity."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S4"
+              ],
+              "basis": "School director challenging an incumbent legislator; has local but no legislative office."
+            },
+            "social": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S6",
+                "S9"
+              ],
+              "basis": "Defended DEI work including gender identity and LGBTQ+ inclusion; endorsed by Planned Parenthood and Stonewall Democrats."
+            },
+            "parental-rights": {
+              "score": 1,
+              "confidence": "low",
+              "citations": [
+                "S7"
+              ],
+              "basis": "Defended teacher-led curriculum adoption against board objections, while acknowledging parents want more input.",
+              "adjusted_by_refutation": true
+            },
+            "housing": {
+              "score": 1,
+              "confidence": "low",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Endorsed by the Washington Housing Alliance; no stated housing position."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "pierce-legislative-district-25-state-representative-pos-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-legislative-district-25-state-representative-pos-2/"
+      ],
+      "office_does": "One of the 25th District's two members of the Washington House, voting on state law and the state budgets for a two-year term.",
+      "race_blurb": "Republican Cyndy Jacobsen, in the House since 2021, faces Democrat Jenn Marie Strickling, a Pierce County charter review commissioner, after a primary decided by under two points. They differ on taxes, public safety and tech regulation.",
+      "candidates": [
+        {
+          "slug": "cyndy-jacobsen",
+          "summary": "State representative since 2021, former Puyallup councilmember, math instructor and accountant, running against new taxes and for police funding and offender accountability.",
+          "highlights": [
+            "Says Washington outspends its revenues and opposes taking 'more of your money' [S1]",
+            "Voted against ESSB 6346 and offered amendments to exempt pass-through income and sunset the tax [S4][S6][S7]",
+            "Would fund police and pass measures for officer recruitment and retention [S2]",
+            "Voted against ESHB 1296 (2025) and ESSB 5599 (2023) [S10][S12]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S4",
+                "S6",
+                "S8",
+                "S9"
+              ],
+              "basis": "Stands 'firm against new taxes'; voted against ESSB 6346, ESHB 2081 and ESSB 5814 and sought to narrow or sunset the income tax."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Says the state outspends its revenues every year and calls for budgets that do not take more money."
+            },
+            "safety": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Prioritizes police funding, recruitment and retention and holding offenders accountable."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "In the House since 2021 after three years on the Puyallup City Council, against a first-time legislative candidate."
+            },
+            "social": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S12",
+                "S13"
+              ],
+              "basis": "Voted against ESSB 5599; no campaign statement on the topic."
+            },
+            "parental-rights": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S10",
+                "S11"
+              ],
+              "basis": "Voted against ESHB 1296's changes to the I-2081 parental-rights list; no campaign statement."
+            },
+            "local-control": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Her site says \"many of our local issues are best addressed at the state and regional level: homelessness and the dual problems of mental health and addiction; equitable traffic funding south of Seattle; and job creation\" [S2], a single clear statement toward the regional/state pole.",
+              "added_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "jenn-marie-strickling",
+          "summary": "Pierce County Charter Review Commissioner, small-business owner and former laborers' union member, running on cost of living, labor rights and checks on big tech.",
+          "highlights": [
+            "Wants the wealthiest to 'pay their share' while cutting wasteful spending [S4]",
+            "Would ban Flock surveillance cameras and limit corporate data harvesting [S4]",
+            "Cites a charter amendment on housing stability and manufactured-home protections [S1][S6]",
+            "Endorsed by the WSLC and Planned Parenthood Alliance Advocates [S7][S8]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Calls the tax code upside-down and wants the wealthiest to pay their share, with relief for working households."
+            },
+            "spending": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Pairs cutting wasteful spending with full K-12 funding, special education and infrastructure investment."
+            },
+            "housing": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S4",
+                "S6"
+              ],
+              "basis": "Cites housing protections to keep seniors and veterans housed and would incentivize affordable and workforce housing."
+            },
+            "safety": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Pairs police, fire and EMS staffing with community-based crime prevention."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "First legislative run after election as a charter review commissioner, against an incumbent in the House since 2021."
+            },
+            "local-control": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Favors bottom-up local solutions and opposes 'top-down mandates' that ignore rural communities.",
+              "adjusted_by_refutation": true
+            },
+            "tech": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Would curb corporate data harvesting, ban Flock cameras, and make data centers pay for the grid costs they impose."
+            },
+            "social": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S8"
+              ],
+              "basis": "Would 'protect reproductive freedom'; endorsed by Planned Parenthood Alliance Advocates."
+            },
+            "healthcare": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Would keep local clinics and hospitals open, cap prescription drug prices, and expand mental-health and addiction treatment [S4]: within-system measures (pole_a), with no single-payer plank.",
+              "added_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "pierce-legislative-district-26-state-representative-pos-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-legislative-district-26-state-representative-pos-1/"
+      ],
+      "office_does": "State Representatives write and vote on state law and the operating, capital and transportation budgets; each district elects two to two-year terms.",
+      "race_blurb": "One-term Democratic Representative Adison Richards faces Republican David Olson, a 13-year Peninsula School Board member who led the primary. They differ most on reproductive and gender policy and spending; both opposed the 2025 B&O tax package. On parental rights, Olson campaigns on parents' right to be informed, while Richards voted for ESHB 1296 after voting for twelve floor amendments, most of which failed, that would have added to or restored parent rights in it.",
+      "candidates": [
+        {
+          "slug": "david-olson",
+          "summary": "Peninsula School Board member since 2013, retired Navy officer and former public finance banker, running on lower spending, no new taxes, housing supply and parental rights.",
+          "highlights": [
+            "Calls for 'no more broad-based taxes' and opposes the 2025 B&O tax package (HB 2081) [S2]",
+            "Would oppose rent caps like HB 1217 and cut red tape to build housing [S2]",
+            "Supports sex-based school sports and locker-room privacy [S2]",
+            "Would 'Defend parents' right to be informed and involved' in their child's education [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Criticizes passing an income tax, calls for no more broad-based taxes and votes against future tax increases."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Calls to reduce and cut wasteful spending and tie budgets to results."
+            },
+            "housing": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Frames affordability as a supply and cost-to-build problem; opposes rent caps and supports permitting and zoning reform."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Calls to restore public safety and stand with law enforcement."
+            },
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Thirteen years in elected school-board office but new to the Legislature, challenging a one-term incumbent."
+            },
+            "local-control": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Calls himself a strong advocate for local control and would standardize permits with local control preserved."
+            },
+            "social": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Would defend sex-based sports and locker-room privacy."
+            },
+            "parental-rights": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Supports parents' right to be informed, access to curriculum information, and pushing back on policies that cut parents out of decisions."
+            }
+          }
+        },
+        {
+          "slug": "adison-richards",
+          "summary": "Attorney and one-term state representative, running on affordability, police funding, trades education and reproductive rights.",
+          "highlights": [
+            "Voted against ESSB 6346 (2026 tax on millionaires) and the major 2025 revenue bills [S5][S10][S11]",
+            "Sponsored legislation to fund more local police officers, per his campaign [S1][S3]",
+            "Pledges to protect reproductive freedom; endorsed by Planned Parenthood and Pro-Choice Washington [S3][S4]",
+            "Voted for ESHB 1296 (2025), which amended the I-2081 parental-rights list, after voting yea on all twelve recorded floor amendments to add or restore parent rights; ten failed [S6][S7]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S5",
+                "S10",
+                "S11",
+                "S12",
+                "S13"
+              ],
+              "basis": "Voted nay on ESSB 6346 and the 2025 gas, B&O, capital gains/estate and services tax bills, while saying tax fairness requires 'more than simply raising taxes on the wealthy'."
+            },
+            "spending": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Seeks dedicated pre-K and technical-school funding alongside 'more accountability and efficiency'."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Attributes rising prices largely to low supply and wants it made easier to build, especially in urban cores."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Sponsored bills to fund more police officers and raise sexual-assault penalties."
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Wants to expand clean energy careers and diversify energy sources."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S8"
+              ],
+              "basis": "Incumbent representative since 2025."
+            },
+            "immigration": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Says he voted to ban law enforcement, including ICE, from wearing face masks."
+            },
+            "healthcare": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Supports more competition among hospitals and providers while fighting federal cuts."
+            },
+            "social": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3",
+                "S4"
+              ],
+              "basis": "Pledges to protect reproductive freedom and says government should stay out of 'who we love, or who we are'; endorsed by Planned Parenthood and Pro-Choice Washington."
+            },
+            "parental-rights": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S6",
+                "S7"
+              ],
+              "basis": "Voted yea on ESHB 1296's amendments to the I-2081 parental-rights list; no further statements found.",
+              "adjusted_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "pierce-legislative-district-26-state-representative-pos-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-legislative-district-26-state-representative-pos-2/"
+      ],
+      "office_does": "State Representatives write and vote on state law and the operating, capital and transportation budgets; each district elects two to two-year terms.",
+      "race_blurb": "Open seat: Republican Katy Cornell, a nonprofit leader and pastor endorsed by the outgoing incumbent, faces Democrat Renee Hernandez Greenfield, an educator and union faculty representative. They split on climate, taxes, housing regulation and reproductive policy.",
+      "candidates": [
+        {
+          "slug": "katy-cornell",
+          "summary": "Nonprofit leader, pastor and Gig Harbor planning commissioner running as a 'common-sense Republican' on affordability, public safety and smaller government.",
+          "highlights": [
+            "Would oppose the income tax and reverse ESSB 5814's sales tax on services [S3]",
+            "Would cut housing regulations, impact fees and red tape [S3][S7]",
+            "Would extend Clean Energy Transformation Act deadlines to 2040 [S6]",
+            "Supports court-mandated treatment for repeat offenders and stronger prosecution of property crime [S3][S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Calls for 'smarter spending, not higher taxes', opposes the income tax and would reverse ESSB 5814."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Wants to reduce waste and bureaucracy and streamline government, without cutting core services."
+            },
+            "housing": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S7"
+              ],
+              "basis": "Would reduce regulations, impact fees and mandates and streamline permitting to lower building costs."
+            },
+            "safety": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S5"
+              ],
+              "basis": "Supports court-mandated treatment, stronger prosecution of repeat property crime, consequences for hard-drug possession and license plate readers."
+            },
+            "climate": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S6"
+              ],
+              "basis": "Would extend CETA clean-energy deadlines to 2040 to limit utility costs."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S4"
+              ],
+              "basis": "First legislative run after service on the Gig Harbor Planning Commission; endorsers cite 'fresh energy'."
+            }
+          }
+        },
+        {
+          "slug": "renee-hernandez-greenfield",
+          "summary": "First-time candidate, special educator and Tacoma Community College adjunct, running on schools, housing costs, climate and abortion rights.",
+          "highlights": [
+            "Calls herself 'a steadfast champion of strong climate policies'; endorsed by Washington Conservation Action [S1][S2]",
+            "Pledges to keep Washington '100 percent pro-choice'; endorsed by Planned Parenthood Alliance Advocates [S1][S2]",
+            "Would fight tax increases on working and middle-class families and cut wasteful state spending [S2]",
+            "Endorsed by the Washington State Labor Council and the Washington Education Association [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Wants to cut wasteful state spending while saying schools do more with less and childcare subsidies are underfunded."
+            },
+            "climate": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Champions clean energy, carbon reduction and polluter accountability; endorsed by Washington Conservation Action."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "First-time candidate whose only elected role is a union faculty representative.",
+              "adjusted_by_refutation": true
+            },
+            "social": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Pledges a '100 percent pro-choice' Washington; endorsed by Planned Parenthood Alliance Advocates.",
+              "adjusted_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "pierce-legislative-district-26-state-senator",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-legislative-district-26-state-senator/"
+      ],
+      "office_does": "The State Senator is the 26th District's single member of the Washington Senate, voting on state law and budgets and confirming gubernatorial appointments.",
+      "race_blurb": "Democratic Senator Deborah Krishnadasan, who won a 2025 special election, faces Republican Gary Parker, a Gig Harbor restaurant owner and former Intel executive making his first run. Both campaign against tax increases; they differ on spending, public safety, climate and reproductive policy.",
+      "candidates": [
+        {
+          "slug": "deborah-krishnadasan",
+          "summary": "Senator since 2025 and former Peninsula School Board president, running on lowering costs, school funding and reproductive rights.",
+          "highlights": [
+            "Voted against ESSB 6346 (2026 tax on millionaires) and the major 2025 revenue bills [S5][S10][S11]",
+            "Prime sponsor of SB 6162, expanding property tax relief for seniors and disabled veterans [S14]",
+            "Supports strong legal protections for abortion; endorsed by Planned Parenthood Alliance Advocates [S1][S3]",
+            "Voted for ESHB 1296 (2025), which amended the I-2081 parental-rights list [S6][S7]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3",
+                "S5",
+                "S10",
+                "S11",
+                "S12",
+                "S13"
+              ],
+              "basis": "Voted nay on ESSB 6346 and on the 2025 gas, B&O, capital gains/estate and services tax bills; campaigns on voting no on tax increases and proposing a sales tax cut."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Cites new energy assistance, PreK Promise funding, and added support for healthcare and childcare programs."
+            },
+            "housing": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Supports expanding affordable housing and protecting renters and first-time homebuyers."
+            },
+            "safety": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Pairs funding for law enforcement officers with behavioral health and community-based violence prevention."
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Supports 'bold but balanced climate action' and clean energy jobs."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S16",
+                "S18"
+              ],
+              "basis": "Sitting senator since 2025 and former school board president, against a first-time candidate."
+            },
+            "immigration": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Campaign lists banning ICE from wearing face masks among her actions."
+            },
+            "healthcare": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Supports capping drug prices and fair reimbursement within the current system and offsetting federal Medicaid cuts."
+            },
+            "social": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Supports strong legal protections for abortion and cites emergency-room reproductive care legislation; endorsed by Planned Parenthood Alliance Advocates."
+            },
+            "parental-rights": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S6",
+                "S7"
+              ],
+              "basis": "Voted yea on ESHB 1296's amendments to the I-2081 parental-rights list; her stated view that families should have a voice does not address notification or opt-outs."
+            }
+          }
+        },
+        {
+          "slug": "gary-parker",
+          "summary": "Gig Harbor restaurant owner, former Intel engineer and executive, and Rotary president, running as 'Not a politician' on affordability and public safety.",
+          "highlights": [
+            "Lists tax relief and property tax among his priorities and wants seniors 'not taxed out of their homes' [S1][S2]",
+            "Criticizes 'out-of-control spending' and pledges responsible use of taxpayer dollars [S3]",
+            "Calls for fully funding law enforcement [S2][S3]",
+            "Would expand energy supply and remove regulatory barriers to housing [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Campaigns on tax relief and fighting rising taxes, asking how much of what people earn 'belongs to the government'."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Criticizes 'out-of-control spending' and pledges transparency and responsible spending."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Would increase housing availability by removing regulatory barriers."
+            },
+            "safety": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Calls for fully funding law enforcement and says state policies have made it easier for criminals to exploit the system."
+            },
+            "climate": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Would expand energy supply to stabilize energy prices."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "No elected experience; campaigns as 'Not a politician' against a sitting senator."
+            },
+            "reform": {
+              "score": 1,
+              "confidence": "low",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Says serving means saying no to outside special interests; touts a campaign without paid consultants.",
+              "adjusted_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "pierce-legislative-district-27-state-representative-pos-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-legislative-district-27-state-representative-pos-1/"
+      ],
+      "office_does": "State Representatives write and vote on state laws and the state budgets; this seat is one of two House seats for Tacoma-area District 27.",
+      "race_blurb": "House Speaker Laurie Jinkins, a Democrat elected in 2010, faces Republican Carole Sue Braaten, a Fife precinct committee officer who ran for State Senate in 2024. They split on taxes, public safety, reproductive and gender policy, and parental rights.",
+      "candidates": [
+        {
+          "slug": "laurie-jinkins",
+          "summary": "Speaker of the House since 2020 and a public health lawyer, running on the Legislature's record in housing, health care, school funding and tax changes.",
+          "highlights": [
+            "Voted for ESSB 6346 (2026 tax on income over $1 million) and the 2025 capital gains, B&O, services sales tax and gas tax bills [S6][S12][S14][S16][S20]",
+            "Says she has worked on \"fixing our regressive tax system\" [S1]",
+            "Voted for the 2025 rent-increase limit (EHB 1217) and campaigns on tenant protections [S3][S18]",
+            "Pledges to keep reproductive rights \"legal and safe\"; voted for ESHB 1296 and ESSB 5599 [S1][S8][S10]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S6",
+                "S12",
+                "S14",
+                "S16"
+              ],
+              "basis": "Voted for ESSB 6346 and every 2025 revenue bill reviewed, and calls the tax system regressive."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Runs on 'historic' K-12 and housing investment, expanded childcare and free college for low-income families.",
+              "adjusted_by_refutation": true
+            },
+            "housing": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S18",
+                "S19"
+              ],
+              "basis": "Voted for the 2025 rent-increase limit and calls for tenant protections, supportive housing and low-income construction."
+            },
+            "safety": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Cites public-safety improvements and gun-violence reduction alongside a pledge to 'transform our policing systems, increase accountability' (undated site)."
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Undated campaign site calls climate change an existential threat and says she kept the House moving on climate policy."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S4",
+                "S5"
+              ],
+              "basis": "In the House since her 2010 election and Speaker since 2020."
+            },
+            "social": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3",
+                "S10",
+                "S11"
+              ],
+              "basis": "Pledges to keep reproductive rights legal, backs bodily-autonomy rights for women and LGBTQ people, and voted for ESSB 5599."
+            },
+            "parental-rights": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S8",
+                "S9",
+                "S10",
+                "S11"
+              ],
+              "basis": "Voted for ESHB 1296's changes to the I-2081 parental-rights list and for ESSB 5599's shelter non-notification provision; no statements on the topic."
+            }
+          }
+        },
+        {
+          "slug": "carole-sue-braaten",
+          "summary": "Fife precinct committee officer with a background in code enforcement, forestry and caregiving, running on no income tax, tough-on-crime policing and parents' rights.",
+          "highlights": [
+            "Lists \"Balance the budget yearly, No Income tax\" among her priorities [S1]",
+            "Says \"Support our Law enforcement and tough on crime\" [S1]",
+            "Opposes \"biological boy/men\" in girls' and women's restrooms, sports and prisons [S1]",
+            "Ran for the 27th District Senate seat in 2024 and received about 28 percent in the general [S3]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Pamphlet statement says 'No Income tax.'"
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Calls for balancing the budget yearly, with no further detail."
+            },
+            "safety": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Supports law enforcement and being 'tough on crime.'"
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Only office is precinct committee officer; lost a 2024 State Senate race."
+            },
+            "social": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Opposes 'biological boy/men' in girls' and women's restrooms, sports and prisons."
+            },
+            "parental-rights": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "States 'Support Parents Rights' without specifics."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "pierce-legislative-district-28-state-representative-pos-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-legislative-district-28-state-representative-pos-1/"
+      ],
+      "office_does": "State Representatives write and vote on state laws and the state budgets; this seat is one of two House seats for District 28 in Pierce County.",
+      "race_blurb": "Democratic incumbent Mari Leavitt, in the House since 2019, faces Republican Kathy Richardson, a 20-year Army officer and nurse practitioner who has not held public office. Both lead with military ties; they differ most on state spending.",
+      "candidates": [
+        {
+          "slug": "mari-leavitt",
+          "summary": "House member since 2019 and Deputy Majority Whip, a former community college administrator and Pierce County human services deputy director who runs on a bipartisan record.",
+          "highlights": [
+            "Voted for ESSB 6346 and the 2025 B&O tax bill, against the 2025 capital gains, services sales tax and gas tax bills [S6][S12][S14][S16][S20]",
+            "Voted against the House and final versions of the 2025 rent-increase limit (EHB 1217), and for concurring in the looser Senate version [S18]",
+            "Says she \"worked with law enforcement to secure resources and tools\" [S1]",
+            "Endorsed by labor, police and sheriffs' groups, the Association of Washington Business and Planned Parenthood [S4][S24][S25]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S6",
+                "S12",
+                "S14",
+                "S16",
+                "S20"
+              ],
+              "basis": "Split record: yes on ESSB 6346 and ESHB 2081; no on ESSB 5813, 5814 and 5801."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Cites investment in affordable childcare, training and improved K-12 outcomes, and support for emergency and affordable housing."
+            },
+            "housing": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3",
+                "S18",
+                "S19"
+              ],
+              "basis": "Backs emergency and affordable housing investment but voted against the House and final versions of the 2025 rent-increase limit, though for concurring in the looser Senate version."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S4"
+              ],
+              "basis": "Says she secured resources and tools for law enforcement; endorsed by police, sheriff and trooper associations."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S5",
+                "S27"
+              ],
+              "basis": "In the House since 2019, in caucus leadership and co-chair of a joint committee."
+            },
+            "social": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S10",
+                "S11"
+              ],
+              "basis": "Voted for ESSB 5599; endorsed by Planned Parenthood Alliance Advocates and ProChoice Washington."
+            },
+            "parental-rights": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S8",
+                "S9",
+                "S10",
+                "S11"
+              ],
+              "basis": "Voted for ESHB 1296's changes to the I-2081 parental-rights list and for ESSB 5599; no statements on the topic."
+            }
+          }
+        },
+        {
+          "slug": "kathy-richardson",
+          "summary": "Army veteran of 20 years, nurse practitioner, former Pacific Lutheran University associate dean and small business owner, running on budget accountability and affordability.",
+          "highlights": [
+            "Says government should \"budget like families do\" and cites State Auditor findings on accountability [S5]",
+            "Questions whether current spending levels are sustainable if high earners and businesses leave [S6]",
+            "Frames public safety as both \"safety and order\" and treatment, saying \"we cannot arrest our way out of every problem\" [S7]",
+            "Attributes housing costs partly to permitting and regulation and wants fewer \"unnecessary barriers and delays\" [S8]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S5",
+                "S6"
+              ],
+              "basis": "Repeatedly calls for a government that 'lives within its means', budget discipline and audit accountability."
+            },
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S5",
+                "S6"
+              ],
+              "basis": "Cites concern about 'additional taxes and fees' and warns that high-income taxpayers may leave; no explicit pledge on any tax."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S8"
+              ],
+              "basis": "Blames permitting costs and regulatory complexity in part and wants fewer barriers and delays, while also 'protecting neighborhoods.'"
+            },
+            "safety": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S7"
+              ],
+              "basis": "Pairs support for law enforcement and order with treatment, prevention and police accountability."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S4"
+              ],
+              "basis": "Has held no public office; background is military, health care, education and business."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "pierce-legislative-district-28-state-representative-pos-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-legislative-district-28-state-representative-pos-2/"
+      ],
+      "office_does": "State Representatives write and vote on state laws and the state budgets; this seat is one of two House seats for District 28 in Pierce County.",
+      "race_blurb": "Democratic incumbent Dan Bronoske, a fire captain in the House since 2021, faces Kerry Hills, a probation officer who prefers the Nonpartisan Party. Hills was not on the primary ballot; filing dates and the 9.3 percent write-in share suggest a write-in qualification, but no by-name tally was found.",
+      "candidates": [
+        {
+          "slug": "dan-bronoske",
+          "summary": "West Pierce Fire & Rescue captain and chair of the House Health Care & Wellness Committee, in the House since 2021, running on lower costs, health care and public safety.",
+          "highlights": [
+            "One of eight House Democrats to vote against ESSB 6346; voted for the 2025 capital gains, B&O and gas tax bills [S5][S11][S13][S19][S25]",
+            "Voted against the final 2025 rent-increase limit and favors permit streamlining and more housing types [S2][S17]",
+            "Cites capping a 30-day insulin supply at $35 [S2]",
+            "Voted for ESHB 1296 and ESSB 5599 [S7][S9]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S5",
+                "S11",
+                "S13",
+                "S15",
+                "S19"
+              ],
+              "basis": "Split record: no on ESSB 6346 and ESSB 5814; yes on ESSB 5813, ESHB 2081 and ESSB 5801."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Cites investments in teachers, mental health, school nutrition, public transit and Medicaid reimbursement."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S17",
+                "S18"
+              ],
+              "basis": "Favors more supply through permit streamlining and more housing types; voted against the House and final versions of the 2025 rent-increase limit, though for concurring in the looser Senate version."
+            },
+            "safety": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Pairs law enforcement training investment with accountability and behavioral health resources."
+            },
+            "healthcare": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Works on cost caps such as $35 insulin and lower drug prices within the existing system; no single-payer position."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S4"
+              ],
+              "basis": "In the House since 2021 and chair of the Health Care & Wellness Committee."
+            },
+            "social": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S9",
+                "S10"
+              ],
+              "basis": "Voted for ESSB 5599 on youth access to gender-affirming and reproductive care; no statements found."
+            },
+            "parental-rights": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S7",
+                "S8",
+                "S9",
+                "S10"
+              ],
+              "basis": "Voted for ESHB 1296's changes to the I-2081 parental-rights list and for ESSB 5599; no statements on the topic."
+            }
+          }
+        },
+        {
+          "slug": "kerry-hills",
+          "summary": "Lakewood probation officer and former clinical case manager who prefers the Nonpartisan Party, running on concern over tax increases and state spending.",
+          "highlights": [
+            "Has \"great concern about the increased taxes enacted\" [S1]",
+            "Says \"Olympia has a spending problem\" and lacks fiscal responsibility [S1]",
+            "Was not on the primary ballot; filing dates and write-in totals suggest a write-in qualification, though no by-name tally was found [S2][S3][S4]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Expresses 'great concern about the increased taxes enacted' without naming a tax or pledge."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Says Olympia 'has a spending problem' and lacks fiscal responsibility."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "No public office; elected experience is a school parent board and an HOA presidency."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "pierce-legislative-district-29-state-representative-pos-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-legislative-district-29-state-representative-pos-1/"
+      ],
+      "office_does": "A State Representative is one of the 29th District's two members of the Washington House, voting on state law and budgets.",
+      "race_blurb": "Four-term Democratic incumbent Melanie Morgan faces Democrat Krista Perez, a first-time candidate endorsed by the 29th LD Democrats. Morgan voted against the 2026 millionaires' tax and Perez backs it.",
+      "candidates": [
+        {
+          "slug": "krista-perez",
+          "summary": "Department of Commerce partnerships manager, DEI consultant and founder of the Tacoma Women of Color Collective, running for 'new leadership' on fair taxation, workers' rights, reproductive freedom and immigrant protections.",
+          "highlights": [
+            "Backs the millionaires' tax and calls for 'flipping' Washington's regressive tax system [S4]",
+            "Pledges to keep Washington a sanctuary regardless of immigration status [S4]",
+            "Would expand affordable-housing funding and tenant protections and reform the GMA for middle-density housing [S4]",
+            "Endorsed by the 29th LD Democrats, Washington State Labor Council, Fuse Washington and seven Tacoma councilmembers [S1][S5][S6]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S4"
+              ],
+              "basis": "Pamphlet pledges 'fair taxation'; site backs the millionaires' tax and calls for flipping the regressive tax structure to raise revenue."
+            },
+            "spending": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Would expand Working Connections Child Care, the Working Families Tax Credit and housing funding, and wants revenue to unlock those investments."
+            },
+            "housing": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S4"
+              ],
+              "basis": "More state affordable-housing funding and tenant protections, alongside GMA reform for middle-density development."
+            },
+            "safety": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Emphasizes youth gun-violence programs and wraparound treatment services for root causes; no enforcement planks."
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Supports immediate action to reduce carbon emissions and green union jobs."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "No elected office; running for 'new leadership' against a four-term incumbent."
+            },
+            "immigration": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S4"
+              ],
+              "basis": "Pledges that Washington remain a sanctuary regardless of immigration status and lists protecting immigrant communities in the pamphlet."
+            },
+            "social": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S4"
+              ],
+              "basis": "Pamphlet and site pledge to protect and expand reproductive freedom and push back on any limits to reproductive autonomy."
+            }
+          }
+        },
+        {
+          "slug": "melanie-morgan",
+          "summary": "Four-term incumbent, former Franklin Pierce school board director and Army veteran, running as 'unbought and unbossed' on housing, healthcare, public safety and equity.",
+          "highlights": [
+            "Voted against ESSB 6346 (2026 millionaires' tax), unlike seatmate Rep. Sharlett Mena [S4]",
+            "Voted for the 2021 capital gains tax and the 2025 capital gains, services and B&O revenue bills [S7][S8][S9][S10]",
+            "Voted for EHB 1217 rent limits and E2SHB 1110 middle housing [S11][S12]",
+            "Led creation of the $200 million Community Reinvestment Account and the CROWN Act [S3]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S7",
+                "S8",
+                "S9",
+                "S10"
+              ],
+              "basis": "Voted for the 2021 capital gains tax and the 2025 revenue bills, but against ESSB 6346, the 2026 income tax on millionaires."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Cites appropriations for the district and led the $200 million Community Reinvestment Account."
+            },
+            "housing": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S11",
+                "S12"
+              ],
+              "basis": "Voted for EHB 1217 rent limits and E2SHB 1110 zoning reform, and cites both in her statement."
+            },
+            "safety": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S13"
+              ],
+              "basis": "Voted against Initiative 2113 on police pursuits; the Community Reinvestment Account funds violence prevention and reentry."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Four-term incumbent with caucus leadership roles and school-board service, against a first-time candidate."
+            },
+            "local-control": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S12"
+              ],
+              "basis": "Voted for E2SHB 1110, the state mandate requiring cities to allow middle housing."
+            },
+            "social": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S6"
+              ],
+              "basis": "Voted for ESSB 5599 on youth access to protected health care; no further statements found."
+            },
+            "parental-rights": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S5"
+              ],
+              "basis": "Voted for ESHB 1296's amendments to the I-2081 parental-rights list; no statement found."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "pierce-legislative-district-29-state-representative-pos-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-legislative-district-29-state-representative-pos-2/"
+      ],
+      "office_does": "A State Representative is one of the 29th District's two members of the Washington House, voting on state law and budgets.",
+      "race_blurb": "An open seat, vacated by Rep. Sharlett Mena's Senate run, between two Democrats: Tacoma Deputy Mayor Joe Bushnell and state equity-policy advisor Patrick Stickney. They differ most on public safety and on record versus renewal.",
+      "candidates": [
+        {
+          "slug": "joe-bushnell",
+          "summary": "Tacoma Deputy Mayor and Marine Corps combat veteran, running on universal healthcare, affordability and community safety.",
+          "highlights": [
+            "Pledges to 'champion Universal Healthcare for all' [S1][S4]",
+            "Would make the rich pay their fair share while expanding the Working Families Tax Credit and the senior property-tax exemption [S4]",
+            "Calls for more community policing and says he led work to cut emergency response times [S4]",
+            "Co-sponsored Tacoma's 2026 ordinance barring civil immigration enforcement on city property [S6]",
+            "Endorsed by police and firefighter unions, the Association of Washington Business and Democratic officials [S1][S5]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Says the rich should pay their fair share while cutting taxes for regular people through tax credits and exemptions."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Calls for more community policing and touts crime and response-time reductions, alongside more mental-health and addiction treatment."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Tacoma councilmember since 2021 and current Deputy Mayor, against a first-time candidate."
+            },
+            "immigration": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S6"
+              ],
+              "basis": "Co-sponsored Tacoma's ordinance restricting civil immigration enforcement on city property and says 'we need to fight back.'"
+            },
+            "healthcare": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S4"
+              ],
+              "basis": "Repeatedly pledges to champion universal healthcare for all."
+            },
+            "social": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Pledges to always vote to protect the right to choose and access to reproductive healthcare."
+            }
+          }
+        },
+        {
+          "slug": "patrick-stickney",
+          "summary": "Lawyer and senior policy advisor at the state Office of Equity, running on housing, worker and civil-rights protections, and a prevention-first approach to public safety.",
+          "highlights": [
+            "Calls for co-response models, youth restorative justice and treatment to address root causes of crime [S4]",
+            "Would protect Apple Health and 'work toward real universal healthcare' [S4]",
+            "Former Department of Financial Institutions investor-protection examiner who would strengthen consumer protections [S1][S4]",
+            "Endorsed by the 29th LD and Pierce County Democrats, the Washington State Labor Council and Rep. Sharlett Mena [S1][S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Root causes, early intervention, co-response and restorative justice, with no enforcement planks."
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Would combat climate-protection rollbacks and support a just transition to clean energy."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "No elected office beyond precinct committee officer, but a state-agency policy professional, running against the Deputy Mayor."
+            },
+            "immigration": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S4"
+              ],
+              "basis": "Supports resources and protections for immigrants and refugees and opposes federal overreach, in general terms."
+            },
+            "healthcare": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Would protect Apple Health and 'work toward' universal healthcare."
+            },
+            "tech": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Would protect the data privacy of Apple Health users."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "pierce-legislative-district-29-state-senator",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-legislative-district-29-state-senator/"
+      ],
+      "office_does": "The State Senator is the 29th District's single member of the Washington Senate, voting on state law and budgets and confirming gubernatorial appointments.",
+      "race_blurb": "An open seat after Sen. Steve Conway's retirement, contested by two Democrats: two-term Rep. Sharlett Mena and first-time candidate David Anderson, a Sumner gym owner. They split on the millionaires' tax, spending and data centers.",
+      "candidates": [
+        {
+          "slug": "sharlett-mena",
+          "summary": "Two-term State Representative and chair of the House State Government & Tribal Relations Committee, running on the millionaires' tax, rent stabilization, utility assistance and voting rights.",
+          "highlights": [
+            "Voted for ESSB 6346 (2026 tax on income over $1 million) and the 2025 capital gains, services and B&O revenue bills [S13][S16][S17][S18]",
+            "Voted for EHB 1217 rent limits and campaigns on capping rent increases [S4][S19]",
+            "Says she sponsored the Immigrant Workers' Protection Act and the 2026 statewide utility-bill assistance program [S7][S9]",
+            "Voted for ESHB 1296 (2025) and ESSB 5599 (2023), and against Initiative 2113 on police pursuits [S14][S15][S21]",
+            "Endorsed by the 29th LD Democrats, Washington State Labor Council, Planned Parenthood Alliance Advocates and Fuse Washington [S1][S10][S25]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S4",
+                "S13",
+                "S16",
+                "S17",
+                "S18"
+              ],
+              "basis": "Voted for ESSB 6346 and the 2025 capital gains, services and B&O revenue bills, and campaigns on the millionaires' tax and a fairer tax structure."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S5"
+              ],
+              "basis": "Backs budgets funding food assistance, K-12, childcare and more resources for high-need school districts; no spending-restraint statements."
+            },
+            "housing": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S4",
+                "S19",
+                "S20"
+              ],
+              "basis": "Voted for and campaigns on EHB 1217 rent limits; also voted for E2SHB 1110 middle housing, a supply measure."
+            },
+            "safety": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S21"
+              ],
+              "basis": "Voted against Initiative 2113, which loosened limits on police vehicular pursuits; no platform statement on policing."
+            },
+            "climate": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S6",
+                "S7"
+              ],
+              "basis": "Leads climate initiatives at Ecology, opposes restarting Centralia coal, and voted for a transmission authority to speed clean-energy build-out."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S22"
+              ],
+              "basis": "House member since 2023 and a committee chair, against a first-time candidate; a shorter tenure than a long-serving incumbent."
+            },
+            "local-control": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S20"
+              ],
+              "basis": "Voted for E2SHB 1110, the state mandate requiring cities to allow middle housing in single-family zones."
+            },
+            "immigration": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S8",
+                "S9"
+              ],
+              "basis": "Sponsored the Immigrant Workers' Protection Act, lists the National Guard deployment ban, and calls federal enforcement practices unconstitutional."
+            },
+            "social": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S5",
+                "S10",
+                "S15"
+              ],
+              "basis": "Voted for ESSB 5599, says she opposed restricting LGBTQ+ students including in school athletics, and is a former Planned Parenthood Votes PAC board member."
+            },
+            "parental-rights": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S5",
+                "S14"
+              ],
+              "basis": "Voted for ESHB 1296's amendments to the I-2081 parental-rights list and says she advocated for inclusive schools in parental-rights debates."
+            },
+            "tech": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S6",
+                "S7"
+              ],
+              "basis": "Says she voted for data-center guardrails (HB 2515) and to end data-center refurbishment tax breaks, and wants data centers to limit ratepayer and water impacts."
+            }
+          }
+        },
+        {
+          "slug": "david-anderson",
+          "summary": "First-time candidate and owner of a Sumner ninja-training gym, running on budget restraint, police and mental-health response changes, and blocking new data centers.",
+          "highlights": [
+            "Says Olympia has a spending problem and calls budget management his primary focus [S1][S6]",
+            "Says the millionaires' tax violates the state constitution, while proposing higher property tax on homes over $1 million [S3][S5]",
+            "Would send social workers rather than police to mental-health calls and wants police focused on theft [S1][S3]",
+            "Says no data center will be built in Washington if he is elected [S5]",
+            "Reports $0 raised and no endorsements [S1][S7]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S5"
+              ],
+              "basis": "Opposes the millionaires' tax as unconstitutional but says he is for taxing the rich and would raise property tax on $1M+ homes while capping it for others."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3",
+                "S6"
+              ],
+              "basis": "Repeated statements that the state has a spending problem; pledges to balance the budget and stop 'out-of-control spending.'"
+            },
+            "safety": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Social workers for mental-health calls and treatment over prison, but also fewer legal limits on police for theft and squatting."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "No elected experience; says 'I am not a politician' and is running against a sitting legislator."
+            },
+            "social": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S4",
+                "S5"
+              ],
+              "basis": "Explicitly backs teaching acceptance of LGBTQ+ youth, more protections for vulnerable communities, and bodily autonomy for women."
+            },
+            "tech": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S5"
+              ],
+              "basis": "Pledges that no data center will be built in Washington if he is elected."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "pierce-pierce-county-auditor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-pierce-county-auditor/"
+      ],
+      "office_does": "The Pierce County Auditor is the nonpartisan official who runs county elections and handles document recording, licensing, marriage licenses and passport acceptance.",
+      "race_blurb": "One-term incumbent Linda Farmer, a former Lakewood councilmember, faces Damon Townsend, a former Pierce County elections supervisor and Cascade Party board member. The race turns on election-administration credentials, office performance measures and party ties.",
+      "candidates": [
+        {
+          "slug": "linda-farmer",
+          "summary": "Pierce County Auditor since her 2022 election, previously a Lakewood councilmember and communications executive, running on election security, voter access and customer service.",
+          "highlights": [
+            "Says her first term added more ballot drop boxes, two new vote centers and expanded voter outreach [S6]",
+            "Earned the CERA elections-administration credential in 2025 and co-chairs the VoteWA executive steering committee [S2]",
+            "Runs on easy-to-navigate service for car tabs, passports, recording and marriage licenses [S3][S6]",
+            "Endorsed by 25 other Washington county auditors, County Executive Ryan Mello and Pierce County Democrats [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3",
+                "S6"
+              ],
+              "basis": "One-term incumbent with prior city council and charter review service who runs on her first-term record and 'two decades of public service and executive management experience'."
+            }
+          }
+        },
+        {
+          "slug": "damon-townsend",
+          "summary": "Former Pierce County Elections Supervisor (2014-2019) and telecommunications operations manager, running on modernized systems, public performance dashboards and low-cost service.",
+          "highlights": [
+            "Pierce County Elections Supervisor 2014-2019 and interim elections manager in Clallam and Cowlitz counties in 2020 [S1]",
+            "Says he helped build the county's modern tabulation system and ballot-tracking procedures still in use [S7]",
+            "Proposes public dashboards on processing times, signature acceptance and licensing waits, and process-driven cost cuts [S1]",
+            "Cascade Party board member; started a Peninsula County exploratory committee in 2026 [S1]",
+            "Endorsed by Mainstream Republicans of Washington, the Tacoma-Pierce County REALTORS, IAFF Local 31 and AFSCME Council 2/Local 120 [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S7"
+              ],
+              "basis": "Proposes performance dashboards, open data and process-driven cost reduction, and pledges service 'at the lowest burden to taxpayers' with 'fiscal responsibility'; scoped to the office's own operations."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S4",
+                "S7"
+              ],
+              "basis": "Challenger who has never held elected office and says office should not be about 'political ambition', though he cites five years running the county's elections and statewide election-system work."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "pierce-pierce-county-council-district-1-county-councilmember",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-pierce-county-council-district-1-county-councilmember/"
+      ],
+      "office_does": "The District 1 councilmember is one of seven Pierce County Council members who adopt the county budget, ordinances, taxes and land-use rules for southeast Pierce County, including Bonney Lake, Buckley, Orting, Graham and South Hill.",
+      "race_blurb": "An open seat between Republican Jerome O'Leary, a commercial real-estate broker and Planning Commission chair who led the primary with 53.5%, and Democrat Kelsey Barrans, a college student-services director who chaired the Charter Review Commission and took 21.0%. Barrans states positions on taxes, housing and rural transit; O'Leary runs on stewardship of taxpayer money without specific proposals.",
+      "candidates": [
+        {
+          "slug": "jerome-o-leary",
+          "summary": "Commercial real-estate broker, family Christmas-tree farmer and Pierce County Planning Commission chair running on business-minded, nonpartisan stewardship of taxpayer money.",
+          "highlights": [
+            "More than 30 years in commercial real estate, construction and business; Master Builders board member [S4][S8]",
+            "Planning Commission appointee (confirmed 2025) and elected District 1 member of the 2025-2026 Charter Review Commission [S2][S3]",
+            "Names housing costs, infrastructure, public safety and homelessness as challenges and promises 'efficient, accountable' government, without specific proposals [S8]",
+            "Endorsed by the county Republican Party, deputy sheriffs' guild, Master Builders, realtors and Farm Bureau PAC [S5]",
+            "Led the August primary with 53.5% [S7]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S4",
+                "S8"
+              ],
+              "basis": "Says government should serve people 'not the bureaucracy' and be 'efficient, accountable', pledging stewardship of taxpayer dollars, without specific cuts."
+            },
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3",
+                "S4",
+                "S8"
+              ],
+              "basis": "Says he is 'not running to become a career politician', but his profile is institutional: Planning Commission chair, elected Charter Review commissioner and several county advisory boards."
+            }
+          }
+        },
+        {
+          "slug": "kelsey-barrans",
+          "summary": "Social worker, Green River College student-services director and Charter Review Commission chair running on affordable housing, access to care and rural infrastructure and transit.",
+          "highlights": [
+            "Chaired the 21-member Pierce County Charter Review Commission [S3][S5]",
+            "Would prioritize affordable housing, access to care and rural infrastructure [S10]",
+            "Supports progressive taxes and higher developer impact fees [S4]",
+            "Would bring bus service to Orting, Buckley and Graham and add road capacity on rural connectors [S4][S6]",
+            "Endorsed by Pierce County Democrats, the Central Labor Council, WEA and the Environmental Coalition of Pierce County [S7]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Answered yes to progressive taxes as wealth increases and to raising developer impact fees in a signed Democratic endorsement questionnaire."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S6",
+                "S10"
+              ],
+              "basis": "Wants more infrastructure funding for unincorporated areas, new rural bus service, and more funding for rural outreach and unhoused students."
+            },
+            "housing": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S6",
+                "S10"
+              ],
+              "basis": "Supports robust investment in public or subsidized housing and rent subsidies and lists affordable housing as a top priority, alongside density and incentives for additional units."
+            },
+            "safety": {
+              "score": 1,
+              "confidence": "low",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Frames safety around structural oversight of the sheriff and proposes rural mobile outreach for homelessness; no stated position on enforcement or staffing."
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Supports local investments to address climate change and lists community-partnered climate action among her values."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S5"
+              ],
+              "basis": "First council run; her only office is the Charter Review Commission, and she argues for more new candidates bringing new perspectives."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "pierce-pierce-county-council-district-5-county-councilmember",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-pierce-county-council-district-5-county-councilmember/"
+      ],
+      "office_does": "The District 5 councilmember is one of seven Pierce County Council members who adopt the county budget, ordinances, taxes and land-use rules for an area including Fife, the Port of Tacoma, Parkland and parts of Spanaway and Tacoma.",
+      "race_blurb": "Incumbent Democrat Bryan Yambe, appointed in 2025 after eleven years on the Fife City Council, faces Republican Bettina Gese, a Puyallup Tribal member and small-business owner; Yambe took 61.5% in the primary. The race turns on Yambe's votes for the county's public-safety sales tax and budget versus Gese's call to cut taxes and spending.",
+      "candidates": [
+        {
+          "slug": "bryan-yambe",
+          "summary": "Appointed councilmember since 2025 and former Fife deputy mayor, running on affordable housing, public safety with crisis response, food security and transportation investment.",
+          "highlights": [
+            "Voted for the 0.1% criminal-justice sales tax (passed 5-2) and the 2026-2027 budget (passed 4-3) [S7][S8]",
+            "Says his first year helped secure $12.2 million creating or preserving 646 affordable homes [S3][S12]",
+            "Voted for the cottage-housing ordinance expanding housing options [S9]",
+            "Pairs first-responder funding with crisis response and youth intervention [S3][S4]",
+            "Endorsed by Gov. Bob Ferguson, the Central Labor Council and Washington Conservation Action [S5]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S7",
+                "S12"
+              ],
+              "basis": "Voted for the council-imposed 0.1% criminal-justice sales tax and campaigns on it as the 'Justice Fund'; a flat sales tax, and he also promotes senior and low-income property-tax relief."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S4",
+                "S8",
+                "S12"
+              ],
+              "basis": "Voted for the 2026-2027 budget and campaigns on expanded housing, childcare, behavioral-health, food and transit investment."
+            },
+            "housing": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S4",
+                "S9",
+                "S12"
+              ],
+              "basis": "Leads with public affordable-housing funding, rapid rehousing and homebuyer programs, alongside permit streamlining and a yes vote on cottage housing."
+            },
+            "safety": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S4",
+                "S7",
+                "S12"
+              ],
+              "basis": "Leads with law enforcement, fire and EMS investment and voted for the tax funding deputy hiring, while emphasizing crisis response, youth intervention and a 'fairer justice system'."
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Platform calls for 'the urgent local action required to mitigate climate change'."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S6",
+                "S12"
+              ],
+              "basis": "Sitting councilmember with eleven prior years on the Fife City Council and several regional board seats, running on what he has 'delivered'."
+            }
+          }
+        },
+        {
+          "slug": "bettina-gese",
+          "summary": "Puyallup Tribal member, former geoduck diver, real-estate agent and small-business owner running on lower taxes, spending restraint, infrastructure and public safety.",
+          "highlights": [
+            "Pledges to 'push back on unnecessary tax increases': 'we have a spending problem' [S3]",
+            "Would prioritize neglected roads and bridges, including the Canyon Road project and the War Memorial and Milroy bridges [S3][S7]",
+            "Would streamline permitting while protecting single-family neighborhoods from denser development [S3]",
+            "Frames public safety around accountability for repeat crime and recovery pathways to 'end the revolving door' [S3][S7]",
+            "Endorsed by the Puyallup Tribe of Indians [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Runs under a 'Lower Taxes' plank pledging to resist unnecessary tax increases and protect families from rising costs."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3",
+                "S7"
+              ],
+              "basis": "Says 'we don't have a money problem \u2014 we have a spending problem', would cut wasteful spending while protecting essential programs, and pledges transparent spending."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Would cut costs, streamline permitting and increase supply 'where it makes sense', while opposing denser development in single-family neighborhoods."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S7"
+              ],
+              "basis": "Emphasizes accountability for repeat crime and says 'enabling destructive behavior under the guise of compassion helps no one', while backing recovery pathways."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S4",
+                "S7"
+              ],
+              "basis": "First-time candidate who presents herself as 'not a career politician' against a sitting incumbent."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "pierce-pierce-county-council-district-7-county-councilmember",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-pierce-county-council-district-7-county-councilmember/"
+      ],
+      "office_does": "The District 7 councilmember is one of seven Pierce County Council members who adopt the county budget, ordinances, taxes and land-use rules for Gig Harbor, Fox Island, the Key Peninsula and parts of north and west Tacoma.",
+      "race_blurb": "An open seat between Democrat Brenda Lykins, a nurse practitioner and former Gig Harbor councilmember who took 56.9% in the primary, and Republican Mike Solan, a Seattle police officer and former police-guild president who took 29.2%. Both call for more deputies; they split over the county's 0.1% public-safety sales tax, spending, sheriff oversight and land-use regulation.",
+      "candidates": [
+        {
+          "slug": "brenda-lykins",
+          "summary": "Neonatal nurse practitioner, former Gig Harbor councilmember and Charter Review commissioner running on public safety, road and broadband investment, urban-focused housing and environmental protection.",
+          "highlights": [
+            "Supports the 0.1% public safety sales tax to fund deputy 'recruitment, retention, and training' [S9]",
+            "Pairs sheriff staffing with mental-health responders and pushed for a sheriff-oversight ombuds charter amendment [S6][S14]",
+            "Would prioritize public safety, broadband, road maintenance and affordable housing while protecting the environment [S15]",
+            "Backs the Comprehensive Plan's shrinking of the rural growth area and urban, infrastructure-served housing [S6][S9]",
+            "Led the August primary with 56.9% [S13]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S9",
+                "S14"
+              ],
+              "basis": "Supports the council-imposed 0.1% public safety sales tax as a stable, dedicated revenue source, in two separate interviews; a flat sales tax, not progressive revenue."
+            },
+            "housing": {
+              "score": 0,
+              "confidence": "low",
+              "citations": [
+                "S6",
+                "S9",
+                "S15"
+              ],
+              "basis": "Names affordable housing as a priority but her stated tools are growth management (urban-focused growth, a smaller rural growth area, cottage housing) rather than deregulation or public housing and tenant protections."
+            },
+            "safety": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S6",
+                "S9",
+                "S14",
+                "S15"
+              ],
+              "basis": "Backs more deputies and the sales tax for 'a stronger law enforcement presence' and says she voted to increase Gig Harbor police staffing, while also pushing mental-health responders, violence prevention and a sheriff-oversight ombuds."
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S6",
+                "S9",
+                "S15"
+              ],
+              "basis": "Prioritizes shoreline, forest and habitat protection and calls it an investment in climate resilience."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S5",
+                "S11",
+                "S15"
+              ],
+              "basis": "Former Gig Harbor councilmember and mayor pro tem now on the Charter Review Commission, running for an open seat."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S9",
+                "S15"
+              ],
+              "basis": "Her statement says she will 'prioritize investing in public safety, expanding broadband access' and expand 'job training and workforce development programs' [S15]. She backs the new 0.1% sales tax to fund deputy 'recruitment, retention, and training' and says District 7 needs more Peninsula Detachment staffing [S9]. That is the invest-and-expand pole. Her one restraint line, spending taxpayer dollars 'responsibly and effectively' [S6], is boilerplate. Solan is at -2 on this axis, so it is the race's clearest fiscal contrast.",
+              "added_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "mike-solan",
+          "summary": "27-year Seattle police officer and former Seattle Police Officers Guild president running on deputy staffing, fiscal accountability and less land-use regulation.",
+          "highlights": [
+            "Would recruit and retain deputies and negotiate a new deputies' contract from 2027 [S2][S5]",
+            "Opposes the 0.1% public safety sales tax as written and passed without a public vote [S5]",
+            "Says county government 'spends too much money and has not budgeted within its means' and promises 'fiscal accountability' [S5][S11]",
+            "Opposes the sheriff-oversight ombuds as 'activist led' and an appointed sheriff [S10]",
+            "Endorsed by the Pierce County Deputy Sheriffs' Independent Guild, the Tacoma Police Union and the county Republican Party [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S5",
+                "S11"
+              ],
+              "basis": "Opposes the public safety sales tax as passed without a public vote and calls for action on 'double-layered taxes', but says he would have backed a tax limited to law enforcement."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S5",
+                "S10",
+                "S11"
+              ],
+              "basis": "Repeatedly says the county spends too much and must live within its budget; pledges program reviews, an 'emergency audit', mandates-first funding and 'fiscal accountability'."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S5",
+                "S11"
+              ],
+              "basis": "Says county regulation stifles growth and would cut red tape for a predictable land-use process and 'reasonable growth standards', while voicing support for parks and open-space conservation."
+            },
+            "safety": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S5",
+                "S10",
+                "S11"
+              ],
+              "basis": "Centers his campaign on deputy recruitment, staffing and retention and opposes the sheriff-oversight ombuds; stated positions cover staffing and oversight only."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S5",
+                "S7",
+                "S11"
+              ],
+              "basis": "First run for office, saying he is 'not a career politician', though he brings 27 years in policing and six as guild president."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "pierce-pierce-county-district-court-no-7-judge-position-no-7",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-pierce-county-district-court-no-7-judge-position-no-7/"
+      ],
+      "office_does": "A Pierce County District Court judge hears misdemeanor and gross misdemeanor cases, traffic infractions, protection orders and civil claims up to $100,000 for a four-year term; the discretion is mostly in pretrial release, sentencing and therapeutic-court supervision.",
+      "race_blurb": "An open seat. Former Olympia Municipal Court judge Pam Nogueira led the August primary by 738 votes over 31-year Pierce County deputy prosecutor Mike Sommerfeld, who holds the Tacoma-Pierce County Bar's Exceptionally Well Qualified rating and has raised far more money.",
+      "candidates": [
+        {
+          "slug": "pam-nogueira",
+          "summary": "Attorney and judge pro tem who served as an Olympia Municipal Court judge (2023 to February 2026) and a Thurston County Superior Court commissioner (2021 to 2023). Her earlier practice included public defense and drug court defense in Grays Harbor County.",
+          "highlights": [
+            "Olympia Municipal Court judge 2023 to February 2026, re-elected unopposed in November 2025; Thurston County Superior Court commissioner 2021 to 2023 [S2][S12]",
+            "Contracted public defense and drug court defense attorney in Grays Harbor County [S2]",
+            "Supports diversion, treatment courts and community-based alternatives where legally authorized, weighing victim and community safety [S5]",
+            "DMCJA Diversity co-chair, FAIR Court Project advisory board and Therapeutic Courts committee member [S2][S5]",
+            "Placed first in the primary with 36.4%; not on TPCBA's 2026 ratings list, which rates only candidates who requested an interview [S11][S7]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S12"
+              ],
+              "basis": "About five years as a full-time judicial officer (municipal judge, superior court commissioner) plus pro tem service, confirmed in part by her 2025 election; runs on a bench record, though not as an incumbent of this court."
+            },
+            "safety": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S5"
+              ],
+              "basis": "Formation in public defense and drug court defense; states support for diversion, treatment courts and community-based alternatives, while saying restorative approaches are not right for every case."
+            },
+            "judicial": {
+              "score": 1,
+              "confidence": "low",
+              "citations": [
+                "S4",
+                "S5",
+                "S2"
+              ],
+              "basis": "Says the judiciary 'must reflect the values of the community it serves'; judicial-association record on the FAIR Court Project and diversity work; supports data-driven review of outcome disparities.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "mike-sommerfeld",
+          "summary": "Pierce County deputy prosecuting attorney since 1995, about 15 years in criminal prosecution and since 2010 legal advisor to Pierce County District Court and Juvenile Court. He has served as a Thurston County District Court judge pro tem.",
+          "highlights": [
+            "Pierce County deputy prosecutor since 1995; prosecuted DUI and domestic violence through murder and child sexual abuse cases [S3][S4]",
+            "Legal advisor to Pierce County District Court judges and staff since 2010; Thurston County District Court pro tem judge [S2][S3]",
+            "Says he will 'hold violent offenders accountable while expanding therapeutic and alternative programs' [S4]",
+            "Rated Exceptionally Well Qualified by the Tacoma-Pierce County Bar Association [S5]",
+            "Endorsements listed include the District Court presiding judge, the county prosecutor and executive, police and prosecutor groups, and party organizations on both sides [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Runs on 31 years of institutional service in the county prosecutor's office, including advising this court, with pro tem bench experience; an insider record rather than an outsider case."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S4"
+              ],
+              "basis": "Formation is criminal prosecution; pairs 'hold violent offenders accountable' with support for therapeutic and alternative programs, a mixed stance anchored in a prosecutorial career."
+            },
+            "judicial": {
+              "score": 1,
+              "confidence": "low",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Questionnaire supports language access, representative juries and fee relief and says judges should be aware of historical inequities; a single questionnaire to an endorsing club, so low confidence."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "pierce-pierce-county-district-court-no-8-judge-position-no-8",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-pierce-county-district-court-no-8-judge-position-no-8/"
+      ],
+      "office_does": "A Pierce County District Court judge hears misdemeanor and gross misdemeanor cases, traffic infractions, protection orders and civil claims up to $100,000 for a four-year term; the discretion is mostly in pretrial release, sentencing and therapeutic-court supervision.",
+      "race_blurb": "Sven Nelson's campaign says Judge Jeanette Lineberry is retiring from Position 8; she is not on the ballot and endorses Nelson, a 30-year Pierce County deputy prosecutor and judge pro tem. His opponent, James Armstrong, is a civil-practice attorney and Marine veteran who was presiding judge of Bremerton Municipal Court in 2025. Only two filed, so there was no primary.",
+      "candidates": [
+        {
+          "slug": "sven-nelson",
+          "summary": "Pierce County deputy prosecuting attorney since 1996, former team chief of the Special Assault, Elder Abuse and Property Crimes units, and a judge pro tempore since 2019.",
+          "highlights": [
+            "Deputy prosecutor since 1996; team chief of the Special Assault, Elder Abuse and Property Crimes units [S1][S3]",
+            "Judge pro tempore since 2019, presiding over jury trials, sentencings and community court [S1][S3]",
+            "Says 'accountability and rehabilitation are not opposites' and that restorative justice 'should never minimize accountability' [S3]",
+            "Rated Exceptionally Well Qualified by the Tacoma-Pierce County Bar Association [S5]",
+            "Endorsed by Position 8 Judge Lineberry, whom his campaign describes as retiring; campaign lists most Pierce County judges, police and firefighter unions, and both county parties [S1][S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Runs on about 30 years in the county prosecutor's office and seven years pro tem, with the endorsement of Position 8 Judge Lineberry, whom his campaign describes as retiring; an institutional record, though no full-time bench service."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Formation is three decades of prosecution focused on victims of sexual assault and elder abuse; open to treatment and community-court options but frames them within accountability and cautions against restorative approaches that minimize it."
+            }
+          }
+        },
+        {
+          "slug": "james-armstrong",
+          "summary": "Kent/Auburn workers' compensation and disability attorney, Marine Corps veteran and judge pro tem who served as presiding judge of Bremerton Municipal Court in 2025.",
+          "highlights": [
+            "Presiding judge of Bremerton Municipal Court in 2025; about four years as a judge pro tem [S2][S4]",
+            "Civil practice in workers' compensation, Social Security disability and personal injury since 2000 [S4][S5]",
+            "Emphasizes treatment-based rehabilitation (substance use, mental health, DV-MRT), restorative justice and concern about legal financial obligations [S2]",
+            "Rated Exceptionally Well Qualified by JAJEC; not on TPCBA's 2026 ratings list, which rates only candidates who requested an interview [S6][S7]",
+            "No campaign website found; statement lists no endorsements [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2",
+                "S4"
+              ],
+              "basis": "Runs on 26 years of practice, a year (January to December 2025) as presiding judge of the single-judge Bremerton Municipal Court, which his questionnaire describes as full-time (the WSBA judicial-service record lists municipal-court service from 1/27/2025 to 12/31/2025), and pro tem service; a record-based pitch rather than an outsider case."
+            },
+            "safety": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S4"
+              ],
+              "basis": "Civil rather than prosecutorial formation; makes treatment-based rehabilitation and restorative justice his stated priority and criticizes legal financial obligations, while keeping accountability in the frame."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "pierce-pierce-county-prosecuting-attorney",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-pierce-county-prosecuting-attorney/"
+      ],
+      "office_does": "The Pierce County Prosecuting Attorney decides which crimes to charge and prosecutes them, and serves as the county's civil legal counsel.",
+      "race_blurb": "With Prosecutor Mary Robnett retiring, her Chief Criminal Deputy Coreen Schnepf faces former Superior Court Judge Bryan Chushcoff. Both run on enforcement; Chushcoff says the office's management is failing on charging and backlog, while Schnepf runs on her trial record and continuity.",
+      "candidates": [
+        {
+          "slug": "coreen-schnepf",
+          "summary": "Chief Criminal Deputy in the Pierce County Prosecutor's Office and a 20-year trial prosecutor, endorsed by outgoing Prosecutor Mary Robnett.",
+          "highlights": [
+            "Chief Criminal Deputy since 2024, leading a 180-person criminal division; earlier led the Domestic Violence and Human Trafficking Unit [S2][S8]",
+            "Says she 'has no patience for crime of any kind' and will hold accountable those who make life 'challenging, expensive, and unsafe' [S8]",
+            "Would add focus on stolen cars and organized retail theft and build digital-evidence capacity [S3]",
+            "Endorsed by Robnett, Legislative District Democrats, Mainstream Republicans, WEA and three IAFF locals [S4][S6]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3",
+                "S8"
+              ],
+              "basis": "Repeatedly runs on convictions for violent crime, more focus on car and retail theft and 'no patience for crime of any kind'; states no position on diversion, bail, policing levels or treatment, and an endorser describes a compassionate approach."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S5",
+                "S8"
+              ],
+              "basis": "Twenty-year career prosecutor and current chief criminal deputy, running as the incumbent-backed successor; first run for office."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Pledges to 'show you what the office delivers for every dollar' and hold town halls; a single accountability line with no call for new spending."
+            }
+          }
+        },
+        {
+          "slug": "bryan-chushcoff",
+          "summary": "Former Pierce County Superior Court judge (1997-2025, per his campaign), running on fixing the office's charging rates, felony filings and case backlog.",
+          "highlights": [
+            "Says he served seven terms as a Superior Court judge, including two terms as presiding judge over 100 employees and a $14 million budget [S2][S8]",
+            "Cites the decline-to-charge rate rising from 8% of bookings (2019) to 15.3% (2024) and a growing felony backlog [S3]",
+            "Says delays shift jail, medical and legal costs to taxpayers and pledges staff accountability, reorganization and training [S8]",
+            "Endorsed by the Pierce County Republican Party, the Tacoma Police Union and the deputy sheriffs' guild [S4][S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S8"
+              ],
+              "basis": "Criticizes the rising decline-to-charge rate, falling felony filings and a communication gap with law enforcement, framed as management failures; no stated position on diversion, bail or sentencing."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S8"
+              ],
+              "basis": "Campaign and statement cite 28 years (1997-2025) on the Superior Court plus presiding-judge and statewide court leadership, presented as proven leadership (not independently verified)."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3",
+                "S8"
+              ],
+              "basis": "Calls the office's core failure management, wants performance data to drive strategy, and says backlog costs fall on taxpayers; the one counterweight is a call for more funding to retain experienced staff."
+            }
+          }
         }
       ]
     }

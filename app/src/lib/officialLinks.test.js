@@ -88,8 +88,8 @@ test('every statewide contest and measure in the shipped general gets a paged SO
         n++
       }
   for (const m of general.measures) {
-    // Spokane's measures cite VoteWA's unpaged online guide (countyGuides).
-    if (m.owner === 'spokane') continue
+    // Spokane's and Pierce's measures cite VoteWA's unpaged online guide (countyGuides).
+    if (m.owner === 'spokane' || m.owner === 'pierce') continue
     assert.match(pamphletLink(m.pamphlet_pages, m.owner, general.election.id), /#page=\d+$/, m.slug)
     n++
   }
@@ -128,7 +128,7 @@ test('Spokane general records, which cite VoteWA\'s unpaged online guide, link t
   assert.equal(pamphletLink([], 'spokane', general.election.id), GUIDE)
   assert.equal(pamphletLink(undefined, 'spokane', general.election.id), GUIDE)
   assert.equal(pamphletLink([{ edition: 'unknown', page: 3 }], 'spokane', general.election.id), GUIDE)
-  // Only Spokane has a county guide; the primary keeps its PDF and no guide.
+  // Snohomish has no county guide; the primary keeps its PDF and no guide.
   assert.equal(pamphletLink([], 'snohomish', general.election.id), null)
   assert.equal(pamphletLink([], 'spokane', primary.election.id), null)
   assert.equal(
@@ -177,6 +177,34 @@ test('the shipped general links Spokane County Elections directly', () => {
       assert.equal(pamphletLink(p, 'spokane', general.election.id), 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=32', item.slug)
     }
   }
+})
+
+test('Pierce general records link SOS Edition 09 at the cited page, else the Pierce VoteWA guide', () => {
+  const GUIDE = 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=27'
+  const ED09 = 'https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2009%20-%20Pierce.pdf'
+  assert.equal(pamphletLink([{ edition: 'voters-pamphlet-edition-09-pierce', page: 24 }], 'pierce', general.election.id), `${ED09}#page=24`)
+  assert.equal(pamphletLink([], 'pierce', general.election.id), GUIDE)
+  assert.deepEqual(countyElectionsOffice(general, { id: 'pierce', name: 'Pierce County' }), {
+    name: 'Pierce County Elections',
+    url: 'https://www.piercecountywa.gov/elections',
+    direct: true,
+  })
+  let paged = 0
+  for (const item of [...general.contests, ...general.measures]) {
+    if (item.owner !== 'pierce') continue
+    const pages = item.candidates ? item.candidates.map((c) => c.pamphlet_pages) : [item.pamphlet_pages]
+    for (const p of pages) {
+      const link = pamphletLink(p, 'pierce', general.election.id)
+      if (p?.length) {
+        assert.match(link, /Edition%2009%20-%20Pierce\.pdf#page=\d+$/, item.slug)
+        paged++
+      } else {
+        assert.equal(link, GUIDE, item.slug)
+      }
+    }
+  }
+  // CD 6 and 10 and the legislative seats Pierce researched itself.
+  assert.ok(paged >= 30, `${paged} Pierce paged links`)
 })
 
 test('the shipped general links Snohomish County Elections directly', () => {
