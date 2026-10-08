@@ -13,6 +13,7 @@ derived_from:
   - data/washington-state/elections/2026-11-03-general/counties/pend-oreille/raw/news/miner-5565.html.url
   - data/washington-state/elections/2026-11-03-general/counties/pend-oreille/raw/pend-oreille/votewa-2026-08-04-primary-results.json.url
   - data/washington-state/elections/2026-11-03-general/counties/pend-oreille/raw/pend-oreille/pdc-pend-oreille-2026.json.url
+  - data/washington-state/elections/2026-11-03-general/counties/pend-oreille/raw/news/miner-5745.html.url
 sources:
   - id: S1
     tier: 1
@@ -49,12 +50,19 @@ sources:
     url: 'https://data.wa.gov/resource/3h9x-7bvm.json?election_year=2026&jurisdiction_county=PEND%20OREILLE&$limit=200'
     pointer: counties/pend-oreille/raw/pend-oreille/pdc-pend-oreille-2026.json.url
     accessed: 2026-10-08
+  - id: S6
+    tier: 2
+    type: news
+    outlet: 'The Miner (Newport), "Longly resigns from Newport City Council" (2026-06-17)'
+    url: 'https://www.pendoreillerivervalley.com/article/5745,longly-resigns-from-newport-city-council'
+    pointer: counties/pend-oreille/raw/news/miner-5745.html.url
+    accessed: 2026-10-08
 ---
 
 ## Background
 
 - Nathan J Longly, of Newport, prefers the Republican Party. He is Chief Deputy Assessor and has worked more than 12 years in the Pend Oreille County Assessor's Office; he holds Washington accreditation for real property appraisal [S1].
-- He served five years on the Newport City Council and was a Republican precinct committee officer [S1]. He filed for assessor in May 2026; Assessor Jim McCroskey was the only county incumbent who did not file [S3].
+- His statement lists five years as a Newport city councilman and service as a Republican precinct committee officer [S1]. The Miner reports he was elected to council Position 5 in 2023, took office the next year and resigned on June 15, 2026, saying his family had been preparing to move away from the city [S6]. He filed for assessor in May 2026; Assessor Jim McCroskey was the only county incumbent who did not file [S3].
 - Received 3,157 votes (95.8%) unopposed in the August 2026 primary [S4]; mini PDC reporting [S5].
 
 ## Positions

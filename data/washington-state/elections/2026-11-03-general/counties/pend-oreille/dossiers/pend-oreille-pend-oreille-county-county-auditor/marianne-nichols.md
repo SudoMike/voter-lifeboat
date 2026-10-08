@@ -15,6 +15,7 @@ derived_from:
   - data/washington-state/elections/2026-11-03-general/counties/pend-oreille/raw/candidates/pend-oreille-pend-oreille-county-county-auditor/sr-2022-11-10-nichols-holds.html.url
   - data/washington-state/elections/2026-11-03-general/counties/pend-oreille/raw/pend-oreille/votewa-2026-08-04-primary-results.json.url
   - data/washington-state/elections/2026-11-03-general/counties/pend-oreille/raw/pend-oreille/pdc-pend-oreille-2026.json.url
+  - data/washington-state/elections/2026-11-03-general/counties/pend-oreille/raw/news/miner-5708.html.url
 sources:
   - id: S1
     tier: 1
@@ -65,6 +66,13 @@ sources:
     url: 'https://data.wa.gov/resource/3h9x-7bvm.json?election_year=2026&jurisdiction_county=PEND%20OREILLE&$limit=200'
     pointer: counties/pend-oreille/raw/pend-oreille/pdc-pend-oreille-2026.json.url
     accessed: 2026-10-08
+  - id: S8
+    tier: 2
+    type: news
+    outlet: 'The Miner (Newport), "Nichols named Auditor of the Year" (2026-06-10)'
+    url: 'https://www.pendoreillerivervalley.com/article/5708,nichols-named-auditor-of-the-year'
+    pointer: counties/pend-oreille/raw/news/miner-5708.html.url
+    accessed: 2026-10-08
 ---
 
 ## Background
@@ -77,6 +85,7 @@ sources:
 
 - In 2022 she said the county's ballot tabulators cannot be reached over the internet and that her office had found one ballot from a deceased voter in 2020, which it reported to the sheriff and the FBI [S4].
 - Says her office prepares the county's financial and accountability audits and has had successful audits every year [S4].
+- Named 2026 County Auditor of the Year by the Secretary of State's office [S8].
 
 ## Positions
 
