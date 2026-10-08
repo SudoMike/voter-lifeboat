@@ -1,0 +1,145 @@
+{
+  "contest_slug": "kitsap-legislative-district-23-state-representative-pos-2",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/kitsap/dossiers/kitsap-legislative-district-23-state-representative-pos-2/"],
+  "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering school funding, tax structure, housing rules, health funding, ferries and criminal-justice statutes.",
+  "race_blurb": "Democratic Rep. Greg Nance, in the House since 2023 and focused on ferries and Puget Sound, faces Republican Lance Byrd, an IT program manager who opposes any state income tax and wants to restore parental-rights and natural gas provisions. Nance led the primary about 58% to 30%.",
+  "candidates": [
+    {
+      "slug": "greg-nance",
+      "summary": "Bainbridge Island native in the House since 2023, a nonprofit founder and youth mental health advocate whose priorities are ferries, Puget Sound and cost of living.",
+      "highlights": [
+        "Cites $895 million for ferries and $42 million for West Sound Tech [S1]",
+        "Voted for the 2026 tax on income over $1 million, and for eight failed amendments to narrow it or cut other taxes [S11][S14][S15]",
+        "Defended the Climate Commitment Act; voted for the 2024 clean-energy transition bill [S7][S33]",
+        "Voted for I-2081 in 2024, then co-sponsored its 2025 rewrite, HB 1296 [S28][S30]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": 1,
+          "confidence": "high",
+          "citations": ["S11", "S22", "S24", "S14", "S15", "S26"],
+          "basis": "Voted for ESSB 6346 and 2025 B&O and capital gains/estate increases, but also for amendments to narrow the income tax, cut the sales tax, and for I-2111 in 2024."
+        },
+        "spending": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S5", "S1"],
+          "basis": "Campaigns on securing ferry, school, workforce and local health-care investments."
+        },
+        "housing": {
+          "score": 0,
+          "confidence": "medium",
+          "citations": ["S5", "S31"],
+          "basis": "Platform favors permit and zoning reform and private-sector incentives, while he voted for EHB 1217 rent-increase limits."
+        },
+        "safety": {
+          "score": 0,
+          "confidence": "medium",
+          "citations": ["S35", "S5"],
+          "basis": "Voted for I-2113 restoring police pursuits, and promotes expanding non-police mental-health response (Poulsbo Fire CARES)."
+        },
+        "climate": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S7", "S33"],
+          "basis": "Defended the Climate Commitment Act as making polluters pay and voted for ESHB 1589 on the clean-energy transition."
+        },
+        "experience": {
+          "score": -1,
+          "confidence": "high",
+          "citations": ["S1", "S4", "S2"],
+          "basis": "Incumbent since 2023 with committee leadership and a ferry and environment record; shorter tenure than a long-serving member."
+        },
+        "reform": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S6"],
+          "basis": "Says his campaign takes no corporate money."
+        },
+        "healthcare": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S5"],
+          "basis": "Health agenda is local capacity within the current system: urgent care, clinics, workforce training."
+        },
+        "social": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S5"],
+          "basis": "Supports a state constitutional amendment protecting the right to choose; no statements on gender or sports eligibility."
+        },
+        "parental-rights": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S30", "S29", "S28"],
+          "basis": "Co-sponsored and voted for HB 1296 narrowing I-2081, after voting for I-2081 itself in 2024."
+        }
+      }
+    },
+    {
+      "slug": "lance-byrd",
+      "summary": "Bremerton IT program manager and former restaurant cook running on no state income tax, budget restraint, natural gas access and parental rights; ran for school board in 2023 and State Senate in 2024.",
+      "highlights": [
+        "Opposes any state income tax and would tie budget growth to population and inflation [S2][S3]",
+        "Would restore natural gas protections and criticizes the Climate Commitment Act and CETA [S2]",
+        "Would restore parental-rights provisions narrowed by HB 1296 [S2]",
+        "Wants Growth Management Act reform with fewer state mandates [S3]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S2", "S3", "S5"],
+          "basis": "Repeatedly pledges to oppose any state income tax and stop new taxes; called for lowering the gas tax in 2024."
+        },
+        "spending": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S2", "S3", "S1"],
+          "basis": "Says the state has a spending problem and would cap budget growth at population plus inflation."
+        },
+        "housing": {
+          "score": -2,
+          "confidence": "medium",
+          "citations": ["S3", "S2"],
+          "basis": "Blames Growth Management Act mandates for limiting supply and wants deregulation to let communities build."
+        },
+        "safety": {
+          "score": -2,
+          "confidence": "medium",
+          "citations": ["S1", "S2", "S5"],
+          "basis": "Runs on supporting law enforcement and reducing crime; called for more officers and easing rules that hamper arrests."
+        },
+        "climate": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S2", "S3", "S5"],
+          "basis": "Says the CCA and CETA raise energy costs, would restore natural gas protections, and opposed ferry electrification."
+        },
+        "experience": {
+          "score": 2,
+          "confidence": "medium",
+          "citations": ["S1", "S2"],
+          "basis": "Has never held office and pitches himself as 'not a career politician' offering balance against one-party control."
+        },
+        "local-control": {
+          "score": -2,
+          "confidence": "medium",
+          "citations": ["S3", "S2"],
+          "basis": "Wants local communities to decide housing growth 'without one-size-fits-all Olympia rules' under a reformed GMA."
+        },
+        "parental-rights": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S2", "S3", "S6"],
+          "basis": "Calls parents the primary decision-makers and would restore I-2081 records access and notification rights removed by HB 1296."
+        }
+      }
+    }
+  ]
+}
