@@ -1,0 +1,1278 @@
+{
+  "county": "snohomish",
+  "script": "pipeline/build_snohomish_lite_data.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/snohomish/raw/votewa/candidate-list.csv.url"
+  ],
+  "coverage": "partial_county",
+  "notes": [
+    "Measures not curated yet for this election: app-measures.json is empty because no one has transcribed this county's local measures, not because the ballot has none.",
+    "Unresolvable district scopes (no queryable official boundary): DISTCRT. Contests/measures scoped to them are hidden rather than shown to the wrong voters."
+  ],
+  "contests": [
+    {
+      "slug": "snohomish-congressional-district-1-u-s-representative",
+      "owner": "snohomish",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 1",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "CONGDST",
+        "value": "1"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Snohomish County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "suzan-delbene",
+          "name": "Suzan DelBene",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "mary-silva",
+          "name": "Mary Silva",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "snohomish-congressional-district-2-u-s-representative",
+      "owner": "snohomish",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 2",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "CONGDST",
+        "value": "2"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Snohomish County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "rick-larsen",
+          "name": "Rick Larsen",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "edwin-h-feller",
+          "name": "Edwin H. Feller",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "snohomish-congressional-district-8-u-s-representative",
+      "owner": "snohomish",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 8",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "CONGDST",
+        "value": "8"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Snohomish County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "kim-schrier",
+          "name": "Kim Schrier",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "spencer-meline",
+          "name": "Spencer Meline",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "snohomish-legislative-district-1-state-representative-pos-1",
+      "owner": "snohomish",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 1",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "LEGDST",
+        "value": "1"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Snohomish County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "davina-duerr",
+          "name": "Davina Duerr",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "maggie-wang",
+          "name": "Maggie Wang",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "snohomish-legislative-district-1-state-representative-pos-2",
+      "owner": "snohomish",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 1",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "LEGDST",
+        "value": "1"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Snohomish County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "shelley-kloba",
+          "name": "Shelley Kloba",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "cliff-moon",
+          "name": "Cliff Moon",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "snohomish-legislative-district-10-state-representative-pos-1",
+      "owner": "snohomish",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 10",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "LEGDST",
+        "value": "10"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Snohomish County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "clyde-shavers",
+          "name": "Clyde Shavers",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "robert-chili-hicks",
+          "name": "Robert (Chili) Hicks",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "snohomish-legislative-district-10-state-representative-pos-2",
+      "owner": "snohomish",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 10",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "LEGDST",
+        "value": "10"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Snohomish County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "dave-paul",
+          "name": "Dave Paul",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "tim-hazelo",
+          "name": "Tim Hazelo",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "snohomish-legislative-district-12-state-representative-pos-1",
+      "owner": "snohomish",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 12",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "LEGDST",
+        "value": "12"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Snohomish County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "brian-burnett",
+          "name": "Brian Burnett",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "stacy-willoughby",
+          "name": "Stacy Willoughby",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "snohomish-legislative-district-12-state-representative-pos-2",
+      "owner": "snohomish",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 12",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "LEGDST",
+        "value": "12"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Snohomish County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "mike-steele",
+          "name": "Mike Steele",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "maggie-adams",
+          "name": "Maggie Adams",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "snohomish-legislative-district-21-state-senator",
+      "owner": "snohomish",
+      "category": "State",
+      "office": "State Senator",
+      "district": "Legislative District 21",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "LEGDST",
+        "value": "21"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Snohomish County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "marko-liias",
+          "name": "Marko Liias",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "riaz-khan",
+          "name": "Riaz Khan",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "snohomish-legislative-district-21-state-representative-pos-1",
+      "owner": "snohomish",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 21",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "LEGDST",
+        "value": "21"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Snohomish County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "strom-peterson",
+          "name": "Strom Peterson",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "jason-moon",
+          "name": "Jason Moon",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "snohomish-legislative-district-21-state-representative-pos-2",
+      "owner": "snohomish",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 21",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "LEGDST",
+        "value": "21"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Snohomish County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "lillian-ortiz-self",
+          "name": "Lillian Ortiz-Self",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "bruce-guthrie",
+          "name": "Bruce Guthrie",
+          "party": "Prefers Libertarian Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "snohomish-legislative-district-32-state-senator",
+      "owner": "snohomish",
+      "category": "State",
+      "office": "State Senator",
+      "district": "Legislative District 32",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "LEGDST",
+        "value": "32"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Snohomish County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "cindy-ryu",
+          "name": "Cindy Ryu",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "jesse-salomon",
+          "name": "Jesse Salomon",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "snohomish-legislative-district-32-state-representative-pos-1",
+      "owner": "snohomish",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 32",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "LEGDST",
+        "value": "32"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Snohomish County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "keith-scully",
+          "name": "Keith Scully",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "danica-noble",
+          "name": "Danica Noble",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "snohomish-legislative-district-32-state-representative-pos-2",
+      "owner": "snohomish",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 32",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "LEGDST",
+        "value": "32"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Snohomish County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "lauren-davis",
+          "name": "Lauren Davis",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "imraan-siddiqi",
+          "name": "Imraan Siddiqi",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "snohomish-legislative-district-38-state-senator",
+      "owner": "snohomish",
+      "category": "State",
+      "office": "State Senator",
+      "district": "Legislative District 38",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "LEGDST",
+        "value": "38"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Snohomish County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "june-robinson",
+          "name": "June Robinson",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "brad-bender",
+          "name": "Brad Bender",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "snohomish-legislative-district-38-state-representative-pos-1",
+      "owner": "snohomish",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 38",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "LEGDST",
+        "value": "38"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Snohomish County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "julio-cortes",
+          "name": "Julio Cortes",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "thomas-jeff-kelly",
+          "name": "Thomas (Jeff) Kelly",
+          "party": "Prefers Cascade Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "snohomish-legislative-district-38-state-representative-pos-2",
+      "owner": "snohomish",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 38",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "LEGDST",
+        "value": "38"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Snohomish County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "mary-fosse",
+          "name": "Mary Fosse",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "snohomish-legislative-district-39-state-representative-pos-1",
+      "owner": "snohomish",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 39",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "LEGDST",
+        "value": "39"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Snohomish County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "kathryn-lewandowsky",
+          "name": "Kathryn Lewandowsky",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "sam-low",
+          "name": "Sam Low",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "snohomish-legislative-district-39-state-representative-pos-2",
+      "owner": "snohomish",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 39",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "LEGDST",
+        "value": "39"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Snohomish County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "ida-keeley",
+          "name": "Ida Keeley",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "steve-ewing",
+          "name": "Steve Ewing",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "snohomish-legislative-district-44-state-senator",
+      "owner": "snohomish",
+      "category": "State",
+      "office": "State Senator",
+      "district": "Legislative District 44",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "LEGDST",
+        "value": "44"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Snohomish County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "john-lovick",
+          "name": "John Lovick",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "sherri-larkin",
+          "name": "Sherri Larkin",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "snohomish-legislative-district-44-state-representative-pos-1",
+      "owner": "snohomish",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 44",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "LEGDST",
+        "value": "44"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Snohomish County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "brandy-donaghy",
+          "name": "Brandy Donaghy",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "chris-elder",
+          "name": "Chris Elder",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "snohomish-legislative-district-44-state-representative-pos-2",
+      "owner": "snohomish",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 44",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "LEGDST",
+        "value": "44"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Snohomish County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "april-berg",
+          "name": "April Berg",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "tonya-stadlman",
+          "name": "Tonya Stadlman",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "snohomish-snohomish-county-prosecuting-attorney",
+      "owner": "snohomish",
+      "category": "County",
+      "office": "Prosecuting Attorney",
+      "district": "Snohomish County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "snohomish"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Snohomish County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "jason-cummings",
+          "name": "Jason Cummings",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "snohomish-court-of-appeals-division-1-district-2-judge-position-2",
+      "owner": "snohomish",
+      "category": "Judicial",
+      "office": "Judge Position 2",
+      "district": "Court of Appeals, Division 1, District 2",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "snohomish"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Snohomish County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "linda-coburn",
+          "name": "Linda Coburn",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "snohomish-snohomish-county-district-court-cascade-district-judge-position-no-1",
+      "owner": "snohomish",
+      "category": "Judicial",
+      "office": "Judge Position No. 1",
+      "district": "Snohomish County District Court, Cascade District",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "DISTCRT",
+        "value": "Cascade"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Snohomish County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "jennifer-rancourt",
+          "name": "Jennifer Rancourt",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "snohomish-snohomish-county-district-court-cascade-district-judge-position-no-2",
+      "owner": "snohomish",
+      "category": "Judicial",
+      "office": "Judge Position No. 2",
+      "district": "Snohomish County District Court, Cascade District",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "DISTCRT",
+        "value": "Cascade"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Snohomish County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "rachelle-francis",
+          "name": "Rachelle Francis",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "snohomish-snohomish-county-district-court-everett-district-judge-position-no-1",
+      "owner": "snohomish",
+      "category": "Judicial",
+      "office": "Judge Position No. 1",
+      "district": "Snohomish County District Court, Everett District",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "DISTCRT",
+        "value": "Everett"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Snohomish County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "anthony-e-howard",
+          "name": "Anthony E. Howard",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "snohomish-snohomish-county-district-court-everett-district-judge-position-no-2",
+      "owner": "snohomish",
+      "category": "Judicial",
+      "office": "Judge Position No. 2",
+      "district": "Snohomish County District Court, Everett District",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "DISTCRT",
+        "value": "Everett"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Snohomish County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "jennifer-millett",
+          "name": "Jennifer Millett",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "snohomish-snohomish-county-district-court-evergreen-district-judge-position-no-1",
+      "owner": "snohomish",
+      "category": "Judicial",
+      "office": "Judge Position No. 1",
+      "district": "Snohomish County District Court, Evergreen District",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "DISTCRT",
+        "value": "Evergreen"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Snohomish County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "rick-leo",
+          "name": "Rick Leo",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "snohomish-snohomish-county-district-court-evergreen-district-judge-position-no-2",
+      "owner": "snohomish",
+      "category": "Judicial",
+      "office": "Judge Position No. 2",
+      "district": "Snohomish County District Court, Evergreen District",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "DISTCRT",
+        "value": "Evergreen"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Snohomish County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "patricia-lyon",
+          "name": "Patricia Lyon",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "snohomish-snohomish-county-district-court-south-district-judge-position-no-1",
+      "owner": "snohomish",
+      "category": "Judicial",
+      "office": "Judge Position No. 1",
+      "district": "Snohomish County District Court, South District",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "DISTCRT",
+        "value": "South"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Snohomish County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "elizabeth-fraser",
+          "name": "Elizabeth Fraser",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "snohomish-snohomish-county-district-court-south-district-judge-position-no-2",
+      "owner": "snohomish",
+      "category": "Judicial",
+      "office": "Judge Position No. 2",
+      "district": "Snohomish County District Court, South District",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "DISTCRT",
+        "value": "South"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Snohomish County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "jeffrey-d-goodwin",
+          "name": "Jeffrey D. Goodwin",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "snohomish-snohomish-county-district-court-south-district-judge-position-no-3",
+      "owner": "snohomish",
+      "category": "Judicial",
+      "office": "Judge Position No. 3",
+      "district": "Snohomish County District Court, South District",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "DISTCRT",
+        "value": "South"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Snohomish County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "matthew-baldock",
+          "name": "Matthew Baldock",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "snohomish-public-utility-district-no-1-commissioner-district-1",
+      "owner": "snohomish",
+      "category": "PublicUtility",
+      "office": "Commissioner District 1",
+      "district": "Public Utility District No. 1",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "snohomish",
+        "layer": "PUDDST",
+        "value": "PUD Commissioner District 1"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Snohomish County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "sid-logan",
+          "name": "Sid Logan",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "janet-st-clair",
+          "name": "Janet St Clair",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    }
+  ]
+}

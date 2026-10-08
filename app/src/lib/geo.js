@@ -14,8 +14,14 @@ const WASHINGTON_STATE_FIPS = '53'
 
 // WA Dept of Revenue statewide taxing-district boundaries (tax year 2025).
 // Layer ids shift when DOR publishes a new tax year; re-verify annually
-// (MapServer?f=json lists them; on 2026-10-08 layer 3 was CEM2025, 7 FIR2025,
-// 14 PRK2025 ... 20 SCH2025, the newest tax year).
+// (MapServer?f=json lists them). Re-verified 2026-10-08 (#20): tax year 2025
+// is still the newest group (layer 0), and every id used below answered a
+// live point query with the expected DISTATTRIB: 3 CEM2025 (Vashon '1'),
+// 6 EMS2025 (Asotin '1'), 7 FIR2025 (West Richland, Benton '4'), 11 HSP2025
+// (Newport, Pend Oreille '1'), 12 LIB2025 (Coupeville, Island 'L'), 14
+// PKR2025, park and recreation districts (Washtucna, Adams '2'; 15 PRK2025 is
+// a different layer), 20 SCH2025 (Friday Harbor, San Juan '149'), 22 WAT2025
+// (Skamania '1'). Table: docs/county-wave-playbook.md.
 const DOR_TAX_DISTRICTS =
   'https://webgis.dor.wa.gov/arcgis/rest/services/Programs/WADOR_PropertyTax/MapServer'
 
@@ -116,6 +122,10 @@ const COUNTY_LAYERS = {
       attr: 'DISTRICT',
     },
   ],
+  // Re-verified 2026-10-08 (#20) at 930 Tacoma Ave S: District_Number 4,
+  // FIRE_DIS 'TACOMA', PC_DISTRICT 'YES'. The Election_Precincts layer also
+  // has KING_DISTRICT ('YES' in Pierce-side Auburn) for King County District
+  // Court's Southeast Electoral District, not configured here yet.
   pierce: [
     {
       key: 'COUNTY_COUNCIL',
@@ -215,7 +225,8 @@ const COUNTY_LAYERS = {
   // Counties below were added from verified 2026 research: commissioner
   // district layers are county-published services; special-district layers use
   // the DOR statewide taxing-district boundaries (attrs verified by live
-  // point queries on 2026-07-17).
+  // point queries on 2026-07-17; DOR layer ids re-verified 2026-10-08, see
+  // DOR_TAX_DISTRICTS).
   adams: [
     { key: 'CEMDST', url: `${DOR_TAX_DISTRICTS}/3/query`, attr: 'DISTATTRIB' },
     { key: 'PARKDST', url: `${DOR_TAX_DISTRICTS}/14/query`, attr: 'DISTATTRIB' },

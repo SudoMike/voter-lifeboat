@@ -171,6 +171,35 @@ def contest_scope(con: dict) -> dict:
     raise ValueError(f"no scope rule for {con['slug']}")
 
 
+def squash(s: str) -> str:
+    return re.sub(r"\s+", " ", s).strip()
+
+
+def seat_first(con: dict) -> tuple[str, str]:
+    """(office, district) with office = the seat and district = the
+    jurisdiction (schema 2; #20).
+
+    KCE's list prints the jurisdiction first for most groups ("Legislative
+    District No.  46" then "State Senator"; "Southwest Electoral District"
+    then "Judge Position No. 5"), which parse_contest_list stores as office
+    and district. Federal, Court of Appeals and single county offices are
+    already seat-first. Jurisdictions are written the way the app displays
+    them (app/src/lib/contests.js): "Legislative District 46" and "King
+    County District Court, Southwest Electoral District". The slug is not
+    touched.
+    """
+    office, district = squash(con["office"]), squash(con["district"])
+    cat = con["category"]
+    if cat == "State":
+        n = re.fullmatch(r"Legislative District No\. (\d+)", office)
+        return district, f"Legislative District {n.group(1)}"
+    if cat == "DistrictCourt":
+        return district, f"King County District Court, {office}"
+    if cat in ("StateSupremeCourt", "City") or (cat == "County" and district):
+        return district, office
+    return office, district
+
+
 # King has no CEMDST layer in its District Adapter; WA DOR tax-district layer 3
 # has exactly one King cemetery district, DISTATTRIB "1" (raw/gis/dor-cemdst-king.json).
 UNRESOLVED_LAYERS = {
@@ -361,6 +390,8 @@ def build(election_id: str | None = None) -> tuple[dict, dict, list[str]]:
             con["owner"] = contest_owner(con)
             con["scope"] = contest_scope(con)
             con["uncontested"] = len(con["candidates"]) == 1
+            # After scope and CSV matching, which read KCE's own order.
+            con["office"], con["district"] = seat_first(con)
 
     election_meta = {"name": election.ELECTION_META[e.id]["name"], "kce_eid": cfg["eid"]}
     out = {

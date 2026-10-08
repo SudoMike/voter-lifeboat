@@ -4,12 +4,59 @@ import json
 import re
 
 import election
+import votewa
 from election import rel
 
 # Usage: python3 pipeline/build_snohomish_lite_data.py [--election <id>]
-COUNTY = election.Election(election.from_argv()).county("snohomish")
+ELECTION = election.Election(election.from_argv())
+COUNTY = ELECTION.county("snohomish")
 TEXT = COUNTY / "interim/pdf-text/sample-ballot.txt"
 OUT = COUNTY / "interim"
+
+
+# --- From the November 3, 2026 general on ----------------------------------
+# Contests come from the county's VoteWA candidate-list export
+# (counties/snohomish/raw/votewa/candidate-list.csv.{url,meta.json}, parsed by
+# pipeline/votewa.py). general_override keeps this county's contest names
+# (so slugs match the primary's and its dossiers carry forward) and the
+# District Adapter layers in app/src/lib/geo.js COUNTY_LAYERS["snohomish"].
+# GENERAL_MEASURES holds the county's curated measures per election, as
+# {"sources": [raw pointer paths or official URLs], "measures": [app-measures
+# rows]}; None means not curated yet. Everything below this block is the primary's
+# sample-ballot transcription, frozen byte-identical.
+PRIMARY = "2026-08-04-primary"
+
+GENERAL_CFG = {"name": "Snohomish County"}
+GENERAL_MEASURES = {"2026-11-03-general": None}
+
+
+def general_override(r, unresolvable):
+    dtype, district, race = r["District Type"].strip().upper(), r["District"].strip().upper(), r["Race"].strip()
+    if dtype == "PUBLIC UTILITY" and district == "PUBLIC UTILITY DISTRICT NO. 1":
+        n = votewa.district_number(race)
+        return ("PublicUtility", "Public Utility District No. 1", f"Commissioner District {n}",
+                ("PUDDST", f"PUD Commissioner District {n}"))
+    if dtype == "JUDICIAL" and district.endswith(" DISTRICT COURT"):
+        # Snohomish County District Court elects judges by electoral
+        # district (Cascade, Everett, Evergreen, South); geo.js has no layer
+        # for those districts yet.
+        name = district[: -len(" DISTRICT COURT")].title()
+        n = votewa.district_number(race)
+        unresolvable.add("DISTCRT")
+        return ("Judicial", f"Snohomish County District Court, {name} District", f"Judge Position No. {n}",
+                ("DISTCRT", name))
+    return None
+
+
+if ELECTION.id != PRIMARY:
+    CURATED = GENERAL_MEASURES.get(ELECTION.id)
+    votewa.write_county_package(
+        "snohomish", ELECTION.id, GENERAL_CFG, "pipeline/build_snohomish_lite_data.py",
+        override=general_override,
+        measures=CURATED["measures"] if CURATED else None,
+        measure_sources=CURATED["sources"] if CURATED else (),
+    )
+    raise SystemExit(0)
 
 
 def slugify(s: str) -> str:

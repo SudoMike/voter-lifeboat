@@ -1,0 +1,890 @@
+{
+  "county": "clark",
+  "script": "pipeline/build_clark_lite_data.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/clark/raw/votewa/candidate-list.csv.url"
+  ],
+  "coverage": "full_county",
+  "notes": [
+    "Measures not curated yet for this election: app-measures.json is empty because no one has transcribed this county's local measures, not because the ballot has none."
+  ],
+  "contests": [
+    {
+      "slug": "clark-congressional-district-3-u-s-representative",
+      "owner": "clark",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 3",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "clark",
+        "layer": "CONGDST",
+        "value": "3"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Clark County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "john-braun",
+          "name": "John Braun",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "marie-gluesenkamp-perez",
+          "name": "Marie Gluesenkamp Perez",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "clark-legislative-district-17-state-representative-pos-1",
+      "owner": "clark",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 17",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "clark",
+        "layer": "LEGDST",
+        "value": "17"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Clark County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "ben-christly",
+          "name": "Ben Christly",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "kevin-waters",
+          "name": "Kevin Waters",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "clark-legislative-district-17-state-representative-pos-2",
+      "owner": "clark",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 17",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "clark",
+        "layer": "LEGDST",
+        "value": "17"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Clark County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "diana-h-perez",
+          "name": "Diana H. Perez",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "david-stuebe",
+          "name": "David Stuebe",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "clark-legislative-district-18-state-representative-pos-1",
+      "owner": "clark",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 18",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "clark",
+        "layer": "LEGDST",
+        "value": "18"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Clark County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "randi-l-knott",
+          "name": "Randi L. Knott",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "stephanie-mcclintock",
+          "name": "Stephanie McClintock",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "clark-legislative-district-18-state-representative-pos-2",
+      "owner": "clark",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 18",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "clark",
+        "layer": "LEGDST",
+        "value": "18"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Clark County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "deken-letinich",
+          "name": "Deken Letinich",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "john-ley",
+          "name": "John Ley",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "clark-legislative-district-20-state-representative-pos-1",
+      "owner": "clark",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 20",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "clark",
+        "layer": "LEGDST",
+        "value": "20"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Clark County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "peter-abbarno",
+          "name": "Peter Abbarno",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "andy-zahn",
+          "name": "Andy Zahn",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "clark-legislative-district-20-state-representative-pos-2",
+      "owner": "clark",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 20",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "clark",
+        "layer": "LEGDST",
+        "value": "20"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Clark County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "ed-orcutt",
+          "name": "Ed Orcutt",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "evan-jones",
+          "name": "Evan Jones",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "clark-legislative-district-49-state-representative-pos-1",
+      "owner": "clark",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 49",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "clark",
+        "layer": "LEGDST",
+        "value": "49"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Clark County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "kim-d-harless",
+          "name": "Kim D. Harless",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "sarah-mittelman",
+          "name": "Sarah Mittelman",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "clark-legislative-district-49-state-representative-pos-2",
+      "owner": "clark",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 49",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "clark",
+        "layer": "LEGDST",
+        "value": "49"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Clark County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "monica-jurado-stonier",
+          "name": "Monica Jurado Stonier",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "derek-thompson",
+          "name": "Derek Thompson",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "clark-clark-county-assessor",
+      "owner": "clark",
+      "category": "County",
+      "office": "Assessor",
+      "district": "Clark County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "clark"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Clark County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "peter-van-nortwick",
+          "name": "Peter Van Nortwick",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "tyler-thoune",
+          "name": "Tyler Thoune",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "clark-clark-county-auditor",
+      "owner": "clark",
+      "category": "County",
+      "office": "Auditor",
+      "district": "Clark County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "clark"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Clark County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "eileen-quiring-o-brien",
+          "name": "Eileen Quiring O'Brien",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "mitchell-kelly",
+          "name": "Mitchell Kelly",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "clark-clark-county-clerk",
+      "owner": "clark",
+      "category": "County",
+      "office": "Clerk",
+      "district": "Clark County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "clark"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Clark County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "scott-g-weber",
+          "name": "Scott G Weber",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "rachel-shapiro",
+          "name": "Rachel Shapiro",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "clark-clark-county-council-district-1-county-councilor",
+      "owner": "clark",
+      "category": "County",
+      "office": "County Councilor",
+      "district": "Clark County Council District 1",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "clark",
+        "layer": "COUNTY_COUNCIL",
+        "value": "1"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Clark County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "glen-yung",
+          "name": "Glen Yung",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "bryan-shull",
+          "name": "Bryan Shull",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "clark-clark-county-council-district-2-county-councilor",
+      "owner": "clark",
+      "category": "County",
+      "office": "County Councilor",
+      "district": "Clark County Council District 2",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "clark",
+        "layer": "COUNTY_COUNCIL",
+        "value": "2"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Clark County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "michelle-belkot",
+          "name": "Michelle Belkot",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "john-zingale",
+          "name": "John Zingale",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "clark-clark-county-council-district-5-county-councilor",
+      "owner": "clark",
+      "category": "County",
+      "office": "County Councilor",
+      "district": "Clark County Council District 5",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "clark",
+        "layer": "COUNTY_COUNCIL",
+        "value": "5"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Clark County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "troy-mccoy",
+          "name": "Troy McCoy",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "peter-silliman",
+          "name": "Peter Silliman",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "clark-clark-county-prosecuting-attorney",
+      "owner": "clark",
+      "category": "County",
+      "office": "Prosecuting Attorney",
+      "district": "Clark County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "clark"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Clark County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "laurel-smith",
+          "name": "Laurel Smith",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "clark-clark-county-sheriff",
+      "owner": "clark",
+      "category": "County",
+      "office": "Sheriff",
+      "district": "Clark County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "clark"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Clark County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "john-horch",
+          "name": "John Horch",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "clark-clark-county-treasurer",
+      "owner": "clark",
+      "category": "County",
+      "office": "Treasurer",
+      "district": "Clark County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "clark"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Clark County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "alishia-topper",
+          "name": "Alishia Topper",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "clark-clark-county-district-court-judge-department-no-1",
+      "owner": "clark",
+      "category": "Judicial",
+      "office": "Judge Department No. 1",
+      "district": "Clark County District Court",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "clark"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Clark County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "kristen-l-parcher",
+          "name": "Kristen L. Parcher",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "clark-clark-county-district-court-judge-department-no-2",
+      "owner": "clark",
+      "category": "Judicial",
+      "office": "Judge Department No. 2",
+      "district": "Clark County District Court",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "clark"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Clark County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "chad-e-sleight",
+          "name": "Chad E. Sleight",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "clark-clark-county-district-court-judge-department-no-3",
+      "owner": "clark",
+      "category": "Judicial",
+      "office": "Judge Department No. 3",
+      "district": "Clark County District Court",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "clark"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Clark County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "james-b-smith",
+          "name": "James B. Smith",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "clark-clark-county-district-court-judge-department-no-4",
+      "owner": "clark",
+      "category": "Judicial",
+      "office": "Judge Department No. 4",
+      "district": "Clark County District Court",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "clark"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Clark County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "leslie-a-lopez",
+          "name": "Leslie A. Lopez",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "clark-clark-county-district-court-judge-department-no-5",
+      "owner": "clark",
+      "category": "Judicial",
+      "office": "Judge Department No. 5",
+      "district": "Clark County District Court",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "clark"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Clark County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "megan-d-peyton",
+          "name": "Megan D. Peyton",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "clark-clark-county-district-court-judge-department-no-6",
+      "owner": "clark",
+      "category": "Judicial",
+      "office": "Judge Department No. 6",
+      "district": "Clark County District Court",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "clark"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Clark County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "abigail-e-bartlett",
+          "name": "Abigail E. Bartlett",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "clark-public-utility-district-no-1-of-clark-county-district-3-pud-commissioner",
+      "owner": "clark",
+      "category": "Local",
+      "office": "PUD Commissioner",
+      "district": "Public Utility District No. 1 of Clark County District 3",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "clark",
+        "layer": "PUDDST",
+        "value": "3"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Clark County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "jane-a-van-dyke",
+          "name": "Jane A. Van Dyke",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "gordon-matthews",
+          "name": "Gordon Matthews",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
