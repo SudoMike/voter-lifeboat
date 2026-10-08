@@ -1,0 +1,12 @@
+{
+  "url": "https://data.wa.gov/resource/3h9x-7bvm.json?$where=election_year=2026 AND filer_type='CO' AND (upper(jurisdiction) like '%MILTON%' OR upper(jurisdiction) like '%SEATAC%' OR upper(jurisdiction) like '%FIRE%' OR upper(jurisdiction) like '%CEMETERY%' OR upper(filer_name) like '%MILTON%' OR upper(filer_name) like '%SKYWAY%' OR upper(filer_name) like '%WEST HILL%' OR upper(filer_name) like '%CEMETERY%' OR upper(filer_name) like '%KCFD%')",
+  "retrieved_at": "2026-10-08",
+  "stage": "raw",
+  "method": "source pointer; HTTP GET (curl), cached copy under data/.cache/measures/city-of-milton-proposition-no-1 (gitignored)",
+  "cache_file": "data/.cache/measures/city-of-milton-proposition-no-1/pdc-committees-query-2026.json",
+  "bytes": 9167,
+  "sha256": "4413bb5e58ce925e2bb2046235281670b642c0f4846bf0a7bd8cbb84f01b481f",
+  "publisher": "Washington Public Disclosure Commission (Campaign Finance Summary, data.wa.gov 3h9x-7bvm)",
+  "tier": 1,
+  "notes": "2026 committee query by jurisdiction/name; no committee registered for City of Milton Proposition 1 (the only Milton-named committee is Citizens for Fife Milton Schools, Fife SD 417)."
+}
