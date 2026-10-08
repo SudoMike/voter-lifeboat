@@ -120,6 +120,50 @@ test('without statewide data, an unsupported county is not covered yet', async (
   )
 })
 
+test('Census district layers are found whatever vintage names them', async () => {
+  mockGeocode({
+    matchedAddress: '789 W MAIN ST, POMEROY, WA, 99347',
+    coordinates: { x: -117.6, y: 46.47 },
+    geographies: {
+      // Garfield's District Adapter has no county layers, so only Census answers.
+      Counties: [{ STATE: '53', COUNTY: '023', NAME: 'Garfield County' }],
+      '120th Congressional Districts': [{ BASENAME: '5' }],
+      '2026 State Legislative Districts - Lower': [{ BASENAME: '9' }],
+      '2026 State Legislative Districts - Upper': [{ BASENAME: '9' }],
+      'Incorporated Places': [{ BASENAME: 'Pomeroy' }],
+    },
+  })
+  const context = await lookupBallotContext(
+    { coverage: { statewide_complete: true, supported_counties: [{ id: 'garfield', coverage: 'full_county' }] } },
+    '789 W Main St, Pomeroy, WA 99347'
+  )
+  assert.deepEqual(context.districts, { CONGDST: '5', LEGDST: '9', CITY: 'Pomeroy' })
+  assert.deepEqual(context.missingLayers, [])
+  assert.equal(context.coverageStatus, 'full_county')
+})
+
+test('a congressional layer without BASENAME falls back to its CD<session> or GEOID number', async () => {
+  for (const congressional of [{ CD120: '05', GEOID: '5305' }, { GEOID: '5305' }]) {
+    mockGeocode({
+      matchedAddress: '789 W MAIN ST, POMEROY, WA, 99347',
+      coordinates: { x: -117.6, y: 46.47 },
+      geographies: {
+        Counties: [{ STATE: '53', COUNTY: '023', NAME: 'Garfield County' }],
+        '120th Congressional Districts': [congressional],
+        '2026 State Legislative Districts - Lower': [{ SLDL: '009' }],
+        '2026 State Legislative Districts - Upper': [{ SLDU: '009' }],
+      },
+    })
+    const context = await lookupBallotContext(
+      { coverage: { statewide_complete: true, supported_counties: [{ id: 'garfield', coverage: 'full_county' }] } },
+      '789 W Main St, Pomeroy, WA 99347'
+    )
+    assert.equal(context.districts.CONGDST, '5', JSON.stringify(congressional))
+    assert.equal(context.districts.LEGDST, '9')
+    assert.deepEqual(context.missingLayers, [])
+  }
+})
+
 test('supported non-King counties use Census federal/state districts as partial coverage', async () => {
   mockGeocode({
     matchedAddress: '3000 ROCKEFELLER AVE, EVERETT, WA, 98201',
