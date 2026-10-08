@@ -1,0 +1,47 @@
+{
+  "contest_slug": "state-senator-legislative-district-no-31",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/king/dossiers/state-senator-legislative-district-no-31/"],
+  "office_does": "The State Senator is the 31st District's single member of the Washington Senate, voting on state law and budgets and confirming gubernatorial appointments.",
+  "race_blurb": "Incumbent Republican Phil Fortunato, a senator since 2017, faces first-time Democratic candidate Tamara Stramel, a PTA and school-bond organizer. The race splits on spending, taxes, and school and family policy.",
+  "candidates": [
+    {
+      "slug": "phil-fortunato",
+      "summary": "Senator since 2017 and earlier a state representative, running on spending restraint, Second Amendment rights, and parental rights.",
+      "highlights": [
+        "Voted against ESSB 6346 (2026 income tax over $1 million), ESHB 1296 (2025), and ESSB 5599 (2023) [S4][S5][S7]",
+        "Proposes zero-based budgeting and funding transportation without raising taxes [S3]",
+        "Endorsed by the Association of Washington Business and the King County Republican Party [S12][S13]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": -2, "confidence": "high", "citations": ["S1", "S3", "S4"], "basis": "Voted against the 2026 income tax and says families are being crushed by rising taxes; proposes funding transportation without new taxes."},
+        "spending": {"score": -2, "confidence": "high", "citations": ["S1", "S3"], "basis": "Blames excessive spending and program growth, and proposes zero-based budgets and rolling back budget increases."},
+        "housing": {"score": -2, "confidence": "medium", "citations": ["S3"], "basis": "Blames regulations, fees, and land-use rules for a 'self-imposed housing crisis' and proposes opening up the state to build all kinds of housing."},
+        "safety": {"score": -1, "confidence": "medium", "citations": ["S3"], "basis": "Says sidewalk camping cannot be allowed and that people should be removed from the streets into treatment, alongside transitional housing."},
+        "local-control": {"score": -1, "confidence": "medium", "citations": ["S3"], "basis": "Proposes letting school districts waive costly state mandates."},
+        "experience": {"score": -2, "confidence": "high", "citations": ["S1", "S10"], "basis": "Senator since 2017 with earlier House service, against a first-time candidate."},
+        "social": {"score": -1, "confidence": "medium", "citations": ["S7", "S8"], "basis": "Voted against ESSB 5599 on youth access to gender-affirming and reproductive care; no further statements found."},
+        "parental-rights": {"score": -1, "confidence": "high", "citations": ["S2", "S5", "S6"], "basis": "Voted against ESHB 1296's amendments to the I-2081 parental-rights list and campaigns on defending parental rights."}
+      }
+    },
+    {
+      "slug": "tamara-stramel",
+      "summary": "First-time candidate, Democratic precinct officer, and PTA and school-bond organizer from near Lake Tapps, running on infrastructure, school funding, and cost of living.",
+      "highlights": [
+        "Wants the district prioritized in the transportation budget, including Fairfax Bridge funding [S1][S3]",
+        "Would change the school funding model and expand free school meals to all schools [S3]",
+        "Would support laws prohibiting surveillance and surge pricing [S3]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "spending": {"score": 1, "confidence": "medium", "citations": ["S1", "S3"], "basis": "Says schools are asked to do more with less and calls for expanding free school meals and infrastructure investment."},
+        "experience": {"score": 2, "confidence": "high", "citations": ["S1"], "basis": "First-time candidate whose only office is precinct committee officer, running against a long-serving senator."},
+        "tech": {"score": 1, "confidence": "medium", "citations": ["S3"], "basis": "Supports laws prohibiting surveillance and surge pricing that exploit customers."},
+        "social": {"score": 1, "confidence": "low", "citations": ["S4", "S7"], "basis": "Endorsed by Planned Parenthood Alliance Advocates; no stated position on reproductive or LGBTQ+ policy."}
+      }
+    }
+  ]
+}

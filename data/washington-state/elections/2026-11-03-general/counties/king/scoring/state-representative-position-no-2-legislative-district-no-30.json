@@ -1,0 +1,49 @@
+{
+  "contest_slug": "state-representative-position-no-2-legislative-district-no-30",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/king/dossiers/state-representative-position-no-2-legislative-district-no-30/"],
+  "office_does": "A State Representative writes and votes on Washington state law and the operating, capital, and transportation budgets, including school funding, taxes, housing, and criminal statutes.",
+  "race_blurb": "Incumbent Democrat Kristine Reeves, chair of the House Agriculture and Natural Resources Committee, faces Paul McDaniel (prefers Independent Party), a former appointed Federal Way councilmember. Reeves voted against the 2026 income tax on earnings over $1 million, which narrows the tax contrast.",
+  "candidates": [
+    {
+      "slug": "kristine-reeves",
+      "summary": "Incumbent state representative (2017-2019 and since 2023) who chairs the House Agriculture and Natural Resources Committee and founded the Veterans & Military Families Caucus.",
+      "highlights": [
+        "Voted against ESSB 6346, the 2026 tax on income over $1 million [S3]",
+        "Voted for ESHB 1296 (2025) and ESSB 5599 (2023) [S4][S6]",
+        "Cites passing laws on homeless students, senior food access, wildfire risk, and $100 million for local public safety [S1]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": 0, "confidence": "medium", "citations": ["S2", "S3"], "basis": "Mixed: voted against the 2026 tax on income over $1 million, but cites helping pass college aid funded by large companies."},
+        "spending": {"score": 1, "confidence": "medium", "citations": ["S1", "S2"], "basis": "Runs on program delivery ($100M public safety, food access, paid family leave, childcare) rather than restraint."},
+        "safety": {"score": 0, "confidence": "medium", "citations": ["S1", "S2"], "basis": "Pairs first-responder resources and public-safety funding with community policing and mental-health officer programs."},
+        "healthcare": {"score": -1, "confidence": "medium", "citations": ["S2"], "basis": "Calls health care a right but backs the state public option to make insurers compete, rather than single-payer."},
+        "experience": {"score": -2, "confidence": "high", "citations": ["S1"], "basis": "Multi-term incumbent and committee chair, against a challenger with no legislative experience."},
+        "social": {"score": 1, "confidence": "medium", "citations": ["S6", "S7"], "basis": "Voted for ESSB 5599 on youth access to gender-affirming and reproductive care; no further statements found."},
+        "parental-rights": {"score": 1, "confidence": "medium", "citations": ["S4", "S5"], "basis": "Voted for ESHB 1296, which amended the Initiative 2081 parental-rights list; no separate statement on the topic."}
+      }
+    },
+    {
+      "slug": "paul-mcdaniel",
+      "summary": "Former appointed Federal Way City Councilmember, Marine Corps veteran, and technology consultant, running on lower taxes, public safety, housing supply, and protecting girls' sports.",
+      "highlights": [
+        "Will oppose any state personal income tax and supports eliminating the sales tax on services [S3]",
+        "Pledges to 'protect girls' sports' [S1]",
+        "Listed as 'BEST CHOICE' by the King County Republican Party [S11]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": -2, "confidence": "high", "citations": ["S1", "S3"], "basis": "Pledges to reduce taxes, oppose a state personal income tax for anyone, and eliminate the sales tax on services."},
+        "spending": {"score": -1, "confidence": "medium", "citations": ["S3"], "basis": "Calls for eliminating wasteful spending and 'spending smarter' before asking taxpayers for more."},
+        "housing": {"score": -1, "confidence": "medium", "citations": ["S5", "S7"], "basis": "Emphasizes increasing supply, middle housing, ADUs, and streamlined permitting."},
+        "safety": {"score": 0, "confidence": "medium", "citations": ["S4"], "basis": "Explicitly pairs law-enforcement support with expanded addiction and mental-health treatment: 'not tougher... not softer... smarter.'"},
+        "experience": {"score": 1, "confidence": "high", "citations": ["S1", "S8"], "basis": "Former appointed city councilmember with no legislative record, running against a multi-term incumbent."},
+        "social": {"score": -1, "confidence": "medium", "citations": ["S1"], "basis": "Pledges to 'protect girls' sports' in his pamphlet statement; no further detail."},
+        "parental-rights": {"score": -1, "confidence": "medium", "citations": ["S6", "S7"], "basis": "Says parents deserve meaningful involvement and supports transparency about academic progress and more educational choice."}
+      }
+    }
+  ]
+}

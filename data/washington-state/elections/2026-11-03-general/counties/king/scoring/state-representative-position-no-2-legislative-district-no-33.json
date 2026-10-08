@@ -1,0 +1,47 @@
+{
+  "contest_slug": "state-representative-position-no-2-legislative-district-no-33",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/king/dossiers/state-representative-position-no-2-legislative-district-no-33/"],
+  "office_does": "A State Representative writes and votes on Washington state law and the operating, capital, and transportation budgets, serving a two-year term.",
+  "race_blurb": "Thirteen-year Democratic incumbent Mia Su-Ling Gregerson, vice-chair of House Appropriations, faces first-time Republican candidate Yuri Marinchik, who took the second primary slot by 600 votes.",
+  "candidates": [
+    {
+      "slug": "mia-su-ling-gregerson",
+      "summary": "State Representative since 2013, former SeaTac mayor and Appropriations vice-chair, running on state programs she helped deliver such as free school meals and right to repair.",
+      "highlights": [
+        "Cites free school meals for every student, emergency food aid and free transit for kids [S1]",
+        "Sponsored the 2025 Right to Repair Act for consumer electronics [S11]",
+        "Voted for ESSB 6346 (2026 income tax over $1 million), ESHB 1296 and rent stabilization [S3][S4][S5]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": 1, "confidence": "high", "citations": ["S3"], "basis": "Voted for the 2026 tax on income over $1 million; no campaign statements on taxes found."},
+        "spending": {"score": 2, "confidence": "medium", "citations": ["S1", "S12"], "basis": "Runs entirely on expanded state programs: universal free school meals, emergency food aid and free youth transit."},
+        "housing": {"score": 1, "confidence": "medium", "citations": ["S5"], "basis": "Voted for rent stabilization in 2025; no campaign housing statement found."},
+        "experience": {"score": -2, "confidence": "high", "citations": ["S1", "S11"], "basis": "In the House since 2013, Appropriations vice-chair, former SeaTac mayor, with enacted bills."},
+        "tech": {"score": 1, "confidence": "medium", "citations": ["S1", "S11"], "basis": "Sponsored the Right to Repair Act, which requires electronics makers to provide parts and tools and restricts parts pairing."},
+        "social": {"score": 1, "confidence": "low", "citations": ["S9"], "basis": "Endorsed by Planned Parenthood Alliance Advocates; no statement of her own on reproductive or LGBTQ+ policy."},
+        "parental-rights": {"score": 1, "confidence": "medium", "citations": ["S4"], "basis": "Voted for ESHB 1296, the 2025 amendments to the I-2081 parental-rights list; no campaign statement on the topic."}
+      }
+    },
+    {
+      "slug": "yuri-marinchik",
+      "summary": "First-time Republican candidate and small-business owner running against career politicians on lower costs, no new taxes, and public safety.",
+      "highlights": [
+        "Says new taxes will not make things better and the state spends more than it earns [S2]",
+        "Calls for lower housing and energy costs and stronger public safety [S1]",
+        "Signed the U.S. Term Limits pledge on congressional term limits [S6]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": -2, "confidence": "medium", "citations": ["S1", "S2"], "basis": "States new taxes will not make things better; cites car-tab and RTA tax grievances."},
+        "spending": {"score": -1, "confidence": "medium", "citations": ["S2"], "basis": "Says the state faces a shortfall and is spending more than it earns."},
+        "safety": {"score": -1, "confidence": "low", "citations": ["S1", "S2"], "basis": "Calls for stronger public safety and cites property crime and break-ins, without stating enforcement or prevention policies."},
+        "experience": {"score": 2, "confidence": "high", "citations": ["S1"], "basis": "No elected experience; runs explicitly against career politicians."},
+        "reform": {"score": 1, "confidence": "medium", "citations": ["S6"], "basis": "Signed a congressional term-limits pledge and frames his run against career politicians."}
+      }
+    }
+  ]
+}

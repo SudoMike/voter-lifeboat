@@ -1,0 +1,50 @@
+{
+  "contest_slug": "state-representative-position-no-1-legislative-district-no-33",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/king/dossiers/state-representative-position-no-1-legislative-district-no-33/"],
+  "office_does": "A State Representative writes and votes on Washington state law and the operating, capital, and transportation budgets, serving a two-year term.",
+  "race_blurb": "Democratic Rep. Edwin Obras, appointed in 2024 and elected in 2025, faces Republican newcomer Chris Martinez, who runs on lower taxes, repealing the Climate Commitment Act, and parental rights in schools.",
+  "candidates": [
+    {
+      "slug": "edwin-obras",
+      "summary": "Incumbent since December 2024 and former Seattle Human Services division director, running on affordability, worker protections and immigrant rights.",
+      "highlights": [
+        "Six bills signed in his first biennium, including background checks and rideshare regulation [S2]",
+        "Has pushed for rent-increase caps and voted for 2025 rent stabilization [S2][S7]",
+        "Voted for ESSB 6346 (2026 income tax over $1 million) and sponsored ESHB 1296 [S4][S6]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": 1, "confidence": "high", "citations": ["S4"], "basis": "Voted for the 2026 tax on income over $1 million; no campaign statements on taxes found."},
+        "spending": {"score": 1, "confidence": "medium", "citations": ["S1", "S2"], "basis": "Cites securing over $30 million in state investment for the district, including housing and health."},
+        "housing": {"score": 2, "confidence": "high", "citations": ["S2", "S7"], "basis": "Pushes rent-increase caps and limits on investor home buying, and voted for rent stabilization."},
+        "experience": {"score": -1, "confidence": "high", "citations": ["S1", "S2"], "basis": "Under two years in office but with six enacted bills and a whip post, against a political newcomer."},
+        "immigration": {"score": 1, "confidence": "medium", "citations": ["S1"], "basis": "Pamphlet pledges to keep fighting for immigrant rights, without specifics."},
+        "social": {"score": 1, "confidence": "low", "citations": ["S9"], "basis": "Endorsed by Planned Parenthood Alliance Advocates; no statement of his own on reproductive or LGBTQ+ policy."},
+        "parental-rights": {"score": 1, "confidence": "high", "citations": ["S5", "S6"], "basis": "Original sponsor of, and yes vote on, ESHB 1296, which amended the I-2081 parental-rights list."}
+      }
+    },
+    {
+      "slug": "chris-martinez",
+      "summary": "Republican precinct committee officer and blue-collar worker making his first run, on lower taxes, smaller government, repeal of the Climate Commitment Act and parental rights.",
+      "highlights": [
+        "Lists \"HB 6346 (Unconstitutional Income Tax)\" among bills he opposes and wants lower B&O taxes [S2]",
+        "Would reduce or eliminate the Climate Commitment Act [S2]",
+        "Says parents have the right to know and guide what their children learn [S2]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": -2, "confidence": "high", "citations": ["S1", "S2"], "basis": "Opposes the new income tax, wants lower B&O taxes, and pledges to abolish energy taxes."},
+        "spending": {"score": -2, "confidence": "medium", "citations": ["S2"], "basis": "Would cut wasteful spending and reduce the size of state government."},
+        "housing": {"score": -1, "confidence": "medium", "citations": ["S2"], "basis": "Would cut regulations on home builders to make housing more affordable."},
+        "safety": {"score": -2, "confidence": "high", "citations": ["S1", "S2"], "basis": "Runs on law and order, more officers, and holding criminals accountable."},
+        "climate": {"score": -2, "confidence": "high", "citations": ["S1", "S2"], "basis": "Would reduce or eliminate the Climate Commitment Act and abolish energy taxes."},
+        "experience": {"score": 2, "confidence": "high", "citations": ["S1"], "basis": "No elected office beyond appointed PCO; pitches himself as a blue-collar outsider."},
+        "parental-rights": {"score": -2, "confidence": "medium", "citations": ["S2"], "basis": "Says parents have the right to know and guide what children learn and opposes instruction without parental knowledge or consent."},
+        "social": {"score": -1, "confidence": "low", "citations": ["S1", "S2"], "basis": "Campaigns on traditional family values; no specific statement on sports eligibility, gender-affirming care or abortion."}
+      }
+    }
+  ]
+}

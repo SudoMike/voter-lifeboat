@@ -1,0 +1,54 @@
+{
+  "contest_slug": "state-senator-legislative-district-no-32",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/king/dossiers/state-senator-legislative-district-no-32/"],
+  "office_does": "A State Senator writes and votes on Washington state law, the state budgets and tax policy, and confirms gubernatorial appointments, serving a four-year term.",
+  "race_blurb": "Two Democratic legislators face off: Rep. Cindy Ryu, who calls incumbent Sen. Jesse Salomon too moderate, against Salomon. Both voted for the new tax on income over $1 million; they split on whether to extend it to lower incomes.",
+  "candidates": [
+    {
+      "slug": "cindy-ryu",
+      "summary": "State Representative since 2011 and chair of the House technology committee, challenging the incumbent senator from the left on taxes and housing.",
+      "highlights": [
+        "Said in an October KUOW debate she would extend the new income tax to household incomes near $250,000, at a lower rate [S5]",
+        "Voted for ESSB 6346 (2026 income tax over $1 million) and for 2025 rent stabilization [S9][S11]",
+        "Endorsed by the 32nd District Democrats and WEA-PAC [S13][S14]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": 2, "confidence": "high", "citations": ["S1", "S5", "S9"], "basis": "Voted for the $1 million income tax and says she would extend it to households near $250,000; pamphlet asks the wealthiest to pay their share."},
+        "spending": {"score": 1, "confidence": "medium", "citations": ["S1", "S3"], "basis": "Platform centers on investing in public schools, early learning, childcare and transportation; no audit or restraint language."},
+        "housing": {"score": 1, "confidence": "high", "citations": ["S3", "S11", "S16"], "basis": "Voted for rent stabilization and lists rent caps, homebuyer programs and social/mixed-income housing, alongside speeding construction."},
+        "climate": {"score": 1, "confidence": "medium", "citations": ["S1", "S3"], "basis": "Lists advancing renewable energy and green jobs and safeguarding the environment."},
+        "experience": {"score": -2, "confidence": "high", "citations": ["S1", "S15"], "basis": "Sixteen years in the House, committee chair, with bills signed into law."},
+        "tech": {"score": 2, "confidence": "high", "citations": ["S15", "S16", "S17"], "basis": "Backs AI regulation and a state privacy law, opposes data-center subsidies, and passed a 2025 law on AI-forged likenesses."},
+        "social": {"score": 2, "confidence": "medium", "citations": ["S3"], "basis": "Calls herself a proud advocate of protecting reproductive rights, decisions for patients and doctors."},
+        "parental-rights": {"score": 1, "confidence": "medium", "citations": ["S10"], "basis": "Voted for ESHB 1296, the 2025 amendments to the I-2081 parental-rights list; no campaign statement on the topic."}
+      }
+    },
+    {
+      "slug": "jesse-salomon",
+      "summary": "Two-term incumbent state senator and Local Government Committee chair who supports the millionaires tax but opposes extending it, and pledges to audit spending.",
+      "highlights": [
+        "Pulled SB 6346 (millionaires tax) from Senate Rules and voted for it, but calls a $250,000 threshold \"incredibly out of touch\" [S6][S7]",
+        "Pamphlet pledges to audit spending and expand senior property-tax relief [S1]",
+        "Endorsed by the Seattle Times (per his site), AWB and the Snohomish County Sheriff [S4][S14]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": 1, "confidence": "high", "citations": ["S3", "S5", "S6", "S10"], "basis": "Voted for and backs the $1 million income tax, but rejects extending it and says more revenue should have gone to tax relief rather than the operating budget."},
+        "spending": {"score": -1, "confidence": "medium", "citations": ["S1"], "basis": "Pamphlet says government must be more responsible with tax dollars and pledges to audit spending."},
+        "housing": {"score": 0, "confidence": "medium", "citations": ["S1", "S3", "S12"], "basis": "Wrote permitting and supply bills and also voted for rent stabilization; a genuine mix of both poles."},
+        "safety": {"score": 0, "confidence": "medium", "citations": ["S1", "S3"], "basis": "Describes a balanced enforcement-and-treatment approach, criticizing the Blake overcorrection while backing treatment, housing and officer decertification."},
+        "climate": {"score": 2, "confidence": "medium", "citations": ["S2", "S3"], "basis": "Says he sponsored the Climate Commitment Act and supported a fracking ban and clean-energy investment."},
+        "experience": {"score": -2, "confidence": "high", "citations": ["S1", "S15"], "basis": "Incumbent senator since 2019 and committee chair with bills passed each session."},
+        "immigration": {"score": 2, "confidence": "high", "citations": ["S1", "S3"], "basis": "Cites banning ICE face masks and co-sponsoring judicial-warrant and audit-notice protections."},
+        "healthcare": {"score": -1, "confidence": "medium", "citations": ["S3"], "basis": "Health priorities are price accountability and oversight within the existing system; no universal-coverage proposal."},
+        "social": {"score": 2, "confidence": "high", "citations": ["S3"], "basis": "Says he is 100% pro-choice, sponsored SB 5400 shielding providers, and supports a constitutional right to reproductive care."},
+        "parental-rights": {"score": 1, "confidence": "medium", "citations": ["S11"], "basis": "Voted for ESHB 1296, the 2025 amendments to the I-2081 parental-rights list; no campaign statement on the topic."},
+        "tech": {"score": 1, "confidence": "medium", "citations": ["S1"], "basis": "Cites leading the fight to block AI-powered rent-setting schemes."}
+      }
+    }
+  ]
+}
