@@ -175,3 +175,33 @@ the guide (`countyGuides.okanogan`, `c=24`). Local news is the Methow
 Valley News and Methow Valley Examiner (WordPress REST API, full text) and
 the Omak-Okanogan County Chronicle (often paywalled; only readable text is
 cited).
+
+## Research (#30)
+
+Dossiers, scoring and an independent refutation pass for the seven
+contested races researched here and the six measures; information-only
+scoring files (empty `scores`) for the five uncontested county offices and
+Superior Court Position 2. The primary's Okanogan dossiers (commissioner,
+coroner, sheriff) were thin and were re-researched, not carried.
+
+Refutation results (`scoring/refutations/`, applied by `merge_scores.py`):
+Gonzalez `safety` -2 adjusted to -1; Jensen `experience` +2 adjusted to +1;
+Gonzalez and Stucker `reform` refuted (trust and transparency talk is not
+money-in-politics reform); every other score upheld. The measure display
+corrections (Twisp and Methow Valley EMS pro summaries) were applied by hand
+to `scoring/measures.json`.
+
+## Known gaps
+
+- No bar ratings were found for any judicial candidate, and the Commission
+  on Judicial Conduct's records were not machine-readable.
+- Robert Grim's statement lists District Court service 2015-2022; the
+  Methow Valley News says he left that court in 2021 for private practice.
+  Both are recorded in his dossier.
+- Doug Aubertin's statement says both "Ferry County Commissioner in
+  District #3 for the past 18 years" and "your PUD Commissioner"; the
+  dossier quotes it as written. Ferry County PUD's website did not answer.
+- Steven Gadd (PUD) and Andrew Pooler (Ferry PUD) are pamphlet-only; Fire
+  District 1's levy had no press coverage.
+- The resolution packets are scans; OCR was not possible here, so the
+  measures rest on the VoteWA guide records.
