@@ -9,6 +9,7 @@ carried_forward_from: data/washington-state/elections/2026-08-04-primary/countie
 derived_from:
   - data/washington-state/elections/2026-11-03-general/counties/pierce/raw/candidates/pierce-pierce-county-council-district-7-county-councilmember/
   - data/washington-state/elections/2026-08-04-primary/counties/pierce/dossiers/pierce-pierce-county-council-district-7-county-councilmember/mike-solan.md
+  - data/washington-state/elections/2026-11-03-general/counties/pierce/raw/votewa/candidate-statements/race-186809.json
 sources:
   - id: S1
     tier: 1
@@ -71,20 +72,30 @@ sources:
     outlet: KNKX Public Radio (2026-07-30), "Public safety a priority for Pierce County Council candidates"
     url: https://www.knkx.org/politics/2026-07-30/public-safety-a-priority-for-pierce-county-council-candidates
     accessed: 2026-10-08
+  - id: S11
+    tier: 1
+    type: votewa
+    ref: VoteWA candidate record, race 186809 (Pierce County Council District No. 7, election 899), "Statement" field: the candidate's own submitted general-election statement (occupation, education, statement)
+    url: https://voter.votewa.gov/elections/candidate.ashx?e=899&r=186809&b=0&la=en&c=27
+    pointer: counties/pierce/raw/votewa/candidate-statements/race-186809.json.meta.json
+    accessed: 2026-10-08
 ---
 
 ## Background
-Mike Solan (prefers Republican Party) is a Seattle police officer of 27 years and former president of the Seattle Police Officers Guild [S1][S2][S6]. Gig Harbor Now reported that he led the guild for six years before deciding in February 2026 not to seek another term, and, citing other outlets, that his tenure included controversies such as his comments assigning blame for the January 6, 2021 Capitol riot to both the far right and the far left [S7]. Court filings indicate he moved to the Artondale area near Gig Harbor in April 2022 [S3].
+His general-election statement comes from his VoteWA candidate record, where the "Statement" field holds the text he submitted (not yet marked approved for display on 2026-10-08) [S11]; the Pierce County printed local voters' pamphlet for the general could not be read (Cloudflare block).
+
+Mike Solan (prefers Republican Party) is a Seattle police officer of 27 years and former president of the Seattle Police Officers Guild [S1][S2][S6]. Gig Harbor Now reported that he led the guild for six years before deciding in February 2026 not to seek another term; it also reported, citing other outlets, that as guild president he drew criticism for comments blaming the January 6, 2021 Capitol riot on both the far right and the far left, including the Black Lives Matter movement [S7]. His statement lists his occupation as "27-year police officer; former President, Seattle Police Officers Guild; former President, United Coalition of Public Safety," and a B.A. from the University of Detroit Mercy, and says he "spent six years at the negotiating table fighting for and winning fair police labor union contracts" [S11]. Court filings indicate he moved to the Artondale area near Gig Harbor in April 2022 [S3].
 
 The Pierce County Elections Office ruled his filing invalid because he had registered to vote in Pierce County only in March 2026, short of the county charter's one-year voter-registration requirement; on May 18, 2026, Superior Court Judge Shelly K. Moss ordered him restored to the ballot [S3]. He said he had delayed registering as a security measure after protests outside his former West Seattle home in 2020 [S3]. He has not held elected public office and says "I'm not a politician" [S5].
 
 In the August 4 primary he finished second of four with 12,856 votes (29.2%), behind Democrat Brenda Lykins's 25,075 (56.9%) [S9]. Ann E. Jolie, a Republican who filed as a backup in case Solan was disqualified, urged voters to support him and received 2.1% [S3][S6][S9].
 
 ## Positions
+- **Statement (says he will):** says residents of unincorporated areas are raising concerns about "public safety, deputy staffing, fair land use policies, and access to county resources"; says the failing Fox Island bridge "requires a responsible plan before it becomes even more costly"; calls for protecting shorelines, docks and swimming areas while "addressing double-layered taxes, rising county costs, aging infrastructure"; and says he will be "laser focused" on "fiscal accountability, public safety and reasonable growth standards" [S11]. Says his union negotiating experience "is what Pierce County needs right now" and that he is "not a career politician" [S11].
 - **Public safety:** would recruit and retain deputies, support first responders, improve emergency response, strengthen rural and unincorporated coverage, and build trust between residents and deputies [S2]. Says Pierce County has roughly 0.57 deputies per 1,000 residents and that county contract priorities with the deputies' guild have driven deputies to other jurisdictions; would seek "positive contract negotiations with the union starting in '27" [S5].
 - **Taxes:** opposes the 0.1% public safety sales tax as passed by five councilmembers "without a vote of the people," saying he would have supported it had it been written specifically for law enforcement and corrections, and that "not a dollar" of it retains road deputies [S5]. His primary statement called for limits on rising county costs and overlapping taxes [S1].
 - **Spending:** says county government "spends too much money and has not budgeted within its means," would fund state mandates and basic services first, and promises "transparency, measurable outcomes, responsible budgeting, and regular review of county programs" [S2][S5]. Told KNKX he would perform an "emergency audit" of the county budget, without naming specific cuts [S10].
-- **Sheriff oversight and the charter amendments:** opposes the proposed Public Safety Ombuds office, saying it would be "activist led" and worsen deputy staffing, and opposes making the sheriff appointed, calling it "disrespectful to the regular citizen" [S10].
+- **Sheriff oversight and the charter amendments:** opposes the proposed Public Safety Ombuds office; KNKX reported he thinks it will be "activist led" and create a "negative atmosphere" for officers, quoting him: "If you think your staffing crisis is bad now, just wait until that's a reality" [S10]. He also opposes making the sheriff appointed, calling it "disrespectful to the regular citizen" [S10].
 - **Growth and land use:** says county policy piles on "bureaucracy and regulation that stifles growth"; would "cut the red tape" and give residents and businesses "a predictable land use process," with "a pro-conservation, pro-environment mindset" toward parks and open space [S5]. Supports "reasonable development, and fair land use" [S2].
 - **Fox Island Bridge:** blames "years of poor fiscal management" for having no reserve; would combine Fox Island, county, state and federal funds and explore selling county land not marked for conservation or development, and opposes placing the whole cost on Fox Island residents [S5]. His primary statement called for a replacement plan and protection of shorelines and docks [S1].
 - **Overall framing:** told a radio host he was running "to stop what appears to be a progressive shift, a leftist agenda" in Pierce County, as reported by Gig Harbor Now [S3].
@@ -95,7 +106,7 @@ In the August 4 primary he finished second of four with 12,856 votes (29.2%), be
 - **I-638 (IL26-638):** No public position found as of 2026-10-08.
 
 ## Record
-- No public-office record. Campaign finance (PDC, data updated 2026-10-02): $77,407.42 raised and $40,265.26 spent for 2026 [S8].
+- No public-office record; his statement cites six years negotiating police union contracts as guild president [S11]. Campaign finance (PDC, data updated 2026-10-02): $77,407.42 raised and $40,265.26 spent for 2026 [S8].
 
 ## Endorsements
 - Tacoma Police Union; Pierce County Deputy Sheriffs' Independent Guild; Pierce County Republican Party; Pierce County Safe; the Tacoma Business Council [S4].
@@ -103,6 +114,6 @@ In the August 4 primary he finished second of four with 12,856 votes (29.2%), be
 
 ## Scoring notes
 - Public-safety platform centers on deputy staffing, pay and retention, from a police-union background; opposes the sheriff-ombuds and appointed-sheriff charter amendments [S2][S5][S10].
-- Opposes the council-imposed public-safety sales tax as written and says the county spends beyond its means [S5].
+- Opposes the council-imposed public-safety sales tax as written and says the county spends beyond its means; his statement pledges "fiscal accountability" and action on "double-layered taxes" and "rising county costs" [S5][S11].
 - Would cut land-use red tape while stating support for conservation of parks and open space [S5].
-- First run for office, after 27 years in policing [S1][S5].
+- First run for office, after 27 years in policing; says he is "not a career politician" [S1][S5][S11].
