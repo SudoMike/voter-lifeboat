@@ -1,0 +1,102 @@
+{
+  "contest_slug": "state-representative-position-no-2-legislative-district-no-34",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/king/dossiers/state-representative-position-no-2-legislative-district-no-34/"],
+  "office_does": "One of 98 Washington State Representatives, serving two-year terms writing state law and the state budget for the 34th District (West Seattle, Vashon Island, White Center and part of Burien).",
+  "race_blurb": "House Majority Leader Joe Fitzgibbon, a 16-year incumbent with a climate and tax record, faces first-time candidate Mary Anito, an operations engineer running on fiscal responsibility combined with public investment; both prefer the Democratic Party. Fitzgibbon took 74.5% in the primary.",
+  "candidates": [
+    {
+      "slug": "joe-fitzgibbon",
+      "summary": "State Representative since 2010 and House Majority Leader since 2022; led passage of the Climate Commitment Act and Clean Fuel Standard and championed the 2026 millionaires' tax.",
+      "highlights": [
+        "Voted for ESSB 6346, the 2026 9.9% tax on income over $1 million, and publicly opposes I-645, which would repeal it [S7][S9]",
+        "Led passage of the Climate Commitment Act and Clean Fuel Standard; pledges to protect and strengthen the CCA [S1][S3]",
+        "Co-sponsored HB 1296 (2025), the parental-rights amendments that I-1 would undo [S5][S6]",
+        "Voted for the 2025 rent-increase limit (EHB 1217) [S8]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S7", "S9"],
+          "basis": "Voted for and says he led passage of the millionaires' tax, and publicly opposes I-645's repeal of it."
+        },
+        "spending": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S9"],
+          "basis": "Cites secured investments in education, healthcare and transit and warns repeal would force 'devastating cuts to education'; also credits himself with stabilizing the budget."
+        },
+        "climate": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S3"],
+          "basis": "Led passage of the Climate Commitment Act and Clean Fuel Standard and pledges to protect and strengthen the CCA."
+        },
+        "housing": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S3", "S8"],
+          "basis": "Voted for the 2025 rent-increase limit and pledges renter and anti-displacement protections, alongside support for building more housing near transit."
+        },
+        "experience": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S7"],
+          "basis": "Sixteen-year incumbent and House Majority Leader with an enacted climate and tax record."
+        },
+        "social": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S3"],
+          "basis": "Campaign site commits to protecting reproductive freedom and healthcare access; no documented position on gender-identity issues."
+        },
+        "parental-rights": {
+          "score": 2,
+          "confidence": "medium",
+          "citations": ["S5", "S6"],
+          "basis": "Co-sponsored and voted for ESHB 1296, which replaced I-2081's curriculum-examination right and eliminated some medical-service notifications in favor of student-privacy provisions."
+        }
+      }
+    },
+    {
+      "slug": "mary-anito",
+      "summary": "First-time candidate and operations engineer (REI, Wayfair, Caterpillar) and small-business owner, running on fiscal responsibility alongside public investment in schools and healthcare.",
+      "highlights": [
+        "Argues 'fiscal responsibility and strong public investment are not mutually exclusive' [S1]",
+        "Supports fully funding schools and fixing the levy and equalization structure [S3]",
+        "Supports universal-healthcare efforts such as the Washington Health Trust and restoring abortion-access funding [S3]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "spending": {
+          "score": 0,
+          "confidence": "medium",
+          "citations": ["S1", "S3"],
+          "basis": "Explicitly pairs budget balancing and 'fiscal responsibility' with fully funding schools, infrastructure and healthcare."
+        },
+        "experience": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1"],
+          "basis": "First-time candidate with a private-sector operations background challenging a 16-year incumbent leader."
+        },
+        "healthcare": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S3"],
+          "basis": "Supports 'efforts toward universal healthcare, such as The Washington Health Trust' while also emphasizing restoring Medicaid funding."
+        },
+        "social": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S3"],
+          "basis": "Pledges access to reproductive healthcare including restoring funding for abortion access; no documented position on gender-identity issues."
+        }
+      }
+    }
+  ]
+}

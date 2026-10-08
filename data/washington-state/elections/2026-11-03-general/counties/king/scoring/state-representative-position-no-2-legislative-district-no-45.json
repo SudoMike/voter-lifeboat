@@ -1,0 +1,42 @@
+{
+  "contest_slug": "state-representative-position-no-2-legislative-district-no-45",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/king/dossiers/state-representative-position-no-2-legislative-district-no-45/"],
+  "office_does": "One of two Washington State Representatives for the 45th District (Kirkland, Redmond, Woodinville, Sammamish, Duvall), serving two-year terms writing state law and budgets.",
+  "race_blurb": "Open seat after Rep. Larry Springer's retirement. Redmond City Councilmember Vanessa Kritzer, who took 62.75% in the primary, faces Republican John P Gibbons, who filed no pamphlet statement or biography and reports no fundraising.",
+  "candidates": [
+    {
+      "slug": "vanessa-kritzer",
+      "summary": "Redmond City Councilmember since 2020 and former Council President; executive director of the Washington Association of Land Trusts.",
+      "highlights": [
+        "Supports progressive revenue, including recent taxes on high earners, and is open to an income tax [S5]",
+        "Raised Redmond's inclusionary-zoning requirements and created a renter-protections code chapter [S5]",
+        "Says \"the state should set the floor\" on housing, with cities choosing how to meet it [S5]",
+        "Lists support for reproductive rights and LGBTQIA+ protections [S3]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": 2, "confidence": "medium", "citations": ["S5"], "basis": "Calls the tax code deeply regressive, supports taxing high earners and is open to an income tax; cites Redmond's head tax."},
+        "spending": {"score": 1, "confidence": "medium", "citations": ["S3", "S5"], "basis": "Would fully fund education, restore childcare and early-learning cuts, and use progressive revenue for sustained investment."},
+        "housing": {"score": 1, "confidence": "high", "citations": ["S5", "S3"], "basis": "Record on inclusionary zoning, supportive housing and renter protections; supports state rent stabilization, alongside supply-oriented planning."},
+        "climate": {"score": 2, "confidence": "high", "citations": ["S3", "S5"], "basis": "Calls climate action a moral imperative; record includes Redmond's sustainability plan, net-zero strategy and CCA-funded electric fire engines."},
+        "experience": {"score": -1, "confidence": "high", "citations": ["S1"], "basis": "Six-plus years on the Redmond council including Council President; no state legislative record."},
+        "local-control": {"score": 1, "confidence": "medium", "citations": ["S5"], "basis": "\"The state should set the floor\" on housing production and affordability, with local flexibility on implementation."},
+        "immigration": {"score": 1, "confidence": "medium", "citations": ["S3", "S5"], "basis": "Secured local funding for immigrant and refugee services and backed a resolution on constitutional protections."},
+        "social": {"score": 2, "confidence": "medium", "citations": ["S3", "S5"], "basis": "Lists standing up for reproductive rights and passing policies affirming LGBTQIA+ rights; supports stronger state anti-discrimination protections."}
+      }
+    },
+    {
+      "slug": "john-p-gibbons",
+      "summary": "Republican candidate who submitted no statement, biography or photo to the voters' pamphlet and lists no campaign website.",
+      "highlights": [
+        "No pamphlet statement or biography submitted [S1]",
+        "No PDC financial reports on file as of September 17 [S3]"
+      ],
+      "evidence_level": "pamphlet-only",
+      "withdrawn": false,
+      "scores": {}
+    }
+  ]
+}
