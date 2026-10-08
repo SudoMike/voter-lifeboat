@@ -41,6 +41,7 @@ import subprocess
 
 import election
 import pamphlet_refs
+import shared_contests
 from election import ROOT, rel
 
 E = election.Election(election.from_argv())
@@ -522,6 +523,15 @@ if KING_SHIPS:
     supported_counties.append(king_county)
 
 shared_scores = shared_score_index(scores)
+# From the general on (county-owned district contests), a county package's
+# contest that another shipped package already researched (the same race by
+# shared_contests.contest_key: a cross-county congressional or legislative
+# district, or a named local race such as King County District Court's
+# Southeast Electoral District in Pierce) ships with that package's scoring
+# and dossiers, unless the county package scored it itself. The primary keeps
+# its statewide-normalized index above.
+COUNTY_OWNED = PACKAGES["district_contests"] == "county"
+researched_elsewhere = shared_contests.researched_index([STATE] + DECLARED_DIRS) if COUNTY_OWNED else {}
 for county_dir in COUNTY_DIRS:
     cfile = county_dir / "interim/app-contests.json"
     mfile = county_dir / "interim/app-measures.json"
@@ -532,7 +542,11 @@ for county_dir in COUNTY_DIRS:
         for contest in pack.get("contests", []):
             scored = scores.get(contest["slug"])
             dossier_slug = contest["slug"]
-            if contest.get("category") in SHARED_CATEGORIES:
+            if COUNTY_OWNED:
+                found = researched_elsewhere.get(shared_contests.contest_key(contest))
+                if scored is None and found and found["package"] != county_dir.name:
+                    scored, dossier_slug = scores.get(found["contest_slug"]), found["contest_slug"]
+            elif contest.get("category") in SHARED_CATEGORIES:
                 shared = shared_scores.get(shared_contest_key(contest))
                 if shared:
                     scored, dossier_slug = shared

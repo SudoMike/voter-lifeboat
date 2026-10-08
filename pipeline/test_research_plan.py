@@ -56,5 +56,50 @@ class GeneralKingPlanTest(unittest.TestCase):
             self.assertIn("scope", m)
 
 
+class GeneralPiercePlanTest(unittest.TestCase):
+    """The county wave dry run (#20): what Pierce reuses and what it researches."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.plan = brp.plan_for("pierce", GENERAL.id)
+        cls.contests = {c["contest_slug"]: c for c in cls.plan["contests"]}
+
+    def test_committed_plan_is_current(self):
+        committed = (brp.interim_for("pierce", GENERAL.id) / "research-plan.json").read_text()
+        self.assertEqual(committed, dumped(self.plan))
+
+    def test_races_king_researched_are_not_researched_again(self):
+        elsewhere = {slug: c["shared"]["researched_in"] for slug, c in self.contests.items()
+                     if (c.get("shared") or {}).get("researched_in")}
+        self.assertEqual({
+            "pierce-congressional-district-8-u-s-representative": "congressional-district-8-united-states-representative",
+            "pierce-legislative-district-31-state-senator": "state-senator-legislative-district-no-31",
+            "pierce-legislative-district-31-state-representative-pos-1": "state-representative-position-no-1-legislative-district-no-31",
+            "pierce-legislative-district-31-state-representative-pos-2": "state-representative-position-no-2-legislative-district-no-31",
+            "pierce-king-county-district-court-southeast-electoral-district-judge-position-no-5": "judge-position-no-5-southeast-electoral-district",
+        }, {slug: r["contest_slug"] for slug, r in elsewhere.items()})
+        for r in elsewhere.values():
+            self.assertEqual("king", r["package"])
+            self.assertEqual([], r["candidates_missing"])
+
+    def test_district_contests_carry_forward_from_the_primary_statewide_dossiers(self):
+        ld25 = {c["name"]: c for c in self.contests["pierce-legislative-district-25-state-representative-pos-1"]["candidates"]}
+        self.assertEqual(
+            "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/"
+            "legislative-district-25-state-representative-position-1/michael-keaton.md",
+            ld25["Michael Keaton"]["primary_dossier"])
+        # LD 25 lies wholly in Pierce: no other package lists it.
+        self.assertNotIn("shared", self.contests["pierce-legislative-district-25-state-representative-pos-1"])
+
+    def test_county_contests_carry_forward_from_the_primary_county_dossiers(self):
+        d1 = {c["name"]: c for c in self.contests["pierce-pierce-county-council-district-1-county-councilmember"]["candidates"]}
+        self.assertEqual("primary", d1["Jerome O'Leary"]["carry_forward"])
+        self.assertIn("/2026-08-04-primary/counties/pierce/dossiers/", d1["Jerome O'Leary"]["primary_dossier"])
+
+    def test_races_other_county_packages_also_list_are_flagged(self):
+        self.assertEqual(["kitsap"], self.contests["pierce-congressional-district-6-u-s-representative"]["shared"]["also_listed_by"])
+        self.assertIsNone(self.contests["pierce-congressional-district-6-u-s-representative"]["shared"]["researched_in"])
+
+
 if __name__ == "__main__":
     unittest.main()
