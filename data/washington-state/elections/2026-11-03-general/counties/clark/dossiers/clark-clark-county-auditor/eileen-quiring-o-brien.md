@@ -87,7 +87,7 @@ sources:
 
 ## Background
 
-Eileen Quiring O'Brien, 78, is a retired former Clark County Council chair [S10]. She represented District 4 on the council from 2017 and was elected by her colleagues as council chair beginning in January 2019 [S1][S2]. The Columbian reports she served on the council from January 2017 to March 2022, resigning shortly after being reelected [S7]. Before that she served in the Oregon House (1995-1997) and Oregon Senate (1997-2001), where she was majority whip [S1]. Her campaign site says she chaired the Oregon Senate Revenue Committee and was deputy co-chair of the joint Ways and Means Committee [S2]. She also served on the Clark County Planning Commission and the Board of Equalization [S1][S2]. Her private-sector work includes small-business ownership, real estate brokerage and appraisal, and serving as founding executive director of the Robert D. and Marcia H. Randall Charitable Trust [S1][S2]. The Columbian describes her as a longtime Republican; the office is nonpartisan and the ballot lists no party preference [S6][S1].
+Eileen Quiring O'Brien, 78, is a retired former Clark County Council chair [S10]. Her pamphlet statement lists County Council District 4, 2016-2019, and council chair from 2019 [S1][S2]. The Columbian reports she served on the council from January 2017 to March 2022, resigning shortly after being reelected [S7]. Before that she served in the Oregon House (1995-1997) and Oregon Senate (1997-2001), where she was majority whip [S1]. Her campaign site says she chaired the Oregon Senate Revenue Committee and was deputy co-chair of the joint Ways and Means Committee [S2]. She also served on the Clark County Planning Commission and the Board of Equalization [S1][S2]. Her private-sector work includes small-business ownership, real estate brokerage and appraisal, and serving as founding executive director of the Robert D. and Marcia H. Randall Charitable Trust [S1][S2]. The Columbian describes her as a longtime Republican; the office is nonpartisan and the ballot lists no party preference [S6][S1].
 
 She is running to succeed Auditor Greg Kimsey, who is not seeking reelection after nearly 28 years [S6]. In the election-night count of the August 4 primary she placed second with 28.74%, behind Mitchell Kelly (29.15%) and ahead of Vancouver Councilor Ty Stober (22.85%) and state Rep. Sharon Wylie (19.26%) [S8].
 
@@ -115,7 +115,7 @@ She is running to succeed Auditor Greg Kimsey, who is not seeking reelection aft
 
 ## Record
 
-- Clark County Council, District 4 (2017-2019), then council chair (2019-2022) [S1][S2][S7].
+- Clark County Council, District 4 (2016-2019 per her pamphlet statement; January 2017 per The Columbian), then council chair (2019-2022) [S1][S2][S7].
 - Oregon House of Representatives (1995-1997) and Oregon Senate (1997-2001), majority whip [S1].
 - Clark County Planning Commission (2012-2016) and Board of Equalization (2015) [S1].
 
@@ -130,6 +130,6 @@ PDC summary as of its October 4, 2026 update: $49,562.70 raised, $34,334.15 spen
 ## Scoring notes
 
 - Spending: makes an outside audit of all finances and a "waste, fraud and abuse" search the core of her campaign. Kelly emphasizes internal controls and financial reporting.
-- Experience: decades of elected office (Oregon Legislature, county council chair), but she runs as the "fresh eyes" change candidate against an office led by one administration for 28 years [S7][S9]. Kelly is a first-time candidate from inside the office.
+- Experience: decades of elected office (Oregon Legislature, county council chair), which her pamphlet statement presents as "proven experience" and "experienced professional leadership" [S1]; she also describes bringing "fresh eyes" to an office led by one administration for 28 years [S7][S9]. Kelly is a first-time candidate from inside the office.
 - Reform: proposes structural changes to how the office checks itself, including external audits, proactive voter-roll cross-checks and retaining election records locally. She is the only finalist open to moving away from vote-by-mail.
 - No taxes, housing, safety or climate evidence; this is an administrative office.
