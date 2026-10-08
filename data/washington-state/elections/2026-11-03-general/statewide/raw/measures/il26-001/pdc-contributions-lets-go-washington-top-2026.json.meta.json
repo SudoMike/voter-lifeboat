@@ -1,0 +1,12 @@
+{
+  "url": "https://data.wa.gov/resource/kv7h-kjye.json?committee_id=30644&election_year=2026&$select=contributor_name,sum(amount)%20as%20total,count(*)%20as%20n&$group=contributor_name&$order=total%20DESC&$limit=10",
+  "retrieved_at": "2026-10-08",
+  "stage": "raw",
+  "method": "source pointer; HTTP GET (curl), cached copy under data/.cache/il26-001 (gitignored)",
+  "cache_file": "data/.cache/il26-001/pdc-contributions-lets-go-washington-top-2026.json",
+  "bytes": 682,
+  "sha256": "2fbdc8e7a540fca62a0d9cf51a6a03deffb6ab2f7cd0e5b50df7bb7e8b10bf5d",
+  "publisher": "Washington Public Disclosure Commission (PDC), Contributions to Candidates and Political Committees dataset on data.wa.gov",
+  "tier": 1,
+  "notes": "Top 10 contributors by total to 'Let's Go Washington (Sponsored by Brian Heywood)' (committee 30644), election year 2026, cash and in-kind combined, names as recorded (surname first for individuals). By type: cash 3849741.50 in 1732 rows, in-kind 26369.00 in 10 rows. The committee backs IL26-001, IL26-638 and IP26-645 together; contributions are not allocated by measure. HEYWOOD BRIAN's 606869.00 is 605000.00 cash in 7 gifts plus 1869.00 in-kind in 7 rows (see also raw/measures/ip26-645/pdc-contributions-lets-go-washington-heywood-2026.json.url)."
+}
