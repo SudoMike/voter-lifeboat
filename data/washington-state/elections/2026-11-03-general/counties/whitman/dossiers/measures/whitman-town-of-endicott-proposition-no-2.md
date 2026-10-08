@@ -68,6 +68,13 @@ sources:
     url: https://results.vote.wa.gov/results/20221108/export/20221108_whitmanprecincts.csv
     pointer: counties/whitman/raw/whitman/sos-results-20221108-whitman-precincts.csv.url
     accessed: 2026-10-08
+  - id: S9
+    tier: 1
+    type: government-website
+    ref: Municipal Research and Services Center (MRSC), "Levy Lid Lifts" (excess levies under RCW 84.52.052 require a 60% majority)
+    url: https://mrsc.org/explore-topics/finance/property-taxes/levy-lid-lifts
+    pointer: counties/whitman/raw/measures/whitman-city-of-tekoa-proposition-no-1/mrsc-levy-lid-lifts.html.url
+    accessed: 2026-10-08
 ---
 ## What it does
 
@@ -81,7 +88,7 @@ $15,000, an estimated $0.49 per $1,000 of assessed value; the county assessor se
 
 Endicott places three one-year town levies (fire and EMT, streets, parks) on the ballot each year; the town had three levies on the 2025 ballot [S6]. Mayor Dean Marty said of the 2024 set that they would not fund any major new projects [S5]. The 2023 results list three Endicott propositions by number only, which all passed (96-15, 81-29, 74-35) [S4]; the export does not name their subjects.
 
-- Results of the "Park Maintenance Levy": 82-68 in 2022 [S8], 87-78 in 2024 [S7], 59-37 in 2025 [S3]. It has drawn the narrowest margins of the three town levies.
+- Results of the "Park Maintenance Levy": 82-68 in 2022 [S8], 87-78 in 2024 [S7], 59-37 in 2025 [S3]. It has drawn the narrowest margins of the three town levies. The 2022 (54.7% yes) and 2024 (52.7%) results are below the 60% majority MRSC cites for excess levies [S9]; the 2025 result (61.5%) clears it.
 - The amount of earlier park levies was not found (the 2024 Gazette figure is behind the paywall) [S5].
 
 ## Arguments for
