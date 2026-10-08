@@ -7,12 +7,19 @@ import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { COUNTY_IDS, COUNTY_LAYERS, KING_LAYERS } from './geo.js'
 import { DISTRICT_LABELS, describeDistrict } from './districts.js'
+import { ELECTION_INDEX_PATH, activeAppDataPath } from './elections.js'
 
-const data = JSON.parse(
-  readFileSync(new URL('../../public/data/app-data.json', import.meta.url), 'utf8')
-)
+// Read the active election's data the same way the app does: through the
+// election index.
+const readPublic = (path) =>
+  JSON.parse(readFileSync(new URL(`../../public/${path}`, import.meta.url), 'utf8'))
+const electionIndex = readPublic(ELECTION_INDEX_PATH)
+const data = readPublic(activeAppDataPath(electionIndex))
 const dossierQueue = JSON.parse(
-  readFileSync(new URL('../../../data/final/dossier-batches.json', import.meta.url), 'utf8')
+  readFileSync(
+    new URL(`../../../data/final/${electionIndex.active}/dossier-batches.json`, import.meta.url),
+    'utf8'
+  )
 )
 
 // Scopes that are knowingly unresolvable, with the reason documented at the

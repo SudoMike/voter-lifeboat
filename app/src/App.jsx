@@ -15,6 +15,7 @@ import {
   interviewItemsForBallot,
 } from './lib/scoring.js'
 import { readHash, clearHash } from './lib/codec.js'
+import { loadActiveAppData } from './lib/elections.js'
 
 export default function App() {
   const [data, setData] = useState(null)
@@ -38,11 +39,7 @@ export default function App() {
   }, [])
 
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}data/app-data.json`)
-      .then((r) => {
-        if (!r.ok) throw new Error(`data ${r.status}`)
-        return r.json()
-      })
+    loadActiveAppData(import.meta.env.BASE_URL)
       .then(setData)
       .catch((e) => setLoadErr(String(e)))
   }, [])
