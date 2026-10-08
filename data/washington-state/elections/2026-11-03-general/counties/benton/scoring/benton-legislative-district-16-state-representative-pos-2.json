@@ -1,0 +1,128 @@
+{
+  "contest_slug": "benton-legislative-district-16-state-representative-pos-2",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/benton/dossiers/benton-legislative-district-16-state-representative-pos-2/"],
+  "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering school funding, tax structure, housing rules and criminal-justice statutes.",
+  "race_blurb": "Republican Skyler Rude, in the seat since 2019, faces Democrat Derek Sarley, a Walla Walla school-board member since 2015. Rude has announced he will resign effective October 31 to join the Secretary of State's office but remains on the ballot; if he wins, a Republican appointee would serve the term.",
+  "candidates": [
+    {
+      "slug": "skyler-rude",
+      "summary": "State Representative since 2019 and Assistant Minority Floor Leader focused on education and budget reform, who has announced his resignation effective October 31 while remaining on the ballot.",
+      "highlights": [
+        "Announced resignation effective October 31 to become legislative director for the Secretary of State; a win would lead to an appointed Republican successor [S17]",
+        "Voted against the 2026 tax on income over $1 million and calls himself a strong opponent of it [S3][S8]",
+        "Supports zero-based budgeting, expenditure limits and rolling back new programs [S5][S15]",
+        "Opposes statewide rent control and favors permitting and building-code streamlining [S4]",
+        "Voted against ESHB 1296 and the 2025 clean fuels bill [S11][S12]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S3", "S4", "S8", "S9", "S10"],
+          "basis": "Voted no on ESSB 6346 and on the 2025 B&O (ESHB 2081) and services excise (ESSB 5814) tax bills; website says he was a strong opponent of the income tax and opposes new taxes."
+        },
+        "spending": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S5", "S15"],
+          "basis": "Supports zero-based budgeting and expenditure limits, calls new programs during a deficit inexcusable and would roll them back."
+        },
+        "housing": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S4", "S13"],
+          "basis": "Opposes statewide rent control and new landlord-tenant rules, favors faster permitting and cheaper building codes; voted against the 2025 tenant housing-stability bill."
+        },
+        "climate": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S4", "S12"],
+          "basis": "Criticizes fuel-related taxes and prioritizes affordable energy; voted against the 2025 clean fuels program bill."
+        },
+        "experience": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S17"],
+          "basis": "Four House terms since 2019 and Assistant Minority Floor Leader after prior legislative staff work."
+        },
+        "local-control": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S15"],
+          "basis": "Says local control is paramount in data-center siting and the Legislature should safeguard local decisions."
+        },
+        "parental-rights": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S11"],
+          "basis": "Voted against ESHB 1296, the 2025 amendments to the parents' rights law, on House passage and final passage; no statement on notification or opt-outs."
+        },
+        "tech": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S15"],
+          "basis": "Frames data-center policy around facilitating siting and adding energy and transmission rather than more regulation."
+        }
+      }
+    },
+    {
+      "slug": "derek-sarley",
+      "summary": "Walla Walla school-board member since 2015, past president of the state school directors' association and PR-firm executive, running on school funding, affordability and budget reform.",
+      "highlights": [
+        "Calls Washington's tax code the second-most regressive in the nation and recent progressive revenue steps important [S2][S6]",
+        "Opposes the 2026 K-12 and childcare cuts and wants the state to rebuild its rainy-day fund [S6][S8]",
+        "Wants more homes built faster with fewer building barriers, and a review of certificate-of-need health rules [S3][S7]",
+        "Endorsed by the Washington State Labor Council, WEA, WSNA, Planned Parenthood Advocates and the area Democratic parties [S5]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S2", "S6"],
+          "basis": "Calls the tax code regressive and the Legislature's recent taxes on capital gains and high incomes important steps, while warning of their volatility."
+        },
+        "spending": {
+          "score": 0,
+          "confidence": "medium",
+          "citations": ["S6", "S8"],
+          "basis": "Opposes K-12 and childcare cuts but says Democrats expanded services beyond revenue and wants spending held below revenue to rebuild reserves."
+        },
+        "housing": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S3", "S8"],
+          "basis": "Wants more homes built faster with fewer outdated barriers and says the state cannot subsidize its way out of scarcity."
+        },
+        "healthcare": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S3", "S7"],
+          "basis": "Focuses on cost and supply within the current system (middlemen, certificate-of-need review) rather than coverage expansion."
+        },
+        "tech": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S8"],
+          "basis": "Opposes special tax breaks for data centers and wants ratepayer protections and equal environmental and water rules, while cautioning against rules that block building."
+        },
+        "experience": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S4"],
+          "basis": "Ten years on a school board but new to the Legislature; asks voters to choose 'someone different.'"
+        },
+        "social": {
+          "score": 1,
+          "confidence": "low",
+          "citations": ["S5"],
+          "basis": "Endorsed by Planned Parenthood Advocates; no statement of his own on reproductive or LGBTQ+ policy."
+        }
+      }
+    }
+  ]
+}
