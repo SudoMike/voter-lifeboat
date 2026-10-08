@@ -1,0 +1,37 @@
+{
+  "contest_slug": "benton-congressional-district-4-u-s-representative",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/benton/dossiers/benton-congressional-district-4-u-s-representative/",
+    "data/washington-state/elections/2026-11-03-general/counties/benton/scoring/benton-congressional-district-4-u-s-representative.json"
+  ],
+  "verdicts": [
+    {"candidate": "amanda-mckinney", "axis": "taxes", "verdict": "upheld"},
+    {"candidate": "amanda-mckinney", "axis": "spending", "verdict": "upheld"},
+    {"candidate": "amanda-mckinney", "axis": "safety", "verdict": "upheld"},
+    {"candidate": "amanda-mckinney", "axis": "climate", "verdict": "upheld"},
+    {"candidate": "amanda-mckinney", "axis": "experience", "verdict": "upheld"},
+    {"candidate": "amanda-mckinney", "axis": "reform", "verdict": "upheld"},
+    {"candidate": "amanda-mckinney", "axis": "immigration", "verdict": "upheld"},
+    {"candidate": "amanda-mckinney", "axis": "social", "verdict": "upheld"},
+    {
+      "candidate": "amanda-mckinney", "axis": "tech", "verdict": "adjust",
+      "adjusted_score": -2, "adjusted_confidence": "medium",
+      "note": "The direction is right: she treats winning the AI race as an energy-production problem [S1] and opposes 'heavy-handed regulation that stifles innovation' in AI [S2], which matches pole_a's light-touch description. But only S2 states a regulatory position, and at a July forum she said she supports some crypto regulation [S13]. That is one clear statement with a qualifier, not a record or repeated statements, so medium rather than high."
+    },
+    {"candidate": "amanda-mckinney", "axis": "defense", "verdict": "upheld"},
+    {"candidate": "john-duresky", "axis": "taxes", "verdict": "upheld"},
+    {
+      "candidate": "john-duresky", "axis": "spending", "verdict": "adjust",
+      "adjusted_score": 1, "adjusted_confidence": "medium",
+      "note": "He would invest in infrastructure and broadband, restore and expand ACA subsidies and fund rural hospitals [S1][S2], which leans pole_b. But the same sources pair that with restraint language: 'lowering these costs at home instead of wasting taxpayer dollars abroad' [S1] and stronger whistleblower protections [S2], and S8 profiles his campaign as stressing accountability. Pole_b at full strength means expanding programs as the primary lever, and the dossier does not show that, so +1."
+    },
+    {"candidate": "john-duresky", "axis": "climate", "verdict": "upheld"},
+    {"candidate": "john-duresky", "axis": "experience", "verdict": "upheld"},
+    {"candidate": "john-duresky", "axis": "reform", "verdict": "upheld"},
+    {"candidate": "john-duresky", "axis": "immigration", "verdict": "upheld"},
+    {"candidate": "john-duresky", "axis": "healthcare", "verdict": "upheld"},
+    {"candidate": "john-duresky", "axis": "defense", "verdict": "upheld"}
+  ],
+  "missing": []
+}
