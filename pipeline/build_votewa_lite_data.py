@@ -637,6 +637,9 @@ ELECTION_MEASURES = {
         # 2025 layer 20 SCH2025): 101 Woodring St, Cashmere -> CITY
         # 'Cashmere'; 350 Orondo Ave, Wenatchee -> SCH2025 DISTATTRIB '246'
         # (101 Woodring St, Cashmere -> '222', not in the district).
+        # Cost and purpose wording also draws on the measure dossiers'
+        # sources (counties/chelan/raw/measures/): the district's bond page,
+        # City of Cashmere Ordinance 1345 and the Assessor's 2026 levy book.
         # Overrides: VoteWA files the commissioner race as Countywide; it is
         # nominated by district and elected county-wide in the general (RCW
         # 36.32.040; SOS 2022 general: Commissioner District No. 2 drew 33,392
@@ -669,14 +672,14 @@ ELECTION_MEASURES = {
                 m("Wenatchee School District No. 246", "Proposition No. 1",
                   "Bonds to Replace Deteriorating Wenatchee High School and Improve School Air Quality Districtwide",
                   ("SCHDST", "246"),
-                  "Authorizes $275,000,000 of general obligation bonds, maturing within 20 years and repaid by excess property taxes, to build a new Wenatchee High School on the existing campus (replacing classrooms and portables, expanding career/technical education space) and replace aging HVAC at seven other schools; it would also qualify the district for an estimated $83,000,000 in state matching funds.",
-                  "$275,000,000 in bonds over up to 20 years; the district estimates $1.46 per $1,000 of assessed value a year.",
+                  "Authorizes $275,000,000 of general obligation bonds, repaid by excess property taxes over up to 20 years, to replace most of Wenatchee High School with new classrooms on its campus (renovating the gyms, pool and auditorium) and replace HVAC at four elementary and three middle schools; it would also qualify the district for an estimated $83,000,000 in state matching funds. Needs 60% yes.",
+                  "$275,000,000 in bonds over up to 20 years; the district estimates $1.46 per $1,000 of assessed value a year (about $584 on a $400,000 home), on top of the current $2.77 school rate, and about $444 million repaid including interest.",
                   "https://voter.votewa.gov/elections/measure.ashx?m=7302&e=899&la=en&c=04",
                   pages=(16, 17)),
                 m("City of Cashmere", "Proposition No. 1", "Public Safety and Government Services Levy Lid Lift",
                   ("CITY", "Cashmere"),
-                  "Lifts Cashmere's regular property tax levy to keep essential city services, including public safety, operating, and lets the levy rise up to 9% a year from 2028 to 2032; the 2032 levy becomes the base for future levy limits.",
-                  "$1.5737 per $1,000 of assessed value for 2027 collection, then up to 9% more a year through 2032.",
+                  "Lifts Cashmere's regular property tax levy to continue city services, which Ordinance 1345 names as law enforcement, fire protection and disaster mitigation, and lets the levy rise up to 9% a year from 2028 to 2032; the 2032 levy becomes the base for future levy limits.",
+                  "$1.5737 per $1,000 of assessed value in 2027, up from $1.4441 in 2026 (about $52 more a year on a $400,000 home), then up to 9% more a year through 2032.",
                   "https://voter.votewa.gov/elections/measure.ashx?m=7301&e=899&la=en&c=04",
                   pages=(18,)),
             ],
