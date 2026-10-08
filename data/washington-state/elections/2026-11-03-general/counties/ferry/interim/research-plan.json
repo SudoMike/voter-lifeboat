@@ -1,0 +1,216 @@
+{
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/ferry/interim/contests.json",
+    "data/washington-state/elections/2026-11-03-general/counties/ferry/interim/measures.json"
+  ],
+  "script": "pipeline/build_research_plan.py",
+  "contests": [
+    {
+      "contest_slug": "ferry-congressional-district-5-u-s-representative",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 5",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "michael-baumgartner",
+          "name": "Michael Baumgartner",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-5-u-s-representative/michael-baumgartner.md"
+        },
+        {
+          "slug": "carmela-conroy",
+          "name": "Carmela Conroy",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-5-u-s-representative/carmela-conroy.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "spokane",
+          "contest_slug": "spokane-congressional-district-5-u-s-representative",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/spokane/scoring/spokane-congressional-district-5-u-s-representative.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "spokane",
+          "franklin",
+          "walla-walla",
+          "stevens",
+          "whitman",
+          "asotin",
+          "adams"
+        ]
+      }
+    },
+    {
+      "contest_slug": "ferry-legislative-district-7-state-senator",
+      "category": "State",
+      "office": "State Senator",
+      "district": "Legislative District 7",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "shelly-short",
+          "name": "Shelly Short",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-7-state-senator/shelly-short.md"
+        },
+        {
+          "slug": "ronald-l-mccoy",
+          "name": "Ronald L McCoy",
+          "party_preference": "Prefers Independent Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-7-state-senator/ronald-l-mccoy.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "spokane",
+          "contest_slug": "spokane-legislative-district-7-state-senator",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/spokane/scoring/spokane-legislative-district-7-state-senator.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "spokane",
+          "chelan",
+          "stevens",
+          "douglas",
+          "okanogan"
+        ]
+      }
+    },
+    {
+      "contest_slug": "ferry-ferry-county-county-clerk",
+      "category": "County",
+      "office": "County Clerk",
+      "district": "Ferry County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "melanie-breezee",
+          "name": "Melanie Breezee",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/ferry/dossiers/ferry-ferry-county-county-clerk/melanie-breezee.md"
+        },
+        {
+          "slug": "sheri-l-mott",
+          "name": "Sheri L Mott",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/ferry/dossiers/ferry-ferry-county-county-clerk/sheri-l-mott.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "ferry-ferry-county-commissioner-district-2-county-commissioner-2",
+      "category": "County",
+      "office": "County Commissioner #2",
+      "district": "Ferry County Commissioner District 2",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "kevin-j-berry",
+          "name": "Kevin J Berry",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/ferry/dossiers/ferry-ferry-county-commissioner-district-2-county-commissioner-2/kevin-j-berry.md"
+        },
+        {
+          "slug": "robert-bob-dean",
+          "name": "Robert (Bob) Dean",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/ferry/dossiers/ferry-ferry-county-commissioner-district-2-county-commissioner-2/robert-bob-dean.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "ferry-ferry-county-county-sheriff",
+      "category": "County",
+      "office": "County Sheriff",
+      "district": "Ferry County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "sam-olson",
+          "name": "Sam Olson",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/ferry/dossiers/ferry-ferry-county-county-sheriff/sam-olson.md"
+        },
+        {
+          "slug": "ray-maycumber",
+          "name": "Ray Maycumber",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/ferry/dossiers/ferry-ferry-county-county-sheriff/ray-maycumber.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "ferry-public-utility-district-commissioner-district-3-public-utility-commissioner-3",
+      "category": "PublicUtility",
+      "office": "Public Utility Commissioner #3",
+      "district": "Public Utility District Commissioner District 3",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "andrew-pooler",
+          "name": "Andrew Pooler",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        },
+        {
+          "slug": "doug-aubertin",
+          "name": "Doug Aubertin",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "okanogan",
+          "contest_slug": "okanogan-public-utility-district-commissioner-district-3-public-utility-commissioner-3",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/okanogan/scoring/okanogan-public-utility-district-commissioner-district-3-public-utility-commissioner-3.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "okanogan"
+        ]
+      }
+    }
+  ],
+  "measures": [],
+  "carry_forward_from": "2026-08-04-primary"
+}

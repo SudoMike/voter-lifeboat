@@ -1,0 +1,11 @@
+{
+  "county": "ferry",
+  "script": "pipeline/extract_pdf_text.mjs",
+  "files": [
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/ferry/raw/ferry/sample-ballot.pdf.url",
+      "url": "https://www.ferry-county.com/SampleBallot.pdf",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/ferry/interim/pdf-text/sample-ballot.txt"
+    }
+  ]
+}
