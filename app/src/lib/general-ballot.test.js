@@ -5,12 +5,14 @@
 // coverage (#28), Island, Lewis, Franklin, Chelan, Clallam and Grays Harbor at
 // full coverage (#29), Mason, Walla Walla, Stevens, Whitman and Douglas at full coverage and Okanogan at
 // partial coverage (#30), Jefferson, Kittitas, Asotin and Adams at full coverage and Klickitat and Pacific at
-// partial coverage (#31), Skamania, San Juan, Lincoln, Pend Oreille, Ferry and Wahkiakum at full coverage (#32), every other Washington address a Statewide-Only Guide (issue #9). These run the app's own ballot, interview, lean and Ballot Brief
+// partial coverage (#31), Skamania, San Juan, Lincoln, Pend Oreille, Ferry, Wahkiakum, Columbia and Garfield at full coverage (#32):
+// every Washington county. An address outside every shipped county would get
+// a Statewide-Only Guide (issue #9). These run the app's own ballot, interview, lean and Ballot Brief
 // code against public/data/2026-11-03-general.
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
-import { scopeMatches, coverageAdvice } from './geo.js'
+import { scopeMatches, coverageAdvice, COUNTY_IDS } from './geo.js'
 import {
   contestsOnBallot,
   measuresOnBallot,
@@ -72,7 +74,17 @@ const STATE_MEASURES = [
   'initiative-measure-no-il26-638',
 ]
 
-test('the general ships thirty-three counties at full county coverage, Spokane, Okanogan, Klickitat and Pacific at partial, with their elections offices', () => {
+test('the general ships all 39 counties: every Washington county the geocoder names', () => {
+  // #32: the last two, Columbia and Garfield, ship full_county.
+  const ids = data.coverage.supported_counties.map((c) => c.id)
+  assert.equal(ids.length, 39)
+  assert.deepEqual([...ids].sort(), Object.values(COUNTY_IDS).sort())
+  assert.equal(data.coverage.supported_counties.filter((c) => c.coverage === 'full_county').length, 35)
+  assert.deepEqual(data.coverage.supported_counties.filter((c) => c.coverage === 'partial_county').map((c) => c.id),
+    ['spokane', 'okanogan', 'klickitat', 'pacific'])
+})
+
+test('the general ships thirty-five counties at full county coverage, Spokane, Okanogan, Klickitat and Pacific at partial, with their elections offices', () => {
   assert.equal(data.election.id, '2026-11-03-general')
   assert.deepEqual(data.coverage, {
     statewide_complete: true,
@@ -442,6 +454,26 @@ test('the general ships thirty-three counties at full county coverage, Spokane, 
         fips: '53069',
         coverage: 'full_county',
         elections_url: 'https://www.co.wahkiakum.wa.us/419/Elections',
+      },
+      {
+        // Full: the Pool District and Prescott park levies read DOR PKR2025
+        // (PARKDST, #32).
+        id: 'columbia',
+        name: 'Columbia County',
+        state: 'WA',
+        fips: '53013',
+        coverage: 'full_county',
+        elections_url: 'https://www.columbiaco.com/616/2026-General-Election',
+      },
+      {
+        // Full: every scope is county-wide or a Census layer (#32). The
+        // office is the SOS county elections offices directory's link.
+        id: 'garfield',
+        name: 'Garfield County',
+        state: 'WA',
+        fips: '53023',
+        coverage: 'full_county',
+        elections_url: 'https://www.garfieldcountywa.gov/auditor',
       },
     ],
   })
@@ -1541,6 +1573,62 @@ test('a Wahkiakum ballot: Clark\'s CD 3, Thurston\'s LD 19, the county EMS levy 
     assert.deepEqual(ownLocal(b, 'wahkiakum'), [COUNTY_EMS])
   }
   assert.equal(coverageAdvice(wa({})), null)
+})
+
+test('a Columbia ballot: Spokane\'s CD 5 and LD 9, the Pool District levy, Columbia\'s own Prescott levy copy', () => {
+  const COLUMBIA = { id: 'columbia', fips: '53013', name: 'Columbia County' }
+  const co = (districts) => ({ coverageStatus: 'full_county', county: COLUMBIA, districts, missingLayers: [] })
+  const POOL = 'columbia-columbia-county-park-and-recreation-pool-district-proposition-no-1'
+  const PRESCOTT = 'columbia-prescott-joint-park-and-recreation-district-proposition-no-1'
+  const WW_PRESCOTT = 'walla-walla-prescott-joint-park-and-recreation-district-proposition-no-1'
+  // Districts as the live District Adapter resolved them on 2026-10-08.
+  // 341 E Main St, Dayton: the Pool District.
+  const dayton = ballotFor(co({ CONGDST: '5', LEGDST: '9', CITY: 'Dayton', COUNTY_COUNCIL: '2', PARKDST: 'CPR' }))
+  const slugs = dayton.contests.map((c) => c.slug)
+  assert.equal(new Set(slugs).size, slugs.length)
+  assert.equal(slugs.length, 12 + SUPREME_COURT.length)
+  for (const slug of SUPREME_COURT) assert.ok(slugs.includes(slug), slug)
+  assert.ok(!dayton.contests.some((c) => c.owner !== 'columbia' && c.owner !== 'statewide'))
+  sameScoring(dayton, 'columbia-congressional-district-5-u-s-representative', 'spokane-congressional-district-5-u-s-representative')
+  for (const pos of [1, 2])
+    sameScoring(dayton, `columbia-legislative-district-9-state-representative-pos-${pos}`, `spokane-legislative-district-9-state-representative-pos-${pos}`)
+  // Commissioner No. 3 is nominated by district, elected county-wide.
+  assert.ok(slugs.includes('columbia-columbia-county-commissioner-district-3-columbia-county-commissioner-no-3'))
+  assert.deepEqual(dayton.measures.map((m) => m.slug), [...STATE_MEASURES, POOL])
+  // The Prescott district's Columbia part (interior point -118.21, 46.40):
+  // Columbia's copy of the levy, never Walla Walla's.
+  const pres = ballotFor(co({ CONGDST: '5', LEGDST: '9', COUNTY_COUNCIL: '3', PARKDST: 'PRES' }))
+  assert.equal(pres.contests.length, 12 + SUPREME_COURT.length)
+  assert.deepEqual(pres.measures.map((m) => m.slug), [...STATE_MEASURES, PRESCOTT])
+  assert.ok(!pres.measures.some((m) => m.slug === WW_PRESCOTT))
+  // 101 Main St, Starbuck: in neither park district, no local measure.
+  const starbuck = ballotFor(co({ CONGDST: '5', LEGDST: '9', CITY: 'Starbuck', COUNTY_COUNCIL: '3' }))
+  assert.equal(starbuck.contests.length, 12 + SUPREME_COURT.length)
+  assert.deepEqual(starbuck.measures.map((m) => m.slug), STATE_MEASURES)
+  assert.equal(coverageAdvice(co({})), null)
+})
+
+test('a Garfield ballot: Spokane\'s CD 5 and LD 9, both commissioner seats county-wide, no local measure', () => {
+  const GARFIELD = { id: 'garfield', fips: '53023', name: 'Garfield County' }
+  const ga = (districts) => ({ coverageStatus: 'full_county', county: GARFIELD, districts, missingLayers: [] })
+  // Districts as the live District Adapter resolved them on 2026-10-08:
+  // 789 W Main St, Pomeroy and the Pataha interior point (-117.5175, 46.4706).
+  // The same 13 county contests.
+  for (const districts of [{ CONGDST: '5', LEGDST: '9', CITY: 'Pomeroy' }, { CONGDST: '5', LEGDST: '9' }]) {
+    const b = ballotFor(ga(districts))
+    const slugs = b.contests.map((c) => c.slug)
+    assert.equal(new Set(slugs).size, slugs.length)
+    assert.equal(slugs.length, 13 + SUPREME_COURT.length)
+    for (const slug of SUPREME_COURT) assert.ok(slugs.includes(slug), slug)
+    assert.deepEqual(b.measures.map((m) => m.slug), STATE_MEASURES)
+    assert.ok(!b.contests.some((c) => c.owner !== 'garfield' && c.owner !== 'statewide'))
+    sameScoring(b, 'garfield-congressional-district-5-u-s-representative', 'spokane-congressional-district-5-u-s-representative')
+    for (const pos of [1, 2])
+      sameScoring(b, `garfield-legislative-district-9-state-representative-pos-${pos}`, `spokane-legislative-district-9-state-representative-pos-${pos}`)
+    for (const n of [1, 3])
+      assert.ok(slugs.includes(`garfield-garfield-county-commissioner-district-${n}-county-commissioner-${n}`), n)
+  }
+  assert.equal(coverageAdvice(ga({})), null)
 })
 
 test('an Adams ballot: Benton\'s, Spokane\'s and Grant\'s research for CD 4/5, LD 9 and LD 13, the pool and fire levies by district', () => {
