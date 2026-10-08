@@ -63,7 +63,7 @@ Kerry Hills (prefers Nonpartisan Party) is a probation officer (2014 to present)
 ## Positions
 All positions come from Hills's pamphlet statement [S1].
 - **Taxes:** "I have great concern about the increased taxes enacted" [S1].
-- **Spending:** "If you agree with past Governors, Gregorie and Locke, that Olympia has a spending problem, then it's time for a change. There is a lack of fiscal responsibility in Olympia, so we can't afford to elect the same representatives" [S1].
+- **Spending:** "If you agree with past Governors, Gregorie [sic] and Locke, that Olympia has a spending problem, then it's time for a change. There is a lack of fiscal responsibility in Olympia, so we can't afford to elect the same representatives" [S1].
 - **Balance of government:** addresses voters "in the 55% of Washingtonians that question the direction WA is moving, believe varied viewpoints are a strength, and believe balanced government is needed" [S1].
 
 ## Positions on the 2026 initiatives

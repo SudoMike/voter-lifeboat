@@ -173,6 +173,96 @@ sources:
     outlet: Washington Secretary of State, November 5, 2024 general results (statewide export)
     url: https://results.vote.wa.gov/results/20241105/export/20241105_AllState.csv
     accessed: 2026-10-08
+  - id: S27
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, Senate Ways & Means striking amendment S-2802.1 to EHB 1217 (2025; adopted as amended 2025-04-10)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/Senate/1217.E%20AMS%20WM%20S2802.1.htm
+    accessed: 2026-10-08
+  - id: S28
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, Senate floor amendment 345 to EHB 1217 (2025; text lists Senator Shewmake; adopted 2025-04-10)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/Senate/1217.E%20AMS%20SHEW%20S3013.1.htm
+    accessed: 2026-10-08
+  - id: S29
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, Senate floor amendment 312 to EHB 1217 (2025; text lists Senator Liias; adopted 2025-04-10)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/Senate/1217.E%20AMS%20LIIA%20S2858.1.htm
+    accessed: 2026-10-08
+  - id: S30
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, House floor amendment 382 to SHB 1296 (2025; text lists Representative Burnett)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/1296-S%20AMH%20BURN%20MOET%20394.htm
+    accessed: 2026-10-08
+  - id: S31
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, House floor amendment 435 to SHB 1296 (2025; text lists Representative Marshall)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/1296-S%20AMH%20MARS%20MORI%20173.htm
+    accessed: 2026-10-08
+  - id: S32
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, House floor amendment 442 to SHB 1296 (2025; text lists Representative Marshall)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/1296-S%20AMH%20MARS%20MORI%20176.htm
+    accessed: 2026-10-08
+  - id: S33
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, House floor amendment 396 to SHB 1296 (2025; text lists Representative Walsh)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/1296-S%20AMH%20WALJ%20MORI%20182.htm
+    accessed: 2026-10-08
+  - id: S34
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, House floor amendment 420 to SHB 1296 (2025; text lists Representative Steele)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/1296-S%20AMH%20STEE%20MORI%20179.htm
+    accessed: 2026-10-08
+  - id: S35
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, House floor amendment 448 to SHB 1296 (2025; text lists Representative Caldier)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/1296-S%20AMH%20CALD%20MORI%20185.htm
+    accessed: 2026-10-08
+  - id: S36
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, House floor amendment 428 to SHB 1296 (2025; text lists Representative Couture)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/1296-S%20AMH%20COUT%20MOET%20434.htm
+    accessed: 2026-10-08
+  - id: S37
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, House floor amendment 444 to SHB 1296 (2025; text lists Representative Couture)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/1296-S%20AMH%20COUT%20REIN%20401.htm
+    accessed: 2026-10-08
+  - id: S38
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, House floor amendment 437 to SHB 1296 (2025; text lists Representative Ley)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/1296-S%20AMH%20LEYJ%20MOET%20396.htm
+    accessed: 2026-10-08
+  - id: S39
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, House floor amendment 462 to SHB 1296 (2025; text lists Representative Barkis)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/1296-S%20AMH%20BARK%20REIN%20388.htm
+    accessed: 2026-10-08
+  - id: S40
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, House floor amendment 383 to SHB 1296 (2025; text lists Representative Keaton)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/1296-S%20AMH%20KEAT%20REIN%20390.htm
+    accessed: 2026-10-08
+  - id: S41
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, House floor amendment 384 to SHB 1296 (2025; text lists Representative Schmidt)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/1296-S%20AMH%20SCHM%20MOET%20391.htm
+    accessed: 2026-10-08
 ---
 
 ## Background
@@ -191,6 +281,17 @@ Dan Bronoske (prefers Democratic Party) has been the 28th District State Represe
 
 ### Parents and schools
 - Voted yea on ESHB 1296 at House third reading (2025-03-12) and final passage as amended by the Senate (2025-04-24) [S7]; the bill modified the list of parental rights enacted by Initiative 2081 [S8].
+- On 2025-03-12, before the third-reading vote, he voted nay on ten recorded floor amendments that the House rejected, which would have [S7]:
+  - added at least monthly evening and weekend opportunities for parents to examine curriculum, textbooks and instructional materials (382) [S30];
+  - added medical or health records (435) and mental health counseling records (442), to the extent federal law permits, to the education records parents may inspect [S31][S32];
+  - restored parental notification when medical services or medications given to a child could affect the parent's health insurance payments or copays (396) [S33];
+  - restored prior notification when medical services, or medications the parent had not authorized, are offered to a child (420) [S34];
+  - restored notification when the school arranges medical treatment or unauthorized medications that result in follow-up care beyond school hours (448) [S35];
+  - restored immediate notification if a child is taken from campus without parental permission, including to a youth shelter or host home (444) [S37];
+  - added a parental right not to have a child under 18 authorize excused absences (437) [S38];
+  - required certificated school staff to work with families to support implementation of the Initiative 2081 parents' bill of rights (383) [S40];
+  - removed the provision that the listed parental rights do not create a private right of action (384) [S41].
+- He voted yea on the two amendments the House adopted that day: a right to immediate notification when a criminal act is alleged against a child, including alleged sexual misconduct by a school employee (428; adopted 93-0) [S36], and a right to request enrollment in a charter school (462; adopted 92-1) [S7][S39].
 
 ## Positions on the 2026 initiatives
 - **I-645 (IP26-645):** No public position on the initiative found as of 2026-10-08. Record: he voted nay on House final passage of ESSB 6346 (9.9 percent tax on Washington taxable income over $1 million), and nay on the motion to postpone it indefinitely [S5][S6].
@@ -200,7 +301,7 @@ Dan Bronoske (prefers Democratic Party) has been the 28th District State Represe
 ## Record
 - ESSB 6346 (2026): nay on House final passage as amended (2026-03-09; passed 51-46); one of eight House Democrats voting nay [S5][S6][S25]. Of the 65 floor amendments the House rejected, he voted yea on 12 [S5].
 - 2025 revenue bills: yea on ESHB 2081 (business and occupation tax rate increases and surcharges), ESSB 5813 (capital gains tax of 9.9 percent above $1 million and estate tax changes) and ESSB 5801 (motor vehicle fuel tax up 6 cents per gallon); nay on ESSB 5814 (sales tax extended to select services) [S11][S12][S13][S14][S15][S16][S19][S20].
-- EHB 1217 (2025, limits annual rent increases to the lesser of 7 percent plus CPI or 10 percent): nay on House passage (2025-03-10) and on final passage of the conference report (2025-04-27); one of five House Democrats voting nay on the final version [S17][S18][S25].
+- EHB 1217 (2025, limits annual rent increases to the lesser of 7 percent plus CPI or 10 percent): nay on House passage (2025-03-10) and on final passage of the conference report (2025-04-27); one of five House Democrats voting nay on the final version [S17][S18][S25]. In between, on 2025-04-23, he voted yea on the motion to concur in the Senate's amendments, which failed 48-50 [S17][S18]. The Senate version, as amended on the Senate floor, raised the annual limit for residential tenancies from seven percent to 10 percent plus the consumer price index [S28], set a 5 percent limit for manufactured/mobile home lots, lengthened the new-construction exemption from 12 to 15 years after the certificate of occupancy [S27], and exempted single-family homes not owned by a real estate investment trust, a corporation or an LLC with a corporate member [S29].
 - ESHB 1296 (2025) and ESSB 5599 (2023): yea [S7][S9].
 - Campaign finance (PDC, data updated 2026-10-05): $142,436.01 raised and $5,684.89 spent for 2026 [S21].
 
@@ -211,6 +312,7 @@ Dan Bronoske (prefers Democratic Party) has been the 28th District State Represe
 
 ## Scoring notes
 - In the House since 2021 and a committee chair, against Kerry Hills, whose name was not on the primary ballot [S1][S22].
-- Voted against ESSB 6346, the 2025 services sales tax and the 2025 rent-increase limit, and for the capital gains, B&O and gas tax bills [S5][S11][S13][S15][S17][S19].
+- Voted against ESSB 6346 and the 2025 services sales tax, and for the capital gains, B&O and gas tax bills [S5][S11][S13][S15][S19].
+- On the 2025 rent-increase limit (EHB 1217), voted nay on House passage and on the final conference version, and yea on concurring in the Senate version, which set a higher limit (10 percent plus CPI) with broader exemptions [S17][S27][S28][S29].
 - Housing approach centered on supply and permit streamlining [S2].
 - Voted for ESHB 1296 and ESSB 5599 [S7][S9].
