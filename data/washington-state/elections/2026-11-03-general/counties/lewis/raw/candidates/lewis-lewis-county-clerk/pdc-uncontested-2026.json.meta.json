@@ -1,0 +1,13 @@
+{
+  "url": "https://data.wa.gov/resource/3h9x-7bvm.json?$where=election_year%3d%272026%27+AND+filer_type%3d%27CA%27+AND+jurisdiction_county%3d%27LEWIS%27+AND+%28upper%28filer_name%29+like+%27%25NIELSON%25%27+OR+upper%28filer_name%29+like+%27%25TINNEY%25%27+OR+upper%28filer_name%29+like+%27%25MEYER%25%27+OR+upper%28filer_name%29+like+%27%25ARNY%25%27+OR+upper%28filer_name%29+like+%27%25SAMUELSON%25%27+OR+upper%28filer_name%29+like+%27%25BUZZARD%25%27%29&$select=id%2cfiler_name%2coffice%2cjurisdiction%2cparty%2cregistered%2ccontributions_amount%2cexpenditures_amount%2creporting_option",
+  "retrieved_at": "2026-10-09",
+  "method": "curl -L (User-Agent 'Mozilla/5.0')",
+  "stage": "raw",
+  "source_type": "pdc",
+  "tier": 1,
+  "outlet": "Washington Public Disclosure Commission",
+  "bytes": 1239,
+  "sha256": "85890878723a31041989844f93566a400caa1399a57cc9ef0a41ac3112acaf16",
+  "cache_file": "data/.cache/lewis/pdc-uncontested-lewis-2026.json",
+  "notes": "PDC campaign finance summary (data.wa.gov 3h9x-7bvm), 2026 Lewis County candidate registrations for Nielson, Tinney, Meyer, Davis, Samuelson and Buzzard (all mini reporting)."
+}
