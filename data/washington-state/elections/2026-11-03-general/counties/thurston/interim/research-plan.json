@@ -1,0 +1,656 @@
+{
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/thurston/interim/contests.json",
+    "data/washington-state/elections/2026-11-03-general/counties/thurston/interim/measures.json"
+  ],
+  "script": "pipeline/build_research_plan.py",
+  "contests": [
+    {
+      "contest_slug": "thurston-congressional-district-3-u-s-representative",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 3",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "john-braun",
+          "name": "John Braun",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-3-u-s-representative/john-braun.md"
+        },
+        {
+          "slug": "marie-gluesenkamp-perez",
+          "name": "Marie Gluesenkamp Perez",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-3-u-s-representative/marie-gluesenkamp-perez.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "clark",
+          "contest_slug": "clark-congressional-district-3-u-s-representative",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/clark/scoring/clark-congressional-district-3-u-s-representative.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "clark"
+        ]
+      }
+    },
+    {
+      "contest_slug": "thurston-congressional-district-10-u-s-representative",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 10",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "marilyn-strickland",
+          "name": "Marilyn Strickland",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-10-u-s-representative/marilyn-strickland.md"
+        },
+        {
+          "slug": "chris-d-chung",
+          "name": "Chris D. Chung",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-10-u-s-representative/chris-d-chung.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "pierce",
+          "contest_slug": "pierce-congressional-district-10-u-s-representative",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/pierce/scoring/pierce-congressional-district-10-u-s-representative.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "pierce"
+        ]
+      }
+    },
+    {
+      "contest_slug": "thurston-legislative-district-2-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 2",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "andrew-barkis",
+          "name": "Andrew Barkis",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-2-state-representative-position-1/andrew-barkis.md"
+        },
+        {
+          "slug": "william-dehnel",
+          "name": "William Dehnel",
+          "party_preference": "Prefers Labor Democrat Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-2-state-representative-position-1/william-dehnel.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "pierce",
+          "contest_slug": "pierce-legislative-district-2-state-representative-pos-1",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/pierce/scoring/pierce-legislative-district-2-state-representative-pos-1.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "pierce"
+        ]
+      }
+    },
+    {
+      "contest_slug": "thurston-legislative-district-2-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 2",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "matt-marshall",
+          "name": "Matt Marshall",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-2-state-representative-position-2/matt-marshall.md"
+        },
+        {
+          "slug": "angela-taylor",
+          "name": "Angela Taylor",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-2-state-representative-position-2/angela-taylor.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "pierce",
+          "contest_slug": "pierce-legislative-district-2-state-representative-pos-2",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/pierce/scoring/pierce-legislative-district-2-state-representative-pos-2.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "pierce"
+        ]
+      }
+    },
+    {
+      "contest_slug": "thurston-legislative-district-19-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 19",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "jim-walsh",
+          "name": "Jim Walsh",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-19-state-representative-position-1/jim-walsh.md"
+        },
+        {
+          "slug": "kevin-moynihan",
+          "name": "Kevin Moynihan",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-19-state-representative-position-1/kevin-moynihan.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "thurston-legislative-district-19-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 19",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "terry-carlson",
+          "name": "Terry Carlson",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-19-state-representative-position-2/terry-carlson.md"
+        },
+        {
+          "slug": "joel-mcentire",
+          "name": "Joel McEntire",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-19-state-representative-position-2/joel-mcentire.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "thurston-legislative-district-20-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 20",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "peter-abbarno",
+          "name": "Peter Abbarno",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-20-state-representative-position-1/peter-abbarno.md"
+        },
+        {
+          "slug": "andy-zahn",
+          "name": "Andy Zahn",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-20-state-representative-position-1/andy-zahn.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "clark",
+          "contest_slug": "clark-legislative-district-20-state-representative-pos-1",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/clark/scoring/clark-legislative-district-20-state-representative-pos-1.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "clark"
+        ]
+      }
+    },
+    {
+      "contest_slug": "thurston-legislative-district-20-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 20",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "ed-orcutt",
+          "name": "Ed Orcutt",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-20-state-representative-position-2/ed-orcutt.md"
+        },
+        {
+          "slug": "evan-jones",
+          "name": "Evan Jones",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-20-state-representative-position-2/evan-jones.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "clark",
+          "contest_slug": "clark-legislative-district-20-state-representative-pos-2",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/clark/scoring/clark-legislative-district-20-state-representative-pos-2.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "clark"
+        ]
+      }
+    },
+    {
+      "contest_slug": "thurston-legislative-district-22-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 22",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "beth-doglio",
+          "name": "Beth Doglio",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-22-state-representative-position-1/beth-doglio.md"
+        },
+        {
+          "slug": "don-hewett",
+          "name": "Don Hewett",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-22-state-representative-position-1/don-hewett.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "thurston-legislative-district-22-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 22",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "lisa-parshley",
+          "name": "Lisa Parshley",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-22-state-representative-position-2/lisa-parshley.md"
+        },
+        {
+          "slug": "jamie-keenan-devargas",
+          "name": "Jamie Keenan-deVargas",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-22-state-representative-position-2/jamie-keenan-devargas.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "thurston-legislative-district-35-state-senator",
+      "category": "State",
+      "office": "State Senator",
+      "district": "Legislative District 35",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "drew-c-macewen",
+          "name": "Drew C MacEwen",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-35-state-senator/drew-c-macewen.md"
+        },
+        {
+          "slug": "carolina-mejia",
+          "name": "Carolina Mejia",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-35-state-senator/carolina-mejia.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "kitsap",
+          "contest_slug": "kitsap-legislative-district-35-state-senator",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/kitsap/scoring/kitsap-legislative-district-35-state-senator.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "kitsap"
+        ]
+      }
+    },
+    {
+      "contest_slug": "thurston-legislative-district-35-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 35",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "dan-griffey",
+          "name": "Dan Griffey",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-35-state-representative-position-1/dan-griffey.md"
+        },
+        {
+          "slug": "jim-pierson",
+          "name": "Jim Pierson",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-35-state-representative-position-1/jim-pierson.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "kitsap",
+          "contest_slug": "kitsap-legislative-district-35-state-representative-pos-1",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/kitsap/scoring/kitsap-legislative-district-35-state-representative-pos-1.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "kitsap"
+        ]
+      }
+    },
+    {
+      "contest_slug": "thurston-legislative-district-35-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 35",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "travis-couture",
+          "name": "Travis Couture",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-35-state-representative-position-2/travis-couture.md"
+        },
+        {
+          "slug": "maria-littlesun",
+          "name": "Maria Littlesun",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-35-state-representative-position-2/maria-littlesun.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "kitsap",
+          "contest_slug": "kitsap-legislative-district-35-state-representative-pos-2",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/kitsap/scoring/kitsap-legislative-district-35-state-representative-pos-2.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "kitsap"
+        ]
+      }
+    },
+    {
+      "contest_slug": "thurston-thurston-county-assessor",
+      "category": "County",
+      "office": "Assessor",
+      "district": "Thurston County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "jj-olson",
+          "name": "JJ Olson",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/thurston/dossiers/thurston-thurston-county-assessor/jj-olson.md"
+        },
+        {
+          "slug": "lynda-nashed-zeman",
+          "name": "Lynda Nashed Zeman",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/thurston/dossiers/thurston-thurston-county-assessor/lynda-nashed-zeman.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "thurston-thurston-county-clerk",
+      "category": "County",
+      "office": "Clerk",
+      "district": "Thurston County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "nicole-miller",
+          "name": "Nicole Miller",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/thurston/dossiers/thurston-thurston-county-clerk/nicole-miller.md"
+        },
+        {
+          "slug": "garrett-cady",
+          "name": "Garrett Cady",
+          "party_preference": "Prefers Independent Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/thurston/dossiers/thurston-thurston-county-clerk/garrett-cady.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "thurston-thurston-county-commissioner-district-no-5-county-commissioner",
+      "category": "County",
+      "office": "County Commissioner",
+      "district": "Thurston County Commissioner District No. 5",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "nicolas-martinez-dunning",
+          "name": "Nicolas Martinez-Dunning",
+          "party_preference": "Prefers Moderate Democrat Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/thurston/dossiers/thurston-thurston-county-commissioner-district-no-5-county-commissioner/nicolas-martinez-dunning.md"
+        },
+        {
+          "slug": "emily-clouse",
+          "name": "Emily Clouse",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/thurston/dossiers/thurston-thurston-county-commissioner-district-no-5-county-commissioner/emily-clouse.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "thurston-thurston-county-sheriff",
+      "category": "County",
+      "office": "Sheriff",
+      "district": "Thurston County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "derek-sanders",
+          "name": "Derek Sanders",
+          "party_preference": "Prefers Independent Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/thurston/dossiers/thurston-thurston-county-sheriff/derek-sanders.md"
+        },
+        {
+          "slug": "kevin-burton-crow",
+          "name": "Kevin Burton-Crow",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/thurston/dossiers/thurston-thurston-county-sheriff/kevin-burton-crow.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "thurston-thurston-county-public-utility-district-commissioner-district-no-1-public-utility-district-commissioner",
+      "category": "PublicUtility",
+      "office": "Public Utility District Commissioner",
+      "district": "Thurston County Public Utility District Commissioner District No. 1",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "jim-campbell",
+          "name": "Jim Campbell",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/thurston/dossiers/thurston-thurston-county-public-utility-district-commissioner-district-no-1-public-utility-district-commissioner/jim-campbell.md"
+        },
+        {
+          "slug": "troy-kirby",
+          "name": "Troy Kirby",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/thurston/dossiers/thurston-thurston-county-public-utility-district-commissioner-district-no-1-public-utility-district-commissioner/troy-kirby.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "thurston-thurston-county-public-utility-district-commissioner-district-no-3-public-utility-district-commissioner",
+      "category": "PublicUtility",
+      "office": "Public Utility District Commissioner",
+      "district": "Thurston County Public Utility District Commissioner District No. 3",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "jeff-curry",
+          "name": "Jeff Curry",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        },
+        {
+          "slug": "chris-pettit",
+          "name": "Chris Pettit",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        }
+      ]
+    }
+  ],
+  "measures": [
+    {
+      "jurisdiction": "Timberland Regional Library District",
+      "proposition": "Proposition No. 1",
+      "title": "Regular Property Tax Levy Lid Lift for Library Services, Operations and Maintenance",
+      "slug": "thurston-timberland-regional-library-district-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Yelm Community Schools",
+      "proposition": "Proposition No. 1",
+      "title": "Educational Programs and Operations Maintenance Levy",
+      "slug": "thurston-yelm-community-schools-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Thurston County Fire Protection District No. 3 (Lacey Fire District 3)",
+      "proposition": "Proposition No. 1",
+      "title": "Bonds for Fire Stations, Training Facility, Logistics Warehouse",
+      "slug": "thurston-thurston-county-fire-protection-district-no-3-lacey-fire-district-3-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "West Thurston Regional Fire Authority (Rochester & Littlerock)",
+      "proposition": "Proposition No. 1",
+      "title": "Property Tax for Fire Maintenance and Operations",
+      "slug": "thurston-west-thurston-regional-fire-authority-rochester-littlerock-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    }
+  ],
+  "carry_forward_from": "2026-08-04-primary"
+}

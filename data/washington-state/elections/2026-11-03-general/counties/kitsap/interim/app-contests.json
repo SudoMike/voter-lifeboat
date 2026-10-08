@@ -2,13 +2,14 @@
   "county": "kitsap",
   "script": "pipeline/build_kitsap_lite_data.py",
   "derived_from": [
-    "data/washington-state/elections/2026-11-03-general/counties/kitsap/raw/votewa/candidate-list.csv.url"
+    "data/washington-state/elections/2026-11-03-general/counties/kitsap/raw/votewa/candidate-list.csv.url",
+    "data/washington-state/elections/2026-11-03-general/counties/kitsap/raw/kitsap/resolutions.html.url",
+    "data/washington-state/elections/2026-11-03-general/counties/kitsap/raw/votewa/voter-guide/voterguide.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/kitsap/raw/votewa/voter-guide/measure-7380.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/kitsap/raw/votewa/voter-guide/measure-7376.json.url"
   ],
-  "coverage": "partial_county",
-  "notes": [
-    "Measures not curated yet for this election: app-measures.json is empty because no one has transcribed this county's local measures, not because the ballot has none.",
-    "Unresolvable district scopes (no queryable official boundary): PUDDST. Contests/measures scoped to them are hidden rather than shown to the wrong voters."
-  ],
+  "coverage": "full_county",
+  "notes": [],
   "contests": [
     {
       "slug": "kitsap-congressional-district-6-u-s-representative",
@@ -756,10 +757,8 @@
       "office": "PUD Commissioner",
       "district": "Kitsap Public Utility District No. 1 Commissioner District 2",
       "scope": {
-        "kind": "DISTRICT",
-        "county": "kitsap",
-        "layer": "PUDDST",
-        "value": "2"
+        "kind": "COUNTY",
+        "county": "kitsap"
       },
       "office_does": null,
       "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Kitsap County. Candidate scoring is not complete for this county yet.",

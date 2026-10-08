@@ -1,0 +1,92 @@
+{
+  "contest_slug": "clark-clark-county-council-district-2-county-councilor",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/clark/dossiers/clark-clark-county-council-district-2-county-councilor/"],
+  "office_does": "The Clark County Council adopts the county budget and property-tax levies, sets councilmanic taxes and fees, adopts the growth-management comprehensive plan and land-use rules for unincorporated areas, and decides which county propositions go to voters.",
+  "race_blurb": "Incumbent Michelle Belkot, who cast the lone votes against the 2026 levy increase and the housing sales tax, faces teacher John Zingale, who says the county should use its allowed 1% levy increase and invest in roads, parks, housing and social services.",
+  "candidates": [
+    {
+      "slug": "michelle-belkot",
+      "summary": "First-term District 2 councilor, a military veteran and former federal procurement official who runs on no new taxes, opposition to annexation and light-rail tolls, and law-enforcement funding.",
+      "highlights": [
+        "Only council vote against the 1% general-fund levy increase in the 2026 budget [S4]",
+        "Lone vote against the 0.1% housing sales tax, citing no spending plan [S5]",
+        "Prioritizes law enforcement, fire and infrastructure \"before expanding programs or increasing spending\" [S1]",
+        "Opposes light-rail taxes and tolls and Vancouver annexation of District 2 [S2]",
+        "Moved the resolution placing the Proposition 12 jail bond on the ballot [S6]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S2", "S4", "S5"],
+          "basis": "Recorded no votes on the 2026 levy increase and the housing sales tax, and a \"No New Taxes\" platform."
+        },
+        "spending": {
+          "score": -1,
+          "confidence": "high",
+          "citations": ["S1", "S2", "S5"],
+          "basis": "Core services before program growth and demands a tracking and spending plan before new revenue, while backing public-safety funding."
+        },
+        "housing": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S5", "S11"],
+          "basis": "Opposes impact fees and new development fees and voted against the housing sales tax, though she voted to extend the mobile-home-park moratorium."
+        },
+        "safety": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S2", "S14"],
+          "basis": "Repeatedly puts law-enforcement funding first and says she stands with local, state and federal law enforcement."
+        },
+        "experience": {
+          "score": -1,
+          "confidence": "high",
+          "citations": ["S1", "S3"],
+          "basis": "First-term incumbent in office since 2023 running on her council record."
+        }
+      }
+    },
+    {
+      "slug": "john-zingale",
+      "summary": "Middle-school history teacher, 2026 Southwest Washington Teacher of the Year and teachers' union representative, running for office for the first time.",
+      "highlights": [
+        "Says skipping the allowed 1% property-tax increase contributed to the deficit and \"we do need to find ways to increase revenue\" [S3]",
+        "Names roads, parks, public safety and housing as spending priorities and would explore a metropolitan park district [S3]",
+        "Favors building \"up, not out\" with a mix of housing sizes [S3]",
+        "Endorsed by Councilors Sue Marshall and Wil Fuentes, Sen. Adrian Cortes and Vancouver Mayor Anne McEnerny-Ogle [S4]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S3"],
+          "basis": "Supports using the 1% annual levy increase and finding new revenue to avoid service cuts."
+        },
+        "spending": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S3"],
+          "basis": "Calls for investing in social services, infrastructure and parks and warns budget cuts threaten essential services."
+        },
+        "safety": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S3"],
+          "basis": "Wants a holistic, affordability-centered approach to homelessness and more behavioral-health capacity rather than a drug-use framing."
+        },
+        "experience": {
+          "score": 1,
+          "confidence": "high",
+          "citations": ["S1"],
+          "basis": "First-time candidate with no elected public office; teacher and union representative."
+        }
+      }
+    }
+  ]
+}

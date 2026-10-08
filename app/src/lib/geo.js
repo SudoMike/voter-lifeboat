@@ -109,6 +109,14 @@ const COUNTY_LAYERS = {
       url: 'https://gis.clark.wa.gov/arcgisfed/rest/services/ClarkView_Public/FireDistrictBoundary/MapServer/0/query',
       attr: 'FIREDST',
     },
+    {
+      // School district number (an integer field; String() makes it '119').
+      // Live 2026-10-08 (#22): 109 SW 1st St, Battle Ground -> 119 (DOR
+      // SCH2025 DISTATTRIB '119' agrees); 1300 Franklin St, Vancouver -> 37.
+      key: 'SCHDST',
+      url: 'https://gis.clark.wa.gov/arcgisfed/rest/services/ClarkView_Public/SchoolDistrict/MapServer/0/query',
+      attr: 'SCHDST',
+    },
   ],
   kitsap: [
     {
@@ -119,6 +127,16 @@ const COUNTY_LAYERS = {
     {
       key: 'FIRDST',
       url: 'https://services6.arcgis.com/qt3UCV9x5kB4CwRA/arcgis/rest/services/Fire_District_Outlines/FeatureServer/0/query',
+      attr: 'DISTRICT',
+    },
+    {
+      // Kitsap County GIS school district outlines, district number as text
+      // ('100-C' Bremerton, '303', '400', '401', '402', '403'). Live
+      // 2026-10-08 (#22): 2689 Hoover Ave SE and 1700 SE Mile Hill Dr, Port
+      // Orchard -> '402' (DOR SCH2025 '402' agrees); 345 6th St, Bremerton ->
+      // '100-C'; 15376 Seabeck Hwy NW, Seabeck -> '401'.
+      key: 'SCHDST',
+      url: 'https://services6.arcgis.com/qt3UCV9x5kB4CwRA/arcgis/rest/services/School_District_Outlines/FeatureServer/0/query',
       attr: 'DISTRICT',
     },
   ],
@@ -300,6 +318,32 @@ const COUNTY_LAYERS = {
       key: 'FIRE_AUTH',
       url: 'https://tconline.co.thurston.wa.us/server/rest/services/ThurstonExt/Thurston_FireDistricts_TCOMM/FeatureServer/0/query',
       attr: 'CONSOL_DIS',
+    },
+    {
+      // West Thurston Regional Fire Authority (former Fire Districts 1,
+      // Rochester, and 11, Littlerock). The fire layer above splits it into
+      // two polygons (DISPATCH_G 'FD01'/'FD11', CONSOL_DIS 'WTRFA - South
+      // Btn'/'WTRFA - North Btn'); both carry CONSOL_NUM 'FD01' and no other
+      // polygon does. Every polygon has a CONSOL_NUM ('FD03' Lacey, 'OFD'
+      // Olympia), so `where` keeps only the WTRFA polygons and no fire
+      // district reads as an RFA. Live 2026-10-08 (#22): 18346 Albany St SW, Rochester
+      // and 10828 Littlerock Rd SW, Olympia -> 'FD01'; 420 College St SE,
+      // Lacey (FIRDST 'FD03'), 105 W Yelm Ave, Yelm and 601 4th Ave E,
+      // Olympia -> no feature.
+      key: 'RFADST',
+      url: 'https://tconline.co.thurston.wa.us/server/rest/services/ThurstonExt/Thurston_FireDistricts_TCOMM/FeatureServer/0/query',
+      attr: 'CONSOL_NUM',
+      where: "CONSOL_DIS LIKE 'WTRFA%'",
+    },
+    {
+      // Thurston County school districts by name (Common_Layers/Jurisdictions
+      // layer 10). Live 2026-10-08 (#22): 105 W Yelm Ave, Yelm -> 'YELM' (DOR
+      // SCH2025 '2', Yelm Community Schools No. 2); 601 4th Ave E, Olympia ->
+      // 'OLYMPIA'; 420 College St SE, Lacey -> 'NORTH THURSTON'; 18346 Albany
+      // St SW, Rochester -> 'ROCHESTER'; 10828 Littlerock Rd SW -> 'TUMWATER'.
+      key: 'SCHDST',
+      url: 'https://tconline.co.thurston.wa.us/server/rest/services/Common_Layers/Jurisdictions/FeatureServer/10/query',
+      attr: 'SchoolDistrictName',
     },
   ],
   // Counties below were added from verified 2026 research: commissioner
@@ -555,7 +599,8 @@ async function queryArcgisLayer(layer, x, y) {
     f: 'json',
   })
   // Optional attribute filter for a layer that mixes the districts a key
-  // means with others (Snohomish RFADST on the DOR fire layer).
+  // means with others (Snohomish RFADST on the DOR fire layer, Thurston
+  // RFADST on the county fire layer).
   if (layer.where) params.set('where', layer.where)
   const res = await fetch(`${layer.url}?${params}`)
   if (!res.ok) throw new GeoError(`District lookup failed (${layer.key}).`, 'network', { layer: layer.key })

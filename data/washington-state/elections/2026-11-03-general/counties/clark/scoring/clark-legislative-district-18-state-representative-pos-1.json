@@ -1,0 +1,110 @@
+{
+  "contest_slug": "clark-legislative-district-18-state-representative-pos-1",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/clark/dossiers/clark-legislative-district-18-state-representative-pos-1/"],
+  "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering school funding, tax structure, housing rules, health funding and criminal-justice statutes.",
+  "race_blurb": "Two-term Republican Rep. Stephanie McClintock, a former Battle Ground School Board member, faces Democrat Randi L. Knott, a first-time candidate with a public-policy career; they split most clearly on the tax on income over $1 million, which McClintock voted against and Knott supports.",
+  "candidates": [
+    {
+      "slug": "randi-l-knott",
+      "summary": "First-time candidate with more than 25 years of public-policy work, a former Brush Prairie bed-and-breakfast and horse-ranch owner, and a disability advocate, running on affordability, special-education funding and health care.",
+      "highlights": [
+        "Says the ultra-wealthy need to be taxed and called the millionaire tax bill \"drafted very well\" [S6]",
+        "Calls for fully funded special education and infrastructure investments that keep pace with growth [S3]",
+        "Says health care is a human right and supports universal health-care solutions [S3]",
+        "Serves on the Clark County Developmental Disabilities Advisory Board; has not held elected office [S1][S4]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": 2,
+          "confidence": "medium",
+          "citations": ["S6", "S1"],
+          "basis": "Says the ultra-wealthy need to be taxed to fund schools and praises the millionaire tax bill; pamphlet opposes policies that protect the wealthy and big corporations."
+        },
+        "spending": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S3", "S6"],
+          "basis": "Calls for fully funded special education, infrastructure investment and restored Medicaid funding, framed as 'economically progressive policies that are fiscally responsible.'"
+        },
+        "healthcare": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S3"],
+          "basis": "Calls health care a human right and supports 'universal healthcare solutions that reduce cost and complexity', without naming a single-payer system."
+        },
+        "experience": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S4"],
+          "basis": "First-time candidate running against a two-term incumbent, though with a long public-policy career and board appointments."
+        }
+      }
+    },
+    {
+      "slug": "stephanie-mcclintock",
+      "summary": "Two-term Republican incumbent, ranking member on House Consumer Protection and Business and former Battle Ground School Board member, running on lower taxes, law enforcement and K-12 accountability.",
+      "highlights": [
+        "Voted against the 2026 tax on income over $1 million and the 2025 B&O and transportation revenue bills [S5][S6][S7]",
+        "Voted against the 2025-27 operating budget and the 2026 supplemental budget [S8][S9]",
+        "Campaigns on law-enforcement funding, restoring police pursuit and sex-offender registration bills [S1][S2][S13]",
+        "Co-sponsored HB 1699 on sex-separated girls' school sports and voted against ESHB 1296, which amended the 2024 parents' rights law [S11][S14]",
+        "Endorsed by The Columbian editorial board [S16]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S5", "S6", "S7", "S13", "S15"],
+          "basis": "Voted against ESSB 6346, ESHB 2081 and ESSB 5801, co-sponsored bills repealing 2025 tax increases, and says she opposes the income tax."
+        },
+        "spending": {
+          "score": -1,
+          "confidence": "high",
+          "citations": ["S1", "S8", "S9", "S2"],
+          "basis": "Voted against both operating budgets and pledges to oppose 'reckless spending' and demand accountability, while naming special education and Medicaid as budget priorities."
+        },
+        "housing": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S10"],
+          "basis": "Voted against EHB 1217, the 2025 limit on residential rent and fee increases."
+        },
+        "safety": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S2", "S3", "S13"],
+          "basis": "Calls for fully funding law enforcement and restoring police pursuit; prime-sponsored sex-offender registration bills and co-sponsored encampment-removal funding."
+        },
+        "social": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S13", "S14"],
+          "basis": "Co-sponsored HB 1699, letting schools bar biologically male students from girls' sports; no recorded position on abortion or gender-affirming care."
+        },
+        "parental-rights": {
+          "score": -2,
+          "confidence": "medium",
+          "citations": ["S3", "S11", "S12"],
+          "basis": "Voted against ESHB 1296, which amended the parents' rights enacted by I-2081, and describes herself as a champion of parental involvement as a school director."
+        },
+        "tech": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S15"],
+          "basis": "Says AI is better handled federally and that differing state regulations create challenges for businesses."
+        },
+        "experience": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S4", "S13"],
+          "basis": "Two-term incumbent, ranking committee member and former school director with an enacted prime-sponsored bill (SHB 1121)."
+        }
+      }
+    }
+  ]
+}

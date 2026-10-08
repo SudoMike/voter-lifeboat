@@ -1,0 +1,45 @@
+{
+  "contest_slug": "kitsap-legislative-district-35-state-representative-pos-1",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/kitsap/dossiers/kitsap-legislative-district-35-state-representative-pos-1/",
+    "data/washington-state/elections/2026-11-03-general/counties/kitsap/scoring/kitsap-legislative-district-35-state-representative-pos-1.json"
+  ],
+  "verdicts": [
+    {"candidate": "dan-griffey", "axis": "taxes", "verdict": "upheld"},
+    {
+      "candidate": "dan-griffey",
+      "axis": "spending",
+      "verdict": "adjust",
+      "adjusted_score": -1,
+      "adjusted_confidence": "medium",
+      "note": "All of the spending evidence comes from one campaign page [S5]. Its proposals are about process: a five-day review period before budget votes, a balanced-budget requirement and budgets based on actual revenue. On the same page he says the budget should 'fund education first' and give property-poor districts stable funding. That is restraint-leaning but not the full audit-and-restrain pole, and it lacks the repeated statements MacEwen and Couture have."
+    },
+    {"candidate": "dan-griffey", "axis": "housing", "verdict": "upheld"},
+    {"candidate": "dan-griffey", "axis": "safety", "verdict": "upheld"},
+    {"candidate": "dan-griffey", "axis": "climate", "verdict": "upheld"},
+    {"candidate": "dan-griffey", "axis": "experience", "verdict": "upheld"},
+    {"candidate": "dan-griffey", "axis": "local-control", "verdict": "upheld"},
+    {"candidate": "dan-griffey", "axis": "social", "verdict": "upheld"},
+    {"candidate": "dan-griffey", "axis": "parental-rights", "verdict": "upheld"},
+    {"candidate": "jim-pierson", "axis": "taxes", "verdict": "upheld"},
+    {"candidate": "jim-pierson", "axis": "housing", "verdict": "upheld"},
+    {"candidate": "jim-pierson", "axis": "safety", "verdict": "upheld"},
+    {"candidate": "jim-pierson", "axis": "climate", "verdict": "upheld"},
+    {"candidate": "jim-pierson", "axis": "healthcare", "verdict": "upheld"},
+    {"candidate": "jim-pierson", "axis": "immigration", "verdict": "upheld"},
+    {"candidate": "jim-pierson", "axis": "social", "verdict": "upheld"},
+    {"candidate": "jim-pierson", "axis": "reform", "verdict": "upheld"},
+    {"candidate": "jim-pierson", "axis": "experience", "verdict": "upheld"}
+  ],
+  "missing": [
+    {
+      "candidate": "jim-pierson",
+      "axis": "tech",
+      "proposed_score": 1,
+      "confidence": "medium",
+      "citations": ["S2"],
+      "basis": "Names AI and data centers among top voter concerns and commits to 'ensuring that new industries pay their fair share of infrastructure costs instead of shifting those costs onto working families,' citing data-center electricity, water and 'who ultimately pays the bill' [S2]. That is data-center cost skepticism, as with Mejia's tech +1, but softer than calling for guardrails, so +1."
+    }
+  ]
+}

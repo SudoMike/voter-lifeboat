@@ -2,11 +2,115 @@
   "county": "thurston",
   "script": "pipeline/build_thurston_lite_data.py",
   "derived_from": [
-    "data/washington-state/elections/2026-11-03-general/counties/thurston/raw/votewa/candidate-list.csv.url"
+    "data/washington-state/elections/2026-11-03-general/counties/thurston/raw/votewa/candidate-list.csv.url",
+    "data/washington-state/elections/2026-11-03-general/counties/thurston/raw/thurston/sample-ballot.pdf.url",
+    "data/washington-state/elections/2026-11-03-general/counties/thurston/raw/thurston/local-voters-pamphlet.pdf.url",
+    "data/washington-state/elections/2026-11-03-general/counties/thurston/raw/thurston/general-election.html.url"
   ],
   "coverage": "full_county",
-  "notes": [
-    "Measures not curated yet for this election: app-measures.json is empty because no one has transcribed this county's local measures, not because the ballot has none."
-  ],
-  "measures": []
+  "notes": [],
+  "measures": [
+    {
+      "slug": "thurston-timberland-regional-library-district-proposition-no-1",
+      "owner": "thurston",
+      "jurisdiction": "Timberland Regional Library District",
+      "proposition": "Proposition No. 1",
+      "title": "Regular Property Tax Levy Lid Lift for Library Services, Operations and Maintenance",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "thurston"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 24
+        },
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 25
+        }
+      ],
+      "what_it_does": "The Timberland Regional Library District's Board of Trustees adopted Resolution No. 26-002 concerning a proposed increase of the District's regular levy rate. If approved, this proposition would restore the District's regular property tax levy rate for library services, operations and maintenance from $0.22 to $0.35 per $1,000 of assessed valuation for both 2027 and 2028, subject to applicable limitations. The resulting 2028 levy dollar amount would be used for the purpose of computing subsequent levy limitations under chapter 84.55 RCW.",
+      "cost_line": "Levy lid lift from $0.22 to $0.35 per $1,000 of assessed value for 2027 and 2028; the 2028 amount becomes the base for later limits (about $40 a year on a $334,000 home, per the explanatory statement).",
+      "pro_summary": "TimberStrong Libraries Committee: the levy has not risen in 25 years; restores hours, staffing and collections at Thurston's eight branches (about $69 a year on a median $530,959 home).",
+      "con_summary": "Sean Swope (Citizens for Accountable TR Libraries): property owners already face rising bills; the library should cut costs and show prudent management before asking for more.",
+      "lean_mappings": {}
+    },
+    {
+      "slug": "thurston-yelm-community-schools-proposition-no-1",
+      "owner": "thurston",
+      "jurisdiction": "Yelm Community Schools",
+      "proposition": "Proposition No. 1",
+      "title": "Educational Programs and Operations Maintenance Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "thurston",
+        "layer": "SCHDST",
+        "value": "YELM"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 26
+        },
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 27
+        }
+      ],
+      "what_it_does": "The Board of Directors of Yelm Community Schools adopted Resolution No. 09-25-26, authorizing a levy to maintain existing educational program support levels. This proposition would authorize the District to levy the following excess taxes, on taxable property within the District, to maintain essential educational programs, extracurricular activities, and operations not funded by the State (including, but not limited to, teachers, arts, nurses, counselors, classified staff, paraeducators, safety, graduation readiness, technology, athletics, facilities, curriculum): Collection Year Estimated Levy Rate/$1,000 Assessed Value Maximum Levy Amount 2027 $1.50 $11,194,449 2028 $1.50 $12,278,072 all as provided in Resolution No. 09-25-26.",
+      "cost_line": "Two-year excess levy at an estimated $1.50 per $1,000 of assessed value: up to $11,194,449 (2027) and $12,278,072 (2028).",
+      "pro_summary": "Yelm Kids First: after several levy failures the district has cut staff, programs and athletics; the levy pays for teachers, nurses, counselors, safety staff and activities the state does not fully fund.",
+      "con_summary": "Martin Miller and Frank Vance: voters have said no four times; the district used one-time money for recurring costs and restores none of the cuts; press Olympia to fund schools instead.",
+      "lean_mappings": {}
+    },
+    {
+      "slug": "thurston-thurston-county-fire-protection-district-no-3-lacey-fire-district-3-proposition-no-1",
+      "owner": "thurston",
+      "jurisdiction": "Thurston County Fire Protection District No. 3 (Lacey Fire District 3)",
+      "proposition": "Proposition No. 1",
+      "title": "Bonds for Fire Stations, Training Facility, Logistics Warehouse",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "thurston",
+        "layer": "FIRDST",
+        "value": "FD03"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 28
+        }
+      ],
+      "what_it_does": "The Board of Fire Commissioners of Thurston County Fire Protection District No. 3 (Lacey Fire District 3) adopted Resolution No. 903-06-26, concerning emergency services facilities to protect public health, life and property. This proposition would authorize the District to: construct a new community fire station (Britton Pkwy); replace Station 32 (Yelm Hwy); construct a regional live fire training facility and logistics warehouse; acquire property (and pay associated financing costs); make other capital improvements and apparatus acquisitions; issue no more than $98,300,000 of general obligation bonds maturing within 20 years; and levy annual excess property taxes to repay the bonds, all as provided in Resolution No. 903-06-26.",
+      "cost_line": "Up to $98,300,000 in bonds maturing within 20 years, repaid by excess property taxes at an approximate $0.23 per $1,000 of assessed value (about $9.60 a month on a $500,000 home).",
+      "pro_summary": "Steve Brooks and Tom Carroll: calls are up 43% in ten years and only one of five stations is north of I-5; a new station and a replaced Station 32 cut response times.",
+      "con_summary": "No statement against was filed; the pamphlet says no one in the jurisdiction contacted the Auditor to write one.",
+      "lean_mappings": {}
+    },
+    {
+      "slug": "thurston-west-thurston-regional-fire-authority-rochester-littlerock-proposition-no-1",
+      "owner": "thurston",
+      "jurisdiction": "West Thurston Regional Fire Authority (Rochester & Littlerock)",
+      "proposition": "Proposition No. 1",
+      "title": "Property Tax for Fire Maintenance and Operations",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "thurston",
+        "layer": "RFADST",
+        "value": "FD01"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 29
+        }
+      ],
+      "what_it_does": "The Board of Commissioners of West Thurston Regional Fire Authority adopted Resolution No. 2026-005 concerning a proposition to finance maintenance and operation expenses. This proposition, if approved, will authorize the Authority to levy, without regard to the dollar rate and percentage limitations imposed by Chapter 84.52 RCW, a property tax upon all taxable property within the Authority's boundaries of: Collection Year Approximate Levy Rate/$1,000 Assessed Value Levy Amount 2027 $0.36 $1,547,228.00 to be used for maintenance and operations and to maintain the current level of fire services and emergency medical services as provided in Resolution No. 2026-005.",
+      "cost_line": "One-year excess levy of $1,547,228 in 2027, about $0.36 per $1,000 of assessed value (up to $15 a month on a $500,000 home).",
+      "pro_summary": "Tyler Mason and Cathe Linn: many frontline vehicles are past their service life and stations need HVAC, roof and plumbing work; levy money goes to apparatus replacement and facility maintenance.",
+      "con_summary": "No statement against was filed; the pamphlet says no one in the jurisdiction contacted the Auditor to write one.",
+      "lean_mappings": {}
+    }
+  ]
 }

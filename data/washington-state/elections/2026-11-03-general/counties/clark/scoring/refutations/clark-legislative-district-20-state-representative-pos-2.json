@@ -1,0 +1,57 @@
+{
+  "contest_slug": "clark-legislative-district-20-state-representative-pos-2",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/clark/dossiers/clark-legislative-district-20-state-representative-pos-2/",
+    "data/washington-state/elections/2026-11-03-general/counties/clark/scoring/clark-legislative-district-20-state-representative-pos-2.json"
+  ],
+  "verdicts": [
+    {
+      "candidate": "ed-orcutt",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Not a lone-ESSB-6346 case. The dossier also has a no vote on ESSB 5814, three amendments to 6346 (texts checked in cache), several sponsored repeal and tax-cut bills, and pamphlet and news statements. -2/high fits."
+    },
+    {
+      "candidate": "ed-orcutt",
+      "axis": "spending",
+      "verdict": "upheld"
+    },
+    {
+      "candidate": "ed-orcutt",
+      "axis": "housing",
+      "verdict": "upheld",
+      "note": "His sponsorship of HB 1365 (rental assistance for manufactured-home park tenants) [S11] leans slightly the other way. One targeted assistance bill does not offset the no votes on rent-increase limits, so -1/medium holds."
+    },
+    {
+      "candidate": "ed-orcutt",
+      "axis": "climate",
+      "verdict": "upheld"
+    },
+    {
+      "candidate": "ed-orcutt",
+      "axis": "parental-rights",
+      "verdict": "upheld"
+    },
+    {
+      "candidate": "ed-orcutt",
+      "axis": "experience",
+      "verdict": "upheld"
+    },
+    {
+      "candidate": "evan-jones",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Cached campaign page confirms the plank verbatim: 'We don't need to raise taxes. We need more businesses and workers paying into the system.' That opposes new taxes but does not call for cuts and comes with no record, so -1/medium is correctly sized. The ESSB 6346 rule does not apply, since he cast no vote."
+    },
+    {
+      "candidate": "evan-jones",
+      "axis": "experience",
+      "verdict": "adjust",
+      "adjusted_score": 1,
+      "adjusted_confidence": "high",
+      "note": "The profile facts are documented record [S1][S3]: port commissioner since 2024, first legislative race, against a 25-year incumbent. His 'I belong to the 20th. Not Olympia.' framing [S1] adds to them. Zahn and Orcutt were scored high on facts of the same kind, so +1 stays and confidence rises to high for consistency."
+    }
+  ],
+  "missing": []
+}

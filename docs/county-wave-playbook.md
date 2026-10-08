@@ -428,10 +428,12 @@ DOR GIS layer, a PDF-only map, a layer that is not public), the rule is:
 Never scope a district race `COUNTY` to make it appear: that shows it to
 voters outside the district.
 
-As of the builder runs on 2026-10-08, the general packages are
-`partial_county` for: Kitsap `PUDDST` (PUD No. 1 District 2), Spokane
-`PUDDST`. Clark, Pierce, Snohomish (since #27) and Thurston are
-`full_county`.
+As of the builder runs on 2026-10-08 (#22), the only general package that
+is `partial_county` is Spokane (`PUDDST`). Clark, Kitsap, Pierce,
+Snohomish (since #27) and Thurston are `full_county`; all six ship. A PUD
+commissioner is nominated by district but elected by the whole PUD in the
+general (RCW 54.12.010(3)), so a countywide PUD's seat is scoped `COUNTY`
+(Clark, Kitsap, Thurston), not `PUDDST`.
 
 Before calling a scope unresolvable, look for a precinct-built district
 layer from the county Auditor: ArcGIS Online items whose description says
@@ -472,6 +474,21 @@ District Court Southeast seats (`KCDISTCRT`), Pierce Transit measure
 layer is queried four times per Pierce address; a shared-layer read would
 need a change to `lookupCountyDistricts`. See
 `counties/pierce/COMPLETENESS.md`.
+
+Clark, Kitsap and Thurston shipped on 2026-10-08 (#22) as `full_county`.
+Each researcher proposed the layer its measures needed and the director
+added it after a live point query: Clark `SCHDST` from the county's
+`ClarkView_Public/SchoolDistrict/MapServer/0` (`SCHDST`, an integer: `119`
+Battle Ground); Kitsap `SCHDST` from `School_District_Outlines/FeatureServer/0`
+(`DISTRICT`: `402` South Kitsap, `100-C` Bremerton); Thurston `SCHDST` from
+`Common_Layers/Jurisdictions/FeatureServer/10` (`SchoolDistrictName`:
+`YELM`, `NORTH THURSTON`) and `RFADST` from the fire layer `FIRDST` and
+`FIRE_AUTH` already read, `CONSOL_NUM` with `where CONSOL_DIS LIKE
+'WTRFA%'` (`FD01`), because West Thurston RFA is two polygons there and
+every other polygon has a `CONSOL_NUM` too. Shared races ship with the
+researching package's scoring: Kitsap's CD 6 and LD 26 with Pierce's,
+Thurston's CD 10 and LD 2 with Pierce's, CD 3 and LD 20 with Clark's, LD
+35 with Kitsap's (13 races). See each county's `COMPLETENESS.md`.
 
 ## 13. Reference
 

@@ -2,12 +2,50 @@
   "county": "kitsap",
   "script": "pipeline/build_kitsap_lite_data.py",
   "derived_from": [
-    "data/washington-state/elections/2026-11-03-general/counties/kitsap/raw/votewa/candidate-list.csv.url"
+    "data/washington-state/elections/2026-11-03-general/counties/kitsap/raw/votewa/candidate-list.csv.url",
+    "data/washington-state/elections/2026-11-03-general/counties/kitsap/raw/kitsap/resolutions.html.url",
+    "data/washington-state/elections/2026-11-03-general/counties/kitsap/raw/votewa/voter-guide/voterguide.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/kitsap/raw/votewa/voter-guide/measure-7380.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/kitsap/raw/votewa/voter-guide/measure-7376.json.url"
   ],
-  "coverage": "partial_county",
-  "notes": [
-    "Measures not curated yet for this election: app-measures.json is empty because no one has transcribed this county's local measures, not because the ballot has none.",
-    "Unresolvable district scopes (no queryable official boundary): PUDDST. Contests/measures scoped to them are hidden rather than shown to the wrong voters."
-  ],
-  "measures": []
+  "coverage": "full_county",
+  "notes": [],
+  "measures": [
+    {
+      "slug": "kitsap-south-kitsap-school-district-no-402-proposition-no-1",
+      "owner": "kitsap",
+      "jurisdiction": "South Kitsap School District No. 402",
+      "proposition": "Proposition No. 1",
+      "title": "Capital Levy for Safety, Technology and Facility Improvements",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "kitsap",
+        "layer": "SCHDST",
+        "value": "402"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Authorizes a three-year capital levy for district-wide safety, technology and facility improvements: security cameras, access controls, emergency communication systems, educational technology and cybersecurity, parking, accessibility, theatre and athletic facilities.",
+      "cost_line": "Estimated $1.50 per $1,000 of assessed value: $23,488,622 (2027), $24,192,839 (2028), $24,918,539 (2029).",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {}
+    },
+    {
+      "slug": "kitsap-kitsap-county-public-utility-district-no-1-proposition-no-1",
+      "owner": "kitsap",
+      "jurisdiction": "Kitsap County Public Utility District No. 1",
+      "proposition": "Proposition No. 1",
+      "title": "Authorizing the Construction or Acquisition of Electric Facilities",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "kitsap"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Asks whether Public Utility District No. 1 of Kitsap County may construct or acquire electric facilities for the generation, transmission or distribution of electric power. A yes vote gives KPUD that authority; it does not require KPUD to use it, and KPUD's board has agreed to a feasibility study first.",
+      "cost_line": "No tax or rate in the ballot title; any cost would depend on later KPUD decisions.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {}
+    }
+  ]
 }

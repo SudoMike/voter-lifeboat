@@ -2,12 +2,13 @@
   "county": "thurston",
   "script": "pipeline/build_thurston_lite_data.py",
   "derived_from": [
-    "data/washington-state/elections/2026-11-03-general/counties/thurston/raw/votewa/candidate-list.csv.url"
+    "data/washington-state/elections/2026-11-03-general/counties/thurston/raw/votewa/candidate-list.csv.url",
+    "data/washington-state/elections/2026-11-03-general/counties/thurston/raw/thurston/sample-ballot.pdf.url",
+    "data/washington-state/elections/2026-11-03-general/counties/thurston/raw/thurston/local-voters-pamphlet.pdf.url",
+    "data/washington-state/elections/2026-11-03-general/counties/thurston/raw/thurston/general-election.html.url"
   ],
   "coverage": "full_county",
-  "notes": [
-    "Measures not curated yet for this election: app-measures.json is empty because no one has transcribed this county's local measures, not because the ballot has none."
-  ],
+  "notes": [],
   "contests": [
     {
       "slug": "thurston-congressional-district-3-u-s-representative",
@@ -931,10 +932,8 @@
       "office": "Public Utility District Commissioner",
       "district": "Thurston County Public Utility District Commissioner District No. 1",
       "scope": {
-        "kind": "DISTRICT",
-        "county": "thurston",
-        "layer": "PUDDST",
-        "value": "1"
+        "kind": "COUNTY",
+        "county": "thurston"
       },
       "office_does": null,
       "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Thurston County. Candidate scoring is not complete for this county yet.",
@@ -971,10 +970,8 @@
       "office": "Public Utility District Commissioner",
       "district": "Thurston County Public Utility District Commissioner District No. 3",
       "scope": {
-        "kind": "DISTRICT",
-        "county": "thurston",
-        "layer": "PUDDST",
-        "value": "3"
+        "kind": "COUNTY",
+        "county": "thurston"
       },
       "office_does": null,
       "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Thurston County. Candidate scoring is not complete for this county yet.",

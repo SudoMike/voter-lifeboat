@@ -67,7 +67,7 @@ APP_PACKAGES = {
     },
     "2026-11-03-general": {
         "statewide_ballot": True,
-        "counties": ["king", "snohomish", "spokane", "pierce"],
+        "counties": ["king", "snohomish", "spokane", "pierce", "clark", "kitsap", "thurston"],
         "district_contests": "county",
     },
 }
@@ -85,6 +85,9 @@ DISTRICT_ADAPTER_LAYERS = {
     "snohomish": ("CONGDST", "LEGDST", "CITY", "PUDDST", "SCHDST", "FIRDST", "HOSPDST", "LIBDST", "RFADST", "DISTCRT"),
     "spokane": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "PTBA", "LIBDST", "SCHDST", "FIRDST", "PARKDST"),
     "pierce": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "FIRDST", "DISTCRT", "KCDISTCRT", "PTBA", "SCHDST"),
+    "clark": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "PUDDST", "FIRDST", "SCHDST"),
+    "kitsap": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "FIRDST", "SCHDST"),
+    "thurston": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "PUDDST", "FIRDST", "FIRE_AUTH", "RFADST", "SCHDST"),
 }
 
 
@@ -185,6 +188,15 @@ COUNTY_ELECTIONS_URLS = {
         # (Cloudflare) to scripted requests (2026-10-08; http://piercecountywa.gov/elections
         # 301s to this address), so its 200 is unchecked here.
         "pierce": "https://www.piercecountywa.gov/elections",
+        # Clark County Elections (200, 2026-10-08; clark.wa.gov/auditor/elections
+        # answers 404).
+        "clark": "https://clark.wa.gov/elections",
+        # Kitsap County Auditor, Elections (200 text/html with the page title
+        # 'Kitsap County Elections', 2026-10-08; kitsap.gov's WAF answered 403
+        # only to scripted requests for its pamphlet PDFs).
+        "kitsap": "https://www.kitsap.gov/auditor/Pages/Elections.aspx",
+        # Thurston County Auditor, Elections (200, 2026-10-08).
+        "thurston": "https://www.thurstoncountywa.gov/departments/auditor/elections",
     },
 }
 

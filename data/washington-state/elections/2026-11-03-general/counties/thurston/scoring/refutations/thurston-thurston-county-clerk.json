@@ -1,0 +1,45 @@
+{
+  "contest_slug": "thurston-thurston-county-clerk",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/thurston/dossiers/thurston-thurston-county-clerk/",
+    "data/washington-state/elections/2026-11-03-general/counties/thurston/scoring/thurston-thurston-county-clerk.json"
+  ],
+  "verdicts": [
+    {
+      "candidate": "nicole-miller",
+      "axis": "experience",
+      "verdict": "upheld",
+      "note": "S1, S2 and S6 support it. She comes from outside the office and pledges to 'guide the office through meaningful change' (S2). She also leans heavily on her own 30 years of public-service leadership ('Experience Matters', S6), so +1 rather than +2 is right."
+    },
+    {
+      "candidate": "nicole-miller",
+      "axis": "spending",
+      "verdict": "upheld",
+      "note": "S5 pairs 'closing the doors ... should not be our default response' and a full-time counter with 'examine opportunities to increase revenue and reduce costs'. S4 says the budget challenges 'cannot be ignored'. She states both sides in one explicit statement, so 0 at medium confidence holds."
+    },
+    {
+      "candidate": "garrett-cady",
+      "axis": "experience",
+      "verdict": "upheld",
+      "note": "S1 and S2 confirm he is a current Clerk's Office employee endorsed by the outgoing clerk, the chief deputy and staff, with no elected record. That is a continuity profile. His tenure is short (Miller's site, not his dossier, says three years), so -1 rather than -2."
+    },
+    {
+      "candidate": "garrett-cady",
+      "axis": "reform",
+      "verdict": "adjust",
+      "adjusted_score": 1,
+      "adjusted_confidence": "low",
+      "note": "The evidence is party independence ('no place for politics in the Clerk's Office'; the clerk should be nonpartisan like judges) [S1][S2]. It is not the money-in-politics or structural reforms the axis names (refusing PAC money, term limits, dark-money bans, RCV). He proposes no change to how the office is elected, and S2 lists endorsements from partisan officeholders. Direction kept as an indirect inference. This matches the King precedent that adjusted an independent prosecutor candidate's party-independence reform score to +1 low."
+    },
+    {
+      "candidate": "garrett-cady",
+      "axis": "spending",
+      "verdict": "adjust",
+      "adjusted_score": 1,
+      "adjusted_confidence": "low",
+      "note": "In S2 he calls the commissioners' cut to his own office 'disproportionate' and pledges to restore and enhance in-person and domestic-violence services. That is department-level advocacy for the office's own staffing, not a stated view on government investment in general. The same page credits 'specialized budgeting adaptations' and 'innovative and creative administrative solutions', which cuts against reading it as invest-and-expand. Miller makes a near-identical restore-the-counter pledge and is scored 0. Direction kept; confidence lowered."
+    }
+  ],
+  "missing": []
+}

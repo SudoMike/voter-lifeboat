@@ -1,0 +1,104 @@
+{
+  "contest_slug": "clark-clark-county-council-district-1-county-councilor",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/clark/dossiers/clark-clark-county-council-district-1-county-councilor/"],
+  "office_does": "The Clark County Council adopts the county budget and property-tax levies, sets councilmanic taxes and fees, adopts the growth-management comprehensive plan and land-use rules for unincorporated areas, and decides which county propositions go to voters.",
+  "race_blurb": "First-term incumbent Glen Yung, who voted for the 2026 property-tax levy increase and a 0.1% housing sales tax, faces business owner Bryan Shull, who runs on a \"tax-last\" approach, lower fees and faster permitting, and treatment and accountability in place of housing-first strategies.",
+  "candidates": [
+    {
+      "slug": "glen-yung",
+      "summary": "First-term District 1 councilor and former banker and remodeling-business owner who runs on homelessness, housing affordability and public-safety investments.",
+      "highlights": [
+        "Voted for the 1% general-fund levy increase in the 2026 county budget [S5]",
+        "Voted for the 0.1% sales tax for affordable housing and behavioral health: \"we are experiencing a housing crisis\" [S6]",
+        "Secured funding for a 120-bed shelter with integrated addiction and mental-health treatment [S1]",
+        "Backs \"a balanced approach that addresses both crime and the root causes behind it\" [S4]",
+        "Voted with the full council to put the Proposition 12 jail bond and Proposition 13 levy lid lift on the ballot [S8]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": 1,
+          "confidence": "high",
+          "citations": ["S5", "S6", "S7"],
+          "basis": "Voted for the 2026 1% levy increases with banked capacity and for the 0.1% councilmanic housing sales tax, citing rising service costs and the housing crisis."
+        },
+        "spending": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S4", "S7"],
+          "basis": "Pushes investment in shelter, treatment and housing now, while also citing a county-manager performance review and responsible budgeting."
+        },
+        "housing": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S3", "S4", "S6"],
+          "basis": "Pairs public funding (housing sales tax) and mobile-home-park protections with supply measures (middle housing, faster permitting)."
+        },
+        "safety": {
+          "score": 0,
+          "confidence": "medium",
+          "citations": ["S1", "S3", "S4"],
+          "basis": "Explicitly balances law-enforcement investment and body cameras with treatment-linked shelter and root-cause approaches."
+        },
+        "experience": {
+          "score": -1,
+          "confidence": "high",
+          "citations": ["S1", "S5"],
+          "basis": "First-term incumbent running on his council record."
+        }
+      }
+    },
+    {
+      "slug": "bryan-shull",
+      "summary": "Vancouver brewery and small-business owner and renewable-energy engineer, president of the Uptown Village Association, running for office for the first time.",
+      "highlights": [
+        "Supports a \"tax-last\" approach: responsible budgeting before asking taxpayers to pay more [S1]",
+        "\"We must address out of control spending\" [S2]",
+        "Would cut permit fees and wait times and address fees and land-use rules that raise housing costs [S2]",
+        "Would replace housing-first and harm-reduction strategies with more treatment and accountability [S2]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -1,
+          "confidence": "high",
+          "citations": ["S1", "S2", "S3"],
+          "basis": "Repeatedly calls tax increases a burden and taxes a last resort after budget reprioritization, without pledging no new taxes."
+        },
+        "spending": {
+          "score": -1,
+          "confidence": "high",
+          "citations": ["S1", "S2", "S3"],
+          "basis": "Calls for addressing \"out of control spending\" and reprioritizing funds to core services before new revenue."
+        },
+        "housing": {
+          "score": -1,
+          "confidence": "high",
+          "citations": ["S2", "S3"],
+          "basis": "Housing plan centers on lower fees, streamlined permitting and land-use changes."
+        },
+        "safety": {
+          "score": -1,
+          "confidence": "high",
+          "citations": ["S1", "S2", "S3"],
+          "basis": "Supports law enforcement and wants treatment and accountability in place of housing-first and harm reduction."
+        },
+        "climate": {
+          "score": 0,
+          "confidence": "medium",
+          "citations": ["S1", "S3"],
+          "basis": "Renewable-energy engineer who backs clean energy but frames it around affordability and reliability."
+        },
+        "experience": {
+          "score": 1,
+          "confidence": "high",
+          "citations": ["S1", "S5"],
+          "basis": "Political newcomer with business and nonprofit leadership but no public office."
+        }
+      }
+    }
+  ]
+}

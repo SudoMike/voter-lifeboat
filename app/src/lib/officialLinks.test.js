@@ -88,8 +88,8 @@ test('every statewide contest and measure in the shipped general gets a paged SO
         n++
       }
   for (const m of general.measures) {
-    // Spokane's and Pierce's measures cite VoteWA's unpaged online guide (countyGuides).
-    if (m.owner === 'spokane' || m.owner === 'pierce') continue
+    // Spokane's, Pierce's and Kitsap's measures cite VoteWA's unpaged online guide (countyGuides).
+    if (m.owner === 'spokane' || m.owner === 'pierce' || m.owner === 'kitsap') continue
     assert.match(pamphletLink(m.pamphlet_pages, m.owner, general.election.id), /#page=\d+$/, m.slug)
     n++
   }
@@ -205,6 +205,58 @@ test('Pierce general records link SOS Edition 09 at the cited page, else the Pie
   }
   // CD 6 and 10 and the legislative seats Pierce researched itself.
   assert.ok(paged >= 30, `${paged} Pierce paged links`)
+})
+
+test('Clark, Kitsap and Thurston general citations link their PDFs at the cited page, else a county guide', () => {
+  const id = general.election.id
+  assert.equal(
+    pamphletLink([{ edition: 'local-voters-pamphlet', page: 86 }], 'clark', id),
+    'https://clark.wa.gov/sites/default/files/media/document/2026-09/2026clarkcountygeneralvp_web.pdf#page=86'
+  )
+  assert.equal(pamphletLink([], 'clark', id), 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=06')
+  assert.equal(pamphletLink([], 'kitsap', id), 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=18')
+  assert.equal(
+    pamphletLink([{ edition: 'local-voters-pamphlet', page: 26 }], 'thurston', id),
+    'https://www.thurstoncountywa.gov/media/34849#page=26'
+  )
+  assert.equal(
+    pamphletLink([{ edition: 'voters-pamphlet-edition-27-thurston', page: 31 }], 'thurston', id),
+    'https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2027%20-%20Thurston.pdf#page=31'
+  )
+  // Thurston has no county guide; the primary keeps its own PDFs.
+  assert.equal(pamphletLink([], 'thurston', id), null)
+  assert.equal(
+    pamphletLink([{ edition: 'local-voters-pamphlet', page: 4 }], 'thurston', primary.election.id),
+    'https://www.thurstoncountywa.gov/media/33642#page=4'
+  )
+})
+
+test('shipped Clark, Kitsap and Thurston records link their own PDFs or guide; their offices link directly', () => {
+  const id = general.election.id
+  const PDF = {
+    clark: /2026clarkcountygeneralvp_web\.pdf#page=\d+$/,
+    thurston: /(thurstoncountywa\.gov\/media\/34849|Edition%2027%20-%20Thurston\.pdf)#page=\d+$/,
+  }
+  const paged = { clark: 0, kitsap: 0, thurston: 0 }
+  for (const item of [...general.contests, ...general.measures]) {
+    if (!(item.owner in paged)) continue
+    const pages = item.candidates ? item.candidates.map((c) => c.pamphlet_pages) : [item.pamphlet_pages]
+    for (const p of pages) {
+      if (!p?.length) continue
+      assert.match(pamphletLink(p, item.owner, id), PDF[item.owner], item.slug)
+      paged[item.owner]++
+    }
+  }
+  // Kitsap cites VoteWA only; every Clark and Thurston measure has pages.
+  assert.equal(paged.kitsap, 0)
+  assert.ok(paged.clark >= 40 && paged.thurston >= 30, JSON.stringify(paged))
+  for (const [county, name, url] of [
+    ['clark', 'Clark County', 'https://clark.wa.gov/elections'],
+    ['kitsap', 'Kitsap County', 'https://www.kitsap.gov/auditor/Pages/Elections.aspx'],
+    ['thurston', 'Thurston County', 'https://www.thurstoncountywa.gov/departments/auditor/elections'],
+  ]) {
+    assert.deepEqual(countyElectionsOffice(general, { id: county, name }), { name: `${name} Elections`, url, direct: true })
+  }
 })
 
 test('the shipped general links Snohomish County Elections directly', () => {

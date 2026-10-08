@@ -1,0 +1,90 @@
+{
+  "contest_slug": "kitsap-legislative-district-23-state-representative-pos-1",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/kitsap/dossiers/kitsap-legislative-district-23-state-representative-pos-1/",
+    "data/washington-state/elections/2026-11-03-general/counties/kitsap/scoring/kitsap-legislative-district-23-state-representative-pos-1.json"
+  ],
+  "verdicts": [
+    {
+      "candidate": "tarra-simmons",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "ESSB 6346 is not the lone taxes evidence: she also voted yes on ESHB 2081 (B&O) and ESSB 5813 (capital gains/estate) in 2025 [S20][S22], voted no on every failed 6346 floor amendment [S18], and her platform asks 'more from those who can afford it' [S5]. Roll calls checked against the cached XML. Her 2024 yes on I-2111 [S24] points the other way but predates three revenue votes, so +2 high stands."
+    },
+    {"candidate": "tarra-simmons", "axis": "spending", "verdict": "upheld"},
+    {"candidate": "tarra-simmons", "axis": "housing", "verdict": "upheld"},
+    {
+      "candidate": "tarra-simmons",
+      "axis": "safety",
+      "verdict": "adjust",
+      "adjusted_score": 1,
+      "adjusted_confidence": "high",
+      "note": "Pole_b record is real (no on I-2113 [S33], treatment/reentry/accountability platform [S5]), but in 2024 she also said she wanted to increase law-enforcement staffing and support so police can focus on violent crime [S17]. That is not 'fully' pole_b; +1."
+    },
+    {"candidate": "tarra-simmons", "axis": "climate", "verdict": "upheld"},
+    {"candidate": "tarra-simmons", "axis": "experience", "verdict": "upheld"},
+    {"candidate": "tarra-simmons", "axis": "immigration", "verdict": "upheld"},
+    {
+      "candidate": "tarra-simmons",
+      "axis": "healthcare",
+      "verdict": "upheld",
+      "note": "Direction is right: prior-authorization, charity-care, parity and drug-cost work are fixes within the current system, which is pole_a (negative)."
+    },
+    {
+      "candidate": "tarra-simmons",
+      "axis": "social",
+      "verdict": "upheld",
+      "note": "Rests on gender-affirming care, LGBTQIA+ anti-discrimination and abortion-care evidence only [S5][S6]; the I-2081/HB 1296 votes are correctly kept on parental-rights."
+    },
+    {
+      "candidate": "tarra-simmons",
+      "axis": "parental-rights",
+      "verdict": "upheld",
+      "note": "Two independent recorded actions: nay on I-2081 (2024, verified in the cached roll call) and named co-sponsor of HB 1296 (verified in the cached House Bill Report) plus yes on both House final-passage votes."
+    },
+    {
+      "candidate": "daria-ilgen",
+      "axis": "taxes",
+      "verdict": "adjust",
+      "adjusted_score": -1,
+      "adjusted_confidence": "medium",
+      "note": "0 means genuinely mixed, but every stated position leans pole_a: no new or higher tax 'without a proven need', examine existing spending before seeking new revenue [S8], 'expanding tax relief' and 'targeted tax relief' for small businesses and families [S6]. The only counterweight is a hedge ('not promising to oppose every tax') and an undefined 'tax equity' phrase, not a pole_b position. Mild restraint, so -1 at medium (campaign statements only, no record)."
+    },
+    {
+      "candidate": "daria-ilgen",
+      "axis": "spending",
+      "verdict": "adjust",
+      "adjusted_score": -1,
+      "adjusted_confidence": "medium",
+      "note": "Direction right, but high overstates it. Every source is his own words (platform [S6], tax-standard release [S8], pamphlet [S1], and his answers in the KDN Q&A [S2]); there is no record. He also pairs audits with new spending pledges ('dedicated funding' for childcare [S6]) and says 'the goal is not simply to spend more or spend less' [S8]. Medium."
+    },
+    {"candidate": "daria-ilgen", "axis": "housing", "verdict": "upheld"},
+    {"candidate": "daria-ilgen", "axis": "safety", "verdict": "upheld"},
+    {
+      "candidate": "daria-ilgen",
+      "axis": "climate",
+      "verdict": "upheld",
+      "note": "Low is the right confidence: one explicit pole_b phrase (growth near transit 'reducing auto dependence and carbon emissions' [S6]) and no CCA position. Puget Sound and shoreline protection is environmental, not climate evidence, and should not raise it."
+    },
+    {
+      "candidate": "daria-ilgen",
+      "axis": "experience",
+      "verdict": "adjust",
+      "adjusted_score": 1,
+      "adjusted_confidence": "medium",
+      "note": "Never held public office, but he is an elected PCO and 23rd LD state committeeman, sits on the district and county Democratic executive boards, helped redraft the state party platform [S1][S5], and is endorsed by U.S. Rep. Adam Smith [S7]. A party-insider profile is not the maximal outsider case; consistent with the Spokane LD6 treatment of a party officer (+1)."
+    },
+    {"candidate": "daria-ilgen", "axis": "reform", "verdict": "upheld"},
+    {"candidate": "daria-ilgen", "axis": "immigration", "verdict": "upheld"},
+    {
+      "candidate": "daria-ilgen",
+      "axis": "healthcare",
+      "verdict": "upheld",
+      "note": "Direction right: insurer accountability, surprise-bill and transparency fixes are explicitly within the current insurance system (pole_a, negative)."
+    },
+    {"candidate": "daria-ilgen", "axis": "social", "verdict": "upheld"},
+    {"candidate": "daria-ilgen", "axis": "tech", "verdict": "upheld"}
+  ],
+  "missing": []
+}

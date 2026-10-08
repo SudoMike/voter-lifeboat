@@ -25,22 +25,129 @@ OUT = COUNTY / "interim"
 # sample-ballot transcription, frozen byte-identical.
 PRIMARY = "2026-08-04-primary"
 
-GENERAL_CFG = {"name": "Thurston County"}
-GENERAL_MEASURES = {"2026-11-03-general": None}
+# Every scope resolves through app/src/lib/geo.js COUNTY_LAYERS["thurston"]
+# (#22), which reads the two measure layers the general added:
+# - SCHDST: Thurston County Elections' school director districts,
+#   https://tconline.co.thurston.wa.us/server/rest/services/Common_Layers/Jurisdictions/FeatureServer/10,
+#   attr SchoolDistrictName ('YELM' at 105 Yelm Ave W, Yelm; 'OLYMPIA',
+#   'NORTH THURSTON', 'ROCHESTER' elsewhere). DOR SCH2025 (layer 20) agrees:
+#   DISTATTRIB '2' (Yelm Community Schools No. 2) at the same point.
+# - RFADST: West Thurston Regional Fire Authority (former Fire Districts 1,
+#   Rochester, and 11, Littlerock). The FIRDST/FIRE_AUTH layer
+#   (ThurstonExt/Thurston_FireDistricts_TCOMM/FeatureServer/0) splits it into
+#   two polygons (DISPATCH_G 'FD01'/'FD11', CONSOL_DIS 'WTRFA - South Btn'/
+#   'WTRFA - North Btn'); both carry CONSOL_NUM 'FD01', and no other polygon
+#   does. geo.js RFADST reads that service's CONSOL_NUM with
+#   where "CONSOL_DIS LIKE 'WTRFA%'" ('FD01' at 18346 Albany St SW,
+#   Rochester and 10828 Littlerock Rd SW, Olympia). DOR FIR2025 has two
+#   values ('1/WTRFA/1B', '11/WTRFA/11B'), so it cannot match one scope value.
+GENERAL_CFG = {"name": "Thurston County", "unresolvable_layers": ()}
+
+_GEN = "data/washington-state/elections/2026-11-03-general/counties/thurston"
+_PAGE = f"{_GEN}/raw/thurston/general-election.html.url"
+_LVP = f"{_GEN}/raw/thurston/local-voters-pamphlet.pdf.url"
+_BALLOT = f"{_GEN}/raw/thurston/sample-ballot.pdf.url"
+_NO_CON = "No statement against was filed; the pamphlet says no one in the jurisdiction contacted the Auditor to write one."
+
+
+def gen_measure(jurisdiction, proposition, title, scope, pages, ballot_title, cost_line, pro, con):
+    """One general-election app-measures row. `jurisdiction`, `title` and
+    `ballot_title` are verbatim from the sample ballot
+    (raw/thurston/sample-ballot.pdf.url); `pages` are local-voters-pamphlet
+    PDF pages (ballot title, explanatory statement, statements for and
+    against). Display fields are overlaid by scoring/measures.json at
+    assembly."""
+    return {
+        "slug": "thurston-" + votewa.slugify(f"{jurisdiction}-{proposition}"),
+        "owner": "thurston",
+        "jurisdiction": jurisdiction,
+        "proposition": proposition,
+        "title": title,
+        "scope": scope,
+        "pamphlet_pages": [{"edition": "local-voters-pamphlet", "page": p} for p in pages],
+        "what_it_does": ballot_title,
+        "cost_line": cost_line,
+        "pro_summary": pro,
+        "con_summary": con,
+        "lean_mappings": {},
+    }
+
+
+def _district(layer, value):
+    return {"kind": "DISTRICT", "county": "thurston", "layer": layer, "value": value}
+
+
+# The four local measures on the composite sample ballot (Rev. 08/24/2026),
+# the Auditor's resolution list and the pamphlet's measure pages agree. The
+# pamphlet's PDF page 28 also carries a stray "Thurston County Fire
+# Protection District 12 Proposition No. 1" heading and ballot title (a
+# leftover; that page's statements are Lacey Fire District 3's): FD 12 is on
+# neither the sample ballot nor the resolution list, so it is not a measure.
+GENERAL_MEASURES = {"2026-11-03-general": {
+    "sources": [_BALLOT, _LVP, _PAGE],
+    "measures": [
+        # Scope: county-wide. The sample ballot heads it "Countywide Measure";
+        # DOR LIB2025 (layer 12) returns 'L' (Timberland) at every check
+        # address (Olympia, Lacey, Yelm, Littlerock, Rochester).
+        gen_measure("Timberland Regional Library District", "Proposition No. 1",
+                    "Regular Property Tax Levy Lid Lift for Library Services, Operations and Maintenance",
+                    {"kind": "COUNTY", "county": "thurston"}, [24, 25],
+                    "The Timberland Regional Library District's Board of Trustees adopted Resolution No. 26-002 concerning a proposed increase of the District's regular levy rate. If approved, this proposition would restore the District's regular property tax levy rate for library services, operations and maintenance from $0.22 to $0.35 per $1,000 of assessed valuation for both 2027 and 2028, subject to applicable limitations. The resulting 2028 levy dollar amount would be used for the purpose of computing subsequent levy limitations under chapter 84.55 RCW.",
+                    "Levy lid lift from $0.22 to $0.35 per $1,000 of assessed value for 2027 and 2028; the 2028 amount becomes the base for later limits (about $40 a year on a $334,000 home, per the explanatory statement).",
+                    "TimberStrong Libraries Committee: the levy has not risen in 25 years; restores hours, staffing and collections at Thurston's eight branches (about $69 a year on a median $530,959 home).",
+                    "Sean Swope (Citizens for Accountable TR Libraries): property owners already face rising bills; the library should cut costs and show prudent management before asking for more."),
+        # Scope: SCHDST (geo.js, see GENERAL_CFG). 105 Yelm Ave W,
+        # Yelm (Census-geocoded -122.60775, 46.94251) -> Jurisdictions/10
+        # SchoolDistrictName 'YELM' (2026-10-08).
+        gen_measure("Yelm Community Schools", "Proposition No. 1",
+                    "Educational Programs and Operations Maintenance Levy",
+                    _district("SCHDST", "YELM"), [26, 27],
+                    "The Board of Directors of Yelm Community Schools adopted Resolution No. 09-25-26, authorizing a levy to maintain existing educational program support levels. This proposition would authorize the District to levy the following excess taxes, on taxable property within the District, to maintain essential educational programs, extracurricular activities, and operations not funded by the State (including, but not limited to, teachers, arts, nurses, counselors, classified staff, paraeducators, safety, graduation readiness, technology, athletics, facilities, curriculum): Collection Year Estimated Levy Rate/$1,000 Assessed Value Maximum Levy Amount 2027 $1.50 $11,194,449 2028 $1.50 $12,278,072 all as provided in Resolution No. 09-25-26.",
+                    "Two-year excess levy at an estimated $1.50 per $1,000 of assessed value: up to $11,194,449 (2027) and $12,278,072 (2028).",
+                    "Yelm Kids First: after several levy failures the district has cut staff, programs and athletics; the levy pays for teachers, nurses, counselors, safety staff and activities the state does not fully fund.",
+                    "Martin Miller and Frank Vance: voters have said no four times; the district used one-time money for recurring costs and restores none of the cuts; press Olympia to fund schools instead."),
+        # Scope: FIRDST. 420 College St SE, Lacey (Census-geocoded -122.82314,
+        # 47.0446) -> DISPATCH_G 'FD03' (DOR FIR2025 '3') (2026-10-08).
+        gen_measure("Thurston County Fire Protection District No. 3 (Lacey Fire District 3)", "Proposition No. 1",
+                    "Bonds for Fire Stations, Training Facility, Logistics Warehouse",
+                    _district("FIRDST", "FD03"), [28],
+                    "The Board of Fire Commissioners of Thurston County Fire Protection District No. 3 (Lacey Fire District 3) adopted Resolution No. 903-06-26, concerning emergency services facilities to protect public health, life and property. This proposition would authorize the District to: construct a new community fire station (Britton Pkwy); replace Station 32 (Yelm Hwy); construct a regional live fire training facility and logistics warehouse; acquire property (and pay associated financing costs); make other capital improvements and apparatus acquisitions; issue no more than $98,300,000 of general obligation bonds maturing within 20 years; and levy annual excess property taxes to repay the bonds, all as provided in Resolution No. 903-06-26.",
+                    "Up to $98,300,000 in bonds maturing within 20 years, repaid by excess property taxes at an approximate $0.23 per $1,000 of assessed value (about $9.60 a month on a $500,000 home).",
+                    "Steve Brooks and Tom Carroll: calls are up 43% in ten years and only one of five stations is north of I-5; a new station and a replaced Station 32 cut response times.",
+                    _NO_CON),
+        # Scope: RFADST (geo.js, see GENERAL_CFG). 18346 Albany St
+        # SW, Rochester (-123.09698, 46.82062) and 10828 Littlerock Rd SW,
+        # Olympia (-122.99209, 46.93043) -> fire layer CONSOL_NUM 'FD01'
+        # (CONSOL_DIS 'WTRFA - South Btn' / 'WTRFA - North Btn') (2026-10-08).
+        gen_measure("West Thurston Regional Fire Authority (Rochester & Littlerock)", "Proposition No. 1",
+                    "Property Tax for Fire Maintenance and Operations",
+                    _district("RFADST", "FD01"), [29],
+                    "The Board of Commissioners of West Thurston Regional Fire Authority adopted Resolution No. 2026-005 concerning a proposition to finance maintenance and operation expenses. This proposition, if approved, will authorize the Authority to levy, without regard to the dollar rate and percentage limitations imposed by Chapter 84.52 RCW, a property tax upon all taxable property within the Authority's boundaries of: Collection Year Approximate Levy Rate/$1,000 Assessed Value Levy Amount 2027 $0.36 $1,547,228.00 to be used for maintenance and operations and to maintain the current level of fire services and emergency medical services as provided in Resolution No. 2026-005.",
+                    "One-year excess levy of $1,547,228 in 2027, about $0.36 per $1,000 of assessed value (up to $15 a month on a $500,000 home).",
+                    "Tyler Mason and Cathe Linn: many frontline vehicles are past their service life and stations need HVAC, roof and plumbing work; levy money goes to apparatus replacement and facility maintenance.",
+                    _NO_CON),
+    ],
+}}
 
 
 def general_override(r, unresolvable):
     dtype, district, race = r["District Type"].strip().upper(), r["District"].strip().upper(), r["Race"].strip()
     if dtype == "COMMISSIONER":
         # 'COMMISSIONER DISTRICT ALL COUNTY': nominated by district in the
-        # primary, elected county-wide in the general (RCW 36.32.040).
+        # primary, elected county-wide in the general (RCW 36.32.0556 for a
+        # five-member board, as Thurston's is).
         n = votewa.district_number(race)
         scope = ("COUNTY", None) if "ALL COUNTY" in district else ("COUNTY_COUNCIL", str(n))
         return "County", f"Thurston County Commissioner District No. {n}", "County Commissioner", scope
     if dtype == "PUBLIC UTILITY":
+        # Nominated by commissioner district in the primary; voters of the
+        # entire PUD elect in the general (RCW 54.12.010(3)). Thurston PUD's
+        # three commissioner districts (Jurisdictions/FeatureServer/15) tile
+        # the whole county: their areas sum to the five county commissioner
+        # districts' (4,099,049,658 sq m in both layers, 2026-10-08).
         n = votewa.district_number(race)
         return ("PublicUtility", f"Thurston County Public Utility District Commissioner District No. {n}",
-                "Public Utility District Commissioner", ("PUDDST", str(n)))
+                "Public Utility District Commissioner", ("COUNTY", None))
     if dtype == "COUNTYWIDE" and race.upper().startswith("DISTRICT COURT JUDGE"):
         n = votewa.district_number(race)
         return "Judicial", "Thurston County District Court", f"Judge Position No. {n}", ("COUNTY", None)
