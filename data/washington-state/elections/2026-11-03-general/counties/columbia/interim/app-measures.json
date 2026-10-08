@@ -1,0 +1,80 @@
+{
+  "county": "columbia",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/columbia/raw/votewa/candidate-list.csv.url",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7379&e=899&la=en&c=07",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7423&e=899&la=en&c=07"
+  ],
+  "coverage": "full_county",
+  "notes": [
+    "Columbia County Commissioner No. 3 is nominated by district and elected county-wide in the general (RCW 36.32.040, RCW 36.32.050(1); SOS precinct results 2022 and 2024: commissioner races on all 13 precincts).",
+    "Both local measures are park and recreation district levies read from WA DOR PKR2025 (layer 14): 'CPR' is the Columbia County Park and Recreation Pool District (the county minus the Town of Starbuck and the Prescott district), 'PRES' the Columbia County part of the Prescott Joint Park and Recreation District."
+  ],
+  "measures": [
+    {
+      "slug": "columbia-columbia-county-park-and-recreation-pool-district-proposition-no-1",
+      "owner": "columbia",
+      "jurisdiction": "Columbia County Park and Recreation Pool District",
+      "proposition": "Proposition No. 1",
+      "title": "Operation Excess Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "columbia",
+        "layer": "PARKDST",
+        "value": "CPR"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 10
+        }
+      ],
+      "what_it_does": "Authorizes a one-year excess property tax levy in 2026 for collection in 2027 to fund operation and maintenance of the pool the district plans to build in Dayton (the old Dayton pool closed in 2017). The district, formed by voters in 2023, covers the county except the Town of Starbuck and the Prescott park district's area.",
+      "cost_line": "$200,000 collected in 2027, approximately $0.20 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7423&e=899&la=en&c=07"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "columbia-prescott-joint-park-and-recreation-district-proposition-no-1",
+      "owner": "columbia",
+      "jurisdiction": "Prescott Joint Park and Recreation District",
+      "proposition": "Proposition No. 1",
+      "title": "Maintenance & Operation Excess Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "columbia",
+        "layer": "PARKDST",
+        "value": "PRES"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 11
+        }
+      ],
+      "what_it_does": "Authorizes a one-year excess property tax levy for the park and recreation district's maintenance and operation expenses in 2027, its main source of operating money (chiefly the Prescott pool). The district is joint with Walla Walla County; only a thinly settled strip of western Columbia County is in it.",
+      "cost_line": "$175,000 collected in 2027 across the whole district, approximately $0.35 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7379&e=899&la=en&c=07"
+          ]
+        }
+      }
+    }
+  ]
+}
