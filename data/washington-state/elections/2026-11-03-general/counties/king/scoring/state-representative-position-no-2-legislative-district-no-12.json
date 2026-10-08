@@ -1,0 +1,51 @@
+{
+  "contest_slug": "state-representative-position-no-2-legislative-district-no-12",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/king/dossiers/state-representative-position-no-2-legislative-district-no-12/"],
+  "office_does": "A State Representative writes and votes on Washington state law and the operating, capital, and transportation budgets, covering school funding, the tax structure, housing rules, and criminal-justice statutes.",
+  "race_blurb": "Five-term Republican Mike Steele, the capital-budget ranking member, faces Democrat Maggie Adams, an IATSE union representative from Snoqualmie. Steele led the primary 41.1% to 33.9%; Adams led the King County portion.",
+  "candidates": [
+    {
+      "slug": "mike-steele",
+      "summary": "Incumbent since 2017, Capital Budget ranking member and Lake Chelan Chamber director, running on small-business, budget and infrastructure priorities.",
+      "highlights": [
+        "Voted against ESSB 6346 (2026) and ESHB 1296 (2025) [S5][S6]",
+        "Says taxes, fees and regulation make housing less affordable [S12]",
+        "Endorsed by the State Labor Council and WEA-PAC as well as AWB and the King County GOP [S3][S13][S14][S15]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": -2, "confidence": "high", "citations": ["S4", "S5", "S16"], "basis": "Voted against the 2026 income tax, campaigns on lowering tax burdens, and has said the state has a spending problem rather than a revenue problem."},
+        "spending": {"score": -1, "confidence": "medium", "citations": ["S2", "S16"], "basis": "Emphasizes balanced budgets and making sure every education dollar delivers results; describes a spending problem."},
+        "housing": {"score": -2, "confidence": "medium", "citations": ["S12"], "basis": "Said affordable housing cannot be made more affordable by more taxes, fees or unfavorable regulation."},
+        "safety": {"score": -1, "confidence": "medium", "citations": ["S3", "S16"], "basis": "Reported to oppose decriminalization; endorsed by the Fraternal Order of Police."},
+        "climate": {"score": -1, "confidence": "low", "citations": ["S2"], "basis": "Opposes policies that would significantly raise transportation and energy costs; no direct climate statement."},
+        "experience": {"score": -2, "confidence": "high", "citations": ["S1", "S2"], "basis": "Ten years in office with budget-committee seniority and past caucus leadership."},
+        "healthcare": {"score": -1, "confidence": "medium", "citations": ["S2"], "basis": "Wants to expand affordable options through transparency, choice and cost containment within the current system."},
+        "parental-rights": {"score": -1, "confidence": "medium", "citations": ["S4", "S6"], "basis": "Voted against ESHB 1296 twice; his caucus site backs school choice and 'empowering parents.'"}
+      }
+    },
+    {
+      "slug": "maggie-adams",
+      "summary": "IATSE Local 887 business representative from Snoqualmie, a first-time candidate running on healthcare access, workers' rights and water protection.",
+      "highlights": [
+        "Calls healthcare \"a fundamental human right\" and wants comprehensive access statewide [S2]",
+        "Has said she supports a millionaire's tax [S7]",
+        "Supports term limits and lowering the voting age to 16 for state and local elections [S2]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": 2, "confidence": "medium", "citations": ["S1", "S7"], "basis": "Has said she supports a millionaire's tax and higher taxes on high-grossing businesses; pamphlet lists tax fairness."},
+        "spending": {"score": 1, "confidence": "medium", "citations": ["S2"], "basis": "Wants better pay and facilities for educators and statewide healthcare access."},
+        "housing": {"score": 2, "confidence": "medium", "citations": ["S7"], "basis": "Would regulate vacation rentals and mandate affordable units in new construction."},
+        "safety": {"score": 1, "confidence": "medium", "citations": ["S7"], "basis": "Emphasizes community policing and de-escalation."},
+        "experience": {"score": 1, "confidence": "medium", "citations": ["S1"], "basis": "First-time candidate with union leadership but no public office."},
+        "reform": {"score": 2, "confidence": "medium", "citations": ["S2"], "basis": "Supports constitutional term limits for elected offices and federal judges and voting at 16."},
+        "healthcare": {"score": 1, "confidence": "low", "citations": ["S2"], "basis": "Calls healthcare a human right and wants comprehensive access everywhere, without naming single-payer."},
+        "tech": {"score": 1, "confidence": "medium", "citations": ["S2"], "basis": "Wants communities and farmers to have priority for water over incoming data centers."}
+      }
+    }
+  ]
+}
