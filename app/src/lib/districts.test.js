@@ -110,6 +110,19 @@ test('Franklin port and commissioner codes and Clallam PUD membership read as na
     ['Public Utility District 3', 'Public Utility District No. 1'])
 })
 
+test('Douglas proposed Rimrock fire district reads as its name; other county fire codes stay hidden', () => {
+  // Live 2026-10-08 (#30): All_Districts_Temporary/MapServer/4 FireNumber
+  // '009' at 1005 Ashcroft Dr, Ephrata; '001' at 448 Belmont Pl, Ephrata,
+  // where DOR FIRDST already names Fire District 1.
+  assert.equal(layerLabel('PROPFIRDST'), 'Proposed fire protection district')
+  assert.equal(describeDistrict('PROPFIRDST', '009'), 'Proposed Rimrock Meadows Fire Protection District No. 9')
+  assert.equal(describeDistrict('PROPFIRDST', '001'), null)
+  assert.equal(describeDistrict('PROPFIRDST', '000'), null)
+  assert.deepEqual(describeDistricts({ FIRDST: '1', PROPFIRDST: '001' }).map((d) => d.text), ['Fire District 1'])
+  assert.deepEqual(describeDistricts({ SCHDST: '209', PROPFIRDST: '009' }).map((d) => d.text),
+    ['Proposed Rimrock Meadows Fire Protection District No. 9', 'School District 209'])
+})
+
 test('codes are tidied without mangling initialisms', () => {
   assert.equal(describeDistrict('FIRDST', 'TACOMA'), 'Fire District Tacoma')
   assert.equal(describeDistrict('SCCDST', 'SCC5'), 'Seattle City Council District 5')

@@ -1443,3 +1443,91 @@ test('Stevens resolves the rural library district and Nine Mile Falls SD from DO
   assert.ok(!scopeMatches(fd10, context))
   assert.ok(!scopeMatches(nmf, context))
 })
+
+// Whitman and Douglas (#30, wave 5). Live point queries 2026-10-08 at the
+// Census-geocoded points of the addresses below.
+const whitmanCommissioner = (n) => ({ path: 'Whitman_County_BOCC_Districts___Feb__2026_WFL1/FeatureServer/10', attributes: { BOCC: n } })
+const douglasFire = (n) => ({ path: 'All_Districts_Temporary/MapServer/4', attributes: { FireNumber: n } })
+
+test('Whitman resolves its library, cemetery and Cheney school scopes from DOR', async () => {
+  const library = { kind: 'DISTRICT', county: 'whitman', layer: 'LIBDST', value: 'L' }
+  const oakesdaleCemetery = { kind: 'DISTRICT', county: 'whitman', layer: 'CEMDST', value: '1' }
+  const oakesdalePark = { kind: 'DISTRICT', county: 'whitman', layer: 'PARKDST', value: '4' }
+  const cheney = { kind: 'DISTRICT', county: 'whitman', layer: 'SCHDST', value: '316' }
+  const fd14 = { kind: 'DISTRICT', county: 'whitman', layer: 'FIRDST', value: '14' }
+  // 101 Steptoe Ave, Oakesdale: library L, Cemetery 1, Park 4, SD 324.
+  const calls = mockWave2('101 STEPTOE AVE, OAKESDALE, WA, 99158', '075', 'Whitman County', [
+    whitmanCommissioner(1), dorLayer(14, '4'), dorLayer(3, '1'), dorLayer(12, 'L'), dorLayer(20, '324'),
+  ])
+  let context = await lookupBallotContext(wave2Data('whitman'), '101 Steptoe Ave Oakesdale WA 99158')
+  assert.equal(context.coverageStatus, 'full_county')
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(scopeMatches(library, context))
+  assert.ok(scopeMatches(oakesdaleCemetery, context))
+  assert.ok(scopeMatches(oakesdalePark, context))
+  assert.ok(!scopeMatches(cheney, context))
+  assert.ok(!scopeMatches(fd14, context))
+  for (const n of [3, 12, 20]) {
+    const url = calls.find((u) => u.includes(`WADOR_PropertyTax/MapServer/${n}/query`))
+    assert.equal(new URL(url).searchParams.get('outFields'), 'DISTATTRIB')
+  }
+  // 110 S Montgomery St, Uniontown: FD 14, no library, cemetery or park.
+  mockWave2('110 S MONTGOMERY ST, UNIONTOWN, WA, 99179', '075', 'Whitman County', [
+    whitmanCommissioner(2), dorLayer(7, '14'), dorLayer(20, '306'),
+  ])
+  context = await lookupBallotContext(wave2Data('whitman'), '110 S Montgomery St Uniontown WA 99179')
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(scopeMatches(fd14, context))
+  assert.ok(!scopeMatches(library, context))
+  assert.ok(!scopeMatches(oakesdaleCemetery, context))
+  // Interior point (-117.70, 47.24) north of St. John: Cheney SD's Whitman
+  // portion, '316'.
+  mockWave2('ST. JOHN RURAL, WA', '075', 'Whitman County', [
+    whitmanCommissioner(1), dorLayer(7, '5'), dorLayer(12, 'L'), dorLayer(20, '316'),
+  ])
+  context = await lookupBallotContext(wave2Data('whitman'), 'St John rural WA')
+  assert.ok(scopeMatches(cheney, context))
+  assert.ok(!scopeMatches({ ...cheney, county: 'spokane' }, context))
+})
+
+test('Douglas resolves Eastmont SD, Cemetery District 2 and the proposed Rimrock fire district', async () => {
+  const eastmont = { kind: 'DISTRICT', county: 'douglas', layer: 'SCHDST', value: '206' }
+  const cemetery2 = { kind: 'DISTRICT', county: 'douglas', layer: 'CEMDST', value: '2' }
+  const hospital2 = { kind: 'DISTRICT', county: 'douglas', layer: 'HOSPDST', value: '2' }
+  const rimrock = { kind: 'DISTRICT', county: 'douglas', layer: 'PROPFIRDST', value: '009' }
+  // 1005 Ashcroft Dr, Ephrata (Rimrock Meadows): proposed FPD 9, SD 209.
+  const calls = mockWave2('1005 ASHCROFT DR, EPHRATA, WA, 98823', '017', 'Douglas County', [
+    dorLayer(20, '209'), douglasFire('009'),
+  ])
+  let context = await lookupBallotContext(wave2Data('douglas'), '1005 Ashcroft Dr Ephrata WA 98823')
+  assert.equal(context.coverageStatus, 'full_county')
+  assert.deepEqual(context.missingLayers, [])
+  assert.equal(context.districts.PROPFIRDST, '009')
+  assert.equal(context.districts.FIRDST, undefined)
+  assert.ok(scopeMatches(rimrock, context))
+  assert.ok(!scopeMatches(eastmont, context))
+  const fire = calls.find((u) => u.includes('All_Districts_Temporary/MapServer/4/query'))
+  assert.ok(fire.startsWith('https://gis.douglascountywa.gov/server/rest/services/'), fire)
+  assert.equal(new URL(fire).searchParams.get('outFields'), 'FireNumber')
+  // 448 Belmont Pl, Ephrata: an existing fire district ('001'), not Rimrock;
+  // DOR FD 1, Hospital District 2, Cemetery District 2.
+  mockWave2('448 BELMONT PL, EPHRATA, WA, 98823', '017', 'Douglas County', [
+    dorLayer(7, '1'), dorLayer(11, '2'), dorLayer(20, '209'), dorLayer(3, '2'), douglasFire('001'),
+  ])
+  context = await lookupBallotContext(wave2Data('douglas'), '448 Belmont Pl Ephrata WA 98823')
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(!scopeMatches(rimrock, context))
+  assert.ok(scopeMatches(hospital2, context))
+  assert.ok(scopeMatches(cemetery2, context))
+  // 100 Eastmont Ave, East Wenatchee: Eastmont SD 206, DOR FD 2.
+  mockWave2('100 EASTMONT AVE, EAST WENATCHEE, WA, 98802', '017', 'Douglas County', [
+    dorLayer(7, '2'), dorLayer(20, '206'), douglasFire('002'),
+  ])
+  context = await lookupBallotContext(wave2Data('douglas'), '100 Eastmont Ave East Wenatchee WA 98802')
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(scopeMatches(eastmont, context))
+  assert.ok(!scopeMatches(cemetery2, context))
+  assert.ok(!scopeMatches(rimrock, context))
+  // The archived primary's Douglas fire scopes still read DOR FIRDST.
+  assert.ok(scopeMatches({ kind: 'DISTRICT', county: 'douglas', layer: 'FIRDST', value: '2' }, context))
+})

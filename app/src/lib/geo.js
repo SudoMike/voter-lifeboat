@@ -436,8 +436,41 @@ const COUNTY_LAYERS = {
     { key: 'COUNTY_COUNCIL', url: 'https://gis.cowlitzwa.gov/ccserver/rest/services/County/Political_Administrative_Districts/MapServer/1/query', attr: 'DIST_ID' },
   ],
   douglas: [
+    // Re-probed 2026-10-08 (#30): 100 Eastmont Ave, East Wenatchee -> '2';
+    // 50 Main St, Mansfield -> '5'; 448 Belmont Pl, Ephrata -> '1'; 213 S
+    // Chelan Ave, Waterville -> no feature. The archived primary's FD 15
+    // ('J15') scope reads it; no general scope does.
     { key: 'FIRDST', url: `${DOR_TAX_DISTRICTS}/7/query`, attr: 'DISTATTRIB' },
+    // Three Rivers Hospital (District 1) bonds and Hospital District 2's
+    // levy (#30). Re-probed 2026-10-08: 1206 Columbia Ave, Bridgeport and 50
+    // Main St, Mansfield -> '1'; 213 S Chelan Ave, Waterville -> '2'; 100
+    // Eastmont Ave, East Wenatchee -> no feature.
     { key: 'HOSPDST', url: `${DOR_TAX_DISTRICTS}/11/query`, attr: 'DISTATTRIB' },
+    // WA DOR SCH2025 (#30): Eastmont School District No. 206's bonds. Live
+    // 2026-10-08: 100 Eastmont Ave, East Wenatchee and 1 Rock Island Dr,
+    // Rock Island -> '206'; Waterville '209'; Bridgeport '75'; Mansfield '207'.
+    { key: 'SCHDST', url: `${DOR_TAX_DISTRICTS}/20/query`, attr: 'DISTATTRIB' },
+    // WA DOR CEM2025 (#30): Cemetery District No. 2's levy. Live 2026-10-08:
+    // 213 S Chelan Ave, Waterville -> '2'; 236 Brays Landing Rd, Orondo ->
+    // '1'; 100 Eastmont Ave, East Wenatchee -> no feature.
+    { key: 'CEMDST', url: `${DOR_TAX_DISTRICTS}/3/query`, attr: 'DISTATTRIB' },
+    // Proposed Rimrock Meadows Fire Protection District No. 9 (#30): its
+    // formation measure and three commissioner seats, voted on only inside
+    // the proposed boundary (RCW 52.02.080). DOR has no polygon for a
+    // district that is only being formed, so this reads the county's own
+    // fire layer, from a service the county names "All_Districts_Temporary".
+    // The proposed district's feature reads '009' ('Proposed Rimrock Fire',
+    // edited 2026-08-19, after the renaming resolution); the others read
+    // '001'-'008', '015', 'BPR' and '000' (no district). Its own key, not
+    // FIRDST, so the archived primary's Douglas fire scope keeps reading
+    // DOR. CORS echoed the Origin. Live 2026-10-08: 1005 Ashcroft Dr,
+    // Ephrata -> '009'; 448 Belmont Pl, Ephrata -> '001'; 100 Eastmont Ave,
+    // East Wenatchee -> '002'; 213 S Chelan Ave, Waterville -> '000'.
+    {
+      key: 'PROPFIRDST',
+      url: 'https://gis.douglascountywa.gov/server/rest/services/All_Districts_Temporary/MapServer/4/query',
+      attr: 'FireNumber',
+    },
   ],
   ferry: [
     { key: 'COUNTY_COUNCIL', url: 'https://services8.arcgis.com/BBejpmYP0j5q6NLc/arcgis/rest/services/Political_Boundaries/FeatureServer/0/query', attr: 'DISTRICT' },
@@ -647,9 +680,35 @@ const COUNTY_LAYERS = {
     { key: 'HOSPDST', url: `${DOR_TAX_DISTRICTS}/11/query`, attr: 'DISTATTRIB' },
   ],
   whitman: [
+    // Re-probed 2026-10-08 (#30): 101 Steptoe Ave, Oakesdale -> 1; 325 SE
+    // Paradise St, Pullman -> 2; 200 S Mill St, Colfax -> 3. No general
+    // scope uses it (Commissioner District 3 is elected county-wide).
     { key: 'COUNTY_COUNCIL', url: 'https://services3.arcgis.com/eoLFybJXLOtInQXJ/arcgis/rest/services/Whitman_County_BOCC_Districts___Feb__2026_WFL1/FeatureServer/10/query', attr: 'BOCC' },
+    // Fire Districts 8 and 14 (#30). Re-probed 2026-10-08: 110 S Montgomery
+    // St, Uniontown and 705 Broadway St, Colton -> '14'; (-117.85, 46.80)
+    // near LaCrosse -> '8'; 102 N Main Ave, LaCrosse (the town itself) and
+    // Pullman -> no feature.
     { key: 'FIRDST', url: `${DOR_TAX_DISTRICTS}/7/query`, attr: 'DISTATTRIB' },
+    // Park districts 1, 2, 3, 4 and 7 (#30). Re-probed 2026-10-08: LaCrosse
+    // '1', 405 E California St, Garfield '2', 101 Front St, St. John '3',
+    // Oakesdale '4', Endicott interior point (-117.6858, 46.9268) '7';
+    // Pullman -> no feature.
     { key: 'PARKDST', url: `${DOR_TAX_DISTRICTS}/14/query`, attr: 'DISTATTRIB' },
+    // WA DOR CEM2025 (#30): Oakesdale 1, Garfield 2, St. John 3 and Endicott
+    // 4 cemetery levies. Live 2026-10-08: 101 Steptoe Ave, Oakesdale '1';
+    // Garfield '2'; St. John '3'; Endicott interior point '4'; 200 S Mill
+    // St, Colfax '6' (no measure); Pullman -> no feature.
+    { key: 'CEMDST', url: `${DOR_TAX_DISTRICTS}/3/query`, attr: 'DISTATTRIB' },
+    // WA DOR LIB2025 (#30): Whitman County Rural Library District Prop. 1 is
+    // scoped 'L'. Live 2026-10-08: 'L' at Colfax (200 S Mill St), Tekoa,
+    // Palouse, Oakesdale, St. John, Albion and LaCrosse; no feature at
+    // Pullman, Rosalia, Garfield, Endicott, Colton or Uniontown.
+    { key: 'LIBDST', url: `${DOR_TAX_DISTRICTS}/12/query`, attr: 'DISTATTRIB' },
+    // WA DOR SCH2025 (#30): Cheney School District No. 360's Whitman portion
+    // reads '316', a thin strip north of St. John with no geocodable street
+    // address. Live 2026-10-08: interior point (-117.70, 47.24) -> '316';
+    // Pullman '267', Colfax '300', Oakesdale '324', Uniontown '306'.
+    { key: 'SCHDST', url: `${DOR_TAX_DISTRICTS}/20/query`, attr: 'DISTATTRIB' },
   ],
   yakima: [
     { key: 'COUNTY_COUNCIL', url: 'https://services3.arcgis.com/9Qz94N8Zml9hnG84/arcgis/rest/services/Commissioner_District_Election_2022/FeatureServer/0/query', attr: 'ID' },

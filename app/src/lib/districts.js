@@ -23,6 +23,9 @@ const DISTRICT_LABELS = {
   FIRDST: 'Fire District',
   FIRE_AUTH: 'Fire Authority',
   RFADST: 'Regional Fire Authority',
+  // Douglas PROPFIRDST: a fire protection district being formed at this
+  // election, read from the county's own fire layer (geo.js).
+  PROPFIRDST: 'Proposed fire protection district',
   EMSDST: 'Emergency Medical District',
   SCHDST: 'School District',
   HOSPDST: 'Hospital District',
@@ -78,6 +81,11 @@ const NAMED_VALUES = {
   UNINC: {
     ISLAND: 'Unincorporated Island County',
   },
+  // Douglas PROPFIRDST reads the county fire layer's FireNumber; only '009',
+  // the proposed Rimrock Meadows district, is on the 2026 general ballot.
+  PROPFIRDST: {
+    '009': 'Proposed Rimrock Meadows Fire Protection District No. 9',
+  },
   // Spokane FIRDST reads the county fire layer's NAME (geo.js). Districts
   // read 'Fire District 9'; these other polygons are cities with their own
   // department, towns served by contract, and land outside every district.
@@ -97,9 +105,15 @@ const NAMED_VALUES = {
 // special districts that only ever carry levies.
 const ORDER = [
   'CITY', 'CONGDST', 'LEGDST', 'KCCDST', 'SCCDST', 'COUNTY_COUNCIL', 'JUDDST', 'DISTCRT', 'KCDISTCRT',
-  'PORTDST', 'PUDDST', 'PUDALL', 'FIRDST', 'FIRE_AUTH', 'RFADST', 'EMSDST', 'SCHDST', 'HOSPDST', 'LIBDST',
+  'PORTDST', 'PUDDST', 'PUDALL', 'FIRDST', 'FIRE_AUTH', 'RFADST', 'PROPFIRDST', 'EMSDST', 'SCHDST', 'HOSPDST', 'LIBDST',
   'PARKDST', 'CEMDST', 'WATDST', 'PTBA', 'AQUIFER', 'UNINC',
 ]
+
+// Layers that show only their NAMED_VALUES. Douglas's county fire layer also
+// carries the existing fire districts ('001', '002', ...) and '000' for no
+// district; DOR's FIRDST already names those, so repeating them would show a
+// voter the same district twice under a "proposed" label.
+const NAMED_ONLY = new Set(['PROPFIRDST'])
 
 // Presence flags, not district numbers. '1' is deliberately absent — it is a
 // real district number nearly everywhere.
@@ -145,6 +159,7 @@ export function describeDistrict(key, value, bodyName = null) {
   if (key === 'CITY') return `City of ${tidy(raw)}`
   const named = NAMED_VALUES[key]?.[raw.toUpperCase()]
   if (named) return named
+  if (NAMED_ONLY.has(key)) return null
   const label = DISTRICT_LABELS[key]
   // An unconfigured layer is still worth showing; a bare key beats dropping it.
   if (!label) return `${key} ${tidy(raw)}`
