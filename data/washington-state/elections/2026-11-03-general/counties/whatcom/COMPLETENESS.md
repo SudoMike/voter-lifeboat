@@ -91,7 +91,30 @@ nothing in the repo was assembled):
   `PORTDST` 4, `FIRDST` 1, `missing=[]`. Ballot: CD 2, LD 42 Senator and
   Pos. 1 and 2, the county-wide races, and Fire District 1 Prop 2026-08.
 
+## Research status
+
+- Researched here, with dossiers, scoring and refutations: LD 40 Pos. 1
+  and 2, LD 42 Senator and Pos. 1 and 2, Prosecuting Attorney (all
+  candidates carried forward from primary dossiers and re-scored on the
+  15-axis rubric), Port D4 and D5 (carried forward), PUD D1 (new). The
+  Port and PUD categories have no applicable rubric axis, so those six
+  candidates ship summaries without scores; their refutation files record
+  a display review with no verdicts.
+- Info-only (empty scores): District Court Positions 1 and 2.
+- Researched elsewhere: CD 2 (Snohomish package; no candidate missing).
+- Measures: five dossiers; Lynden Prop 2026-05 and Fire District 1 Prop
+  2026-08 map to `taxes` +2; the two Bellingham charter amendments and
+  Initiative 26-01 have no lean (no measure axis fits). All refutation
+  verdicts upheld.
+
 ## Known gaps
 
 - The Auditor's measures list and printed pamphlet could not be fetched
   (403); the measures are VoteWA's guide records.
+- Certified primary percentages were not fetched (SOS results pages
+  answered 404); dossiers cite Cascadia Daily News counts, except the
+  Fire District 1 August result, read from results.votewa.gov.
+- PUD D1 candidate Frank Imhof filed no statement and his PDC record reads
+  "Candidate discontinued campaign" (May 15, 2026), after the withdrawal
+  deadline; VoteWA lists him Active, so he ships as a ballot candidate
+  (`withdrawn: false`) with that status in his summary.
