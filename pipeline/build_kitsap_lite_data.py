@@ -4,11 +4,60 @@ import json
 import re
 
 import election
+import votewa
 from election import rel
 
 # Usage: python3 pipeline/build_kitsap_lite_data.py [--election <id>]
-COUNTY = election.Election(election.from_argv()).county("kitsap")
+ELECTION = election.Election(election.from_argv())
+COUNTY = ELECTION.county("kitsap")
 OUT = COUNTY / "interim"
+
+
+# --- From the November 3, 2026 general on ----------------------------------
+# Contests come from the county's VoteWA candidate-list export
+# (counties/kitsap/raw/votewa/candidate-list.csv.{url,meta.json}, parsed by
+# pipeline/votewa.py). general_override keeps this county's contest names
+# (so slugs match the primary's and its dossiers carry forward) and the
+# District Adapter layers in app/src/lib/geo.js COUNTY_LAYERS["kitsap"].
+# GENERAL_MEASURES holds the county's curated measures per election, as
+# {"sources": [raw pointer paths or official URLs], "measures": [app-measures
+# rows]}; None means not curated yet. Everything below this block is the primary's
+# sample-ballot transcription, frozen byte-identical.
+PRIMARY = "2026-08-04-primary"
+
+GENERAL_CFG = {"name": "Kitsap County"}
+GENERAL_MEASURES = {"2026-11-03-general": None}
+
+
+def general_override(r, unresolvable):
+    dtype, district, race = r["District Type"].strip().upper(), r["District"].strip().upper(), r["Race"].strip()
+    if dtype == "COUNTYWIDE" and race.upper().startswith("COMMISSIONER DISTRICT"):
+        # Nominated by district in the primary, elected county-wide in the
+        # general (RCW 36.32.040); VoteWA lists it as Countywide.
+        n = votewa.district_number(race)
+        return "County", f"Kitsap County Commissioner District {n}", "County Commissioner", ("COUNTY", None)
+    if dtype == "PUBLIC UTILITY":
+        # No Kitsap PUD commissioner-district layer is configured in geo.js.
+        n = votewa.district_number(race)
+        unresolvable.add("PUDDST")
+        return ("PublicUtility", f"Kitsap Public Utility District No. 1 Commissioner District {n}",
+                "PUD Commissioner", ("PUDDST", str(n)))
+    if dtype == "JUDICIAL" and district == "DISTRICT COURT":
+        # Kitsap County District Court is elected county-wide.
+        n = votewa.district_number(race)
+        return "Judicial", "Kitsap County District Court", f"Judge Department No. {n}", ("COUNTY", None)
+    return None
+
+
+if ELECTION.id != PRIMARY:
+    CURATED = GENERAL_MEASURES.get(ELECTION.id)
+    votewa.write_county_package(
+        "kitsap", ELECTION.id, GENERAL_CFG, "pipeline/build_kitsap_lite_data.py",
+        override=general_override,
+        measures=CURATED["measures"] if CURATED else None,
+        measure_sources=CURATED["sources"] if CURATED else (),
+    )
+    raise SystemExit(0)
 
 
 def slugify(s: str) -> str:

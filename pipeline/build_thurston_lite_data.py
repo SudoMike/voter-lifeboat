@@ -4,11 +4,58 @@ import json
 import re
 
 import election
+import votewa
 from election import rel
 
 # Usage: python3 pipeline/build_thurston_lite_data.py [--election <id>]
-COUNTY = election.Election(election.from_argv()).county("thurston")
+ELECTION = election.Election(election.from_argv())
+COUNTY = ELECTION.county("thurston")
 OUT = COUNTY / "interim"
+
+
+# --- From the November 3, 2026 general on ----------------------------------
+# Contests come from the county's VoteWA candidate-list export
+# (counties/thurston/raw/votewa/candidate-list.csv.{url,meta.json}, parsed by
+# pipeline/votewa.py). general_override keeps this county's contest names
+# (so slugs match the primary's and its dossiers carry forward) and the
+# District Adapter layers in app/src/lib/geo.js COUNTY_LAYERS["thurston"].
+# GENERAL_MEASURES holds the county's curated measures per election, as
+# {"sources": [raw pointer paths or official URLs], "measures": [app-measures
+# rows]}; None means not curated yet. Everything below this block is the primary's
+# sample-ballot transcription, frozen byte-identical.
+PRIMARY = "2026-08-04-primary"
+
+GENERAL_CFG = {"name": "Thurston County"}
+GENERAL_MEASURES = {"2026-11-03-general": None}
+
+
+def general_override(r, unresolvable):
+    dtype, district, race = r["District Type"].strip().upper(), r["District"].strip().upper(), r["Race"].strip()
+    if dtype == "COMMISSIONER":
+        # 'COMMISSIONER DISTRICT ALL COUNTY': nominated by district in the
+        # primary, elected county-wide in the general (RCW 36.32.040).
+        n = votewa.district_number(race)
+        scope = ("COUNTY", None) if "ALL COUNTY" in district else ("COUNTY_COUNCIL", str(n))
+        return "County", f"Thurston County Commissioner District No. {n}", "County Commissioner", scope
+    if dtype == "PUBLIC UTILITY":
+        n = votewa.district_number(race)
+        return ("PublicUtility", f"Thurston County Public Utility District Commissioner District No. {n}",
+                "Public Utility District Commissioner", ("PUDDST", str(n)))
+    if dtype == "COUNTYWIDE" and race.upper().startswith("DISTRICT COURT JUDGE"):
+        n = votewa.district_number(race)
+        return "Judicial", "Thurston County District Court", f"Judge Position No. {n}", ("COUNTY", None)
+    return None
+
+
+if ELECTION.id != PRIMARY:
+    CURATED = GENERAL_MEASURES.get(ELECTION.id)
+    votewa.write_county_package(
+        "thurston", ELECTION.id, GENERAL_CFG, "pipeline/build_thurston_lite_data.py",
+        override=general_override,
+        measures=CURATED["measures"] if CURATED else None,
+        measure_sources=CURATED["sources"] if CURATED else (),
+    )
+    raise SystemExit(0)
 
 
 def slugify(s: str) -> str:

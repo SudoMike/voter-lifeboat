@@ -1,0 +1,13 @@
+{
+  "county": "snohomish",
+  "script": "pipeline/build_snohomish_lite_data.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/snohomish/raw/votewa/candidate-list.csv.url"
+  ],
+  "coverage": "partial_county",
+  "notes": [
+    "Measures not curated yet for this election: app-measures.json is empty because no one has transcribed this county's local measures, not because the ballot has none.",
+    "Unresolvable district scopes (no queryable official boundary): DISTCRT. Contests/measures scoped to them are hidden rather than shown to the wrong voters."
+  ],
+  "measures": []
+}

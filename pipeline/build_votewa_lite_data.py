@@ -1,11 +1,14 @@
 """Build lite county packages for the 32 counties covered from VoteWA data.
 
-Contests: parsed from the official VoteWA PRIMARY 2026 candidate list CSV in
-data/washington-state/elections/<id>/counties/<county>/raw/votewa/candidate-list.csv.
-Rows with Election Status 'In Primary' are exactly the races printed on the
-Aug 4, 2026 primary ballot (validated against the six hand-built county
-packages, which this parser reproduces contest-for-contest). PCO races and
-the statewide Supreme Court contests are excluded by convention.
+Contests: parsed (pipeline/votewa.py) from the official VoteWA candidate list
+export for the election (election.VOTEWA_SOURCES): for the primary, the
+verbatim PRIMARY 2026 CSV in counties/<county>/raw/votewa/candidate-list.csv,
+rows with Election Status 'In Primary' (validated against the six hand-built
+county packages, which this parser reproduced contest-for-contest); for the
+general, the GENERAL 2026 export (VoteWA election 899) pinned by the pointer
+counties/<county>/raw/votewa/candidate-list.csv.{url,meta.json}, rows with a
+blank Election Status. PCO races and the statewide Supreme Court contests are
+excluded by convention.
 
 Measures: curated below from official county election pages, sample ballots,
 and local voters' pamphlets (source_url on each measure). District scoping
@@ -19,19 +22,26 @@ Counties with a commissioner/PUD race but no queryable district boundary
 stay partial_county and the affected contest is hidden rather than shown to
 the wrong voters.
 
-Usage: python3 pipeline/build_votewa_lite_data.py [--election <id>]
+Usage: python3 pipeline/build_votewa_lite_data.py [--election <id>] [--county <id> ...]
+
+Without --county: the primary builds all 32 configured counties; later
+elections build every configured county that has a VoteWA raw pointer for
+that election (fetch_votewa_candidate_list.py --write-pointer adds one).
 """
 
-import csv
 import json
-import re
 
 import election
+import votewa
 from election import rel
-
-WA = election.Election(election.from_argv()).counties
+from votewa import scope_json, slugify
 
 # DOR statewide taxing-district layer ids (2025 group) -> resolver layer key.
+# Re-verified 2026-10-08 (#20): MapServer?f=json still lists tax year 2025 as
+# the newest group (layer 0) and 3 CEM2025, 6 EMS2025, 7 FIR2025, 11 HSP2025,
+# 12 LIB2025, 14 PKR2025 (park and recreation districts; 15 PRK2025 is a
+# different layer), 20 SCH2025, 22 WAT2025; one live point query per layer
+# returned the expected DISTATTRIB (table in docs/county-wave-playbook.md).
 DOR_LAYER_KEYS = {
     3: "CEMDST",
     6: "EMSDST",
@@ -558,152 +568,40 @@ COUNTY_CONFIG = {
 }
 
 
-def slugify(s: str) -> str:
-    return re.sub(r"-+", "-", re.sub(r"[^a-z0-9]+", "-", s.lower())).strip("-")
-
-
-def titleish(s: str) -> str:
-    """Title-case fully-uppercase ballot strings; leave mixed case alone."""
-    if s != s.upper():
-        return s
-    small = {"of", "the", "and", "for", "no", "at"}
-    out = []
-    for i, w in enumerate(s.lower().split()):
-        if re.fullmatch(r"[0-9#.]+", w):
-            out.append(w)
-        elif w in ("no.", "pos.", "dist.", "u.s."):
-            out.append(w.capitalize() if w != "u.s." else "U.S.")
-        elif w in small and i:
-            out.append(w)
-        else:
-            out.append(w.capitalize())
-    return " ".join(out)
-
-
-PARTY_MAP = {
-    "DEMOCRATIC": "Prefers Democratic Party",
-    "DEMOCRAT": "Prefers Democrat Party",
-    "REPUBLICAN": "Prefers Republican Party",
-    "INDEPENDENT": "Prefers Independent Party",
-    "STATES NO PARTY PREFERENCE": "States No Party Preference",
-    "": None,
+# Measures per election. The primary's are the `measures` lists in
+# COUNTY_CONFIG above (curated 2026-07-17). From the general on, a county's
+# measures are curated here by the agent working that county (see
+# docs/county-wave-playbook.md) from its official local pamphlet or sample
+# ballot; a county with no entry gets an empty measure list and a note saying
+# its measures are not curated yet, so it can never pass for "no measures".
+ELECTION_MEASURES = {
+    "2026-11-03-general": {},
 }
 
 
-def party_label(raw: str):
-    raw = (raw or "").strip().upper()
-    if raw in PARTY_MAP:
-        return PARTY_MAP[raw]
-    return f"Prefers {titleish(raw)} Party"
+def config_for(county, election_id):
+    """COUNTY_CONFIG's geography (name, scope formats) plus this election's
+    measures and notes. Returns (cfg, measures_curated)."""
+    cfg = dict(COUNTY_CONFIG[county])
+    if election_id not in ELECTION_MEASURES:
+        return cfg, True
+    per = ELECTION_MEASURES[election_id].get(county)
+    cfg["measures"] = list(per["measures"]) if per else []
+    cfg["extra_notes"] = list(per.get("extra_notes", [])) if per else []
+    return cfg, per is not None
 
 
-def district_number(*texts):
-    for t in texts:
-        n = re.search(r"(\d+)", t)
-        if n:
-            return int(n.group(1))
-    raise ValueError(f"no district number in {texts!r}")
-
-
-def load_contests(county, cfg, unresolvable):
-    csv_path = WA / county / "raw/votewa/candidate-list.csv"
-    rows = [r for r in csv.DictReader(open(csv_path, encoding="utf-8-sig")) if r["Election Status"] == "In Primary"]
-    contests, order = {}, []
-    for r in rows:
-        dtype = r["District Type"].strip().upper()
-        district, race = r["District"].strip(), r["Race"].strip()
-        if dtype == "PRECINCT" or district.upper() == "SUPREME COURT":
-            continue
-        key = (district.upper(), race.upper())
-        if key not in contests:
-            if dtype == "CONGRESSIONAL":
-                n = district_number(district)
-                category, disp_district, scope = "Federal", f"Congressional District {n}", ("CONGDST", str(n))
-            elif dtype == "LEGISLATIVE":
-                n = district_number(district)
-                category, disp_district, scope = "State", f"Legislative District {n}", ("LEGDST", str(n))
-            elif dtype in ("COMMISSIONER", "COUNCIL"):
-                n = district_number(race, district)
-                fmt = cfg.get("commissioner")
-                category = "County"
-                disp_district = f"{cfg['name']} Commissioner District {n}"
-                scope = ("COUNTY_COUNCIL", fmt.format(n=n) if fmt else str(n))
-                if fmt is None:
-                    unresolvable.add("COUNTY_COUNCIL")
-            elif dtype in ("COUNTYWIDE", "COUNTY"):
-                category, disp_district, scope = "County", cfg["name"], ("COUNTY", None)
-            elif dtype == "JUDICIAL":
-                # Superior/district courts and Court of Appeals divisions are
-                # county-wide electorates for a single county's package.
-                category, disp_district, scope = "Judicial", titleish(district), ("COUNTY", None)
-            elif dtype == "PUBLIC UTILITY":
-                n = district_number(district, race)
-                fmt = cfg.get("pud")
-                layer = cfg.get("pud_layer_key", "PUDDST")
-                category = "PublicUtility"
-                disp_district = f"Public Utility District Commissioner District {n}"
-                scope = (layer, fmt.format(n=n) if fmt else str(n))
-                if fmt is None:
-                    unresolvable.add("PUDDST")
-            elif dtype == "PORT":
-                n = district_number(district, race)
-                fmt = cfg.get("port")
-                category = "Port"
-                disp_district = titleish(district)
-                scope = ("PORTDST", fmt.format(n=n) if fmt else str(n))
-                if fmt is None:
-                    unresolvable.add("PORTDST")
-            elif dtype == "CITY/TOWN":
-                city = re.sub(r"^(city|town) of ", "", district, flags=re.I).strip()
-                category, disp_district, scope = "City", titleish(district), ("CITY", titleish(city))
-            else:
-                raise ValueError(f"{county}: unmapped district type {dtype!r} ({district} / {race})")
-            contests[key] = {
-                "category": category,
-                "district": disp_district,
-                "office": titleish(race),
-                "scope": scope,
-                "candidates": [],
-            }
-            order.append(key)
-        contests[key]["candidates"].append({
-            "slug": slugify(r["Name"]),
-            "name": r["Name"].strip(),
-            "party": party_label(r["Party Preference"]),
-            "evidence_level": "official-ballot-only",
-            "withdrawn": r["Status"].strip() != "Active",
-            "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
-            "highlights": [],
-            "scores": {},
-            "sources": [],
-        })
-    return [contests[k] for k in order]
-
-
-def scope_json(county, scope):
-    layer, value = scope
-    if layer == "COUNTY":
-        return {"kind": "COUNTY", "county": county}
-    return {"kind": "DISTRICT", "county": county, "layer": layer, "value": str(value)}
-
-
-def build_county(county, cfg):
+def county_docs(county, cfg, election_id, measures_curated=True):
+    """(app-contests doc, app-measures doc, unresolvable layers) without writing."""
     unresolvable = set()
-    raw_contests = load_contests(county, cfg, unresolvable)
-    out_contests = []
-    for c in raw_contests:
-        out_contests.append({
-            "slug": f"{county}-" + slugify(f"{c['district']}-{c['office']}"),
-            "owner": county,
-            "category": c["category"],
-            "office": c["office"],
-            "district": c["district"],
-            "scope": scope_json(county, c["scope"]),
-            "office_does": None,
-            "race_blurb": f"Official ballot listing imported from the VoteWA PRIMARY 2026 candidate list for {cfg['name']}. Candidate scoring is not complete for this county yet.",
-            "uncontested": len(c["candidates"]) == 1,
-            "candidates": c["candidates"],
-        })
+    rows = votewa.ballot_rows(election_id, county)
+    raw_contests = votewa.parse_contests(rows, county, cfg, unresolvable)
+    label = election.VOTEWA_SOURCES[election_id]["label"]
+    out_contests = votewa.app_contests(
+        county, raw_contests,
+        f"Official ballot listing imported from the VoteWA {label} candidate list for {cfg['name']}. "
+        "Candidate scoring is not complete for this county yet.",
+    )
 
     out_measures = []
     for mm in cfg["measures"]:
@@ -725,35 +623,72 @@ def build_county(county, cfg):
 
     coverage = "partial_county" if unresolvable else "full_county"
     notes = list(cfg.get("extra_notes", []))
+    if not measures_curated:
+        notes.append(votewa.MEASURES_NOT_CURATED)
     if unresolvable:
-        notes.append(
-            "Unresolvable district scopes (no queryable official boundary): "
-            + ", ".join(sorted(unresolvable))
-            + ". Contests/measures scoped to them are hidden rather than shown to the wrong voters."
-        )
-    outdir = WA / county / "interim"
-    outdir.mkdir(parents=True, exist_ok=True)
+        notes.append(votewa.unresolvable_note(unresolvable))
     common = {
         "county": county,
         "script": "pipeline/build_votewa_lite_data.py",
         "derived_from": [
-            rel(WA / county / "raw/votewa/candidate-list.csv"),
+            rel(votewa.source_path(election_id, county)),
             *sorted({mm["source_url"] for mm in cfg["measures"]}),
         ],
         "coverage": coverage,
         "notes": notes,
     }
-    (outdir / "app-contests.json").write_text(json.dumps({**common, "contests": out_contests}, indent=2))
-    (outdir / "app-measures.json").write_text(json.dumps({**common, "measures": out_measures}, indent=2))
-    return len(out_contests), len(out_measures), coverage, sorted(unresolvable)
+    return {**common, "contests": out_contests}, {**common, "measures": out_measures}, sorted(unresolvable)
 
 
-if __name__ == "__main__":
+def build_county(county, cfg, election_id, measures_curated=True):
+    contests, measures, unresolvable = county_docs(county, cfg, election_id, measures_curated)
+    outdir = election.Election(election_id).county(county) / "interim"
+    outdir.mkdir(parents=True, exist_ok=True)
+    (outdir / "app-contests.json").write_text(json.dumps(contests, indent=2))
+    (outdir / "app-measures.json").write_text(json.dumps(measures, indent=2))
+    return len(contests["contests"]), len(measures["measures"]), contests["coverage"], unresolvable
+
+
+def counties_for(election_id, requested):
+    """The counties to build: `requested`, else every configured county for
+    an election whose exports are committed verbatim (the primary), else
+    every configured county that has a VoteWA raw pointer for this election."""
+    if requested:
+        unknown = sorted(set(requested) - set(COUNTY_CONFIG))
+        if unknown:
+            raise SystemExit(f"not configured in COUNTY_CONFIG: {', '.join(unknown)} "
+                             "(the six hand-built counties have their own build_<county>_lite_data.py)")
+        missing = [c for c in requested if not votewa.has_source(election_id, c)]
+        if missing:
+            raise SystemExit(f"no VoteWA raw source for {', '.join(missing)} in {election_id}: run "
+                             f"python3 pipeline/fetch_votewa_candidate_list.py --election {election_id} "
+                             f"--write-pointer {' '.join(missing)}")
+        return sorted(requested)
+    if election.VOTEWA_SOURCES[election_id]["verbatim_csv"]:
+        return sorted(COUNTY_CONFIG)
+    return sorted(c for c in COUNTY_CONFIG if votewa.has_source(election_id, c))
+
+
+def main(argv=None):
+    import argparse
+    parser = argparse.ArgumentParser(description="Build VoteWA-derived county lite packages.")
+    election.add_election_arg(parser)
+    parser.add_argument("--county", action="append", default=[],
+                        help="build only this county (repeatable)")
+    args = parser.parse_args(argv)
+    election_id = election.resolve(args.election)
+    counties = counties_for(election_id, args.county)
     total_c = total_m = 0
-    for county, cfg in sorted(COUNTY_CONFIG.items()):
-        nc, nm, coverage, unresolvable = build_county(county, cfg)
+    for county in counties:
+        cfg, curated = config_for(county, election_id)
+        nc, nm, coverage, unresolvable = build_county(county, cfg, election_id, curated)
         total_c += nc
         total_m += nm
         flag = f"  UNRESOLVABLE: {','.join(unresolvable)}" if unresolvable else ""
+        flag += "" if curated else "  MEASURES NOT CURATED"
         print(f"{county:14s} contests: {nc:3d}  measures: {nm}  {coverage}{flag}")
-    print(f"total: {len(COUNTY_CONFIG)} counties, {total_c} contests, {total_m} measures")
+    print(f"total: {len(counties)} counties, {total_c} contests, {total_m} measures")
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,1552 @@
+{
+  "county": "pierce",
+  "script": "pipeline/build_pierce_lite_data.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/pierce/raw/votewa/candidate-list.csv.url"
+  ],
+  "coverage": "partial_county",
+  "notes": [
+    "Measures not curated yet for this election: app-measures.json is empty because no one has transcribed this county's local measures, not because the ballot has none.",
+    "Unresolvable district scopes (no queryable official boundary): KCDISTCRT. Contests/measures scoped to them are hidden rather than shown to the wrong voters."
+  ],
+  "contests": [
+    {
+      "slug": "pierce-congressional-district-6-u-s-representative",
+      "owner": "pierce",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 6",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "CONGDST",
+        "value": "6"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "emily-randall",
+          "name": "Emily Randall",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "teresa-fox",
+          "name": "Teresa Fox",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-congressional-district-8-u-s-representative",
+      "owner": "pierce",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 8",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "CONGDST",
+        "value": "8"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "kim-schrier",
+          "name": "Kim Schrier",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "spencer-meline",
+          "name": "Spencer Meline",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-congressional-district-10-u-s-representative",
+      "owner": "pierce",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 10",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "CONGDST",
+        "value": "10"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "marilyn-strickland",
+          "name": "Marilyn Strickland",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "chris-d-chung",
+          "name": "Chris D. Chung",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-legislative-district-2-state-representative-pos-1",
+      "owner": "pierce",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 2",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "LEGDST",
+        "value": "2"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "andrew-barkis",
+          "name": "Andrew Barkis",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "william-dehnel",
+          "name": "William Dehnel",
+          "party": "Prefers Labor Democrat Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-legislative-district-2-state-representative-pos-2",
+      "owner": "pierce",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 2",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "LEGDST",
+        "value": "2"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "matt-marshall",
+          "name": "Matt Marshall",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "angela-taylor",
+          "name": "Angela Taylor",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-legislative-district-25-state-representative-pos-1",
+      "owner": "pierce",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 25",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "LEGDST",
+        "value": "25"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "michael-keaton",
+          "name": "Michael Keaton",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "david-berg",
+          "name": "David Berg",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-legislative-district-25-state-representative-pos-2",
+      "owner": "pierce",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 25",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "LEGDST",
+        "value": "25"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "cyndy-jacobsen",
+          "name": "Cyndy Jacobsen",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "jenn-marie-strickling",
+          "name": "Jenn Marie Strickling",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-legislative-district-26-state-senator",
+      "owner": "pierce",
+      "category": "State",
+      "office": "State Senator",
+      "district": "Legislative District 26",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "LEGDST",
+        "value": "26"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "deborah-krishnadasan",
+          "name": "Deborah Krishnadasan",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "gary-parker",
+          "name": "Gary Parker",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-legislative-district-26-state-representative-pos-1",
+      "owner": "pierce",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 26",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "LEGDST",
+        "value": "26"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "david-olson",
+          "name": "David Olson",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "adison-richards",
+          "name": "Adison Richards",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-legislative-district-26-state-representative-pos-2",
+      "owner": "pierce",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 26",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "LEGDST",
+        "value": "26"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "katy-cornell",
+          "name": "Katy Cornell",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "renee-hernandez-greenfield",
+          "name": "Renee Hernandez Greenfield",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-legislative-district-27-state-representative-pos-1",
+      "owner": "pierce",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 27",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "LEGDST",
+        "value": "27"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "laurie-jinkins",
+          "name": "Laurie Jinkins",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "carole-sue-braaten",
+          "name": "Carole Sue Braaten",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-legislative-district-27-state-representative-pos-2",
+      "owner": "pierce",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 27",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "LEGDST",
+        "value": "27"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "jake-fey",
+          "name": "Jake Fey",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-legislative-district-28-state-representative-pos-1",
+      "owner": "pierce",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 28",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "LEGDST",
+        "value": "28"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "mari-leavitt",
+          "name": "Mari Leavitt",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "kathy-richardson",
+          "name": "Kathy Richardson",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-legislative-district-28-state-representative-pos-2",
+      "owner": "pierce",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 28",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "LEGDST",
+        "value": "28"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "dan-bronoske",
+          "name": "Dan Bronoske",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "kerry-hills",
+          "name": "Kerry Hills",
+          "party": "Prefers Nonpartisan Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-legislative-district-29-state-senator",
+      "owner": "pierce",
+      "category": "State",
+      "office": "State Senator",
+      "district": "Legislative District 29",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "LEGDST",
+        "value": "29"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "sharlett-mena",
+          "name": "Sharlett Mena",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "david-anderson",
+          "name": "David Anderson",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-legislative-district-29-state-representative-pos-1",
+      "owner": "pierce",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 29",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "LEGDST",
+        "value": "29"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "krista-perez",
+          "name": "Krista Perez",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "melanie-morgan",
+          "name": "Melanie Morgan",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-legislative-district-29-state-representative-pos-2",
+      "owner": "pierce",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 29",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "LEGDST",
+        "value": "29"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "joe-bushnell",
+          "name": "Joe Bushnell",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "patrick-stickney",
+          "name": "Patrick Stickney",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-legislative-district-31-state-senator",
+      "owner": "pierce",
+      "category": "State",
+      "office": "State Senator",
+      "district": "Legislative District 31",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "LEGDST",
+        "value": "31"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "phil-fortunato",
+          "name": "Phil Fortunato",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "tamara-stramel",
+          "name": "Tamara Stramel",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-legislative-district-31-state-representative-pos-1",
+      "owner": "pierce",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 31",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "LEGDST",
+        "value": "31"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "drew-stokesbary",
+          "name": "Drew Stokesbary",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "stephen-szczurko-walton",
+          "name": "Stephen Szczurko-Walton",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-legislative-district-31-state-representative-pos-2",
+      "owner": "pierce",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 31",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "LEGDST",
+        "value": "31"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "joshua-penner",
+          "name": "Joshua Penner",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "john-bielka",
+          "name": "John Bielka",
+          "party": "Prefers Democrat Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-pierce-county-auditor",
+      "owner": "pierce",
+      "category": "County",
+      "office": "Auditor",
+      "district": "Pierce County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "pierce"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "linda-farmer",
+          "name": "Linda Farmer",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "damon-townsend",
+          "name": "Damon Townsend",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-pierce-county-prosecuting-attorney",
+      "owner": "pierce",
+      "category": "County",
+      "office": "Prosecuting Attorney",
+      "district": "Pierce County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "pierce"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "coreen-schnepf",
+          "name": "Coreen Schnepf",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "bryan-chushcoff",
+          "name": "Bryan Chushcoff",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-pierce-county-council-district-1-county-councilmember",
+      "owner": "pierce",
+      "category": "County",
+      "office": "County Councilmember",
+      "district": "Pierce County Council District 1",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "COUNTY_COUNCIL",
+        "value": "1"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "jerome-o-leary",
+          "name": "Jerome O'Leary",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "kelsey-barrans",
+          "name": "Kelsey Barrans",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-pierce-county-council-district-5-county-councilmember",
+      "owner": "pierce",
+      "category": "County",
+      "office": "County Councilmember",
+      "district": "Pierce County Council District 5",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "COUNTY_COUNCIL",
+        "value": "5"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "bryan-yambe",
+          "name": "Bryan Yambe",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "bettina-gese",
+          "name": "Bettina Gese",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-pierce-county-council-district-7-county-councilmember",
+      "owner": "pierce",
+      "category": "County",
+      "office": "County Councilmember",
+      "district": "Pierce County Council District 7",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "COUNTY_COUNCIL",
+        "value": "7"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "brenda-lykins",
+          "name": "Brenda Lykins",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "mike-solan",
+          "name": "Mike Solan",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-court-of-appeals-division-2-district-1-judge-position-2",
+      "owner": "pierce",
+      "category": "Judicial",
+      "office": "Judge Position 2",
+      "district": "Court of Appeals, Division 2, District 1",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "pierce"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "meng-li-che",
+          "name": "Meng Li Che",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-king-county-district-court-southeast-electoral-district-judge-position-no-1",
+      "owner": "pierce",
+      "category": "Judicial",
+      "office": "Judge Position No. 1",
+      "district": "King County District Court, Southeast Electoral District",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "KCDISTCRT",
+        "value": "YES"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "leah-taguba",
+          "name": "Leah Taguba",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-king-county-district-court-southeast-electoral-district-judge-position-no-2",
+      "owner": "pierce",
+      "category": "Judicial",
+      "office": "Judge Position No. 2",
+      "district": "King County District Court, Southeast Electoral District",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "KCDISTCRT",
+        "value": "YES"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "matthew-york",
+          "name": "Matthew York",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-king-county-district-court-southeast-electoral-district-judge-position-no-3",
+      "owner": "pierce",
+      "category": "Judicial",
+      "office": "Judge Position No. 3",
+      "district": "King County District Court, Southeast Electoral District",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "KCDISTCRT",
+        "value": "YES"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "tricia-grove-johnson",
+          "name": "Tricia Grove Johnson",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-king-county-district-court-southeast-electoral-district-judge-position-no-4",
+      "owner": "pierce",
+      "category": "Judicial",
+      "office": "Judge Position No. 4",
+      "district": "King County District Court, Southeast Electoral District",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "KCDISTCRT",
+        "value": "YES"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "corinna-harn",
+          "name": "Corinna Harn",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-king-county-district-court-southeast-electoral-district-judge-position-no-5",
+      "owner": "pierce",
+      "category": "Judicial",
+      "office": "Judge Position No. 5",
+      "district": "King County District Court, Southeast Electoral District",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "KCDISTCRT",
+        "value": "YES"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "joshua-c-harris",
+          "name": "Joshua C. Harris",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "heather-m-barker",
+          "name": "Heather M. Barker",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-king-county-district-court-southeast-electoral-district-judge-position-no-6",
+      "owner": "pierce",
+      "category": "Judicial",
+      "office": "Judge Position No. 6",
+      "district": "King County District Court, Southeast Electoral District",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "KCDISTCRT",
+        "value": "YES"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "rhonda-laumann",
+          "name": "Rhonda Laumann",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-pierce-county-district-court-no-1-judge-position-no-1",
+      "owner": "pierce",
+      "category": "Judicial",
+      "office": "Judge Position No. 1",
+      "district": "Pierce County District Court No. 1",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "DISTCRT",
+        "value": "YES"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "kevin-a-mccann",
+          "name": "Kevin A. McCann",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-pierce-county-district-court-no-2-judge-position-no-2",
+      "owner": "pierce",
+      "category": "Judicial",
+      "office": "Judge Position No. 2",
+      "district": "Pierce County District Court No. 2",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "DISTCRT",
+        "value": "YES"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "claire-sussman",
+          "name": "Claire Sussman",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-pierce-county-district-court-no-3-judge-position-no-3",
+      "owner": "pierce",
+      "category": "Judicial",
+      "office": "Judge Position No. 3",
+      "district": "Pierce County District Court No. 3",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "DISTCRT",
+        "value": "YES"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "lizanne-padula",
+          "name": "Lizanne Padula",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-pierce-county-district-court-no-4-judge-position-no-4",
+      "owner": "pierce",
+      "category": "Judicial",
+      "office": "Judge Position No. 4",
+      "district": "Pierce County District Court No. 4",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "DISTCRT",
+        "value": "YES"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "neil-horibe",
+          "name": "Neil Horibe",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-pierce-county-district-court-no-5-judge-position-no-5",
+      "owner": "pierce",
+      "category": "Judicial",
+      "office": "Judge Position No. 5",
+      "district": "Pierce County District Court No. 5",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "DISTCRT",
+        "value": "YES"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "dwayne-christopher",
+          "name": "Dwayne Christopher",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-pierce-county-district-court-no-6-judge-position-no-6",
+      "owner": "pierce",
+      "category": "Judicial",
+      "office": "Judge Position No. 6",
+      "district": "Pierce County District Court No. 6",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "DISTCRT",
+        "value": "YES"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "karl-williams",
+          "name": "Karl Williams",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-pierce-county-district-court-no-7-judge-position-no-7",
+      "owner": "pierce",
+      "category": "Judicial",
+      "office": "Judge Position No. 7",
+      "district": "Pierce County District Court No. 7",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "DISTCRT",
+        "value": "YES"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "pam-nogueira",
+          "name": "Pam Nogueira",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "mike-sommerfeld",
+          "name": "Mike Sommerfeld",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-pierce-county-district-court-no-8-judge-position-no-8",
+      "owner": "pierce",
+      "category": "Judicial",
+      "office": "Judge Position No. 8",
+      "district": "Pierce County District Court No. 8",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "DISTCRT",
+        "value": "YES"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "sven-nelson",
+          "name": "Sven Nelson",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "james-armstrong",
+          "name": "James Armstrong",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-city-of-tacoma-tacoma-municipal-court-pos-1",
+      "owner": "pierce",
+      "category": "City",
+      "office": "Tacoma Municipal Court Pos. 1",
+      "district": "City of Tacoma",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "CITY",
+        "value": "Tacoma"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "dee-sonntag",
+          "name": "Dee Sonntag",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-city-of-tacoma-tacoma-municipal-court-pos-2",
+      "owner": "pierce",
+      "category": "City",
+      "office": "Tacoma Municipal Court Pos. 2",
+      "district": "City of Tacoma",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "CITY",
+        "value": "Tacoma"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "sergio-c-flores",
+          "name": "Sergio C. Flores",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pierce-city-of-tacoma-tacoma-municipal-court-pos-3",
+      "owner": "pierce",
+      "category": "City",
+      "office": "Tacoma Municipal Court Pos. 3",
+      "district": "City of Tacoma",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pierce",
+        "layer": "CITY",
+        "value": "Tacoma"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pierce County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "steven-j-krupa",
+          "name": "Steven J. Krupa",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    }
+  ]
+}

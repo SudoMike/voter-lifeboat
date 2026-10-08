@@ -108,6 +108,60 @@ KCE_SOURCES = {
     },
 }
 
+# VoteWA candidate list (voter.votewa.gov/candidatelist.aspx) per election,
+# read by build_votewa_lite_data.py and the county builders.
+# `e`: VoteWA's election dropdown value (candidatelist.aspx?e=).
+# `ballot_status`: the "Election Status" values whose rows are printed on this
+#   election's ballot. The primary's export marks them 'In Primary'. The
+#   general's export leaves the column blank for every row (checked on
+#   2026-10-08 for c=99 and every county code exported since), so the general
+#   keeps rows whose status is ''.
+# `verbatim_csv`: True when each county's export is committed verbatim at
+#   counties/<county>/raw/votewa/candidate-list.csv (the primary). Otherwise
+#   the committed raw source is the pointer pair candidate-list.csv.url +
+#   .meta.json (sha256 pinned) and the CSV itself is cached in data/.cache/
+#   by fetch_votewa_candidate_list.py.
+VOTEWA_SOURCES = {
+    "2026-08-04-primary": {
+        "e": 898,
+        "label": "PRIMARY 2026",
+        "dropdown_label": "PRIMARY 2026 (08/04/2026) (Primary)",
+        "ballot_status": ("In Primary",),
+        "verbatim_csv": True,
+        "notes": "Election Status 'In Primary' marks races printed on the Aug 4, 2026 primary ballot.",
+    },
+    "2026-11-03-general": {
+        "e": 899,
+        "label": "GENERAL 2026",
+        "dropdown_label": "GENERAL 2026 (11/03/2026) (General)",
+        "ballot_status": ("",),
+        "verbatim_csv": False,
+        "notes": "Official county candidate filing data for the November 3, 2026 general. The 'Election Status' column is blank for every row in the general export, and the export lists only general-election candidates (top-two survivors of partisan and judicial primaries plus offices filed directly for the general). The CSV has no Ballot Order column; the grid's Ballot Order is HTML-only.",
+    },
+}
+
+# VoteWA county dropdown values (candidatelist.aspx?c=) and labels, read from
+# the page's County dropdown on 2026-10-08. Mostly alphabetical, but not
+# entirely: Thurston is 31 and Snohomish 34. 99 is "State".
+VOTEWA_COUNTY_CODES = {
+    "adams": "01", "asotin": "02", "benton": "03", "chelan": "04",
+    "clallam": "05", "clark": "06", "columbia": "07", "cowlitz": "08",
+    "douglas": "09", "ferry": "10", "franklin": "11", "garfield": "12",
+    "grant": "13", "grays-harbor": "14", "island": "15", "jefferson": "16",
+    "king": "17", "kitsap": "18", "kittitas": "19", "klickitat": "20",
+    "lewis": "21", "lincoln": "22", "mason": "23", "okanogan": "24",
+    "pacific": "25", "pend-oreille": "26", "pierce": "27", "san-juan": "28",
+    "skagit": "29", "skamania": "30", "thurston": "31", "spokane": "32",
+    "stevens": "33", "snohomish": "34", "wahkiakum": "35", "walla-walla": "36",
+    "whatcom": "37", "whitman": "38", "yakima": "39",
+}
+
+
+def votewa_county_label(county_id: str) -> str:
+    """The County dropdown's label for a county id ('grays-harbor' -> 'Grays Harbor')."""
+    return county_id.replace("-", " ").title()
+
+
 # Each Supported County's elections office site, per election, carried into
 # app data as `coverage.supported_counties[].elections_url` (the results
 # footer links it). Checked live (HTTP 200) when added. Add counties as their
