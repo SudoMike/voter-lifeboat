@@ -1,0 +1,115 @@
+{
+  "contest_slug": "yakima-legislative-district-15-state-representative-pos-1",
+  "scored_at": "2026-10-09",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/yakima/dossiers/yakima-legislative-district-15-state-representative-pos-1/"],
+  "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering school funding, tax structure, housing rules, health funding and criminal-justice statutes.",
+  "race_blurb": "Republican Rep. Chris Corry, the House Republican Deputy Minority Leader, faces Democrat Jack McEntire, a Selah sculptor making his third run for a 15th District House seat. Corry has a long voting record against new taxes and the Climate Commitment Act; McEntire's platform centers on universal health care and need-based access to education.",
+  "candidates": [
+    {
+      "slug": "chris-corry",
+      "summary": "Four-term State Representative and House Republican Deputy Minority Leader who campaigns on limited government, lower taxes and parental rights.",
+      "highlights": [
+        "Voted against the 2026 tax on income over $1 million and the 2025 B&O and services tax bills [S6][S7][S8]",
+        "Says an income tax should require a constitutional amendment and a vote of the people [S4]",
+        "Voted for 2023 middle-housing legalization and against the 2025 rent-increase cap [S10][S11]",
+        "Voted against the Climate Commitment Act (2021) and ESHB 1296 (2025) [S9][S12]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S4", "S5", "S6", "S7", "S8"],
+          "basis": "Voted no on ESSB 6346, EHB 2081 and ESSB 5814, and issued repeated statements opposing the income tax and calling for lower tax burdens."
+        },
+        "spending": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S4", "S5"],
+          "basis": "Repeatedly argues the operating budget has doubled in a decade and the state should manage existing revenue before asking for more."
+        },
+        "housing": {
+          "score": -2,
+          "confidence": "medium",
+          "citations": ["S10", "S11"],
+          "basis": "Voted for middle-housing legalization (supply) and against the 2025 cap on residential rent increases."
+        },
+        "safety": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S5", "S13", "S14"],
+          "basis": "Voted against the 2021 police-tactics and use-of-force bills; criticizes the Legislature for not holding repeat offenders accountable."
+        },
+        "climate": {
+          "score": -2,
+          "confidence": "medium",
+          "citations": ["S12"],
+          "basis": "Voted against the Climate Commitment Act in 2021; no campaign statement on climate."
+        },
+        "experience": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "In the House since 2019 and now Deputy Minority Leader, facing a challenger with no government-office record."
+        },
+        "social": {
+          "score": -2,
+          "confidence": "medium",
+          "citations": ["S1", "S15"],
+          "basis": "Voted against ESHB 1469 on access to reproductive and gender-affirming care; lists Life Choices of Yakima among his community service."
+        },
+        "parental-rights": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S5", "S9"],
+          "basis": "Campaigns on parental rights, voted against ESHB 1296 twice, and criticized the Legislature for not acting on the parental-rights initiative."
+        },
+        "immigration": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S16"],
+          "basis": "Voted against the 2019 Keep Washington Working Act limiting state cooperation with federal immigration enforcement; one vote, no statement."
+        }
+      }
+    },
+    {
+      "slug": "jack-mcentire",
+      "summary": "Selah sculptor and Yakima County Democrats vice-chair, in his third run for a 15th District House seat, campaigning on universal health care and need-based access to education.",
+      "highlights": [
+        "Says \"We deserve universal health care\" [S1]",
+        "Says college or vocational education should be based on ability and need, not money [S1]",
+        "Called climate change an existential threat in 2020 [S2]",
+        "Argues voters have seen \"the same faces and ideas\" for years [S1]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "healthcare": {
+          "score": 2,
+          "confidence": "medium",
+          "citations": ["S1", "S2"],
+          "basis": "Calls for universal health care and says Washington could provide it, criticizing job-based coverage."
+        },
+        "spending": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S2"],
+          "basis": "Calls investment the way to transform the region and backs universal education and youth skills programs."
+        },
+        "climate": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S2"],
+          "basis": "Called climate change an existential threat and urged listening to science (2020); no specific policy stated."
+        },
+        "experience": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1"],
+          "basis": "No government-office record; argues voters have seen the same faces and ideas for years."
+        }
+      }
+    }
+  ]
+}

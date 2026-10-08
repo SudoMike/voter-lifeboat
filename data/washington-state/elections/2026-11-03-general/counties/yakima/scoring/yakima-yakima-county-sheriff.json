@@ -1,0 +1,67 @@
+{
+  "contest_slug": "yakima-yakima-county-sheriff",
+  "scored_at": "2026-10-09",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/yakima/dossiers/yakima-yakima-county-sheriff/"],
+  "office_does": "The sheriff runs the Yakima County Sheriff's Office, which patrols unincorporated areas, runs search and rescue, monitors sex offenders and serves civil court papers.",
+  "race_blurb": "An open seat: retiring Sheriff Bob Udell endorsed his lieutenant Jake Church, who runs on 26 years in law enforcement, against West Richland police officer and business owner Roman Kilinkaridis, who runs as an outsider. Both prefer the Republican Party; they differ on keeping Flock license-plate cameras.",
+  "candidates": [
+    {
+      "slug": "jake-church",
+      "summary": "Yakima County sheriff's lieutenant with 26 years in law enforcement, endorsed by retiring Sheriff Bob Udell.",
+      "highlights": [
+        "Administrative lieutenant handling internal investigations, policy and budgets; 10 years in the sheriff's office after 16 in Toppenish [S1][S4]",
+        "Would use analytics to aim limited staff at violent, gang, drug and property crime [S4]",
+        "Would keep Flock license-plate cameras under existing audits, but follow a public vote if one is held [S4]",
+        "Endorsed by Sheriff Bob Udell [S3]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "experience": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S2", "S4"],
+          "basis": "26 years in law enforcement, 10 inside the sheriff's office as deputy, sergeant and lieutenant, endorsed by the incumbent."
+        },
+        "safety": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S2", "S4"],
+          "basis": "Centers staffing, analytics-directed enforcement, prosecution follow-through and license-plate cameras, alongside promised prevention programs."
+        }
+      }
+    },
+    {
+      "slug": "roman-kilinkaridis",
+      "summary": "West Richland police officer since 2021 and Yakima business owner running as an outsider focused on youth, domestic-violence victims and seniors.",
+      "highlights": [
+        "First-year priorities: youth, domestic-violence victims and fraud against seniors [S1]",
+        "Would start a countywide Police Athletic League to steer youth away from gangs [S3]",
+        "Would switch off the new Flock cameras until voters weigh in through an advisory vote [S2][S3]",
+        "West Richland police demoted him from sergeant in his probationary period; he attributes it to department politics [S4]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "experience": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S3"],
+          "basis": "Seven years in policing and none in the sheriff's office; describes himself as an outsider bringing a new perspective."
+        },
+        "safety": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S3"],
+          "basis": "Leads with youth programs, domestic-violence victim support, community engagement and limits on camera surveillance rather than enforcement."
+        },
+        "reform": {
+          "score": 1,
+          "confidence": "low",
+          "citations": ["S2", "S3"],
+          "basis": "Proposes an advisory public vote on Flock cameras and a public ledger of campaign promises."
+        }
+      }
+    }
+  ]
+}
