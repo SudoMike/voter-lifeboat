@@ -384,6 +384,13 @@ are counted as `researched_elsewhere` and must have no copy in your
    cited pages). Candidate pages come from the county's own dossiers'
    pamphlet citations; `pamphlet_refs.PAMPHLET_REF` must recognize the
    edition id.
+   If the county's dossiers cite VoteWA's online voters' guide instead
+   (`candidate.ashx`/`measure.ashx` URLs, no pages), its records ship no
+   pages: add the county's guide
+   (`voter.votewa.gov/genericvoterguide.aspx?e=<e>&c=<c>`, checked 200) to
+   `countyGuides` in the same file, and `pamphletLink` links it (Spokane).
+   If the elections office URL answers 403 to scripts, use the address
+   the county's own pamphlet prints and say so in `election.py`.
 7. `cd app && npm ci && npm test && npm run build`. `data-consistency.test.js`
    fails if a shipped DISTRICT scope uses a layer the county's adapter lacks
    and is not in `UNRESOLVABLE_SCOPES` (section 12).
@@ -431,6 +438,15 @@ FIR2025 (layer 7) `DISTATTRIB` with `where DISTATTRIB = 'SCRFA'`, because
 that layer mixes fire-district numbers and RFA codes (see
 `counties/snohomish/COMPLETENESS.md`). A layer config may carry such a
 `where` when a shared layer holds more than the key means.
+
+Spokane shipped on 2026-10-08 (#21) as `partial_county` for `PUDDST` alone
+(`spokane/PUDDST` is in `UNRESOLVABLE_SCOPES`): its Stevens County PUD
+seat stays hidden, because the only candidate layer (county Water
+Districts) maps water service, not an electoral boundary. Its school and
+fire levies resolve from the county's `OpenData/Boundary` layers 6
+(`DISTRCTNAME`) and 1 (`NAME`; not `CODE`, which contract towns share). See
+`counties/spokane/COMPLETENESS.md`, including the Town of Fairfield fire
+district discrepancy with DOR.
 
 ## 13. Reference
 

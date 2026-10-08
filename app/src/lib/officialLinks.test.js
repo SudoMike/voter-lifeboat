@@ -88,6 +88,8 @@ test('every statewide contest and measure in the shipped general gets a paged SO
         n++
       }
   for (const m of general.measures) {
+    // Spokane's measures cite VoteWA's unpaged online guide (countyGuides).
+    if (m.owner === 'spokane') continue
     assert.match(pamphletLink(m.pamphlet_pages, m.owner, general.election.id), /#page=\d+$/, m.slug)
     n++
   }
@@ -121,6 +123,20 @@ test('King general pages link the KCE local pamphlet or the SOS King edition at 
   assert.ok(n > 150, `${n} King pamphlet links`)
 })
 
+test('Spokane general records, which cite VoteWA\'s unpaged online guide, link that guide', () => {
+  const GUIDE = 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=32'
+  assert.equal(pamphletLink([], 'spokane', general.election.id), GUIDE)
+  assert.equal(pamphletLink(undefined, 'spokane', general.election.id), GUIDE)
+  assert.equal(pamphletLink([{ edition: 'unknown', page: 3 }], 'spokane', general.election.id), GUIDE)
+  // Only Spokane has a county guide; the primary keeps its PDF and no guide.
+  assert.equal(pamphletLink([], 'snohomish', general.election.id), null)
+  assert.equal(pamphletLink([], 'spokane', primary.election.id), null)
+  assert.equal(
+    pamphletLink([{ edition: 'local-voters-pamphlet', page: 4 }], 'spokane', primary.election.id),
+    'https://www.spokanecounty.gov/DocumentCenter/View/72507/August-4-2026-Primary-Election-Voters-Pamphlet-PDF#page=4'
+  )
+})
+
 test('Snohomish general pages link the county Local Voters\' Pamphlet at that page', () => {
   assert.equal(
     pamphletLink([{ edition: 'local-voters-pamphlet', page: 92 }], 'snohomish', general.election.id),
@@ -145,6 +161,22 @@ test('Snohomish general pages link the county Local Voters\' Pamphlet at that pa
     }
   }
   assert.ok(n > 40, `${n} Snohomish pamphlet links`)
+})
+
+test('the shipped general links Spokane County Elections directly', () => {
+  assert.deepEqual(countyElectionsOffice(general, { id: 'spokane', name: 'Spokane County' }), {
+    name: 'Spokane County Elections',
+    url: 'https://www.spokanecounty.gov/elections',
+    direct: true,
+  })
+  // Every shipped Spokane record links the county's VoteWA guide.
+  for (const item of [...general.contests, ...general.measures]) {
+    if (item.owner !== 'spokane') continue
+    const pages = item.candidates ? item.candidates.map((c) => c.pamphlet_pages) : [item.pamphlet_pages]
+    for (const p of pages) {
+      assert.equal(pamphletLink(p, 'spokane', general.election.id), 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=32', item.slug)
+    }
+  }
 })
 
 test('the shipped general links Snohomish County Elections directly', () => {
@@ -186,8 +218,8 @@ test('a known county without its own URL gets the SOS county offices directory',
     url: COUNTY_OFFICES_URL,
     direct: false,
   })
-  assert.deepEqual(countyElectionsOffice(general, { id: 'spokane', name: 'Spokane County' }), {
-    name: 'Spokane County Elections',
+  assert.deepEqual(countyElectionsOffice(general, { id: 'yakima', name: 'Yakima County' }), {
+    name: 'Yakima County Elections',
     url: COUNTY_OFFICES_URL,
     direct: false,
   })

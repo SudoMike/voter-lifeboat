@@ -1,0 +1,46 @@
+{
+  "contest_slug": "spokane-legislative-district-7-state-senator",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/spokane/dossiers/spokane-legislative-district-7-state-senator/"],
+  "office_does": "A State Senator writes and votes on Washington state law and the operating, capital and transportation budgets, and confirms the governor's appointees.",
+  "race_blurb": "Republican Shelly Short, the Senate Republican Floor Leader and a legislator since 2009, faces independent Ronald McCoy, a former Chewelah mayor and Navy veteran. Short took 57.9% and McCoy 27.7% in the primary.",
+  "candidates": [
+    {
+      "slug": "shelly-short",
+      "summary": "Incumbent Republican senator and Senate Republican Floor Leader, in the Legislature since 2009, focused on agriculture, natural resources, wildfire and opposing state taxes and regulation.",
+      "highlights": [
+        "Voted against the 2026 tax on income over $1 million (ESSB 6346) [S5]",
+        "Voted against the 2025 capital-gains/estate and B&O tax increases [S6]",
+        "Voted against the 2025-27 operating budget [S7]",
+        "Voted against ESHB 1296, the 2025 changes to the parental-rights list [S8]",
+        "Calls wildfire risk and homeowner insurance her top priority [S3]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": -2, "confidence": "high", "citations": ["S1", "S5", "S6"], "basis": "Voted Nay on ESSB 6346, SB 5813 and HB 2081 and pledges to stand against 'endless taxes'."},
+        "spending": {"score": -1, "confidence": "medium", "citations": ["S1", "S7"], "basis": "Opposes 'unchecked spending' and voted against the 2025-27 operating budget; no specific audit or cut proposals found."},
+        "local-control": {"score": -1, "confidence": "medium", "citations": ["S1", "S2"], "basis": "Campaigns on fighting 'burdensome agency rules' and battling state government when it stands in the way of local prosperity."},
+        "parental-rights": {"score": -1, "confidence": "medium", "citations": ["S8"], "basis": "Voted against ESHB 1296, which modified and narrowed parts of the I-2081 parental-rights list; no campaign statement on the topic."},
+        "experience": {"score": -2, "confidence": "high", "citations": ["S1", "S3"], "basis": "In the Legislature since 2009, senator since 2017 and Republican Floor Leader."}
+      }
+    },
+    {
+      "slug": "ronald-l-mccoy",
+      "summary": "Independent former Chewelah mayor and retired Navy petty officer, running on rural healthcare, small-business tax relief and independence from party and lobbyists.",
+      "highlights": [
+        "Former Chewelah mayor (1998-2002) and city councilmember [S1][S3]",
+        "Focuses on rural healthcare access for older and disabled residents [S3]",
+        "Names tax burdens on small businesses and 'protect taxpayers' as priorities [S1][S2]",
+        "Says the district was not built by lobbyists and special interests [S1]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": -1, "confidence": "medium", "citations": ["S1", "S2", "S3"], "basis": "Names small-business and household tax burdens as a concern and 'protect taxpayers' as a goal, without a specific tax proposal."},
+        "reform": {"score": 1, "confidence": "medium", "citations": ["S1", "S3"], "basis": "Runs as an independent against lobbyists, special interests and 'big money'."},
+        "experience": {"score": 1, "confidence": "medium", "citations": ["S1", "S3"], "basis": "Former small-city mayor and councilmember with no state-level office, running as a change candidate against an 18-year legislator."}
+      }
+    }
+  ]
+}

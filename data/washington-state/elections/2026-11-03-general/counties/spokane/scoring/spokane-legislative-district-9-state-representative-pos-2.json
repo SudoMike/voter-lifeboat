@@ -1,0 +1,45 @@
+{
+  "contest_slug": "spokane-legislative-district-9-state-representative-pos-2",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/spokane/dossiers/spokane-legislative-district-9-state-representative-pos-2/"],
+  "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering taxes, school funding, public safety and natural-resource rules.",
+  "race_blurb": "Republican Rep. Joe Schmick, a former farmer in office since 2007, faces Democrat Karina Wallace, a peer support specialist making her first run for office. Schmick took 61.6% in the primary; the race contrasts his fiscal-restraint record with her lobbying-reform and worker-protection platform.",
+  "candidates": [
+    {
+      "slug": "joe-schmick",
+      "summary": "Republican incumbent since 2007 and former second-generation farmer, running on curbing state spending, agriculture and water, and parental involvement in schools.",
+      "highlights": [
+        "Voted against the 2026 tax on income over $1 million and the 2025 capital-gains/estate and B&O tax increases [S5][S6]",
+        "Voted against the 2025-27 operating budget [S7]",
+        "Says 'We don't have a revenue problem, we have a spending problem' [S2]",
+        "Wants more local school-board control and parents informed of what is taught; voted against ESHB 1296 [S2][S8]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": -2, "confidence": "high", "citations": ["S2", "S5", "S6"], "basis": "Nay on ESSB 6346, SB 5813 and HB 2081, and campaigns on tax relief and 'a spending problem', not a revenue problem."},
+        "spending": {"score": -2, "confidence": "high", "citations": ["S1", "S2", "S7"], "basis": "Calls for curbing state spending and living within means, and voted against the 2025-27 operating budget."},
+        "safety": {"score": -1, "confidence": "medium", "citations": ["S2"], "basis": "Says Democratic police reforms made communities less safe and police need more tools and support; no detail on treatment or diversion."},
+        "parental-rights": {"score": -2, "confidence": "medium", "citations": ["S2", "S8"], "basis": "Campaign plank that parents have a right to know what is taught in class, plus Nay on ESHB 1296 (amendments narrowing the I-2081 parental-rights list)."},
+        "experience": {"score": -2, "confidence": "high", "citations": ["S1"], "basis": "Serving in the House since 2007."}
+      }
+    },
+    {
+      "slug": "karina-wallace",
+      "summary": "Democrat and certified peer support specialist from Cheney, a first-time candidate running on paycheck protection, rural healthcare access and lobbying reform.",
+      "highlights": [
+        "Refuses corporate PAC money and lobbyist donations [S1]",
+        "Wants stronger lobbying disclosure and closed gift loopholes [S2]",
+        "Supports legal immigration pathways, due process and humane treatment [S2]",
+        "Endorsed by the Washington State Labor Council and Spokane Regional Labor Council [S2]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "reform": {"score": 2, "confidence": "high", "citations": ["S1", "S2"], "basis": "Refuses corporate PAC and lobbyist money and proposes lobbying disclosure and gift-loophole limits."},
+        "immigration": {"score": 1, "confidence": "medium", "citations": ["S2"], "basis": "Supports due process and humane treatment and says fear-based enforcement does not make communities safer; also backs 'orderly legal immigration pathways'."},
+        "experience": {"score": 2, "confidence": "high", "citations": ["S1", "S2"], "basis": "First-time candidate who describes herself as 'not a career politician'."}
+      }
+    }
+  ]
+}

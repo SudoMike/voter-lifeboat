@@ -1,6 +1,6 @@
 // The November 3, 2026 general as shipped: King County at Full County
-// Coverage (issue #16), every other Washington address a Statewide-Only Guide
-// (issue #9). These run the app's own ballot, interview, lean and Ballot Brief
+// Coverage (issue #16), Snohomish and Spokane at partial coverage (#21),
+// every other Washington address a Statewide-Only Guide (issue #9). These run the app's own ballot, interview, lean and Ballot Brief
 // code against public/data/2026-11-03-general.
 import test from 'node:test'
 import assert from 'node:assert/strict'
@@ -24,11 +24,11 @@ const data = JSON.parse(
 
 const KING = { id: 'king', fips: '53033', name: 'King County' }
 
-// What lookupBallotContext returns for a Washington address outside King
-// County (geo.test.js covers the lookup itself).
-const spokane = {
+// What lookupBallotContext returns for a Washington address in a county the
+// general does not ship (geo.test.js covers the lookup itself).
+const yakima = {
   coverageStatus: 'statewide_only',
-  county: { id: 'spokane', fips: '53063', name: 'Spokane County' },
+  county: { id: 'yakima', fips: '53077', name: 'Yakima County' },
   districts: {},
   missingLayers: [],
 }
@@ -65,7 +65,7 @@ const STATE_MEASURES = [
   'initiative-measure-no-il26-638',
 ]
 
-test('the general ships King at full county coverage and Snohomish at partial, with their elections offices', () => {
+test('the general ships King at full county coverage, Snohomish and Spokane at partial, with their elections offices', () => {
   assert.equal(data.election.id, '2026-11-03-general')
   assert.deepEqual(data.coverage, {
     statewide_complete: true,
@@ -88,8 +88,44 @@ test('the general ships King at full county coverage and Snohomish at partial, w
         coverage: 'partial_county',
         elections_url: 'https://www.snohomishcountywa.gov/224/Elections-Voter-Registration',
       },
+      {
+        // Partial: the Stevens County PUD seat Spokane voters inside that PUD
+        // elect is scoped to PUDDST, which no electoral layer resolves (#21).
+        id: 'spokane',
+        name: 'Spokane County',
+        state: 'WA',
+        fips: '53063',
+        coverage: 'partial_county',
+        elections_url: 'https://www.spokanecounty.gov/elections',
+      },
     ],
   })
+})
+
+test('a Spokane ballot: its own districts, school and fire measures by name, no PUD seat', () => {
+  const SPOKANE = { id: 'spokane', fips: '53063', name: 'Spokane County' }
+  const spo = (districts) => ({ coverageStatus: 'partial_county', county: SPOKANE, districts, missingLayers: [] })
+  // 808 W Spokane Falls Blvd, Spokane (live 2026-10-08, see geo.js).
+  const downtown = ballotFor(spo({
+    CONGDST: '5', LEGDST: '3', CITY: 'Spokane', COUNTY_COUNCIL: '1', SCHDST: 'Spokane #81', FIRDST: 'City of Spokane',
+  }))
+  const slugs = downtown.contests.map((c) => c.slug)
+  assert.equal(new Set(slugs).size, slugs.length)
+  for (const slug of SUPREME_COURT) assert.ok(slugs.includes(slug), slug)
+  assert.ok(slugs.includes('spokane-congressional-district-5-u-s-representative'))
+  assert.ok(slugs.includes('spokane-legislative-district-3-state-representative-pos-1'))
+  assert.ok(slugs.includes('spokane-spokane-county-sheriff'))
+  assert.ok(!slugs.some((s) => s.includes('public-utility-district')), slugs.join())
+  const dm = downtown.measures.map((m) => m.slug)
+  assert.ok(dm.includes('spokane-spokane-school-district-no-81-proposition-no-1'))
+  assert.ok(!dm.some((s) => s.includes('fire-protection-district')), dm.join())
+  // 3801 E Farwell Rd, Mead: Fire District 9's two propositions.
+  const mead = ballotFor(spo({ CONGDST: '5', LEGDST: '4', COUNTY_COUNCIL: '3', SCHDST: 'Mead #354', FIRDST: 'Fire District 9' }))
+  const mm = mead.measures.map((m) => m.slug)
+  assert.ok(mm.includes('spokane-spokane-county-fire-protection-district-no-9-proposition-no-1'))
+  assert.ok(mm.includes('spokane-spokane-county-fire-protection-district-no-9-proposition-no-2'))
+  assert.ok(!mm.some((s) => s.includes('school-district')), mm.join())
+  assert.equal(coverageAdvice(spo({})), 'degraded')
 })
 
 test('a Snohomish ballot: statewide races once, its districts, South County Fire only inside the RFA', () => {
@@ -121,11 +157,11 @@ test('each Supreme Court contest ships once, owned by the statewide package', ()
   assert.equal(new Set(slugs).size, slugs.length)
 })
 
-test('outside King, an address gets all five court races and all three initiatives only', () => {
-  const { contests, measures } = ballotFor(spokane)
+test('outside the shipped counties, an address gets all five court races and all three initiatives only', () => {
+  const { contests, measures } = ballotFor(yakima)
   assert.deepEqual(contests.map((c) => c.slug), SUPREME_COURT)
   assert.deepEqual(measures.map((m) => m.slug), STATE_MEASURES)
-  assert.equal(coverageAdvice(spokane), 'statewide-only')
+  assert.equal(coverageAdvice(yakima), 'statewide-only')
 })
 
 test('every King ballot carries the statewide races once, the countywide races and its district races', () => {
@@ -190,7 +226,7 @@ test('uncontested King contests ship information-only, with no scores', () => {
 const STATEWIDE_AXES = ['experience', 'judicial', 'local-control', 'parental-rights', 'safety', 'social', 'spending', 'taxes']
 
 test('the statewide-only interview asks only about axes on the statewide ballot', () => {
-  const { axes, items } = ballotFor(spokane)
+  const { axes, items } = ballotFor(yakima)
   assert.deepEqual([...axes].sort(), STATEWIDE_AXES)
   assert.deepEqual(items.map((i) => i.id), [
     'card-taxes',
@@ -220,7 +256,7 @@ const agreeWithEverything = (items) =>
   )
 
 test('a voter who answers the interview gets a lean on every measure on the ballot', () => {
-  for (const context of [spokane, ...Object.values(ADDRESSES)]) {
+  for (const context of [yakima, ...Object.values(ADDRESSES)]) {
     const { measures, items } = ballotFor(context)
     const answers = agreeWithEverything(items)
     for (const m of measures) {
@@ -250,11 +286,11 @@ const briefFor = (context) => {
 }
 
 test('the statewide-only Ballot Brief carries the warning and every contest and measure', () => {
-  const { contests, measures, text } = briefFor(spokane)
+  const { contests, measures, text } = briefFor(yakima)
   assert.match(text, /November 3, 2026 General Election/)
   assert.match(text, /Coverage: STATEWIDE-ONLY GUIDE/)
   assert.match(text, /omits county, city, school, fire, judicial district, and other local contests/)
-  assert.match(text, /Resolved county: Spokane County/)
+  assert.match(text, /Resolved county: Yakima County/)
   for (const c of contests) assert.ok(text.includes(`## SUPREME COURT — ${c.district}`), c.slug)
   assert.match(text, /## BALLOT MEASURES/)
   for (const m of measures) {
@@ -283,7 +319,7 @@ test('a King Ballot Brief is a full county guide naming every contest once and e
 })
 
 test('the general Ballot Brief names election day, terms and SOS pamphlet pages, never the primary', () => {
-  const { text } = briefFor(spokane)
+  const { text } = briefFor(yakima)
   assert.match(text, /^# MY BALLOT BRIEF — Washington State, November 3, 2026 General Election$/m)
   assert.match(text, /^Election day: Tuesday, November 3, 2026\.$/m)
   assert.match(text, /statewide contests on the November 3, 2026 General Election ballot/)

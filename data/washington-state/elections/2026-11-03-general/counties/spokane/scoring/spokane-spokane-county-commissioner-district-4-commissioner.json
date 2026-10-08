@@ -1,0 +1,91 @@
+{
+  "contest_slug": "spokane-spokane-county-commissioner-district-4-commissioner",
+  "scored_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/dossiers/spokane-spokane-county-commissioner-district-4-commissioner/"
+  ],
+  "office_does": "A county commissioner is one of five board members who adopt Spokane County's budget, set county tax and land-use policy for unincorporated areas, and oversee the jail and criminal justice funding.",
+  "race_blurb": "Republican State Rep. Suzanne Schmidt and independent Rachelle Miller, a social worker who reached the ballot as a primary write-in, are running to replace retiring Commissioner Mary Brooks. Data centers divide them most sharply: Miller would support a ban, and Schmidt would accept projects that do not raise utility rates or harm water.",
+  "candidates": [
+    {
+      "slug": "suzanne-schmidt",
+      "summary": "Two-term Republican state representative for the 4th Legislative District and former CEO of Associated Builders and Contractors Inland Pacific, running on cutting red tape, backing law enforcement and keeping taxes in check.",
+      "highlights": [
+        "Voted against ESSB 6346 (2026 tax on income over $1 million), ESSB 5813 (2025 capital gains and estate tax changes) and ESHB 2081 (2025 B&O tax increases) [S7][S9][S10]",
+        "Would rather grow the tax base than raise property taxes to close the county's projected $30 million deficit [S4]",
+        "Would not support a data center that raises utility rates, threatens water or strains the grid [S2]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S7", "S9", "S10", "S4", "S2"],
+          "basis": "Voted no on three 2025-26 state tax bills including ESSB 6346, says property taxes are already too much of a burden, and pledges to keep taxes in check."
+        },
+        "spending": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S2", "S11"],
+          "basis": "Campaign pledges to cut waste and protect taxpayer dollars; voted against the 2025-27 state operating budget."
+        },
+        "housing": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S1", "S4"],
+          "basis": "Would cut red tape, streamline county permitting and push for development-friendly state rules on housing."
+        },
+        "safety": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S2", "S4"],
+          "basis": "Platform says she will back law enforcement and keep criminals off the streets; also supports replacing the jail with a facility that includes treatment."
+        },
+        "experience": {
+          "score": -1,
+          "confidence": "high",
+          "citations": ["S1", "S4"],
+          "basis": "Two-term state representative and ranking committee member who says eight of her bills became law."
+        }
+      }
+    },
+    {
+      "slug": "rachelle-miller",
+      "summary": "Independent licensed clinical social worker and first-time candidate who reached the ballot through a primary write-in campaign centered on opposing AI data centers.",
+      "highlights": [
+        "Would support an outright ban on data centers in Spokane County and opposes tax breaks for them [S5]",
+        "Says the deficit stems from state mandates, not residents underpaying, but would consider a property tax increase to fund essential services [S2][S5]",
+        "Backs co-responder programs, the Regional Stabilization Center and stable funding for treatment [S2]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": 0,
+          "confidence": "medium",
+          "citations": ["S2", "S5"],
+          "basis": "Platform says the answer is not more taxes on struggling families, yet she told the Spokesman-Review she would consider raising property taxes to close the deficit."
+        },
+        "safety": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S2"],
+          "basis": "Platform centers opioid-settlement treatment programs and co-responder models that keep people out of jails, along with lasting solutions for homelessness."
+        },
+        "experience": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S5"],
+          "basis": "First-time candidate running as an independent outsider recruited over data centers."
+        },
+        "reform": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S2"],
+          "basis": "Runs as an independent on 'No party sent me. No donor owns me.'"
+        }
+      }
+    }
+  ]
+}

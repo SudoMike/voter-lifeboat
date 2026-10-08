@@ -1,0 +1,121 @@
+{
+  "contest_slug": "spokane-legislative-district-4-state-representative-pos-2",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/spokane/dossiers/spokane-legislative-district-4-state-representative-pos-2/"],
+  "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering school funding, tax structure, housing rules, health funding and criminal-justice statutes.",
+  "race_blurb": "Republican incumbent Rob Chase faces first-time Democratic candidate Rob Tupper after a close primary (43% to 41%). The race turns on Chase's bill to create two autonomous regions within Washington, which Tupper opposes, and on taxes: Chase voted against the 2026 income tax and Tupper would keep it.",
+  "candidates": [
+    {
+      "slug": "rob-chase",
+      "summary": "Two-term State Representative and former Spokane County treasurer whose signature proposal would divide Washington into two autonomous regions.",
+      "highlights": [
+        "Voted against the 2026 tax on income over $1 million and the 2025 B&O and services tax bills [S4][S6][S7]",
+        "Prime sponsor of HB 2085 to create autonomous Puget Sound and Columbia regions [S8]",
+        "Says human activity does not affect climate change and calls the Climate Commitment Act the most damaging tax [S9][S10]",
+        "Supported the parental-rights and girls'-sports initiatives and voted against ESHB 1296 [S5][S9]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S4", "S6", "S7", "S10"],
+          "basis": "Voted no on ESSB 6346 and on the 2025 B&O (EHB 2081) and services excise (ESSB 5814) tax bills; pledges to lower taxes for everyone."
+        },
+        "climate": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S9", "S10"],
+          "basis": "Says climate change is not human-caused, the state should not act to slow it, and the Climate Commitment Act is 'taxing the air'."
+        },
+        "experience": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S11"],
+          "basis": "Two House terms and eight years as county treasurer, facing a first-time candidate."
+        },
+        "local-control": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S8", "S9"],
+          "basis": "Sponsors HB 2085 to devolve state government to two autonomous regions with their own governors, judges and legislators."
+        },
+        "social": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S2", "S9"],
+          "basis": "Opposes abortion except for ectopic pregnancy and supported the initiative barring athletes assigned male at birth from girls' sports; cites a perfect Family Policy Institute score."
+        },
+        "parental-rights": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S5", "S9"],
+          "basis": "Supported the I-1 parental-rights initiative, voted against ESHB 1296 and for faster parent access to special-education evaluations."
+        },
+        "tech": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S10"],
+          "basis": "Supports building AI data centers unless they significantly affect nearby residents."
+        }
+      }
+    },
+    {
+      "slug": "rob-tupper",
+      "summary": "Retired teacher, engineer and commercial fisherman running as a Democrat for the first time, centering opposition to splitting the state, universal healthcare and keeping the income tax.",
+      "highlights": [
+        "Would focus on maintaining the 2026 tax on income over $1 million [S6]",
+        "Pledges to fight for universal healthcare coverage [S3]",
+        "Lists \"No Data Centers\" as his first issue [S3]",
+        "Calls for community-oriented policing coordinated with social services [S1]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S3", "S6"],
+          "basis": "Would focus on maintaining the tax on income over $1 million; website argues the sales-tax-reliant system is regressive."
+        },
+        "healthcare": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S3", "S6"],
+          "basis": "Website pledges universal healthcare coverage; interested in partnering with Whole Washington, a universal-healthcare group."
+        },
+        "tech": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S3", "S6"],
+          "basis": "Opposes data centers; 'No Data Centers' is his lead website issue, citing power, water, land and tax breaks."
+        },
+        "safety": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S3"],
+          "basis": "Frames crime around root causes and backs police-clinician co-deployment and community-oriented policing coordinated with social services."
+        },
+        "climate": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S5", "S6"],
+          "basis": "Says fossil-fuel use drives climate change; favors carbon-credit funds for building efficiency, forests and nuclear research."
+        },
+        "experience": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "First run for office; describes himself as 'not a career politician' against a two-term incumbent."
+        },
+        "social": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S5"],
+          "basis": "Says government should not interfere in private matters like abortion; no stated position on LGBTQ+ issues."
+        }
+      }
+    }
+  ]
+}
