@@ -1024,6 +1024,58 @@ ELECTION_MEASURES = {
                 "PROPFIRDST '009', the county's Fire Districts layer (FireNumber '009'); DOR's 2025 fire layer has no such district.",
             ],
         },
+        # Ferry (#32). Ballot checked against the Ferry County Auditor's
+        # general sample ballot (counties/ferry/raw/ferry/sample-ballot.pdf.url,
+        # linked as '2026 General' under Sample Ballots on the Auditor's public
+        # records page; text in interim/pdf-text/sample-ballot.txt) and VoteWA's
+        # online voters' guide for county 10 (raw/votewa/voter-guide/
+        # guide.json.url): both list exactly the export's races, the three
+        # statewide measures and no local measure. Ferry prints no local
+        # pamphlet.
+        # Overrides: Ferry is a non-charter county, so Commissioner #2 is
+        # nominated by district and elected county-wide in the general (RCW
+        # 36.32.040, 36.32.050(1)): the SOS precinct exports put Commissioner
+        # #1 and #3 (2020), #2 (2022) and #1 and #3 (2024) on all 19 precincts,
+        # while the 2026 primary's #2 race reported 7 of 19 units
+        # (raw/ferry/). It keeps the primary's contest name so its slug and the
+        # primary dossiers carry forward. The District Court is one county-wide
+        # court (2022 and 2024: all 19 precincts). Public Utility District No. 1
+        # of Ferry County covers the whole county (VoteWA 'PUD (COUNTYWIDE)'):
+        # WA DOR PUD2025 (layer 17) has one Ferry polygon ('1') whose area
+        # (12,939,379,609) equals the sum of Ferry's SCH2025 polygons and of
+        # its TCA2025 polygons other than '8888', a no-district code that also
+        # covers part of Inchelium (39 Shortcut Rd answers TCA '8888' and no
+        # PUD2025 feature), so DOR cannot scope it; the whole PUD elects each
+        # commissioner (RCW 54.12.010(3)), and the 2020, 2022 and 2024 PUD
+        # races were on all 19 precincts with per-precinct totals close to the
+        # county-wide races' (Inchelium 138 vs 140 in 2020, 42 vs 44 in 2022,
+        # 73 vs 81 in 2024). Scoped COUNTY, and named as the generic rule names it
+        # (the Okanogan package's names for the same seat), so it ships with
+        # Okanogan's research (Okanogan's ~325 voters in eight northeastern
+        # precincts elect it too; Okanogan's copy stays PUDDST, hidden).
+        "ferry": {
+            "overrides": {
+                ("COUNTY", "COUNTY COMMISSIONER #2"): (
+                    "County", "Ferry County Commissioner District 2", "County Commissioner #2", ("COUNTY", None)),
+                ("COUNTY", "DISTRICT COURT JUDGE"): (
+                    "Judicial", "Ferry County District Court", "District Court Judge", ("COUNTY", None)),
+                ("PUD (COUNTYWIDE)", "PUBLIC UTILITY COMMISSIONER #3"): (
+                    "PublicUtility", "Public Utility District Commissioner District 3", "Public Utility Commissioner #3",
+                    ("COUNTY", None)),
+            },
+            "measures": [],
+            "extra_notes": [
+                "No local measures are on Ferry County's November 3, 2026 general ballot: the Auditor's general sample "
+                "ballot (https://www.ferry-county.com/SampleBallot.pdf) and VoteWA's online voters' guide "
+                "(genericvoterguide.aspx?e=899&c=10) list only the three statewide measures.",
+                "Ferry County prints no local voters' pamphlet for the general; candidate statements are in VoteWA's "
+                "online voters' guide (genericvoterguide.aspx?e=899&c=10).",
+                "Ferry County Commissioner District 2 is nominated by district and elected county-wide in the general "
+                "(RCW 36.32.040, 36.32.050(1); SOS 2022 general precinct results: on all 19 precincts).",
+                "Public Utility District No. 1 of Ferry County covers the whole county (WA DOR PUD2025, layer 17) and "
+                "every PUD voter elects each commissioner (RCW 54.12.010(3)), so the Commissioner #3 seat is scoped COUNTY.",
+            ],
+        },
         # Franklin (#29). Ballot checked against the Auditor's general sample
         # ballot and local voters' pamphlet (counties/franklin/raw/franklin/
         # sample-ballot.pdf.url, local-voters-pamphlet.pdf.url): one local
