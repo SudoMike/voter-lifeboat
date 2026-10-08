@@ -1261,6 +1261,64 @@ ELECTION_MEASURES = {
               "https://voter.votewa.gov/elections/measure.ashx?m=7429&e=899&la=en&c=29",
               pages=(21,)),
         ]},
+        # Walla Walla (#30): checked against the Walla Walla County Auditor's
+        # general sample ballot and local voters' pamphlet (counties/walla-walla/
+        # raw/walla-walla/{sample-ballot,local-voters-pamphlet}.pdf.url, linked
+        # from wwcowa.gov/government/auditor/current_election.php) and VoteWA's
+        # online guide for county 36 (raw/votewa/voter-guide/), which list two
+        # local measures (guide records 7378, 7379; pamphlet pp. 22-25).
+        # Measure scopes, point-checked 2026-10-08 (Census geocoder, Current):
+        # SCHDST '101': WA DOR SCH2025 (layer 20) DISTATTRIB '101' (COUNTYNAME
+        # 'WALLA WALLA') at the interior point (-118.153, 46.140) in the Dixie
+        # CDP; the Census geocoder matches no Dixie street address (the school's
+        # 10520 E Highway 12 included). Other Walla Walla values: 140 at 315 W
+        # Main St, Walla Walla; 250 at 940 SE Harvest Dr, College Place; 401 at
+        # 106 Preston Ave, Waitsburg; 402 at 108 S D St, Prescott; 400 at 785
+        # Tumbleweed Ln, Burbank. '101' also names districts in Clark, Pacific,
+        # Skagit and Whatcom, which a point query never reaches.
+        # PARKDST 'PRES': WA DOR PKR2025 (layer 14) DISTATTRIB 'PRES' at 108 S D
+        # St, Prescott; 'WAIT' at 106 Preston Ave, Waitsburg; no feature at 315
+        # W Main St, Walla Walla. The district is joint with Columbia County
+        # (DOR has a 'PRES' polygon in each county; the guide record says
+        # 'Columbia, Walla Walla').
+        # Overrides: County Commissioner District 3 is nominated by district and
+        # elected county-wide in the general (RCW 36.32.040). VoteWA's general
+        # export lists it as 'Countywide'; the SOS precinct exports show the
+        # 2022 District 3 and 2024 District 1 and 2 general races on all 62
+        # voting precincts, while the 2026 primary's District 3 race reported
+        # 18 of 62 units (raw/walla-walla/sos-results-*.csv.url). It keeps the
+        # primary's contest name so its slug and primary dossiers carry forward.
+        # The District Court is one county-wide district with a full-time and
+        # a part-time judge; the overrides file both seats as Judicial.
+        "walla-walla": {
+            "overrides": {
+                ("COUNTY", "COUNTY COMMISSIONER DISTRICT 3"): (
+                    "County", "Walla Walla County Commissioner District 3", "County Commissioner District 3",
+                    ("COUNTY", None)),
+                ("COUNTY", "DISTRICT COURT JUDGE - FULL TIME"): (
+                    "Judicial", "Walla Walla County District Court", "District Court Judge - Full Time",
+                    ("COUNTY", None)),
+                ("COUNTY", "DISTRICT COURT JUDGE - PART TIME"): (
+                    "Judicial", "Walla Walla County District Court", "District Court Judge - Part Time",
+                    ("COUNTY", None)),
+            },
+            "measures": [
+                m("Dixie School District No. 101", "Proposition 1",
+                  "Replacement Capital Levy for Health, Safety and Energy Efficiency Improvements",
+                  ("SCHDST", "101"),
+                  "Replaces Dixie School District's capital levy, which expires at the end of 2026, with a six-year levy for 2027 through 2032 to keep funding health, safety and energy-efficiency repairs and modernization at Dixie School.",
+                  "$75,000 a year for 2027 through 2032, an estimated $0.50 per $1,000 of assessed value.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7378&e=899&la=en&c=36",
+                  pages=(22, 23)),
+                m("Prescott Joint Park and Recreation District", "Proposition No. 1",
+                  "Maintenance & Operation Excess Levy",
+                  ("PARKDST", "PRES"),
+                  "Authorizes a one-year excess property tax levy for the park and recreation district's maintenance and operation expenses in 2027, its main source of operating money.",
+                  "$175,000 collected in 2027, approximately $0.35 per $1,000 of assessed value.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7379&e=899&la=en&c=36",
+                  pages=(24, 25)),
+            ],
+        },
         # Whatcom (#28). Measures: VoteWA's online voters' guide for Whatcom
         # County (voterguide.ashx?e=899&c=37, read 2026-10-08) lists five local
         # measures; whatcomcounty.us answered 403 (Cloudflare) to scripted
