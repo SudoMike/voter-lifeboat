@@ -145,6 +145,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3390926
     pointer: counties/whatcom/raw/candidates/whatcom-legislative-district-42-state-senator/pdc-erika-creydt.url
     accessed: 2026-10-08
+photo:
+  url: https://static.wixstatic.com/media/37b616_4ecc5266c3644d71b7669dfebffe8fc8~mv2.jpg
+  page: https://www.erikaforwhatcom.com/
+  kind: campaign-website
 ---
 
 ## Background

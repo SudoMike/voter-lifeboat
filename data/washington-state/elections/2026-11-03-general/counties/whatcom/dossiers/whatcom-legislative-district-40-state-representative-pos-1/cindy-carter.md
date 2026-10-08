@@ -62,6 +62,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3395472
     pointer: counties/whatcom/raw/candidates/whatcom-legislative-district-40-state-representative-pos-1/pdc-cindy-carter.url
     accessed: 2026-10-08
+photo:
+  url: https://noincometaxcarter.com/wp-content/uploads/2026/06/NoIncometaxCarter-2-200x300.jpg
+  page: https://noincometaxcarter.com/
+  kind: campaign-website
 ---
 
 ## Background

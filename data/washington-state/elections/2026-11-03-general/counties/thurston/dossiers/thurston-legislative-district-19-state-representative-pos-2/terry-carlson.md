@@ -89,6 +89,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3321370
     pointer: counties/thurston/raw/candidates/thurston-legislative-district-19-state-representative-pos-2/pdc-carlson.url
     accessed: 2026-10-08
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/6984264634f1ae6a44f66bbb/d46783a2-3413-44e3-a740-598f7e29cd15/1000026787.jpg
+  page: https://electterrycarlson.com/meet-terry
+  kind: campaign-website
 ---
 
 ## Background

@@ -68,6 +68,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3391024
     pointer: counties/yakima/raw/candidates/yakima-legislative-district-14-state-representative-pos-2/pdc-ezequiel-morfin.url
     accessed: 2026-10-09
+photo:
+  url: https://static.wixstatic.com/media/88e548_2fca62f5e6484414982050681b6352bb~mv2.jpeg
+  page: https://www.electmorfin.com/
+  kind: campaign-website
 ---
 
 ## Background

@@ -68,6 +68,10 @@ sources:
     url: https://www.thejoltnews.com/stories/thurston-county-canvassing-board-certifies-aug-4-primary-election-results,30975
     pointer: counties/thurston/raw/candidates/thurston-thurston-county-clerk/jolt-2026-08-19-certified.url
     accessed: 2026-10-08
+photo:
+  url: https://assets.nationbuilder.com/nicoleforclerk/pages/9/attachments/original/1791227094/Headshot_resized_website.jpg?1791227094
+  page: https://www.nicoleforclerk.com/
+  kind: campaign-website
 ---
 
 ## Background

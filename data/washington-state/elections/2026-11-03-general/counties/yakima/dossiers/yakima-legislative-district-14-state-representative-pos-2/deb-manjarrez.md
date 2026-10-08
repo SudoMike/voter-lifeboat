@@ -171,6 +171,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3321396
     pointer: counties/yakima/raw/candidates/yakima-legislative-district-14-state-representative-pos-2/pdc-deb-manjarrez.url
     accessed: 2026-10-09
+photo:
+  url: https://leg.wa.gov/memberphoto/35412.jpg
+  page: https://leg.wa.gov/memberphoto/35412.jpg
+  kind: government
 ---
 
 ## Background

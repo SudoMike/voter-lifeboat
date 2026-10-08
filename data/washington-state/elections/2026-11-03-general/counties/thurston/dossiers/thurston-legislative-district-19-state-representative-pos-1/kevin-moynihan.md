@@ -89,6 +89,10 @@ sources:
     url: https://www.thedailyworld.com/2026/09/16/kevin-moynihan-to-attend-indivisible-meet-and-greet-in-long-beach/
     pointer: counties/thurston/raw/candidates/thurston-legislative-district-19-state-representative-pos-1/dailyworld-2026-09-16-moynihan-indivisible.url
     accessed: 2026-10-08
+photo:
+  url: https://static.wixstatic.com/media/88e548_a75334e8293b4454b144fc4af7951eb2~mv2.jpg
+  page: https://www.kevinmoynihan.com/about
+  kind: campaign-website
 ---
 
 ## Background

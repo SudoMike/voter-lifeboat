@@ -179,6 +179,10 @@ sources:
     url: "https://wslwebservices.leg.wa.gov/LegislationService.asmx/GetRollCalls?biennium=2025-26&billNumber=5167"
     pointer: counties/thurston/raw/candidates/thurston-legislative-district-22-state-representative-pos-2/leg-rollcalls-essb-5167.url
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/35415.jpg
+  page: https://leg.wa.gov/memberphoto/35415.jpg
+  kind: government
 ---
 
 ## Background

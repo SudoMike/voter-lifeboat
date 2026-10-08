@@ -67,6 +67,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3391158
     pointer: counties/thurston/raw/candidates/thurston-thurston-county-sheriff/pdc-derek-sanders.url
     accessed: 2026-10-08
+photo:
+  url: https://assets.nationbuilder.com/sandersforsheriff/pages/67/attachments/original/1770242571/sheriff.png?1770242571
+  page: https://www.sandersforsheriff.org/
+  kind: campaign-website
 ---
 
 ## Background

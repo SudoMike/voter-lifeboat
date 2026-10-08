@@ -103,6 +103,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3321424
     pointer: counties/whatcom/raw/candidates/whatcom-legislative-district-40-state-representative-pos-2/pdc-alex-ramel.url
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/30127.jpg
+  page: https://leg.wa.gov/memberphoto/30127.jpg
+  kind: government
 ---
 
 ## Background

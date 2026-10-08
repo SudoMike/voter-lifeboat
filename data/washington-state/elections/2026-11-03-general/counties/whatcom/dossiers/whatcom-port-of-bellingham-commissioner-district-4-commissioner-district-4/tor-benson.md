@@ -83,6 +83,10 @@ sources:
     url: https://www.cascadiadaily.com/2026/aug/04/primary-election-2026-updates-for-whatcom-skagit-counties/
     pointer: counties/whatcom/raw/candidates/whatcom-port-of-bellingham-commissioner-district-4-commissioner-district-4/cdn-2026-08-04-primary-updates.url
     accessed: 2026-10-08
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/69f1637cf8bf667a0c8d1cb3/f0f715ea-fe0c-449b-b0eb-5816c428afb8/TorBenson_050626_01331.jpg
+  page: https://www.torforport.com/
+  kind: campaign-website
 ---
 
 ## Background

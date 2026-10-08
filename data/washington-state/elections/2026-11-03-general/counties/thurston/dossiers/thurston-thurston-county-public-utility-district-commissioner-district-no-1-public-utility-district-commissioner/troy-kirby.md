@@ -75,6 +75,10 @@ sources:
     url: http://www.thurstonpud.org/docs/minutes/2025/Minutes%2010282025.pdf
     pointer: counties/thurston/raw/candidates/thurston-thurston-county-public-utility-district-commissioner-district-no-1-public-utility-district-commissioner/thurstonpud-minutes-2025-10-28.url
     accessed: 2026-10-08
+photo:
+  url: https://static1.squarespace.com/static/69fd33d474c08042a6751c1b/t/69fd37208e44a90c6238a64e/1778202400468/447783960_8457107300971389_8494369843826367524_n.jpg?format=1500w
+  page: https://www.kirby4pud.org/
+  kind: campaign-website
 ---
 
 ## Background

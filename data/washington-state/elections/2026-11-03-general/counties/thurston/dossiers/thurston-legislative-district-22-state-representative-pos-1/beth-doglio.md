@@ -144,6 +144,10 @@ sources:
     url: "https://wslwebservices.leg.wa.gov/LegislationService.asmx/GetLegislation?biennium=2025-26&billNumber=1152"
     pointer: counties/thurston/raw/candidates/thurston-legislative-district-22-state-representative-pos-1/leg-hb-1152.url
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/26175.jpg
+  page: https://leg.wa.gov/memberphoto/26175.jpg
+  kind: government
 ---
 
 ## Background

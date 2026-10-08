@@ -201,6 +201,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3321378
     pointer: counties/thurston/raw/candidates/thurston-legislative-district-19-state-representative-pos-2/pdc-mcentire.url
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/31525.jpg
+  page: https://leg.wa.gov/memberphoto/31525.jpg
+  kind: government
 ---
 
 ## Background
