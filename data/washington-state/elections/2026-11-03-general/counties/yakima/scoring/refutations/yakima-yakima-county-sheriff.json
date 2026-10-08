@@ -1,0 +1,57 @@
+{
+  "contest_slug": "yakima-yakima-county-sheriff",
+  "reviewed_at": "2026-10-09",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/yakima/dossiers/yakima-yakima-county-sheriff/",
+    "data/washington-state/elections/2026-11-03-general/counties/yakima/scoring/yakima-yakima-county-sheriff.json"
+  ],
+  "verdicts": [
+    {
+      "candidate": "jake-church",
+      "axis": "experience",
+      "verdict": "adjust",
+      "adjusted_score": -1,
+      "adjusted_confidence": "high",
+      "note": "The direction is clear: 26 years in law enforcement, 10 inside the sheriff's office, and the outgoing sheriff's endorsement [S1][S3][S4]. But he is a lieutenant, not the incumbent, and has no elected or enacted record [S4]. -2 is the maximal proven-record case (long tenure, enacted record); an endorsed internal successor sits at -1, as the treasurer race's 12-year office manager does."
+    },
+    {
+      "candidate": "jake-church",
+      "axis": "safety",
+      "verdict": "upheld",
+      "note": "Staffing, analytics-directed enforcement against violent, gang, drug and property crime, prosecution follow-through and continued Flock use [S4], alongside promised prevention programs [S2]: enforcement-leaning but mixed, so -1 medium holds."
+    },
+    {
+      "candidate": "roman-kilinkaridis",
+      "axis": "experience",
+      "verdict": "adjust",
+      "adjusted_score": 1,
+      "adjusted_confidence": "high",
+      "note": "He runs explicitly as an outsider to the sheriff's office with no elected record [S1][S3], which points to pole_b. But he has seven years as a police officer, including a period as a sergeant [S1][S3][S4], so he is not the maximal outsider/renewal case; +1."
+    },
+    {
+      "candidate": "roman-kilinkaridis",
+      "axis": "safety",
+      "verdict": "upheld",
+      "note": "First-year priorities are youth (Police Athletic League, deputies in classrooms), domestic-violence victims and senior fraud, plus community-engagement policing [S1][S3]; he also wants more deputies through grants [S3], which keeps it at +1 rather than +2. Medium holds."
+    },
+    {
+      "candidate": "roman-kilinkaridis",
+      "axis": "reform",
+      "verdict": "upheld",
+      "note": "Weak fit, kept at low: the advisory public vote on Flock cameras is a direct-democracy device and the 'commitment ledger' is a self-accountability pledge [S2][S3]; neither is about campaign money or structural political reform, and his opponent also says he would respect a ballot decision (jake-church.md S4). Low confidence keeps it out of alignment math, which is appropriate."
+    }
+  ],
+  "missing": [
+    {
+      "candidate": "roman-kilinkaridis",
+      "axis": "spending",
+      "proposed_score": -1,
+      "confidence": "medium",
+      "citations": [
+        "S2",
+        "S3"
+      ],
+      "basis": "Would trade in the sheriff's $130,000 Ford Bronco, questions year-end spend-down of budgets and presents the 9.2% rise in the 2026 sheriff budget as something voters should question [S2][S3]; restraint-and-scrutiny proposals (pole_a), tempered by wanting grant-funded deputies."
+    }
+  ]
+}
