@@ -1,0 +1,329 @@
+{
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/okanogan/interim/contests.json",
+    "data/washington-state/elections/2026-11-03-general/counties/okanogan/interim/measures.json"
+  ],
+  "script": "pipeline/build_research_plan.py",
+  "contests": [
+    {
+      "contest_slug": "okanogan-congressional-district-4-u-s-representative",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 4",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "amanda-mckinney",
+          "name": "Amanda McKinney",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-4-u-s-representative/amanda-mckinney.md"
+        },
+        {
+          "slug": "john-duresky",
+          "name": "John Duresky",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-4-u-s-representative/john-duresky.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "benton",
+          "contest_slug": "benton-congressional-district-4-u-s-representative",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/benton/scoring/benton-congressional-district-4-u-s-representative.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "yakima",
+          "benton",
+          "grant",
+          "franklin"
+        ]
+      }
+    },
+    {
+      "contest_slug": "okanogan-legislative-district-7-state-senator",
+      "category": "State",
+      "office": "State Senator",
+      "district": "Legislative District 7",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "shelly-short",
+          "name": "Shelly Short",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-7-state-senator/shelly-short.md"
+        },
+        {
+          "slug": "ronald-l-mccoy",
+          "name": "Ronald L McCoy",
+          "party_preference": "Prefers Independent Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-7-state-senator/ronald-l-mccoy.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "spokane",
+          "contest_slug": "spokane-legislative-district-7-state-senator",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/spokane/scoring/spokane-legislative-district-7-state-senator.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "spokane",
+          "chelan"
+        ]
+      }
+    },
+    {
+      "contest_slug": "okanogan-okanogan-county-commissioner-district-3-commissioner-district-3",
+      "category": "County",
+      "office": "Commissioner District 3",
+      "district": "Okanogan County Commissioner District 3",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "trinity-hightower-stucker",
+          "name": "Trinity Hightower Stucker",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/okanogan/dossiers/okanogan-okanogan-county-commissioner-district-3-commissioner-district-3/trinity-hightower-stucker.md"
+        },
+        {
+          "slug": "jon-r-neal",
+          "name": "Jon R Neal",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/okanogan/dossiers/okanogan-okanogan-county-commissioner-district-3-commissioner-district-3/jon-r-neal.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "okanogan-okanogan-county-coroner",
+      "category": "County",
+      "office": "Coroner",
+      "district": "Okanogan County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "gene-davis",
+          "name": "Gene Davis",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/okanogan/dossiers/okanogan-okanogan-county-coroner/gene-davis.md"
+        },
+        {
+          "slug": "cindy-jensen",
+          "name": "Cindy Jensen",
+          "party_preference": "Prefers Independent Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/okanogan/dossiers/okanogan-okanogan-county-coroner/cindy-jensen.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "okanogan-okanogan-county-sheriff",
+      "category": "County",
+      "office": "Sheriff",
+      "district": "Okanogan County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "jodie-barcus",
+          "name": "Jodie Barcus",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/okanogan/dossiers/okanogan-okanogan-county-sheriff/jodie-barcus.md"
+        },
+        {
+          "slug": "gisberth-giz-gonzalez",
+          "name": "Gisberth (Giz) Gonzalez",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/okanogan/dossiers/okanogan-okanogan-county-sheriff/gisberth-giz-gonzalez.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "okanogan-okanogan-county-district-court-judge-position-no-1",
+      "category": "Judicial",
+      "office": "Judge Position No. 1",
+      "district": "Okanogan County District Court",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "byron-moore",
+          "name": "Byron Moore",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        },
+        {
+          "slug": "robert-w-grim",
+          "name": "Robert W. Grim",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        }
+      ]
+    },
+    {
+      "contest_slug": "okanogan-okanogan-county-district-court-judge-position-no-2",
+      "category": "Judicial",
+      "office": "Judge Position No. 2",
+      "district": "Okanogan County District Court",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "charles-short",
+          "name": "Charles Short",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        },
+        {
+          "slug": "john-andrew-bangerter",
+          "name": "John Andrew Bangerter",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        }
+      ]
+    },
+    {
+      "contest_slug": "okanogan-public-utility-district-commissioner-district-1-okanogan-commissioner-dist-1",
+      "category": "PublicUtility",
+      "office": "Okanogan Commissioner Dist. #1",
+      "district": "Public Utility District Commissioner District 1",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "scott-vejraska",
+          "name": "Scott Vejraska",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        },
+        {
+          "slug": "steven-gadd",
+          "name": "Steven Gadd",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        }
+      ]
+    },
+    {
+      "contest_slug": "okanogan-public-utility-district-commissioner-district-3-public-utility-commissioner-3",
+      "category": "PublicUtility",
+      "office": "Public Utility Commissioner #3",
+      "district": "Public Utility District Commissioner District 3",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "andrew-pooler",
+          "name": "Andrew Pooler",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        },
+        {
+          "slug": "doug-aubertin",
+          "name": "Doug Aubertin",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        }
+      ]
+    }
+  ],
+  "measures": [
+    {
+      "jurisdiction": "Public Hospital District No. 1, Okanogan and Douglas Counties",
+      "proposition": "Proposition No. 1",
+      "title": "Bonds for Hospital Renovation and Improvement",
+      "slug": "okanogan-public-hospital-district-no-1-okanogan-and-douglas-counties-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "City of Brewster",
+      "proposition": "Proposition No. 1",
+      "title": "Emergency Medical Care or Emergency Medical Services Continuation Levy",
+      "slug": "okanogan-city-of-brewster-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Town of Twisp",
+      "proposition": "Proposition No. 1",
+      "title": "Emergency Medical Care and Services Excess Operations and Maintenance Levy",
+      "slug": "okanogan-town-of-twisp-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Town of Winthrop",
+      "proposition": "Proposition No. 1",
+      "title": "Emergency Medical Services Excess Operations and Maintenance Levy",
+      "slug": "okanogan-town-of-winthrop-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Methow Valley Emergency Medical Services District",
+      "proposition": "Proposition No. 1",
+      "title": "Emergency Medical Care and Services Excess Operations and Maintenance Levy",
+      "slug": "okanogan-methow-valley-emergency-medical-services-district-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Okanogan County Fire Protection District No. 1",
+      "proposition": "Proposition No. 1",
+      "title": "Levy Lid Lift",
+      "slug": "okanogan-okanogan-county-fire-protection-district-no-1-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    }
+  ],
+  "carry_forward_from": "2026-08-04-primary"
+}
