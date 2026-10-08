@@ -389,6 +389,11 @@ are counted as `researched_elsewhere` and must have no copy in your
    pages: add the county's guide
    (`voter.votewa.gov/genericvoterguide.aspx?e=<e>&c=<c>`, checked 200) to
    `countyGuides` in the same file, and `pamphletLink` links it (Spokane).
+   A county can do both (Pierce: SOS Edition 09 pages for federal and
+   legislative candidates, its VoteWA guide for the rest).
+   `verify_dossiers.py` rewrites the county's `interim/dossier-audit.json`;
+   that file belongs to the research package, so commit it with the
+   research or restore it, not with the ship.
    If the elections office URL answers 403 to scripts, use the address
    the county's own pamphlet prints and say so in `election.py`.
 7. `cd app && npm ci && npm test && npm run build`. `data-consistency.test.js`
@@ -424,11 +429,9 @@ Never scope a district race `COUNTY` to make it appear: that shows it to
 voters outside the district.
 
 As of the builder runs on 2026-10-08, the six counties' general packages
-are `partial_county` for: Kitsap `PUDDST` (PUD No. 1 District 2), Pierce
-`KCDISTCRT` (King County District Court, Southeast Electoral District; the
-Pierce `Election_Precincts` layer's `KING_DISTRICT` attribute could resolve
-it), Snohomish `DISTCRT` (District Court electoral districts), Spokane
-`PUDDST`. Clark and Thurston are `full_county`.
+are `partial_county` for: Kitsap `PUDDST` (PUD No. 1 District 2),
+Snohomish `DISTCRT` (District Court electoral districts), Spokane
+`PUDDST`. Clark, Pierce and Thurston are `full_county`.
 
 Snohomish shipped on 2026-10-08 (#21) as `partial_county` for `DISTCRT`
 alone (`snohomish/DISTCRT` is in `UNRESOLVABLE_SCOPES`): its nine District
@@ -447,6 +450,15 @@ fire levies resolve from the county's `OpenData/Boundary` layers 6
 (`DISTRCTNAME`) and 1 (`NAME`; not `CODE`, which contract towns share). See
 `counties/spokane/COMPLETENESS.md`, including the Town of Fairfield fire
 district discrepancy with DOR.
+
+Pierce shipped on 2026-10-08 (#21) as `full_county`. Its King County
+District Court Southeast seats (`KCDISTCRT`), Pierce Transit measure
+(`PTBA`) and school measures (`SCHDST`) resolve from attributes of the
+`Election_Precincts` layer that `DISTCRT` already reads (`KING_DISTRICT`,
+`PIERCE_TRANSIT`, `SCHOOL`). The adapter queries once per key, so the same
+layer is queried four times per Pierce address; a shared-layer read would
+need a change to `lookupCountyDistricts`. See
+`counties/pierce/COMPLETENESS.md`.
 
 ## 13. Reference
 
