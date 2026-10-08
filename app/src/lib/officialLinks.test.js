@@ -684,6 +684,50 @@ test('shipped Skamania and San Juan records link their pamphlet at the cited PDF
     'https://www.sanjuancountywa.gov/DocumentCenter/View/36027#page=56')
 })
 
+test('shipped Lincoln and Pend Oreille records link their pamphlet at the cited PDF page, else the county\'s VoteWA guide', () => {
+  const id = general.election.id
+  for (const [county, name, pdf, guide, office, counts] of [
+    ['lincoln', 'Lincoln County', 'https://www.lincolncountywa.com/DocumentCenter/View/2055',
+      'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=22',
+      'https://www.lincolncountywa.com/312/Current-Future-Elections', [8, 6]],
+    ['pend-oreille', 'Pend Oreille County',
+      'https://www.pendoreille.gov/sites/g/files/vyhlif14901/files/media/auditor/file/34071/final_vp_general_2026_pend_oreille.pdf',
+      'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=26',
+      'https://www.pendoreille.gov/auditor/page/elections', [14, 8]],
+  ]) {
+    let paged = 0
+    let guided = 0
+    for (const item of [...general.contests, ...general.measures]) {
+      if (item.owner !== county) continue
+      const pages = item.candidates ? item.candidates.map((c) => c.pamphlet_pages) : [item.pamphlet_pages]
+      for (const p of pages) {
+        if (p?.length) {
+          // Citations are PDF pages (Lincoln's equal the printed ones; Pend
+          // Oreille's run 38 behind).
+          assert.equal(pamphletLink(p, county, id), `${pdf}#page=${p[0].page}`, item.slug)
+          paged++
+        } else {
+          // CD, LD, Court of Appeals and Superior Court seats.
+          assert.equal(pamphletLink(p, county, id), guide, item.slug)
+          guided++
+        }
+      }
+    }
+    assert.deepEqual([paged, guided], counts, county)
+    assert.deepEqual(countyElectionsOffice(general, { id: county, name }), {
+      name: `${name} Elections`,
+      url: office,
+      direct: true,
+    })
+  }
+  // Lincoln's Assessor, p. 4; Pend Oreille's Sacheen Lake levy, PDF p. 18
+  // (printed p. 56).
+  assert.equal(pamphletLink([{ edition: 'local-voters-pamphlet', page: 4 }], 'lincoln', id),
+    'https://www.lincolncountywa.com/DocumentCenter/View/2055#page=4')
+  assert.equal(pamphletLink([{ edition: 'local-voters-pamphlet', page: 18 }], 'pend-oreille', id),
+    'https://www.pendoreille.gov/sites/g/files/vyhlif14901/files/media/auditor/file/34071/final_vp_general_2026_pend_oreille.pdf#page=18')
+})
+
 test('shipped Pacific records link the county\'s VoteWA guide; its office falls back to the statewide list', () => {
   const id = general.election.id
   const GUIDE = 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=25'

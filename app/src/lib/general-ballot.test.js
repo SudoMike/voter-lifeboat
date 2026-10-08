@@ -5,7 +5,7 @@
 // coverage (#28), Island, Lewis, Franklin, Chelan, Clallam and Grays Harbor at
 // full coverage (#29), Mason, Walla Walla, Stevens, Whitman and Douglas at full coverage and Okanogan at
 // partial coverage (#30), Jefferson, Kittitas, Asotin and Adams at full coverage and Klickitat and Pacific at
-// partial coverage (#31), Skamania and San Juan at full coverage (#32), every other Washington address a Statewide-Only Guide (issue #9). These run the app's own ballot, interview, lean and Ballot Brief
+// partial coverage (#31), Skamania, San Juan, Lincoln and Pend Oreille at full coverage (#32), every other Washington address a Statewide-Only Guide (issue #9). These run the app's own ballot, interview, lean and Ballot Brief
 // code against public/data/2026-11-03-general.
 import test from 'node:test'
 import assert from 'node:assert/strict'
@@ -71,7 +71,7 @@ const STATE_MEASURES = [
   'initiative-measure-no-il26-638',
 ]
 
-test('the general ships twenty-nine counties at full county coverage, Spokane, Okanogan, Klickitat and Pacific at partial, with their elections offices', () => {
+test('the general ships thirty-one counties at full county coverage, Spokane, Okanogan, Klickitat and Pacific at partial, with their elections offices', () => {
   assert.equal(data.election.id, '2026-11-03-general')
   assert.deepEqual(data.coverage, {
     statewide_complete: true,
@@ -403,6 +403,25 @@ test('the general ships twenty-nine counties at full county coverage, Spokane, O
         fips: '53055',
         coverage: 'full_county',
         elections_url: 'https://www.sanjuancountywa.gov/1292/Current-Election',
+      },
+      {
+        // Full: every scope is county-wide or a Census layer (#32).
+        id: 'lincoln',
+        name: 'Lincoln County',
+        state: 'WA',
+        fips: '53043',
+        coverage: 'full_county',
+        elections_url: 'https://www.lincolncountywa.com/312/Current-Future-Elections',
+      },
+      {
+        // Full: the hospital, Riverside school and Sacheen Lake measures read
+        // DOR HSP2025, SCH2025 and SEW2025 (SEWDST, #32).
+        id: 'pend-oreille',
+        name: 'Pend Oreille County',
+        state: 'WA',
+        fips: '53051',
+        coverage: 'full_county',
+        elections_url: 'https://www.pendoreille.gov/auditor/page/elections',
       },
     ],
   })
@@ -1381,6 +1400,68 @@ test('a San Juan ballot: Snohomish\'s CD 2 and Whatcom\'s LD 40, the Lopez and O
   assert.equal(fh.contests.length, 11 + SUPREME_COURT.length)
   assert.deepEqual(ownLocal(fh, 'san-juan'), [])
   assert.equal(coverageAdvice(sj({})), null)
+})
+
+test('a Lincoln ballot: Spokane\'s research for CD 5 and LD 9, every county seat county-wide, no local measure', () => {
+  const LINCOLN = { id: 'lincoln', fips: '53043', name: 'Lincoln County' }
+  const li = (districts) => ({ coverageStatus: 'full_county', county: LINCOLN, districts, missingLayers: [] })
+  // Districts as the live District Adapter resolved them on 2026-10-08:
+  // 450 Logan St, Davenport and 211 W 2nd St, Sprague (Cemetery District 7,
+  // which has no general measure). The same 12 county contests.
+  for (const districts of [
+    { CONGDST: '5', LEGDST: '9', CITY: 'Davenport' },
+    { CONGDST: '5', LEGDST: '9', CITY: 'Sprague', CEMDST: '7' },
+  ]) {
+    const b = ballotFor(li(districts))
+    const slugs = b.contests.map((c) => c.slug)
+    assert.equal(new Set(slugs).size, slugs.length)
+    assert.equal(slugs.length, 12 + SUPREME_COURT.length)
+    for (const slug of SUPREME_COURT) assert.ok(slugs.includes(slug), slug)
+    assert.deepEqual(b.measures.map((m) => m.slug), STATE_MEASURES)
+    assert.ok(!b.contests.some((c) => c.owner !== 'lincoln' && c.owner !== 'statewide'))
+    sameScoring(b, 'lincoln-congressional-district-5-u-s-representative', 'spokane-congressional-district-5-u-s-representative')
+    for (const pos of [1, 2])
+      sameScoring(b, `lincoln-legislative-district-9-state-representative-pos-${pos}`, `spokane-legislative-district-9-state-representative-pos-${pos}`)
+    // Commissioner District 3 is nominated by district, elected county-wide.
+    assert.ok(slugs.includes('lincoln-lincoln-county-commissioner-district-3-county-commissioner-district-no-3'))
+  }
+  assert.equal(coverageAdvice(li({})), null)
+})
+
+test('a Pend Oreille ballot: Spokane\'s CD 5 and LD 7, Stevens\'s Superior Court seat, the hospital, Riverside and Sacheen Lake measures by district', () => {
+  const PEND_OREILLE = { id: 'pend-oreille', fips: '53051', name: 'Pend Oreille County' }
+  const po = (districts) => ({ coverageStatus: 'full_county', county: PEND_OREILLE, districts, missingLayers: [] })
+  const HOSP = 'pend-oreille-pend-oreille-county-public-hospital-district-no-1-proposition-no-1'
+  const RIVERSIDE = 'pend-oreille-riverside-school-district-no-416-62-proposition-no-1'
+  const SACHEEN = 'pend-oreille-sacheen-lake-water-and-sewer-district-proposition-no-1'
+  // Districts as the live District Adapter resolved them on 2026-10-08.
+  // 4571 State Route 211, Newport (Sacheen Lake): hospital bonds and the
+  // Sacheen Lake levy.
+  const sl = ballotFor(po({ CONGDST: '5', LEGDST: '7', COUNTY_COUNCIL: 'Commissioner - 01', HOSPDST: '1', SCHDST: '56', SEWDST: '3' }))
+  const slugs = sl.contests.map((c) => c.slug)
+  assert.equal(new Set(slugs).size, slugs.length)
+  assert.equal(slugs.length, 15 + SUPREME_COURT.length)
+  for (const slug of SUPREME_COURT) assert.ok(slugs.includes(slug), slug)
+  assert.ok(!sl.contests.some((c) => c.owner !== 'pend-oreille' && c.owner !== 'statewide'))
+  sameScoring(sl, 'pend-oreille-congressional-district-5-u-s-representative', 'spokane-congressional-district-5-u-s-representative')
+  sameScoring(sl, 'pend-oreille-legislative-district-7-state-senator', 'spokane-legislative-district-7-state-senator')
+  for (const pos of [1, 2])
+    sameScoring(sl, `pend-oreille-legislative-district-7-state-representative-pos-${pos}`, `spokane-legislative-district-7-state-representative-pos-${pos}`)
+  sameScoring(sl, 'pend-oreille-ferry-pend-oreille-stevens-superior-court-judge-position-2', 'stevens-ferry-pend-oreille-stevens-superior-court-judge-position-2')
+  // The commissioner and PUD seats are nominated by district, elected county-wide.
+  for (const slug of ['pend-oreille-pend-oreille-county-commissioner-district-2-county-commissioner-2',
+    'pend-oreille-public-utility-district-commissioner-district-2-public-utility-commissioner-2'])
+    assert.ok(slugs.includes(slug), slug)
+  assert.deepEqual(sl.measures.map((m) => m.slug), [...STATE_MEASURES, HOSP, SACHEEN])
+  // 1722 Kirkpatrick Rd, Elk: hospital bonds and the Riverside levy.
+  const elk = ballotFor(po({ CONGDST: '5', LEGDST: '7', COUNTY_COUNCIL: 'Commissioner - 01', HOSPDST: '1', SCHDST: '62' }))
+  assert.equal(elk.contests.length, 15 + SUPREME_COURT.length)
+  assert.deepEqual(ownLocal(elk, 'pend-oreille'), [HOSP, RIVERSIDE])
+  // 201 Main St, Ione: Hospital District No. 2, no local measure.
+  const ione = ballotFor(po({ CONGDST: '5', LEGDST: '7', CITY: 'Ione', COUNTY_COUNCIL: 'Commissioner - 03', HOSPDST: '2', SCHDST: '70' }))
+  assert.equal(ione.contests.length, 15 + SUPREME_COURT.length)
+  assert.deepEqual(ownLocal(ione, 'pend-oreille'), [])
+  assert.equal(coverageAdvice(po({})), null)
 })
 
 test('an Adams ballot: Benton\'s, Spokane\'s and Grant\'s research for CD 4/5, LD 9 and LD 13, the pool and fire levies by district', () => {

@@ -67,11 +67,15 @@
     "data/washington-state/elections/2026-11-03-general/counties/skamania/scoring/*.json",
     "data/washington-state/elections/2026-11-03-general/counties/skamania/scoring/refutations/*.json",
     "data/washington-state/elections/2026-11-03-general/counties/san-juan/scoring/*.json",
-    "data/washington-state/elections/2026-11-03-general/counties/san-juan/scoring/refutations/*.json"
+    "data/washington-state/elections/2026-11-03-general/counties/san-juan/scoring/refutations/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/lincoln/scoring/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/lincoln/scoring/refutations/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/pend-oreille/scoring/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/pend-oreille/scoring/refutations/*.json"
   ],
   "script": "pipeline/merge_scores.py",
   "verdict_stats": {
-    "upheld": 2281,
+    "upheld": 2289,
     "adjust": 199,
     "refuted": 24,
     "missing_added": 31,
@@ -38112,6 +38116,508 @@
             "Added autopay and multi-property online payment [S1]"
           ],
           "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "lincoln-court-of-appeals-division-3-district-1-judge-position-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/lincoln/dossiers/lincoln-court-of-appeals-division-3-district-1-judge-position-2/"
+      ],
+      "office_does": "A Court of Appeals judge decides appeals from superior-court cases; District 1 of Division III is elected by voters in Ferry, Lincoln, Okanogan, Pend Oreille, Spokane and Stevens counties.",
+      "race_blurb": "Uncontested: Judge Tracy Arlene Staab, who won the seat in 2020, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "tracy-arlene-staab",
+          "summary": "Court of Appeals judge elected in 2020 and a former Spokane Municipal Court judge; the only candidate on the ballot.",
+          "highlights": [
+            "Won the open seat in 2020 against Marshall Casey [S2][S3]",
+            "Spokane Municipal Court judge from 2009; earlier an appellate attorney [S2]",
+            "Submitted no statement to the 2026 voters' guide [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "lincoln-lincoln-county-assessor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/lincoln/dossiers/lincoln-lincoln-county-assessor/"
+      ],
+      "office_does": "The assessor values all taxable property in Lincoln County each year for property taxes.",
+      "race_blurb": "Uncontested: Assessor J Scott Liebing, appointed in 2018 and elected since, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "j-scott-liebing",
+          "summary": "Lincoln County Assessor since a 2018 appointment, in the office since 2006; submitted no statement.",
+          "highlights": [
+            "Hired in the assessor's office in 2006; appointed assessor in 2018 [S3]",
+            "Unopposed in 2022 and in the 2026 primary [S5][S6]",
+            "Submitted no statement to the pamphlet [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "lincoln-lincoln-county-auditor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/lincoln/dossiers/lincoln-lincoln-county-auditor/"
+      ],
+      "office_does": "The auditor records deeds and documents, keeps the county's financial accounts, and runs voter registration and elections in Lincoln County.",
+      "race_blurb": "Uncontested: Auditor Chandra Schumacher, appointed in 2021 and elected in 2022, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "chandra-l-schumacher",
+          "summary": "Lincoln County Auditor since a 2021 appointment; a CPA and former Eastern Washington University Foundation budget officer.",
+          "highlights": [
+            "Appointed auditor in 2021; unopposed in 2022 [S3][S5]",
+            "CPA; former EWU Foundation chief budget officer and Odessa Union Grain Growers CFO [S1]",
+            "Statement stresses modernizing processes and transparent elections [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "lincoln-lincoln-county-clerk",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/lincoln/dossiers/lincoln-lincoln-county-clerk/"
+      ],
+      "office_does": "The county clerk keeps the records and handles the money of the Lincoln County Superior Court.",
+      "race_blurb": "Uncontested: Clerk Traci Gants, elected in 2022 after 16 years as a deputy clerk, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "traci-gants",
+          "summary": "Lincoln County Clerk since 2023, in the clerk's office for about 20 years; seeking a second term.",
+          "highlights": [
+            "About 20 years in the clerk's office, first as deputy clerk [S1][S3]",
+            "Unopposed in 2022 and in the 2026 primary [S4][S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "lincoln-lincoln-county-commissioner-district-3-county-commissioner-district-no-3",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/lincoln/dossiers/lincoln-lincoln-county-commissioner-district-3-county-commissioner-district-no-3/"
+      ],
+      "office_does": "The three county commissioners adopt Lincoln County's budget, oversee roads and county services, and set county policy; each lives in and is nominated by a district but is elected county-wide.",
+      "race_blurb": "Uncontested: Commissioner Rob Coffman, in office since 2010 and a past president of the Washington State Association of Counties, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "rob-coffman",
+          "summary": "District 3 commissioner since 2010 and 2024 president of the Washington State Association of Counties; submitted no statement.",
+          "highlights": [
+            "Commissioner since 2010; re-elected in 2022 over Jason DeBord [S3][S8]",
+            "Sworn in as Washington State Association of Counties president in 2024 [S6]",
+            "Cited unfunded state mandates and road and public-safety funding in 2022 [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "lincoln-lincoln-county-district-court-district-court-judge",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/lincoln/dossiers/lincoln-lincoln-county-district-court-district-court-judge/"
+      ],
+      "office_does": "The District Court judge hears misdemeanor, traffic and small civil cases for all of Lincoln County.",
+      "race_blurb": "Uncontested: Judge Dan B. Johnson, on the bench since 2015, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "dan-b-johnson",
+          "summary": "Lincoln County District Court judge since 2015 and former Stevens County deputy prosecutor; served six years on the state Board for Judicial Administration.",
+          "highlights": [
+            "District Court judge since July 2015 [S1]",
+            "Attorney since 1980; Stevens County deputy prosecutor 1981-1987 [S1]",
+            "Board for Judicial Administration member for six years from 2016 [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "lincoln-lincoln-county-prosecuting-attorney",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/lincoln/dossiers/lincoln-lincoln-county-prosecuting-attorney/"
+      ],
+      "office_does": "The prosecuting attorney prosecutes crimes in Lincoln County and is the county government's lawyer.",
+      "race_blurb": "Uncontested: Prosecuting Attorney Ty Albertson, appointed in December 2024 from chief deputy prosecutor, is the only candidate in his first election to the office.",
+      "candidates": [
+        {
+          "slug": "ty-albertson",
+          "summary": "Appointed prosecuting attorney in December 2024 after serving as chief deputy prosecutor handling felony cases; submitted no statement.",
+          "highlights": [
+            "Appointed effective January 2025 to succeed Adam Walser [S3]",
+            "Former chief deputy prosecutor who handled all felony cases [S3]",
+            "Submitted no statement to the pamphlet [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "lincoln-lincoln-county-sheriff",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/lincoln/dossiers/lincoln-lincoln-county-sheriff/"
+      ],
+      "office_does": "The sheriff leads law enforcement in Lincoln County, including patrol, the jail and civil process.",
+      "race_blurb": "Uncontested: Sheriff Gabe Gants, with the office since 2004 and sheriff since 2022, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "gabe-gants",
+          "summary": "Lincoln County Sheriff since a 2022 appointment, with the sheriff's office since 2004; former Davenport council and school board member.",
+          "highlights": [
+            "With the sheriff's office since 2004 in dispatch, corrections, patrol and as sergeant [S1]",
+            "Interim sheriff from July 2022, elected that November [S3][S8]",
+            "Columns stress staffing and technology upgrades [S6][S7]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "lincoln-lincoln-county-treasurer",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/lincoln/dossiers/lincoln-lincoln-county-treasurer/"
+      ],
+      "office_does": "The treasurer collects property taxes and manages and pays out Lincoln County's money.",
+      "race_blurb": "Uncontested: Treasurer Emily Lybbert-Hansen, elected in 2022 after ten years as deputy treasurer, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "emily-lybbert-hansen",
+          "summary": "Lincoln County Treasurer since 2023, previously deputy treasurer for ten years; submitted no statement.",
+          "highlights": [
+            "Deputy treasurer for ten years before 2022 [S3]",
+            "Won 2022 race over Brad Sweet [S5]",
+            "Submitted no statement to the pamphlet [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "pend-oreille-court-of-appeals-division-3-district-1-judge-position-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pend-oreille/dossiers/pend-oreille-court-of-appeals-division-3-district-1-judge-position-2/"
+      ],
+      "office_does": "A Court of Appeals judge decides appeals from superior-court cases; District 1 of Division III is elected by voters in Ferry, Lincoln, Okanogan, Pend Oreille, Spokane and Stevens counties.",
+      "race_blurb": "Uncontested: Judge Tracy Arlene Staab, who won the seat in 2020, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "tracy-arlene-staab",
+          "summary": "Court of Appeals judge elected in 2020 and a former Spokane Municipal Court judge; the only candidate on the ballot.",
+          "highlights": [
+            "Won the open seat in 2020 against Marshall Casey [S2][S3]",
+            "Spokane Municipal Court judge from 2009; earlier an appellate attorney [S2]",
+            "Submitted no statement to the 2026 voters' guide [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "pend-oreille-pend-oreille-county-commissioner-district-2-county-commissioner-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pend-oreille/dossiers/pend-oreille-pend-oreille-county-commissioner-district-2-county-commissioner-2/"
+      ],
+      "office_does": "The three county commissioners adopt Pend Oreille County's budget and tax levies, set land-use and road policy and oversee county departments; District 2's commissioner is elected by the whole county.",
+      "race_blurb": "Two Republicans finished one vote apart in the district-only primary. Incumbent Robert Rosencrantz runs against data centers, for holding taxes down and on his road and housing record; small-business owner Brandy Parker Warren runs on collaboration and responsible growth. A data center proposed for the former Usk paper mill hangs over the race: the Spokesman-Review reported that Warren's husband manages at the developer, Merkle Standard.",
+      "candidates": [
+        {
+          "slug": "robert-rosencrantz",
+          "summary": "Commissioner since 2021 and a commercial real estate owner, running to stop data centers, hold taxes down and keep road money for roads.",
+          "highlights": [
+            "Says his first reason for running is to stop data centers from being built in the county [S4][S7]",
+            "Opposes road levy shifts and pledges to hold taxes down while keeping essential services [S1][S4]",
+            "Helped secure nearly $5 million to renovate Kaniksu Village Apartments in Metaline Falls [S6]",
+            "Petitioned the State Board of Health to restore a 100-foot septic setback from the river [S6]",
+            "Led the district-only primary by one vote, 670 to 669 [S10]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S6",
+                "S9"
+              ],
+              "basis": "Incumbent commissioner since 2021, elected in 2022, running on his record ('I get results') with prior hospital and library board service."
+            },
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S3"
+              ],
+              "basis": "Pledges to maintain essential services 'while holding taxes down' and to protect taxpayers; no proposal to cut existing taxes."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S1"
+              ],
+              "basis": "Says county government should spend carefully, focus on the highest priorities and stay accountable to taxpayers; opposes using road levy shifts to balance the budget."
+            }
+          }
+        },
+        {
+          "slug": "brandy-parker-warren",
+          "summary": "Newport small-business owner and youth soccer leader in her first race for county office, running on collaboration, infrastructure, public safety and responsible growth.",
+          "highlights": [
+            "Owns Lucky Bee Variety Store in Newport and Squatchee's Scoops & Swirls in Priest River [S1][S4]",
+            "Promises community-driven, collaborative and transparent leadership focused on solutions [S1][S3]",
+            "Endorsed by the mayors of Newport, Metaline Falls, Cusick and Metaline and Commissioner John Gentle [S5]",
+            "News reports say her husband is a manager at Merkle Standard, the Usk data center developer; her materials do not address data centers [S7][S8]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "First run for county office against an incumbent; her experience is small business and volunteer boards, and she pitches community-driven leadership rather than an outsider overhaul."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "pend-oreille-pend-oreille-county-county-assessor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pend-oreille/dossiers/pend-oreille-pend-oreille-county-county-assessor/"
+      ],
+      "office_does": "The county assessor values all taxable property each year for the property tax rolls.",
+      "race_blurb": "Open seat with one candidate: Chief Deputy Assessor Nathan Longly is unopposed after Assessor Jim McCroskey did not seek re-election.",
+      "candidates": [
+        {
+          "slug": "nathan-j-longly",
+          "summary": "Chief Deputy Assessor with more than 12 years in the office and a former Newport city councilman, running unopposed for the open seat.",
+          "highlights": [
+            "More than 12 years in the Assessor's Office, now Chief Deputy Assessor [S1]",
+            "Newport City Council member until June 2026 [S1][S6]",
+            "Wants updated technology and processes to save taxpayer money [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "pend-oreille-pend-oreille-county-county-auditor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pend-oreille/dossiers/pend-oreille-pend-oreille-county-county-auditor/"
+      ],
+      "office_does": "The county auditor runs elections, records documents, licenses vehicles and keeps the county's books.",
+      "race_blurb": "Uncontested: Auditor Marianne Nichols, in office since 2007, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "marianne-nichols",
+          "summary": "County Auditor since 2007 and a certified election administrator; re-elected over an election-skeptic challenger in 2022.",
+          "highlights": [
+            "Auditor since 2007; certified election administrator since 2009 [S1]",
+            "Past president of the Washington Association of County Auditors [S1]",
+            "Won 2022 re-election 70.7% to 27.7% over a challenger who questioned election security [S5]",
+            "Named 2026 County Auditor of the Year [S8]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "pend-oreille-pend-oreille-county-county-clerk",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pend-oreille/dossiers/pend-oreille-pend-oreille-county-county-clerk/"
+      ],
+      "office_does": "The county clerk keeps Superior Court records and court funds and manages juries.",
+      "race_blurb": "Uncontested: Clerk Tammie Ownbey, in office since 2007, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "tammie-ownbey",
+          "summary": "County Clerk since 2007 and a past president of the state clerks' association.",
+          "highlights": [
+            "County Clerk since 2007 [S1]",
+            "President of the Washington State Association of County Clerks in 2023 [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "pend-oreille-pend-oreille-county-county-prosecutor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pend-oreille/dossiers/pend-oreille-pend-oreille-county-county-prosecutor/"
+      ],
+      "office_does": "The prosecuting attorney charges crimes and is the county government's lawyer.",
+      "race_blurb": "Uncontested: Prosecutor Dolly Hunt, in her third term, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "dolly-hunt",
+          "summary": "Three-term county prosecutor with more than 22 years as a prosecutor, running unopposed.",
+          "highlights": [
+            "Elected prosecutor for three terms; with the office since 2006 [S1]",
+            "Board member of the Washington Association of Prosecuting Attorneys [S1]",
+            "Stresses victims' rights and offender accountability [S6]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "pend-oreille-pend-oreille-county-county-sheriff",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pend-oreille/dossiers/pend-oreille-pend-oreille-county-county-sheriff/"
+      ],
+      "office_does": "The sheriff runs county law enforcement and the jail.",
+      "race_blurb": "Uncontested: Sheriff Glenn Blakeslee, seeking a third term, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "glenn-blakeslee",
+          "summary": "Two-term sheriff and a deputy since 1999, running unopposed for a third term.",
+          "highlights": [
+            "Seeking a third term as sheriff [S1]",
+            "With the sheriff's office since 1999 [S1]",
+            "Co-plaintiff in the 2026 sheriffs' lawsuit against SB 5974 qualification standards [S6][S7]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "pend-oreille-pend-oreille-county-county-treasurer",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pend-oreille/dossiers/pend-oreille-pend-oreille-county-county-treasurer/"
+      ],
+      "office_does": "The county treasurer collects property taxes and manages county and district funds.",
+      "race_blurb": "Uncontested: Treasurer Nicole Dice, in office since 2019, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "nicole-dice",
+          "summary": "County Treasurer since 2019 with more than 25 years in city and county government.",
+          "highlights": [
+            "Treasurer since 2019; in the office since 2011 [S1]",
+            "Secretary of the Washington Association of County Treasurers [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "pend-oreille-pend-oreille-county-district-court-district-court-judge",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pend-oreille/dossiers/pend-oreille-pend-oreille-county-district-court-district-court-judge/"
+      ],
+      "office_does": "The District Court judge hears misdemeanors, traffic cases, small claims and smaller civil cases.",
+      "race_blurb": "Uncontested: Judge Robin McCroskey, seeking a third term, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "robin-r-mccroskey",
+          "summary": "Sitting District Court judge seeking a third four-year term, unopposed.",
+          "highlights": [
+            "Seeking a third term on the District Court [S1]",
+            "Re-elected unopposed in 2022 [S3]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "pend-oreille-public-utility-district-commissioner-district-2-public-utility-commissioner-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pend-oreille/dossiers/pend-oreille-public-utility-district-commissioner-district-2-public-utility-commissioner-2/"
+      ],
+      "office_does": "A Pend Oreille PUD commissioner sits on the three-member board that sets rates, budgets and policy for the county's public electric, water and broadband utility and hires its general manager, for a six-year term; every county voter elects each commissioner.",
+      "race_blurb": "Open seat: Commissioner Curt Knapp is retiring. Newport teacher and former KUBS FM manager Gerry David Bradbury praises current management and puts the 2030 Boundary Dam power deal with Seattle City Light first. Retired technology executive Ernie Hood calls for fiscal discipline, more transparency on spending and care about rate pressure from state mandates and data centers.",
+      "candidates": [
+        {
+          "slug": "gerry-david-bradbury",
+          "summary": "Lifelong Newport resident, Newport School District teacher and coach and longtime KUBS FM manager, once a PUD seasonal engineering assistant.",
+          "highlights": [
+            "Calls the 2030 renegotiation of the Boundary Dam power agreement with Seattle City Light the top issue [S3]",
+            "Warns that unfunded state and federal environmental mandates could raise costs for ratepayers [S3]",
+            "Praises the current board's choice of general manager and management team [S3]",
+            "Former Newport city councilman; finished first in the district-only primary [S1][S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "ernie-hood",
+          "summary": "Retired Navy electronics technician and technology-industry manager with an MBA, in the county about eight years, running on fiscal discipline and transparency.",
+          "highlights": [
+            "Names aging infrastructure, data center growth and the Clean Energy Transformation Act as pressures on rates [S3]",
+            "Wants efficiency, caution about unnecessary spending and independent oversight [S3]",
+            "Asks for greater transparency in how major spending decisions are made [S3]",
+            "Wants the PUD to meet CETA's 2030 requirement while limiting the effect on ratepayers [S3]"
+          ],
+          "evidence_level": "moderate",
           "withdrawn": false,
           "scores": {}
         }
