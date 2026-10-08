@@ -1453,6 +1453,244 @@ ELECTION_MEASURES = {
                   "https://voter.votewa.gov/elections/measure.ashx?m=7300&e=899&la=en&c=37"),
             ],
         },
+        # Whitman (#30). Measures: the Whitman County Auditor's general sample
+        # ballot and printed Local Voters' Guide (counties/whitman/raw/whitman/
+        # {sample-ballot,local-voters-pamphlet}.pdf.url, DocumentCenter 12666
+        # and 12618, linked from whitmancounty.gov/172/Current-Election) and
+        # VoteWA's online guide for county 38 (raw/votewa/voter-guide/) list
+        # 31 local measures; the pamphlet prints 23 of them (pp. 12-31), the
+        # other eight filed hardship waivers. Text from the guide's records.
+        # Scopes point-checked 2026-10-08 (Census geocoder, Current vintage;
+        # WA DOR 2025 layers 3 CEM, 7 FIR, 12 LIB, 14 PKR, 20 SCH):
+        # - LIBDST 'L' (Whitman County Rural Library District): one Whitman
+        #   polygon; 'L' at 200 S Mill St, Colfax; 123 Crosby St, Tekoa; 120 E
+        #   Main St, Palouse; 101 Steptoe Ave, Oakesdale; 101 Front St, St.
+        #   John; 201 N Main St, Albion; 102 N Main Ave, LaCrosse. No feature at
+        #   325 SE Paradise St, Pullman (Neill Public Library) or in the towns
+        #   of Rosalia, Garfield, Endicott, Colton and Uniontown, so it is not
+        #   county-wide.
+        # - SCHDST '316': DOR SCH2025 numbers Cheney School District No. 360's
+        #   Whitman portion '316' (the county's copy of the layer,
+        #   Whitman_County_Elections_Precinct_Data FeatureServer/62, labels it
+        #   'Cheney School Tax District'); interior point (-117.70, 47.24),
+        #   north of St. John, reads '316' and lies in OSPI's Cheney polygon.
+        # - CITY: Census places Albion, Colton (705 Broadway St), Endicott
+        #   (interior point -117.6858, 46.9268), Garfield, Oakesdale, Palouse,
+        #   Rosalia (105 S Whitman Ave), St. John, Tekoa, Uniontown (110 S
+        #   Montgomery St).
+        # - FIRDST: '8' at (-117.85, 46.80) near LaCrosse (the town itself has
+        #   no FIR2025 feature); '14' at 110 S Montgomery St, Uniontown and 705
+        #   Broadway St, Colton.
+        # - PARKDST: '1' LaCrosse, '2' Garfield, '3' St. John, '4' Oakesdale,
+        #   '7' Endicott, each at the address above.
+        # - CEMDST: '1' Oakesdale, '2' Garfield (405 E California St), '3' St.
+        #   John, '4' Endicott.
+        # Overrides: VoteWA files Commissioner 3 as Countywide. Whitman is a
+        # non-charter county whose commissioners are nominated by district and
+        # elected by the whole county (RCW 36.32.040, 36.32.050(1)): the 2026
+        # primary counted the race in 28 of 81 reporting units, while the SOS
+        # precinct exports put Commissioner 1 and 2 (2024) and Commissioner 3
+        # (2022) on all 80 voting precincts, as for statewide races. It keeps
+        # the primary's contest name so primary research carries forward. The
+        # District Court seat (VoteWA 'District Court Judge Postion 1') is a
+        # judicial seat of the single county-wide district court.
+        "whitman": {
+            "overrides": {
+                ("COUNTY", "COMMISSIONER 3"): (
+                    "County", "Whitman County Commissioner District 3", "Commissioner 3", ("COUNTY", None)),
+                ("COUNTY", "DISTRICT COURT JUDGE POSTION 1"): (
+                    "Judicial", "Whitman County District Court", "Judge Position No. 1", ("COUNTY", None)),
+            },
+            "measures": [
+                m("Whitman County Rural Library District", "Proposition No. 1",
+                  "Restoring Regular Property Tax Levy for Library Services",
+                  ("LIBDST", "L"),
+                  "Restores the Whitman County Rural Library District's regular property tax levy to $0.45 per $1,000 of assessed value for 2027 collection and keeps that maximum for nine more years; the 2036 levy amount becomes the base for later limits (chapter 84.55 RCW).",
+                  "From $0.39 to $0.45 per $1,000 of assessed value; the district puts it at $14.30 more a year on a $275,000 home.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7390&e=899&la=en&c=38",
+                  pages=(12,)),
+                m("Cheney School District No. 360", "Proposition No. 1",
+                  "Replacement Educational Programs and Operation Levy",
+                  ("SCHDST", "316"),
+                  "Replaces Cheney School District's expiring educational programs and operation levy for three years, paying for school safety, athletics, extracurricular activities, art, music, special education and staffing above the state allocation.",
+                  "Estimated $2.10 per $1,000 of assessed value: $18,450,000 in 2028, $19,000,000 in 2029 and $19,550,000 in 2030.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7328&e=899&la=en&c=38",
+                  pages=(13,)),
+                m("Cheney School District No. 360", "Proposition No. 2",
+                  "Replacement Capital Levy for Technology, Security and Infrastructure Improvements",
+                  ("SCHDST", "316"),
+                  "Replaces Cheney School District's expiring capital levy for three years, for instructional technology, security cameras and entry controls, and other safety infrastructure.",
+                  "Estimated $0.10, $0.15 and $0.20 per $1,000 of assessed value: $880,000 in 2028, $1,350,000 in 2029 and $1,900,000 in 2030.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7329&e=899&la=en&c=38",
+                  pages=(14,)),
+                m("Town of Albion", "Proposition No. 1", "Protective Services",
+                  ("CITY", "Albion"),
+                  "One-year excess property tax levy for fire protection, law enforcement services, emergency response and other public safety purposes in Albion.",
+                  "$20,000, an estimated $0.459 per $1,000 of assessed value, collected in 2027.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7392&e=899&la=en&c=38",
+                  pages=(15,)),
+                m("Town of Albion", "Proposition No. 2", "Cemetery Maintenance and Hazardous Tree Removal",
+                  ("CITY", "Albion"),
+                  "One-year excess property tax levy to maintain the Albion town cemetery, including hazardous tree removal and grounds improvements.",
+                  "$5,000, an estimated $0.114 per $1,000 of assessed value, collected in 2027.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7393&e=899&la=en&c=38",
+                  pages=(16,)),
+                m("Town of Colton", "Proposition No. 880", "Levy of Additional Taxes",
+                  ("CITY", "Colton"),
+                  "One-year excess property tax levy that continues the town's support for general operations, street improvements and the water and sewer systems.",
+                  "$30,000, approximately $0.53 per $1,000 of assessed value, collected in 2027.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7394&e=899&la=en&c=38",
+                  pages=(17,)),
+                m("Town of Endicott", "Proposition No. 1", "Fire Protection and Emergency Services Excess Levy",
+                  ("CITY", "Endicott"),
+                  "One-year excess property tax levy for fire protection and emergency services, including contracted fire protection, equipment and training.",
+                  "$13,500, an estimated $0.44 per $1,000 of assessed value, collected in 2027.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7395&e=899&la=en&c=38",
+                  pages=(18,)),
+                m("Town of Endicott", "Proposition No. 2", "Park Excess Levy",
+                  ("CITY", "Endicott"),
+                  "One-year excess property tax levy to maintain and improve Endicott's parks: mowing, trees, playgrounds, irrigation and other park facilities.",
+                  "$15,000, an estimated $0.49 per $1,000 of assessed value, collected in 2027.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7396&e=899&la=en&c=38",
+                  pages=(18,)),
+                m("Town of Endicott", "Proposition No. 3", "Street Maintenance and Public Safety Excess Levy",
+                  ("CITY", "Endicott"),
+                  "One-year excess property tax levy for street maintenance and related public safety in Endicott.",
+                  "$35,000, an estimated $1.14 per $1,000 of assessed value (explanatory statement), collected in 2027.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7397&e=899&la=en&c=38",
+                  pages=(19,)),
+                m("Town of Garfield", "Proposition No. 1", "Street Maintenance and Repair Levy",
+                  ("CITY", "Garfield"),
+                  "One-year excess property tax levy for street maintenance, repair and improvements in Garfield; the town says its street fund has no other revenue of its own.",
+                  "$72,000, an estimated $2.24 per $1,000 of assessed value, collected in 2027.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7398&e=899&la=en&c=38",
+                  pages=(20,)),
+                m("Town of Oakesdale", "Proposition No. 1", "Fire Protection and Emergency Medical Service Levy",
+                  ("CITY", "Oakesdale"),
+                  "One-year special property tax levy to fund fire protection and emergency medical services for Oakesdale.",
+                  "$14,000, an estimated $0.46 per $1,000 of assessed value, collected in 2027.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7399&e=899&la=en&c=38"),
+                m("Town of Oakesdale", "Proposition No. 2", "Street Maintenance Levy",
+                  ("CITY", "Oakesdale"),
+                  "One-year special property tax levy for street work, street lights and street maintenance in Oakesdale.",
+                  "$60,000, an estimated $1.93 per $1,000 of assessed value, collected in 2027.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7400&e=899&la=en&c=38"),
+                m("City of Palouse", "Proposition No. 1", "Operation and Maintenance of Infrastructure Levy",
+                  ("CITY", "Palouse"),
+                  "One-year excess property tax levy for the operation and maintenance of Palouse's city infrastructure (Resolution 2026-08).",
+                  "$55,000 collected in 2027: the ballot title estimates $0.73058 per $1,000 of assessed value, the explanatory statement $0.5912.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7401&e=899&la=en&c=38",
+                  pages=(21,)),
+                m("City of Palouse", "Proposition No. 2", "Pool Maintenance and Operations Levy",
+                  ("CITY", "Palouse"),
+                  "One-year excess property tax levy for the operation and maintenance of the Palouse swimming pool (Resolution 2026-09).",
+                  "$50,000 collected in 2027: the ballot title estimates $0.6641 per $1,000 of assessed value, the explanatory statement $0.53748.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7402&e=899&la=en&c=38",
+                  pages=(21,)),
+                m("City of Palouse", "Proposition No. 3", "Street Improvements and Equipment Levy",
+                  ("CITY", "Palouse"),
+                  "One-year excess property tax levy for street improvements and the vehicles and equipment used to maintain Palouse's streets (Resolution 2026-10).",
+                  "$50,000, an estimated $0.6641 per $1,000 of assessed value, collected in 2027.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7403&e=899&la=en&c=38",
+                  pages=(22,)),
+                m("Town of Rosalia", "Proposition No. 1", "Street Levy",
+                  ("CITY", "Rosalia"),
+                  "One-year special (excess) property tax levy for Rosalia's street fund: street lights, seal coating, shoulder work, equipment and street maintenance.",
+                  "$50,000 collected in 2027, at $1.50 per $1,000 of assessed value per the ballot title.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7404&e=899&la=en&c=38",
+                  pages=(23,)),
+                m("Town of St. John", "Proposition No. 1", "Street Improvement Levy",
+                  ("CITY", "St. John"),
+                  "Renews St. John's one-year special property tax levy for the maintenance, repair, improvement and replacement of town streets.",
+                  "$90,000, an estimated $1.89 per $1,000 of assessed value, collected in 2027.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7405&e=899&la=en&c=38",
+                  pages=(24,)),
+                m("Town of St. John", "Proposition No. 2", "Water and Sewer Levy",
+                  ("CITY", "St. John"),
+                  "Renews St. John's one-year special property tax levy for water and sewer upgrades and capital improvements.",
+                  "$80,000, an estimated $1.68 per $1,000 of assessed value, collected in 2027.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7406&e=899&la=en&c=38",
+                  pages=(25,)),
+                m("City of Tekoa", "Proposition No. 1", "Street Levy",
+                  ("CITY", "Tekoa"),
+                  "One-year special property tax levy for oiling gravel streets, chip sealing, asphalt replacement and sidewalk repair in Tekoa, including grant match.",
+                  "$50,000, an estimated $1.23 per $1,000 of assessed value, collected in 2027.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7407&e=899&la=en&c=38",
+                  pages=(26,)),
+                m("Town of Uniontown", "Proposition No. 1", "Levy of Additional Taxes",
+                  ("CITY", "Uniontown"),
+                  "One-year excess property tax levy for Uniontown's general operations, water and sewer improvements and general maintenance, not employee wages.",
+                  "About $30,000, approximately $0.64 per $1,000 of assessed value, collected in 2027.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7408&e=899&la=en&c=38",
+                  pages=(27,)),
+                m("Whitman County Fire Protection District No. 8", "Proposition No. 1", "Maintenance and Operation Levy",
+                  ("FIRDST", "8"),
+                  "Four-year excess property tax levy for the maintenance and operation of Fire District No. 8 (LaCrosse area), collected 2027 through 2030 (Resolution No. 2026-1).",
+                  "$75,000 a year, an estimated $0.36 per $1,000 of assessed value.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7409&e=899&la=en&c=38",
+                  pages=(28,)),
+                m("Whitman County Fire Protection District No. 14", "Proposition No. 1", "Levy Lid Lift",
+                  ("FIRDST", "14"),
+                  "Sets Fire District No. 14's regular property tax levy at $1.08 per $1,000 of assessed value for 2027 collection, for fire protection, life safety services, apparatus and equipment, and firefighter safety; that amount becomes the base for later limits (Resolution No. 26-03).",
+                  "$1.08 per $1,000 of assessed value for 2027 collection; the guide gives no current rate.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7410&e=899&la=en&c=38"),
+                m("LaCrosse Park & Recreation District No. 1", "Proposition No. 1", "Operation and Maintenance Levy",
+                  ("PARKDST", "1"),
+                  "One-year special levy for the operation, maintenance and capital improvements of the LaCrosse swimming pool and the district's existing buildings.",
+                  "$75,000, an estimated $0.31 per $1,000 of assessed value, collected in 2027.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7411&e=899&la=en&c=38",
+                  pages=(29,)),
+                m("Garfield Park & Recreation District No. 2", "Proposition No. 1", "Maintenance, Repair and Operating Cost Levy",
+                  ("PARKDST", "2"),
+                  "One-year property tax levy for pool maintenance, repair, higher operating costs (wages and chemicals) and new pool equipment (Resolution 2026-04).",
+                  "$140,000, an estimated $1.05 per $1,000 of assessed value, collected in 2027.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7412&e=899&la=en&c=38"),
+                m("St. John Park & Recreation District No. 3", "Proposition No. 1", "Operating Fund Levy",
+                  ("PARKDST", "3"),
+                  "One-year special levy for the district's operating fund, swimming pool, capital outlay and cumulative reserve.",
+                  "$75,000, an estimated $0.2506 per $1,000 of assessed value, collected in 2027.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7413&e=899&la=en&c=38"),
+                m("Oakesdale Park & Recreation District No. 4", "Proposition No. 1", "Operating, Maintaining and Improving Recreational Facilities",
+                  ("PARKDST", "4"),
+                  "One-year special levy to operate, maintain and improve the district's recreational facilities.",
+                  "$120,000, an estimated $0.53 per $1,000 of assessed value, collected in 2027.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7414&e=899&la=en&c=38"),
+                m("Endicott Parks & Recreation District No. 7", "Proposition No. 1", "Operating, Capital Outlay and Cumulative Reserve Levy",
+                  ("PARKDST", "7"),
+                  "One-year special levy for the district's operating fund, swimming pool, capital outlay and cumulative reserve.",
+                  "$65,000, an estimated $0.42 or less per $1,000 of assessed value, collected in 2027.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7418&e=899&la=en&c=38"),
+                m("Oakesdale Cemetery District No. 1", "Proposition No. 1", "Improvements and Maintenance Levy",
+                  ("CEMDST", "1"),
+                  "One-year special levy for continued improvements and maintenance of the Oakesdale cemetery.",
+                  "$70,000, an estimated $0.35 per $1,000 of assessed value, collected in 2027.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7419&e=899&la=en&c=38"),
+                m("Whitman County (Garfield) Cemetery District No. 2", "Proposition No. 2026-1", "Operation and Maintenance Levy",
+                  ("CEMDST", "2"),
+                  "One-year levy for equipment, sprinkler-system improvements and other operation and maintenance of the district's cemeteries (Garfield and Silver Creek).",
+                  "$105,000, an estimated $0.82 or less per $1,000 of assessed value, collected in 2027.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7420&e=899&la=en&c=38",
+                  pages=(30,)),
+                m("St. John Cemetery District No. 3", "Proposition No. 1", "Funds to Maintain & Operate Cemetery",
+                  ("CEMDST", "3"),
+                  "One-year special property tax levy for the maintenance and operation of the St. John cemetery district.",
+                  "$20,000, an estimated $0.16 per $1,000 of assessed value, collected in 2027.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7421&e=899&la=en&c=38",
+                  pages=(31,)),
+                m("Whitman County (Endicott) Cemetery District No. 4", "Proposition No. 1", "Maintenance and Operations Levy",
+                  ("CEMDST", "4"),
+                  "One-year excess property tax levy for the maintenance and operation of the Endicott cemetery district, renewing a levy that expires in 2026 (Resolution No. 2026-1).",
+                  "$40,000, an estimated $0.37 per $1,000 of assessed value, collected in 2027.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7422&e=899&la=en&c=38",
+                  pages=(31,)),
+            ],
+            "extra_notes": [
+                "Whitman County Rural Library District Proposition No. 1 is scoped LIBDST 'L' (WA DOR LIB2025, layer 12): "
+                "Pullman and the towns of Rosalia, Garfield, Endicott, Colton and Uniontown are outside the district, so it is not county-wide.",
+                "Cheney School District No. 360's two levies reach a small Whitman area north of St. John; DOR SCH2025 (layer 20) numbers "
+                "that portion '316', so both are scoped SCHDST '316'.",
+            ],
+        },
         # Yakima (#28): no local measures. The Auditor's "Election at a glance"
         # (raw/yakima/election-at-a-glance-2026-general.pdf.url) lists only the
         # three statewide measures, and so do the sample ballot and VoteWA's

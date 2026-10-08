@@ -1,0 +1,13 @@
+{
+  "url": "https://data.wa.gov/resource/3h9x-7bvm.json?$select=filer_name,filer_type,committee_city,jurisdiction,ballot_number,for_or_against&$where=election_year=2026%20AND%20filer_type!='CA'%20AND%20(upper(filer_name)%20like%20'%25WHITMAN%25'%20OR%20upper(filer_name)%20like%20'%25LACROSSE%25'%20OR%20upper(filer_name)%20like%20'%25COLTON%25'%20OR%20upper(filer_name)%20like%20'%25GARFIELD%25'%20OR%20upper(filer_name)%20like%20'%25OAKESDALE%25'%20OR%20upper(filer_name)%20like%20'%25ENDICOTT%25'%20OR%20upper(filer_name)%20like%20'%25ST%20JOHN%25'%20OR%20upper(filer_name)%20like%20'%25CEMETERY%25'%20OR%20upper(committee_county)='WHITMAN')&$limit=200",
+  "retrieved_at": "2026-10-08",
+  "method": "curl -L (User-Agent 'Mozilla/5.0')",
+  "stage": "raw",
+  "source_type": "pdc",
+  "tier": 1,
+  "outlet": "PDC campaign finance summary (data.wa.gov 3h9x-7bvm)",
+  "cache_file": "data/.cache/whitman/meas3/pdc-committees-query-2026.json",
+  "bytes": 571,
+  "sha256": "83902917d1b4735b9aec3774f2eba5d902a9f327b61dbae9c686a80e3c47f41c",
+  "notes": "Query of 2026 non-candidate filers named for Whitman County places or cemeteries, or based in Whitman County: returns only party committees, no ballot-measure committee."
+}
