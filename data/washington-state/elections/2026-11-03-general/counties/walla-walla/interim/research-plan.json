@@ -1,0 +1,256 @@
+{
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/walla-walla/interim/contests.json",
+    "data/washington-state/elections/2026-11-03-general/counties/walla-walla/interim/measures.json"
+  ],
+  "script": "pipeline/build_research_plan.py",
+  "contests": [
+    {
+      "contest_slug": "walla-walla-congressional-district-5-u-s-representative",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 5",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "michael-baumgartner",
+          "name": "Michael Baumgartner",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-5-u-s-representative/michael-baumgartner.md"
+        },
+        {
+          "slug": "carmela-conroy",
+          "name": "Carmela Conroy",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-5-u-s-representative/carmela-conroy.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "spokane",
+          "contest_slug": "spokane-congressional-district-5-u-s-representative",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/spokane/scoring/spokane-congressional-district-5-u-s-representative.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "spokane",
+          "franklin",
+          "stevens"
+        ]
+      }
+    },
+    {
+      "contest_slug": "walla-walla-legislative-district-16-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 16",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "mark-klicker",
+          "name": "Mark Klicker",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-16-state-representative-position-1/mark-klicker.md"
+        },
+        {
+          "slug": "kyle-palmer",
+          "name": "Kyle Palmer",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-16-state-representative-position-1/kyle-palmer.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "benton",
+          "contest_slug": "benton-legislative-district-16-state-representative-pos-1",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/benton/scoring/benton-legislative-district-16-state-representative-pos-1.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "benton",
+          "grant",
+          "franklin"
+        ]
+      }
+    },
+    {
+      "contest_slug": "walla-walla-legislative-district-16-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 16",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "skyler-rude",
+          "name": "Skyler Rude",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-16-state-representative-position-2/skyler-rude.md"
+        },
+        {
+          "slug": "derek-sarley",
+          "name": "Derek Sarley",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-16-state-representative-position-2/derek-sarley.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "benton",
+          "contest_slug": "benton-legislative-district-16-state-representative-pos-2",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/benton/scoring/benton-legislative-district-16-state-representative-pos-2.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "benton",
+          "grant",
+          "franklin"
+        ]
+      }
+    },
+    {
+      "contest_slug": "walla-walla-walla-walla-county-auditor",
+      "category": "County",
+      "office": "Auditor",
+      "district": "Walla Walla County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "sheryl-r-park",
+          "name": "Sheryl R. Park",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/walla-walla/dossiers/walla-walla-walla-walla-county-auditor/sheryl-r-park.md"
+        },
+        {
+          "slug": "tim-reeves",
+          "name": "Tim Reeves",
+          "party_preference": "Prefers Democrat Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/walla-walla/dossiers/walla-walla-walla-walla-county-auditor/tim-reeves.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "walla-walla-walla-walla-county-commissioner-district-3-county-commissioner-district-3",
+      "category": "County",
+      "office": "County Commissioner District 3",
+      "district": "Walla Walla County Commissioner District 3",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "gunner-fulmer",
+          "name": "Gunner Fulmer",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/walla-walla/dossiers/walla-walla-walla-walla-county-commissioner-district-3-county-commissioner-district-3/gunner-fulmer.md"
+        },
+        {
+          "slug": "troy-woody",
+          "name": "Troy Woody",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/walla-walla/dossiers/walla-walla-walla-walla-county-commissioner-district-3-county-commissioner-district-3/troy-woody.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "walla-walla-walla-walla-county-sheriff",
+      "category": "County",
+      "office": "Sheriff",
+      "district": "Walla Walla County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "richard-schram",
+          "name": "Richard Schram",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/walla-walla/dossiers/walla-walla-walla-walla-county-sheriff/richard-schram.md"
+        },
+        {
+          "slug": "ashley-daschofsky",
+          "name": "Ashley Daschofsky",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/walla-walla/dossiers/walla-walla-walla-walla-county-sheriff/ashley-daschofsky.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "walla-walla-walla-walla-county-district-court-district-court-judge-part-time",
+      "category": "Judicial",
+      "office": "District Court Judge - Part Time",
+      "district": "Walla Walla County District Court",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "nicholas-holce",
+          "name": "Nicholas Holce",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        },
+        {
+          "slug": "janelle-carman-wagner",
+          "name": "Janelle Carman-Wagner",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        }
+      ]
+    }
+  ],
+  "measures": [
+    {
+      "jurisdiction": "Dixie School District No. 101",
+      "proposition": "Proposition 1",
+      "title": "Replacement Capital Levy for Health, Safety and Energy Efficiency Improvements",
+      "slug": "walla-walla-dixie-school-district-no-101-proposition-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Prescott Joint Park and Recreation District",
+      "proposition": "Proposition No. 1",
+      "title": "Maintenance & Operation Excess Levy",
+      "slug": "walla-walla-prescott-joint-park-and-recreation-district-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    }
+  ],
+  "carry_forward_from": "2026-08-04-primary"
+}

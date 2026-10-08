@@ -599,14 +599,47 @@ const COUNTY_LAYERS = {
     { key: 'WATDST', url: `${DOR_TAX_DISTRICTS}/22/query`, attr: 'DISTATTRIB' },
   ],
   stevens: [
+    // Re-probed 2026-10-08 (#30): 6015 State Route 291, Nine Mile Falls ->
+    // '1'; 301 E Clay Ave, Chewelah -> '2'; 215 S Oak St, Colville -> '3'.
+    // No general scope uses it (the commissioner race is county-wide).
     { key: 'COUNTY_COUNCIL', url: 'https://gis.stevenscountywa.gov/server/rest/services/AdministrativeBoundaries/MapServer/5/query', attr: 'districtid' },
+    // Fire District 10 Prop. 1 (#30). Re-probed 2026-10-08: 2785 Aladdin Rd,
+    // Colville -> '10'; Nine Mile Falls and Loon Lake -> '1'; 215 S Oak St,
+    // Colville -> no feature.
     { key: 'FIRDST', url: `${DOR_TAX_DISTRICTS}/7/query`, attr: 'DISTATTRIB' },
+    // WA DOR LIB2025 (#30): Stevens County Rural Library District Prop. 2 is
+    // scoped 'L'; the Cities of Colville and Kettle Falls are outside the
+    // district. Live 2026-10-08: 'L' at 301 E Clay Ave, Chewelah; 3998 State
+    // Hwy 292, Loon Lake; 6015 State Route 291, Nine Mile Falls; 2785 Aladdin
+    // Rd, Colville. No feature at 215 S Oak St, Colville or 605 Meyers St,
+    // Kettle Falls.
+    { key: 'LIBDST', url: `${DOR_TAX_DISTRICTS}/12/query`, attr: 'DISTATTRIB' },
+    // WA DOR SCH2025 (#30): Nine Mile Falls SD 325-179 Props. 1 and 2 are
+    // scoped '179J' (the district's Stevens side). Live 2026-10-08: 6015
+    // State Route 291, Nine Mile Falls -> '179J'; 215 S Oak St, Colville
+    // '115'; Chewelah '36'; Loon Lake '183J'; 2785 Aladdin Rd '211'.
+    { key: 'SCHDST', url: `${DOR_TAX_DISTRICTS}/20/query`, attr: 'DISTATTRIB' },
   ],
   wahkiakum: [
     { key: 'COUNTY_COUNCIL', url: 'https://services5.arcgis.com/SQaKrZ90pTH1GKNW/arcgis/rest/services/Commissioner_Districts1/FeatureServer/1/query', attr: 'District_Number' },
   ],
   'walla-walla': [
+    // Re-probed 2026-10-08 (#30): 315 W Main St, Walla Walla -> '1'; 108 S D
+    // St, Prescott -> '2'; 625 S College Ave, College Place -> '3'. No
+    // general scope uses it (Commissioner District 3 is elected county-wide).
     { key: 'COUNTY_COUNCIL', url: 'https://services8.arcgis.com/COL6rRPkF9w28VGX/arcgis/rest/services/Voting_Districts1/FeatureServer/52/query', attr: 'commis_dis' },
+    // WA DOR SCH2025 (#30): Dixie SD 101 Prop. 1 is scoped '101' ('101' also
+    // names districts in other counties, which a Walla Walla point never
+    // reaches). Live 2026-10-08: interior point (-118.153, 46.140) in Dixie
+    // -> '101' (the Census geocoder matches no Dixie street address); 315 W
+    // Main St, Walla Walla '140'; 106 Preston Ave, Waitsburg '401'; 108 S D
+    // St, Prescott '402'.
+    { key: 'SCHDST', url: `${DOR_TAX_DISTRICTS}/20/query`, attr: 'DISTATTRIB' },
+    // WA DOR PKR2025 (#30): Prescott Joint Park and Recreation District Prop.
+    // No. 1 is scoped 'PRES' (joint with Columbia County). Live 2026-10-08:
+    // 108 S D St, Prescott -> 'PRES'; 106 Preston Ave, Waitsburg -> 'WAIT';
+    // 315 W Main St, Walla Walla -> no feature.
+    { key: 'PARKDST', url: `${DOR_TAX_DISTRICTS}/14/query`, attr: 'DISTATTRIB' },
   ],
   whatcom: [
     { key: 'PORTDST', url: 'https://services3.arcgis.com/Qkk60MooanUNTUHp/arcgis/rest/services/2021ProposedPOBDistricts/FeatureServer/0/query', attr: 'Council' },

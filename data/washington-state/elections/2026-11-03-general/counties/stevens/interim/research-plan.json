@@ -1,0 +1,269 @@
+{
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/stevens/interim/contests.json",
+    "data/washington-state/elections/2026-11-03-general/counties/stevens/interim/measures.json"
+  ],
+  "script": "pipeline/build_research_plan.py",
+  "contests": [
+    {
+      "contest_slug": "stevens-stevens-county-auditor",
+      "category": "County",
+      "office": "Auditor",
+      "district": "Stevens County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "lori-larsen",
+          "name": "Lori Larsen",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/stevens/dossiers/stevens-stevens-county-auditor/lori-larsen.md"
+        },
+        {
+          "slug": "eric-simpson",
+          "name": "Eric Simpson",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/stevens/dossiers/stevens-stevens-county-auditor/eric-simpson.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "stevens-stevens-county-commissioner-district-2-commissioner-2",
+      "category": "County",
+      "office": "Commissioner #2",
+      "district": "Stevens County Commissioner District 2",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "mark-burrows",
+          "name": "Mark Burrows",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/stevens/dossiers/stevens-stevens-county-commissioner-district-2-commissioner-2/mark-burrows.md"
+        },
+        {
+          "slug": "jack-griffin-jr",
+          "name": "Jack Griffin Jr",
+          "party_preference": "States No Party Preference",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/stevens/dossiers/stevens-stevens-county-commissioner-district-2-commissioner-2/jack-griffin-jr.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "stevens-stevens-county-coroner",
+      "category": "County",
+      "office": "Coroner",
+      "district": "Stevens County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "johnathan-waldrop",
+          "name": "Johnathan Waldrop",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/stevens/dossiers/stevens-stevens-county-coroner/johnathan-waldrop.md"
+        },
+        {
+          "slug": "roseanne-ennis-jezerinac",
+          "name": "Roseanne Ennis Jezerinac",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/stevens/dossiers/stevens-stevens-county-coroner/roseanne-ennis-jezerinac.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "stevens-congressional-district-5-u-s-representative",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 5",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "michael-baumgartner",
+          "name": "Michael Baumgartner",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-5-u-s-representative/michael-baumgartner.md"
+        },
+        {
+          "slug": "carmela-conroy",
+          "name": "Carmela Conroy",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-5-u-s-representative/carmela-conroy.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "spokane",
+          "contest_slug": "spokane-congressional-district-5-u-s-representative",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/spokane/scoring/spokane-congressional-district-5-u-s-representative.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "spokane",
+          "franklin",
+          "walla-walla"
+        ]
+      }
+    },
+    {
+      "contest_slug": "stevens-stevens-county-district-court-district-court-judge",
+      "category": "Judicial",
+      "office": "District Court Judge",
+      "district": "Stevens County District Court",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "c-olivia-irwin",
+          "name": "C. Olivia Irwin",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        },
+        {
+          "slug": "gina-a-tveit",
+          "name": "Gina A. Tveit",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        }
+      ]
+    },
+    {
+      "contest_slug": "stevens-public-utility-district-no-1-of-stevens-county-commissioner-district-2-pud-commissioner",
+      "category": "PublicUtility",
+      "office": "PUD Commissioner",
+      "district": "Public Utility District No. 1 of Stevens County Commissioner District 2",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "howie-kubik",
+          "name": "Howie Kubik",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        },
+        {
+          "slug": "andrea-morgan",
+          "name": "Andrea Morgan",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "spokane",
+          "contest_slug": "spokane-public-utility-district-no-1-of-stevens-county-commissioner-district-2-pud-commissioner",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/spokane/scoring/spokane-public-utility-district-no-1-of-stevens-county-commissioner-district-2-pud-commissioner.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "spokane"
+        ]
+      }
+    },
+    {
+      "contest_slug": "stevens-legislative-district-7-state-senator",
+      "category": "State",
+      "office": "State Senator",
+      "district": "Legislative District 7",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "shelly-short",
+          "name": "Shelly Short",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-7-state-senator/shelly-short.md"
+        },
+        {
+          "slug": "ronald-l-mccoy",
+          "name": "Ronald L McCoy",
+          "party_preference": "Prefers Independent Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-7-state-senator/ronald-l-mccoy.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "spokane",
+          "contest_slug": "spokane-legislative-district-7-state-senator",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/spokane/scoring/spokane-legislative-district-7-state-senator.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "spokane",
+          "chelan"
+        ]
+      }
+    }
+  ],
+  "measures": [
+    {
+      "jurisdiction": "Stevens County Rural Library District",
+      "proposition": "Proposition No. 2",
+      "title": "Levy Lift For Library Services",
+      "slug": "stevens-stevens-county-rural-library-district-proposition-no-2",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Stevens County Fire Protection District No. 10",
+      "proposition": "Proposition No. 1",
+      "title": "Property Tax Levy For Fire Protection Services",
+      "slug": "stevens-stevens-county-fire-protection-district-no-10-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Nine Mile Falls School District No. 325-179",
+      "proposition": "Proposition No. 1",
+      "title": "Replacement Educational Programs And Operations Levy",
+      "slug": "stevens-nine-mile-falls-school-district-no-325-179-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Nine Mile Falls School District No. 325-179",
+      "proposition": "Proposition No. 2",
+      "title": "Capital Levy for Safety, Security, and Infrastructure Improvements",
+      "slug": "stevens-nine-mile-falls-school-district-no-325-179-proposition-no-2",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    }
+  ],
+  "carry_forward_from": "2026-08-04-primary"
+}
