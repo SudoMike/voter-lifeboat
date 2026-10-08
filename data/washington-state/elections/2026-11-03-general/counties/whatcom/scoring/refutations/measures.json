@@ -1,0 +1,54 @@
+{
+  "contest_slug": "measures",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/whatcom/scoring/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/whatcom/dossiers/measures/",
+    "data/final/2026-11-03-general/rubric.json"
+  ],
+  "verdicts": [
+    {
+      "candidate": "whatcom-city-of-bellingham-proposition-2026-06",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches the ballot title and explanatory statement (S1) and CDN on the 2021 commission (S2). cost_line matches S2 (just under $237,000 plus $49,128 in benefits) and S1 (no figure set). pro_summary paraphrases the statement for; 'lone outlier' and 'same transparent process' are verbatim in measure-7295.txt. con_summary correctly frames Reding's column (S3) as predating the measure and notes he also urged repealing the formula. Empty lean_mappings is right: the measure changes who sets one salary and no source says whether pay would rise or fall, so spending has no direction; taxes and local-control do not apply."
+    },
+    {
+      "candidate": "whatcom-city-of-bellingham-proposition-2026-07",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches the explanatory statement (S1): designee signing, end of finance director attestation and seal, electronic signatures. cost_line matches S1 (savings claimed, no figure). The pro_summary quote 'adds time and cost to every contract without adding value or accountability' and the four-signature description are verbatim in measure-7297.txt. con_summary matches S1 and the dossier's search. Empty lean_mappings is right: administrative charter change with no tax, spending level or state-versus-local question."
+    },
+    {
+      "candidate": "whatcom-city-of-bellingham-initiative-26-01",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does and cost_line match S1 and the initiative text (S2): coordinating-service ban, private suits with up to $5,000 per violation or triple damages, City Attorney enforcement, misdemeanor up to 90 days, whistleblower protection, hotel and short-term rental exemption. pro_summary names the committee and paraphrases the statement ($70/month, Seattle, Portland and other cities) accurately against measure-7298.txt. con_summary fairly summarizes Donnelly's column (S5) and quotes the initiative's findings (S2) verbatim. Empty lean_mappings checked against precedent: Pierce mapped Tacoma Initiative 1 to spending +1 because it builds a new enforcement program with inspections, licensing and a landlord database; this initiative creates no new office or funding source and relies on private suits and the existing City Attorney (S1, S2), so no spending mapping. It shifts no power between the city and the state or a region, so no local-control. Housing does not apply to measures."
+    },
+    {
+      "candidate": "whatcom-city-of-lynden-proposition-2026-05",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Direction and strength hold. The explanatory statement sets $1.54304 per $1,000, $0.50 above the 2025 rate, with 3% annual growth through 2035 and the 2035 amount as the new base (S1); the city gives the current rate as about $1.04 and about $2 million a year in new revenue on top of $4.1 million (S2, S3). That is a new increase of roughly 48% with no expiring levy being replaced, the King and Spokane strength-2 case (Milton, SeaTac, Liberty Lake). Spending was considered and not proposed: the city's spending plan does add two officers and four firefighters (S2), but the city frames the levy as maintaining 'a level of service our community has historically enjoyed' (S2), the explanatory statement says it avoids 'further cuts to service levels' (S1), and most of the plan restores cut positions, Friday hours and reserves. That matches the Spokane Liberty Lake reading, where staff added to keep pace with growth under a current-service framing did not earn a spending mapping, and differs from Spokane Fire District 3, where the district said the levy would 'improve the level' of service."
+    },
+    {
+      "candidate": "whatcom-city-of-lynden-proposition-2026-05",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches the ballot title's five purposes (S1). cost_line arithmetic checks: $0.50 x 600 = $300 a year, matching the city's figure (S2, S3); $1.04 is the city's current rate (S2). pro_summary names the committee and the quote 'a small additional amount' is verbatim in measure-7299.txt; 'cut costs in every department' paraphrases 'Belt-tightening measures have been implemented throughout all Lynden City Departments.' con_summary matches S3 and S5 (Laninga's no vote, Bode's hesitation)."
+    },
+    {
+      "candidate": "whatcom-whatcom-county-fire-protection-district-no-1-proposition-2026-08",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked on strength, since the pro statement calls it a restoration and 'not a new tax' and the measure replaces the final year of the 2021 lid lift (S1). It does not hold up as a renewal: the rate goes from $1.12 to $1.48, about 32% higher, and above the $1.40 voters approved in 2021 (S1, S4), with up to 6% annual growth for nine years against the usual 1% (S1). Strength 2 is consistent with King Fire District 20 and Spokane Fire Districts 3 and 9. No spending mapping: the explanatory statement says the money is 'to maintain an effective level of services, fire fighter staffing, equipment and facilities' (S1), and the chief says it keeps grant-funded positions already on staff (S7)."
+    },
+    {
+      "candidate": "whatcom-whatcom-county-fire-protection-district-no-1-proposition-2026-08",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1 and S2 (identical August measure) and the service area in S4 and S7 (the dossier also lists Nugents Corner, a harmless omission). cost_line arithmetic checks: $0.36 x 500 = $180. pro_summary matches measure-7300.txt ($1.40 in 2021, now $1.12, 10 full-time staff, about 1,100 calls, 'A levy lid lift is not a new tax'). con_summary's 1,744 to 1,620 matches S3 and the chief's 'just one more burden' quote matches S7."
+    }
+  ],
+  "missing": []
+}
