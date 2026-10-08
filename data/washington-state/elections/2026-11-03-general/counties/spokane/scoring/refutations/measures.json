@@ -1,0 +1,266 @@
+{
+  "contest_slug": "measures",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/scoring/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/dossiers/measures/",
+    "data/final/2026-11-03-general/rubric.json"
+  ],
+  "verdicts": [
+    {
+      "candidate": "spokane-city-of-liberty-lake-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked on strength: 0.1% on sales is small in dollars, and King's scale gives 1 for a 'minor increase'. But the scale also gives 2 for a 'brand-new tax', and this is one: the ballot title asks whether to 'impose' it, no end date is set, and no existing RCW 82.14.450 tax is replaced (S1, S2). King scored its new public safety sales taxes (Milton, SeaTac) at 2. S1, S2 and S4 support the 9.0% to 9.1% and $750,000 basis. Spending was considered and rejected: the explanatory statement frames the money as keeping 'the current level of service' as the city grows (S1); the 15-officer and $8.7M facility figures on the city page (S2) are long-term goals, and Dunne says $750,000 covers 'one and possibly two' officers (S3). No local-control angle (the city levies its own tax)."
+    },
+    {
+      "candidate": "spokane-city-of-liberty-lake-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1 and S5 (0.1%, RCW 82.14.450, no expiry, 85/15 split). cost_line matches S1 (10 cents per $100, $750,000) and S2/S4 (9.0% to 9.1%). pro_summary paraphrases the statement accurately; the pamphlet prints no author, so naming committee contact Kathryn Lynn Atkins is the right attribution. con_summary matches the pamphlet notice."
+    },
+    {
+      "candidate": "spokane-town-of-rockford-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Ballot title says 'This levy replaces an expiring levy' (S1); the rate is the same $0.51 as the 2025 and 2026 levies (S3, S4), and the mayor confirmed it is 'just a replacement levy' (S2). The amount rises about 13% at the same rate because values grew, which is not a rate increase. 1 fits the renewal tier. No spending axis: the stated purpose is maintaining current fire service (S1)."
+    },
+    {
+      "candidate": "spokane-town-of-rockford-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "Rate, $40,934.57, 2026 comparison ($36,075.08) and the $153-on-$300,000 arithmetic check out against S1 and S3. pro_summary correctly says no statement was filed and attributes the rationale to the town (the council's explanatory statement, S1). con_summary matches the pamphlet. The dossier's excess-vs-regular wording inconsistency is not something the display needs to surface."
+    },
+    {
+      "candidate": "spokane-town-of-spangle-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Same $1.40 rate and $49,000 amount as the 2025 and 2026 levies (S1, S2, S3); a recurring one-year levy for an existing Fire District 3 contract. The 2024-to-2025 jump ($23,000 to $49,000) is outside this measure's comparison window. 1 is right. No spending mapping: it pays an existing contract (S1)."
+    },
+    {
+      "candidate": "spokane-town-of-spangle-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does, cost_line (rate, amount, $420 on $300,000) and pro_summary ('no other funds, grants or loans') match S1-S3. con_summary matches the pamphlet."
+    },
+    {
+      "candidate": "spokane-town-of-spangle-proposition-no-2",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Same $1.19 rate and $28,000 amount as 2026 (S1, S2). The 2025 entry listed $0.80 for the same $28,000 (S3), so the rate looks higher than 2025, but the dollar amount is flat since 2025 and all rates are labelled approximate; that is a renewal, not a larger tax. 1 is right."
+    },
+    {
+      "candidate": "spokane-town-of-spangle-proposition-no-2",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "cost_line correctly compares to 2026 only, which avoids the unexplained 2025 $0.80 figure. $357 on $300,000 is correct arithmetic. pro_summary paraphrases S1 ('No other grants, or loans are available'). Accurate."
+    },
+    {
+      "candidate": "spokane-central-valley-school-district-no-356-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked on strength. The case for 2 is that the amounts rise about 3.5% a year and the expiring levy was sent to voters at an estimated $2.40, so the rate has crept up to the $2.50 maximum (S4, S6). It does not prevail: the rate is 'the same rate they paid in 2026' (S4), the pro statement and district say $2.50 is the current rate (S1, S2), and the district projects total school taxes flat at $3.92 (S4). That is the King Kent EP&O renewal case, so 1. S1, S2, S4 and S6 support the basis. No spending mapping: officials say the levy keeps current programs while cuts continue (S5)."
+    },
+    {
+      "candidate": "spokane-central-valley-school-district-no-356-proposition-no-1",
+      "axis": "_display",
+      "verdict": "adjust",
+      "note": "what_it_does, cost_line and pro_summary match S1, S2, S4 and S6 ($48.9M/$50.55M/$52.4M; $1,045 on a $418,000 median home; $137M expiring; the pro committee and 'Replace the levy. Keep the rate.'). con_summary overstates in two places. (1) 'board members questioned the roughly 3.5% yearly increases': in S4 only Vice President Anniece Barker objected to the 3.5% increases. Pam Orebaugh's concern was the rate cap, not the increases. (2) 'the party opposes new taxes' is closer to S5 as a resolution to support no new taxes for five years. Corrected con_summary: \"No statement against was received (the listed committee is Dennis Reed). In news coverage, board Vice President Anniece Barker voted to send the levy to the ballot but said 'I do not support continuing to raise taxes on our community,' citing the roughly 3.5% yearly increases in the levy amount. The Spokane County Republican Party chair said the party has resolved to support no new taxes for five years and that districts should 'lean it up.'\" Applied: measures.json display text corrected as described (2026-10-08)."
+    },
+    {
+      "candidate": "spokane-cheney-school-district-no-360-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked on strength. About $57M against about $51M (+12%) and an estimated $2.10 against $1.97 (+7%) is a moderate increase on a replacement (S1, S5). The district projects the combined school rate to dip from $3.93 to $3.90 (S3, S4), and the superintendent says 'It's not new taxes' (S4). That is the King strength-1 case. S1, S3, S4 and S5 support the basis. Caveat: $1.97 is the 2023 estimate, not the rate actually collected, but the dossier says so and the comparison is not load-bearing for strength."
+    },
+    {
+      "candidate": "spokane-cheney-school-district-no-360-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches the explanatory statement (S1). cost_line amounts sum to $57M, and the $1.97 / about $51M expiring figures match S5 ('more than $51 million'). pro_summary names the Committee for Great Schools (Lemelin, Williams, Pruett), and the quotes 'drastic cuts' and 'This is not a new tax' are verbatim in measure-7328.txt. con_summary matches the pamphlet's no-volunteers notice."
+    },
+    {
+      "candidate": "spokane-cheney-school-district-no-360-proposition-no-2",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Hardest attack on strength, and it fails. For 2: King's scale counts a 'near-doubling' as 2. This levy's dollars rise from about $2.3M to about $4.1M (1.78x), its average rate from $0.09 to $0.15 (1.67x), and its 2030 rate of $0.20 is more than twice $0.09 (S1, S3, S5). For 1, which prevails: (a) the ballot title and explanatory statement call it a replacement 'in place of an expiring levy' (S1); (b) the increase is small in absolute terms, about 6 cents per $1,000 on average (roughly $24 a year on a $400,000 home), and King's scale puts a 'temporary or minor increase' at 1; (c) the district projects the combined school rate to fall from $3.93 to $3.90 (S3, S4), the same rate-flat reasoning that moved King's Highline Prop 1 from 2 to 1; (d) the $0.09 baseline is a 2023 estimate and the rate actually collected is unknown (S5), so 'roughly doubles' rests on an estimate. The basis states the counter-case openly. S1, S3, S4 and S5 support it."
+    },
+    {
+      "candidate": "spokane-cheney-school-district-no-360-proposition-no-2",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1's three categories. cost_line's per-year rates and amounts match the ballot title, the total of about $4.1M matches S3, and the 9 cents / $2.3M expiring estimate matches S5 ('renew to 9 cents ... around $2.3 million over three years'). pro_summary's 'a replacement levy, not a new tax' is verbatim, and the listed items (whiteboards and technology, roof, HVAC, fire alarms, cameras, access controls, door locks, deferred maintenance costing more later) are all in measure-7329.txt. con_summary matches the no-volunteers notice. Optional: cost_line could add the district's combined-rate projection ($3.93 to $3.90, S3, S4) so readers see the bill-level effect next to the per-levy increase."
+    },
+    {
+      "candidate": "spokane-east-valley-school-district-no-361-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked on direction-of-baseline and strength. The source conflict is narrower than the basis suggests. S3 and S4 (Jan and Apr 2026) say an existing 74-cent school levy 'is set to expire', and their bond math ($1.96 bond minus 74 cents gives about a $1.23 increase in 2027) only works if that levy stops collecting after 2026. That matches the ballot title's 'existing capital levy expiring at the end of 2026' (S1). S2's 'expired four years ago' refers to the first capital levy, passed in 2018, so it does not show that nothing is expiring now. Strength: $0.74 to $0.99 is about +34% on a two-year, temporary levy, close to King's Lake Forest Park (temporary, about a third higher, scored 1). No con statement was filed, and the GOP chair's comment is a general no-new-taxes stance, not a campaign against this measure (S2). So 1. S1, S2 and S3 support the basis. A shared-contest note: if the 74-cent figure turned out to be a different levy, the measure would be closer to a new tax at 99 cents, but the ballot title is Tier 1 and controls."
+    },
+    {
+      "candidate": "spokane-east-valley-school-district-no-361-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1 (expires end of 2026; 2027-2028; the four work areas) and S5 (two failed 2026 bonds). cost_line amounts match the ballot title, and $446 on $450,000 matches S2 (0.99 x 450 = $445.50). The 74-cent attribution to 'reporting earlier in 2026' is accurately hedged (S3, S4). pro_summary correctly says no statement was filed and paraphrases Rehn accurately (S2). con_summary is accurate, but S2's wording is a resolution 'not supporting any new taxes for the next five years'. Optional: 'said the party has a resolution not to support any new taxes for five years' would be more exact than 'opposes any new taxes'."
+    },
+    {
+      "candidate": "spokane-nine-mile-falls-school-district-no-325-179-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked on direction and strength. A yes vote continues an EP&O levy at a lower estimated rate ($2.10 against the $2.27 collected in 2026, S2), and the combined rate falls from $2.65 to $2.48 (S2). No expiring dollar amounts are known, so the rate drop is the best evidence. The con statement's 'voters said no' refers to the April capital levy, not this levy (dossier, S4). It is a replacement, so 1. Not 0 or -1, since a yes vote still continues about $4.4M a year of property tax. S1 and S2 support the basis."
+    },
+    {
+      "candidate": "spokane-nine-mile-falls-school-district-no-325-179-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1, and the 17% figure matches S2. cost_line amounts match the ballot title, and $2.27 in 2026 is verbatim from S2. pro_summary correctly says no statement was received (measure-7330.txt) and names Fackenthall's committee. Baerwald's 'lifeblood' quote is in S2, and 'lowering the rate' paraphrases 'We're actually looking to lower the rate' (S2, about the combined rate). con_summary's committee, Joplin, the 90-day claim, the 'not funded by the State' quote and the 50th/235th ranking are verbatim in the pamphlet."
+    },
+    {
+      "candidate": "spokane-nine-mile-falls-school-district-no-325-179-proposition-no-2",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked on strength. For 2: the ballot title does not call it a replacement (S1); the Spokesman-Review says it 'would be a new tax' (S2); King's scale counts a brand-new tax as 2; and it follows an April rejection, with the con side framing it as a tax fight (S1, S3). For 1, which prevails: the 38 cents it levies is exactly the rate of a voter-approved construction bond ending Jan 1, 2027 (S1, S2), so total school taxes in 2027 stay at $2.65 and fall to $2.48 in 2028 with Prop 1 (S2). The S-R sentence that calls it a new tax goes on to say 'it would be offset'. King applied the same bill-level test to Highline Prop 1, a bond replacing retiring debt at a flat total rate, scored 1. The April version (58 cents, raising the rate to about $2.90) would have been a 2. This one is the cut-back, rate-neutral version. S1 and S2 support the basis. A yes vote replaces expiring debt service with new capital spending, but the dossier shows repairs to existing facilities, not expansion, so no spending mapping."
+    },
+    {
+      "candidate": "spokane-nine-mile-falls-school-district-no-325-179-proposition-no-2",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does correctly calls it a new six-year levy and matches the ballot title's purpose (S1). It also notes the larger April levy that failed (S3). cost_line's 38 cents, the $774,853-$842,954 amounts and the six-year total of about $4.85M ($4,851,126) match S1. The bond's 38-cent rate and its payoff at the end of 2026 match S2 and the pro statement ('expires January 1, 2027'). 'The district's rate would not rise' holds: 2027 is $2.27 + $0.38 = $2.65, the same as 2026 (S2). pro_summary's committee and members (Reynolds, Bauer, Haggard), 'same rate', 'after listening to community concerns about rising taxes' and the roof, condemned-portable and fire/camera items match the pamphlet. con_summary's 90 days, 'carte blanche', the sunk-cost recovery ('the Proposal budgets for recovering these sunk costs') and 'not essential' portables (from the con rebuttal, filed in the guide's RebuttalFor field) are accurate."
+    },
+    {
+      "candidate": "spokane-riverside-school-district-no-416-62-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked on strength. $1.52 to $1.58 (+4%) is a similar rate (S2), the measure 'does not create a second levy' (S1), and the superintendent calls it the same levy run 'every three years for decades' (S2). No expiring dollar figure is known, but the rate comparison suffices. So 1. S1 and S2 support the basis."
+    },
+    {
+      "candidate": "spokane-riverside-school-district-no-416-62-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1, and the 13% figure matches S2. cost_line amounts match the ballot title, and $1.52 is verbatim from S2. pro_summary's committee (Vineyard, Koesel, Gaffaney), 'does not create a second levy' and 'not extras' are verbatim in measure-7332.txt. con_summary's no-volunteers notice is verbatim, and the Nov 2025 capital-levy failure matches S3."
+    },
+    {
+      "candidate": "spokane-spokane-school-district-no-81-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked on strength. The amount rises 12% ($297M to $333M, S3, S6) at the same $2.50 maximum rate (S3, S4). The total school rate rises from $3.96 to $4.15-$4.17 (S3, S4), but the sources attribute that to previously approved debt, not this levy, whose rate is unchanged. Swinyard: 'This won't be an expansion of services' (S3). A same-rate replacement is 1, the Kent precedent. A strong con statement (Neff) does not change the fiscal character. S1, S3, S4 and S6 support the basis."
+    },
+    {
+      "candidate": "spokane-spokane-school-district-no-81-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1, and 15% matches S2 and S3. cost_line amounts and the $333M total match S1 and S3, $830 on $333,700 matches S2 (Konis), and $297M expiring matches S6. pro_summary matches measure-7356.txt: Carol Wendle, clean audits, 200+ positions cut, literacy, graduation and career gains, and the rebuttal's 700 positions. con_summary matches Neff's statement: the maximum rate for three straight years, stretched families, 'Roughly 97% of last year's levy went to extra salaries and benefits not covered by state funding', test scores and absenteeism, and 'Students will still be educated if this levy fails'. Optional: the con statement's own household figure ('a continued $1,000 tax per year on a typical home') could be noted, since it differs from the assessor's $830."
+    },
+    {
+      "candidate": "spokane-west-valley-school-district-no-363-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked on strength. $30M to $32.2M (+7%) at the $2.50 rate 'consistent with 2026 collections' (S4, S5, S6). The combined rate with Prop 2 is $3.50 against $3.49 (S3, S4). That is a same-rate replacement, so 1. S1, S4, S5 and S6 support the basis."
+    },
+    {
+      "candidate": "spokane-west-valley-school-district-no-363-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1, and 15% matches S4 and S5. cost_line amounts sum to $32,229,246 (about $32.2M). The $1,308 combined figure on a $375,000 median home matches the district page (S2), which says the cost is 'projected to continue at $1,308', consistent with $3.49. pro_summary's committee (Rosentrater, Cahalan), 'This is not a new tax' and 'without increasing the tax rate' are verbatim in measure-7357.txt. con_summary matches the no-volunteers notice."
+    },
+    {
+      "candidate": "spokane-west-valley-school-district-no-363-proposition-no-2",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked on citation: the expiring capital levy's own rate is not in any source, and the 'about $1.00 stays $1.00' reading is the dossier's inference. The basis rests instead on the district's stated combined rate ($3.50 against $3.49, S3, S4) and on S5's 'around $1 per thousand', and both support it. S4 confirms the current capital levy was approved in November 2024 and both levies are renewals. Strength 1. The Pasadena Park library addition adds space, but the dossier treats it as too thin for spending, and I agree: one addition inside a maintenance-and-safety levy at a flat rate."
+    },
+    {
+      "candidate": "spokane-west-valley-school-district-no-363-proposition-no-2",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches the ballot title's four items (S1). cost_line amounts sum to $8,509,372 (about $8.5M) and the $3.50 against $3.49 combined rate matches S3 and S4. pro_summary's committee and its 'responsible, time-limited measure' wording are verbatim in measure-7358.txt. con_summary matches the no-volunteers notice."
+    },
+    {
+      "candidate": "spokane-spokane-county-fire-protection-district-no-2-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Ballot title 'Reauthorizing and Continuing' at $0.50 (S1); the 2020 levy was $0.50 for 2021-2026 collection (S3); Chief Olson says the current levy collects 50 cents and 'It is a renewal' (S2). Same-rate replacement, 1. Spending not supported: money maintains existing ambulance service (S1, S2)."
+    },
+    {
+      "candidate": "spokane-spokane-county-fire-protection-district-no-2-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "Rate, 2027-2032 collection window and $150 on $300,000 match S1/S2. 'approved in 2020' is correct (August 2020 primary, S3). pro_summary: the four names appear under CommitteeFor in the pamphlet, and the quoted 'not a new tax' framing and EMS-dedication point match the statement (S1). con_summary matches."
+    },
+    {
+      "candidate": "spokane-spokane-county-fire-protection-district-no-3-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Hardest to attack: the district's FAQ says 'This is a proposed new six-year EMS levy' on top of the regular fire levy (S3), the combined rate rises about a third ($1.48 to about $1.98), and the 2022 attempt failed (S5, S6). That is the scale's 'brand-new tax' case, like King FD20's new bond levy at 2. Minor citation fix: the basis says the 2022 levy 'fell short of 60%'; S6 gives the 53.48% result but the 60% threshold comes from RCW 84.52.069 (S9), so add S9 to the citations (or say 'failed to reach the required supermajority')."
+    },
+    {
+      "candidate": "spokane-spokane-county-fire-protection-district-no-3-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1-S3 (new, 14 firefighter/EMTs, 24-hour staffing at Cheney Station 31 and Spangle Station 36); the area list (Cheney, Medical Lake, Four Lakes, Spangle) matches station locations in S2/S3. cost_line ($50 per $100,000, $250 on $500,000, ~$2.79M = $2,785,967, $1.48 to ~$1.98) matches S2/S3. pro_summary (Dale Fulfs; 'two positions unfilled'; two stations around the clock; 'managed taxpayer resources responsibly') matches the statement in S1. con_summary matches. Optional: mentioning the three-fifths approval threshold (S9) would help voters, but it is not required."
+    },
+    {
+      "candidate": "spokane-spokane-county-fire-protection-district-no-9-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Rate goes from about $0.65 to $1.50 (S1, S2), more than double, plus up to 6% annual revenue growth for five years with the 2032 amount as the permanent base (S1). That is 'near-doubling' and 'large permanent lid lift' on King's scale, so 2. The promised $0.20 M&O cut does not save it: it is outside the ballot title, starts in 2028, and depends on a 2027 M&O vote (S1, S5, S6); even net of it the increase is $323 a year on $500,000. Cost conflict: the pamphlet (S1), the flyer (S5) and the Spokesman (S7) all give $423 for Prop 1 alone, and the rate arithmetic ($0.85 x 500 = $425) agrees; the commissioner's newsletter 'combined' wording (S6) is the outlier and does not change the strength. Spending considered and rejected: about half the levy replaces aging apparatus (S7); three added firefighters is a small expansion next to that."
+    },
+    {
+      "candidate": "spokane-spokane-county-fire-protection-district-no-9-proposition-no-1",
+      "axis": "_display",
+      "verdict": "adjust",
+      "note": "Two fixes. (1) what_it_does says the money would 'mainly' replace vehicles and equipment; S7 has the chief saying 50% of the levy funds new fire vehicles, and the flyer also lists personnel, training and operations (S5). Corrected: 'Lifts Fire District 9's regular fire levy from about $0.65 to the legal maximum of $1.50 per $1,000 for 2027, then lets levy revenue grow up to 6% a year for five years (still capped at $1.50); the 2032 amount becomes the base for later years. The chief says about half the money would replace aging fire vehicles; the rest goes to equipment, personnel and operations.' (2) cost_line presents the $323 net as if assured; the $0.20 M&O cut is a board commitment outside the ballot title that the newsletter ties to both propositions passing and to the 2027 M&O renewal (S1, S5, S6). Corrected: 'The district estimates $423 more per year ($35.25 a month) on a $500,000 property in 2027, and levy revenue can rise up to 6% a year after that. The board has also promised to cut its separate M&O levy by $0.20 per $1,000 from 2028, which it says would make the net increase $323 a year; that promise is not part of the ballot measure.' On the cost conflict: keep the pamphlet's $423 as Prop 1 alone (S1, S5, S7 and the rate arithmetic agree); no display change is needed for the newsletter's 'combined' wording. pro_summary is accurate: no statement by the deadline, Caroline Kusher is the committee contact, and 'must-haves' is Vinci's word for the fleet and facilities (S7). con_summary matches. Applied: measures.json display text corrected as described (2026-10-08)."
+    },
+    {
+      "candidate": "spokane-spokane-county-fire-protection-district-no-9-proposition-no-2",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "New 20-year excess levy of about $0.39 per $1,000 to repay $70M, and no bond levy is replaced (S1, S2). This matches King FD20 ($16M new bond at $0.28) scored 2. Citations support it. Spending considered: the explanatory statement mentions 'the District's expanding operations' and a new training/classroom building and expanded logistics building (S1), which points toward spending +1 as in King's Auburn bond. But the 'No. 1 focus' is replacing a temporary Station 99 and the rest is renovation of four existing stations (S6). King FD20 (renovate a station, replace support sites) got no spending mapping, so I leave this out. It is a judgment call."
+    },
+    {
+      "candidate": "spokane-spokane-county-fire-protection-district-no-9-proposition-no-2",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does lists the projects in S1/S2 accurately (Station 99 named per S3/S6). cost_line ($70M, up to 20 years, $0.39, $196 / $16.34 on $500,000) matches S1. 'on top of Proposition 1' is correct. pro_summary paraphrases S1 and S5 ('more than three decades without significant facility improvements') accurately. con_summary matches. Optional: bonds need 60% approval (S6)."
+    },
+    {
+      "candidate": "spokane-spokane-county-fire-protection-district-no-11-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Strength attacked: $0.2676 to $0.35 is about a 31% rate increase, more than Kent's ~13%. But the explanatory statement calls it a 'replacement measure' that 'restore[s]' the rate (S1), $0.35 is the rate voters approved in 2021 (S3, S4), and the drift down came from the 1% limit, not a voter cut. Dollar impact is about $25 a year on $300,000. King gave Lake Forest Park's roughly one-third-higher temporary lid lift a 1. Renewal at a moderately higher rate, so 1 fits. S1-S3 support the basis."
+    },
+    {
+      "candidate": "spokane-spokane-county-fire-protection-district-no-11-proposition-no-1",
+      "axis": "_display",
+      "verdict": "adjust",
+      "note": "pro_summary misattributes a phrase. In S2 the reporter writes that 35 cents 'is well below the maximum of 50 cents'; Hill himself says only that 'the amount was kept low on purpose, particularly as other taxes are rising.' Corrected pro_summary: 'No statement in favor was filed. The district says renewal is needed to maintain EMS supplies and equipment as costs rise. Chief Gary Hill says the rate was kept low on purpose as other taxes rise; $0.35 is below the 50-cent legal maximum.' what_it_does and cost_line are accurate ($0.35 vs $0.2676, $105 on $300,000, about $25 more, and the 1% limit after 2027 is per S1). Applied: measures.json display text corrected as described (2026-10-08)."
+    },
+    {
+      "candidate": "spokane-spokane-county-fire-protection-district-no-12-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Pamphlet says it lets the district 'retain its existing' $0.50 rate (S1), and the 2020 levy was $0.50 (S2). One gap: the dossier says the actual collected 2026 rate was not checked, and a six-year EMS levy usually drifts below its approved rate (FD11 fell from $0.35 to $0.2676). So this may really restore a decayed rate, like FD11. That is still a renewal and still 1, so the score holds either way."
+    },
+    {
+      "candidate": "spokane-spokane-county-fire-protection-district-no-12-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does ('at its existing rate') and cost_line ('same rate voters approved in 2020') follow the pamphlet's own wording (S1, S2) and are accurate as stated. pro_summary paraphrases the commissioners' reason (S1). con_summary matches. Optional hedge if the coordinator wants it: 'the pamphlet calls $0.50 the existing rate'."
+    }
+  ],
+  "missing": [
+    {
+      "candidate": "spokane-spokane-county-fire-protection-district-no-3-proposition-no-1",
+      "axis": "spending",
+      "proposed_score": 1,
+      "confidence": "medium",
+      "citations": [
+        "S1",
+        "S2",
+        "S3"
+      ],
+      "basis": "A yes vote funds 14 new firefighter/EMT positions and round-the-clock staffing at two more stations, which the district says will improve the level of EMS service, an expansion beyond current service.",
+      "note": "The dossier declines spending on the ground that the axis is about government-wide investment versus audit, but that conflicts with King precedent. King mapped spending +1 on measures that pay for clear expansion beyond current service (Seattle transit, Issaquah parks, Auburn's fifth middle school, the cemetery district), and the brief allows spending with explicit evidence. Here the evidence is explicit. The explanatory statement says the levy 'will allow the District to improve the level of emergency medical services' (S1). The district says it would 'hire 14 full-time firefighter/EMTs' and add 24-hour staffing at two stations that are not staffed around the clock now (S2, S3). The pro statement calls it a way to 'expand 24-hour emergency response coverage' (S1). The pro side also frames it as preserving service (S3: current revenues 'will not sustain current staffing'), so strength 1, not 2. Proposed basis: 'A yes vote funds 14 new firefighter/EMT positions and round-the-clock staffing at two more stations, which the district says will improve the level of EMS service, an expansion beyond current service.'"
+    }
+  ]
+}
