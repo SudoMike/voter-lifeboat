@@ -133,6 +133,20 @@ const UNRESOLVABLE_SCOPES = new Set([
   // are hidden and the general's Okanogan package is partial_county; see
   // counties/okanogan/COMPLETENESS.md.
   'okanogan/PUDDST',
+  // Klickitat's East and West District Court judges (#31) are separate
+  // electorates that partition the county (Auditor's 2025 Votes by District:
+  // East 7,550 and West 8,871 voters); precincts are split between the courts
+  // (SOS 2018 and 2022 exports), and no county, DOR or ArcGIS Online layer of
+  // the court districts exists, so both seats are hidden and the general's
+  // Klickitat package is partial_county; see counties/klickitat/COMPLETENESS.md.
+  'klickitat/DISTCRT',
+  // Pacific's North and South District Court judges (#31) are separate
+  // electorates (2022: North on 23 precincts, South on 18, some precincts
+  // straddling the school-district lines the courts roughly follow); no
+  // public layer of the court districts exists and the county's own site
+  // does not answer, so both seats are hidden and the general's Pacific
+  // package is partial_county; see counties/pacific/COMPLETENESS.md.
+  'pacific/DISTCRT',
 ])
 
 const CENSUS_LAYERS = new Set(['CONGDST', 'LEGDST', 'CITY'])

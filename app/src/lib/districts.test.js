@@ -123,6 +123,18 @@ test('Douglas proposed Rimrock fire district reads as its name; other county fir
     ['Proposed Rimrock Meadows Fire Protection District No. 9', 'School District 209'])
 })
 
+test('Asotin Rural EMS District No. 2 reads as its name, after the EMS district', () => {
+  // Live 2026-10-08 (#31): 992 Park Rd, Anatone is in DOR TCA2025 '0030',
+  // which geo.js reads as RURALEMSDST '2' (a presence layer); Clarkston
+  // Heights reads EMSDST '1' (EMS District #1, not the rural district).
+  assert.equal(layerLabel('RURALEMSDST'), 'Rural emergency medical services district')
+  assert.equal(describeDistrict('RURALEMSDST', '2'), 'Asotin County Rural EMS District No. 2')
+  assert.deepEqual(describeDistricts({ CONGDST: '5', LEGDST: '9', RURALEMSDST: '2' }).map((d) => d.text),
+    ['Congressional District 5', 'Legislative District 9', 'Asotin County Rural EMS District No. 2'])
+  assert.deepEqual(describeDistricts({ PUDDST: '1', EMSDST: '1', CITY: 'Clarkston' }).map((d) => d.text),
+    ['City of Clarkston', 'Public Utility District 1', 'Emergency Medical District 1'])
+})
+
 test('Kittitas Upper and Lower District Court read with the county name', () => {
   // Live 2026-10-08 (#31): Court_Districts court_district_name 'Lower
   // District Court' at 205 W 5th Ave, Ellensburg; 'Upper District Court' at

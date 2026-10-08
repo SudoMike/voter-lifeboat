@@ -114,6 +114,13 @@ DISTRICT_ADAPTER_LAYERS = {
     "okanogan": ("CONGDST", "LEGDST", "CITY", "FIRDST", "HOSPDST", "EMSDST"),
     "jefferson": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "CEMDST", "FIRDST", "SCHDST"),
     "kittitas": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "FIRDST", "DISTCRT"),
+    # Klickitat's East/West and Pacific's North/South District Court seats
+    # stay DISTCRT, which no layer resolves (see
+    # app/src/lib/data-consistency.test.js UNRESOLVABLE_SCOPES), so both
+    # counties ship partial_county.
+    "klickitat": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "FIRDST", "EMSDST"),
+    "pacific": ("CONGDST", "LEGDST", "CITY", "FIRDST", "EMSDST"),
+    "asotin": ("CONGDST", "LEGDST", "CITY", "EMSDST", "PUDDST", "RURALEMSDST"),
 }
 
 

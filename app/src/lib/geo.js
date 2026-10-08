@@ -359,7 +359,40 @@ const COUNTY_LAYERS = {
     { key: 'PARKDST', url: `${DOR_TAX_DISTRICTS}/14/query`, attr: 'DISTATTRIB' },
   ],
   asotin: [
+    // Re-probed 2026-10-08 (#31): 829 5th St and 1225 Highland Ave, Clarkston
+    // -> 'CLAR'; 121 2nd St and 215 Filmore St, Asotin -> 'ASOT'; 1406 16th
+    // Ave and 2075 Appleside Ct, Clarkston Heights -> '1' (EMS District #1,
+    // the same polygon as Fire District 1); 992 Park Rd, Anatone -> no
+    // feature. Only the archived primary uses it (its Rural EMS levy scope
+    // '1'); the general's Rural EMS levy reads RURALEMSDST below.
     { key: 'EMSDST', url: `${DOR_TAX_DISTRICTS}/6/query`, attr: 'DISTATTRIB' },
+    // WA DOR PUD2025 (#31): Asotin County PUD No. 1, elected PUD-wide in the
+    // general (RCW 54.12.010(3)). The PUD is Clarkston and Clarkston Heights,
+    // not the whole county (Anatone, Asotin and Rural Asotin precincts are
+    // outside). Live 2026-10-08: 829 5th St, 1225 Highland Ave, 1406 16th Ave
+    // and 2075 Appleside Ct, Clarkston -> '1'; 121 2nd St and 215 Filmore St,
+    // Asotin and 992 Park Rd, Anatone -> no feature.
+    { key: 'PUDDST', url: `${DOR_TAX_DISTRICTS}/17/query`, attr: 'DISTATTRIB' },
+    // Asotin County Rural EMS District No. 2's levy (#31). The district is
+    // the county outside Clarkston and Fire District 1 (south of the fire
+    // district to the Oregon line); DOR EMS2025 has no polygon for it (its
+    // Asotin '1' is EMS District #1, the same area as Fire District 1). It is
+    // identified by its 2025 tax code areas 0025, 0030 and 0030F: DOR's 2025
+    // levy detail ('EMS Dist #1 Special', $0.12084 per $1,000), the county's
+    // 2025 rate table (that rate in TCAs 25, 30 and 30F only) and the
+    // precinct parts that voted on it (see counties/asotin/COMPLETENESS.md).
+    // Presence-only: any DOR TCA2025 (layer 23) feature passing the `where`
+    // means the district. Live 2026-10-08: 992 Park Rd, Anatone -> TCA
+    // '0030' ('2'); interior point -117.1335, 46.1347 -> '0030F' ('2'); 829
+    // 5th St, Clarkston ('0021'), 1406 16th Ave, Clarkston Heights ('0023P')
+    // and 121 2nd St, Asotin ('0026') -> no feature.
+    {
+      key: 'RURALEMSDST',
+      url: `${DOR_TAX_DISTRICTS}/23/query`,
+      attr: 'DISTATTRIB',
+      where: "COUNTYNAME = 'ASOTIN' AND DISTATTRIB IN ('0025','0030','0030F')",
+      value: '2',
+    },
   ],
   benton: [
     { key: 'COUNTY_COUNCIL', url: 'https://services7.arcgis.com/NURlY7V8UHl6XumF/arcgis/rest/services/CommissionerDistrict/FeatureServer/6/query', attr: 'District' },
@@ -601,8 +634,22 @@ const COUNTY_LAYERS = {
     { key: 'DISTCRT', url: 'https://services.arcgis.com/eSnyVpqwqWBADfzp/arcgis/rest/services/Court_Districts/FeatureServer/0/query', attr: 'court_district_name' },
   ],
   klickitat: [
+    // Re-probed 2026-10-08 (#31): 100 N Main Ave, White Salmon, 208 W
+    // Steuben St, Bingen and 2383 State Rte 141, Trout Lake -> '1'; 5 Lyle
+    // Snowden Rd, Lyle and 103 Main St, Klickitat -> '2'; 205 S Columbus Ave,
+    // Goldendale and 100 E Market St, Bickleton -> '3'. Only the archived
+    // primary uses it (Commissioner 2 is elected county-wide in the general).
     { key: 'COUNTY_COUNCIL', url: 'https://geo.gartrellgroup.com/server/rest/services/Klickitat/Layers/MapServer/21/query', attr: 'NO' },
+    // Re-probed 2026-10-08 (#31): Lyle '4'; Trout Lake '1'; Klickitat '12';
+    // Bickleton '2'; Goldendale, White Salmon and Bingen -> no feature. Only
+    // the archived primary's Fire District 4 (Lyle) levy uses it.
     { key: 'FIRDST', url: `${DOR_TAX_DISTRICTS}/7/query`, attr: 'DISTATTRIB' },
+    // WA DOR EMS2025 (#31): Emergency Medical Services District No. 1's
+    // permanent levy, scoped '1' (one Klickitat polygon; the district is the
+    // county minus the Bickleton area, 16,105 of 16,421 voters). Live
+    // 2026-10-08: Goldendale, White Salmon, Bingen, Lyle, Trout Lake and
+    // Klickitat -> '1'; 100 E Market St, Bickleton -> no feature.
+    { key: 'EMSDST', url: `${DOR_TAX_DISTRICTS}/6/query`, attr: 'DISTATTRIB' },
   ],
   lewis: [
     { key: 'COUNTY_COUNCIL', url: 'https://arcgis.lewiscountywa.gov/arcgispublic/rest/services/VotingTaxingDistricts/MapServer/0/query', attr: 'COMMISSION' },
@@ -663,7 +710,20 @@ const COUNTY_LAYERS = {
     { key: 'EMSDST', url: `${DOR_TAX_DISTRICTS}/6/query`, attr: 'DISTATTRIB' },
   ],
   pacific: [
+    // Fire Protection District No. 3 and No. 6 levies (#31). Re-probed
+    // 2026-10-08: 1000 State Rte 6, Raymond (Menlo area) -> '3'; 38 2nd St,
+    // Bay Center -> '6'; 793 State Rte 4, Naselle -> '4'; 1511 Bay Ave, Ocean
+    // Park -> '1'; 300 Memorial Dr, South Bend, 230 2nd St, Raymond, 115
+    // Bolstad St, Long Beach and 120 1st Ave N, Ilwaco -> no feature.
     { key: 'FIRDST', url: `${DOR_TAX_DISTRICTS}/7/query`, attr: 'DISTATTRIB' },
+    // WA DOR EMS2025 (#31): North Pacific County EMS District No. 1's levy,
+    // scoped '1' (the county minus the Ocean Beach, Ocosta and North River
+    // school districts, per its ballot title). Live 2026-10-08: 300 Memorial
+    // Dr, South Bend, 230 2nd St and 1000 State Rte 6, Raymond, 793 State Rte
+    // 4, Naselle and 38 2nd St, Bay Center -> '1'; 1511 Bay Ave, Ocean Park
+    // -> 'OB'; 115 Bolstad St, Long Beach and 120 1st Ave N, Ilwaco -> no
+    // feature.
+    { key: 'EMSDST', url: `${DOR_TAX_DISTRICTS}/6/query`, attr: 'DISTATTRIB' },
   ],
   'pend-oreille': [
     { key: 'COUNTY_COUNCIL', url: 'https://services1.arcgis.com/o3wuEYcU5N00WpI1/arcgis/rest/services/Commissioner_Districts___Open_Data/FeatureServer/0/query', attr: 'commission' },

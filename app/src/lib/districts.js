@@ -27,6 +27,9 @@ const DISTRICT_LABELS = {
   // election, read from the county's own fire layer (geo.js).
   PROPFIRDST: 'Proposed fire protection district',
   EMSDST: 'Emergency Medical District',
+  // Asotin RURALEMSDST: Rural EMS District No. 2, read as a presence layer
+  // from its DOR tax code areas (geo.js), a constant '2'.
+  RURALEMSDST: 'Rural emergency medical services district',
   SCHDST: 'School District',
   HOSPDST: 'Hospital District',
   LIBDST: 'Library District',
@@ -93,6 +96,11 @@ const NAMED_VALUES = {
   PROPFIRDST: {
     '009': 'Proposed Rimrock Meadows Fire Protection District No. 9',
   },
+  // Asotin RURALEMSDST is presence-only: geo.js reports '2' inside the
+  // district's tax code areas (Anatone and Rural Asotin), nothing elsewhere.
+  RURALEMSDST: {
+    2: 'Asotin County Rural EMS District No. 2',
+  },
   // Spokane FIRDST reads the county fire layer's NAME (geo.js). Districts
   // read 'Fire District 9'; these other polygons are cities with their own
   // department, towns served by contract, and land outside every district.
@@ -112,8 +120,8 @@ const NAMED_VALUES = {
 // special districts that only ever carry levies.
 const ORDER = [
   'CITY', 'CONGDST', 'LEGDST', 'KCCDST', 'SCCDST', 'COUNTY_COUNCIL', 'JUDDST', 'DISTCRT', 'KCDISTCRT',
-  'PORTDST', 'PUDDST', 'PUDALL', 'FIRDST', 'FIRE_AUTH', 'RFADST', 'PROPFIRDST', 'EMSDST', 'SCHDST', 'HOSPDST', 'LIBDST',
-  'PARKDST', 'CEMDST', 'WATDST', 'PTBA', 'AQUIFER', 'UNINC',
+  'PORTDST', 'PUDDST', 'PUDALL', 'FIRDST', 'FIRE_AUTH', 'RFADST', 'PROPFIRDST', 'EMSDST', 'RURALEMSDST',
+  'SCHDST', 'HOSPDST', 'LIBDST', 'PARKDST', 'CEMDST', 'WATDST', 'PTBA', 'AQUIFER', 'UNINC',
 ]
 
 // Layers that show only their NAMED_VALUES. Douglas's county fire layer also
