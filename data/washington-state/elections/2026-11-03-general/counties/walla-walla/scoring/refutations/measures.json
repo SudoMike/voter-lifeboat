@@ -1,0 +1,36 @@
+{
+  "contest_slug": "measures",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/walla-walla/dossiers/measures/",
+    "data/washington-state/elections/2026-11-03-general/counties/walla-walla/scoring/measures.json",
+    "data/final/2026-11-03-general/rubric.json"
+  ],
+  "verdicts": [
+    {
+      "candidate": "walla-walla-dixie-school-district-no-101-proposition-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "The ballot title says the levy is 'in place of an expiring levy', and the current capital levy runs through the end of 2026 (S1, S2, S3). Unlike a lapsed levy, there is no gap year, so the renewal tier (+1) applies. The February 2026 failure (S4, S5) does not change that, because the existing levy is still in place. Two fixes to the basis. (1) It says the levy replaces the old one 'rather than raising a rate', but the dossier records that the prior levy's rate was not found, so it cannot be said whether $0.50 is equal to, above or below the current rate. Suggested: 'It replaces an expiring capital levy (the prior rate was not found), so it maps at the renewal tier.' (2) S4 is the recount article and supports the $75,000/$0.50 figures and the earlier failure, not the replacement claim. S1 (with S2/S3) is the source for 'in place of an expiring levy'. No spending mapping: it funds repairs to the existing building (S1)."
+    },
+    {
+      "candidate": "walla-walla-dixie-school-district-no-101-proposition-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1 (expires end of 2026; six years, 2027-2032; foundation and gym floor) and S4/S5 (107-108 in February 2026). cost_line matches S1/S3 ($75,000 x 6 = $450,000; $0.50 per $1,000). pro_summary correctly attributes the statement to Lisa and Dean Davis and quotes 'does not create a new tax' and 'fiscally responsible with your tax dollars' as S1 records them; the listed past projects appear in S1. con_summary matches S1/S2 (no argument printed; Peter Berg named in VoteWA with no text)."
+    },
+    {
+      "candidate": "walla-walla-prescott-joint-park-and-recreation-district-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked toward +1, since the district runs this levy every year (S4). But the 2025 request failed (S5), so no excess levy is being collected for 2026. A yes vote adds $175,000 (about $0.35 per $1,000) to bills that carry none now, and the amount is above the $145,000 (about $0.31) last approved in 2024 (S4). Under the calibration for new or increased levies, +2 holds. No spending mapping: it funds operating the existing pool (S1)."
+    },
+    {
+      "candidate": "walla-walla-prescott-joint-park-and-recreation-district-proposition-no-1",
+      "axis": "_display",
+      "verdict": "adjust",
+      "note": "what_it_does says 'the November 2025 request failed with 59.5% of the vote (60% needed)'. The dossier records 59.51% (122-83) for Walla Walla County's certified results only (S5), and the measure's sources_note itself says Columbia County's share of the vote was not found. The district spans both counties (S2, S4). Suggested: '...the November 2025 request failed, drawing 59.5% yes in Walla Walla County's count (60% needed).' con_summary already scopes its 40.5% to Walla Walla County voters correctly. cost_line checks out ($0.35 x 200 = $70, the Union-Bulletin's 2025 estimate, S4). pro_summary correctly attributes the statement to Hudson and Phillips. Its paraphrase 'families drove to other towns this summer without it' is close to S1's 'families had to drive to other towns for swim lessons', but 'for swim lessons' would be more exact."
+    }
+  ],
+  "missing": []
+}
