@@ -1,0 +1,105 @@
+{
+  "contest_slug": "state-senator-legislative-district-no-47",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/king/dossiers/state-senator-legislative-district-no-47/"],
+  "office_does": "One of 49 Washington State Senators, serving a four-year term writing state law and budgets for the 47th District (Kent, Auburn and Covington area of South King County).",
+  "race_blurb": "Incumbent Democrat Claudia Kauffman faces Republican Covington City Councilmember Kristina Soltys. Both talk about affordability and public safety; they split on income taxes, housing policy tools, and state versus local control.",
+  "candidates": [
+    {
+      "slug": "claudia-kauffman",
+      "summary": "Incumbent State Senator since 2022, who also held the seat from 2007 to 2011; former Muckleshoot Tribe intergovernmental affairs liaison. Running on affordability, housing supply with renter protections, and the safety net.",
+      "highlights": [
+        "Voted yes on ESSB 6346, the 2026 tax on household income over $1 million that I-645 would repeal [S5]",
+        "Platform says the bottom 20% pay 'SEVEN times more of their income in taxes than billionaires' and proposes cutting property and sales taxes [S4]",
+        "Wants more housing supply and protection for renters from 'predatory price gouging' [S1]",
+        "Voted yes on ESHB 1296 (2025), the parental-rights amendments I-1 would undo [S6]",
+        "Endorsed by Gov. Ferguson, the mayors of Auburn, Covington and Kent, the State Labor Council and Washington Conservation Action [S1][S3][S11]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S4", "S5"],
+          "basis": "Voted for the 2026 millionaires' tax (ESSB 6346) and argues the tax code burdens the poor far more than billionaires, proposing lower sales and property taxes instead."
+        },
+        "spending": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S9"],
+          "basis": "Emphasizes expanded childcare, a 'robust' safety net and capital investments, without a stated program to expand public spending broadly."
+        },
+        "housing": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1"],
+          "basis": "Pairs housing supply with renter protections against 'predatory price gouging' and middle-income housing."
+        },
+        "parental-rights": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S6"],
+          "basis": "Single record item: voted yes on ESHB 1296, which amended the I-2081 parental-rights law; no campaign statement on the topic."
+        },
+        "experience": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S2", "S9"],
+          "basis": "Two Senate stints (2007-2011, 2022-present), committee leadership, and a 2026 legislative record."
+        }
+      }
+    },
+    {
+      "slug": "kristina-soltys",
+      "summary": "Covington City Councilmember since 2019 and former diagnostic medical sonographer who immigrated from Ukraine as a child. Running against the income tax and recent tax increases, and for permitting reform and police funding.",
+      "highlights": [
+        "Opposes a state income tax ('Washington voters have rejected an income tax ten times') and says Olympia has 'a spending problem' [S4]",
+        "Said in July of the income tax repeal effort that an income tax 'doesn't belong here' [S5]",
+        "Favors permitting reform and market incentives; says state government should empower local communities rather than impose mandates [S4]",
+        "On the council: funded an additional police officer and started a community resource officer program for residents in crisis [S1]",
+        "Has raised more than the incumbent: $208.9K in contributions [S6]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S3", "S4", "S5"],
+          "basis": "Repeated opposition to an income tax and to recent B&O and gas tax increases; calls the state's problem one of spending, not revenue."
+        },
+        "spending": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S4", "S5"],
+          "basis": "'Spending problem' framing and demand for budget results, while also backing funding for police and transportation."
+        },
+        "housing": {
+          "score": -2,
+          "confidence": "medium",
+          "citations": ["S3", "S4"],
+          "basis": "Relies on permitting reform and market incentives over state mandates; no tenant-protection or public-housing proposals."
+        },
+        "local-control": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S4"],
+          "basis": "'Local communities know their neighborhoods. State government should empower them'; opposes top-down mandates, stated for housing."
+        },
+        "safety": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S1", "S4"],
+          "basis": "Prioritizes fully funded police and more officers, paired with treatment resources and a community resource officer program."
+        },
+        "experience": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1"],
+          "basis": "Seven years on a city council but new to the Legislature, running against a long-serving incumbent."
+        }
+      }
+    }
+  ]
+}

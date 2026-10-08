@@ -1,0 +1,109 @@
+{
+  "contest_slug": "state-representative-position-no-1-legislative-district-no-37",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/king/dossiers/state-representative-position-no-1-legislative-district-no-37/"],
+  "office_does": "One of 98 Washington State Representatives, serving two-year terms writing state law and the state budget for the 37th District (southeast Seattle, Skyway and part of Renton).",
+  "race_blurb": "House Education Committee chair Sharon Tomiko Santos, the state's longest-serving House member, trails first-time candidate Kelabe Tewolde after a 51.5% to 47.9% primary; both are Democrats. The sharpest policy split is rent stabilization, which Santos voted against and Tewolde supports.",
+  "candidates": [
+    {
+      "slug": "sharon-tomiko-santos",
+      "summary": "State Representative since 1999 and chair of the House Education Committee; voted for the 2026 millionaires' tax and against the 2025 rent-increase cap.",
+      "highlights": [
+        "Only Seattle-area legislator to vote against the 2025 rent-increase cap, citing harm to small landlords [S6][S7][S8]",
+        "Voted for ESSB 6346, the millionaires' tax I-645 would repeal [S9]",
+        "As Education chair, signed the committee's do-pass report on HB 1296 (2025 parental-rights amendments) and voted for it on the floor [S10][S11]",
+        "Opposes a universal school cellphone ban, preferring local school-board decisions [S5]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": 2,
+          "confidence": "medium",
+          "citations": ["S1", "S9"],
+          "basis": "Voted for the millionaires' tax and campaigns on 'tax fairness for working families'; founding member of the Washington Tax Fairness Coalition."
+        },
+        "housing": {
+          "score": -1,
+          "confidence": "high",
+          "citations": ["S5", "S7", "S8"],
+          "basis": "Voted against the 2025 rent-increase cap, saying rent control 'has not stemmed the cost of housing,' while supporting more supply and affordable housing near transit."
+        },
+        "safety": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S3"],
+          "basis": "Campaign site emphasizes community-led violence prevention and behavioral-health response services."
+        },
+        "experience": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S5"],
+          "basis": "In the House since 1999 and chair of the Education Committee; the state's longest-serving House member."
+        },
+        "local-control": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S5"],
+          "basis": "Opposes a universal school cellphone ban, preferring that local school boards decide."
+        },
+        "immigration": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S3"],
+          "basis": "Founding board member of Hate Free Zone (OneAmerica) and an NCSL immigration task force; site cites protecting immigrant communities."
+        },
+        "parental-rights": {
+          "score": 2,
+          "confidence": "medium",
+          "citations": ["S10", "S11"],
+          "basis": "As Education chair signed the do-pass report on HB 1296 and voted for final passage; the bill narrowed I-2081's curriculum, records and medical-notification rights."
+        }
+      }
+    },
+    {
+      "slug": "kelabe-tewolde",
+      "summary": "First-time candidate, Rainier Scholars leadership director and Seattle Planning Commissioner, running on generational change, rent stabilization and early education; won the primary.",
+      "highlights": [
+        "Supports rent stabilization and says he would have voted for the 2025 rent-increase cap [S5][S7]",
+        "Priorities: housing affordability, childcare, interest limits on medical debt, early interventions for kids [S1]",
+        "Supports a statewide school cellphone ban [S5]",
+        "Endorsed by Gov. Bob Ferguson, Executive Girmay Zahilay, Superintendent Chris Reykdal, the WEA and The Seattle Times [S4][S6]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "housing": {
+          "score": 2,
+          "confidence": "medium",
+          "citations": ["S5", "S6", "S7"],
+          "basis": "Prioritizes a real rent-stabilization cap and criticizes the incumbent's vote against the 2025 cap; anti-displacement focus."
+        },
+        "spending": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S3", "S7"],
+          "basis": "Wants to fully fund early education and criticizes education cuts paired with forgone estate-tax revenue."
+        },
+        "safety": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S3"],
+          "basis": "Campaign site calls for 'safety built on community investment,' including gun-violence prevention."
+        },
+        "experience": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S5"],
+          "basis": "First-time candidate running explicitly on 'generation change' against a 27-year incumbent."
+        },
+        "local-control": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S5"],
+          "basis": "Supports a statewide school cellphone ban, where the incumbent prefers local school-board discretion."
+        }
+      }
+    }
+  ]
+}

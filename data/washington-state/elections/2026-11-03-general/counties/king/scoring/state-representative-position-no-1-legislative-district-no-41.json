@@ -1,0 +1,121 @@
+{
+  "contest_slug": "state-representative-position-no-1-legislative-district-no-41",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/king/dossiers/state-representative-position-no-1-legislative-district-no-41/"],
+  "office_does": "One of two Washington State Representatives for the 41st District (Mercer Island, Newcastle and parts of Bellevue, Issaquah, Renton and Sammamish), voting on state law, budgets and taxes for two-year terms.",
+  "race_blurb": "Incumbent Democrat Janice Zahn, appointed in 2025 and a former Bellevue councilmember, faces Republican Elle Nguyen, who opposes a state income tax and the 2026 state housing-siting mandate. Zahn took 72% in the August primary.",
+  "candidates": [
+    {
+      "slug": "janice-zahn",
+      "summary": "Incumbent State Representative since 2025 and former Bellevue councilmember (2017-2025); Port of Seattle chief engineer running on affordability, infrastructure investment and fiscal responsibility.",
+      "highlights": [
+        "Voted for the 2026 tax on household income over $1 million (ESSB 6346), the tax I-645 would repeal [S8]",
+        "Voted for 2025 rent stabilization (EHB 1217) and the 2026 supportive-housing siting law (ESHB 2266) [S9][S10]",
+        "Says Washington must 'accelerate investments in clean energy and community resilience' to meet 2030 climate goals [S4]",
+        "Voted for ESHB 1296 (2025), the parents' rights amendments I-1 would undo; no public position found on the three initiatives [S7]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S8"],
+          "basis": "Voted yea on ESSB 6346, the 9.9% tax on household income over $1 million; no further stated tax agenda."
+        },
+        "spending": {
+          "score": 0,
+          "confidence": "medium",
+          "citations": ["S1", "S3", "S4"],
+          "basis": "Pairs 'delivering investments in housing, education, childcare, and transportation' with 'fiscal responsibility' and 'accountability' on budget challenges: genuinely mixed."
+        },
+        "housing": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S9", "S10", "S11"],
+          "basis": "Voted for 2025 rent stabilization and for ESHB 2266 requiring cities to allow supportive housing and shelters."
+        },
+        "climate": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S4", "S1"],
+          "basis": "Says the state must accelerate clean-energy investment to meet 2030 climate goals; endorsed by Conservation Action."
+        },
+        "experience": {
+          "score": -1,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "Sitting legislator since 2025 with eight prior years on the Bellevue council: an established record, though short legislative tenure."
+        },
+        "local-control": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S10", "S11"],
+          "basis": "Voted for ESHB 2266, which requires cities to allow transitional and supportive housing and shelters in specified zones."
+        },
+        "social": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1"],
+          "basis": "Pamphlet endorsement list includes Planned Parenthood; no direct statement on gender or reproductive policy."
+        },
+        "parental-rights": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S7"],
+          "basis": "Voted yea on ESHB 1296 (2025), which amended the I-2081 parents' rights law; single vote, no statement."
+        }
+      }
+    },
+    {
+      "slug": "elle-nguyen",
+      "summary": "Republican challenger from Mercer Island, a real estate investor and community advocate without prior elected office, running on fiscal discipline, public safety and local control.",
+      "highlights": [
+        "Opposes a state income tax and says 'Olympia has been fiscally irresponsible' [S4]",
+        "'Adamantly opposes' ESHB 2266: 'Olympia should not substitute statewide mandates for the judgment of local communities' [S4]",
+        "Site lists 'Supporting law enforcement, holding criminals accountable' [S3]",
+        "States a commitment to 'parental rights' without specifics; no public position found on the three initiatives [S4]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -2,
+          "confidence": "medium",
+          "citations": ["S3", "S4"],
+          "basis": "Opposes a state income tax and lists 'protecting taxpayers from unnecessary tax increases'."
+        },
+        "spending": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S3", "S4"],
+          "basis": "Repeated calls for fiscal discipline, stopping wasteful spending and balancing the budget; says Olympia has been fiscally irresponsible."
+        },
+        "safety": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S3", "S1"],
+          "basis": "Site lists supporting law enforcement and holding criminals accountable; no detailed enforcement agenda."
+        },
+        "experience": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1"],
+          "basis": "No elected office held; prior unsuccessful school-board and legislative runs."
+        },
+        "local-control": {
+          "score": -2,
+          "confidence": "medium",
+          "citations": ["S4", "S7"],
+          "basis": "Adamantly opposes ESHB 2266 as a statewide mandate overriding 'the judgment of local communities'; commits to 'meaningful local control'."
+        },
+        "parental-rights": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S4", "S2"],
+          "basis": "Repeatedly names 'parental rights' as a commitment, but no specific position on notification, curricula or opt-outs."
+        }
+      }
+    }
+  ]
+}

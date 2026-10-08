@@ -1,0 +1,47 @@
+{
+  "contest_slug": "state-representative-position-no-1-legislative-district-no-48",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/king/dossiers/state-representative-position-no-1-legislative-district-no-48/"],
+  "office_does": "One of two Washington State Representatives for the 48th District (parts of Redmond, Bellevue and Kirkland plus the Points communities and Medina), serving two-year terms writing state law and budgets.",
+  "race_blurb": "Democrat Osman Salahuddin, appointed in 2025 and elected that November, faces Republican Jeffery Poppe, a retired CPA campaigning on no new taxes, fraud audits and individual-only contributions.",
+  "candidates": [
+    {
+      "slug": "osman-salahuddin",
+      "summary": "Incumbent State Representative appointed in January 2025 and elected in November 2025; former Redmond City Councilmember and Fred Hutch cancer researcher.",
+      "highlights": [
+        "Passed 2025 bills on behavioral-health co-response teams and paid sick leave for immigration proceedings [S4]",
+        "Voted yes on ESSB 6346, the 2026 millionaires' tax that I-645 would repeal [S8]",
+        "Voted yes on ESHB 1296, the 2025 parental-rights amendments that I-1 would undo [S7]",
+        "Endorsed by Gov. Ferguson, the State Labor Council, teachers, nurses and Planned Parenthood Alliance [S1]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "experience": {"score": -1, "confidence": "medium", "citations": ["S1", "S2", "S6"], "basis": "About two sessions in the House after a 2025 appointment and election, plus prior Redmond council service."},
+        "taxes": {"score": 1, "confidence": "medium", "citations": ["S8", "S4"], "basis": "Voted for the 2026 millionaires' tax and describes the 2025 budget's \"equitable revenue measures.\""},
+        "spending": {"score": 1, "confidence": "medium", "citations": ["S1", "S4"], "basis": "Cites securing childcare and healthcare investments and invest-in-services budget framing."},
+        "safety": {"score": 1, "confidence": "medium", "citations": ["S4", "S3"], "basis": "Passed a co-response bill meant to \"reduce reliance on law enforcement\" and says safety means \"prioritizing prevention\"; also passed a sentencing aggravator for rape resulting in pregnancy."},
+        "immigration": {"score": 1, "confidence": "high", "citations": ["S4", "S1"], "basis": "Sponsored the enacted paid-sick-leave law for immigration proceedings and cites immigrant-protection bills."},
+        "climate": {"score": 1, "confidence": "medium", "citations": ["S3"], "basis": "Calls for a just transition to clean energy with environmental justice in emissions reduction."},
+        "parental-rights": {"score": 1, "confidence": "medium", "citations": ["S7"], "basis": "Voted yes on ESHB 1296, which amended the I-2081 parents' rights law; no campaign statement on the topic."}
+      }
+    },
+    {
+      "slug": "jeffery-poppe",
+      "summary": "Republican challenger; retired CPA and financial systems consultant and former San Diego Taxpayers Association director, running on no new taxes and fraud audits.",
+      "highlights": [
+        "\"No more new taxes! Washington has an outrageous spending problem, not an income problem\" [S1]",
+        "Pledges to spearhead fraud audits and publish spending and performance metrics [S1][S3]",
+        "Will accept only individual contributions, no PAC or union money [S1][S3]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "experience": {"score": 2, "confidence": "high", "citations": ["S1"], "basis": "No prior elected public office; runs on a private-sector auditing career."},
+        "taxes": {"score": -2, "confidence": "high", "citations": ["S1", "S3"], "basis": "Repeated pledge to reject any new taxes; says the state has a spending problem, not an income problem."},
+        "spending": {"score": -2, "confidence": "high", "citations": ["S1", "S3"], "basis": "Platform built on fraud audits, efficiency and spending transparency."},
+        "reform": {"score": 1, "confidence": "high", "citations": ["S1", "S3"], "basis": "Repeated pledge to accept only individual contributions and refuse PAC and union money; no other structural-reform positions."}
+      }
+    }
+  ]
+}

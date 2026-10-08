@@ -1,0 +1,53 @@
+{
+  "contest_slug": "state-representative-position-no-1-legislative-district-no-45",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/king/dossiers/state-representative-position-no-1-legislative-district-no-45/"],
+  "office_does": "One of two Washington State Representatives for the 45th District (Kirkland, Redmond, Woodinville, Sammamish, Duvall), serving two-year terms writing state law and budgets.",
+  "race_blurb": "Incumbent Democrat Roger Goodman, in the House since 2007 and chair of the Community Safety Committee, faces Republican JoAnn Tolentino, a retired music teacher and compliance professional making her first legislative run. Goodman took 72.87% in the August primary.",
+  "candidates": [
+    {
+      "slug": "roger-goodman",
+      "summary": "Incumbent State Representative since 2007 and chair of the House Community Safety Committee; attorney and former director of the state Sentencing Guidelines Commission.",
+      "highlights": [
+        "Cites laws on crime survivors, drug and mental health services, and police accountability and training [S1]",
+        "Voted yes on ESSB 6346, the 2026 tax on household income over $1 million that I-645 would repeal [S6]",
+        "Voted yes on ESHB 1296, the 2025 parental-rights amendments that I-1 would undo [S5]",
+        "Pledges to champion K-12 funding, affordable housing investments, climate action and reproductive rights [S1]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "experience": {"score": -2, "confidence": "high", "citations": ["S1", "S4"], "basis": "House member since 2007 and chair of the Community Safety Committee, citing an enacted record."},
+        "taxes": {"score": 1, "confidence": "medium", "citations": ["S6", "S1"], "basis": "Voted for the 2026 millionaires' tax; his statement stresses tax relief for working people and small businesses rather than new revenue."},
+        "spending": {"score": 1, "confidence": "medium", "citations": ["S1"], "basis": "Cites free school meals and childcare funding and pledges K-12 and affordable-housing investment."},
+        "safety": {"score": 1, "confidence": "high", "citations": ["S1", "S3"], "basis": "Record and platform center on police accountability reform and expanded drug and mental health services, alongside crime-survivor protections."},
+        "climate": {"score": 1, "confidence": "medium", "citations": ["S1", "S2"], "basis": "Pledges to champion climate action; primary-era campaign material cited carbon-cap legislation."},
+        "housing": {"score": 1, "confidence": "medium", "citations": ["S1"], "basis": "Pledges continued affordable-housing investments; no deregulation or rent-policy statement."},
+        "social": {"score": 1, "confidence": "medium", "citations": ["S1"], "basis": "Single explicit pledge to champion reproductive rights."},
+        "parental-rights": {"score": 1, "confidence": "medium", "citations": ["S5"], "basis": "Voted yes on ESHB 1296, which amended the I-2081 parents' rights law; no campaign statement on the topic."}
+      }
+    },
+    {
+      "slug": "joann-tolentino",
+      "summary": "Republican challenger from Woodinville, a retired music teacher and compliance-software professional and five-year precinct committee officer, running as \"not a politician.\"",
+      "highlights": [
+        "Says \"parents, not politicians, should guide their children's education and healthcare\" [S3]",
+        "Supports voter ID, paper ballots and bipartisan election oversight [S1][S3]",
+        "Would fight regulations driving up housing costs and streamline permitting and zoning [S1][S3]",
+        "Backs fossil fuels, nuclear and hydro to keep energy bills low [S3]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "experience": {"score": 2, "confidence": "high", "citations": ["S1"], "basis": "No public office beyond precinct committee officer; presents herself as \"not a politician.\""},
+        "parental-rights": {"score": -2, "confidence": "high", "citations": ["S1", "S3"], "basis": "Repeated statements: \"empower parents\"; parents \"should guide their children's education and healthcare\"; involve parents and reject CRT and gender-ideology content in classrooms."},
+        "local-control": {"score": -1, "confidence": "medium", "citations": ["S3"], "basis": "Calls to \"restore local control\" in schools, a single statement."},
+        "housing": {"score": -2, "confidence": "medium", "citations": ["S1", "S3"], "basis": "Would fight regulations driving up housing costs and streamline permitting and zoning to build more homes."},
+        "climate": {"score": -2, "confidence": "medium", "citations": ["S1", "S3"], "basis": "Champions affordable energy and supports fossil fuels, nuclear and hydro \"to keep bills low.\""},
+        "safety": {"score": -1, "confidence": "medium", "citations": ["S1", "S3"], "basis": "\"Full support for our law enforcement\" paired with \"treatment, not just punishment\" and recovery programs."},
+        "spending": {"score": -2, "confidence": "medium", "citations": ["S1", "S3"], "basis": "\"Audit every dollar and pass balanced budgets\"; waste and fraud and fiscal accountability are recurring themes."},
+        "immigration": {"score": -1, "confidence": "medium", "citations": ["S3"], "basis": "Supports legal immigration, the rule of law and border security, with \"humane processing.\""}
+      }
+    }
+  ]
+}

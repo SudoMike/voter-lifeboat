@@ -1,0 +1,123 @@
+{
+  "contest_slug": "state-representative-position-no-1-legislative-district-no-47",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/king/dossiers/state-representative-position-no-1-legislative-district-no-47/"],
+  "office_does": "One of two Washington State Representatives for the 47th District (Kent, Auburn and Covington area of South King County), serving a two-year term writing state law and budgets.",
+  "race_blurb": "Eight-year Democratic incumbent Debra Entenman faces Libertarian housing developer Cobi Clark, who is endorsed by the 47th District Republicans. Clark would repeal the 2026 income tax and the 2025 parental-rights amendments; Entenman voted for both.",
+  "candidates": [
+    {
+      "slug": "debra-jean-entenman",
+      "summary": "Incumbent State Representative since 2018 and former congressional district director. Running on her public safety funding and college student support bills and on the safety net.",
+      "highlights": [
+        "Prime sponsor of HB 2015 (2025), which her pamphlet says secured $100 million for public safety [S1][S2]",
+        "Voted yes on ESSB 6346, the 2026 millionaires' tax that I-645 would repeal [S4]",
+        "Voted yes on ESHB 1296 (2025); her platform supports district-set curricula and comprehensive sex education, plus parental opt-outs from specific lessons [S3][S5]",
+        "Platform calls for independent investigations of police use of force and for social workers alongside officers [S3]",
+        "Endorsed by Washington Conservation Action, King County Democrats and The Urbanist [S9][S10][S11]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": 2,
+          "confidence": "medium",
+          "citations": ["S4"],
+          "basis": "Voted for the 2026 tax on household income over $1 million; no separate campaign statement on taxes."
+        },
+        "spending": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S3"],
+          "basis": "Runs on strengthening safety-net programs (rental assistance, eviction prevention, childcare, healthcare) and investment in frontline responders."
+        },
+        "housing": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S3"],
+          "basis": "Platform commits to rental assistance, eviction prevention and housing stability services."
+        },
+        "safety": {
+          "score": 0,
+          "confidence": "medium",
+          "citations": ["S1", "S2", "S3"],
+          "basis": "Mixed: sponsored new public safety funding (HB 2015) while backing independent use-of-force investigations and social workers in safety response."
+        },
+        "parental-rights": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S3", "S5"],
+          "basis": "Voted for ESHB 1296 and backs district-set curricula and comprehensive sex education, but her platform also supports parental opt-outs from specific lessons."
+        },
+        "tech": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S3"],
+          "basis": "Platform calls for laws requiring companies to disclose and give consumers control over the personal data they collect."
+        },
+        "experience": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "In the seat since 2018, with four committee assignments and signed bills (HB 2015, HB 1559)."
+        }
+      }
+    },
+    {
+      "slug": "cobi-clark",
+      "summary": "Libertarian housing developer and construction project manager from Auburn, endorsed by the 47th District Republicans. Running on housing deregulation, opposition to the income tax, and civil liberties.",
+      "highlights": [
+        "Would 'Repeal the state income tax contemplated under SB 6346' [S3]",
+        "Would 'Repeal HB 1296 which undermined the voter approved parents rights initiative 2081' [S3]",
+        "Would cut permitting delays and limit building codes to safety, based on his developer experience [S1][S7]",
+        "Would end qualified immunity, criminalize masked arrests, and ban Flock cameras [S3][S9]",
+        "Proposes multi-winner ranked-choice voting and advisory votes on new taxes [S4]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S3", "S6"],
+          "basis": "Opposes any state income tax in the pamphlet and on his site, and would repeal the 2026 income tax in SB 6346."
+        },
+        "spending": {
+          "score": -2,
+          "confidence": "medium",
+          "citations": ["S4", "S6"],
+          "basis": "'Washington doesn't have a revenue problem. It has a spending problem'; would rein in spending, cut waste and tie spending to revenue sources."
+        },
+        "housing": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S4", "S7"],
+          "basis": "Supply-side deregulation from developer experience: faster permits, building codes limited to safety, fewer regulations."
+        },
+        "climate": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S1", "S8"],
+          "basis": "Puts affordable, 'abundant' energy and stopping 'policies that punish commuters' first, while also backing nuclear and geothermal investment; does not name carbon pricing."
+        },
+        "parental-rights": {
+          "score": -2,
+          "confidence": "medium",
+          "citations": ["S3", "S5"],
+          "basis": "Would repeal ESHB 1296 to restore the I-2081 parental-rights law, and says schools should 'respect the role of parents in education decisions.'"
+        },
+        "reform": {
+          "score": 2,
+          "confidence": "medium",
+          "citations": ["S4"],
+          "basis": "Proposes multi-winner ranked-choice voting, restoring advisory votes on new taxes, and 50-year sunsets for legislation."
+        },
+        "experience": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "No elected office (lost a 2025 Auburn council race); runs on private-sector development experience."
+        }
+      }
+    }
+  ]
+}

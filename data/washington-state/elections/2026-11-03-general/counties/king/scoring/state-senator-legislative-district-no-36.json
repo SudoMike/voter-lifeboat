@@ -1,0 +1,115 @@
+{
+  "contest_slug": "state-senator-legislative-district-no-36",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/king/dossiers/state-senator-legislative-district-no-36/"],
+  "office_does": "One of 49 Washington State Senators, serving four-year terms writing state law and the state budget for the 36th District (Ballard, Magnolia, Queen Anne and the Greenwood area of northwest Seattle).",
+  "race_blurb": "Incumbent Democrat Noel Frame, a co-sponsor of the 2026 millionaires' tax and the Legislature's lead wealth-tax sponsor, faces Republican party officer Jillian England, whose top priority is repealing that tax. Frame took 87.7% in the primary.",
+  "candidates": [
+    {
+      "slug": "noel-c-frame",
+      "summary": "State Senator since 2023 after seven years as the district's State Representative; Vice Chair of Finance on Ways & Means and a leading advocate of progressive tax restructuring.",
+      "highlights": [
+        "Co-sponsored and voted for ESSB 6346, the 2026 millionaires' tax that I-645 would repeal [S5][S6]",
+        "Prime sponsor of wealth-tax bills since 2021 [S2][S4]",
+        "Cites expansion of the Working Families Tax Credit and senior property-tax exemption [S1]",
+        "Voted for ESHB 1296 (2025 parental-rights amendments) and EHB 1217 (2025 rent-increase limit) [S7][S8]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S3", "S5", "S6"],
+          "basis": "Co-sponsored and voted for the millionaires' tax, sponsors wealth-tax bills, and calls for the wealthiest to pay their fair share."
+        },
+        "spending": {
+          "score": 2,
+          "confidence": "medium",
+          "citations": ["S1", "S3"],
+          "basis": "Frames new revenue as funding schools, healthcare, human services and early learning, with expanded credits and assistance programs."
+        },
+        "housing": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S8"],
+          "basis": "Voted for the 2025 rent-increase limit and cites 'historic investments in affordable housing.'"
+        },
+        "experience": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1"],
+          "basis": "Ten years in the Legislature with finance leadership in both chambers and an enacted tax record."
+        },
+        "parental-rights": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S7"],
+          "basis": "Voted for ESHB 1296, which narrowed I-2081's parental notification and records rights; no public statements on the topic."
+        }
+      }
+    },
+    {
+      "slug": "jillian-england",
+      "summary": "Republican challenger, longtime precinct committee officer and 36th District Republican vice chair with a career in computer science and health-care operations; running to repeal the millionaires' tax and the Climate Commitment Act.",
+      "highlights": [
+        "Top priority is repealing the 9.9% 'Millionaires Tax'; also targets the sales and B&O taxes [S1][S3]",
+        "Would repeal the Climate Commitment Act and accelerate nuclear and natural gas [S1][S3]",
+        "Calls for clearing encampments and for 'exit' programs rather than housing alone [S1][S3]",
+        "Campaign posts say she will oppose policies that weaken 'parental rights over minor children' and describe sex as binary [S4]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S3"],
+          "basis": "Top priority is repealing the millionaires' tax; also targets the sales and B&O taxes."
+        },
+        "spending": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S2", "S3"],
+          "basis": "Calls for cutting 'fraud and wasteful spending' and says 'government force cannot create prosperity, safety, or abundance.'"
+        },
+        "safety": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S3"],
+          "basis": "Calls for clearing encampments, restoring public safety, and funding exit programs; frames homelessness around addiction and 'open tolerance.'"
+        },
+        "climate": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S3"],
+          "basis": "Would repeal the Climate Commitment Act on cost grounds and expand nuclear and natural gas."
+        },
+        "experience": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1"],
+          "basis": "No elected office beyond party precinct officer; runs on private-sector experience."
+        },
+        "tech": {
+          "score": -2,
+          "confidence": "medium",
+          "citations": ["S3"],
+          "basis": "Calls Seattle's data-center moratorium 'Luddite symbolism' and wants to capture AI infrastructure growth."
+        },
+        "social": {
+          "score": -2,
+          "confidence": "medium",
+          "citations": ["S4"],
+          "basis": "Campaign post calls sex 'binary' and gender-affirming interventions for minors 'elective and irreversible interventions that sterilize.'"
+        },
+        "parental-rights": {
+          "score": -2,
+          "confidence": "medium",
+          "citations": ["S1", "S4"],
+          "basis": "Says she will oppose any policy that 'weakens parental rights over minor children,' criticizes shelter notification going to DCYF instead of parents, and says schools should 'educate students rather than indoctrinate them.'"
+        }
+      }
+    }
+  ]
+}
