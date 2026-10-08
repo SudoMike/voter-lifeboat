@@ -1256,7 +1256,7 @@ ELECTION_MEASURES = {
         #   'SBH'; Long Beach, Ilwaco, Chinook -> no feature (the ballot title
         #   excludes the Ocean Beach, Ocosta and North River school districts).
         # - FIRDST '3' (FIR2025, layer 7): 1000 State Rte 6, Raymond (Menlo).
-        # - FIRDST '6': 38 2nd St, Bay Center.
+        # - FIRDST '6': 38 2nd St and 3 Park St E, Bay Center.
         "pacific": {
             "overrides": {
                 ("COUNTY", "COUNTY COMMISSIONER #03"): (
