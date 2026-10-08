@@ -189,6 +189,25 @@ const ELECTIONS = {
       // page numbers equal the printed ones (candidates pp. 5-11, measures
       // pp. 12-31).
       'whitman/local-voters-pamphlet': 'https://www.whitmancounty.gov/DocumentCenter/View/12618',
+      // Skamania general Local Voters' Pamphlet (#32), from the package's
+      // pointer counties/skamania/raw/skamania/local-voters-pamphlet.pdf.url.
+      // skamaniacounty.gov's front end answers 403 to a bare scripted
+      // User-Agent; checked 2026-10-08 with full browser request headers
+      // (Chrome User-Agent, Accept, Accept-Language, Sec-Fetch-*): 200
+      // application/pdf with the pointer's sha256, 10 PDF pages printed as
+      // pp. 35-44. Citations are PDF pages, which run 34 behind the printed
+      // numbers (PDF p. 6 is printed p. 40, the Assessor; PDF p. 10 is
+      // printed p. 44, District Court and PUD).
+      'skamania/local-voters-pamphlet':
+        'https://www.skamaniacounty.gov/home/showpublisheddocument/19600/639253463106470000',
+      // San Juan's combined state and county voters' pamphlet (#32), from the
+      // package's pointer counties/san-juan/raw/san-juan/
+      // local-voters-pamphlet.pdf.url. Checked 2026-10-08: redirect to
+      // .../36027/2026-General-VP-San-Juan-County---Final-State-and-County,
+      // then 200 application/pdf with the pointer's sha256; 72 PDF pages, PDF
+      // page numbers equal the printed ones (Assessor p. 42, Fire District 4
+      // levy p. 50, Lopez Solid Waste levy p. 56).
+      'san-juan/local-voters-pamphlet': 'https://www.sanjuancountywa.gov/DocumentCenter/View/36027',
     },
     // Counties whose research cites VoteWA's online voters' guide, which has
     // no page numbers, instead of a printed pamphlet: their records carry no
@@ -275,6 +294,11 @@ const ELECTIONS = {
       // Adams prints no local pamphlet; its dossiers cite VoteWA only. #31;
       // 200 text/html, 2026-10-08.
       adams: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=01',
+      // Skamania's and San Juan's dossiers cite their pamphlets and VoteWA's
+      // guide records; the guide links any record without a page (CD, LD and
+      // Court of Appeals seats). #32; each 200 text/html, 2026-10-08.
+      skamania: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=30',
+      'san-juan': 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=28',
     },
     pamphletIndex: `${SOS_GENERAL_2026}/2026-voters-pamphlet-pdfs`,
   },

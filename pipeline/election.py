@@ -323,6 +323,17 @@ COUNTY_ELECTIONS_URLS = {
         # | Adams County, WA", 2026-10-08; the page that links the general's
         # sample ballot; the package's raw/adams/elections-page.html.url).
         "adams": "https://www.co.adams.wa.gov/162/Elections-Elecciones",
+        # Skamania County Auditor, Current Election (the page that links the
+        # general's local voters' pamphlet and sample ballot; the package's
+        # raw/skamania/current-election.html.url). skamaniacounty.gov answers
+        # 403 to a bare scripted User-Agent and 200 text/html to full browser
+        # request headers (Chrome User-Agent, Accept, Accept-Language,
+        # Sec-Fetch-*), checked 2026-10-08; browsers load it.
+        "skamania": "https://www.skamaniacounty.gov/departments-offices/auditor/elections/current-election",
+        # San Juan County Auditor, Current Election (200 text/html, 2026-10-08;
+        # the page that links the general's voters' pamphlet, sample ballot and
+        # measure resolutions; the package's raw/san-juan/current-election.html.url).
+        "san-juan": "https://www.sanjuancountywa.gov/1292/Current-Election",
     },
 }
 
