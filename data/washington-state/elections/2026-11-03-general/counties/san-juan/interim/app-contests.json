@@ -1,0 +1,377 @@
+{
+  "county": "san-juan",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/san-juan/raw/votewa/candidate-list.csv.url",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7285&e=899&la=en&c=28",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7286&e=899&la=en&c=28",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7287&e=899&la=en&c=28",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7288&e=899&la=en&c=28"
+  ],
+  "coverage": "full_county",
+  "notes": [
+    "San Juan County Council Residency District 3 is voted on county-wide in the primary and the general (the residency district is a candidate qualification): scoped COUNTY.",
+    "San Juan County Fire Protection District No. 4 Proposition No. 1 is scoped FIRDST '4' (WA DOR FIR2025, layer 7), Port of Lopez Proposition No. 1 PORTDST 'LOPEZ' (PRT2025, layer 16) and Orcas Island Park and Recreation District Proposition No. 1 PARKDST 'ORCAS' (PKR2025, layer 14), each DISTATTRIB.",
+    "Lopez Solid Waste Disposal District Proposition No. 1 is scoped SWDDST 'LOPEZ': no tax-district layer has the district; its levy is voted on in precincts Lopez North, Lopez Northwest and Lopez South (county Voter_Precincts St_Code SJ031, SJ030, SJ032)."
+  ],
+  "contests": [
+    {
+      "slug": "san-juan-congressional-district-2-u-s-representative",
+      "owner": "san-juan",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 2",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "san-juan",
+        "layer": "CONGDST",
+        "value": "2"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for San Juan County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "rick-larsen",
+          "name": "Rick Larsen",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "edwin-h-feller",
+          "name": "Edwin H. Feller",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "san-juan-legislative-district-40-state-representative-pos-1",
+      "owner": "san-juan",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 40",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "san-juan",
+        "layer": "LEGDST",
+        "value": "40"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for San Juan County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "debra-lekanoff",
+          "name": "Debra Lekanoff",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "cindy-carter",
+          "name": "Cindy Carter",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "san-juan-legislative-district-40-state-representative-pos-2",
+      "owner": "san-juan",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 40",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "san-juan",
+        "layer": "LEGDST",
+        "value": "40"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for San Juan County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "alex-ramel",
+          "name": "Alex Ramel",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "joseph-segault",
+          "name": "Joseph Segault",
+          "party": "States No Party Preference",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "san-juan-san-juan-county-assessor",
+      "owner": "san-juan",
+      "category": "County",
+      "office": "Assessor",
+      "district": "San Juan County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "san-juan"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for San Juan County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "john-kulseth",
+          "name": "John Kulseth",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "san-juan-san-juan-county-auditor",
+      "owner": "san-juan",
+      "category": "County",
+      "office": "Auditor",
+      "district": "San Juan County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "san-juan"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for San Juan County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "heather-lee",
+          "name": "Heather Lee",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "natasha-k-warmenhoven",
+          "name": "Natasha K Warmenhoven",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "san-juan-san-juan-county-clerk",
+      "owner": "san-juan",
+      "category": "County",
+      "office": "Clerk",
+      "district": "San Juan County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "san-juan"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for San Juan County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "lisa-henderson",
+          "name": "Lisa Henderson",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "san-juan-san-juan-county-council-residency-district-3",
+      "owner": "san-juan",
+      "category": "County",
+      "office": "Council Residency District 3",
+      "district": "San Juan County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "san-juan"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for San Juan County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "jennifer-swanson",
+          "name": "Jennifer Swanson",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "katherine-bryant-ingman",
+          "name": "Katherine Bryant Ingman",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "san-juan-san-juan-county-prosecuting-attorney",
+      "owner": "san-juan",
+      "category": "County",
+      "office": "Prosecuting Attorney",
+      "district": "San Juan County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "san-juan"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for San Juan County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "amy-s-vira",
+          "name": "Amy S. Vira",
+          "party": "Prefers Democrat Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "san-juan-san-juan-county-sheriff",
+      "owner": "san-juan",
+      "category": "County",
+      "office": "Sheriff",
+      "district": "San Juan County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "san-juan"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for San Juan County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "ronald-j-krebs",
+          "name": "Ronald J. Krebs",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "san-juan-san-juan-county-treasurer",
+      "owner": "san-juan",
+      "category": "County",
+      "office": "Treasurer",
+      "district": "San Juan County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "san-juan"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for San Juan County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "rhonda-pederson",
+          "name": "Rhonda Pederson",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "san-juan-san-juan-county-district-court-judge",
+      "owner": "san-juan",
+      "category": "Judicial",
+      "office": "Judge",
+      "district": "San Juan County District Court",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "san-juan"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for San Juan County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "carolyn-jewett-platts",
+          "name": "Carolyn Jewett-Platts",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/san-juan/interim/contests.json",
+    "data/washington-state/elections/2026-11-03-general/counties/san-juan/interim/measures.json"
+  ],
+  "script": "pipeline/build_research_plan.py",
+  "contests": [
+    {
+      "contest_slug": "san-juan-congressional-district-2-u-s-representative",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 2",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "rick-larsen",
+          "name": "Rick Larsen",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-2-u-s-representative/rick-larsen.md"
+        },
+        {
+          "slug": "edwin-h-feller",
+          "name": "Edwin H. Feller",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-2-u-s-representative/edwin-h-feller.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "snohomish",
+          "contest_slug": "snohomish-congressional-district-2-u-s-representative",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/snohomish/scoring/snohomish-congressional-district-2-u-s-representative.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "snohomish",
+          "whatcom",
+          "skagit",
+          "island"
+        ]
+      }
+    },
+    {
+      "contest_slug": "san-juan-legislative-district-40-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 40",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "debra-lekanoff",
+          "name": "Debra Lekanoff",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-40-state-representative-position-1/debra-lekanoff.md"
+        },
+        {
+          "slug": "cindy-carter",
+          "name": "Cindy Carter",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-40-state-representative-position-1/cindy-carter.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "whatcom",
+          "contest_slug": "whatcom-legislative-district-40-state-representative-pos-1",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/whatcom/scoring/whatcom-legislative-district-40-state-representative-pos-1.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "whatcom",
+          "skagit"
+        ]
+      }
+    },
+    {
+      "contest_slug": "san-juan-legislative-district-40-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 40",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "alex-ramel",
+          "name": "Alex Ramel",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-40-state-representative-position-2/alex-ramel.md"
+        },
+        {
+          "slug": "joseph-segault",
+          "name": "Joseph Segault",
+          "party_preference": "States No Party Preference",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-40-state-representative-position-2/joseph-segault.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "whatcom",
+          "contest_slug": "whatcom-legislative-district-40-state-representative-pos-2",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/whatcom/scoring/whatcom-legislative-district-40-state-representative-pos-2.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "whatcom",
+          "skagit"
+        ]
+      }
+    },
+    {
+      "contest_slug": "san-juan-san-juan-county-auditor",
+      "category": "County",
+      "office": "Auditor",
+      "district": "San Juan County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "heather-lee",
+          "name": "Heather Lee",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        },
+        {
+          "slug": "natasha-k-warmenhoven",
+          "name": "Natasha K Warmenhoven",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        }
+      ]
+    },
+    {
+      "contest_slug": "san-juan-san-juan-county-council-residency-district-3",
+      "category": "County",
+      "office": "Council Residency District 3",
+      "district": "San Juan County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "jennifer-swanson",
+          "name": "Jennifer Swanson",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/san-juan/dossiers/san-juan-san-juan-county-council-residency-district-3/jennifer-swanson.md"
+        },
+        {
+          "slug": "katherine-bryant-ingman",
+          "name": "Katherine Bryant Ingman",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/san-juan/dossiers/san-juan-san-juan-county-council-residency-district-3/katherine-bryant-ingman.md"
+        }
+      ]
+    }
+  ],
+  "measures": [
+    {
+      "jurisdiction": "San Juan County Fire Protection District No. 4 (Lopez Island Fire & EMS)",
+      "proposition": "Proposition No. 1",
+      "title": "Property Tax Levy for Fire Protection and Emergency Medical",
+      "slug": "san-juan-san-juan-county-fire-protection-district-no-4-lopez-island-fire-ems-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Port of Lopez",
+      "proposition": "Proposition No. 1",
+      "title": "Term Length of Port Commissioners",
+      "slug": "san-juan-port-of-lopez-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Orcas Island Park and Recreation District",
+      "proposition": "Proposition No. 1",
+      "title": "Six-Year Property Tax Levy",
+      "slug": "san-juan-orcas-island-park-and-recreation-district-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Lopez Solid Waste Disposal District",
+      "proposition": "Proposition No. 1",
+      "title": "Excess Property Tax Levy for 2027",
+      "slug": "san-juan-lopez-solid-waste-disposal-district-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    }
+  ],
+  "carry_forward_from": "2026-08-04-primary"
+}

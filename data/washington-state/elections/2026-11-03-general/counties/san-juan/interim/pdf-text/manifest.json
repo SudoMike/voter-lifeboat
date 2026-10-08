@@ -1,0 +1,36 @@
+{
+  "county": "san-juan",
+  "script": "pipeline/extract_pdf_text.mjs",
+  "files": [
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/san-juan/raw/san-juan/local-voters-pamphlet.pdf.url",
+      "url": "https://www.sanjuancountywa.gov/DocumentCenter/View/36027/2026-General-VP-San-Juan-County---Final-State-and-County?bidId=",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/san-juan/interim/pdf-text/local-voters-pamphlet.txt"
+    },
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/san-juan/raw/san-juan/resolution-fire-district-4-levy.pdf.url",
+      "url": "https://www.sanjuancountywa.gov/DocumentCenter/View/35851",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/san-juan/interim/pdf-text/resolution-fire-district-4-levy.txt"
+    },
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/san-juan/raw/san-juan/resolution-lopez-solid-waste-2027-levy.pdf.url",
+      "url": "https://www.sanjuancountywa.gov/DocumentCenter/View/35848",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/san-juan/interim/pdf-text/resolution-lopez-solid-waste-2027-levy.txt"
+    },
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/san-juan/raw/san-juan/resolution-orcas-park-rec-levy.pdf.url",
+      "url": "https://www.sanjuancountywa.gov/DocumentCenter/View/35850",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/san-juan/interim/pdf-text/resolution-orcas-park-rec-levy.txt"
+    },
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/san-juan/raw/san-juan/resolution-port-of-lopez-terms.pdf.url",
+      "url": "https://www.sanjuancountywa.gov/DocumentCenter/View/35849",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/san-juan/interim/pdf-text/resolution-port-of-lopez-terms.txt"
+    },
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/san-juan/raw/san-juan/sample-ballot.pdf.url",
+      "url": "https://www.sanjuancountywa.gov/DocumentCenter/View/35947",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/san-juan/interim/pdf-text/sample-ballot.txt"
+    }
+  ]
+}
