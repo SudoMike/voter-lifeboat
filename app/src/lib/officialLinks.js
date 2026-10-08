@@ -144,6 +144,13 @@ const ELECTIONS = {
       'clallam/local-voters-pamphlet': 'https://www.clallamcountywa.gov/DocumentCenter/View/29375/2026-General-Voter-Pamphlet',
       'franklin/local-voters-pamphlet':
         'https://www.franklincountywa.gov/DocumentCenter/View/4553/2611-Franklin-County-Voters-Pamphlet-',
+      // Mason general Local Voters' Pamphlet (#30), from the package's pointer
+      // counties/mason/raw/mason/local-voters-pamphlet.pdf.url. Checked
+      // 2026-10-08: 302 to cms2.revize.com, then 200 application/pdf with the
+      // pointer's sha256; 32 PDF pages (candidates pp. 10-22, measures pp.
+      // 24-30).
+      'mason/local-voters-pamphlet':
+        'https://www.masoncountywa.gov/Documents/Departments/Auditor/Elections/Current%20Election/General_2026_Local_Voters_Pamphlet.pdf',
     },
     // Counties whose research cites VoteWA's online voters' guide, which has
     // no page numbers, instead of a printed pamphlet: their records carry no
@@ -192,6 +199,10 @@ const ELECTIONS = {
       chelan: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=04',
       clallam: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=05',
       'grays-harbor': 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=14',
+      // Mason's dossiers cite the pamphlet and VoteWA's guide records; the
+      // Auditor links this guide as its "Voter Guide Portal" (#30; 200
+      // text/html, 2026-10-08).
+      mason: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=23',
     },
     pamphletIndex: `${SOS_GENERAL_2026}/2026-voters-pamphlet-pdfs`,
   },
