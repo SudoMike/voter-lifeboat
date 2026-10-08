@@ -1314,6 +1314,88 @@ ELECTION_MEASURES = {
                 "layer 20, DISTATTRIB). Timberland Regional Library District covers all of Mason County.",
             ],
         },
+        # Okanogan (#30): the six local measures in VoteWA's online voters'
+        # guide for Okanogan County (voterguide.ashx?e=899&c=24, read
+        # 2026-10-08; counties/okanogan/raw/votewa/voter-guide/), which match
+        # the Auditor's District Resolutions page (seven stamped packets; the
+        # county's own levy was on the August primary). The county prints no
+        # local pamphlet. Scopes point-checked 2026-10-08 (Census geocoder,
+        # Current vintage; WA DOR WADOR_PropertyTax layers 6, 7 and 11):
+        # 415 Hospital Way, Brewster -> Census place 'Brewster city', HSP2025
+        # '1J'; 118 S Glover St, Twisp -> 'Twisp town', HSP2025 '1J', EMS2025
+        # 'TC'; 206 Riverside Ave, Winthrop -> 'Winthrop town', EMS2025 'WC';
+        # 50 Lost River Rd, Mazama -> EMS2025 'MV' (Methow Valley EMS District,
+        # which leaves out the two towns), HSP2025 '1J'; 26 Eastside Oroville
+        # Rd and 38 Swanson Mill Rd, Oroville -> FIR2025 '1'; 1308 Ironwood
+        # St, Oroville (in the city) -> no FIR2025 feature; 2 S Ash St, Omak
+        # -> HSP2025 '3' (Mid-Valley, not Three Rivers).
+        # Overrides: Commissioner District 3 is nominated by district and
+        # elected county-wide in the general (RCW 36.32.040; the 2022 general's
+        # District 3 race was on all 248 Okanogan precincts in the SOS precinct
+        # export); the name keeps the primary's so its dossiers carry forward.
+        # The District Court is one county-wide district (both seats on all
+        # 248 precincts in 2022). The two PUD rows are left to the generic
+        # rule (PUDDST, unresolvable): Okanogan PUD's seat is elected by the
+        # whole PUD, which is the county minus about 325 voters in the
+        # northeast (Bodie, Wauconda, Toroda area) who are in Ferry County PUD
+        # No. 1 and vote in its Commissioner #3 race instead; no public layer
+        # separates the two (DOR PUD2025 has one Okanogan polygon covering the
+        # whole county). See counties/okanogan/COMPLETENESS.md.
+        "okanogan": {
+            "overrides": {
+                ("COUNTY", "COMMISSIONER DISTRICT 3"): (
+                    "County", "Okanogan County Commissioner District 3", "Commissioner District 3", ("COUNTY", None)),
+                ("DISTRICT COURT JUDGE", "JUDGE POS. 1"): (
+                    "Judicial", "Okanogan County District Court", "Judge Position No. 1", ("COUNTY", None)),
+                ("DISTRICT COURT JUDGE", "JUDGE POS. 2"): (
+                    "Judicial", "Okanogan County District Court", "Judge Position No. 2", ("COUNTY", None)),
+            },
+            "measures": [
+                m("Public Hospital District No. 1, Okanogan and Douglas Counties", "Proposition No. 1",
+                  "Bonds for Hospital Renovation and Improvement",
+                  ("HOSPDST", "1J"),
+                  "Authorizes up to $48,000,000 of general obligation bonds, maturing within 30 years, to renovate, remodel and equip Three Rivers Hospital in Brewster, repaid by annual excess property taxes (Resolution No. 2026-10).",
+                  "Up to $48 million in bonds over up to 30 years; an estimated $0.73 per $1,000 of assessed value, about $18 a month on a $300,000 home, per the explanatory statement.",
+                  "https://voter.votewa.gov/elections/measure.ashx?e=899&m=7283&la=en&c=24"),
+                m("City of Brewster", "Proposition No. 1",
+                  "Emergency Medical Care or Emergency Medical Services Continuation Levy",
+                  ("CITY", "Brewster"),
+                  "Continues Brewster's emergency medical services property tax levy, first approved in 2020, for six years from 2027; the city contracts with Douglas-Okanogan Fire District 15 for EMS (RCW 84.52.069).",
+                  "$0.50 or less per $1,000 of assessed value a year for 2027-2032, the same rate as the expiring levy.",
+                  "https://voter.votewa.gov/elections/measure.ashx?e=899&m=7278&la=en&c=24"),
+                m("Town of Twisp", "Proposition No. 1",
+                  "Emergency Medical Care and Services Excess Operations and Maintenance Levy",
+                  ("CITY", "Twisp"),
+                  "One-year excess levy (RCW 84.52.052) to keep emergency medical and ambulance services from being cut; Aero Methow Rescue Service is the contracted provider. Needs 60% approval and the constitutional turnout minimum.",
+                  "$0.10 per $1,000 of assessed value, collected in 2027 only.",
+                  "https://voter.votewa.gov/elections/measure.ashx?e=899&m=7279&la=en&c=24"),
+                m("Town of Winthrop", "Proposition No. 1",
+                  "Emergency Medical Services Excess Operations and Maintenance Levy",
+                  ("CITY", "Winthrop"),
+                  "One-year excess levy (RCW 84.52.052) to keep emergency medical and ambulance services from being cut; Aero Methow Rescue Service is the contracted provider. Needs 60% approval and the constitutional turnout minimum.",
+                  "$0.10 per $1,000 of assessed value, collected in 2027 only.",
+                  "https://voter.votewa.gov/elections/measure.ashx?e=899&m=7280&la=en&c=24"),
+                m("Methow Valley Emergency Medical Services District", "Proposition No. 1",
+                  "Emergency Medical Care and Services Excess Operations and Maintenance Levy",
+                  ("EMSDST", "MV"),
+                  "One-year excess levy (RCW 84.52.052) across the Methow Valley EMS District (outside the towns of Twisp and Winthrop) to keep emergency medical and ambulance services from being cut; Aero Methow Rescue Service is the contracted provider. Needs 60% approval and the constitutional turnout minimum.",
+                  "$0.10 per $1,000 of assessed value, collected in 2027 only.",
+                  "https://voter.votewa.gov/elections/measure.ashx?e=899&m=7282&la=en&c=24"),
+                m("Okanogan County Fire Protection District No. 1", "Proposition No. 1",
+                  "Levy Lid Lift",
+                  ("FIRDST", "1"),
+                  "Resets the Oroville-area fire district's regular property tax levy to $0.50 per $1,000 for 2027 collection (Resolution No. 97); that 2027 amount becomes the base for later 1% limits (chapter 84.55 RCW).",
+                  "From about $0.22 to $0.50 per $1,000 of assessed value for 2027 collection.",
+                  "https://voter.votewa.gov/elections/measure.ashx?e=899&m=7281&la=en&c=24"),
+            ],
+            "extra_notes": [
+                "The Okanogan County PUD Commissioner District 1 seat is elected by the whole PUD, which is Okanogan County "
+                "except about 325 registered voters in the northeast who are in Ferry County PUD No. 1 (Commissioner #3 race); "
+                "no public GIS layer separates the two, so both PUD seats are scoped PUDDST and hidden (partial_county).",
+                "The Methow Valley EMS levy is scoped EMSDST 'MV' (WA DOR EMS2025, layer 6, DISTATTRIB); the Fire District 1 "
+                "levy FIRDST '1' (layer 7) and the Three Rivers hospital bonds HOSPDST '1J' (layer 11).",
+            ],
+        },
         # Skagit: the four measures the Auditor's Ballot Measures page lists
         # for the general (counties/skagit/raw/skagit/ballot-measures.html.url),
         # text from the local voters' pamphlet pages 18-21 and VoteWA
