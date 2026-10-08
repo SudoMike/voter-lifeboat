@@ -38,7 +38,37 @@ ELECTION_META = {
         "name": "November 3, 2026 General Election",
         "day": "2026-11-03",
         "scope": "Washington State",
-        "statewide_complete": False,
+        "statewide_complete": True,
+    },
+}
+
+
+# Which packages each election's app data is assembled from, and who owns
+# congressional/legislative (district) contests.
+#
+# `statewide_ballot`: True when statewide/interim/{contests,measures}.json is
+#   the ballot source for Statewide Contests and measures (hand-built, with
+#   explicit scope). The primary predates this: its Supreme Court contests
+#   come from King's interim files, and its statewide contests.json holds
+#   research-only deduplicated district contests.
+# `counties`: county packages declared complete enough to ship, in order.
+#   None keeps the primary's rule (King's interim files plus every county
+#   package with interim/app-*.json). merge_scores.py merges scoring only
+#   from the statewide package and these counties.
+# `district_contests`: "statewide" when normalize_research_inputs.py writes
+#   deduplicated congressional/legislative contests into the statewide
+#   package (the primary); "county" when they stay in the county packages
+#   (the general onward, see statewide/COMPLETENESS.md).
+APP_PACKAGES = {
+    "2026-08-04-primary": {
+        "statewide_ballot": False,
+        "counties": None,
+        "district_contests": "statewide",
+    },
+    "2026-11-03-general": {
+        "statewide_ballot": True,
+        "counties": [],  # King joins in #16
+        "district_contests": "county",
     },
 }
 
@@ -120,9 +150,21 @@ class Election:
     def county(self, county_id: str) -> Path:
         return self.counties / county_id
 
+    @property
+    def app_packages(self) -> dict:
+        return APP_PACKAGES[self.id]
+
     def packages(self) -> list[Path]:
         """Statewide package first, then every county package in name order."""
         return [self.state] + sorted(p for p in self.counties.iterdir() if p.is_dir())
+
+    def shipped_packages(self) -> list[Path]:
+        """Packages whose data ships in the app: statewide first, then the
+        declared counties (every county package when none are declared)."""
+        counties = self.app_packages["counties"]
+        if counties is None:
+            return self.packages()
+        return [self.state] + [self.county(c) for c in counties]
 
 
 def rel(path: Path) -> str:

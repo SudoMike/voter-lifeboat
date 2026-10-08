@@ -9,6 +9,9 @@ Rules:
   measures: same verdict semantics against lean_mappings ("_display" verdicts
   are notes only)
 
+Packages: the statewide package plus the counties declared in
+election.APP_PACKAGES (every county package for the primary).
+
 Usage:   python3 pipeline/merge_scores.py [--election <id>]
 Outputs: data/final/<id>/scores.json, data/final/<id>/measures.json
 Every output carries derived_from + the counts of applied verdicts.
@@ -20,7 +23,9 @@ import election
 from election import ROOT
 
 E = election.Election(election.from_argv())
-PACKAGES = E.packages()
+# Only packages that ship (election.APP_PACKAGES): a county package still being
+# researched must not leak half-finished scores into the final files.
+PACKAGES = E.shipped_packages()
 SCORING_DIRS = [p / "scoring" for p in PACKAGES if (p / "scoring").is_dir()]
 FINAL = E.final
 

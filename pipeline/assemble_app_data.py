@@ -2,10 +2,17 @@
 
 Usage: python3 pipeline/assemble_app_data.py [--election <id>]
 
+Which packages are read is declared per election in election.APP_PACKAGES.
+
 Inputs (E = data/washington-state/elections/<id>):
-  E/counties/king/interim/{contests,measures,pamphlet-index}.json
+  Statewide ballot (`statewide_ballot`, the general onward):
+    E/statewide/interim/{contests,measures,pamphlet-index}.json
+  Legacy (the primary): E/counties/king/interim/{contests,measures,
+    pamphlet-index}.json, which also carry the primary's Supreme Court contests
+  County packages: the declared `counties`, or for the primary every
+    E/counties/*/interim/app-*.json
   data/final/<id>/{scores,measures,rubric,interview}.json
-  E/{statewide,counties/*}/dossiers/**
+  dossiers/** of the packages above
 
 Outputs:
   data/final/<id>/app-data.json
@@ -14,7 +21,7 @@ Outputs:
     every election whose app-data exists, with package `id`, `app_id` and
     `status`; `active` from elections/ACTIVE)
 
-An empty package (no King interim files, no scores) assembles to app data
+An empty package (no ballot interim files, no scores) assembles to app data
 with no contests; rubric.json and interview.json are always required.
 
 Scope model:
@@ -31,14 +38,27 @@ import election
 from election import ROOT, rel
 
 E = election.Election(election.from_argv())
+PACKAGES = E.app_packages
 STATE = E.state
 KING = E.county("king")
-INTERIM = KING / "interim"
 FINAL = E.final
-DOSSIER_DIRS = [STATE / "dossiers", KING / "dossiers"] + sorted(
-    p / "dossiers" for p in E.counties.iterdir()
-    if p.is_dir() and p.name != "king"
-)
+if PACKAGES["statewide_ballot"]:
+    # Statewide Contests and measures come from the statewide package. County
+    # packages ship only once declared in election.APP_PACKAGES.
+    COUNTY_DIRS = [E.county(c) for c in PACKAGES["counties"]]
+    if KING in COUNTY_DIRS:
+        raise SystemExit(
+            "King's schema-2 package (owner/scope per contest) has no assembly "
+            "rule yet; add one before declaring king in election.APP_PACKAGES"
+        )
+    INTERIM = STATE / "interim"
+    DOSSIER_DIRS = [STATE / "dossiers"] + [d / "dossiers" for d in COUNTY_DIRS]
+else:
+    # The primary: King's interim files hold King's ballot including the
+    # Supreme Court contests; every other county ships via app-*.json.
+    COUNTY_DIRS = sorted(p for p in E.counties.iterdir() if p.is_dir() and p.name != "king")
+    INTERIM = KING / "interim"
+    DOSSIER_DIRS = [STATE / "dossiers", KING / "dossiers"] + [d / "dossiers" for d in COUNTY_DIRS]
 COUNTY_NAMES = {
     "adams": ("Adams County", "53001"),
     "asotin": ("Asotin County", "53003"),
@@ -92,7 +112,7 @@ def load_optional(path, key, default):
 
 
 # An election package may be empty (a new election before research lands):
-# missing King interim files and score files mean "no contests yet", not an
+# missing ballot interim files and score files mean "no contests yet", not an
 # error. rubric.json and interview.json are hand-authored and always required.
 contests = load_optional(INTERIM / "contests.json", "contests", [])
 scores = {c["contest_slug"]: c for c in load_optional(FINAL / "scores.json", "contests", [])}
@@ -230,11 +250,7 @@ MEASURE_SCOPES = {
     "snoqualmie-pass-fire-and-rescue-proposition-no-1": district_scope("FIRDST", "51"),
 }
 
-out_contests = []
-for con in contests:
-    sc = scores.get(con["slug"])
-    if not sc:
-        raise SystemExit(f"no scores for {con['slug']}")
+def assembled_candidates(con, sc, pamphlet_pages):
     scored_by_slug = {c["slug"]: c for c in sc["candidates"]}
     cands = []
     for c in con["candidates"]:
@@ -245,7 +261,7 @@ for con in contests:
             "party": c.get("party_preference"),
             "ballot_order": c.get("ballot_order"),
             "website": c.get("campaign_website"),
-            "pamphlet_pages": pidx["candidates"].get(c["slug"], []),
+            "pamphlet_pages": pamphlet_pages(c),
             "evidence_level": s.get("evidence_level"),
             "withdrawn": bool(s.get("withdrawn")),
             "summary": s.get("summary"),
@@ -254,45 +270,86 @@ for con in contests:
             "sources": parse_sources(con["slug"], c["slug"]),
         })
     cands.sort(key=lambda x: (x["ballot_order"] or 99))
-    owner = "statewide" if con["category"] in STATEWIDE_CATEGORIES else "king"
-    out_contests.append({
+    return cands
+
+
+def assembled_contest(con, owner, scope, sc, cands):
+    return {
         "slug": con["slug"],
         "owner": owner,
         "category": con["category"],
         "office": con["office"],
         "district": con["district"],
-        "scope": contest_scope(con),
+        "scope": scope,
         "office_does": sc.get("office_does"),
         "race_blurb": sc.get("race_blurb"),
         "uncontested": len(cands) == 1,
         "candidates": cands,
-    })
+    }
 
-out_measures = []
-for m in measures_meta:
-    ms = measures_scored[m["slug"]]
-    out_measures.append({
+
+def assembled_measure(m, owner, scope):
+    ms = measures_scored.get(m["slug"])
+    if not ms:
+        raise SystemExit(f"no scored measure for {m['slug']}")
+    return {
         "slug": m["slug"],
-        "owner": "king",
+        "owner": owner,
         "jurisdiction": m["jurisdiction"],
         "proposition": m["proposition"],
         "title": m["title"],
-        "scope": MEASURE_SCOPES[m["slug"]],
+        "scope": scope,
         "pamphlet_pages": pidx["measures"].get(m["slug"], []),
         "what_it_does": ms.get("what_it_does"),
         "cost_line": ms.get("cost_line"),
         "pro_summary": ms.get("pro_summary"),
         "con_summary": ms.get("con_summary"),
         "lean_mappings": ms.get("lean_mappings", {}),
-    })
+    }
 
+
+def scores_for(con):
+    sc = scores.get(con["slug"])
+    if not sc:
+        raise SystemExit(f"no scores for {con['slug']}")
+    return sc
+
+
+def candidate_pages(c):
+    return pidx["candidates"].get(c["slug"], [])
+
+
+STATEWIDE_SCOPE = {"kind": "STATEWIDE"}
+
+out_contests = []
+out_measures = []
 supported_counties = []
-if contests or measures_meta:
-    supported_counties.append({"id": "king", "name": "King County", "state": "WA", "fips": "53033", "coverage": "full_county"})
+if PACKAGES["statewide_ballot"]:
+    # Every contest and measure here is a Statewide Contest (ADR-0003). A
+    # district- or county-scoped entry means the package was polluted.
+    for con in contests:
+        if con.get("scope") != STATEWIDE_SCOPE:
+            raise SystemExit(f"statewide package contest {con['slug']} is not STATEWIDE: {con.get('scope')}")
+        sc = scores_for(con)
+        cands = assembled_candidates(con, sc, candidate_pages)
+        out_contests.append(assembled_contest(con, "statewide", STATEWIDE_SCOPE, sc, cands))
+    for m in measures_meta:
+        if m.get("scope") != STATEWIDE_SCOPE:
+            raise SystemExit(f"statewide package measure {m['slug']} is not STATEWIDE: {m.get('scope')}")
+        out_measures.append(assembled_measure(m, "statewide", STATEWIDE_SCOPE))
+else:
+    for con in contests:
+        sc = scores_for(con)
+        cands = assembled_candidates(con, sc, candidate_pages)
+        owner = "statewide" if con["category"] in STATEWIDE_CATEGORIES else "king"
+        out_contests.append(assembled_contest(con, owner, contest_scope(con), sc, cands))
+    for m in measures_meta:
+        out_measures.append(assembled_measure(m, "king", MEASURE_SCOPES[m["slug"]]))
+    if contests or measures_meta:
+        supported_counties.append({"id": "king", "name": "King County", "state": "WA", "fips": "53033", "coverage": "full_county"})
+
 shared_scores = shared_score_index(scores)
-for county_dir in sorted(E.counties.iterdir()):
-    if county_dir.name == "king" or not county_dir.is_dir():
-        continue
+for county_dir in COUNTY_DIRS:
     cfile = county_dir / "interim/app-contests.json"
     mfile = county_dir / "interim/app-measures.json"
     package_coverages = []
@@ -318,6 +375,8 @@ for county_dir in sorted(E.counties.iterdir()):
         name, fips = COUNTY_NAMES.get(county_dir.name, (county_dir.name.title(), None))
         coverage = "full_county" if package_coverages and all(c == "full_county" for c in package_coverages) else "partial_county"
         supported_counties.append({"id": county_dir.name, "name": name, "state": "WA", "fips": fips, "coverage": coverage})
+    elif PACKAGES["counties"] is not None:
+        raise SystemExit(f"declared county package {county_dir.name} has no interim/app-*.json")
 
 contest_slugs = [c["slug"] for c in out_contests]
 measure_slugs = [m["slug"] for m in out_measures]
@@ -331,10 +390,14 @@ sha = subprocess.run(["git", "rev-parse", "--short", "HEAD"], capture_output=Tru
                      text=True, cwd=ROOT).stdout.strip() or "dev"
 
 app_data = {
-    "derived_from": [
+    "derived_from": ([
         f"{rel(STATE)}/**",
         f"{rel(KING)}/**",
         f"{rel(E.counties)}/*/interim/app-*.json",
+    ] if PACKAGES["counties"] is None else [
+        f"{rel(STATE)}/**",
+        *(f"{rel(d)}/**" for d in COUNTY_DIRS),
+    ]) + [
         f"{rel(FINAL)}/scores.json",
         f"{rel(FINAL)}/measures.json",
         f"{rel(FINAL)}/rubric.json",
