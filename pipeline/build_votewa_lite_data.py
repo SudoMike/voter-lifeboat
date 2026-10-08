@@ -601,6 +601,58 @@ COUNTY_CONFIG = {
 # its measures are not curated yet, so it can never pass for "no measures".
 ELECTION_MEASURES = {
     "2026-11-03-general": {
+        # Adams (#31). Measures: the Adams County Auditor's general sample
+        # ballot (counties/adams/raw/adams/sample-ballot.pdf.url,
+        # DocumentCenter 2684, linked from co.adams.wa.gov/162/Elections-
+        # Elecciones) and VoteWA's online voters' guide for county 01
+        # (raw/votewa/voter-guide/guide.json.url, read 2026-10-08) both list
+        # two local measures and no others. Adams prints no local pamphlet.
+        # Scopes point-checked 2026-10-08 (Census geocoder, Current vintage;
+        # WA DOR 2025 layers 7 FIR2025 and 14 PKR2025, DISTATTRIB):
+        # 155 W Main St, Washtucna -> PKR2025 '2' (210 W Broadway Ave,
+        # Ritzville -> '4'; 107 E 2nd St, Lind -> '3'; 425 E Main St,
+        # Othello -> '1'); FD 4 has no geocodable street address, so its
+        # interior points (-118.02, 47.15) and (-118.05, 47.10) -> FIR2025
+        # '4' (1780 E Templin Rd, Ritzville -> '1'; Ritzville, Lind,
+        # Washtucna and Othello -> no fire district). FIRDST is not in
+        # COUNTY_LAYERS.adams yet (it reads CEMDST and PARKDST); see
+        # counties/adams/COMPLETENESS.md.
+        # Overrides: the commissioner race (District Type Countywide) is
+        # nominated by district and elected county-wide in the general (RCW
+        # 36.32.040, 36.32.050(1); SOS 2022 general precinct export: 'Adams
+        # County Commissioner District 3' on all 28 precincts, the 2026
+        # primary on 5 of 30 reporting units); it keeps the primary's contest
+        # name so primary dossiers carry forward. The two District Court
+        # seats are judicial seats of one county-wide court (2022: both on
+        # all 28 precincts).
+        "adams": {
+            "overrides": {
+                ("COUNTY", "COUNTY COMMISSIONER DISTRICT 3"): (
+                    "County", "Adams County Commissioner District 3", "County Commissioner District 3", ("COUNTY", None)),
+                ("COUNTY", "DISTRICT COURT JUDGE POSITION 1"): (
+                    "Judicial", "Adams County District Court", "Judge Position No. 1", ("COUNTY", None)),
+                ("COUNTY", "DISTRICT COURT JUDGE POSITION 2"): (
+                    "Judicial", "Adams County District Court", "Judge Position No. 2", ("COUNTY", None)),
+            },
+            "measures": [
+                m("Adams County Fire Protection District No. 4", "Proposition No. 1", "Maintenance and Operation Levy",
+                  ("FIRDST", "4"),
+                  "Authorizes a one-year special (excess) property tax levy for the construction, maintenance and operation of the fire district's pumper equipment in 2027. Needs 60% yes.",
+                  "$11,000, an estimated $0.42 per $1,000 of assessed value, collected in 2027.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7368&e=899&la=en&c=01"),
+                m("Adams County Park and Recreation District No. 2", "Proposition No. 1", "Maintenance and Operation Levy (Washtucna Pool)",
+                  ("PARKDST", "2"),
+                  "Authorizes a one-year special (excess) property tax levy for the maintenance and operation of the Washtucna Pool in 2027. Needs 60% yes; the same levy drew 57% yes in the August 4, 2026 primary.",
+                  "$85,000, an estimated $0.83 per $1,000 of assessed value, collected in 2027.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7371&e=899&la=en&c=01"),
+            ],
+            "extra_notes": [
+                "Adams County prints no local voters' pamphlet for the general; candidate statements and measure "
+                "ballot titles are in VoteWA's online voters' guide (genericvoterguide.aspx?e=899&c=01).",
+                "Adams County Commissioner District 3 is nominated by district and elected county-wide in the general "
+                "(RCW 36.32.040; SOS 2022 general precinct results: on all 28 precincts).",
+            ],
+        },
         # Asotin (#31): checked against the Asotin County Auditor's general
         # sample ballot (precinct 001.02 Anatone) and local voters' pamphlet
         # (counties/asotin/raw/asotin/{sample-ballot,local-voters-pamphlet}.pdf.url,

@@ -1,0 +1,70 @@
+{
+  "county": "adams",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/adams/raw/votewa/candidate-list.csv.url",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7368&e=899&la=en&c=01",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7371&e=899&la=en&c=01"
+  ],
+  "coverage": "full_county",
+  "notes": [
+    "Adams County prints no local voters' pamphlet for the general; candidate statements and measure ballot titles are in VoteWA's online voters' guide (genericvoterguide.aspx?e=899&c=01).",
+    "Adams County Commissioner District 3 is nominated by district and elected county-wide in the general (RCW 36.32.040; SOS 2022 general precinct results: on all 28 precincts)."
+  ],
+  "measures": [
+    {
+      "slug": "adams-adams-county-fire-protection-district-no-4-proposition-no-1",
+      "owner": "adams",
+      "jurisdiction": "Adams County Fire Protection District No. 4",
+      "proposition": "Proposition No. 1",
+      "title": "Maintenance and Operation Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "adams",
+        "layer": "FIRDST",
+        "value": "4"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Authorizes a one-year special (excess) property tax levy for the construction, maintenance and operation of the fire district's pumper equipment in 2027. Needs 60% yes.",
+      "cost_line": "$11,000, an estimated $0.42 per $1,000 of assessed value, collected in 2027.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7368&e=899&la=en&c=01"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "adams-adams-county-park-and-recreation-district-no-2-proposition-no-1",
+      "owner": "adams",
+      "jurisdiction": "Adams County Park and Recreation District No. 2",
+      "proposition": "Proposition No. 1",
+      "title": "Maintenance and Operation Levy (Washtucna Pool)",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "adams",
+        "layer": "PARKDST",
+        "value": "2"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Authorizes a one-year special (excess) property tax levy for the maintenance and operation of the Washtucna Pool in 2027. Needs 60% yes; the same levy drew 57% yes in the August 4, 2026 primary.",
+      "cost_line": "$85,000, an estimated $0.83 per $1,000 of assessed value, collected in 2027.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7371&e=899&la=en&c=01"
+          ]
+        }
+      }
+    }
+  ]
+}
