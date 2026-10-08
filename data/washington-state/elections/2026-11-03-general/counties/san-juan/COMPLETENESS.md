@@ -3,7 +3,22 @@
 Election: 2026 Washington general election, November 3, 2026 (VoteWA
 election 899, county code 28).
 
-Status (#32): research package, not yet shipped. Contests and measures are
+Status (#32): shipped at Full County Coverage in
+`APP_PACKAGES["2026-11-03-general"]["counties"]`, with its elections office
+(`https://www.sanjuancountywa.gov/1292/Current-Election`), its pamphlet
+(`pamphletPdfs['san-juan/local-voters-pamphlet']`, PDF page = printed page)
+and its VoteWA guide (`countyGuides['san-juan']`, `c=28`).
+`COUNTY_LAYERS['san-juan']` gained `FIRDST`, `PORTDST` and `PARKDST` as
+proposed below, and `SWDDST` read from DOR PRT2025 (`where: "DISTATTRIB =
+'LOPEZ'"`, `value: 'LOPEZ'`), the equivalent alternative named below, rather
+than the county precinct layer. CD 2 ships with Snohomish's research, LD 40
+with Whatcom's. Live ballots on 2026-10-08, each `full_county` with no
+missing layer: 2225 Fisherman Bay Rd, Lopez Island (Fire District 4, Port
+of Lopez and Lopez Solid Waste measures), 500 Rose St, Eastsound (the Orcas
+park levy only) and 350 Court St, Friday Harbor (no local measure). The
+paragraphs below describe the package as researched.
+
+Research package for #32. Contests and measures are
 built by `pipeline/build_votewa_lite_data.py --county san-juan` from the
 VoteWA candidate list (`raw/votewa/candidate-list.csv.url`, 26 rows) and the
 overrides and measures in that script's

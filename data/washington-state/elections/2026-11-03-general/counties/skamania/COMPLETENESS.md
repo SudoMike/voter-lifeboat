@@ -3,8 +3,20 @@
 Election: 2026 Washington general election, November 3, 2026 (VoteWA
 election 899, county code 30).
 
-Research package for #32 (county wave 7). Not yet shipped: the director
-declares it in `APP_PACKAGES["2026-11-03-general"]["counties"]`.
+Status (#32): shipped at Full County Coverage in
+`APP_PACKAGES["2026-11-03-general"]["counties"]`, with its elections office
+(`https://www.skamaniacounty.gov/departments-offices/auditor/elections/current-election`),
+its local pamphlet (`pamphletPdfs['skamania/local-voters-pamphlet']`, PDF
+page = printed page - 34) and its VoteWA guide (`countyGuides.skamania`,
+`c=30`). No layer was added: `COUNTY_LAYERS.skamania` (`COUNTY_COUNCIL`,
+`WATDST`) was re-probed and no general scope uses it. CD 3 and LD 17 ship
+with Clark's research. Live ballots on 2026-10-08, each `full_county` with
+no missing layer and the same 12 county contests and no local measure: 240
+NW Vancouver Ave, Stevenson (CD 3, LD 17, Commissioner District 2) and 71
+Cooper Ave, Underwood (CD 3, LD 17, District 3). The paragraphs below
+describe the package as researched.
+
+Research package for #32 (county wave 7).
 
 Contests are built by `pipeline/build_votewa_lite_data.py --county skamania`
 from the VoteWA candidate list (`raw/votewa/candidate-list.csv.url`, 29 rows)

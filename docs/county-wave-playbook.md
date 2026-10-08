@@ -428,13 +428,14 @@ DOR GIS layer, a PDF-only map, a layer that is not public), the rule is:
 Never scope a district race `COUNTY` to make it appear: that shows it to
 voters outside the district.
 
-As of the builder runs on 2026-10-08 (#22, #28, #29, #30, #31), the shipped
+As of the builder runs on 2026-10-08 (#22, #28, #29, #30, #31, #32), the shipped
 general packages that are `partial_county` are Spokane and Okanogan (both
 `PUDDST`) and Klickitat and Pacific (both `DISTCRT`). Benton,
 Clark, Kitsap, Pierce, Snohomish (since #27), Thurston, Whatcom, Yakima,
 Skagit, Cowlitz, Grant, Island, Lewis, Franklin, Chelan, Clallam, Grays
 Harbor, Mason, Walla Walla, Stevens, Whitman, Douglas, Jefferson, Kittitas,
-Asotin and Adams are `full_county`; all thirty ship with King. A PUD
+Asotin, Adams, Skamania and San Juan are `full_county`; all thirty-two ship
+with King. A PUD
 commissioner is nominated by district but elected by the whole PUD in the
 general (RCW 54.12.010(3)), so a countywide PUD's seat is scoped `COUNTY`
 (Clark, Kitsap, Thurston), not `PUDDST`.
@@ -744,6 +745,22 @@ links its VoteWA guide (`c=01`). Shipping it moved two pipeline fixtures
 that used Adams as "a county with no general package" to Garfield
 (`test_votewa`, `test_research_inputs`); pick a still-unshipped county
 for such fixtures.
+
+Skamania and San Juan shipped on 2026-10-08 (#32) as `full_county`.
+Skamania needs no county layer: every scope is `COUNTY` or a Census layer
+(the commissioner and PUD seats are nominated by district and elected
+county-wide; `COUNTY_COUNCIL` and `WATDST` were re-probed and stay for the
+archived primary). Its CD 3 and LD 17 Pos. 1/2 ship with Clark's scoring.
+skamaniacounty.gov answers 403 to a bare scripted User-Agent and 200 to full
+browser request headers; its pamphlet's PDF pages run 34 behind the printed
+ones. `COUNTY_LAYERS['san-juan']` gained `FIRDST`, `PORTDST` and `PARKDST`
+(DOR layers 7, 16, 14) and `SWDDST`, a presence layer for the Lopez Solid
+Waste Disposal District, which has no DOR polygon: DOR PRT2025 `where:
+"DISTATTRIB = 'LOPEZ'"`, `value: 'LOPEZ'` (the research's 425-point grid
+showed the Port of Lopez polygon equals the three Lopez precincts that vote
+the levy). San Juan's council residency district is a candidate
+qualification; the seat is voted on county-wide. Its CD 2 ships with
+Snohomish's scoring and LD 40 Pos. 1/2 with Whatcom's.
 
 ## 13. Reference
 
