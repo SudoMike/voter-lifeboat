@@ -1,0 +1,17 @@
+{
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/statewide/scoring/*.json",
+    "data/washington-state/elections/2026-11-03-general/statewide/scoring/refutations/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/king/scoring/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/king/scoring/refutations/*.json"
+  ],
+  "script": "pipeline/merge_scores.py",
+  "verdict_stats": {
+    "upheld": 0,
+    "adjust": 0,
+    "refuted": 0,
+    "missing_added": 0,
+    "missing_dropped_low": 0
+  },
+  "contests": []
+}

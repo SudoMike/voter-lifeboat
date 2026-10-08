@@ -2,25 +2,56 @@
 // geo.js: every supported county must be recognizable from a geocode, and
 // every DISTRICT scope in the data must be producible by some configured
 // layer for its county (or by the census-derived districts).
+//
+// Every election listed in the index is checked, not only the active one, so
+// an archived election's data (still served at /washington-state/<id>) stays
+// guarded. An election with no contests yet passes trivially; checks on the
+// `coverage` block apply only once it claims statewide_complete.
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { COUNTY_IDS, COUNTY_LAYERS, KING_LAYERS } from './geo.js'
 import { DISTRICT_LABELS, describeDistrict } from './districts.js'
-import { ELECTION_INDEX_PATH, activeAppDataPath } from './elections.js'
+import { ELECTION_INDEX_PATH, activeAppDataPath, appDataPath } from './elections.js'
 
-// Read the active election's data the same way the app does: through the
-// election index.
+// Read each election's data the same way the app does: through the election
+// index.
 const readPublic = (path) =>
   JSON.parse(readFileSync(new URL(`../../public/${path}`, import.meta.url), 'utf8'))
 const electionIndex = readPublic(ELECTION_INDEX_PATH)
-const data = readPublic(activeAppDataPath(electionIndex))
-const dossierQueue = JSON.parse(
-  readFileSync(
-    new URL(`../../../data/final/${electionIndex.active}/dossier-batches.json`, import.meta.url),
-    'utf8'
-  )
-)
+const elections = electionIndex.elections.map((entry) => ({
+  entry,
+  data: readPublic(appDataPath(entry)),
+  dossierQueue: JSON.parse(
+    readFileSync(
+      new URL(`../../../data/final/${entry.id}/dossier-batches.json`, import.meta.url),
+      'utf8'
+    )
+  ),
+}))
+
+test('the index names a listed active election and every entry has its app id', () => {
+  assert.doesNotThrow(() => activeAppDataPath(electionIndex))
+  for (const { entry, data } of elections) {
+    assert.ok(entry.app_id, `${entry.id}: index entry has no app_id`)
+    assert.equal(data.election.id, entry.app_id, `${entry.id}: app-data election.id`)
+    assert.equal(data.data_version, entry.data_version, `${entry.id}: data_version`)
+    assert.equal(
+      entry.status,
+      entry.id === electionIndex.active ? 'active' : 'archived',
+      `${entry.id}: status`
+    )
+  }
+})
+
+const eachElection = (name, fn) => {
+  for (const { entry, data, dossierQueue } of elections)
+    test(`${name} [${entry.id}]`, () => fn(data, dossierQueue))
+}
+const eachCompleteElection = (name, fn) =>
+  eachElection(name, (data, queue) => {
+    if (data.coverage.statewide_complete) fn(data, queue)
+  })
 
 // Scopes that are knowingly unresolvable, with the reason documented at the
 // definition site. Keep this list short and deliberate.
@@ -45,7 +76,7 @@ const UNRESOLVABLE_SCOPES = new Set([
 
 const CENSUS_LAYERS = new Set(['CONGDST', 'LEGDST', 'CITY'])
 
-test('every supported county has a FIPS mapping in geo.js', () => {
+eachCompleteElection('every supported county has a FIPS mapping in geo.js', (data) => {
   const ids = new Set(Object.values(COUNTY_IDS))
   for (const county of data.coverage.supported_counties) {
     assert.ok(ids.has(county.id), `county ${county.id} missing from COUNTY_IDS`)
@@ -53,7 +84,7 @@ test('every supported county has a FIPS mapping in geo.js', () => {
   }
 })
 
-test('every DISTRICT scope layer in the data is resolvable for its county', () => {
+eachElection('every DISTRICT scope layer in the data is resolvable for its county', (data) => {
   const supported = new Set(data.coverage.supported_counties.map((c) => c.id))
   const layersFor = (county) =>
     county === 'king'
@@ -72,7 +103,7 @@ test('every DISTRICT scope layer in the data is resolvable for its county', () =
   }
 })
 
-test('every supported county with local DISTRICT scopes has a District Adapter', () => {
+eachCompleteElection('every supported county with local DISTRICT scopes has a District Adapter', (data) => {
   for (const county of data.coverage.supported_counties) {
     if (county.id === 'king') continue
     const needsLocal = [...data.contests, ...data.measures].some(
@@ -91,7 +122,7 @@ test('every supported county with local DISTRICT scopes has a District Adapter',
   }
 })
 
-test('release data has no unfinished contested candidate dossiers', () => {
+eachElection('release data has no unfinished contested candidate dossiers', (data, dossierQueue) => {
   assert.equal(dossierQueue.total_units, 0)
   assert.equal(dossierQueue.total_dossiers, 0)
   assert.equal(dossierQueue.total_batches, 0)
@@ -113,7 +144,7 @@ test('release data has no unfinished contested candidate dossiers', () => {
   }
 })
 
-test('researched county measures are present in the shipped app data', () => {
+eachElection('researched county measures are present in the shipped app data', (data) => {
   for (const measure of data.measures.filter((item) => item.owner !== 'king')) {
     assert.ok(measure.what_it_does, `${measure.slug}: missing what_it_does`)
     assert.ok(measure.cost_line, `${measure.slug}: missing cost_line`)
@@ -127,7 +158,7 @@ test('researched county measures are present in the shipped app data', () => {
 // as 'City of X' rather than a numbered district.
 const UNLABELED_BY_DESIGN = new Set(['CITY'])
 
-test('every district layer a voter can be placed in has a voter-facing label', () => {
+eachElection('every district layer a voter can be placed in has a voter-facing label', (data) => {
   const configured = new Set([
     ...Object.keys(KING_LAYERS),
     ...Object.values(COUNTY_LAYERS).flatMap((layers) => layers.map((l) => l.key)),
@@ -144,7 +175,7 @@ test('every district layer a voter can be placed in has a voter-facing label', (
   }
 })
 
-test('every district value in the shipped data renders as readable text', () => {
+eachElection('every district value in the shipped data renders as readable text', (data) => {
   for (const item of [...data.contests, ...data.measures]) {
     const scope = item.scope
     if (scope?.kind !== 'DISTRICT') continue

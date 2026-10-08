@@ -16,15 +16,24 @@ Elections:
 
 | id | Election | Status |
 |---|---|---|
-| `2026-08-04-primary` | August 4, 2026 Primary and Special Election | active (`ACTIVE`) |
-| `2026-11-03-general` | November 3, 2026 General Election | skeleton only, no data yet |
+| `2026-08-04-primary` | August 4, 2026 Primary and Special Election | archived, served at `/washington-state/2026-08-04-primary` |
+| `2026-11-03-general` | November 3, 2026 General Election | active (`ACTIVE`); stub app data, no contests yet |
 
 Every pipeline script takes `--election <id>`; without it the script uses the
 id in `elections/ACTIVE`. Outputs land in `data/final/<id>/` and the app copy
 in `app/public/data/<id>/app-data.json`. `assemble_app_data.py` also writes
 `elections.json` (to `data/final/` and `app/public/data/`), which lists every
-election whose `app-data.json` exists and names the active one; the app loads
-that index first, then the active election's file.
+election whose `app-data.json` exists and names the active one. Each entry
+carries `id` (package id), `app_id` (the `election.id` inside its app data,
+which report links carry) and `status` (`active` or `archived`). The app loads
+that index first, then the file for the route's election (`/washington-state`
+is the active one, `/washington-state/<id>` any listed one).
+
+An election package may be empty: `merge_scores.py` then writes empty
+`scores.json`/`measures.json`, and `assemble_app_data.py` writes app data with
+no contests, no supported counties and the `statewide_complete` value declared
+in `pipeline/election.py`. While the active election has no contests the app
+shows a notice page instead of the guide.
 
 Every file in `data/final/` must be traceable back through package `interim/`
 files to verbatim or pointer `raw/` sources. Large source artifacts should be
@@ -80,10 +89,15 @@ hand-authored per election, not generated.
 
 ## Election Facts
 
-- Active election: August 4, 2026 Primary and Special Election
+- Active election: November 3, 2026 General Election (`2026-11-03-general`).
+  Its `F/rubric.json`, `F/interview.json` and `F/rubric-derivation.md` are
+  verbatim copies of the primary's (see the `.meta.json` siblings and the
+  interview's `derived_from`).
+- Archived: August 4, 2026 Primary and Special Election
   (`2026-08-04-primary`; its app-data `election.id` is
   `2026-08-04-primary-special`, which report links carry).
-- Public route: `/washington-state`.
+- Public routes: `/washington-state` (active election),
+  `/washington-state/<id>` (any election in `elections.json`).
 - Supported counties: King County.
 - Coverage statuses emitted by the app: `full_county`, `partial_county`,
   `statewide_only`.
