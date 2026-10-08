@@ -1,0 +1,19 @@
+{
+  "url": "https://data.wa.gov/resource/3h9x-7bvm.json?$where=election_year=2026 AND (upper(filer_name) like '%WENATCHEE%' OR upper(filer_name) like '%CASHMERE%' OR upper(jurisdiction) like '%WENATCHEE%' OR upper(jurisdiction) like '%CASHMERE%')",
+  "retrieved_at": "2026-10-08",
+  "method": "curl -sL -A 'Mozilla/5.0'; cached at data/.cache/chelan/pdc-wenatchee-cashmere-2026.json",
+  "cache_file": "data/.cache/chelan/pdc-wenatchee-cashmere-2026.json",
+  "bytes": 1664,
+  "sha256": "e221742ee1dc8f26d037f8799bcb23568549c2edee3f4d7bf1544decc57c60c8",
+  "stage": "raw",
+  "source_type": "pdc",
+  "tier": 1,
+  "outlet": "Public Disclosure Commission (data.wa.gov 3h9x-7bvm)",
+  "cited_by": [
+    {
+      "dossier": "data/washington-state/elections/2026-11-03-general/counties/chelan/dossiers/measures/chelan-city-of-cashmere-proposition-no-1.md",
+      "source_id": "S9"
+    }
+  ],
+  "notes": "No 2026 committee lists the City of Cashmere as its jurisdiction or names Cashmere."
+}

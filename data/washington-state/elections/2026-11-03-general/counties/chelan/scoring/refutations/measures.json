@@ -1,0 +1,36 @@
+{
+  "contest_slug": "measures",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/chelan/scoring/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/chelan/dossiers/measures/",
+    "data/final/2026-11-03-general/rubric.json"
+  ],
+  "verdicts": [
+    {
+      "candidate": "chelan-wenatchee-school-district-no-246-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Hardest attack: the district says the combined local school rate 'would stay stable, because the previous bond debt will be retired' and projects $4.23 per $1,000 in 2027, below the $4.66 rate when the 2014 bond passed (S4), so a yes vote might be framed as holding taxes level. The attack fails on the dossier's own numbers. The 2014 bond is still levying $0.6405 per $1,000 (S8) and was refinanced to run about nine more years (S4), so nothing is retired in 2027. The district's $4.23 is about $1.46 above the 2026 certified combined rate of $2.7654 (S4, S8). The measure is a new $275 million authorization, not a renewal (S1), with about $169 million in interest and a flat $1.46 rate for 20 years (S4). That matches new bond levies mapped 2 elsewhere (Grant's McKay bond, King and Spokane school and fire bonds). The state match and the expected Microsoft data-center tax base (S4) affect the size of the burden, not its direction. S1, S4 and S8 support the basis. Spending was considered and not proposed: the bond adds classrooms to reduce overcrowding and expands CTE space (S1), but the district says the new building is 'sized for projected enrollment, not current overcrowding' (S4) and the main purpose is replacing end-of-life buildings and HVAC (S1, S4), so it is a replacement bond rather than clear new capacity. Parental-rights does not apply: the measure concerns buildings and HVAC, with no dossier evidence about notification, records, curricula or opt-outs (S1). Local-control does not apply: the state match flows through the existing SCAP program (S4)."
+    },
+    {
+      "candidate": "chelan-wenatchee-school-district-no-246-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1, S3 and S4: $275 million, up to 20 years, new classroom space on the current campus while the gyms, pool, auditorium (and locker rooms and band block) are kept and renovated, HVAC at four elementaries and three middle schools (S4 names them), $83 million estimated state match (S1), 60% to pass (S7). 'Replaces most of' fairly reflects the 100,000+ square feet retained (S6). 'Installs new HVAC' slightly restates the ballot title's 'upgrade aging HVAC' (S1); acceptable. cost_line matches S4 ($1.46, flat for 20 years; $444 million total with $169 million interest) and S8 ($2.7654 rounds to $2.77); $584 on $400,000 is correct, and 'on top of the current $2.77' is consistent with the district's own $4.23 projection (S4). pro_summary matches the statement for and its authors (S2, S3). con_summary matches the statement against and its committee (S2, S3); '$440-444 million' correctly spans the statement ($440 mil) and its rebuttal ($444 million). One small attribution point: the statement against refers to 'a $9 million error' and the Columbia closure without dates (S2); the years 2022 and 2024 come from news coverage (S10, S12). They are accurate, so no change is needed, though 'the district's $9 million budget error' would track the statement more closely."
+    },
+    {
+      "candidate": "chelan-city-of-cashmere-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked on strength: the 2027 step is about 13 cents per $1,000, roughly $52 a year on a $400,000 home (S3, S4), and the ordinance frames the money as continuing existing services rather than expanding them (S3). But the measure is a levy lid lift above the RCW 84.55.010 limit (S3, S8), and cap lifts are named at the taxes pole_b. It is about 9% above the 2026 rate in its first year (1.5737 / 1.4441, S3, S4), authorizes up to 9% a year more from 2028 to 2032 (S1), and makes the 2032 level the permanent base (S1, S3); it is not a renewal (S3). That is the profile of multi-year lid lifts mapped 2 elsewhere. S1, S3 and S4 support the basis. Spending was considered and not proposed: the ordinance says 'continual provision' of services (S3) and no source describes new programs. Local-control does not apply: the city is using a state-authorized local vote (S8). No school or parental angle."
+    },
+    {
+      "candidate": "chelan-city-of-cashmere-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1 and S3: rate set at $1.5737 for 2027, up to 9% a year 2028-2032, 2032 level as the permanent base; the ordinance's purpose list (law enforcement, fire protection, disaster mitigation) is correctly attributed to the ordinance rather than the ballot title, and the sheriff contract matches S5. Calling the 1% limit a limit on yearly growth in the rate follows the ordinance's own wording (S3). cost_line arithmetic checks out from S3 and S4: 1.5737 - 1.4441 = 0.1296 per $1,000, about $52 on $400,000; $552,586,488 x 1.5737 / 1,000 is about $870,000, about $72,000 above the 2026 levy of $797,968. 'Roughly' adequately signals that the citywide figure uses 2026 assessed values (the dossier notes 2027 collections depend on 2027 values). pro_summary correctly says no statement was filed and attributes the case to the council's ordinance (S1-S3). con_summary matches S1, S2 and S9."
+    }
+  ],
+  "missing": []
+}
