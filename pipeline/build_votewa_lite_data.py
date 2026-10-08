@@ -1074,6 +1074,41 @@ ELECTION_MEASURES = {
                 "by-district elections, NonStop Local 2025-10-03).",
             ],
         },
+        # Garfield (#32). Measures: none. VoteWA's online voters' guide for
+        # county 12 (counties/garfield/raw/votewa/voter-guide/guide.json.url,
+        # read 2026-10-08) lists only the three statewide measures; Garfield
+        # prints no local pamphlet the agent could reach (garfieldcountywa.gov
+        # answers every scripted request, browser headers included, with a
+        # Cloudflare 403 challenge), so the guide is the official listing.
+        # Overrides: VoteWA files both commissioner races as Countywide. They
+        # are nominated by district (the 2026 primary counted District 1 and
+        # District 3 in 4 of 11 units each) and elected county-wide in the
+        # general (RCW 36.32.040, 36.32.050(1); SOS precinct exports put
+        # Commissioner 3 (2022) and Commissioner 1 and 2 (2024) on all 11
+        # precincts). They keep the primary's contest names so the slugs and
+        # primary dossiers carry forward. The District Court is one
+        # county-wide court (2022 general: Thomas W. Cox on all 11 precincts).
+        # Every scope is COUNTY or Census, so no county GIS layer is needed.
+        "garfield": {
+            "overrides": {
+                ("COUNTY", "COUNTY COMMISSIONER 1"): (
+                    "County", "Garfield County Commissioner District 1", "County Commissioner 1", ("COUNTY", None)),
+                ("COUNTY", "COUNTY COMMISSIONER 3"): (
+                    "County", "Garfield County Commissioner District 3", "County Commissioner 3", ("COUNTY", None)),
+                ("COUNTY", "DISTRICT COURT JUDGE"): (
+                    "Judicial", "Garfield County District Court", "District Court Judge", ("COUNTY", None)),
+            },
+            "measures": [],
+            "extra_notes": [
+                "No local measures on the November 3, 2026 ballot: Garfield County's VoteWA online voters' guide "
+                "(https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=12) lists only the statewide measures "
+                "IP26-645, IL26-001 and IL26-638. The county's own site (garfieldcountywa.gov) refuses scripted "
+                "access, so its sample ballot could not be checked.",
+                "Garfield County Commissioner Districts 1 and 3 are nominated by district and elected county-wide "
+                "in the general (RCW 36.32.040, RCW 36.32.050(1); SOS 2022 and 2024 general precinct results: "
+                "on all 11 precincts).",
+            ],
+        },
         # Grant (#28). Measures: Grant County Elections' November 2026 sample
         # ballot (raw/grant/sample-ballot.pdf.url, DocumentCenter 16964, linked
         # from grantcountywa.gov/1374/Current-Election) and VoteWA's online
