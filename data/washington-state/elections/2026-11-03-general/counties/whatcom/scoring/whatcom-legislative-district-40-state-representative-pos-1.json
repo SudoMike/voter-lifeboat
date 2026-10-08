@@ -1,0 +1,121 @@
+{
+  "contest_slug": "whatcom-legislative-district-40-state-representative-pos-1",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/whatcom/dossiers/whatcom-legislative-district-40-state-representative-pos-1/"],
+  "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering school funding, tax structure, housing rules, ferries, health funding and criminal-justice statutes.",
+  "race_blurb": "Eight-year Democratic incumbent Debra Lekanoff faces Republican Cindy Carter of Orcas Island, whose campaign centers on repealing the 2026 tax on income over $1 million that Lekanoff voted for. Carter also campaigns on spending accountability and cutting the carbon tax; neither candidate has stated a position on the 2026 initiatives.",
+  "candidates": [
+    {
+      "slug": "debra-lekanoff",
+      "summary": "Eight-year State Representative and vice chair of the House Health Care and Wellness Committee, campaigning on affordability, ferries, salmon and the Salish Sea, unions and reproductive freedom.",
+      "highlights": [
+        "Voted for the 2026 tax on income over $1 million and the 2025 B&O and services tax bills [S3][S5][S6]",
+        "Co-sponsored and voted for the 2025 limit on residential rent and fee increases [S7]",
+        "Voted for ESHB 1296, the 2025 changes to the parental-rights law that I-1 would undo [S4]",
+        "Says she helped fund three new ferries and accelerated ferry hiring [S1]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S3", "S5", "S6"],
+          "basis": "Voted yes on ESSB 6346 and on the 2025 B&O (EHB 2081) and services excise (ESSB 5814) tax bills."
+        },
+        "housing": {
+          "score": 1,
+          "confidence": "high",
+          "citations": ["S7", "S8"],
+          "basis": "Co-sponsored and voted for the EHB 1217 rent-increase limit and backs low-income housing investment, alongside support for middle housing and zoning plans."
+        },
+        "climate": {
+          "score": 2,
+          "confidence": "medium",
+          "citations": ["S1", "S8"],
+          "basis": "Pledges to protect salmon, forests and the Salish Sea; 2024 website calls for green-building standards, retrofit and renewable incentives and climate planning."
+        },
+        "social": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S8"],
+          "basis": "Pledges to defend reproductive freedom and the right to choose; no stated position on LGBTQ+ policy or school sports."
+        },
+        "parental-rights": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S4"],
+          "basis": "Voted for ESHB 1296 on House passage and final passage; no statement on notification or opt-outs."
+        },
+        "experience": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "Eight years in the House, committee vice chair, facing a challenger with no elected office."
+        }
+      }
+    },
+    {
+      "slug": "cindy-carter",
+      "summary": "Orcas Island former hospital laboratory technologist and Republican Party officer campaigning as \"No Income Tax Carter\" to repeal the 2026 income tax and restrain state spending.",
+      "highlights": [
+        "Central pledge is to repeal the 2026 tax on income over $1 million [S1][S4]",
+        "Says the state has a spending problem and cites unaudited child-care spending [S3]",
+        "Would eliminate the carbon tax to lower gas and food prices [S3]",
+        "Opposes a universal health-care system and favors catastrophic plans and interstate insurance competition [S3]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S3", "S4"],
+          "basis": "Pledges to repeal the income tax, says there is no need to increase any taxes and would cut existing ones."
+        },
+        "spending": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S2", "S3"],
+          "basis": "Says Washington has a spending problem, cites audit findings and lists eliminating fraud and ineffective programs as priorities."
+        },
+        "climate": {
+          "score": -2,
+          "confidence": "medium",
+          "citations": ["S3"],
+          "basis": "Would eliminate the 'Carbon Emissions Tax' to lower gasoline and food prices."
+        },
+        "healthcare": {
+          "score": -2,
+          "confidence": "medium",
+          "citations": ["S3"],
+          "basis": "Argues against a universal health-care system; favors catastrophic insurance, interstate competition and private practice."
+        },
+        "safety": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S3"],
+          "basis": "Says the best way to improve safety is to get criminals off the streets through joint enforcement, while also listing drug treatment."
+        },
+        "immigration": {
+          "score": -1,
+          "confidence": "low",
+          "citations": ["S3"],
+          "basis": "Favors 'coming into compliance with federal law' and working with federal authorities; does not name immigration enforcement directly."
+        },
+        "local-control": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S3"],
+          "basis": "Calls one-size-fits-all state water rules damaging to the district and wants to roll back state regulation."
+        },
+        "experience": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S5"],
+          "basis": "No elected office; long service as a county and state Republican Party officer."
+        }
+      }
+    }
+  ]
+}

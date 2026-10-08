@@ -1,0 +1,102 @@
+{
+  "contest_slug": "whatcom-legislative-district-40-state-representative-pos-2",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/whatcom/dossiers/whatcom-legislative-district-40-state-representative-pos-2/"],
+  "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering school funding, tax structure, housing rules, energy policy, health funding and criminal-justice statutes.",
+  "race_blurb": "Third-term Democratic incumbent and House Majority Whip Alex Ramel faces Orcas Island stone mason Joseph Segault, a newcomer with no party preference, after Ramel took 68% of the primary vote in Whatcom County. Ramel voted for the 2026 income tax and is voting no on all statewide initiatives; Segault opposes rising taxes and wants the income tax put to a public vote.",
+  "candidates": [
+    {
+      "slug": "alex-ramel",
+      "summary": "Third-term State Representative and House Majority Whip, a former clean-energy organizer focused on climate, housing and progressive revenue.",
+      "highlights": [
+        "Voted for the 2026 tax on income over $1 million and the 2025 B&O and services tax bills [S3][S5][S6]",
+        "Co-sponsored and voted for the 2025 limit on residential rent and fee increases [S7]",
+        "Says he is voting no on all statewide initiatives, including I-645, I-1 and I-638 [S1]",
+        "Names building decarbonization and rent stabilization among his proudest accomplishments [S8]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S3", "S5", "S6", "S8"],
+          "basis": "Voted yes on ESSB 6346, EHB 2081 and ESSB 5814; supports the high-earner tax, opposes I-645 and requires any new tax to be progressive."
+        },
+        "housing": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S7", "S8"],
+          "basis": "Co-sponsored and voted for the EHB 1217 rent cap, calls rent stabilization a top accomplishment and cites affordable-housing funding."
+        },
+        "climate": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S8", "S11"],
+          "basis": "Campaigns on 'bold climate action'; record on building decarbonization and clean-energy siting."
+        },
+        "social": {
+          "score": 2,
+          "confidence": "medium",
+          "citations": ["S1"],
+          "basis": "Says he is '100% pro-choice' and is voting no on all statewide initiatives, including I-638."
+        },
+        "parental-rights": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S4"],
+          "basis": "Voted for ESHB 1296 on House passage and final passage and is voting no on I-1."
+        },
+        "tech": {
+          "score": 0,
+          "confidence": "medium",
+          "citations": ["S8"],
+          "basis": "Would allow data-center construction while keeping energy costs off the state and neighboring ratepayers."
+        },
+        "experience": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "Third term and House Majority Whip, facing a political newcomer."
+        }
+      }
+    },
+    {
+      "slug": "joseph-segault",
+      "summary": "Orcas Island stone mason and political newcomer with no party preference, running against rising taxes and cost of living.",
+      "highlights": [
+        "Says increased taxes and living costs are pushing people out of local communities [S1][S2]",
+        "Says the income tax on millionaire households should go to a vote of the people [S2]",
+        "Says restrictive zoning makes housing less affordable and more homes are needed [S2]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S1", "S2"],
+          "basis": "Opposes rising taxes on families and would put the income tax to a public vote; does not state a position on repeal."
+        },
+        "spending": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S2"],
+          "basis": "Says it is unclear why state budgets are 'totally bloated'; no specific proposals."
+        },
+        "housing": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S2"],
+          "basis": "Blames restrictive zoning for housing costs and says more homes need to be built."
+        },
+        "experience": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "Political newcomer with no listed elected or professional experience, running as an independent."
+        }
+      }
+    }
+  ]
+}
