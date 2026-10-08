@@ -636,8 +636,9 @@ ELECTION_MEASURES = {
         # COUNTY_LAYERS.lewis has no PUDDST key.
         # Measure scopes, point-checked 2026-10-09 (Census geocoder, Current):
         # LIBDST 'L': DOR LIB2025 (layer 12) at Chehalis, Centralia, Morton,
-        # Toledo and Winlock; Pe Ell (200 S Main St) and Mossyrock (243 E State
-        # St) return no feature, so the measure is not county-wide.
+        # Toledo, Winlock and 2152 Jackson Hwy (unincorporated); Pe Ell (200 S
+        # Main St), Mossyrock (243 E State St), Napavine (105 2nd Ave NW) and
+        # Vader (509 A St) return no feature, so the measure is not county-wide.
         # COUNTY_LAYERS.lewis has no LIBDST key: unresolvable until one is added.
         # CITY 'Chehalis': Census place at 351 NW North St (the TBD's board is the
         # Chehalis City Council). FIRDST '6': DOR FIR2025 (layer 7) DISTATTRIB
@@ -674,7 +675,7 @@ ELECTION_MEASURES = {
             ],
             "extra_notes": [
                 "Timberland Regional Library District Proposition No. 1 is scoped LIBDST 'L' (WA DOR LIB2025, layer 12). "
-                "Pe Ell and Mossyrock are outside the district, so it is not county-wide, and COUNTY_LAYERS.lewis has "
+                "Pe Ell, Mossyrock, Napavine and Vader are outside the district, so it is not county-wide, and COUNTY_LAYERS.lewis has "
                 "no LIBDST key yet: the measure is hidden until the layer is added.",
                 "Lewis County PUD No. 1 excludes the City of Centralia; its at-large Commissioner District 1 seat is "
                 "scoped PUDDST '1' (WA DOR PUD2025, layer 17, DISTATTRIB '1'), which COUNTY_LAYERS.lewis does not read yet.",
