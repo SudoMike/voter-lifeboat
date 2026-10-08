@@ -58,6 +58,9 @@ package's `interim/` files, so county district contests cannot be merged in.
 
 Dossiers (`dossiers/`), scoring (`scoring/`) and refutations
 (`scoring/refutations/`) exist for all ten justice candidates (#8) and all
-three measures (#6, #7). Since #9 this package is the general's whole shipped
+three measures (#6, #7). Since #9 this package is the general's statewide
 ballot: `data/final/2026-11-03-general/app-data.json` has
-`coverage.statewide_complete: true` and no supported counties.
+`coverage.statewide_complete: true`. Since #16 King County ships alongside it
+(`../counties/king/COMPLETENESS.md`); King's own copies of the five Supreme
+Court contests (`owner: "statewide"` in its `interim/contests.json`) are not
+shipped, so each Supreme Court contest appears once, from this package.
