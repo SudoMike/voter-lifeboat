@@ -3,14 +3,20 @@
 Election: 2026 Washington general election, November 3, 2026 (VoteWA
 election 899, county code 14).
 
-Status (#29): researched, scored and refuted; **not yet declared** in
-`APP_PACKAGES["2026-11-03-general"]["counties"]` (the director ships). The
-builder (`pipeline/build_votewa_lite_data.py --county grays-harbor`) writes
-`interim/app-contests.json` and `interim/app-measures.json` with `coverage:
-"full_county"`, but two measure scopes use layers that `app/src/lib/geo.js`
-`COUNTY_LAYERS['grays-harbor']` does not list yet (`LIBDST`, `SCHDST`; see
-District scoping). Until they are added the assembler would ship the county
-`partial_county`.
+Status (#29): shipped at Full County Coverage in
+`APP_PACKAGES["2026-11-03-general"]["counties"]`, with its elections office
+(`https://www.graysharbor.us/government/Auditors/elections.php`) and its
+VoteWA guide (`countyGuides['grays-harbor']`, `c=14`).
+`COUNTY_LAYERS['grays-harbor']` reads `LIBDST` (DOR LIB2025) and `SCHDST`
+(DOR SCH2025) beside `FIRDST`, as proposed below. LD 24 Pos. 1 and 2 ship
+with Clallam's research (the rebuilt plan shows them `researched_in`
+clallam with no candidates missing). Live ballots on 2026-10-08: 200 W
+Market St, Aberdeen (LD 19, Timberland only); 100 S 3rd St, McCleary
+(Timberland, McCleary SD 65); 110 Main St, Oakville (Timberland, FD 1); 200
+N Main St, Montesano (LD 24, Timberland, Montesano Prop 1); 500 Wynoochee
+Valley Rd (FD 2); 585 Point Brown Ave NW, Ocean Shores (no local measure);
+each `full_county` with no missing layer. The paragraphs below describe the
+package as researched.
 
 ## Sources
 

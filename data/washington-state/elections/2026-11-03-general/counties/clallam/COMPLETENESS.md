@@ -3,16 +3,22 @@
 Election: 2026 Washington general election, November 3, 2026 (VoteWA
 election 899, county code 05).
 
-Status (#29): researched, scored and refuted; not yet declared in
-`APP_PACKAGES["2026-11-03-general"]["counties"]`. The builder
-(`pipeline/build_votewa_lite_data.py --county clallam`) writes
-`interim/app-contests.json` and `interim/app-measures.json` with
-`coverage: "full_county"`, but two scopes use layers that
-`app/src/lib/geo.js` `COUNTY_LAYERS.clallam` does not list yet (`DISTCRT`,
-`SCHDST`, both with a working layer proposed below) and one uses a layer
-no adapter can read yet (`PUDALL`, the PUD seat). Until the director adds
-or resolves them, the assembler will mark Clallam `partial_county` and print
-those scopes.
+Status (#29): shipped at Full County Coverage in
+`APP_PACKAGES["2026-11-03-general"]["counties"]`, with its elections office
+(`https://www.clallamcountywa.gov/162/Elections-Voter-Registration`), its
+pamphlet in `officialLinks.js` `pamphletPdfs['clallam/local-voters-pamphlet']`
+and its VoteWA guide (`countyGuides.clallam`, `c=05`). `COUNTY_LAYERS.clallam`
+reads `DISTCRT` (the Auditor's `District_Court` layer) and `SCHDST` (DOR
+SCH2025), as proposed below, and `PUDALL` by option (a): the
+`PUD_Commissioner_District_dissolve` layer with `value: '1'`, so any feature
+there means the address is in the PUD. Live ballots on 2026-10-08: 223 E 4th
+St, Port Angeles (District Court 1, charter amendments, no PUD race, no
+fire or school measure); 500 E Division St, Forks (District Court 2, the PUD
+seat, QVSD 402 bonds, FD 1); 3851 S Mount Angeles Rd (District Court 1, PUD
+seat, FD 2); 7764 La Push Rd (District Court 2, PUD seat, QVSD, FD 6); 152 W
+Cedar St, Sequim (District Court 1, PUD seat, no local measure beyond the
+charter amendments); each `full_county` with no missing layer. The
+paragraphs below describe the package as researched.
 
 ## Sources
 

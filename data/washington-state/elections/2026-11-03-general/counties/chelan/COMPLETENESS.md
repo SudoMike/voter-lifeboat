@@ -3,15 +3,20 @@
 Election: 2026 Washington general election, November 3, 2026 (VoteWA
 election 899, county code 04).
 
-Status (#29): researched, scored and refuted; **not yet declared** in
-`APP_PACKAGES["2026-11-03-general"]["counties"]`. The builder
-(`pipeline/build_votewa_lite_data.py --county chelan`) writes
-`interim/app-contests.json` and `interim/app-measures.json` with
-`coverage: "full_county"`. Every contest scope is `CONGDST`, `LEGDST` or
-`COUNTY`. One measure scope, `SCHDST` `246`, needs a layer that
-`app/src/lib/geo.js` `COUNTY_LAYERS.chelan` does not list yet (see District
-scoping); until the director adds it, assembly would mark Chelan
-`partial_county` for that measure.
+Status (#29): shipped at Full County Coverage in
+`APP_PACKAGES["2026-11-03-general"]["counties"]`, with its elections office
+(`https://www.co.chelan.wa.us/elections`), its pamphlet in `officialLinks.js`
+`pamphletPdfs['chelan/local-voters-pamphlet']` and its VoteWA guide
+(`countyGuides.chelan`, `c=04`). `COUNTY_LAYERS.chelan` reads `SCHDST` (DOR
+SCH2025), as proposed below. Its `COUNTY_COUNCIL` layer moved at ship time
+from `PW/Commissioner_Districts/MapServer/0`, whose queries 500ed or timed
+out on 2026-10-08, to `GIS/CM_districts/MapServer/0` (`DIST_NO`, same
+values: Wenatchee `1`, Cashmere and Leavenworth `2`, Chelan `3`). Live
+ballots on 2026-10-08: 316 Washington St and 350 Orondo Ave, Wenatchee
+(SD 246 bonds), 101 Woodring St, Cashmere (Cashmere Prop 1, SCH `222`), 700
+US Hwy 2, Leavenworth and 135 E Johnson Ave, Chelan (no local measure);
+each `full_county` with no missing layer and 16 county contests. The
+paragraphs below describe the package as researched.
 
 ## Sources
 

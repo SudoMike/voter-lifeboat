@@ -3,10 +3,19 @@
 Election: 2026 Washington general election, November 3, 2026 (VoteWA
 election 899, county code 11).
 
-Status: researched (#29), not yet shipped. The director declares the package
-in `APP_PACKAGES["2026-11-03-general"]["counties"]` and fixes the
-District Adapter (see "District Adapter" below) before it can ship at Full
-County Coverage.
+Status: shipped (#29) at Full County Coverage in
+`APP_PACKAGES["2026-11-03-general"]["counties"]`, with its elections office
+(`https://www.franklincountywa.gov/Elections`), its local pamphlet in
+`officialLinks.js` `pamphletPdfs['franklin/local-voters-pamphlet']` and its
+VoteWA guide (`countyGuides.franklin`, `c=11`). `COUNTY_LAYERS.franklin`
+reads `COUNTY_COUNCIL` (portal `Commissioner_Districts/MapServer/0`, since
+the 2026-10-09 hotfix), `PORTDST` (`Special_tax_districts/MapServer/7`) and
+`FIRDST` (DOR FIR2025), as proposed below. Live ballots on 2026-10-08: 525 N
+3rd Ave, Pasco (CD 4, LD 14, COM2, PoP1; no port race, no measure); 5600 N
+Rd 68, Pasco (LD 16, COM3, PoP3, FIR '3': the commissioner and port races
+and the FPD 3 levy); 104 E Adams St, Connell (CD 5, LD 16, PoP3); 2108 N Rd
+84, Pasco (LD 8, COM1, PoP2); 103 Franklin St, Mesa (CD 5, PoP3); each
+`full_county` with no missing layer.
 
 Contests and measures are built by
 `pipeline/build_votewa_lite_data.py --county franklin` from the VoteWA
