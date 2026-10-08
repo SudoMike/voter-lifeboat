@@ -1,0 +1,115 @@
+{
+  "contest_slug": "snohomish-legislative-district-10-state-representative-pos-1",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/snohomish/dossiers/snohomish-legislative-district-10-state-representative-pos-1/"],
+  "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering school funding, tax structure, housing rules, health funding and criminal-justice statutes.",
+  "race_blurb": "Democratic incumbent Clyde Shavers, a Navy veteran and attorney who has voted against the recent state tax increases, faces Republican Stanwood councilmember Robert (Chili) Hicks, a retired Navy Master Chief. They differ most on parental rights in schools, spending and abortion.",
+  "candidates": [
+    {
+      "slug": "clyde-shavers",
+      "summary": "Incumbent State Representative and Vice Chair of House Education, a Naval Academy graduate and Yale-trained attorney from Whidbey Island who campaigns on lowering costs and not raising taxes.",
+      "highlights": [
+        "Voted no on the 2026 tax on income over $1 million, the 2025 gas-tax package, the services sales tax and the B&O increases [S7][S9][S10][S11]",
+        "\"I do not support raising taxes\" [S3]",
+        "Voted for the 2025 rent-increase limits (EHB 1217) and against the 2025 clean fuel standard bill [S12][S13]",
+        "Says he is \"100 percent pro-choice\"; voted for ESHB 1296, the parental-rights amendments I-1 would repeal [S3][S8]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S3", "S7", "S9", "S10", "S11"],
+          "basis": "Voted against the income tax over $1M, the gas-tax package, the services sales tax and B&O increases, and states he does not support raising taxes."
+        },
+        "spending": {
+          "score": -1,
+          "confidence": "low",
+          "citations": ["S14"],
+          "basis": "Voted against the 2025-27 operating budget twice; no stated spending philosophy."
+        },
+        "housing": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S12", "S3"],
+          "basis": "Voted for the 2025 rent-increase limits, and favors incentives for nonprofit affordable-housing development."
+        },
+        "climate": {
+          "score": 0,
+          "confidence": "medium",
+          "citations": ["S3", "S9", "S13"],
+          "basis": "Backs a clean-energy economy and fusion research, but voted against the 2025 clean fuel standard bill and the gas-tax package."
+        },
+        "safety": {
+          "score": -1,
+          "confidence": "low",
+          "citations": ["S3"],
+          "basis": "General pledge to support law enforcement with resources and tools; no enforcement or prevention specifics."
+        },
+        "experience": {
+          "score": -1,
+          "confidence": "high",
+          "citations": ["S1"],
+          "basis": "Sitting representative and Education Committee vice chair, facing a first-term city councilmember."
+        },
+        "social": {
+          "score": 1,
+          "confidence": "high",
+          "citations": ["S2", "S3", "S16"],
+          "basis": "Repeatedly states he is \"100 percent pro-choice\"; endorsed by Planned Parenthood Alliance Advocates; no record on gender or sports policy."
+        },
+        "parental-rights": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S8"],
+          "basis": "Voted for ESHB 1296, which amended and narrowed parts of the I-2081 parents' rights list; no campaign statement on the topic."
+        }
+      }
+    },
+    {
+      "slug": "robert-chili-hicks",
+      "summary": "Stanwood City Councilmember (elected 2024) and retired Navy Master Chief running on lower taxes, spending audits, enforcement-first public safety and parental rights.",
+      "highlights": [
+        "Proposes lowering the sales tax, repealing the estate tax and stopping new taxes and fees [S3]",
+        "Calls for independent audits, public review of every major budget and performance-based funding [S3]",
+        "Would restore the original parents' bill of rights, require schools to post curricula and notify parents before non-emergency health services [S2][S3]",
+        "Supports police pursuits and a crackdown on fentanyl dealers, with treatment for those ready [S3]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S3"],
+          "basis": "Pamphlet and platform pledge to lower taxes, cut the sales tax, repeal the estate tax and stop new taxes and fees."
+        },
+        "spending": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S3"],
+          "basis": "Centers fiscal discipline, independent audits, public budget review and performance-based funding."
+        },
+        "safety": {
+          "score": -2,
+          "confidence": "medium",
+          "citations": ["S2", "S3"],
+          "basis": "Platform centers police pursuits, full police funding, accountability for judges and prosecutors and a drug-dealer crackdown; treatment is secondary."
+        },
+        "experience": {
+          "score": 1,
+          "confidence": "high",
+          "citations": ["S1"],
+          "basis": "Local elected experience (Stanwood council since 2024) but no state legislative record, challenging an incumbent."
+        },
+        "parental-rights": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S2", "S3"],
+          "basis": "Would restore the original parents' bill of rights, require curriculum posting, and require parent notice before non-emergency health services."
+        }
+      }
+    }
+  ]
+}
