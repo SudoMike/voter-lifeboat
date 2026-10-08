@@ -49,7 +49,7 @@ sources:
 
 ## Background
 
-Dotsi Graves, of Raymond, prefers the Independent Party and is the Pacific County Auditor's Office election administrator [S1][S3]. She worked in the auditor's office from 2003 to 2007, rising to chief deputy, returned in 2023 as elections administrator, and completed election administrator certification in June 2026; she says she is the county's only certified election administrator [S1]. She cites 30 years of county service and experience in recording, licensing and accounting, and has also worked as fair manager and as a paraeducator [S1]. She has not held elected office [S1].
+Dotsi Graves, of Raymond, prefers the Independent Party and is the Pacific County Auditor's Office election administrator [S1][S3]. She worked in the auditor's office from 2003 to 2007, rising to chief deputy, returned in 2023 as elections administrator, and received her election administrator certificate "in June" (the statement gives no year); she says she is the county's only certified election administrator [S1]. She cites 30 years of county service and experience in recording, licensing and accounting, and has also worked as fair manager and as a paraeducator [S1]. She has not held elected office [S1].
 
 In October 2025 she was one of the two finalists for appointment as auditor after Alex Gerow resigned; the commission chose Nicole Deskins 3-0, and Graves applauded the choice at the meeting [S2]. She led the August primary by 22 votes, 4,034 to 4,012 [S4].
 
