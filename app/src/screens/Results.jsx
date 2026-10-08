@@ -271,10 +271,20 @@ function ContestCard({ data, contest, answers }) {
             {contest.term}
           </div>
         )}
+        {contest.office_does && (
+          <div className="note" style={{ marginTop: 2, fontSize: 11.5 }}>
+            {contest.office_does}
+          </div>
+        )}
         {c.summary && (
           <p className="copy" style={{ fontSize: 12.5, marginTop: 6 }}>
             {c.summary}
           </p>
+        )}
+        {contest.race_blurb && (
+          <div className="note" style={{ marginTop: 6, fontSize: 11 }}>
+            {contest.race_blurb}
+          </div>
         )}
       </section>
     )
