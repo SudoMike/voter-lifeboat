@@ -1,0 +1,30 @@
+{
+  "contest_slug": "kitsap-legislative-district-35-state-representative-pos-2",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/kitsap/dossiers/kitsap-legislative-district-35-state-representative-pos-2/",
+    "data/washington-state/elections/2026-11-03-general/counties/kitsap/scoring/kitsap-legislative-district-35-state-representative-pos-2.json"
+  ],
+  "verdicts": [
+    {"candidate": "travis-couture", "axis": "taxes", "verdict": "upheld"},
+    {"candidate": "travis-couture", "axis": "spending", "verdict": "upheld"},
+    {"candidate": "travis-couture", "axis": "safety", "verdict": "upheld"},
+    {"candidate": "travis-couture", "axis": "experience", "verdict": "upheld"},
+    {"candidate": "travis-couture", "axis": "social", "verdict": "upheld"},
+    {"candidate": "travis-couture", "axis": "parental-rights", "verdict": "upheld"},
+    {"candidate": "maria-littlesun", "axis": "spending", "verdict": "upheld"},
+    {"candidate": "maria-littlesun", "axis": "housing", "verdict": "upheld"},
+    {
+      "candidate": "maria-littlesun",
+      "axis": "safety",
+      "verdict": "adjust",
+      "adjusted_score": 1,
+      "adjusted_confidence": "medium",
+      "note": "All of the evidence covers homelessness: she says encampment sweeps don't solve the root cause and wants social housing with wraparound behavioral-health services [S5]. Those are clear prevention-side positions. Nothing in the dossier addresses policing, prosecution, diversion or treatment mandates, so the record doesn't support the full pole_b position (+2) on the safety axis as a whole."
+    },
+    {"candidate": "maria-littlesun", "axis": "healthcare", "verdict": "upheld"},
+    {"candidate": "maria-littlesun", "axis": "social", "verdict": "upheld"},
+    {"candidate": "maria-littlesun", "axis": "experience", "verdict": "upheld"}
+  ],
+  "missing": []
+}
