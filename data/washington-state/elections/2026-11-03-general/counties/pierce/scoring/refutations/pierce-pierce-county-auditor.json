@@ -1,0 +1,23 @@
+{
+  "contest_slug": "pierce-pierce-county-auditor",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-pierce-county-auditor/",
+    "data/washington-state/elections/2026-11-03-general/counties/pierce/scoring/pierce-pierce-county-auditor.json"
+  ],
+  "verdicts": [
+    {"candidate": "linda-farmer", "axis": "experience", "verdict": "upheld",
+     "note": "S1-S3 support a one-term incumbent with prior council and charter-review service running on 'experienced, steady leadership'; -1 rather than -2 fits a single term."},
+    {"candidate": "damon-townsend", "axis": "spending", "verdict": "upheld",
+     "note": "S1 proposes live performance dashboards, open data, annual reporting and 'cost reduction' through process; that is the audit-and-restrain pole, scoped to the office. Medium fits a single clear platform statement."},
+    {"candidate": "damon-townsend", "axis": "experience", "verdict": "upheld",
+     "note": "Never held elected office and runs on 'Competence over politics' [S1][S4]. He also argues the auditor should be 'promoted from inside the office' and cites five years as elections supervisor, so +1 and not +2 is right."},
+    {"candidate": "damon-townsend", "axis": "reform", "verdict": "adjust", "adjusted_score": 1, "adjusted_confidence": "low",
+     "note": "The basis is mostly affiliation: Cascade Party board membership and a new-county exploratory committee. S1 states no position on PAC money, term limits, RCV, dark money or direct democracy, which are the pole_b markers. The new-county effort is about service geography, not money and power in politics. His one stated position on the axis is disclosing party membership rather than claiming nonpartisanship [S1], so the direction holds but only at low confidence. His endorsement coalition (Mainstream Republicans, REALTORS, three unions [S3]) also looks conventional."},
+    {"candidate": "damon-townsend", "axis": "taxes", "verdict": "upheld",
+     "note": "The cached S5 questionnaire supports it: he answered 'Yes' to 'tax reform and progressive taxes as wealth increases' and wrote 'we should all pay our fair share'. Low confidence is right because the questionnaire is from 2022, went to a Democratic endorsing group, came before he joined the Cascade Party, and he says the office has little influence on taxes. Low keeps it out of the alignment math."},
+    {"candidate": "damon-townsend", "axis": "climate", "verdict": "refuted",
+     "note": "S5 does not place him on this axis's tension (climate action even when it raises costs vs energy affordability). He said yes to 'local investments to address climate change where applicable', but explained it as cost-cutting: 'I hate waste and inefficiency', with energy reduction that will 'reduce costs and carbon output' and paper and envelope reduction at the elections office. That case for efficiency fits both poles, so the yes is boilerplate. The evidence is also four years old, from a Democratic questionnaire, and outside the office's duties. Drop the score."}
+  ],
+  "missing": []
+}
