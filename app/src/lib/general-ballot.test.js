@@ -143,3 +143,33 @@ test('the Ballot Brief carries the statewide-only warning and every contest and 
     assert.match(line, /leans (YES|NO) for me|genuinely split for me/, line)
   }
 })
+
+test('the general Ballot Brief names election day, terms and SOS pamphlet pages, never the primary', () => {
+  const { contests, measures, items } = ballotFor(spokane)
+  const text = buildBrief(
+    data,
+    spokane,
+    agreeWithEverything(items),
+    contests,
+    measures,
+    'https://example.test/washington-state#p=abc',
+    ''
+  )
+  assert.match(text, /^# MY BALLOT BRIEF — Washington State, November 3, 2026 General Election$/m)
+  assert.match(text, /^Election day: Tuesday, November 3, 2026\.$/m)
+  assert.match(text, /statewide contests on the November 3, 2026 General Election ballot/)
+  assert.match(text, /^Term: 2-year unexpired term$/m)
+  assert.match(text, /Official pamphlet (statement|entry): https:\/\/www\.sos\.wa\.gov\/.*#page=\d+/)
+  // Candidate summaries and sources may mention August or King County; the
+  // brief's own copy and pamphlet links must not.
+  assert.doesNotMatch(text, /past the primary|top 2/i)
+  for (const line of text.split('\n').filter((l) => l.startsWith('Official pamphlet')))
+    assert.match(line, /: https:\/\/www\.sos\.wa\.gov\//, line)
+})
+
+test('the general ships contest terms from the statewide package', () => {
+  const terms = Object.fromEntries(data.contests.map((c) => [c.slug, c.term]))
+  assert.equal(terms['justice-position-no-1-supreme-court'], '2-year unexpired term')
+  assert.equal(terms['justice-position-no-5-supreme-court'], '2-year unexpired term')
+  assert.equal(terms['justice-position-no-3-supreme-court'], '6-year term')
+})
