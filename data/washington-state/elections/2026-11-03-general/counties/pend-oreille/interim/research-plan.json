@@ -1,0 +1,175 @@
+{
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/pend-oreille/interim/contests.json",
+    "data/washington-state/elections/2026-11-03-general/counties/pend-oreille/interim/measures.json"
+  ],
+  "script": "pipeline/build_research_plan.py",
+  "contests": [
+    {
+      "contest_slug": "pend-oreille-congressional-district-5-u-s-representative",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 5",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "michael-baumgartner",
+          "name": "Michael Baumgartner",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-5-u-s-representative/michael-baumgartner.md"
+        },
+        {
+          "slug": "carmela-conroy",
+          "name": "Carmela Conroy",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-5-u-s-representative/carmela-conroy.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "spokane",
+          "contest_slug": "spokane-congressional-district-5-u-s-representative",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/spokane/scoring/spokane-congressional-district-5-u-s-representative.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "spokane",
+          "franklin",
+          "walla-walla",
+          "stevens",
+          "whitman",
+          "asotin"
+        ]
+      }
+    },
+    {
+      "contest_slug": "pend-oreille-legislative-district-7-state-senator",
+      "category": "State",
+      "office": "State Senator",
+      "district": "Legislative District 7",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "shelly-short",
+          "name": "Shelly Short",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-7-state-senator/shelly-short.md"
+        },
+        {
+          "slug": "ronald-l-mccoy",
+          "name": "Ronald L McCoy",
+          "party_preference": "Prefers Independent Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-7-state-senator/ronald-l-mccoy.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "spokane",
+          "contest_slug": "spokane-legislative-district-7-state-senator",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/spokane/scoring/spokane-legislative-district-7-state-senator.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "spokane",
+          "chelan",
+          "stevens",
+          "douglas",
+          "okanogan"
+        ]
+      }
+    },
+    {
+      "contest_slug": "pend-oreille-pend-oreille-county-commissioner-district-2-county-commissioner-2",
+      "category": "County",
+      "office": "County Commissioner 2",
+      "district": "Pend Oreille County Commissioner District 2",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "robert-rosencrantz",
+          "name": "Robert Rosencrantz",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/pend-oreille/dossiers/pend-oreille-pend-oreille-county-commissioner-district-2-county-commissioner-2/robert-rosencrantz.md"
+        },
+        {
+          "slug": "brandy-parker-warren",
+          "name": "Brandy Parker Warren",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/pend-oreille/dossiers/pend-oreille-pend-oreille-county-commissioner-district-2-county-commissioner-2/brandy-parker-warren.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "pend-oreille-public-utility-district-commissioner-district-2-public-utility-commissioner-2",
+      "category": "PublicUtility",
+      "office": "Public Utility Commissioner #2",
+      "district": "Public Utility District Commissioner District 2",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "gerry-david-bradbury",
+          "name": "Gerry David Bradbury",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/pend-oreille/dossiers/pend-oreille-public-utility-district-commissioner-district-2-public-utility-commissioner-2/gerry-david-bradbury.md"
+        },
+        {
+          "slug": "ernie-hood",
+          "name": "Ernie Hood",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/pend-oreille/dossiers/pend-oreille-public-utility-district-commissioner-district-2-public-utility-commissioner-2/ernie-hood.md"
+        }
+      ]
+    }
+  ],
+  "measures": [
+    {
+      "jurisdiction": "Pend Oreille County Public Hospital District No. 1",
+      "proposition": "Proposition No. 1",
+      "title": "Bonds for Expansion and Renovation of Newport Community Hospital",
+      "slug": "pend-oreille-pend-oreille-county-public-hospital-district-no-1-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Riverside School District No. 416-62",
+      "proposition": "Proposition No. 1",
+      "title": "Replacement of Expiring Educational Programs and Operations Levy",
+      "slug": "pend-oreille-riverside-school-district-no-416-62-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Sacheen Lake Water and Sewer District",
+      "proposition": "Proposition No. 1",
+      "title": "One Year Excess Levy for Maintenance & Operation",
+      "slug": "pend-oreille-sacheen-lake-water-and-sewer-district-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    }
+  ],
+  "carry_forward_from": "2026-08-04-primary"
+}
