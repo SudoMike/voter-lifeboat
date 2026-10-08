@@ -1,0 +1,121 @@
+{
+  "contest_slug": "kitsap-legislative-district-35-state-senator",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/kitsap/dossiers/kitsap-legislative-district-35-state-senator/"],
+  "office_does": "A State Senator serves a four-year term writing and voting on Washington state law and the operating, capital and transportation budgets, covering school funding, tax structure, housing rules, health funding and criminal-justice statutes.",
+  "race_blurb": "Republican Sen. Drew MacEwen, the Senate Deputy Republican Leader and a 35th District legislator since 2013, faces Democratic Thurston County Commissioner Carolina Mejia. He runs on spending restraint and tax cuts after voting against the 2026 tax on income over $1 million; she runs on cost of living, rural hospitals and infrastructure, and opposes I-1 and I-638.",
+  "candidates": [
+    {
+      "slug": "drew-c-macewen",
+      "summary": "Senate Deputy Republican Leader from Shelton, in the Legislature since 2013, a Navy submarine veteran and investment-firm managing partner running on spending restraint and tax relief.",
+      "highlights": [
+        "Voted against ESSB 6346, the 2026 tax on income over $1 million, and against the 2025 capital-gains/estate and B&O increases [S6][S7][S8]",
+        "Top priorities: rein in spending, end tax hikes, cut the sales tax and cap property taxes [S2]",
+        "Voted for the 2024 parents' bill of rights (I-2081) and against its 2025 rewrite, ESHB 1296 [S10][S11]",
+        "Endorsed by the Association of Washington Business and 16 other trade and professional groups [S5][S15]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S2", "S3", "S6", "S7", "S8", "S9"],
+          "basis": "Voted no on ESSB 6346, ESSB 5813 and ESHB 2081 and yes on I-2111; campaigns to end tax hikes, cut the sales tax and cap property taxes."
+        },
+        "spending": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S2", "S3", "S4"],
+          "basis": "Repeatedly calls for reining in spending and 'responsible budgeting'; says government 'should live within its means.'"
+        },
+        "experience": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "In the Legislature since 2013, Senate Deputy Republican Leader; runs on his 'bipartisan track record.'"
+        },
+        "social": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S13", "S14"],
+          "basis": "Voted against ESSB 5599 and ESHB 1469 (2023 reproductive and gender-affirming care bills); no campaign statements or I-638 position."
+        },
+        "parental-rights": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S10", "S11", "S12"],
+          "basis": "Voted for I-2081 and against ESHB 1296, the changes I-1 would repeal; no campaign statement on I-1."
+        }
+      }
+    },
+    {
+      "slug": "carolina-mejia",
+      "summary": "Thurston County commissioner since 2021 and county Board of Health chair, who came to the U.S. from Honduras at 11, running on lowering costs, rural hospitals and infrastructure.",
+      "highlights": [
+        "Would cut permitting delays for housing while 'protecting local control over what development looks like' [S4]",
+        "Helped found the Regional Housing Authority and the countywide Home Fund as commissioner [S5][S1]",
+        "Pledges to keep reproductive health care 'safe, legal, and accessible'; listed as opposing I-1 and I-638 [S4][S7]",
+        "Wants 'strict guardrails' so data centers do not pass energy costs to ratepayers [S4]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "spending": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S4"],
+          "basis": "Calls for dedicated road and bridge funding, broadband, water-system investment and full state funding of public education."
+        },
+        "housing": {
+          "score": 0,
+          "confidence": "medium",
+          "citations": ["S4", "S5"],
+          "basis": "Pairs cutting permitting red tape with a record of founding a regional housing authority and a county housing fund."
+        },
+        "local-control": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S4"],
+          "basis": "Wants local control over development and says growth should be shaped by residents, 'not dictated from the outside.'"
+        },
+        "safety": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S4"],
+          "basis": "Prioritizes victim services and a treatment-centered addiction response alongside first-responder funding and gun-safety laws."
+        },
+        "healthcare": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S4", "S2"],
+          "basis": "Wants to cap prescription drug prices, protect existing coverage and keep rural hospitals open; no single-payer statement."
+        },
+        "social": {
+          "score": 2,
+          "confidence": "medium",
+          "citations": ["S4", "S7", "S6"],
+          "basis": "Pledges to keep reproductive care safe, legal and accessible; listed as opposing I-638; endorsed by Planned Parenthood Alliance Advocates and Stonewall Democrats."
+        },
+        "parental-rights": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S7"],
+          "basis": "Listed among elected officials opposing I-1; no other statement on notification, records or opt-outs."
+        },
+        "tech": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S4"],
+          "basis": "Wants strict guardrails on data centers' energy costs and pollution."
+        },
+        "experience": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S2"],
+          "basis": "County commissioner since 2021 with no legislative tenure, running on 'It's time the messenger changed.'"
+        }
+      }
+    }
+  ]
+}
