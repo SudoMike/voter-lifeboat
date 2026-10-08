@@ -84,11 +84,21 @@ export function longElectionDay(day) {
   return `${WEEKDAYS[parseDay(day).getUTCDay()]}, ${formatElectionDay(day)}`
 }
 
+/** 'primary' for 2026-08-04-primary; 'election' when the id names no kind. */
+export function electionKind(entry) {
+  return entry.id.split('-').slice(3).join(' ') || 'election'
+}
+
 /** 'Explore the August primary guide' for 2026-08-04-primary. */
 export function guideLinkText(entry) {
   const month = MONTHS[parseDay(entry.day || entry.id.slice(0, 10)).getUTCMonth()]
-  const kind = entry.id.split('-').slice(3).join(' ') || 'election'
-  return `Explore the ${month} ${kind} guide`
+  return `Explore the ${month} ${electionKind(entry)} guide`
+}
+
+/** 'August 4' for 2026-08-04. */
+export function monthDay(day) {
+  const date = parseDay(day)
+  return `${MONTHS[date.getUTCMonth()]} ${date.getUTCDate()}`
 }
 
 /** Path, relative to the site base, of the active election's app data. */

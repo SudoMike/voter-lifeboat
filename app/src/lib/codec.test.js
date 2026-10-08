@@ -20,6 +20,7 @@ test('profile payload round-trips derived location state without street address'
   assert.equal(decoded.electionId, '2026-08-04-primary-special')
   assert.deepEqual(decoded.context.districts, { LEGDST: '43' })
   assert.equal(decoded.context.matched, undefined)
+  assert.equal(decoded.fromElectionId, undefined)
   assert.equal(JSON.stringify(decoded).includes('Othello'), false)
 })
 
@@ -101,9 +102,10 @@ test('re-encoding for an archived election carries its app id and data version, 
     matched: '4218 SW Othello St, Seattle, WA',
   }
   const answers = { housing: { v: 1, w: 2 }, 'parental-rights': { v: -1.5, w: 1 } }
-  const decoded = decodeProfile(encodeProfileForElection(archived, context, answers))
+  const decoded = decodeProfile(encodeProfileForElection(archived, context, answers, '2026-11-03-general'))
   assert.equal(decoded.electionId, '2026-08-04-primary-special')
   assert.equal(decoded.dataVersion, '5204e0a')
+  assert.equal(decoded.fromElectionId, '2026-11-03-general')
   assert.equal(decoded.context.coverageStatus, 'statewide_only')
   assert.deepEqual(decoded.context.county, context.county)
   assert.deepEqual(decoded.context.districts, {})
