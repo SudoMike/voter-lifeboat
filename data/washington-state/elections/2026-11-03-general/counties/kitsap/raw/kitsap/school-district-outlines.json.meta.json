@@ -1,0 +1,12 @@
+{
+  "url": "https://services6.arcgis.com/qt3UCV9x5kB4CwRA/arcgis/rest/services/School_District_Outlines/FeatureServer/0/query?where=1%3D1&outFields=DISTRICT,DESCRIPTION,DIMS&returnGeometry=false&f=json",
+  "retrieved_at": "2026-10-08",
+  "method": "curl -L (User-Agent 'Mozilla/5.0'); cached verbatim at data/.cache/kitsap/school-district-outlines.json (gitignored)",
+  "stage": "raw",
+  "source_type": "official-record",
+  "tier": 1,
+  "bytes": 6178,
+  "sha256": "9a349bcdc47596ee1fbf1b08661b1e263c77b1889d8f73fbc057aa258dad81dc",
+  "cache_file": "data/.cache/kitsap/school-district-outlines.json",
+  "notes": "Kitsap County GIS School_District_Outlines (ArcGIS Online, services6.arcgis.com/qt3UCV9x5kB4CwRA), attribute DISTRICT: 303, 401, 403, 100-C, 402, 400. Point query at 2689 Hoover Ave SE, Port Orchard (Census-geocoded -122.62722, 47.52342) returned DISTRICT '402' (DOR SCH2025 DISTATTRIB '402' agrees), 2026-10-08. Proposed geo.js COUNTY_LAYERS.kitsap SCHDST layer; not configured yet."
+}

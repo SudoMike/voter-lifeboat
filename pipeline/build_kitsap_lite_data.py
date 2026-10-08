@@ -25,8 +25,69 @@ OUT = COUNTY / "interim"
 # sample-ballot transcription, frozen byte-identical.
 PRIMARY = "2026-08-04-primary"
 
-GENERAL_CFG = {"name": "Kitsap County"}
-GENERAL_MEASURES = {"2026-11-03-general": None}
+GENERAL_CFG = {
+    "name": "Kitsap County",
+    # SCHDST (South Kitsap School District Prop 1) has no layer in geo.js
+    # COUNTY_LAYERS["kitsap"] yet. Proposed (#22): Kitsap County GIS
+    # services6.arcgis.com/qt3UCV9x5kB4CwRA/arcgis/rest/services/
+    # School_District_Outlines/FeatureServer/0, attr DISTRICT (values 100-C,
+    # 303, 400, 401, 402, 403; raw/kitsap/school-district-outlines.json.url).
+    # Until the director adds it, the measure is hidden and the package is
+    # partial_county.
+    "unresolvable_layers": ["SCHDST"],
+}
+
+# The general's local measures, transcribed 2026-10-08 from Kitsap County's
+# online voters' guide on VoteWA (voter.votewa.gov/genericvoterguide.aspx?e=899&c=18)
+# and the Auditor's ballot resolutions page (raw/kitsap/resolutions.html.url),
+# which lists exactly these two. kitsap.gov answered HTTP 403 (Azure WAF) to
+# scripted requests for its PDFs (local voters' pamphlet, sample ballot), so
+# the printed pamphlet could not be fetched. Ballot titles and statements are
+# in counties/kitsap/interim/voter-guide-text/measure-<id>.txt.
+_GEN = "data/washington-state/elections/2026-11-03-general/counties/kitsap"
+_GUIDE = f"{_GEN}/raw/votewa/voter-guide"
+
+
+def general_measure(jurisdiction, proposition, title, scope, what_it_does, cost_line):
+    return {
+        "slug": f"kitsap-{votewa.slugify(f'{jurisdiction}-{proposition}')}",
+        "owner": "kitsap",
+        "jurisdiction": jurisdiction,
+        "proposition": proposition,
+        "title": title,
+        "scope": votewa.scope_json("kitsap", scope),
+        "pamphlet_pages": [],
+        "what_it_does": what_it_does,
+        "cost_line": cost_line,
+        "pro_summary": None,
+        "con_summary": None,
+        "lean_mappings": {},
+    }
+
+
+GENERAL_MEASURES = {"2026-11-03-general": {
+    "sources": [f"{_GEN}/raw/kitsap/resolutions.html.url", f"{_GUIDE}/voterguide.json.url",
+                f"{_GUIDE}/measure-7380.json.url", f"{_GUIDE}/measure-7376.json.url"],
+    "measures": [
+        # 7380; 2689 Hoover Ave SE, Port Orchard (Census-geocoded -122.62722,
+        # 47.52342): Kitsap School_District_Outlines DISTRICT '402' (DOR
+        # SCH2025 DISTATTRIB '402' agrees), live 2026-10-08.
+        general_measure("South Kitsap School District No. 402", "Proposition No. 1",
+                        "Capital Levy for Safety, Technology and Facility Improvements",
+                        ("SCHDST", "402"),
+                        "Authorizes a three-year capital levy for district-wide safety, technology and facility improvements: security cameras, access controls, emergency communication systems, educational technology and cybersecurity, parking, accessibility, theatre and athletic facilities.",
+                        "Estimated $1.50 per $1,000 of assessed value: $23,488,622 (2027), $24,192,839 (2028), $24,918,539 (2029)."),
+        # 7376; Kitsap PUD No. 1 is countywide (its explanatory statement:
+        # "provide electric services within Kitsap County"; KPUD serves
+        # communities "throughout Kitsap County", raw/kitsap/kpud-who-we-are.html.url),
+        # so the electorate is the county.
+        general_measure("Kitsap County Public Utility District No. 1", "Proposition No. 1",
+                        "Authorizing the Construction or Acquisition of Electric Facilities",
+                        ("COUNTY", None),
+                        "Asks whether Public Utility District No. 1 of Kitsap County may construct or acquire electric facilities for the generation, transmission or distribution of electric power. A yes vote gives KPUD that authority; it does not require KPUD to use it, and KPUD's board has agreed to a feasibility study first.",
+                        "No tax or rate in the ballot title; any cost would depend on later KPUD decisions."),
+    ],
+}}
 
 
 def general_override(r, unresolvable):
@@ -37,11 +98,14 @@ def general_override(r, unresolvable):
         n = votewa.district_number(race)
         return "County", f"Kitsap County Commissioner District {n}", "County Commissioner", ("COUNTY", None)
     if dtype == "PUBLIC UTILITY":
-        # No Kitsap PUD commissioner-district layer is configured in geo.js.
+        # Nominated by commissioner district in the primary, elected by the
+        # whole PUD in the general (RCW 54.12.010(3);
+        # raw/kitsap/rcw-54-12-010.html.url). Kitsap PUD No. 1 is countywide
+        # (raw/kitsap/kpud-who-we-are.html.url; VoteWA measure 7376's
+        # explanatory statement), so the general electorate is the county.
         n = votewa.district_number(race)
-        unresolvable.add("PUDDST")
         return ("PublicUtility", f"Kitsap Public Utility District No. 1 Commissioner District {n}",
-                "PUD Commissioner", ("PUDDST", str(n)))
+                "PUD Commissioner", ("COUNTY", None))
     if dtype == "JUDICIAL" and district == "DISTRICT COURT":
         # Kitsap County District Court is elected county-wide.
         n = votewa.district_number(race)
