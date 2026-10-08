@@ -30,8 +30,8 @@ const primary = readPublic(appDataPath(primaryEntry))
 const BASE = '/washington-state/'
 const KING = { id: 'king', fips: '53033', name: 'King County' }
 
-// What lookupBallotContext returns for a King address against the general,
-// which ships no supported counties.
+// A statewide-only King context: what lookupBallotContext returned for a King
+// address against the general before King shipped in it (#16).
 const liveGeneralContext = {
   coverageStatus: 'statewide_only',
   county: KING,
@@ -140,15 +140,54 @@ test('a payload carrying King districts keeps its full-county guide on the archi
   assert.ok(contests.some((c) => c.scope.kind === 'DISTRICT' && c.scope.layer === 'LEGDST'))
 })
 
+test('a live King context from the general opens the primary as a full county guide', () => {
+  // 11700 Pinehurst Way NE, Seattle, as the general's District Adapter
+  // resolved it live on 2026-10-08.
+  const context = {
+    coverageStatus: 'full_county',
+    county: KING,
+    districts: { CONGDST: '7', LEGDST: '46', KCCDST: '1', SCCDST: 'SCC5', JUDDST: 'W', SCHDST: '1', CITY: 'Seattle' },
+    missingLayers: [],
+    matched: '11700 PINEHURST WAY NE, SEATTLE, WA, 98125',
+  }
+  assert.equal(comparisonTarget({ index, election: generalEntry, context, restored: null }), primaryEntry)
+  const p = fromHash(comparisonHref(BASE, primaryEntry, general.election.id, context, allGeneralAnswers))
+  const ctx = reconcileContext(p.context, primary)
+  assert.equal(ctx.coverageStatus, 'full_county')
+  assert.deepEqual(ctx.missingLayers, [])
+  assert.equal(ctx.districtsNotLookedUp, undefined)
+  const contests = contestsOnBallot(primary, ctx, scopeMatches)
+  const district = contests.filter((c) => c.scope.kind === 'DISTRICT').map((c) => `${c.scope.layer}=${c.scope.value}`)
+  for (const want of ['CONGDST=7', 'LEGDST=46']) assert.ok(district.includes(want), want)
+  assert.ok(contests.some((c) => c.scope.kind === 'COUNTY'))
+  assert.ok(measuresOnBallot(primary, ctx, scopeMatches).some((m) => m.scope.value === 'Seattle'))
+})
+
 test('reconcileContext leaves same-election contexts alone and never overclaims', () => {
-  // A statewide-only link on the general (no supported counties): unchanged.
-  assert.deepEqual(reconcileContext(liveGeneralContext, general), liveGeneralContext)
+  // A statewide-only link on the general, for a county the general does not
+  // cover: unchanged.
+  const spokane = { ...liveGeneralContext, county: { id: 'spokane', fips: '53063', name: 'Spokane County' } }
+  assert.deepEqual(reconcileContext(spokane, general), spokane)
+  // A King link made before King shipped in the general (#16) carries no
+  // districts: it now reads as a partial King guide, never as full coverage.
+  const old = reconcileContext(liveGeneralContext, general)
+  assert.equal(old.coverageStatus, 'partial_county')
+  assert.equal(old.districtsNotLookedUp, true)
+  assert.ok(old.missingLayers.includes('CEMDST'))
+  // A live King context on the general passes through unchanged.
+  const live = {
+    coverageStatus: 'full_county',
+    county: KING,
+    districts: { CONGDST: '7', LEGDST: '46', KCCDST: '1', SCCDST: 'SCC5', JUDDST: 'W', SCHDST: '1', CITY: 'Seattle' },
+    missingLayers: [],
+  }
+  assert.deepEqual(reconcileContext(live, general), live)
   // A partial King link with a failed layer: unchanged.
   const partial = { coverageStatus: 'partial_county', county: KING, districts: { LEGDST: '43' }, missingLayers: ['CITY'] }
   assert.deepEqual(reconcileContext(partial, primary), partial)
   // A county-level claim against data that does not cover the county
   // degrades to statewide-only.
-  const claimed = { coverageStatus: 'full_county', county: KING, districts: { LEGDST: '43' }, missingLayers: [] }
+  const claimed = { coverageStatus: 'full_county', county: spokane.county, districts: { LEGDST: '3' }, missingLayers: [] }
   assert.equal(reconcileContext(claimed, general).coverageStatus, 'statewide_only')
 })
 

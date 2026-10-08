@@ -28,7 +28,11 @@ test('the general links the SOS voters guide and has no primary-only copy', () =
   const g = electionGuide(general.election)
   assert.equal(g.kind, 'general')
   assert.match(g.statePamphlet.url, /^https:\/\/www\.sos\.wa\.gov\/.*2026-general-election-voters-guide$/)
-  assert.doesNotMatch(JSON.stringify(g), /primary|top 2|kingcounty/i)
+  // King's general pamphlet PDFs are kingcounty.gov links, but nothing may
+  // point at the primary's pamphlets (voters-pamphlets/2026/08) or copy.
+  const { pamphletPdfs, ...copy } = g
+  assert.doesNotMatch(JSON.stringify(copy), /primary|top 2|kingcounty/i)
+  assert.doesNotMatch(JSON.stringify(pamphletPdfs), /primary|top 2|\/2026\/08\//i)
 })
 
 test('the archived primary keeps its own King pamphlet link and top-2 note', () => {
@@ -88,6 +92,41 @@ test('every statewide contest and measure in the shipped general gets a paged SO
     n++
   }
   assert.ok(n > 3)
+})
+
+test('King general pages link the KCE local pamphlet or the SOS King edition at that page', () => {
+  assert.equal(
+    pamphletLink([{ edition: 'local-edition', page: 60 }], 'king', general.election.id),
+    'https://cdn.kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/voters-pamphlets/2026/11/local-edition.pdf#page=60'
+  )
+  assert.match(
+    pamphletLink([{ edition: 'voters-pamphlet-edition-04-king-seattle', page: 24 }], 'king', general.election.id),
+    /^https:\/\/www\.sos\.wa\.gov\/.*Edition%2004%C2%A0-%20King%20-%20Seattle\.pdf#page=24$/
+  )
+  // Every King candidate and measure with pamphlet pages gets a paged link to
+  // one of those four PDFs, never the unpaged SOS index.
+  let n = 0
+  for (const item of [...general.contests, ...general.measures]) {
+    if (item.owner !== 'king') continue
+    const pages = item.candidates ? item.candidates.map((c) => c.pamphlet_pages) : [item.pamphlet_pages]
+    for (const p of pages.filter((x) => x?.length)) {
+      assert.match(
+        pamphletLink(p, 'king', general.election.id),
+        /^https:\/\/(cdn\.kingcounty\.gov|www\.sos\.wa\.gov\/sites)\/.*\.pdf#page=\d+$/,
+        item.slug
+      )
+      n++
+    }
+  }
+  assert.ok(n > 150, `${n} King pamphlet links`)
+})
+
+test('the shipped general links King County Elections directly', () => {
+  assert.deepEqual(countyElectionsOffice(general, { id: 'king', name: 'King County' }), {
+    name: 'King County Elections',
+    url: 'https://kingcounty.gov/en/dept/elections',
+    direct: true,
+  })
 })
 
 test('county elections office comes from coverage.supported_counties elections_url', () => {

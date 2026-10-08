@@ -1,6 +1,7 @@
-// The November 3, 2026 general as shipped (issue #9): a Statewide-Only Guide
-// for every Washington address. These run the app's own ballot, interview,
-// lean and Ballot Brief code against public/data/2026-11-03-general.
+// The November 3, 2026 general as shipped: King County at Full County
+// Coverage (issue #16), every other Washington address a Statewide-Only Guide
+// (issue #9). These run the app's own ballot, interview, lean and Ballot Brief
+// code against public/data/2026-11-03-general.
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
@@ -20,15 +21,34 @@ const data = JSON.parse(
   readFileSync(new URL('../../public/data/2026-11-03-general/app-data.json', import.meta.url), 'utf8')
 )
 
-// What lookupBallotContext returns for any Washington address while no county
-// ships (geo.test.js covers the lookup itself).
+const KING = { id: 'king', fips: '53033', name: 'King County' }
+
+// What lookupBallotContext returns for a Washington address outside King
+// County (geo.test.js covers the lookup itself).
 const spokane = {
   coverageStatus: 'statewide_only',
   county: { id: 'spokane', fips: '53063', name: 'Spokane County' },
   districts: {},
   missingLayers: [],
 }
-const king = { ...spokane, county: { id: 'king', fips: '53033', name: 'King County' } }
+
+// King districts as the live District Adapter resolved them on 2026-10-08
+// (Census geocoder + King GIS + the DOR cemetery layer).
+const king = (districts) => ({ coverageStatus: 'full_county', county: KING, districts, missingLayers: [] })
+const ADDRESSES = {
+  // 600 4th Ave, Seattle 98104 (City Hall)
+  cityHall: king({ CONGDST: '7', LEGDST: '34', KCCDST: '8', SCCDST: 'SCC7', JUDDST: 'W', SCHDST: '1', CITY: 'Seattle' }),
+  // 11700 Pinehurst Way NE, Seattle 98125
+  pinehurst: king({ CONGDST: '7', LEGDST: '46', KCCDST: '1', SCCDST: 'SCC5', JUDDST: 'W', SCHDST: '1', CITY: 'Seattle' }),
+  // 17500 Midvale Ave N, Shoreline 98133
+  shoreline: king({ CONGDST: '7', LEGDST: '32', KCCDST: '1', JUDDST: 'SH', FIRDST: '4', SCHDST: '412', CITY: 'Shoreline' }),
+  // 10105 SW Bank Rd, Vashon 98070
+  vashon: king({ CONGDST: '7', LEGDST: '34', KCCDST: '8', JUDDST: 'SW', FIRDST: '13', SCHDST: '402', CEMDST: '1' }),
+  // 220 4th Ave S, Kent 98032
+  kent: king({ CONGDST: '9', LEGDST: '33', KCCDST: '5', JUDDST: 'SE', SCHDST: '415', CITY: 'Kent' }),
+  // 25 W Main St, Auburn 98001
+  auburn: king({ CONGDST: '9', LEGDST: '47', KCCDST: '7', JUDDST: 'SE', SCHDST: '408', CITY: 'Auburn' }),
+}
 
 const ballotFor = (context) => {
   const contests = contestsOnBallot(data, context, scopeMatches)
@@ -37,52 +57,112 @@ const ballotFor = (context) => {
   return { contests, measures, axes, items: interviewItemsForBallot(data, axes) }
 }
 
-test('the general ships real statewide data, so the notice page is not shown', () => {
+const SUPREME_COURT = [1, 3, 4, 5, 7].map((n) => `justice-position-no-${n}-supreme-court`)
+const STATE_MEASURES = [
+  'initiative-measure-no-ip26-645',
+  'initiative-measure-no-il26-001',
+  'initiative-measure-no-il26-638',
+]
+
+test('the general ships King at full county coverage with its elections office', () => {
   assert.equal(data.election.id, '2026-11-03-general')
-  assert.deepEqual(data.coverage, { statewide_complete: true, supported_counties: [] })
-  // App.jsx shows ElectionNotice only when both lists are empty.
-  assert.ok(data.contests.length && data.measures.length)
+  assert.deepEqual(data.coverage, {
+    statewide_complete: true,
+    supported_counties: [
+      {
+        id: 'king',
+        name: 'King County',
+        state: 'WA',
+        fips: '53033',
+        coverage: 'full_county',
+        elections_url: 'https://kingcounty.gov/en/dept/elections',
+      },
+    ],
+  })
 })
 
-test('every Washington address gets all five court races and all three initiatives', () => {
-  for (const context of [spokane, king]) {
+test('each Supreme Court contest ships once, owned by the statewide package', () => {
+  for (const slug of SUPREME_COURT) {
+    const found = data.contests.filter((c) => c.slug === slug)
+    assert.equal(found.length, 1, slug)
+    assert.equal(found[0].owner, 'statewide')
+    assert.deepEqual(found[0].scope, { kind: 'STATEWIDE' })
+  }
+  const slugs = data.contests.map((c) => c.slug)
+  assert.equal(new Set(slugs).size, slugs.length)
+})
+
+test('outside King, an address gets all five court races and all three initiatives only', () => {
+  const { contests, measures } = ballotFor(spokane)
+  assert.deepEqual(contests.map((c) => c.slug), SUPREME_COURT)
+  assert.deepEqual(measures.map((m) => m.slug), STATE_MEASURES)
+  assert.equal(coverageAdvice(spokane), 'statewide-only')
+})
+
+test('every King ballot carries the statewide races once, the countywide races and its district races', () => {
+  const COUNTYWIDE = [
+    'prosecuting-attorney',
+    'assessor',
+    'director-of-elections',
+    'court-of-appeals-division-1-district-1-judge-position-no-5',
+    'court-of-appeals-division-1-district-1-judge-position-no-6',
+  ]
+  for (const [name, context] of Object.entries(ADDRESSES)) {
     const { contests, measures } = ballotFor(context)
-    assert.deepEqual(
-      contests.map((c) => c.slug),
-      [1, 3, 4, 5, 7].map((n) => `justice-position-no-${n}-supreme-court`)
-    )
-    assert.deepEqual(measures.map((m) => m.slug), [
-      'initiative-measure-no-ip26-645',
-      'initiative-measure-no-il26-001',
-      'initiative-measure-no-il26-638',
-    ])
-    assert.equal(coverageAdvice(context), 'statewide-only')
+    const slugs = contests.map((c) => c.slug)
+    assert.equal(new Set(slugs).size, slugs.length, name)
+    for (const slug of [...SUPREME_COURT, ...COUNTYWIDE]) assert.ok(slugs.includes(slug), `${name}: ${slug}`)
+    assert.deepEqual(measures.slice(0, 3).map((m) => m.slug), STATE_MEASURES, name)
+    assert.ok(slugs.includes(`congressional-district-${context.districts.CONGDST}-united-states-representative`), name)
+    assert.ok(slugs.some((s) => s.endsWith(`legislative-district-no-${context.districts.LEGDST}`)), name)
+    // The district court contests are exactly the voter's electoral district's.
+    const court = { NE: 'northeast', SE: 'southeast', SW: 'southwest', W: 'west', SH: 'shoreline' }[context.districts.JUDDST]
+    const courts = slugs.filter((s) => /^judge-position-no-\d+-.+-electoral-district$/.test(s))
+    assert.ok(courts.length >= 2, name)
+    for (const s of courts) assert.ok(s.endsWith(`-${court}-electoral-district`), `${name}: ${s}`)
+    assert.equal(coverageAdvice(context), null)
   }
 })
 
-// The interview is ballot-driven. Justices are scored on judicial, experience
-// and safety; the initiatives map onto parental-rights, social, taxes,
-// local-control and (IP26-645, upheld by its refutation) spending.
-const GENERAL_AXES = [
-  'experience',
-  'judicial',
-  'local-control',
-  'parental-rights',
-  'safety',
-  'social',
-  'spending',
-  'taxes',
-]
+test('Seattle gets Seattle Prop 1 and Municipal Court; Council D5 only inside D5', () => {
+  for (const name of ['cityHall', 'pinehurst']) {
+    const { contests, measures } = ballotFor(ADDRESSES[name])
+    const slugs = contests.map((c) => c.slug)
+    assert.ok(measures.some((m) => m.slug === 'city-of-seattle-proposition-no-1'), name)
+    assert.equal(slugs.filter((s) => s.startsWith('municipal-court-judge-position-no-')).length, 7, name)
+    assert.equal(slugs.includes('council-district-no-5-city-of-seattle'), name === 'pinehurst', name)
+  }
+})
 
-test('the interview asks only about axes on the statewide ballot', () => {
+test('local measures reach exactly their own district', () => {
+  const local = (name) => ballotFor(ADDRESSES[name]).measures.filter((m) => m.owner === 'king').map((m) => m.slug)
+  assert.deepEqual(local('cityHall'), ['city-of-seattle-proposition-no-1'])
+  assert.deepEqual(local('shoreline'), ['city-of-shoreline-proposition-no-1'])
+  assert.deepEqual(local('vashon'), ['king-county-cemetery-district-no-1-proposition-no-1'])
+  assert.deepEqual(local('kent'), ['kent-school-district-no-415-proposition-no-1'])
+  assert.deepEqual(local('auburn'), ['auburn-school-district-no-408-proposition-no-1'])
+})
+
+test('uncontested King contests ship information-only, with no scores', () => {
+  const uncontested = data.contests.filter((c) => c.owner === 'king' && c.uncontested)
+  assert.ok(uncontested.length >= 30)
+  for (const c of uncontested) {
+    assert.equal(c.candidates.length, 1, c.slug)
+    assert.deepEqual(c.candidates[0].scores, {}, c.slug)
+  }
+  // Most carry a researched summary; the rest are the official ballot entry.
+  const levels = new Set(uncontested.map((c) => c.candidates[0].evidence_level))
+  for (const level of levels) assert.ok(['rich', 'moderate', 'pamphlet-only', 'official-ballot-only'].includes(level), level)
+  assert.ok(uncontested.filter((c) => c.candidates[0].summary).length >= 30)
+})
+
+// The interview is ballot-driven: a King ballot reaches all fifteen axes,
+// parental-rights included; the statewide-only ballot reaches eight.
+const STATEWIDE_AXES = ['experience', 'judicial', 'local-control', 'parental-rights', 'safety', 'social', 'spending', 'taxes']
+
+test('the statewide-only interview asks only about axes on the statewide ballot', () => {
   const { axes, items } = ballotFor(spokane)
-  assert.deepEqual([...axes].sort(), GENERAL_AXES)
-  const asked = new Set(
-    items.flatMap((item) =>
-      item.kind === 'statement' ? [item.axis] : item.options.flatMap((o) => Object.keys(o.effects))
-    )
-  )
-  assert.deepEqual([...asked].sort(), GENERAL_AXES)
+  assert.deepEqual([...axes].sort(), STATEWIDE_AXES)
   assert.deepEqual(items.map((i) => i.id), [
     'card-taxes',
     'card-spending',
@@ -96,41 +176,52 @@ test('the interview asks only about axes on the statewide ballot', () => {
   ])
 })
 
+test('every King interview asks the parental-rights card and covers the whole rubric', () => {
+  for (const [name, context] of Object.entries(ADDRESSES)) {
+    const { axes, items } = ballotFor(context)
+    assert.equal(axes.size, data.rubric.axes.length, name)
+    assert.ok(items.some((i) => i.id === 'card-parental-rights'), name)
+  }
+})
+
 const agreeWithEverything = (items) =>
   buildProfile(
     items.map((item) => ({ item, choice: item.kind === 'statement' ? 'agree' : 0 })),
     {}
   )
 
-test('a voter who answers the interview gets a lean on all three initiatives', () => {
-  const { measures, items } = ballotFor(spokane)
-  const answers = agreeWithEverything(items)
-  for (const m of measures) {
-    const { lean } = measureLean(m, answers)
-    assert.ok(['yes', 'no', 'split'].includes(lean), `${m.slug}: lean ${lean}`)
+test('a voter who answers the interview gets a lean on every measure on the ballot', () => {
+  for (const context of [spokane, ...Object.values(ADDRESSES)]) {
+    const { measures, items } = ballotFor(context)
+    const answers = agreeWithEverything(items)
+    for (const m of measures) {
+      const { lean } = measureLean(m, answers)
+      assert.ok(['yes', 'no', 'split'].includes(lean), `${m.slug}: lean ${lean}`)
+    }
   }
 })
 
-test('every court race ranks its candidates', () => {
-  const { contests, items } = ballotFor(spokane)
+test('every contested race ranks all its candidates', () => {
+  const { items } = ballotFor(ADDRESSES.cityHall)
   const answers = agreeWithEverything(items)
-  for (const c of contests) {
+  for (const c of data.contests.filter((x) => !x.uncontested)) {
     const { rows } = rankContest(c, answers)
-    assert.equal(rows.length, 2, c.slug)
+    assert.equal(rows.length, c.candidates.length, c.slug)
+    assert.ok(c.candidates.length >= 2, c.slug)
   }
 })
 
-test('the Ballot Brief carries the statewide-only warning and every contest and measure', () => {
-  const { contests, measures, items } = ballotFor(spokane)
-  const text = buildBrief(
-    data,
-    spokane,
-    agreeWithEverything(items),
+const briefFor = (context) => {
+  const { contests, measures, items } = ballotFor(context)
+  return {
     contests,
     measures,
-    'https://example.test/washington-state#p=abc',
-    ''
-  )
+    text: buildBrief(data, context, agreeWithEverything(items), contests, measures, 'https://example.test/washington-state#p=abc', ''),
+  }
+}
+
+test('the statewide-only Ballot Brief carries the warning and every contest and measure', () => {
+  const { contests, measures, text } = briefFor(spokane)
   assert.match(text, /November 3, 2026 General Election/)
   assert.match(text, /Coverage: STATEWIDE-ONLY GUIDE/)
   assert.match(text, /omits county, city, school, fire, judicial district, and other local contests/)
@@ -144,17 +235,25 @@ test('the Ballot Brief carries the statewide-only warning and every contest and 
   }
 })
 
+test('a King Ballot Brief is a full county guide naming every contest once and every measure', () => {
+  const { contests, measures, text } = briefFor(ADDRESSES.pinehurst)
+  assert.match(text, /^Coverage: FULL COUNTY GUIDE\.$/m)
+  assert.match(text, /contests on the November 3, 2026 General Election ballot that Voter Lifeboat matched/)
+  assert.match(text, /Resolved county: King County/)
+  assert.doesNotMatch(text, /STATEWIDE-ONLY|PARTIAL COUNTY/)
+  for (const c of contests) {
+    const heading = `## ${c.office.toUpperCase()} — ${c.district || 'Countywide'}`
+    assert.equal(text.split('\n').filter((l) => l === heading).length, 1, heading)
+  }
+  assert.equal(text.split('\n').filter((l) => l.startsWith('## SUPREME COURT')).length, 5)
+  for (const m of measures)
+    assert.ok(text.split('\n').some((l) => l.startsWith(`### ${m.jurisdiction} ${m.proposition}:`)), m.slug)
+  assert.match(text, /Official pamphlet statement: https:\/\/cdn\.kingcounty\.gov\/.*local-edition\.pdf#page=\d+/)
+  assert.match(text, /Official pamphlet statement: https:\/\/www\.sos\.wa\.gov\/.*Edition%2004.*#page=\d+/)
+})
+
 test('the general Ballot Brief names election day, terms and SOS pamphlet pages, never the primary', () => {
-  const { contests, measures, items } = ballotFor(spokane)
-  const text = buildBrief(
-    data,
-    spokane,
-    agreeWithEverything(items),
-    contests,
-    measures,
-    'https://example.test/washington-state#p=abc',
-    ''
-  )
+  const { text } = briefFor(spokane)
   assert.match(text, /^# MY BALLOT BRIEF — Washington State, November 3, 2026 General Election$/m)
   assert.match(text, /^Election day: Tuesday, November 3, 2026\.$/m)
   assert.match(text, /statewide contests on the November 3, 2026 General Election ballot/)
@@ -165,6 +264,8 @@ test('the general Ballot Brief names election day, terms and SOS pamphlet pages,
   assert.doesNotMatch(text, /past the primary|top 2/i)
   for (const line of text.split('\n').filter((l) => l.startsWith('Official pamphlet')))
     assert.match(line, /: https:\/\/www\.sos\.wa\.gov\//, line)
+  const kingText = briefFor(ADDRESSES.kent).text
+  assert.doesNotMatch(kingText, /past the primary|top 2|voters-pamphlets\/2026\/08/i)
 })
 
 test('the general ships contest terms from the statewide package', () => {
