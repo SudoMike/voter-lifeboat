@@ -35,6 +35,41 @@ export function archivedElections(index) {
 
 export const appDataPath = (entry) => `data/${entry.id}/app-data.json`
 
+/** The route serving one election: `<base><id>`. */
+export const electionHref = (base, entry) => `${base.replace(/\/+$/, '')}/${entry.id}`
+
+const MONTHS = [
+  'January', 'February', 'March', 'April', 'May', 'June',
+  'July', 'August', 'September', 'October', 'November', 'December',
+]
+const parseDay = (day) => {
+  const [y, m, d] = day.split('-').map(Number)
+  return new Date(Date.UTC(y, m - 1, d))
+}
+
+/** '2026-08-04' -> 'August 4, 2026' */
+export function formatElectionDay(day) {
+  const date = parseDay(day)
+  return `${MONTHS[date.getUTCMonth()]} ${date.getUTCDate()}, ${date.getUTCFullYear()}`
+}
+
+/**
+ * Washington county auditors mail ballots at least 18 days before election
+ * day (RCW 29A.40.070). '2026-11-03' -> 'Oct 16'
+ */
+export function ballotsMailBy(day) {
+  const date = parseDay(day)
+  date.setUTCDate(date.getUTCDate() - 18)
+  return `${MONTHS[date.getUTCMonth()].slice(0, 3)} ${date.getUTCDate()}`
+}
+
+/** 'Explore the August primary guide' for 2026-08-04-primary. */
+export function guideLinkText(entry) {
+  const month = MONTHS[parseDay(entry.day || entry.id.slice(0, 10)).getUTCMonth()]
+  const kind = entry.id.split('-').slice(3).join(' ') || 'election'
+  return `Explore the ${month} ${kind} guide`
+}
+
 /** Path, relative to the site base, of the active election's app data. */
 export function activeAppDataPath(index) {
   const active = index?.active

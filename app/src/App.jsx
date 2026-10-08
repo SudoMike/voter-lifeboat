@@ -7,6 +7,9 @@ import Snapshot from './screens/Snapshot.jsx'
 import Results from './screens/Results.jsx'
 import DataPage from './screens/DataPage.jsx'
 import Methodology from './screens/Methodology.jsx'
+import ArchivedBanner from './screens/ArchivedBanner.jsx'
+import ElectionNotice from './screens/ElectionNotice.jsx'
+import NoSuchElection from './screens/NoSuchElection.jsx'
 import { scopeMatches } from './lib/geo.js'
 import {
   contestsOnBallot,
@@ -15,10 +18,13 @@ import {
   interviewItemsForBallot,
 } from './lib/scoring.js'
 import { readHash, clearHash } from './lib/codec.js'
-import { loadActiveAppData } from './lib/elections.js'
+import { ElectionNotFound, electionIdFromPath, loadElection } from './lib/elections.js'
+
+const BASE = import.meta.env.BASE_URL
 
 export default function App() {
-  const [data, setData] = useState(null)
+  const [site, setSite] = useState(null) // { index, election, data }
+  const data = site?.data ?? null
   const [loadErr, setLoadErr] = useState(null)
   const [stage, setStage] = useState('landing')
   const [ballotContext, setBallotContext] = useState(null)
@@ -38,15 +44,27 @@ export default function App() {
     return () => window.removeEventListener('hashchange', onHash)
   }, [])
 
-  useEffect(() => {
-    loadActiveAppData(import.meta.env.BASE_URL)
-      .then(setData)
-      .catch((e) => setLoadErr(String(e)))
-  }, [])
-
+  // Routes: /washington-state serves the active election (or, for a report
+  // link, the election the link was made for); /washington-state/<id> serves
+  // that election.
   useEffect(() => {
     if (location.pathname === '/')
-      history.replaceState(null, '', `/washington-state/${location.search}${location.hash}`)
+      history.replaceState(null, '', `${BASE}${location.search}${location.hash}`)
+    const routeId = electionIdFromPath(location.pathname, BASE)
+    const link = readHash()
+    loadElection(BASE, { routeId, linkElectionId: link?.electionId })
+      .then((loaded) => {
+        // A report link for another election moves to that election's route,
+        // so the link the results screen rewrites keeps pointing at it.
+        if (!routeId && loaded.election.id !== loaded.index.active)
+          history.replaceState(
+            null,
+            '',
+            `${BASE}${loaded.election.id}${location.search}${location.hash}`
+          )
+        setSite(loaded)
+      })
+      .catch(setLoadErr)
   }, [])
 
   // Restore a shared/bookmarked report from the hash fragment.
@@ -70,6 +88,8 @@ export default function App() {
     return { contests, measures, axes, items }
   }, [data, ballotContext])
 
+  if (loadErr instanceof ElectionNotFound)
+    return <NoSuchElection electionId={loadErr.electionId} activeHref={BASE} />
   if (loadErr)
     return (
       <main className="screen screen--app" style={{ padding: '60px 24px', textAlign: 'center' }}>
@@ -93,8 +113,20 @@ export default function App() {
     setDataPage(false)
     setMethodologyPage(false)
   }
-  if (dataPage) return <DataPage data={data} onBack={leaveOverlay} />
-  if (methodologyPage) return <Methodology data={data} onBack={leaveOverlay} />
+  const archived = site.election.status === 'archived'
+  const withBanner = (screen) => (
+    <>
+      {archived && <ArchivedBanner election={site.election} activeHref={BASE} />}
+      {screen}
+    </>
+  )
+
+  if (dataPage) return withBanner(<DataPage data={data} onBack={leaveOverlay} />)
+  if (methodologyPage) return withBanner(<Methodology data={data} onBack={leaveOverlay} />)
+
+  // An election with nothing researched yet gets a notice, not the guide.
+  if (!data.contests.length && !data.measures.length && !restored)
+    return withBanner(<ElectionNotice data={data} index={site.index} base={BASE} />)
 
   const startOver = () => {
     clearHash()
@@ -104,59 +136,72 @@ export default function App() {
     setStage('landing')
   }
 
-  switch (stage) {
-    case 'landing':
-      return <Landing data={data} onStart={() => setStage('address')} />
-    case 'address':
-      return (
-        <Address
-          onBack={() => setStage('landing')}
-          data={data}
-          onFound={(context) => {
-            setBallotContext(context)
-            setStage('confirm')
-          }}
-        />
-      )
-    case 'confirm':
-      return (
-        <Confirm
-          data={data}
-          context={ballotContext}
-          ballot={ballot}
-          onProceed={() => setStage('interview')}
-          onRetry={() => {
-            setBallotContext(null)
-            setStage('address')
-          }}
-        />
-      )
-    case 'interview':
-      return (
-        <Interview
-          data={data}
-          items={ballot.items}
-          onDone={(a) => {
-            setAnswers(a)
-            setStage('snapshot')
-          }}
-        />
-      )
-    case 'snapshot':
-      return (
-        <Snapshot data={data} answers={answers} onShow={() => setStage('results')} />
-      )
-    case 'results':
-      return (
-        <Results
-          data={data}
-          ballotContext={ballotContext}
-          answers={answers}
-          restored={restored}
-          onStartOver={startOver}
-        />
-      )
-    default:
-      return null
+  return withBanner(renderStage())
+
+  function renderStage() {
+    switch (stage) {
+      case 'landing':
+        return (
+          <Landing
+            data={data}
+            index={site.index}
+            election={site.election}
+            base={BASE}
+            onStart={() => setStage('address')}
+          />
+        )
+      case 'address':
+        return (
+          <Address
+            onBack={() => setStage('landing')}
+            data={data}
+            onFound={(context) => {
+              setBallotContext(context)
+              setStage('confirm')
+            }}
+          />
+        )
+      case 'confirm':
+        return (
+          <Confirm
+            data={data}
+            context={ballotContext}
+            ballot={ballot}
+            onProceed={() => setStage('interview')}
+            onRetry={() => {
+              setBallotContext(null)
+              setStage('address')
+            }}
+          />
+        )
+      case 'interview':
+        return (
+          <Interview
+            data={data}
+            items={ballot.items}
+            onDone={(a) => {
+              setAnswers(a)
+              setStage('snapshot')
+            }}
+          />
+        )
+      case 'snapshot':
+        return (
+          <Snapshot data={data} answers={answers} onShow={() => setStage('results')} />
+        )
+      case 'results':
+        return (
+          <Results
+            data={data}
+            election={site.election}
+            ballotContext={ballotContext}
+            answers={answers}
+            restored={restored}
+            onStartOver={startOver}
+          />
+        )
+      default:
+        return null
+    }
   }
 }

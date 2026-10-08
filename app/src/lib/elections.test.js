@@ -6,6 +6,11 @@ import {
   electionIdFromPath,
   loadElection,
   ElectionNotFound,
+  formatElectionDay,
+  ballotsMailBy,
+  archivedElections,
+  electionHref,
+  guideLinkText,
 } from './elections.js'
 
 const index = {
@@ -137,6 +142,30 @@ test('a listed election whose file is missing is "no such election", not a parse
     loadElection(BASE, { routeId: '2026-08-04-primary' }, fetchImpl),
     (e) => e instanceof ElectionNotFound && e.electionId === '2026-08-04-primary'
   )
+})
+
+test('election days read as long dates', () => {
+  assert.equal(formatElectionDay('2026-08-04'), 'August 4, 2026')
+  assert.equal(formatElectionDay('2026-11-03'), 'November 3, 2026')
+})
+
+test('ballots mail 18 days before election day (RCW 29A.40.070)', () => {
+  assert.equal(ballotsMailBy('2026-11-03'), 'Oct 16')
+  assert.equal(ballotsMailBy('2026-08-04'), 'Jul 17')
+})
+
+test('archived elections are listed newest first, linking to their own route', () => {
+  const index = {
+    active: 'c',
+    elections: [
+      { id: '2025-08-05-primary', day: '2025-08-05', status: 'archived' },
+      { id: '2026-08-04-primary', day: '2026-08-04', status: 'archived' },
+      { id: '2026-11-03-general', day: '2026-11-03', status: 'active' },
+    ],
+  }
+  assert.deepEqual(archivedElections(index).map((e) => e.id), ['2026-08-04-primary', '2025-08-05-primary'])
+  assert.equal(electionHref(BASE, index.elections[1]), '/washington-state/2026-08-04-primary')
+  assert.equal(guideLinkText(index.elections[1]), 'Explore the August primary guide')
 })
 
 test('an HTML fallback page served for a data file is "no such election"', async () => {
