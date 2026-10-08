@@ -1,0 +1,77 @@
+{
+  "contest_slug": "pierce-pierce-county-council-district-7-county-councilmember",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-pierce-county-council-district-7-county-councilmember/",
+    "data/washington-state/elections/2026-11-03-general/counties/pierce/scoring/pierce-pierce-county-council-district-7-county-councilmember.json"
+  ],
+  "verdicts": [
+    {
+      "candidate": "brenda-lykins",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "She supports the 0.1% sales tax in two separate interviews [S9][S14]. That is an explicit stance for new revenue, so +1 at medium. It is a flat sales tax, not progressive revenue, so not higher."
+    },
+    {
+      "candidate": "brenda-lykins",
+      "axis": "housing",
+      "verdict": "adjust",
+      "adjusted_score": 0,
+      "adjusted_confidence": "low",
+      "note": "The evidence is mostly off this axis rather than mixed on it. Growth limits (shrinking the UGA, ending the rural density bonus) and directing growth to urban and transit areas, including cottage housing, are growth-management positions [S9]. Neither is market deregulation or public housing and tenant protection. 'Partnering with cities and nonprofits on homelessness' [S6] is too thin to place her. Keeping 0 at medium would put an inferred 'mixed' into the alignment math; low is honest."
+    },
+    {
+      "candidate": "brenda-lykins",
+      "axis": "safety",
+      "verdict": "adjust",
+      "adjusted_score": 0,
+      "adjusted_confidence": "medium",
+      "note": "The dossier records strong pole-A evidence next to the pole-B items. She says she voted on the Gig Harbor council to 'significantly increase police staffing' [S9][S11]; she supports 'adequate staffing and resources' for the Sheriff and more Peninsula Detachment staffing [S6][S9]; and she supports the public-safety sales tax [S9][S14]. The cached Gig Harbor Now text adds that she backs it because residents 'want a stronger law enforcement presence' and it funds 'recruitment, retention, and training.' On the other side are mental-health responders, violence prevention and the sheriff-ombuds amendment [S6][S14]. That is a balanced profile: 0 at medium."
+    },
+    {
+      "candidate": "brenda-lykins",
+      "axis": "climate",
+      "verdict": "upheld",
+      "note": "Her own platform calls environmental protection an investment in 'climate resilience' [S6][S9], and she says she voted to preserve a 52-acre conservation area [S9]. Medium rests on her statements, not on the Washington Conservation Action endorsement."
+    },
+    {
+      "candidate": "brenda-lykins",
+      "axis": "experience",
+      "verdict": "upheld",
+      "note": "Former Gig Harbor councilmember and mayor pro tem, Pierce Regional Council representative, current Charter Review commissioner [S5][S11]. Short tenure in an open-seat race keeps it at -1, not -2."
+    },
+    {
+      "candidate": "mike-solan",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Confirmed in the cached Gig Harbor Now text: he opposes the tax as passed 'without a vote of the people' but would have supported a version limited to law enforcement and corrections [S5]. That conditional support keeps it at -1."
+    },
+    {
+      "candidate": "mike-solan",
+      "axis": "spending",
+      "verdict": "upheld",
+      "note": "Repeated across three sources: the county 'spends too much money and has not budgeted within its means' and should fund mandates first [S5]; 'transparency, measurable outcomes, … regular review of county programs' [S2]; an 'emergency audit' of the budget [S10]. These are the audit-and-restrain pole almost word for word, so -2 at high holds. Wanting a better deputy contract is a priority within the budget, not a pro-expansion stance."
+    },
+    {
+      "candidate": "mike-solan",
+      "axis": "housing",
+      "verdict": "upheld",
+      "note": "He would 'cut the red tape' and give residents 'a predictable land use process,' saying regulation 'stifles growth' [S5]. That is a pole-A position in his own words. It is one interview, so medium."
+    },
+    {
+      "candidate": "mike-solan",
+      "axis": "safety",
+      "verdict": "adjust",
+      "adjusted_score": -2,
+      "adjusted_confidence": "medium",
+      "note": "Direction and magnitude stand on stated positions: deputy recruitment and retention at the center of his platform [S2][S5], and opposition to the sheriff-ombuds oversight office as 'activist led' [S10]. But the basis also leans on his police-union background and the guild endorsements [S4], which is affiliation inference. His stated positions cover staffing and oversight only, with nothing on prosecution, encampments or treatment. Use medium, with S4 not load-bearing."
+    },
+    {
+      "candidate": "mike-solan",
+      "axis": "experience",
+      "verdict": "upheld",
+      "note": "First run for office and 'I'm not a politician' [S5]. Six years as guild president [S7] is an institutional-power background, so +1 rather than +2 is right."
+    }
+  ],
+  "missing": []
+}
