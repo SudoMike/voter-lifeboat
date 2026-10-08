@@ -1,0 +1,24 @@
+{
+  "script": "pipeline/verify_dossiers.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/adams/interim/research-plan.json",
+    "data/washington-state/elections/2026-11-03-general/counties/adams/dossiers/"
+  ],
+  "missing": [],
+  "no_frontmatter": [],
+  "invalid_evidence_levels": [],
+  "invalid_source_formats": [],
+  "evidence_levels": {
+    "moderate": 8
+  },
+  "contest_overviews_missing": [],
+  "untouched_contests": [],
+  "untouched_measures": [],
+  "researched_elsewhere": [
+    "adams-congressional-district-4-u-s-representative -> benton/benton-congressional-district-4-u-s-representative",
+    "adams-congressional-district-5-u-s-representative -> spokane/spokane-congressional-district-5-u-s-representative",
+    "adams-legislative-district-9-state-representative-pos-2 -> spokane/spokane-legislative-district-9-state-representative-pos-2",
+    "adams-legislative-district-13-state-representative-pos-1 -> grant/grant-legislative-district-13-state-representative-pos-1",
+    "adams-legislative-district-13-state-representative-pos-2 -> grant/grant-legislative-district-13-state-representative-pos-2"
+  ]
+}
