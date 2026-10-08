@@ -16,6 +16,18 @@ The election dataset currently served by an Election Scope's stable public
 route.
 _Avoid_: Current data, selected election
 
+**Archived Election**:
+A past election dataset that stays explorable, read-only, at its own route
+after a later election became the Active Election. It keeps the Rubric and
+data version its reports were made with and records no new Anonymous Report
+Records.
+_Avoid_: Old election, past data, inactive election
+
+**Election Index**:
+The list of every election an Election Scope has a dataset for, naming which
+one is the Active Election and which are Archived Elections.
+_Avoid_: Election list, manifest
+
 **Supported County**:
 A county whose local contests, measures, pamphlet material, district scoping,
 and scored dossiers are available in Voter Lifeboat.

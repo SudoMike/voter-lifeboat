@@ -5,6 +5,7 @@
 
 import React from 'react'
 import GitHubLink from './GitHubLink.jsx'
+import { rubricNotes } from '../lib/methodology.js'
 
 function Section({ eyebrow, title, children }) {
   return (
@@ -64,6 +65,7 @@ export default function Methodology({ data, onBack }) {
   const axes = data?.rubric?.axes || []
   const scale = data?.rubric?.scale
   const electionName = data?.election?.name || 'the active election'
+  const notes = rubricNotes(data?.rubric, data?.election?.id)
 
   return (
     <main className="screen screen--app screen--wide rise" style={{ paddingBottom: 0 }}>
@@ -181,6 +183,49 @@ export default function Methodology({ data, onBack }) {
               <strong>The scale.</strong> {scale.description}
             </div>
           )}
+          {notes.split && (
+            <div className="panel">
+              <div style={{ fontWeight: 800, fontSize: 14 }}>
+                Why gender policy and parents &amp; schools are separate axes
+              </div>
+              <p className="copy" style={{ fontSize: 13, marginTop: 4 }}>
+                The August 2026 primary had a single social-issues axis that
+                covered both. The November 2026 general ballot carries two
+                statewide initiatives that each
+                touch one half of it: I-1 is about parents' rights over what
+                public schools teach and disclose, and I-638 is about sex-based
+                eligibility for girls' school sports. On one axis, a voter who
+                supports one and opposes the other would average out to the
+                middle and then get a confident lean on both measures that
+                matches neither answer. So the axis was split. The social axis
+                now covers gender, LGBTQ+ and reproductive policy, with its
+                poles pointing the same way as before, and a new parents and
+                schools axis covers notification, record access, and opt-outs.
+                Candidates scored on the old social axis in the primary are
+                re-checked against the narrower definition when their research
+                is refreshed for the general, not copied over. Judges are
+                never scored on either axis.
+              </p>
+            </div>
+          )}
+        </Section>
+
+        {/* ---- one dataset per election ---- */}
+        <Section eyebrow="Which election this is" title="One dataset per election">
+          <p className="copy" style={{ fontSize: 13.5 }}>
+            This page describes the <strong>{electionName}</strong>. Each
+            election has its own dataset: its own rubric, interview, dossiers,
+            and scores, built and checked separately. When a new election
+            becomes the main guide, the previous one stays online, read-only,
+            at its own address, still scored on the rubric its voters answered.
+            A report link always opens the election it was made for.
+          </p>
+          <p className="copy" style={{ fontSize: 13.5 }}>
+            An axis that means the same thing in two elections keeps the same
+            name in both. When you carry your answers over to a past ballot,
+            only the axes the two rubrics share are used; nothing is translated
+            from one axis to another.
+          </p>
         </Section>
 
         {/* ---- the pipeline ---- */}
@@ -271,6 +316,43 @@ export default function Methodology({ data, onBack }) {
               number.
             </p>
           </div>
+          {(notes.parentalRights || notes.rules.length > 0) && (
+            <div className="panel">
+              <div style={{ fontWeight: 800, fontSize: 14 }}>
+                Evidence rules for this election
+              </div>
+              <ul className="copy" style={{ fontSize: 13, marginTop: 4, paddingLeft: 18 }}>
+                {notes.rules.map((r) => (
+                  <li key={r.id}>
+                    <strong>{r.title}.</strong> {r.text}
+                  </li>
+                ))}
+                {notes.parentalRights && (
+                  <li>
+                    <strong>Who is scored on parents and schools.</strong> Only{' '}
+                    {notes.parentalRights.scored} are scored on it.
+                    {notes.parentalRights.notScored && (
+                      <>
+                        {' '}
+                        {notes.parentalRights.notScored[0].toUpperCase() +
+                          notes.parentalRights.notScored.slice(1)}{' '}
+                        candidates are not, even when their dossier records a
+                        position; the position stays in the dossier.
+                      </>
+                    )}
+                  </li>
+                )}
+                {notes.localControlOverlap && (
+                  <li>
+                    <strong>School governance is not local control.</strong>{' '}
+                    Evidence about who decides what schools teach and disclose
+                    counts toward parents and schools, not toward the local
+                    control axis, so one statement does not count on both.
+                  </li>
+                )}
+              </ul>
+            </div>
+          )}
         </Section>
 
         {/* ---- interview + math ---- */}

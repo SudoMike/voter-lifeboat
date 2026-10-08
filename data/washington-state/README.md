@@ -140,19 +140,60 @@ normalizer for it changes no file.
 
 ## Election Facts
 
-- Active election: November 3, 2026 General Election (`2026-11-03-general`).
-  Its `F/rubric.json`, `F/interview.json` and `F/rubric-derivation.md` are
-  verbatim copies of the primary's (see the `.meta.json` siblings and the
-  interview's `derived_from`).
-- Archived: August 4, 2026 Primary and Special Election
-  (`2026-08-04-primary`; its app-data `election.id` is
-  `2026-08-04-primary-special`, which report links carry).
+### November 3, 2026 General Election (`2026-11-03-general`, active)
+
+- Election day: Tuesday, November 3, 2026. Ballots mailed by October 16
+  (18 days before, RCW 29A.40.070). Registration and updates online or by
+  mail by October 26 (8 days before, RCW 29A.08.140); in person until 8 p.m.
+  on November 3.
+- App-data `election.id`: `2026-11-03-general` (same as the package id).
+- Statewide Contests: Supreme Court Justice Positions 1, 3, 4, 5 and 7
+  (Positions 1 and 5 are 2-year unexpired terms). Statewide measures:
+  IP26-645 (I-645, state and local taxes), IL26-001 (I-1, parental rights in
+  public school), IL26-638 (I-638, participation in K-12 athletics). Details
+  and pamphlet pages in `statewide/COMPLETENESS.md`.
+- Official sources: VoteWA election 899 (`statewide/raw/votewa-general-2026-candidate-list.url`);
+  SOS voters' pamphlet, every regional edition listed in
+  `statewide/interim/pamphlet-editions.json` (Edition 06 is the statewide
+  reference); King County Elections eid 55 (`KCE_SOURCES` in
+  `pipeline/election.py`); King local pamphlet
+  `counties/king/raw/pamphlet/local-edition.pdf.url`.
+- Rubric: 15 axes. `F/rubric.json`, `F/interview.json` and
+  `F/rubric-derivation.md` started as copies of the primary's and were then
+  edited for this ballot (#4): `social` narrowed to gender, LGBTQ+ and
+  reproductive policy, and `parental-rights` (parents and public schools)
+  added. The rationale is in the dated section of `F/rubric-derivation.md`;
+  provenance is in the `.meta.json` siblings and the interview's
+  `derived_from`. Intended measure axes: I-645 → `taxes`, `local-control`;
+  I-1 → `parental-rights`; I-638 → `social`.
+- Coverage today: Statewide-Only. `coverage.statewide_complete: true`,
+  `supported_counties: []`, so every Washington address gets the
+  Statewide-Only Guide. King County's package is being researched and joins
+  `APP_PACKAGES["2026-11-03-general"]["counties"]` in #16; no other county
+  package exists yet for this election.
+- District (congressional and legislative) contests are county-owned
+  (`district_contests: "county"`). Uncontested contests ship information-only
+  (`scoring/<slug>.json` with empty `scores`).
+- Research and scoring rules: `counties/king/dossiers/RESEARCH-GUIDE.md` and
+  `counties/king/scoring/SCORING-GUIDE.md` cover every package in this
+  election, the statewide package included.
+
+### August 4, 2026 Primary and Special Election (`2026-08-04-primary`, archived)
+
+- App-data `election.id`: `2026-08-04-primary-special`, which its report
+  links carry. Both ids resolve to this election.
+- Served read-only at `/washington-state/2026-08-04-primary`: a banner, no
+  Anonymous Report Records. Its package, `F` files and app data are frozen so
+  its `data_version` stays stable.
+- Rubric: 14 axes, with the original `social` ("Social issues & schools").
+- Supported counties: all 39. 28 ship `full_county` (King among them) and
+  11 `partial_county`, where a commissioner or PUD race has no queryable
+  official district boundary and is hidden.
+
+### Both elections
+
 - Public routes: `/washington-state` (active election),
   `/washington-state/<id>` (any election in `elections.json`).
-- Supported counties: the primary ships King County (full) plus the other 38
-  counties (partial); the general ships none yet (`statewide_complete: true`,
-  `supported_counties: []`), so every Washington address gets the
-  Statewide-Only Guide.
 - Coverage statuses emitted by the app: `full_county`, `partial_county`,
   `statewide_only`.
 - Statewide scope is explicit (`{"kind":"STATEWIDE"}`); countywide and local
