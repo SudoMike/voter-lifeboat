@@ -82,6 +82,19 @@ test('Skagit and Grant DOR district numbers read as names', () => {
   assert.equal(describeDistrict('HOSPDST', '4'), 'Hospital District 4')
 })
 
+test('Island PUD, port and unincorporated codes and Lewis districts read as names', () => {
+  // Live 2026-10-08 (#29): Camano Island (precinct County code 53029, TCA
+  // 0590), Langley (PRT2025 'S WHIDBEY'), Coupeville ('COUPE'); Chehalis
+  // (PUD2025 '1', LIB2025 'L').
+  assert.equal(describeDistrict('PUDDST', '53029'), 'Snohomish County Public Utility District No. 1 (Camano Island)')
+  assert.equal(describeDistrict('PORTDST', 'S WHIDBEY'), 'Port of South Whidbey Island')
+  assert.equal(describeDistrict('PORTDST', 'COUPE'), 'Port of Coupeville')
+  assert.equal(describeDistrict('UNINC', 'ISLAND'), 'Unincorporated Island County')
+  assert.equal(layerLabel('UNINC'), 'Unincorporated County')
+  assert.equal(describeDistrict('PUDDST', '1'), 'Public Utility District 1')
+  assert.equal(describeDistrict('LIBDST', 'L'), 'Library District L')
+})
+
 test('codes are tidied without mangling initialisms', () => {
   assert.equal(describeDistrict('FIRDST', 'TACOMA'), 'Fire District Tacoma')
   assert.equal(describeDistrict('SCCDST', 'SCC5'), 'Seattle City Council District 5')

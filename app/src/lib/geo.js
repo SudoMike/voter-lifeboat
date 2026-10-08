@@ -21,7 +21,10 @@ const WASHINGTON_STATE_FIPS = '53'
 // (Newport, Pend Oreille '1'), 12 LIB2025 (Coupeville, Island 'L'), 14
 // PKR2025, park and recreation districts (Washtucna, Adams '2'; 15 PRK2025 is
 // a different layer), 20 SCH2025 (Friday Harbor, San Juan '149'), 22 WAT2025
-// (Skamania '1'). Table: docs/county-wave-playbook.md.
+// (Skamania '1'). Table: docs/county-wave-playbook.md. #29 added 16 PRT2025
+// (Langley, Island 'S WHIDBEY'), 17 PUD2025 (Chehalis, Lewis '1') and 23
+// TCA2025, tax code areas (Camano Island, Island '0590'), each re-listed in
+// MapServer?f=json on 2026-10-08.
 const DOR_TAX_DISTRICTS =
   'https://webgis.dor.wa.gov/arcgis/rest/services/Programs/WADOR_PropertyTax/MapServer'
 
@@ -429,6 +432,39 @@ const COUNTY_LAYERS = {
   island: [
     { key: 'COUNTY_COUNCIL', url: 'https://maps.islandcountywa.gov/arcgis/rest/services/Geocortex/Elections/MapServer/0/query', attr: 'COMM__DIST___' },
     { key: 'LIBDST', url: `${DOR_TAX_DISTRICTS}/12/query`, attr: 'DISTATTRIB' },
+    {
+      // Snohomish County PUD No. 1 serves Camano Island; its seats are
+      // elected PUD-wide in the general (RCW 54.12.010(3)), so the Island
+      // side of the electorate is Camano Island (#29). DOR PUD2025 has no
+      // Island polygon. The Auditor's precinct layer has no PUD attribute,
+      // so `where` keeps the Camano precincts (Camano 01-21) and the value is
+      // the layer's constant County attribute '53029'. Live 2026-10-08: 848
+      // N Sunrise Blvd, Camano Island -> '53029' (precinct Camano 01); 865 SW
+      // Barrington Dr, Oak Harbor, 112 2nd St, Langley and 5476 Harbor Rd,
+      // Freeland -> none.
+      key: 'PUDDST',
+      url: 'https://maps.islandcountywa.gov/arcgis/rest/services/Geocortex/Elections/MapServer/2/query',
+      attr: 'County',
+      where: "PrecinctNa LIKE 'Camano%'",
+    },
+    // WA DOR PRT2025 (#29). Live 2026-10-08: 112 2nd St, Langley and 5476
+    // Harbor Rd, Freeland -> 'S WHIDBEY'; 1 7th St NE, Coupeville -> 'COUPE';
+    // Oak Harbor and Camano Island -> none.
+    { key: 'PORTDST', url: `${DOR_TAX_DISTRICTS}/16/query`, attr: 'DISTATTRIB' },
+    {
+      // Unincorporated Island County (#29), for the fireworks advisory vote:
+      // WA DOR TCA2025 (layer 23) minus the three incorporated tax code
+      // areas, 0100 Oak Harbor, 0300 Coupeville and 0700 Langley (the
+      // county's Tax Codes layer gives TCA 100 the fire district 'City of
+      // Oak Harbor'). Live 2026-10-08: 848 N Sunrise Blvd, Camano (TCA 0590),
+      // 5476 Harbor Rd, Freeland (0760) and 2795 Heller Rd, Oak Harbor
+      // (0110) -> 'ISLAND'; 865 SW Barrington Dr, Oak Harbor (0100), 1 7th
+      // St NE, Coupeville (0300) and 112 2nd St, Langley (0700) -> none.
+      key: 'UNINC',
+      url: `${DOR_TAX_DISTRICTS}/23/query`,
+      attr: 'COUNTYNAME',
+      where: "COUNTYNAME = 'ISLAND' AND DISTATTRIB NOT IN ('0100','0300','0700')",
+    },
   ],
   jefferson: [
     { key: 'COUNTY_COUNCIL', url: 'https://gisweb.jeffcowa.us/server/rest/services/OpenData/OpenData/MapServer/26/query', attr: 'DISTID' },
@@ -445,7 +481,17 @@ const COUNTY_LAYERS = {
   ],
   lewis: [
     { key: 'COUNTY_COUNCIL', url: 'https://arcgis.lewiscountywa.gov/arcgispublic/rest/services/VotingTaxingDistricts/MapServer/0/query', attr: 'COMMISSION' },
+    // Live 2026-10-08 (#29): 2152 Jackson Hwy, Chehalis -> '6'.
     { key: 'FIRDST', url: `${DOR_TAX_DISTRICTS}/7/query`, attr: 'DISTATTRIB' },
+    // WA DOR PUD2025 (#29). Lewis County PUD No. 1 is the county minus the
+    // City of Centralia; its seats are elected PUD-wide in the general. Live
+    // 2026-10-08: 351 NW North St, Chehalis, 2152 Jackson Hwy and 200 S Main
+    // St, Pe Ell -> '1'; 118 W Maple St, Centralia -> none.
+    { key: 'PUDDST', url: `${DOR_TAX_DISTRICTS}/17/query`, attr: 'DISTATTRIB' },
+    // WA DOR LIB2025, Timberland Regional Library (#29). Live 2026-10-08:
+    // Chehalis, Centralia and 2152 Jackson Hwy -> 'L'; 200 S Main St, Pe Ell
+    // -> none.
+    { key: 'LIBDST', url: `${DOR_TAX_DISTRICTS}/12/query`, attr: 'DISTATTRIB' },
   ],
   lincoln: [
     { key: 'CEMDST', url: `${DOR_TAX_DISTRICTS}/3/query`, attr: 'DISTATTRIB' },
