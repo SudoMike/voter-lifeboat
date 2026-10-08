@@ -1,0 +1,36 @@
+{
+  "contest_slug": "measures",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/wahkiakum/scoring/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/wahkiakum/dossiers/measures/",
+    "data/final/2026-11-03-general/rubric.json"
+  ],
+  "verdicts": [
+    {
+      "candidate": "wahkiakum-wahkiakum-county-ballot-measure",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked toward 0 and toward 2. A yes vote continues a property tax that a no vote would let lapse, so 0 is wrong. The maximum stays $0.40, 'the same rate as six years ago' [S1][S2], last renewed in 2020 [S3], and the 2025 rate was $0.2967 [S4]: a same-rate renewal, not an increase or lid lift, so +1 matches the Klickitat and Lewis treatment. S1, S2 and S3 exist in the dossier and support the basis."
+    },
+    {
+      "candidate": "wahkiakum-wahkiakum-county-ballot-measure",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "Checked against the dossier: six-year levy collected 2027-2032 under Resolution 87-26 for operating and equipment costs [S1][S2]; 2020 renewal at 63.47% [S3]; 'over 35 years' and the unchanged rate per the county's emergency management coordinator [S2]; $120 on $300,000 at $0.40, and the 2025 rate of $0.29670 fairly rounded to about $0.30 [S4]; unanimous EMS and Trauma Care Council recommendation [S2]; no statement against and no PDC committee [S1][S6]. The pro line is attributed to county officials. Minor, optional: the parenthetical '(Resolution No. 87-26)' attaches to the tax being renewed, though the resolution is the 2026 one authorizing the new levy; 'under Resolution No. 87-26' would read more accurately."
+    },
+    {
+      "candidate": "wahkiakum-wahkiakum-county-fire-protection-district-no-2-skamokawa-ballot-measure",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked toward 2: the 2025 levy-rate sheet shows no separate Fire District 2 EMS rate in the district's tax code areas [S2], so residents may not currently pay any district EMS levy, and the ten-year term with chapter 84.55 growth runs longer than a six-year renewal [S1]. But the ballot title calls it a replacement of an existing levy [S1], the dossier says it could not determine the existing levy or whether $1.00 is an increase [S2], and the published statute's 50-cent limits [S3] leave the amount the district can actually levy uncertain. With no increase established, the renewal tier (+1) is the defensible mapping; 0 is wrong because a yes vote authorizes a property tax. S1 and S2 exist and support the basis."
+    },
+    {
+      "candidate": "wahkiakum-wahkiakum-county-fire-protection-district-no-2-skamokawa-ballot-measure",
+      "axis": "_display",
+      "verdict": "adjust",
+      "note": "The facts check out: up to $1.00 per $1,000 for ten years from 2027 collection, Resolution #2026-01, operating and equipment costs, chapter 84.55 CPI-linked limits after year one [S1]; $300 on $300,000 by arithmetic; no statements for or against and no PDC committee [S1][S6]. Two wording problems. (1) what_it_does says as fact that it 'Replaces Skamokawa's Fire District 2 emergency medical services levy', but the dossier found no Fire District 2 EMS rate on the 2025 levy sheet and could not identify the existing levy [S2]. Attribute it instead: 'The ballot title calls it a replacement of the district's existing EMS levy; ...'. Likewise pro_summary's 'the district calls it' should say the ballot title calls it [S1]. (2) con_summary puts the dossier's own statutory observation in the slot meant for arguments against, and says flatly that the statute 'caps such levies at $0.50', where the dossier hedges that this is the text as published on leg.wa.gov with amendment history through 2018 [S3]. Cut con_summary to 'No statement against was published and no opposition committee is registered.' If the statute point stays anywhere, hedge it ('The state EMS-levy statute as published online...') and note that the county's own EMS levy is on the same ballot [S1][S3]. Optional for cost_line: add that the 2025 levy sheet showed no separate district EMS rate [S2]."
+    }
+  ],
+  "missing": []
+}
