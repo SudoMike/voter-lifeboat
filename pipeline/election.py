@@ -103,6 +103,8 @@ DISTRICT_ADAPTER_LAYERS = {
     "clallam": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "PUDDST", "FIRDST", "DISTCRT", "SCHDST", "PUDALL"),
     "grays-harbor": ("CONGDST", "LEGDST", "CITY", "FIRDST", "LIBDST", "SCHDST"),
     "mason": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "FIRDST", "PUDDST", "SCHDST"),
+    "walla-walla": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "SCHDST", "PARKDST"),
+    "stevens": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "FIRDST", "LIBDST", "SCHDST"),
 }
 
 

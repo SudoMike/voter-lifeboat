@@ -1368,3 +1368,78 @@ test('Mason resolves PUD No. 1 or No. 3 and its school districts from DOR', asyn
   assert.ok(scopeMatches(pud3, context))
   assert.ok(!scopeMatches({ ...sd65, county: 'grays-harbor' }, context))
 })
+
+// Walla Walla and Stevens (#30, wave 5). Live point queries 2026-10-08 at the
+// Census-geocoded points of the addresses below.
+const wallaWallaCommissioner = (n) => ({ path: 'Voting_Districts1/FeatureServer/52', attributes: { commis_dis: n } })
+const stevensCommissioner = (n) => ({ path: 'AdministrativeBoundaries/MapServer/5', attributes: { districtid: n } })
+
+test('Walla Walla resolves Dixie SD 101 and the Prescott park district from DOR', async () => {
+  const dixie = { kind: 'DISTRICT', county: 'walla-walla', layer: 'SCHDST', value: '101' }
+  const prescott = { kind: 'DISTRICT', county: 'walla-walla', layer: 'PARKDST', value: 'PRES' }
+  // 108 S D St, Prescott: commissioner 2, Prescott SD 402, park district PRES.
+  const calls = mockWave2('108 S D ST, PRESCOTT, WA, 99348', '071', 'Walla Walla County', [
+    wallaWallaCommissioner('2'), dorLayer(20, '402'), dorLayer(14, 'PRES'),
+  ])
+  let context = await lookupBallotContext(wave2Data('walla-walla'), '108 S D St Prescott WA 99348')
+  assert.equal(context.coverageStatus, 'full_county')
+  assert.deepEqual(context.missingLayers, [])
+  assert.deepEqual([context.districts.SCHDST, context.districts.PARKDST], ['402', 'PRES'])
+  assert.ok(scopeMatches(prescott, context))
+  assert.ok(!scopeMatches(dixie, context))
+  for (const n of [14, 20]) {
+    const url = calls.find((u) => u.includes(`WADOR_PropertyTax/MapServer/${n}/query`))
+    assert.equal(new URL(url).searchParams.get('outFields'), 'DISTATTRIB')
+  }
+  // 315 W Main St, Walla Walla: Walla Walla SD 140, no park district.
+  mockWave2('315 W MAIN ST, WALLA WALLA, WA, 99362', '071', 'Walla Walla County', [
+    wallaWallaCommissioner('1'), dorLayer(20, '140'),
+  ])
+  context = await lookupBallotContext(wave2Data('walla-walla'), '315 W Main St Walla Walla WA 99362')
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(!scopeMatches(prescott, context))
+  assert.ok(!scopeMatches(dixie, context))
+  // Dixie (an interior point; the Census geocoder matches no Dixie street
+  // address): SCH2025 '101'.
+  mockWave2('DIXIE, WA', '071', 'Walla Walla County', [wallaWallaCommissioner('2'), dorLayer(20, '101')])
+  context = await lookupBallotContext(wave2Data('walla-walla'), 'Dixie WA')
+  assert.ok(scopeMatches(dixie, context))
+  assert.ok(!scopeMatches({ ...dixie, county: 'clark' }, context))
+})
+
+test('Stevens resolves the rural library district and Nine Mile Falls SD from DOR', async () => {
+  const library = { kind: 'DISTRICT', county: 'stevens', layer: 'LIBDST', value: 'L' }
+  const fd10 = { kind: 'DISTRICT', county: 'stevens', layer: 'FIRDST', value: '10' }
+  const nmf = { kind: 'DISTRICT', county: 'stevens', layer: 'SCHDST', value: '179J' }
+  // 6015 State Route 291, Nine Mile Falls: FD 1, library L, SD 179J.
+  const calls = mockWave2('6015 STATE RTE 291, NINE MILE FALLS, WA, 99026', '065', 'Stevens County', [
+    stevensCommissioner('1'), dorLayer(7, '1'), dorLayer(12, 'L'), dorLayer(20, '179J'),
+  ])
+  let context = await lookupBallotContext(wave2Data('stevens'), '6015 State Route 291 Nine Mile Falls WA 99026')
+  assert.equal(context.coverageStatus, 'full_county')
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(scopeMatches(library, context))
+  assert.ok(scopeMatches(nmf, context))
+  assert.ok(!scopeMatches(fd10, context))
+  for (const n of [12, 20]) {
+    const url = calls.find((u) => u.includes(`WADOR_PropertyTax/MapServer/${n}/query`))
+    assert.equal(new URL(url).searchParams.get('outFields'), 'DISTATTRIB')
+  }
+  // 2785 Aladdin Rd, Colville: FD 10, library L, SCH2025 '211'.
+  mockWave2('2785 ALADDIN RD, COLVILLE, WA, 99114', '065', 'Stevens County', [
+    stevensCommissioner('3'), dorLayer(7, '10'), dorLayer(12, 'L'), dorLayer(20, '211'),
+  ])
+  context = await lookupBallotContext(wave2Data('stevens'), '2785 Aladdin Rd Colville WA 99114')
+  assert.ok(scopeMatches(library, context))
+  assert.ok(scopeMatches(fd10, context))
+  assert.ok(!scopeMatches(nmf, context))
+  // 215 S Oak St, Colville: outside the library and fire districts.
+  mockWave2('215 S OAK ST, COLVILLE, WA, 99114', '065', 'Stevens County', [
+    stevensCommissioner('3'), dorLayer(20, '115'),
+  ])
+  context = await lookupBallotContext(wave2Data('stevens'), '215 S Oak St Colville WA 99114')
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(!scopeMatches(library, context))
+  assert.ok(!scopeMatches(fd10, context))
+  assert.ok(!scopeMatches(nmf, context))
+})
