@@ -1,0 +1,13 @@
+{
+  "url": "https://webgis.dor.wa.gov/arcgis/rest/services/Programs/WADOR_PropertyTax/MapServer/17/query?where=COUNTYNAME%3D%27WHATCOM%27&outFields=*&returnGeometry=false&f=json",
+  "retrieved_at": "2026-10-08",
+  "method": "curl -sL -A \"Mozilla/5.0 ...\" during Whatcom dossier research for issue #28; cached verbatim at data/.cache/whatcom/scope/dor-17-whatcom.json",
+  "stage": "raw",
+  "source_type": "gis",
+  "tier": 1,
+  "outlet": "WA DOR property tax districts, PUD2025, Whatcom features",
+  "cache_file": "data/.cache/whatcom/scope/dor-17-whatcom.json",
+  "bytes": 1087,
+  "sha256": "24c64369d390bfd2e9a04f9027626e6a396143750116372c85060a43bd580a22",
+  "notes": "One Whatcom feature, DISTATTRIB 1, with the same Shape_Length and Shape_Area as the PRT2025 port polygon. The same six point queries (Point Roberts, Glacier, Newhalem, Bellingham, Sumas, Acme) all return it: PUD No. 1 of Whatcom County is county-wide."
+}
