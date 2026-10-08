@@ -1,0 +1,85 @@
+{
+  "county": "walla-walla",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/walla-walla/raw/votewa/candidate-list.csv.url",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7378&e=899&la=en&c=36",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7379&e=899&la=en&c=36"
+  ],
+  "coverage": "full_county",
+  "notes": [],
+  "measures": [
+    {
+      "slug": "walla-walla-dixie-school-district-no-101-proposition-1",
+      "owner": "walla-walla",
+      "jurisdiction": "Dixie School District No. 101",
+      "proposition": "Proposition 1",
+      "title": "Replacement Capital Levy for Health, Safety and Energy Efficiency Improvements",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "walla-walla",
+        "layer": "SCHDST",
+        "value": "101"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 22
+        },
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 23
+        }
+      ],
+      "what_it_does": "Replaces Dixie School District's capital levy, which expires at the end of 2026, with a six-year levy for 2027 through 2032 to keep funding health, safety and energy-efficiency repairs and modernization at Dixie School.",
+      "cost_line": "$75,000 a year for 2027 through 2032, an estimated $0.50 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7378&e=899&la=en&c=36"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "walla-walla-prescott-joint-park-and-recreation-district-proposition-no-1",
+      "owner": "walla-walla",
+      "jurisdiction": "Prescott Joint Park and Recreation District",
+      "proposition": "Proposition No. 1",
+      "title": "Maintenance & Operation Excess Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "walla-walla",
+        "layer": "PARKDST",
+        "value": "PRES"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 24
+        },
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 25
+        }
+      ],
+      "what_it_does": "Authorizes a one-year excess property tax levy for the park and recreation district's maintenance and operation expenses in 2027, its main source of operating money.",
+      "cost_line": "$175,000 collected in 2027, approximately $0.35 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7379&e=899&la=en&c=36"
+          ]
+        }
+      }
+    }
+  ]
+}
