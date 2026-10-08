@@ -129,11 +129,18 @@ const ELECTIONS = {
     // requests for its pamphlet PDFs). A few Clark dossiers cite VoteWA
     // records rather than the printed pamphlet; Clark's guide is their
     // fallback. Checked 2026-10-08: both 200 text/html.
+    // Yakima, Whatcom and Benton dossiers cite VoteWA only (#28): Benton
+    // publishes its general pamphlet only as this guide, whatcomcounty.us
+    // answered 403 to scripted requests, and no Yakima dossier cites a page
+    // of SOS Edition 01. Checked 2026-10-08: each 200 text/html.
     countyGuides: {
       spokane: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=32',
       pierce: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=27',
       kitsap: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=18',
       clark: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=06',
+      yakima: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=39',
+      whatcom: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=37',
+      benton: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=03',
     },
     pamphletIndex: `${SOS_GENERAL_2026}/2026-voters-pamphlet-pdfs`,
   },
