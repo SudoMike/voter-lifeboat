@@ -55,14 +55,20 @@
     "data/washington-state/elections/2026-11-03-general/counties/jefferson/scoring/*.json",
     "data/washington-state/elections/2026-11-03-general/counties/jefferson/scoring/refutations/*.json",
     "data/washington-state/elections/2026-11-03-general/counties/kittitas/scoring/*.json",
-    "data/washington-state/elections/2026-11-03-general/counties/kittitas/scoring/refutations/*.json"
+    "data/washington-state/elections/2026-11-03-general/counties/kittitas/scoring/refutations/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/klickitat/scoring/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/klickitat/scoring/refutations/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/pacific/scoring/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/pacific/scoring/refutations/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/asotin/scoring/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/asotin/scoring/refutations/*.json"
   ],
   "script": "pipeline/merge_scores.py",
   "verdict_stats": {
-    "upheld": 2202,
-    "adjust": 191,
-    "refuted": 21,
-    "missing_added": 30,
+    "upheld": 2241,
+    "adjust": 197,
+    "refuted": 24,
+    "missing_added": 31,
     "missing_dropped_low": 12
   },
   "contests": [
@@ -35743,6 +35749,1241 @@
             "22 years as a deputy prosecuting attorney before the bench [S1]"
           ],
           "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "klickitat-court-of-appeals-division-3-district-3-judge-position-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/klickitat/dossiers/klickitat-court-of-appeals-division-3-district-3-judge-position-1/"
+      ],
+      "office_does": "Court of Appeals judges in Division III (Spokane) decide appeals from the superior courts of eastern and central Washington, including Klickitat County.",
+      "race_blurb": "Uncontested: Judge Megan K. Murphy, appointed in 2025, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "megan-k-murphy",
+          "summary": "Court of Appeals Division III judge since her January 2025 appointment, a former Yakima County deputy prosecutor and civil litigator; the only candidate.",
+          "highlights": [
+            "Appointed to Division III in January 2025 [S2]",
+            "Former Yakima County deputy prosecutor; later civil litigation [S1][S2]",
+            "Unopposed in November 2025 [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "klickitat-klickitat-county-commissioner-district-2-county-commissioner-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/klickitat/dossiers/klickitat-klickitat-county-commissioner-district-2-county-commissioner-2/"
+      ],
+      "office_does": "Klickitat County's three commissioners adopt the county budget and ordinances, set land-use policy and oversee county departments, including the county jail; each is nominated by district and elected by the whole county.",
+      "race_blurb": "First-term Commissioner Lori Zoller, who led the August primary 1,148 to 760, faces State Parks ranger Andy Kallinen of Lyle; both prefer the Republican Party. Kallinen faults how the county took over the jail and wants more deputies, dispatchers and a crisis responder; Zoller runs on a leaner reorganization, a stable budget and writing a data-center ordinance instead of a moratorium.",
+      "candidates": [
+        {
+          "slug": "lori-zoller",
+          "summary": "First-term District 2 commissioner with three decades of county project work (rails-to-trails, watershed and salmon recovery) and chair of regional aging, housing, airport and health boards.",
+          "highlights": [
+            "Says a reorganization done in-house 'made us leaner,' cutting costs through attrition with no layoffs [S2]",
+            "Defends the county's takeover of jail operations and credits her term with bringing the jail into compliance [S1][S2]",
+            "Opposed a six-month data-center moratorium in favour of writing an ordinance; sees data centers as possible tax base [S2][S3]",
+            "Wants to diversify county revenue beyond the Roosevelt landfill and explore managing state timber trust lands locally [S2]",
+            "Led the August primary with 1,148 votes [S6]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Sitting commissioner running on her first-term record, with about 30 years of county project work and chairs of several regional boards; only one term in this office."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2",
+                "S5"
+              ],
+              "basis": "Credits leaner reorganization by not backfilling positions and a hiring freeze, while also seeking new revenue (industry, timber trust management) rather than cuts alone."
+            }
+          }
+        },
+        {
+          "slug": "andy-kallinen",
+          "summary": "Washington State Parks ranger and assistant area manager with 30-plus years in law enforcement and 20 years in the Army National Guard and Coast Guard Reserve; ran for LD 14 in 2024.",
+          "highlights": [
+            "Platform of 'Responsible, Effective, Accountable, Limited' county government [S2]",
+            "Wants at least two more deputies, more 911 dispatchers and a dedicated mental-health crisis responder [S2][S3]",
+            "Says the way the jail transition was handled 'was terrible,' though he does not oppose a separate corrections department [S3]",
+            "Wants the county fairly compensated for hosting energy projects and to plan for data-center power demand [S2][S3]",
+            "Finished second in the primary with 760 votes [S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Has never held county office and is challenging the incumbent, though he brings decades of state service, a union executive-board seat and a community council seat."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Calls public safety government's first job and wants more deputies and dispatchers, but also a dedicated crisis responder and says jail should be the last resort for people in mental-health crisis."
+            },
+            "spending": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Runs on 'Limited' government and protecting existing revenue while proposing added deputies, dispatchers and a crisis responder."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "klickitat-klickitat-county-county-assessor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/klickitat/dossiers/klickitat-klickitat-county-county-assessor/"
+      ],
+      "office_does": "The assessor values every taxable property in Klickitat County each year, the basis for property tax bills.",
+      "race_blurb": "Uncontested: Assessor Billi Jean Bare (Prefers Republican Party), in office since 2023, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "billi-jean-bare",
+          "summary": "Klickitat County Assessor since 2023 and in the office since 2016; a state-accredited appraiser and the only candidate.",
+          "highlights": [
+            "Assessor since 2023, in the office since 2016 [S1]",
+            "Department of Revenue accredited appraiser [S1]",
+            "Unopposed in 2022 with 7,669 votes [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "klickitat-klickitat-county-east-district-court-judge",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/klickitat/dossiers/klickitat-klickitat-county-east-district-court-judge/"
+      ],
+      "office_does": "The East District Court judge in Goldendale hears infractions, misdemeanors, civil and small claims cases and protection orders; only East District voters elect the judge.",
+      "race_blurb": "Uncontested: Judge Rick L Hansen, on the East District Court bench since 2010, is the only candidate. Only voters in the East District Court district vote on this seat.",
+      "candidates": [
+        {
+          "slug": "rick-l-hansen",
+          "summary": "East District Court judge since 2010 and a Goldendale lawyer since 1984; the only candidate.",
+          "highlights": [
+            "East District Court judge since 2010 [S1]",
+            "Practised law in Goldendale since 1984 [S1]",
+            "Unopposed in 2018 and 2022 [S2][S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "klickitat-klickitat-county-klickitat-county-auditor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/klickitat/dossiers/klickitat-klickitat-county-klickitat-county-auditor/"
+      ],
+      "office_does": "The auditor runs Klickitat County's elections and handles the office's recording, licensing and accounting work.",
+      "race_blurb": "Uncontested: Auditor Heather Jobe (Prefers Republican Party), elected in 2022, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "heather-jobe",
+          "summary": "Klickitat County Auditor, elected in 2022 after six years as chief deputy auditor; the only candidate.",
+          "highlights": [
+            "Elected auditor in 2022, 6,036 to 3,575 [S2]",
+            "Chief deputy auditor for six years before that [S1]",
+            "Cites election security and transparency work [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "klickitat-klickitat-county-klickitat-county-clerk",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/klickitat/dossiers/klickitat-klickitat-county-klickitat-county-clerk/"
+      ],
+      "office_does": "The county clerk keeps Klickitat County Superior Court's case records and filings and manages juries.",
+      "race_blurb": "Uncontested: Clerk Renea Campbell (Prefers Republican Party), in office since 2014, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "renea-campbell",
+          "summary": "Klickitat County Clerk since 2014 and a former East District Court administrator; the only candidate.",
+          "highlights": [
+            "Elected clerk in 2014, 2018 and 2022 [S1]",
+            "Introduced electronic filing and a new case management system [S1]",
+            "24 years at East District Court before that [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "klickitat-klickitat-county-klickitat-county-prosecuting-attorney",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/klickitat/dossiers/klickitat-klickitat-county-klickitat-county-prosecuting-attorney/"
+      ],
+      "office_does": "The prosecuting attorney prosecutes crimes in Klickitat County and is the county government's lawyer.",
+      "race_blurb": "Uncontested: appointed Prosecuting Attorney Rebecca Cranston (States No Party Preference) is the only candidate for both the short and full terms.",
+      "candidates": [
+        {
+          "slug": "rebecca-cranston",
+          "summary": "Appointed Klickitat County Prosecuting Attorney in December 2025 after nearly a decade as a deputy prosecutor; the only candidate for the short and full terms.",
+          "highlights": [
+            "Appointed prosecutor by the commissioners on December 30, 2025, the only applicant [S2]",
+            "Deputy prosecutor since 2016 (civil matters and criminal appeals) [S1]",
+            "Pledges accountability for offenders and advocacy for victims [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "klickitat-klickitat-county-klickitat-county-sheriff",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/klickitat/dossiers/klickitat-klickitat-county-klickitat-county-sheriff/"
+      ],
+      "office_does": "The sheriff is Klickitat County's elected chief law enforcement officer and runs the Sheriff's Office: patrol, investigations, search and rescue and marine patrol across the county.",
+      "race_blurb": "Sheriff Bob Songer is retiring. Former deputy Dwayne Matulovich (Prefers Independent Party), who left the office in 2023, won 57% in the primary; Detective Sgt. Tony Warren (Prefers Republican Party), endorsed by Songer, had 27%. Warren says he might not enforce state laws he judges against residents' interest; Matulovich says that is for the courts. Neither would join the Constitutional Sheriffs and Peace Officers Association.",
+      "candidates": [
+        {
+          "slug": "dwayne-t-matulovich",
+          "summary": "Former Klickitat County deputy (2015-2023) and Goldendale and Bingen-White Salmon police officer, now a BNSF Railway welding foreman and volunteer firefighter, running to rebuild trust in the Sheriff's Office.",
+          "highlights": [
+            "Wants more patrols and 'more thorough investigations' to 'start building that trust again' [S2]",
+            "Will improve deputies' training and morale and manage the budget responsibly [S1]",
+            "'My job is to enforce the laws. It's not to interpret them'; leaves constitutional questions to the courts [S3]",
+            "Will not join the Constitutional Sheriffs and Peace Officers Association [S3][S4]",
+            "Won 4,614 votes, about 57%, in the August primary [S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Left the Sheriff's Office in 2023 and runs against its current direction with no supervisory law-enforcement record, though with 19 years of police and deputy work."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Wants more patrols, more thorough investigations, more deputies and better training; no position on diversion or treatment found."
+            }
+          }
+        },
+        {
+          "slug": "tony-warren",
+          "summary": "Klickitat County Sheriff's Office detective sergeant (with the office since 2021) and former Bingen-White Salmon police officer and detective, endorsed by retiring Sheriff Bob Songer.",
+          "highlights": [
+            "Wants three or four more deputies and faster, modernized records and reports [S4]",
+            "Lists drug enforcement, property crime and traffic safety, with community policing and regular deputy time in schools [S1][S3][S4]",
+            "Says he agrees with Songer 'on a lot of things' and may not enforce state laws he judges against residents' interest, 'within reason' [S5][S6]",
+            "Promises 'intentional, structural changes' (accountability standards, shift changes for deputy wellness) and to stay active on patrol rather than 'manage from behind the desk' [S3][S4]",
+            "City records show a 2014 suspension and a 2019 resignation during an internal investigation at the Bingen-White Salmon Police Department; his state separation notice listed no disqualifying misconduct, and he says the resignation followed allegations during his divorce [S4][S5]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S3",
+                "S4"
+              ],
+              "basis": "Serving detective sergeant and the current sheriff's endorsed candidate, running as the only active officer in the race, but has not led the office."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S4"
+              ],
+              "basis": "Platform centres on more deputies and cracking down on drugs, property crime and abuse; his community policing and school presence are still policing, not services or diversion.",
+              "adjusted_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "klickitat-klickitat-county-klickitat-county-treasurer",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/klickitat/dossiers/klickitat-klickitat-county-klickitat-county-treasurer/"
+      ],
+      "office_does": "The treasurer manages Klickitat County's money and that of its special purpose districts, including property tax collection.",
+      "race_blurb": "Uncontested: Treasurer Greg Gallagher (Prefers Republican Party), in office since 2015, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "greg-gallagher",
+          "summary": "Klickitat County Treasurer since 2015; the only candidate.",
+          "highlights": [
+            "Treasurer since 2015 [S1]",
+            "Unopposed in 2018 and 2022 [S2][S3]",
+            "Plans technology upgrades to office processes [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "klickitat-klickitat-county-west-district-court-judge",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/klickitat/dossiers/klickitat-klickitat-county-west-district-court-judge/"
+      ],
+      "office_does": "The West District Court judge in White Salmon hears infractions, misdemeanors, civil cases up to $75,000 and small claims, and serves White Salmon and Bingen; only West District voters elect the judge.",
+      "race_blurb": "Uncontested: Judge Jeff Baker, on the West District Court bench since 2014, is the only candidate. Only voters in the West District Court district vote on this seat.",
+      "candidates": [
+        {
+          "slug": "jeff-baker",
+          "summary": "West District Court judge since 2014 and a former Superior Court commissioner and Hood River lawyer; the only candidate.",
+          "highlights": [
+            "West District Court judge since 2014 [S1]",
+            "Judicial representative on the statewide Trueblood implementation committee [S1]",
+            "Unopposed in 2018 and 2022 [S2][S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "klickitat-public-utility-district-commissioner-district-3-public-utility-district-1-commissioner-pos-3",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/klickitat/dossiers/klickitat-public-utility-district-commissioner-district-3-public-utility-district-1-commissioner-pos-3/"
+      ],
+      "office_does": "Klickitat PUD's three elected commissioners set policy, budgets and electric rates for the county-wide public utility, which also owns generation and transmission assets, for six-year terms.",
+      "race_blurb": "Commissioner Dan Gunkel, on the board since 1991, runs on rate offsets from PUD-owned hydro and renewable natural gas and on finishing the Goldendale pumped-storage project. Logan Siebert, a Goldendale meat-processing business owner and first-time candidate, wants clearer explanations of rates and data centers that pay their share of grid costs. Siebert led the district primary 1,220 to 879; all of Klickitat County votes on the seat.",
+      "candidates": [
+        {
+          "slug": "logan-b-siebert",
+          "summary": "Owner of Siebert Custom Slaughter and Meats in Goldendale and a reserve Goldendale police officer, running for office for the first time on rate transparency and protecting ratepayers.",
+          "highlights": [
+            "Wants the PUD to explain how rates are set and why bills carry charges such as demand charges [S2]",
+            "Says data centers should 'pay their fair share for the grid' and not draw municipal or aquifer water [S2]",
+            "Questions how much PUD customers gain from private energy projects in the county [S2]",
+            "Led the district primary with 1,220 votes; the county Republican Party recommended him [S4][S5]",
+            "Owed $1,407.78 in 2025-2026 property taxes when the Sentinel asked in September [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "dan-g-gunkel",
+          "summary": "Klickitat PUD commissioner since 1991, former Energy Northwest executive board member and owner of Gunkel Orchards, a third-generation family fruit farm.",
+          "highlights": [
+            "Says PUD-owned assets now offset rates by about $5.9 million a year, about $34.49 a month for the average home [S2]",
+            "Says KPUD rates fell from third to tenth highest in its utility group during his tenure [S1]",
+            "Wants to see the Goldendale pumped-storage project completed [S1][S2]",
+            "Takes no campaign contributions and calls the party recommendation of his opponent 'inappropriate and sad' [S2]",
+            "Finished second in the district primary with 879 votes [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "pacific-pacific-county-commissioner-district-3-county-commissioner-03",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pacific/dossiers/pacific-pacific-county-commissioner-district-3-county-commissioner-03/"
+      ],
+      "office_does": "The three county commissioners are Pacific County's governing board: they adopt the budget, set land-use policy and fill vacancies in county offices. The District 3 (north county) seat is elected by all county voters.",
+      "race_blurb": "Commission chair Jerry Doyle (Prefers Independent Party), elected in 2022 as a write-in primary candidate, faces Pacific County Republican Party chair Pattie Gray, who led him 750 to 600 in the District 3-only primary. Gray runs on lower taxes, cutting wasteful spending, term limits and less regulation; Doyle runs on balanced budgets and resisting state land-use rules.",
+      "candidates": [
+        {
+          "slug": "pattie-gray",
+          "summary": "Chair of the Pacific County Republican Party and a paralegal, in her first run for county office, campaigning on lower taxes, spending cuts and limited government.",
+          "highlights": [
+            "Supports \"less taxation\" and cutting \"excessive regulations and red tape\" [S1]",
+            "Would review every county department's budget \"line by line\" and audit departments regularly [S4][S3]",
+            "Wants term limits, a salary commission and commissioner pay cut to the county median income [S1][S3]",
+            "Would ease fees and permitting delays to make housing cheaper to build [S4]",
+            "Endorsed by the county Republican Party, Rep. Joel McEntire and Sen. Jeff Wilson [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Repeated explicit calls for less taxation and lower tax burdens in her statement and platform."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3",
+                "S4"
+              ],
+              "basis": "Stop 'wasteful spending', regular department audits, line-by-line budget review, live within means."
+            },
+            "housing": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S3"
+              ],
+              "basis": "Affordability through cutting regulations, fees and permitting delays and pro-growth policies."
+            },
+            "safety": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Platform: fully fund law enforcement and 'strong and real consequences for violence and theft'."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2",
+                "S5"
+              ],
+              "basis": "No government office held; her elected roles are party offices (precinct committee officer, state committeewoman, county chair).",
+              "adjusted_by_refutation": true
+            },
+            "reform": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Term limits, a lobbying ban for former officials, a salary commission and limits on executive sessions."
+            }
+          }
+        },
+        {
+          "slug": "jerry-doyle",
+          "summary": "Incumbent District 3 commissioner and commission chair, a general contractor, running on balanced budgets and resisting state land-use rules.",
+          "highlights": [
+            "Says every budget he has worked on was balanced with core services preserved [S2]",
+            "Credits grants, fees and investment income for easing pressure on the general fund [S2]",
+            "Opposes added state regulation of land use under the Growth Management Act [S2][S6]",
+            "Says housing costs are driven by supply and demand and points to permitting reform [S2]",
+            "Led the board's August 2026 vote to recognize a deputy's medical retirement over the sheriff's objection [S7]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S5"
+              ],
+              "basis": "Four-year incumbent and board chair since 2024 running on his record."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Stresses balanced budgets and fiscal responsibility while preserving core services; no cut or expansion agenda."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Frames housing costs as supply and demand and points to permitting reform."
+            },
+            "taxes": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Wants the state to 'control spending and not rely on us, the citizens, to bridge the gap'; no local tax pledge.",
+              "adjusted_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "pacific-pacific-county-county-assessor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pacific/dossiers/pacific-pacific-county-county-assessor/"
+      ],
+      "office_does": "The assessor sets the assessed values that property taxes are based on and runs exemption programs such as the senior citizen and disabled persons exemption.",
+      "race_blurb": "Bruce Walker, assessor since his 2002 election and seeking a seventh term, faces his first opponent in 24 years, Ocean Park accountant Jeff Phelan, who promises to lower property taxes. Both state no party preference; Walker led the primary 5,011 to 3,366.",
+      "candidates": [
+        {
+          "slug": "bruce-walker",
+          "summary": "Incumbent assessor, first elected in 2002, and former title officer; filed no voters' guide statement.",
+          "highlights": [
+            "First elected in 2002; ran unopposed in 2022 [S2][S5]",
+            "His office's columns explain the expanded 2026 senior and disabled exemptions [S3][S4]",
+            "Notes that exempted taxes shift to other property owners in the district [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S5"
+              ],
+              "basis": "Six-term incumbent seeking a seventh."
+            }
+          }
+        },
+        {
+          "slug": "jeffrey-phelan",
+          "summary": "Ocean Park resident with a utility accounting background, running to 'exempt, reduce, or remove' property taxes.",
+          "highlights": [
+            "Says he 'will exempt, reduce, or remove your property taxes where possible' [S1]",
+            "Calls for 'new blood' after the incumbent's 20-plus years [S1]",
+            "Pledges to cut costs without affecting staff [S1]",
+            "The Chinook Observer reported his Facebook posts attacking the Chinook Indian Nation and Democrats [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "First-time candidate running explicitly on 'new blood' against a long-tenured incumbent.",
+              "adjusted_by_refutation": true
+            },
+            "taxes": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Frames his candidacy around reducing property taxes on fixed-income owners."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Pledges to streamline processes and reduce costs."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "pacific-pacific-county-county-auditor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pacific/dossiers/pacific-pacific-county-county-auditor/"
+      ],
+      "office_does": "The auditor runs elections and voter registration, records documents, licenses vehicles and vessels, and handles county financial services such as payroll and financial reports.",
+      "race_blurb": "Two auditor's office employees, both preferring the Independent Party: appointed Auditor Nicole Deskins, chosen by the commissioners in 2025, and election administrator Dotsi Graves, the other finalist for that appointment. Graves led the primary by 22 votes.",
+      "candidates": [
+        {
+          "slug": "dotsi-graves",
+          "summary": "The auditor's office election administrator and a former chief deputy auditor, citing 30 years of county service.",
+          "highlights": [
+            "Worked in the auditor's office 2003-2007, rising to chief deputy; election administrator since 2023 [S1]",
+            "Says she is the county's only certified election administrator [S1]",
+            "Was the other finalist when the commissioners appointed Deskins in 2025 [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Long county service and election certification, though she has not held the top office."
+            }
+          }
+        },
+        {
+          "slug": "nicole-deskins",
+          "summary": "Appointed county auditor since December 2025 and former office and accounting manager in the auditor's office.",
+          "highlights": [
+            "Appointed auditor by a 3-0 commission vote in October 2025 [S2]",
+            "Cites a new payroll system and county website during her tenure [S1]",
+            "Defended the county's mail-ballot procedures amid federal moves to restrict mail voting [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Sitting appointed auditor running on her first year in the job."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "pacific-pacific-county-county-clerk",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pacific/dossiers/pacific-pacific-county-county-clerk/"
+      ],
+      "office_does": "The county clerk is clerk of the Pacific County Superior Court, keeping its records and handling its administrative and financial affairs.",
+      "race_blurb": "Uncontested: incumbent Emma Rose (Prefers Independent Party), clerk since 2023, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "emma-rose",
+          "summary": "Pacific County Superior Court Clerk since 2023, after three years in court administration; the only candidate.",
+          "highlights": [
+            "Elected unopposed in 2022 [S3]",
+            "Southwest District representative for the state association of county clerks [S1]",
+            "Says she has improved communication and access to information [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "pacific-pacific-county-county-sheriff",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pacific/dossiers/pacific-pacific-county-county-sheriff/"
+      ],
+      "office_does": "The sheriff runs the Pacific County Sheriff's Office, the county's law enforcement agency covering more than 1,200 square miles; since 2025 the jail has been a separate county department.",
+      "race_blurb": "First-term Sheriff Daniel Garcia (Prefers Republican Party), a Navy veteran elected in 2022 without prior police experience, faces Rich Byrd (Prefers Independent Party), a retired lieutenant with 20 years in the office. They split over the drug task force Garcia let lapse, 24-hour coverage and whether the office needs more money.",
+      "candidates": [
+        {
+          "slug": "daniel-c-garcia",
+          "summary": "Incumbent sheriff since 2023 and retired Navy Reserve senior chief, running on rebuilding the office's detectives, search and rescue and training.",
+          "highlights": [
+            "Says his office re-established a detective division, search and rescue team and internal affairs unit [S3][S4]",
+            "Let the county drug task force end by not seeking more state funding; says the sheriff's office now handles its cases [S4]",
+            "Says more deputies are needed but opposes raising taxes and did not support a 0.1% sales tax increase [S5]",
+            "Opposed the state law setting minimum experience standards for sheriffs [S6]",
+            "Fired his primary rival, deputy Sean Eastham, in August 2026 after an investigation [S9]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S6",
+                "S7"
+              ],
+              "basis": "Incumbent running on his first-term record, but came to the office in 2023 from outside law enforcement."
+            },
+            "taxes": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S5"
+              ],
+              "basis": "Says he opposes raising taxes and declined to support a proposed one-tenth of one percent sales tax increase."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S4"
+              ],
+              "basis": "Enforcement-led record (detectives, major cases solved) alongside co-responder crisis work."
+            },
+            "spending": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S5"
+              ],
+              "basis": "Says the office needs more deputies but would manage without new tax revenue."
+            }
+          }
+        },
+        {
+          "slug": "rich-byrd",
+          "summary": "Retired sheriff's lieutenant with about 20 years in the office and later a private-sector manager, running on restoring the drug task force and doing more with the current budget.",
+          "highlights": [
+            "Would restore the drug task force 'day one' and rebuild dedicated drug enforcement [S5][S4]",
+            "Says the office budget doubled to $3.2 million under Garcia and 'we have to do better with what we have' [S6]",
+            "Would cut administrators' overtime and flex time to keep 24-hour coverage at both ends of the county [S5][S6]",
+            "Supports expanding designated crisis responders to seven days and co-responder programs [S4]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3",
+                "S6"
+              ],
+              "basis": "Challenger who has not held elected office; long career in the same office but out of law enforcement since 2010-2011.",
+              "adjusted_by_refutation": true
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S6",
+                "S5",
+                "S4"
+              ],
+              "basis": "Argues the office has enough money, calls requests for more 'ludicrous', and would cut overtime and redeploy administrators.",
+              "adjusted_by_refutation": true
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S5"
+              ],
+              "basis": "Enforcement-led drug strategy (task force, arrests of traffickers) paired with treatment access and expanded crisis responders."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "pacific-pacific-county-county-treasurer",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pacific/dossiers/pacific-pacific-county-county-treasurer/"
+      ],
+      "office_does": "The county treasurer runs the county treasury and its finances.",
+      "race_blurb": "Uncontested open seat: longtime Treasurer Renee Goodin is retiring, and Sheila Didion (Prefers Independent Party), a senior accountant in the office, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "sheila-didion",
+          "summary": "Senior accountant in the treasurer's office, previously in the auditor's and sheriff's offices; the only candidate.",
+          "highlights": [
+            "Works under the outgoing treasurer [S1][S2]",
+            "Former auditor's office payroll/benefits technician and sheriff's dispatcher [S1]",
+            "Background in banking, payroll and accounts payable [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "pacific-pacific-county-district-court-north-district-district-court-judge",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pacific/dossiers/pacific-pacific-county-district-court-north-district-district-court-judge/"
+      ],
+      "office_does": "Pacific County District Court has two judges, each elected only by the voters of its own district; this is the North District seat.",
+      "race_blurb": "Uncontested: Judge Scott Harmer, elected in 2022, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "scott-harmer",
+          "summary": "North District Court judge since 2022 and longtime Pacific County superior court commissioner; the only candidate.",
+          "highlights": [
+            "Former senior criminal deputy prosecutor and county indigent defense counsel [S1]",
+            "Superior court commissioner since 2000 [S1]",
+            "Elected unopposed in 2022 [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "pacific-pacific-county-district-court-south-district-district-court-judge",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pacific/dossiers/pacific-pacific-county-district-court-south-district-district-court-judge/"
+      ],
+      "office_does": "Pacific County District Court has two judges, each elected only by the voters of its own district; this is the South District seat.",
+      "race_blurb": "Uncontested: Judge Nancy McAllister, appointed in 2017, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "nancy-r-mcallister",
+          "summary": "South District Court judge since her 2017 appointment; the only candidate. She submitted no voters' guide statement.",
+          "highlights": [
+            "First appointed in 2017 [S2]",
+            "Elected unopposed in 2018 and 2022 [S4][S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "pacific-pacific-county-prosecuting-attorney",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pacific/dossiers/pacific-pacific-county-prosecuting-attorney/"
+      ],
+      "office_does": "The prosecuting attorney leads the county office that charges and prosecutes crimes, including felonies.",
+      "race_blurb": "Open seat: Prosecutor Michael Rothman is not running and backs his chief criminal deputy, Jennifer Zorn (Prefers Independent Party). She faces Michael S. Turner, a Raymond attorney and former city prosecutor, judge and court commissioner (no party preference). Zorn led the primary 4,858 to 3,381.",
+      "candidates": [
+        {
+          "slug": "jennifer-zorn",
+          "summary": "Pacific County's chief criminal deputy prosecutor, handling most felony cases, and the outgoing prosecutor's chosen successor.",
+          "highlights": [
+            "More than ten years as a prosecutor in Pacific, Grays Harbor and Lewis counties [S1][S4]",
+            "Platform: enforce the law consistently, protect victims and hold offenders accountable [S1]",
+            "Says bail is sometimes 'necessary to protect the community' [S2]",
+            "Rothman says he recruited her to succeed him [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Senior career prosecutor inside the current office, though this is her first campaign."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Enforcement and victim-protection framing, with charges that reflect the conduct and bail when needed."
+            }
+          }
+        },
+        {
+          "slug": "michael-s-turner",
+          "summary": "Raymond attorney for 30 years who has prosecuted for four cities and served as municipal judge, court commissioner and hearing examiner.",
+          "highlights": [
+            "Prosecuted for Raymond, South Bend, Long Beach and Ilwaco [S1]",
+            "Pro tem district court judge, superior court commissioner and county hearing examiner [S1][S2]",
+            "Lost a 2019 race for superior court judge with 48% [S2]",
+            "Had put $7,000 of his own money into his campaign as of July [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Three decades of local legal and quasi-judicial roles, though outside the current prosecutor's office."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "pacific-public-utility-district-no-2-of-pacific-county-commissioner-district-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/pacific/dossiers/pacific-public-utility-district-no-2-of-pacific-county-commissioner-district-1/"
+      ],
+      "office_does": "Pacific County PUD No. 2 is the county's public electric utility; its three commissioners, elected county-wide for six-year terms, set rates and policy and oversee the general manager.",
+      "race_blurb": "Uncontested: Commissioner Pam Hickey, first elected in 2020, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "pamela-pam-hickey",
+          "summary": "PUD commissioner since 2020 and former Chinook Water District office manager; the only candidate.",
+          "highlights": [
+            "Says rates are lower than neighboring utilities and the PUD is debt free [S1]",
+            "Cites north county broadband and a 20-year Bonneville power contract [S1]",
+            "Donates 10% of her base salary toward neighbors' utility bills [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "asotin-asotin-county-commissioner-district-3-county-commissioner-3",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/asotin/dossiers/asotin-asotin-county-commissioner-district-3-county-commissioner-3/"
+      ],
+      "office_does": "The three county commissioners are Asotin County's legislative and executive body: they adopt the budget and run county roads, buildings and the jail.",
+      "race_blurb": "Uncontested: Commissioner Chuck Whitman is the only candidate; District 3 nominated him in the primary and the whole county elects him in November.",
+      "candidates": [
+        {
+          "slug": "chuck-whitman",
+          "summary": "Asotin County Commissioner for District 3, elected unopposed in 2020 and 2022, running unopposed again.",
+          "highlights": [
+            "Elected unopposed in 2020 and 2022 [S5][S6]",
+            "Cites unfunded and underfunded state requirements and cost-efficient services [S1]",
+            "Pledges to keep fighting for veterans' benefits [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "asotin-asotin-county-county-assessor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/asotin/dossiers/asotin-asotin-county-county-assessor/"
+      ],
+      "office_does": "The county assessor lists and values all taxable property in Asotin County each year, the basis for property tax bills.",
+      "race_blurb": "Uncontested: Assessor Jenny L. Rynearson, in office since 2016, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "jenny-l-rynearson",
+          "summary": "Asotin County Assessor since 2016 and a past president of the state county assessors' association, running unopposed for another term.",
+          "highlights": [
+            "Assessor since 2016; Southeast Washington chair and past president of the state assessors' association [S1]",
+            "Served on the Clean Energy Project Tax Impact Task Force and supported HB 1960 on taxing wind and solar projects [S1]",
+            "Re-elected unopposed in 2022 [S4]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "asotin-asotin-county-county-auditor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/asotin/dossiers/asotin-asotin-county-county-auditor/"
+      ],
+      "office_does": "The county auditor runs Asotin County's elections, records deeds and other documents and keeps the county's accounts.",
+      "race_blurb": "Uncontested: Auditor Darla McKay, in office since 2011, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "darla-mckay",
+          "summary": "Asotin County Auditor since 2011 and a former Washington State Election Administrator, running unopposed for another term.",
+          "highlights": [
+            "Auditor since 2011; Washington State Election Administrator, 2021-2022 [S1]",
+            "Added ballot drop boxes, longer office hours and a property recording alert service [S1]",
+            "Re-elected unopposed in 2022 [S4]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "asotin-asotin-county-county-clerk",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/asotin/dossiers/asotin-asotin-county-county-clerk/"
+      ],
+      "office_does": "The county clerk is clerk of the Asotin County Superior Court, keeping its case records, dockets and filings.",
+      "race_blurb": "Uncontested: Clerk McKenzie A. Campbell, in office since 2016, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "mckenzie-a-campbell",
+          "summary": "Asotin County Clerk since 2016, previously the office's chief deputy, running unopposed for another term.",
+          "highlights": [
+            "Clerk since her August 2016 appointment; chief deputy clerk 2012-2016 [S1]",
+            "Digitizing and archiving older court records [S1]",
+            "Re-elected unopposed in 2022 [S4]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "asotin-asotin-county-county-prosecutor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/asotin/dossiers/asotin-asotin-county-county-prosecutor/"
+      ],
+      "office_does": "The prosecuting attorney prosecutes crimes in Asotin County and is the legal adviser to the county commissioners and county offices.",
+      "race_blurb": "Uncontested: Prosecutor Curt L. Liedkie, in office since 2023, is the only candidate; he says the office is short-staffed after the county cut a deputy prosecutor position.",
+      "candidates": [
+        {
+          "slug": "curt-l-liedkie",
+          "summary": "Asotin County Prosecuting Attorney since 2023, a prosecutor for more than 25 years, running unopposed for a full term.",
+          "highlights": [
+            "Prosecutor for three and a half years, since the loss of Prosecutor Benjamin Nichols in 2023; elected unopposed in 2024 [S1][S5]",
+            "More than 25 years as a prosecuting attorney [S1]",
+            "Says the commissioners cut funding for a third deputy prosecutor, leaving the office short-staffed [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "asotin-asotin-county-county-sheriff",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/asotin/dossiers/asotin-asotin-county-county-sheriff/"
+      ],
+      "office_does": "The sheriff runs the Asotin County Sheriff's Office, the county's chief law-enforcement agency, which patrols, investigates, serves court process and warrants, and leads the newly opened county jail.",
+      "race_blurb": "Open seat: Sheriff John Hilderbrand is not on the ballot. Undersheriff Blake Richards, a Pullman fire captain and former Life Flight base manager who moved into full-time law enforcement in recent years, faces City of Asotin Police Chief Monte Renzelman, a 31-year Lewis-Clark Valley officer. Richards led the primary 50.7% to 49.0%; both oppose the state's new sheriff-qualification law, which a judge has paused.",
+      "candidates": [
+        {
+          "slug": "blake-richards",
+          "summary": "Asotin County undersheriff since July 2025, a full-time Pullman firefighter-paramedic captain and former Life Flight Lewiston base manager, running on putting criminals in jail and better equipping deputies.",
+          "highlights": [
+            "Undersheriff since July 2025; reserve officer since 2011, then an emergency hire and patrol deputy [S1][S3][S5]",
+            "Would work through more than 1,500 outstanding warrants and target drug dealers: 'criminals should be in jail' [S2][S4]",
+            "Wants patrol rifles and modern equipment issued to deputies, plus regular town halls [S2]",
+            "Led the August primary 3,016 to 2,913 [S9]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S4"
+              ],
+              "basis": "Repeated, explicit enforcement framing: Washington 'making excuses for criminals', 'criminals should be in jail', clearing 1,500 warrants, targeting drug dealers and building strong cases with the prosecutor; no prevention or treatment plank."
+            },
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3",
+                "S5"
+              ],
+              "basis": "Mixed profile: he is the current administration's undersheriff, but came to full-time law enforcement only in recent years after a fire, paramedic and air-medical career, and runs on new practices (issued rifles, town halls, in-house instructors)."
+            }
+          }
+        },
+        {
+          "slug": "monte-renzelman",
+          "summary": "City of Asotin police chief for 11 years and a 31-year Lewis-Clark Valley officer, including as a county deputy sergeant, running on experience, fentanyl enforcement and jail reentry programs.",
+          "highlights": [
+            "Asotin police chief for 11 years; earlier 13 years with Lewiston police and a deputy sergeant with the Sheriff's Office [S2]",
+            "Would 'aggressively confront the fentanyl epidemic' through enforcement, prevention and education [S1]",
+            "Supports jail treatment, education, job training and structured release to reduce reoffending [S1][S2]",
+            "Endorsed by former Asotin County Sheriffs John Jeffers and Wayne Weber [S3]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Runs on a long proven record ('Experience You Can Trust'): 31 years in the valley's departments, more than 10 as a chief, endorsed by two former sheriffs; not the incumbent in this office."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S5"
+              ],
+              "basis": "Leads with drug-supply enforcement and task-force work but pairs it with treatment, reentry programs, structured release and community policing, and set up a fund to help people in crisis."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "asotin-asotin-county-county-treasurer",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/asotin/dossiers/asotin-asotin-county-county-treasurer/"
+      ],
+      "office_does": "The county treasurer collects property taxes and receives and pays out Asotin County's money.",
+      "race_blurb": "Uncontested: Treasurer Holly Steiner, in office since 2015, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "holly-steiner",
+          "summary": "Asotin County Treasurer since 2015, running unopposed for another term.",
+          "highlights": [
+            "Treasurer since 2015 [S1]",
+            "Improved tax collection software and put tax information online [S1]",
+            "Re-elected unopposed in 2022 [S4]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "asotin-asotin-county-district-court-district-court-judge",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/asotin/dossiers/asotin-asotin-county-district-court-district-court-judge/"
+      ],
+      "office_does": "The district court judge hears misdemeanor and other criminal cases and civil cases for Asotin County and the Cities of Clarkston and Asotin.",
+      "race_blurb": "Uncontested: Judge Tina L. Kernan, on the bench since 2016, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "tina-l-kernan",
+          "summary": "Asotin County District Court judge since 2016, previously a superior court commissioner, running unopposed.",
+          "highlights": [
+            "District Court judge since January 2016; elected 2016, 2018 and 2022 [S1][S4]",
+            "Superior Court commissioner from 2014; 23 years as an attorney before the bench [S1]",
+            "Hears criminal and civil cases for the county and the Cities of Clarkston and Asotin [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "asotin-asotin-county-public-utility-district-commissioner-district-no-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/asotin/dossiers/asotin-asotin-county-public-utility-district-commissioner-district-no-1/"
+      ],
+      "office_does": "An Asotin County PUD commissioner sits on the three-member elected board that sets policy, budgets and rates for the public water and sewer utility serving Clarkston and the Clarkston Heights area, for a six-year term.",
+      "race_blurb": "Open seat: board president Judy Ridge, who beat Joe Louis for this seat in 2020, is not on the ballot. Retired PUD field foreman Louis, with about 40 years on the local water system, faces broadcaster and former Clarkston Chamber president Darcy Nelly, who stresses transparency and accountability. Every PUD voter elects the District 1 commissioner.",
+      "candidates": [
+        {
+          "slug": "joe-louis",
+          "summary": "Retired field foreman with about 40 years on the Clarkston-area water system under three owners, including the PUD, running to keep updating mains, wells and tanks.",
+          "highlights": [
+            "Worked on the water system from 1976; PUD field foreman from 1999 [S1]",
+            "Holds Water Distribution Manager III and Cross Connection Specialist certifications [S1]",
+            "Wants to keep updating water services, mains, wells and water tanks [S1]",
+            "Lost this seat's 2020 race to Judy Ridge, 3,682 to 5,472 [S5]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "darcy-nelly",
+          "summary": "Co-owner of Nelly Broadcasting, a 34-year resident and former president of the Clarkston Chamber of Commerce, running on leadership, transparency and responsible stewardship.",
+          "highlights": [
+            "Co-owns Nelly Broadcasting; works on advertising budgets and proposals with local businesses [S1]",
+            "Past president of the Clarkston Chamber of Commerce, the LCSC Alumni Association and the TriState Health Foundation [S1]",
+            "Pledges 'strong leadership, transparency, and responsible stewardship' at the PUD [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "asotin-court-of-appeals-division-3-district-2-judge-position-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/asotin/dossiers/asotin-court-of-appeals-division-3-district-2-judge-position-1/"
+      ],
+      "office_does": "A Court of Appeals judge reviews trial-court decisions on appeal; Division III, District 2 elects one judge from Adams, Asotin, Benton, Columbia, Franklin, Garfield, Grant, Walla Walla and Whitman counties.",
+      "race_blurb": "Uncontested: Judge Tyson R. Hill, appointed by Gov. Ferguson effective Jan. 1, 2026 to replace retiring Judge George Fearing, is the only candidate for the remaining two years of the term.",
+      "candidates": [
+        {
+          "slug": "tyson-r-hill",
+          "summary": "Court of Appeals judge since his appointment effective Jan. 1, 2026; previously a Grant County Superior Court and District Court judge. The only candidate on the ballot.",
+          "highlights": [
+            "Appointed by Gov. Ferguson to replace retiring Judge George Fearing, effective Jan. 1, 2026 [S4]",
+            "More than 12 years as a Grant County District and Superior Court judge; co-founded Grant County's first therapeutic drug court [S1][S4]",
+            "Former lead appellate prosecutor and law clerk to Justice James M. Johnson [S1][S4]"
+          ],
+          "evidence_level": "moderate",
           "withdrawn": false,
           "scores": {}
         }

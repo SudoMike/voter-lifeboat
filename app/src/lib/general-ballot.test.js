@@ -4,7 +4,8 @@
 // coverage (#22), Yakima, Whatcom, Benton, Skagit, Cowlitz and Grant at full
 // coverage (#28), Island, Lewis, Franklin, Chelan, Clallam and Grays Harbor at
 // full coverage (#29), Mason, Walla Walla, Stevens, Whitman and Douglas at full coverage and Okanogan at
-// partial coverage (#30), Jefferson and Kittitas at full coverage (#31), every other Washington address a Statewide-Only Guide (issue #9). These run the app's own ballot, interview, lean and Ballot Brief
+// partial coverage (#30), Jefferson, Kittitas and Asotin at full coverage and Klickitat and Pacific at
+// partial coverage (#31), every other Washington address a Statewide-Only Guide (issue #9). These run the app's own ballot, interview, lean and Ballot Brief
 // code against public/data/2026-11-03-general.
 import test from 'node:test'
 import assert from 'node:assert/strict'
@@ -70,7 +71,7 @@ const STATE_MEASURES = [
   'initiative-measure-no-il26-638',
 ]
 
-test('the general ships twenty-five counties at full county coverage, Spokane and Okanogan at partial, with their elections offices', () => {
+test('the general ships twenty-six counties at full county coverage, Spokane, Okanogan, Klickitat and Pacific at partial, with their elections offices', () => {
   assert.equal(data.election.id, '2026-11-03-general')
   assert.deepEqual(data.coverage, {
     statewide_complete: true,
@@ -342,6 +343,36 @@ test('the general ships twenty-five counties at full county coverage, Spokane an
         fips: '53037',
         coverage: 'full_county',
         elections_url: 'https://www.co.kittitas.wa.us/auditor/elections/default.aspx',
+      },
+      {
+        // Partial: the East and West District Court seats are DISTCRT, with no
+        // public layer of the court districts; the EMS levy reads DOR EMS2025 (#31).
+        id: 'klickitat',
+        name: 'Klickitat County',
+        state: 'WA',
+        fips: '53039',
+        coverage: 'partial_county',
+        elections_url: 'https://www.klickitatcounty.gov/1136/ElectionsVoter-Registration',
+      },
+      {
+        // Partial: the North and South District Court seats are DISTCRT, with
+        // no public layer; the EMS and fire levies read DOR EMS2025 and FIR2025.
+        // No elections_url: the county's site did not answer on 2026-10-08 (#31).
+        id: 'pacific',
+        name: 'Pacific County',
+        state: 'WA',
+        fips: '53049',
+        coverage: 'partial_county',
+      },
+      {
+        // Full: the PUD seat reads DOR PUD2025 and the Rural EMS District No. 2
+        // levy its DOR TCA2025 tax code areas (RURALEMSDST, #31).
+        id: 'asotin',
+        name: 'Asotin County',
+        state: 'WA',
+        fips: '53003',
+        coverage: 'full_county',
+        elections_url: 'https://www.asotincountywa.gov/186/Current-Election',
       },
     ],
   })
@@ -1143,6 +1174,121 @@ test('a Kittitas ballot: King\'s and Grant\'s research for the shared races, one
     'kittitas-public-utility-district-no-1-of-kittitas-county-commissioner-district-1-commissioner-1'])
     assert.ok(es.includes(slug) && cs.includes(slug), slug)
   assert.equal(coverageAdvice(kt({})), null)
+})
+
+test('a Klickitat ballot: Benton\'s, Yakima\'s and Clark\'s research for the shared races, the EMS levy outside Bickleton, no District Court seat', () => {
+  const KLICKITAT = { id: 'klickitat', fips: '53039', name: 'Klickitat County' }
+  const kl = (districts) => ({ coverageStatus: 'partial_county', county: KLICKITAT, districts, missingLayers: [] })
+  const EMS = 'klickitat-emergency-medical-services-district-no-1-klickitat-county-proposition-no-1'
+  // Districts as the live District Adapter resolved them on 2026-10-08.
+  // 205 S Columbus Ave, Goldendale: LD 17, EMS District No. 1.
+  const gd = ballotFor(kl({ CONGDST: '4', LEGDST: '17', CITY: 'Goldendale', COUNTY_COUNCIL: '3', EMSDST: '1' }))
+  const gs = gd.contests.map((c) => c.slug)
+  assert.equal(new Set(gs).size, gs.length)
+  assert.equal(gs.length, 12 + SUPREME_COURT.length)
+  for (const slug of SUPREME_COURT) assert.ok(gs.includes(slug), slug)
+  assert.deepEqual(gd.measures.map((m) => m.slug), [...STATE_MEASURES, EMS])
+  sameScoring(gd, 'klickitat-congressional-district-4-u-s-representative', 'benton-congressional-district-4-u-s-representative')
+  for (const pos of [1, 2])
+    sameScoring(gd, `klickitat-legislative-district-17-state-representative-pos-${pos}`, `clark-legislative-district-17-state-representative-pos-${pos}`)
+  assert.ok(!gd.contests.some((c) => c.owner !== 'klickitat' && c.owner !== 'statewide'))
+  // Commissioner 2 and the PUD seat are elected county-wide.
+  for (const slug of ['klickitat-klickitat-county-commissioner-district-2-county-commissioner-2',
+    'klickitat-public-utility-district-commissioner-district-3-public-utility-district-1-commissioner-pos-3'])
+    assert.ok(gs.includes(slug), slug)
+  // The East and West District Court seats stay hidden: DISTCRT is
+  // unresolvable (data-consistency.test.js), but both ship.
+  assert.ok(!gs.some((s) => s.includes('district-court')), gs.join())
+  assert.equal(data.contests.filter((c) => c.owner === 'klickitat' && c.scope.layer === 'DISTCRT').length, 2)
+  // 100 E Market St, Bickleton: LD 14, outside the EMS district.
+  const bk = ballotFor(kl({ CONGDST: '4', LEGDST: '14', COUNTY_COUNCIL: '3', FIRDST: '2' }))
+  const bs = bk.contests.map((c) => c.slug)
+  assert.equal(bs.length, 12 + SUPREME_COURT.length)
+  assert.deepEqual(bk.measures.map((m) => m.slug), STATE_MEASURES)
+  for (const pos of [1, 2])
+    sameScoring(bk, `klickitat-legislative-district-14-state-representative-pos-${pos}`, `yakima-legislative-district-14-state-representative-pos-${pos}`)
+  assert.ok(!bs.some((s) => s.includes('legislative-district-17')))
+  // The partial package tells every Klickitat voter the ballot may be incomplete.
+  assert.equal(coverageAdvice(kl({})), 'degraded')
+})
+
+test('a Pacific ballot: Clark\'s and Thurston\'s research for the shared races, Timberland everywhere, EMS and fire levies by district', () => {
+  const PACIFIC = { id: 'pacific', fips: '53049', name: 'Pacific County' }
+  const pc = (districts) => ({ coverageStatus: 'partial_county', county: PACIFIC, districts, missingLayers: [] })
+  const TRL = 'pacific-timberland-regional-library-district-proposition-no-1'
+  const EMS = 'pacific-north-pacific-county-emergency-medical-services-district-no-1-proposition-no-1'
+  const FD3 = 'pacific-pacific-county-fire-protection-district-no-3-proposition-no-1'
+  const FD6 = 'pacific-pacific-county-fire-protection-district-no-6-proposition-no-1'
+  // Districts as the live District Adapter resolved them on 2026-10-08.
+  // 300 Memorial Dr, South Bend: Timberland and North Pacific EMS.
+  const sb = ballotFor(pc({ CONGDST: '3', LEGDST: '19', CITY: 'South Bend', EMSDST: '1' }))
+  const ss = sb.contests.map((c) => c.slug)
+  assert.equal(new Set(ss).size, ss.length)
+  assert.equal(ss.length, 11 + SUPREME_COURT.length)
+  for (const slug of SUPREME_COURT) assert.ok(ss.includes(slug), slug)
+  assert.deepEqual(sb.measures.slice(0, 3).map((m) => m.slug), STATE_MEASURES)
+  assert.deepEqual(ownLocal(sb, 'pacific'), [TRL, EMS])
+  sameScoring(sb, 'pacific-congressional-district-3-u-s-representative', 'clark-congressional-district-3-u-s-representative')
+  for (const pos of [1, 2])
+    sameScoring(sb, `pacific-legislative-district-19-state-representative-pos-${pos}`, `thurston-legislative-district-19-state-representative-pos-${pos}`)
+  assert.ok(!sb.contests.some((c) => c.owner !== 'pacific' && c.owner !== 'statewide'))
+  // Commissioner District 3 and the PUD No. 2 seat are elected county-wide;
+  // the North and South District Court seats stay hidden (DISTCRT).
+  for (const slug of ['pacific-pacific-county-commissioner-district-3-county-commissioner-03',
+    'pacific-public-utility-district-no-2-of-pacific-county-commissioner-district-1'])
+    assert.ok(ss.includes(slug), slug)
+  assert.ok(!ss.some((s) => s.includes('district-court')), ss.join())
+  assert.equal(data.contests.filter((c) => c.owner === 'pacific' && c.scope.layer === 'DISTCRT').length, 2)
+  // 115 Bolstad St, Long Beach: Timberland only.
+  const lb = ballotFor(pc({ CONGDST: '3', LEGDST: '19', CITY: 'Long Beach' }))
+  assert.deepEqual(ownLocal(lb, 'pacific'), [TRL])
+  assert.equal(lb.contests.length, 11 + SUPREME_COURT.length)
+  // 38 2nd St, Bay Center: Timberland, EMS and Fire District 6.
+  const bc = ballotFor(pc({ CONGDST: '3', LEGDST: '19', EMSDST: '1', FIRDST: '6' }))
+  assert.deepEqual(ownLocal(bc, 'pacific'), [TRL, EMS, FD6])
+  // 1000 State Rte 6, Raymond (Menlo area): Fire District 3.
+  const mn = ballotFor(pc({ CONGDST: '3', LEGDST: '19', EMSDST: '1', FIRDST: '3' }))
+  assert.deepEqual(ownLocal(mn, 'pacific'), [TRL, EMS, FD3])
+  // 1511 Bay Ave, Ocean Park: the Ocean Beach EMS code, not North Pacific's.
+  const op = ballotFor(pc({ CONGDST: '3', LEGDST: '19', EMSDST: 'OB', FIRDST: '1' }))
+  assert.deepEqual(ownLocal(op, 'pacific'), [TRL])
+  assert.equal(coverageAdvice(pc({})), 'degraded')
+})
+
+test('an Asotin ballot: Spokane\'s research for CD 5 and LD 9, the PUD seat in Clarkston, the Rural EMS levy only outside it', () => {
+  const ASOTIN = { id: 'asotin', fips: '53003', name: 'Asotin County' }
+  const as = (districts) => ({ coverageStatus: 'full_county', county: ASOTIN, districts, missingLayers: [] })
+  const PUD = 'asotin-asotin-county-public-utility-district-commissioner-district-no-1'
+  const RURAL_EMS = 'asotin-asotin-county-rural-ems-district-no-2-proposition-no-1'
+  // Districts as the live District Adapter resolved them on 2026-10-08.
+  // 829 5th St, Clarkston: the PUD seat, no local measure.
+  const cl = ballotFor(as({ CONGDST: '5', LEGDST: '9', CITY: 'Clarkston', EMSDST: 'CLAR', PUDDST: '1' }))
+  const cs = cl.contests.map((c) => c.slug)
+  assert.equal(new Set(cs).size, cs.length)
+  assert.equal(cs.length, 13 + SUPREME_COURT.length)
+  for (const slug of SUPREME_COURT) assert.ok(cs.includes(slug), slug)
+  assert.ok(cs.includes(PUD))
+  assert.deepEqual(cl.measures.map((m) => m.slug), STATE_MEASURES)
+  sameScoring(cl, 'asotin-congressional-district-5-u-s-representative', 'spokane-congressional-district-5-u-s-representative')
+  for (const pos of [1, 2])
+    sameScoring(cl, `asotin-legislative-district-9-state-representative-pos-${pos}`, `spokane-legislative-district-9-state-representative-pos-${pos}`)
+  assert.ok(!cl.contests.some((c) => c.owner !== 'asotin' && c.owner !== 'statewide'))
+  // 121 2nd St, Asotin: outside the PUD and the rural EMS district.
+  const ac = ballotFor(as({ CONGDST: '5', LEGDST: '9', CITY: 'Asotin', EMSDST: 'ASOT' }))
+  const acs = ac.contests.map((c) => c.slug)
+  assert.equal(acs.length, 12 + SUPREME_COURT.length)
+  assert.ok(!acs.includes(PUD))
+  assert.deepEqual(ac.measures.map((m) => m.slug), STATE_MEASURES)
+  // 1406 16th Ave, Clarkston Heights: EMS District #1 ('1') is not the rural
+  // district (the archived primary's EMSDST '1' scope was wrong).
+  const ch = ballotFor(as({ CONGDST: '5', LEGDST: '9', EMSDST: '1', PUDDST: '1' }))
+  assert.ok(ch.contests.map((c) => c.slug).includes(PUD))
+  assert.deepEqual(ownLocal(ch, 'asotin'), [])
+  // 992 Park Rd, Anatone: the Rural EMS levy, no PUD seat.
+  const an = ballotFor(as({ CONGDST: '5', LEGDST: '9', RURALEMSDST: '2' }))
+  assert.ok(!an.contests.map((c) => c.slug).includes(PUD))
+  assert.deepEqual(ownLocal(an, 'asotin'), [RURAL_EMS])
+  assert.equal(coverageAdvice(as({})), null)
 })
 
 test('a Spokane ballot: its own districts, school and fire measures by name, no PUD seat', () => {
