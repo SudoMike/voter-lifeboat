@@ -63,12 +63,16 @@
     "data/washington-state/elections/2026-11-03-general/counties/asotin/scoring/*.json",
     "data/washington-state/elections/2026-11-03-general/counties/asotin/scoring/refutations/*.json",
     "data/washington-state/elections/2026-11-03-general/counties/adams/scoring/*.json",
-    "data/washington-state/elections/2026-11-03-general/counties/adams/scoring/refutations/*.json"
+    "data/washington-state/elections/2026-11-03-general/counties/adams/scoring/refutations/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/skamania/scoring/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/skamania/scoring/refutations/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/san-juan/scoring/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/san-juan/scoring/refutations/*.json"
   ],
   "script": "pipeline/merge_scores.py",
   "verdict_stats": {
-    "upheld": 2256,
-    "adjust": 197,
+    "upheld": 2281,
+    "adjust": 199,
     "refuted": 24,
     "missing_added": 31,
     "missing_dropped_low": 12
@@ -37395,6 +37399,719 @@
             "Former lead appellate prosecutor and law clerk to Justice James M. Johnson [S1][S2]"
           ],
           "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "skamania-public-utility-district-no-1-of-skamania-county-commissioner-district-3-commissioner-3",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/skamania/dossiers/skamania-public-utility-district-no-1-of-skamania-county-commissioner-district-3-commissioner-3/",
+        "data/final/2026-11-03-general/rubric.json"
+      ],
+      "office_does": "A Skamania County PUD commissioner is one of three board members who set rates, budgets, borrowing and projects for the county's public electric utility and the Carson and Underwood water systems; nominated from District 3, elected by the whole county, six-year term.",
+      "race_blurb": "Board president Liz Green, commissioner for 12 years, faces Addison Dillon of Carson, a first-time candidate. Green points to a rebuild of the 90-year-old system financed by bonds, grants and loans over decades; Dillon says the $60 monthly residential basic charge is the state's highest and wants major spending explained before rate increases, a freeze on commissioner raises and a plain-language 'Ratepayer Report Card'. No rubric axis applies to PUD races.",
+      "candidates": [
+        {
+          "slug": "liz-green",
+          "summary": "PUD commissioner for District 3 for 12 years and the board's president; lives in Cook.",
+          "highlights": [
+            "Says the PUD is rebuilding substations and water treatment plants and replacing reservoirs [S2]",
+            "Financed with bonds, grants and loans and a rate structure spread over decades [S2]",
+            "Cites rising regulatory costs and power-shortage risk [S1]",
+            "Re-elected unopposed in 2020 [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "addison-dillon",
+          "summary": "Skamania County native from Carson with a career in the service industry; first run for office.",
+          "highlights": [
+            "Says the residential basic charge rose from $8.45 in 2009 to $60, the highest in Washington [S2][S6]",
+            "Would require a public cost-and-benefit explanation before major projects or new debt [S2]",
+            "Would oppose commissioner pay raises until rates stabilize [S2]",
+            "Proposes a monthly 'Ratepayer Report Card' on every bill [S3]",
+            "Raised $2,560 by Sept. 17, including $500 from the county Democrats [S7][S8]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "skamania-skamania-county-assessor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/skamania/dossiers/skamania-skamania-county-assessor/",
+        "data/final/2026-11-03-general/rubric.json"
+      ],
+      "office_does": "The assessor values all property in Skamania County for taxation, calculates the levy limits and rates of its taxing districts and administers exemptions; four-year term.",
+      "race_blurb": "Democrat Gabe Spencer, assessor for about two decades, faces Republican Cora Moser, a county employee with 20 years as a paralegal, on her first run; the primary was 2,157 to 2,130 for Moser. Moser runs on a state homestead exemption and opposes what she calls the incumbent's plan to sell the fairgrounds parking lot; Spencer runs on defensible valuations and a higher business personal property exemption.",
+      "candidates": [
+        {
+          "slug": "cora-moser",
+          "summary": "Carson resident raised in Mill A; 20 years as a paralegal and more than eight working for Skamania County. Republican, endorsed by the county Republican Party; led the primary by 27 votes.",
+          "highlights": [
+            "Would advocate for a state homestead exemption through the assessors' exemption committee [S2][S5]",
+            "Promises plain-language valuations and an open-door office [S1][S5]",
+            "Opposes selling the county fair parking lot, which she attributes to the incumbent [S2]",
+            "Not a certified appraiser; says she would seek certification if elected [S2]",
+            "Endorsed by the Skamania County Republican Party [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3",
+                "S5"
+              ],
+              "basis": "Makes property tax relief for homeowners (a state homestead exemption) her main goal for the office and promises to make property taxes 'more affordable', while noting the assessor does not set tax policy."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S5"
+              ],
+              "basis": "First-time candidate who asks for change and 'a fresh perspective' against a two-decade incumbent."
+            }
+          }
+        },
+        {
+          "slug": "gabriel-p-spencer",
+          "summary": "Skamania County Assessor for about 20 years (in the office since 2002), running for re-election as a Democrat; unopposed in 2022.",
+          "highlights": [
+            "Backs raising the business personal property tax exemption from $15,000 to $50,000 or more [S2]",
+            "Uses sales, cost and income approaches, taking the lower middle of the data for commercial values [S2]",
+            "DOR's 2025 levy audit found two procedural requirements and one recommendation for his office [S3]",
+            "Lost the primary to Moser by 27 votes [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "His stated tax agenda is a larger business personal property exemption, pursued through the assessors' association, to let small businesses keep more capital; no position on new revenue."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S5"
+              ],
+              "basis": "Assessor for about two decades, re-elected unopposed in 2022, running on continuity of the office and its staff."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "skamania-skamania-county-auditor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/skamania/dossiers/skamania-skamania-county-auditor/"
+      ],
+      "office_does": "The auditor runs county elections and voter registration, records documents and keeps the county's accounts; four-year term.",
+      "race_blurb": "Uncontested: Auditor Robert J Waymire, in office for more than 11 years, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "robert-j-waymire",
+          "summary": "Skamania County Auditor for more than 11 years, running for re-election as a Republican; unopposed in 2022 and 2026.",
+          "highlights": [
+            "Auditor for 11+ years; raised in the county [S1]",
+            "Promises professional, efficient and transparent service [S1]",
+            "Re-elected unopposed in 2022 [S2]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "skamania-skamania-county-clerk",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/skamania/dossiers/skamania-skamania-county-clerk/",
+        "data/final/2026-11-03-general/rubric.json"
+      ],
+      "office_does": "The county clerk is clerk of the Superior Court: the office keeps court files and records, takes filings and fees and manages the jury pool; four-year term.",
+      "race_blurb": "Democrat Grace D. Cross, clerk for ten years, faces Republican Olivia D. Munsch, a 14-year employee of the same office; the primary was 2,153 to 2,098. Both promise accessible, accurate service: Cross cites e-filing and online records, Munsch published fee schedules, plain-language help and jury-service outreach to employers.",
+      "candidates": [
+        {
+          "slug": "grace-d-cross",
+          "summary": "Skamania County Clerk for ten years after a decade on the office's staff; running for re-election as a Democrat.",
+          "highlights": [
+            "Added e-filing, online public records and electronic jury summons responses [S1][S2]",
+            "Prioritizes staff training and technology for consistent service [S2]",
+            "Raised $8,429 by Sept. 30, including $1,500 from the county Democratic Party [S5][S6]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S4"
+              ],
+              "basis": "Twenty years in the Clerk's Office, ten as the elected clerk, re-elected unopposed in 2022, running on her record of modernizing the office."
+            }
+          }
+        },
+        {
+          "slug": "olivia-d-munsch",
+          "summary": "Lifetime county resident from Carson with 18 years in county employment, 14 in the Clerk's Office; running as a Republican on her first campaign.",
+          "highlights": [
+            "Would publish policies, fee schedules and court information online and in print [S2]",
+            "Proposes a patron feedback system and jury-service education for employers [S2]",
+            "Raised $7,529 by Sept. 27, about half of it her own money [S4][S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "A challenger on her first run, but a 14-year staff member of the office she seeks who runs on that experience and continuity of service, not on outsider change."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "skamania-skamania-county-commissioner-district-3-commissioner-no-3",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/skamania/dossiers/skamania-skamania-county-commissioner-district-3-commissioner-no-3/",
+        "data/final/2026-11-03-general/rubric.json"
+      ],
+      "office_does": "The District 3 commissioner is one of three members of the Board of County Commissioners, which passes county ordinances, adopts the budget, sets land use and oversees county departments; nominated by District 3 (eastern county), elected county-wide, four-year term.",
+      "race_blurb": "Republican Asa Leckie, the board's chair and an Army Special Forces veteran elected in 2022, faces Democrat Paul H. Mosbrucker of Underwood, a former school board member. Leckie led the district primary 775 to 629 and runs on no new taxes, timber revenue and pushing back on state mandates; Mosbrucker points to housing costs, insurance premiums, school cuts and slow job growth and asks for new leadership.",
+      "candidates": [
+        {
+          "slug": "asa-leckie",
+          "summary": "District 3 commissioner, elected in 2022, and board chair; an Army Special Forces veteran of more than two decades from Carson, running for re-election as a Republican.",
+          "highlights": [
+            "Says he has never voted for or supported the county's annual 1% property tax increase [S1]",
+            "Wants core-services budgets 'without unnecessary tax increases' [S2]",
+            "Proposes logging along Gifford Pinchot roads and payments to counties for conservation set-asides [S3]",
+            "Voted to open about 400 acres in Underwood to 10-acre residential lots [S4]",
+            "Joined the board's opposition to 77,000 acres of new state legacy forests [S5]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "'We're taxed enough already': says he has never voted for the county's 1% levy increase and wants budgets without tax increases, stated in the pamphlet and the Chamber Q&A."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Calls for 'fiscal discipline' and budgets that prioritize core services, while also backing public-private partnerships and business incentives where feasible."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S4"
+              ],
+              "basis": "Treats the shortage of developable land as the housing constraint and voted to zone previously unzoned Underwood forest land for 10-acre residential lots over neighbors' objections; no public-housing or tenant position."
+            },
+            "climate": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S2",
+                "S3",
+                "S5"
+              ],
+              "basis": "Wants to 'reduce energy costs' and expand timber harvest, and opposed state legacy-forest set-asides, but states no position on carbon pricing or clean-energy policy."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3",
+                "S4"
+              ],
+              "basis": "Sitting commissioner and board chair running on his record in office."
+            }
+          }
+        },
+        {
+          "slug": "paul-h-mosbrucker",
+          "summary": "Underwood resident of 22 years and former White Salmon Valley School District board member; running as a Democrat on his first county campaign.",
+          "highlights": [
+            "Names scarce, unaffordable housing, insurance premiums, school cuts and slow job growth as the county's problems [S1]",
+            "Says the county budget is 'at the mercy of politicians who don't live here' [S1]",
+            "Calls for 'new leadership and innovative ideas' [S1]",
+            "Raised $4,971 by Sept. 28, including $1,500 from the county Democrats [S4][S5]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Runs explicitly for 'new leadership' against the board chair and has held no county office, though he cites management experience and past school board service."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "skamania-skamania-county-district-court-district-court-judge",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/skamania/dossiers/skamania-skamania-county-district-court-district-court-judge/"
+      ],
+      "office_does": "The District Court judge hears misdemeanors, traffic infractions, small claims and civil cases up to the statutory limit for all of Skamania County; nonpartisan, four-year term.",
+      "race_blurb": "Uncontested: Christopher Robert Lanz, a Klickitat County Superior Court commissioner, is the only candidate; Judge Ron Reynier, elected in 2022, is not on the ballot.",
+      "candidates": [
+        {
+          "slug": "christopher-robert-lanz",
+          "summary": "Klickitat County Superior Court Commissioner who has sat as a judge pro tem in Skamania District and Superior Courts and both Klickitat District Courts.",
+          "highlights": [
+            "Klickitat County Superior Court Commissioner, appointed by Judge Randy Krog [S1]",
+            "Judge pro tem in Skamania District Court, Skamania Superior Court and Klickitat District Courts [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "skamania-skamania-county-prosecuting-attorney",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/skamania/dossiers/skamania-skamania-county-prosecuting-attorney/"
+      ],
+      "office_does": "The prosecuting attorney charges and prosecutes crimes in Superior and District Court and is the county government's lawyer; four-year term.",
+      "race_blurb": "Uncontested: Prosecuting Attorney Adam N. Kick, in office for more than 15 years, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "adam-n-kick",
+          "summary": "Skamania County Prosecuting Attorney for more than 15 years, seeking re-election; lists a 'Non Partisan' party preference.",
+          "highlights": [
+            "Prosecuting attorney for 15+ years [S1]",
+            "Re-elected unopposed in 2022 [S2]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "skamania-skamania-county-sheriff",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/skamania/dossiers/skamania-skamania-county-sheriff/"
+      ],
+      "office_does": "The sheriff runs county law enforcement, the jail, and search and rescue; four-year term.",
+      "race_blurb": "Uncontested: Sheriff Summer Scheyer, who won the office by 25 votes in 2022, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "summer-scheyer",
+          "summary": "Skamania County Sheriff in her fourth year in office and a law enforcement officer for 22 years, nearly 20 in the county; running as a Republican.",
+          "highlights": [
+            "Won the 2022 race by 25 votes [S3]",
+            "Says lost federal Secure Rural Schools money cost two patrol deputies in 2025 [S4]",
+            "Her 2024 sales tax for an animal control officer failed, 3,750 to 3,297 [S5][S6]",
+            "Proposed bringing volunteer teams under sheriff's office oversight [S7]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "skamania-skamania-county-treasurer",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/skamania/dossiers/skamania-skamania-county-treasurer/"
+      ],
+      "office_does": "The treasurer collects property taxes, manages and invests county funds and banks for the county's taxing districts; this ballot fills the short and full four-year term.",
+      "race_blurb": "Uncontested: interim Treasurer Emily Sabo, appointed in May 2026 after Vickie Clelland retired, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "emily-sabo",
+          "summary": "Lifelong county resident from North Bonneville, appointed interim Treasurer in May 2026; running as a Republican.",
+          "highlights": [
+            "Appointed interim treasurer by the commissioners from May 18, 2026 [S2]",
+            "Stresses fiscal responsibility and careful management of public funds [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "san-juan-san-juan-county-assessor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/san-juan/dossiers/san-juan-san-juan-county-assessor/"
+      ],
+      "office_does": "The assessor values all taxable property in San Juan County for property taxes. Nonpartisan, four-year term.",
+      "race_blurb": "Uncontested: John Kulseth, Assessor since 2015, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "john-kulseth",
+          "summary": "San Juan County Assessor since 2015 and an appraiser in the office since 2004; the only candidate.",
+          "highlights": [
+            "Assessor since 2015; chief appraiser 2007-2014 [S1]",
+            "Wants an assessment process that is \"professional, fair, and clearly understood\" [S1]",
+            "Says taxing districts' budgets, not assessed values, set the amount of tax [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "san-juan-san-juan-county-auditor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/san-juan/dossiers/san-juan-san-juan-county-auditor/"
+      ],
+      "office_does": "The auditor records deeds and documents, runs county elections, handles licensing and keeps the county's books; in San Juan County the office also prepares the county budget. Nonpartisan, four-year term.",
+      "race_blurb": "The incumbent against her former chief deputy. Natasha Warmenhoven runs on her first-term record; Heather Lee, who resigned in March saying the office lacked transparency, responsiveness and consistency, promises a different approach. Neither states positions on wider policy.",
+      "candidates": [
+        {
+          "slug": "heather-lee",
+          "summary": "Former Chief Deputy Auditor (three years, through March 2026) who resigned over the office's direction; now a finance consultant to local districts and the Town of Friday Harbor.",
+          "highlights": [
+            "Chief Deputy Auditor for three years; earlier Payroll Deputy and Elections Specialist [S1]",
+            "Says the office lacks \"transparency, responsiveness, and consistency\" and wants to rebuild morale [S1][S6]",
+            "Would work to reopen the licensing desk five days a week [S3]",
+            "Endorsed by the San Juan County Democrats and former Auditor Milene Henley [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "low",
+              "citations": [
+                "S1",
+                "S6"
+              ],
+              "basis": "Has not held elected office and runs on changing the office's direction, though her case rests on three years as its second-in-command.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "natasha-k-warmenhoven",
+          "summary": "San Juan County Auditor since 2023 and Chief Deputy Auditor from 2020, running on her first-term record: budgets, financial reporting, a new financial system and elections.",
+          "highlights": [
+            "Auditor since January 2023; Chief Deputy Auditor 2020-2023; certified elections administrator [S1]",
+            "Cites balanced 2024-2025 and 2026 budgets, a Budget-in-Brief and expanded quarterly reports [S3][S4]",
+            "Leading the county's new financial management system, set for March 2027 [S3]",
+            "Her office prepared the balanced 2027 preliminary budget [S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3",
+                "S4"
+              ],
+              "basis": "First-term incumbent with six years in the office's top two jobs, running on 'Experience. Integrity. Stability.' and her record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "san-juan-san-juan-county-clerk",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/san-juan/dossiers/san-juan-san-juan-county-clerk/"
+      ],
+      "office_does": "The county clerk keeps the superior court's records and files and handles its fees and trust funds. Nonpartisan, four-year term.",
+      "race_blurb": "Uncontested: Lisa Henderson, Clerk since 2019, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "lisa-henderson",
+          "summary": "San Juan County Clerk since 2019; the only candidate.",
+          "highlights": [
+            "Clerk since 2019; San Juan Island School District board 2004-2007 [S1]",
+            "Cites remote access to files since 2018 and electronic filing [S1]",
+            "Has held passport fairs on Orcas and Lopez [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "san-juan-san-juan-county-council-residency-district-3",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/san-juan/dossiers/san-juan-san-juan-county-council-residency-district-3/"
+      ],
+      "office_does": "One of three members of the San Juan County Council, which adopts the county budget and sets policy; the member must live in District 3 (Lopez, Shaw, Decatur and nearby islands), but every county voter votes for the seat.",
+      "race_blurb": "Open seat decided under a $3.7 million budget gap after voters rejected the county levy lid lift in April. Shaw Island's Jennifer Swanson, a former school board director and superintendent, pledges restraint; Lopez Island's Katherine Bryant Ingman, a nonprofit leader, would protect frontline services and names new revenue sources.",
+      "candidates": [
+        {
+          "slug": "jennifer-swanson",
+          "summary": "Former Shaw Island school board director and superintendent who chairs the county Ferry Advisory Committee and co-founded the Shaw Island Community Land Trust; running on budget restraint, housing, ferries and the environment.",
+          "highlights": [
+            "11 years an elected school board director and 7 years superintendent on Shaw Island [S1]",
+            "\"This is not the time to expand county services\"; will \"live within our means\" and rebuild reserves [S4][S5]",
+            "Promises to look for \"alternative ways the county can increase revenue\" for 2028, without naming a tax [S5]",
+            "Co-founded the Shaw Island Community Land Trust; backs affordable housing \"for the full income diversity of our county\" [S3][S4]",
+            "Led the August primary with 2,944 votes [S9]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3",
+                "S8"
+              ],
+              "basis": "11 years of elected school board service and 7 as superintendent; calls herself 'the longest track record and ... most experienced, seasoned candidate' who can 'hit the ground running', though she has not held county office."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S4",
+                "S5"
+              ],
+              "basis": "Repeatedly pledges restraint: 'not the time to expand county services', 'live within our means', rebuild emergency reserves, seek efficiency, while protecting mandated and priority services."
+            },
+            "taxes": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S5"
+              ],
+              "basis": "Reads the levy defeat as voters not wanting higher property taxes, yet commits to look for alternative county revenue for 2028; names no tax to add or cut."
+            },
+            "housing": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S4",
+                "S5"
+              ],
+              "basis": "Co-founded a community land trust and raises money for teacher housing; would advocate affordable housing for the full income range, alongside code revisions to ease affordable development.",
+              "adjusted_by_refutation": true
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S6"
+              ],
+              "basis": "Calls environmental protection 'of the utmost importance' given climate change impacts on the islands and took part in the county Climate Convergence; no energy-cost tradeoff stated."
+            }
+          }
+        },
+        {
+          "slug": "katherine-bryant-ingman",
+          "summary": "Lopez Island nonprofit leader (Washington Women's Foundation; president of the Catherine Washburn Medical Association) running for a first office on healthcare, housing, ferries, the environment and protecting frontline services.",
+          "highlights": [
+            "Led the Lopez Clinic's transition to a new provider as president of the Catherine Washburn Medical Association [S5][S7][S9]",
+            "Would protect frontline services and infrastructure, reviewing management costs before cuts, and keep funding the county Home Fund [S5]",
+            "Names revenue tools: updated lodging taxes, short-term rental permitting, a 0.1% law-and-justice sales tax, voluntary visitor taxes [S5]",
+            "Wants the county Climate Action Plan integrated across departments [S4]",
+            "Has not held elected office; stresses a younger generation's stake [S1][S9]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S9"
+              ],
+              "basis": "No elected experience; argues 'with age doesn't always come more experience \u2013 sometimes we need to shake things up' and that her generation's perspective belongs at the table, while citing a decade of nonprofit leadership."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S5"
+              ],
+              "basis": "Would protect frontline services, invest in maintenance now and keep funding the Home Fund 'before cutting deeper', while reviewing administrative costs first and backing balanced budgets."
+            },
+            "taxes": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S5",
+                "S9"
+              ],
+              "basis": "Proposes new county revenue (updated lodging taxes, a 0.1% law-and-justice sales tax, visitor taxes) and was disappointed the levy lid lift failed, while ruling out asking islanders 'to shoulder more'."
+            },
+            "housing": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S5"
+              ],
+              "basis": "Pairs public investment (protect and fund the county Home Fund, low- and moderate-income housing) with supply-side tools (ADU reforms, pre-approved plans, permit streamlining)."
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S6"
+              ],
+              "basis": "Would integrate the county Climate Action Plan across departments, build climate resilience and encourage on-island EV use."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "san-juan-san-juan-county-district-court-judge",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/san-juan/dossiers/san-juan-san-juan-county-district-court-judge/"
+      ],
+      "office_does": "San Juan County's one District Court judge hears misdemeanor and gross misdemeanor cases for the whole county. Nonpartisan, four-year term.",
+      "race_blurb": "Uncontested: Judge Carolyn Jewett-Platts, on the bench since 2019, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "carolyn-jewett-platts",
+          "summary": "San Juan County District Court Judge since 2019 and a former deputy prosecutor; the only candidate.",
+          "highlights": [
+            "District Court Judge since 2019 [S1]",
+            "Deputy prosecutor in San Juan County District Court 2015-2018 [S1]",
+            "Served on the District and Municipal Court Judges' Association board, 2022-2025 [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "san-juan-san-juan-county-prosecuting-attorney",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/san-juan/dossiers/san-juan-san-juan-county-prosecuting-attorney/"
+      ],
+      "office_does": "The prosecuting attorney prosecutes crimes in the county's courts and advises county officials. Partisan, four-year term.",
+      "race_blurb": "Uncontested: Amy S. Vira, Prosecuting Attorney since 2023 and a longtime deputy before that, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "amy-s-vira",
+          "summary": "San Juan County Prosecuting Attorney for one term after more than a decade as a deputy prosecutor; prefers the Democratic Party; the only candidate.",
+          "highlights": [
+            "One term as Prosecuting Attorney; deputy prosecutor for over a decade before [S1]",
+            "Civil work on land use, public records and liability as well as criminal cases [S1]",
+            "Unopposed in the primary: 4,812 votes to 241 write-ins [S3]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "san-juan-san-juan-county-sheriff",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/san-juan/dossiers/san-juan-san-juan-county-sheriff/"
+      ],
+      "office_does": "The sheriff is the county's chief law enforcement officer and runs the jail and civil process. Nonpartisan in San Juan County, four-year term.",
+      "race_blurb": "Uncontested: former Sheriff Ron Krebs (2015-2022) is the only candidate.",
+      "candidates": [
+        {
+          "slug": "ronald-j-krebs",
+          "summary": "San Juan County Sheriff from 2015 to 2022 and a 19-year veteran of the office; the only candidate.",
+          "highlights": [
+            "Sheriff 2015-2022; 19 years with the Sheriff's Office [S1][S3]",
+            "Cites state accreditation, an expanded marine unit and modernized emergency communications [S1][S3]",
+            "Says the office faces recruitment, retention and morale problems [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "san-juan-san-juan-county-treasurer",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/san-juan/dossiers/san-juan-san-juan-county-treasurer/"
+      ],
+      "office_does": "The treasurer collects property taxes, receives and pays out county and district money and invests idle funds. Nonpartisan, four-year term.",
+      "race_blurb": "Uncontested: Rhonda Pederson, Treasurer since 2015, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "rhonda-pederson",
+          "summary": "San Juan County Treasurer since 2015 with 26 years at the county; the only candidate.",
+          "highlights": [
+            "Treasurer since 2015; seven years as chief accountant [S1]",
+            "Added autopay and multi-property online payment [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
           "withdrawn": false,
           "scores": {}
         }

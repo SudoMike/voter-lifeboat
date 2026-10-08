@@ -155,7 +155,7 @@ class GeneralPackagesTest(unittest.TestCase):
         self.assertEqual(["king", "snohomish", "spokane", "pierce", "clark", "kitsap", "thurston", "yakima", "whatcom",
                           "benton", "skagit", "cowlitz", "grant", "island", "lewis", "franklin", "chelan", "clallam",
                           "grays-harbor", "mason", "walla-walla", "stevens", "whitman", "douglas", "okanogan",
-                          "jefferson", "kittitas", "klickitat", "pacific", "asotin", "adams"],
+                          "jefferson", "kittitas", "klickitat", "pacific", "asotin", "adams", "skamania", "san-juan"],
                          election.APP_PACKAGES[GENERAL.id]["counties"])
 
     def test_wave2_builders_are_full_county(self):
