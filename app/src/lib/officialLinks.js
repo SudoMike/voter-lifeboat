@@ -144,6 +144,17 @@ const ELECTIONS = {
       'clallam/local-voters-pamphlet': 'https://www.clallamcountywa.gov/DocumentCenter/View/29375/2026-General-Voter-Pamphlet',
       'franklin/local-voters-pamphlet':
         'https://www.franklincountywa.gov/DocumentCenter/View/4553/2611-Franklin-County-Voters-Pamphlet-',
+      // Jefferson and Kittitas general Local Voters' Pamphlets (#31), from each
+      // package's raw/<county>/local-voters-pamphlet.pdf.url. Checked
+      // 2026-10-08: each 200 application/pdf with the pointer's sha256 (with a
+      // browser User-Agent; Jefferson's DocumentCenter link 301s to
+      // .../25551/Jeffco-Voter-Guide-2026_General_WEB first). PDF page numbers
+      // equal the printed ones. Jefferson: 16 pages (candidates pp. 6-12,
+      // measures pp. 14-15). Kittitas: 12 pages (candidates pp. 4-11, no
+      // measures).
+      'jefferson/local-voters-pamphlet': 'https://www.co.jefferson.wa.us/DocumentCenter/View/25551',
+      'kittitas/local-voters-pamphlet':
+        'https://www.co.kittitas.wa.us/uploads/auditor/elections/voters-pamphlet//General%20Pamphlet.pdf',
       // Mason general Local Voters' Pamphlet (#30), from the package's pointer
       // counties/mason/raw/mason/local-voters-pamphlet.pdf.url. Checked
       // 2026-10-08: 302 to cms2.revize.com, then 200 application/pdf with the
@@ -230,6 +241,12 @@ const ELECTIONS = {
       // #30; each 200 text/html, 2026-10-08.
       whitman: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=38',
       douglas: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=09',
+      // Jefferson's and Kittitas's dossiers cite their local pamphlets and
+      // VoteWA's guide records; the guide links any record without a page
+      // (CD, LD and Court of Appeals seats are not in either local pamphlet).
+      // #31; each 200 text/html, 2026-10-08.
+      jefferson: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=16',
+      kittitas: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=19',
       // Okanogan prints no local pamphlet; its dossiers cite VoteWA only.
       // #30; 200 text/html, 2026-10-08.
       okanogan: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=24',
