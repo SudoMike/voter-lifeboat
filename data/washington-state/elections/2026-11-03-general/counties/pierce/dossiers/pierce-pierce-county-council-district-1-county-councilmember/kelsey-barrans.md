@@ -9,6 +9,7 @@ carried_forward_from: data/washington-state/elections/2026-08-04-primary/countie
 derived_from:
   - data/washington-state/elections/2026-11-03-general/counties/pierce/raw/candidates/pierce-pierce-county-council-district-1-county-councilmember/
   - data/washington-state/elections/2026-08-04-primary/counties/pierce/dossiers/pierce-pierce-county-council-district-1-county-councilmember/kelsey-barrans.md
+  - data/washington-state/elections/2026-11-03-general/counties/pierce/raw/votewa/candidate-statements/race-186807.json
 sources:
   - id: S1
     tier: 1
@@ -66,16 +67,26 @@ sources:
     outlet: Washington Secretary of State election results, August 4, 2026 primary, Pierce County (certified; data as of 2026-09-11)
     url: https://results.vote.wa.gov/
     accessed: 2026-10-08
+  - id: S10
+    tier: 1
+    type: votewa
+    ref: VoteWA candidate record, race 186807 (Pierce County Council District No. 1, election 899), "Statement" field: the candidate's own submitted general-election statement (occupation, education, statement)
+    url: https://voter.votewa.gov/elections/candidate.ashx?e=899&r=186807&b=0&la=en&c=27
+    pointer: counties/pierce/raw/votewa/candidate-statements/race-186807.json.meta.json
+    accessed: 2026-10-08
 ---
 
 ## Background
+Her general-election statement comes from her VoteWA candidate record, where the "Statement" field holds the text she submitted (not yet marked approved for display on 2026-10-08) [S10]; the Pierce County printed local voters' pamphlet for the general could not be read (Cloudflare block).
+
 Kelsey Barrans (prefers Democratic Party) holds bachelor's and master's degrees in social work from the University of Washington, moved to Bonney Lake after college, and now lives in Graham [S5]. She has worked for six years at Green River College, where she is Director of Transformational Wellness, running a team that provides students with food-pantry access, housing funds, support for survivors of violence and help for parenting students [S4][S5]. Earlier she worked at a nonprofit domestic-violence agency, supervising staff and managing local, state and federal grants [S4][S5]. She was a Soroptimist International of Auburn member, serving as committee chair and club vice president [S4][S5].
 
-She was elected to the Pierce County Charter Review Commission for District 1 in 2025 and chaired the 21-member commission [S3][S4][S5]. Her primary pamphlet statement, summarized in the primary dossier, presented her higher-education and Charter Review Commission experience [S1]. She says she completed Emerge Washington candidate training [S4].
+She was elected to the Pierce County Charter Review Commission for District 1 in 2025 and chaired the 21-member commission [S3][S4][S5]. Her primary pamphlet statement, summarized in the primary dossier, presented her higher-education and Charter Review Commission experience [S1]. She says she completed Emerge Washington candidate training [S4]. Her general statement lists her occupation as "Social worker for domestic violence advocacy, program management, and supporting student basic needs" and says that as Charter Review chair she "led the commission as we worked together ... by collaborating, finding common ground, and compromising" [S10].
 
 In the August 4 primary she finished second of four with 6,012 votes (21.0%), behind Jerome O'Leary's 15,295 (53.5%); two other Democrats, Terrance Mayers (15.9%) and Kenneth King (9.5%), were eliminated [S9].
 
 ## Positions
+- **Statement (says she will):** says she "will prioritize Council policies that make it easier for people to stay here, like affordable housing, access to care, and rural infrastructure," names "housing people can actually afford" and "reliable roads" among the council decisions that affect the district, and closes "It's time we find common ground for the common good" [S10].
 - **Infrastructure:** says some unincorporated communities have become "islands" cut off by failing bridges and wants the council to increase funding for projects serving unincorporated Pierce County [S4][S6].
 - **Transportation:** wants public transit in towns that lack it, such as Orting, Buckley and Graham, and more road capacity on rural connectors; says creating bus service there would reduce reliance on single-occupancy vehicles [S4][S6].
 - **Housing:** says there is "no one-size fits all solution" and lists increasing density in some areas, incentives for landowners to build additional units, and rent subsidies where unused housing stock exists [S4][S6]. Answered yes to "robust investment in publicly owned housing/subsidized housing for elderly and low-income individuals/families, and zoning changes to support such housing" [S4].
@@ -106,6 +117,6 @@ In the August 4 primary she finished second of four with 6,012 votes (21.0%), be
 
 ## Scoring notes
 - Supports progressive taxes and higher developer impact fees, against an opponent with no stated tax position [S4].
-- Favors public transit expansion to rural towns and public or subsidized housing investment, alongside density and accessory-unit incentives [S4][S6].
+- Favors public transit expansion to rural towns and public or subsidized housing investment, alongside density and accessory-unit incentives; her statement lists affordable housing, access to care and rural infrastructure as priorities [S4][S6][S10].
 - Frames public safety around structural oversight of the sheriff and rural outreach services [S4].
 - First-time council candidate; her public office so far is the Charter Review Commission chair [S3][S5].
