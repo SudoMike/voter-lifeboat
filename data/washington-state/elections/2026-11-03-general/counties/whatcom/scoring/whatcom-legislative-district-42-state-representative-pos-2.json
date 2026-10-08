@@ -1,0 +1,133 @@
+{
+  "contest_slug": "whatcom-legislative-district-42-state-representative-pos-2",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/whatcom/dossiers/whatcom-legislative-district-42-state-representative-pos-2/"],
+  "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering school funding, tax structure, housing rules, health funding and criminal-justice statutes.",
+  "race_blurb": "Second-term Democrat Joe Timmons, who voted against the 2026 income tax but sees merit in a millionaires' tax, faces first-time Republican candidate Justin Pike, a sheriff's detective running on budget accountability and lower taxes. Timmons won 54% in the primary, and the two have raised similar amounts.",
+  "candidates": [
+    {
+      "slug": "joe-timmons",
+      "summary": "Second-term State Representative, Assistant Speaker Pro Tempore and former aide to Gov. Inslee, focused on state investment in Whatcom County, higher-education funding and housing supply.",
+      "highlights": [
+        "Voted against ESSB 6346 (2026 income tax) and the 2025 B&O and services tax bills, citing too little relief from other taxes [S7][S9][S10][S14]",
+        "Prime sponsor of HB 2070 for Western Washington University funding parity [S11]",
+        "States he is \"100% Pro-Choice\" and supports continued emissions reductions [S3]",
+        "Voted for ESHB 1296, the parental-rights rewrite I-1 would undo [S8]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -1,
+          "confidence": "high",
+          "citations": ["S7", "S9", "S10", "S14"],
+          "basis": "Voted no on ESSB 6346, EHB 2081 and ESSB 5814; says he sees merit in a millionaires' tax but wants drastic cuts to sales, B&O and property taxes alongside any new revenue."
+        },
+        "spending": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S2", "S11", "S16"],
+          "basis": "Campaigns on securing state funding for local projects and sponsors WWU funding parity; also cited state spending levels in his income-tax vote."
+        },
+        "housing": {
+          "score": 0,
+          "confidence": "medium",
+          "citations": ["S3", "S12"],
+          "basis": "Website centers building more housing near transit, while he voted for the EHB 1217 rent-increase limits."
+        },
+        "climate": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S3", "S5"],
+          "basis": "Says climate change is real and supports continued emissions reductions and the clean-energy economy; endorsed by Sierra Club and Washington Conservation Action; no stated position on carbon pricing."
+        },
+        "healthcare": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S3", "S11"],
+          "basis": "Cites work to lower EpiPen and inhaler costs and a medical-debt bill, measures within the existing insurance system."
+        },
+        "immigration": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S13"],
+          "basis": "Voted yes on SB 5855 limiting face coverings worn by law enforcement; no campaign statement on immigration."
+        },
+        "social": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S3", "S5"],
+          "basis": "States he is 100% pro-choice and that abortion decisions belong to patients and providers; endorsed by Planned Parenthood Advocates."
+        },
+        "parental-rights": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S8"],
+          "basis": "Voted yes on ESHB 1296, which amended the I-2081 parental-rights law, on House passage and final passage; no statement on notification or opt-outs."
+        },
+        "experience": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S4", "S17"],
+          "basis": "Second House term, Assistant Speaker Pro Tempore and 15 years in government, facing a first-time candidate."
+        }
+      }
+    },
+    {
+      "slug": "justin-pike",
+      "summary": "Whatcom County Sheriff's detective, National Guard soldier and Ferndale small-business owner running for office for the first time on affordability, budget accountability and public safety.",
+      "highlights": [
+        "Opposes tax increases and calls for rebalancing the state tax structure [S3][S7]",
+        "Would speed permitting, reassess energy-efficiency mandates and let Growth Management Act boundaries expand with growth [S3]",
+        "Supports enforcement and repeat-offender accountability alongside behavioral-health treatment [S2][S3]",
+        "Criticizes the Climate Commitment Act's cost and reporting [S8]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S3", "S7", "S8"],
+          "basis": "Platform says excessive taxation holds back business; opposed raising taxes at a May town hall and says the Climate Commitment Act taxed people out of their homes."
+        },
+        "spending": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S2", "S3", "S7", "S8"],
+          "basis": "Starts accountability with the budget, criticizes one-time funding of ongoing programs and overspending, and calls for measurable results."
+        },
+        "housing": {
+          "score": -2,
+          "confidence": "medium",
+          "citations": ["S3"],
+          "basis": "Housing platform is faster permitting, fewer energy-efficiency mandates and easier boundary expansion under the Growth Management Act."
+        },
+        "local-control": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S3"],
+          "basis": "Wants the Growth Management Act changed so municipal boundaries expand with local growth rather than on state multi-decade schedules."
+        },
+        "safety": {
+          "score": -1,
+          "confidence": "high",
+          "citations": ["S1", "S2", "S3"],
+          "basis": "Supports effective law enforcement and accountability for repeat offenders, combined with shelter, treatment and community service for minor offenses."
+        },
+        "climate": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S3", "S8"],
+          "basis": "Criticizes the Climate Commitment Act's cost and would reassess energy-efficiency mandates on homeowners."
+        },
+        "experience": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S6"],
+          "basis": "First-time candidate for public office facing a second-term incumbent."
+        }
+      }
+    }
+  ]
+}

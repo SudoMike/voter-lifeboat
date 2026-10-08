@@ -1,0 +1,115 @@
+{
+  "contest_slug": "whatcom-legislative-district-42-state-representative-pos-1",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/whatcom/dossiers/whatcom-legislative-district-42-state-representative-pos-1/"],
+  "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering school funding, tax structure, housing rules, health funding and criminal-justice statutes.",
+  "race_blurb": "Third-term Democrat Alicia Rule, who voted against the 2026 income tax and the 2025 tax bills, faces Republican Party chair Misty Flowers, who pledges lower property, sales and income taxes and more jail capacity. Rule won 56% in the primary; she campaigns on her pro-choice positions and her votes for rent-increase limits and against masked law enforcement.",
+  "candidates": [
+    {
+      "slug": "alicia-rule",
+      "summary": "Third-term State Representative, social worker and former Blaine councilmember who broke with most House Democrats to vote against the 2026 tax on income over $1 million.",
+      "highlights": [
+        "Voted against ESSB 6346 (2026 income tax) and the 2025 B&O and services tax bills [S6][S8][S9]",
+        "States she is \"100% pro-choice\" and introduced a bill to protect IVF access [S1]",
+        "Voted for the 2025 rent-increase limits and the 2026 law-enforcement mask bill [S11][S12]",
+        "Voted for ESHB 1296, the parental-rights rewrite I-1 would undo [S7]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -1,
+          "confidence": "high",
+          "citations": ["S1", "S6", "S8", "S9", "S13"],
+          "basis": "Voted no on ESSB 6346, EHB 2081 and ESSB 5814 and campaigns on voting no on tax increases, while calling the state's tax system regressive and objecting to the income tax's specifics rather than all new revenue."
+        },
+        "housing": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S11"],
+          "basis": "Voted for and campaigns on the EHB 1217 rent-increase limits, alongside zoning changes to add supply."
+        },
+        "immigration": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S12"],
+          "basis": "Voted for SB 5855 on law-enforcement face coverings and cites laws stopping masked ICE agents and limiting state data sharing with federal authorities."
+        },
+        "social": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S4"],
+          "basis": "States she is 100% pro-choice, introduced an IVF access bill and replaced Planned Parenthood funding; endorsed by Planned Parenthood in 2024."
+        },
+        "parental-rights": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S7"],
+          "basis": "Voted yes on final passage of ESHB 1296, which amended the I-2081 parental-rights law; no statement on notification or opt-outs."
+        },
+        "experience": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S5"],
+          "basis": "Third House term, committee vice chair and former Blaine councilmember, facing a challenger who has not held office."
+        }
+      }
+    },
+    {
+      "slug": "misty-flowers",
+      "summary": "Small-business owner and Whatcom County Republican Party chair running on lower taxes, spending restraint and expanded jail capacity after a 2025 county council run.",
+      "highlights": [
+        "Pledges to lower property, sales and state income taxes [S2]",
+        "Calls the state budget bloated and unaccountable and pledges spending restraint [S1][S2]",
+        "Would expand jail capacity for violent offenders and back recovery programs focused on personal responsibility [S2]",
+        "Lost the 2025 Whatcom County Council at-large race, 37% to 63% [S9]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S2", "S3", "S5"],
+          "basis": "Statement and website pledge to lower property, sales and state income taxes and say Washington is 'taxed out'; opposed regular county tax increases in 2025."
+        },
+        "spending": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S2", "S5"],
+          "basis": "Calls for restraining Olympia's spending and a less 'bloated' budget, and for performance requirements in county nonprofit contracts."
+        },
+        "housing": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S2", "S3"],
+          "basis": "Blames strict building rules and taxes for housing costs and pledges code changes to cut delays; also proposed rent subsidies in 2025."
+        },
+        "safety": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S2", "S5"],
+          "basis": "Pledges expanded jail capacity for violent offenders, criticizes drug decriminalization and housing-first programs, and backs jail time as part of breaking addiction-driven crime."
+        },
+        "immigration": {
+          "score": -1,
+          "confidence": "low",
+          "citations": ["S6"],
+          "basis": "Asked about protecting immigrants from unconstitutional enforcement, said immigration is a federal matter and pointed to federal immigration law."
+        },
+        "reform": {
+          "score": -1,
+          "confidence": "low",
+          "citations": ["S6"],
+          "basis": "Opposes ranked-choice voting as confusing and costly."
+        },
+        "experience": {
+          "score": 1,
+          "confidence": "high",
+          "citations": ["S1", "S5", "S9"],
+          "basis": "Has never held public office and runs as 'fresh leadership', though she has chaired the county Republican Party and ran for county council in 2025."
+        }
+      }
+    }
+  ]
+}
