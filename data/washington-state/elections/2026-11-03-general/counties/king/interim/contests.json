@@ -1,0 +1,3168 @@
+{
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/king/raw/kce/candidates-eid55.html",
+    "data/washington-state/elections/2026-11-03-general/counties/king/raw/kce/2026-candidates.csv"
+  ],
+  "script": "pipeline/parse_candidates.py",
+  "election": {
+    "name": "November 3, 2026 General Election",
+    "kce_eid": 55
+  },
+  "notes": "ballot_order is the candidate's position in the eid list (KCE lists candidates in ballot order); campaign_website/email come from the candidate CSV. owner 'statewide' marks Statewide Contests that the statewide package owns (assembly must dedupe them against statewide/interim/contests.json); scope uses the assemble_app_data.py scope model.",
+  "contests": [
+    {
+      "kce_contest_id": "186947",
+      "category": "Federal",
+      "office": "United States Representative",
+      "district": "Congressional District 1",
+      "slug": "congressional-district-1-united-states-representative",
+      "candidates": [
+        {
+          "kce_candidate_id": "1651889",
+          "name": "Suzan DelBene",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "suzan-delbene",
+          "ballot_order": 1,
+          "campaign_website": "www.delbeneforcongress.com",
+          "campaign_email": "info@delbeneforcongress.com",
+          "csv_jurisdiction": "CONGRESSIONAL DISTRICT 1"
+        },
+        {
+          "kce_candidate_id": "1651888",
+          "name": "Mary Silva",
+          "party_preference": "Prefers Republican Party",
+          "slug": "mary-silva",
+          "ballot_order": 2,
+          "campaign_website": "https://www.marysilvaforcongress.com/",
+          "campaign_email": "info@marysilvaforcongress.com",
+          "csv_jurisdiction": "CONGRESSIONAL DISTRICT 1"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "CONGDST",
+        "value": "1"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "186953",
+      "category": "Federal",
+      "office": "United States Representative",
+      "district": "Congressional District 7",
+      "slug": "congressional-district-7-united-states-representative",
+      "candidates": [
+        {
+          "kce_candidate_id": "1651900",
+          "name": "Pramila Jayapal",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "pramila-jayapal",
+          "ballot_order": 1,
+          "campaign_website": "www.pramilaforcongress.com",
+          "campaign_email": null,
+          "csv_jurisdiction": "CONGRESSIONAL DISTRICT 7"
+        },
+        {
+          "kce_candidate_id": "1651901",
+          "name": "Nirav Sheth",
+          "party_preference": "Prefers Republican Party",
+          "slug": "nirav-sheth",
+          "ballot_order": 2,
+          "campaign_website": "www.shethforcongress.com",
+          "campaign_email": "campaign@shethforcongress.com",
+          "csv_jurisdiction": "CONGRESSIONAL DISTRICT 7"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "CONGDST",
+        "value": "7"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "186954",
+      "category": "Federal",
+      "office": "United States Representative",
+      "district": "Congressional District 8",
+      "slug": "congressional-district-8-united-states-representative",
+      "candidates": [
+        {
+          "kce_candidate_id": "1651904",
+          "name": "Kim Schrier",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "kim-schrier",
+          "ballot_order": 1,
+          "campaign_website": "DrKimSchrier.com",
+          "campaign_email": "info@drkimschrier.com",
+          "csv_jurisdiction": "CONGRESSIONAL DISTRICT 8"
+        },
+        {
+          "kce_candidate_id": "1651903",
+          "name": "Spencer Meline",
+          "party_preference": "Prefers Republican Party",
+          "slug": "spencer-meline",
+          "ballot_order": 2,
+          "campaign_website": "www.melineforcongress.com",
+          "campaign_email": "meline2026@protonmail.com",
+          "csv_jurisdiction": "CONGRESSIONAL DISTRICT 8"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "CONGDST",
+        "value": "8"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "186955",
+      "category": "Federal",
+      "office": "United States Representative",
+      "district": "Congressional District 9",
+      "slug": "congressional-district-9-united-states-representative",
+      "candidates": [
+        {
+          "kce_candidate_id": "1651906",
+          "name": "Adam Smith",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "adam-smith",
+          "ballot_order": 1,
+          "campaign_website": "www.electadamsmith.com",
+          "campaign_email": "info@electadamsmith.com",
+          "csv_jurisdiction": "CONGRESSIONAL DISTRICT 9"
+        },
+        {
+          "kce_candidate_id": "1651905",
+          "name": "Doug Basler",
+          "party_preference": "Prefers Republican Party",
+          "slug": "doug-basler",
+          "ballot_order": 2,
+          "campaign_website": "dougbasler.com",
+          "campaign_email": "candidate@dougbasler.com",
+          "csv_jurisdiction": "CONGRESSIONAL DISTRICT 9"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "CONGDST",
+        "value": "9"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "186957",
+      "category": "State",
+      "office": "Legislative District No.  1",
+      "district": "State Representative Position No. 1",
+      "slug": "state-representative-position-no-1-legislative-district-no-1",
+      "candidates": [
+        {
+          "kce_candidate_id": "1651909",
+          "name": "Davina Duerr",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "davina-duerr",
+          "ballot_order": 1,
+          "campaign_website": "electdavina.com",
+          "campaign_email": "davina@electdavina.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 1"
+        },
+        {
+          "kce_candidate_id": "1651910",
+          "name": "Maggie Wang",
+          "party_preference": "Prefers Republican Party",
+          "slug": "maggie-wang",
+          "ballot_order": 2,
+          "campaign_website": null,
+          "campaign_email": "maggiewangld126@gmail.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 1"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "1"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "186958",
+      "category": "State",
+      "office": "Legislative District No.  1",
+      "district": "State Representative Position No. 2",
+      "slug": "state-representative-position-no-2-legislative-district-no-1",
+      "candidates": [
+        {
+          "kce_candidate_id": "1651911",
+          "name": "Shelley Kloba",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "shelley-kloba",
+          "ballot_order": 1,
+          "campaign_website": "www.votekloba.com",
+          "campaign_email": "info@votekloba.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 1"
+        },
+        {
+          "kce_candidate_id": "1651912",
+          "name": "Cliff Moon",
+          "party_preference": "Prefers Republican Party",
+          "slug": "cliff-moon",
+          "ballot_order": 2,
+          "campaign_website": null,
+          "campaign_email": null,
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 1"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "1"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "186965",
+      "category": "State",
+      "office": "Legislative District No.  5",
+      "district": "State Representative Position No. 1",
+      "slug": "state-representative-position-no-1-legislative-district-no-5",
+      "candidates": [
+        {
+          "kce_candidate_id": "1651925",
+          "name": "Zach Hall",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "zach-hall",
+          "ballot_order": 1,
+          "campaign_website": "www.electzachhall.com",
+          "campaign_email": "hello@electzachhall.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 5"
+        },
+        {
+          "kce_candidate_id": "1651926",
+          "name": "Michelle Bennett",
+          "party_preference": "Prefers Republican Party",
+          "slug": "michelle-bennett",
+          "ballot_order": 2,
+          "campaign_website": "electmichellebennett.com",
+          "campaign_email": "michelle@votembennett.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 5"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "5"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "186966",
+      "category": "State",
+      "office": "Legislative District No.  5",
+      "district": "State Representative Position No. 2",
+      "slug": "state-representative-position-no-2-legislative-district-no-5",
+      "candidates": [
+        {
+          "kce_candidate_id": "1651927",
+          "name": "Lisa Callan",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "lisa-callan",
+          "ballot_order": 1,
+          "campaign_website": "electlisacallan.org",
+          "campaign_email": "elect.lisacallan@gmail.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 5"
+        },
+        {
+          "kce_candidate_id": "1651928",
+          "name": "Patrick Peacock",
+          "party_preference": "Prefers Republican Party",
+          "slug": "patrick-peacock",
+          "ballot_order": 2,
+          "campaign_website": null,
+          "campaign_email": null,
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 5"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "5"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "186980",
+      "category": "State",
+      "office": "Legislative District No.  11",
+      "district": "State Representative Position No. 1",
+      "slug": "state-representative-position-no-1-legislative-district-no-11",
+      "candidates": [
+        {
+          "kce_candidate_id": "1651949",
+          "name": "David Hackney",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "david-hackney",
+          "ballot_order": 1,
+          "campaign_website": "hackney4the11th.com",
+          "campaign_email": null,
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 11"
+        },
+        {
+          "kce_candidate_id": "1651950",
+          "name": "Ashley Fedan",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "ashley-fedan",
+          "ballot_order": 2,
+          "campaign_website": "Electashleyfedan.com",
+          "campaign_email": "Info@electashleyfedan.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 11"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "11"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "186981",
+      "category": "State",
+      "office": "Legislative District No.  11",
+      "district": "State Representative Position No. 2",
+      "slug": "state-representative-position-no-2-legislative-district-no-11",
+      "candidates": [
+        {
+          "kce_candidate_id": "1651951",
+          "name": "Steve Bergquist",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "steve-bergquist",
+          "ballot_order": 1,
+          "campaign_website": "https://www.steve4house.com/",
+          "campaign_email": "steve4house@gmail.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 11"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "11"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "186982",
+      "category": "State",
+      "office": "Legislative District No.  12",
+      "district": "State Representative Position No. 1",
+      "slug": "state-representative-position-no-1-legislative-district-no-12",
+      "candidates": [
+        {
+          "kce_candidate_id": "1651952",
+          "name": "Brian Burnett",
+          "party_preference": "Prefers Republican Party",
+          "slug": "brian-burnett",
+          "ballot_order": 1,
+          "campaign_website": "https://www.burnettforstaterepresentative.com",
+          "campaign_email": "brian@burnettforstaterep.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 12"
+        },
+        {
+          "kce_candidate_id": "1651953",
+          "name": "Stacy Willoughby",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "stacy-willoughby",
+          "ballot_order": 2,
+          "campaign_website": "www.stacyforhouse.com",
+          "campaign_email": "stacy@stacyforhouse.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 12"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "12"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "186983",
+      "category": "State",
+      "office": "Legislative District No.  12",
+      "district": "State Representative Position No. 2",
+      "slug": "state-representative-position-no-2-legislative-district-no-12",
+      "candidates": [
+        {
+          "kce_candidate_id": "1651955",
+          "name": "Mike Steele",
+          "party_preference": "Prefers Republican Party",
+          "slug": "mike-steele",
+          "ballot_order": 1,
+          "campaign_website": "votemikesteele.com",
+          "campaign_email": "mike@votemikesteele.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 12"
+        },
+        {
+          "kce_candidate_id": "1651954",
+          "name": "Maggie Adams",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "maggie-adams",
+          "ballot_order": 2,
+          "campaign_website": "www.adamsforwashington.com",
+          "campaign_email": "campaign@adamsforwashington.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 12"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "12"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "187023",
+      "category": "State",
+      "office": "Legislative District No.  30",
+      "district": "State Senator",
+      "slug": "state-senator-legislative-district-no-30",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652030",
+          "name": "Claire Wilson",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "claire-wilson",
+          "ballot_order": 1,
+          "campaign_website": "claireforsenate.com",
+          "campaign_email": "claireforsenate30ld@gmail.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 30"
+        },
+        {
+          "kce_candidate_id": "1652031",
+          "name": "Michael Rutland",
+          "party_preference": "Prefers Republican Party",
+          "slug": "michael-rutland",
+          "ballot_order": 2,
+          "campaign_website": null,
+          "campaign_email": "rutlandforwashington@gmail.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 30"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "30"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "187024",
+      "category": "State",
+      "office": "Legislative District No.  30",
+      "district": "State Representative Position No. 1",
+      "slug": "state-representative-position-no-1-legislative-district-no-30",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652032",
+          "name": "Jamila E. Taylor",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "jamila-e-taylor",
+          "ballot_order": 1,
+          "campaign_website": "https://www.electjamilataylor.com",
+          "campaign_email": "info@electjamilataylor.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 30"
+        },
+        {
+          "kce_candidate_id": "1652033",
+          "name": "Tiffany Bowyer",
+          "party_preference": "Prefers Republican Party",
+          "slug": "tiffany-bowyer",
+          "ballot_order": 2,
+          "campaign_website": "Www.tiffanybowyer.com",
+          "campaign_email": "votetiffanyforwa@gmail.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 30"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "30"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "187025",
+      "category": "State",
+      "office": "Legislative District No.  30",
+      "district": "State Representative Position No. 2",
+      "slug": "state-representative-position-no-2-legislative-district-no-30",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652035",
+          "name": "Kristine Reeves",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "kristine-reeves",
+          "ballot_order": 1,
+          "campaign_website": "https://www.kristinereeves.com/",
+          "campaign_email": "info@kristinereeves.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 30"
+        },
+        {
+          "kce_candidate_id": "1652034",
+          "name": "Paul McDaniel",
+          "party_preference": "Prefers Independent Party",
+          "slug": "paul-mcdaniel",
+          "ballot_order": 2,
+          "campaign_website": "https://paul4washington.com",
+          "campaign_email": "vote@paul4washington.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 30"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "30"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "187026",
+      "category": "State",
+      "office": "Legislative District No.  31",
+      "district": "State Senator",
+      "slug": "state-senator-legislative-district-no-31",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652037",
+          "name": "Phil Fortunato",
+          "party_preference": "Prefers Republican Party",
+          "slug": "phil-fortunato",
+          "ballot_order": 1,
+          "campaign_website": "www.VoteFortunato.org",
+          "campaign_email": "phil@VoteFortunato.org",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 31"
+        },
+        {
+          "kce_candidate_id": "1652036",
+          "name": "Tamara Stramel",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "tamara-stramel",
+          "ballot_order": 2,
+          "campaign_website": "togetherwithtamara.com",
+          "campaign_email": "togetherwithtamara@gmail.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 31"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "31"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "187027",
+      "category": "State",
+      "office": "Legislative District No.  31",
+      "district": "State Representative Position No. 1",
+      "slug": "state-representative-position-no-1-legislative-district-no-31",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652038",
+          "name": "Drew Stokesbary",
+          "party_preference": "Prefers Republican Party",
+          "slug": "drew-stokesbary",
+          "ballot_order": 1,
+          "campaign_website": "drewstokesbary.com",
+          "campaign_email": "drew@drewstokesbary.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 31"
+        },
+        {
+          "kce_candidate_id": "1652039",
+          "name": "Stephen Szczurko-Walton",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "stephen-szczurko-walton",
+          "ballot_order": 2,
+          "campaign_website": null,
+          "campaign_email": "Stephen@stephen4district31.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 31"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "31"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "187028",
+      "category": "State",
+      "office": "Legislative District No.  31",
+      "district": "State Representative Position No. 2",
+      "slug": "state-representative-position-no-2-legislative-district-no-31",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652040",
+          "name": "Joshua Penner",
+          "party_preference": "Prefers Republican Party",
+          "slug": "joshua-penner",
+          "ballot_order": 1,
+          "campaign_website": "https://VotePenner.com",
+          "campaign_email": "Josh@VotePenner.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 31"
+        },
+        {
+          "kce_candidate_id": "1652041",
+          "name": "John Bielka",
+          "party_preference": "Prefers Democrat Party",
+          "slug": "john-bielka",
+          "ballot_order": 2,
+          "campaign_website": "Bielka31.com",
+          "campaign_email": "Johnbielka@icloud.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 31"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "31"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "187029",
+      "category": "State",
+      "office": "Legislative District No.  32",
+      "district": "State Senator",
+      "slug": "state-senator-legislative-district-no-32",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652042",
+          "name": "Cindy Ryu",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "cindy-ryu",
+          "ballot_order": 1,
+          "campaign_website": "https://www.cindyryu.com/",
+          "campaign_email": "ELECTCINDYRYU@GMAIL.COM",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 32"
+        },
+        {
+          "kce_candidate_id": "1652043",
+          "name": "Jesse Salomon",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "jesse-salomon",
+          "ballot_order": 2,
+          "campaign_website": "votesalomon.com",
+          "campaign_email": "info@votesalomon.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 32"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "32"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "187030",
+      "category": "State",
+      "office": "Legislative District No.  32",
+      "district": "State Representative Position No. 1",
+      "slug": "state-representative-position-no-1-legislative-district-no-32",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652045",
+          "name": "Keith Scully",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "keith-scully",
+          "ballot_order": 1,
+          "campaign_website": "keithscully.org",
+          "campaign_email": "keith@keithscully.org",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 32"
+        },
+        {
+          "kce_candidate_id": "1652044",
+          "name": "Danica Noble",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "danica-noble",
+          "ballot_order": 2,
+          "campaign_website": "www.electdanica.com",
+          "campaign_email": "danica@electdanica.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 32"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "32"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "187031",
+      "category": "State",
+      "office": "Legislative District No.  32",
+      "district": "State Representative Position No. 2",
+      "slug": "state-representative-position-no-2-legislative-district-no-32",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652046",
+          "name": "Lauren Davis",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "lauren-davis",
+          "ballot_order": 1,
+          "campaign_website": null,
+          "campaign_email": "lauren@electlaurendavis.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 32"
+        },
+        {
+          "kce_candidate_id": "1652047",
+          "name": "Imraan Siddiqi",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "imraan-siddiqi",
+          "ballot_order": 2,
+          "campaign_website": "https://peopleforimraan.com",
+          "campaign_email": "info@peopleforimraan.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 32"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "32"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "187032",
+      "category": "State",
+      "office": "Legislative District No.  33",
+      "district": "State Senator",
+      "slug": "state-senator-legislative-district-no-33",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652048",
+          "name": "Tina L. Orwall",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "tina-l-orwall",
+          "ballot_order": 1,
+          "campaign_website": "www.electtinaorwall.com",
+          "campaign_email": "tina.orwall@gmail.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 33"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "33"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "187033",
+      "category": "State",
+      "office": "Legislative District No.  33",
+      "district": "State Representative Position No. 1",
+      "slug": "state-representative-position-no-1-legislative-district-no-33",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652050",
+          "name": "Edwin Obras",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "edwin-obras",
+          "ballot_order": 1,
+          "campaign_website": "edwinobras.org",
+          "campaign_email": "info@edwinobras.org",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 33"
+        },
+        {
+          "kce_candidate_id": "1652049",
+          "name": "Chris Martinez",
+          "party_preference": "Prefers Republican Party",
+          "slug": "chris-martinez",
+          "ballot_order": 2,
+          "campaign_website": "ElectMartinezld33.com",
+          "campaign_email": "cmartinez121325@gmail.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 33"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "33"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "187034",
+      "category": "State",
+      "office": "Legislative District No.  33",
+      "district": "State Representative Position No. 2",
+      "slug": "state-representative-position-no-2-legislative-district-no-33",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652051",
+          "name": "Mia Su-Ling Gregerson",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "mia-su-ling-gregerson",
+          "ballot_order": 1,
+          "campaign_website": "MiaGregerson.com",
+          "campaign_email": "peopleformia@gmail.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 33"
+        },
+        {
+          "kce_candidate_id": "1652052",
+          "name": "Yuri Marinchik",
+          "party_preference": "Prefers Republican Party",
+          "slug": "yuri-marinchik",
+          "ballot_order": 2,
+          "campaign_website": null,
+          "campaign_email": "yurihr@proton.me",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 33"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "33"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "187035",
+      "category": "State",
+      "office": "Legislative District No.  34",
+      "district": "State Senator",
+      "slug": "state-senator-legislative-district-no-34",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652053",
+          "name": "Emily Alvarado",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "emily-alvarado",
+          "ballot_order": 1,
+          "campaign_website": "https://emilyalvarado.com/",
+          "campaign_email": "emily@emilyalvarado.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 34"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "34"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "187036",
+      "category": "State",
+      "office": "Legislative District No.  34",
+      "district": "State Representative Position No. 1",
+      "slug": "state-representative-position-no-1-legislative-district-no-34",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652054",
+          "name": "Brianna K. Thomas",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "brianna-k-thomas",
+          "ballot_order": 1,
+          "campaign_website": "Briannathomas.org",
+          "campaign_email": "brianna4the34th@gmail.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 34"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "34"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "187037",
+      "category": "State",
+      "office": "Legislative District No.  34",
+      "district": "State Representative Position No. 2",
+      "slug": "state-representative-position-no-2-legislative-district-no-34",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652055",
+          "name": "Joe Fitzgibbon",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "joe-fitzgibbon",
+          "ballot_order": 1,
+          "campaign_website": "www.joefitzgibbon.com",
+          "campaign_email": null,
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 34"
+        },
+        {
+          "kce_candidate_id": "1652056",
+          "name": "Mary Anito",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "mary-anito",
+          "ballot_order": 2,
+          "campaign_website": "Maryforwa.com",
+          "campaign_email": "Maryforseattle@gmail.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 34"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "34"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "187041",
+      "category": "State",
+      "office": "Legislative District No.  36",
+      "district": "State Senator",
+      "slug": "state-senator-legislative-district-no-36",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652063",
+          "name": "Noel C. Frame",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "noel-c-frame",
+          "ballot_order": 1,
+          "campaign_website": "www.noelframe.com",
+          "campaign_email": "campaign@noelframe.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 36"
+        },
+        {
+          "kce_candidate_id": "1652064",
+          "name": "Jillian England",
+          "party_preference": "Prefers Republican Party",
+          "slug": "jillian-england",
+          "ballot_order": 2,
+          "campaign_website": "www.JillianEngland.com",
+          "campaign_email": "jillian@jillianEngland.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 36"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "36"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "187042",
+      "category": "State",
+      "office": "Legislative District No.  36",
+      "district": "State Representative Position No. 1",
+      "slug": "state-representative-position-no-1-legislative-district-no-36",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652065",
+          "name": "Julia Grant Reed",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "julia-grant-reed",
+          "ballot_order": 1,
+          "campaign_website": "www.votejuliareed.com",
+          "campaign_email": "info@votejuliareed.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 36"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "36"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "187043",
+      "category": "State",
+      "office": "Legislative District No.  36",
+      "district": "State Representative Position No. 2",
+      "slug": "state-representative-position-no-2-legislative-district-no-36",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652066",
+          "name": "Liz Berry",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "liz-berry",
+          "ballot_order": 1,
+          "campaign_website": "www.lizberry.com",
+          "campaign_email": "info@lizberry.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 36"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "36"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "187044",
+      "category": "State",
+      "office": "Legislative District No.  37",
+      "district": "State Senator",
+      "slug": "state-senator-legislative-district-no-37",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652067",
+          "name": "Chipalo Street",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "chipalo-street",
+          "ballot_order": 1,
+          "campaign_website": "https://electchipalo.com/",
+          "campaign_email": "info@electchipalo.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 37"
+        },
+        {
+          "kce_candidate_id": "1652068",
+          "name": "Tatiana Brown",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "tatiana-brown",
+          "ballot_order": 2,
+          "campaign_website": "https://www.tatianaforwa.org",
+          "campaign_email": "hello@tatianaforwa.org",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 37"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "37"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "187045",
+      "category": "State",
+      "office": "Legislative District No.  37",
+      "district": "State Representative Position No. 1",
+      "slug": "state-representative-position-no-1-legislative-district-no-37",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652069",
+          "name": "Kelabe Tewolde",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "kelabe-tewolde",
+          "ballot_order": 1,
+          "campaign_website": "kelabeforwashington.com",
+          "campaign_email": "hello@kelabeforwashington.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 37"
+        },
+        {
+          "kce_candidate_id": "1652070",
+          "name": "Sharon Tomiko Santos",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "sharon-tomiko-santos",
+          "ballot_order": 2,
+          "campaign_website": null,
+          "campaign_email": "info@FriendsofSantos.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 37"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "37"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "187046",
+      "category": "State",
+      "office": "Legislative District No.  37",
+      "district": "State Representative Position No. 2",
+      "slug": "state-representative-position-no-2-legislative-district-no-37",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652071",
+          "name": "Jaelynn Scott",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "jaelynn-scott",
+          "ballot_order": 1,
+          "campaign_website": "votejaelynn.com",
+          "campaign_email": "hello@votejaelynn.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 37"
+        },
+        {
+          "kce_candidate_id": "1652072",
+          "name": "Evon McCorkle",
+          "party_preference": "Prefers Independent Party",
+          "slug": "evon-mccorkle",
+          "ballot_order": 2,
+          "campaign_website": "Voteevonmccorkle.com",
+          "campaign_email": "Voteevonmccorkle@gmail.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 37"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "37"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "187054",
+      "category": "State",
+      "office": "Legislative District No.  41",
+      "district": "State Representative Position No. 1",
+      "slug": "state-representative-position-no-1-legislative-district-no-41",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652086",
+          "name": "Janice Zahn",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "janice-zahn",
+          "ballot_order": 1,
+          "campaign_website": "janicezahn.org",
+          "campaign_email": "info@janicezahn.org",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 41"
+        },
+        {
+          "kce_candidate_id": "1652087",
+          "name": "Elle Nguyen",
+          "party_preference": "Prefers Republican Party",
+          "slug": "elle-nguyen",
+          "ballot_order": 2,
+          "campaign_website": "TheChoiceForChange.org",
+          "campaign_email": "electElle2021@gmail.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 41"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "41"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "187055",
+      "category": "State",
+      "office": "Legislative District No.  41",
+      "district": "State Representative Position No. 2",
+      "slug": "state-representative-position-no-2-legislative-district-no-41",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652089",
+          "name": "My-Linh T Thai",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "my-linh-t-thai",
+          "ballot_order": 1,
+          "campaign_website": "www.mylinhthai.com",
+          "campaign_email": "Electmylinh@gmail.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 41"
+        },
+        {
+          "kce_candidate_id": "1652088",
+          "name": "Michael Rosen",
+          "party_preference": "Prefers Independent Party",
+          "slug": "michael-rosen",
+          "ballot_order": 2,
+          "campaign_website": "rosenforwa.com",
+          "campaign_email": "michael@rosenforwa.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 41"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "41"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "187059",
+      "category": "State",
+      "office": "Legislative District No.  43",
+      "district": "State Senator",
+      "slug": "state-senator-legislative-district-no-43",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652096",
+          "name": "Jamie Pedersen",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "jamie-pedersen",
+          "ballot_order": 1,
+          "campaign_website": "https://peopleforpedersen.org/",
+          "campaign_email": "jamie@peopleforpedersen.org",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 43"
+        },
+        {
+          "kce_candidate_id": "1652097",
+          "name": "Hannah Sabio-Howell",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "hannah-sabio-howell",
+          "ballot_order": 2,
+          "campaign_website": "hannahforwashington.com",
+          "campaign_email": "info@hannahforwashington.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 43"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "43"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "187060",
+      "category": "State",
+      "office": "Legislative District No.  43",
+      "district": "State Representative Position No. 1",
+      "slug": "state-representative-position-no-1-legislative-district-no-43",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652099",
+          "name": "Nicole Macri",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "nicole-macri",
+          "ballot_order": 1,
+          "campaign_website": "https://www.votenicole.org/",
+          "campaign_email": "nicole@votenicole.org",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 43"
+        },
+        {
+          "kce_candidate_id": "1652098",
+          "name": "Alby Clendennin",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "alby-clendennin",
+          "ballot_order": 2,
+          "campaign_website": null,
+          "campaign_email": "albyforwashington@gmail.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 43"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "43"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "187061",
+      "category": "State",
+      "office": "Legislative District No.  43",
+      "district": "State Representative Position No. 2",
+      "slug": "state-representative-position-no-2-legislative-district-no-43",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652100",
+          "name": "Shaun Scott",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "shaun-scott",
+          "ballot_order": 1,
+          "campaign_website": "BolderWashington.org",
+          "campaign_email": "organizewithshaun@gmail.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 43"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "43"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "187065",
+      "category": "State",
+      "office": "Legislative District No.  45",
+      "district": "State Senator",
+      "slug": "state-senator-legislative-district-no-45",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652106",
+          "name": "Manka Dhingra",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "manka-dhingra",
+          "ballot_order": 1,
+          "campaign_website": "https://electmanka.com/",
+          "campaign_email": "info@electmanka.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 45"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "45"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "187066",
+      "category": "State",
+      "office": "Legislative District No.  45",
+      "district": "State Representative Position No. 1",
+      "slug": "state-representative-position-no-1-legislative-district-no-45",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652107",
+          "name": "Roger Goodman",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "roger-goodman",
+          "ballot_order": 1,
+          "campaign_website": "rogergoodman.org",
+          "campaign_email": "roger@rogergoodman.org",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 45"
+        },
+        {
+          "kce_candidate_id": "1652108",
+          "name": "JoAnn Tolentino",
+          "party_preference": "Prefers Republican Party",
+          "slug": "joann-tolentino",
+          "ballot_order": 2,
+          "campaign_website": null,
+          "campaign_email": "jotolentino@protonmail.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 45"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "45"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "187067",
+      "category": "State",
+      "office": "Legislative District No.  45",
+      "district": "State Representative Position No. 2",
+      "slug": "state-representative-position-no-2-legislative-district-no-45",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652109",
+          "name": "Vanessa Kritzer",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "vanessa-kritzer",
+          "ballot_order": 1,
+          "campaign_website": "https://www.electvanessakritzer.com",
+          "campaign_email": "vanessa@electvanessakritzer.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 45"
+        },
+        {
+          "kce_candidate_id": "1652110",
+          "name": "John P Gibbons",
+          "party_preference": "Prefers Republican Party",
+          "slug": "john-p-gibbons",
+          "ballot_order": 2,
+          "campaign_website": null,
+          "campaign_email": "john98045@gmail.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 45"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "45"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "187068",
+      "category": "State",
+      "office": "Legislative District No.  46",
+      "district": "State Senator",
+      "slug": "state-senator-legislative-district-no-46",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652111",
+          "name": "Javier Valdez",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "javier-valdez",
+          "ballot_order": 1,
+          "campaign_website": "javiervaldez.com",
+          "campaign_email": "javiervaldez46senate@gmail.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 46"
+        },
+        {
+          "kce_candidate_id": "1652112",
+          "name": "Sandra Stephens",
+          "party_preference": "Prefers Republican Party",
+          "slug": "sandra-stephens",
+          "ballot_order": 2,
+          "campaign_website": null,
+          "campaign_email": "Sandy.Stephens11@gmail.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 46"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "46"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "187069",
+      "category": "State",
+      "office": "Legislative District No.  46",
+      "district": "State Representative Position No. 1",
+      "slug": "state-representative-position-no-1-legislative-district-no-46",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652113",
+          "name": "Gerry Pollet",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "gerry-pollet",
+          "ballot_order": 1,
+          "campaign_website": "gerrypollet.com",
+          "campaign_email": "info@gerrypollet.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 46"
+        },
+        {
+          "kce_candidate_id": "1652114",
+          "name": "Will Dreher",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "will-dreher",
+          "ballot_order": 2,
+          "campaign_website": "willdreher.com",
+          "campaign_email": "info@willdreher.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 46"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "46"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "187070",
+      "category": "State",
+      "office": "Legislative District No.  46",
+      "district": "State Representative Position No. 2",
+      "slug": "state-representative-position-no-2-legislative-district-no-46",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652116",
+          "name": "Darya Farivar",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "darya-farivar",
+          "ballot_order": 1,
+          "campaign_website": "daryaforhouse.com",
+          "campaign_email": "info@daryaforhouse.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 46"
+        },
+        {
+          "kce_candidate_id": "1652115",
+          "name": "Rodney 'Star' Thornley",
+          "party_preference": "Prefers Independent Party",
+          "slug": "rodney-star-thornley",
+          "ballot_order": 2,
+          "campaign_website": "rthornley.com",
+          "campaign_email": "star1398105@yahoo.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 46"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "46"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "187071",
+      "category": "State",
+      "office": "Legislative District No.  47",
+      "district": "State Senator",
+      "slug": "state-senator-legislative-district-no-47",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652117",
+          "name": "Claudia Kauffman",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "claudia-kauffman",
+          "ballot_order": 1,
+          "campaign_website": "www.voteclaudiakauffman.com",
+          "campaign_email": "info@voteclaudiakauffman.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 47"
+        },
+        {
+          "kce_candidate_id": "1652118",
+          "name": "Kristina Soltys",
+          "party_preference": "Prefers Republican Party",
+          "slug": "kristina-soltys",
+          "ballot_order": 2,
+          "campaign_website": "kristinaforsenate.com",
+          "campaign_email": "kristina@kristinaforsenate.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 47"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "47"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "187072",
+      "category": "State",
+      "office": "Legislative District No.  47",
+      "district": "State Representative Position No. 1",
+      "slug": "state-representative-position-no-1-legislative-district-no-47",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652119",
+          "name": "Debra Jean Entenman",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "debra-jean-entenman",
+          "ballot_order": 1,
+          "campaign_website": "www.electdebraentenman.org",
+          "campaign_email": "INFO@electDebraEntenman.org",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 47"
+        },
+        {
+          "kce_candidate_id": "1652120",
+          "name": "Cobi Clark",
+          "party_preference": "Prefers Libertarian Party",
+          "slug": "cobi-clark",
+          "ballot_order": 2,
+          "campaign_website": "https://www.cobiclark.com/",
+          "campaign_email": "campaign@cobiclark.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 47"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "47"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "187073",
+      "category": "State",
+      "office": "Legislative District No.  47",
+      "district": "State Representative Position No. 2",
+      "slug": "state-representative-position-no-2-legislative-district-no-47",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652121",
+          "name": "Chris Stearns",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "chris-stearns",
+          "ballot_order": 1,
+          "campaign_website": "chris4wa.com",
+          "campaign_email": "info@chris4wa.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 47"
+        },
+        {
+          "kce_candidate_id": "1652122",
+          "name": "Ted Cooke",
+          "party_preference": "Prefers Republican Party",
+          "slug": "ted-cooke",
+          "ballot_order": 2,
+          "campaign_website": "tedcooke.org",
+          "campaign_email": "Ted.Cooke@outlook.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 47"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "47"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "187074",
+      "category": "State",
+      "office": "Legislative District No.  48",
+      "district": "State Senator",
+      "slug": "state-senator-legislative-district-no-48",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652123",
+          "name": "Vandana Slatter",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "vandana-slatter",
+          "ballot_order": 1,
+          "campaign_website": "vandanaslatter.com",
+          "campaign_email": "friendsofvandanaslatter@gmail.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 48"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "48"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "187075",
+      "category": "State",
+      "office": "Legislative District No.  48",
+      "district": "State Representative Position No. 1",
+      "slug": "state-representative-position-no-1-legislative-district-no-48",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652125",
+          "name": "Osman Salahuddin",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "osman-salahuddin",
+          "ballot_order": 1,
+          "campaign_website": "www.electosman.com",
+          "campaign_email": "osman@electosman.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 48"
+        },
+        {
+          "kce_candidate_id": "1652124",
+          "name": "Jeffery Poppe",
+          "party_preference": "Prefers Republican Party",
+          "slug": "jeffery-poppe",
+          "ballot_order": 2,
+          "campaign_website": null,
+          "campaign_email": "jpfordistrict48@outlook.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 48"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "48"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "187076",
+      "category": "State",
+      "office": "Legislative District No.  48",
+      "district": "State Representative Position No. 2",
+      "slug": "state-representative-position-no-2-legislative-district-no-48",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652126",
+          "name": "Jessica Forsythe",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "jessica-forsythe",
+          "ballot_order": 1,
+          "campaign_website": "voteforsythe.com",
+          "campaign_email": "info@voteforsythe.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 48"
+        },
+        {
+          "kce_candidate_id": "1652127",
+          "name": "Amy Walen",
+          "party_preference": "Prefers Democratic Party",
+          "slug": "amy-walen",
+          "ballot_order": 2,
+          "campaign_website": "https://www.voteamywalen.com/",
+          "campaign_email": "amy@amywalen.com",
+          "csv_jurisdiction": "LEGISLATIVE DISTRICT 48"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "LEGDST",
+        "value": "48"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "186671",
+      "category": "County",
+      "office": "Prosecuting Attorney",
+      "district": "",
+      "slug": "prosecuting-attorney",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652180",
+          "name": "Leesa Manion",
+          "party_preference": null,
+          "slug": "leesa-manion",
+          "ballot_order": 1,
+          "campaign_website": "leesamanion.com",
+          "campaign_email": "info@leesamanion.com",
+          "csv_jurisdiction": "KING COUNTY"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "king"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "186672",
+      "category": "County",
+      "office": "Assessor",
+      "district": "",
+      "slug": "assessor",
+      "candidates": [
+        {
+          "kce_candidate_id": "1651659",
+          "name": "Rob Foxcurran",
+          "party_preference": null,
+          "slug": "rob-foxcurran",
+          "ballot_order": 1,
+          "campaign_website": "voterobfoxcurran.com",
+          "campaign_email": "rob@voterobfoxcurran.com",
+          "csv_jurisdiction": "KING COUNTY"
+        },
+        {
+          "kce_candidate_id": "1651660",
+          "name": "Dominique M Scarimbolo",
+          "party_preference": null,
+          "slug": "dominique-m-scarimbolo",
+          "ballot_order": 2,
+          "campaign_website": "https://www.facebook.com/DominiqueforAssessor",
+          "campaign_email": "domscarimboloforkcassessor@gmail.com",
+          "csv_jurisdiction": "KING COUNTY"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "king"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "186673",
+      "category": "County",
+      "office": "Director of Elections",
+      "district": "",
+      "slug": "director-of-elections",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652181",
+          "name": "Julie Wise",
+          "party_preference": null,
+          "slug": "julie-wise",
+          "ballot_order": 1,
+          "campaign_website": "https://facebook.com/ElectJulieWise",
+          "campaign_email": "wise.julie@me.com",
+          "csv_jurisdiction": "KING COUNTY"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "king"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "186674",
+      "category": "County",
+      "office": "Metropolitan King County",
+      "district": "Council District No. 2",
+      "slug": "council-district-no-2-metropolitan-king-county",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652372",
+          "name": "Rebecca Salda\u00f1a",
+          "party_preference": null,
+          "slug": "rebecca-salda-a",
+          "ballot_order": 1,
+          "campaign_website": "www.rebeccasaldana.com",
+          "campaign_email": "info@rebeccasaldana.com",
+          "csv_jurisdiction": "COUNTY COUNCIL DISTRICT NO. 2"
+        },
+        {
+          "kce_candidate_id": "1651661",
+          "name": "Toshiko Grace Hasegawa",
+          "party_preference": null,
+          "slug": "toshiko-grace-hasegawa",
+          "ballot_order": 2,
+          "campaign_website": "http://www.votetoshiko.com",
+          "campaign_email": "hello@votetoshiko.com",
+          "csv_jurisdiction": "COUNTY COUNCIL DISTRICT NO. 2"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "KCCDST",
+        "value": "2"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "186675",
+      "category": "County",
+      "office": "Metropolitan King County",
+      "district": "Council District No. 4",
+      "slug": "council-district-no-4-metropolitan-king-county",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652220",
+          "name": "Jorge L. Bar\u00f3n",
+          "party_preference": null,
+          "slug": "jorge-l-bar-n",
+          "ballot_order": 1,
+          "campaign_website": "www.electjorgebaron.com",
+          "campaign_email": "info@electjorgebaron.com",
+          "csv_jurisdiction": "COUNTY COUNCIL DISTRICT NO. 4"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "KCCDST",
+        "value": "4"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "186676",
+      "category": "County",
+      "office": "Metropolitan King County",
+      "district": "Council District No. 6",
+      "slug": "council-district-no-6-metropolitan-king-county",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652221",
+          "name": "Claudia Balducci",
+          "party_preference": null,
+          "slug": "claudia-balducci",
+          "ballot_order": 1,
+          "campaign_website": "claudiabalducci.com",
+          "campaign_email": "claudiabalducci1@gmail.com",
+          "csv_jurisdiction": "COUNTY COUNCIL DISTRICT NO. 6"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "KCCDST",
+        "value": "6"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "186677",
+      "category": "County",
+      "office": "Metropolitan King County",
+      "district": "Council District No. 8",
+      "slug": "council-district-no-8-metropolitan-king-county",
+      "candidates": [
+        {
+          "kce_candidate_id": "1651663",
+          "name": "Teresa Mosqueda",
+          "party_preference": null,
+          "slug": "teresa-mosqueda",
+          "ballot_order": 1,
+          "campaign_website": "TeamTeresa.org",
+          "campaign_email": "info@TeamTeresa.org",
+          "csv_jurisdiction": "COUNTY COUNCIL DISTRICT NO. 8"
+        },
+        {
+          "kce_candidate_id": "1651664",
+          "name": "Nick Duda",
+          "party_preference": null,
+          "slug": "nick-duda",
+          "ballot_order": 2,
+          "campaign_website": "www.nickduda.com",
+          "campaign_email": "info@nickduda.com",
+          "csv_jurisdiction": "COUNTY COUNCIL DISTRICT NO. 8"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "KCCDST",
+        "value": "8"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "187079",
+      "category": "StateSupremeCourt",
+      "office": "Supreme Court",
+      "district": "Justice Position No. 1",
+      "slug": "justice-position-no-1-supreme-court",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652132",
+          "name": "Colleen Melody",
+          "party_preference": null,
+          "slug": "colleen-melody",
+          "ballot_order": 1,
+          "campaign_website": "https://melodyforjustice.com/",
+          "campaign_email": "hello@melodyforjustice.com",
+          "csv_jurisdiction": "SUPREME COURT"
+        },
+        {
+          "kce_candidate_id": "1652133",
+          "name": "Scott Edwards",
+          "party_preference": null,
+          "slug": "scott-edwards",
+          "ballot_order": 2,
+          "campaign_website": "votescottedwards.com",
+          "campaign_email": "info@votescottedwards.com",
+          "csv_jurisdiction": "SUPREME COURT"
+        }
+      ],
+      "owner": "statewide",
+      "scope": {
+        "kind": "STATEWIDE"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "187080",
+      "category": "StateSupremeCourt",
+      "office": "Supreme Court",
+      "district": "Justice Position No. 3",
+      "slug": "justice-position-no-3-supreme-court",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652134",
+          "name": "David Stevens",
+          "party_preference": null,
+          "slug": "david-stevens",
+          "ballot_order": 1,
+          "campaign_website": "JudgeStevensforWA.com",
+          "campaign_email": "DavidforJustice@yahoo.com",
+          "csv_jurisdiction": "SUPREME COURT"
+        },
+        {
+          "kce_candidate_id": "1652135",
+          "name": "Jaime Michelle Hawk",
+          "party_preference": null,
+          "slug": "jaime-michelle-hawk",
+          "ballot_order": 2,
+          "campaign_website": "www.judgehawk.com",
+          "campaign_email": "info@judgehawk.com",
+          "csv_jurisdiction": "SUPREME COURT"
+        }
+      ],
+      "owner": "statewide",
+      "scope": {
+        "kind": "STATEWIDE"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "187081",
+      "category": "StateSupremeCourt",
+      "office": "Supreme Court",
+      "district": "Justice Position No. 4",
+      "slug": "justice-position-no-4-supreme-court",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652270",
+          "name": "Ian Birk",
+          "party_preference": null,
+          "slug": "ian-birk",
+          "ballot_order": 1,
+          "campaign_website": "www.ianbirk.com",
+          "campaign_email": "info@ianbirk.com",
+          "csv_jurisdiction": "SUPREME COURT"
+        },
+        {
+          "kce_candidate_id": "1652271",
+          "name": "Sean O'Donnell",
+          "party_preference": null,
+          "slug": "sean-o-donnell",
+          "ballot_order": 2,
+          "campaign_website": "odonnellforjustice.com",
+          "campaign_email": "campaign@odonnellforjustice.com",
+          "csv_jurisdiction": "SUPREME COURT"
+        }
+      ],
+      "owner": "statewide",
+      "scope": {
+        "kind": "STATEWIDE"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "187082",
+      "category": "StateSupremeCourt",
+      "office": "Supreme Court",
+      "district": "Justice Position No. 5",
+      "slug": "justice-position-no-5-supreme-court",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652136",
+          "name": "Theo Angelis",
+          "party_preference": null,
+          "slug": "theo-angelis",
+          "ballot_order": 1,
+          "campaign_website": "www.justiceangaelis.com",
+          "campaign_email": "info@justiceangelis.com",
+          "csv_jurisdiction": "SUPREME COURT"
+        },
+        {
+          "kce_candidate_id": "1652137",
+          "name": "Dave Larson",
+          "party_preference": null,
+          "slug": "dave-larson",
+          "ballot_order": 2,
+          "campaign_website": "www.larsonforjustice.com",
+          "campaign_email": "campaign@larsonforjustice.com",
+          "csv_jurisdiction": "SUPREME COURT"
+        }
+      ],
+      "owner": "statewide",
+      "scope": {
+        "kind": "STATEWIDE"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "187083",
+      "category": "StateSupremeCourt",
+      "office": "Supreme Court",
+      "district": "Justice Position No. 7",
+      "slug": "justice-position-no-7-supreme-court",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652139",
+          "name": "Debra L. Stephens",
+          "party_preference": null,
+          "slug": "debra-l-stephens",
+          "ballot_order": 1,
+          "campaign_website": "https://justicestephens.com",
+          "campaign_email": "debra@debrastephenslaw.com",
+          "csv_jurisdiction": "SUPREME COURT"
+        },
+        {
+          "kce_candidate_id": "1652138",
+          "name": "Todd A. Bloom",
+          "party_preference": null,
+          "slug": "todd-a-bloom",
+          "ballot_order": 2,
+          "campaign_website": null,
+          "campaign_email": "electtoddbloom@gmail.com",
+          "csv_jurisdiction": "SUPREME COURT"
+        }
+      ],
+      "owner": "statewide",
+      "scope": {
+        "kind": "STATEWIDE"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "187084",
+      "category": "CourtOfAppeals",
+      "office": "Judge Position No. 5",
+      "district": "Court of Appeals, Division 1, District 1",
+      "slug": "court-of-appeals-division-1-district-1-judge-position-no-5",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652259",
+          "name": "David S. Mann",
+          "party_preference": null,
+          "slug": "david-s-mann",
+          "ballot_order": 1,
+          "campaign_website": null,
+          "campaign_email": "judgedavidmann@gmail.com",
+          "csv_jurisdiction": "COURT OF APPEALS, DIVISION 1, DISTRICT 1"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "king"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "187085",
+      "category": "CourtOfAppeals",
+      "office": "Judge Position No. 6",
+      "district": "Court of Appeals, Division 1, District 1",
+      "slug": "court-of-appeals-division-1-district-1-judge-position-no-6",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652260",
+          "name": "Bill A. Bowman",
+          "party_preference": null,
+          "slug": "bill-a-bowman",
+          "ballot_order": 1,
+          "campaign_website": null,
+          "campaign_email": "judgebillbowman@gmail.com",
+          "csv_jurisdiction": "COURT OF APPEALS, DIVISION 1, DISTRICT 1"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "king"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "186678",
+      "category": "DistrictCourt",
+      "office": "Northeast Electoral District",
+      "district": "Judge Position No. 1",
+      "slug": "judge-position-no-1-northeast-electoral-district",
+      "candidates": [
+        {
+          "kce_candidate_id": "1651666",
+          "name": "Jan Trasen",
+          "party_preference": null,
+          "slug": "jan-trasen",
+          "ballot_order": 1,
+          "campaign_website": "https://trasenforjudge.com",
+          "campaign_email": "trasenforjudge@gmail.com",
+          "csv_jurisdiction": "NORTHEAST ELECTORAL DISTRICT"
+        },
+        {
+          "kce_candidate_id": "1651665",
+          "name": "Bianca Tse",
+          "party_preference": null,
+          "slug": "bianca-tse",
+          "ballot_order": 2,
+          "campaign_website": "biancaforjudge.org",
+          "campaign_email": "info@biancaforjudge.org",
+          "csv_jurisdiction": "NORTHEAST ELECTORAL DISTRICT"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "JUDDST",
+        "value": "NE"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "186679",
+      "category": "DistrictCourt",
+      "office": "Northeast Electoral District",
+      "district": "Judge Position No. 2",
+      "slug": "judge-position-no-2-northeast-electoral-district",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652231",
+          "name": "Michelle Gehlsen",
+          "party_preference": null,
+          "slug": "michelle-gehlsen",
+          "ballot_order": 1,
+          "campaign_website": null,
+          "campaign_email": "retainjudgegehlsen@gmail.com",
+          "csv_jurisdiction": "NORTHEAST ELECTORAL DISTRICT"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "JUDDST",
+        "value": "NE"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "186680",
+      "category": "DistrictCourt",
+      "office": "Northeast Electoral District",
+      "district": "Judge Position No. 3",
+      "slug": "judge-position-no-3-northeast-electoral-district",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652232",
+          "name": "Lisa O'Toole",
+          "party_preference": null,
+          "slug": "lisa-o-toole",
+          "ballot_order": 1,
+          "campaign_website": null,
+          "campaign_email": "otooleforjudge@gmail.com",
+          "csv_jurisdiction": "NORTHEAST ELECTORAL DISTRICT"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "JUDDST",
+        "value": "NE"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "186681",
+      "category": "DistrictCourt",
+      "office": "Northeast Electoral District",
+      "district": "Judge Position No. 4",
+      "slug": "judge-position-no-4-northeast-electoral-district",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652233",
+          "name": "Kevin Peck",
+          "party_preference": null,
+          "slug": "kevin-peck",
+          "ballot_order": 1,
+          "campaign_website": "judgekevinpeck.com",
+          "campaign_email": "Judgekevinpeck@gmail.com",
+          "csv_jurisdiction": "NORTHEAST ELECTORAL DISTRICT"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "JUDDST",
+        "value": "NE"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "186682",
+      "category": "DistrictCourt",
+      "office": "Northeast Electoral District",
+      "district": "Judge Position No. 5",
+      "slug": "judge-position-no-5-northeast-electoral-district",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652234",
+          "name": "Jill Klinge",
+          "party_preference": null,
+          "slug": "jill-klinge",
+          "ballot_order": 1,
+          "campaign_website": null,
+          "campaign_email": "judgeklinge@gmail.com",
+          "csv_jurisdiction": "NORTHEAST ELECTORAL DISTRICT"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "JUDDST",
+        "value": "NE"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "186683",
+      "category": "DistrictCourt",
+      "office": "Northeast Electoral District",
+      "district": "Judge Position No. 6",
+      "slug": "judge-position-no-6-northeast-electoral-district",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652235",
+          "name": "Denice Gagner",
+          "party_preference": null,
+          "slug": "denice-gagner",
+          "ballot_order": 1,
+          "campaign_website": "gagnerforjudge.com",
+          "campaign_email": "gagnerforjudge@gmail.com",
+          "csv_jurisdiction": "NORTHEAST ELECTORAL DISTRICT"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "JUDDST",
+        "value": "NE"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "186684",
+      "category": "DistrictCourt",
+      "office": "Northeast Electoral District",
+      "district": "Judge Position No. 7",
+      "slug": "judge-position-no-7-northeast-electoral-district",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652236",
+          "name": "Peter Peaquin",
+          "party_preference": null,
+          "slug": "peter-peaquin",
+          "ballot_order": 1,
+          "campaign_website": "judgepeterpeaquin.com",
+          "campaign_email": "judgepeterpeaquin@gmail.com",
+          "csv_jurisdiction": "NORTHEAST ELECTORAL DISTRICT"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "JUDDST",
+        "value": "NE"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "186685",
+      "category": "DistrictCourt",
+      "office": "Shoreline Electoral District",
+      "district": "Judge Position No. 1",
+      "slug": "judge-position-no-1-shoreline-electoral-district",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652237",
+          "name": "Raul Martinez",
+          "party_preference": null,
+          "slug": "raul-martinez",
+          "ballot_order": 1,
+          "campaign_website": "www.judgeraulmartinez.org",
+          "campaign_email": "judgeraulmartinez@gmail.com",
+          "csv_jurisdiction": "SHORELINE ELECTORAL DISTRICT"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "JUDDST",
+        "value": "SH"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "186686",
+      "category": "DistrictCourt",
+      "office": "Shoreline Electoral District",
+      "district": "Judge Position No. 2",
+      "slug": "judge-position-no-2-shoreline-electoral-district",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652238",
+          "name": "Karama H. Hawkins",
+          "party_preference": null,
+          "slug": "karama-h-hawkins",
+          "ballot_order": 1,
+          "campaign_website": "Reelectjudgekaramahawkins.com",
+          "campaign_email": "Reelectjudgekaramahawkins@gmail.com",
+          "csv_jurisdiction": "SHORELINE ELECTORAL DISTRICT"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "JUDDST",
+        "value": "SH"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "186687",
+      "category": "DistrictCourt",
+      "office": "Southeast Electoral District",
+      "district": "Judge Position No. 1",
+      "slug": "judge-position-no-1-southeast-electoral-district",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652239",
+          "name": "Leah Taguba",
+          "party_preference": null,
+          "slug": "leah-taguba",
+          "ballot_order": 1,
+          "campaign_website": null,
+          "campaign_email": "judgeleahtaguba@gmail.com",
+          "csv_jurisdiction": "SOUTHEAST ELECTORAL DISTRICT"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "JUDDST",
+        "value": "SE"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "186688",
+      "category": "DistrictCourt",
+      "office": "Southeast Electoral District",
+      "district": "Judge Position No. 2",
+      "slug": "judge-position-no-2-southeast-electoral-district",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652240",
+          "name": "Matthew York",
+          "party_preference": null,
+          "slug": "matthew-york",
+          "ballot_order": 1,
+          "campaign_website": null,
+          "campaign_email": "reelectjudgeyork@gmail.com",
+          "csv_jurisdiction": "SOUTHEAST ELECTORAL DISTRICT"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "JUDDST",
+        "value": "SE"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "186689",
+      "category": "DistrictCourt",
+      "office": "Southeast Electoral District",
+      "district": "Judge Position No. 3",
+      "slug": "judge-position-no-3-southeast-electoral-district",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652241",
+          "name": "Tricia Grove Johnson",
+          "party_preference": null,
+          "slug": "tricia-grove-johnson",
+          "ballot_order": 1,
+          "campaign_website": null,
+          "campaign_email": "GROVEJOHNSONFORJUDGE@GMAIL.COM",
+          "csv_jurisdiction": "SOUTHEAST ELECTORAL DISTRICT"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "JUDDST",
+        "value": "SE"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "186690",
+      "category": "DistrictCourt",
+      "office": "Southeast Electoral District",
+      "district": "Judge Position No. 4",
+      "slug": "judge-position-no-4-southeast-electoral-district",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652242",
+          "name": "Corinna Harn",
+          "party_preference": null,
+          "slug": "corinna-harn",
+          "ballot_order": 1,
+          "campaign_website": null,
+          "campaign_email": "Committeetoreelectjudgeharn1@gmail.com",
+          "csv_jurisdiction": "SOUTHEAST ELECTORAL DISTRICT"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "JUDDST",
+        "value": "SE"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "186691",
+      "category": "DistrictCourt",
+      "office": "Southeast Electoral District",
+      "district": "Judge Position No. 5",
+      "slug": "judge-position-no-5-southeast-electoral-district",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652244",
+          "name": "Joshua C. Harris",
+          "party_preference": null,
+          "slug": "joshua-c-harris",
+          "ballot_order": 1,
+          "campaign_website": "josh4kingcounty.com",
+          "campaign_email": "info@josh4kingcounty.com",
+          "csv_jurisdiction": "SOUTHEAST ELECTORAL DISTRICT"
+        },
+        {
+          "kce_candidate_id": "1652243",
+          "name": "Heather M. Barker",
+          "party_preference": null,
+          "slug": "heather-m-barker",
+          "ballot_order": 2,
+          "campaign_website": "heatherbarkerforjudge.com",
+          "campaign_email": "heatherbarkerforjudge@gmail.com",
+          "csv_jurisdiction": "SOUTHEAST ELECTORAL DISTRICT"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "JUDDST",
+        "value": "SE"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "186692",
+      "category": "DistrictCourt",
+      "office": "Southeast Electoral District",
+      "district": "Judge Position No. 6",
+      "slug": "judge-position-no-6-southeast-electoral-district",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652245",
+          "name": "Rhonda Laumann",
+          "party_preference": null,
+          "slug": "rhonda-laumann",
+          "ballot_order": 1,
+          "campaign_website": null,
+          "campaign_email": "treasurer@andy-lo.com",
+          "csv_jurisdiction": "SOUTHEAST ELECTORAL DISTRICT"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "JUDDST",
+        "value": "SE"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "186693",
+      "category": "DistrictCourt",
+      "office": "Southwest Electoral District",
+      "district": "Judge Position No. 1",
+      "slug": "judge-position-no-1-southwest-electoral-district",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652246",
+          "name": "Brian Todd",
+          "party_preference": null,
+          "slug": "brian-todd",
+          "ballot_order": 1,
+          "campaign_website": null,
+          "campaign_email": null,
+          "csv_jurisdiction": "SOUTHWEST ELECTORAL DISTRICT"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "JUDDST",
+        "value": "SW"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "186694",
+      "category": "DistrictCourt",
+      "office": "Southwest Electoral District",
+      "district": "Judge Position No. 2",
+      "slug": "judge-position-no-2-southwest-electoral-district",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652247",
+          "name": "Andrea Samonica Jarmon",
+          "party_preference": null,
+          "slug": "andrea-samonica-jarmon",
+          "ballot_order": 1,
+          "campaign_website": "reelectjudgeandreajarmon.com",
+          "campaign_email": "friendsofandreajarmon@gmail.com",
+          "csv_jurisdiction": "SOUTHWEST ELECTORAL DISTRICT"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "JUDDST",
+        "value": "SW"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "186695",
+      "category": "DistrictCourt",
+      "office": "Southwest Electoral District",
+      "district": "Judge Position No. 3",
+      "slug": "judge-position-no-3-southwest-electoral-district",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652248",
+          "name": "Mitch Greene",
+          "party_preference": null,
+          "slug": "mitch-greene",
+          "ballot_order": 1,
+          "campaign_website": "www.mitchgreeneforjudge.com",
+          "campaign_email": "mitchgreeneforjudge@gmail.com",
+          "csv_jurisdiction": "SOUTHWEST ELECTORAL DISTRICT"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "JUDDST",
+        "value": "SW"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "186696",
+      "category": "DistrictCourt",
+      "office": "Southwest Electoral District",
+      "district": "Judge Position No. 4",
+      "slug": "judge-position-no-4-southwest-electoral-district",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652250",
+          "name": "Fa'amomoi Masaniai, Jr.",
+          "party_preference": null,
+          "slug": "fa-amomoi-masaniai-jr",
+          "ballot_order": 1,
+          "campaign_website": "reelectjudgemasaniai.com",
+          "campaign_email": "fmasaniai_jr@hotmail.com",
+          "csv_jurisdiction": "SOUTHWEST ELECTORAL DISTRICT"
+        },
+        {
+          "kce_candidate_id": "1652249",
+          "name": "Harry Steinmetz",
+          "party_preference": null,
+          "slug": "harry-steinmetz",
+          "ballot_order": 2,
+          "campaign_website": "steinmetzforjudge.com",
+          "campaign_email": "info@steinmetzforjudge.com",
+          "csv_jurisdiction": "SOUTHWEST ELECTORAL DISTRICT"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "JUDDST",
+        "value": "SW"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "186697",
+      "category": "DistrictCourt",
+      "office": "Southwest Electoral District",
+      "district": "Judge Position No. 5",
+      "slug": "judge-position-no-5-southwest-electoral-district",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652252",
+          "name": "Noel Merfeld",
+          "party_preference": null,
+          "slug": "noel-merfeld",
+          "ballot_order": 1,
+          "campaign_website": "merfeldforjudge.com",
+          "campaign_email": "merfeldforjudge@gmail.com",
+          "csv_jurisdiction": "SOUTHWEST ELECTORAL DISTRICT"
+        },
+        {
+          "kce_candidate_id": "1652251",
+          "name": "Renee Walls",
+          "party_preference": null,
+          "slug": "renee-walls",
+          "ballot_order": 2,
+          "campaign_website": "reneewallsforjudge.com",
+          "campaign_email": "reneewallsforjudge@gmail.com",
+          "csv_jurisdiction": "SOUTHWEST ELECTORAL DISTRICT"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "JUDDST",
+        "value": "SW"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "186698",
+      "category": "DistrictCourt",
+      "office": "West Electoral District",
+      "district": "Judge Position No. 1",
+      "slug": "judge-position-no-1-west-electoral-district",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652254",
+          "name": "Bardi Martin",
+          "party_preference": null,
+          "slug": "bardi-martin",
+          "ballot_order": 1,
+          "campaign_website": "judgebardimartin.com",
+          "campaign_email": "judgebardimartin@gmail.com",
+          "csv_jurisdiction": "WEST ELECTORAL DISTRICT"
+        },
+        {
+          "kce_candidate_id": "1652253",
+          "name": "Nyjat Rose-Akins",
+          "party_preference": null,
+          "slug": "nyjat-rose-akins",
+          "ballot_order": 2,
+          "campaign_website": "https://electnyjatforjudge.com/",
+          "campaign_email": "info@electnyjatforjudge.com",
+          "csv_jurisdiction": "WEST ELECTORAL DISTRICT"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "JUDDST",
+        "value": "W"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "186699",
+      "category": "DistrictCourt",
+      "office": "West Electoral District",
+      "district": "Judge Position No. 2",
+      "slug": "judge-position-no-2-west-electoral-district",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652255",
+          "name": "Kuljinder K. Dhillon",
+          "party_preference": null,
+          "slug": "kuljinder-k-dhillon",
+          "ballot_order": 1,
+          "campaign_website": null,
+          "campaign_email": "judgekuljinderdhillon@gmail.com",
+          "csv_jurisdiction": "WEST ELECTORAL DISTRICT"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "JUDDST",
+        "value": "W"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "186700",
+      "category": "DistrictCourt",
+      "office": "West Electoral District",
+      "district": "Judge Position No. 3",
+      "slug": "judge-position-no-3-west-electoral-district",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652256",
+          "name": "Rebecca Robertson",
+          "party_preference": null,
+          "slug": "rebecca-robertson",
+          "ballot_order": 1,
+          "campaign_website": null,
+          "campaign_email": "judgerebeccarobertson@gmail.com",
+          "csv_jurisdiction": "WEST ELECTORAL DISTRICT"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "JUDDST",
+        "value": "W"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "186701",
+      "category": "DistrictCourt",
+      "office": "West Electoral District",
+      "district": "Judge Position No. 4",
+      "slug": "judge-position-no-4-west-electoral-district",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652257",
+          "name": "Yvonne Chin",
+          "party_preference": null,
+          "slug": "yvonne-chin",
+          "ballot_order": 1,
+          "campaign_website": null,
+          "campaign_email": null,
+          "csv_jurisdiction": "WEST ELECTORAL DISTRICT"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "JUDDST",
+        "value": "W"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "186702",
+      "category": "DistrictCourt",
+      "office": "West Electoral District",
+      "district": "Judge Position No. 5",
+      "slug": "judge-position-no-5-west-electoral-district",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652258",
+          "name": "Kristin Shotwell",
+          "party_preference": null,
+          "slug": "kristin-shotwell",
+          "ballot_order": 1,
+          "campaign_website": null,
+          "campaign_email": "judgeshotwell@gmail.com",
+          "csv_jurisdiction": "WEST ELECTORAL DISTRICT"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "JUDDST",
+        "value": "W"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "186703",
+      "category": "City",
+      "office": "City of Seattle",
+      "district": "Council District No. 5",
+      "slug": "council-district-no-5-city-of-seattle",
+      "candidates": [
+        {
+          "kce_candidate_id": "1651668",
+          "name": "Nilu Jenks",
+          "party_preference": null,
+          "slug": "nilu-jenks",
+          "ballot_order": 1,
+          "campaign_website": "www.neighborsfornilu.org",
+          "campaign_email": "info@neighborsfornilu.com",
+          "csv_jurisdiction": "SEATTLE CITY COUNCIL DISTRICT 5"
+        },
+        {
+          "kce_candidate_id": "1651667",
+          "name": "Julie Kang",
+          "party_preference": null,
+          "slug": "julie-kang",
+          "ballot_order": 2,
+          "campaign_website": "julieforseattle.com",
+          "campaign_email": "julieforseattle@gmail.com",
+          "csv_jurisdiction": "SEATTLE CITY COUNCIL DISTRICT 5"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "SCCDST",
+        "value": "SCC5"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "186704",
+      "category": "City",
+      "office": "City of Seattle",
+      "district": "Municipal Court Judge Position No. 1",
+      "slug": "municipal-court-judge-position-no-1-city-of-seattle",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652225",
+          "name": "Cat McDowall",
+          "party_preference": null,
+          "slug": "cat-mcdowall",
+          "ballot_order": 1,
+          "campaign_website": "judgecatmcdowall.com",
+          "campaign_email": "judgecatmcdowall@gmail.com",
+          "csv_jurisdiction": "CITY OF SEATTLE"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "CITY",
+        "value": "Seattle"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "186705",
+      "category": "City",
+      "office": "City of Seattle",
+      "district": "Municipal Court Judge Position No. 2",
+      "slug": "municipal-court-judge-position-no-2-city-of-seattle",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652222",
+          "name": "Katharine Edwards",
+          "party_preference": null,
+          "slug": "katharine-edwards",
+          "ballot_order": 1,
+          "campaign_website": "edwardsforsmc.com",
+          "campaign_email": "katharineedwardsforjudge@gmail.com",
+          "csv_jurisdiction": "CITY OF SEATTLE"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "CITY",
+        "value": "Seattle"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "186706",
+      "category": "City",
+      "office": "City of Seattle",
+      "district": "Municipal Court Judge Position No. 3",
+      "slug": "municipal-court-judge-position-no-3-city-of-seattle",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652226",
+          "name": "Pooja Vaddadi",
+          "party_preference": null,
+          "slug": "pooja-vaddadi",
+          "ballot_order": 1,
+          "campaign_website": null,
+          "campaign_email": "pooja@electjudgevaddadi.com",
+          "csv_jurisdiction": "CITY OF SEATTLE"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "CITY",
+        "value": "Seattle"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "186707",
+      "category": "City",
+      "office": "City of Seattle",
+      "district": "Municipal Court Judge Position No. 4",
+      "slug": "municipal-court-judge-position-no-4-city-of-seattle",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652223",
+          "name": "Anita Crawford-Willis",
+          "party_preference": null,
+          "slug": "anita-crawford-willis",
+          "ballot_order": 1,
+          "campaign_website": null,
+          "campaign_email": "judgecrawfordwillis@gmail.com",
+          "csv_jurisdiction": "CITY OF SEATTLE"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "CITY",
+        "value": "Seattle"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "186708",
+      "category": "City",
+      "office": "City of Seattle",
+      "district": "Municipal Court Judge Position No. 5",
+      "slug": "municipal-court-judge-position-no-5-city-of-seattle",
+      "candidates": [
+        {
+          "kce_candidate_id": "1651669",
+          "name": "Gabe Rothstein",
+          "party_preference": null,
+          "slug": "gabe-rothstein",
+          "ballot_order": 1,
+          "campaign_website": "https://www.gabeforjudge.com/",
+          "campaign_email": "gabrielrothstein1975@yahoo.com",
+          "csv_jurisdiction": "CITY OF SEATTLE"
+        },
+        {
+          "kce_candidate_id": "1651670",
+          "name": "Garmon Newsom",
+          "party_preference": null,
+          "slug": "garmon-newsom",
+          "ballot_order": 2,
+          "campaign_website": "https://newsomforjudge.com/",
+          "campaign_email": "info@newsomforjudge.com",
+          "csv_jurisdiction": "CITY OF SEATTLE"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "CITY",
+        "value": "Seattle"
+      },
+      "uncontested": false
+    },
+    {
+      "kce_contest_id": "186709",
+      "category": "City",
+      "office": "City of Seattle",
+      "district": "Municipal Court Judge Position No. 6",
+      "slug": "municipal-court-judge-position-no-6-city-of-seattle",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652227",
+          "name": "Shantrice Anderson",
+          "party_preference": null,
+          "slug": "shantrice-anderson",
+          "ballot_order": 1,
+          "campaign_website": "https://andersonforjudge.com/",
+          "campaign_email": "shantrice@andersonforjudge.com",
+          "csv_jurisdiction": "CITY OF SEATTLE"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "CITY",
+        "value": "Seattle"
+      },
+      "uncontested": true
+    },
+    {
+      "kce_contest_id": "186710",
+      "category": "City",
+      "office": "City of Seattle",
+      "district": "Municipal Court Judge Position No. 7",
+      "slug": "municipal-court-judge-position-no-7-city-of-seattle",
+      "candidates": [
+        {
+          "kce_candidate_id": "1652224",
+          "name": "Damon Shadid",
+          "party_preference": null,
+          "slug": "damon-shadid",
+          "ballot_order": 1,
+          "campaign_website": "www.shadidforseattle.com",
+          "campaign_email": "shadidforseattle@gmail.com",
+          "csv_jurisdiction": "CITY OF SEATTLE"
+        }
+      ],
+      "owner": "king",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "CITY",
+        "value": "Seattle"
+      },
+      "uncontested": true
+    }
+  ]
+}

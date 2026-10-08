@@ -43,6 +43,39 @@ ELECTION_META = {
 }
 
 
+# King County Elections (KCE) raw sources per election, under
+# counties/king/raw/kce/ (read by parse_candidates.py). `eid` is KCE's own
+# election id in candidates.aspx?eid= / ballotmeasures.aspx?eid=.
+# `csv_ballot_order`: take ballot order from the CSV's Ballot Order column
+# (the primary's ballot-specific CSV) rather than from the eid list order.
+# `schema` 1 is the primary's frozen output shape; 2 adds owner/scope hints
+# and measure details (see parse_candidates.py).
+KCE_SOURCES = {
+    "2026-08-04-primary": {
+        "eid": 54,
+        "candidates_html": "candidates-eid54.html",
+        "measures_html": "ballotmeasures-eid54.html",
+        "candidates_csv": "2026-primary-candidates.csv",
+        "csv_ballot_order": True,
+        "schema": 1,
+    },
+    "2026-11-03-general": {
+        "eid": 55,
+        "candidates_html": "candidates-eid55.html",
+        "measures_html": "ballotmeasures-eid55.html",
+        "candidates_csv": "2026-candidates.csv",
+        "csv_ballot_order": False,
+        "schema": 2,
+    },
+}
+
+# The election whose dossiers an election's research plan carries forward
+# (build_research_plan.py matches contest slug + candidate name).
+PREDECESSOR = {
+    "2026-11-03-general": "2026-08-04-primary",
+}
+
+
 def active_election() -> str:
     return ACTIVE_FILE.read_text().strip()
 
