@@ -1,0 +1,58 @@
+{
+  "contest_slug": "spokane-congressional-district-5-u-s-representative",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/dossiers/spokane-congressional-district-5-u-s-representative/",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/scoring/spokane-congressional-district-5-u-s-representative.json"
+  ],
+  "verdicts": [
+    {"candidate": "michael-baumgartner", "axis": "taxes", "verdict": "upheld"},
+    {"candidate": "michael-baumgartner", "axis": "spending", "verdict": "upheld"},
+    {"candidate": "michael-baumgartner", "axis": "immigration", "verdict": "upheld"},
+    {"candidate": "michael-baumgartner", "axis": "social", "verdict": "upheld"},
+    {"candidate": "michael-baumgartner", "axis": "defense", "verdict": "upheld"},
+    {"candidate": "michael-baumgartner", "axis": "climate", "verdict": "upheld"},
+    {
+      "candidate": "michael-baumgartner",
+      "axis": "tech",
+      "verdict": "adjust",
+      "adjusted_score": 0,
+      "adjusted_confidence": "medium",
+      "note": "S14 cuts both ways: alongside the 'race with China' framing and build incentives, he said concern about data centers is warranted, that 'people take a bit of a pause' and the industry 'needs to step forward', and he introduced a bill making data centers pay for the power and water systems they need so 'no community has a data center forced into it'. That is a regulatory requirement, not light-touch; the record is genuinely mixed."
+    },
+    {"candidate": "michael-baumgartner", "axis": "reform", "verdict": "upheld"},
+    {"candidate": "michael-baumgartner", "axis": "experience", "verdict": "upheld"},
+    {"candidate": "carmela-conroy", "axis": "spending", "verdict": "upheld"},
+    {
+      "candidate": "carmela-conroy",
+      "axis": "healthcare",
+      "verdict": "adjust",
+      "adjusted_score": 1,
+      "adjusted_confidence": "medium",
+      "note": "Her own platform [S3] and pamphlet [S1] are incremental changes to the current system: restore Medicare/Medicaid funding, undo H.R. 1 eligibility rules, Medicaid for children under 19, drug-price negotiation. Single-payer appears only in one line of the Spokesman-Review's primary-night report [S4], not in her own words, which does not support the full pole_b position."
+    },
+    {"candidate": "carmela-conroy", "axis": "immigration", "verdict": "upheld"},
+    {"candidate": "carmela-conroy", "axis": "defense", "verdict": "upheld"},
+    {
+      "candidate": "carmela-conroy",
+      "axis": "social",
+      "verdict": "adjust",
+      "adjusted_score": 1,
+      "adjusted_confidence": "medium",
+      "note": "The evidence is opposition to a federal ban on gender-affirming care for minors, with decisions left to patients and doctors and 'the parents should have a say' [S6], plus the general 'keep politicians out of your doctor's office' line [S1]. There is no explicit abortion-rights, sports or anti-discrimination position, so the full +2 pole is overstated."
+    },
+    {"candidate": "carmela-conroy", "axis": "tech", "verdict": "upheld"},
+    {"candidate": "carmela-conroy", "axis": "reform", "verdict": "upheld"},
+    {"candidate": "carmela-conroy", "axis": "experience", "verdict": "upheld"}
+  ],
+  "missing": [
+    {
+      "candidate": "michael-baumgartner",
+      "axis": "healthcare",
+      "proposed_score": -1,
+      "confidence": "medium",
+      "citations": ["S5", "S16"],
+      "basis": "Official site backs a 'patient-centered' system where Americans are not 'forced to follow bureaucratic directives', working within the existing structure (rural hospital fund) [S5]; he supports the H.R. 1 Medicaid eligibility restrictions as cost-cutting [S16]. Clearly not single-payer; -1 rather than -2 because pole_a's 'protect ACA/Medicaid' does not describe him."
+    }
+  ]
+}

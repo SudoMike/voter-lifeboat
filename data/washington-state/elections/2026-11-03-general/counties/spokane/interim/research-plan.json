@@ -1,0 +1,604 @@
+{
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/interim/contests.json",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/interim/measures.json"
+  ],
+  "script": "pipeline/build_research_plan.py",
+  "contests": [
+    {
+      "contest_slug": "spokane-congressional-district-5-u-s-representative",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 5",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "michael-baumgartner",
+          "name": "Michael Baumgartner",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-5-u-s-representative/michael-baumgartner.md"
+        },
+        {
+          "slug": "carmela-conroy",
+          "name": "Carmela Conroy",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-5-u-s-representative/carmela-conroy.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-spokane-county-commissioner-district-4-commissioner",
+      "category": "County",
+      "office": "Commissioner",
+      "district": "Spokane County Commissioner District 4",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "suzanne-schmidt",
+          "name": "Suzanne Schmidt",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        },
+        {
+          "slug": "rachelle-miller",
+          "name": "Rachelle Miller",
+          "party_preference": "Prefers Independent Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-spokane-county-auditor",
+      "category": "County",
+      "office": "Auditor",
+      "district": "Spokane County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "callie-gee",
+          "name": "Callie Gee",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/spokane/dossiers/spokane-spokane-county-auditor/callie-gee.md"
+        },
+        {
+          "slug": "michael-cathcart",
+          "name": "Michael Cathcart",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/spokane/dossiers/spokane-spokane-county-auditor/michael-cathcart.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-spokane-county-clerk",
+      "category": "County",
+      "office": "Clerk",
+      "district": "Spokane County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "dave-lucas",
+          "name": "Dave Lucas",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/spokane/dossiers/spokane-spokane-county-clerk/dave-lucas.md"
+        },
+        {
+          "slug": "elliot-robison",
+          "name": "Elliot Robison",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/spokane/dossiers/spokane-spokane-county-clerk/elliot-robison.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-spokane-county-prosecuting-attorney",
+      "category": "County",
+      "office": "Prosecuting Attorney",
+      "district": "Spokane County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "preston-mccollam",
+          "name": "Preston McCollam",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/spokane/dossiers/spokane-spokane-county-prosecuting-attorney/preston-mccollam.md"
+        },
+        {
+          "slug": "danny-tarkenton",
+          "name": "Danny Tarkenton",
+          "party_preference": "States No Party Preference",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/spokane/dossiers/spokane-spokane-county-prosecuting-attorney/danny-tarkenton.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-public-utility-district-no-1-of-stevens-county-commissioner-district-2-pud-commissioner",
+      "category": "PublicUtility",
+      "office": "PUD Commissioner",
+      "district": "Public Utility District No. 1 of Stevens County Commissioner District 2",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "howie-kubik",
+          "name": "Howie Kubik",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        },
+        {
+          "slug": "andrea-morgan",
+          "name": "Andrea Morgan",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-spokane-county-district-court-judge-position-no-2",
+      "category": "Judicial",
+      "office": "Judge Position No. 2",
+      "district": "Spokane County District Court",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "mike-michael-valerien",
+          "name": "Mike (Michael) Valerien",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        },
+        {
+          "slug": "deanna-kathleen-crull",
+          "name": "Deanna Kathleen Crull",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-spokane-county-district-court-judge-position-no-4",
+      "category": "Judicial",
+      "office": "Judge Position No. 4",
+      "district": "Spokane County District Court",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "nicholas-ulrich",
+          "name": "Nicholas Ulrich",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        },
+        {
+          "slug": "michael-r-addams",
+          "name": "Michael R Addams",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-legislative-district-3-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 3",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "natasha-hill",
+          "name": "Natasha Hill",
+          "party_preference": "Prefers Democrat Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-3-state-representative-position-1/natasha-hill.md"
+        },
+        {
+          "slug": "tony-kiepe",
+          "name": "Tony Kiepe",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-3-state-representative-position-1/tony-kiepe.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-legislative-district-3-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 3",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "natalie-poulson",
+          "name": "Natalie Poulson",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-3-state-representative-position-2/natalie-poulson.md"
+        },
+        {
+          "slug": "luc-jasmin-iii",
+          "name": "Luc Jasmin III",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-3-state-representative-position-2/luc-jasmin-iii.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-legislative-district-4-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 4",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "hillary-q-pham",
+          "name": "Hillary Q. Pham",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-4-state-representative-position-1/hillary-q-pham.md"
+        },
+        {
+          "slug": "trent-maier",
+          "name": "Trent Maier",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-4-state-representative-position-1/trent-maier.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-legislative-district-4-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 4",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "rob-chase",
+          "name": "Rob Chase",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-4-state-representative-position-2/rob-chase.md"
+        },
+        {
+          "slug": "rob-tupper",
+          "name": "Rob Tupper",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-4-state-representative-position-2/rob-tupper.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-legislative-district-6-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 6",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "michaela-kelso",
+          "name": "Michaela Kelso",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-6-state-representative-position-1/michaela-kelso.md"
+        },
+        {
+          "slug": "alan-nolan",
+          "name": "Alan Nolan",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-6-state-representative-position-1/alan-nolan.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-legislative-district-6-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 6",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "jonathan-bingle",
+          "name": "Jonathan Bingle",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-6-state-representative-position-2/jonathan-bingle.md"
+        },
+        {
+          "slug": "julia-payne",
+          "name": "Julia Payne",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-6-state-representative-position-2/julia-payne.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-legislative-district-7-state-senator",
+      "category": "State",
+      "office": "State Senator",
+      "district": "Legislative District 7",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "shelly-short",
+          "name": "Shelly Short",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-7-state-senator/shelly-short.md"
+        },
+        {
+          "slug": "ronald-l-mccoy",
+          "name": "Ronald L McCoy",
+          "party_preference": "Prefers Independent Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-7-state-senator/ronald-l-mccoy.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-legislative-district-9-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 9",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "joe-schmick",
+          "name": "Joe Schmick",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-9-state-representative-position-2/joe-schmick.md"
+        },
+        {
+          "slug": "karina-wallace",
+          "name": "Karina Wallace",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-9-state-representative-position-2/karina-wallace.md"
+        }
+      ]
+    }
+  ],
+  "measures": [
+    {
+      "jurisdiction": "City of Liberty Lake",
+      "proposition": "Proposition No. 1",
+      "title": "Impose a Sales and Use Tax of One-Tenth of One Percent for the Purpose of Funding Criminal Justice Services",
+      "slug": "spokane-city-of-liberty-lake-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Town of Rockford",
+      "proposition": "Proposition No. 1",
+      "title": "Property Tax Levy for Fire Protection",
+      "slug": "spokane-town-of-rockford-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Town of Spangle",
+      "proposition": "Proposition No. 1",
+      "title": "Fire Protection Service Excess Levy",
+      "slug": "spokane-town-of-spangle-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Town of Spangle",
+      "proposition": "Proposition No. 2",
+      "title": "Police Protection Service Excess Levy",
+      "slug": "spokane-town-of-spangle-proposition-no-2",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Central Valley School District No. 356",
+      "proposition": "Proposition No. 1",
+      "title": "Replacement of Expiring Educational Programs and Operations Levy",
+      "slug": "spokane-central-valley-school-district-no-356-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Cheney School District No. 360",
+      "proposition": "Proposition No. 1",
+      "title": "Replacement Educational Programs and Operation Levy",
+      "slug": "spokane-cheney-school-district-no-360-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Cheney School District No. 360",
+      "proposition": "Proposition No. 2",
+      "title": "Replacement Capital Levy for Technology, Security and Infrastructure Improvements",
+      "slug": "spokane-cheney-school-district-no-360-proposition-no-2",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "East Valley School District No. 361",
+      "proposition": "Proposition No. 1",
+      "title": "Replacement Capital Levy for Safety, Security, Infrastructure, and Technology Improvements",
+      "slug": "spokane-east-valley-school-district-no-361-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Nine Mile Falls School District No. 325-179",
+      "proposition": "Proposition No. 1",
+      "title": "Replacement Educational Programs And Operations Levy",
+      "slug": "spokane-nine-mile-falls-school-district-no-325-179-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Nine Mile Falls School District No. 325-179",
+      "proposition": "Proposition No. 2",
+      "title": "Capital Levy for Safety, Security, and Infrastructure Improvements",
+      "slug": "spokane-nine-mile-falls-school-district-no-325-179-proposition-no-2",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Riverside School District No. 416-62",
+      "proposition": "Proposition No. 1",
+      "title": "Replacement of Expiring Educational Programs and Operations Levy",
+      "slug": "spokane-riverside-school-district-no-416-62-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Spokane School District No. 81",
+      "proposition": "Proposition No. 1",
+      "title": "Replacement of Expiring Educational Programs and Operation Levy",
+      "slug": "spokane-spokane-school-district-no-81-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "West Valley School District No. 363",
+      "proposition": "Proposition No. 1",
+      "title": "Educational Programs and Operations Replacement Levy",
+      "slug": "spokane-west-valley-school-district-no-363-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "West Valley School District No. 363",
+      "proposition": "Proposition No. 2",
+      "title": "Safety, Security and Infrastructure Improvements Replacement Levy",
+      "slug": "spokane-west-valley-school-district-no-363-proposition-no-2",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Spokane County Fire Protection District No. 2",
+      "proposition": "Proposition No. 1",
+      "title": "Proposition Reauthorizing and Continuing Regular Emergency Medical Services Property Tax Levy",
+      "slug": "spokane-spokane-county-fire-protection-district-no-2-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Spokane County Fire Protection District No. 3",
+      "proposition": "Proposition No. 1",
+      "title": "Emergency Medical Services Property Tax Levy",
+      "slug": "spokane-spokane-county-fire-protection-district-no-3-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Spokane County Fire Protection District No. 9",
+      "proposition": "Proposition No. 1",
+      "title": "Property Tax Levy for Fire Protection and Emergency Services",
+      "slug": "spokane-spokane-county-fire-protection-district-no-9-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Spokane County Fire Protection District No. 9",
+      "proposition": "Proposition No. 2",
+      "title": "Fire Station and Firefighter Safety Improvements General Obligation Bonds - $70,000,000",
+      "slug": "spokane-spokane-county-fire-protection-district-no-9-proposition-no-2",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Spokane County Fire Protection District No. 11",
+      "proposition": "Proposition No. 1",
+      "title": "Emergency Medical Services Property Tax Levy",
+      "slug": "spokane-spokane-county-fire-protection-district-no-11-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Spokane County Fire Protection District No. 12",
+      "proposition": "Proposition No. 1",
+      "title": "Emergency Medical Services Regular Property Tax Levy",
+      "slug": "spokane-spokane-county-fire-protection-district-no-12-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    }
+  ],
+  "carry_forward_from": "2026-08-04-primary"
+}

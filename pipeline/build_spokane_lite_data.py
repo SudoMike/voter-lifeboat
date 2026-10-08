@@ -25,8 +25,173 @@ OUT = COUNTY / "interim"
 # sample-ballot transcription, frozen byte-identical.
 PRIMARY = "2026-08-04-primary"
 
-GENERAL_CFG = {"name": "Spokane County"}
-GENERAL_MEASURES = {"2026-11-03-general": None}
+GENERAL_CFG = {
+    "name": "Spokane County",
+    # Measure scopes on layers COUNTY_LAYERS["spokane"] (app/src/lib/geo.js)
+    # does not have yet (#21). Each value below is what a live point query of
+    # the proposed layer returns; until the layer is added the measures are
+    # hidden and the package is partial_county.
+    #   SCHDST: gismo.spokanecounty.org .../OpenData/Boundary/MapServer/6, attr DISTRCTNAME
+    #   FIRDST: gismo.spokanecounty.org .../OpenData/Boundary/MapServer/1, attr NAME
+    #           (NAME, not CODE/SERVICE/DISTRICTID: towns that contract for
+    #           fire service, e.g. Rockford and Spangle, carry their own NAME
+    #           with the district's CODE, and the City of Cheney polygon
+    #           carries DISTRICTID 32103 like Fire District 3)
+    "unresolvable_layers": ["SCHDST", "FIRDST"],
+}
+
+# The general's local measures, transcribed 2026-10-08 from Spokane County's
+# online voters' guide on VoteWA (voter.votewa.gov/genericvoterguide.aspx?e=899&c=32;
+# spokanecounty.gov answered HTTP 403 to scripted requests, so the printed
+# local pamphlet PDF could not be fetched). Each row's ballot title is in
+# counties/spokane/interim/voter-guide-text/measure-<id>.txt. Scope values
+# were checked by a live point query of the layer at the address in the
+# comment (Census-geocoded).
+GUIDE = "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide"
+
+
+def general_measure(jurisdiction, proposition, title, scope, what_it_does, cost_line):
+    layer, value = scope
+    return {
+        "slug": f"spokane-{votewa.slugify(f'{jurisdiction}-{proposition}')}",
+        "owner": "spokane",
+        "jurisdiction": jurisdiction,
+        "proposition": proposition,
+        "title": title,
+        "scope": votewa.scope_json("spokane", (layer, value)),
+        "pamphlet_pages": [],
+        "what_it_does": what_it_does,
+        "cost_line": cost_line,
+        "pro_summary": None,
+        "con_summary": None,
+        "lean_mappings": {},
+    }
+
+
+GENERAL_MEASURES = {"2026-11-03-general": {
+    "sources": [f"{GUIDE}/voterguide.json.url"] + [f"{GUIDE}/measure-{m}.json.url" for m in (
+        7351, 7352, 7353, 7354, 7350, 7328, 7329, 7355, 7330, 7331, 7332, 7356, 7357, 7358,
+        7359, 7360, 7361, 7362, 7363, 7364)],
+    "measures": [
+        # 7351; 22710 E Country Vista Dr, Liberty Lake: Census place Liberty Lake.
+        general_measure("City of Liberty Lake", "Proposition No. 1",
+                        "Impose a Sales and Use Tax of One-Tenth of One Percent for the Purpose of Funding Criminal Justice Services",
+                        ("CITY", "Liberty Lake"),
+                        "Imposes a 0.1% city sales and use tax (RCW 82.14.450) dedicated to public safety and criminal justice services in Liberty Lake.",
+                        "0.1% sales and use tax (10 cents on a $100 purchase), projected at about $750,000 a year."),
+        # 7352; 20 W Emma St, Rockford: Census place Rockford.
+        general_measure("Town of Rockford", "Proposition No. 1", "Property Tax Levy for Fire Protection",
+                        ("CITY", "Rockford"),
+                        "Replaces an expiring one-year excess property tax levy that pays for the town's fire protection services in 2027.",
+                        "About $0.51 per $1,000 of assessed value in 2027, raising $40,934.57."),
+        # 7353; 100 N Main St, Spangle: Census place Spangle.
+        general_measure("Town of Spangle", "Proposition No. 1", "Fire Protection Service Excess Levy",
+                        ("CITY", "Spangle"),
+                        "Authorizes a one-year excess property tax levy to pay for the town's fire protection services in 2027.",
+                        "About $1.40 per $1,000 of assessed value in 2027, raising $49,000."),
+        # 7354; same point.
+        general_measure("Town of Spangle", "Proposition No. 2", "Police Protection Service Excess Levy",
+                        ("CITY", "Spangle"),
+                        "Authorizes a one-year excess property tax levy to pay for the town's police protection services in 2027.",
+                        "About $1.19 per $1,000 of assessed value in 2027, raising $28,000."),
+        # 7350; 19307 E Cataldo Ave, Spokane Valley: DISTRCTNAME 'Central Valley #356'.
+        general_measure("Central Valley School District No. 356", "Proposition No. 1",
+                        "Replacement of Expiring Educational Programs and Operations Levy",
+                        ("SCHDST", "Central Valley #356"),
+                        "Replaces an expiring educational programs and operations levy for expenses the state does not fund, including staff compensation, nurses, counselors, safety staff, music, athletics and advanced courses.",
+                        "Estimated $2.50 per $1,000 of assessed value: $48,900,000 (2028), $50,550,000 (2029), $52,400,000 (2030)."),
+        # 7328; 12414 S Andrus Rd, Cheney: DISTRCTNAME 'Cheney #360'.
+        general_measure("Cheney School District No. 360", "Proposition No. 1",
+                        "Replacement Educational Programs and Operation Levy",
+                        ("SCHDST", "Cheney #360"),
+                        "Replaces an expiring educational programs and operation levy for expenses the state does not fund, including school safety, athletics, art, music, special education and staffing above the state allocation.",
+                        "Estimated $2.10 per $1,000 of assessed value: $18,450,000 (2028), $19,000,000 (2029), $19,550,000 (2030)."),
+        # 7329; same point.
+        general_measure("Cheney School District No. 360", "Proposition No. 2",
+                        "Replacement Capital Levy for Technology, Security and Infrastructure Improvements",
+                        ("SCHDST", "Cheney #360"),
+                        "Replaces an expiring capital levy for instructional technology, security cameras and entry controls, and other safety infrastructure.",
+                        "Estimated $0.10, $0.15 and $0.20 per $1,000 of assessed value: $880,000 (2028), $1,350,000 (2029), $1,900,000 (2030)."),
+        # 7355; 3830 N Sullivan Rd, Spokane Valley: DISTRCTNAME 'East Valley #361'.
+        general_measure("East Valley School District No. 361", "Proposition No. 1",
+                        "Replacement Capital Levy for Safety, Security, Infrastructure, and Technology Improvements",
+                        ("SCHDST", "East Valley #361"),
+                        "Replaces an expiring capital levy for safety, security, parking and traffic improvements, plumbing, HVAC, roof and electrical replacement, and educational technology and cybersecurity.",
+                        "Estimated $0.99 per $1,000 of assessed value: $6,793,300 (2027), $6,996,996 (2028)."),
+        # 7330; 10110 W Charles Rd, Nine Mile Falls: DISTRCTNAME 'Nine Mile Falls #325'.
+        general_measure("Nine Mile Falls School District No. 325-179", "Proposition No. 1",
+                        "Replacement Educational Programs And Operations Levy",
+                        ("SCHDST", "Nine Mile Falls #325"),
+                        "Replaces an expiring educational programs and operations levy for expenses the state does not fund, including safety, music, arts, nurses, counselors, class size reduction, athletics, transportation and technology.",
+                        "Estimated $2.10 per $1,000 of assessed value: $4,354,837 (2028), $4,428,827 (2029), $4,504,075 (2030)."),
+        # 7331; same point.
+        general_measure("Nine Mile Falls School District No. 325-179", "Proposition No. 2",
+                        "Capital Levy for Safety, Security, and Infrastructure Improvements",
+                        ("SCHDST", "Nine Mile Falls #325"),
+                        "A new six-year capital levy to replace a failing roof and condemned portable classrooms at Lakeside High School and modernize security, fire systems, facilities and infrastructure district-wide.",
+                        "Estimated $0.38 per $1,000 of assessed value each year 2027-2032, from $774,853 (2027) to $842,954 (2032)."),
+        # 7332; 34515 N Newport Hwy, Chattaroy: DISTRCTNAME 'Riverside #416'.
+        general_measure("Riverside School District No. 416-62", "Proposition No. 1",
+                        "Replacement of Expiring Educational Programs and Operations Levy",
+                        ("SCHDST", "Riverside #416"),
+                        "Replaces an expiring educational programs and operations levy for programs, services and staff the state does not fund, including electives, vocational education, nurses, counselors, safety, performing arts and athletics.",
+                        "Estimated $1.58 per $1,000 of assessed value: $3,996,811 (2028), $4,116,715 (2029), $4,240,217 (2030)."),
+        # 7356; 808 W Spokane Falls Blvd, Spokane: DISTRCTNAME 'Spokane #81'.
+        general_measure("Spokane School District No. 81", "Proposition No. 1",
+                        "Replacement of Expiring Educational Programs and Operation Levy",
+                        ("SCHDST", "Spokane #81"),
+                        "Replaces Spokane Public Schools' expiring educational programs and operation levy for expenses the state does not fund, including class size, special education, nurses, counselors, safety staff, music and athletics.",
+                        "Estimated $2.50 per $1,000 of assessed value: $107,000,000 (2028), $111,000,000 (2029), $115,000,000 (2030)."),
+        # 7357; 2805 N Argonne Rd, Spokane Valley (Millwood): DISTRCTNAME 'West Valley #363'.
+        general_measure("West Valley School District No. 363", "Proposition No. 1",
+                        "Educational Programs and Operations Replacement Levy",
+                        ("SCHDST", "West Valley #363"),
+                        "Replaces an expiring educational programs and operations levy for expenses the state does not fund, including smaller classes, advanced courses, nurses, counselors, technology, safety, music, athletics and facility maintenance.",
+                        "Estimated $2.50 per $1,000 of assessed value: $10,479,522 (2028), $10,793,908 (2029), $10,955,816 (2030)."),
+        # 7358; same point.
+        general_measure("West Valley School District No. 363", "Proposition No. 2",
+                        "Safety, Security and Infrastructure Improvements Replacement Levy",
+                        ("SCHDST", "West Valley #363"),
+                        "Replaces an expiring capital levy for entrance security, door locks and cameras, HVAC replacement at Spokane Valley High and a library addition at Pasadena Park Elementary.",
+                        "Estimated $1.00 per $1,000 of assessed value: $4,191,809 (2028), $4,317,563 (2029)."),
+        # 7359; 102 E Main St, Fairfield: NAME 'Fire District 2'.
+        general_measure("Spokane County Fire Protection District No. 2", "Proposition No. 1",
+                        "Proposition Reauthorizing and Continuing Regular Emergency Medical Services Property Tax Levy",
+                        ("FIRDST", "Fire District 2"),
+                        "Renews the district's regular emergency medical services property tax levy for six years.",
+                        "$0.50 per $1,000 of assessed value a year for six years, collected beginning in 2027."),
+        # 7360; 12414 S Andrus Rd, Cheney (unincorporated): NAME 'Fire District 3'.
+        general_measure("Spokane County Fire Protection District No. 3", "Proposition No. 1",
+                        "Emergency Medical Services Property Tax Levy",
+                        ("FIRDST", "Fire District 3"),
+                        "Authorizes a regular emergency medical services property tax levy for six years.",
+                        "Up to $0.50 per $1,000 of assessed value a year for six years, collected beginning in 2027."),
+        # 7361; 3801 E Farwell Rd, Mead: NAME 'Fire District 9'.
+        general_measure("Spokane County Fire Protection District No. 9", "Proposition No. 1",
+                        "Property Tax Levy for Fire Protection and Emergency Services",
+                        ("FIRDST", "Fire District 9"),
+                        "Restores (lifts) the district's regular property tax levy to $1.50 per $1,000 and allows levy revenue to grow up to 6% a year for five years, the final amount becoming the base for later limits.",
+                        "Levy rate restored to $1.50 per $1,000 of assessed value, with up to 6% annual revenue growth for the next five years."),
+        # 7362; same point.
+        general_measure("Spokane County Fire Protection District No. 9", "Proposition No. 2",
+                        "Fire Station and Firefighter Safety Improvements General Obligation Bonds - $70,000,000",
+                        ("FIRDST", "Fire District 9"),
+                        "Authorizes $70,000,000 in general obligation bonds to renovate, modernize, construct and replace fire stations and build a training building, repaid by excess property taxes.",
+                        "$70,000,000 in bonds maturing within 20 years, repaid by annual excess property taxes (no rate is stated in the ballot title)."),
+        # 7363; interior point (-117.1703, 47.43431): NAME 'Fire District 11'.
+        general_measure("Spokane County Fire Protection District No. 11", "Proposition No. 1",
+                        "Emergency Medical Services Property Tax Levy",
+                        ("FIRDST", "Fire District 11"),
+                        "Authorizes a regular emergency medical services property tax levy for six years.",
+                        "$0.35 per $1,000 of assessed value a year for six years, collected beginning in 2027."),
+        # 7364; 300 N Main St, Latah: NAME 'Fire District 12'.
+        general_measure("Spokane County Fire Protection District No. 12", "Proposition No. 1",
+                        "Emergency Medical Services Regular Property Tax Levy",
+                        ("FIRDST", "Fire District 12"),
+                        "Authorizes a regular emergency medical services property tax levy for six years.",
+                        "$0.50 per $1,000 of assessed value a year for six years, collected 2027 through 2032."),
+    ],
+}}
 
 
 def general_override(r, unresolvable):
@@ -40,11 +205,22 @@ def general_override(r, unresolvable):
         n = votewa.district_number(race)
         return "Judicial", "Spokane County District Court", f"Judge Position No. {n}", ("COUNTY", None)
     if dtype == "PUBLIC UTILITY":
-        # No Spokane PUD commissioner-district layer is configured in geo.js.
+        # 'PUBLIC UTILITY DISTRICT 1' is Public Utility District No. 1 of
+        # Stevens County (#21): VoteWA's voters' guide gives the race district
+        # id UTL330001 (33 = Stevens) with ballot counties 'Spokane, Stevens',
+        # and both candidates live in Stevens County. Spokane County has no
+        # PUD of its own (the DOR PUD2025 layer has no Spokane feature). In
+        # the general the whole PUD votes for each commissioner district's
+        # seat (RCW 54.12.010), so the Spokane electorate is the Stevens PUD
+        # territory inside Spokane County. No official boundary layer for it
+        # is configured; the closest public layer is Spokane County's Water
+        # Districts (OpenData/Boundary/MapServer/10, NAME 'Stevens County
+        # PUD'), which maps PUD water-service areas, not certified electoral
+        # boundaries. The scope value is that NAME.
         n = votewa.district_number(race)
         unresolvable.add("PUDDST")
-        return ("PublicUtility", f"Public Utility District No. 1 Commissioner District {n}", "PUD Commissioner",
-                ("PUDDST", str(n)))
+        return ("PublicUtility", f"Public Utility District No. 1 of Stevens County Commissioner District {n}",
+                "PUD Commissioner", ("PUDDST", "Stevens County PUD"))
     return None
 
 

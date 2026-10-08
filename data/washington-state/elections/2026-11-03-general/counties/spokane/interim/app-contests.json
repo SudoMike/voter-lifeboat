@@ -2,12 +2,32 @@
   "county": "spokane",
   "script": "pipeline/build_spokane_lite_data.py",
   "derived_from": [
-    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/candidate-list.csv.url"
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/candidate-list.csv.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/voterguide.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7351.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7352.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7353.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7354.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7350.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7328.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7329.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7355.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7330.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7331.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7332.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7356.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7357.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7358.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7359.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7360.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7361.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7362.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7363.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7364.json.url"
   ],
   "coverage": "partial_county",
   "notes": [
-    "Measures not curated yet for this election: app-measures.json is empty because no one has transcribed this county's local measures, not because the ballot has none.",
-    "Unresolvable district scopes (no queryable official boundary): PUDDST. Contests/measures scoped to them are hidden rather than shown to the wrong voters."
+    "Unresolvable district scopes (no queryable official boundary): FIRDST, PUDDST, SCHDST. Contests/measures scoped to them are hidden rather than shown to the wrong voters."
   ],
   "contests": [
     {
@@ -315,16 +335,16 @@
       ]
     },
     {
-      "slug": "spokane-public-utility-district-no-1-commissioner-district-2-pud-commissioner",
+      "slug": "spokane-public-utility-district-no-1-of-stevens-county-commissioner-district-2-pud-commissioner",
       "owner": "spokane",
       "category": "PublicUtility",
       "office": "PUD Commissioner",
-      "district": "Public Utility District No. 1 Commissioner District 2",
+      "district": "Public Utility District No. 1 of Stevens County Commissioner District 2",
       "scope": {
         "kind": "DISTRICT",
         "county": "spokane",
         "layer": "PUDDST",
-        "value": "2"
+        "value": "Stevens County PUD"
       },
       "office_does": null,
       "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Spokane County. Candidate scoring is not complete for this county yet.",

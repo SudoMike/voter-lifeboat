@@ -2,12 +2,413 @@
   "county": "spokane",
   "script": "pipeline/build_spokane_lite_data.py",
   "derived_from": [
-    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/candidate-list.csv.url"
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/candidate-list.csv.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/voterguide.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7351.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7352.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7353.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7354.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7350.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7328.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7329.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7355.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7330.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7331.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7332.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7356.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7357.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7358.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7359.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7360.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7361.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7362.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7363.json.url",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/raw/votewa/voter-guide/measure-7364.json.url"
   ],
   "coverage": "partial_county",
   "notes": [
-    "Measures not curated yet for this election: app-measures.json is empty because no one has transcribed this county's local measures, not because the ballot has none.",
-    "Unresolvable district scopes (no queryable official boundary): PUDDST. Contests/measures scoped to them are hidden rather than shown to the wrong voters."
+    "Unresolvable district scopes (no queryable official boundary): FIRDST, PUDDST, SCHDST. Contests/measures scoped to them are hidden rather than shown to the wrong voters."
   ],
-  "measures": []
+  "measures": [
+    {
+      "slug": "spokane-city-of-liberty-lake-proposition-no-1",
+      "owner": "spokane",
+      "jurisdiction": "City of Liberty Lake",
+      "proposition": "Proposition No. 1",
+      "title": "Impose a Sales and Use Tax of One-Tenth of One Percent for the Purpose of Funding Criminal Justice Services",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "spokane",
+        "layer": "CITY",
+        "value": "Liberty Lake"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Imposes a 0.1% city sales and use tax (RCW 82.14.450) dedicated to public safety and criminal justice services in Liberty Lake.",
+      "cost_line": "0.1% sales and use tax (10 cents on a $100 purchase), projected at about $750,000 a year.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {}
+    },
+    {
+      "slug": "spokane-town-of-rockford-proposition-no-1",
+      "owner": "spokane",
+      "jurisdiction": "Town of Rockford",
+      "proposition": "Proposition No. 1",
+      "title": "Property Tax Levy for Fire Protection",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "spokane",
+        "layer": "CITY",
+        "value": "Rockford"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Replaces an expiring one-year excess property tax levy that pays for the town's fire protection services in 2027.",
+      "cost_line": "About $0.51 per $1,000 of assessed value in 2027, raising $40,934.57.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {}
+    },
+    {
+      "slug": "spokane-town-of-spangle-proposition-no-1",
+      "owner": "spokane",
+      "jurisdiction": "Town of Spangle",
+      "proposition": "Proposition No. 1",
+      "title": "Fire Protection Service Excess Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "spokane",
+        "layer": "CITY",
+        "value": "Spangle"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Authorizes a one-year excess property tax levy to pay for the town's fire protection services in 2027.",
+      "cost_line": "About $1.40 per $1,000 of assessed value in 2027, raising $49,000.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {}
+    },
+    {
+      "slug": "spokane-town-of-spangle-proposition-no-2",
+      "owner": "spokane",
+      "jurisdiction": "Town of Spangle",
+      "proposition": "Proposition No. 2",
+      "title": "Police Protection Service Excess Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "spokane",
+        "layer": "CITY",
+        "value": "Spangle"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Authorizes a one-year excess property tax levy to pay for the town's police protection services in 2027.",
+      "cost_line": "About $1.19 per $1,000 of assessed value in 2027, raising $28,000.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {}
+    },
+    {
+      "slug": "spokane-central-valley-school-district-no-356-proposition-no-1",
+      "owner": "spokane",
+      "jurisdiction": "Central Valley School District No. 356",
+      "proposition": "Proposition No. 1",
+      "title": "Replacement of Expiring Educational Programs and Operations Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "spokane",
+        "layer": "SCHDST",
+        "value": "Central Valley #356"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Replaces an expiring educational programs and operations levy for expenses the state does not fund, including staff compensation, nurses, counselors, safety staff, music, athletics and advanced courses.",
+      "cost_line": "Estimated $2.50 per $1,000 of assessed value: $48,900,000 (2028), $50,550,000 (2029), $52,400,000 (2030).",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {}
+    },
+    {
+      "slug": "spokane-cheney-school-district-no-360-proposition-no-1",
+      "owner": "spokane",
+      "jurisdiction": "Cheney School District No. 360",
+      "proposition": "Proposition No. 1",
+      "title": "Replacement Educational Programs and Operation Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "spokane",
+        "layer": "SCHDST",
+        "value": "Cheney #360"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Replaces an expiring educational programs and operation levy for expenses the state does not fund, including school safety, athletics, art, music, special education and staffing above the state allocation.",
+      "cost_line": "Estimated $2.10 per $1,000 of assessed value: $18,450,000 (2028), $19,000,000 (2029), $19,550,000 (2030).",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {}
+    },
+    {
+      "slug": "spokane-cheney-school-district-no-360-proposition-no-2",
+      "owner": "spokane",
+      "jurisdiction": "Cheney School District No. 360",
+      "proposition": "Proposition No. 2",
+      "title": "Replacement Capital Levy for Technology, Security and Infrastructure Improvements",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "spokane",
+        "layer": "SCHDST",
+        "value": "Cheney #360"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Replaces an expiring capital levy for instructional technology, security cameras and entry controls, and other safety infrastructure.",
+      "cost_line": "Estimated $0.10, $0.15 and $0.20 per $1,000 of assessed value: $880,000 (2028), $1,350,000 (2029), $1,900,000 (2030).",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {}
+    },
+    {
+      "slug": "spokane-east-valley-school-district-no-361-proposition-no-1",
+      "owner": "spokane",
+      "jurisdiction": "East Valley School District No. 361",
+      "proposition": "Proposition No. 1",
+      "title": "Replacement Capital Levy for Safety, Security, Infrastructure, and Technology Improvements",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "spokane",
+        "layer": "SCHDST",
+        "value": "East Valley #361"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Replaces an expiring capital levy for safety, security, parking and traffic improvements, plumbing, HVAC, roof and electrical replacement, and educational technology and cybersecurity.",
+      "cost_line": "Estimated $0.99 per $1,000 of assessed value: $6,793,300 (2027), $6,996,996 (2028).",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {}
+    },
+    {
+      "slug": "spokane-nine-mile-falls-school-district-no-325-179-proposition-no-1",
+      "owner": "spokane",
+      "jurisdiction": "Nine Mile Falls School District No. 325-179",
+      "proposition": "Proposition No. 1",
+      "title": "Replacement Educational Programs And Operations Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "spokane",
+        "layer": "SCHDST",
+        "value": "Nine Mile Falls #325"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Replaces an expiring educational programs and operations levy for expenses the state does not fund, including safety, music, arts, nurses, counselors, class size reduction, athletics, transportation and technology.",
+      "cost_line": "Estimated $2.10 per $1,000 of assessed value: $4,354,837 (2028), $4,428,827 (2029), $4,504,075 (2030).",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {}
+    },
+    {
+      "slug": "spokane-nine-mile-falls-school-district-no-325-179-proposition-no-2",
+      "owner": "spokane",
+      "jurisdiction": "Nine Mile Falls School District No. 325-179",
+      "proposition": "Proposition No. 2",
+      "title": "Capital Levy for Safety, Security, and Infrastructure Improvements",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "spokane",
+        "layer": "SCHDST",
+        "value": "Nine Mile Falls #325"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "A new six-year capital levy to replace a failing roof and condemned portable classrooms at Lakeside High School and modernize security, fire systems, facilities and infrastructure district-wide.",
+      "cost_line": "Estimated $0.38 per $1,000 of assessed value each year 2027-2032, from $774,853 (2027) to $842,954 (2032).",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {}
+    },
+    {
+      "slug": "spokane-riverside-school-district-no-416-62-proposition-no-1",
+      "owner": "spokane",
+      "jurisdiction": "Riverside School District No. 416-62",
+      "proposition": "Proposition No. 1",
+      "title": "Replacement of Expiring Educational Programs and Operations Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "spokane",
+        "layer": "SCHDST",
+        "value": "Riverside #416"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Replaces an expiring educational programs and operations levy for programs, services and staff the state does not fund, including electives, vocational education, nurses, counselors, safety, performing arts and athletics.",
+      "cost_line": "Estimated $1.58 per $1,000 of assessed value: $3,996,811 (2028), $4,116,715 (2029), $4,240,217 (2030).",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {}
+    },
+    {
+      "slug": "spokane-spokane-school-district-no-81-proposition-no-1",
+      "owner": "spokane",
+      "jurisdiction": "Spokane School District No. 81",
+      "proposition": "Proposition No. 1",
+      "title": "Replacement of Expiring Educational Programs and Operation Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "spokane",
+        "layer": "SCHDST",
+        "value": "Spokane #81"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Replaces Spokane Public Schools' expiring educational programs and operation levy for expenses the state does not fund, including class size, special education, nurses, counselors, safety staff, music and athletics.",
+      "cost_line": "Estimated $2.50 per $1,000 of assessed value: $107,000,000 (2028), $111,000,000 (2029), $115,000,000 (2030).",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {}
+    },
+    {
+      "slug": "spokane-west-valley-school-district-no-363-proposition-no-1",
+      "owner": "spokane",
+      "jurisdiction": "West Valley School District No. 363",
+      "proposition": "Proposition No. 1",
+      "title": "Educational Programs and Operations Replacement Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "spokane",
+        "layer": "SCHDST",
+        "value": "West Valley #363"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Replaces an expiring educational programs and operations levy for expenses the state does not fund, including smaller classes, advanced courses, nurses, counselors, technology, safety, music, athletics and facility maintenance.",
+      "cost_line": "Estimated $2.50 per $1,000 of assessed value: $10,479,522 (2028), $10,793,908 (2029), $10,955,816 (2030).",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {}
+    },
+    {
+      "slug": "spokane-west-valley-school-district-no-363-proposition-no-2",
+      "owner": "spokane",
+      "jurisdiction": "West Valley School District No. 363",
+      "proposition": "Proposition No. 2",
+      "title": "Safety, Security and Infrastructure Improvements Replacement Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "spokane",
+        "layer": "SCHDST",
+        "value": "West Valley #363"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Replaces an expiring capital levy for entrance security, door locks and cameras, HVAC replacement at Spokane Valley High and a library addition at Pasadena Park Elementary.",
+      "cost_line": "Estimated $1.00 per $1,000 of assessed value: $4,191,809 (2028), $4,317,563 (2029).",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {}
+    },
+    {
+      "slug": "spokane-spokane-county-fire-protection-district-no-2-proposition-no-1",
+      "owner": "spokane",
+      "jurisdiction": "Spokane County Fire Protection District No. 2",
+      "proposition": "Proposition No. 1",
+      "title": "Proposition Reauthorizing and Continuing Regular Emergency Medical Services Property Tax Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "spokane",
+        "layer": "FIRDST",
+        "value": "Fire District 2"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Renews the district's regular emergency medical services property tax levy for six years.",
+      "cost_line": "$0.50 per $1,000 of assessed value a year for six years, collected beginning in 2027.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {}
+    },
+    {
+      "slug": "spokane-spokane-county-fire-protection-district-no-3-proposition-no-1",
+      "owner": "spokane",
+      "jurisdiction": "Spokane County Fire Protection District No. 3",
+      "proposition": "Proposition No. 1",
+      "title": "Emergency Medical Services Property Tax Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "spokane",
+        "layer": "FIRDST",
+        "value": "Fire District 3"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Authorizes a regular emergency medical services property tax levy for six years.",
+      "cost_line": "Up to $0.50 per $1,000 of assessed value a year for six years, collected beginning in 2027.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {}
+    },
+    {
+      "slug": "spokane-spokane-county-fire-protection-district-no-9-proposition-no-1",
+      "owner": "spokane",
+      "jurisdiction": "Spokane County Fire Protection District No. 9",
+      "proposition": "Proposition No. 1",
+      "title": "Property Tax Levy for Fire Protection and Emergency Services",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "spokane",
+        "layer": "FIRDST",
+        "value": "Fire District 9"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Restores (lifts) the district's regular property tax levy to $1.50 per $1,000 and allows levy revenue to grow up to 6% a year for five years, the final amount becoming the base for later limits.",
+      "cost_line": "Levy rate restored to $1.50 per $1,000 of assessed value, with up to 6% annual revenue growth for the next five years.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {}
+    },
+    {
+      "slug": "spokane-spokane-county-fire-protection-district-no-9-proposition-no-2",
+      "owner": "spokane",
+      "jurisdiction": "Spokane County Fire Protection District No. 9",
+      "proposition": "Proposition No. 2",
+      "title": "Fire Station and Firefighter Safety Improvements General Obligation Bonds - $70,000,000",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "spokane",
+        "layer": "FIRDST",
+        "value": "Fire District 9"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Authorizes $70,000,000 in general obligation bonds to renovate, modernize, construct and replace fire stations and build a training building, repaid by excess property taxes.",
+      "cost_line": "$70,000,000 in bonds maturing within 20 years, repaid by annual excess property taxes (no rate is stated in the ballot title).",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {}
+    },
+    {
+      "slug": "spokane-spokane-county-fire-protection-district-no-11-proposition-no-1",
+      "owner": "spokane",
+      "jurisdiction": "Spokane County Fire Protection District No. 11",
+      "proposition": "Proposition No. 1",
+      "title": "Emergency Medical Services Property Tax Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "spokane",
+        "layer": "FIRDST",
+        "value": "Fire District 11"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Authorizes a regular emergency medical services property tax levy for six years.",
+      "cost_line": "$0.35 per $1,000 of assessed value a year for six years, collected beginning in 2027.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {}
+    },
+    {
+      "slug": "spokane-spokane-county-fire-protection-district-no-12-proposition-no-1",
+      "owner": "spokane",
+      "jurisdiction": "Spokane County Fire Protection District No. 12",
+      "proposition": "Proposition No. 1",
+      "title": "Emergency Medical Services Regular Property Tax Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "spokane",
+        "layer": "FIRDST",
+        "value": "Fire District 12"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Authorizes a regular emergency medical services property tax levy for six years.",
+      "cost_line": "$0.50 per $1,000 of assessed value a year for six years, collected 2027 through 2032.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {}
+    }
+  ]
 }
