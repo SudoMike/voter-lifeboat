@@ -155,6 +155,19 @@ const ELECTIONS = {
       'jefferson/local-voters-pamphlet': 'https://www.co.jefferson.wa.us/DocumentCenter/View/25551',
       'kittitas/local-voters-pamphlet':
         'https://www.co.kittitas.wa.us/uploads/auditor/elections/voters-pamphlet//General%20Pamphlet.pdf',
+      // Klickitat and Asotin general voters' pamphlets (#31), from each
+      // package's raw/<county>/local-voters-pamphlet.pdf.url. Checked
+      // 2026-10-08: each 200 application/pdf with the pointer's sha256 (with a
+      // browser User-Agent; Klickitat's DocumentCenter link redirects to
+      // .../23954/2026-General-Election-Voters-Pamphlet). Klickitat: the SOS
+      // state pamphlet bound with the local one, 72 PDF pages, PDF page =
+      // printed page (Court of Appeals p. 37, candidates pp. 46-55, EMS
+      // measure p. 56). Asotin: the local pamphlet alone, 12 PDF pages,
+      // printed pp. 37-48; citations are PDF pages (Assessor p. 3, PUD p. 11,
+      // Rural EMS levy p. 12).
+      'klickitat/local-voters-pamphlet': 'https://www.klickitatcounty.gov/DocumentCenter/View/23954',
+      'asotin/local-voters-pamphlet':
+        'https://www.asotincountywa.gov/DocumentCenter/View/18054/2026GeneralElectionLocalVotersPamphlet-_Asotin-82726',
       // Mason general Local Voters' Pamphlet (#30), from the package's pointer
       // counties/mason/raw/mason/local-voters-pamphlet.pdf.url. Checked
       // 2026-10-08: 302 to cms2.revize.com, then 200 application/pdf with the
@@ -250,6 +263,15 @@ const ELECTIONS = {
       // Okanogan prints no local pamphlet; its dossiers cite VoteWA only.
       // #30; 200 text/html, 2026-10-08.
       okanogan: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=24',
+      // Klickitat's and Asotin's dossiers cite their pamphlets and VoteWA's
+      // guide records; the guide links any record without a page (Asotin's
+      // CD, LD and Court of Appeals seats). Pacific's dossiers cite VoteWA
+      // only: the county's site (co.pacific.wa.us) did not answer on
+      // 2026-10-08, and its local pamphlet is not posted online. #31; each
+      // 200 text/html, 2026-10-08.
+      klickitat: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=20',
+      pacific: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=25',
+      asotin: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=02',
     },
     pamphletIndex: `${SOS_GENERAL_2026}/2026-voters-pamphlet-pdfs`,
   },
