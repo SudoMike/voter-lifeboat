@@ -1,0 +1,56 @@
+{
+  "contest_slug": "measures",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/pend-oreille/scoring/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/pend-oreille/dossiers/measures/",
+    "data/washington-state/elections/2026-11-03-general/counties/pend-oreille/interim/pdf-text/local-voters-pamphlet.txt",
+    "data/washington-state/elections/2026-11-03-general/counties/pend-oreille/interim/voter-guide-text/",
+    "data/final/2026-11-03-general/rubric.json"
+  ],
+  "verdicts": [
+    {
+      "candidate": "pend-oreille-pend-oreille-county-public-hospital-district-no-1-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "A yes vote authorizes a new 30-year excess levy at an estimated $1.47 per $1,000 (S1, pamphlet p. 14), roughly 2.6 times the district's combined 2025 regular ($0.265) and existing bond ($0.305) levies (S10). A new tax, not a renewal, so strength 2 is right; the $750 bill-credit offset (S5, S6) does not change the direction. S1, S3 and S10 support the basis."
+    },
+    {
+      "candidate": "pend-oreille-pend-oreille-county-public-hospital-district-no-1-proposition-no-1",
+      "axis": "spending",
+      "verdict": "upheld",
+      "note": "Capital expansion: ED from 7 to up to 12 beds, three ORs, MRI, behavioral health rooms, 20-25 jobs (S1, S5, S6), which is invest-and-expand. Tried to argue for no mapping because it partly replaces a 1958 wing at capacity (S3, S4), but the measure adds services and capacity, not just repair. Strength 1 rather than 2 is a reasonable hedge given the replacement component. S1, S5, S6 support it."
+    },
+    {
+      "candidate": "pend-oreille-pend-oreille-county-public-hospital-district-no-1-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches the ballot title and explanatory statement ($51,000,000 GO bonds, 30 years, entrance relocation, imaging, lab, therapy, surgical, emergency, behavioral health) (pamphlet p. 14) and the dossier's three-story wing and 7-to-12-bed ED (S3, S5, S6); the August result (1,719 to 2,084, 45.2% yes, 60% needed) matches S8 and S11. cost_line matches the pamphlet ($1.47, $36.75 a month on $300,000) and the $750 credit (S5, S6; the April $500 figure in S3 is superseded). pro_summary matches the statement for (authors; Spokane and Coeur d'Alene travel; emergency, therapy, specialists) plus S3, S4, S6, S7 (capacity, $55 million total, cost of waiting, Newport council support). The council vote was 2-1 with one abstention (S7); 'voted to support it' is accurate though it omits the split. con_summary matches S1 (no statement against), S8 and S3/S6 (about 30% Idaho patients)."
+    },
+    {
+      "candidate": "pend-oreille-riverside-school-district-no-416-62-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Replacement of an expiring EP&O levy for 2028-2030 at an estimated $1.58 per $1,000 (S1, pamphlet p. 16) versus about $1.52 now (S3; DOR 2025 shows $1.485 in the Pend Oreille part, S4). A yes vote continues an existing tax at a slightly higher rate: strength 1 fits the renewal precedent; 2 would overstate it and nothing supports a negative. No parental-rights or spending mapping is supported: the dossier describes continuing existing programs."
+    },
+    {
+      "candidate": "pend-oreille-riverside-school-district-no-416-62-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches the ballot title (replaces a levy expiring at the end of 2027; three-year levy; program list) (pamphlet p. 16), S3 (about 13% of budget) and the dossier note that only the Pend Oreille part votes on this copy. cost_line matches the pamphlet table ($3,996,811 / $4,116,715 / $4,240,217 at $1.58) and S3 ($1.52). pro_summary matches the statement for (authors; 'does not create a second levy'; 'not \"extras\"'). con_summary matches S1 ('no volunteers came forward') and S3 (2025 capital levy failed). Minor: DOR's 2025 rate in S4 ($1.485) is a bit below the superintendent's $1.52; 'about $1.52' is acceptable."
+    },
+    {
+      "candidate": "pend-oreille-sacheen-lake-water-and-sewer-district-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "One-year excess M&O levy, about $0.75 per $1,000 for $113,827 (S1, pamphlet p. 18), against $0.735 in 2025 (S3), approved at every general since at least 2020 (S4-S6). A yes vote renews a recurring tax at about the current rate: strength 1, consistent with other one-year renewal levies. The dollar total is higher than 2025 ($113,827 vs. $88,376) on a larger assessed value, but the rate is essentially flat, so not enough for 2."
+    },
+    {
+      "candidate": "pend-oreille-sacheen-lake-water-and-sewer-district-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches the ballot title and explanatory statement (general fund; milfoil and water shield control; Myers/Harter sanctuary; lake-level management and beaver tubes; insurance) (pamphlet p. 18; VoteWA measure-7245 text) and S7 (60%). 'Approved the same levy every two years' matches S4-S6 (2020, 2022, 2024). cost_line matches S1 and S3 ($0.73487 in 2025). pro_summary matches Grant Miller's statement, including 'no additional tax cost to you' (S1). con_summary is a verbatim quote of the statement against (S1)."
+    }
+  ],
+  "missing": []
+}

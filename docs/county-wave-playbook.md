@@ -434,8 +434,8 @@ general packages that are `partial_county` are Spokane and Okanogan (both
 Clark, Kitsap, Pierce, Snohomish (since #27), Thurston, Whatcom, Yakima,
 Skagit, Cowlitz, Grant, Island, Lewis, Franklin, Chelan, Clallam, Grays
 Harbor, Mason, Walla Walla, Stevens, Whitman, Douglas, Jefferson, Kittitas,
-Asotin, Adams, Skamania and San Juan are `full_county`; all thirty-two ship
-with King. A PUD
+Asotin, Adams, Skamania, San Juan, Lincoln and Pend Oreille are
+`full_county`; all thirty-four ship with King. A PUD
 commissioner is nominated by district but elected by the whole PUD in the
 general (RCW 54.12.010(3)), so a countywide PUD's seat is scoped `COUNTY`
 (Clark, Kitsap, Thurston), not `PUDDST`.
@@ -761,6 +761,23 @@ showed the Port of Lopez polygon equals the three Lopez precincts that vote
 the levy). San Juan's council residency district is a candidate
 qualification; the seat is voted on county-wide. Its CD 2 ships with
 Snohomish's scoring and LD 40 Pos. 1/2 with Whatcom's.
+
+Lincoln and Pend Oreille shipped on 2026-10-08 (#32) as `full_county`.
+Lincoln needs no county layer: every scope is `COUNTY`, CD 5 or LD 9 (its
+Commissioner District 3 is elected county-wide), and `CEMDST` (DOR CEM2025)
+was re-probed and stays for the archived primary. It prints a local
+pamphlet (PDF page = printed page) but has no local measure. Its CD 5 and LD
+9 Pos. 1/2 ship with Spokane's scoring. `COUNTY_LAYERS['pend-oreille']`
+gained `SCHDST` (DOR SCH2025, `62` for Riverside SD 416-62's strip near Elk)
+and a new key `SEWDST`, DOR's sewer-district layer SEW2025 (layer 21), for
+the Sacheen Lake Water and Sewer District's levy (`3`; DOR's 2025 levy
+detail lists it as the county's only sewer levy); `districts.js` labels the
+key "Water and sewer district" and names `3`. Its Hospital District No. 1
+bonds read `HOSPDST` `1` (Ione and Metaline Falls are District No. 2). The
+commissioner and PUD No. 1 seats are elected county-wide (the PUD is the
+whole county). CD 5 and LD 7 Senate and Pos. 1/2 ship with Spokane's
+scoring, the Superior Court (Ferry, Pend Oreille, Stevens) Pos. 2 seat with
+Stevens's. Its pamphlet's PDF pages run 38 behind the printed ones.
 
 ## 13. Reference
 

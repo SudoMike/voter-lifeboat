@@ -71,7 +71,7 @@ APP_PACKAGES = {
                      "benton", "skagit", "cowlitz", "grant", "island", "lewis", "franklin", "chelan", "clallam",
                      "grays-harbor", "mason", "walla-walla", "stevens", "whitman", "douglas", "okanogan",
                      "jefferson", "kittitas", "klickitat", "pacific", "asotin", "adams",
-                     "skamania", "san-juan"],
+                     "skamania", "san-juan", "lincoln", "pend-oreille"],
         "district_contests": "county",
     },
 }
@@ -127,6 +127,10 @@ DISTRICT_ADAPTER_LAYERS = {
     # San Juan's Lopez Solid Waste levy reads SWDDST, a presence layer on DOR
     # PRT2025 (the Port of Lopez polygon; see geo.js).
     "san-juan": ("CONGDST", "LEGDST", "CITY", "SCHDST", "FIRDST", "PORTDST", "PARKDST", "SWDDST"),
+    "lincoln": ("CONGDST", "LEGDST", "CITY", "CEMDST"),
+    # Pend Oreille's Sacheen Lake levy reads SEWDST, DOR SEW2025 (layer 21;
+    # see geo.js).
+    "pend-oreille": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "HOSPDST", "SCHDST", "SEWDST"),
 }
 
 
@@ -335,6 +339,16 @@ COUNTY_ELECTIONS_URLS = {
         # the page that links the general's voters' pamphlet, sample ballot and
         # measure resolutions; the package's raw/san-juan/current-election.html.url).
         "san-juan": "https://www.sanjuancountywa.gov/1292/Current-Election",
+        # Lincoln County Auditor, Current & Future Elections (200 text/html,
+        # 2026-10-08; the page that links the general's local voters'
+        # pamphlet and sample ballot; the package's
+        # raw/lincoln/current-future-elections.html.url). The county moved
+        # from co.lincoln.wa.us, whose elections path now answers 404.
+        "lincoln": "https://www.lincolncountywa.com/312/Current-Future-Elections",
+        # Pend Oreille County Auditor, Elections (200 text/html, 2026-10-08;
+        # the page that links the general's local voters' pamphlet and sample
+        # ballot; pendoreilleco.org redirects to pendoreille.gov).
+        "pend-oreille": "https://www.pendoreille.gov/auditor/page/elections",
     },
 }
 

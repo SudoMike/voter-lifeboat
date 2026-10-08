@@ -1,0 +1,366 @@
+{
+  "county": "lincoln",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/lincoln/raw/votewa/candidate-list.csv.url"
+  ],
+  "coverage": "full_county",
+  "notes": [
+    "No local measures on Lincoln County's November 3, 2026 general ballot: the Auditor's sample ballot and Local Voters' Pamphlet (https://www.lincolncountywa.com/312/Current-Future-Elections) and VoteWA's online guide for the county (https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=22) list none.",
+    "Lincoln County Commissioner District 3 is nominated by district and elected county-wide in the general (RCW 36.32.040, RCW 36.32.050(1)); it is scoped COUNTY."
+  ],
+  "contests": [
+    {
+      "slug": "lincoln-congressional-district-5-u-s-representative",
+      "owner": "lincoln",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 5",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "lincoln",
+        "layer": "CONGDST",
+        "value": "5"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Lincoln County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "michael-baumgartner",
+          "name": "Michael Baumgartner",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "carmela-conroy",
+          "name": "Carmela Conroy",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "lincoln-legislative-district-9-state-representative-pos-1",
+      "owner": "lincoln",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 9",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "lincoln",
+        "layer": "LEGDST",
+        "value": "9"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Lincoln County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "mary-dye",
+          "name": "Mary Dye",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "lincoln-legislative-district-9-state-representative-pos-2",
+      "owner": "lincoln",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 9",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "lincoln",
+        "layer": "LEGDST",
+        "value": "9"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Lincoln County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "joe-schmick",
+          "name": "Joe Schmick",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "karina-wallace",
+          "name": "Karina Wallace",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "lincoln-lincoln-county-assessor",
+      "owner": "lincoln",
+      "category": "County",
+      "office": "Assessor",
+      "district": "Lincoln County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "lincoln"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Lincoln County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "j-scott-liebing",
+          "name": "J Scott Liebing",
+          "party": "Prefers Republican - Gop Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "lincoln-lincoln-county-auditor",
+      "owner": "lincoln",
+      "category": "County",
+      "office": "Auditor",
+      "district": "Lincoln County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "lincoln"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Lincoln County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "chandra-l-schumacher",
+          "name": "Chandra L Schumacher",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "lincoln-lincoln-county-clerk",
+      "owner": "lincoln",
+      "category": "County",
+      "office": "Clerk",
+      "district": "Lincoln County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "lincoln"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Lincoln County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "traci-gants",
+          "name": "Traci Gants",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "lincoln-lincoln-county-commissioner-district-3-county-commissioner-district-no-3",
+      "owner": "lincoln",
+      "category": "County",
+      "office": "County Commissioner District No. 3",
+      "district": "Lincoln County Commissioner District 3",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "lincoln"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Lincoln County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "rob-coffman",
+          "name": "Rob Coffman",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "lincoln-lincoln-county-prosecuting-attorney",
+      "owner": "lincoln",
+      "category": "County",
+      "office": "Prosecuting Attorney",
+      "district": "Lincoln County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "lincoln"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Lincoln County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "ty-albertson",
+          "name": "Ty Albertson",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "lincoln-lincoln-county-sheriff",
+      "owner": "lincoln",
+      "category": "County",
+      "office": "Sheriff",
+      "district": "Lincoln County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "lincoln"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Lincoln County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "gabe-gants",
+          "name": "Gabe Gants",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "lincoln-lincoln-county-treasurer",
+      "owner": "lincoln",
+      "category": "County",
+      "office": "Treasurer",
+      "district": "Lincoln County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "lincoln"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Lincoln County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "emily-lybbert-hansen",
+          "name": "Emily Lybbert-Hansen",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "lincoln-court-of-appeals-division-3-district-1-judge-position-2",
+      "owner": "lincoln",
+      "category": "Judicial",
+      "office": "Judge Position 2",
+      "district": "Court of Appeals, Division 3, District 1",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "lincoln"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Lincoln County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "tracy-arlene-staab",
+          "name": "Tracy Arlene Staab",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "lincoln-lincoln-county-district-court-district-court-judge",
+      "owner": "lincoln",
+      "category": "Judicial",
+      "office": "District Court Judge",
+      "district": "Lincoln County District Court",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "lincoln"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Lincoln County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "dan-b-johnson",
+          "name": "Dan B. Johnson",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    }
+  ]
+}

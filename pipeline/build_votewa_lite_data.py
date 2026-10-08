@@ -1527,6 +1527,44 @@ ELECTION_MEASURES = {
                 "scoped PUDDST '1' (WA DOR PUD2025, layer 17, DISTATTRIB '1'), which COUNTY_LAYERS.lewis reads.",
             ],
         },
+        # Lincoln (#32): checked against the Lincoln County Auditor's general
+        # sample ballot and Local Voters' Pamphlet (counties/lincoln/raw/lincoln/
+        # {sample-ballot,local-voters-pamphlet}.pdf.url, linked from
+        # lincolncountywa.com/312/Current-Future-Elections) and VoteWA's online
+        # guide for county 22 (raw/votewa/voter-guide/guide.json.url): the same
+        # 12 non-Supreme-Court races as the candidate list and no local measure.
+        # The pamphlet's contents list (p. 2) has county offices and the District
+        # Court only, the sample ballot has no "Local Issues" section, and the
+        # guide's Measures category holds only the three statewide initiatives.
+        # (The primary's sample ballot, a county-wide composite, did print the
+        # Sprague-only Cemetery District 7 levy under "Local Issues".)
+        # Overrides: Lincoln is a non-charter county under 400,000, so its
+        # commissioners are nominated by district (RCW 36.32.040) and elected by
+        # the voters of the whole county (RCW 36.32.050(1)). VoteWA's general
+        # export lists the race as 'Countywide'; the SOS precinct exports show
+        # the 2022 District No. 3 general race and the 2020 and 2024 District
+        # No. 1 and 2 races on all 46 precincts, while the 2026 primary's
+        # District No. 3 race reported 16 of 46 units (raw/lincoln/). It keeps
+        # the primary's contest name so its slug matches. The District Court is
+        # one county-wide court with one judge (2022 SOS export: all 46
+        # precincts).
+        "lincoln": {
+            "overrides": {
+                ("COUNTY", "COUNTY COMMISSIONER DISTRICT NO. 3"): (
+                    "County", "Lincoln County Commissioner District 3", "County Commissioner District No. 3",
+                    ("COUNTY", None)),
+                ("COUNTY", "DISTRICT COURT JUDGE"): (
+                    "Judicial", "Lincoln County District Court", "District Court Judge", ("COUNTY", None)),
+            },
+            "measures": [],
+            "extra_notes": [
+                "No local measures on Lincoln County's November 3, 2026 general ballot: the Auditor's sample ballot and "
+                "Local Voters' Pamphlet (https://www.lincolncountywa.com/312/Current-Future-Elections) and VoteWA's online "
+                "guide for the county (https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=22) list none.",
+                "Lincoln County Commissioner District 3 is nominated by district and elected county-wide in the general "
+                "(RCW 36.32.040, RCW 36.32.050(1)); it is scoped COUNTY.",
+            ],
+        },
         # Mason (#30): checked against the Mason County Auditor's Local Voters'
         # Pamphlet (counties/mason/raw/mason/local-voters-pamphlet.pdf.url, which
         # "contains all races and measures throughout Mason County", pp. 10-30)
@@ -1786,6 +1824,93 @@ ELECTION_MEASURES = {
                 "(WA DOR PUD2025 and LIB2025 each have one Pacific polygon with the county's area).",
                 "The EMS measure is scoped EMSDST '1' (WA DOR EMS2025, layer 6) and the fire measures FIRDST '3' and '6' "
                 "(WA DOR FIR2025, layer 7), DISTATTRIB.",
+            ],
+        },
+        # Pend Oreille (#32): checked against the Pend Oreille County Auditor's
+        # general sample ballot and local voters' pamphlet (counties/pend-oreille/
+        # raw/pend-oreille/{sample-ballot,local-voters-pamphlet}.pdf.url, linked
+        # from pendoreille.gov/auditor/page/elections) and VoteWA's online guide
+        # for county 26 (raw/votewa/voter-guide/), which list the export's races
+        # and three local measures (guide records 7307, 7332, 7245; pamphlet PDF
+        # pages 14-19, printed 52-57).
+        # Overrides keep the primary's contest names, so the slugs and primary
+        # dossiers carry forward:
+        # - County Commissioner 2: nominated by district (the primary's race ran
+        #   in 7 of 27 precincts) and elected county-wide in the general (RCW
+        #   36.32.040, 36.32.050(1)); the SOS precinct exports put the 2020 #1
+        #   and #3, 2022 #2 and 2024 #1 and #3 general races on all 27 voting
+        #   precincts (raw/pend-oreille/sos-results-*.csv.url). Scope COUNTY.
+        # - PUD No. 1 Commissioner #2: VoteWA lists the race as 'Public Utility
+        #   District (ALL)'. The primary ran in 7 of 27 precincts (the
+        #   commissioner district), but the whole PUD elects each commissioner
+        #   in the general (RCW 54.12.010(3)): the 2020 #2, 2022 #3 and 2024 #1
+        #   general races were on all 27 precincts. WA DOR PUD2025 (layer 17)
+        #   has one Pend Oreille polygon ('1'), Shape_Area 8,410,296,539.69,
+        #   equal to the sum of the county's SCH2025 polygons (8,410,296,537.7)
+        #   and of its two HSP2025 polygons; '1' at Newport, Cusick, Ione,
+        #   Metaline Falls, Sacheen Lake and Elk (1722 Kirkpatrick Rd). Scope
+        #   COUNTY (the primary scoped it COUNTY_COUNCIL 'Commissioner - 02',
+        #   the nominating district; the primary is frozen).
+        # - District Court: one county-wide court (2022 race on all 27
+        #   precincts); filed Judicial.
+        # Measure scopes, point-checked 2026-10-08 (Census geocoder, Current;
+        # WA DOR WADOR_PropertyTax tax year 2025):
+        # - HOSPDST '1' (HSP2025, layer 11): 714 W Pine St, Newport; 111
+        #   Calispell Ave, Cusick; 4571 State Route 211 (Sacheen Lake). '2' at
+        #   201 Main St, Ione and 305 Park St, Metaline Falls (Hospital District
+        #   No. 2, outside). The August 4 bond ran in 22 of 27 precincts.
+        # - SCHDST '62' (SCH2025, layer 20; Riverside School District No.
+        #   416-62's Pend Oreille part): 1722 Kirkpatrick Rd and 3441 Allen Rd,
+        #   Elk; the county's School_Districts___Open_Data layer reads
+        #   'Riverside Joint #416/062' at the first. DOR's 2025 levy detail
+        #   lists 'Riverside #1-62-416 Enrichment' (TDCODE 260441610). Spokane's
+        #   package has its own copy of the measure, scoped to Spokane.
+        # - SEWDST '3' (SEW2025, layer 21; a new key): 4571 State Route 211, 62
+        #   Schaefers Beach Dr and 636 Mountain View Dr, Newport (Sacheen Lake);
+        #   the county's Water_Sewer_Districts___Open_Data layer reads
+        #   'Sacheen' at all three. The district's levy has been on the ballot
+        #   of the one Sacheen precinct (2020, 2022, 2024 SOS exports).
+        "pend-oreille": {
+            "overrides": {
+                ("COUNTY", "COUNTY COMMISSIONER 2"): (
+                    "County", "Pend Oreille County Commissioner District 2", "County Commissioner 2",
+                    ("COUNTY", None)),
+                ("COUNTY", "DISTRICT COURT JUDGE"): (
+                    "Judicial", "Pend Oreille County District Court", "District Court Judge", ("COUNTY", None)),
+                ("PUBLIC UTILITY DISTRICT (ALL)", "PUBLIC UTILITY COMMISSIONER #2"): (
+                    "PublicUtility", "Public Utility District Commissioner District 2", "Public Utility Commissioner #2",
+                    ("COUNTY", None)),
+            },
+            "measures": [
+                m("Pend Oreille County Public Hospital District No. 1", "Proposition No. 1",
+                  "Bonds for Expansion and Renovation of Newport Community Hospital",
+                  ("HOSPDST", "1"),
+                  "Authorizes up to $51,000,000 of general obligation bonds, repaid within 30 years by an annual excess property tax, to expand and renovate Newport Community Hospital: a relocated main entrance and admitting area and larger imaging, laboratory, rehabilitation therapy, surgical, emergency, trauma and behavioral health services (Resolution No. 2026-06). The same bonds failed in the August 4 primary. Needs 60% approval.",
+                  "Estimated $1.47 per $1,000 of assessed value a year for up to 30 years; about $441 a year ($36.75 a month) on a $300,000 home, per the explanatory statement.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7307&e=899&la=en&c=26",
+                  pages=(14, 15)),
+                m("Riverside School District No. 416-62", "Proposition No. 1",
+                  "Replacement of Expiring Educational Programs and Operations Levy",
+                  ("SCHDST", "62"),
+                  "Replaces Riverside School District's educational programs and operations levy, which expires at the end of 2027, with a three-year levy (2028-2030) for programs, services and staff the state does not fund: elective and advanced courses, vocational education, nurses, counselors, technology support, safety, security, performing arts, athletics and extracurricular activities (Resolution No. 6-26-03).",
+                  "Estimated $1.58 per $1,000 of assessed value: $3,996,811 in 2028, $4,116,715 in 2029 and $4,240,217 in 2030.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7332&e=899&la=en&c=26",
+                  pages=(16, 17)),
+                m("Sacheen Lake Water and Sewer District", "Proposition No. 1",
+                  "One Year Excess Levy for Maintenance & Operation",
+                  ("SEWDST", "3"),
+                  "Levies a one-year excess property tax for the district's general fund: aquatic weed control (milfoil and water shield), lake-level management including beaver-dam clearing on the West Branch of the Little Spokane River, upkeep of the Myers/Harter sanctuary, and insurance for volunteers, the park and the board. The district has run the same levy every two years. Needs 60% approval.",
+                  "About $0.75 per $1,000 of assessed value, $113,827 in total, collected in 2027 only.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7245&e=899&la=en&c=26",
+                  pages=(18, 19)),
+            ],
+            "extra_notes": [
+                "Pend Oreille County Commissioner District 2 is nominated by district and elected county-wide in the general "
+                "(RCW 36.32.040, RCW 36.32.050(1)); Public Utility District No. 1 of Pend Oreille County covers the whole county "
+                "(WA DOR PUD2025, layer 17) and every PUD voter elects each commissioner (RCW 54.12.010(3)). Both are scoped COUNTY.",
+                "The hospital bonds are scoped HOSPDST '1' (WA DOR HSP2025, layer 11; Ione and Metaline Falls are in Hospital "
+                "District No. 2, outside), the Riverside levy SCHDST '62' (SCH2025, layer 20, the district's Pend Oreille part) "
+                "and the Sacheen Lake levy SEWDST '3' (SEW2025, layer 21), DISTATTRIB.",
             ],
         },
         # San Juan (#32): checked against the San Juan County Auditor's

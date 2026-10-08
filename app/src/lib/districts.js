@@ -39,6 +39,8 @@ const DISTRICT_LABELS = {
   // San Juan SWDDST: the Lopez Solid Waste Disposal District, read as a
   // presence layer on DOR PRT2025 (geo.js), a constant 'LOPEZ'.
   SWDDST: 'Solid waste disposal district',
+  // Pend Oreille SEWDST: WA DOR SEW2025, the sewer-district layer (geo.js).
+  SEWDST: 'Water and sewer district',
   PTBA: 'Public Transportation Benefit Area',
   AQUIFER: 'Aquifer Protection Area',
   UNINC: 'Unincorporated County',
@@ -98,6 +100,11 @@ const NAMED_VALUES = {
   SWDDST: {
     LOPEZ: 'Lopez Solid Waste Disposal District',
   },
+  // Pend Oreille SEWDST reads WA DOR SEW2025 (geo.js; #32); '3' is the
+  // Sacheen Lake Water and Sewer District, the only one with a 2026 measure.
+  SEWDST: {
+    3: 'Sacheen Lake Water and Sewer District',
+  },
   // Kittitas DISTCRT reads the Auditor's Court_Districts court_district_name
   // (geo.js), which leaves out the county; the ballot names the seats
   // 'Lower Kittitas County District Court' and 'Upper ...'.
@@ -140,7 +147,7 @@ const NAMED_VALUES = {
 const ORDER = [
   'CITY', 'CONGDST', 'LEGDST', 'KCCDST', 'SCCDST', 'COUNTY_COUNCIL', 'JUDDST', 'DISTCRT', 'KCDISTCRT',
   'PORTDST', 'PUDDST', 'PUDALL', 'FIRDST', 'FIRE_AUTH', 'RFADST', 'PROPFIRDST', 'EMSDST', 'RURALEMSDST',
-  'SCHDST', 'HOSPDST', 'LIBDST', 'PARKDST', 'CEMDST', 'WATDST', 'SWDDST', 'PTBA', 'AQUIFER', 'UNINC',
+  'SCHDST', 'HOSPDST', 'LIBDST', 'PARKDST', 'CEMDST', 'WATDST', 'SWDDST', 'SEWDST', 'PTBA', 'AQUIFER', 'UNINC',
 ]
 
 // Layers that show only their NAMED_VALUES. Douglas's county fire layer also

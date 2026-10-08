@@ -1901,3 +1901,45 @@ test('San Juan resolves fire, port, park and the Lopez solid waste district from
   assert.equal(context.districts.PORTDST, 'FRI HAR')
   for (const s of [fd4, lopezPort, orcasPark, lopezSwd]) assert.ok(!scopeMatches(s, context), s.layer)
 })
+
+// Pend Oreille (#32, wave 7). Live point queries 2026-10-08 at the
+// Census-geocoded points of the addresses below: DOR HSP2025 (11), SCH2025
+// (20) and SEW2025 (21, the new SEWDST key), and the county's commissioner
+// layer, which no general scope uses.
+test('Pend Oreille resolves hospital, school and Sacheen Lake sewer districts from DOR layers', async () => {
+  const commish = { path: '/Commissioner_Districts___Open_Data/FeatureServer/0' }
+  const hosp1 = { kind: 'DISTRICT', county: 'pend-oreille', layer: 'HOSPDST', value: '1' }
+  const riverside = { kind: 'DISTRICT', county: 'pend-oreille', layer: 'SCHDST', value: '62' }
+  const sacheen = { kind: 'DISTRICT', county: 'pend-oreille', layer: 'SEWDST', value: '3' }
+  // 4571 State Route 211, Newport (Sacheen Lake): HSP '1', SCH '56', SEW '3'.
+  mockWave2('4571 STATE RTE 211, NEWPORT, WA, 99156', '051', 'Pend Oreille County', [
+    { ...commish, attributes: { commission: 'Commissioner - 01' } },
+    dorLayer(11, '1'), dorLayer(20, '56'), dorLayer(21, '3'),
+  ])
+  let context = await lookupBallotContext(wave2Data('pend-oreille'), '4571 State Route 211 Newport WA 99156')
+  assert.equal(context.county.id, 'pend-oreille')
+  assert.equal(context.coverageStatus, 'full_county')
+  assert.deepEqual(context.missingLayers, [])
+  assert.equal(context.districts.SEWDST, '3')
+  for (const s of [hosp1, sacheen]) assert.ok(scopeMatches(s, context), s.layer)
+  assert.ok(!scopeMatches(riverside, context))
+  // 1722 Kirkpatrick Rd, Elk: HSP '1', SCH '62', no sewer district.
+  mockWave2('1722 KIRKPATRICK RD, ELK, WA, 99009', '051', 'Pend Oreille County', [
+    { ...commish, attributes: { commission: 'Commissioner - 01' } },
+    dorLayer(11, '1'), dorLayer(20, '62'),
+  ])
+  context = await lookupBallotContext(wave2Data('pend-oreille'), '1722 Kirkpatrick Rd Elk WA 99009')
+  assert.deepEqual(context.missingLayers, [])
+  assert.equal('SEWDST' in context.districts, false)
+  for (const s of [hosp1, riverside]) assert.ok(scopeMatches(s, context), s.layer)
+  assert.ok(!scopeMatches(sacheen, context))
+  // 201 Main St, Ione: Hospital District No. 2, SCH '70'.
+  mockWave2('201 MAIN ST, IONE, WA, 99139', '051', 'Pend Oreille County', [
+    { ...commish, attributes: { commission: 'Commissioner - 03' } },
+    dorLayer(11, '2'), dorLayer(20, '70'),
+  ])
+  context = await lookupBallotContext(wave2Data('pend-oreille'), '201 Main St Ione WA 99139')
+  assert.deepEqual(context.missingLayers, [])
+  assert.equal(context.districts.HOSPDST, '2')
+  for (const s of [hosp1, riverside, sacheen]) assert.ok(!scopeMatches(s, context), s.layer)
+})

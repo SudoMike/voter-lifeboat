@@ -208,6 +208,21 @@ const ELECTIONS = {
       // page numbers equal the printed ones (Assessor p. 42, Fire District 4
       // levy p. 50, Lopez Solid Waste levy p. 56).
       'san-juan/local-voters-pamphlet': 'https://www.sanjuancountywa.gov/DocumentCenter/View/36027',
+      // Lincoln County Local Voters' Pamphlet (#32), from the package's pointer
+      // counties/lincoln/raw/lincoln/local-voters-pamphlet.pdf.url. Checked
+      // 2026-10-08: 301 to .../2055/2026-General-LVP-Final-PDF, then 200
+      // application/pdf with the pointer's sha256; 8 PDF pages, PDF page
+      // numbers equal the printed ones (candidates pp. 4-6: Assessor p. 4,
+      // District Court p. 6).
+      'lincoln/local-voters-pamphlet': 'https://www.lincolncountywa.com/DocumentCenter/View/2055',
+      // Pend Oreille County Local Voters' Pamphlet (#32), from the package's
+      // pointer counties/pend-oreille/raw/pend-oreille/local-voters-pamphlet.pdf.url.
+      // Checked 2026-10-08: 200 application/pdf with the pointer's sha256; 19
+      // PDF pages printed as pp. 39-57. Citations are PDF pages, which run 38
+      // behind the printed numbers (PDF p. 14 is printed p. 52, Hospital
+      // District No. 1; PDF p. 18 is printed p. 56, Sacheen Lake W/S District).
+      'pend-oreille/local-voters-pamphlet':
+        'https://www.pendoreille.gov/sites/g/files/vyhlif14901/files/media/auditor/file/34071/final_vp_general_2026_pend_oreille.pdf',
     },
     // Counties whose research cites VoteWA's online voters' guide, which has
     // no page numbers, instead of a printed pamphlet: their records carry no
@@ -299,6 +314,11 @@ const ELECTIONS = {
       // Court of Appeals seats). #32; each 200 text/html, 2026-10-08.
       skamania: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=30',
       'san-juan': 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=28',
+      // Lincoln's and Pend Oreille's guides link any record without a page
+      // (CD, LD, Court of Appeals and Superior Court seats). #32; each 200
+      // text/html, 2026-10-08.
+      lincoln: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=22',
+      'pend-oreille': 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=26',
     },
     pamphletIndex: `${SOS_GENERAL_2026}/2026-voters-pamphlet-pdfs`,
   },
