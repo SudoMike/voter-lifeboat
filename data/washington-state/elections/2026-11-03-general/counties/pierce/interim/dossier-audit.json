@@ -1,0 +1,45 @@
+{
+  "script": "pipeline/verify_dossiers.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/pierce/interim/research-plan.json",
+    "data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/"
+  ],
+  "missing": [],
+  "no_frontmatter": [],
+  "invalid_evidence_levels": [],
+  "invalid_source_formats": [],
+  "evidence_levels": {},
+  "contest_overviews_missing": [],
+  "untouched_contests": [
+    "pierce-congressional-district-6-u-s-representative",
+    "pierce-congressional-district-10-u-s-representative",
+    "pierce-legislative-district-2-state-representative-pos-1",
+    "pierce-legislative-district-2-state-representative-pos-2",
+    "pierce-legislative-district-25-state-representative-pos-1",
+    "pierce-legislative-district-25-state-representative-pos-2",
+    "pierce-legislative-district-26-state-senator",
+    "pierce-legislative-district-26-state-representative-pos-1",
+    "pierce-legislative-district-26-state-representative-pos-2",
+    "pierce-legislative-district-27-state-representative-pos-1",
+    "pierce-legislative-district-28-state-representative-pos-1",
+    "pierce-legislative-district-28-state-representative-pos-2",
+    "pierce-legislative-district-29-state-senator",
+    "pierce-legislative-district-29-state-representative-pos-1",
+    "pierce-legislative-district-29-state-representative-pos-2",
+    "pierce-pierce-county-auditor",
+    "pierce-pierce-county-prosecuting-attorney",
+    "pierce-pierce-county-council-district-1-county-councilmember",
+    "pierce-pierce-county-council-district-5-county-councilmember",
+    "pierce-pierce-county-council-district-7-county-councilmember",
+    "pierce-pierce-county-district-court-no-7-judge-position-no-7",
+    "pierce-pierce-county-district-court-no-8-judge-position-no-8"
+  ],
+  "untouched_measures": [],
+  "researched_elsewhere": [
+    "pierce-congressional-district-8-u-s-representative -> king/congressional-district-8-united-states-representative",
+    "pierce-legislative-district-31-state-senator -> king/state-senator-legislative-district-no-31",
+    "pierce-legislative-district-31-state-representative-pos-1 -> king/state-representative-position-no-1-legislative-district-no-31",
+    "pierce-legislative-district-31-state-representative-pos-2 -> king/state-representative-position-no-2-legislative-district-no-31",
+    "pierce-king-county-district-court-southeast-electoral-district-judge-position-no-5 -> king/judge-position-no-5-southeast-electoral-district"
+  ]
+}

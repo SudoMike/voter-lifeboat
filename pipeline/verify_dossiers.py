@@ -45,8 +45,17 @@ def audit_package(package: Path):
         "untouched_measures": [],
     }
 
+    elsewhere = []
     for contest in plan.get("contests", []):
         slug = contest["contest_slug"]
+        researched_in = (contest.get("shared") or {}).get("researched_in")
+        if researched_in:
+            # Researched once in another package (build_research_plan.py); its
+            # dossiers are audited there, never copied here.
+            elsewhere.append(f"{slug} -> {researched_in['package']}/{researched_in['contest_slug']}")
+            if (dossiers / slug).exists():
+                audit["missing"].append(f"{slug}: researched in {researched_in['package']}; remove this copy")
+            continue
         contest_dir = dossiers / slug
         if not contest_dir.is_dir():
             audit["untouched_contests"].append(slug)
@@ -86,6 +95,8 @@ def audit_package(package: Path):
         elif not frontmatter(path):
             audit["no_frontmatter"].append(f"measures/{measure['slug']}")
 
+    if elsewhere:
+        audit["researched_elsewhere"] = elsewhere
     output = package / "interim/dossier-audit.json"
     output.write_text(json.dumps(audit, indent=2) + "\n")
     return audit
@@ -114,7 +125,8 @@ def main():
         failed |= bool(hard_errors)
         print(
             f"{package.name}: errors={len(hard_errors)} started={sum(audit['evidence_levels'].values())} "
-            f"untouched_contests={len(audit['untouched_contests'])} evidence={audit['evidence_levels']}"
+            f"untouched_contests={len(audit['untouched_contests'])} "
+            f"researched_elsewhere={len(audit.get('researched_elsewhere', []))} evidence={audit['evidence_levels']}"
         )
         for error in hard_errors:
             print("  E:", error)
