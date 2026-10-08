@@ -25,8 +25,134 @@ OUT = COUNTY / "interim"
 # sample-ballot transcription, frozen byte-identical.
 PRIMARY = "2026-08-04-primary"
 
-GENERAL_CFG = {"name": "Clark County"}
-GENERAL_MEASURES = {"2026-11-03-general": None}
+GENERAL_CFG = {
+    "name": "Clark County",
+    # SCHDST is not in geo.js COUNTY_LAYERS["clark"] (#22): Battle Ground
+    # School District Prop 11 stays hidden until the director adds a layer.
+    # Clark's own ClarkView_Public/SchoolDistrict/MapServer/0 (attribute
+    # SCHDST, values 37 Vancouver ... 119 Battle Ground ... 122 Ridgefield)
+    # returns SCHDST 119 at 109 SW 1st St, Battle Ground (Census-geocoded
+    # -122.53766, 45.78008) on 2026-10-08; DOR SCH2025 (layer 20) returns
+    # DISTATTRIB '119' at the same point.
+    "unresolvable_layers": ["SCHDST"],
+}
+
+# The general's local measures, transcribed 2026-10-08 from Clark County's
+# sample ballot (raw/clark/sample-ballot.pdf.url: titles and ballot titles,
+# verbatim) and its local voters' pamphlet (raw/clark/local-voters-pamphlet.pdf.url,
+# PDF pages below). The pamphlet's local section (pages 41-99) uses fonts
+# without a Unicode map, so its statements were read from the same
+# statements in Clark's VoteWA online voters' guide
+# (raw/votewa/voter-guide/measure-<id>.json.url; interim/voter-guide-text/).
+_E = "data/washington-state/elections/2026-11-03-general/counties/clark/raw"
+_COUNTY = ("COUNTY", None)
+_CHARTER_COST = "No tax or rate in the ballot title; amends the Clark County Home Rule Charter."
+
+
+def general_measure(jurisdiction, proposition, title, scope, pages, ballot_title, cost_line, pro, con):
+    """One general-election app-measures row. `title` and `ballot_title` are
+    verbatim from the sample ballot; `pages` are local-voters-pamphlet PDF
+    pages (statement for and against, explanatory statement). Display fields
+    are overlaid by scoring/measures.json at assembly."""
+    return {
+        "slug": "clark-" + votewa.slugify(f"{jurisdiction}-{proposition}"),
+        "owner": "clark",
+        "jurisdiction": jurisdiction,
+        "proposition": proposition,
+        "title": title,
+        "scope": votewa.scope_json("clark", scope),
+        "pamphlet_pages": [{"edition": "local-voters-pamphlet", "page": p} for p in pages],
+        "what_it_does": ballot_title,
+        "cost_line": cost_line,
+        "pro_summary": pro,
+        "con_summary": con,
+        "lean_mappings": {},
+    }
+
+
+def _charter(n, title, pages, ballot_title, pro, con):
+    return general_measure("Clark County", f"Proposed Charter Amendment No. {n}", title, _COUNTY, pages,
+                           ballot_title, _CHARTER_COST, pro, con)
+
+
+_NO_CON = "No statement against was filed: after recruitment attempts, no one in the jurisdiction volunteered to write one."
+
+GENERAL_MEASURES = {"2026-11-03-general": {
+    "sources": [f"{_E}/clark/sample-ballot.pdf.url", f"{_E}/clark/local-voters-pamphlet.pdf.url",
+                f"{_E}/votewa/voter-guide/voterguide.json.url"]
+               + [f"{_E}/votewa/voter-guide/measure-{m}.json.url"
+                  for m in (7333, 7334, 7335, 7336, 7337, 7338, 7339, 7340, 7341, 7342, 7344, 7345)],
+    "measures": [
+        # 7333
+        _charter(19, "Concerning a Limitation on Consecutive Terms for County Council Members", [64, 65],
+                 "The Clark County Charter Review Commission adopted Resolution No. 26-20 proposing an amendment to the Clark County Home Rule Charter, concerning a limitation on consecutive terms for County Council members. If approved, this amendment would limit the number of consecutive terms a County Council member could sit to three terms, with eligibility restored after one full term out of office.",
+                 "Brandon Erickson, Dorothy Gasque and Liz Shaw: open seats widen the field and bring fresh perspectives; twelve years is ample time to serve, and former members may run again after a term away.",
+                 "Morgan Holmgren, Liz Cline and Chuck Green: voters already remove councilors who overstay; limits cost institutional knowledge, empower unelected staff and interest groups, and restrict voter choice."),
+        # 7334
+        _charter(20, "Concerning a Revised Budget Transparency Process", [66, 67],
+                 "The Clark County Charter Review Commission adopted Resolution No. 26-10 proposing an amendment to the Clark County Home Rule Charter, concerning a revised budget transparency process. If approved, this amendment would establish a new timeline for the submission of budget information, presentation, and adoption of the Clark County budget earlier than those dates set in Chapter 36.40 RCW.",
+                 "Peter Silliman, Liz Cline and Ann Donnelly: moves the first public budget presentation to early September and adoption to November, giving residents time to review a budget of almost $900 million.",
+                 "John Latta, Julie Koepp and Janet Landesberg: the charter already lets the county set earlier deadlines; process details do not belong in the charter and would make the budget process harder to improve."),
+        # 7335
+        _charter(21, "Concerning Revised Council Powers Regarding Boards and Commissions", [68],
+                 "The Clark County Charter Review Commission adopted Resolution No. 26-23 proposing an amendment to the Clark County Home Rule Charter, concerning revised Council powers regarding boards and commissions. If approved, this amendment would give the County Council the concurrent authority with the County Manager to nominate members to all boards and commissions, with the exception of the Ethics Review Commission.",
+                 "Patrick Adigweme and Eric LaBrant: the Council can now nominate only to three bodies; letting councilors nominate volunteers to the rest could help keep seats filled.",
+                 _NO_CON),
+        # 7336
+        _charter(22, "Concerning a Clarification of Nonpartisan Office Elections", [70, 71],
+                 "The Clark County Charter Review Commission adopted Resolution No. 26-01 proposing an amendment to the Clark County Home Rule Charter, concerning a clarification of nonpartisan office elections. If approved, this amendment clarifies if two or less county candidates file for a race in the Primary, that race will bypass the Primary and proceed directly to the General Election. Nonpartisan elections for county offices shall be held in accordance with the procedures established in state law for nonpartisan elections, and shall occur in even numbered years.",
+                 "Cathie Garber, Jennifer Wendel and Dorothy Gasque: a primary with one or two candidates narrows nothing; skipping it, as other nonpartisan races already do, saves printing and mailing costs.",
+                 "Ann Donnelly, Peter Silliman and Liz Cline: the primary and its pamphlet inform voters for months; skipping it favors incumbents and embeds even-year elections in the charter."),
+        # 7337
+        _charter(23, "Concerning a Required Annual Report Publication by the County Manager", [72, 73],
+                 "The Clark County Charter Review Commission adopted Resolution No. 26-24 proposing an amendment to the Clark County Home Rule Charter, concerning a required annual report publication by the County Manager. If approved, the amendment would require the County Manager to present to the Council in a public meeting and publish broadly an annual statement of the County's fiscal and government affairs, and any other report which the Council may deem necessary as well as annually prepare and present to the Council in a public meeting a budget and budget message setting forth the proposals for the forthcoming fiscal year.",
+                 "Patrick Adigweme, Eric LaBrant and Ann Donnelly: makes the annual report mandatory and broadly published, so the public gets it regardless of who holds office.",
+                 "Margaret Tweet: the 'publish broadly' mandate has no election-season limit and could fund mailers that favor incumbents or county ballot measures; post reports online instead."),
+        # 7338
+        _charter(24, "Concerning a Requirement for a Housing Impact Analysis", [74, 75],
+                 "The Clark County Charter Review Commission adopted Resolution No. 26-07 proposing an amendment to the Clark County Home Rule Charter, concerning a requirement for a Housing Impact Analysis. If approved, this amendment would require prior to the adoption of any ordinance reasonably likely to have a direct and material impact upon residential housing capacity, density, permitting, subdivision requirements, parking requirements, applicable to residential development, or residential construction costs, the County shall publish a Housing Impact Analysis.",
+                 "John Jay, David Stuebe and Justin Wood: councilors and the public should see the housing-cost effects of discretionary land-use rules before adoption; it dictates no outcome.",
+                 "Chuck Green, Irene Finley and Morgan Holmgren: policy micromanagement in the charter; reports cost taxpayers and will not fix affordability driven by interest rates and state and federal rules."),
+        # 7339
+        _charter(25, "Concerning the Requirement of Supermajority Approval by Council for County Taxes", [76, 77],
+                 "The Clark County Charter Review Commission adopted Resolution No. 26-08 proposing an amendment to the Clark County Home Rule Charter, concerning the requirement of supermajority approval by Council for County taxes. If approved, after January 1, 2027, this amendment would require any new councilmanic tax assessed, levied, or increased to have a two-third affirmative vote by the Council. Also, if approved, this amendment would not apply to fees, rates and charges, special assessments, or existing taxes levied prior to adoption of the amendment or any renewal or reauthorization of those taxes not seeking an increased tax rate.",
+                 "John Jay, Paul Harris and Brian Lewallen: new council-imposed taxes should need broad agreement; it changes no current tax or service.",
+                 "Janet Landesberg, Dorothy Gasque and Julie Koepp: on a five-member council two-thirds means four votes, letting two councilors block funding for law and justice, roads and parks."),
+        # 7340
+        _charter(26, "Concerning the Initiative, Mini-Initiative, and Referenda Process", [78, 79],
+                 "The Clark County Charter Review Commission adopted Resolution No. 26-40 proposing an amendment to the Clark County Home Rule Charter, concerning the initiative, mini-initiative, and referenda process. If approved, this amendment would reduce the number of signatures necessary for initiatives and referendums from 10% to 8%; remove calculation requirements of required signatures based on the number of votes cast within unincorporated areas of the County at the date the initiative and referendum is initiated; allow for initiatives without sufficient signatures have possible opportunity to become a mini-initiative; and permit the Auditor's Office to limited use statistical sampling techniques for signature verification.",
+                 "Cathie Garber, Liz Cline and Dorothy Gasque: no citizen petition has qualified since 2014; a lower threshold and signature sampling keep safeguards while making the process achievable.",
+                 "Janet Landesberg and Chuck Green: voters rejected the same thresholds in 2022 by 59%; every signature should be verified, and lower thresholds elsewhere produced no initiatives."),
+        # 7341
+        _charter(27, "Concerning Legislative Branch Performance Audits", [80, 81],
+                 "The Clark County Charter Review Commission adopted Resolution No. 26-14 proposing an amendment to the Clark County Home Rule Charter, concerning legislative branch performance audits. If approved, the amendment would permit the County Council to conduct, or cause to be conducted, performance and program audits to review the effectiveness and efficiency of the programs and operations of the County. Also, if approved, this amendment would require the County Council to establish by ordinance within the legislative branch an independent county auditing process.",
+                 "Peter Silliman, Liz Cline and Ann Donnelly: the body that approves department budgets should be able to commission performance audits, as other charter counties allow.",
+                 "John Latta, Dijana Katan and Janet Landesberg: councilors and residents can already request audits and the State Auditor reviews for free; the measure's fiscal analysis says it could cost at least $100,000 more a year."),
+        # 7342
+        general_measure("Clark County", "Proposition No. 12", "Bonds for Public Safety and Criminal Justice Capital Infrastructure",
+                        _COUNTY, [82],
+                        "The Clark County Council adopted Resolution 2026-07-08, concerning public safety and criminal justice infrastructure. This proposition would allow Clark County to acquire, construct, remodel, and equip public safety and criminal justice infrastructure in Clark County, including the remodel and expansion of the Clark County Jail and courtrooms and a new or remodeled Sheriff's Office Headquarters; issue no more than $366,204,000 of general obligation bonds maturing within 31 years; and levy annual excess property taxes on all taxable property within Clark County to pay the bonds, pursuant to Resolution 2026-07-08.",
+                        "Up to $366,204,000 in general obligation bonds maturing within 31 years, repaid by annual excess property taxes countywide; the statement for puts the cost at about $86 a year per median home.",
+                        "Ann Donnelly, Sue Marshall and John Horch: the jail, built more than 40 years ago, is overcrowded and unsafe; expansion would add treatment and reentry space and cut the cost of housing inmates elsewhere.",
+                        _NO_CON),
+        # 7344
+        general_measure("Clark County", "Proposition No. 13", "Levy Lid Lift for Public Safety and Criminal Justice Services",
+                        _COUNTY, [84, 85],
+                        "The Clark County Council adopted Resolution 2026-07-09, concerning public safety and criminal justice services. This proposition would provide funds for public safety and criminal justice services, including additional correction deputies, sheriff deputies, prosecuting attorney staff, and other services. It authorizes a maximum regular property tax levy for collection in 2027 of $1.15 per $1,000 of assessed value, an increase of approximately $0.44 from 2026. The 2027 levy amount would be used to compute the limitations for subsequent levies under chapter 84.55 RCW. Qualifying persons are exempt under RCW 84.36.381.",
+                        "County regular levy up to $1.15 per $1,000 of assessed value in 2027, about $0.44 more than 2026, and the base for later years' limits.",
+                        "Ann Donnelly, Sue Marshall and John Horch: the Sheriff's Office has one of the lowest deputy-to-population ratios in the state; the levy funds deputies, corrections officers and prosecutors.",
+                        "Margaret Tweet: a 62% jump in the county levy rate, raised to staff a jail expansion voters have not yet approved, on top of a 0.1% criminal justice sales tax the Council adopted in April 2026."),
+        # 7345; 109 SW 1st St, Battle Ground (Census-geocoded -122.53766,
+        # 45.78008): ClarkView_Public/SchoolDistrict SCHDST 119 (2026-10-08).
+        general_measure("Battle Ground School District No. 119", "Proposition No. 11",
+                        "Student Safety, Academic Support, Educational Programs and Operations Levy",
+                        ("SCHDST", "119"), [86, 87],
+                        "The Board of Directors of Battle Ground School District No. 119 adopted Resolution No. I-26, concerning funding for student safety, academic support, educational programs and operations. If approved, this proposition would authorize the District to levy the following excess taxes, replacing an expired levy, on all taxable property within the District for programs not funded by the State, including student safety, smaller classes, special education, reading and math support, curriculum, student activities, and preparing students for postsecondary education, employment, or military: 2027, estimated $1.76 per $1,000 assessed value, $37,025,000; 2028, $1.76, $38,690,000; 2029, $1.76, $40,430,000; as provided in Resolution No. I-26.",
+                        "Estimated $1.76 per $1,000 of assessed value: $37,025,000 (2027), $38,690,000 (2028), $40,430,000 (2029).",
+                        "Terry Dotson and Sabrena Worthy: replaces the levy that expired in 2025, lowering the amount from the failed proposals as the community asked; failure risks state financial oversight.",
+                        "Richard Rylander: the fourth attempt after three failures; about $1,144 a year on a $650,000 home, with no line-item commitment on how the general-fund money is spent."),
+    ],
+}}
 
 
 def general_override(r, unresolvable):
@@ -38,9 +164,16 @@ def general_override(r, unresolvable):
         # 'COUNTY ASSESSOR' -> 'Assessor' (the primary's office names).
         return "County", "Clark County", votewa.titleish(re.sub(r"^COUNTY ", "", race.upper())), ("COUNTY", None)
     if dtype == "PUBLIC UTILITY":
+        # Nominated by commissioner district in the primary, but in the
+        # general "voters of the entire public utility district" elect each
+        # district's commissioner (RCW 54.12.010(3)), and PUD No. 1 of Clark
+        # County is countywide (its CPUCommissionerDistrict layer has the
+        # council layer's extent; the 2024 District 1 general drew 222,496
+        # votes, results.vote.wa.gov/results/20241105/clark/). So the general
+        # electorate is the whole county, not PUDDST (#22).
         n = votewa.district_number(race)
         return ("Local", f"Public Utility District No. 1 of Clark County District {n}", "PUD Commissioner",
-                ("PUDDST", str(n)))
+                ("COUNTY", None))
     if dtype == "JUDICIAL" and district == "DISTRICT COURT JUDGES":
         # Clark County District Court is elected county-wide.
         n = votewa.district_number(race)

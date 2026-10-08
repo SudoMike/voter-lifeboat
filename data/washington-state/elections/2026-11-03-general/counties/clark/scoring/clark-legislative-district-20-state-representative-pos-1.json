@@ -1,0 +1,135 @@
+{
+  "contest_slug": "clark-legislative-district-20-state-representative-pos-1",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/clark/dossiers/clark-legislative-district-20-state-representative-pos-1/"],
+  "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering school funding, tax structure, housing rules, health funding and criminal-justice statutes.",
+  "race_blurb": "Republican Rep. Peter Abbarno of Chehalis, a Centralia attorney and House Republican Caucus chair, seeks a fourth term against Democrat Andy Zahn, a Toutle writer and photographer in his first race. They split on taxes, data centers and AI, corporate campaign money and climate policy.",
+  "candidates": [
+    {
+      "slug": "peter-abbarno",
+      "summary": "State representative since 2021, former Centralia City Council member and Centralia attorney, running on tax relief, affordability and bringing capital-budget money to the district.",
+      "highlights": [
+        "Voted no on the 2026 tax on income over $1 million and the 2025 tax package; pledges 'meaningful tax relief' [S5][S6][S1]",
+        "Says he helped secure $81 million in 2025 capital-budget money for the district [S15]",
+        "Voted no on 2025 rent-increase limits and the clean-fuels expansion [S8][S11]",
+        "Voted no on both 2025 bills amending the parents' rights law [S9][S10]",
+        "Chairs Cascade PAC, which funds Republican candidates [S17]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S5", "S6", "S2", "S1"],
+          "basis": "Voted no on ESSB 6346 and ESSB 5814, calls the income tax 'unconstitutional, unpopular, and unnecessary,' and campaigns on tax relief."
+        },
+        "spending": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S7", "S3", "S15"],
+          "basis": "Voted against the 2025-27 operating budget and says taxpayers should spend their own money, while touting capital-budget money won for the district."
+        },
+        "housing": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S8"],
+          "basis": "Voted against the 2025 rent-increase limits (EHB 1217); no other housing statements."
+        },
+        "safety": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S2", "S3", "S12"],
+          "basis": "Backs more law-enforcement funding and stronger penalties for repeat offenders, opposed 2021 police-reform bills, and voted no on the 2026 officer face-covering bill."
+        },
+        "climate": {
+          "score": -1,
+          "confidence": "high",
+          "citations": ["S11", "S3"],
+          "basis": "Voted against the 2025 clean-fuels changes and called 2021 climate bills including cap-and-trade job-killing, while offering amendments to redirect rather than end the program."
+        },
+        "parental-rights": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S9", "S10", "S3"],
+          "basis": "Voted against ESHB 1296 and ESSB 5181, which amended the parents' rights law; lists the right 'to parent' among rights he defends."
+        },
+        "reform": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S17", "S15"],
+          "basis": "Chairs Cascade PAC, which funds Republican candidates, and accepts corporate contributions."
+        },
+        "experience": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S17", "S15"],
+          "basis": "House member since 2021, House Republican Caucus chair, and six years on the Centralia City Council."
+        }
+      }
+    },
+    {
+      "slug": "andy-zahn",
+      "summary": "Toutle freelance writer and photographer in his first race for office, running on rural parks, industrial hemp, passenger rail and limits on data centers, and refusing corporate contributions.",
+      "highlights": [
+        "Proposes a moratorium on new data centers and limits on generative AI in the state [S5][S4]",
+        "Calls the state tax structure regressive and wants more revenue with less burden on middle and lower earners [S6]",
+        "Proposes publicly owned hourly passenger rail on the I-5 corridor with small-town stops [S7]",
+        "Supports a universal government-paid health care system [S6]",
+        "Refuses corporate campaign contributions [S9][S1]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S6"],
+          "basis": "Calls the tax structure 'deeply flawed and regressive' and says reform could raise more revenue while easing the burden on middle and lower earners; names no specific tax."
+        },
+        "spending": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S6", "S7", "S9"],
+          "basis": "Proposes borrowing for self-repaying public investment in parks, rail, housing and community colleges, while saying he wants a balanced budget."
+        },
+        "housing": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S6", "S4"],
+          "basis": "Proposes a publicly built rent-to-own housing model and affordable housing in town centers instead of sprawl."
+        },
+        "climate": {
+          "score": 2,
+          "confidence": "medium",
+          "citations": ["S8"],
+          "basis": "Says fossil-fuel extraction and use must cease and calls climate change urgent; prioritizes demand reduction and distributed solar."
+        },
+        "healthcare": {
+          "score": 2,
+          "confidence": "medium",
+          "citations": ["S6"],
+          "basis": "Says paying for health care through a government universal health care system would save individuals 'an immense amount of money.'"
+        },
+        "tech": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S5", "S4", "S8", "S1"],
+          "basis": "Repeatedly calls for a data-center moratorium, a ban on generative AI and cryptocurrency in data centers, higher data-center utility taxes and AI-content labeling."
+        },
+        "reform": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S9"],
+          "basis": "Says big-money interests must be evicted from government and has vowed to refuse all corporate contributions."
+        },
+        "experience": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S9", "S1"],
+          "basis": "First bid for any elected office, with no elected experience."
+        }
+      }
+    }
+  ]
+}

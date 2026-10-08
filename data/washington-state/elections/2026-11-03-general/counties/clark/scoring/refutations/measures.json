@@ -1,0 +1,128 @@
+{
+  "contest_slug": "measures",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/clark/scoring/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/clark/dossiers/measures/",
+    "data/final/2026-11-03-general/rubric.json"
+  ],
+  "verdicts": [
+    {
+      "candidate": "clark-clark-county-proposed-charter-amendment-no-19",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches the ballot title and explanatory statement (three consecutive terms, prior consecutive service counts, eligibility restored after one full term out; four-year terms make 12 years) (S1, S2). pro_summary and con_summary paraphrase the pamphlet accurately with the committees named. 'Unelected staff' slightly compresses the pamphlet's 'outside interest groups or executive branch officials ... in some cases never face the voters', but it is a fair paraphrase. Empty lean_mappings is right: term limits fall under 'reform', which does not apply to measures."
+    },
+    {
+      "candidate": "clark-clark-county-proposed-charter-amendment-no-20",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "Schedule (first presentation first week of September, second in October, adoption hearing in November) and 'almost $900-million budget' match the statement in favor (S1). con_summary matches the statement against. No spending mapping is consistent with Snohomish Prop 4 (transparency with no audit or restraint mechanism mapped {}); the amendment changes timing and publicity, not spending or audit power."
+    },
+    {
+      "candidate": "clark-clark-county-proposed-charter-amendment-no-21",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "Matches the ballot title ('all boards and commissions, with the exception of the Ethics Review Commission') and the statement in favor (Council now nominates only to the Planning Commission, Historic Preservation Commission and Board of Equalization). The no-statement-against wording matches S1. No axis applies."
+    },
+    {
+      "candidate": "clark-clark-county-proposed-charter-amendment-no-22",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "Office list, 'two or less' bypass rule and even-year language match S1/S2. pro_summary and con_summary match the pamphlet. No axis applies (election procedure; 'reform' does not apply to measures)."
+    },
+    {
+      "candidate": "clark-clark-county-proposed-charter-amendment-no-23",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "Optional-to-mandatory change, broad publication and public-meeting budget presentation match the ballot title and explanatory statement. con_summary correctly draws 'post reports online' from the opponents' rebuttal. No mapping is consistent with Snohomish Prop 4 and amendment 20."
+    },
+    {
+      "candidate": "clark-clark-county-proposed-charter-amendment-no-24",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "The list of triggers (capacity, density, permitting, subdivision, residential parking, construction costs) and the discretionary-only scope match S1/S2. pro_summary and con_summary are accurate. local-control was considered and rejected: the county is imposing a procedure on itself, not a state mandate or regional authority question, and 'housing' does not apply to measures."
+    },
+    {
+      "candidate": "clark-clark-county-proposed-charter-amendment-no-25",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked on strength. Opponents say it 'will not cut your taxes', and existing taxes and same-rate renewals are exempt (S1, S2), which argues for 1. But the rubric's pole A is about opposing new taxes and levy-cap lifts, and a four-of-five bar on every new or increased councilmanic tax is a permanent structural limit. The explanatory statement itself says the aim is to 'limit tax increases without broad council support' (S1). Snohomish Prop 5, which is substantively identical, was mapped -2 and upheld. S1 and S2 support the basis."
+    },
+    {
+      "candidate": "clark-clark-county-proposed-charter-amendment-no-25",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "'From 2027' (after January 1, 2027), the exclusions and 'four votes' (two-thirds of five, the opponents' arithmetic and simple math) match S1/S2. The pro and con summaries are accurate. Optional: what_it_does could also say existing taxes are excluded, not only renewals at the same rate."
+    },
+    {
+      "candidate": "clark-clark-county-proposed-charter-amendment-no-26",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "10% to 8%, mini-initiative transfer, unincorporated-area calculation and sampling match the ballot title. 'No citizen petition has qualified since 2014' matches the statement in favor. The 2022 '59%' matches the statement against and the cached SOS 2022 results (Charter Amendment No. 14 rejected 58.98%). The cached 2022 ballot title confirms the same 8% threshold. local-control was considered and rejected: initiative thresholds are a direct-democracy (reform) question, not local versus regional."
+    },
+    {
+      "candidate": "clark-clark-county-proposed-charter-amendment-no-27",
+      "axis": "spending",
+      "verdict": "upheld",
+      "note": "The pole-A label is literally 'Audit & restrain', and the amendment creates a council performance-audit power and requires an independent auditing process by ordinance (S1, S2), so the direction is right. -2 was considered and rejected: there is no restraint mechanism or spending limit, and opponents say it adds at least $100,000 a year in costs (S1). -1 fits and is consistent with Snohomish's -1 for its restraint-only charter amendments."
+    },
+    {
+      "candidate": "clark-clark-county-proposed-charter-amendment-no-27",
+      "axis": "_display",
+      "verdict": "adjust",
+      "note": "con_summary says outside audits 'would add at least $100,000 a year'. The pamphlet says 'Its Fiscal Analysis says it could cost taxpayers at least $100,000 more each year' (S1), and the proponents' rebuttal says it adds no expense by itself. Suggested: '...the State Auditor reviews for free; the measure's fiscal analysis says it could cost at least $100,000 more a year.' Everything else matches S1/S2."
+    },
+    {
+      "candidate": "clark-clark-county-proposition-no-12",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "A brand-new 31-year countywide excess levy for up to $366,204,000 in bonds (S2) is the top tier. S1 and S2 support it."
+    },
+    {
+      "candidate": "clark-clark-county-proposition-no-12",
+      "axis": "spending",
+      "verdict": "upheld",
+      "note": "This is new capital investment that expands capacity: more jail capacity, added courtrooms, and a new or remodeled Sheriff's headquarters (S1, S2), with added medical, addiction-treatment and reentry space (S1). +2 matches other large bond programs. No offsetting restraint evidence."
+    },
+    {
+      "candidate": "clark-clark-county-proposition-no-12",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "$366,204,000, 31 years, excess levy, and the supporters' $86/year median-home estimate all match S1/S2. cost_line correctly notes that no rate is stated. Minor: pro_summary's '40-year-old jail' compresses the pamphlet's 'built 40 plus years ago' (Prop 13's statement says 42-year-old). 'More than 40-year-old' would be exact."
+    },
+    {
+      "candidate": "clark-clark-county-proposition-no-13",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "The levy rises from about $0.71 to $1.15 per $1,000 (+$0.44, S2; $0.71 and 62% per the statement against, S1), and the higher amount becomes the permanent base under ch. 84.55 RCW. This is a large, permanent levy-lid lift, so +2."
+    },
+    {
+      "candidate": "clark-clark-county-proposition-no-13",
+      "axis": "spending",
+      "verdict": "upheld",
+      "note": "+2 was considered, since the levy funds added deputies, corrections officers and prosecutors (S2). But much of the stated purpose is restoring adequate staffing that 'has not kept pace' and operating the jail safely (S1), so +1 (expansion beyond current service, partly catch-up) fits the precedent of the Spokane fire district adjustment."
+    },
+    {
+      "candidate": "clark-clark-county-proposition-no-13",
+      "axis": "_display",
+      "verdict": "adjust",
+      "note": "The numbers check out: $1.15, about $0.44, $0.44/$0.71 = 62%, $1.15 x 600 = $690, $0.44 x 600 = $264 (S1, S2). But cost_line gives only the opponents' dollar estimate, while Prop 12's cost_line gives the supporters' figure. For balance, add the statement in favor's estimate: '...about $264 more on a $600,000 property, per the statement against; supporters put the cost at about $212 a year per median household.' pro_summary and con_summary are accurate."
+    },
+    {
+      "candidate": "clark-battle-ground-school-district-no-119-proposition-no-11",
+      "axis": "taxes",
+      "verdict": "adjust",
+      "adjusted_score": 2,
+      "adjusted_confidence": "medium",
+      "note": "The levy lapsed: the old EP&O levy expired at the end of 2025 (S1; 2025 explanatory statement, S4), so 2026 bills carry no Battle Ground EP&O levy. A yes vote adds an estimated $1.76 per $1,000, about $1,144 a year on a $650,000 home (S1, S2), to bills that now pay nothing for it. The basis compares the rate to the failed April 2025 ask of $1.95 (S4), not to what taxpayers pay now. The new levy is also larger per year than the one that expired: $116,145,000 over 3 years (about $38.7M a year, S1/S2) against $115,700,000 over 4 years (about $28.9M a year) for the expired levy, per the 2025 statement against (S4). The precedents point to 2. Highline's lapsed tech levy got +1 only because it was 'modest' ($0.32-$0.36, half the old rate). Spokane's Nine Mile Falls reasoning keys on whether a yes vote raises current bills. Snohomish's Monroe new $0.82-$0.95 levy was adjusted to +2. Proposed basis: 'YES restores an operations levy that lapsed at the end of 2025, adding an estimated $1.76 per $1,000 (about $38.7 million a year, more than the expired levy's roughly $28.9 million average) to tax bills that carry no district operations levy in 2026.' Citations should be S1, S2, S4. The current S5 is the April 2025 results page and does not state the $1.95 rate."
+    },
+    {
+      "candidate": "clark-battle-ground-school-district-no-119-proposition-no-11",
+      "axis": "_display",
+      "verdict": "adjust",
+      "note": "Numbers check out: $1.76; $37,025,000 + $38,690,000 + $40,430,000 = $116,145,000; $1.76 x 650 = $1,144 (S1, S2). Three fixes: (1) sources_note mislabels ids. The dossier's frontmatter has S4 = April 2025 Prop 9 pamphlet record, S5 = April 2025 results, S6 = February 2025 results, and there is no S7. It should read 'April 2025 Prop 9 record (S4) and results (S5); February 2025 results (S6)'. (2) The taxes citation S5 should be S4 (see the taxes verdict). (3) pro_summary's 'at a lower amount the community asked for' can read as lower than the expired levy, but the annual amount is higher than the expired levy's average (S4). Suggested: 'replaces the levy that expired in 2025, lowering the amount from the failed proposals as the community asked'. con_summary is accurate."
+    }
+  ],
+  "missing": []
+}
