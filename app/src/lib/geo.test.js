@@ -56,6 +56,70 @@ test('unsupported Washington counties receive statewide-only fallback when state
   assert.equal(context.county.id, 'thurston')
 })
 
+// The general's coverage before any county ships (issue #9): every Washington
+// address, King included, gets the Statewide-Only Guide without a district
+// lookup; anything outside Washington still stops at the geocode.
+const statewideOnlyData = { coverage: { statewide_complete: true, supported_counties: [] } }
+
+test('with no supported counties, every Washington county is statewide-only', async () => {
+  for (const [fips, name, id] of [
+    ['033', 'King County', 'king'],
+    ['063', 'Spokane County', 'spokane'],
+  ]) {
+    const calls = []
+    global.fetch = async (url) => {
+      calls.push(String(url))
+      return {
+        ok: true,
+        async json() {
+          return {
+            result: {
+              addressMatches: [
+                {
+                  matchedAddress: `1 MAIN ST, ${name.toUpperCase()}, WA`,
+                  coordinates: { x: -120, y: 47 },
+                  geographies: { Counties: [{ STATE: '53', COUNTY: fips, NAME: name }] },
+                },
+              ],
+            },
+          }
+        },
+      }
+    }
+    const context = await lookupBallotContext(statewideOnlyData, '1 Main St WA')
+    assert.equal(context.coverageStatus, 'statewide_only', name)
+    assert.equal(context.county.id, id)
+    assert.deepEqual(context.districts, {})
+    assert.deepEqual(context.missingLayers, [])
+    assert.equal(calls.length, 1, `${name}: only the geocoder is called`)
+    assert.equal(coverageAdvice(context), 'statewide-only')
+  }
+})
+
+test('with no supported counties, an out-of-state address still hard-stops', async () => {
+  mockGeocode({
+    matchedAddress: '1600 PENNSYLVANIA AVE NW, WASHINGTON, DC, 20500',
+    coordinates: { x: -77.03, y: 38.89 },
+    geographies: { Counties: [{ STATE: '11', COUNTY: '001', NAME: 'District of Columbia' }] },
+  })
+  await assert.rejects(
+    lookupBallotContext(statewideOnlyData, '1600 Pennsylvania Ave NW Washington DC 20500'),
+    (err) => err.kind === 'outside-wa'
+  )
+})
+
+test('without statewide data, an unsupported county is not covered yet', async () => {
+  mockGeocode({
+    matchedAddress: '808 W SPOKANE FALLS BLVD, SPOKANE, WA, 99201',
+    coordinates: { x: -117.42, y: 47.66 },
+    geographies: { Counties: [{ STATE: '53', COUNTY: '063', NAME: 'Spokane County' }] },
+  })
+  await assert.rejects(
+    lookupBallotContext({ coverage: { statewide_complete: false, supported_counties: [] } }, 'x'),
+    (err) => err.kind === 'unsupported-county'
+  )
+})
+
 test('supported non-King counties use Census federal/state districts as partial coverage', async () => {
   mockGeocode({
     matchedAddress: '3000 ROCKEFELLER AVE, EVERETT, WA, 98201',
