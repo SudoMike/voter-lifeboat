@@ -17,7 +17,7 @@ Elections:
 | id | Election | Status |
 |---|---|---|
 | `2026-08-04-primary` | August 4, 2026 Primary and Special Election | archived, served at `/washington-state/2026-08-04-primary` |
-| `2026-11-03-general` | November 3, 2026 General Election | active (`ACTIVE`); King County at Full County Coverage, Snohomish County at partial coverage (District Court electoral districts unresolvable), every other county a Statewide-Only Guide (5 Supreme Court contests, 3 initiatives) |
+| `2026-11-03-general` | November 3, 2026 General Election | active (`ACTIVE`); King County at Full County Coverage, Snohomish County at partial coverage (District Court electoral districts unresolvable), Spokane County at partial coverage (Stevens County PUD seat unresolvable), every other county a Statewide-Only Guide (5 Supreme Court contests, 3 initiatives) |
 
 Every pipeline script takes `--election <id>`; without it the script uses the
 id in `elections/ACTIVE`. Outputs land in `data/final/<id>/` and the app copy
@@ -136,12 +136,14 @@ package already researched (for example a legislative district King shares)
 is not researched again: `build_research_plan.py` names the owning package
 and `assemble_app_data.py` ships that package's scoring and dossiers.
 
-A declared non-King county (Snohomish, from #21) ships its
+A declared non-King county (Snohomish and Spokane, from #21) ships its
 `interim/app-{contests,measures}.json`. Its candidates' `pamphlet_pages` come
 from its own dossiers' `type: pamphlet` citations (`pamphlet_refs.py`; edition
 ids are the package's `raw/*/<edition>.pdf.url` pointer names, such as
 `local-voters-pamphlet`); a race shipped with another package's research
-carries none. Its coverage is `full_county` only when its package says so and
+carries none. A county whose dossiers cite VoteWA's unpaged online voters'
+guide instead of a printed pamphlet (Spokane) ships no pages; the app links
+that guide (`officialLinks.js` `countyGuides`). Its coverage is `full_county` only when its package says so and
 every DISTRICT scope it ships is in `election.DISTRICT_ADAPTER_LAYERS[<county>]`
 (the Census layers plus `geo.js` `COUNTY_LAYERS[<county>]`). See the county's
 `COMPLETENESS.md`.
