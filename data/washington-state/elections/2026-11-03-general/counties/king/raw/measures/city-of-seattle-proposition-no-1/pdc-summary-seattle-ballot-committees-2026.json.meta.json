@@ -1,0 +1,12 @@
+{
+  "url": "https://data.wa.gov/resource/3h9x-7bvm.json?$where=election_year=2026%20AND%20jurisdiction='CITY%20OF%20SEATTLE'%20AND%20ballot_committee='X'&$select=filer_name,committee_id,for_or_against,ballot_number,ballot_title,ballot_proposal_detail,election_date,contributions_amount,expenditures_amount,updated_at",
+  "retrieved_at": "2026-10-08",
+  "stage": "raw",
+  "method": "source pointer; HTTP GET (curl), cached copy under data/.cache/measures/city-of-seattle-proposition-no-1 (gitignored)",
+  "cache_file": "data/.cache/measures/city-of-seattle-proposition-no-1/pdc-summary-seattle-ballot-committees-2026.json",
+  "bytes": 2506,
+  "sha256": "53e580361f32014b38df653308df02059d5883133b621ab4a3a1d8856e8b6c89",
+  "publisher": "Washington Public Disclosure Commission (PDC), Campaign Finance Summary dataset on data.wa.gov",
+  "tier": 1,
+  "notes": "All 2026 City of Seattle ballot committees in the PDC summary. 'Hop On Board PAC' (committee 42282, for, election 2026-11-03, proposal type levy, ballot number 'TBD'): contributions 154144.00, expenditures 1969.00, updated 2026-10-05T13:23:29; registered 2026-07-29 with email kirk@transportationchoices.org. No committee registered against this measure appears. Registration page https://my.pdc.wa.gov/registration/public/-/#/public/registration/69980 (JavaScript app, not fetched)."
+}
