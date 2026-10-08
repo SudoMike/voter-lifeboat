@@ -434,8 +434,9 @@ general packages that are `partial_county` are Spokane and Okanogan (both
 Clark, Kitsap, Pierce, Snohomish (since #27), Thurston, Whatcom, Yakima,
 Skagit, Cowlitz, Grant, Island, Lewis, Franklin, Chelan, Clallam, Grays
 Harbor, Mason, Walla Walla, Stevens, Whitman, Douglas, Jefferson, Kittitas,
-Asotin, Adams, Skamania, San Juan, Lincoln, Pend Oreille, Ferry and
-Wahkiakum are `full_county`; all thirty-six ship with King. A PUD
+Asotin, Adams, Skamania, San Juan, Lincoln, Pend Oreille, Ferry,
+Wahkiakum, Columbia and Garfield are `full_county`; all thirty-eight ship
+with King, so every Washington county ships (#32). A PUD
 commissioner is nominated by district but elected by the whole PUD in the
 general (RCW 54.12.010(3)), so a countywide PUD's seat is scoped `COUNTY`
 (Clark, Kitsap, Thurston), not `PUDDST`.
@@ -801,6 +802,28 @@ CD 3 ships with Clark's scoring and LD 19 Pos. 1/2 with Thurston's. Neither
 county prints a general pamphlet; both link their VoteWA guide, though
 Wahkiakum's carries no county race (its Auditor's sample ballot is the only
 official listing).
+
+Columbia and Garfield shipped on 2026-10-08 (#32) as `full_county`, the last
+two counties. `COUNTY_LAYERS.columbia` gained `PARKDST` (DOR PKR2025, layer
+14) for the Columbia County Park and Recreation Pool District levy (`CPR`;
+the Town of Starbuck is in no park district) and Columbia's copy of the
+Prescott Joint Park and Recreation District levy (`PRES`, the county's
+western strip). Walla Walla ships the same Prescott measure scoped to its own
+county, so each voter sees only their county's copy (as with McCleary SD 65,
+Grays Harbor/Mason); both lean `taxes` +2. `districts.js` names the PKR2025
+codes `CPR`, `PRES` and Walla Walla's `WAIT`. Garfield needs no county layer:
+every scope is `COUNTY`, CD 5 or LD 9 (both commissioner seats are elected
+county-wide), and `DISTRICT_ADAPTER_LAYERS["garfield"]` is the Census keys
+alone; `garfield/COUNTY_COUNCIL` stays in `UNRESOLVABLE_SCOPES` for the
+archived primary. Both counties' CD 5 and LD 9 Pos. 1/2 ship with Spokane's
+scoring. Columbia's pamphlet PDF pages run one ahead of the printed ones;
+Garfield's site answers 403 to scripts, so its records link its VoteWA guide
+and its elections office is the SOS directory's link, unchecked. A pamphlet
+ref's note must not nest parentheses: `PAMPHLET_REF` closes the note at the
+first `)` and reads any later `page N` as another page (Columbia's
+Prosecutor ref, fixed in the ship pass). With no county left unshipped, tests
+that need an unshipped county use a synthetic one (`test-unshipped`,
+`testcounty`), never a real county.
 
 ## 13. Reference
 

@@ -477,7 +477,22 @@ const COUNTY_LAYERS = {
     },
   ],
   columbia: [
+    // Re-probed 2026-10-08 (#32): 341 E Main St, Dayton -> '2'; 650 Wagon Rd,
+    // Dayton, 101 and 401 Main St, Starbuck and the Prescott interior point
+    // (-118.21, 46.40) -> '3'. No general scope uses it (Commissioner No. 3 is
+    // elected county-wide); only the archived primary does.
     { key: 'COUNTY_COUNCIL', url: 'https://services9.arcgis.com/zq1Ay6bxXC1T1CBk/arcgis/rest/services/CommissionerDistricts/FeatureServer/0/query', attr: 'District' },
+    // WA DOR PKR2025 (#32): Columbia County Park and Recreation Pool District
+    // Prop. 1 is scoped 'CPR'; Prescott Joint Park and Recreation District
+    // Prop. 1 (joint with Walla Walla, whose own copy is scoped to Walla
+    // Walla) is scoped 'PRES'. Columbia has exactly these two polygons, which
+    // do not overlap. Live 2026-10-08: 341 E Main St and 650 Wagon Rd, Dayton
+    // -> 'CPR'; 101 and 401 Main St, Starbuck (the Town of Starbuck is in
+    // neither district) -> no feature; interior point (-118.21, 46.40), the
+    // county's western strip -> 'PRES' (no Columbia street address inside it
+    // geocodes). King also has a DOR 'CPR' polygon; King's adapter does not
+    // read PKR2025.
+    { key: 'PARKDST', url: `${DOR_TAX_DISTRICTS}/14/query`, attr: 'DISTATTRIB' },
   ],
   cowlitz: [
     { key: 'COUNTY_COUNCIL', url: 'https://gis.cowlitzwa.gov/ccserver/rest/services/County/Political_Administrative_Districts/MapServer/1/query', attr: 'DIST_ID' },
@@ -551,7 +566,12 @@ const COUNTY_LAYERS = {
     // 2026-10-08: 5600 N Rd 68, Pasco -> '3'; downtown Pasco and Connell none.
     { key: 'FIRDST', url: `${DOR_TAX_DISTRICTS}/7/query`, attr: 'DISTATTRIB' },
   ],
-  garfield: [],
+  garfield: [
+    // No layer (#32): every general scope is COUNTY, CD 5 or LD 9 (both
+    // commissioner seats are elected county-wide in the general; no local
+    // measure). The archived primary's district-only commissioner races stay
+    // unresolvable (the county publishes only a PDF district map).
+  ],
   grant: [
     { key: 'COUNTY_COUNCIL', url: 'https://services2.arcgis.com/hQZvdtFxRzJpMtdS/arcgis/rest/services/County_Commissioner_Districts/FeatureServer/27/query', attr: 'DistrictNo' },
     // Live 2026-10-08 (#28): 127 Main Ave E, Soap Lake -> HSP2025 '4'

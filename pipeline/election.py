@@ -71,7 +71,8 @@ APP_PACKAGES = {
                      "benton", "skagit", "cowlitz", "grant", "island", "lewis", "franklin", "chelan", "clallam",
                      "grays-harbor", "mason", "walla-walla", "stevens", "whitman", "douglas", "okanogan",
                      "jefferson", "kittitas", "klickitat", "pacific", "asotin", "adams",
-                     "skamania", "san-juan", "lincoln", "pend-oreille", "ferry", "wahkiakum"],
+                     "skamania", "san-juan", "lincoln", "pend-oreille", "ferry", "wahkiakum",
+                     "columbia", "garfield"],
         "district_contests": "county",
     },
 }
@@ -136,6 +137,12 @@ DISTRICT_ADAPTER_LAYERS = {
     "ferry": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "EMSDST"),
     # Wahkiakum's Fire District 2 EMS levy reads FIRDST, DOR FIR2025 (layer 7).
     "wahkiakum": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "FIRDST"),
+    # Columbia's Pool District and Prescott Joint Park & Rec levies read
+    # PARKDST, DOR PKR2025 (layer 14; see geo.js).
+    "columbia": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "PARKDST"),
+    # Garfield's general scopes are all COUNTY, CD 5 or LD 9: Census layers
+    # only (geo.js COUNTY_LAYERS.garfield is empty).
+    "garfield": ("CONGDST", "LEGDST", "CITY"),
 }
 
 
@@ -362,6 +369,18 @@ COUNTY_ELECTIONS_URLS = {
         # the general's sample ballot, DocumentCenter/View/3637, but on
         # 2026-10-08 still linked the primary's VoteWA guide, e=898).
         "wahkiakum": "https://www.co.wahkiakum.wa.us/419/Elections",
+        # Columbia County Auditor, 2026 General Election (200 text/html with a
+        # bare and a browser User-Agent, 2026-10-08; links the general's local
+        # voters' pamphlet, DocumentCenter/View/8822, the sample ballot and
+        # VoteWA's guide).
+        "columbia": "https://www.columbiaco.com/616/2026-General-Election",
+        # Garfield County Auditor: the "Location Website" the Secretary of
+        # State's county elections offices directory
+        # (sos.wa.gov/elections/voters/voter-registration/county-elections-offices)
+        # gives for Garfield (789 Main St, Pomeroy). garfieldcountywa.gov
+        # answers 403 (Cloudflare challenge) to every scripted request, browser
+        # User-Agent included (2026-10-08), so its 200 is unchecked here.
+        "garfield": "https://www.garfieldcountywa.gov/auditor",
     },
 }
 

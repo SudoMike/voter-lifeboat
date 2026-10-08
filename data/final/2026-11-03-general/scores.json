@@ -75,12 +75,16 @@
     "data/washington-state/elections/2026-11-03-general/counties/ferry/scoring/*.json",
     "data/washington-state/elections/2026-11-03-general/counties/ferry/scoring/refutations/*.json",
     "data/washington-state/elections/2026-11-03-general/counties/wahkiakum/scoring/*.json",
-    "data/washington-state/elections/2026-11-03-general/counties/wahkiakum/scoring/refutations/*.json"
+    "data/washington-state/elections/2026-11-03-general/counties/wahkiakum/scoring/refutations/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/columbia/scoring/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/columbia/scoring/refutations/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/garfield/scoring/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/garfield/scoring/refutations/*.json"
   ],
   "script": "pipeline/merge_scores.py",
   "verdict_stats": {
-    "upheld": 2300,
-    "adjust": 201,
+    "upheld": 2315,
+    "adjust": 204,
     "refuted": 24,
     "missing_added": 31,
     "missing_dropped_low": 12
@@ -39204,6 +39208,669 @@
           "highlights": [
             "Won in 2022, 51.43% to 48.41% [S3]",
             "Unopposed in the August 2026 primary [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "columbia-columbia-county-columbia-county-assessor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/columbia/dossiers/columbia-columbia-county-columbia-county-assessor/"
+      ],
+      "office_does": "The county assessor lists and values all taxable property in Columbia County each year, the basis for property tax bills.",
+      "race_blurb": "Uncontested: Assessor Tammy Groom Ketterman, in office since 2023, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "tammy-groom-ketterman",
+          "summary": "Columbia County Assessor since 2023 after six years as the office's chief deputy appraiser, running unopposed for another term.",
+          "highlights": [
+            "Assessor since 2023; chief deputy appraiser 2016-2022; Walla Walla County residential and farm appraiser 1992-2000 [S1]",
+            "Pledges 'a fair and equitable valuation of each individual property' [S1]",
+            "Said in 2025 the county needs more taxable value, after the Columbia Pulp closure cut assessed value 4.46% [S6]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "columbia-columbia-county-columbia-county-auditor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/columbia/dossiers/columbia-columbia-county-columbia-county-auditor/"
+      ],
+      "office_does": "The county auditor records deeds and documents, keeps the county's accounts and, in Columbia County, also runs budgeting, licensing and elections.",
+      "race_blurb": "Uncontested: Auditor Will Hutchens, in office since 2023, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "will-hutchens",
+          "summary": "Columbia County Auditor since 2023, a farm office manager and volunteer firefighter, running unopposed with no party preference.",
+          "highlights": [
+            "Auditor 2023-2026; leads the office's budgeting, finance, licensing, recording and elections staff [S1]",
+            "Oversaw the county's part of the 2024 statewide hand recount: 1,349 ballots, no changes [S6]",
+            "M.I.M., Portland State; B.S. in crop science, WSU [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "columbia-columbia-county-columbia-county-clerk",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/columbia/dossiers/columbia-columbia-county-columbia-county-clerk/"
+      ],
+      "office_does": "The county clerk is clerk of the superior court, keeping its filings, dockets and case records.",
+      "race_blurb": "Uncontested: Clerk Kriston Chapman, in office since 2022, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "kriston-chapman",
+          "summary": "Columbia County Clerk since 2022 and a former chief deputy clerk and District Court administrator, running unopposed.",
+          "highlights": [
+            "County Clerk since 2022; earlier deputy clerk in Benton and Walla Walla counties [S1]",
+            "Cites a new e-filing system and cleanup of older records [S1]",
+            "Elected unopposed in 2022 [S5]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "columbia-columbia-county-columbia-county-prosecutor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/columbia/dossiers/columbia-columbia-county-columbia-county-prosecutor/"
+      ],
+      "office_does": "The prosecuting attorney prosecutes crimes for the state and is legal adviser to the county commissioners, county officers and school districts.",
+      "race_blurb": "Uncontested: Nickolas J. Ward, appointed interim prosecutor from November 2025 after Dale Slack resigned, is the only candidate for both the short and the full term.",
+      "candidates": [
+        {
+          "slug": "nickolas-j-ward",
+          "summary": "Appointed Columbia County Prosecutor since November 2025, a former Asotin County deputy prosecutor and public defender and a Marine Corps veteran, running with no party preference.",
+          "highlights": [
+            "Appointed by the commissioners in September 2025 to finish Dale Slack's term; started Nov. 1, 2025 [S5]",
+            "Former Asotin County deputy prosecutor and felony public defender in four southeast Washington counties [S1]",
+            "Says he re-opened the prosecutor's office to the public [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "columbia-columbia-county-columbia-county-sheriff",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/columbia/dossiers/columbia-columbia-county-columbia-county-sheriff/"
+      ],
+      "office_does": "The sheriff is the county's chief law enforcement officer, keeping the peace, enforcing state law and executing court orders.",
+      "race_blurb": "Uncontested: Sheriff Joe Helm, first elected in 2018 and re-elected in 2022, is the only candidate and submitted no statement.",
+      "candidates": [
+        {
+          "slug": "joe-helm",
+          "summary": "Columbia County Sheriff since the 2018 election and chief deputy for 11 years before that; submitted no 2026 statement.",
+          "highlights": [
+            "Won in 2018 with 64% and in 2022, 1,306 to 793, both times over Deputy Jeff Jenkins [S5][S6]",
+            "In 2022 named crime and drugs his top priority, through community-oriented policing and more staffing [S6]",
+            "No 2026 pamphlet or online guide statement [S1][S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "columbia-columbia-county-columbia-county-treasurer",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/columbia/dossiers/columbia-columbia-county-columbia-county-treasurer/"
+      ],
+      "office_does": "The county treasurer collects property taxes, receives all money due the county and pays out county funds.",
+      "race_blurb": "Uncontested: Treasurer Carla Rowe, in office since 2019, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "carla-rowe",
+          "summary": "Columbia County Treasurer since 2019 and owner of a bookkeeping business, running unopposed with no party preference.",
+          "highlights": [
+            "Treasurer since 2019; owner of CJ Bookkeeping since 2004 [S1]",
+            "Cites refinancing the public works building loan and online tax payments; collection rate near 98% [S1]",
+            "Served on the state Clean Energy Property Tax Impacts Task Force, 2024-2026 [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "columbia-columbia-county-commissioner-district-3-columbia-county-commissioner-no-3",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/columbia/dossiers/columbia-columbia-county-commissioner-district-3-columbia-county-commissioner-no-3/"
+      ],
+      "office_does": "The three county commissioners set the county budget and county taxes, oversee county roads and buildings, and run county business.",
+      "race_blurb": "One-term Commissioner Jack Miller, a retired farmer who names over-taxation as residents' main problem, faces farmer, orchardist and Walla Walla Community College board chair Bill Warren, who says the county needs funds for youth, families and the planned pool. Both prefer the Republican Party; District 3 voters chose the finalists in August (Warren 215, Miller 198), and the whole county votes in November.",
+      "candidates": [
+        {
+          "slug": "bill-warren",
+          "summary": "Lifelong Columbia County farmer, orchardist and rancher, and a Walla Walla Community College trustee since 2017 and current board chair, making his first run for county office.",
+          "highlights": [
+            "Says the community 'needs funds' for youth and young families: complete the pool project and maintain child care [S3]",
+            "Would maintain investments in critical infrastructure and modernize county systems [S1]",
+            "Would abide by the state's sanctuary law [S3]",
+            "Walla Walla Community College trustee since 2017, current board chair [S1]",
+            "Led the District 3 primary, 215 to 198 [S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S1"
+              ],
+              "basis": "Argues the community needs funds for youth and family services, completing the pool project and child care, and would maintain infrastructure investment."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "low",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Challenger with no county office experience who says he can 'bring a stronger voice', though he has served as a college trustee since 2017.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "jack-miller",
+          "summary": "District 3 commissioner since 2023 and a retired farmer who managed the Coeur d'Alene Tribal Farm for more than 30 years, seeking a second term.",
+          "highlights": [
+            "Names 'over taxation' as the main problem for residents and backs raising the income limit for property tax exemptions [S3]",
+            "'My priority is always to maintain a positive cash flow'; pledges to spend carefully and reduce regulations [S1]",
+            "Says state sanctuary laws 'need to be abolished' [S3]",
+            "Won the seat in 2022 over incumbent Charles Amerein, 1,094 to 1,005 [S13]",
+            "Says the new-commissioner learning curve 'is now behind me' [S3]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S1"
+              ],
+              "basis": "Calls over-taxation the main problem facing residents and favors widening property tax exemptions; stresses careful handling of tax dollars.",
+              "adjusted_by_refutation": true
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Priorities are positive cash flow, careful spending and spending 'as efficiently as possible', without a specific audit or cut proposal."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3",
+                "S13"
+              ],
+              "basis": "One-term incumbent running on his record and the experience he gained in office."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "columbia-columbia-county-district-court-district-court-judge",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/columbia/dossiers/columbia-columbia-county-district-court-district-court-judge/"
+      ],
+      "office_does": "The District Court judge hears misdemeanor and gross misdemeanor cases and other limited-jurisdiction matters for all of Columbia County.",
+      "race_blurb": "Uncontested: Judge Kimberly (Kim) Boggs, appointed in 2022 and elected unopposed that year, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "kimberly-kim-boggs",
+          "summary": "Columbia County District Court Judge since her 2022 appointment, with a general law practice in the county since 1994.",
+          "highlights": [
+            "Appointed District Court Judge in 2022 and elected unopposed that year [S1][S4]",
+            "District Court judge pro tem 2002-2021; Superior Court commissioner (2022) and judge pro tem [S1]",
+            "Past president of the Walla Walla Bar Association [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "columbia-court-of-appeals-division-3-district-2-judge-position-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/columbia/dossiers/columbia-court-of-appeals-division-3-district-2-judge-position-1/"
+      ],
+      "office_does": "A Court of Appeals judge reviews trial-court decisions on appeal; Division III, District 2 elects one judge from Adams, Asotin, Benton, Columbia, Franklin, Garfield, Grant, Walla Walla and Whitman counties.",
+      "race_blurb": "Uncontested: Judge Tyson R. Hill, appointed by Gov. Ferguson effective Jan. 1, 2026 to replace retiring Judge George Fearing, is the only candidate for the remaining two years of the term.",
+      "candidates": [
+        {
+          "slug": "tyson-r-hill",
+          "summary": "Court of Appeals judge since his appointment effective Jan. 1, 2026; previously a Grant County Superior Court and District Court judge. The only candidate on the ballot.",
+          "highlights": [
+            "Appointed by Gov. Ferguson to replace retiring Judge George Fearing, effective Jan. 1, 2026 [S4]",
+            "More than 12 years as a Grant County District and Superior Court judge; co-founded Grant County's first therapeutic drug court [S1][S4]",
+            "Former lead appellate prosecutor and law clerk to Justice James M. Johnson [S1][S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "garfield-court-of-appeals-division-3-district-2-judge-position-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/garfield/dossiers/garfield-court-of-appeals-division-3-district-2-judge-position-1/"
+      ],
+      "office_does": "A Court of Appeals judge reviews trial-court decisions on appeal; Division III, District 2 elects one judge from Adams, Asotin, Benton, Columbia, Franklin, Garfield, Grant, Walla Walla and Whitman counties.",
+      "race_blurb": "Uncontested: Judge Tyson R. Hill, appointed by Gov. Ferguson effective Jan. 1, 2026 to replace retiring Judge George Fearing, is the only candidate for the remaining two years of the term.",
+      "candidates": [
+        {
+          "slug": "tyson-r-hill",
+          "summary": "Court of Appeals judge since his appointment effective Jan. 1, 2026; previously a Grant County Superior Court and District Court judge and the Grant County Prosecutor's lead appellate attorney. The only candidate.",
+          "highlights": [
+            "Appointed by Gov. Ferguson to replace retiring Judge George Fearing, effective Jan. 1, 2026 [S2]",
+            "More than 12 years as a Grant County District and Superior Court judge; co-founded Grant County's first therapeutic drug court [S1][S2]",
+            "Former lead appellate prosecutor and law clerk to Justice Jim Johnson [S1][S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "garfield-garfield-county-commissioner-district-1-county-commissioner-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/garfield/dossiers/garfield-garfield-county-commissioner-district-1-county-commissioner-1/"
+      ],
+      "office_does": "The three Garfield County commissioners adopt the county budget, set county policy and ordinances, and oversee roads, property and services; this seat is for the two years left in the term.",
+      "race_blurb": "Appointed Commissioner Vonda (Vonni) Mulrony, chosen in February 2026 after Jim Nelson resigned, faces Beau Blachly, a farm-supply sales manager on the county planning commission. Mulrony led the district-only primary 186 to 119; every county voter votes in November.",
+      "candidates": [
+        {
+          "slug": "vonda-vonni-mulrony",
+          "summary": "Appointed District 1 commissioner since February 2026, the first woman to serve on the board; a dental hygienist, dental hygiene professor and insurance agent by career, who has served on the school, hospital district, health and equalization boards.",
+          "highlights": [
+            "Appointed in February 2026 to fill the vacant District 1 seat; first woman on the board [S2]",
+            "Lists the Pomeroy School District, Hospital District, Board of Health and Board of Equalization [S1]",
+            "Says 'strong financial oversight, and steady, informed leadership are essential' [S1]",
+            "Led the District 1 primary 186 to 119 [S6]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "The sitting commissioner (by appointment since February 2026) with several local board seats, running to keep the seat; a short tenure in this office, so not -2."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Single clear statement leading with 'strong financial oversight' and steady leadership; no spending or program-expansion plank."
+            }
+          }
+        },
+        {
+          "slug": "beau-blachly",
+          "summary": "Agribusiness sales manager, Pomeroy conservation district vice chair and county planning commissioner, running on a balanced long-term budget, county services and property owners' rights.",
+          "highlights": [
+            "15 years a WinField United sales area manager after 14 years at Pomeroy Grain Growers [S1]",
+            "Vice chair of the Pomeroy Soil and Water Conservation District; on the county planning commission [S1]",
+            "Would build 'long term balanced budget funding' to keep road and emergency services at a high standard [S1]",
+            "States 'a firm commitment to the rights of property owners large and small' [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "low",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Challenger who has never held county office; runs on a private-sector agribusiness career, with only conservation district and planning commission service in public roles.",
+              "adjusted_by_refutation": true
+            },
+            "spending": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Pairs a long-term balanced budget with keeping road and emergency services at a high standard: restraint and service continuity in one sentence."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "garfield-garfield-county-commissioner-district-3-county-commissioner-3",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/garfield/dossiers/garfield-garfield-county-commissioner-district-3-county-commissioner-3/"
+      ],
+      "office_does": "The three Garfield County commissioners adopt the county budget, set county policy and ordinances, and oversee roads, property and services.",
+      "race_blurb": "Commissioner Justin E. Dixon, on the board since 2015 and its 2026 chair, faces Gary W. Bowles, a Fire District 1 commissioner and volunteer EMT. Bowles led the district-only primary 171 to 165; every county voter votes in November.",
+      "candidates": [
+        {
+          "slug": "gary-w-bowles",
+          "summary": "Second-term Garfield County Fire District 1 commissioner and volunteer EMT since 2010, running on transparency, open communication and collaboration.",
+          "highlights": [
+            "Second term as a Fire District 1 commissioner; volunteer EMT since 2010 [S1]",
+            "Promises 'transparency, accountability, and open communication' and a government that 'keeps them informed' [S1]",
+            "Wants to 'move our county forward in a positive direction' [S1]",
+            "Led the District 3 primary 171 to 165 [S3]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "First-time county candidate challenging a commissioner of more than ten years, pitching honest leadership and moving the county 'forward'; has fire-district board experience, so not +2."
+            }
+          }
+        },
+        {
+          "slug": "justin-e-dixon",
+          "summary": "Garfield County commissioner since 2015 and 2026 board chair, a farmer and rancher who sits on the state counties association's legislative steering committee and the Snake River Salmon Recovery Board.",
+          "highlights": [
+            "Commissioner since 2015; won in 2018 and re-elected unopposed in 2022 [S1][S2][S3]",
+            "Chaired the board's March 2026 flood emergency proclamation [S5]",
+            "Washington State Association of Counties legislative steering committee; Snake River Salmon Recovery Board [S1]",
+            "Says 'fiscal responsibility, transparency, and accountability are essential' to maintaining services [S1]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3",
+                "S5"
+              ],
+              "basis": "More than ten years on the board (since 2015), won the seat in 2018 and was re-elected in 2022, current chair, with state and regional board seats; runs on that record."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Single clear statement naming fiscal responsibility and accountability as essential to maintaining existing services; no expansion plank."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "garfield-garfield-county-county-assessor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/garfield/dossiers/garfield-garfield-county-county-assessor/"
+      ],
+      "office_does": "The county assessor values real and personal property in Garfield County for property taxation each year.",
+      "race_blurb": "Uncontested: Assessor Brian Bartels, first elected in 2018, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "brian-bartels",
+          "summary": "Garfield County Assessor since winning the office in 2018, running unopposed for another term; he submitted no statement to the voters' guide.",
+          "highlights": [
+            "Won the office in 2018, 915 to 396 [S2]",
+            "Re-elected unopposed in 2022 [S3]",
+            "757 votes in the August 2026 primary [S4]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "garfield-garfield-county-county-auditor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/garfield/dossiers/garfield-garfield-county-county-auditor/"
+      ],
+      "office_does": "The county auditor runs Garfield County's elections, records documents, licenses vehicles and vessels, and keeps the county's accounts, payroll and budget.",
+      "race_blurb": "Uncontested: Auditor McKenzie Lueck, in office since 2020, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "mckenzie-lueck",
+          "summary": "Garfield County Auditor since 2020 and an Executive Board member of the Washington State Association of County Auditors, running unopposed.",
+          "highlights": [
+            "Auditor since 2020; elected unopposed in 2020 and 2022 [S1][S2][S3]",
+            "Third year on the Washington State Association of County Auditors Executive Board [S1]",
+            "Commits to 'fiscal transparency, secure elections, and accountable service' [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "garfield-garfield-county-county-clerk",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/garfield/dossiers/garfield-garfield-county-county-clerk/"
+      ],
+      "office_does": "The county clerk keeps the records, files and accounts of the Superior Court that Garfield County shares with Asotin and Columbia counties.",
+      "race_blurb": "Uncontested: Clerk Marie Gormsen, first elected in 2018, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "marie-gormsen",
+          "summary": "Garfield County Clerk since 2018, running unopposed; she submitted no statement to the voters' guide.",
+          "highlights": [
+            "Won the office in 2018, 806 to 492 [S3]",
+            "Re-elected unopposed in 2022 [S4]",
+            "Born and raised in Garfield County [S6]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "garfield-garfield-county-county-prosecutor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/garfield/dossiers/garfield-garfield-county-county-prosecutor/"
+      ],
+      "office_does": "The prosecuting attorney prosecutes crimes in Garfield County for the state and is the legal adviser to county officers and boards.",
+      "race_blurb": "Uncontested: Prosecuting Attorney Matt L. Newberg, elected unopposed in 2018 and 2022, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "matt-l-newberg",
+          "summary": "Garfield County Prosecuting Attorney since 2018, running unopposed; he submitted no statement to the voters' guide.",
+          "highlights": [
+            "Elected unopposed in 2018 and 2022 [S2][S3]",
+            "Graduate of Eastern Washington University and Gonzaga University School of Law [S5]",
+            "772 votes in the August 2026 primary [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "garfield-garfield-county-county-sheriff",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/garfield/dossiers/garfield-garfield-county-county-sheriff/"
+      ],
+      "office_does": "The sheriff runs the Garfield County Sheriff's Office, the county's law-enforcement agency, which patrols, investigates and serves court process and warrants.",
+      "race_blurb": "Open seat: Sheriff Drew Hyer is not on the ballot. Deputy and deputies' union president Kristopher Lee Taylor, who led the primary 533 to 415, faces Undersheriff Calvin Dansereau. The office is short-handed: four deputies resigned this summer, during a county hiring freeze.",
+      "candidates": [
+        {
+          "slug": "kristopher-lee-taylor",
+          "summary": "Garfield County deputy since 2022, deputies' union president and search and rescue coordinator, running on recruiting and retaining deputies.",
+          "highlights": [
+            "Deputy since 2022; field training officer and search and rescue coordinator [S1]",
+            "President of the Garfield County Sheriff's Deputy Union [S1]",
+            "Calls retaining qualified deputies one of the office's biggest challenges; would focus on professional growth and local recruiting [S1]",
+            "Led the primary 533 to 415 [S3]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "About four years as a deputy, seeking the top job over the sitting undersheriff, on a platform of changing how the office recruits and keeps deputies."
+            }
+          }
+        },
+        {
+          "slug": "calvin-dansereau",
+          "summary": "Garfield County undersheriff for seven years with 17 years in law enforcement, running on leadership experience, accountability and partnerships.",
+          "highlights": [
+            "Undersheriff for seven years; 17 years in law enforcement, including as jail commander [S1][S2]",
+            "Eleven years in management before law enforcement [S1]",
+            "Says 'public safety begins with strong relationships' and would work with local government and justice partners [S1]",
+            "Trailed in the primary, 415 to 533 [S3]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Runs explicitly on 'the leadership, knowledge, and commitment' of 17 years in law enforcement and seven as the office's second-in-command, in both his guide statement and his newspaper profile; not the incumbent sheriff, so not -2."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "garfield-garfield-county-county-treasurer",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/garfield/dossiers/garfield-garfield-county-county-treasurer/"
+      ],
+      "office_does": "The county treasurer collects property taxes for Garfield County and its taxing districts and receives, invests and pays out the county's money.",
+      "race_blurb": "Treasurer Tereasa Summers, in office since 2019 after ten years as chief deputy, faces Katie Nagle, who has served as chief deputy treasurer and who reached the ballot as a write-in (230 write-in votes to Summers's 593 in the primary).",
+      "candidates": [
+        {
+          "slug": "tereasa-summers",
+          "summary": "Garfield County Treasurer since 2019 and chief deputy treasurer for ten years before that, with 25 years in county government.",
+          "highlights": [
+            "Treasurer since 2019; chief deputy treasurer 2009-2019 [S1]",
+            "Won the office in 2018 and was re-elected unopposed in 2022 [S3][S4]",
+            "Brought in an online property tax system and is working on a monthly payment option [S1]",
+            "593 votes in the primary to 230 write-ins [S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3",
+                "S4"
+              ],
+              "basis": "Incumbent treasurer since 2019, re-elected in 2022, after ten years as chief deputy and 25 years in county government; runs on that record."
+            }
+          }
+        },
+        {
+          "slug": "katie-nagle",
+          "summary": "Has served as Garfield County chief deputy treasurer and has a banking background; who reached the general ballot through a write-in campaign.",
+          "highlights": [
+            "Served as chief deputy treasurer; earlier worked at the Bank of Eastern Washington [S1][S2]",
+            "Says banking gives her 'a fresh perspective' and promises a 'consistent presence in the office' [S1]",
+            "Reached the ballot as a primary write-in [S2][S3][S5]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Challenger to a long-time incumbent, pitching banking experience and 'a fresh perspective'; has worked inside the office as chief deputy, so not +2."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "garfield-garfield-county-district-court-district-court-judge",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/garfield/dossiers/garfield-garfield-county-district-court-district-court-judge/"
+      ],
+      "office_does": "The district court judge hears misdemeanor criminal, traffic and smaller civil cases at Garfield County's one district court in Pomeroy.",
+      "race_blurb": "Uncontested: Judge Thomas W. Cox, first elected in 2018, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "thomas-w-cox",
+          "summary": "Garfield County District Court judge since winning the seat in 2018, running unopposed; he submitted no statement to the voters' guide.",
+          "highlights": [
+            "Won the seat in 2018, 1,056 to 206 [S3]",
+            "Re-elected unopposed in 2022 [S4]",
+            "Sits at the courthouse in Pomeroy [S2]"
           ],
           "evidence_level": "moderate",
           "withdrawn": false,

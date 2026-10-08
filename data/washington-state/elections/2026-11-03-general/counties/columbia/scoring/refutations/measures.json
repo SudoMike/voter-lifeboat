@@ -1,0 +1,36 @@
+{
+  "contest_slug": "measures",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/columbia/dossiers/measures/",
+    "data/washington-state/elections/2026-11-03-general/counties/columbia/scoring/measures.json",
+    "data/final/2026-11-03-general/rubric.json"
+  ],
+  "verdicts": [
+    {
+      "candidate": "columbia-columbia-county-park-and-recreation-pool-district-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked toward +2, since the pool is not built yet and the levy pays to run a facility that does not exist. But the tax itself is a renewal. The same $200,000 levy at about $0.20 per $1,000 passed in November 2024 and added 20.6 cents to 2025 bills (S6, S7). It passed again in November 2025, 854 to 564 (S10), so a levy is being collected in 2026. This proposition continues it at the same amount and rate (S1), and the rate equals the cap voters set in 2023 (S1). That is the renewal tier, +1. Minor: S10 is a vote count and does not itself show the 2025 amount. The 'same amount' claim rests on the dossier's 'passed again' and on S1. The new-facility point is spending evidence, and the dossier deliberately leaves spending unmapped, which is reasonable because construction is grant-funded."
+    },
+    {
+      "candidate": "columbia-columbia-county-park-and-recreation-pool-district-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "Checked against the pamphlet text. what_it_does matches S1 (2026 levy, 2027 collection; boundaries exclude Starbuck and the Prescott district; formed 2023) and S5/S6 (Dayton pool closed 2017). cost_line matches S1/S3 ($200,000, $0.20) and S4 ($60 on a $300,000 home). pro_summary correctly attributes the statement to Kevin Rust, and 'modest pool', 'help curb drowning' and 'secures funding for operation and maintenance, which is voted on annually' are verbatim. The grants listed are 'all for the construction'. con_summary matches S1/S2 (no statement against) and S10 (564 of 1,418 = 39.8%)."
+    },
+    {
+      "candidate": "columbia-prescott-joint-park-and-recreation-district-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked toward +1, since the district has sought this levy every year for more than two decades (S3). But the November 2025 request failed (S3, S4), so no excess levy is being collected for 2026. A yes vote restores a tax that is not in place now, at $175,000 (about $0.35), above the $145,000 (about $0.31) last approved in 2024 (S3). Under the new-or-restored rule, +2 holds. It is consistent with the Walla Walla copy of this measure."
+    },
+    {
+      "candidate": "columbia-prescott-joint-park-and-recreation-district-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "Checked against the pamphlet text. what_it_does: one-year M&O levy and 'primary source of funding' (S1). The district is joint with Walla Walla County, and its Columbia County part is the ALTO/STARBUCK COUNTRY strip (S6, S7). The 2025 failure is 'by less than half a percent' (S3, S4). Unlike the Walla Walla copy, this text does not attach a Walla Walla-only percentage to the whole district, so it does not repeat that scoping error. cost_line matches S1/S2 and S3 ($70 on a $200,000 home at the same rate). pro_summary correctly attributes the statement to Hudson and Phillips, and 'families had to drive to other towns for swim lessons' and 'Once a community pool is gone...' are verbatim. con_summary: no statement against (S1; VoteWA 7379 says 'No Information Submitted'); Columbia County part voted 3 yes, 1 no (S5)."
+    }
+  ],
+  "missing": []
+}

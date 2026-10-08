@@ -1981,3 +1981,45 @@ test('Wahkiakum resolves Fire District 2 (Skamokawa) from DOR FIR2025', async ()
   assert.ok(!scopeMatches(fd2, context))
   assert.ok(scopeMatches(countyLevy, context))
 })
+
+// Columbia (#32, wave 7). Live point queries 2026-10-08 at the
+// Census-geocoded points of the addresses below (and the Prescott interior
+// point): DOR PKR2025 (14, the new PARKDST entry) and the county's
+// commissioner layer, which no general scope uses.
+test('Columbia resolves the Pool District and Prescott park districts from DOR PKR2025', async () => {
+  const commish = { path: '/CommissionerDistricts/FeatureServer/0' }
+  const pool = { kind: 'DISTRICT', county: 'columbia', layer: 'PARKDST', value: 'CPR' }
+  const prescott = { kind: 'DISTRICT', county: 'columbia', layer: 'PARKDST', value: 'PRES' }
+  const wwPrescott = { kind: 'DISTRICT', county: 'walla-walla', layer: 'PARKDST', value: 'PRES' }
+  // 341 E Main St, Dayton: PKR 'CPR'.
+  mockWave2('341 E MAIN ST, DAYTON, WA, 99328', '013', 'Columbia County', [
+    { ...commish, attributes: { District: '2' } }, dorLayer(14, 'CPR'),
+  ])
+  let context = await lookupBallotContext(wave2Data('columbia'), '341 E Main St Dayton WA 99328')
+  assert.equal(context.county.id, 'columbia')
+  assert.equal(context.coverageStatus, 'full_county')
+  assert.deepEqual(context.missingLayers, [])
+  assert.equal(context.districts.PARKDST, 'CPR')
+  assert.equal(context.districts.COUNTY_COUNCIL, '2')
+  assert.ok(scopeMatches(pool, context))
+  assert.ok(!scopeMatches(prescott, context))
+  // The Prescott district's Columbia part (interior point -118.21, 46.40):
+  // 'PRES' matches Columbia's copy of the levy, never Walla Walla's.
+  mockWave2('PRESCOTT DISTRICT POINT, WA', '013', 'Columbia County', [
+    { ...commish, attributes: { District: '3' } }, dorLayer(14, 'PRES'),
+  ])
+  context = await lookupBallotContext(wave2Data('columbia'), 'Prescott district point')
+  assert.deepEqual(context.missingLayers, [])
+  assert.equal(context.districts.PARKDST, 'PRES')
+  assert.ok(scopeMatches(prescott, context))
+  assert.ok(!scopeMatches(wwPrescott, context))
+  assert.ok(!scopeMatches(pool, context))
+  // 101 Main St, Starbuck: the Town of Starbuck is in neither district.
+  mockWave2('101 MAIN ST, STARBUCK, WA, 99359', '013', 'Columbia County', [
+    { ...commish, attributes: { District: '3' } },
+  ])
+  context = await lookupBallotContext(wave2Data('columbia'), '101 Main St Starbuck WA 99359')
+  assert.deepEqual(context.missingLayers, [])
+  assert.equal('PARKDST' in context.districts, false)
+  for (const s of [pool, prescott]) assert.ok(!scopeMatches(s, context), s.value)
+})

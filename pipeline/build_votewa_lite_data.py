@@ -898,6 +898,73 @@ ELECTION_MEASURES = {
                 "Auditor's District_Court layer, which COUNTY_LAYERS.clallam reads.",
             ],
         },
+        # Columbia (#32). Measures: the Columbia County Auditor's local voters'
+        # pamphlet (counties/columbia/raw/columbia/local-voters-pamphlet.pdf.url,
+        # DocumentCenter 8822, linked from columbiaco.com/616/2026-General-
+        # Election; PDF page = printed page + 1) and VoteWA's online guide for
+        # county 07 (raw/votewa/voter-guide/) both list two local measures,
+        # guide records 7423 and 7379 (PDF pp. 10 and 11); the Brooklyn
+        # precinct sample ballot (raw/columbia/sample-ballot-page-{1,2}.jpg.url)
+        # carries the pool levy only. Scopes point-checked 2026-10-08 (Census
+        # geocoder, Current vintage; WA DOR PKR2025, layer 14, DISTATTRIB;
+        # Columbia has two polygons, 'CPR' and 'PRES'):
+        # - PARKDST 'CPR' (Columbia County Park and Recreation Pool District,
+        #   VoteWA jurisdiction PKR070004): 341 E Main St, Dayton; 650 Wagon
+        #   Rd, Dayton; 100 Hogeye Hollow Rd, Dayton; rural points (-117.75,
+        #   46.45) and (-117.80, 46.10); and (-118.20, 46.45) in the rural
+        #   Starbuck school district. No feature at 101 and 401 Main St,
+        #   Starbuck: the district is the county minus the Town of Starbuck and
+        #   the Prescott park district (explanatory statement); the 2024 pool
+        #   levy was on every precinct but STARBUCK CITY (raw/columbia/sos-*).
+        # - PARKDST 'PRES' (Prescott Joint Park and Recreation District, joint
+        #   with Walla Walla County): the interior point (-118.21, 46.40) on
+        #   the county's western edge (bbox -118.242..-118.179, 46.331..46.500);
+        #   no Columbia street address there geocodes. SOS exports put the
+        #   2022 and 2024 Prescott levies on the ALTO and STARBUCK COUNTRY
+        #   precinct parts only (7 and 10 votes). Walla Walla's package carries
+        #   its own copy scoped to Walla Walla County (same guide record 7379),
+        #   so each county's voters see one copy.
+        # Overrides: Commissioner No. 3 is nominated by district and elected
+        # county-wide in the general (RCW 36.32.040, 36.32.050(1); Columbia is
+        # a non-charter county): the 2026 primary race drew 417 votes against
+        # about 1,050 in county-wide races (raw/columbia/votewa-2026-08-04-
+        # primary-results.json.url), while the SOS precinct exports put
+        # Commissioner #3 (2022) and #1 and #2 (2024) on all 13 voting
+        # precincts, the same 13 as Sheriff and Governor. It keeps the
+        # primary's contest name so its slug and primary dossiers carry
+        # forward. The District Court is one county-wide district (2022 judge
+        # race on all 13 precincts).
+        "columbia": {
+            "overrides": {
+                ("COUNTY", "COLUMBIA COUNTY COMMISSIONER NO. 3"): (
+                    "County", "Columbia County Commissioner District 3", "Columbia County Commissioner No. 3",
+                    ("COUNTY", None)),
+                ("COURT DISTRICT", "COLUMBIA COUNTY DISTRICT COURT JUDGE"): (
+                    "Judicial", "Columbia County District Court", "District Court Judge", ("COUNTY", None)),
+            },
+            "measures": [
+                m("Columbia County Park and Recreation Pool District", "Proposition No. 1", "Operation Excess Levy",
+                  ("PARKDST", "CPR"),
+                  "Authorizes a one-year excess property tax levy in 2026 for collection in 2027 to fund operation and maintenance of the pool the district plans to build in Dayton (the old Dayton pool closed in 2017). The district, formed by voters in 2023, covers the county except the Town of Starbuck and the Prescott park district's area.",
+                  "$200,000 collected in 2027, approximately $0.20 per $1,000 of assessed value.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7423&e=899&la=en&c=07",
+                  pages=(10,)),
+                m("Prescott Joint Park and Recreation District", "Proposition No. 1",
+                  "Maintenance & Operation Excess Levy",
+                  ("PARKDST", "PRES"),
+                  "Authorizes a one-year excess property tax levy for the park and recreation district's maintenance and operation expenses in 2027, its main source of operating money (chiefly the Prescott pool). The district is joint with Walla Walla County; only a thinly settled strip of western Columbia County is in it.",
+                  "$175,000 collected in 2027 across the whole district, approximately $0.35 per $1,000 of assessed value.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7379&e=899&la=en&c=07",
+                  pages=(11,)),
+            ],
+            "extra_notes": [
+                "Columbia County Commissioner No. 3 is nominated by district and elected county-wide in the general "
+                "(RCW 36.32.040, RCW 36.32.050(1); SOS precinct results 2022 and 2024: commissioner races on all 13 precincts).",
+                "Both local measures are park and recreation district levies read from WA DOR PKR2025 (layer 14): 'CPR' is the "
+                "Columbia County Park and Recreation Pool District (the county minus the Town of Starbuck and the Prescott "
+                "district), 'PRES' the Columbia County part of the Prescott Joint Park and Recreation District.",
+            ],
+        },
         # Cowlitz (#28). Measures: the county's general sample ballot and
         # local voters' pamphlet (counties/cowlitz/raw/cowlitz/
         # {sample-ballot,local-voters-pamphlet}.pdf.url, pamphlet pp. 57-58)
@@ -1124,6 +1191,41 @@ ELECTION_MEASURES = {
                 "123 reporting units).",
                 "The Port of Pasco Commissioner District 3 race is elected by district from 2026 (Port of Pasco "
                 "by-district elections, NonStop Local 2025-10-03).",
+            ],
+        },
+        # Garfield (#32). Measures: none. VoteWA's online voters' guide for
+        # county 12 (counties/garfield/raw/votewa/voter-guide/guide.json.url,
+        # read 2026-10-08) lists only the three statewide measures; Garfield
+        # prints no local pamphlet the agent could reach (garfieldcountywa.gov
+        # answers every scripted request, browser headers included, with a
+        # Cloudflare 403 challenge), so the guide is the official listing.
+        # Overrides: VoteWA files both commissioner races as Countywide. They
+        # are nominated by district (the 2026 primary counted District 1 and
+        # District 3 in 4 of 11 units each) and elected county-wide in the
+        # general (RCW 36.32.040, 36.32.050(1); SOS precinct exports put
+        # Commissioner 3 (2022) and Commissioner 1 and 2 (2024) on all 11
+        # precincts). They keep the primary's contest names so the slugs and
+        # primary dossiers carry forward. The District Court is one
+        # county-wide court (2022 general: Thomas W. Cox on all 11 precincts).
+        # Every scope is COUNTY or Census, so no county GIS layer is needed.
+        "garfield": {
+            "overrides": {
+                ("COUNTY", "COUNTY COMMISSIONER 1"): (
+                    "County", "Garfield County Commissioner District 1", "County Commissioner 1", ("COUNTY", None)),
+                ("COUNTY", "COUNTY COMMISSIONER 3"): (
+                    "County", "Garfield County Commissioner District 3", "County Commissioner 3", ("COUNTY", None)),
+                ("COUNTY", "DISTRICT COURT JUDGE"): (
+                    "Judicial", "Garfield County District Court", "District Court Judge", ("COUNTY", None)),
+            },
+            "measures": [],
+            "extra_notes": [
+                "No local measures on the November 3, 2026 ballot: Garfield County's VoteWA online voters' guide "
+                "(https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=12) lists only the statewide measures "
+                "IP26-645, IL26-001 and IL26-638. The county's own site (garfieldcountywa.gov) refuses scripted "
+                "access, so its sample ballot could not be checked.",
+                "Garfield County Commissioner Districts 1 and 3 are nominated by district and elected county-wide "
+                "in the general (RCW 36.32.040, RCW 36.32.050(1); SOS 2022 and 2024 general precinct results: "
+                "on all 11 precincts).",
             ],
         },
         # Grant (#28). Measures: Grant County Elections' November 2026 sample

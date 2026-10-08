@@ -759,6 +759,47 @@ test('shipped Ferry and Wahkiakum records link the county\'s VoteWA guide; their
   }
 })
 
+test('shipped Columbia records link its pamphlet at the cited PDF page or its guide; Garfield\'s link its guide', () => {
+  const id = general.election.id
+  const PDF = 'https://www.columbiaco.com/DocumentCenter/View/8822'
+  const COLUMBIA_GUIDE = 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=07'
+  const GARFIELD_GUIDE = 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=12'
+  // Columbia's local pamphlet prints its county races and both park levies
+  // (#32); CD 5, LD 9 and the Court of Appeals seat link the guide. Garfield
+  // prints no pamphlet the research reached: every record links the guide.
+  const tally = { columbia: [0, 0], garfield: [0, 0] }
+  for (const item of [...general.contests, ...general.measures]) {
+    if (!(item.owner in tally)) continue
+    const pages = item.candidates ? item.candidates.map((c) => c.pamphlet_pages) : [item.pamphlet_pages]
+    for (const p of pages) {
+      if (p?.length) {
+        assert.equal(item.owner, 'columbia', item.slug)
+        // Citations are PDF pages, one ahead of the printed numbers.
+        assert.equal(pamphletLink(p, 'columbia', id), `${PDF}#page=${p[0].page}`, item.slug)
+        tally[item.owner][0]++
+      } else {
+        assert.equal(pamphletLink(p, item.owner, id), item.owner === 'columbia' ? COLUMBIA_GUIDE : GARFIELD_GUIDE, item.slug)
+        tally[item.owner][1]++
+      }
+    }
+  }
+  assert.deepEqual(tally, { columbia: [11, 6], garfield: [0, 19] })
+  // Commissioner No. 3, PDF p. 7 (printed p. 6); the Prescott levy, PDF p. 11.
+  assert.equal(pamphletLink([{ edition: 'local-voters-pamphlet', page: 7 }], 'columbia', id), `${PDF}#page=7`)
+  assert.equal(pamphletLink([{ edition: 'local-voters-pamphlet', page: 11 }], 'columbia', id), `${PDF}#page=11`)
+  assert.deepEqual(countyElectionsOffice(general, { id: 'columbia', name: 'Columbia County' }), {
+    name: 'Columbia County Elections',
+    url: 'https://www.columbiaco.com/616/2026-General-Election',
+    direct: true,
+  })
+  // The SOS county elections offices directory's link for Garfield.
+  assert.deepEqual(countyElectionsOffice(general, { id: 'garfield', name: 'Garfield County' }), {
+    name: 'Garfield County Elections',
+    url: 'https://www.garfieldcountywa.gov/auditor',
+    direct: true,
+  })
+})
+
 test('shipped Pacific records link the county\'s VoteWA guide; its office falls back to the statewide list', () => {
   const id = general.election.id
   const GUIDE = 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=25'
@@ -842,9 +883,11 @@ test('a known county without its own URL gets the SOS county offices directory',
     url: COUNTY_OFFICES_URL,
     direct: false,
   })
-  // Garfield does not ship in the general (Walla Walla does since #30).
-  assert.deepEqual(countyElectionsOffice(general, { id: 'garfield', name: 'Garfield County' }), {
-    name: 'Garfield County Elections',
+  // A county the general does not ship. Every Washington county ships since
+  // #32, so this is a synthetic county no package owns.
+  assert.ok(!general.coverage.supported_counties.some((c) => c.id === 'test-unshipped'))
+  assert.deepEqual(countyElectionsOffice(general, { id: 'test-unshipped', name: 'Test County' }), {
+    name: 'Test County Elections',
     url: COUNTY_OFFICES_URL,
     direct: false,
   })

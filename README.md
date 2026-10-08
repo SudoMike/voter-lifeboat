@@ -9,10 +9,10 @@ General Election**, served under `/washington-state`. The archived **August 4,
 The app asks for a street address, derives county and district context, and
 shows the contests Voter Lifeboat can cover for that ballot context. For the
 general, the statewide package (Supreme Court races and statewide initiatives)
-is complete. King County addresses get a `full_county` guide (King's general
-package has shipped); every other Washington address gets a statewide-only
-guide, and further county packages join as they are researched and declared
-shippable. In the archived primary all 39 counties
+is complete, and since #32 every one of Washington's 39 counties ships a
+county package: 35 `full_county` and 4 `partial_county` (Spokane, Okanogan,
+Klickitat, Pacific). An address the app cannot place in a shipped county
+would still get a statewide-only guide. In the archived primary all 39 counties
 were covered: 28 `full_county` and 11 `partial_county` (a county is partial
 when it has a commissioner or PUD race with no queryable official district
 boundary — those contests are hidden rather than shown to the wrong voters).

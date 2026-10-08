@@ -93,6 +93,11 @@ const NAMED_VALUES = {
   PARKDST: {
     ORCAS: 'Orcas Island Park and Recreation District',
     'S J': 'San Juan Island Park and Recreation District',
+    // Columbia and Walla Walla PARKDST codes (geo.js; #32). 'PRES' is the
+    // joint Prescott district, a polygon in each county.
+    CPR: 'Columbia County Park and Recreation Pool District',
+    PRES: 'Prescott Joint Park and Recreation District',
+    WAIT: 'Waitsburg Park and Recreation District',
   },
   // San Juan SWDDST is presence-only: geo.js reports 'LOPEZ' inside the
   // Port of Lopez polygon (the district's three Lopez precincts), nothing

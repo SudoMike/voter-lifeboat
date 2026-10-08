@@ -165,6 +165,19 @@ test('Pend Oreille Sacheen Lake Water and Sewer District reads as its name', () 
       'Sacheen Lake Water and Sewer District'])
 })
 
+test('Columbia and Walla Walla park districts read as their names', () => {
+  // Live 2026-10-08 (#32): DOR PKR2025 'CPR' at 341 E Main St, Dayton; 'PRES'
+  // at the Columbia interior point (-118.21, 46.40) and 108 S D St, Prescott;
+  // 'WAIT' at 106 Preston Ave, Waitsburg.
+  assert.equal(describeDistrict('PARKDST', 'CPR'), 'Columbia County Park and Recreation Pool District')
+  assert.equal(describeDistrict('PARKDST', 'PRES'), 'Prescott Joint Park and Recreation District')
+  assert.equal(describeDistrict('PARKDST', 'WAIT'), 'Waitsburg Park and Recreation District')
+  assert.deepEqual(
+    describeDistricts({ PARKDST: 'CPR', COUNTY_COUNCIL: '2', CONGDST: '5', LEGDST: '9', CITY: 'Dayton' }).map((d) => d.text),
+    ['City of Dayton', 'Congressional District 5', 'Legislative District 9', 'County Council District 2',
+      'Columbia County Park and Recreation Pool District'])
+})
+
 test('Kittitas Upper and Lower District Court read with the county name', () => {
   // Live 2026-10-08 (#31): Court_Districts court_district_name 'Lower
   // District Court' at 205 W 5th Ave, Ellensburg; 'Upper District Court' at
