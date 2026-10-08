@@ -141,6 +141,46 @@ Flodin, Whelchel, Myers and Nelson. Local news: Whitman County Gazette
 its `sitemap_stories1.xml`), Moscow-Pullman Daily News and Lewiston Tribune
 (found through their sitemaps).
 
+## Research
+
+- Auditor (contested, open seat; Auditor Sandy Jamison retires): Crystn
+  Guenthner and Kenneth Millar, both `moderate`, each scored on
+  `experience` only (-2 high, +1 medium); the refutation upheld both. Both
+  file under the PDC mini option; no campaign websites were found.
+- Nine uncontested contests ship information-only (`scoring/<slug>.json`
+  with empty scores): Assessor, Clerk, Commissioner District 3, Coroner,
+  Prosecuting Attorney, Sheriff, Treasurer, District Court Judge Position
+  No. 1 and Court of Appeals III-2 Pos. 1. All `moderate`.
+- 31 measures: the library levy `rich`, the rest `moderate`. Every measure
+  maps `taxes` only: +2 for the library lid lift, Fire District 14's lid lift
+  ($0.633 to $1.08), and levies that do not continue one collected in 2026
+  (Albion 1-2, Oakesdale 1-2, Tekoa, Uniontown, Garfield Park District 2,
+  St. John Cemetery District 3); +1 for replacements and yearly
+  continuations. The measure refutation upheld all 31 mappings and adjusted
+  three display texts (Endicott Prop 2, Palouse Prop 3, Tekoa), fixed in
+  `scoring/measures.json`.
+
 ## Known gaps
 
-(filled in below after research)
+- Sheriff Brett J. Myers: the printed pamphlet (p. 11) says "States No Party
+  Preference"; VoteWA, the sample ballot and the candidate list say "Prefers
+  Republican Party". The package keeps VoteWA's value; the dossier records
+  both.
+- Myers, Treasurer Nelson and Judge Hart submitted no pamphlet statements;
+  Millar's printed entry has only a statement.
+- Prior-year levy history comes from SOS November precinct exports
+  (2022-2025) and DOR levy detail; February and April 2026 special-election
+  exports answered 404, so a district that levied through a spring 2026
+  election may be read as having no 2026 levy (Oakesdale, Garfield Park 2,
+  Endicott Park 7, St. John Cemetery 3).
+- Tekoa's 2025 street levy (58.2% yes) and Rosalia's 2024 levy (59.0%) are
+  read as failed from the 60% excess-levy requirement; no certification
+  notice was found.
+- St. John Cemetery District 3's estimated $0.16 rate implies about $125
+  million of assessed value where DOR shows about $213 million; reported as
+  given.
+- Garfield Cemetery District 2's proposition is numbered 2026-1 on the ballot
+  and pamphlet, 1 in VoteWA and 2027-1 in its explanatory statement.
+- Cheney School District No. 360 Prop 2 is mapped +1 to match Spokane's
+  score for the same levy, although the levy's dollars nearly double; if
+  Spokane's mapping changes, Whitman's should follow.
