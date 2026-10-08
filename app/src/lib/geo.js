@@ -704,7 +704,9 @@ function lookupCensusDistricts(pt) {
   const districts = {}
   const cd = trimDistrictNumber(congressionalNumber(congressional))
   const ld = trimDistrictNumber(lower?.BASENAME || lower?.SLDL || upper?.BASENAME || upper?.SLDU)
-  const city = (place?.BASENAME || place?.NAME || '').replace(/\s+city$/i, '').trim()
+  // BASENAME is the bare place name and may itself end in 'City' ('Benton
+  // City', 'Coulee City'); only NAME carries the legal suffix ('Seattle city').
+  const city = place?.BASENAME ? String(place.BASENAME).trim() : (place?.NAME || '').replace(/\s+city$/i, '').trim()
   if (cd) districts.CONGDST = cd
   if (ld) districts.LEGDST = ld
   if (city) districts.CITY = city

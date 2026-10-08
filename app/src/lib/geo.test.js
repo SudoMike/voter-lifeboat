@@ -992,3 +992,39 @@ test('Whatcom Fire District 1 resolves from DOR FIR2025 at Everson', async () =>
   assert.deepEqual(context.missingLayers, [])
   assert.ok(scopeMatches({ kind: 'DISTRICT', county: 'whatcom', layer: 'FIRDST', value: '1' }, context))
 })
+
+test('a Census place whose name ends in City keeps it; only NAME loses the legal suffix', async () => {
+  // 1009 Dale Ave, Benton City (2026-10-08): BASENAME 'Benton City', NAME
+  // 'Benton City city'. The Benton City propositions are scoped CITY 'Benton City'.
+  const place = (p) => async (url) => {
+    if (String(url).startsWith('/api/geocode')) {
+      return {
+        ok: true,
+        async json() {
+          return {
+            result: {
+              addressMatches: [{
+                matchedAddress: '1009 DALE AVE, BENTON CITY, WA, 99320',
+                coordinates: { x: -119.49, y: 46.26 },
+                geographies: {
+                  Counties: [{ STATE: '53', COUNTY: '005', NAME: 'Benton County' }],
+                  '120th Congressional Districts': [{ BASENAME: '4' }],
+                  '2026 State Legislative Districts - Lower': [{ BASENAME: '16' }],
+                  'Incorporated Places': [p],
+                },
+              }],
+            },
+          }
+        },
+      }
+    }
+    return { ok: true, async json() { return { features: [] } } }
+  }
+  global.fetch = place({ BASENAME: 'Benton City', NAME: 'Benton City city' })
+  let context = await lookupBallotContext(wave2Data('benton'), '1009 Dale Ave Benton City WA 99320')
+  assert.equal(context.districts.CITY, 'Benton City')
+  assert.ok(scopeMatches({ kind: 'DISTRICT', county: 'benton', layer: 'CITY', value: 'Benton City' }, context))
+  global.fetch = place({ NAME: 'Benton City city' })
+  context = await lookupBallotContext(wave2Data('benton'), '1009 Dale Ave Benton City WA 99320')
+  assert.equal(context.districts.CITY, 'Benton City')
+})
