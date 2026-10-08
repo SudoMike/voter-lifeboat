@@ -1133,6 +1133,95 @@ ELECTION_MEASURES = {
                 "scoped PUDDST '1' (WA DOR PUD2025, layer 17, DISTATTRIB '1'), which COUNTY_LAYERS.lewis reads.",
             ],
         },
+        # Mason (#30): checked against the Mason County Auditor's Local Voters'
+        # Pamphlet (counties/mason/raw/mason/local-voters-pamphlet.pdf.url, which
+        # "contains all races and measures throughout Mason County", pp. 10-30)
+        # and VoteWA's online guide for county 23 (raw/votewa/voter-guide/
+        # guide.json.url): the same 16 contests and five local measures. The
+        # sample ballot (raw/mason/sample-ballot.pdf.url) is vector art with no
+        # extractable text. Measure text from the guide records and pamphlet.
+        # Commissioner District 3: nominated by district, elected county-wide in
+        # the general (RCW 36.32.040; VoteWA lists it 'Countywide'; in the SOS
+        # precinct exports the 2020 and 2024 District 1 and 2 races and the 2022
+        # District 3 race are on every precinct the statewide races are on).
+        # Named as in the primary so its dossiers carry forward. District Court:
+        # one county-wide judge (2022 SOS export: every precinct).
+        # PUD No. 1 (Hood Canal/Hoodsport, 42.2 sq mi) and PUD No. 3 (the rest
+        # of the county, 1,002.7 sq mi) split Mason between them; each seat is
+        # elected PUD-wide in the general (RCW 54.12.010(3); SOS exports: PUD 1
+        # races on 6-7 precincts, PUD 3 races on 42-55), so they are scoped
+        # PUDDST '1' and '3' (WA DOR PUD2025, layer 17, DISTATTRIB: '1' at 24151
+        # N US Hwy 101, Hoodsport; '3' at 525 W Cota St, Shelton and 23850 NE
+        # State Route 3, Belfair; 2026-10-09). COUNTY_LAYERS.mason does not read
+        # PUD2025 yet.
+        # Measure scopes, point-checked 2026-10-09 (Census geocoder, Current;
+        # DOR layers 12 and 20): Timberland Regional Library covers all of
+        # Mason (one LIB2025 polygon, 1,044.9 sq mi, equal to the sum of
+        # Mason's SCH2025 polygons; 'L' at Shelton, Belfair, Hoodsport), and
+        # the whole five-county district votes, so COUNTY. SCHDST '42' at 161
+        # SE Collier Rd, Shelton; '402' at 112 E Spencer Lake Rd, Shelton; '65'
+        # at interior point (-123.2614, 47.0894) (Census: McCleary School
+        # District, Mason County; 0.8 sq mi of Mason). COUNTY_LAYERS.mason does
+        # not read SCH2025 yet. CITY 'Shelton': Census place at 525 W Cota St
+        # (the Shelton TBD's tax applies to sales within the city).
+        "mason": {
+            "overrides": {
+                ("COUNTY", "COUNTY COMMISSIONER DISTRICT NO. 3"): (
+                    "County", "Mason County Commissioner District 3", "County Commissioner District No. 3",
+                    ("COUNTY", None)),
+                ("COUNTY", "DISTRICT COURT JUDGE"): (
+                    "Judicial", "Mason County District Court", "District Court Judge", ("COUNTY", None)),
+                ("PUBLIC UTILITY DIST 1", "COMMISSIONER DISTRICT 2"): (
+                    "PublicUtility", "Public Utility District No. 1 of Mason County", "Commissioner District 2",
+                    ("PUDDST", "1")),
+                ("PUBLIC UTILITY DIST 3", "COMMISSIONER DISTRICT 2"): (
+                    "PublicUtility", "Public Utility District No. 3 of Mason County", "Commissioner District 2",
+                    ("PUDDST", "3")),
+            },
+            "measures": [
+                m("Timberland Regional Library District", "Proposition No. 1",
+                  "Regular Property Tax Levy Lid Lift for Library Services, Operations and Maintenance",
+                  ("COUNTY", None),
+                  "Restores the Timberland Regional Library District's regular property tax levy from $0.22 to $0.35 per $1,000 of assessed value for 2027 and 2028; the 2028 levy amount becomes the base for later limits (chapter 84.55 RCW).",
+                  "From $0.228924 to $0.35 per $1,000 of assessed value in 2027 and 2028; about $40.44 a year on a $334,000 home, per the explanatory statement.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7284&e=899&la=en&c=23",
+                  pages=(24, 25)),
+                m("Southside School District No. 42", "Proposition No. 1",
+                  "Replacement Educational Programs and Operations Levy",
+                  ("SCHDST", "42"),
+                  "Replaces Southside School District's expiring educational programs and operations levy for four years (2027-2030), for staffing, health and safety, afterschool, curriculum, technology, nutrition and special education costs the state does not fund.",
+                  "$994,006 in 2027 rising to $1,217,701 in 2030, an estimated $1.97 per $1,000 of assessed value each year.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7383&e=899&la=en&c=23",
+                  pages=(26, 27)),
+                m("McCleary School District No. 65", "Proposition No. 1",
+                  "Bonds to Improve Safety, Security and School Facilities",
+                  ("SCHDST", "65"),
+                  "Authorizes $12,800,000 of general obligation bonds, maturing within 21 years, for security upgrades, building, HVAC, drainage and parking improvements and modernized playgrounds at the McCleary School, repaid by annual excess property taxes.",
+                  "$12.8 million in bonds over up to 21 years, repaid by an excess property tax levy; the ballot materials give no rate.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7385&e=899&la=en&c=23",
+                  pages=(28,)),
+                m("Pioneer School District No. 402", "Proposition No. 1",
+                  "Replacement of Expiring Educational Programs and Operations Levy",
+                  ("SCHDST", "402"),
+                  "Replaces Pioneer School District's educational programs and operations levy, which expires at the end of 2027, for four years (2028-2031): class sizes, safety and security, mental health, music and STEM, academic supports, athletics and activities.",
+                  "$3,700,000 in 2028 rising to $4,043,090 in 2031, an estimated $1.18 to $1.15 per $1,000 of assessed value.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7382&e=899&la=en&c=23",
+                  pages=(29,)),
+                m("City of Shelton", "Proposition No. 1",
+                  "Sales and Use Tax for Transportation Improvements",
+                  ("CITY", "Shelton"),
+                  "Raises the Shelton Transportation Benefit District's sales and use tax from 0.2% to 0.3% for ten years, for street and pedestrian maintenance, repair and construction projects.",
+                  "Sales tax for transportation rises from 0.2% to 0.3% (one more cent on a $10 purchase) for ten years.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7384&e=899&la=en&c=23",
+                  pages=(30,)),
+            ],
+            "extra_notes": [
+                "Mason County PUD No. 1 and PUD No. 3 each elect their Commissioner District 2 seat PUD-wide; the seats are "
+                "scoped PUDDST '1' and '3' (WA DOR PUD2025, layer 17, DISTATTRIB).",
+                "The Southside, McCleary and Pioneer school measures are scoped SCHDST '42', '65' and '402' (WA DOR SCH2025, "
+                "layer 20, DISTATTRIB). Timberland Regional Library District covers all of Mason County.",
+            ],
+        },
         # Skagit: the four measures the Auditor's Ballot Measures page lists
         # for the general (counties/skagit/raw/skagit/ballot-measures.html.url),
         # text from the local voters' pamphlet pages 18-21 and VoteWA

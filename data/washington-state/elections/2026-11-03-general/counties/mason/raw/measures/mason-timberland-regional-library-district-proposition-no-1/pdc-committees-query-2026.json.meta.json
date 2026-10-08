@@ -1,0 +1,13 @@
+{
+  "url": "https://data.wa.gov/resource/3h9x-7bvm.json?$where=election_year='2026'%20AND%20filer_type='CO'%20AND%20(upper(filer_name)%20like%20'%25LIBRAR%25'%20OR%20upper(filer_name)%20like%20'%25TIMBER%25'%20OR%20upper(filer_name)%20like%20'%25TRL%25'%20OR%20upper(filer_name)%20like%20'%25SHELTON%25'%20OR%20upper(filer_name)%20like%20'%25PIONEER%25'%20OR%20upper(filer_name)%20like%20'%25SOUTHSIDE%25'%20OR%20upper(filer_name)%20like%20'%25MCCLEARY%25')&$limit=100",
+  "retrieved_at": "2026-10-09",
+  "method": "curl-equivalent urllib GET (User-Agent 'Mozilla/5.0')",
+  "stage": "raw",
+  "source_type": "pdc",
+  "tier": 1,
+  "outlet": "PDC campaign finance summary (data.wa.gov 3h9x-7bvm), 2026 committees named for libraries, Timber/TRL, Shelton, Pioneer, Southside or McCleary",
+  "bytes": 15739,
+  "sha256": "927aa71f0e17d626fbd0edf69b0b102e3a012127f4ef04107cdad0f7079486e7",
+  "cache_file": "data/.cache/mason/web/52f99f757658d75c194fb6fe",
+  "notes": "Committees found: 'Yes For Libraries' (Thurston Co., for, $46,855.18 raised), 'Citizens for Shelton Schools' (Shelton SD 309, for). None for Pioneer, Southside, McCleary, the Shelton TBD or against TRL. Used by all five Mason measure dossiers."
+}

@@ -1,0 +1,185 @@
+{
+  "county": "mason",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/mason/raw/votewa/candidate-list.csv.url",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7284&e=899&la=en&c=23",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7382&e=899&la=en&c=23",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7383&e=899&la=en&c=23",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7384&e=899&la=en&c=23",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7385&e=899&la=en&c=23"
+  ],
+  "coverage": "full_county",
+  "notes": [
+    "Mason County PUD No. 1 and PUD No. 3 each elect their Commissioner District 2 seat PUD-wide; the seats are scoped PUDDST '1' and '3' (WA DOR PUD2025, layer 17, DISTATTRIB).",
+    "The Southside, McCleary and Pioneer school measures are scoped SCHDST '42', '65' and '402' (WA DOR SCH2025, layer 20, DISTATTRIB). Timberland Regional Library District covers all of Mason County."
+  ],
+  "measures": [
+    {
+      "slug": "mason-timberland-regional-library-district-proposition-no-1",
+      "owner": "mason",
+      "jurisdiction": "Timberland Regional Library District",
+      "proposition": "Proposition No. 1",
+      "title": "Regular Property Tax Levy Lid Lift for Library Services, Operations and Maintenance",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "mason"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 24
+        },
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 25
+        }
+      ],
+      "what_it_does": "Restores the Timberland Regional Library District's regular property tax levy from $0.22 to $0.35 per $1,000 of assessed value for 2027 and 2028; the 2028 levy amount becomes the base for later limits (chapter 84.55 RCW).",
+      "cost_line": "From $0.228924 to $0.35 per $1,000 of assessed value in 2027 and 2028; about $40.44 a year on a $334,000 home, per the explanatory statement.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7284&e=899&la=en&c=23"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "mason-southside-school-district-no-42-proposition-no-1",
+      "owner": "mason",
+      "jurisdiction": "Southside School District No. 42",
+      "proposition": "Proposition No. 1",
+      "title": "Replacement Educational Programs and Operations Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "mason",
+        "layer": "SCHDST",
+        "value": "42"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 26
+        },
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 27
+        }
+      ],
+      "what_it_does": "Replaces Southside School District's expiring educational programs and operations levy for four years (2027-2030), for staffing, health and safety, afterschool, curriculum, technology, nutrition and special education costs the state does not fund.",
+      "cost_line": "$994,006 in 2027 rising to $1,217,701 in 2030, an estimated $1.97 per $1,000 of assessed value each year.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7383&e=899&la=en&c=23"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "mason-mccleary-school-district-no-65-proposition-no-1",
+      "owner": "mason",
+      "jurisdiction": "McCleary School District No. 65",
+      "proposition": "Proposition No. 1",
+      "title": "Bonds to Improve Safety, Security and School Facilities",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "mason",
+        "layer": "SCHDST",
+        "value": "65"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 28
+        }
+      ],
+      "what_it_does": "Authorizes $12,800,000 of general obligation bonds, maturing within 21 years, for security upgrades, building, HVAC, drainage and parking improvements and modernized playgrounds at the McCleary School, repaid by annual excess property taxes.",
+      "cost_line": "$12.8 million in bonds over up to 21 years, repaid by an excess property tax levy; the ballot materials give no rate.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7385&e=899&la=en&c=23"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "mason-pioneer-school-district-no-402-proposition-no-1",
+      "owner": "mason",
+      "jurisdiction": "Pioneer School District No. 402",
+      "proposition": "Proposition No. 1",
+      "title": "Replacement of Expiring Educational Programs and Operations Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "mason",
+        "layer": "SCHDST",
+        "value": "402"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 29
+        }
+      ],
+      "what_it_does": "Replaces Pioneer School District's educational programs and operations levy, which expires at the end of 2027, for four years (2028-2031): class sizes, safety and security, mental health, music and STEM, academic supports, athletics and activities.",
+      "cost_line": "$3,700,000 in 2028 rising to $4,043,090 in 2031, an estimated $1.18 to $1.15 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7382&e=899&la=en&c=23"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "mason-city-of-shelton-proposition-no-1",
+      "owner": "mason",
+      "jurisdiction": "City of Shelton",
+      "proposition": "Proposition No. 1",
+      "title": "Sales and Use Tax for Transportation Improvements",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "mason",
+        "layer": "CITY",
+        "value": "Shelton"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 30
+        }
+      ],
+      "what_it_does": "Raises the Shelton Transportation Benefit District's sales and use tax from 0.2% to 0.3% for ten years, for street and pedestrian maintenance, repair and construction projects.",
+      "cost_line": "Sales tax for transportation rises from 0.2% to 0.3% (one more cent on a $10 purchase) for ten years.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7384&e=899&la=en&c=23"
+          ]
+        }
+      }
+    }
+  ]
+}
