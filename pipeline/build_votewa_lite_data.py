@@ -1902,6 +1902,67 @@ ELECTION_MEASURES = {
                 "(WA DOR PUD2025, layer 17) and every PUD voter elects each commissioner (RCW 54.12.010(3)). Both are scoped COUNTY.",
             ],
         },
+        # Wahkiakum (#32). Ballot: the Wahkiakum County Auditor's general
+        # sample ballot (counties/wahkiakum/raw/wahkiakum/sample-ballot.pdf.url,
+        # DocumentCenter 3637, linked from co.wahkiakum.wa.us/419/Elections),
+        # which lists exactly the export's races plus two local measures.
+        # Wahkiakum prints no local voters' pamphlet; VoteWA's online guide for
+        # county 35 (raw/votewa/voter-guide/guide.json.url) lists only the
+        # statewide measures, CD 3, LD 19 and the Supreme Court.
+        # Overrides: Commissioner #3 (District Type Countywide) is nominated by
+        # district and elected county-wide in the general (RCW 36.32.040,
+        # 36.32.050(1)): the SOS precinct exports put the 2022 #3 and 2024 #1
+        # and #2 general races on all 11 precincts, while the 2022 District 3
+        # primary ran in 4 (Deep River, Grays River, Rosburg/Altoona,
+        # Skamokawa) and the 2026 primary's #3 race reported 4 of 4 units
+        # (raw/sos/). It keeps the primary's contest name so the slug matches.
+        # PUD No. 1 covers the whole county and elects PUD-wide in the general
+        # (RCW 54.12.010(3); 2022 #3 and 2024 #2 on all 11 precincts; WA DOR
+        # PUD2025 has one Wahkiakum polygon, '1', with the same area as the
+        # county's EMS2025 and SCH2025 coverage, 1,552,022,023), so the seat
+        # is COUNTY. The District Court is one county-wide court (2022: all
+        # 11 precincts). Measure scopes point-checked 2026-10-08 (Census
+        # geocoder, Current; DOR FIR2025 layer 7 DISTATTRIB): 1391 State Rte 4
+        # and 391 Middle Valley Rd, Skamokawa -> '2'; 4 Covered Bridge Rd,
+        # Grays River and 50 Rosburg School Rd -> '3'; 222 E Sunny Sands Rd,
+        # Puget Island -> '1'; 341 Risk Rd and 6 Linquist Ln, Cathlamet ->
+        # '4'; 64 Main St, Cathlamet (the town) -> no fire district. FIRDST is
+        # not in COUNTY_LAYERS.wahkiakum yet (see counties/wahkiakum/COMPLETENESS.md).
+        "wahkiakum": {
+            "overrides": {
+                ("COUNTY", "COMMISSIONER #3"): (
+                    "County", "Wahkiakum County Commissioner District 3", "Commissioner #3", ("COUNTY", None)),
+                ("PUBLIC UTILITY DISTRICT COUNTYWIDE", "COMMISSIONER #1"): (
+                    "PublicUtility", "Public Utility District No. 1 of Wahkiakum County", "Commissioner #1",
+                    ("COUNTY", None)),
+                ("COUNTY", "DISTRICT COURT JUDGE"): (
+                    "Judicial", "Wahkiakum County District Court", "District Court Judge", ("COUNTY", None)),
+            },
+            "measures": [
+                m("Wahkiakum County", None, "Countywide Emergency Medical Services Levy - Replacement of Existing Levy",
+                  ("COUNTY", None),
+                  "Renews the county's six-year emergency medical services levy (Resolution No. 87-26, RCW 84.52.069) for collection 2027 through 2032, funding EMS operational and equipment costs. Qualifying seniors, veterans and disabled persons can be exempt.",
+                  "Up to $0.40 per $1,000 of assessed value a year for six years, the same maximum voters approved in 2020 (the 2025 rate was about $0.30).",
+                  "https://www.co.wahkiakum.wa.us/DocumentCenter/View/3637"),
+                m("Wahkiakum County Fire Protection District No. 2 (Skamokawa)", None,
+                  "Emergency Medical Services Levy - Replacement of Existing Levy",
+                  ("FIRDST", "2"),
+                  "Replaces Fire District 2's existing emergency medical services levy with a ten-year levy (Resolution #2026-01, RCW 84.52.069) collected from 2027, funding EMS operational and equipment costs; increases in years two through ten are limited under chapter 84.55 RCW and linked to the Consumer Price Index.",
+                  "Up to $1.00 per $1,000 of assessed value a year for ten years starting with 2027 collection.",
+                  "https://www.co.wahkiakum.wa.us/DocumentCenter/View/3637"),
+            ],
+            "extra_notes": [
+                "Wahkiakum County prints no local voters' pamphlet for the general and its VoteWA online guide carries "
+                "no county races or local measures; the sample ballot (co.wahkiakum.wa.us DocumentCenter 3637) is the "
+                "official listing.",
+                "Wahkiakum County Commissioner District 3 is nominated by district and elected county-wide in the "
+                "general (RCW 36.32.040, 36.32.050(1); SOS 2022 and 2024 general precinct results: on all 11 precincts).",
+                "Public Utility District No. 1 of Wahkiakum County covers the whole county (WA DOR PUD2025 has one "
+                "Wahkiakum polygon) and elects its commissioners PUD-wide in the general (RCW 54.12.010(3)).",
+                "The Fire Protection District No. 2 (Skamokawa) measure is scoped FIRDST '2' (WA DOR FIR2025, layer 7, "
+                "DISTATTRIB).",
+            ],
+        },
         # Walla Walla (#30): checked against the Walla Walla County Auditor's
         # general sample ballot and local voters' pamphlet (counties/walla-walla/
         # raw/walla-walla/{sample-ballot,local-voters-pamphlet}.pdf.url, linked
