@@ -10,6 +10,8 @@ derived_from:
   - data/washington-state/elections/2026-11-03-general/counties/king/interim/pdf-text/local-edition.txt
   - data/washington-state/elections/2026-11-03-general/counties/king/raw/candidates/jorge-l-bar-n/kingcounty-gov-adc604e4.url
   - data/washington-state/elections/2026-11-03-general/counties/king/raw/candidates/jorge-l-bar-n/data-wa-gov-8cc2b304.url
+  - data/washington-state/elections/2026-11-03-general/counties/king/raw/candidates/jorge-l-bar-n/no645-com-d4398028.url
+  - data/washington-state/elections/2026-11-03-general/counties/king/raw/candidates/jorge-l-bar-n/nohateinwastate-org-24460aca.url
 sources:
   - id: S1
     tier: 1
@@ -26,6 +28,18 @@ sources:
     type: pdc
     outlet: PDC campaign finance summary (data.wa.gov dataset 3h9x-7bvm), record ca-2026-3364814, updated 2026-10-01
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3364814
+    accessed: 2026-10-08
+  - id: S4
+    tier: 2
+    type: endorsement
+    outlet: Vote No on Initiative 645 campaign, "Our Coalition" page (Elected Leaders list)
+    url: https://no645.com/our-coalition
+    accessed: 2026-10-08
+  - id: S5
+    tier: 2
+    type: endorsement
+    outlet: NO HATE in WA State, endorsement page ("Elected Officials and Candidates Opposing I-001 & I-638")
+    url: https://nohateinwastate.org/endorse
     accessed: 2026-10-08
 ---
 
@@ -57,7 +71,9 @@ PDC summary as of the October 1, 2026 update: $41,204.52 raised, $9,437.84 spent
 
 ## Positions on the 2026 initiatives
 
-No public position on I-645, I-1 or I-638 found as of 2026-10-08.
+- **I-645:** The No on 645 campaign lists him ("King County Council") among its elected leaders [S4].
+- **I-1 and I-638:** Listed as "King County Councilmember, District 4" on the NO HATE in WA State page of elected officials and candidates opposing I-001 and I-638 [S5].
+- No statement of his own on any of the three found as of 2026-10-08.
 
 ## Scoring notes
 

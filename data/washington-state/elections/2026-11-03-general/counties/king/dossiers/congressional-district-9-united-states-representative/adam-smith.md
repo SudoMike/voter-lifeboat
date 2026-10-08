@@ -30,6 +30,7 @@ derived_from:
   - data/washington-state/elections/2026-11-03-general/counties/king/raw/candidates/adam-smith/seattleweekly-com-b8f12ba9.url
   - data/washington-state/elections/2026-11-03-general/counties/king/raw/candidates/adam-smith/rentonreporter-com-09cb221c.url
   - data/washington-state/elections/2026-11-03-general/counties/king/raw/candidates/adam-smith/mynorthwest-com-8e70e86c.url
+  - data/washington-state/elections/2026-11-03-general/counties/king/raw/candidates/adam-smith/nohateinwastate-org-24460aca.url
 sources:
   - id: S1
     tier: 1
@@ -140,6 +141,12 @@ sources:
     outlet: MyNorthwest (Frank Sumrall), "Adam Smith, Doug Basler to face off for sixth time in WA-9 race" (Aug. 4, 2026)
     url: https://mynorthwest.com/mynorthwest-politics/adam-smith-doug-basler/4263262
     accessed: 2026-10-08
+  - id: S20
+    tier: 2
+    type: endorsement
+    outlet: NO HATE in WA State, endorsement page ("Elected Officials and Candidates Opposing I-001 & I-638")
+    url: https://nohateinwastate.org/endorse
+    accessed: 2026-10-08
 ---
 
 ## Background
@@ -183,9 +190,9 @@ sources:
 
 ## Positions on the 2026 initiatives
 
-- **I-645 (IP26-645, income-tax repeal):** No public position found as of 2026-10-08.
-- **I-1 (IL26-001, parental rights):** No public position found as of 2026-10-08.
-- **I-638 (IL26-638, girls' sports):** No public position found as of 2026-10-08.
+- **I-645 (IP26-645, income-tax repeal):** No public position found as of 2026-10-08. He is not on the No on 645 campaign's list of elected leaders as of that date.
+- **I-1 (IL26-001, parental rights):** Listed as "Member of Congress" on the NO HATE in WA State page of elected officials and candidates opposing I-001 and I-638 [S20]. No statement of his own found as of 2026-10-08.
+- **I-638 (IL26-638, girls' sports):** Listed as opposing I-638 on the same NO HATE in WA State page [S20]. No statement of his own found as of 2026-10-08.
 
 ## Record
 

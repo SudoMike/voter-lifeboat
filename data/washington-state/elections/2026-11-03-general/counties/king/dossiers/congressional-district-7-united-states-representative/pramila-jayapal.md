@@ -22,6 +22,8 @@ derived_from:
   - data/washington-state/elections/2026-11-03-general/counties/king/raw/candidates/pramila-jayapal/fusewashington-org-d710ad69.url
   - data/washington-state/elections/2026-11-03-general/counties/king/raw/candidates/pramila-jayapal/vashonbeachcomber-com-e31a65f5.url
   - data/washington-state/elections/2026-11-03-general/counties/king/raw/candidates/pramila-jayapal/seattlered-com-e9193280.url
+  - data/washington-state/elections/2026-11-03-general/counties/king/raw/candidates/pramila-jayapal/no645-com-d4398028.url
+  - data/washington-state/elections/2026-11-03-general/counties/king/raw/candidates/pramila-jayapal/nohateinwastate-org-24460aca.url
 sources:
   - id: S1
     tier: 1
@@ -99,6 +101,18 @@ sources:
     url: https://seattlered.com/seattle-red/jason-rantz-opinion/income-tax-jayapal-300-billion-i-645-lie/4120421
     accessed: 2026-10-08
     note: opinion column; cited only for its verbatim quotation of a Sept. 26, 2026 Jayapal post on X about I-645. The X post itself was not reviewed (social media is excluded).
+  - id: S14
+    tier: 2
+    type: endorsement
+    outlet: Vote No on Initiative 645 campaign, "Our Coalition" page (Elected Leaders list)
+    url: https://no645.com/our-coalition
+    accessed: 2026-10-08
+  - id: S15
+    tier: 2
+    type: endorsement
+    outlet: NO HATE in WA State, endorsement page ("Elected Officials and Candidates Opposing I-001 & I-638")
+    url: https://nohateinwastate.org/endorse
+    accessed: 2026-10-08
 ---
 
 ## Background
@@ -142,9 +156,9 @@ Pramila Jayapal is the incumbent U.S. Representative for Washington's 7th Distri
 
 ## Positions on the 2026 initiatives
 
-- **I-645 (IP26-645, income-tax repeal):** Seattle Red quotes a Sept. 26, 2026 post by Jayapal: "Now, millionaires and billionaires are trying to pass I-645, a ballot initiative that would give them a $300 billion tax break by cutting social programs in K-12 schools. Make it make sense." The column disputes the $300 billion figure [S13]. Read as opposition to I-645; the underlying post was not reviewed directly.
-- **I-1 (IL26-001, parental rights):** No public position found as of 2026-10-08.
-- **I-638 (IL26-638, girls' sports):** No public position found as of 2026-10-08.
+- **I-645 (IP26-645, income-tax repeal):** Seattle Red quotes a Sept. 26, 2026 post by Jayapal: "Now, millionaires and billionaires are trying to pass I-645, a ballot initiative that would give them a $300 billion tax break by cutting social programs in K-12 schools. Make it make sense." The column disputes the $300 billion figure [S13]. Read as opposition to I-645; the underlying post was not reviewed directly. The No on 645 campaign lists her ("U.S. Representative, CD 7") among its elected leaders [S14].
+- **I-1 (IL26-001, parental rights):** Listed as "Member of Congress, Chair Congressional Progressive Caucus" on the NO HATE in WA State page of elected officials and candidates opposing I-001 and I-638 [S15]. No statement of her own found as of 2026-10-08.
+- **I-638 (IL26-638, girls' sports):** Listed as opposing I-638 on the same NO HATE in WA State page [S15]. No statement of her own found as of 2026-10-08.
 
 ## Record
 

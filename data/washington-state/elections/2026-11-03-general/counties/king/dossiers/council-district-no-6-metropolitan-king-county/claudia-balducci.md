@@ -10,6 +10,7 @@ derived_from:
   - data/washington-state/elections/2026-11-03-general/counties/king/interim/pdf-text/local-edition.txt
   - data/washington-state/elections/2026-11-03-general/counties/king/raw/candidates/claudia-balducci/kingcounty-gov-13af75a2.url
   - data/washington-state/elections/2026-11-03-general/counties/king/raw/candidates/claudia-balducci/data-wa-gov-c9873f65.url
+  - data/washington-state/elections/2026-11-03-general/counties/king/raw/candidates/claudia-balducci/no645-com-d4398028.url
 sources:
   - id: S1
     tier: 1
@@ -26,6 +27,12 @@ sources:
     type: pdc
     outlet: PDC campaign finance summary (data.wa.gov dataset 3h9x-7bvm), record ca-2026-3253723, updated 2026-10-05
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3253723
+    accessed: 2026-10-08
+  - id: S4
+    tier: 2
+    type: endorsement
+    outlet: Vote No on Initiative 645 campaign, "Our Coalition" page (Elected Leaders list)
+    url: https://no645.com/our-coalition
     accessed: 2026-10-08
 ---
 
@@ -59,7 +66,8 @@ PDC summary as of the October 5, 2026 update: $200,922.00 raised (plus $113,453.
 
 ## Positions on the 2026 initiatives
 
-No public position on I-645, I-1 or I-638 found as of 2026-10-08.
+- **I-645:** The No on 645 campaign lists her ("King County Council") among its elected leaders [S4]. No statement of her own found as of 2026-10-08.
+- **I-1 and I-638:** No public position found as of 2026-10-08; she is not on the NO HATE in WA State endorser page as of that date.
 
 ## Scoring notes
 

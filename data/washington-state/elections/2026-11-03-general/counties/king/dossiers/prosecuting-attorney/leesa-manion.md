@@ -10,6 +10,7 @@ derived_from:
   - data/washington-state/elections/2026-11-03-general/counties/king/interim/pdf-text/local-edition.txt
   - data/washington-state/elections/2026-11-03-general/counties/king/raw/candidates/leesa-manion/kingcounty-gov-601517bf.url
   - data/washington-state/elections/2026-11-03-general/counties/king/raw/candidates/leesa-manion/data-wa-gov-070c93e9.url
+  - data/washington-state/elections/2026-11-03-general/counties/king/raw/candidates/leesa-manion/nohateinwastate-org-24460aca.url
 sources:
   - id: S1
     tier: 1
@@ -26,6 +27,12 @@ sources:
     type: pdc
     outlet: PDC campaign finance summary (data.wa.gov dataset 3h9x-7bvm), record ca-2026-689003, updated 2026-10-03
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-689003
+    accessed: 2026-10-08
+  - id: S4
+    tier: 2
+    type: endorsement
+    outlet: NO HATE in WA State, endorsement page ("Elected Officials and Candidates Opposing I-001 & I-638")
+    url: https://nohateinwastate.org/endorse
     accessed: 2026-10-08
 ---
 
@@ -58,7 +65,8 @@ PDC summary as of the October 3, 2026 update: $120,987.60 raised, $71,686.60 spe
 
 ## Positions on the 2026 initiatives
 
-No public position on I-645, I-1 or I-638 found as of 2026-10-08.
+- **I-1 and I-638:** Listed as "King County Prosecuting Attorney" on the NO HATE in WA State page of elected officials and candidates opposing I-001 and I-638 [S4]. No statement of her own found as of 2026-10-08.
+- **I-645:** No public position found as of 2026-10-08.
 
 ## Scoring notes
 
