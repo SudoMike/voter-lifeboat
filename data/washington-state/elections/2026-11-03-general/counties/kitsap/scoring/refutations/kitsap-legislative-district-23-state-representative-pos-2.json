@@ -1,0 +1,83 @@
+{
+  "contest_slug": "kitsap-legislative-district-23-state-representative-pos-2",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/kitsap/dossiers/kitsap-legislative-district-23-state-representative-pos-2/",
+    "data/washington-state/elections/2026-11-03-general/counties/kitsap/scoring/kitsap-legislative-district-23-state-representative-pos-2.json"
+  ],
+  "verdicts": [
+    {
+      "candidate": "greg-nance",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Not a lone ESSB 6346 vote: yes on 6346 final passage [S11], yes on ESHB 2081 and ESSB 5813 in 2025 [S22][S24] (pole_b), against yes on eight failed narrowing/tax-cut amendments [S14]-[S21] and on I-2111 in 2024 [S26] (pole_a). All checked against the cached roll calls. Several independent recorded votes justify high; the mix justifies +1 rather than +2."
+    },
+    {"candidate": "greg-nance", "axis": "spending", "verdict": "upheld"},
+    {"candidate": "greg-nance", "axis": "housing", "verdict": "upheld"},
+    {"candidate": "greg-nance", "axis": "safety", "verdict": "upheld"},
+    {"candidate": "greg-nance", "axis": "climate", "verdict": "upheld"},
+    {"candidate": "greg-nance", "axis": "experience", "verdict": "upheld"},
+    {"candidate": "greg-nance", "axis": "reform", "verdict": "upheld"},
+    {
+      "candidate": "greg-nance",
+      "axis": "healthcare",
+      "verdict": "adjust",
+      "adjusted_score": -1,
+      "adjusted_confidence": "low",
+      "note": "Negative (strengthen current system) is the better reading, but the evidence is local capacity (urgent care, clinics, training, St. Michael oversight [S5]), which says nothing about insurance-system design, and the campaign section is headed 'Affordable Healthcare for All'. Placing him on this axis is an inference from the absence of single-payer language; low."
+    },
+    {
+      "candidate": "greg-nance",
+      "axis": "social",
+      "verdict": "upheld",
+      "note": "Rests on reproductive-rights evidence only (constitutional amendment for the right to choose [S5]), as the narrowed social definition requires."
+    },
+    {
+      "candidate": "greg-nance",
+      "axis": "parental-rights",
+      "verdict": "upheld",
+      "note": "Mixed record verified: yea on I-2081 (2024) and named co-sponsor of HB 1296 plus yea on both House final-passage votes (2025). The later, more active action is pole_b, so +1 medium fits."
+    },
+    {
+      "candidate": "lance-byrd",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Not vote-based; independent sources are the 2026 KDN Q&A ('I will oppose new state income taxes' [S3]), campaign site [S2], pamphlet [S1] and the 2024 call to lower the gas tax [S5]."
+    },
+    {
+      "candidate": "lance-byrd",
+      "axis": "spending",
+      "verdict": "upheld",
+      "note": "Not campaign-site-only: the population-plus-inflation budget cap appears in the KDN Q&A [S3] as well as the site [S2], with 'live within its means' in the pamphlet [S1]."
+    },
+    {"candidate": "lance-byrd", "axis": "housing", "verdict": "upheld"},
+    {
+      "candidate": "lance-byrd",
+      "axis": "safety",
+      "verdict": "adjust",
+      "adjusted_score": -1,
+      "adjusted_confidence": "medium",
+      "note": "Pole_a is clear (more officers, ease laws that 'hamstring' arrests, stand with law enforcement [S5][S2]), but in the same 2024 interview he acknowledged concerns over 'violations of people's rights' and proposed a citizen review board [S5], and his pamphlet lists 'real help and shelter for the mentally ill' [S1]. Not fully pole_a; -1."
+    },
+    {
+      "candidate": "lance-byrd",
+      "axis": "climate",
+      "verdict": "upheld",
+      "note": "Sources are the campaign site [S2], KDN 2026 Q&A [S3] and KDN 2024 [S5], not the site alone."
+    },
+    {
+      "candidate": "lance-byrd",
+      "axis": "experience",
+      "verdict": "upheld",
+      "note": "Unlike Ilgen (Pos 1), holds no party or public office; two unsuccessful runs do not reduce the outsider case."
+    },
+    {
+      "candidate": "lance-byrd",
+      "axis": "local-control",
+      "verdict": "upheld",
+      "note": "Rests on Growth Management Act reform 'without one-size-fits-all Olympia rules' / 'without state mandates' on housing [S3][S2], which is legitimate local-control evidence. His school-governance positions are correctly kept on parental-rights and not used here."
+    },
+    {"candidate": "lance-byrd", "axis": "parental-rights", "verdict": "upheld"}
+  ],
+  "missing": []
+}
