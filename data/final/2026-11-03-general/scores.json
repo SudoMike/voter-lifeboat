@@ -27,13 +27,17 @@
     "data/washington-state/elections/2026-11-03-general/counties/cowlitz/scoring/*.json",
     "data/washington-state/elections/2026-11-03-general/counties/cowlitz/scoring/refutations/*.json",
     "data/washington-state/elections/2026-11-03-general/counties/grant/scoring/*.json",
-    "data/washington-state/elections/2026-11-03-general/counties/grant/scoring/refutations/*.json"
+    "data/washington-state/elections/2026-11-03-general/counties/grant/scoring/refutations/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/island/scoring/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/island/scoring/refutations/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/lewis/scoring/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/lewis/scoring/refutations/*.json"
   ],
   "script": "pipeline/merge_scores.py",
   "verdict_stats": {
-    "upheld": 1877,
-    "adjust": 160,
-    "refuted": 6,
+    "upheld": 1927,
+    "adjust": 163,
+    "refuted": 7,
     "missing_added": 26,
     "missing_dropped_low": 10
   },
@@ -28324,6 +28328,1105 @@
             "First elected in 2018; re-elected unopposed in 2022 [S2][S4]",
             "Board secretary; Warden farmer active in agricultural organizations [S2]",
             "Submitted no voters'-guide statement [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "island-island-county-county-assessor",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/island/dossiers/island-island-county-county-assessor/"
+      ],
+      "office_does": "The assessor values every parcel in the county for property tax, runs the exemption and current-use programs, and computes levy rates and puts the taxes on the roll.",
+      "race_blurb": "Incumbent Kelly Todd Mauck, elected in 2022 as a Republican and now running with no party preference, faces Doug Stults (Prefers Democratic Party), a residential appraiser on his own staff who led the primary 52.7% to 47.1%. The race centers on Mauck's $5.6 million levy reduction to return school-levy overcollections, which the Department of Revenue disputes.",
+      "candidates": [
+        {
+          "slug": "doug-stults",
+          "summary": "Residential appraiser in the Island County Assessor's Office for more than 4.5 years, with two IAAO designations and no elected record; endorsed by former Assessor Bernie Upchurch and the Island County Democrats.",
+          "highlights": [
+            "Taxpayer Protection Plan would test every levy before he signs the roll, so a rate carried over from last year is caught [S5]",
+            "Wants refund checks to the people who paid the levy overcollection, not credits on later tax bills [S5]",
+            "Would make no large levy correction without a written Department of Revenue determination first [S5]",
+            "Pledges a public conflict-of-interest log, posted work hours and IAAO certification for the office [S4]",
+            "Led the August primary with 52.7% of the vote [S12]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S5",
+                "S7"
+              ],
+              "basis": "Runs a 'Taxpayer Protection Plan' to return every overcharged dollar to those who paid it and to widen exemption enrollment; no position on tax levels themselves."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S4",
+                "S8"
+              ],
+              "basis": "Never elected and challenging his own office's elected head, though he brings 4.5 years of appraisal work inside the office and national IAAO credentials."
+            }
+          }
+        },
+        {
+          "slug": "kelly-todd-mauck",
+          "summary": "Island County Assessor since 2023 and former county undersheriff, running with no party preference; endorsed by all three county commissioners, most of the state's elected assessors and the Island County Republican Party.",
+          "highlights": [
+            "Cut the 2025 state school levy by $5.6 million to return 2022 and 2024 overcollections; the Department of Revenue disputes most of it [S7]",
+            "Says he will go to court rather than raise a later levy to undo the correction [S7]",
+            "Says the office now meets all eight Department of Revenue standards, up from four in 2023 [S6]",
+            "Says the office has run under budget and cut unnecessary staffing costs [S4]",
+            "Supported the 2026 law raising income limits for the senior, disabled and veteran exemption [S8]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S7",
+                "S8"
+              ],
+              "basis": "Lowered the 2025 levy to refund overcollections, says he would refuse a state demand to raise a later levy, and backed the wider senior exemption."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S4"
+              ],
+              "basis": "Says the office has consistently run under budget, reduced unnecessary staffing costs and created efficiencies."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3",
+                "S5"
+              ],
+              "basis": "First-term incumbent running on his record in office, after 22 years in county law enforcement including undersheriff, backed by the sitting commissioners and 28 elected assessors."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "island-island-county-county-auditor",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/island/dossiers/island-island-county-county-auditor/"
+      ],
+      "office_does": "The auditor runs elections and voter registration, records deeds and other documents, issues licenses, and keeps the county's accounts and annual financial statement.",
+      "race_blurb": "A 2022 rematch: Sheilah Crider, auditor since 2008 and now running as an Independent, led the four-way primary with 39.7%, and Barbara Fuller (Prefers Democratic Party), a compliance and audit professional, was second with 28.0%. Local coverage frames it as continuity against change, with office staffing as the main issue.",
+      "candidates": [
+        {
+          "slug": "barbara-fuller",
+          "summary": "Coupeville compliance and audit professional, former police officer and member of the county Civil Service Commission, making her second run for auditor; endorsed by the Island County Democrats.",
+          "highlights": [
+            "Lists 25+ years in regulatory compliance, auditing and operational leadership [S1]",
+            "Wants to modernize the office and find out why the chief accountant post stayed vacant for nearly a year [S3]",
+            "Would look for 'more cost-effective and sustainable ways' to run the office [S3]",
+            "Says she will not 'clean house' and would start with an assessment drawing on staff input [S2]",
+            "Expects the county will need a new elections office at some point [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3",
+                "S4"
+              ],
+              "basis": "Pledges strong financial oversight and more cost-effective operations and has criticized weak handling of an audit finding; she also expects a new elections office will be needed."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3",
+                "S4"
+              ],
+              "basis": "Never elected and running a second time as the change candidate against an 18-year incumbent, with a long professional auditing career behind her."
+            }
+          }
+        },
+        {
+          "slug": "sheilah-crider",
+          "summary": "Island County Auditor since her 2008 appointment and a state-certified election administrator, formerly an Oak Harbor city councilmember; running as an Independent after running as a Republican in 2022.",
+          "highlights": [
+            "Auditor for 18 years, after 10 years on the Oak Harbor City Council [S1]",
+            "Says the office's 'policies, practices and procedures have stood the test of time' [S2]",
+            "Says salary limits hiring and wants funding for a backup employee [S3]",
+            "A judge upheld her 2024 mask mandate in the ballot-counting room [S5]",
+            "Plans stronger election security ahead of the 2028 presidential election [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 1,
+              "confidence": "low",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Blames limited salary money for staffing gaps and seeks funding for an added backup position and for an observer space.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S4"
+              ],
+              "basis": "Incumbent for 18 years, running on the office's record and continuity, after a decade on a city council."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "island-island-county-county-clerk",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/island/dossiers/island-island-county-county-clerk/"
+      ],
+      "office_does": "The county clerk is the clerk of the superior court: the office files and keeps court records, attends court, enters orders and judgments, and handles the court's money.",
+      "race_blurb": "An open seat after Clerk Debra Van Pelt retired in May 2026, so the winner takes office at certification and then serves the full four-year term. Former chief deputy clerk Dierdre Butler (Prefers Democratic Party) led the primary with 33.6%; Juvenile Court Services office manager Maria Hazelo (Prefers Republican Party) was second with 26.3% and has Van Pelt's endorsement.",
+      "candidates": [
+        {
+          "slug": "dierdre-butler",
+          "summary": "Coupeville resident who worked in the Island County Clerk's Office from 2014 to 2020, rising from deputy clerk to chief deputy, and has worked in accounts payable in the Auditor's Office since 2020. She ran for clerk in 2022 against Van Pelt.",
+          "highlights": [
+            "Former chief deputy clerk; in the Auditor's Office accounts payable since 2020 [S1][S3]",
+            "Promises to modernize operations, streamline record-keeping and reduce delays [S2][S4]",
+            "Would borrow processes from other counties and teach the public what the office does [S5]",
+            "Says she will carefully manage the clerk's budget on behalf of taxpayers [S3][S4]",
+            "Endorsed by the Island County Democratic Party [S8][S9]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3",
+                "S6"
+              ],
+              "basis": "Six years inside the Clerk's Office up to chief deputy plus county finance work, but has not held the elected office and is running for an open seat."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S4"
+              ],
+              "basis": "Pledges careful budget management and running the office efficiently and responsibly on behalf of taxpayers, with no new spending proposals."
+            }
+          }
+        },
+        {
+          "slug": "maria-hazelo",
+          "summary": "Oak Harbor resident and Island County Juvenile Court Services office manager, about 20 years with the county, who also serves as the court's liaison to the state Administrative Office of the Courts.",
+          "highlights": [
+            "Manages court-services operations, records, filings, grants, payroll and purchasing [S1]",
+            "Promises modernized court records systems, shorter waits and better public access [S1][S2]",
+            "Proposes staff training, de-escalation training and a coaching-style approach to retain staff [S5]",
+            "Endorsed by the Island County Republican Party and retired Clerk Debra Van Pelt [S8][S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S5"
+              ],
+              "basis": "About two decades of county court administration, though not in the Clerk's Office, running for an open seat."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "island-island-county-county-commissioner-district-3",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/island/dossiers/island-island-county-county-commissioner-district-3/"
+      ],
+      "office_does": "The three county commissioners are the county's legislative body: they adopt the budget and county taxes, plan for growth, and build and run roads, the jail and other county facilities.",
+      "race_blurb": "Open seat: Commissioner Janet St. Clair (D) is retiring, and the result decides the board's party majority. Republican Matthew Van Pelt led the district primary with 44.7%, and Democrat Grant Shaw edged a second Democrat for the other general-election spot; the general is county-wide.",
+      "candidates": [
+        {
+          "slug": "grant-shaw",
+          "summary": "Camano Island resident of 30 years with a retail budget-management background and nonprofit and water-association leadership, making his first run for office; endorsed by Commissioner St. Clair and the Island County Democrats.",
+          "highlights": [
+            "Supports a new jail with space for treatment, behavioral health and rehabilitation programs, funded partly through grants [S9]",
+            "Wants ADUs, smaller homes and workforce housing where infrastructure allows, with predictable permitting [S4]",
+            "Backs Growth Management planning that protects water, septic capacity, farmland and rural character [S4][S5]",
+            "Would review county operations for efficiency without cutting service levels [S9]",
+            "Says the ICOM 911 system needs an overhaul [S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S5",
+                "S9"
+              ],
+              "basis": "Backs a new jail with program space, up-front technology investment and planning for future infrastructure, with no proposed cuts; also pledges to watch taxpayer dollars."
+            },
+            "housing": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Mixed: more housing types and predictable permitting, limited by infrastructure and rural-character protection, with no public-housing or tenant proposals."
+            },
+            "safety": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S5",
+                "S9"
+              ],
+              "basis": "Frames a new jail around treatment, behavioral health and rehabilitation to reduce recidivism, while also pledging support for first responders."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "First run for public office; brings retail budget and community-board leadership rather than a government record."
+            }
+          }
+        },
+        {
+          "slug": "matthew-van-pelt",
+          "summary": "North Whidbey resident, 23-year Navy veteran and owner of three local businesses, including a construction company, with no elected record; endorsed by the Island County Republican Party.",
+          "highlights": [
+            "Says 'tax increases should be the last thing we look at' [S8]",
+            "Questions county-funded services he says draw newcomers to the island: 'We need to take care of who's already here' [S8]",
+            "Would look at remodeling the jail before building a new one [S8]",
+            "Would trim 'non-essential' building codes and cut permitting delays to lower construction costs [S4]",
+            "Wants funding to fill what he calls the state's lowest deputy staffing per resident [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S8"
+              ],
+              "basis": "Puts tax increases last and argues business growth and tourism would reduce pressure for further tax increases."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S8"
+              ],
+              "basis": "Focuses on cutting county costs, including county-funded social services, and prefers remodeling the jail, with volunteers rather than paid experts reviewing any new plans.",
+              "adjusted_by_refutation": true
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S8"
+              ],
+              "basis": "Would cut 'non-essential' building codes and permitting delays and opposes the state requirement to plan for population growth.",
+              "adjusted_by_refutation": true
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S4",
+                "S8"
+              ],
+              "basis": "Repeatedly calls for more sheriff's deputies and law-enforcement presence and doubts in-jail treatment programs, while speaking of 'compassionate solutions' for strained services."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S7"
+              ],
+              "basis": "No elected record; runs on Navy and small-business experience for an open seat."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "island-island-county-county-coroner",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/island/dossiers/island-island-county-county-coroner/"
+      ],
+      "office_does": "The coroner investigates unnatural, violent or suspicious deaths in Island County and can hold inquests.",
+      "race_blurb": "Uncontested: incumbent Shantel Porter (Prefers Independent Party), elected in 2022 after serving as deputy coroner, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "shantel-porter",
+          "summary": "Island County Coroner for four years and a certified medicolegal death investigator; the only candidate on the ballot.",
+          "highlights": [
+            "Former deputy coroner; elected unopposed in 2022 [S3][S5]",
+            "Certified medicolegal death investigator since 2022, after a 28-year career in dentistry [S1]",
+            "Pledges transparency and compassion for families and careful attention to the facts [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "island-island-county-county-prosecutor",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/island/dossiers/island-island-county-county-prosecutor/"
+      ],
+      "office_does": "The prosecuting attorney decides which crimes are charged and prosecutes them, and is the legal adviser and civil lawyer for county officials.",
+      "race_blurb": "Greg Banks, prosecutor since 1999 and running with no party preference, faces Andrew Scott (Prefers Democratic Party), a former Missoula chief city prosecutor who reached the ballot as a primary write-in. The race turns on Banks's prosecution of a former county Republican chair and on how charges are filed and later escalated.",
+      "candidates": [
+        {
+          "slug": "andrew-f-scott",
+          "summary": "Freeland attorney and former chief prosecuting attorney for the City of Missoula, Montana, who reached the ballot with 1,437 primary write-in votes; has not held elected office.",
+          "highlights": [
+            "Published a 'Complete Initial Charging' policy against filing a misdemeanor and later refiling as a felony when plea talks fail [S3]",
+            "Wants faster charging decisions, more victim communication and closer coordination with the sheriff [S1][S5]",
+            "Would add mental-health and other treatment courts alongside the existing drug court [S5]",
+            "Would prioritize serious and repeat offenses [S3]",
+            "About 16 years as a Missoula city prosecutor, mostly misdemeanors, rising to chief [S1][S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3",
+                "S5"
+              ],
+              "basis": "Leans to treatment courts and limits on overcharging and charge escalation, while also pledging to prioritize serious and repeat offenses and work with law enforcement."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S5"
+              ],
+              "basis": "Never elected and challenging a 28-year incumbent as the change candidate, though he has about 16 years of city prosecution behind him."
+            }
+          }
+        },
+        {
+          "slug": "greg-banks",
+          "summary": "Island County Prosecuting Attorney since 1999, seeking an eighth term with no party preference; vice president of the National District Attorneys Association and endorsed by Gov. Ferguson, AG Nick Brown and former AG Rob McKenna.",
+          "highlights": [
+            "Cites 'successfully prosecuting serious offenses and standing up for crime victims' [S1]",
+            "Personally prosecuted former county GOP chair Tim Hazelo, convicted by a jury in 2025 [S14]",
+            "Won a unanimous state Supreme Court case against the commissioners' hiring of outside lawyers [S3]",
+            "Says he and his deputies trained all Oak Harbor and county officers in 2026 [S3]",
+            "A visiting judge disqualified his office from a related public-records suit in August 2026 [S13]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3",
+                "S10"
+              ],
+              "basis": "Stresses prosecuting serious offenses, victims' rights and officer training, mentioning drug courts and alternative sentencing only in general terms."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3",
+                "S8"
+              ],
+              "basis": "28-year incumbent with seven election wins, a felony and Supreme Court record, and state and national prosecutor-association leadership."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "island-island-county-county-sheriff",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/island/dossiers/island-island-county-county-sheriff/"
+      ],
+      "office_does": "The sheriff runs the Island County Sheriff's Office: patrol deputies, arrests, service of court papers and the county jail. The sheriff is also county fire marshal and sets burn bans.",
+      "race_blurb": "Two-term Sheriff Rick Felici, elected as a Republican and now running with an independent preference, faces Langley police chief and former county deputy Tavier Wasser (Prefers Democratic Party). Felici led the primary 51.7% to 48.1%; endorsements cross party lines, and both candidates say deputy coverage is too thin amid a tight county budget.",
+      "candidates": [
+        {
+          "slug": "rick-felici",
+          "summary": "Island County sheriff since 2018, with the office since 1994 as deputy, detective, sergeant and chief criminal deputy; seeking a third term with an independent party preference.",
+          "highlights": [
+            "38 years in law enforcement; sheriff since 2018 [S1]",
+            "Calls drugs and mental health the top challenges and wants 'education, enforcement and accountability' [S3]",
+            "Points to body cameras, de-escalation training and co-responder mental health and opioid outreach [S1][S11]",
+            "Says he will follow the Keep Washington Working Act and rejects the constitutional sheriff movement [S3][S6]",
+            "Endorsed by the county Republican Party, the deputies' and corrections unions and Indivisible Whidbey [S4]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S11",
+                "S12"
+              ],
+              "basis": "Two-term sitting sheriff with 32 years in the office, endorsed by both of its unions."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S11",
+                "S1"
+              ],
+              "basis": "Frames drugs and mental health around enforcement and accountability and has sought more deputies, while running grant-funded co-responder mental health and opioid outreach."
+            }
+          }
+        },
+        {
+          "slug": "tavier-wasser",
+          "summary": "Langley police chief since 2022, an Island County deputy and acting sergeant from 2015 to 2022, and a Marine Corps military policeman before that; first run for office.",
+          "highlights": [
+            "Langley police chief since 2022; county deputy 2015-2022 [S1]",
+            "Plan: more deputy training, better communication, stronger mental health support and victim advocacy [S6]",
+            "Would route some calls, such as behavioral health crises, to social workers [S7]",
+            "Proposes a victim advocacy unit and a public information officer [S4][S1]",
+            "Says he will follow the Keep Washington Working Act and has repudiated the 'constitutional sheriff' label [S7][S8]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "First-time candidate challenging a two-term incumbent, though he has run a small city department since 2022 and served seven years as a county deputy."
+            },
+            "safety": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S7"
+              ],
+              "basis": "Emphasizes expanded mental-health capacity, telling crimes from calls for help, sending some behavioral-health calls to social workers and victim advocacy, alongside more tactical training."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "island-island-county-county-treasurer",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/island/dossiers/island-island-county-county-treasurer/"
+      ],
+      "office_does": "The treasurer collects property taxes and acts as banker and investment manager for Island County and its local districts.",
+      "race_blurb": "Uncontested: incumbent Tony Lam (Prefers Independent Party), elected in 2022 after serving as the office's chief deputy, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "tony-lam",
+          "summary": "Island County Treasurer for four years after 18 years in the office, including eight as chief deputy treasurer; the only candidate on the ballot.",
+          "highlights": [
+            "18 years in the treasurer's office, including eight as chief deputy, before winning the seat [S1]",
+            "Won the open seat in 2022 with 57.2% of the vote [S6]",
+            "Stresses fiduciary duty and experienced management of the county investment pool [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "island-island-county-district-court-judge",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/island/dossiers/island-island-county-district-court-judge/"
+      ],
+      "office_does": "The Island County District Court judge hears misdemeanor and gross-misdemeanor cases, traffic infractions and civil claims up to $100,000.",
+      "race_blurb": "Uncontested: Judge Ronald A. Costeck, appointed in 2024 when Judge Bill Hawkins retired, runs for both the short term left on Hawkins's term and the next full four-year term.",
+      "candidates": [
+        {
+          "slug": "ronald-a-costeck",
+          "summary": "Presiding Judge of Island County District Court since his 2024 appointment, after six years as the court's commissioner; earlier a prosecutor and a private attorney in criminal, family and civil cases.",
+          "highlights": [
+            "Unanimously appointed by county commissioners in 2024 to replace retiring Judge Hawkins [S2]",
+            "District and Oak Harbor Municipal Court commissioner from 2018 to 2024 [S1][S2]",
+            "Former deputy prosecutor; founded a multi-county practice in criminal, family and civil law in 2005 [S1][S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "lewis-lewis-county-assessor",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/lewis/dossiers/lewis-lewis-county-assessor/"
+      ],
+      "office_does": "The assessor values every taxable property in Lewis County each year for property taxes; taxing districts and voters set the levies.",
+      "race_blurb": "Uncontested: first-term incumbent Ross W. Nielson (Prefers Republican Party) is the only candidate and submitted no voters' guide statement.",
+      "candidates": [
+        {
+          "slug": "ross-w-nielson",
+          "summary": "First-term Lewis County Assessor and former independent fee appraiser; the only candidate on the ballot.",
+          "highlights": [
+            "Won the office in 2022 with 52.7% over Tom Crowson [S5]",
+            "Campaign says he inherited a large backlog of court and tax appeal cases and runs a 'hands-on' office [S3]",
+            "Submitted no statement to the 2026 voters' guide [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "lewis-lewis-county-auditor",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/lewis/dossiers/lewis-lewis-county-auditor/"
+      ],
+      "office_does": "The auditor runs Lewis County's elections and voter registration, records deeds and documents, and keeps the county's accounts and annual financial statement.",
+      "race_blurb": "Open seat: Auditor Larry Grove is retiring. CPA Mitchell Merrill, endorsed by Grove and other county officials, finished 33 votes ahead of former county Republican Party chair Mitch Townsend in the primary. Townsend runs on auditing the voter rolls and every county department and on state election reform.",
+      "candidates": [
+        {
+          "slug": "mitchell-l-merrill",
+          "summary": "Winlock-raised certified public accountant who owns Merrill CPA, P.S., running to keep the auditor's office accurate, transparent and professionally managed.",
+          "highlights": [
+            "CPA with nearly 10 years in public accounting and an MBA from Pacific Lutheran University [S1][S3]",
+            "Promises to follow the law, use modern technology, widen access to information and build on his predecessor's work [S1]",
+            "Says elections must stay free from material error and fairly run [S1][S2]",
+            "Endorsed by Auditor Larry Grove, former Auditor Gary Zandell, Commissioners Brummer and Swope, the treasurer and the clerk [S2][S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "First-time candidate, but runs as continuity with the retiring auditor, on professional credentials and with the backing of current and former county officials."
+            }
+          }
+        },
+        {
+          "slug": "mitch-townsend",
+          "summary": "Mossyrock School Board chair, former Lewis County Republican Party chair, Army infantry veteran and business owner running on a 'Contract with Lewis County' to audit the votes and open the books.",
+          "highlights": [
+            "Would audit the voter rolls, using AI among other methods, and review every practice in the auditor's office within 30 days [S1][S2]",
+            "Promises a full financial re-examination of every county department [S1][S2][S4]",
+            "Backs voter ID with proof of citizenship, final results on election night and no late-arriving ballots [S3]",
+            "Says the job needs executive leadership, not a CPA [S1][S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3",
+                "S4"
+              ],
+              "basis": "Repeated, explicit platform of auditing the auditor's office and re-examining every county department's finances ('Audit and Open the Books')."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3",
+                "S8"
+              ],
+              "basis": "Outsider to the office promising a top-to-bottom review to 'supercharge' it, though with long business, school-board and party leadership."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "lewis-lewis-county-clerk",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/lewis/dossiers/lewis-lewis-county-clerk/"
+      ],
+      "office_does": "The county clerk is the administrative and financial officer of the Superior Court, keeping its records and handling its filings and money.",
+      "race_blurb": "Uncontested: Scott Tinney (Prefers Republican Party), clerk since 2016, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "scott-tinney",
+          "summary": "Lewis County Clerk since 2016, after 23 years as a deputy clerk in Thurston County; the only candidate on the ballot.",
+          "highlights": [
+            "County Clerk since 2016; deputy clerk in Thurston County 1993-2016 [S1]",
+            "Re-elected in 2022 with 57.3% over Linda Williams [S3]",
+            "Runs on experience: more than 33 years as a deputy clerk or clerk [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "lewis-lewis-county-commissioner-district-3-county-commissioner-district-3",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/lewis/dossiers/lewis-lewis-county-commissioner-district-3-county-commissioner-district-3/"
+      ],
+      "office_does": "The three county commissioners are Lewis County's legislative body: they adopt the budget, pass ordinances and oversee county departments. District 3 candidates are nominated in East and south Lewis County, but every county voter elects them in November.",
+      "race_blurb": "Republican incumbent Scott Brummer, first elected in 2022, faces Republican PUD Commissioner Mike Hadaller of Salkum. Brummer led the district-only primary 33.6% to 31.7%. Both oppose a public safety tax for now. They split on the proposed Chehalis River flow-through dam and on how the county is run: Hadaller wants audits of every funded agency and an end to the county manager position.",
+      "candidates": [
+        {
+          "slug": "scott-brummer",
+          "summary": "District 3 commissioner since 2022, former state fish biologist, senior pastor in Ethel and farm-feed business owner, running on his record of budget restraint and flood-control work.",
+          "highlights": [
+            "Says the board took the allowed property-tax increase only once in four budgets [S3][S2]",
+            "Chairs the Chehalis Basin board and supports the proposed flow-through flood dam near Pe Ell [S1][S3][S4]",
+            "'Not sold' on a public safety tax until a new sheriff rebuilds trust [S3][S4]",
+            "Voted against allowing cannabis sales in unincorporated Lewis County [S5]",
+            "Would not cut deputies to end the road-fund transfer to the sheriff [S6]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Incumbent running explicitly on his record, budget votes and regional board chairmanships."
+            },
+            "taxes": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S3",
+                "S4"
+              ],
+              "basis": "Record and repeated statements of keeping property-tax increases to a minimum; hesitant on, but not closed to, a dedicated public safety tax."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3",
+                "S6"
+              ],
+              "basis": "Says the board has kept spending down and made hard choices, but refuses to cut deputy positions funded by the road-fund transfer."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3",
+                "S5"
+              ],
+              "basis": "Pledges support for law enforcement, defended the county's syringe ordinance and voted against cannabis sales over youth access."
+            }
+          }
+        },
+        {
+          "slug": "michael-hadaller",
+          "summary": "Lewis County PUD commissioner since 2022 and board president, a Salkum resident from a longtime East County logging family, running to put the district's voice first and audit county spending.",
+          "highlights": [
+            "Wants every agency that receives county tax money open to audit, the sheriff included [S3]",
+            "Would eliminate the $177,000 county manager position [S2]",
+            "Opposes a public safety tax before audits and opposes the proposed flow-through dam [S2]",
+            "Promises an open-door policy, expedited permitting and a crackdown on drug houses [S1][S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3",
+                "S5"
+              ],
+              "basis": "Challenges the incumbent on change and East County representation, with one term on the PUD board as his elected record."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Calls for audits of every county-funded entity, eliminating the county manager and 'tighten the belt' budgeting."
+            },
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S4"
+              ],
+              "basis": "Opposes a public safety tax until departments are audited and favors 'getting government out of the way', while allowing that roads and safety must be paid for."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2",
+                "S4"
+              ],
+              "basis": "Enforcement framing on burglaries, drug dealers and drug houses; opposed cannabis sales in unincorporated areas."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "lewis-lewis-county-coroner",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/lewis/dossiers/lewis-lewis-county-coroner/"
+      ],
+      "office_does": "The coroner investigates sudden, violent, suspicious and unexplained deaths in Lewis County and determines their cause and manner.",
+      "race_blurb": "Coroner Warren McLeod, a Republican in office since 2011, seeks what he says will be his final term against independent Jessica Stickley, a former Lewis County deputy coroner. Stickley campaigns on investigation standards, transparency and prevention. McLeod took 54.4% in the primary.",
+      "candidates": [
+        {
+          "slug": "warren-mcleod",
+          "summary": "Lewis County Coroner since 2011 and former Nevada coroner's investigator and Boston-area EMT; says this would be his last term.",
+          "highlights": [
+            "Coroner since 2011, unopposed after his first election [S2]",
+            "Says the office has been accredited since 2012 and its staff are certified death investigators [S1]",
+            "Final-term goals: keep accreditation, certify all deputies and turn casual on-call staff into county employees [S2]",
+            "Endorsed by the Lewis County Republican Party and coroners of Thurston, Grant and Benton counties [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Sixteen-year incumbent running on the office's accreditation, certifications and continuity."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Plans to keep pressing commissioners for funding to convert casual on-call staff into full- or part-time benefited county positions."
+            }
+          }
+        },
+        {
+          "slug": "jessica-stickley",
+          "summary": "Medicolegal death investigator and former Lewis County deputy coroner (2009-2019) running as an independent on investigation standards, transparency and death prevention.",
+          "highlights": [
+            "About 15 years in death investigation in Lewis, Cowlitz and Columbia counties [S1][S4]",
+            "Cites concerns over controversial investigations, including the Christensen case, and pledges national investigative standards [S4][S2]",
+            "Promises more transparency, accountability for mistakes and aftercare for families [S2][S3]",
+            "Wants the office to lead prevention of suicides, overdoses and other avoidable deaths [S2][S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "First-time candidate challenging a 16-year incumbent on change and accountability for the office's mistakes, though she brings about 15 years in the field."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "lewis-lewis-county-district-court-district-court-judge-dept-1",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/lewis/dossiers/lewis-lewis-county-district-court-district-court-judge-dept-1/"
+      ],
+      "office_does": "District Court judges hear misdemeanors, traffic and other infractions, small claims, civil cases and protection orders for all of Lewis County.",
+      "race_blurb": "Uncontested: sitting Judge Wade S. Samuelson is the only candidate.",
+      "candidates": [
+        {
+          "slug": "wade-s-samuelson",
+          "summary": "Sitting Lewis County District Court judge (Department 1), unopposed in 2014, 2018 and 2022; the only candidate on the ballot.",
+          "highlights": [
+            "Elected without opposition in 2014, 2018 and 2022 [S5][S4][S3]",
+            "Submitted no statement to the 2026 voters' guide [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "lewis-lewis-county-district-court-district-court-judge-dept-2",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/lewis/dossiers/lewis-lewis-county-district-court-district-court-judge-dept-2/"
+      ],
+      "office_does": "District Court judges hear misdemeanors, traffic and other infractions, small claims, civil cases and protection orders for all of Lewis County.",
+      "race_blurb": "Uncontested: sitting Judge R.W. Buzzard is the only candidate.",
+      "candidates": [
+        {
+          "slug": "rw-buzzard",
+          "summary": "Sitting Lewis County District Court judge (Department 2), unopposed in 2014, 2018 and 2022; the only candidate on the ballot.",
+          "highlights": [
+            "Elected without opposition in 2014, 2018 and 2022 [S5][S4][S3]",
+            "Submitted no statement to the 2026 voters' guide [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "lewis-lewis-county-prosecuting-attorney",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/lewis/dossiers/lewis-lewis-county-prosecuting-attorney/"
+      ],
+      "office_does": "The prosecuting attorney charges and tries crimes in Lewis County courts and is the legal adviser to the county commissioners and departments.",
+      "race_blurb": "Uncontested: incumbent Jonathan L. Meyer (Prefers Republican Party) is the only candidate and submitted no voters' guide statement.",
+      "candidates": [
+        {
+          "slug": "jonathan-l-meyer",
+          "summary": "Lewis County Prosecuting Attorney, unopposed in 2014, 2018 and 2022; the only candidate on the ballot.",
+          "highlights": [
+            "Re-elected without opposition in 2014, 2018 and 2022 [S4][S3][S2]",
+            "Submitted no statement to the 2026 voters' guide [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "lewis-lewis-county-sheriff",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/lewis/dossiers/lewis-lewis-county-sheriff/"
+      ],
+      "office_does": "The sheriff runs the Lewis County Sheriff's Office and the county jail, the county's chief law-enforcement agency, which patrols, investigates, makes arrests and serves court orders.",
+      "race_blurb": "Sheriff Rob Snaza is retiring, so the seat is open. Sheriff's Office Special Services Chief Gabriel Frase, a 24-year insider, faces former Centralia police Sgt. Tracy Murphy, who was fired in April for dishonesty during an internal investigation, per the police chief; Murphy is contesting the firing in arbitration. Both prefer the Republican Party; Frase led the primary 36.2% to 34.3%.",
+      "candidates": [
+        {
+          "slug": "gabriel-j-frase",
+          "summary": "Lewis County Sheriff's Office special services chief and 24-year employee of the office, a Marine Corps veteran running to build on what he calls the agency's good foundation.",
+          "highlights": [
+            "With the Sheriff's Office since 2002; special services chief since 2024, one of its three chiefs [S1][S5]",
+            "Priorities include putting victims over career criminals and re-forming a combined SWAT team and drug unit [S3]",
+            "Names the budget, transparency and inter-agency relationships as the office's biggest challenges [S5]",
+            "Endorsed by Prosecuting Attorney Jonathan Meyer and former Sheriff John McCroskey [S9][S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S5"
+              ],
+              "basis": "Long-tenured member of the office's command staff who runs on continuity with the current administration, but has never held elected office."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Platform prioritizes victims over career criminals and focuses resources on enforcement, investigations and holding offenders accountable; it describes conventional policing rather than hardline positions."
+            }
+          }
+        },
+        {
+          "slug": "tracy-murphy",
+          "summary": "Former Centralia Police Department detective sergeant and narcotics task force (JNET) supervisor with 35 years in law enforcement, running again after his 2022 loss to Sheriff Snaza.",
+          "highlights": [
+            "Centralia police 1990-2026; fired in April 2026 for dishonesty in an internal investigation, per the police chief, a finding he contests in arbitration set for Nov. 19-20 [S6][S7]",
+            "Promises aggressive enforcement against drug suppliers and a volunteer cold-case unit [S5]",
+            "Backs jail mental-health, substance-abuse and faith-based programs to reduce recidivism [S1][S5]",
+            "Says he will look for efficiencies in administration and staffing before asking taxpayers for more [S5]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S5"
+              ],
+              "basis": "Outside challenger who frames the race as 'the status quo and a new direction' and says the office needs a leader rather than 'another administrator', though he brings 35 years of police experience."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3",
+                "S5"
+              ],
+              "basis": "Leads with aggressive drug-supply enforcement and offender accountability, while also backing jail treatment and reentry programs to reduce recidivism."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S5",
+                "S3"
+              ],
+              "basis": "Pledges to examine administration, staffing and programs for efficiencies before asking taxpayers for more, and to choose an administration committed to fiscal responsibility."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "lewis-lewis-county-treasurer",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/lewis/dossiers/lewis-lewis-county-treasurer/"
+      ],
+      "office_does": "The treasurer collects property taxes and manages the county's money and banking, including for school, fire, water and cemetery districts.",
+      "race_blurb": "Uncontested: Arny Davis (Prefers Republican Party), treasurer since 2015, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "arny-davis",
+          "summary": "Lewis County Treasurer since 2015, former chief deputy treasurer and commercial lender; the only candidate on the ballot.",
+          "highlights": [
+            "Treasurer since January 2015; chief deputy treasurer before that [S2]",
+            "More than 30 years in business management, finance and banking [S1][S2]",
+            "Statement stresses efficient financial operations and staff [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "lewis-public-utility-district-commissioner-district-1-commissioner-district-1",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/lewis/dossiers/lewis-public-utility-district-commissioner-district-1-commissioner-district-1/"
+      ],
+      "office_does": "A Lewis County PUD commissioner sits on the three-member elected board that sets policy and rates for the public electric utility serving about 35,000 customers outside Centralia, for a six-year term.",
+      "race_blurb": "Open seat: appointed Commissioner Dave Muller, named in 2025 after Michael Kelly's seat was vacated, is not on the ballot, and every PUD voter elects the District 1 commissioner for the short and full terms. Retired PUD engineer Steve Grega stresses low rates and Cowlitz Falls Dam relicensing. Technology architect and former PUD employee Jeff Baine stresses transparency, broadband and reliable, affordable power.",
+      "candidates": [
+        {
+          "slug": "steve-grega",
+          "summary": "Retired Lewis County PUD engineer of 37 years and former Army Corps of Engineers engineer, running on low rates, reliability and Cowlitz Falls Dam relicensing.",
+          "highlights": [
+            "Worked on licensing, construction and operation of Cowlitz Falls Dam during his PUD career [S1]",
+            "Says rising power costs and state renewable mandates mean every other expense must be closely checked to keep rates low [S1]",
+            "Would plan Cowlitz Falls relicensing now and minimize its costs [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "jeff-baine",
+          "summary": "Lifelong Lewis County resident and Barracuda Networks solutions architect, a former PUD employee and Broadband Action Committee president, running on transparency and reliable, affordable power.",
+          "highlights": [
+            "Former long-time PUD employee and former president of the Lewis County Broadband Action Committee [S2]",
+            "Wants PUD decisions made with transparency and ratepayers at the center [S1]",
+            "Prioritizes broadband expansion, infrastructure investment and affordable power while meeting the Clean Energy Transformation Act [S1]"
           ],
           "evidence_level": "moderate",
           "withdrawn": false,

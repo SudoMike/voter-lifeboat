@@ -68,7 +68,7 @@ APP_PACKAGES = {
     "2026-11-03-general": {
         "statewide_ballot": True,
         "counties": ["king", "snohomish", "spokane", "pierce", "clark", "kitsap", "thurston", "yakima", "whatcom",
-                     "benton", "skagit", "cowlitz", "grant"],
+                     "benton", "skagit", "cowlitz", "grant", "island", "lewis"],
         "district_contests": "county",
     },
 }
@@ -95,6 +95,8 @@ DISTRICT_ADAPTER_LAYERS = {
     "skagit": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "FIRDST", "HOSPDST", "SCHDST"),
     "cowlitz": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL"),
     "grant": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "HOSPDST", "FIRDST", "CEMDST"),
+    "island": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "LIBDST", "PUDDST", "PORTDST", "UNINC"),
+    "lewis": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "FIRDST", "PUDDST", "LIBDST"),
 }
 
 
@@ -224,6 +226,13 @@ COUNTY_ELECTIONS_URLS = {
         # Grant County Auditor, Elections (200, 2026-10-08; grantcountywa.gov/
         # elections answers 404, and /1374/Current-Election sits under it).
         "grant": "https://www.grantcountywa.gov/270/Elections",
+        # Island County Auditor, Elections & Voter Registration (200, 2026-10-08;
+        # islandcountywa.gov/elections 301s; the page links VoteWA's guide).
+        "island": "https://www.islandcountywa.gov/423/Elections-Voter-Registration",
+        # Lewis County Elections (200, 2026-10-08; the Auditor's elections site,
+        # whose /current-election/ page links VoteWA's guide;
+        # lewiscountywa.gov/offices/auditor/elections/ answers 404).
+        "lewis": "https://elections.lewiscountywa.gov/",
     },
 }
 
