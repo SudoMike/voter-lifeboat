@@ -1,0 +1,114 @@
+{
+  "contest_slug": "snohomish-legislative-district-44-state-representative-pos-1",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/snohomish/dossiers/snohomish-legislative-district-44-state-representative-pos-1/"],
+  "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering school funding, tax structure, housing rules, health funding and criminal-justice statutes.",
+  "race_blurb": "Democratic incumbent Brandy Donaghy, Vice Chair of House Transportation since her 2021 appointment, faces first-time Republican candidate Chris Elder; both are Navy veterans. Donaghy voted for the 2025 and 2026 tax increases; Elder runs on cutting wasteful spending rather than raising taxes.",
+  "candidates": [
+    {
+      "slug": "brandy-donaghy",
+      "summary": "Incumbent State Representative since 2021 and House Transportation vice chair, a Navy veteran whose record centers road safety, emergency preparedness and consumer protection.",
+      "highlights": [
+        "Sponsored traffic safety camera expansion (2024), young-driver education (2025) and school albuterol access (2026) [S3]",
+        "States that reproductive health care and gender-affirming care are health care [S2]",
+        "Voted for the 2026 tax on income over $1 million and the 2025 tax increases [S7][S8][S9][S10]",
+        "Voted for EHB 1217 (2025 rent-increase limits) and ESHB 1296 (2025 parents' rights amendments) [S11][S12]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S7", "S8", "S9", "S10"],
+          "basis": "Voted for ESSB 6346 (9.9% tax on income over $1 million) and for the 2025 capital gains/estate, excise and B&O tax increases."
+        },
+        "spending": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S2", "S6"],
+          "basis": "Supports public investment in affordable childcare, healthcare-workforce pipelines and behavioral-health and crisis-response funding; no spending-restraint positions."
+        },
+        "housing": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S2", "S11"],
+          "basis": "Voted for the 2025 limits on rent and fee increases; her own housing statement emphasizes building supply through transit-oriented and co-housing models."
+        },
+        "safety": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S6"],
+          "basis": "Session update frames public safety around 'prevention, early intervention' and behavioral-health and crisis-response funding."
+        },
+        "climate": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S2"],
+          "basis": "Committed to policies that 'reduce carbon emissions, promote renewable and clean energy sources'; no stated position on carbon pricing."
+        },
+        "experience": {
+          "score": -1,
+          "confidence": "high",
+          "citations": ["S1", "S4"],
+          "basis": "Five-year incumbent and committee vice chair; opponent is a first-time candidate."
+        },
+        "social": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S2", "S15"],
+          "basis": "States 'Reproductive health care is health care' and 'Gender affirming care is healthcare'; endorsed by Planned Parenthood Alliance Advocates."
+        },
+        "parental-rights": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S12", "S17"],
+          "basis": "Voted for ESHB 1296, which amended the I-2081 list of parent and guardian rights; no campaign statement on the topic."
+        }
+      }
+    },
+    {
+      "slug": "chris-elder",
+      "summary": "First-time Republican candidate, a 20-year Navy aviation veteran, farmer, realtor and small-business owner running on spending restraint, lower taxes and public safety.",
+      "highlights": [
+        "Will 'reduce wasteful spending rather than raise taxes,' citing state budget growth of more than 110% in a decade [S3]",
+        "Would 'lessen regulations that hinder affordable housing' [S3]",
+        "Supports law enforcement, more police per capita and crime prevention [S3]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S3"],
+          "basis": "Pamphlet pledges to 'lower taxes'; website says he will fight to reduce spending 'rather than raise taxes' and let residents keep more of their earnings."
+        },
+        "spending": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S3"],
+          "basis": "Centers his campaign on budget growth outpacing inflation, cutting waste and full spending transparency."
+        },
+        "housing": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S3"],
+          "basis": "Would 'lessen regulations that hinder affordable housing'; no further housing proposals."
+        },
+        "safety": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S3"],
+          "basis": "Supports law enforcement and raising Washington's low police-per-capita levels, alongside unspecified crime-prevention strategies."
+        },
+        "experience": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1"],
+          "basis": "First time seeking office, running against a five-year incumbent."
+        }
+      }
+    }
+  ]
+}

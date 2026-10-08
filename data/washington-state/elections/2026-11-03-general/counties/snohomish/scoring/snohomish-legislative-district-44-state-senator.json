@@ -1,0 +1,103 @@
+{
+  "contest_slug": "snohomish-legislative-district-44-state-senator",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/snohomish/dossiers/snohomish-legislative-district-44-state-senator/"],
+  "office_does": "A State Senator writes and votes on Washington state law and the operating, capital and transportation budgets, covering the tax structure, school funding, criminal-justice statutes and housing rules, and confirms gubernatorial appointments.",
+  "race_blurb": "Democratic incumbent John Lovick, a former State Patrol trooper, county sheriff and county executive, faces Republican Sherri Larkin, a Snohomish School Board director in her first legislative race. Lovick voted for the 2025 and 2026 state tax increases; Larkin runs on reducing the tax burden and restraining state spending.",
+  "candidates": [
+    {
+      "slug": "john-lovick",
+      "summary": "Incumbent State Senator since 2021, former Snohomish County Sheriff and Executive and longtime State Patrol trooper, whose record centers law-enforcement training and accountability standards and road safety.",
+      "highlights": [
+        "Prime sponsor of SB 5974 (2026), setting eligibility and certification standards for police chiefs, marshals and sheriffs [S5]",
+        "Cites three new regional peace-officer academies and supports light rail to Everett and beyond [S1]",
+        "Voted for the 2026 tax on income over $1 million and the 2025 capital gains, excise and B&O tax increases [S8][S9][S10][S11]",
+        "Voted for EHB 1217 (2025 rent-increase limits) and ESHB 1296 (2025 amendments to the I-2081 parents' rights list) [S12][S13]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S8", "S9", "S10", "S11"],
+          "basis": "Voted for ESSB 6346 (9.9% tax on income over $1 million) and for the 2025 capital gains/estate (ESSB 5813), excise (ESSB 5814) and B&O (ESHB 2081) tax increases."
+        },
+        "housing": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S12"],
+          "basis": "Voted for EHB 1217, the 2025 limits on residential rent and fee increases; no campaign statement on housing."
+        },
+        "safety": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S1", "S5"],
+          "basis": "Record centers law-enforcement capacity (three new regional police academies) and standards for law-enforcement leaders (SB 5974), framed around feeling safe; no stated prevention or diversion agenda."
+        },
+        "experience": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S4"],
+          "basis": "Senator since 2021 after nine House years, plus service as county sheriff and executive; opponent has never held legislative office."
+        },
+        "social": {
+          "score": 1,
+          "confidence": "low",
+          "citations": ["S1", "S17"],
+          "basis": "Lists a Planned Parenthood endorsement and is endorsed by Planned Parenthood Alliance Advocates; no statement of his own on reproductive or LGBTQ+ policy."
+        },
+        "parental-rights": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S13", "S18"],
+          "basis": "Voted for ESHB 1296, which amended the I-2081 list of parent and guardian rights; no campaign statement on the topic."
+        }
+      }
+    },
+    {
+      "slug": "sherri-larkin",
+      "summary": "Snohomish School Board director since 2023 and former teacher, a first-time legislative candidate running on stronger schools, safer communities and smarter spending.",
+      "highlights": [
+        "Says a rapidly expanding state government has left families \"overtaxed and overburdened\" [S1]",
+        "Pledges to restore \"fiscal integrity\" and reduce the burden on families and businesses [S1]",
+        "Wants safe neighborhoods \"where law enforcement is supported\" [S1]",
+        "Endorsers quoted on her site describe her school-board work in parental-rights terms [S3]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -2,
+          "confidence": "medium",
+          "citations": ["S1"],
+          "basis": "Pamphlet says families are 'overtaxed and overburdened' and pledges to 'reduce the heavy burden on families and businesses'."
+        },
+        "spending": {
+          "score": -2,
+          "confidence": "medium",
+          "citations": ["S1", "S2"],
+          "basis": "Criticizes a 'rapidly expanding state government' with 'programs that too often deliver no measurable results' and runs on 'Smarter Spending' and restoring fiscal integrity."
+        },
+        "safety": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S1"],
+          "basis": "Calls for 'safe neighborhoods where law enforcement is supported'; no specific enforcement or prevention proposals."
+        },
+        "experience": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1"],
+          "basis": "First legislative race, with three years of school-board service, against a long-serving incumbent."
+        },
+        "parental-rights": {
+          "score": -1,
+          "confidence": "low",
+          "citations": ["S3"],
+          "basis": "Only endorser quotes on her site (parents 'should have a voice'; school-board work 'back toward ... parental rights'); no statement of her own."
+        }
+      }
+    }
+  ]
+}
