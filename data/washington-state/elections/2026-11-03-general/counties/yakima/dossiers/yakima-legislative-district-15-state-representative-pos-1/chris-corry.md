@@ -173,7 +173,7 @@ Chris Corry, of Yakima, is the incumbent Republican State Representative for the
 - Voted nay on House final passage of ESSB 6346, the 9.9% tax on household income over $1 million (2026-03-09, passed 51-46) [S6].
 - Voted nay on ESHB 2081, business and occupation tax increases (2025-04-22, passed 50-48) [S7], and on ESSB 5814, excise taxes on select services (2025-04-23, passed 50-47) [S8].
 - Voted nay on ESHB 1296 on House passage (2025-03-12) and final passage as amended by the Senate (2025-04-24, 59-39) [S9].
-- Voted nay on EHB 1217, the residential rent-increase limit, on House passage (2025-03-10) and on the conference report (2025-04-27, passed 54-44) [S10].
+- Voted nay on EHB 1217, the residential rent-increase limit, on House passage (2025-03-10) and on the conference report (2025-04-27, passed 54-44); in between he voted yea on the failed motion to concur in the Senate's amendments (2025-04-23, 48-50) [S10].
 - Voted yea on E2SHB 1110, middle housing in cities, on House passage (2023-03-06, 75-21) and final passage (2023-04-18, 79-18) [S11].
 - Voted nay on E2SSB 5126, the Climate Commitment Act (2021-04-23, passed 54-43) [S12].
 - Voted nay on ESHB 1054 (police tactics) and E2SHB 1310 (use of force) on final passage (2021-04-23) [S13][S14].
