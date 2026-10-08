@@ -136,6 +136,12 @@ DISTRICT_ADAPTER_LAYERS = {
     "ferry": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "EMSDST"),
     # Wahkiakum's Fire District 2 EMS levy reads FIRDST, DOR FIR2025 (layer 7).
     "wahkiakum": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "FIRDST"),
+    # Columbia's Pool District and Prescott Joint Park & Rec levies read
+    # PARKDST, DOR PKR2025 (layer 14; see geo.js).
+    "columbia": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "PARKDST"),
+    # Garfield's general scopes are all COUNTY, CD 5 or LD 9: Census layers
+    # only (geo.js COUNTY_LAYERS.garfield is empty).
+    "garfield": ("CONGDST", "LEGDST", "CITY"),
 }
 
 
