@@ -1204,7 +1204,7 @@ ELECTION_MEASURES = {
                 m("Emergency Medical Services District No. 1, Klickitat County", "Proposition No. 1",
                   "Permanent Regular Emergency Medical Services Property Tax Levy",
                   ("EMSDST", "1"),
-                  "Makes the EMS district's property tax levy permanent, at up to $0.50 per $1,000 of assessed value, first levied in 2026 for collection in 2027; it replaces the six-year renewal voters approved in 2024 (collected 2025-2030). The money pays only for emergency medical services: ambulances, paramedics and EMTs, training, equipment and stations. The district covers the whole county except the Bickleton area.",
+                  "Makes the EMS district's property tax levy permanent, at up to $0.50 per $1,000 of assessed value, first levied in 2026 for collection in 2027, in place of the six-year renewal voters approved in 2024 (collected 2025-2030). The money pays only for emergency medical services: ambulances, paramedics and EMTs, training, equipment and stations. The district covers the whole county except the Bickleton area.",
                   "Up to $0.50 per $1,000 of assessed value every year with no end date (about $250 a year on a $500,000 home at the full rate); the district's 2026 rate under its current levy is about $0.48, raising $2.56 million.",
                   "https://www.klickitatcounty.gov/DocumentCenter/View/23954",
                   pages=(56,)),
