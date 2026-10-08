@@ -97,7 +97,7 @@ class GeneralPiercePlanTest(unittest.TestCase):
         self.assertIn("/2026-08-04-primary/counties/pierce/dossiers/", d1["Jerome O'Leary"]["primary_dossier"])
 
     def test_races_other_county_packages_also_list_are_flagged(self):
-        self.assertEqual(["kitsap", "clallam", "grays-harbor"], self.contests["pierce-congressional-district-6-u-s-representative"]["shared"]["also_listed_by"])
+        self.assertEqual(["kitsap", "clallam", "grays-harbor", "mason"], self.contests["pierce-congressional-district-6-u-s-representative"]["shared"]["also_listed_by"])
         self.assertIsNone(self.contests["pierce-congressional-district-6-u-s-representative"]["shared"]["researched_in"])
 
 
