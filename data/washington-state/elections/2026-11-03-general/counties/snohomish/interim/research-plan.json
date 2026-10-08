@@ -1,0 +1,869 @@
+{
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/snohomish/interim/contests.json",
+    "data/washington-state/elections/2026-11-03-general/counties/snohomish/interim/measures.json"
+  ],
+  "script": "pipeline/build_research_plan.py",
+  "contests": [
+    {
+      "contest_slug": "snohomish-congressional-district-1-u-s-representative",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 1",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "suzan-delbene",
+          "name": "Suzan DelBene",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-1-u-s-representative/suzan-delbene.md"
+        },
+        {
+          "slug": "mary-silva",
+          "name": "Mary Silva",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-1-u-s-representative/mary-silva.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "king",
+          "contest_slug": "congressional-district-1-united-states-representative",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/king/scoring/congressional-district-1-united-states-representative.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "king"
+        ]
+      }
+    },
+    {
+      "contest_slug": "snohomish-congressional-district-2-u-s-representative",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 2",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "rick-larsen",
+          "name": "Rick Larsen",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-2-u-s-representative/rick-larsen.md"
+        },
+        {
+          "slug": "edwin-h-feller",
+          "name": "Edwin H. Feller",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-2-u-s-representative/edwin-h-feller.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-congressional-district-8-u-s-representative",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 8",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "kim-schrier",
+          "name": "Kim Schrier",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-8-u-s-representative/kim-schrier.md"
+        },
+        {
+          "slug": "spencer-meline",
+          "name": "Spencer Meline",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-8-u-s-representative/spencer-meline.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "king",
+          "contest_slug": "congressional-district-8-united-states-representative",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/king/scoring/congressional-district-8-united-states-representative.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "king",
+          "pierce"
+        ]
+      }
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-1-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 1",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "davina-duerr",
+          "name": "Davina Duerr",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-1-state-representative-position-1/davina-duerr.md"
+        },
+        {
+          "slug": "maggie-wang",
+          "name": "Maggie Wang",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-1-state-representative-position-1/maggie-wang.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "king",
+          "contest_slug": "state-representative-position-no-1-legislative-district-no-1",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/king/scoring/state-representative-position-no-1-legislative-district-no-1.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "king"
+        ]
+      }
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-1-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 1",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "shelley-kloba",
+          "name": "Shelley Kloba",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-1-state-representative-position-2/shelley-kloba.md"
+        },
+        {
+          "slug": "cliff-moon",
+          "name": "Cliff Moon",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-1-state-representative-position-2/cliff-moon.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "king",
+          "contest_slug": "state-representative-position-no-2-legislative-district-no-1",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/king/scoring/state-representative-position-no-2-legislative-district-no-1.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "king"
+        ]
+      }
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-10-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 10",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "clyde-shavers",
+          "name": "Clyde Shavers",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-10-state-representative-position-1/clyde-shavers.md"
+        },
+        {
+          "slug": "robert-chili-hicks",
+          "name": "Robert (Chili) Hicks",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-10-state-representative-position-1/robert-chili-hicks.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-10-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 10",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "dave-paul",
+          "name": "Dave Paul",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-10-state-representative-position-2/dave-paul.md"
+        },
+        {
+          "slug": "tim-hazelo",
+          "name": "Tim Hazelo",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-10-state-representative-position-2/tim-hazelo.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-12-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 12",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "brian-burnett",
+          "name": "Brian Burnett",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-12-state-representative-position-1/brian-burnett.md"
+        },
+        {
+          "slug": "stacy-willoughby",
+          "name": "Stacy Willoughby",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-12-state-representative-position-1/stacy-willoughby.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "king",
+          "contest_slug": "state-representative-position-no-1-legislative-district-no-12",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/king/scoring/state-representative-position-no-1-legislative-district-no-12.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "king"
+        ]
+      }
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-12-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 12",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "mike-steele",
+          "name": "Mike Steele",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-12-state-representative-position-2/mike-steele.md"
+        },
+        {
+          "slug": "maggie-adams",
+          "name": "Maggie Adams",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-12-state-representative-position-2/maggie-adams.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "king",
+          "contest_slug": "state-representative-position-no-2-legislative-district-no-12",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/king/scoring/state-representative-position-no-2-legislative-district-no-12.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "king"
+        ]
+      }
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-21-state-senator",
+      "category": "State",
+      "office": "State Senator",
+      "district": "Legislative District 21",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "marko-liias",
+          "name": "Marko Liias",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-21-state-senator/marko-liias.md"
+        },
+        {
+          "slug": "riaz-khan",
+          "name": "Riaz Khan",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-21-state-senator/riaz-khan.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-21-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 21",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "strom-peterson",
+          "name": "Strom Peterson",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-21-state-representative-position-1/strom-peterson.md"
+        },
+        {
+          "slug": "jason-moon",
+          "name": "Jason Moon",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-21-state-representative-position-1/jason-moon.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-21-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 21",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "lillian-ortiz-self",
+          "name": "Lillian Ortiz-Self",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-21-state-representative-position-2/lillian-ortiz-self.md"
+        },
+        {
+          "slug": "bruce-guthrie",
+          "name": "Bruce Guthrie",
+          "party_preference": "Prefers Libertarian Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-21-state-representative-position-2/bruce-guthrie.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-32-state-senator",
+      "category": "State",
+      "office": "State Senator",
+      "district": "Legislative District 32",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "cindy-ryu",
+          "name": "Cindy Ryu",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-32-state-senator/cindy-ryu.md"
+        },
+        {
+          "slug": "jesse-salomon",
+          "name": "Jesse Salomon",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-32-state-senator/jesse-salomon.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "king",
+          "contest_slug": "state-senator-legislative-district-no-32",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/king/scoring/state-senator-legislative-district-no-32.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "king"
+        ]
+      }
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-32-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 32",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "keith-scully",
+          "name": "Keith Scully",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-32-state-representative-position-1/keith-scully.md"
+        },
+        {
+          "slug": "danica-noble",
+          "name": "Danica Noble",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-32-state-representative-position-1/danica-noble.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "king",
+          "contest_slug": "state-representative-position-no-1-legislative-district-no-32",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/king/scoring/state-representative-position-no-1-legislative-district-no-32.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "king"
+        ]
+      }
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-32-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 32",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "lauren-davis",
+          "name": "Lauren Davis",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-32-state-representative-position-2/lauren-davis.md"
+        },
+        {
+          "slug": "imraan-siddiqi",
+          "name": "Imraan Siddiqi",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-32-state-representative-position-2/imraan-siddiqi.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "king",
+          "contest_slug": "state-representative-position-no-2-legislative-district-no-32",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/king/scoring/state-representative-position-no-2-legislative-district-no-32.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "king"
+        ]
+      }
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-38-state-senator",
+      "category": "State",
+      "office": "State Senator",
+      "district": "Legislative District 38",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "june-robinson",
+          "name": "June Robinson",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-38-state-senator/june-robinson.md"
+        },
+        {
+          "slug": "brad-bender",
+          "name": "Brad Bender",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-38-state-senator/brad-bender.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-38-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 38",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "julio-cortes",
+          "name": "Julio Cortes",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-38-state-representative-position-1/julio-cortes.md"
+        },
+        {
+          "slug": "thomas-jeff-kelly",
+          "name": "Thomas (Jeff) Kelly",
+          "party_preference": "Prefers Cascade Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-38-state-representative-position-1/thomas-jeff-kelly.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-39-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 39",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "kathryn-lewandowsky",
+          "name": "Kathryn Lewandowsky",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-39-state-representative-position-1/kathryn-lewandowsky.md"
+        },
+        {
+          "slug": "sam-low",
+          "name": "Sam Low",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-39-state-representative-position-1/sam-low.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-39-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 39",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "ida-keeley",
+          "name": "Ida Keeley",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-39-state-representative-position-2/ida-keeley.md"
+        },
+        {
+          "slug": "steve-ewing",
+          "name": "Steve Ewing",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-39-state-representative-position-2/steve-ewing.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-44-state-senator",
+      "category": "State",
+      "office": "State Senator",
+      "district": "Legislative District 44",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "john-lovick",
+          "name": "John Lovick",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-44-state-senator/john-lovick.md"
+        },
+        {
+          "slug": "sherri-larkin",
+          "name": "Sherri Larkin",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-44-state-senator/sherri-larkin.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-44-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 44",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "brandy-donaghy",
+          "name": "Brandy Donaghy",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-44-state-representative-position-1/brandy-donaghy.md"
+        },
+        {
+          "slug": "chris-elder",
+          "name": "Chris Elder",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-44-state-representative-position-1/chris-elder.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-44-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 44",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "april-berg",
+          "name": "April Berg",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-44-state-representative-position-2/april-berg.md"
+        },
+        {
+          "slug": "tonya-stadlman",
+          "name": "Tonya Stadlman",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-44-state-representative-position-2/tonya-stadlman.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-public-utility-district-no-1-commissioner-district-1",
+      "category": "PublicUtility",
+      "office": "Commissioner District 1",
+      "district": "Public Utility District No. 1",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "sid-logan",
+          "name": "Sid Logan",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/snohomish/dossiers/snohomish-public-utility-district-no-1-commissioner-district-1/sid-logan.md"
+        },
+        {
+          "slug": "janet-st-clair",
+          "name": "Janet St Clair",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/snohomish/dossiers/snohomish-public-utility-district-no-1-commissioner-district-1/janet-st-clair.md"
+        }
+      ]
+    }
+  ],
+  "measures": [
+    {
+      "jurisdiction": "Snohomish County",
+      "proposition": "Proposition No. 1",
+      "title": "Adoption of a Foundational Government Services Policy",
+      "slug": "snohomish-snohomish-county-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Snohomish County",
+      "proposition": "Proposition No. 2",
+      "title": "Prioritize Funding of Budget Stabilization Funds",
+      "slug": "snohomish-snohomish-county-proposition-no-2",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Snohomish County",
+      "proposition": "Proposition No. 3",
+      "title": "Converting All Elected County Offices to Non-partisan Offices",
+      "slug": "snohomish-snohomish-county-proposition-no-3",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Snohomish County",
+      "proposition": "Proposition No. 4",
+      "title": "Increasing Public Access to County Financial Transparency",
+      "slug": "snohomish-snohomish-county-proposition-no-4",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Snohomish County",
+      "proposition": "Proposition No. 5",
+      "title": "Requiring a 4/5 Supermajority Council Vote to Increase Taxes",
+      "slug": "snohomish-snohomish-county-proposition-no-5",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "City of Bothell",
+      "proposition": "Proposition No. 1",
+      "title": "Annexation Into Shoreline Fire Department Regional Fire Authority",
+      "slug": "snohomish-city-of-bothell-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "City of Everett",
+      "proposition": "Proposition No. 261",
+      "title": "Amendment to Everett City Charter Sections 2.2 and 4.10",
+      "slug": "snohomish-city-of-everett-proposition-no-261",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "City of Everett",
+      "proposition": "Proposition No. 262",
+      "title": "Amendment to Everett City Charter Section 3.2",
+      "slug": "snohomish-city-of-everett-proposition-no-262",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "City of Everett",
+      "proposition": "Proposition No. 263",
+      "title": "Amendment to Everett City Charter Section 8.3",
+      "slug": "snohomish-city-of-everett-proposition-no-263",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "City of Everett",
+      "proposition": "Proposition No. 264",
+      "title": "Amendment to Four Sections of the Everett City Charter",
+      "slug": "snohomish-city-of-everett-proposition-no-264",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "City of Everett",
+      "proposition": "Proposition No. 265",
+      "title": "Amendment to Eight Sections of the Everett City Charter",
+      "slug": "snohomish-city-of-everett-proposition-no-265",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Monroe School District No. 103",
+      "proposition": "Proposition No. 1",
+      "title": "Capital Projects Levy for Safety and Facility Improvements",
+      "slug": "snohomish-monroe-school-district-no-103-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Mukilteo School District No. 6",
+      "proposition": "Proposition No. 1",
+      "title": "General Obligation Bonds - $400,000,000",
+      "slug": "snohomish-mukilteo-school-district-no-6-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Sultan School District No. 311",
+      "proposition": "Proposition No. 1",
+      "title": "Bonds To Modernize Community Schools, Construct New High School and Improve Safety",
+      "slug": "snohomish-sultan-school-district-no-311-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Fire Protection District No. 10",
+      "proposition": "Proposition No. 1",
+      "title": "Annexation Into Shoreline Fire Department Regional Fire Authority",
+      "slug": "snohomish-fire-protection-district-no-10-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "South Snohomish County Fire & Rescue Regional Fire Authority",
+      "proposition": "Proposition No. 1",
+      "title": "Fire and Emergency Medical Services Construction General Obligation Bonds - $420,000,000",
+      "slug": "snohomish-south-snohomish-county-fire-rescue-regional-fire-authority-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Public Hospital District No. 1",
+      "proposition": "Proposition No. 1",
+      "title": "Bonds for New Replacement Hospital",
+      "slug": "snohomish-public-hospital-district-no-1-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    }
+  ],
+  "carry_forward_from": "2026-08-04-primary"
+}
