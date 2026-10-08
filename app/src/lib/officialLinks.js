@@ -83,6 +83,15 @@ const ELECTIONS = {
       // application/pdf, 104 pages; PDF pages equal the printed page numbers.
       'snohomish/local-voters-pamphlet': 'https://www.snohomishcountywa.gov/DocumentCenter/View/151457',
     },
+    // Counties whose research cites VoteWA's online voters' guide, which has
+    // no page numbers, instead of a printed pamphlet: their records carry no
+    // pamphlet_pages, so a link goes to the county's guide. Spokane's
+    // dossiers cite voter.votewa.gov candidate.ashx / measure.ashx pages
+    // (spokanecounty.gov answered 403 to scripted requests, so no local
+    // pamphlet PDF was fetched). Checked 2026-10-08: 200 text/html.
+    countyGuides: {
+      spokane: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=32',
+    },
     pamphletIndex: `${SOS_GENERAL_2026}/2026-voters-pamphlet-pdfs`,
   },
 }
@@ -101,19 +110,21 @@ export function electionGuide(election) {
 
 /**
  * The official pamphlet page a citation points at: the edition's PDF at that
- * page when the election knows the edition, else the election's pamphlet
- * index (unpaged), else null.
+ * page when the election knows the edition, else the owner's online county
+ * voters' guide (countyGuides), else the election's pamphlet index (unpaged),
+ * else null. With no pages, only an owner's county guide.
  */
 export function pamphletLink(pages, owner, electionId) {
-  if (!pages?.length) return null
   const guide = electionGuide({ id: electionId })
+  const countyGuide = guide.countyGuides?.[owner] || null
+  if (!pages?.length) return countyGuide
   for (const p of pages) {
     const url =
       guide.pamphletPdfs[`${owner}/${p.edition}`] ||
       (guide.fallbackOwner && guide.pamphletPdfs[`${guide.fallbackOwner}/${p.edition}`])
     if (url) return `${url}#page=${p.page}`
   }
-  return guide.pamphletIndex || null
+  return countyGuide || guide.pamphletIndex || null
 }
 
 /**

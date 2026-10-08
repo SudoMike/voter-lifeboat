@@ -121,6 +121,20 @@ test('King general pages link the KCE local pamphlet or the SOS King edition at 
   assert.ok(n > 150, `${n} King pamphlet links`)
 })
 
+test('Spokane general records, which cite VoteWA\'s unpaged online guide, link that guide', () => {
+  const GUIDE = 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=32'
+  assert.equal(pamphletLink([], 'spokane', general.election.id), GUIDE)
+  assert.equal(pamphletLink(undefined, 'spokane', general.election.id), GUIDE)
+  assert.equal(pamphletLink([{ edition: 'unknown', page: 3 }], 'spokane', general.election.id), GUIDE)
+  // Only Spokane has a county guide; the primary keeps its PDF and no guide.
+  assert.equal(pamphletLink([], 'snohomish', general.election.id), null)
+  assert.equal(pamphletLink([], 'spokane', primary.election.id), null)
+  assert.equal(
+    pamphletLink([{ edition: 'local-voters-pamphlet', page: 4 }], 'spokane', primary.election.id),
+    'https://www.spokanecounty.gov/DocumentCenter/View/72507/August-4-2026-Primary-Election-Voters-Pamphlet-PDF#page=4'
+  )
+})
+
 test('Snohomish general pages link the county Local Voters\' Pamphlet at that page', () => {
   assert.equal(
     pamphletLink([{ edition: 'local-voters-pamphlet', page: 92 }], 'snohomish', general.election.id),
