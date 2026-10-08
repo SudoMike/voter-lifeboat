@@ -151,6 +151,13 @@ const ELECTIONS = {
       // 24-30).
       'mason/local-voters-pamphlet':
         'https://www.masoncountywa.gov/Documents/Departments/Auditor/Elections/Current%20Election/General_2026_Local_Voters_Pamphlet.pdf',
+      // Walla Walla general Local Voters' Pamphlet (#30), from the package's
+      // pointer counties/walla-walla/raw/walla-walla/local-voters-pamphlet.pdf.url.
+      // Checked 2026-10-08: redirect to cms7files.revize.com, then 200
+      // application/pdf with the pointer's sha256; 28 PDF pages, PDF page
+      // numbers equal the printed ones (candidates pp. 11-20, measures pp.
+      // 22-25).
+      'walla-walla/local-voters-pamphlet': 'https://www.wwcowa.gov/November%20General%202026-%20Final.pdf',
     },
     // Counties whose research cites VoteWA's online voters' guide, which has
     // no page numbers, instead of a printed pamphlet: their records carry no
@@ -203,6 +210,13 @@ const ELECTIONS = {
       // Auditor links this guide as its "Voter Guide Portal" (#30; 200
       // text/html, 2026-10-08).
       mason: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=23',
+      // Walla Walla's Court of Appeals record cites VoteWA's guide (its
+      // pamphlet does not print the race); Stevens's dossiers cite VoteWA
+      // only (stevenscountywa.gov answered 403 to scripted requests, and no
+      // printed general pamphlet was found). #30; each 200 text/html,
+      // 2026-10-08.
+      'walla-walla': 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=36',
+      stevens: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=33',
     },
     pamphletIndex: `${SOS_GENERAL_2026}/2026-voters-pamphlet-pdfs`,
   },
