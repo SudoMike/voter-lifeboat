@@ -1,0 +1,13 @@
+{
+  "url": "https://data.wa.gov/resource/3h9x-7bvm.json?$select=filer_name,filer_type,jurisdiction,jurisdiction_county&$where=election_year=2026%20AND%20filer_type=%27CO%27%20AND%20(jurisdiction_county=%27WHITMAN%27%20OR%20upper(filer_name)%20like%20%27%25OAKESDALE%25%27%20OR%20upper(filer_name)%20like%20%27%25PALOUSE%25%27%20OR%20upper(filer_name)%20like%20%27%25ROSALIA%25%27%20OR%20upper(filer_name)%20like%20%27%25ST%20JOHN%25%27%20OR%20upper(filer_name)%20like%20%27%25TEKOA%25%27%20OR%20upper(filer_name)%20like%20%27%25UNIONTOWN%25%27%20OR%20upper(filer_name)%20like%20%27%25LEVY%25%27)&$limit=200",
+  "retrieved_at": "2026-10-08",
+  "method": "curl -L (User-Agent 'Mozilla/5.0')",
+  "stage": "raw",
+  "source_type": "pdc",
+  "tier": 1,
+  "outlet": "Public Disclosure Commission campaign finance summary (data.wa.gov 3h9x-7bvm), 2026 committees",
+  "cache_file": "data/.cache/whitman/meas2/pdc-committees-towns-2026.json",
+  "bytes": 2060,
+  "sha256": "9fb6330d44d8b652910aa570ff66e44b39bc4a1512e60f166a6ba7d8865ccc5d",
+  "notes": "2026 committee filers in Whitman County or named for Oakesdale, Palouse, Rosalia, St. John, Tekoa, Uniontown or a levy; none relates to these town levies."
+}

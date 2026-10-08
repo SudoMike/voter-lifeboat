@@ -1045,7 +1045,7 @@ ELECTION_MEASURES = {
                   "$13,500, an estimated $0.44 per $1,000 of assessed value, collected in 2027.",
                   "https://voter.votewa.gov/elections/measure.ashx?m=7395&e=899&la=en&c=38",
                   pages=(18,)),
-                m("Town of Endicott", "Proposition No. 2", "Parks Excess Levy",
+                m("Town of Endicott", "Proposition No. 2", "Park Excess Levy",
                   ("CITY", "Endicott"),
                   "One-year excess property tax levy to maintain and improve Endicott's parks: mowing, trees, playgrounds, irrigation and other park facilities.",
                   "$15,000, an estimated $0.49 per $1,000 of assessed value, collected in 2027.",
