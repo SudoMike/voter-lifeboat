@@ -1,0 +1,23 @@
+{
+  "url": "https://data.kingcounty.gov/resource/2ydw-3iau.json?$select=countertype,sum(sumofcount)%20as%20votes&$where=race='City%20of%20Seattle%20Municipal%20Court%20Judge%20Position%20No.%205'&$group=countertype",
+  "retrieved_at": "2026-10-08",
+  "method": "source pointer; read with a web fetch during dossier research for issue #14 (not cached)",
+  "stage": "raw",
+  "source_type": "election-results",
+  "tier": 1,
+  "outlet": "King County Elections, August 2026 primary final precinct results (data.kingcounty.gov 2ydw-3iau)",
+  "cited_by": [
+    {
+      "dossier": "data/washington-state/elections/2026-11-03-general/counties/king/dossiers/municipal-court-judge-position-no-5-city-of-seattle/_contest.md",
+      "source_id": "S4"
+    },
+    {
+      "dossier": "data/washington-state/elections/2026-11-03-general/counties/king/dossiers/municipal-court-judge-position-no-5-city-of-seattle/gabe-rothstein.md",
+      "source_id": "S6"
+    },
+    {
+      "dossier": "data/washington-state/elections/2026-11-03-general/counties/king/dossiers/municipal-court-judge-position-no-5-city-of-seattle/garmon-newsom.md",
+      "source_id": "S10"
+    }
+  ]
+}
