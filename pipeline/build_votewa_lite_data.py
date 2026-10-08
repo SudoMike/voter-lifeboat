@@ -1040,12 +1040,16 @@ ELECTION_MEASURES = {
         # (raw/ferry/). It keeps the primary's contest name so its slug and the
         # primary dossiers carry forward. The District Court is one county-wide
         # court (2022 and 2024: all 19 precincts). Public Utility District No. 1
-        # of Ferry County covers the whole county: WA DOR PUD2025 (layer 17) has
-        # one Ferry polygon ('1') whose area (12,939,379,609) equals the sum of
-        # Ferry's SCH2025 polygons and of its TCA2025 polygons other than
-        # '8888' (water); the whole PUD elects each commissioner (RCW
-        # 54.12.010(3); the 2020, 2022 and 2024 PUD races were on all 19
-        # precincts). Scoped COUNTY, and named as the generic rule names it
+        # of Ferry County covers the whole county (VoteWA 'PUD (COUNTYWIDE)'):
+        # WA DOR PUD2025 (layer 17) has one Ferry polygon ('1') whose area
+        # (12,939,379,609) equals the sum of Ferry's SCH2025 polygons and of
+        # its TCA2025 polygons other than '8888', a no-district code that also
+        # covers part of Inchelium (39 Shortcut Rd answers TCA '8888' and no
+        # PUD2025 feature), so DOR cannot scope it; the whole PUD elects each
+        # commissioner (RCW 54.12.010(3)), and the 2020, 2022 and 2024 PUD
+        # races were on all 19 precincts with per-precinct totals close to the
+        # county-wide races' (Inchelium 138 vs 140 in 2020, 42 vs 44 in 2022,
+        # 73 vs 81 in 2024). Scoped COUNTY, and named as the generic rule names it
         # (the Okanogan package's names for the same seat), so it ships with
         # Okanogan's research (Okanogan's ~325 voters in eight northeastern
         # precincts elect it too; Okanogan's copy stays PUDDST, hidden).
