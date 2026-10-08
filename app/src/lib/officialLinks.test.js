@@ -88,9 +88,9 @@ test('every statewide contest and measure in the shipped general gets a paged SO
         n++
       }
   for (const m of general.measures) {
-    // Spokane's, Pierce's, Kitsap's, Whatcom's, Benton's and Grant's
-    // measures cite VoteWA's unpaged online guide (countyGuides).
-    if (['spokane', 'pierce', 'kitsap', 'whatcom', 'benton', 'grant'].includes(m.owner)) continue
+    // Spokane's, Pierce's, Kitsap's, Whatcom's, Benton's, Grant's, Island's
+    // and Lewis's measures cite VoteWA's unpaged online guide (countyGuides).
+    if (['spokane', 'pierce', 'kitsap', 'whatcom', 'benton', 'grant', 'island', 'lewis'].includes(m.owner)) continue
     assert.match(pamphletLink(m.pamphlet_pages, m.owner, general.election.id), /#page=\d+$/, m.slug)
     n++
   }
@@ -323,6 +323,32 @@ test('shipped Skagit and Cowlitz records link their local pamphlet at the cited 
     ['skagit', 'Skagit County', 'https://www.skagitcountywa.gov/government/auditor-s-office/elections-and-voting/'],
     ['cowlitz', 'Cowlitz County', 'https://www.co.cowlitz.wa.us/2357/Elections'],
     ['grant', 'Grant County', 'https://www.grantcountywa.gov/270/Elections'],
+  ]) {
+    assert.deepEqual(countyElectionsOffice(general, { id: county, name }), { name: `${name} Elections`, url, direct: true })
+  }
+})
+
+test('shipped Island and Lewis records link their VoteWA guide; their offices link directly', () => {
+  const id = general.election.id
+  const GUIDE = {
+    island: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=15',
+    lewis: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=21',
+  }
+  const guided = { island: 0, lewis: 0 }
+  for (const item of [...general.contests, ...general.measures]) {
+    if (!(item.owner in guided)) continue
+    const pages = item.candidates ? item.candidates.map((c) => c.pamphlet_pages) : [item.pamphlet_pages]
+    for (const p of pages) {
+      // Neither county prints a general pamphlet (#29).
+      assert.deepEqual(p, [], item.slug)
+      assert.equal(pamphletLink(p, item.owner, id), GUIDE[item.owner], item.slug)
+      guided[item.owner]++
+    }
+  }
+  assert.deepEqual(guided, { island: 26, lewis: 29 })
+  for (const [county, name, url] of [
+    ['island', 'Island County', 'https://www.islandcountywa.gov/423/Elections-Voter-Registration'],
+    ['lewis', 'Lewis County', 'https://elections.lewiscountywa.gov/'],
   ]) {
     assert.deepEqual(countyElectionsOffice(general, { id: county, name }), { name: `${name} Elections`, url, direct: true })
   }

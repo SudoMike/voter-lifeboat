@@ -1,0 +1,483 @@
+{
+  "county": "island",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/island/raw/votewa/candidate-list.csv.url",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7304&e=899&la=en&c=15",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7305&e=899&la=en&c=15",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7306&e=899&la=en&c=15"
+  ],
+  "coverage": "full_county",
+  "notes": [],
+  "contests": [
+    {
+      "slug": "island-congressional-district-2-u-s-representative",
+      "owner": "island",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 2",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "island",
+        "layer": "CONGDST",
+        "value": "2"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Island County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "rick-larsen",
+          "name": "Rick Larsen",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "edwin-h-feller",
+          "name": "Edwin H. Feller",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "island-legislative-district-10-state-representative-pos-1",
+      "owner": "island",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 10",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "island",
+        "layer": "LEGDST",
+        "value": "10"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Island County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "clyde-shavers",
+          "name": "Clyde Shavers",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "robert-chili-hicks",
+          "name": "Robert (Chili) Hicks",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "island-legislative-district-10-state-representative-pos-2",
+      "owner": "island",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 10",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "island",
+        "layer": "LEGDST",
+        "value": "10"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Island County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "dave-paul",
+          "name": "Dave Paul",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "tim-hazelo",
+          "name": "Tim Hazelo",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "island-island-county-county-assessor",
+      "owner": "island",
+      "category": "County",
+      "office": "County Assessor",
+      "district": "Island County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "island"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Island County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "doug-stults",
+          "name": "Doug Stults",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "kelly-todd-mauck",
+          "name": "Kelly Todd Mauck",
+          "party": "States No Party Preference",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "island-island-county-county-auditor",
+      "owner": "island",
+      "category": "County",
+      "office": "County Auditor",
+      "district": "Island County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "island"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Island County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "sheilah-crider",
+          "name": "Sheilah Crider",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "barbara-fuller",
+          "name": "Barbara Fuller",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "island-island-county-county-clerk",
+      "owner": "island",
+      "category": "County",
+      "office": "County Clerk",
+      "district": "Island County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "island"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Island County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "dierdre-butler",
+          "name": "Dierdre Butler",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "maria-hazelo",
+          "name": "Maria Hazelo",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "island-island-county-county-commissioner-district-3",
+      "owner": "island",
+      "category": "County",
+      "office": "County Commissioner, District 3",
+      "district": "Island County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "island"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Island County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "matthew-van-pelt",
+          "name": "Matthew Van Pelt",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "grant-shaw",
+          "name": "Grant Shaw",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "island-island-county-county-coroner",
+      "owner": "island",
+      "category": "County",
+      "office": "County Coroner",
+      "district": "Island County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "island"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Island County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "shantel-porter",
+          "name": "Shantel Porter",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "island-island-county-county-prosecutor",
+      "owner": "island",
+      "category": "County",
+      "office": "County Prosecutor",
+      "district": "Island County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "island"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Island County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "greg-banks",
+          "name": "Greg Banks",
+          "party": "States No Party Preference",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "andrew-f-scott",
+          "name": "Andrew F. Scott",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "island-island-county-county-sheriff",
+      "owner": "island",
+      "category": "County",
+      "office": "County Sheriff",
+      "district": "Island County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "island"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Island County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "rick-felici",
+          "name": "Rick Felici",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "tavier-wasser",
+          "name": "Tavier Wasser",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "island-island-county-county-treasurer",
+      "owner": "island",
+      "category": "County",
+      "office": "County Treasurer",
+      "district": "Island County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "island"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Island County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "tony-lam",
+          "name": "Tony Lam",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "island-island-county-district-court-judge",
+      "owner": "island",
+      "category": "Judicial",
+      "office": "Judge",
+      "district": "Island County District Court",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "island"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Island County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "ronald-a-costeck",
+          "name": "Ronald A. Costeck",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "island-public-utility-district-no-1-commissioner-district-1",
+      "owner": "island",
+      "category": "PublicUtility",
+      "office": "Commissioner District 1",
+      "district": "Public Utility District No. 1",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "island",
+        "layer": "PUDDST",
+        "value": "53029"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Island County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "sid-logan",
+          "name": "Sid Logan",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "janet-st-clair",
+          "name": "Janet St Clair",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    }
+  ]
+}

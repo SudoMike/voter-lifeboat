@@ -1,0 +1,12 @@
+{
+  "url": "https://maps.islandcountywa.gov/arcgis/rest/services/Geocortex/Elections/MapServer/2/query?where=1%3D1&outFields=PrecinctNa,COMM__DIST,County&returnGeometry=false&returnDistinctValues=true&f=json",
+  "retrieved_at": "2026-10-09",
+  "method": "curl -L (User-Agent 'Mozilla/5.0')",
+  "stage": "raw",
+  "source_type": "gis",
+  "tier": 1,
+  "bytes": 7199,
+  "sha256": "703635dd101eb8f94dc3e3c79bc673bd9983c2fd68c9baf6d0f4f2a46c8f9f9c",
+  "cache_file": "data/.cache/island/gis-elections-precinct-splits.json",
+  "notes": "Island County GIS 'Elections' map service, layer 2 'Voting Precincts Splits' (attributes only, distinct values): 87 precinct names with their commissioner district and County '53029'. Camano 01-21 are the Camano Island precincts (all Commissioner District 3); N Whidbey 01-05 and 13-16 are also District 3, so the commissioner district cannot stand in for Camano Island. Basis for the PUDDST scope (PrecinctNa LIKE 'Camano%', County '53029') of the Snohomish County PUD No. 1 District 1 race."
+}

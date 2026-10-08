@@ -1,0 +1,369 @@
+{
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/lewis/interim/contests.json",
+    "data/washington-state/elections/2026-11-03-general/counties/lewis/interim/measures.json"
+  ],
+  "script": "pipeline/build_research_plan.py",
+  "contests": [
+    {
+      "contest_slug": "lewis-congressional-district-3-u-s-representative",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 3",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "john-braun",
+          "name": "John Braun",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-3-u-s-representative/john-braun.md"
+        },
+        {
+          "slug": "marie-gluesenkamp-perez",
+          "name": "Marie Gluesenkamp Perez",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-3-u-s-representative/marie-gluesenkamp-perez.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "clark",
+          "contest_slug": "clark-congressional-district-3-u-s-representative",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/clark/scoring/clark-congressional-district-3-u-s-representative.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "clark",
+          "thurston",
+          "cowlitz"
+        ]
+      }
+    },
+    {
+      "contest_slug": "lewis-legislative-district-19-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 19",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "jim-walsh",
+          "name": "Jim Walsh",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-19-state-representative-position-1/jim-walsh.md"
+        },
+        {
+          "slug": "kevin-moynihan",
+          "name": "Kevin Moynihan",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-19-state-representative-position-1/kevin-moynihan.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "thurston",
+          "contest_slug": "thurston-legislative-district-19-state-representative-pos-1",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/thurston/scoring/thurston-legislative-district-19-state-representative-pos-1.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "thurston",
+          "cowlitz"
+        ]
+      }
+    },
+    {
+      "contest_slug": "lewis-legislative-district-19-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 19",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "terry-carlson",
+          "name": "Terry Carlson",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-19-state-representative-position-2/terry-carlson.md"
+        },
+        {
+          "slug": "joel-mcentire",
+          "name": "Joel McEntire",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-19-state-representative-position-2/joel-mcentire.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "thurston",
+          "contest_slug": "thurston-legislative-district-19-state-representative-pos-2",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/thurston/scoring/thurston-legislative-district-19-state-representative-pos-2.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "thurston",
+          "cowlitz"
+        ]
+      }
+    },
+    {
+      "contest_slug": "lewis-legislative-district-20-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 20",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "peter-abbarno",
+          "name": "Peter Abbarno",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-20-state-representative-position-1/peter-abbarno.md"
+        },
+        {
+          "slug": "andy-zahn",
+          "name": "Andy Zahn",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-20-state-representative-position-1/andy-zahn.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "clark",
+          "contest_slug": "clark-legislative-district-20-state-representative-pos-1",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/clark/scoring/clark-legislative-district-20-state-representative-pos-1.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "clark",
+          "thurston",
+          "cowlitz"
+        ]
+      }
+    },
+    {
+      "contest_slug": "lewis-legislative-district-20-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 20",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "ed-orcutt",
+          "name": "Ed Orcutt",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-20-state-representative-position-2/ed-orcutt.md"
+        },
+        {
+          "slug": "evan-jones",
+          "name": "Evan Jones",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-20-state-representative-position-2/evan-jones.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "clark",
+          "contest_slug": "clark-legislative-district-20-state-representative-pos-2",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/clark/scoring/clark-legislative-district-20-state-representative-pos-2.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "clark",
+          "thurston",
+          "cowlitz"
+        ]
+      }
+    },
+    {
+      "contest_slug": "lewis-lewis-county-auditor",
+      "category": "County",
+      "office": "Auditor",
+      "district": "Lewis County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "mitchell-l-merrill",
+          "name": "Mitchell L. Merrill",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/lewis/dossiers/lewis-lewis-county-auditor/mitchell-l-merrill.md"
+        },
+        {
+          "slug": "mitch-townsend",
+          "name": "Mitch Townsend",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/lewis/dossiers/lewis-lewis-county-auditor/mitch-townsend.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "lewis-lewis-county-coroner",
+      "category": "County",
+      "office": "Coroner",
+      "district": "Lewis County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "warren-mcleod",
+          "name": "Warren McLeod",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/lewis/dossiers/lewis-lewis-county-coroner/warren-mcleod.md"
+        },
+        {
+          "slug": "jessica-stickley",
+          "name": "Jessica Stickley",
+          "party_preference": "Prefers Independent Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/lewis/dossiers/lewis-lewis-county-coroner/jessica-stickley.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "lewis-lewis-county-sheriff",
+      "category": "County",
+      "office": "Sheriff",
+      "district": "Lewis County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "gabriel-j-frase",
+          "name": "Gabriel J Frase",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/lewis/dossiers/lewis-lewis-county-sheriff/gabriel-j-frase.md"
+        },
+        {
+          "slug": "tracy-murphy",
+          "name": "Tracy Murphy",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/lewis/dossiers/lewis-lewis-county-sheriff/tracy-murphy.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "lewis-lewis-county-commissioner-district-3-county-commissioner-district-3",
+      "category": "County",
+      "office": "County Commissioner, District 3",
+      "district": "Lewis County Commissioner District 3",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "scott-brummer",
+          "name": "Scott Brummer",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/lewis/dossiers/lewis-lewis-county-commissioner-district-3-county-commissioner-district-3/scott-brummer.md"
+        },
+        {
+          "slug": "michael-hadaller",
+          "name": "Michael Hadaller",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/lewis/dossiers/lewis-lewis-county-commissioner-district-3-county-commissioner-district-3/michael-hadaller.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "lewis-public-utility-district-commissioner-district-1-commissioner-district-1",
+      "category": "PublicUtility",
+      "office": "Commissioner District 1",
+      "district": "Public Utility District Commissioner District 1",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "steve-grega",
+          "name": "Steve Grega",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        },
+        {
+          "slug": "jeff-baine",
+          "name": "Jeff Baine",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        }
+      ]
+    }
+  ],
+  "measures": [
+    {
+      "jurisdiction": "Timberland Regional Library District",
+      "proposition": "Proposition No. 1",
+      "title": "Regular Property Tax Levy Lid Lift for Library Services, Operations and Maintenance",
+      "slug": "lewis-timberland-regional-library-district-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Transportation Benefit District of Chehalis",
+      "proposition": "Proposition No. 1",
+      "title": "Sales and Use Tax Levy Renewal For Transportation Needs",
+      "slug": "lewis-transportation-benefit-district-of-chehalis-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Lewis County Fire Protection District No. 6",
+      "proposition": "Proposition No. 1",
+      "title": "Levy Lid Lift",
+      "slug": "lewis-lewis-county-fire-protection-district-no-6-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    }
+  ],
+  "carry_forward_from": "2026-08-04-primary"
+}

@@ -1,0 +1,12 @@
+{
+  "url": "https://webgis.dor.wa.gov/arcgis/rest/services/Programs/WADOR_PropertyTax/MapServer/23/query?where=COUNTYNAME%3D%27ISLAND%27&outFields=COUNTYNAME,COUNTYNUM,DISTATTRIB&returnGeometry=false&f=json",
+  "retrieved_at": "2026-10-09",
+  "method": "curl -L (User-Agent 'Mozilla/5.0')",
+  "stage": "raw",
+  "source_type": "gis",
+  "tier": 1,
+  "bytes": 2756,
+  "sha256": "9a5abf91f7f12a81b307c0c5bf35f2b793fcda50f7b286d63323f36330850b3b",
+  "cache_file": "data/.cache/island/dor-tca2025-island.json",
+  "notes": "WA Department of Revenue property-tax map service, layer 23 TCA2025 (tax code areas, tax year 2025), Island County rows. Spatial queries against the Census TIGERweb incorporated place polygons (layer 4, 2026-10-09) found that Oak Harbor city intersects TCAs 0100, 0110 and 0160; Coupeville town 0300 and 0310; Langley city 0700 and 0710. Point queries: 865 SW Barrington Dr, Oak Harbor 0100; 1 7th St NE, Coupeville 0300; 112 2nd St, Langley 0700; 2795 Heller Rd, Oak Harbor (unincorporated) 0110; 5476 Harbor Rd, Freeland 0760; 848 N Sunrise Blvd, Camano Island 0590. TCAs 0100, 0300 and 0700 are the incorporated areas; basis for the UNINC scope of the consumer fireworks advisory vote."
+}

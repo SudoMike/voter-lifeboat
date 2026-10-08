@@ -428,10 +428,11 @@ DOR GIS layer, a PDF-only map, a layer that is not public), the rule is:
 Never scope a district race `COUNTY` to make it appear: that shows it to
 voters outside the district.
 
-As of the builder runs on 2026-10-08 (#22, #28), the only shipped general
-package that is `partial_county` is Spokane (`PUDDST`). Benton, Clark,
-Kitsap, Pierce, Snohomish (since #27), Thurston, Whatcom, Yakima, Skagit,
-Cowlitz and Grant are `full_county`; all twelve ship with King. A PUD
+As of the builder runs on 2026-10-08 (#22, #28, #29), the only shipped
+general package that is `partial_county` is Spokane (`PUDDST`). Benton,
+Clark, Kitsap, Pierce, Snohomish (since #27), Thurston, Whatcom, Yakima,
+Skagit, Cowlitz, Grant, Island and Lewis are `full_county`; all fourteen
+ship with King. A PUD
 commissioner is nominated by district but elected by the whole PUD in the
 general (RCW 54.12.010(3)), so a countywide PUD's seat is scoped `COUNTY`
 (Clark, Kitsap, Thurston), not `PUDDST`.
@@ -528,6 +529,31 @@ through the builder's `m(..., pages=)` argument (the bulk builder otherwise
 ships measures with no pages); Grant prints no pamphlet and links its
 VoteWA guide. Skagit's District Court seats keep category `County`;
 Cowlitz's and Grant's overrides make theirs `Judicial`.
+
+Island and Lewis shipped on 2026-10-08 (#29) as `full_county`. Island's
+PUD race is Snohomish County PUD No. 1's District 1 seat, which Camano
+Island elects with all of Snohomish County; the builder keeps Snohomish's
+contest names so it ships with Snohomish's research, scoped `PUDDST`
+`53029`. DOR PUD2025 has no Island polygon and the Auditor's precinct layer
+(`Geocortex/Elections/MapServer/2`) has no PUD attribute, so `geo.js` reads
+its constant `County` attribute with `where PrecinctNa LIKE 'Camano%'`.
+The fireworks advisory vote is for unincorporated voters only: `UNINC`
+`ISLAND` reads DOR TCA2025 (layer 23) `COUNTYNAME` with `where COUNTYNAME
+= 'ISLAND' AND DISTATTRIB NOT IN ('0100','0300','0700')`, the tax code
+areas of Oak Harbor, Coupeville and Langley (a city annexation that DOR's
+2025 tax code areas do not yet carry would be missed). The Port of South
+Whidbey levy reads DOR PRT2025 (layer 16, `S WHIDBEY`). Lewis's PUD No. 1
+is the county minus Centralia: its at-large seat is scoped `PUDDST` `1`
+through a builder override that keeps the generic contest name, and reads
+DOR PUD2025 (layer 17); the Timberland Regional Library levy reads LIB2025
+(`L`; Pe Ell, Mossyrock, Napavine and Vader are outside). Shared races (9):
+Island's CD 2, LD 10 and the PUD seat with Snohomish's scoring; Lewis's CD
+3 and LD 20 with Clark's and LD 19 with Thurston's (Chehalis and Centralia
+are LD 20, Pe Ell LD 19). Neither county prints a general pamphlet; both
+link their VoteWA guide. A `NAMED` shared-race key such as Island's
+`("public utility district 1", "commissioner district 1")` matches any
+package that names a PUD seat exactly that way, so check a new county's
+research plan for an unintended match.
 
 ## 13. Reference
 

@@ -821,6 +821,8 @@ function mockWave2(matchedAddress, countyFips, countyName, features) {
     // An equality filter (Benton PUDDST: PUD_District = 'Benton PUD').
     const eq = where?.match(/^(\w+) = '(.*)'$/)
     if (attrs && eq && hit.attributes[eq[1]] !== eq[2]) attrs = null
+    // Any other filter: the feature's own predicate (Island PUDDST, UNINC).
+    if (attrs && hit.keep && !hit.keep(where)) attrs = null
     return { ok: true, async json() { return { features: attrs ? [{ attributes: attrs }] : [] } } }
   }
   return calls
@@ -1072,4 +1074,90 @@ test('Grant Fire District 7, Cemetery District 2 and Hospital District 4 resolve
   mockWave2('321 S BALSAM ST, MOSES LAKE, WA, 98837', '025', 'Grant County', [dorLayer(11, '1')])
   context = await lookupBallotContext(wave2Data('grant'), '321 S Balsam St Moses Lake WA 98837')
   for (const scope of [fd7, cem2, hosp4]) assert.ok(!scopeMatches(scope, context), scope.layer)
+})
+
+// Island and Lewis (#29, wave 4). Live point queries 2026-10-08 at the
+// Census-geocoded points of the addresses below.
+const islandPrecinct = (name) => ({
+  path: 'Geocortex/Elections/MapServer/2/query',
+  attributes: { County: '53029', PrecinctNa: name },
+  keep: (where) => where === "PrecinctNa LIKE 'Camano%'" && name.startsWith('Camano'),
+})
+const islandTca = (tca) => ({
+  path: 'WADOR_PropertyTax/MapServer/23/query',
+  attributes: { COUNTYNAME: 'ISLAND', DISTATTRIB: tca },
+  keep: (where) =>
+    where === "COUNTYNAME = 'ISLAND' AND DISTATTRIB NOT IN ('0100','0300','0700')" && !['0100', '0300', '0700'].includes(tca),
+})
+const islandCommissioner = (n) => ({ path: 'Geocortex/Elections/MapServer/0/query', attributes: { COMM__DIST___: n } })
+
+test('Island resolves the Camano PUD seat, the South Whidbey port and the unincorporated county', async () => {
+  const pud = { kind: 'DISTRICT', county: 'island', layer: 'PUDDST', value: '53029' }
+  const port = { kind: 'DISTRICT', county: 'island', layer: 'PORTDST', value: 'S WHIDBEY' }
+  const uninc = { kind: 'DISTRICT', county: 'island', layer: 'UNINC', value: 'ISLAND' }
+  // 848 N Sunrise Blvd, Camano Island: precinct Camano 01, TCA 0590, no port.
+  const calls = mockWave2('848 N SUNRISE BLVD, CAMANO ISLAND, WA, 98282', '029', 'Island County', [
+    islandCommissioner('3'), islandPrecinct('Camano 01'), islandTca('0590'),
+  ])
+  let context = await lookupBallotContext(wave2Data('island'), '848 N Sunrise Blvd Camano Island WA 98282')
+  assert.equal(context.coverageStatus, 'full_county')
+  assert.deepEqual(context.missingLayers, [])
+  assert.equal(context.districts.PUDDST, '53029')
+  assert.equal(context.districts.UNINC, 'ISLAND')
+  assert.ok(scopeMatches(pud, context))
+  assert.ok(scopeMatches(uninc, context))
+  assert.ok(!scopeMatches(port, context))
+  const where = (path) => calls.filter((u) => u.includes(path)).map((u) => new URL(u).searchParams.get('where'))
+  assert.deepEqual(where('Elections/MapServer/2/query'), ["PrecinctNa LIKE 'Camano%'"])
+  assert.deepEqual(where('MapServer/23/query'), ["COUNTYNAME = 'ISLAND' AND DISTATTRIB NOT IN ('0100','0300','0700')"])
+  // 112 2nd St, Langley: precinct Langley, PRT2025 'S WHIDBEY', TCA 0700 (incorporated).
+  mockWave2('112 2ND ST, LANGLEY, WA, 98260', '029', 'Island County', [
+    islandCommissioner('1'), islandPrecinct('Langley'), dorLayer(16, 'S WHIDBEY'), islandTca('0700'),
+  ])
+  context = await lookupBallotContext(wave2Data('island'), '112 2nd St Langley WA 98260')
+  assert.ok(scopeMatches(port, context))
+  assert.ok(!scopeMatches(pud, context))
+  assert.ok(!scopeMatches(uninc, context))
+  // 865 SW Barrington Dr, Oak Harbor: precinct Oak Harbor 03, TCA 0100, no port.
+  mockWave2('865 SW BARRINGTON DR, OAK HARBOR, WA, 98277', '029', 'Island County', [
+    islandCommissioner('2'), islandPrecinct('Oak Harbor 03'), islandTca('0100'),
+  ])
+  context = await lookupBallotContext(wave2Data('island'), '865 SW Barrington Dr Oak Harbor WA 98277')
+  for (const scope of [pud, port, uninc]) assert.ok(!scopeMatches(scope, context), scope.layer)
+  // 5476 Harbor Rd, Freeland (unincorporated): port and advisory vote, no PUD.
+  mockWave2('5476 HARBOR RD, FREELAND, WA, 98249', '029', 'Island County', [
+    islandCommissioner('1'), islandPrecinct('S Whidbey 13'), dorLayer(16, 'S WHIDBEY'), islandTca('0760'),
+  ])
+  context = await lookupBallotContext(wave2Data('island'), '5476 Harbor Rd Freeland WA 98249')
+  assert.ok(scopeMatches(port, context))
+  assert.ok(scopeMatches(uninc, context))
+  assert.ok(!scopeMatches(pud, context))
+})
+
+test('Lewis resolves PUD No. 1 (not Centralia) and Timberland Regional Library (not Pe Ell) from DOR', async () => {
+  const pud = { kind: 'DISTRICT', county: 'lewis', layer: 'PUDDST', value: '1' }
+  const trl = { kind: 'DISTRICT', county: 'lewis', layer: 'LIBDST', value: 'L' }
+  const fd6 = { kind: 'DISTRICT', county: 'lewis', layer: 'FIRDST', value: '6' }
+  // 351 NW North St, Chehalis: PUD2025 '1', LIB2025 'L', no fire district.
+  mockWave2('351 NW NORTH ST, CHEHALIS, WA, 98532', '041', 'Lewis County', [dorLayer(17, '1'), dorLayer(12, 'L')])
+  let context = await lookupBallotContext(wave2Data('lewis'), '351 NW North St Chehalis WA 98532')
+  assert.equal(context.coverageStatus, 'full_county')
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(scopeMatches(pud, context))
+  assert.ok(scopeMatches(trl, context))
+  assert.ok(!scopeMatches(fd6, context))
+  // 118 W Maple St, Centralia: LIB2025 'L', FIR2025 'RFPSA 1', no PUD feature.
+  mockWave2('118 W MAPLE ST, CENTRALIA, WA, 98531', '041', 'Lewis County', [dorLayer(7, 'RFPSA 1'), dorLayer(12, 'L')])
+  context = await lookupBallotContext(wave2Data('lewis'), '118 W Maple St Centralia WA 98531')
+  assert.ok(!scopeMatches(pud, context))
+  assert.ok(scopeMatches(trl, context))
+  // 2152 Jackson Hwy, Chehalis: FIR2025 '6', PUD2025 '1', LIB2025 'L'.
+  mockWave2('2152 JACKSON HWY, CHEHALIS, WA, 98532', '041', 'Lewis County', [dorLayer(7, '6'), dorLayer(17, '1'), dorLayer(12, 'L')])
+  context = await lookupBallotContext(wave2Data('lewis'), '2152 Jackson Hwy Chehalis WA 98532')
+  for (const scope of [pud, trl, fd6]) assert.ok(scopeMatches(scope, context), scope.layer)
+  // 200 S Main St, Pe Ell: PUD2025 '1', FIR2025 '11', outside Timberland.
+  mockWave2('200 MAIN ST, PE ELL, WA, 98572', '041', 'Lewis County', [dorLayer(7, '11'), dorLayer(17, '1')])
+  context = await lookupBallotContext(wave2Data('lewis'), '200 S Main St Pe Ell WA 98572')
+  assert.ok(scopeMatches(pud, context))
+  assert.ok(!scopeMatches(trl, context))
 })

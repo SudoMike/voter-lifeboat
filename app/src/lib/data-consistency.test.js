@@ -110,10 +110,11 @@ const UNRESOLVABLE_SCOPES = new Set([
   'lincoln/COUNTY_COUNCIL',
   'okanogan/COUNTY_COUNCIL',
   'pacific/COUNTY_COUNCIL',
-  // PUD commissioner districts with no queryable boundary (island's PUD race
-  // is Snohomish PUD No. 1 District 1 on Camano; klickitat's PUD publishes
-  // PDF maps only).
-  'island/PUDDST',
+  // PUD commissioner districts with no queryable boundary (klickitat's PUD
+  // publishes PDF maps only). island/PUDDST left the set in #29: geo.js reads
+  // the Camano precincts, where the general's Snohomish PUD No. 1 seat is
+  // scoped '53029'. The archived primary's Island PUD scope ('1') matches no
+  // address, as before, and that package stays partial_county.
   'klickitat/PUDDST',
   // Spokane voters inside Public Utility District No. 1 of Stevens County
   // vote for its commissioner seat; no electoral boundary layer for the

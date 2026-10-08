@@ -30,6 +30,7 @@ const DISTRICT_LABELS = {
   WATDST: 'Water District',
   PTBA: 'Public Transportation Benefit Area',
   AQUIFER: 'Aquifer Protection Area',
+  UNINC: 'Unincorporated County',
 }
 
 // Layers whose values are codes for named places. King GIS's JUDDST layer
@@ -53,6 +54,19 @@ const NAMED_VALUES = {
   // Benton PUDDST reads the Auditor's PrecinctSplits PUD_District (geo.js).
   PUDDST: {
     'BENTON PUD': 'Benton County Public Utility District',
+    // Island PUDDST reads the Auditor's precinct layer's County code on the
+    // Camano precincts, which Snohomish County PUD No. 1 serves (geo.js).
+    '53029': 'Snohomish County Public Utility District No. 1 (Camano Island)',
+  },
+  // Island PORTDST reads WA DOR PRT2025 codes (geo.js).
+  PORTDST: {
+    'S WHIDBEY': 'Port of South Whidbey Island',
+    COUPE: 'Port of Coupeville',
+  },
+  // Island UNINC reads the DOR tax code area's county name outside the
+  // incorporated tax code areas (geo.js).
+  UNINC: {
+    ISLAND: 'Unincorporated Island County',
   },
   // Spokane FIRDST reads the county fire layer's NAME (geo.js). Districts
   // read 'Fire District 9'; these other polygons are cities with their own
@@ -74,7 +88,7 @@ const NAMED_VALUES = {
 const ORDER = [
   'CITY', 'CONGDST', 'LEGDST', 'KCCDST', 'SCCDST', 'COUNTY_COUNCIL', 'JUDDST', 'DISTCRT', 'KCDISTCRT',
   'PORTDST', 'PUDDST', 'FIRDST', 'FIRE_AUTH', 'RFADST', 'EMSDST', 'SCHDST', 'HOSPDST', 'LIBDST',
-  'PARKDST', 'CEMDST', 'WATDST', 'PTBA', 'AQUIFER',
+  'PARKDST', 'CEMDST', 'WATDST', 'PTBA', 'AQUIFER', 'UNINC',
 ]
 
 // Presence flags, not district numbers. '1' is deliberately absent — it is a

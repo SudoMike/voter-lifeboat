@@ -2,7 +2,7 @@
 // Coverage (issue #16), Spokane at partial coverage, Pierce at full coverage
 // (#21), Snohomish at full coverage (#27), Clark, Kitsap and Thurston at full
 // coverage (#22), Yakima, Whatcom, Benton, Skagit, Cowlitz and Grant at full
-// coverage (#28), every other Washington address a Statewide-Only Guide (issue #9). These run the app's own ballot, interview, lean and Ballot Brief
+// coverage (#28), Island and Lewis at full coverage (#29), every other Washington address a Statewide-Only Guide (issue #9). These run the app's own ballot, interview, lean and Ballot Brief
 // code against public/data/2026-11-03-general.
 import test from 'node:test'
 import assert from 'node:assert/strict'
@@ -68,7 +68,7 @@ const STATE_MEASURES = [
   'initiative-measure-no-il26-638',
 ]
 
-test('the general ships twelve counties at full county coverage, Spokane at partial, with their elections offices', () => {
+test('the general ships fourteen counties at full county coverage, Spokane at partial, with their elections offices', () => {
   assert.equal(data.election.id, '2026-11-03-general')
   assert.deepEqual(data.coverage, {
     statewide_complete: true,
@@ -199,6 +199,26 @@ test('the general ships twelve counties at full county coverage, Spokane at part
         fips: '53025',
         coverage: 'full_county',
         elections_url: 'https://www.grantcountywa.gov/270/Elections',
+      },
+      {
+        // Full: the Camano PUD seat reads the Auditor's precinct layer; the
+        // port and unincorporated-county measures read DOR PRT2025 and
+        // TCA2025 (#29).
+        id: 'island',
+        name: 'Island County',
+        state: 'WA',
+        fips: '53029',
+        coverage: 'full_county',
+        elections_url: 'https://www.islandcountywa.gov/423/Elections-Voter-Registration',
+      },
+      {
+        // Full: the PUD seat and Timberland levy read DOR PUD2025 and LIB2025 (#29).
+        id: 'lewis',
+        name: 'Lewis County',
+        state: 'WA',
+        fips: '53041',
+        coverage: 'full_county',
+        elections_url: 'https://elections.lewiscountywa.gov/',
       },
     ],
   })
@@ -487,6 +507,72 @@ test('a Grant ballot: Benton\'s research for CD 4, the advisory vote countywide,
   for (const pos of [1, 2])
     sameScoring(ld16, `grant-legislative-district-16-state-representative-pos-${pos}`, `benton-legislative-district-16-state-representative-pos-${pos}`)
   assert.equal(coverageAdvice(gra({})), null)
+})
+
+test('an Island ballot: Snohomish\'s research for CD 2, LD 10 and the Camano PUD seat, local measures by district', () => {
+  const ISLAND = { id: 'island', fips: '53029', name: 'Island County' }
+  const isl = (districts) => ({ coverageStatus: 'full_county', county: ISLAND, districts, missingLayers: [] })
+  const PUD = 'island-public-utility-district-no-1-commissioner-district-1'
+  const FIREWORKS = 'island-unincorporated-island-county-advisory-vote'
+  // Districts as the live District Adapter resolved them on 2026-10-08.
+  // 865 SW Barrington Dr, Oak Harbor: no PUD seat, port or advisory vote.
+  const oh = ballotFor(isl({ CONGDST: '2', LEGDST: '10', CITY: 'Oak Harbor', COUNTY_COUNCIL: '2', LIBDST: 'L' }))
+  const os = oh.contests.map((c) => c.slug)
+  assert.equal(new Set(os).size, os.length)
+  for (const slug of SUPREME_COURT) assert.ok(os.includes(slug), slug)
+  sameScoring(oh, 'island-congressional-district-2-u-s-representative', 'snohomish-congressional-district-2-u-s-representative')
+  for (const pos of [1, 2])
+    sameScoring(oh, `island-legislative-district-10-state-representative-pos-${pos}`, `snohomish-legislative-district-10-state-representative-pos-${pos}`)
+  assert.ok(!oh.contests.some((c) => c.owner === 'snohomish'))
+  assert.ok(os.includes('island-island-county-county-commissioner-district-3'))
+  assert.ok(!os.includes(PUD))
+  assert.deepEqual(ownLocal(oh, 'island'), [])
+  // 848 N Sunrise Blvd, Camano Island: the Snohomish PUD seat and the advisory vote.
+  const cam = ballotFor(isl({ CONGDST: '2', LEGDST: '10', COUNTY_COUNCIL: '3', LIBDST: 'L', PUDDST: '53029', UNINC: 'ISLAND' }))
+  sameScoring(cam, PUD, 'snohomish-public-utility-district-no-1-commissioner-district-1')
+  assert.deepEqual(ownLocal(cam, 'island'), [FIREWORKS])
+  // 112 2nd St, Langley: Langley Prop 1 and the South Whidbey port levy, no advisory vote.
+  const lan = ballotFor(isl({ CONGDST: '2', LEGDST: '10', CITY: 'Langley', COUNTY_COUNCIL: '1', LIBDST: 'L', PORTDST: 'S WHIDBEY' }))
+  assert.ok(!lan.contests.some((c) => c.slug === PUD))
+  assert.deepEqual(ownLocal(lan, 'island'), [
+    'island-city-of-langley-proposition-no-1',
+    'island-port-district-of-south-whidbey-island-proposition-no-1',
+  ])
+  assert.equal(coverageAdvice(isl({})), null)
+})
+
+test('a Lewis ballot: Clark\'s research for CD 3 and LD 20, Thurston\'s for LD 19, PUD seat outside Centralia, Timberland levy by district', () => {
+  const LEWIS = { id: 'lewis', fips: '53041', name: 'Lewis County' }
+  const lew = (districts) => ({ coverageStatus: 'full_county', county: LEWIS, districts, missingLayers: [] })
+  const PUD = 'lewis-public-utility-district-commissioner-district-1-commissioner-district-1'
+  const TRL = 'lewis-timberland-regional-library-district-proposition-no-1'
+  // Districts as the live District Adapter resolved them on 2026-10-08.
+  // 351 NW North St, Chehalis: LD 20, the PUD seat, Timberland and the Chehalis TBD.
+  const ch = ballotFor(lew({ CONGDST: '3', LEGDST: '20', CITY: 'Chehalis', COUNTY_COUNCIL: '2', PUDDST: '1', LIBDST: 'L' }))
+  const cs = ch.contests.map((c) => c.slug)
+  assert.equal(new Set(cs).size, cs.length)
+  for (const slug of SUPREME_COURT) assert.ok(cs.includes(slug), slug)
+  sameScoring(ch, 'lewis-congressional-district-3-u-s-representative', 'clark-congressional-district-3-u-s-representative')
+  for (const pos of [1, 2])
+    sameScoring(ch, `lewis-legislative-district-20-state-representative-pos-${pos}`, `clark-legislative-district-20-state-representative-pos-${pos}`)
+  assert.ok(!ch.contests.some((c) => c.owner === 'clark' || c.owner === 'thurston'))
+  assert.ok(cs.includes(PUD))
+  assert.ok(cs.includes('lewis-lewis-county-commissioner-district-3-county-commissioner-district-3'))
+  assert.deepEqual(ownLocal(ch, 'lewis'), [TRL, 'lewis-transportation-benefit-district-of-chehalis-proposition-no-1'])
+  // 118 W Maple St, Centralia: outside the PUD.
+  const ce = ballotFor(lew({ CONGDST: '3', LEGDST: '20', CITY: 'Centralia', COUNTY_COUNCIL: '1', FIRDST: 'RFPSA 1', LIBDST: 'L' }))
+  assert.ok(!ce.contests.some((c) => c.slug === PUD))
+  assert.deepEqual(ownLocal(ce, 'lewis'), [TRL])
+  // 2152 Jackson Hwy, Chehalis: Fire District 6.
+  const jh = ballotFor(lew({ CONGDST: '3', LEGDST: '20', COUNTY_COUNCIL: '2', FIRDST: '6', PUDDST: '1', LIBDST: 'L' }))
+  assert.deepEqual(ownLocal(jh, 'lewis'), [TRL, 'lewis-lewis-county-fire-protection-district-no-6-proposition-no-1'])
+  // 200 S Main St, Pe Ell: LD 19, outside Timberland.
+  const pe = ballotFor(lew({ CONGDST: '3', LEGDST: '19', CITY: 'Pe Ell', COUNTY_COUNCIL: '2', FIRDST: '11', PUDDST: '1' }))
+  for (const pos of [1, 2])
+    sameScoring(pe, `lewis-legislative-district-19-state-representative-pos-${pos}`, `thurston-legislative-district-19-state-representative-pos-${pos}`)
+  assert.ok(pe.contests.some((c) => c.slug === PUD))
+  assert.deepEqual(ownLocal(pe, 'lewis'), [])
+  assert.equal(coverageAdvice(lew({})), null)
 })
 
 test('a Spokane ballot: its own districts, school and fire measures by name, no PUD seat', () => {
