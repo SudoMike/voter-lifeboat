@@ -531,3 +531,74 @@ test('coverageAdvice reports degraded coverage from either cause', () => {
   assert.equal(coverageAdvice({ coverageStatus: 'statewide_only', missingLayers: [] }), 'statewide-only')
   assert.equal(coverageAdvice(null), null)
 })
+
+// South County Fire's RFA has no polygon in Snohomish's own fire layer; the
+// adapter reads it from the DOR FIR2025 layer filtered to 'SCRFA' (live
+// 2026-10-08, unfiltered: 19100 44th Ave W, Lynnwood -> 'SCRFA'; 806 W Main
+// St, Monroe -> 'SRF'). The mock answers like the server: the feature at the
+// point, dropped when the request's `where` excludes it.
+function mockSnohomish(matchedAddress, dorValue) {
+  const calls = []
+  global.fetch = async (url) => {
+    calls.push(String(url))
+    if (String(url).startsWith('/api/geocode')) {
+      return {
+        ok: true,
+        async json() {
+          return {
+            result: {
+              addressMatches: [{
+                matchedAddress,
+                coordinates: { x: -122.29, y: 47.83 },
+                geographies: {
+                  Counties: [{ STATE: '53', COUNTY: '061', NAME: 'Snohomish County' }],
+                  '120th Congressional Districts': [{ BASENAME: '2' }],
+                  '2026 State Legislative Districts - Lower': [{ BASENAME: '32' }],
+                },
+              }],
+            },
+          }
+        },
+      }
+    }
+    const where = new URL(String(url)).searchParams.get('where')
+    const kept = dorValue && (!where || where === `DISTATTRIB = '${dorValue}'`)
+    const attrs = String(url).includes('WADOR_PropertyTax/MapServer/7/query') && kept
+      ? { DISTATTRIB: dorValue }
+      : null
+    return { ok: true, async json() { return { features: attrs ? [{ attributes: attrs }] : [] } } }
+  }
+  return calls
+}
+
+const snohomishRfa = { kind: 'DISTRICT', county: 'snohomish', layer: 'RFADST', value: 'SCRFA' }
+const snohomishData = {
+  coverage: { statewide_complete: true, supported_counties: [{ id: 'snohomish', coverage: 'partial_county' }] },
+}
+
+test('Snohomish resolves South County Fire RFA from the DOR fire layer', async () => {
+  const calls = mockSnohomish('19100 44TH AVE W, LYNNWOOD, WA, 98036', 'SCRFA')
+  const context = await lookupBallotContext(snohomishData, '19100 44th Ave W Lynnwood WA 98036')
+  assert.equal(context.districts.RFADST, 'SCRFA')
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(scopeMatches(snohomishRfa, context))
+  const dor = calls.filter((u) => u.includes('WADOR_PropertyTax'))
+  assert.equal(dor.length, 1)
+  assert.ok(dor[0].startsWith('https://webgis.dor.wa.gov/arcgis/rest/services/Programs/WADOR_PropertyTax/MapServer/7/query?'), dor[0])
+  assert.equal(new URL(dor[0]).searchParams.get('outFields'), 'DISTATTRIB')
+  assert.equal(new URL(dor[0]).searchParams.get('where'), "DISTATTRIB = 'SCRFA'")
+})
+
+test('another RFA or no fire feature leaves RFADST unset', async () => {
+  // Monroe is in Snohomish Regional Fire & Rescue ('SRF'): filtered out, so
+  // the voter is not told they live in a regional fire authority 'SRF'.
+  mockSnohomish('806 W MAIN ST, MONROE, WA, 98272', 'SRF')
+  let context = await lookupBallotContext(snohomishData, '806 W Main St Monroe WA 98272')
+  assert.equal('RFADST' in context.districts, false)
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(!scopeMatches(snohomishRfa, context))
+  mockSnohomish('2930 WETMORE AVE, EVERETT, WA, 98201', null)
+  context = await lookupBallotContext(snohomishData, '2930 Wetmore Ave Everett WA 98201')
+  assert.equal('RFADST' in context.districts, false)
+  assert.ok(!scopeMatches(snohomishRfa, context))
+})

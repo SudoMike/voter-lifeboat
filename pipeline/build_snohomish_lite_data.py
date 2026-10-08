@@ -27,11 +27,12 @@ OUT = COUNTY / "interim"
 PRIMARY = "2026-08-04-primary"
 
 # RFADST: South Snohomish County Fire & Rescue RFA. The county's
-# Fire_Districts layer (geo.js FIRDST) has no RFA polygon; the WA DOR FIR2025
-# layer (WADOR_PropertyTax/MapServer/7, DISTATTRIB 'SCRFA' at 19100 44th Ave W,
-# Lynnwood) or the county's RFA_Commissioner layer (FeatureServer/0,
-# 'SCRFA Commissioner Dist 1-5') could resolve it; neither is in geo.js yet.
-GENERAL_CFG = {"name": "Snohomish County", "unresolvable_layers": ["RFADST"]}
+# Fire_Districts layer (geo.js FIRDST) has no RFA polygon, so geo.js
+# COUNTY_LAYERS["snohomish"] reads RFADST from the WA DOR FIR2025 layer
+# (WADOR_PropertyTax/MapServer/7, DISTATTRIB, filtered to 'SCRFA'; 'SCRFA' at
+# 19100 44th Ave W, Lynnwood, live 2026-10-08, #21). DISTCRT (District Court
+# electoral districts) has no layer; general_override marks it unresolvable.
+GENERAL_CFG = {"name": "Snohomish County", "unresolvable_layers": []}
 
 _GEN = "data/washington-state/elections/2026-11-03-general/counties/snohomish"
 _LVP = f"{_GEN}/raw/snohomish/local-voters-pamphlet.pdf.url"
@@ -156,7 +157,7 @@ GENERAL_MEASURES = {"2026-11-03-general": {
                     "The RFA levy (estimated $0.45 per $1,000, from 2028) replaces the district's levy (about $0.90), plus a fire benefit charge set in 2028.",
                     "Morris Parrish, Jack Barnes and Craig Bishop: the Bothell-area fire service has not grown with population; a regional authority shares resources and training; endorsed by the Bothell firefighters' union.",
                     _NO_CON),
-        # Scope: RFADST (unresolvable, see GENERAL_CFG). 19100 44th Ave W,
+        # Scope: geo.js RFADST (DOR FIR2025, see GENERAL_CFG). 19100 44th Ave W,
         # Lynnwood (Census-geocoded -122.29251, 47.82559) -> DOR FIR2025
         # DISTATTRIB 'SCRFA'; county RFA_Commissioner 'SCRFA Commissioner Dist 1'.
         gen_measure("South Snohomish County Fire & Rescue Regional Fire Authority", "Proposition No. 1",

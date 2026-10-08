@@ -115,6 +115,11 @@ const UNRESOLVABLE_SCOPES = new Set([
   // PDF maps only).
   'island/PUDDST',
   'klickitat/PUDDST',
+  // Snohomish County District Court elects judges by electoral district
+  // (Cascade, Everett, Evergreen, South); no county or DOR GIS layer publishes
+  // those boundaries (build_snohomish_lite_data.py general_override), so the
+  // general's Snohomish package is partial_county.
+  'snohomish/DISTCRT',
 ])
 
 const CENSUS_LAYERS = new Set(['CONGDST', 'LEGDST', 'CITY'])

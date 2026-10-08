@@ -169,6 +169,21 @@ const COUNTY_LAYERS = {
       url: 'https://gis.snoco.org/sis/rest/services/Districts/Districts_and_Boundaries/MapServer/16/query',
       attr: 'District',
     },
+    {
+      // South Snohomish County Fire & Rescue RFA (South County Fire). The
+      // county's FIRDST layer above has no polygon for it. DOR FIR2025 has,
+      // but mixes fire districts and RFAs: its Snohomish DISTATTRIB values
+      // are district numbers ('10', '26 NB') and RFA codes ('SCRFA', 'SRF',
+      // 'NCRFA', 'MARFA', '12 MARFA', 'NCRFA/19B'). `where` keeps only the RFA
+      // a shipped scope names, so no fire-district number is shown to a voter
+      // as an RFA. Live 2026-10-08 (#21), unfiltered: 19100 44th Ave W,
+      // Lynnwood -> 'SCRFA'; 806 W Main St, Monroe -> 'SRF'; 2930 Wetmore
+      // Ave, Everett -> no feature. Filtered: Lynnwood 'SCRFA', Monroe none.
+      key: 'RFADST',
+      url: `${DOR_TAX_DISTRICTS}/7/query`,
+      attr: 'DISTATTRIB',
+      where: "DISTATTRIB = 'SCRFA'",
+    },
   ],
   spokane: [
     {
@@ -474,6 +489,9 @@ async function queryArcgisLayer(layer, x, y) {
     returnGeometry: 'false',
     f: 'json',
   })
+  // Optional attribute filter for a layer that mixes the districts a key
+  // means with others (Snohomish RFADST on the DOR fire layer).
+  if (layer.where) params.set('where', layer.where)
   const res = await fetch(`${layer.url}?${params}`)
   if (!res.ok) throw new GeoError(`District lookup failed (${layer.key}).`, 'network', { layer: layer.key })
   const data = await res.json()

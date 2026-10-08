@@ -19,6 +19,7 @@ const DISTRICT_LABELS = {
   PUDDST: 'Public Utility District',
   FIRDST: 'Fire District',
   FIRE_AUTH: 'Fire Authority',
+  RFADST: 'Regional Fire Authority',
   EMSDST: 'Emergency Medical District',
   SCHDST: 'School District',
   HOSPDST: 'Hospital District',
@@ -42,13 +43,17 @@ const NAMED_VALUES = {
     W: 'King County District Court, West Electoral District',
     SH: 'King County District Court, Shoreline Electoral District',
   },
+  // Snohomish RFADST reads the WA DOR fire layer's RFA code (geo.js).
+  RFADST: {
+    SCRFA: 'South Snohomish County Fire & Rescue Regional Fire Authority',
+  },
 }
 
 // Districts that decide which candidates a voter sees come first, then the
 // special districts that only ever carry levies.
 const ORDER = [
   'CITY', 'CONGDST', 'LEGDST', 'KCCDST', 'SCCDST', 'COUNTY_COUNCIL', 'JUDDST', 'DISTCRT',
-  'PORTDST', 'PUDDST', 'FIRDST', 'FIRE_AUTH', 'EMSDST', 'SCHDST', 'HOSPDST', 'LIBDST',
+  'PORTDST', 'PUDDST', 'FIRDST', 'FIRE_AUTH', 'RFADST', 'EMSDST', 'SCHDST', 'HOSPDST', 'LIBDST',
   'PARKDST', 'CEMDST', 'WATDST', 'PTBA', 'AQUIFER',
 ]
 
