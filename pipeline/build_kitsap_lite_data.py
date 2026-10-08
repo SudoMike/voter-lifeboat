@@ -120,6 +120,9 @@ if ELECTION.id != PRIMARY:
         override=general_override,
         measures=CURATED["measures"] if CURATED else None,
         measure_sources=CURATED["sources"] if CURATED else (),
+        notes=("SCHDST has a public layer that the District Adapter does not read yet: Kitsap County GIS "
+               "School_District_Outlines/FeatureServer/0, attribute DISTRICT ('402' at 2689 Hoover Ave SE, "
+               "Port Orchard, 2026-10-08; raw/kitsap/school-district-outlines.json.url).",),
     )
     raise SystemExit(0)
 
