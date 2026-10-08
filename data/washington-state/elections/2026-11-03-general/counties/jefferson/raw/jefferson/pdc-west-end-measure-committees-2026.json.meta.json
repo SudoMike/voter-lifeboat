@@ -1,0 +1,13 @@
+{
+  "url": "https://data.wa.gov/resource/3h9x-7bvm.json?$where=election_year=2026%20AND%20jurisdiction_county='CLALLAM'%20AND%20starts_with(id,'co-')&$limit=200",
+  "retrieved_at": "2026-10-08",
+  "method": "curl -sL -A 'Mozilla/5.0' (Python urllib with a browser User-Agent); cached verbatim at data/.cache/jefferson/pdc/pdc-clallam-committees-2026.json (gitignored)",
+  "stage": "raw",
+  "source_type": "pdc",
+  "tier": 1,
+  "outlet": "PDC Campaign Finance Summary (data.wa.gov 3h9x-7bvm)",
+  "cache_file": "data/.cache/jefferson/pdc/pdc-clallam-committees-2026.json",
+  "bytes": 1802,
+  "sha256": "2ad53b51aed5a1c4f8110881d161153824cf01f8b627f76c44ac618546951dc5",
+  "notes": "2026 committees whose jurisdiction county is Clallam (queried 2026-10-08): one, 'Vote Yes! for North Olympic Library System' (co-2026-41285). No committee for or against Quillayute Valley School District No. 402 Proposition No. 1 or Clallam County Fire Protection District No. 1 Proposition No. 1; a second query for 2026 filers whose jurisdiction or name mentions Quillayute or Forks, or a Clallam fire jurisdiction, returned none (data/.cache/jefferson/pdc/pdc-west-end-measures-2026.json)."
+}

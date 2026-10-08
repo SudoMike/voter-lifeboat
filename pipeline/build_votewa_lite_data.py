@@ -1158,6 +1158,73 @@ ELECTION_MEASURES = {
                   "https://voter.votewa.gov/elections/measure.ashx?m=7306&e=899&la=en&c=15"),
             ],
         },
+        # Jefferson (#31): checked against the Jefferson County Auditor's Local
+        # Voters' Pamphlet (counties/jefferson/raw/jefferson/local-voters-pamphlet.pdf.url,
+        # which "contains all races and issues in this election"), its sample
+        # ballot (raw/jefferson/sample-ballot.pdf.url) and VoteWA's online guide
+        # for county 16 (raw/votewa/voter-guide/guide.json.url): the same 13
+        # contests and two local measures, both from districts based in Clallam
+        # County that reach into Jefferson's West End. Jefferson is not a charter
+        # county. Commissioner District 3: nominated by district, elected
+        # county-wide in the general (RCW 36.32.040; VoteWA lists it 'Countywide';
+        # in the SOS precinct exports the 2022 District 3 and 2020/2024 District 1
+        # and 2 races are on every precinct, 37/37 and 39/39). Named as in the
+        # primary so its slug and dossiers carry forward. District Court: one
+        # county-wide judge (2022 SOS export: 37/37 precincts). Public Utility
+        # District No. 1 of Jefferson County covers the whole county, Port
+        # Townsend included (DOR PUD2025 layer 17 has one Jefferson polygon,
+        # DISTATTRIB '1', equal in area to the sum of Jefferson's SCH2025
+        # polygons; '1' at Port Townsend, Port Hadlock, Quilcene, Brinnon, Port
+        # Ludlow and Forks-area West End addresses), and its seats are elected
+        # PUD-wide in the general (RCW 54.12.010(3); SOS exports: the 2020
+        # District 2, 2022 District 1 and 2024 District 3 races on every
+        # precinct), so the seat is scoped COUNTY, as Clark's, Kitsap's and
+        # Thurston's are.
+        # Measure scopes, point-checked 2026-10-08 (Census geocoder, Current):
+        # SCHDST '402': DOR SCH2025 (layer 20) DISTATTRIB '402' at 1993 Dowans
+        # Creek Rd, Forks (Jefferson side) and 18113 Upper Hoh Rd, Forks; the
+        # county's FindMyDistricts layer 8 names it 'Quillayute Valley School
+        # District No. 402'. COUNTY_LAYERS.jefferson does not read SCH2025 yet.
+        # FIRDST '9': DOR FIR2025 (layer 7) numbers the Jefferson part of
+        # Clallam County Fire Protection District No. 1 '9' (1993 Dowans Creek
+        # Rd -> '9'; the polygon matches the county FindMyDistricts layer 10
+        # feature 'CCFD1' on 8,613 of 8,621 grid points); COUNTY_LAYERS.jefferson
+        # already reads FIR2025. Jefferson's own Fire District 1 (East Jefferson
+        # Fire Rescue) is '1', so the Clallam district cannot be scoped '1' here.
+        "jefferson": {
+            "overrides": {
+                ("COUNTY", "DISTRICT 3"): (
+                    "County", "Jefferson County Commissioner District 3", "District 3", ("COUNTY", None)),
+                ("DISTRICT COURT", "JUDGE POSITION NO. 1"): (
+                    "Judicial", "Jefferson County District Court", "Judge Position No. 1", ("COUNTY", None)),
+                ("PUBLIC UTILITY DISTRICT", "COMMISSIONER, DISTRICT 2"): (
+                    "PublicUtility", "Public Utility District No. 1 of Jefferson County", "Commissioner District 2",
+                    ("COUNTY", None)),
+            },
+            "measures": [
+                m("Quillayute Valley School District No. 402", "Proposition No. 1", "Bonds to Rebuild Forks Middle School",
+                  ("SCHDST", "402"),
+                  "Authorizes $34,000,000 of general obligation bonds, maturing within 25 years and repaid by excess property taxes, to build a new Forks Middle School replacing three existing buildings on the site. The district reaches into Jefferson County's West End.",
+                  "$34,000,000 in bonds repaid over up to 25 years; the ballot materials give no rate, and the district estimates about $1.94 per $1,000 of assessed value from 2028, as its high school bond ends.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7296&e=899&la=en&c=16",
+                  pages=(14,)),
+                m("Clallam County Fire Protection District No. 1", "Proposition No. 1",
+                  "Property Tax Levy for Fire Protection and Emergency Medical Services",
+                  ("FIRDST", "9"),
+                  "Sets the Forks-area fire district's regular levy at $1.00 per $1,000 for 2027 collection and lets it grow each year for nine more years by the greater of 1% or West Region CPI-U; the 2035 maximum becomes the base for later limits. A small part of the district is in Jefferson County.",
+                  "$1.00 per $1,000 of assessed value for 2027 collection, up from about $0.47, then CPI-based growth (at least 1%) through 2035.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7292&e=899&la=en&c=16",
+                  pages=(15,)),
+            ],
+            "extra_notes": [
+                "Quillayute Valley School District No. 402 Proposition No. 1 is scoped SCHDST '402' (WA DOR SCH2025, layer 20, "
+                "DISTATTRIB), the district's Jefferson County part (West End).",
+                "Clallam County Fire Protection District No. 1 Proposition No. 1 is scoped FIRDST '9': WA DOR FIR2025 (layer 7) "
+                "numbers the district's Jefferson County part '9'.",
+                "County Commissioner District 3 and Public Utility District No. 1 Commissioner District 2 are elected county-wide "
+                "in the general; PUD No. 1 of Jefferson County covers the whole county.",
+            ],
+        },
         # Lewis (#29): checked against the Lewis County Auditor's general sample
         # ballot (counties/lewis/raw/lewis/sample-ballot.pdf.url) and VoteWA's
         # online guide for county 21 (raw/votewa/voter-guide/guide.json.url),
