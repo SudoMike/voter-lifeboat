@@ -1,0 +1,26 @@
+{
+  "county": "jefferson",
+  "script": "pipeline/extract_pdf_text.mjs",
+  "files": [
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/jefferson/raw/jefferson/local-voters-pamphlet.pdf.url",
+      "url": "https://www.co.jefferson.wa.us/DocumentCenter/View/25551",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/jefferson/interim/pdf-text/local-voters-pamphlet.txt"
+    },
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/jefferson/raw/jefferson/resolution-clallam-jefferson-fire-district-1.pdf.url",
+      "url": "https://www.co.jefferson.wa.us/DocumentCenter/View/25266",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/jefferson/interim/pdf-text/resolution-clallam-jefferson-fire-district-1.txt"
+    },
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/jefferson/raw/jefferson/resolution-quillayute-valley-sd-402.pdf.url",
+      "url": "https://www.co.jefferson.wa.us/DocumentCenter/View/25264",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/jefferson/interim/pdf-text/resolution-quillayute-valley-sd-402.txt"
+    },
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/jefferson/raw/jefferson/sample-ballot.pdf.url",
+      "url": "https://www.co.jefferson.wa.us/DocumentCenter/View/25497",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/jefferson/interim/pdf-text/sample-ballot.txt"
+    }
+  ]
+}

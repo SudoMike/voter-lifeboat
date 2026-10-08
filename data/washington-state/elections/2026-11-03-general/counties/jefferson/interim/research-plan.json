@@ -1,0 +1,202 @@
+{
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/jefferson/interim/contests.json",
+    "data/washington-state/elections/2026-11-03-general/counties/jefferson/interim/measures.json"
+  ],
+  "script": "pipeline/build_research_plan.py",
+  "contests": [
+    {
+      "contest_slug": "jefferson-congressional-district-6-u-s-representative",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 6",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "emily-randall",
+          "name": "Emily Randall",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-6-u-s-representative/emily-randall.md"
+        },
+        {
+          "slug": "teresa-fox",
+          "name": "Teresa Fox",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-6-u-s-representative/teresa-fox.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "pierce",
+          "contest_slug": "pierce-congressional-district-6-u-s-representative",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/pierce/scoring/pierce-congressional-district-6-u-s-representative.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "pierce",
+          "kitsap",
+          "clallam",
+          "grays-harbor",
+          "mason"
+        ]
+      }
+    },
+    {
+      "contest_slug": "jefferson-legislative-district-24-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 24",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "adam-bernbaum",
+          "name": "Adam Bernbaum",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-24-state-representative-position-1/adam-bernbaum.md"
+        },
+        {
+          "slug": "eric-w-pratt",
+          "name": "Eric W. Pratt",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-24-state-representative-position-1/eric-w-pratt.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "clallam",
+          "contest_slug": "clallam-legislative-district-24-state-representative-pos-1",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/clallam/scoring/clallam-legislative-district-24-state-representative-pos-1.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "clallam",
+          "grays-harbor"
+        ]
+      }
+    },
+    {
+      "contest_slug": "jefferson-legislative-district-24-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 24",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "marcia-kelbon",
+          "name": "Marcia Kelbon",
+          "party_preference": "States No Party Preference",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-24-state-representative-position-2/marcia-kelbon.md"
+        },
+        {
+          "slug": "kaylee-kuehn",
+          "name": "Kaylee Kuehn",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-24-state-representative-position-2/kaylee-kuehn.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "clallam",
+          "contest_slug": "clallam-legislative-district-24-state-representative-pos-2",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/clallam/scoring/clallam-legislative-district-24-state-representative-pos-2.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "clallam",
+          "grays-harbor"
+        ]
+      }
+    },
+    {
+      "contest_slug": "jefferson-jefferson-county-commissioner-district-3-district-3",
+      "category": "County",
+      "office": "District 3",
+      "district": "Jefferson County Commissioner District 3",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "anji-scalf",
+          "name": "Anji Scalf",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/jefferson/dossiers/jefferson-jefferson-county-commissioner-district-3-district-3/anji-scalf.md"
+        },
+        {
+          "slug": "stephen-t-nieman",
+          "name": "Stephen T. Nieman",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/jefferson/dossiers/jefferson-jefferson-county-commissioner-district-3-district-3/stephen-t-nieman.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "jefferson-public-utility-district-no-1-of-jefferson-county-commissioner-district-2",
+      "category": "PublicUtility",
+      "office": "Commissioner District 2",
+      "district": "Public Utility District No. 1 of Jefferson County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "keith-kisler",
+          "name": "Keith Kisler",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        },
+        {
+          "slug": "michael-brittain",
+          "name": "Michael Brittain",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        }
+      ]
+    }
+  ],
+  "measures": [
+    {
+      "jurisdiction": "Quillayute Valley School District No. 402",
+      "proposition": "Proposition No. 1",
+      "title": "Bonds to Rebuild Forks Middle School",
+      "slug": "jefferson-quillayute-valley-school-district-no-402-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Clallam County Fire Protection District No. 1",
+      "proposition": "Proposition No. 1",
+      "title": "Property Tax Levy for Fire Protection and Emergency Medical Services",
+      "slug": "jefferson-clallam-county-fire-protection-district-no-1-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    }
+  ],
+  "carry_forward_from": "2026-08-04-primary"
+}

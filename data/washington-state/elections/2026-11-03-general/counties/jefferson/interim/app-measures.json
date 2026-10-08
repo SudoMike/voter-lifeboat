@@ -1,0 +1,81 @@
+{
+  "county": "jefferson",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/jefferson/raw/votewa/candidate-list.csv.url",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7292&e=899&la=en&c=16",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7296&e=899&la=en&c=16"
+  ],
+  "coverage": "full_county",
+  "notes": [
+    "Quillayute Valley School District No. 402 Proposition No. 1 is scoped SCHDST '402' (WA DOR SCH2025, layer 20, DISTATTRIB), the district's Jefferson County part (West End).",
+    "Clallam County Fire Protection District No. 1 Proposition No. 1 is scoped FIRDST '9': WA DOR FIR2025 (layer 7) numbers the district's Jefferson County part '9'.",
+    "County Commissioner District 3 and Public Utility District No. 1 Commissioner District 2 are elected county-wide in the general; PUD No. 1 of Jefferson County covers the whole county."
+  ],
+  "measures": [
+    {
+      "slug": "jefferson-quillayute-valley-school-district-no-402-proposition-no-1",
+      "owner": "jefferson",
+      "jurisdiction": "Quillayute Valley School District No. 402",
+      "proposition": "Proposition No. 1",
+      "title": "Bonds to Rebuild Forks Middle School",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "jefferson",
+        "layer": "SCHDST",
+        "value": "402"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 14
+        }
+      ],
+      "what_it_does": "Authorizes $34,000,000 of general obligation bonds, maturing within 25 years and repaid by excess property taxes, to build a new Forks Middle School replacing three existing buildings on the site. The district reaches into Jefferson County's West End.",
+      "cost_line": "$34,000,000 in bonds repaid over up to 25 years; the ballot materials give no rate, and the district estimates about $1.94 per $1,000 of assessed value from 2028, as its high school bond ends.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7296&e=899&la=en&c=16"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "jefferson-clallam-county-fire-protection-district-no-1-proposition-no-1",
+      "owner": "jefferson",
+      "jurisdiction": "Clallam County Fire Protection District No. 1",
+      "proposition": "Proposition No. 1",
+      "title": "Property Tax Levy for Fire Protection and Emergency Medical Services",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "jefferson",
+        "layer": "FIRDST",
+        "value": "9"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 15
+        }
+      ],
+      "what_it_does": "Sets the Forks-area fire district's regular levy at $1.00 per $1,000 for 2027 collection and lets it grow each year for nine more years by the greater of 1% or West Region CPI-U; the 2035 maximum becomes the base for later limits. A small part of the district is in Jefferson County.",
+      "cost_line": "$1.00 per $1,000 of assessed value for 2027 collection, up from about $0.47, then CPI-based growth (at least 1%) through 2035.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7292&e=899&la=en&c=16"
+          ]
+        }
+      }
+    }
+  ]
+}
