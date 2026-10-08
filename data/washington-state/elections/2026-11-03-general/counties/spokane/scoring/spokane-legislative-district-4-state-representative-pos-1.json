@@ -1,0 +1,89 @@
+{
+  "contest_slug": "spokane-legislative-district-4-state-representative-pos-1",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/spokane/dossiers/spokane-legislative-district-4-state-representative-pos-1/"],
+  "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering school funding, tax structure, housing rules, health funding and criminal-justice statutes.",
+  "race_blurb": "Two first-time Republican candidates are competing for the Spokane Valley seat Rep. Suzanne Schmidt is leaving to run for county commissioner. Hillary Pham, an Air Force veteran and aide to Rep. Rob Chase, led the primary narrowly over Trent Maier, a cidery owner and former Spokane Valley Chamber chair endorsed by Schmidt.",
+  "candidates": [
+    {
+      "slug": "hillary-q-pham",
+      "summary": "Air Force veteran and legislative assistant to Rep. Rob Chase, running for office for the first time on affordability, housing and public safety.",
+      "highlights": [
+        "Names affordability and better pathways to home ownership as her top priorities [S4]",
+        "Calls the Climate Commitment Act a \"huge monster\" and would change parts of it rather than repeal it [S4]",
+        "Supports Rep. Chase's bill to create two autonomous regions in Washington; endorsed by Chase [S2][S3]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S1", "S3"],
+          "basis": "Runs on affordability and keeping grocery bag fees low; reported among candidates focused on lowering taxes, with no explicit tax plank of her own."
+        },
+        "climate": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S3", "S4"],
+          "basis": "Says the Climate Commitment Act and gas tax raise costs without measurable progress; would change parts of the act rather than repeal it."
+        },
+        "safety": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S1", "S2"],
+          "basis": "Pledges to defend public safety and 'stand with law enforcement'; no specific enforcement or prevention proposals."
+        },
+        "experience": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S4"],
+          "basis": "First-time candidate, but presents legislative-staff and county intergovernmental experience as readiness to 'hit the ground running'."
+        }
+      }
+    },
+    {
+      "slug": "trent-maier",
+      "summary": "Electrical engineer and Trailbreaker Cider co-founder, former Greater Spokane Valley Chamber chair, running for office for the first time on lower taxes, less regulation and public safety.",
+      "highlights": [
+        "Runs for \"lower taxes\" and pledges to fight unnecessary tax increases [S1][S2]",
+        "Supports recruiting more police officers and restoring accountability in the criminal justice system; endorsed by the county prosecutor and sheriff [S2][S3]",
+        "Endorsed by Rep. Suzanne Schmidt, two county commissioners and the Association of Washington Business [S3]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S2", "S5"],
+          "basis": "Voter guide, website and interview all center lower taxes and opposing tax increases."
+        },
+        "spending": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S2"],
+          "basis": "Website says government should 'live within its means' and commits to responsible spending, without specific cuts."
+        },
+        "safety": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S2", "S3", "S5"],
+          "basis": "Supports more officers, criminal-justice accountability and keeping dangerous offenders off the streets; prioritizes public-safety capital funding; endorsed by prosecutor and sheriff."
+        },
+        "climate": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S2", "S4"],
+          "basis": "Calls the Climate Commitment Act's expectations irresponsible and prefers market innovation over mandates; opposes policies raising utility costs."
+        },
+        "experience": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S4"],
+          "basis": "No prior office or government work; runs on 15 years of business experience."
+        }
+      }
+    }
+  ]
+}
