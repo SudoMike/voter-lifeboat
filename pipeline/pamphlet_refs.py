@@ -7,6 +7,10 @@ free text written by the researcher, for example
     edition-04 page 24 (identical statement at edition-06 page 24)
     voters-pamphlet-edition-05-king-north-eastside page 34 (same statement in voters-pamphlet-edition-06-king-south-southeast page 32)
     local-edition pages 76-80 (full text of Ordinance No. 127474)
+    local-voters-pamphlet page 33 (2026 General Election Voters' Pamphlet, Snohomish County edition, ...)
+
+(`local-voters-pamphlet` is the edition id of a non-King county's pamphlet
+pointer, raw/<county>/local-voters-pamphlet.pdf.url.)
 
 assemble_app_data.py turns those into the app's `pamphlet_pages`
 ([{edition, page}], PDF page numbers), because they name the statement page
@@ -17,7 +21,7 @@ endorsement lists on other candidates' pages.
 import re
 
 PAMPHLET_REF = re.compile(
-    r"(?:\b(?P<ed>local-edition|voters-pamphlet-edition-\d+(?:-[a-z]+)+|edition-\d+)\s+)?"
+    r"(?:\b(?P<ed>local-edition|local-voters-pamphlet|voters-pamphlet-edition-\d+(?:-[a-z]+)+|edition-\d+)\s+)?"
     r"\bpages?\s+(?P<p>\d+)(?:-(?P<q>\d+))?(?:\s*\((?P<note>[^)]*)\))?"
 )
 SAME_STATEMENT = re.compile(r"^\s*(same|identical) statements? (in|at)\b", re.I)
