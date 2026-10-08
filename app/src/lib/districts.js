@@ -18,6 +18,8 @@ const DISTRICT_LABELS = {
   KCDISTCRT: 'King County District Court, Southeast Electoral District',
   PORTDST: 'Port Commissioner District',
   PUDDST: 'Public Utility District',
+  // Clallam PUDALL: membership of the whole PUD, a constant '1' (geo.js).
+  PUDALL: 'Public Utility District No.',
   FIRDST: 'Fire District',
   FIRE_AUTH: 'Fire Authority',
   RFADST: 'Regional Fire Authority',
@@ -58,10 +60,18 @@ const NAMED_VALUES = {
     // Camano precincts, which Snohomish County PUD No. 1 serves (geo.js).
     '53029': 'Snohomish County Public Utility District No. 1 (Camano Island)',
   },
-  // Island PORTDST reads WA DOR PRT2025 codes (geo.js).
+  // Island PORTDST reads WA DOR PRT2025 codes; Franklin's reads the county
+  // layer's commissioner-district codes, Port of Pasco and Port of Kahlotus
+  // (geo.js; matched upper-cased).
   PORTDST: {
     'S WHIDBEY': 'Port of South Whidbey Island',
     COUPE: 'Port of Coupeville',
+    POP1: 'Port of Pasco Commissioner District 1',
+    POP2: 'Port of Pasco Commissioner District 2',
+    POP3: 'Port of Pasco Commissioner District 3',
+    POK1: 'Port of Kahlotus Commissioner District 1',
+    POK2: 'Port of Kahlotus Commissioner District 2',
+    POK3: 'Port of Kahlotus Commissioner District 3',
   },
   // Island UNINC reads the DOR tax code area's county name outside the
   // incorporated tax code areas (geo.js).
@@ -87,7 +97,7 @@ const NAMED_VALUES = {
 // special districts that only ever carry levies.
 const ORDER = [
   'CITY', 'CONGDST', 'LEGDST', 'KCCDST', 'SCCDST', 'COUNTY_COUNCIL', 'JUDDST', 'DISTCRT', 'KCDISTCRT',
-  'PORTDST', 'PUDDST', 'FIRDST', 'FIRE_AUTH', 'RFADST', 'EMSDST', 'SCHDST', 'HOSPDST', 'LIBDST',
+  'PORTDST', 'PUDDST', 'PUDALL', 'FIRDST', 'FIRE_AUTH', 'RFADST', 'EMSDST', 'SCHDST', 'HOSPDST', 'LIBDST',
   'PARKDST', 'CEMDST', 'WATDST', 'PTBA', 'AQUIFER', 'UNINC',
 ]
 
@@ -130,7 +140,8 @@ function tidy(value) {
 export function describeDistrict(key, value, bodyName = null) {
   const raw = String(value ?? '').trim()
   if (!raw) return null
-  if (bodyName) return `${bodyName} ${raw}`
+  // Franklin's commissioner layer reads 'COM3'; the contest says 'District 3'.
+  if (bodyName) return `${bodyName} ${raw.match(/^[A-Za-z]+(\d+)$/)?.[1] ?? raw}`
   if (key === 'CITY') return `City of ${tidy(raw)}`
   const named = NAMED_VALUES[key]?.[raw.toUpperCase()]
   if (named) return named

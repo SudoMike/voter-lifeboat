@@ -61,7 +61,8 @@ class GeneralPackagesTest(unittest.TestCase):
         for county, layers in election.DISTRICT_ADAPTER_LAYERS.items():
             if county == "king":
                 continue
-            block = re.search(rf"\n  {county}: \[(.*?)\n  \],", text, re.S).group(1)
+            # Hyphenated ids are quoted keys ('grays-harbor').
+            block = re.search(rf"\n  '?{county}'?: \[(.*?)\n  \],", text, re.S).group(1)
             keys = re.findall(r"key: '([A-Z_]+)'", block)
             self.assertEqual(sorted(["CONGDST", "LEGDST", "CITY"] + keys), sorted(layers), county)
 

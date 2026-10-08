@@ -848,7 +848,8 @@ test('Franklin commissioner districts resolve from the county portal MapServer',
   assert.equal(context.districts.COUNTY_COUNCIL, 'COM3')
   assert.deepEqual(context.missingLayers, [])
   assert.ok(scopeMatches(com3, context))
-  const layerCalls = calls.filter((u) => !u.startsWith('/api/geocode'))
+  // PORTDST and FIRDST (#29) are the county's other layers.
+  const layerCalls = calls.filter((u) => u.includes('Commissioner_Districts'))
   assert.equal(layerCalls.length, 1)
   assert.ok(layerCalls[0].startsWith(portal), layerCalls[0])
   assert.equal(new URL(layerCalls[0]).searchParams.get('outFields'), 'DISTRICT_CODE')
@@ -1189,5 +1190,139 @@ test('Lewis resolves PUD No. 1 (not Centralia) and Timberland Regional Library (
   mockWave2('200 MAIN ST, PE ELL, WA, 98572', '041', 'Lewis County', [dorLayer(7, '11'), dorLayer(17, '1')])
   context = await lookupBallotContext(wave2Data('lewis'), '200 S Main St Pe Ell WA 98572')
   assert.ok(scopeMatches(pud, context))
+  assert.ok(!scopeMatches(trl, context))
+})
+
+// Franklin, Chelan, Clallam and Grays Harbor (#29, wave 4b). Live point
+// queries 2026-10-08 at the Census-geocoded points of the addresses below.
+const franklinLayer = (path, value) => ({ path, attributes: { DISTRICT_CODE: value } })
+
+test('Franklin resolves the Port of Pasco district and Fire District 3', async () => {
+  const port3 = { kind: 'DISTRICT', county: 'franklin', layer: 'PORTDST', value: 'PoP3' }
+  const fd3 = { kind: 'DISTRICT', county: 'franklin', layer: 'FIRDST', value: '3' }
+  // 5600 N Rd 68, Pasco (unincorporated): COM3, PoP3, FIR2025 '3'.
+  const calls = mockWave2('5600 N RD 68, PASCO, WA, 99301', '021', 'Franklin County', [
+    franklinLayer('Commissioner_Districts/MapServer/0', 'COM3'),
+    franklinLayer('Special_tax_districts/MapServer/7', 'PoP3'),
+    dorLayer(7, '3'),
+  ])
+  let context = await lookupBallotContext(wave2Data('franklin'), '5600 N Rd 68 Pasco WA 99301')
+  assert.equal(context.coverageStatus, 'full_county')
+  assert.deepEqual(context.missingLayers, [])
+  assert.deepEqual([context.districts.PORTDST, context.districts.FIRDST], ['PoP3', '3'])
+  assert.ok(scopeMatches(port3, context))
+  assert.ok(scopeMatches(fd3, context))
+  const port = calls.find((u) => u.includes('Special_tax_districts/MapServer/7/query'))
+  assert.equal(new URL(port).searchParams.get('outFields'), 'DISTRICT_CODE')
+  // 525 N 3rd Ave, Pasco: COM2, PoP1, no fire district.
+  mockWave2('525 N 3RD AVE, PASCO, WA, 99301', '021', 'Franklin County', [
+    franklinLayer('Commissioner_Districts/MapServer/0', 'COM2'),
+    franklinLayer('Special_tax_districts/MapServer/7', 'PoP1'),
+  ])
+  context = await lookupBallotContext(wave2Data('franklin'), '525 N 3rd Ave Pasco WA 99301')
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(!scopeMatches(port3, context))
+  assert.ok(!scopeMatches(fd3, context))
+})
+
+test('Chelan reads commissioner districts from GIS/CM_districts and Wenatchee SD 246 from DOR SCH2025', async () => {
+  const sd246 = { kind: 'DISTRICT', county: 'chelan', layer: 'SCHDST', value: '246' }
+  // 316 Washington St, Wenatchee: district 1, SCH2025 '246'.
+  const calls = mockWave2('316 WASHINGTON ST, WENATCHEE, WA, 98801', '007', 'Chelan County', [
+    { path: 'GIS/CM_districts/MapServer/0', attributes: { DIST_NO: '1' } },
+    dorLayer(20, '246'),
+  ])
+  let context = await lookupBallotContext(wave2Data('chelan'), '316 Washington St Wenatchee WA 98801')
+  assert.equal(context.coverageStatus, 'full_county')
+  assert.deepEqual(context.missingLayers, [])
+  assert.equal(context.districts.COUNTY_COUNCIL, '1')
+  assert.ok(scopeMatches(sd246, context))
+  // The PW/Commissioner_Districts service, whose queries fail, is not asked.
+  assert.equal(calls.filter((u) => u.includes('PW/Commissioner_Districts')).length, 0)
+  // 101 Woodring St, Cashmere: district 2, Cashmere SD 222.
+  mockWave2('101 WOODRING ST, CASHMERE, WA, 98815', '007', 'Chelan County', [
+    { path: 'GIS/CM_districts/MapServer/0', attributes: { DIST_NO: '2' } },
+    dorLayer(20, '222'),
+  ])
+  context = await lookupBallotContext(wave2Data('chelan'), '101 Woodring St Cashmere WA 98815')
+  assert.equal(context.districts.COUNTY_COUNCIL, '2')
+  assert.ok(!scopeMatches(sd246, context))
+})
+
+const clallamPud = (n) => ({ path: 'PUD_Commissioner_District_dissolve/FeatureServer/0', attributes: { Comm_Dist: n } })
+const clallamCourt = (n) => ({ path: 'District_Court/FeatureServer/0', attributes: { DISTRICT: n } })
+const clallamPudAll = { kind: 'DISTRICT', county: 'clallam', layer: 'PUDALL', value: '1' }
+
+test('a layer with a constant value reports it when the point has a feature (Clallam PUDALL)', async () => {
+  // 500 E Division St, Forks: PUD commissioner district 3, District Court 2,
+  // QVSD 402, FIR2025 '1'.
+  const calls = mockWave2('500 E DIVISION ST, FORKS, WA, 98331', '009', 'Clallam County', [
+    { path: 'Commissioner_Districts/FeatureServer/0', attributes: { COM_DIST: '3' } },
+    clallamPud('3'), clallamCourt('2'), dorLayer(7, '1'), dorLayer(20, '402'),
+  ])
+  const context = await lookupBallotContext(wave2Data('clallam'), '500 E Division St Forks WA 98331')
+  assert.equal(context.coverageStatus, 'full_county')
+  assert.deepEqual(context.missingLayers, [])
+  // PUDDST still reads the commissioner district; PUDALL reads the constant.
+  assert.equal(context.districts.PUDDST, '3')
+  assert.equal(context.districts.PUDALL, '1')
+  assert.equal(context.districts.DISTCRT, '2')
+  assert.equal(context.districts.SCHDST, '402')
+  assert.ok(scopeMatches(clallamPudAll, context))
+  assert.ok(scopeMatches({ kind: 'DISTRICT', county: 'clallam', layer: 'DISTCRT', value: '2' }, context))
+  assert.equal(calls.filter((u) => u.includes('PUD_Commissioner_District_dissolve')).length, 2)
+})
+
+test('a constant-value layer with no feature is no district, not a missing layer (Port Angeles)', async () => {
+  // 223 E 4th St, Port Angeles: outside the PUD's commissioner districts.
+  mockWave2('223 E 4TH ST, PORT ANGELES, WA, 98362', '009', 'Clallam County', [
+    { path: 'Commissioner_Districts/FeatureServer/0', attributes: { COM_DIST: '2' } },
+    clallamCourt('1'), dorLayer(20, '121'),
+  ])
+  const context = await lookupBallotContext(wave2Data('clallam'), '223 E 4th St Port Angeles WA 98362')
+  assert.equal(context.coverageStatus, 'full_county')
+  assert.deepEqual(context.missingLayers, [])
+  assert.equal('PUDALL' in context.districts, false)
+  assert.equal('PUDDST' in context.districts, false)
+  assert.equal(context.districts.DISTCRT, '1')
+  assert.ok(!scopeMatches(clallamPudAll, context))
+})
+
+test('a constant-value layer that fails to answer is reported missing', async () => {
+  mockWave2('500 E DIVISION ST, FORKS, WA, 98331', '009', 'Clallam County', [])
+  const inner = global.fetch
+  global.fetch = async (url) => {
+    if (String(url).includes('PUD_Commissioner_District_dissolve')) return { ok: false, async json() { return {} } }
+    return inner(url)
+  }
+  const context = await lookupBallotContext(wave2Data('clallam'), '500 E Division St Forks WA 98331')
+  assert.deepEqual([...context.missingLayers].sort(), ['PUDALL', 'PUDDST'])
+  assert.equal(context.coverageStatus, 'partial_county')
+})
+
+test('Grays Harbor resolves Timberland Regional Library (not Ocean Shores) and McCleary SD 65 from DOR', async () => {
+  const trl = { kind: 'DISTRICT', county: 'grays-harbor', layer: 'LIBDST', value: 'L' }
+  const sd65 = { kind: 'DISTRICT', county: 'grays-harbor', layer: 'SCHDST', value: '65' }
+  const fd1 = { kind: 'DISTRICT', county: 'grays-harbor', layer: 'FIRDST', value: '1' }
+  // 100 S 3rd St, McCleary: LIB2025 'L', SCH2025 '65', no fire district.
+  mockWave2('100 S 3RD ST, MCCLEARY, WA, 98557', '027', 'Grays Harbor County', [dorLayer(12, 'L'), dorLayer(20, '65')])
+  let context = await lookupBallotContext(wave2Data('grays-harbor'), '100 S 3rd St McCleary WA 98557')
+  assert.equal(context.coverageStatus, 'full_county')
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(scopeMatches(trl, context))
+  assert.ok(scopeMatches(sd65, context))
+  assert.ok(!scopeMatches(fd1, context))
+  // 110 Main St, Oakville: FIR2025 '1', LIB2025 'L', Oakville SD 400.
+  mockWave2('110 MAIN ST, OAKVILLE, WA, 98568', '027', 'Grays Harbor County', [
+    dorLayer(7, '1'), dorLayer(12, 'L'), dorLayer(20, '400'),
+  ])
+  context = await lookupBallotContext(wave2Data('grays-harbor'), '110 Main St Oakville WA 98568')
+  assert.ok(scopeMatches(fd1, context))
+  assert.ok(scopeMatches(trl, context))
+  assert.ok(!scopeMatches(sd65, context))
+  // 585 Point Brown Ave NW, Ocean Shores: outside Timberland.
+  mockWave2('585 POINT BROWN AVE NW, OCEAN SHORES, WA, 98569', '027', 'Grays Harbor County', [dorLayer(20, '64')])
+  context = await lookupBallotContext(wave2Data('grays-harbor'), '585 Point Brown Ave NW Ocean Shores WA 98569')
+  assert.deepEqual(context.missingLayers, [])
   assert.ok(!scopeMatches(trl, context))
 })
