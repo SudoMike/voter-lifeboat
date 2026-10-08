@@ -1,0 +1,99 @@
+{
+  "county": "lewis",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/lewis/raw/votewa/candidate-list.csv.url",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7284&e=899&la=en&c=21",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7365&e=899&la=en&c=21",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7366&e=899&la=en&c=21"
+  ],
+  "coverage": "partial_county",
+  "notes": [
+    "Timberland Regional Library District Proposition No. 1 is scoped LIBDST 'L' (WA DOR LIB2025, layer 12). Pe Ell, Mossyrock, Napavine and Vader are outside the district, so it is not county-wide, and COUNTY_LAYERS.lewis has no LIBDST key yet: the measure is hidden until the layer is added.",
+    "Lewis County PUD No. 1 excludes the City of Centralia; its at-large Commissioner District 1 seat is scoped PUDDST '1' (WA DOR PUD2025, layer 17, DISTATTRIB '1'), which COUNTY_LAYERS.lewis does not read yet.",
+    "Unresolvable district scopes (no queryable official boundary): PUDDST. Contests/measures scoped to them are hidden rather than shown to the wrong voters."
+  ],
+  "measures": [
+    {
+      "slug": "lewis-timberland-regional-library-district-proposition-no-1",
+      "owner": "lewis",
+      "jurisdiction": "Timberland Regional Library District",
+      "proposition": "Proposition No. 1",
+      "title": "Regular Property Tax Levy Lid Lift for Library Services, Operations and Maintenance",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "lewis",
+        "layer": "LIBDST",
+        "value": "L"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Restores the Timberland Regional Library District's regular property tax levy from $0.22 to $0.35 per $1,000 of assessed value for 2027 and 2028; the 2028 levy amount becomes the base for later limits (chapter 84.55 RCW).",
+      "cost_line": "From $0.228924 to $0.35 per $1,000 of assessed value in 2027 and 2028; about $40.44 a year on a $334,000 home, per the explanatory statement.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7284&e=899&la=en&c=21"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "lewis-transportation-benefit-district-of-chehalis-proposition-no-1",
+      "owner": "lewis",
+      "jurisdiction": "Transportation Benefit District of Chehalis",
+      "proposition": "Proposition No. 1",
+      "title": "Sales and Use Tax Levy Renewal For Transportation Needs",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "lewis",
+        "layer": "CITY",
+        "value": "Chehalis"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Renews the Chehalis Transportation Benefit District's 0.2% sales and use tax for ten years (July 1, 2027 to June 30, 2037) for street, bridge and transportation improvements, traffic engineering and street maintenance.",
+      "cost_line": "0.2% sales and use tax (20 cents on each $100 of taxable purchases), the current rate, renewed for ten years.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7365&e=899&la=en&c=21"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "lewis-lewis-county-fire-protection-district-no-6-proposition-no-1",
+      "owner": "lewis",
+      "jurisdiction": "Lewis County Fire Protection District No. 6",
+      "proposition": "Proposition No. 1",
+      "title": "Levy Lid Lift",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "lewis",
+        "layer": "FIRDST",
+        "value": "6"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Sets Fire District 6's regular property tax levy at $1.15 per $1,000 of assessed value for 2027 collection, for fire protection, life safety services, apparatus and equipment, and firefighter safety; that amount becomes the base for later limits.",
+      "cost_line": "$1.15 per $1,000 of assessed value for 2027 collection; the district says its 2026 rate is about $0.79 and would be about $0.99 without the measure.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7366&e=899&la=en&c=21"
+          ]
+        }
+      }
+    }
+  ]
+}

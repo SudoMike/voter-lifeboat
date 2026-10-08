@@ -786,6 +786,69 @@ ELECTION_MEASURES = {
                   "https://voter.votewa.gov/elections/measure.ashx?m=7306&e=899&la=en&c=15"),
             ],
         },
+        # Lewis (#29): checked against the Lewis County Auditor's general sample
+        # ballot (counties/lewis/raw/lewis/sample-ballot.pdf.url) and VoteWA's
+        # online guide for county 21 (raw/votewa/voter-guide/guide.json.url),
+        # which list three local measures; text from the guide's measure records.
+        # Commissioner District 3: nominated by district, elected county-wide in
+        # the general (RCW 36.32.040; VoteWA's general export lists it as
+        # 'Countywide'; the SOS 2020-11-03 Lewis precinct export has the District
+        # 1 and 2 races in all 96 precincts). Named as in the primary so its
+        # dossiers carry forward. District Court: one county-wide district, two
+        # departments. The PUD seat stays on the generic rule (PUDDST '1',
+        # unresolvable): Lewis County PUD No. 1 is the county minus the City of
+        # Centralia (the PUD races of 2020, 2022 and 2024 were on no Centralia
+        # precinct; DOR PUD2025 layer 17 and the county's VotingTaxingDistricts
+        # MapServer layer 8 both return no feature at 118 W Maple St,
+        # Centralia, and DISTATTRIB '1' at 351 NW North St, Chehalis), and
+        # COUNTY_LAYERS.lewis has no PUDDST key.
+        # Measure scopes, point-checked 2026-10-09 (Census geocoder, Current):
+        # LIBDST 'L': DOR LIB2025 (layer 12) at Chehalis, Centralia, Morton,
+        # Toledo, Winlock and 2152 Jackson Hwy (unincorporated); Pe Ell (200 S
+        # Main St), Mossyrock (243 E State St), Napavine (105 2nd Ave NW) and
+        # Vader (509 A St) return no feature, so the measure is not county-wide.
+        # COUNTY_LAYERS.lewis has no LIBDST key: unresolvable until one is added.
+        # CITY 'Chehalis': Census place at 351 NW North St (the TBD's board is the
+        # Chehalis City Council). FIRDST '6': DOR FIR2025 (layer 7) DISTATTRIB
+        # '6' at 2152 Jackson Hwy, Chehalis (county Precinct Splits layer 12:
+        # 'Lewis County FD #6').
+        "lewis": {
+            "overrides": {
+                ("COUNTY", "COUNTY COMMISSIONER, DISTRICT 3"): (
+                    "County", "Lewis County Commissioner District 3", "County Commissioner, District 3",
+                    ("COUNTY", None)),
+                ("DISTRICT COURT", "DISTRICT COURT JUDGE, DEPT 1"): (
+                    "Judicial", "Lewis County District Court", "District Court Judge, Dept 1", ("COUNTY", None)),
+                ("DISTRICT COURT", "DISTRICT COURT JUDGE, DEPT 2"): (
+                    "Judicial", "Lewis County District Court", "District Court Judge, Dept 2", ("COUNTY", None)),
+            },
+            "measures": [
+                m("Timberland Regional Library District", "Proposition No. 1",
+                  "Regular Property Tax Levy Lid Lift for Library Services, Operations and Maintenance",
+                  ("LIBDST", "L"),
+                  "Restores the Timberland Regional Library District's regular property tax levy from $0.22 to $0.35 per $1,000 of assessed value for 2027 and 2028; the 2028 levy amount becomes the base for later limits (chapter 84.55 RCW).",
+                  "From $0.228924 to $0.35 per $1,000 of assessed value in 2027 and 2028; about $40.44 a year on a $334,000 home, per the explanatory statement.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7284&e=899&la=en&c=21"),
+                m("Transportation Benefit District of Chehalis", "Proposition No. 1",
+                  "Sales and Use Tax Levy Renewal For Transportation Needs",
+                  ("CITY", "Chehalis"),
+                  "Renews the Chehalis Transportation Benefit District's 0.2% sales and use tax for ten years (July 1, 2027 to June 30, 2037) for street, bridge and transportation improvements, traffic engineering and street maintenance.",
+                  "0.2% sales and use tax (20 cents on each $100 of taxable purchases), the current rate, renewed for ten years.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7365&e=899&la=en&c=21"),
+                m("Lewis County Fire Protection District No. 6", "Proposition No. 1", "Levy Lid Lift",
+                  ("FIRDST", "6"),
+                  "Sets Fire District 6's regular property tax levy at $1.15 per $1,000 of assessed value for 2027 collection, for fire protection, life safety services, apparatus and equipment, and firefighter safety; that amount becomes the base for later limits.",
+                  "$1.15 per $1,000 of assessed value for 2027 collection; the district says its 2026 rate is about $0.79 and would be about $0.99 without the measure.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7366&e=899&la=en&c=21"),
+            ],
+            "extra_notes": [
+                "Timberland Regional Library District Proposition No. 1 is scoped LIBDST 'L' (WA DOR LIB2025, layer 12). "
+                "Pe Ell, Mossyrock, Napavine and Vader are outside the district, so it is not county-wide, and COUNTY_LAYERS.lewis has "
+                "no LIBDST key yet: the measure is hidden until the layer is added.",
+                "Lewis County PUD No. 1 excludes the City of Centralia; its at-large Commissioner District 1 seat is "
+                "scoped PUDDST '1' (WA DOR PUD2025, layer 17, DISTATTRIB '1'), which COUNTY_LAYERS.lewis does not read yet.",
+            ],
+        },
         # Skagit: the four measures the Auditor's Ballot Measures page lists
         # for the general (counties/skagit/raw/skagit/ballot-measures.html.url),
         # text from the local voters' pamphlet pages 18-21 and VoteWA
