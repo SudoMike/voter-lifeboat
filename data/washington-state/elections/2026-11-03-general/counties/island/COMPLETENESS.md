@@ -3,8 +3,11 @@
 Election: 2026 Washington general election, November 3, 2026 (VoteWA
 election 899, county code 15).
 
-Researched in #29 (county wave 4); not yet declared in
-`APP_PACKAGES["2026-11-03-general"]["counties"]`. `interim/app-contests.json`
+Researched in #29 (county wave 4) and shipped on 2026-10-08 at Full County
+Coverage: declared in `APP_PACKAGES["2026-11-03-general"]["counties"]`, with
+the Auditor's Elections & Voter Registration page as its elections office
+and VoteWA's guide (`countyGuides.island`) for its records' pamphlet links.
+`interim/app-contests.json`
 and `interim/app-measures.json` are built by
 `pipeline/build_votewa_lite_data.py --county island` from the VoteWA
 candidate list (`raw/votewa/candidate-list.csv.url`) and the overrides and
@@ -12,13 +15,11 @@ measures in that script's `ELECTION_MEASURES["2026-11-03-general"]["island"]`,
 checked against the Island County Auditor's general sample ballot
 (`raw/island/sample-ballot.pdf.url`, text in `interim/pdf-text/sample-ballot.txt`).
 
-The builder reports `full_county`, but that holds only once
-`app/src/lib/geo.js` `COUNTY_LAYERS.island` gains the three layers proposed
-below (`PUDDST`, `PORTDST`, `UNINC`). Today the island adapter reads only
-`COUNTY_COUNCIL` and `LIBDST`, both left from the primary, and no general
-record uses either. Until the layers are added, the assembler would mark
-Island `partial_county`, and the PUD race and two of the three measures would
-be hidden.
+The builder reports `full_county` (it checks contest layers only), and the
+assembler agrees: `app/src/lib/geo.js` `COUNTY_LAYERS.island` reads the
+three layers below (`PUDDST`, `PORTDST`, `UNINC`) since #29, next to
+`COUNTY_COUNCIL` and `LIBDST` left from the primary (no general record uses
+either), and `election.DISTRICT_ADAPTER_LAYERS["island"]` matches.
 
 ## What is on the ballot
 
@@ -100,10 +101,12 @@ election rule. Every such citation's `ref` names the primary, so
   (`raw/island/dor-prt2025-island.json.url`).
 - **Langley levy: `CITY` `Langley`** (Census place `Langley city`).
 
-## Layers proposed for `COUNTY_LAYERS.island`
+## Layers in `COUNTY_LAYERS.island`
 
-Each config was point-queried live on 2026-10-09 (Census geocoder, Current
-vintage):
+Proposed by the research and added at ship time (#29) exactly as below.
+Each config was point-queried live on 2026-10-09 by the research and again
+on 2026-10-08 by the director (Census geocoder, Current vintage), with the
+same results:
 
 ```js
 { key: 'PUDDST', url: 'https://maps.islandcountywa.gov/arcgis/rest/services/Geocortex/Elections/MapServer/2/query',
@@ -124,14 +127,25 @@ vintage):
 
 The `PUDDST` value is the precinct layer's constant `County` attribute
 (`53029`). The `where` clause makes it non-null only on Camano precincts; the
-layer has no attribute that names the PUD. With these three layers,
-`election.DISTRICT_ADAPTER_LAYERS["island"]` should read `CONGDST`, `LEGDST`,
-`CITY`, `COUNTY_COUNCIL`, `LIBDST`, `PUDDST`, `PORTDST`, `UNINC`.
+layer has no attribute that names the PUD. `UNINC` relies on DOR's 2025 tax
+code areas: a city annexation they do not yet carry would show the advisory
+vote to a few incorporated voters. `election.DISTRICT_ADAPTER_LAYERS["island"]`
+reads `CONGDST`, `LEGDST`, `CITY`, `COUNTY_COUNCIL`, `LIBDST`, `PUDDST`,
+`PORTDST`, `UNINC`.
 
-Suggested live checks: 865 SW Barrington Dr, Oak Harbor, WA 98277 (no local
-measure, no PUD race) and 848 N Sunrise Blvd, Camano Island, WA 98282 (PUD race
-plus the fireworks advisory vote). 112 2nd St, Langley, WA 98260 is the only
-address type that gets both the Langley and port levies.
+## Live ballots (2026-10-08)
+
+`node pipeline/live_ballot.mjs data/final/2026-11-03-general/app-data.json`,
+each `coverage=full_county`, `missing=[]`, 5 Supreme Court contests and the 3
+initiatives:
+
+- 865 SW Barrington Dr, Oak Harbor: CD 2, LD 10 (Snohomish's scoring), City
+  Oak Harbor, Commissioner District 2; the 9 county contests; no PUD seat, no
+  local measure.
+- 848 N Sunrise Blvd, Camano Island: `PUDDST` `53029`, `UNINC` `ISLAND`; the
+  Snohomish PUD No. 1 District 1 seat and the fireworks advisory vote.
+- 112 2nd St, Langley: City Langley, `PORTDST` `S WHIDBEY`; Langley Prop 1 and
+  the Port of South Whidbey levy, no advisory vote, no PUD seat.
 
 ## Known gaps
 

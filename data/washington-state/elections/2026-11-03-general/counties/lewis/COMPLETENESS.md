@@ -3,7 +3,11 @@
 Election: 2026 Washington general election, November 3, 2026 (VoteWA
 election 899, county code 21).
 
-Not shipped: research package for #29 (county wave 4). Contests and measures
+Research package for #29 (county wave 4), shipped on 2026-10-08 at Full
+County Coverage: declared in `APP_PACKAGES["2026-11-03-general"]["counties"]`,
+with `https://elections.lewiscountywa.gov/` as its elections office and
+VoteWA's guide (`countyGuides.lewis`) for its records' pamphlet links.
+Contests and measures
 are built by `pipeline/build_votewa_lite_data.py --county lewis` from the
 VoteWA candidate list (`raw/votewa/candidate-list.csv.url`) and the overrides
 and measures in that script's `ELECTION_MEASURES["2026-11-03-general"]["lewis"]`,
@@ -14,10 +18,13 @@ and VoteWA's online voters' guide for the county
 `https://elections.lewiscountywa.gov/current-election/`; records under
 `raw/votewa/voter-guide/`, text in `interim/voter-guide-text/`).
 
-The builder reports `partial_county` (`UNRESOLVABLE: PUDDST`), and one
-measure is scoped to `LIBDST`, which `COUNTY_LAYERS.lewis` does not read
-either. Both layers exist (see District scoping); with them added the
-package would be `full_county`.
+The builder reports `full_county`. At ship time (#29) `COUNTY_LAYERS.lewis`
+gained the two layers proposed below (DOR PUD2025 for `PUDDST`, LIB2025 for
+`LIBDST`), and the builder's override scopes the PUD row (District `PUD
+DISTRICT-AT-LARGE`) to `PUDDST` `1` under the generic rule's own names, so
+its slug and dossiers are unchanged. `election.DISTRICT_ADAPTER_LAYERS["lewis"]`
+reads `CONGDST`, `LEGDST`, `CITY`, `COUNTY_COUNCIL`, `FIRDST`, `PUDDST`,
+`LIBDST`.
 
 ## What is on the ballot
 
@@ -80,26 +87,43 @@ Measures (VoteWA guide records 7284, 7365, 7366):
     no feature at Centralia, `2` at Chehalis and Pe Ell. It agrees with DOR
     on the Centralia exclusion but carries commissioner districts, not a
     PUD-wide value.
-  Proposal: `{ key: 'PUDDST', url: `${DOR_TAX_DISTRICTS}/17/query`, attr: 'DISTATTRIB' }`
+  Added at ship time (#29): `{ key: 'PUDDST', url: `${DOR_TAX_DISTRICTS}/17/query`, attr: 'DISTATTRIB' }`
   in `COUNTY_LAYERS.lewis`.
 - Timberland Regional Library District: DOR LIB2025 (layer 12) `DISTATTRIB`
   `L` at Centralia, Chehalis, Morton, Toledo, Winlock and 2152 Jackson Hwy
   (unincorporated); no feature at Pe Ell (200 S Main St), Mossyrock (243 E
   State St), Napavine (105 2nd Ave NW) and Vader (509 A St). The district is
-  not county-wide, so the measure is scoped `LIBDST` `L`. Proposal: `{ key:
-  'LIBDST', url: `${DOR_TAX_DISTRICTS}/12/query`, attr: 'DISTATTRIB' }` (as
-  Island County reads it). No Lewis County layer carries library districts.
-  Until then the builder's coverage flag does not see it (measure scopes are
-  not checked there), so the note in `app-measures.json` says so.
+  not county-wide, so the measure is scoped `LIBDST` `L`. Added at ship
+  time (#29): `{ key: 'LIBDST', url: `${DOR_TAX_DISTRICTS}/12/query`, attr:
+  'DISTATTRIB' }` (as Island County reads it). No Lewis County layer carries
+  library districts. The builder's coverage flag does not check measure
+  scopes; the assembler does.
 - Chehalis TBD: the City Council is its governing board (ballot title), so
   the electorate is the city: Census place `Chehalis` at 351 NW North St.
 - Fire District 6: DOR FIR2025 (layer 7) `DISTATTRIB` `6` at 2152 Jackson
   Hwy, Chehalis; the county's Precinct Splits layer (12) reads `Lewis County
   FD #6` there. `COUNTY_LAYERS.lewis` already reads FIR2025.
 
-`app/src/lib/geo.js` `COUNTY_LAYERS.lewis` today: `COUNTY_COUNCIL`
-(VotingTaxingDistricts layer 0, `COMMISSION`) and `FIRDST` (DOR layer 7).
-This package uses `FIRDST`; no general contest uses `COUNTY_COUNCIL`.
+`app/src/lib/geo.js` `COUNTY_LAYERS.lewis`: `COUNTY_COUNCIL`
+(VotingTaxingDistricts layer 0, `COMMISSION`), `FIRDST` (DOR layer 7), and
+since #29 `PUDDST` (DOR 17) and `LIBDST` (DOR 12). No general contest uses
+`COUNTY_COUNCIL`.
+
+## Live ballots (2026-10-08)
+
+`node pipeline/live_ballot.mjs data/final/2026-11-03-general/app-data.json`,
+each `coverage=full_county`, `missing=[]`, 5 Supreme Court contests and the 3
+initiatives, CD 3 with Clark's scoring:
+
+- 351 NW North St, Chehalis: LD 20 (Clark's scoring), City Chehalis,
+  `PUDDST` `1`, `LIBDST` `L`; the PUD seat, the Timberland levy and the
+  Chehalis TBD renewal.
+- 118 W Maple St, Centralia: LD 20, `LIBDST` `L`, no `PUDDST`; no PUD seat,
+  the Timberland levy only.
+- 2152 Jackson Hwy, Chehalis (unincorporated): LD 20, `FIRDST` `6`, `PUDDST`
+  `1`, `LIBDST` `L`; the PUD seat, Timberland and the FD 6 levy.
+- 200 S Main St, Pe Ell: LD 19 (Thurston's scoring), `PUDDST` `1`, no
+  `LIBDST`; the PUD seat, no local measure.
 
 ## Sources
 

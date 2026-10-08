@@ -89,5 +89,7 @@ Fire & Rescue RFA Prop 1 (`RFADST` `SCRFA`) and Public Hospital District 1
   (`7580eaf60d6e46174d60fe45f851022e36c8616d601f14b7880a650ccdce993b`)
   since #27; a re-export on 2026-10-08 reproduced that digest, and the
   builder output was byte-identical.
-- PUD No. 1 also serves Camano Island (Island County); this package scopes
-  the race to Snohomish County only.
+- PUD No. 1 also serves Camano Island (Island County). This package scopes
+  the race to Snohomish County; since #29 Island's package ships the same
+  seat to Camano Island voters (`PUDDST` `53029`, the Island Auditor's Camano
+  precincts) with this package's research and scoring.
