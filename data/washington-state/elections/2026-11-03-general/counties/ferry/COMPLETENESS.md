@@ -3,8 +3,19 @@
 Election: 2026 Washington general election, November 3, 2026 (VoteWA
 election 899, county code 10).
 
-Research package for #32 (county wave 7). Not yet declared in
-`APP_PACKAGES`; the director ships it. Contests are built by
+Status (#32): shipped at Full County Coverage in
+`APP_PACKAGES["2026-11-03-general"]["counties"]`, with its elections office
+(`https://www.ferry-county.com/departments/auditor/index.php`) and its
+VoteWA guide (`countyGuides.ferry`, `c=10`); no pamphlet. No layer was
+added; `COUNTY_COUNCIL` and `EMSDST` were re-probed. CD 5 and LD 7 ship with
+Spokane's research and the PUD No. 1 #3 seat with Okanogan's; the ship pass
+corrected two display lines of Okanogan's scoring for that seat (see Known
+gaps). Live ballots on 2026-10-08, each `full_county` with no missing layer
+and the 15 contests (the PUD seat included) and no local measure: 350 E
+Delaware Ave, Republic and 39 Shortcut Rd, Inchelium. The paragraphs below
+describe the package as researched.
+
+Research package for #32 (county wave 7). Contests are built by
 `pipeline/build_votewa_lite_data.py --county ferry` from the VoteWA
 candidate list (`raw/votewa/candidate-list.csv.url`, 31 rows) and the
 overrides in that script's `ELECTION_MEASURES["2026-11-03-general"]["ferry"]`,
@@ -178,4 +189,6 @@ scores, 7 upheld, 2 adjusted (Olson `safety` -2 to -1; Breezee
   voters" on Okanogan's ballot, and describes Andrew Pooler as "running for
   his first elected office"; Pooler ran for Ferry County Commissioner #3 in
   2024 (lost 1,129 to 2,439, `raw/ferry/sos-results-20241105-ferry-precincts.csv.url`).
-  Not edited here (outside this package).
+  Not edited here (outside this package). Fixed in the ship pass: the
+  `office_does` clause is gone and Pooler's summary records the 2024 race,
+  in Okanogan's scoring file, so both copies carry it.

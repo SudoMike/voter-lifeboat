@@ -3,10 +3,18 @@
 Election: 2026 Washington general election, November 3, 2026 (VoteWA
 election 899, county code 35).
 
-Status (#32): researched, scored and refuted; not yet shipped (not in
-`APP_PACKAGES`). The builder reports `full_county`, but the Fire District 2
-measure needs `FIRDST` added to `COUNTY_LAYERS.wahkiakum` (see District
-scoping) before the county can ship at full coverage.
+Status (#32): shipped at Full County Coverage in
+`APP_PACKAGES["2026-11-03-general"]["counties"]`, with its elections office
+(`https://www.co.wahkiakum.wa.us/419/Elections`) and its VoteWA guide
+(`countyGuides.wahkiakum`, `c=35`; it carries no county race, and the app
+has no sample-ballot link, so every record links the guide). `COUNTY_LAYERS.wahkiakum`
+gained `FIRDST` (DOR FIR2025, layer 7) as proposed below; `COUNTY_COUNCIL`
+was re-probed. CD 3 ships with Clark's research and LD 19 Pos. 1/2 with
+Thurston's. Live ballots on 2026-10-08, each `full_county` with no missing
+layer and the 12 contests: 64 Main St, Cathlamet (county EMS levy only),
+1391 State Rte 4, Skamokawa (county EMS levy and Fire District 2's) and 222
+E Sunny Sands Rd, Cathlamet (Puget Island, county levy only). The
+paragraphs below describe the package as researched.
 
 ## Sources
 
