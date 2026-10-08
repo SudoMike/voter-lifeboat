@@ -48,6 +48,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3391394
     pointer: counties/douglas/raw/candidates/douglas-douglas-county-clerk-of-superior-court/pdc-jester.url
     accessed: 2026-10-08
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/69bf11eaf985405915b39d0a/131ec9f5-43eb-49f5-b983-6c733af7bc89/IMG_7353.jpeg
+  page: https://www.votejester.com/profile
+  kind: campaign-website
 ---
 
 ## Background

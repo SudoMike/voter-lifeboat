@@ -145,6 +145,10 @@ sources:
     url: https://www.peninsuladailynews.com/2026/10/07/clallam-commissioner-candidates-differ-on-affordability-planning/
     pointer: counties/clallam/raw/candidates/clallam-clallam-county-commissioner-district-3-county-commissioner-dist-no-3/pdn-2026-10-07-differ-on-affordability.url
     accessed: 2026-10-09
+photo:
+  url: https://www.clallamcountywa.gov/ImageRepository/Document?documentID=11155
+  page: https://www.clallamcountywa.gov/m/directory/employee?eid=632
+  kind: government
 ---
 
 ## Background

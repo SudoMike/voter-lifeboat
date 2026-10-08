@@ -1,0 +1,28 @@
+{
+  "script": "pipeline/verify_dossiers.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/ferry/interim/research-plan.json",
+    "data/washington-state/elections/2026-11-03-general/counties/ferry/dossiers/"
+  ],
+  "missing": [],
+  "no_frontmatter": [],
+  "invalid_evidence_levels": [],
+  "invalid_source_formats": [],
+  "evidence_levels": {
+    "moderate": 4,
+    "pamphlet-only": 2
+  },
+  "contest_overviews_missing": [],
+  "untouched_contests": [],
+  "untouched_measures": [],
+  "invalid_photos": [],
+  "photos": {
+    "present": 0,
+    "missing": 6
+  },
+  "researched_elsewhere": [
+    "ferry-congressional-district-5-u-s-representative -> spokane/spokane-congressional-district-5-u-s-representative",
+    "ferry-legislative-district-7-state-senator -> spokane/spokane-legislative-district-7-state-senator",
+    "ferry-public-utility-district-commissioner-district-3-public-utility-commissioner-3 -> okanogan/okanogan-public-utility-district-commissioner-district-3-public-utility-commissioner-3"
+  ]
+}

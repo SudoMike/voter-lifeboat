@@ -89,6 +89,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?election_year=2026&jurisdiction_county=DOUGLAS
     pointer: counties/douglas/raw/candidates/douglas-douglas-county-commissioner-district-3-commissioner-district-no-3/pdc-douglas-2026.url
     accessed: 2026-10-08
+photo:
+  url: https://douglascountywa.gov/ImageRepository/Document?documentId=560
+  page: https://douglascountywa.gov/300/Marc-Straub
+  kind: government
 ---
 
 ## Background

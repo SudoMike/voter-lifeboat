@@ -82,6 +82,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3391598
     pointer: counties/clallam/raw/candidates/clallam-legislative-district-24-state-representative-pos-2/pdc-kelbon.url
     accessed: 2026-10-09
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/69d6c469a63ca93f2662b952/c4db5186-0e1f-47bd-a781-d9bd2fd5d28b/2026+Portrait+Glasses+Cropped.png
+  page: https://www.electmarcia.com/
+  kind: campaign-website
 ---
 
 ## Background

@@ -53,6 +53,10 @@ sources:
     url: https://results.votewa.gov/results/public/api/elections/franklin-county-wa/20260804/ballot-items
     pointer: counties/franklin/raw/franklin/votewa-2026-08-04-primary-results.json.url
     accessed: 2026-10-08
+photo:
+  url: https://montyhuberforsheriff.com/wp-content/uploads/2025/09/Monty-Huber.webp
+  page: https://montyhuberforsheriff.com/
+  kind: campaign-website
 ---
 
 ## Background

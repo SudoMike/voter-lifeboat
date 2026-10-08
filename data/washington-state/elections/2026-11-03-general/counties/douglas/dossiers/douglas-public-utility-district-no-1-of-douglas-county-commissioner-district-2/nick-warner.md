@@ -45,6 +45,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?election_year=2026&jurisdiction_county=DOUGLAS
     pointer: counties/douglas/raw/candidates/douglas-douglas-county-commissioner-district-3-commissioner-district-no-3/pdc-douglas-2026.url
     accessed: 2026-10-08
+photo:
+  url: https://static.showit.com/800/1mLQk-1Cz5paC7S3pGc2nQ/349195/nick_warner_headshot.png
+  page: https://wewantwarner.com/
+  kind: campaign-website
 ---
 
 ## Background

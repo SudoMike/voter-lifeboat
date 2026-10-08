@@ -37,6 +37,10 @@ sources:
     url: https://data.wa.gov/resource/kv7h-kjye.json
     pointer: counties/franklin/raw/candidates/franklin-franklin-county-district-court-judge/pdc-contrib-orosco.url
     accessed: 2026-10-08
+photo:
+  url: https://trinityforjudge.com/wp-content/uploads/2022/05/Trinity-4.jpg
+  page: https://www.trinityforjudge.com/
+  kind: campaign-website
 ---
 
 ## Background

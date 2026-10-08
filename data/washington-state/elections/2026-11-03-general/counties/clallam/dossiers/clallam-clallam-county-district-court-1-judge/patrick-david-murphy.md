@@ -66,6 +66,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3391695
     pointer: counties/clallam/raw/candidates/clallam-clallam-county-district-court-1-judge/pdc-murphy.url
     accessed: 2026-10-09
+photo:
+  url: https://irp.cdn-website.com/ec929d22/dms3rep/multi/opt/portrait+sm+300dpi-1920w.jpg
+  page: https://www.votemurphyjudge.com/
+  kind: campaign-website
 ---
 
 ## Background
