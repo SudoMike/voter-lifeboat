@@ -186,6 +186,96 @@ sources:
     outlet: Washington State Legislature member roster, 2025-26 biennium (SponsorService; party per member)
     url: https://wslwebservices.leg.wa.gov/SponsorService.asmx/GetSponsors?biennium=2025-26
     accessed: 2026-10-08
+  - id: S29
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, Senate Ways & Means striking amendment S-2802.1 to EHB 1217 (2025; adopted as amended 2025-04-10)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/Senate/1217.E%20AMS%20WM%20S2802.1.htm
+    accessed: 2026-10-08
+  - id: S30
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, Senate floor amendment 345 to EHB 1217 (2025; text lists Senator Shewmake; adopted 2025-04-10)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/Senate/1217.E%20AMS%20SHEW%20S3013.1.htm
+    accessed: 2026-10-08
+  - id: S31
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, Senate floor amendment 312 to EHB 1217 (2025; text lists Senator Liias; adopted 2025-04-10)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/Senate/1217.E%20AMS%20LIIA%20S2858.1.htm
+    accessed: 2026-10-08
+  - id: S32
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, House floor amendment 382 to SHB 1296 (2025; text lists Representative Burnett)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/1296-S%20AMH%20BURN%20MOET%20394.htm
+    accessed: 2026-10-08
+  - id: S33
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, House floor amendment 435 to SHB 1296 (2025; text lists Representative Marshall)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/1296-S%20AMH%20MARS%20MORI%20173.htm
+    accessed: 2026-10-08
+  - id: S34
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, House floor amendment 442 to SHB 1296 (2025; text lists Representative Marshall)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/1296-S%20AMH%20MARS%20MORI%20176.htm
+    accessed: 2026-10-08
+  - id: S35
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, House floor amendment 396 to SHB 1296 (2025; text lists Representative Walsh)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/1296-S%20AMH%20WALJ%20MORI%20182.htm
+    accessed: 2026-10-08
+  - id: S36
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, House floor amendment 420 to SHB 1296 (2025; text lists Representative Steele)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/1296-S%20AMH%20STEE%20MORI%20179.htm
+    accessed: 2026-10-08
+  - id: S37
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, House floor amendment 448 to SHB 1296 (2025; text lists Representative Caldier)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/1296-S%20AMH%20CALD%20MORI%20185.htm
+    accessed: 2026-10-08
+  - id: S38
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, House floor amendment 428 to SHB 1296 (2025; text lists Representative Couture)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/1296-S%20AMH%20COUT%20MOET%20434.htm
+    accessed: 2026-10-08
+  - id: S39
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, House floor amendment 444 to SHB 1296 (2025; text lists Representative Couture)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/1296-S%20AMH%20COUT%20REIN%20401.htm
+    accessed: 2026-10-08
+  - id: S40
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, House floor amendment 437 to SHB 1296 (2025; text lists Representative Ley)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/1296-S%20AMH%20LEYJ%20MOET%20396.htm
+    accessed: 2026-10-08
+  - id: S41
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, House floor amendment 462 to SHB 1296 (2025; text lists Representative Barkis)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/1296-S%20AMH%20BARK%20REIN%20388.htm
+    accessed: 2026-10-08
+  - id: S42
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, House floor amendment 383 to SHB 1296 (2025; text lists Representative Keaton)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/1296-S%20AMH%20KEAT%20REIN%20390.htm
+    accessed: 2026-10-08
+  - id: S43
+    tier: 1
+    type: legislative-record
+    outlet: Washington State Legislature, House floor amendment 384 to SHB 1296 (2025; text lists Representative Schmidt)
+    url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/1296-S%20AMH%20SCHM%20MOET%20391.htm
+    accessed: 2026-10-08
 ---
 
 ## Background
@@ -205,6 +295,17 @@ Mari Leavitt (prefers Democratic Party) is the 28th District State Representativ
 
 ### Parents and schools
 - Voted yea on ESHB 1296 at House third reading (2025-03-12) and final passage as amended by the Senate (2025-04-24) [S8]; the bill modified the list of parental rights enacted by Initiative 2081 [S9].
+- On 2025-03-12, before the third-reading vote, she voted nay on ten recorded floor amendments that the House rejected, which would have [S8]:
+  - added at least monthly evening and weekend opportunities for parents to examine curriculum, textbooks and instructional materials (382) [S32];
+  - added medical or health records (435) and mental health counseling records (442), to the extent federal law permits, to the education records parents may inspect [S33][S34];
+  - restored parental notification when medical services or medications given to a child could affect the parent's health insurance payments or copays (396) [S35];
+  - restored prior notification when medical services, or medications the parent had not authorized, are offered to a child (420) [S36];
+  - restored notification when the school arranges medical treatment or unauthorized medications that result in follow-up care beyond school hours (448) [S37];
+  - restored immediate notification if a child is taken from campus without parental permission, including to a youth shelter or host home (444) [S39];
+  - added a parental right not to have a child under 18 authorize excused absences (437) [S40];
+  - required certificated school staff to work with families to support implementation of the Initiative 2081 parents' bill of rights (383) [S42];
+  - removed the provision that the listed parental rights do not create a private right of action (384) [S43].
+- She voted yea on the two amendments the House adopted that day: a right to immediate notification when a criminal act is alleged against a child, including alleged sexual misconduct by a school employee (428; adopted 93-0) [S38], and a right to request enrollment in a charter school (462; adopted 92-1) [S8][S41].
 - Endorsed by the Washington Education Association per her campaign site [S4].
 
 ## Positions on the 2026 initiatives
@@ -215,7 +316,7 @@ Mari Leavitt (prefers Democratic Party) is the 28th District State Representativ
 ## Record
 - ESSB 6346 (2026): yea on House final passage as amended (2026-03-09; passed 51-46) [S6][S7]. Of the 65 floor amendments the House rejected, she voted yea on 33 [S6].
 - 2025 revenue bills: yea on ESHB 2081 (business and occupation tax rate increases and surcharges) [S12][S13]; nay on ESSB 5813 (capital gains tax of 9.9 percent above $1 million and estate tax changes), ESSB 5814 (sales tax extended to select services) and ESSB 5801 (motor vehicle fuel tax up 6 cents per gallon) [S14][S15][S16][S17][S20][S21]. She was one of six House Democrats voting nay on ESSB 5813, nine on ESSB 5814 and eight on ESSB 5801 [S14][S16][S20][S28].
-- EHB 1217 (2025, limits annual rent increases to the lesser of 7 percent plus CPI or 10 percent): nay on House passage (2025-03-10) and on final passage of the conference report (2025-04-27); one of five House Democrats voting nay on the final version [S18][S19][S28].
+- EHB 1217 (2025, limits annual rent increases to the lesser of 7 percent plus CPI or 10 percent): nay on House passage (2025-03-10) and on final passage of the conference report (2025-04-27); one of five House Democrats voting nay on the final version [S18][S19][S28]. In between, on 2025-04-23, she voted yea on the motion to concur in the Senate's amendments, which failed 48-50 [S18][S19]. The Senate version, as amended on the Senate floor, raised the annual limit for residential tenancies from seven percent to 10 percent plus the consumer price index [S30], set a 5 percent limit for manufactured/mobile home lots, lengthened the new-construction exemption from 12 to 15 years after the certificate of occupancy [S29], and exempted single-family homes not owned by a real estate investment trust, a corporation or an LLC with a corporate member [S31].
 - ESHB 1296 (2025) and ESSB 5599 (2023): yea [S8][S10].
 - Campaign finance (PDC, data updated 2026-10-05): $242,810.03 raised and $169,613.99 spent for 2026 [S22].
 
@@ -226,5 +327,5 @@ Mari Leavitt (prefers Democratic Party) is the 28th District State Representativ
 ## Scoring notes
 - In the House since 2019 and in caucus leadership as Deputy Majority Whip, against a first-time candidate [S1][S5][S27].
 - Mixed tax record: yea on ESSB 6346 and ESHB 2081, nay on ESSB 5813, ESSB 5814 and ESSB 5801 [S6][S12][S14][S16][S20].
-- Voted against the 2025 rent-increase limit while citing support for emergency and affordable housing; endorsed by both law enforcement groups and landlord/realtor groups [S1][S4][S18].
+- On the 2025 rent-increase limit (EHB 1217), voted nay on House passage and on the final conference version, and yea on concurring in the Senate version, which set a higher limit (10 percent plus CPI) with broader exemptions [S18][S29][S30][S31]. She cites support for emergency and affordable housing and is endorsed by both law enforcement groups and landlord/realtor groups [S1][S4].
 - Voted for ESHB 1296 and ESSB 5599; endorsed by Planned Parenthood and ProChoice Washington [S4][S8][S10].
