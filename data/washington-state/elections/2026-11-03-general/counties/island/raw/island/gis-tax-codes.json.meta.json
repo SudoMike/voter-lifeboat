@@ -1,0 +1,12 @@
+{
+  "url": "https://maps.islandcountywa.gov/arcgis/rest/services/Geocortex/Boundaries/MapServer/2/query?where=1%3D1&outFields=Tax_code,EMS,Fire,Port,School,Park_Rec&returnGeometry=false&returnDistinctValues=true&f=json",
+  "retrieved_at": "2026-10-09",
+  "method": "curl -L (User-Agent 'Mozilla/5.0')",
+  "stage": "raw",
+  "source_type": "gis",
+  "tier": 1,
+  "bytes": 6836,
+  "sha256": "29054b3f1c7a5fc0ed19b0049c68e522e8e7001652cdfdf12e1a4e7e14b86674",
+  "cache_file": "data/.cache/island/gis-tax-codes.json",
+  "notes": "Island County GIS 'Boundaries' map service, layer 2 'Tax Codes' (attributes only, distinct values): 34 tax codes with their EMS, fire, port, school and park districts. Tax code 100 carries fire district 'City of Oak Harbor'; codes 510-590 are Camano Fire and Rescue; 700-850 are in the Port of South Whidbey."
+}

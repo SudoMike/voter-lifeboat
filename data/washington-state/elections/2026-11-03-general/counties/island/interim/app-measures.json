@@ -1,0 +1,95 @@
+{
+  "county": "island",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/island/raw/votewa/candidate-list.csv.url",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7304&e=899&la=en&c=15",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7305&e=899&la=en&c=15",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7306&e=899&la=en&c=15"
+  ],
+  "coverage": "full_county",
+  "notes": [],
+  "measures": [
+    {
+      "slug": "island-unincorporated-island-county-advisory-vote",
+      "owner": "island",
+      "jurisdiction": "Unincorporated Island County",
+      "proposition": "Advisory Vote",
+      "title": "Advisory Vote Regarding the Use of Consumer Fireworks in Unincorporated Island County",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "island",
+        "layer": "UNINC",
+        "value": "ISLAND"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Non-binding advisory vote: asks voters in unincorporated Island County whether the Board of County Commissioners should amend Island County Code Chapter 9.08A to ban consumer fireworks there. Permitted public displays are not affected.",
+      "cost_line": "No tax or fee; the vote does not change the law.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7304&e=899&la=en&c=15"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "island-city-of-langley-proposition-no-1",
+      "owner": "island",
+      "jurisdiction": "City of Langley",
+      "proposition": "Proposition No. 1",
+      "title": "Governmental Services and Technology Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "island",
+        "layer": "CITY",
+        "value": "Langley"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Permanently lifts Langley's regular property tax levy to fund continuing city services and update its operating and electronic technology, with the senior and disability exemption.",
+      "cost_line": "Up to $1.66 per $1,000 of assessed value for 2027 collection, $0.65 more than the current $1.01; about $42 a month on a $770,000 home.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7305&e=899&la=en&c=15"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "island-port-district-of-south-whidbey-island-proposition-no-1",
+      "owner": "island",
+      "jurisdiction": "Port District of South Whidbey Island",
+      "proposition": "Proposition No. 1",
+      "title": "Levy for Renovation and Modernization of Port Facilities",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "island",
+        "layer": "PORTDST",
+        "value": "S WHIDBEY"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Lifts the port district's regular property tax levy to renovate and modernize port facilities, including the fairgrounds and waterfront, and support economic development and its small business incubator.",
+      "cost_line": "Up to $0.169 per $1,000 of assessed value for 2027 collection, six cents more than the current $0.109.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7306&e=899&la=en&c=15"
+          ]
+        }
+      }
+    }
+  ]
+}

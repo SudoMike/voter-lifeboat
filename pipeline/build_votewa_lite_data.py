@@ -728,6 +728,64 @@ ELECTION_MEASURES = {
                   "https://voter.votewa.gov/elections/measure.ashx?m=7346&e=899&la=en&c=13"),
             ],
         },
+        # Island (#29). Measures: the Island County Auditor's general sample
+        # ballot (counties/island/raw/island/sample-ballot.pdf.url) and VoteWA's
+        # online voters' guide for county 15 (raw/votewa/voter-guide/), which the
+        # Auditor links as its online voters' guide, list three local measures.
+        # Scopes point-checked 2026-10-09 (Census geocoder, Current vintage):
+        # - CITY: Census place 'Langley' at 112 2nd St, Langley.
+        # - PORTDST: WA DOR PRT2025 (layer 16) DISTATTRIB 'S WHIDBEY' at 112 2nd
+        #   St, Langley and 5476 Harbor Rd, Freeland; no feature at 865 SW
+        #   Barrington Dr, Oak Harbor or 848 N Sunrise Blvd, Camano Island.
+        # - UNINC (unincorporated Island County): WA DOR TCA2025 (layer 23)
+        #   COUNTYNAME 'ISLAND' with where DISTATTRIB NOT IN ('0100', '0300',
+        #   '0700'). Those three tax code areas are Oak Harbor, Coupeville and
+        #   Langley: the only Island TCAs that intersect the Census incorporated
+        #   places apart from the surrounding unincorporated TCAs 0110, 0160,
+        #   0310 and 0710, which touch them only at their edges, and the county's
+        #   Tax Codes layer gives TCA 0100 the fire district 'City of Oak Harbor'.
+        #   Live: 865 SW Barrington Dr (Oak Harbor) 0100, 1 7th St NE (Coupeville)
+        #   0300, 112 2nd St (Langley) 0700; 5476 Harbor Rd, Freeland 0760, 2795
+        #   Heller Rd, Oak Harbor (unincorporated) 0110, 848 N Sunrise Blvd,
+        #   Camano 0590.
+        # COUNTY_LAYERS.island has neither PORTDST nor UNINC yet; both are
+        # proposed in counties/island/COMPLETENESS.md.
+        # Overrides: the PUD race is Snohomish County PUD No. 1's District 1
+        # seat, which Camano Island voters elect with all of Snohomish County
+        # (RCW 54.12.010(3)). It keeps the Snohomish package's names, so it ships
+        # with Snohomish's research, and is scoped to Camano Island's precincts:
+        # PUDDST '53029', the County attribute of the Auditor's precinct layer
+        # (Geocortex/Elections/MapServer/2) with where PrecinctNa LIKE 'Camano%'
+        # (precincts Camano 01-21; live 2026-10-09: 848 N Sunrise Blvd -> Camano
+        # 01; Oak Harbor, Coupeville, Freeland -> no Camano precinct). The
+        # District Court seat is a single county-wide district, named as the
+        # Whatcom block names its seats.
+        "island": {
+            "overrides": {
+                ("COUNTY", "DISTRICT COURT JUDGE"): (
+                    "Judicial", "Island County District Court", "Judge", ("COUNTY", None)),
+                ("PUBLIC UTILITY DISTRICT NO. 1", "COMMISSIONER DISTRICT 1"): (
+                    "PublicUtility", "Public Utility District No. 1", "Commissioner District 1",
+                    ("PUDDST", "53029")),
+            },
+            "measures": [
+                m("Unincorporated Island County", "Advisory Vote", "Advisory Vote Regarding the Use of Consumer Fireworks in Unincorporated Island County",
+                  ("UNINC", "ISLAND"),
+                  "Non-binding advisory vote: asks voters in unincorporated Island County whether the Board of County Commissioners should amend Island County Code Chapter 9.08A to ban consumer fireworks there. Permitted public displays are not affected.",
+                  "No tax or fee; the vote does not change the law.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7304&e=899&la=en&c=15"),
+                m("City of Langley", "Proposition No. 1", "Governmental Services and Technology Levy",
+                  ("CITY", "Langley"),
+                  "Permanently lifts Langley's regular property tax levy to fund continuing city services and update its operating and electronic technology, with the senior and disability exemption.",
+                  "Up to $1.66 per $1,000 of assessed value for 2027 collection, $0.65 more than the current $1.01; about $42 a month on a $770,000 home.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7305&e=899&la=en&c=15"),
+                m("Port District of South Whidbey Island", "Proposition No. 1", "Levy for Renovation and Modernization of Port Facilities",
+                  ("PORTDST", "S WHIDBEY"),
+                  "Lifts the port district's regular property tax levy to renovate and modernize port facilities, including the fairgrounds and waterfront, and support economic development and its small business incubator.",
+                  "Up to $0.169 per $1,000 of assessed value for 2027 collection, six cents more than the current $0.109.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7306&e=899&la=en&c=15"),
+            ],
+        },
         # Skagit: the four measures the Auditor's Ballot Measures page lists
         # for the general (counties/skagit/raw/skagit/ballot-measures.html.url),
         # text from the local voters' pamphlet pages 18-21 and VoteWA

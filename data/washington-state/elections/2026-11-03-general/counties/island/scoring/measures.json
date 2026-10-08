@@ -1,0 +1,58 @@
+{
+  "scored_at": "2026-10-09",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/island/dossiers/measures/",
+    "data/washington-state/elections/2026-11-03-general/counties/island/interim/measures.json",
+    "data/final/2026-11-03-general/rubric.json"
+  ],
+  "measures": [
+    {
+      "slug": "island-unincorporated-island-county-advisory-vote",
+      "what_it_does": "A non-binding advisory vote asking voters in unincorporated Island County whether county commissioners should amend county code to ban consumer fireworks there. It does not change the law, and permitted public displays are not affected. Residents of Oak Harbor, Coupeville and Langley do not vote on it. Under state law a ban the board adopted could not take effect for at least a year.",
+      "cost_line": "No tax or fee. The roughly $3,000 to $3,500 cost of placing it on the ballot was raised by Safe and Humane Fireworks of Island County at the commissioners' request.",
+      "pro_summary": "The statement for (Committee for a Safer, Healthier, and more Environmentally Friendly July 4th) cites wildfire risk in a fourth drought-emergency year, limited evacuation routes and volunteer fire departments, 'fireworks tourism,' insurance costs, and harm to animals, veterans and the environment. The Safe & Humane Fireworks Campaign committee reported $11,560 raised.",
+      "con_summary": "The statement against (Committee to Keep Fireworks, written by Commissioner Jill Johnson according to the South Whidbey Record) says current limits on days, mortars and dry-weather bans are a reasonable compromise that should be enforced rather than replaced with prohibition. No opposition committee is registered with the PDC.",
+      "lean_mappings": {},
+      "sources_note": "Sources: VoteWA voters' guide record 7304 (S1); Resolution C-62-25 (S2); Island County Code chapter 9.08A (S3) and county fireworks page (S4); RCW 70.77.395 and 70.77.250 (S5, S6); South Whidbey Record coverage (S7-S10); PDC committee and contribution data (S11, S12). No rubric measure axis covers a fireworks ban, so no Lean is shown."
+    },
+    {
+      "slug": "island-city-of-langley-proposition-no-1",
+      "what_it_does": "A levy lid lift that permanently raises the City of Langley's regular property tax rate to $1.66 per $1,000 of assessed value starting in 2027, to fund general city services and update the city's technology. After 2027 the levy grows by the usual 1% a year plus new construction from the higher base. Qualifying seniors and people with disabilities are exempt.",
+      "cost_line": "$1.66 per $1,000, up $0.648544721 from $1.0106789, about a 64% increase in the city's rate (computed). The city puts it at about $42 a month, or $500.50 a year, on the average $770,000 home; computed from the exact rate it is about $499 a year, and about $324 a year on a $500,000 home (computed). The South Whidbey Record reported city property tax collections would rise from about $492,000 to about $808,000 a year.",
+      "pro_summary": "The statement for (credited to the City of Langley) says the city has not sought a lid lift in more than 20 years, that this is 'not a budget expansion' but funding for essential services, and that without it the general fund runs a deficit by 2028. The city says it has already cut services and left jobs unfilled. A committee, Langley Citizens for the Levy, is registered with the PDC.",
+      "con_summary": "The statement against (Committee for Fair Tax Increase in Langley) calls a 65% increase 'just too large,' says Island County could provide some services more cheaply, and says money spent on tourism could cover much of it. The authors say they support a smaller increase. No opposition committee is registered with the PDC.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "A yes vote is a permanent levy lid lift raising the city rate about 64%, from $1.01 to $1.66 per $1,000, about $499 a year on the average home, and city officials say more lifts are likely.",
+          "citations": [
+            "S1",
+            "S2",
+            "S6",
+            "S14"
+          ]
+        }
+      },
+      "sources_note": "Sources: VoteWA voters' guide record 7305 (S1); city levy FAQ (S2) and 2026 budget (S3); South Whidbey Record coverage (S4-S7); Department of Revenue levy detail 2005-2025 (S8-S13); RCW 84.55.050 and chapter 35.07 RCW (S14, S15); PDC committee query (S16). The dossier finds a local-control argument in the campaign statements but notes the measure moves no authority, so no local-control mapping is made; spending is mixed."
+    },
+    {
+      "slug": "island-port-district-of-south-whidbey-island-proposition-no-1",
+      "what_it_does": "A levy lid lift that raises the Port of South Whidbey's property tax rate by six cents, to $0.169 per $1,000, starting in 2027, and keeps the higher amount as the base for later years. The money goes to renovating and modernizing port facilities, including the fairgrounds and waterfront, economic development and expanding the small business incubator program.",
+      "cost_line": "$0.169 per $1,000, up from $0.109, about a 55% increase in the port's rate (computed). The port puts it at about $4.33 a month, or $52 a year, on the average $866,000 South Whidbey home; about $30 a year on a $500,000 home (computed). The port published no revenue estimate; at 2025 assessed values six cents would raise about $483,000 a year (computed).",
+      "pro_summary": "The statement for (no author named in the voters' guide) says the levy would help preserve public waterfronts, fairgrounds and small business spaces, address growing maintenance needs and let the port compete for grants that stretch local tax dollars. The port says the rate would return to roughly its 2017 level and that it has cut staff and raised fees.",
+      "con_summary": "No statement against was filed; the voters' guide says no community members came forward to write one. No opposition committee is registered with the PDC.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "A yes vote is a levy lid lift that raises the port rate six cents, about $52 a year on the average home, and keeps the higher base. The new rate restores the port to below its 2017 rate of $0.183, so it is a modest increase rather than a large one.",
+          "citations": [
+            "S1",
+            "S2",
+            "S11"
+          ]
+        }
+      },
+      "sources_note": "Sources: VoteWA voters' guide record 7306 (S1); port levy FAQ (S2), June 2026 press release (S3) and June 9 meeting packet (S4); South Whidbey Record coverage (S5-S7); Department of Revenue levy detail 2005-2025 (S8-S14); RCW 84.55.050 (S15); PDC committee query (S16). The signed resolution and vote count were not found. Spending is mixed (preservation versus a new incubator and ferry dock), so it is not mapped."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "url": "https://webgis.dor.wa.gov/arcgis/rest/services/Programs/WADOR_PropertyTax/MapServer/16/query?where=COUNTYNAME%3D%27ISLAND%27&outFields=COUNTYNAME,DISTATTRIB&returnGeometry=false&f=json",
+  "retrieved_at": "2026-10-09",
+  "method": "curl -L (User-Agent 'Mozilla/5.0')",
+  "stage": "raw",
+  "source_type": "gis",
+  "tier": 1,
+  "bytes": 479,
+  "sha256": "21cd2ce5ffd764aee3be67716a8444eca8c759e0cf77f09cb2e1d62778e5650c",
+  "cache_file": "data/.cache/island/dor-prt2025-island.json",
+  "notes": "WA DOR property-tax map service, layer 16 PRT2025 (port districts), Island County rows. Point queries 2026-10-09: 112 2nd St, Langley and 5476 Harbor Rd, Freeland -> 'S WHIDBEY'; 1 7th St NE, Coupeville -> 'COUPE'; 865 SW Barrington Dr, Oak Harbor and 848 N Sunrise Blvd, Camano Island -> no feature. Basis for the PORTDST 'S WHIDBEY' scope of the Port of South Whidbey levy."
+}

@@ -1,0 +1,351 @@
+{
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/island/interim/contests.json",
+    "data/washington-state/elections/2026-11-03-general/counties/island/interim/measures.json"
+  ],
+  "script": "pipeline/build_research_plan.py",
+  "contests": [
+    {
+      "contest_slug": "island-congressional-district-2-u-s-representative",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 2",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "rick-larsen",
+          "name": "Rick Larsen",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-2-u-s-representative/rick-larsen.md"
+        },
+        {
+          "slug": "edwin-h-feller",
+          "name": "Edwin H. Feller",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-2-u-s-representative/edwin-h-feller.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "snohomish",
+          "contest_slug": "snohomish-congressional-district-2-u-s-representative",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/snohomish/scoring/snohomish-congressional-district-2-u-s-representative.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "snohomish",
+          "whatcom"
+        ]
+      }
+    },
+    {
+      "contest_slug": "island-legislative-district-10-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 10",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "clyde-shavers",
+          "name": "Clyde Shavers",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-10-state-representative-position-1/clyde-shavers.md"
+        },
+        {
+          "slug": "robert-chili-hicks",
+          "name": "Robert (Chili) Hicks",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-10-state-representative-position-1/robert-chili-hicks.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "snohomish",
+          "contest_slug": "snohomish-legislative-district-10-state-representative-pos-1",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/snohomish/scoring/snohomish-legislative-district-10-state-representative-pos-1.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "snohomish"
+        ]
+      }
+    },
+    {
+      "contest_slug": "island-legislative-district-10-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 10",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "dave-paul",
+          "name": "Dave Paul",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-10-state-representative-position-2/dave-paul.md"
+        },
+        {
+          "slug": "tim-hazelo",
+          "name": "Tim Hazelo",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-10-state-representative-position-2/tim-hazelo.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "snohomish",
+          "contest_slug": "snohomish-legislative-district-10-state-representative-pos-2",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/snohomish/scoring/snohomish-legislative-district-10-state-representative-pos-2.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "snohomish"
+        ]
+      }
+    },
+    {
+      "contest_slug": "island-island-county-county-assessor",
+      "category": "County",
+      "office": "County Assessor",
+      "district": "Island County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "doug-stults",
+          "name": "Doug Stults",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/island/dossiers/island-island-county-county-assessor/doug-stults.md"
+        },
+        {
+          "slug": "kelly-todd-mauck",
+          "name": "Kelly Todd Mauck",
+          "party_preference": "States No Party Preference",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/island/dossiers/island-island-county-county-assessor/kelly-todd-mauck.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "island-island-county-county-auditor",
+      "category": "County",
+      "office": "County Auditor",
+      "district": "Island County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "sheilah-crider",
+          "name": "Sheilah Crider",
+          "party_preference": "Prefers Independent Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/island/dossiers/island-island-county-county-auditor/sheilah-crider.md"
+        },
+        {
+          "slug": "barbara-fuller",
+          "name": "Barbara Fuller",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/island/dossiers/island-island-county-county-auditor/barbara-fuller.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "island-island-county-county-clerk",
+      "category": "County",
+      "office": "County Clerk",
+      "district": "Island County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "dierdre-butler",
+          "name": "Dierdre Butler",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/island/dossiers/island-island-county-county-clerk/dierdre-butler.md"
+        },
+        {
+          "slug": "maria-hazelo",
+          "name": "Maria Hazelo",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/island/dossiers/island-island-county-county-clerk/maria-hazelo.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "island-island-county-county-commissioner-district-3",
+      "category": "County",
+      "office": "County Commissioner, District 3",
+      "district": "Island County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "matthew-van-pelt",
+          "name": "Matthew Van Pelt",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        },
+        {
+          "slug": "grant-shaw",
+          "name": "Grant Shaw",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        }
+      ]
+    },
+    {
+      "contest_slug": "island-island-county-county-prosecutor",
+      "category": "County",
+      "office": "County Prosecutor",
+      "district": "Island County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "greg-banks",
+          "name": "Greg Banks",
+          "party_preference": "States No Party Preference",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        },
+        {
+          "slug": "andrew-f-scott",
+          "name": "Andrew F. Scott",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        }
+      ]
+    },
+    {
+      "contest_slug": "island-island-county-county-sheriff",
+      "category": "County",
+      "office": "County Sheriff",
+      "district": "Island County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "rick-felici",
+          "name": "Rick Felici",
+          "party_preference": "Prefers Independent Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/island/dossiers/island-island-county-county-sheriff/rick-felici.md"
+        },
+        {
+          "slug": "tavier-wasser",
+          "name": "Tavier Wasser",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/island/dossiers/island-island-county-county-sheriff/tavier-wasser.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "island-public-utility-district-no-1-commissioner-district-1",
+      "category": "PublicUtility",
+      "office": "Commissioner District 1",
+      "district": "Public Utility District No. 1",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "sid-logan",
+          "name": "Sid Logan",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        },
+        {
+          "slug": "janet-st-clair",
+          "name": "Janet St Clair",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "snohomish",
+          "contest_slug": "snohomish-public-utility-district-no-1-commissioner-district-1",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/snohomish/scoring/snohomish-public-utility-district-no-1-commissioner-district-1.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "snohomish"
+        ]
+      }
+    }
+  ],
+  "measures": [
+    {
+      "jurisdiction": "Unincorporated Island County",
+      "proposition": "Advisory Vote",
+      "title": "Advisory Vote Regarding the Use of Consumer Fireworks in Unincorporated Island County",
+      "slug": "island-unincorporated-island-county-advisory-vote",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "City of Langley",
+      "proposition": "Proposition No. 1",
+      "title": "Governmental Services and Technology Levy",
+      "slug": "island-city-of-langley-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Port District of South Whidbey Island",
+      "proposition": "Proposition No. 1",
+      "title": "Levy for Renovation and Modernization of Port Facilities",
+      "slug": "island-port-district-of-south-whidbey-island-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    }
+  ],
+  "carry_forward_from": "2026-08-04-primary"
+}
