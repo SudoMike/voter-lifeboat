@@ -129,3 +129,25 @@ Intended statewide mappings (confirm against the measure dossier): I-645 →
 `taxes` and `local-control`; I-1 → `parental-rights`; I-638 → `social`.
 School-district and other school-adjacent measures may map to
 `parental-rights` when the dossier supports it.
+
+## Addendum (2026-10-08, issue #19): evidence rules
+
+These apply to every package in this election from this date. Existing
+scoring files are not rewritten for them; they apply at each contest's next
+scoring or refutation pass.
+
+- **Single-vote evidence on `taxes`.** A legislator's floor vote on ESSB 6346
+  (chapter 238, Laws of 2026, the 9.9% tax on income over $1M), when it is
+  the only `taxes` evidence in the dossier, scores magnitude 1 (+1 for a yes
+  vote, -1 for a no vote) at `medium` confidence. Score ±2 or `high` only when
+  the dossier has a second independent source on taxes (another recorded
+  vote, a sponsored bill, an explicit statement or a platform plank).
+- **`parental-rights` scope.** Score it only for State legislative contests
+  and measures, as its `applies_to` says. Federal, County and City
+  candidates are not scored on it even when the dossier records a position;
+  the position stays in the dossier and can inform the race blurb.
+- **`local-control` vs `parental-rights`.** Evidence about school
+  governance (who decides curricula, notification, record access and
+  opt-outs) is `parental-rights` evidence, not `local-control` evidence.
+  `local-control` keeps zoning, growth management, state mandates on local
+  governments, annexations and regional authorities.

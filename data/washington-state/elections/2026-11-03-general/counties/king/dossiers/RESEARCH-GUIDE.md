@@ -101,3 +101,19 @@ this race. Neutral wording.
   does, the dynamics of this particular race, and which issue axes truly
   differentiate these candidates (this feeds rubric derivation, via
   `pipeline/extract_axis_notes.py` into `E/counties/king/interim/axis-notes.md`).
+
+## Addendum (2026-10-08, issue #19): recording positions
+
+Matches the 2026-10-08 addendum in `counties/king/scoring/SCORING-GUIDE.md`.
+
+- **Taxes.** For a legislator whose only tax evidence would be the ESSB 6346
+  floor vote, look for a second independent source (another recorded vote, a
+  sponsored bill, an explicit statement, a platform plank). Without one the
+  score is capped at magnitude 1, medium confidence.
+- **Parents and schools.** Record positions on parental notification, record
+  access and curricula opt-outs for any non-judicial candidate who has them.
+  Only State legislative contests and measures are scored on
+  `parental-rights`; for Federal, County and City candidates the position is
+  recorded in the dossier but not scored.
+- **School governance** belongs under the parents-and-schools heading, not
+  under local control.
