@@ -123,6 +123,13 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3391147
     pointer: counties/clark/raw/candidates/clark-clark-county-council-district-2-county-councilor/pdc-belkot.url
     accessed: 2026-10-08
+  - id: S17
+    tier: 2
+    type: news
+    outlet: The Columbian, Mia Ryder-Marks, 2026-01-07, "Clark County Council approves hike in sales tax to pay for affordable housing, behavioral health services"
+    url: https://www.columbian.com/news/2026/jan/07/clark-county-council-approves-hike-in-sales-tax-to-pay-for-affordable-housing-behavioral-health-services/
+    pointer: counties/clark/raw/candidates/clark-clark-county-council-district-2-county-councilor/col-2026-01-07-sales-tax.url
+    accessed: 2026-10-08
 ---
 
 ## Background
@@ -147,7 +154,7 @@ She led the August 4 primary with 51.18% in the election-night count, ahead of J
 
 ## Record
 - **2026 property tax (Dec. 2, 2025):** the only vote against the 1% general-fund levy increase ("It's a bad day for Clark County"); abstained on the banked-capacity votes [S4].
-- **0.1% housing and behavioral-health sales tax (Jan. 6, 2026):** the lone no vote in a 4-1 decision, saying the county lacked a spending plan: "You can't reverse a tax once you implement it" [S5].
+- **0.1% housing and behavioral-health sales tax (Jan. 6, 2026):** the lone no vote in a 4-1 decision, saying the county lacked a spending plan [S5]: "You can't reverse a tax once you implement it" [S17].
 - **Propositions 12 and 13 (July 21, 2026):** moved approval of separate-business item 1 and seconded item 2; per the county these were the $366,204,000 bond for jail expansion, courtrooms and a sheriff's headquarters, and the levy lid lift to $1.15 per $1,000 for criminal-justice staffing [S6][S7].
 - **Comprehensive plan (Apr. 28, 2026):** voted with Yung and Little for the planning commission's preferred alternative keeping urban-growth-area expansions under study [S8].
 - **Manufactured-home-park moratorium (Oct. 14, 2025):** voted to extend the redevelopment moratorium (4-0) [S9].
