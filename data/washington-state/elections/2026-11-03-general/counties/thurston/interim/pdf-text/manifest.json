@@ -1,0 +1,46 @@
+{
+  "county": "thurston",
+  "script": "pipeline/extract_pdf_text.mjs",
+  "files": [
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/thurston/raw/sos/voters-pamphlet-edition-27-page-63-update.pdf.url",
+      "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Page%2063%20update%20ED%2027.pdf",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/thurston/interim/pdf-text/voters-pamphlet-edition-27-page-63-update.txt"
+    },
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/thurston/raw/sos/voters-pamphlet-edition-27-thurston.pdf.url",
+      "url": "https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2027%20-%20Thurston.pdf",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/thurston/interim/pdf-text/voters-pamphlet-edition-27-thurston.txt"
+    },
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/thurston/raw/thurston/local-voters-pamphlet.pdf.url",
+      "url": "https://www.thurstoncountywa.gov/media/34849",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/thurston/interim/pdf-text/local-voters-pamphlet.txt"
+    },
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/thurston/raw/thurston/resolution-lacey-fire-district-3.pdf.url",
+      "url": "https://www.thurstoncountywa.gov/media/34331",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/thurston/interim/pdf-text/resolution-lacey-fire-district-3.txt"
+    },
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/thurston/raw/thurston/resolution-timberland-regional-library.pdf.url",
+      "url": "https://www.thurstoncountywa.gov/media/34333",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/thurston/interim/pdf-text/resolution-timberland-regional-library.txt"
+    },
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/thurston/raw/thurston/resolution-west-thurston-regional-fire-authority.pdf.url",
+      "url": "https://www.thurstoncountywa.gov/media/34334",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/thurston/interim/pdf-text/resolution-west-thurston-regional-fire-authority.txt"
+    },
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/thurston/raw/thurston/resolution-yelm-community-schools.pdf.url",
+      "url": "https://www.thurstoncountywa.gov/media/34338",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/thurston/interim/pdf-text/resolution-yelm-community-schools.txt"
+    },
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/thurston/raw/thurston/sample-ballot.pdf.url",
+      "url": "https://www.thurstoncountywa.gov/media/34874",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/thurston/interim/pdf-text/sample-ballot.txt"
+    }
+  ]
+}
