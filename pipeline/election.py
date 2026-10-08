@@ -111,6 +111,8 @@ DISTRICT_ADAPTER_LAYERS = {
     # app/src/lib/data-consistency.test.js UNRESOLVABLE_SCOPES), so the
     # county ships partial_county.
     "okanogan": ("CONGDST", "LEGDST", "CITY", "FIRDST", "HOSPDST", "EMSDST"),
+    "jefferson": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "CEMDST", "FIRDST", "SCHDST"),
+    "kittitas": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "FIRDST", "DISTCRT"),
 }
 
 

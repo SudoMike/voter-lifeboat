@@ -555,13 +555,50 @@ const COUNTY_LAYERS = {
     },
   ],
   jefferson: [
-    { key: 'COUNTY_COUNCIL', url: 'https://gisweb.jeffcowa.us/server/rest/services/OpenData/OpenData/MapServer/26/query', attr: 'DISTID' },
+    // Commissioner districts. The county's own server (gisweb.jeffcowa.us,
+    // OpenData/MapServer/26) died: HTTP 503 on every request on 2026-10-08
+    // (#31). This is the county's hosted copy of the same districts
+    // (FindMyDistrictsInstantApp_WFL1 layer 1 "County Commissioners", same
+    // DISTID '1'-'3'). Only the archived primary uses this key (its District
+    // 3 race); the general elects District 3 county-wide. Live 2026-10-08:
+    // 1820 Jefferson St, Port Townsend -> '1'; 620 Cedar Ave, Port Hadlock ->
+    // '2'; Quilcene, Brinnon, 9500 Oak Bay Rd, Port Ludlow and 1993 Dowans
+    // Creek Rd, Forks -> '3'.
+    { key: 'COUNTY_COUNCIL', url: 'https://services3.arcgis.com/RPU019D0wA2T8GMO/arcgis/rest/services/FindMyDistrictsInstantApp_WFL1/FeatureServer/1/query', attr: 'DISTID' },
+    // Re-probed 2026-10-08 (#31): 294715 US Hwy 101, Quilcene -> '2'; 272
+    // Schoolhouse Rd, Brinnon -> '1'; Port Townsend and Forks-area -> no
+    // feature. Only the archived primary's Quilcene cemetery levy uses it.
     { key: 'CEMDST', url: `${DOR_TAX_DISTRICTS}/3/query`, attr: 'DISTATTRIB' },
+    // Clallam County Fire District 1's levy (#31): DOR numbers the
+    // district's Jefferson part '9' (Jefferson's own FD 1 is '1'). Live
+    // 2026-10-08: 1993 Dowans Creek Rd, Forks -> '9'; Port Townsend, Port
+    // Hadlock and Port Ludlow '1'; Quilcene '2'; Brinnon '4'; 18113 Upper
+    // Hoh Rd, Forks -> no feature.
     { key: 'FIRDST', url: `${DOR_TAX_DISTRICTS}/7/query`, attr: 'DISTATTRIB' },
+    // WA DOR SCH2025 (#31): Quillayute Valley School District No. 402's
+    // bonds, the Forks district's Jefferson part (West End). Live 2026-10-08:
+    // 1993 Dowans Creek Rd and 18113 Upper Hoh Rd, Forks -> '402'; Port
+    // Townsend '50'; Port Hadlock '49'; Quilcene '48'; Brinnon '46'.
+    { key: 'SCHDST', url: `${DOR_TAX_DISTRICTS}/20/query`, attr: 'DISTATTRIB' },
   ],
   kittitas: [
+    // Re-probed 2026-10-08 (#31): 205 W 5th Ave, Ellensburg -> 3; 207 N
+    // Main St, Kittitas -> 1; Thorp, Cle Elum, Roslyn and Easton -> 2. Only
+    // the archived primary uses it (Commissioner 3 is elected county-wide in
+    // the general).
     { key: 'COUNTY_COUNCIL', url: 'https://services.arcgis.com/eSnyVpqwqWBADfzp/arcgis/rest/services/Commissioner_Districts/FeatureServer/7/query', attr: 'commissioner_district_nbr' },
+    // Re-probed 2026-10-08 (#31): Ellensburg '2'; 10700 Thorp Hwy N, Thorp
+    // '1'; Easton '3'; Kittitas, Cle Elum, Roslyn -> no feature. Only the
+    // archived primary's fire levies use it.
     { key: 'FIRDST', url: `${DOR_TAX_DISTRICTS}/7/query`, attr: 'DISTATTRIB' },
+    // The Auditor's precinct-built District Court districts (#31): the Upper
+    // and Lower Kittitas County District Court judges are elected by their
+    // own district (KCC 2.08.010-.020). Live 2026-10-08: 205 W 5th Ave,
+    // Ellensburg, 207 N Main St, Kittitas and 10700 Thorp Hwy N, Thorp ->
+    // 'Lower District Court'; 719 E 3rd St, Cle Elum, 201 S 1st St, Roslyn,
+    // 523 Lincoln Ave, South Cle Elum and 1893 Railroad St, Easton -> 'Upper
+    // District Court'.
+    { key: 'DISTCRT', url: 'https://services.arcgis.com/eSnyVpqwqWBADfzp/arcgis/rest/services/Court_Districts/FeatureServer/0/query', attr: 'court_district_name' },
   ],
   klickitat: [
     { key: 'COUNTY_COUNCIL', url: 'https://geo.gartrellgroup.com/server/rest/services/Klickitat/Layers/MapServer/21/query', attr: 'NO' },
