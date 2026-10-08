@@ -1,0 +1,397 @@
+{
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/franklin/interim/contests.json",
+    "data/washington-state/elections/2026-11-03-general/counties/franklin/interim/measures.json"
+  ],
+  "script": "pipeline/build_research_plan.py",
+  "contests": [
+    {
+      "contest_slug": "franklin-congressional-district-4-u-s-representative",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 4",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "amanda-mckinney",
+          "name": "Amanda McKinney",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-4-u-s-representative/amanda-mckinney.md"
+        },
+        {
+          "slug": "john-duresky",
+          "name": "John Duresky",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-4-u-s-representative/john-duresky.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "benton",
+          "contest_slug": "benton-congressional-district-4-u-s-representative",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/benton/scoring/benton-congressional-district-4-u-s-representative.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "yakima",
+          "benton"
+        ]
+      }
+    },
+    {
+      "contest_slug": "franklin-congressional-district-5-u-s-representative",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 5",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "michael-baumgartner",
+          "name": "Michael Baumgartner",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-5-u-s-representative/michael-baumgartner.md"
+        },
+        {
+          "slug": "carmela-conroy",
+          "name": "Carmela Conroy",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-5-u-s-representative/carmela-conroy.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "spokane",
+          "contest_slug": "spokane-congressional-district-5-u-s-representative",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/spokane/scoring/spokane-congressional-district-5-u-s-representative.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "spokane"
+        ]
+      }
+    },
+    {
+      "contest_slug": "franklin-franklin-county-assessor",
+      "category": "County",
+      "office": "Assessor",
+      "district": "Franklin County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "chris-hollingsworth",
+          "name": "Chris Hollingsworth",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/franklin/dossiers/franklin-franklin-county-assessor/chris-hollingsworth.md"
+        },
+        {
+          "slug": "john-a-rosenau",
+          "name": "John A Rosenau",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/franklin/dossiers/franklin-franklin-county-assessor/john-a-rosenau.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "franklin-franklin-county-commissioner-district-3-commissioner-district-3",
+      "category": "County",
+      "office": "Commissioner District 3",
+      "district": "Franklin County Commissioner District 3",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "clint-didier",
+          "name": "Clint Didier",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/franklin/dossiers/franklin-franklin-county-commissioner-district-3-commissioner-district-3/clint-didier.md"
+        },
+        {
+          "slug": "joel-prantle",
+          "name": "Joel Prantle",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/franklin/dossiers/franklin-franklin-county-commissioner-district-3-commissioner-district-3/joel-prantle.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "franklin-franklin-county-sheriff",
+      "category": "County",
+      "office": "Sheriff",
+      "district": "Franklin County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "monty-huber",
+          "name": "Monty Huber",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/franklin/dossiers/franklin-franklin-county-sheriff/monty-huber.md"
+        },
+        {
+          "slug": "christopher-chris-lee",
+          "name": "Christopher (Chris) Lee",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/franklin/dossiers/franklin-franklin-county-sheriff/christopher-chris-lee.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "franklin-legislative-district-8-state-senator",
+      "category": "State",
+      "office": "State Senator",
+      "district": "Legislative District 8",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "nikki-torres",
+          "name": "Nikki Torres",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-8-state-senator/nikki-torres.md"
+        },
+        {
+          "slug": "gabe-galbraith",
+          "name": "Gabe Galbraith",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-8-state-senator/gabe-galbraith.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "benton",
+          "contest_slug": "benton-legislative-district-8-state-senator",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/benton/scoring/benton-legislative-district-8-state-senator.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "benton"
+        ]
+      }
+    },
+    {
+      "contest_slug": "franklin-legislative-district-14-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 14",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "gloria-mendoza",
+          "name": "Gloria Mendoza",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-14-state-representative-position-1/gloria-mendoza.md"
+        },
+        {
+          "slug": "chelsea-dimas",
+          "name": "Chelsea Dimas",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-14-state-representative-position-1/chelsea-dimas.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "yakima",
+          "contest_slug": "yakima-legislative-district-14-state-representative-pos-1",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/yakima/scoring/yakima-legislative-district-14-state-representative-pos-1.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "yakima",
+          "benton"
+        ]
+      }
+    },
+    {
+      "contest_slug": "franklin-legislative-district-14-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 14",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "deb-manjarrez",
+          "name": "Deb Manjarrez",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-14-state-representative-position-2/deb-manjarrez.md"
+        },
+        {
+          "slug": "ezequiel-morfin",
+          "name": "Ezequiel Morfin",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-14-state-representative-position-2/ezequiel-morfin.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "yakima",
+          "contest_slug": "yakima-legislative-district-14-state-representative-pos-2",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/yakima/scoring/yakima-legislative-district-14-state-representative-pos-2.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "yakima",
+          "benton"
+        ]
+      }
+    },
+    {
+      "contest_slug": "franklin-legislative-district-16-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 16",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "mark-klicker",
+          "name": "Mark Klicker",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-16-state-representative-position-1/mark-klicker.md"
+        },
+        {
+          "slug": "kyle-palmer",
+          "name": "Kyle Palmer",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-16-state-representative-position-1/kyle-palmer.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "benton",
+          "contest_slug": "benton-legislative-district-16-state-representative-pos-1",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/benton/scoring/benton-legislative-district-16-state-representative-pos-1.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "benton"
+        ]
+      }
+    },
+    {
+      "contest_slug": "franklin-legislative-district-16-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 16",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "skyler-rude",
+          "name": "Skyler Rude",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-16-state-representative-position-2/skyler-rude.md"
+        },
+        {
+          "slug": "derek-sarley",
+          "name": "Derek Sarley",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-16-state-representative-position-2/derek-sarley.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "benton",
+          "contest_slug": "benton-legislative-district-16-state-representative-pos-2",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/benton/scoring/benton-legislative-district-16-state-representative-pos-2.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "benton"
+        ]
+      }
+    },
+    {
+      "contest_slug": "franklin-franklin-county-district-court-judge",
+      "category": "Judicial",
+      "office": "Judge",
+      "district": "Franklin County District Court",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "michael-nguyen",
+          "name": "Michael Nguyen",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        },
+        {
+          "slug": "trinity-orosco",
+          "name": "Trinity Orosco",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        }
+      ]
+    }
+  ],
+  "measures": [
+    {
+      "jurisdiction": "Franklin County Fire Protection District No. 3",
+      "proposition": "Proposition No. 1",
+      "title": "Authorization for a Single-Year Permanent Levy Lid Lift",
+      "slug": "franklin-franklin-county-fire-protection-district-no-3-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    }
+  ],
+  "carry_forward_from": "2026-08-04-primary"
+}

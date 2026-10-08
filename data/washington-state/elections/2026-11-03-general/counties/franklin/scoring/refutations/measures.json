@@ -1,0 +1,24 @@
+{
+  "contest_slug": "measures",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/franklin/scoring/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/franklin/dossiers/measures/",
+    "data/final/2026-11-03-general/rubric.json"
+  ],
+  "verdicts": [
+    {
+      "candidate": "franklin-franklin-county-fire-protection-district-no-3-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked on strength: the explanatory statement frames the money as 'maintaining and adequately funding district operations' (S1). But a yes vote is a permanent levy lid lift above the 1% growth limit (S5), the rubric's pole_b example, raising the rate from $0.86 (S2) to $1.24 per $1,000 (S1), a 44% increase that becomes the base for later years (S1, S5). That matches the Benton City Prop 2 mapping (2 for a large permanent cap lift). Citations S1, S2, S5 support each claim. Spending considered and not proposed: the district ties the money to one new firefighter-paramedic, two seasonal wildland firefighters, gear, ambulances and backup power (S2), but the ballot's own statement frames it as maintaining operations (S1), so the direction is not clean enough to map."
+    },
+    {
+      "candidate": "franklin-franklin-county-fire-protection-district-no-3-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "Arithmetic checks: $1.24 x 400 = $496; $0.86 x 400 = $344; difference $152 (matches cost_line and the dossier's computation from S1 and S2). $0.38 / $0.86 = 44.2%, matching the taxes basis. 2024 result: 1,023 / (1,023 + 775) = 56.9% no (S4). what_it_does matches S1 and S5 ('for 2027' is the collection year; assessment year 2026). cost_line correctly labels $0.86 a district figure, since it comes via NonStop Local (S2), not the pamphlet. pro_summary is attributed to the district as S2 reports; 'risen sharply' slightly sharpens the dossier's 'risen significantly' but is not worth a correction. 'No one filed a pamphlet statement for' matches S1. con_summary matches S1, S4 and S7."
+    }
+  ],
+  "missing": []
+}

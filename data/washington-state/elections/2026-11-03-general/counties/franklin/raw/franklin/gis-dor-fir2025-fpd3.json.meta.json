@@ -1,0 +1,9 @@
+{
+  "url": "https://webgis.dor.wa.gov/arcgis/rest/services/Programs/WADOR_PropertyTax/MapServer/7/query?where=COUNTYNUM%3D11&outFields=COUNTYNAME,DISTATTRIB&returnGeometry=false&f=json",
+  "retrieved_at": "2026-10-08",
+  "method": "curl -L (User-Agent 'Mozilla/5.0')",
+  "stage": "raw",
+  "source_type": "gis",
+  "tier": 1,
+  "notes": "WA DOR FIR2025 (layer 7) Franklin polygons: DISTATTRIB '1' to '5' and '/3NVB'. Point query 2026-10-08: 5600 N Rd 68, Pasco (Census geocoder -119.23423, 46.33666) -> '3', where the Auditor's precinct-split layer reads FIRE 'FPD3' (precinct 071); 1016 N 4th Ave, Pasco -> no feature (city fire, FIRE 'PFD')."
+}

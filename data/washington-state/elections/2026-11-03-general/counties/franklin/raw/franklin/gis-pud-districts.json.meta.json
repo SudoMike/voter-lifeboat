@@ -1,0 +1,9 @@
+{
+  "url": "https://gisportal.franklin.co.franklin.wa.us/arcgis2/rest/services/districts/Special_tax_districts/MapServer/6/query?where=1%3D1&outFields=DISTRICT_CODE,RES_ORD_AUTH,LABEL&returnGeometry=false&f=json",
+  "retrieved_at": "2026-10-08",
+  "method": "curl -L (User-Agent 'Mozilla/5.0')",
+  "stage": "raw",
+  "source_type": "gis",
+  "tier": 1,
+  "notes": "Franklin County GIS, Special_tax_districts layer 6 'Franklin Public Utility District': PUD1, PUD2, PUD3 (RES_ORD_AUTH 1361), together the whole county. WA DOR PUD2025 (layer 17) has no Franklin polygon. The PUD seat is scoped COUNTY because the whole PUD elects it (SOS 2024 general: PUD District 3 on all 123 precincts)."
+}
