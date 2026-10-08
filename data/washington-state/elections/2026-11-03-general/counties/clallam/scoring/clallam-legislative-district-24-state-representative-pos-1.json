@@ -1,0 +1,134 @@
+{
+  "contest_slug": "clallam-legislative-district-24-state-representative-pos-1",
+  "scored_at": "2026-10-09",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/clallam/dossiers/clallam-legislative-district-24-state-representative-pos-1/"],
+  "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering the tax structure, natural-resource and timber policy, K-12 policy and funding, and criminal-justice statutes.",
+  "race_blurb": "First-term Democratic Rep. Adam Bernbaum faces Republican Eric Pratt, a Quilcene field-installation supervisor making his first legislative run. A September forum report described both as wary of raising taxes and wanting local say on road projects; they split most sharply on the 2026 tax on income over $1 million, which Bernbaum voted for and Pratt opposes.",
+  "candidates": [
+    {
+      "slug": "adam-bernbaum",
+      "summary": "First-term state representative from Port Angeles and Vice Chair of the House Transportation Committee, a former legislative assistant and policy analyst with a Ph.D. in political science.",
+      "highlights": [
+        "Voted for the 2026 9.9% tax on income over $1 million and defended it as shifting the burden toward high earners [S5][S8]",
+        "Prime sponsor of enacted bills on childcare capacity, prescribed-fire insurance and rural middle housing [S11][S13][S14]",
+        "Plans a bill to freeze the state energy code for six years, citing housing costs [S5]",
+        "Voted for ESHB 1296, which narrowed several parental notification and records rights from Initiative 2081 [S9][S10]",
+        "Platform pledges to protect abortion access; endorsed by Planned Parenthood [S1][S3]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": 1,
+          "confidence": "high",
+          "citations": ["S8", "S5"],
+          "basis": "Voted yes on ESSB 6346 and defended it at a forum as shifting the tax burden toward high earners, while saying he won spending limits in exchange."
+        },
+        "spending": {
+          "score": 0,
+          "confidence": "medium",
+          "citations": ["S5", "S2", "S3"],
+          "basis": "Points to the budget-spending limits he won and a balanced budget, alongside calls for infrastructure investment and protecting K-12 from cuts."
+        },
+        "housing": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S11", "S5", "S3"],
+          "basis": "Sponsored a law easing sewer requirements for rural middle housing, plans an energy-code freeze to cut building costs, and backs permitting reform."
+        },
+        "climate": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S3", "S1", "S5"],
+          "basis": "Platform says climate change is real and the region should be part of the solution, endorsed by Washington Conservation Action; tempered by his proposed energy-code freeze."
+        },
+        "experience": {
+          "score": -1,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "One-term incumbent and committee vice chair with several enacted bills, running on that record."
+        },
+        "local-control": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S5"],
+          "basis": "Said communities rather than Olympia should decide on projects like Highway 101 roundabouts; a single forum statement."
+        },
+        "healthcare": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S3"],
+          "basis": "Focuses on rural hospital funding, affordable insulin and mental-health access within the existing system; no single-payer position."
+        },
+        "social": {
+          "score": 2,
+          "confidence": "medium",
+          "citations": ["S3", "S1"],
+          "basis": "Platform commits to protecting abortion access, contraception and IVF; endorsed by Planned Parenthood."
+        },
+        "parental-rights": {
+          "score": 1,
+          "confidence": "high",
+          "citations": ["S9", "S10"],
+          "basis": "Recorded yes votes on ESHB 1296, which eliminated or narrowed several Initiative 2081 parental notification, records and opt-out rights and added student privacy priorities."
+        }
+      }
+    },
+    {
+      "slug": "eric-w-pratt",
+      "summary": "Quilcene single father and sports-field installation supervisor, a Precinct Committee Officer who has testified on tax bills in Olympia, making his first run for the Legislature.",
+      "highlights": [
+        "Opposed the 2026 tax on income over $1 million and would oppose all new taxes until the state accounts for current revenue [S6]",
+        "Testified in 2024 for Initiative 2111, a ban on state and local income taxes [S5]",
+        "Pledges to increase housing supply and oppose regulations that inflate costs [S3]",
+        "Says Olympia should not decide local projects such as Highway 101 roundabouts [S6]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S5", "S6", "S3"],
+          "basis": "Statement, website, 2024 testimony for an income-tax ban and forum remarks all oppose new taxes, including the 2026 income tax."
+        },
+        "spending": {
+          "score": -2,
+          "confidence": "medium",
+          "citations": ["S6", "S7"],
+          "basis": "Calls the budget 'a little reckless' and an 'ever-increasing spending problem' and wants accounting for current revenue before any new tax."
+        },
+        "housing": {
+          "score": -2,
+          "confidence": "medium",
+          "citations": ["S3", "S1"],
+          "basis": "Pledges to increase housing supply and oppose regulations that inflate costs; opposes over-regulation that impedes housing."
+        },
+        "safety": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S3"],
+          "basis": "Stands behind law enforcement and supports community policing funding; no specific enforcement proposals."
+        },
+        "experience": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S2", "S6"],
+          "basis": "No office beyond Precinct Committee Officer; presents himself as a citizen 'not as a politician' against a sitting incumbent."
+        },
+        "local-control": {
+          "score": -2,
+          "confidence": "medium",
+          "citations": ["S6", "S1", "S3"],
+          "basis": "Says it is not Olympia's role to tell communities what road projects they need and that local voices should shape policy."
+        },
+        "healthcare": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S3"],
+          "basis": "Would lower drug costs, protect pre-existing-condition coverage and expand rural access, with decisions left to patients and doctors."
+        }
+      }
+    }
+  ]
+}

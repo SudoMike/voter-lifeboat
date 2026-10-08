@@ -684,6 +684,109 @@ ELECTION_MEASURES = {
                   pages=(18,)),
             ],
         },
+        # Clallam (#29). Measures: the Auditor's general sample ballot and local
+        # voters' pamphlet (counties/clallam/raw/clallam/{sample-ballot,
+        # local-voters-pamphlet}.pdf.url, linked from clallamcountywa.gov/2002/
+        # 2026-November-General-Election) list seven local measures; VoteWA's
+        # online guide for county 05 (measures 7289-7294, 7296) agrees. Scopes
+        # point-checked 2026-10-09 (Census geocoder, Current vintage; WA DOR
+        # 2025 layers 7 FIR and 20 SCH): 500 E Division St, Forks -> FIR2025
+        # '1', SCH2025 '402'; 3851 S Mount Angeles Rd, Port Angeles -> FIR2025
+        # '2'; 7764 La Push Rd, Forks -> FIR2025 '6'. The county's own
+        # Fire_Districts and Precinct_Splits layers agree at each address.
+        # Overrides:
+        # - Commissioner District 3: nominated by district, elected county-wide
+        #   (Home Rule Charter Section 2.20, as amended 2015 and 2020; 2022
+        #   general: 39,943 votes in the D3 race vs 37,120 for the county-wide
+        #   DCD Director). Keeps the primary's contest name so primary dossiers
+        #   carry forward.
+        # - District Court 1 and 2 are separate electoral districts (2022
+        #   general: 23,704 votes for District Court 1, 1,940 for District
+        #   Court 2), scoped DISTCRT to the Auditor's District_Court layer
+        #   (services8.arcgis.com/noCZ2SM2C0rVag8y/.../District_Court/
+        #   FeatureServer/0, DISTRICT '1' at Port Angeles and Sequim, '2' at
+        #   Forks). That layer is not in COUNTY_LAYERS.clallam yet (proposed in
+        #   counties/clallam/COMPLETENESS.md).
+        # - PUD No. 1 Commissioner District No. 2: elected by the whole PUD in
+        #   the general (RCW 54.12.010(3)), but the PUD's electorate is not the
+        #   county: the City of Port Angeles precincts are in none of the PUD's
+        #   commissioner districts (PUD_Commissioner_District_dissolve has no
+        #   feature at 223 E 4th St, Port Angeles; 2022 general PUD D1 race
+        #   28,129 votes vs 39,943 county-wide). COUNTY would show it to Port
+        #   Angeles voters, and the PUDDST key reads the commissioner district
+        #   number (1-3), not PUD membership, so the seat is scoped to the
+        #   honest layer PUDALL '1' that no adapter resolves yet (the assembler
+        #   marks it; see COMPLETENESS.md for the proposed fix).
+        "clallam": {
+            "overrides": {
+                ("COUNTY", "COUNTY COMMISSIONER DIST. NO. 3"): (
+                    "County", "Clallam County Commissioner District 3", "County Commissioner Dist. No. 3",
+                    ("COUNTY", None)),
+                ("DISTRICT COURT 1", "JUDGE - DISTRICT COURT 1"): (
+                    "Judicial", "Clallam County District Court 1", "Judge", ("DISTCRT", "1")),
+                ("DISTRICT COURT 2", "JUDGE - DISTRICT COURT 2"): (
+                    "Judicial", "Clallam County District Court 2", "Judge", ("DISTCRT", "2")),
+                ("PUBLIC UTILITY DISTRICT NO. 1", "COMMISSIONER DISTRICT NO. 2"): (
+                    "PublicUtility", "Public Utility District No. 1 of Clallam County", "Commissioner District No. 2",
+                    ("PUDALL", "1")),
+            },
+            "measures": [
+                m("Clallam County", "Proposed Charter Amendment No. 1",
+                  "Charter Amendment Requiring County Commissioner District Town Hall Meetings",
+                  ("COUNTY", None),
+                  "Amends Article II of the county charter: each commissioner must hold at least one town hall a year in their own district, and the three commissioners together at least one a year in each district, all outside normal business hours with 30 days' notice.",
+                  "No tax or fee; no fiscal statement was filed.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7289&e=899&la=en&c=05",
+                  pages=(42, 43)),
+                m("Clallam County", "Proposed Charter Amendment No. 2",
+                  "Charter Amendment Establishing an Ethics Review Board",
+                  ("COUNTY", None),
+                  "Amends Article VIII of the county charter to create a three-member, unpaid ethics review board (one member per commissioner district, appointed by elected county officials) that reviews complaints that elected county officials broke the county code of ethics and publishes written findings; it cannot impose penalties.",
+                  "No tax or fee; board members serve without pay (opponents cite staff and process costs; no fiscal statement was filed).",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7290&e=899&la=en&c=05",
+                  pages=(44, 45)),
+                m("Clallam County", "Proposed Charter Amendment No. 3",
+                  "Charter Amendment Requiring Printing of the Full Text of Proposed Charter Amendments in the Local Voters' Pamphlet",
+                  ("COUNTY", None),
+                  "Amends Article XI of the county charter to require the full text of every proposed charter amendment to be printed in the local voters' pamphlet.",
+                  "No tax or fee; affects what the Auditor prints in future pamphlets.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7291&e=899&la=en&c=05",
+                  pages=(46, 47)),
+                m("Quillayute Valley School District No. 402", "Proposition No. 1", "Bonds to Rebuild Forks Middle School",
+                  ("SCHDST", "402"),
+                  "Authorizes $34,000,000 of general obligation bonds, maturing within 25 years and repaid by excess property taxes, to build a new Forks Middle School replacing three existing buildings on the site.",
+                  "$34,000,000 in bonds repaid over up to 25 years; the district estimates about $1.94 per $1,000 of assessed value from 2028, as its high school bond ends.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7296&e=899&la=en&c=05",
+                  pages=(58,)),
+                m("Clallam County Fire Protection District No. 1", "Proposition No. 1",
+                  "Property Tax Levy for Fire Protection and Emergency Medical Services",
+                  ("FIRDST", "1"),
+                  "Sets the Forks-area fire district's regular levy at $1.00 per $1,000 for 2027 collection and lets it grow each year for nine more years by the greater of 1% or West Region CPI-U; the 2035 maximum becomes the base for later limits.",
+                  "$1.00 per $1,000 of assessed value for 2027 collection, up from about $0.47, then CPI-based growth (at least 1%) through 2035.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7292&e=899&la=en&c=05",
+                  pages=(59,)),
+                m("Clallam County Fire Protection District No. 2", "Proposition No. 1", "Property Tax Levy For Emergency Medical Services",
+                  ("FIRDST", "2"),
+                  "Authorizes a ten-year EMS property tax levy for the fire district around Port Angeles, collected from 2027, used only for emergency medical services (the district says it would end transport bills for district residents). Needs 60% yes and minimum turnout; the same levy fell short in the August primary.",
+                  "Up to $0.50 per $1,000 of assessed value a year for ten years, starting with 2027 collection.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7293&e=899&la=en&c=05",
+                  pages=(60, 61)),
+                m("Clallam County Fire Protection District No. 6", "Proposition No. 1",
+                  "Property Tax Levy For Fire Protection and Emergency Services",
+                  ("FIRDST", "6"),
+                  "Restores the regular levy of the all-volunteer Three Rivers fire district (La Push Road, Quillayute Prairie, Mora) to up to $1.50 per $1,000 for 2027 collection; the amount levied becomes the base for future levy limits.",
+                  "Up to $1.50 per $1,000 of assessed value for 2027 collection; the amount levied becomes the base for later years.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7294&e=899&la=en&c=05",
+                  pages=(62, 63)),
+            ],
+            "extra_notes": [
+                "Public Utility District No. 1 of Clallam County Commissioner District No. 2 is scoped PUDALL '1': the whole "
+                "PUD votes in the general (RCW 54.12.010(3)), and the City of Port Angeles is outside the PUD's commissioner "
+                "districts; no District Adapter layer reads PUD membership yet (counties/clallam/COMPLETENESS.md).",
+                "District Court 1 and District Court 2 are separate electoral districts, scoped DISTCRT '1' and '2' to the "
+                "Auditor's District_Court layer (proposed for COUNTY_LAYERS.clallam).",
+            ],
+        },
         # Cowlitz (#28). Measures: the county's general sample ballot and
         # local voters' pamphlet (counties/cowlitz/raw/cowlitz/
         # {sample-ballot,local-voters-pamphlet}.pdf.url, pamphlet pp. 57-58)
