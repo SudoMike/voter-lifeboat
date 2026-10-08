@@ -53,6 +53,49 @@ const eachCompleteElection = (name, fn) =>
     if (data.coverage.statewide_complete) fn(data, queue)
   })
 
+// The rubric and interview are hand-authored per election, so their shape is
+// checked per election: the primary keeps its 14 axes, while the general
+// split `social` and added `parental-rights` (issue #4).
+const EXPECTED_AXES = {
+  '2026-08-04-primary': 14,
+  '2026-11-03-general': 15,
+}
+
+test('each election ships its own rubric size', () => {
+  for (const { entry, data } of elections) {
+    if (!(entry.id in EXPECTED_AXES)) continue
+    assert.equal(data.rubric.axes.length, EXPECTED_AXES[entry.id], `${entry.id}: rubric axis count`)
+  }
+  const general = elections.find(({ entry }) => entry.id === '2026-11-03-general')?.data
+  const primary = elections.find(({ entry }) => entry.id === '2026-08-04-primary')?.data
+  if (general) assert.ok(general.rubric.axes.some((a) => a.id === 'parental-rights'))
+  if (primary) assert.ok(!primary.rubric.axes.some((a) => a.id === 'parental-rights'))
+})
+
+eachElection('rubric axis ids are unique and the interview reaches every axis', (data) => {
+  const ids = data.rubric.axes.map((a) => a.id)
+  assert.equal(new Set(ids).size, ids.length, 'duplicate rubric axis id')
+  const known = new Set(ids)
+  const reached = new Set()
+  for (const item of data.interview.items) {
+    const axes = item.kind === 'statement' ? [item.axis] : item.options.flatMap((o) => Object.keys(o.effects))
+    for (const axis of axes) {
+      assert.ok(known.has(axis), `${item.id}: unknown axis ${axis}`)
+      reached.add(axis)
+    }
+  }
+  for (const id of ids) assert.ok(reached.has(id), `axis ${id}: no interview item asks about it`)
+})
+
+eachElection('judges are never scorable on social or parental-rights', (data) => {
+  const JUDICIAL = ['StateSupremeCourt', 'DistrictCourt', 'Judicial']
+  for (const axis of data.rubric.axes.filter((a) => ['social', 'parental-rights'].includes(a.id))) {
+    for (const category of JUDICIAL) {
+      assert.ok(!axis.applies_to.includes(category), `${axis.id} applies to ${category}`)
+    }
+  }
+})
+
 // Scopes that are knowingly unresolvable, with the reason documented at the
 // definition site. Keep this list short and deliberate.
 const UNRESOLVABLE_SCOPES = new Set([

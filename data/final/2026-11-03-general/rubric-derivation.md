@@ -56,3 +56,96 @@ ideology scales.
 - Measures: mapped to axes with a direction (a "yes" vote's alignment),
   e.g., Seattle Prop 1 yes = taxes+2/spending+1; annexations = local-control
   −2 direction. Weak mappings omitted (Lean not shown).
+
+## November 3, 2026 general: social split (2026-10-08, issue #4)
+
+Everything above describes the primary rubric, which this file was copied
+from. Its paths (`data/dossiers/`, `data/interim/axis-notes.md`) are the
+pre-split layout; the same files now live under
+`data/washington-state/elections/2026-08-04-primary/`. The primary's rubric,
+interview and scores are unchanged.
+
+### Why `social` was split
+
+The general ballot carries two statewide initiatives that both touch the old
+`social` axis ("Social issues & schools"):
+
+- **I-1** (IL26-001): parental rights in public schools. It would undo the
+  2025 Legislature's amendments to RCW 28A.605.005 and restore the list of
+  parent and guardian rights as enacted by I-2081 in 2024 (examining
+  curricula and materials, faster records access, notification and opt-out
+  rights).
+- **I-638** (IL26-638): would bar students it defines as "biologically
+  male" from certain girls' school athletics, with sex verified by the
+  student's healthcare provider.
+
+Sources: the Attorney General's explanatory statements, raw pointers at
+`data/washington-state/elections/2026-11-03-general/statewide/raw/sos/measures/{il26-001,il26-638,ip26-645}-explanatory-statement.pdf.url`,
+text in that package's `interim/pdf-text/`.
+
+On one axis, a voter who supports one and opposes the other averages to
+about zero, then gets a confident, wrong lean on both measures. The two
+questions are about different things: one is who decides what schools teach
+and disclose, the other is gender and sex-based policy. So the axis is split
+in two:
+
+- **`social`** is now "Gender, LGBTQ+ and reproductive policy": trans
+  participation in sports, gender-affirming care, reproductive rights,
+  anti-discrimination law. The curricula and parental-rights language is
+  gone from its tension and poles. Pole A (-2) is still the traditional
+  pole and pole B (+2) the progressive one.
+- **`parental-rights`** is new: "Parents and public schools". Should parents
+  have broad notification, record access and opt-out rights over what schools
+  teach and provide, or should schools and students have discretion?
+  Pole A (-2) "Parental notification and opt-out", pole B (+2) "School and
+  student discretion". `applies_to` is `State` and `measures`: state
+  legislative contests, school-district and other school-adjacent measures,
+  and statewide initiatives. Never judicial contests.
+
+### Why the `social` id was kept
+
+The decision was to keep `social` and add `parental-rights`, not to retire
+`social` in favor of two new ids. Reasons:
+
+- Report links and anonymous report records carry axis ids. Old links still
+  decode against the rubric, and the archived primary keeps its 14-axis
+  rubric with the old `social` meaning.
+- Candidates scored on `social` in the primary keep a meaningful sign when
+  they are re-scored in their general-election refresh, because the pole
+  direction did not flip. There is no bulk rescoring: each candidate's
+  `social` score is re-checked against the narrowed definition during that
+  refresh, and `parental-rights` is scored then if the dossier supports it.
+- The new axis takes the narrower, newly separated concern, so it gets the
+  new id.
+
+### Interview changes
+
+- `card-social` was reworded. The old text ("Parents should have more say
+  over what public schools teach about gender and race") was a
+  parental-rights statement, so it now asks about legal protection for
+  transgender people, with school sports as the concrete case. Agree is now
+  the progressive pole (`value: 2`).
+- `card-parental-rights` was added after it, with agree = parental
+  notification and opt-out (`value: -2`) and a care pulse. Agree keeps
+  alternating poles across neighbouring statement cards: healthcare -2,
+  social +2, parental-rights -2, tech +2, defense -2.
+- As with every axis, the card appears only when a contest or measure on the
+  voter's ballot is scored on `parental-rights`.
+
+### Intended statewide measure mappings (for research tickets #6, #7)
+
+Measure scoring must still cite the dossier, but research should start from
+these mappings:
+
+| Measure | Axes |
+|---|---|
+| I-645 (IP26-645): repeal the 9.9% tax on individual income over $1M and prohibit taxes on individual income | `taxes`, `local-control` |
+| I-1 (IL26-001): restore I-2081's parental rights in public schools | `parental-rights` |
+| I-638 (IL26-638): sex verification for girls' school sports | `social` |
+
+### Judges
+
+Judicial candidates are never scored on `social` or `parental-rights`.
+Neither axis lists a judicial category in `applies_to`, and
+`pipeline/validate_scoring.py` rejects any judicial axis other than
+`judicial`, `safety` and `experience`.

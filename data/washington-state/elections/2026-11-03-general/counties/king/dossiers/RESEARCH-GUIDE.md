@@ -3,10 +3,18 @@
 How every dossier in this directory was produced. Research agents follow this
 spec exactly.
 
+This guide covers every package in the November 3, 2026 general election.
+Paths below use `E` = `data/washington-state/elections/2026-11-03-general`
+and `<package>` = `statewide` or `counties/<county>` (the package that owns
+the contest). As in the primary, the statewide package follows this guide
+rather than carrying its own copy. The issue axes are in
+`data/final/2026-11-03-general/rubric.json` (15 axes).
+
 ## Source policy (see CONTEXT.md "Source Tier")
 
 - **Tier 1 (always use):** the candidate's official pamphlet statement
-  (already archived: `data/interim/pamphlet-text/<edition>/page-NNN.txt`),
+  (archived under the owning package, e.g.
+  `E/counties/king/interim/pamphlet-text/<edition>/page-NNN.txt`),
   the candidate's own campaign website, PDC campaign-finance filings
   (pdc.wa.gov), official voting/legislative records (leg.wa.gov,
   congress.gov, county/city council records, court opinions for judges).
@@ -17,7 +25,7 @@ spec exactly.
 - **Excluded:** social media posts, opposition sites, personal blogs,
   anonymous sources. Do not let these influence anything, even indirectly.
 
-## File format — `data/dossiers/<contest-slug>/<candidate-slug>.md`
+## File format — `E/<package>/dossiers/<contest-slug>/<candidate-slug>.md`
 
 ```markdown
 ---
@@ -50,7 +58,7 @@ Who they are, current role, relevant history. Every sentence cites [Sn].
 
 ## Positions
 Grouped by topic (housing, taxes, public safety, transit, climate, courts,
-etc. as applicable). Bullet points; each bullet cites [Sn]. Distinguish
+gender and reproductive policy, parents and schools, etc. as applicable). Bullet points; each bullet cites [Sn]. Distinguish
 "says they will" (campaign promises) from "has done" (record).
 
 ## Record
@@ -77,7 +85,19 @@ this race. Neutral wording.
   nothing found beyond the pamphlet statement. Honesty here is load-bearing:
   when in doubt, downgrade.
 - Judges: focus on experience, ratings (bar association evaluations are
-  Tier 2), notable rulings; partisan inference is inappropriate.
+  Tier 2), notable rulings; partisan inference is inappropriate. Judges are
+  never scored on `social` or `parental-rights`, so do not research or
+  record positions on those topics for judicial candidates.
+- `social` and `parental-rights` are separate axes in the general. Keep the
+  evidence apart in Positions: gender, LGBTQ+, sports eligibility and
+  reproductive policy under one heading; parental notification, record
+  access, curricula opt-outs and school-provided services under another. A
+  source about one is not evidence about the other.
+- Statewide measure dossiers (I-645, I-1, I-638) should note evidence for
+  the intended axes recorded in
+  `data/final/2026-11-03-general/rubric-derivation.md`: I-645 →
+  `taxes` and `local-control`, I-1 → `parental-rights`, I-638 → `social`.
 - Contest overview file `_contest.md` per contest: what the office actually
   does, the dynamics of this particular race, and which issue axes truly
-  differentiate these candidates (this feeds rubric derivation).
+  differentiate these candidates (this feeds rubric derivation, via
+  `pipeline/extract_axis_notes.py` into `E/counties/king/interim/axis-notes.md`).
