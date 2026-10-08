@@ -1,0 +1,1 @@
+https://data.kingcounty.gov/resource/u2qf-rdct.json?$select=race,countertype,sum(sumofcount)&$where=upper(race)%20like%20'%25ELECTORAL%20DISTRICT%25'&$group=race,countertype&$limit=500

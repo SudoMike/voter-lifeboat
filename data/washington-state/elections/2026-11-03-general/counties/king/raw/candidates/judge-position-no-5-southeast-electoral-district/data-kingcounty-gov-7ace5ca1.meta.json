@@ -1,0 +1,14 @@
+{
+  "url": "https://data.kingcounty.gov/resource/u2qf-rdct.json?$select=race,countertype,sum(sumofcount)&$where=upper(race)%20like%20'%25ELECTORAL%20DISTRICT%25'&$group=race,countertype&$limit=500",
+  "retrieved_at": "2026-10-08",
+  "method": "source pointer; read with a web fetch during dossier research for issue #14 (cached under the gitignored data/.cache/issue14/)",
+  "stage": "raw",
+  "source_type": "election-results",
+  "tier": 1,
+  "cited_by": [
+    {
+      "dossier": "data/washington-state/elections/2026-11-03-general/counties/king/dossiers/judge-position-no-5-southeast-electoral-district/_contest.md",
+      "source_id": "S2"
+    }
+  ]
+}

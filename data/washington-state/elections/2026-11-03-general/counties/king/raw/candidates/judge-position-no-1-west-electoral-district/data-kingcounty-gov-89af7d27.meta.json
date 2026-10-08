@@ -1,0 +1,15 @@
+{
+  "url": "https://data.kingcounty.gov/resource/2ydw-3iau.json?$select=race,count(*)&$where=upper(race)%20like%20'%25DISTRICT%20COURT%25'%20OR%20upper(race)%20like%20'%25ELECTORAL%25'&$group=race",
+  "retrieved_at": "2026-10-08",
+  "method": "source pointer; read with a web fetch during dossier research for issue #14 (not cached)",
+  "stage": "raw",
+  "source_type": "election-results",
+  "tier": 1,
+  "outlet": "King County Elections, August 2026 primary final precinct results (data.kingcounty.gov 2ydw-3iau), District Court races",
+  "cited_by": [
+    {
+      "dossier": "data/washington-state/elections/2026-11-03-general/counties/king/dossiers/judge-position-no-1-west-electoral-district/_contest.md",
+      "source_id": "S15"
+    }
+  ]
+}
