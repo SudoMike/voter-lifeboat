@@ -1,0 +1,49 @@
+{
+  "contest_slug": "pierce-legislative-district-28-state-representative-pos-1",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-legislative-district-28-state-representative-pos-1/"],
+  "office_does": "State Representatives write and vote on state laws and the state budgets; this seat is one of two House seats for District 28 in Pierce County.",
+  "race_blurb": "Democratic incumbent Mari Leavitt, in the House since 2019, faces Republican Kathy Richardson, a 20-year Army officer and nurse practitioner who has not held public office. Both lead with military ties; they differ most on state spending.",
+  "candidates": [
+    {
+      "slug": "mari-leavitt",
+      "summary": "House member since 2019 and Deputy Majority Whip, a former community college administrator and Pierce County human services deputy director who runs on a bipartisan record.",
+      "highlights": [
+        "Voted for ESSB 6346 and the 2025 B&O tax bill, against the 2025 capital gains, services sales tax and gas tax bills [S6][S12][S14][S16][S20]",
+        "Voted against the 2025 rent-increase limit (EHB 1217) [S18]",
+        "Says she \"worked with law enforcement to secure resources and tools\" [S1]",
+        "Endorsed by labor, police and sheriffs' groups, the Association of Washington Business and Planned Parenthood [S4][S24][S25]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": 0, "confidence": "medium", "citations": ["S6", "S12", "S14", "S16", "S20"], "basis": "Split record: yes on ESSB 6346 and ESHB 2081; no on ESSB 5813, 5814 and 5801."},
+        "spending": {"score": 1, "confidence": "medium", "citations": ["S1", "S3"], "basis": "Cites investment in childcare, training, K-12 and affordable housing; sits on Appropriations."},
+        "housing": {"score": 0, "confidence": "medium", "citations": ["S1", "S3", "S18", "S19"], "basis": "Backs emergency and affordable housing investment but voted against the 2025 rent-increase limit."},
+        "safety": {"score": -1, "confidence": "medium", "citations": ["S1", "S4"], "basis": "Says she secured resources and tools for law enforcement; endorsed by police, sheriff and trooper associations."},
+        "experience": {"score": -2, "confidence": "high", "citations": ["S1", "S5", "S27"], "basis": "In the House since 2019, in caucus leadership and co-chair of a joint committee."},
+        "social": {"score": 1, "confidence": "medium", "citations": ["S4", "S10", "S11"], "basis": "Voted for ESSB 5599; endorsed by Planned Parenthood Alliance Advocates and ProChoice Washington."},
+        "parental-rights": {"score": 1, "confidence": "high", "citations": ["S8", "S9", "S10", "S11"], "basis": "Voted for ESHB 1296's changes to the I-2081 parental-rights list and for ESSB 5599; no statements on the topic."}
+      }
+    },
+    {
+      "slug": "kathy-richardson",
+      "summary": "Army veteran of 20 years, nurse practitioner, former Pacific Lutheran University associate dean and small business owner, running on budget accountability and affordability.",
+      "highlights": [
+        "Says government should \"budget like families do\" and cites State Auditor findings on accountability [S5]",
+        "Questions whether current spending levels are sustainable if high earners and businesses leave [S6]",
+        "Frames public safety as both \"safety and order\" and treatment, saying \"we cannot arrest our way out of every problem\" [S7]",
+        "Attributes housing costs partly to permitting and regulation and wants fewer \"unnecessary barriers and delays\" [S8]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "spending": {"score": -2, "confidence": "high", "citations": ["S3", "S5", "S6"], "basis": "Repeatedly calls for a government that 'lives within its means', budget discipline and audit accountability."},
+        "taxes": {"score": -1, "confidence": "medium", "citations": ["S5", "S6"], "basis": "Cites concern about 'additional taxes and fees' and warns that high-income taxpayers may leave; no explicit pledge on any tax."},
+        "housing": {"score": -1, "confidence": "medium", "citations": ["S8"], "basis": "Blames permitting costs and regulatory complexity in part and wants fewer barriers and delays, while also 'protecting neighborhoods.'"},
+        "safety": {"score": 0, "confidence": "medium", "citations": ["S7"], "basis": "Pairs support for law enforcement and order with treatment, prevention and police accountability."},
+        "experience": {"score": 2, "confidence": "high", "citations": ["S1", "S4"], "basis": "Has held no public office; background is military, health care, education and business."}
+      }
+    }
+  ]
+}
