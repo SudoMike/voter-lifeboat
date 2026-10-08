@@ -354,6 +354,14 @@ COUNTY_ELECTIONS_URLS = {
         # the page that links the general's local voters' pamphlet and sample
         # ballot; pendoreilleco.org redirects to pendoreille.gov).
         "pend-oreille": "https://www.pendoreille.gov/auditor/page/elections",
+        # Ferry County Auditor (200 text/html, 2026-10-08; the page carries the
+        # Auditor's elections links. The general's sample ballot is linked from
+        # the Auditor's public records page as ferry-county.com/SampleBallot.pdf).
+        "ferry": "https://www.ferry-county.com/departments/auditor/index.php",
+        # Wahkiakum County Auditor, Elections (200 text/html, 2026-10-08; links
+        # the general's sample ballot, DocumentCenter/View/3637, but on
+        # 2026-10-08 still linked the primary's VoteWA guide, e=898).
+        "wahkiakum": "https://www.co.wahkiakum.wa.us/419/Elections",
     },
 }
 
