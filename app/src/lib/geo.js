@@ -210,6 +210,20 @@ const COUNTY_LAYERS = {
       attr: 'DISTATTRIB',
       where: "DISTATTRIB = 'SCRFA'",
     },
+    {
+      // District Court electoral districts. The Auditor's Office (Elections)
+      // maintains this layer from voter precinct portions joined with VoteWA
+      // district data (item aa298eefc0ee4cdb9bfe8d2b02f574d0); four polygons,
+      // District 'Cascade District Court', 'Everett District Court',
+      // 'Evergreen District Court', 'South District Court'. The county's
+      // Districts_and_Boundaries/MapServer/41 copy agreed at every check
+      // point. Live 2026-10-08 (#27): 2930 Wetmore Ave, Everett -> 'Everett
+      // District Court'; 806 W Main St, Monroe -> 'Evergreen District Court';
+      // 19100 44th Ave W, Lynnwood -> 'South District Court'.
+      key: 'DISTCRT',
+      url: 'https://services6.arcgis.com/z6WYi9VRHfgwgtyW/arcgis/rest/services/Court_Districts/FeatureServer/0/query',
+      attr: 'District',
+    },
   ],
   spokane: [
     {

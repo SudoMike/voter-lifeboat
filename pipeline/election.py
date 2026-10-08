@@ -82,7 +82,7 @@ APP_PACKAGES = {
 # county, its package also claims full_county).
 DISTRICT_ADAPTER_LAYERS = {
     "king": ("CONGDST", "LEGDST", "KCCDST", "SCCDST", "JUDDST", "FIRDST", "SCHDST", "CITY", "CEMDST"),
-    "snohomish": ("CONGDST", "LEGDST", "CITY", "PUDDST", "SCHDST", "FIRDST", "HOSPDST", "LIBDST", "RFADST"),
+    "snohomish": ("CONGDST", "LEGDST", "CITY", "PUDDST", "SCHDST", "FIRDST", "HOSPDST", "LIBDST", "RFADST", "DISTCRT"),
     "spokane": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "PTBA", "LIBDST", "SCHDST", "FIRDST", "PARKDST"),
     "pierce": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "FIRDST", "DISTCRT", "KCDISTCRT", "PTBA", "SCHDST"),
 }

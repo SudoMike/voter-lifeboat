@@ -115,11 +115,6 @@ const UNRESOLVABLE_SCOPES = new Set([
   // PDF maps only).
   'island/PUDDST',
   'klickitat/PUDDST',
-  // Snohomish County District Court elects judges by electoral district
-  // (Cascade, Everett, Evergreen, South); no county or DOR GIS layer publishes
-  // those boundaries (build_snohomish_lite_data.py general_override), so the
-  // general's Snohomish package is partial_county.
-  'snohomish/DISTCRT',
   // Spokane voters inside Public Utility District No. 1 of Stevens County
   // vote for its commissioner seat; no electoral boundary layer for the
   // PUD's Spokane territory is published (the county's Water Districts layer
