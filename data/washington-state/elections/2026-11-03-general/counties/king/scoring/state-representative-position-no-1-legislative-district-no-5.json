@@ -1,0 +1,47 @@
+{
+  "contest_slug": "state-representative-position-no-1-legislative-district-no-5",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/king/dossiers/state-representative-position-no-1-legislative-district-no-5/"],
+  "office_does": "A State Representative writes and votes on Washington state law and the operating, capital, and transportation budgets, covering school funding, the tax structure, housing rules, behavioral-health funding, transportation projects, and criminal-justice statutes.",
+  "race_blurb": "Appointed Democratic incumbent Zach Hall faces Republican Michelle Bennett, Mercer Island's police chief, after a close primary (44.5% to 43.0% in the King County count). The seat is on the ballot as both a short term and a full two-year term.",
+  "candidates": [
+    {
+      "slug": "zach-hall",
+      "summary": "Appointed in June 2025 and seeking election in his own right; Vice Chair of the House Environment & Energy Committee and a former Issaquah City Councilmember.",
+      "highlights": [
+        "Voted for ESSB 6346, the 2026 tax on income over $1 million [S4]",
+        "Frames public safety around first responders, gun-violence prevention, and behavioral-health interventions [S2]",
+        "Commits to cutting greenhouse gas emissions and moving away from fossil fuels faster [S2]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": 1, "confidence": "high", "citations": ["S4"], "basis": "Recorded yea on House final passage of the 2026 tax on income over $1 million; no further public statement on revenue found."},
+        "spending": {"score": 1, "confidence": "medium", "citations": ["S1", "S2"], "basis": "Calls for more school funding, protecting essential services, and investment in infrastructure, childcare and healthcare access."},
+        "housing": {"score": -1, "confidence": "low", "citations": ["S2"], "basis": "Housing platform centers on supply and reforms that make it easier to finance and build homes faster; no tenant-protection or social-housing position stated."},
+        "safety": {"score": 1, "confidence": "medium", "citations": ["S2"], "basis": "Describes safety as first-responder support, gun-violence prevention, and behavioral-health and substance-use interventions that meet people where they are."},
+        "climate": {"score": 2, "confidence": "medium", "citations": ["S2", "S3"], "basis": "Commits to reducing emissions and transitioning away from fossil fuels faster; endorsed by WA Conservation Action and Sierra Club."},
+        "experience": {"score": -1, "confidence": "medium", "citations": ["S1", "S12"], "basis": "Appointed incumbent with one legislative session plus six years on a city council; a short record rather than long tenure."},
+        "social": {"score": 1, "confidence": "medium", "citations": ["S3", "S10"], "basis": "Endorsed by Planned Parenthood Alliance Advocates and the WA State Stonewall Democrats; no direct statement found."}
+      }
+    },
+    {
+      "slug": "michelle-bennett",
+      "summary": "Mercer Island police chief and former chief in Maple Valley and Sammamish, running for office for the first time on tax restraint and public safety.",
+      "highlights": [
+        "Says Olympia passed \"the largest tax increase in state history\" and that police lack clear tools [S1]",
+        "Says state housing and zoning mandates do not work for every community [S2]",
+        "Endorsed by the King County Republican Party [S8]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": -2, "confidence": "high", "citations": ["S1", "S3", "S4"], "basis": "Opposes an income tax, criticizes recent tax increases in her pamphlet, and cites the new income tax as a reason for running."},
+        "spending": {"score": -1, "confidence": "medium", "citations": ["S1"], "basis": "Pledges to ensure state spending delivers measurable results, an accountability frame."},
+        "safety": {"score": -2, "confidence": "medium", "citations": ["S1", "S3"], "basis": "Police-chief candidate who says police lack tools to protect victims and wants drugs made illegal again, paired with pretrial diversion."},
+        "experience": {"score": 1, "confidence": "medium", "citations": ["S1"], "basis": "First run for office, though she brings a long law-enforcement executive career rather than a legislative record."},
+        "local-control": {"score": -2, "confidence": "medium", "citations": ["S2"], "basis": "Said Olympia dictating a city's housing zoning or affordable housing 'simply doesn't work for every community.'"}
+      }
+    }
+  ]
+}

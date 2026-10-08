@@ -1,0 +1,48 @@
+{
+  "contest_slug": "state-representative-position-no-2-legislative-district-no-5",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/king/dossiers/state-representative-position-no-2-legislative-district-no-5/"],
+  "office_does": "A State Representative writes and votes on Washington state law and the operating, capital, and transportation budgets, covering school funding, the tax structure, housing rules, and criminal-justice statutes.",
+  "race_blurb": "A 2024 rematch: Democratic incumbent Lisa Callan, Capital Budget vice chair since 2019, against Republican Patrick Peacock, an Army veteran and King County GOP vice chair. Callan won the King County primary count 57.7% to 42.3%.",
+  "candidates": [
+    {
+      "slug": "lisa-callan",
+      "summary": "Incumbent since 2019 and Vice Chair of the House Capital Budget Committee; former Issaquah School Board director and Boeing engineer.",
+      "highlights": [
+        "Voted for ESSB 6346, the 2026 tax on income over $1 million, and wants a tax code that \"doesn't squeeze working people\" [S1][S3]",
+        "Pledges to \"defend reproductive freedom\" [S1]",
+        "Voted for ESHB 1296 (2025), the law I-1 would undo [S4]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": 2, "confidence": "high", "citations": ["S1", "S3"], "basis": "Voted for the 2026 tax on income over $1 million and campaigns for a tax code that does not squeeze working people."},
+        "spending": {"score": 1, "confidence": "medium", "citations": ["S1", "S2"], "basis": "Campaigns on school funding, youth mental health, childcare and workforce housing investment."},
+        "housing": {"score": 1, "confidence": "low", "citations": ["S1"], "basis": "Calls for workforce housing and is endorsed by the Housing Alliance; mechanism not specified."},
+        "climate": {"score": 1, "confidence": "medium", "citations": ["S1"], "basis": "Pledges to protect forests and clean air; endorsed by Sierra Club and Washington Conservation Action."},
+        "experience": {"score": -2, "confidence": "high", "citations": ["S1", "S2"], "basis": "In office since 2019 with budget-committee leadership."},
+        "social": {"score": 1, "confidence": "medium", "citations": ["S1", "S10"], "basis": "States she will defend reproductive freedom and is endorsed by Planned Parenthood Alliance Advocates; no LGBTQ+ or sports position found."},
+        "parental-rights": {"score": 1, "confidence": "medium", "citations": ["S4", "S5"], "basis": "Voted for ESHB 1296 (2025), which amended the I-2081 parent and guardian rights list."}
+      }
+    },
+    {
+      "slug": "patrick-peacock",
+      "summary": "Army counter-intelligence veteran, Boeing security specialist and King County GOP vice chair, running again on no state income tax and lower fuel taxes.",
+      "highlights": [
+        "\"No state income tax. Roll back fuel taxes\" [S2]",
+        "Would cut red tape blocking new home construction [S2]",
+        "Endorsed by the 5th LD and King County Republicans [S1]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": -2, "confidence": "high", "citations": ["S1", "S2"], "basis": "Opposes a state income tax in both the pamphlet and on his site and wants fuel taxes rolled back."},
+        "housing": {"score": -2, "confidence": "medium", "citations": ["S2"], "basis": "Housing plan is to cut the red tape blocking new construction."},
+        "safety": {"score": -2, "confidence": "medium", "citations": ["S2"], "basis": "Back officers, hold repeat offenders accountable, restore safe streets."},
+        "climate": {"score": -1, "confidence": "low", "citations": ["S1", "S2"], "basis": "Wants fuel taxes rolled back on cost grounds; no direct climate-policy statement."},
+        "experience": {"score": 1, "confidence": "medium", "citations": ["S1"], "basis": "Calls himself not a career politician and has not held public office, though he is a county party officer."},
+        "parental-rights": {"score": -1, "confidence": "low", "citations": ["S2"], "basis": "Asks schools to respect parents as partners in their kids' education; no notification or opt-out specifics."}
+      }
+    }
+  ]
+}
