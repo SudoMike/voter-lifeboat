@@ -618,6 +618,55 @@ ELECTION_MEASURES = {
                   "https://voter.votewa.gov/elections/measure.ashx?m=7273&e=899&la=en&c=03"),
             ],
         },
+        # Franklin (#29). Ballot checked against the Auditor's general sample
+        # ballot and local voters' pamphlet (counties/franklin/raw/franklin/
+        # sample-ballot.pdf.url, local-voters-pamphlet.pdf.url): one local
+        # measure, Fire Protection District No. 3 Proposition No. 1.
+        # FIRDST: WA DOR FIR2025 (layer 7) DISTATTRIB '3' at 5600 N Rd 68,
+        # Pasco (2026-10-08); the Auditor's precinct-split layer
+        # (gisportal.franklin.co.franklin.wa.us/arcgis2/rest/services/districts/
+        # Voting_Precinct_Group/FeatureServer/12) agrees there (FIRE 'FPD3').
+        # Commissioner District 3 keeps the generic scope (COUNTY_COUNCIL
+        # 'COM3'): Franklin elects commissioners by district in the general
+        # since 2024 (SOS 2024 general precinct export: District 1 on 48 and
+        # District 2 on 31 of 123 precincts; the 2026 primary's District 3 on
+        # 44 of 123 reporting units). Overrides: the District Court seat is a
+        # single county-wide judicial seat (VoteWA District Type 'Countywide');
+        # Franklin PUD No. 1 covers the whole county and the whole PUD elects
+        # each commissioner (its 2024 District 3 race was on all 123
+        # precincts; RCW 54.12.010(3)), so the seat is COUNTY; the Port of
+        # Pasco moved to by-district general elections from 2026 (NonStop
+        # Local, 2025-10-03; Port Resolution 1577 on the county's port layer),
+        # so its seat is PORTDST 'PoP3' (Special_tax_districts/MapServer/7
+        # DISTRICT_CODE; 5600 N Rd 68, Pasco and 103 Franklin St, Mesa ->
+        # 'PoP3'; 1016 N 4th Ave, Pasco -> 'PoP1'). The Port of Pasco is not
+        # the whole county: the Port of Kahlotus covers the east end.
+        "franklin": {
+            "overrides": {
+                ("COUNTY", "DISTRICT COURT JUDGE"): (
+                    "Judicial", "Franklin County District Court", "Judge", ("COUNTY", None)),
+                ("PUD DISTRICT 2", "COMMISSIONER DISTRICT 2"): (
+                    "PublicUtility", "Public Utility District No. 1 of Franklin County", "Commissioner District 2",
+                    ("COUNTY", None)),
+                ("PASCO PORT DISTRICT 3", "COMMISSIONER, DISTRICT 3"): (
+                    "Port", "Port of Pasco", "Commissioner District 3", ("PORTDST", "PoP3")),
+            },
+            "measures": [
+                m("Franklin County Fire Protection District No. 3", "Proposition No. 1",
+                  "Authorization for a Single-Year Permanent Levy Lid Lift",
+                  ("FIRDST", "3"),
+                  "Raises the fire district's regular property tax levy to fund district operations, including emergency medical (ambulance) services; the 2027 levy becomes the base for later years' limits.",
+                  "$1.24 per $1,000 of assessed value for assessment in 2026 and collection in 2027 (the district says its current rate is $0.86).",
+                  "https://www.franklincountywa.gov/DocumentCenter/View/4553/2611-Franklin-County-Voters-Pamphlet-"),
+            ],
+            "extra_notes": [
+                "Franklin County Commissioner District 3 is elected by district in the general (VoteWA District "
+                "'COUNTY COMMISSION DISTRICT 3'; SOS 2024 general precinct results; 2026 primary results on 44 of "
+                "123 reporting units).",
+                "The Port of Pasco Commissioner District 3 race is elected by district from 2026 (Port of Pasco "
+                "by-district elections, NonStop Local 2025-10-03).",
+            ],
+        },
         # Whatcom (#28). Measures: VoteWA's online voters' guide for Whatcom
         # County (voterguide.ashx?e=899&c=37, read 2026-10-08) lists five local
         # measures; whatcomcounty.us answered 403 (Cloudflare) to scripted

@@ -1,0 +1,42 @@
+{
+  "county": "franklin",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/franklin/raw/votewa/candidate-list.csv.url",
+    "https://www.franklincountywa.gov/DocumentCenter/View/4553/2611-Franklin-County-Voters-Pamphlet-"
+  ],
+  "coverage": "full_county",
+  "notes": [
+    "Franklin County Commissioner District 3 is elected by district in the general (VoteWA District 'COUNTY COMMISSION DISTRICT 3'; SOS 2024 general precinct results; 2026 primary results on 44 of 123 reporting units).",
+    "The Port of Pasco Commissioner District 3 race is elected by district from 2026 (Port of Pasco by-district elections, NonStop Local 2025-10-03)."
+  ],
+  "measures": [
+    {
+      "slug": "franklin-franklin-county-fire-protection-district-no-3-proposition-no-1",
+      "owner": "franklin",
+      "jurisdiction": "Franklin County Fire Protection District No. 3",
+      "proposition": "Proposition No. 1",
+      "title": "Authorization for a Single-Year Permanent Levy Lid Lift",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "franklin",
+        "layer": "FIRDST",
+        "value": "3"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Raises the fire district's regular property tax levy to fund district operations, including emergency medical (ambulance) services; the 2027 levy becomes the base for later years' limits.",
+      "cost_line": "$1.24 per $1,000 of assessed value for assessment in 2026 and collection in 2027 (the district says its current rate is $0.86).",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://www.franklincountywa.gov/DocumentCenter/View/4553/2611-Franklin-County-Voters-Pamphlet-"
+          ]
+        }
+      }
+    }
+  ]
+}
