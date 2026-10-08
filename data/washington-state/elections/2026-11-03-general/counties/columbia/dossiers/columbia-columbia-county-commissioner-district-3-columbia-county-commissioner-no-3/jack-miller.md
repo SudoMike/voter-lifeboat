@@ -128,6 +128,9 @@ sources:
 - "State sanctuary laws are incredibly short-sighted ... Sanctuary laws need to be abolished" [S3].
 - In August 2025, when the board discussed Franklin County's invitation to declare non-sanctuary status, he agreed county business is "dollars and cents" and proposed "just 'no comment' on the whole subject"; the board declined to join [S8].
 
+### Experience
+- "I learned during my first term that it takes many months for a new commissioner to fully understand the workings of the county. This learning curve is now behind me" [S3].
+
 ### Governing approach
 - Says he finds common ground with people who do not share his politics and that "it is very important to investigate all sides of any issue" [S3].
 

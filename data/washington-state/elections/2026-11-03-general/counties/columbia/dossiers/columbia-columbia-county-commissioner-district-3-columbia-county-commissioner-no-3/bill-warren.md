@@ -97,7 +97,7 @@ sources:
 - "I would abide by the state's sanctuary state law," calling it "a good step to build trust for people trying to manage their legal obligations without fear of detention and separation of their families" [S3].
 
 ### Governing approach
-- Stresses transparent communication "to build trust, improve collaboration for decision-making, and reduce conflict," drawing on labor relations, policy and budget work as a college trustee [S1]. Says he will serve based on the issues people bring forward rather than their politics [S3].
+- Stresses transparent communication "to build trust, improve collaboration for decision-making, and reduce conflict," drawing on labor relations, policy and budget work as a college trustee [S1]. Says he will serve based on the issues people bring forward rather than their politics [S3]. Says "being a commissioner is more than having a seat at the table" and "I believe I can bring a stronger voice to the community" [S3].
 
 ### Gender, LGBTQ+ and reproductive policy
 - No public position found in the sources reviewed.
