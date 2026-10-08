@@ -90,6 +90,10 @@ sources:
     page: https://app.leg.wa.gov/billsummary?BillNumber=5167&Year=2025
     pointer: counties/spokane/raw/candidates/spokane-spokane-county-commissioner-district-4-commissioner/leg-rollcalls-essb-5167.url
     accessed: 2026-10-08
+photo:
+  url: https://vote4suzanne.com/wp-content/uploads/2022/06/Suzanne-grey-2-scaled-e1654624263823.jpg
+  page: https://vote4suzanne.com/
+  kind: campaign-website
 ---
 
 ## Background

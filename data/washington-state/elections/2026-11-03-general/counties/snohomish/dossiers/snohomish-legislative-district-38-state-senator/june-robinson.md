@@ -83,6 +83,10 @@ sources:
     outlet: Everett Herald (HeraldNet)
     url: https://www.heraldnet.com/2026/08/04/cortes-holds-early-lead-in-primary-race-for-38th-district-seat/
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/18265.jpg
+  page: https://leg.wa.gov/legislators/all-representatives-and-senators/june-robinson
+  kind: government
 ---
 
 ## Background

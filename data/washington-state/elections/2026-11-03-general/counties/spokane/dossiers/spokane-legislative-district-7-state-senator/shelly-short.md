@@ -71,6 +71,10 @@ sources:
     page: https://app.leg.wa.gov/billsummary?BillNumber=1296&Year=2025
     pointer: counties/spokane/raw/candidates/spokane-legislative-district-7-state-senator/leg-rollcalls-eshb-1296.url
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/11952.jpg
+  page: https://leg.wa.gov/legislators/all-representatives-and-senators/shelly-short
+  kind: government
 ---
 
 ## Background

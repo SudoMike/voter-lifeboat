@@ -68,6 +68,10 @@ sources:
     url: https://www.spokesman.com/stories/2026/jul/17/campaign-cash-baumgartner-dominates-fundraising-wh/
     pointer: counties/spokane/raw/candidates/spokane-congressional-district-5-u-s-representative/spokesman-2026-07-17-campaign-cash.url
     accessed: 2026-10-08
+photo:
+  url: https://conroy4congress.com/wp-content/uploads/banner-conroy-small.png
+  page: https://conroy4congress.com/
+  kind: campaign-website
 ---
 
 ## Background

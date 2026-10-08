@@ -134,6 +134,10 @@ sources:
     url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Pdf/Bill%20Reports/House/1296-S.E%20HBR%20FBR%2025.pdf
     pointer: data/washington-state/elections/2026-11-03-general/counties/snohomish/raw/candidates/snohomish-legislative-district-44-state-representative-pos-2/april-berg--s17.url
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/31534.jpg
+  page: https://leg.wa.gov/legislators/all-representatives-and-senators/april-berg
+  kind: government
 ---
 
 ## Background

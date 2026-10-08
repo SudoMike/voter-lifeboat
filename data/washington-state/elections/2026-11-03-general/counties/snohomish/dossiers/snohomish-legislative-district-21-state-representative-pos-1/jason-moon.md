@@ -27,6 +27,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?election_year=2026&legislative_district=21
     page: https://www.pdc.wa.gov/political-disclosure-reporting-data/browse-search-data/candidates/41273
     accessed: 2026-10-08
+photo:
+  url: https://img1.wsimg.com/isteam/ip/47b99eae-d4d1-4d7e-b294-1894bb6e2012/Main%20Profile.jpg
+  page: https://hellojasonmoon.com/
+  kind: campaign-website
 ---
 
 ## Background

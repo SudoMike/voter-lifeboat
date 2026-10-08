@@ -43,6 +43,10 @@ sources:
     outlet: Washington State Public Disclosure Commission (open data, dataset 3h9x-7bvm)
     url: https://data.wa.gov/resource/3h9x-7bvm.json?election_year=2026&legislative_district=38
     accessed: 2026-10-08
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/69e146c04cca177b036dc263/514ac381-9fa7-48ef-91b0-fb3655ead13b/jeff_hero_cropped.jpg
+  page: https://www.jeffkellyfor38.com/
+  kind: campaign-website
 ---
 
 ## Background

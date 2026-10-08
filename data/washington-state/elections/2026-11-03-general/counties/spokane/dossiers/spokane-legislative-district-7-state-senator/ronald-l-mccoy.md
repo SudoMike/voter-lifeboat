@@ -40,6 +40,10 @@ sources:
     url: https://www.spokesman.com/stories/2026/aug/04/primary-results-show-tight-races-for-open-seats-in/
     pointer: counties/spokane/raw/candidates/spokane-legislative-district-7-state-senator/spokesman-2026-08-04-legislative-primary.url
     accessed: 2026-10-08
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/6a0bb7bfa2b00e1a1d513053/f5ca2258-d2b5-4830-ad7b-8730d3613dad/Ron+at+BK+talk+HD.png
+  page: https://mccoyforwa.com/
+  kind: campaign-website
 ---
 
 ## Background

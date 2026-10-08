@@ -97,6 +97,10 @@ sources:
     url: https://www.spokesman.com/stories/2026/apr/01/spokane-legislator-timm-ormsby-will-not-seek-re-el/
     pointer: counties/spokane/raw/candidates/spokane-legislative-district-3-state-representative-pos-2/spokesman-2026-04-01-ormsby.url
     accessed: 2026-10-08
+photo:
+  url: https://assets.cdn.filesafe.space/Kz08vWjqwr4hGQCGynWF/media/6a0642ef138c806d2d1b56e5.jpeg
+  page: https://friendsofnatalie.com/
+  kind: campaign-website
 ---
 
 ## Background

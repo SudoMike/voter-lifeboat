@@ -69,6 +69,10 @@ sources:
     url: https://www.inlander.com/news/three-candidates-hope-to-make-it-past-the-primary-in-the-race-for-spokane-county/article_dd6003e3-e643-4c95-883d-5e13fb55636a.html
     pointer: counties/spokane/raw/candidates/spokane-spokane-county-auditor/inlander-2026-07-15-auditor-race.url
     accessed: 2026-10-08
+photo:
+  url: https://static.wixstatic.com/media/f1c8f5_6a5773824d124471b289040ac9da0da7~mv2.jpg/v1/crop/x_76,y_0,w_2716,h_2069/fill/w_320,h_244,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/uncropped%20Callie%20Headies-1_edited_edited.jpg
+  page: https://www.calliegeeforspokanecounty.com/
+  kind: campaign-website
 ---
 
 ## Background

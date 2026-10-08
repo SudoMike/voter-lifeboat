@@ -97,6 +97,10 @@ sources:
     url: https://www.rangemedia.co/6th-legislative-district-questionnaire-2026-election/
     pointer: counties/spokane/raw/candidates/spokane-legislative-district-6-state-representative-pos-2/range-2026-07-22-questionnaire-ld6-p2.url
     accessed: 2026-10-08
+photo:
+  url: https://www.jonathanbingle.com/_next/image?url=%2Fjb-hero.jpg&w=640&q=90&dpl=dpl_42ymxE26fPRAbn5ySxKXRnmrmtfx
+  page: https://www.jonathanbingle.com/
+  kind: campaign-website
 ---
 
 ## Background

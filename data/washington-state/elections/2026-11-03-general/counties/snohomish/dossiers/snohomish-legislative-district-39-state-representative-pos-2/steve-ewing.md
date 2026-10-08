@@ -27,6 +27,10 @@ sources:
     outlet: Washington State Public Disclosure Commission (open data, dataset 3h9x-7bvm), committee 41462
     url: https://data.wa.gov/resource/3h9x-7bvm.json?election_year=2026&$where=upper(filer_name)%20like%20%27%25EWING%25%27
     accessed: 2026-10-08
+photo:
+  url: https://electsteveewing.com/wp-content/uploads/2025/03/steve-ewing-in-suit-no-bg-480x503.png
+  page: https://electsteveewing.com/
+  kind: campaign-website
 ---
 
 ## Background

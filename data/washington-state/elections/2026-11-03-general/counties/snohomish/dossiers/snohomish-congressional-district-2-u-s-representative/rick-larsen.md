@@ -69,6 +69,10 @@ sources:
     outlet: Clerk of the U.S. House, Roll Call 151 (2024), H.R. 8035 Ukraine Security Supplemental Appropriations Act
     url: https://clerk.house.gov/evs/2024/roll151.xml
     accessed: 2026-10-08
+photo:
+  url: https://larsen.house.gov/uploadedphotos/mediumresolution/cfd9a158-5f9c-4b81-a622-da8b61083fc9.jpg
+  page: https://larsen.house.gov/about
+  kind: government
 ---
 
 ## Background

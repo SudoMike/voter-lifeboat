@@ -87,6 +87,10 @@ sources:
     outlet: Rep. Sam Low, House Republican caucus site (home page, key issues)
     url: https://samlow.houserepublicans.wa.gov/
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/34031.jpg
+  page: https://leg.wa.gov/legislators/all-representatives-and-senators/sam-low
+  kind: government
 ---
 
 ## Background

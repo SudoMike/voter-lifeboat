@@ -76,6 +76,10 @@ sources:
     url: https://www.spokesman.com/stories/2026/sep/29/spokane-county-prosecutor-candidate-retracts-fake-/
     pointer: counties/spokane/raw/candidates/spokane-spokane-county-prosecuting-attorney/sr-2026-09-29-tarkenton-endorsement.url
     accessed: 2026-10-08
+photo:
+  url: https://prestonforprosecutor.com/images/preston-mccollam-portrait-cutout.webp
+  page: https://prestonforprosecutor.com/
+  kind: campaign-website
 ---
 
 ## Background
