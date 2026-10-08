@@ -152,7 +152,16 @@ class GeneralPackagesTest(unittest.TestCase):
                 self.assertTrue(c["slug"].startswith(f"{county}-"))
 
     def test_shipped_general_counties(self):
-        self.assertEqual(["king", "snohomish", "spokane", "pierce"], election.APP_PACKAGES[GENERAL.id]["counties"])
+        self.assertEqual(["king", "snohomish", "spokane", "pierce", "clark", "kitsap", "thurston"],
+                         election.APP_PACKAGES[GENERAL.id]["counties"])
+
+    def test_wave2_builders_are_full_county(self):
+        # Every Clark, Kitsap and Thurston scope resolves through geo.js
+        # COUNTY_LAYERS (#22), so the builders list no unresolvable layer.
+        for county in ("clark", "kitsap", "thurston"):
+            for name in ("app-contests.json", "app-measures.json"):
+                doc = json.loads((GENERAL.county(county) / "interim" / name).read_text())
+                self.assertEqual(("full_county", []), (doc["coverage"], doc["notes"]), f"{county} {name}")
 
 if __name__ == "__main__":
     unittest.main()

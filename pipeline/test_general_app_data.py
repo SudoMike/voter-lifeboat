@@ -1,7 +1,7 @@
 """The general's shipped data: the statewide package, King's schema-2
-package at Full County Coverage (issues #9 and #16), Snohomish's and
-Spokane's app-*.json packages at partial coverage, and Pierce's at full
-coverage (#21).
+package at Full County Coverage (issues #9 and #16), Spokane's app-*.json
+package at partial coverage, Pierce's (#21) and Snohomish's (#27) at full
+coverage, and Clark's, Kitsap's and Thurston's at full coverage (#22).
 
 These read the committed outputs of merge_scores.py and assemble_app_data.py,
 so they fail if the general is re-assembled from the wrong packages, King's
@@ -20,6 +20,10 @@ KING = GENERAL.county("king")
 SNOHOMISH = GENERAL.county("snohomish")
 SPOKANE = GENERAL.county("spokane")
 PIERCE = GENERAL.county("pierce")
+CLARK = GENERAL.county("clark")
+KITSAP = GENERAL.county("kitsap")
+THURSTON = GENERAL.county("thurston")
+SHIPPED = ("king", "snohomish", "spokane", "pierce", "clark", "kitsap", "thurston")
 STATEWIDE = {"kind": "STATEWIDE"}
 GEO_JS = election.ROOT / "app/src/lib/geo.js"
 
@@ -29,10 +33,11 @@ def read(path):
 
 
 class GeneralPackagesTest(unittest.TestCase):
-    def test_general_ships_the_statewide_package_king_snohomish_spokane_and_pierce(self):
+    def test_general_ships_the_statewide_package_and_seven_counties(self):
         self.assertTrue(election.ELECTION_META[GENERAL.id]["statewide_complete"])
-        self.assertEqual(["king", "snohomish", "spokane", "pierce"], election.APP_PACKAGES[GENERAL.id]["counties"])
-        self.assertEqual([GENERAL.state, KING, SNOHOMISH, SPOKANE, PIERCE], GENERAL.shipped_packages())
+        self.assertEqual(list(SHIPPED), election.APP_PACKAGES[GENERAL.id]["counties"])
+        self.assertEqual([GENERAL.state, KING, SNOHOMISH, SPOKANE, PIERCE, CLARK, KITSAP, THURSTON],
+                         GENERAL.shipped_packages())
 
     def test_king_adapter_layers_match_geo_js(self):
         block = re.search(r"const KING_LAYERS = \{(.*?)\n\}", GEO_JS.read_text(), re.S).group(1)
@@ -58,6 +63,11 @@ class GeneralPackagesTest(unittest.TestCase):
                          election.county_elections_url(GENERAL.id, "spokane"))
         self.assertEqual("https://www.piercecountywa.gov/elections",
                          election.county_elections_url(GENERAL.id, "pierce"))
+        self.assertEqual("https://clark.wa.gov/elections", election.county_elections_url(GENERAL.id, "clark"))
+        self.assertEqual("https://www.kitsap.gov/auditor/Pages/Elections.aspx",
+                         election.county_elections_url(GENERAL.id, "kitsap"))
+        self.assertEqual("https://www.thurstoncountywa.gov/departments/auditor/elections",
+                         election.county_elections_url(GENERAL.id, "thurston"))
         self.assertIsNone(election.county_elections_url(GENERAL.id, "yakima"))
         # The primary's shipped app data predates the field.
         self.assertIsNone(election.county_elections_url("2026-08-04-primary", "king"))
@@ -86,13 +96,16 @@ class GeneralAppDataTest(unittest.TestCase):
         cls.spo_measures = read(SPOKANE / "interim/app-measures.json")["measures"]
         cls.pie_contests = read(PIERCE / "interim/app-contests.json")["contests"]
         cls.pie_measures = read(PIERCE / "interim/app-measures.json")["measures"]
+        cls.wave2_contests = [c for d in (CLARK, KITSAP, THURSTON) for c in read(d / "interim/app-contests.json")["contests"]]
+        cls.wave2_measures = [m for d in (CLARK, KITSAP, THURSTON) for m in read(d / "interim/app-measures.json")["measures"]]
 
-    def test_king_snohomish_and_pierce_are_full_spokane_partial(self):
+    def test_six_counties_are_full_spokane_partial(self):
         # Spokane is partial_county because its Stevens County PUD seat is
         # scoped to PUDDST, which no public layer resolves. Snohomish's nine
         # District Court seats resolve from the Auditor's Court_Districts
         # layer (DISTCRT, #27). Pierce's KCDISTCRT, PTBA and SCHDST read the
-        # Election_Precincts layer.
+        # Election_Precincts layer. Clark's, Kitsap's and Thurston's school
+        # levies and Thurston's WTRFA levy read county layers (#22).
         self.assertEqual({
             "statewide_complete": True,
             "supported_counties": [{
@@ -108,6 +121,16 @@ class GeneralAppDataTest(unittest.TestCase):
             }, {
                 "id": "pierce", "name": "Pierce County", "state": "WA", "fips": "53053",
                 "coverage": "full_county", "elections_url": "https://www.piercecountywa.gov/elections",
+            }, {
+                "id": "clark", "name": "Clark County", "state": "WA", "fips": "53011",
+                "coverage": "full_county", "elections_url": "https://clark.wa.gov/elections",
+            }, {
+                "id": "kitsap", "name": "Kitsap County", "state": "WA", "fips": "53035",
+                "coverage": "full_county", "elections_url": "https://www.kitsap.gov/auditor/Pages/Elections.aspx",
+            }, {
+                "id": "thurston", "name": "Thurston County", "state": "WA", "fips": "53067",
+                "coverage": "full_county",
+                "elections_url": "https://www.thurstoncountywa.gov/departments/auditor/elections",
             }],
         }, self.app["coverage"])
 
@@ -116,7 +139,7 @@ class GeneralAppDataTest(unittest.TestCase):
         for item in self.app["contests"] + self.app["measures"]:
             scope = item["scope"]
             if scope["kind"] == "DISTRICT":
-                self.assertIn(scope["county"], ("king", "snohomish", "spokane", "pierce"), item["slug"])
+                self.assertIn(scope["county"], SHIPPED, item["slug"])
                 if scope["layer"] not in election.DISTRICT_ADAPTER_LAYERS[scope["county"]]:
                     unresolved.append((scope["county"], scope["layer"], item["slug"]))
         self.assertEqual({("spokane", "PUDDST")}, {u[:2] for u in unresolved})
@@ -135,6 +158,16 @@ class GeneralAppDataTest(unittest.TestCase):
         auburn = self.measures["pierce-auburn-school-district-no-408-proposition-no-1"]
         self.assertEqual({"kind": "DISTRICT", "county": "pierce", "layer": "SCHDST",
                           "value": "AUBURN SCHOOL DISTRICT NO. 408"}, auburn["scope"])
+        for slug, layer, value in (
+            ("clark-battle-ground-school-district-no-119-proposition-no-11", "SCHDST", "119"),
+            ("kitsap-south-kitsap-school-district-no-402-proposition-no-1", "SCHDST", "402"),
+            ("thurston-yelm-community-schools-proposition-no-1", "SCHDST", "YELM"),
+            ("thurston-west-thurston-regional-fire-authority-rochester-littlerock-proposition-no-1", "RFADST", "FD01"),
+            ("thurston-thurston-county-fire-protection-district-no-3-lacey-fire-district-3-proposition-no-1",
+             "FIRDST", "FD03"),
+        ):
+            self.assertEqual({"kind": "DISTRICT", "county": slug.split("-")[0], "layer": layer, "value": value},
+                             self.measures[slug]["scope"])
         cemetery = self.measures["king-county-cemetery-district-no-1-proposition-no-1"]
         self.assertEqual({"kind": "DISTRICT", "county": "king", "layer": "CEMDST", "value": "1"}, cemetery["scope"])
 
@@ -152,14 +185,14 @@ class GeneralAppDataTest(unittest.TestCase):
                              sorted(c["slug"] for c in shipped["candidates"]))
         self.assertIn("sean-odonnell", [c["slug"] for c in self.contests["justice-position-no-4-supreme-court"]["candidates"]])
 
-    def test_ballot_is_statewide_plus_king_in_kce_order_then_snohomish_spokane_pierce(self):
+    def test_ballot_is_statewide_plus_king_in_kce_order_then_the_declared_counties(self):
         self.assertEqual([c["slug"] for c in self.king_contests + self.sno_contests + self.spo_contests
-                          + self.pie_contests],
+                          + self.pie_contests + self.wave2_contests],
                          [c["slug"] for c in self.app["contests"]])
         self.assertEqual([m["slug"] for m in self.state_measures + self.king_measures + self.sno_measures
-                          + self.spo_measures + self.pie_measures],
+                          + self.spo_measures + self.pie_measures + self.wave2_measures],
                          [m["slug"] for m in self.app["measures"]])
-        self.assertEqual((206, 69), (len(self.app["contests"]), len(self.app["measures"])))
+        self.assertEqual((281, 87), (len(self.app["contests"]), len(self.app["measures"])))
 
     def test_king_records_keep_owner_scope_and_uncontested_verbatim(self):
         for source in self.king_contests:
@@ -245,18 +278,18 @@ class GeneralAppDataTest(unittest.TestCase):
                          [(p["edition"], p["page"]) for p in self.measures["city-of-seattle-proposition-no-1"]["pamphlet_pages"]])
 
     def test_provenance_names_the_shipped_packages(self):
-        for path in (f"{election.rel(GENERAL.state)}/**", f"{election.rel(KING)}/**",
-                     f"{election.rel(SNOHOMISH)}/**", f"{election.rel(SPOKANE)}/**", f"{election.rel(PIERCE)}/**"):
-            self.assertIn(path, self.app["derived_from"])
+        for d in (GENERAL.state, KING, SNOHOMISH, SPOKANE, PIERCE, CLARK, KITSAP, THURSTON):
+            self.assertIn(f"{election.rel(d)}/**", self.app["derived_from"])
         merged = read(GENERAL.final / "scores.json")["derived_from"] + read(
             GENERAL.final / "measures.json")["derived_from"]
         self.assertTrue([d for d in merged if "/counties/king/" in d])
         self.assertTrue([d for d in merged if "/counties/snohomish/" in d])
         self.assertTrue([d for d in merged if "/counties/spokane/" in d])
-        self.assertTrue([d for d in merged if "/counties/pierce/" in d])
+        for county in SHIPPED:
+            self.assertTrue([d for d in merged if f"/counties/{county}/" in d], county)
         self.assertFalse([d for d in merged + self.app["derived_from"]
                           if "/counties/" in d
-                          and not any(f"/counties/{c}" in d for c in ("king", "snohomish", "spokane", "pierce"))])
+                          and not any(f"/counties/{c}" in d for c in SHIPPED)])
 
     def test_statewide_candidates_carry_ballot_order_pamphlet_pages_and_sources(self):
         for source in self.state_contests:
@@ -285,19 +318,24 @@ class GeneralAppDataTest(unittest.TestCase):
                 self.assertTrue(measure[field], f"{measure['slug']}: {field}")
             if not measure["lean_mappings"]:
                 no_axis.append(measure["slug"])
-            # Spokane's and Pierce's measures cite VoteWA's unpaged online
-            # guide (officialLinks.js countyGuides), so they carry no pages.
-            if measure["owner"] in ("spokane", "pierce"):
+            # Spokane's, Pierce's and Kitsap's measures cite VoteWA's unpaged
+            # online guide (officialLinks.js countyGuides), so they carry no pages.
+            if measure["owner"] in ("spokane", "pierce", "kitsap"):
                 self.assertEqual([], measure["pamphlet_pages"], measure["slug"])
             else:
                 self.assertTrue(measure["pamphlet_pages"], measure["slug"])
         # Five Pierce charter amendments (52-55, 58: council meetings,
         # appointed sheriff, ombuds, initiative deadline, juvenile detention
-        # office) carry none either.
-        self.assertEqual(12, len(no_axis), no_axis)
+        # office) carry none either, nor do seven Clark charter amendments
+        # (19-24, 26) and Kitsap PUD's electric-authority question (#22).
+        self.assertEqual(20, len(no_axis), no_axis)
         self.assertEqual(7, sum(s.startswith("snohomish-") for s in no_axis), no_axis)
         self.assertEqual(sorted(f"pierce-pierce-county-charter-amendment-no-{n}" for n in (52, 53, 54, 55, 58)),
                          sorted(s for s in no_axis if s.startswith("pierce-")))
+        self.assertEqual(sorted(f"clark-clark-county-proposed-charter-amendment-no-{n}" for n in (19, 20, 21, 22, 23, 24, 26)),
+                         sorted(s for s in no_axis if s.startswith("clark-")))
+        self.assertEqual(["kitsap-kitsap-county-public-utility-district-no-1-proposition-no-1"],
+                         [s for s in no_axis if s.startswith("kitsap-")])
 
 
 class GeneralSnohomishTest(unittest.TestCase):
@@ -442,6 +480,62 @@ class GeneralPierceTest(unittest.TestCase):
                     self.assertEqual("voters-pamphlet-edition-09-pierce", p["edition"], cand["slug"])
 
 
+class GeneralWave2Test(unittest.TestCase):
+    """Clark, Kitsap and Thurston (#22): counts, races shipped with another
+    package's research, and pamphlet editions."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.app = read(GENERAL.final / "app-data.json")
+        cls.contests = {c["slug"]: c for c in cls.app["contests"]}
+
+    def test_counts(self):
+        for county, contests, uncontested, measures in (("clark", 25, 9, 12), ("kitsap", 22, 8, 2), ("thurston", 28, 9, 4)):
+            own = [c for c in self.app["contests"] if c["owner"] == county]
+            self.assertEqual((contests, uncontested, measures),
+                             (len(own), sum(c["uncontested"] for c in own),
+                              sum(1 for m in self.app["measures"] if m["owner"] == county)), county)
+            self.assertFalse([c for c in own if "supreme" in c["slug"]])
+
+    def test_shared_races_ship_with_the_researching_package(self):
+        shared = {
+            "kitsap-congressional-district-6-u-s-representative": "pierce-congressional-district-6-u-s-representative",
+            "thurston-congressional-district-10-u-s-representative": "pierce-congressional-district-10-u-s-representative",
+            "thurston-congressional-district-3-u-s-representative": "clark-congressional-district-3-u-s-representative",
+        }
+        for office in ("state-senator", "state-representative-pos-1", "state-representative-pos-2"):
+            shared[f"kitsap-legislative-district-26-{office}"] = f"pierce-legislative-district-26-{office}"
+            shared[f"thurston-legislative-district-35-{office}"] = f"kitsap-legislative-district-35-{office}"
+        for pos in (1, 2):
+            shared[f"thurston-legislative-district-2-state-representative-pos-{pos}"] = \
+                f"pierce-legislative-district-2-state-representative-pos-{pos}"
+            shared[f"thurston-legislative-district-20-state-representative-pos-{pos}"] = \
+                f"clark-legislative-district-20-state-representative-pos-{pos}"
+        self.assertEqual(13, len(shared))
+        for slug, owner_slug in shared.items():
+            shipped, source = self.contests[slug], self.contests[owner_slug]
+            by_slug = {c["slug"]: c for c in source["candidates"]}
+            self.assertEqual(sorted(by_slug), sorted(c["slug"] for c in shipped["candidates"]), slug)
+            for cand in shipped["candidates"]:
+                self.assertTrue(cand["scores"], f"{slug}: {cand['slug']}")
+                for field in ("scores", "summary", "highlights", "sources", "evidence_level"):
+                    self.assertEqual(by_slug[cand["slug"]][field], cand[field], f"{slug}: {cand['slug']}: {field}")
+                # The researching package's pages are in its own pamphlet.
+                self.assertEqual([], cand["pamphlet_pages"], slug)
+
+    def test_pamphlet_editions(self):
+        editions = {county: set() for county in ("clark", "kitsap", "thurston")}
+        for contest in self.app["contests"]:
+            if contest["owner"] in editions:
+                for cand in contest["candidates"]:
+                    editions[contest["owner"]] |= {p["edition"] for p in cand["pamphlet_pages"]}
+        self.assertEqual({"clark": {"local-voters-pamphlet"}, "kitsap": set(),
+                          "thurston": {"local-voters-pamphlet", "voters-pamphlet-edition-27-thurston"}}, editions)
+        walsh = next(c for c in self.contests["thurston-legislative-district-19-state-representative-pos-1"]["candidates"]
+                     if c["slug"] == "jim-walsh")
+        self.assertEqual([{"edition": "voters-pamphlet-edition-27-thurston", "page": 31}], walsh["pamphlet_pages"])
+
+
 class GeneralRefutationsAppliedTest(unittest.TestCase):
     """merge_scores.py applies `adjust`, `refuted` and medium/high `missing`
     verdicts, for candidates and measures."""
@@ -486,7 +580,7 @@ class GeneralRefutationsAppliedTest(unittest.TestCase):
 
     def test_verdict_counts(self):
         stats = read(GENERAL.final / "scores.json")["verdict_stats"]
-        self.assertEqual({"upheld": 1233, "adjust": 91, "refuted": 4, "missing_added": 18, "missing_dropped_low": 3}, stats)
+        self.assertEqual({"upheld": 1568, "adjust": 127, "refuted": 6, "missing_added": 22, "missing_dropped_low": 6}, stats)
 
 
 if __name__ == "__main__":

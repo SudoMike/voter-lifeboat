@@ -88,8 +88,8 @@ test('every statewide contest and measure in the shipped general gets a paged SO
         n++
       }
   for (const m of general.measures) {
-    // Spokane's and Pierce's measures cite VoteWA's unpaged online guide (countyGuides).
-    if (m.owner === 'spokane' || m.owner === 'pierce') continue
+    // Spokane's, Pierce's and Kitsap's measures cite VoteWA's unpaged online guide (countyGuides).
+    if (m.owner === 'spokane' || m.owner === 'pierce' || m.owner === 'kitsap') continue
     assert.match(pamphletLink(m.pamphlet_pages, m.owner, general.election.id), /#page=\d+$/, m.slug)
     n++
   }
@@ -229,6 +229,34 @@ test('Clark, Kitsap and Thurston general citations link their PDFs at the cited 
     pamphletLink([{ edition: 'local-voters-pamphlet', page: 4 }], 'thurston', primary.election.id),
     'https://www.thurstoncountywa.gov/media/33642#page=4'
   )
+})
+
+test('shipped Clark, Kitsap and Thurston records link their own PDFs or guide; their offices link directly', () => {
+  const id = general.election.id
+  const PDF = {
+    clark: /2026clarkcountygeneralvp_web\.pdf#page=\d+$/,
+    thurston: /(thurstoncountywa\.gov\/media\/34849|Edition%2027%20-%20Thurston\.pdf)#page=\d+$/,
+  }
+  const paged = { clark: 0, kitsap: 0, thurston: 0 }
+  for (const item of [...general.contests, ...general.measures]) {
+    if (!(item.owner in paged)) continue
+    const pages = item.candidates ? item.candidates.map((c) => c.pamphlet_pages) : [item.pamphlet_pages]
+    for (const p of pages) {
+      if (!p?.length) continue
+      assert.match(pamphletLink(p, item.owner, id), PDF[item.owner], item.slug)
+      paged[item.owner]++
+    }
+  }
+  // Kitsap cites VoteWA only; every Clark and Thurston measure has pages.
+  assert.equal(paged.kitsap, 0)
+  assert.ok(paged.clark >= 40 && paged.thurston >= 30, JSON.stringify(paged))
+  for (const [county, name, url] of [
+    ['clark', 'Clark County', 'https://clark.wa.gov/elections'],
+    ['kitsap', 'Kitsap County', 'https://www.kitsap.gov/auditor/Pages/Elections.aspx'],
+    ['thurston', 'Thurston County', 'https://www.thurstoncountywa.gov/departments/auditor/elections'],
+  ]) {
+    assert.deepEqual(countyElectionsOffice(general, { id: county, name }), { name: `${name} Elections`, url, direct: true })
+  }
 })
 
 test('the shipped general links Snohomish County Elections directly', () => {

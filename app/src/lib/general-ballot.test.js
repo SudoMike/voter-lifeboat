@@ -1,6 +1,7 @@
 // The November 3, 2026 general as shipped: King County at Full County
 // Coverage (issue #16), Spokane at partial coverage, Pierce at full coverage
-// (#21) and Snohomish at full coverage (#27), every other Washington address a Statewide-Only
+// (#21), Snohomish at full coverage (#27), Clark, Kitsap and Thurston at full
+// coverage (#22), every other Washington address a Statewide-Only
 // Guide (issue #9). These run the app's own ballot, interview, lean and Ballot Brief
 // code against public/data/2026-11-03-general.
 import test from 'node:test'
@@ -66,7 +67,7 @@ const STATE_MEASURES = [
   'initiative-measure-no-il26-638',
 ]
 
-test('the general ships King, Snohomish and Pierce at full county coverage, Spokane at partial, with their elections offices', () => {
+test('the general ships King, Snohomish, Pierce, Clark, Kitsap and Thurston at full county coverage, Spokane at partial, with their elections offices', () => {
   assert.equal(data.election.id, '2026-11-03-general')
   assert.deepEqual(data.coverage, {
     statewide_complete: true,
@@ -109,8 +110,149 @@ test('the general ships King, Snohomish and Pierce at full county coverage, Spok
         coverage: 'full_county',
         elections_url: 'https://www.piercecountywa.gov/elections',
       },
+      {
+        // Full: Battle Ground SD's levy (SCHDST) resolves from Clark's own
+        // school district layer (#22).
+        id: 'clark',
+        name: 'Clark County',
+        state: 'WA',
+        fips: '53011',
+        coverage: 'full_county',
+        elections_url: 'https://clark.wa.gov/elections',
+      },
+      {
+        // Full: South Kitsap SD's levy (SCHDST) resolves from Kitsap's school
+        // district outlines; commissioner and PUD seats are countywide (#22).
+        id: 'kitsap',
+        name: 'Kitsap County',
+        state: 'WA',
+        fips: '53035',
+        coverage: 'full_county',
+        elections_url: 'https://www.kitsap.gov/auditor/Pages/Elections.aspx',
+      },
+      {
+        // Full: Yelm's levy (SCHDST) and West Thurston RFA's (RFADST) resolve
+        // from Thurston's Jurisdictions and fire layers (#22).
+        id: 'thurston',
+        name: 'Thurston County',
+        state: 'WA',
+        fips: '53067',
+        coverage: 'full_county',
+        elections_url: 'https://www.thurstoncountywa.gov/departments/auditor/elections',
+      },
     ],
   })
+})
+
+// A race listed by two counties ships once per county, with the researching
+// package's scoring (shared_contests): same candidates, same scores.
+const sameScoring = (ballot, slug, ownerSlug) => {
+  const shipped = ballot.contests.find((c) => c.slug === slug)
+  const owner = data.contests.find((c) => c.slug === ownerSlug)
+  assert.ok(shipped, slug)
+  assert.deepEqual(shipped.candidates.map((c) => [c.slug, c.scores]), owner.candidates.map((c) => [c.slug, c.scores]))
+}
+const ownLocal = (ballot, owner) => ballot.measures.filter((m) => m.owner === owner).map((m) => m.slug)
+
+test('a Clark ballot: council district, Battle Ground SD levy only inside the district', () => {
+  const CLARK = { id: 'clark', fips: '53011', name: 'Clark County' }
+  const cla = (districts) => ({ coverageStatus: 'full_county', county: CLARK, districts, missingLayers: [] })
+  // Districts as the live District Adapter resolved them on 2026-10-08.
+  // 1300 Franklin St, Vancouver.
+  const vancouver = ballotFor(cla({
+    CONGDST: '3', LEGDST: '49', CITY: 'Vancouver', COUNTY_COUNCIL: '1', PUDDST: '3', FIRDST: '26', SCHDST: '37',
+  }))
+  const vs = vancouver.contests.map((c) => c.slug)
+  assert.equal(new Set(vs).size, vs.length)
+  for (const slug of SUPREME_COURT) assert.ok(vs.includes(slug), slug)
+  assert.deepEqual(vancouver.measures.slice(0, 3).map((m) => m.slug), STATE_MEASURES)
+  assert.ok(vs.includes('clark-clark-county-council-district-1-county-councilor'))
+  assert.ok(vs.includes('clark-legislative-district-49-state-representative-pos-1'))
+  // The PUD seat is elected countywide in the general.
+  assert.ok(vs.includes('clark-public-utility-district-no-1-of-clark-county-district-3-pud-commissioner'))
+  assert.ok(!vs.some((s) => s.includes('council-district-5')), vs.join())
+  assert.equal(ownLocal(vancouver, 'clark').length, 11)
+  assert.ok(!ownLocal(vancouver, 'clark').includes('clark-battle-ground-school-district-no-119-proposition-no-11'))
+  // 109 SW 1st St, Battle Ground.
+  const bg = ballotFor(cla({
+    CONGDST: '3', LEGDST: '18', CITY: 'Battle Ground', COUNTY_COUNCIL: '5', PUDDST: '1', FIRDST: '3', SCHDST: '119',
+  }))
+  const bs = bg.contests.map((c) => c.slug)
+  assert.ok(bs.includes('clark-clark-county-council-district-5-county-councilor'))
+  assert.ok(bs.includes('clark-legislative-district-18-state-representative-pos-2'))
+  assert.ok(ownLocal(bg, 'clark').includes('clark-battle-ground-school-district-no-119-proposition-no-11'))
+  assert.equal(coverageAdvice(cla({})), null)
+})
+
+test('a Kitsap ballot: Pierce\'s research for LD 26 and CD 6, its own for LD 35, South Kitsap levy by district', () => {
+  const KITSAP = { id: 'kitsap', fips: '53035', name: 'Kitsap County' }
+  const kit = (districts) => ({ coverageStatus: 'full_county', county: KITSAP, districts, missingLayers: [] })
+  // 345 6th St, Bremerton.
+  const bremerton = ballotFor(kit({ CONGDST: '6', LEGDST: '26', CITY: 'Bremerton', COUNTY_COUNCIL: '2', SCHDST: '100-C' }))
+  const bs = bremerton.contests.map((c) => c.slug)
+  assert.equal(new Set(bs).size, bs.length)
+  for (const slug of SUPREME_COURT) assert.ok(bs.includes(slug), slug)
+  sameScoring(bremerton, 'kitsap-congressional-district-6-u-s-representative', 'pierce-congressional-district-6-u-s-representative')
+  sameScoring(bremerton, 'kitsap-legislative-district-26-state-senator', 'pierce-legislative-district-26-state-senator')
+  assert.ok(!bremerton.contests.some((c) => c.owner === 'pierce'))
+  assert.deepEqual(ownLocal(bremerton, 'kitsap'), ['kitsap-kitsap-county-public-utility-district-no-1-proposition-no-1'])
+  // 1700 SE Mile Hill Dr, Port Orchard: South Kitsap SD 402.
+  const po = ballotFor(kit({ CONGDST: '6', LEGDST: '26', CITY: 'Port Orchard', COUNTY_COUNCIL: '2', FIRDST: '7', SCHDST: '402' }))
+  assert.deepEqual(ownLocal(po, 'kitsap'), [
+    'kitsap-south-kitsap-school-district-no-402-proposition-no-1',
+    'kitsap-kitsap-county-public-utility-district-no-1-proposition-no-1',
+  ])
+  // 15376 Seabeck Hwy NW, Seabeck: LD 35, researched by Kitsap.
+  const seabeck = ballotFor(kit({ CONGDST: '6', LEGDST: '35', COUNTY_COUNCIL: '3', FIRDST: '1', SCHDST: '401' }))
+  const ss = seabeck.contests.map((c) => c.slug)
+  assert.ok(ss.includes('kitsap-legislative-district-35-state-senator'))
+  assert.ok(!ss.some((s) => s.includes('district-26')), ss.join())
+  assert.equal(coverageAdvice(kit({})), null)
+})
+
+test('a Thurston ballot: Pierce, Clark and Kitsap research for shared seats, WTRFA and Yelm levies by district', () => {
+  const THURSTON = { id: 'thurston', fips: '53067', name: 'Thurston County' }
+  const thu = (districts) => ({ coverageStatus: 'full_county', county: THURSTON, districts, missingLayers: [] })
+  // 601 4th Ave E, Olympia: CD 10 with Pierce's scoring, LD 22 Thurston's own.
+  const olympia = ballotFor(thu({
+    CONGDST: '10', LEGDST: '22', CITY: 'Olympia', COUNTY_COUNCIL: '1', PUDDST: '1', FIRDST: 'OFD', FIRE_AUTH: 'Olympia',
+    SCHDST: 'OLYMPIA',
+  }))
+  const os = olympia.contests.map((c) => c.slug)
+  assert.equal(new Set(os).size, os.length)
+  for (const slug of SUPREME_COURT) assert.ok(os.includes(slug), slug)
+  sameScoring(olympia, 'thurston-congressional-district-10-u-s-representative', 'pierce-congressional-district-10-u-s-representative')
+  assert.ok(os.includes('thurston-legislative-district-22-state-representative-pos-2'))
+  assert.deepEqual(ownLocal(olympia, 'thurston'), ['thurston-timberland-regional-library-district-proposition-no-1'])
+  // 18346 Albany St SW, Rochester: CD 3 (Clark's), LD 35 (Kitsap's), WTRFA.
+  const rochester = ballotFor(thu({
+    CONGDST: '3', LEGDST: '35', COUNTY_COUNCIL: '4', PUDDST: '3', FIRDST: 'FD01', FIRE_AUTH: 'WTRFA - South Btn',
+    RFADST: 'FD01', SCHDST: 'ROCHESTER',
+  }))
+  sameScoring(rochester, 'thurston-congressional-district-3-u-s-representative', 'clark-congressional-district-3-u-s-representative')
+  sameScoring(rochester, 'thurston-legislative-district-35-state-senator', 'kitsap-legislative-district-35-state-senator')
+  sameScoring(rochester, 'thurston-legislative-district-35-state-representative-pos-1', 'kitsap-legislative-district-35-state-representative-pos-1')
+  assert.ok(!rochester.contests.some((c) => c.owner !== 'thurston' && c.owner !== 'statewide'))
+  assert.deepEqual(ownLocal(rochester, 'thurston'), [
+    'thurston-timberland-regional-library-district-proposition-no-1',
+    'thurston-west-thurston-regional-fire-authority-rochester-littlerock-proposition-no-1',
+  ])
+  // 105 W Yelm Ave, Yelm: LD 2 (Pierce's), Yelm Community Schools.
+  const yelm = ballotFor(thu({
+    CONGDST: '10', LEGDST: '2', CITY: 'Yelm', COUNTY_COUNCIL: '2', PUDDST: '2', FIRDST: 'FD02',
+    FIRE_AUTH: 'S.E. Thurston Fire Authority', SCHDST: 'YELM',
+  }))
+  sameScoring(yelm, 'thurston-legislative-district-2-state-representative-pos-1', 'pierce-legislative-district-2-state-representative-pos-1')
+  assert.deepEqual(ownLocal(yelm, 'thurston'), [
+    'thurston-timberland-regional-library-district-proposition-no-1',
+    'thurston-yelm-community-schools-proposition-no-1',
+  ])
+  // Pierce's own Yelm Community Schools copy is scoped to Pierce.
+  assert.ok(!yelm.measures.some((m) => m.owner === 'pierce'))
+  // 420 College St SE, Lacey: Lacey Fire District 3's bonds.
+  const lacey = ballotFor(thu({ CONGDST: '10', LEGDST: '22', CITY: 'Lacey', FIRDST: 'FD03', FIRE_AUTH: 'Lacey', SCHDST: 'NORTH THURSTON' }))
+  assert.ok(ownLocal(lacey, 'thurston').includes('thurston-thurston-county-fire-protection-district-no-3-lacey-fire-district-3-proposition-no-1'))
+  assert.equal(coverageAdvice(thu({})), null)
 })
 
 test('a Spokane ballot: its own districts, school and fire measures by name, no PUD seat', () => {

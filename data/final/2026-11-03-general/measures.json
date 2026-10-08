@@ -9,7 +9,13 @@
     "data/washington-state/elections/2026-11-03-general/counties/spokane/scoring/measures.json",
     "data/washington-state/elections/2026-11-03-general/counties/spokane/scoring/refutations/measures.json",
     "data/washington-state/elections/2026-11-03-general/counties/pierce/scoring/measures.json",
-    "data/washington-state/elections/2026-11-03-general/counties/pierce/scoring/refutations/measures.json"
+    "data/washington-state/elections/2026-11-03-general/counties/pierce/scoring/refutations/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/clark/scoring/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/clark/scoring/refutations/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/kitsap/scoring/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/kitsap/scoring/refutations/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/thurston/scoring/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/thurston/scoring/refutations/measures.json"
   ],
   "script": "pipeline/merge_scores.py",
   "measures": [
@@ -1355,6 +1361,303 @@
         }
       },
       "sources_note": "Sources: VoteWA ballot title, explanatory statement, statements and rebuttals (S1); the district's levy page, levy FAQ, fiscal-oversight FAQ and school-funding page (S2-S5); OSPI 2026 levy status data (S6); PDC records for Yelm Kids First and the 2026 committee query (S7-S9). Local news (Nisqually Valley News) and the Pierce County pamphlet could not be read (HTTP 403). No parental-rights content."
+    },
+    {
+      "slug": "clark-clark-county-proposed-charter-amendment-no-19",
+      "what_it_does": "Limits County Council members to three consecutive four-year terms (12 years), counting prior consecutive service; a former member may run again after one full term out of office.",
+      "cost_line": "No tax or rate in the ballot title; amends the Clark County Home Rule Charter.",
+      "pro_summary": "Brandon Erickson, Dorothy Gasque and Liz Shaw: open seats widen the field and bring fresh perspectives; twelve years is ample time to serve, and former members may run again after a term away.",
+      "con_summary": "Morgan Holmgren, Liz Cline and Chuck Green: voters already remove councilors who overstay; limits cost institutional knowledge, empower unelected staff and interest groups, and restrict voter choice.",
+      "lean_mappings": {},
+      "sources_note": "Sources: VoteWA voters' guide measure record (local pamphlet statements, S1); sample ballot (S2); county election page (S3); Charter Review Commission page (S4)."
+    },
+    {
+      "slug": "clark-clark-county-proposed-charter-amendment-no-20",
+      "what_it_does": "Writes an earlier county budget calendar into the charter: earlier department estimates, preliminary budget information from the County Manager, and public presentations (September and October) before a November adoption hearing.",
+      "cost_line": "No tax or rate in the ballot title; amends the Clark County Home Rule Charter.",
+      "pro_summary": "Peter Silliman, Liz Cline and Ann Donnelly: moves the first public budget presentation to early September and adoption to November, giving residents time to review a budget of almost $900 million.",
+      "con_summary": "John Latta, Julie Koepp and Janet Landesberg: the charter already lets the county set earlier deadlines; process details do not belong in the charter and would make the budget process harder to improve.",
+      "lean_mappings": {},
+      "sources_note": "Sources: VoteWA voters' guide measure record (local pamphlet statements, S1); sample ballot (S2); county election page (S3); Charter Review Commission page (S4)."
+    },
+    {
+      "slug": "clark-clark-county-proposed-charter-amendment-no-21",
+      "what_it_does": "Lets the County Council nominate members to all county boards and commissions alongside the County Manager, except the Ethics Review Commission; today it nominates to three.",
+      "cost_line": "No tax or rate in the ballot title; amends the Clark County Home Rule Charter.",
+      "pro_summary": "Patrick Adigweme and Eric LaBrant: the Council can now nominate only to three bodies; letting councilors nominate volunteers to the rest could help keep seats filled.",
+      "con_summary": "No statement against was filed: after recruitment attempts, no one in the jurisdiction volunteered to write one.",
+      "lean_mappings": {},
+      "sources_note": "Sources: VoteWA voters' guide measure record (local pamphlet statements, S1); sample ballot (S2); county election page (S3); Charter Review Commission page (S4)."
+    },
+    {
+      "slug": "clark-clark-county-proposed-charter-amendment-no-22",
+      "what_it_does": "County nonpartisan races (Council, Assessor, Auditor, Clerk, Sheriff, Treasurer, Prosecuting Attorney) with one or two candidates would skip the August primary and go straight to the general; county elections stay in even-numbered years.",
+      "cost_line": "No tax or rate in the ballot title; amends the Clark County Home Rule Charter.",
+      "pro_summary": "Cathie Garber, Jennifer Wendel and Dorothy Gasque: a primary with one or two candidates narrows nothing; skipping it, as other nonpartisan races already do, saves printing and mailing costs.",
+      "con_summary": "Ann Donnelly, Peter Silliman and Liz Cline: the primary and its pamphlet inform voters for months; skipping it favors incumbents and embeds even-year elections in the charter.",
+      "lean_mappings": {},
+      "sources_note": "Sources: VoteWA voters' guide measure record (local pamphlet statements, S1); sample ballot (S2); county election page (S3); Charter Review Commission page (S4)."
+    },
+    {
+      "slug": "clark-clark-county-proposed-charter-amendment-no-23",
+      "what_it_does": "Requires the County Manager to present and broadly publish an annual statement of the county's fiscal and governmental affairs (now optional), and to present the budget in a public meeting.",
+      "cost_line": "No tax or rate in the ballot title; amends the Clark County Home Rule Charter.",
+      "pro_summary": "Patrick Adigweme, Eric LaBrant and Ann Donnelly: makes the annual report mandatory and broadly published, so the public gets it regardless of who holds office.",
+      "con_summary": "Margaret Tweet: the 'publish broadly' mandate has no election-season limit and could fund mailers that favor incumbents or county ballot measures; post reports online instead.",
+      "lean_mappings": {},
+      "sources_note": "Sources: VoteWA voters' guide measure record (local pamphlet statements, S1); sample ballot (S2); county election page (S3); Charter Review Commission page (S4)."
+    },
+    {
+      "slug": "clark-clark-county-proposed-charter-amendment-no-24",
+      "what_it_does": "Requires the county to publish a Housing Impact Analysis before adopting any discretionary ordinance likely to materially affect housing capacity, density, permitting, subdivisions, residential parking or construction costs.",
+      "cost_line": "No tax or rate in the ballot title; amends the Clark County Home Rule Charter.",
+      "pro_summary": "John Jay, David Stuebe and Justin Wood: councilors and the public should see the housing-cost effects of discretionary land-use rules before adoption; it dictates no outcome.",
+      "con_summary": "Chuck Green, Irene Finley and Morgan Holmgren: policy micromanagement in the charter; reports cost taxpayers and will not fix affordability driven by interest rates and state and federal rules.",
+      "lean_mappings": {},
+      "sources_note": "Sources: VoteWA voters' guide measure record (local pamphlet statements, S1); sample ballot (S2); county election page (S3); Charter Review Commission page (S4)."
+    },
+    {
+      "slug": "clark-clark-county-proposed-charter-amendment-no-25",
+      "what_it_does": "From 2027, a new or increased council-imposed (councilmanic) tax would need a two-thirds Council vote, which on a five-member council means four votes. Fees, special assessments and renewals at the same rate are excluded.",
+      "cost_line": "No tax or rate in the ballot title; amends the Clark County Home Rule Charter.",
+      "pro_summary": "John Jay, Paul Harris and Brian Lewallen: new council-imposed taxes should need broad agreement; it changes no current tax or service.",
+      "con_summary": "Janet Landesberg, Dorothy Gasque and Julie Koepp: on a five-member council two-thirds means four votes, letting two councilors block funding for law and justice, roads and parks.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": -2,
+          "basis": "YES requires four of five councilors to approve any new or increased council-imposed tax, a structural limit on tax increases; Snohomish's four-of-five tax supermajority amendment maps the same way.",
+          "citations": [
+            "S1",
+            "S2"
+          ]
+        }
+      },
+      "sources_note": "Sources: VoteWA voters' guide measure record (local pamphlet statements, S1); sample ballot (S2); county election page (S3); Charter Review Commission page (S4)."
+    },
+    {
+      "slug": "clark-clark-county-proposed-charter-amendment-no-26",
+      "what_it_does": "Lowers the signatures needed for county initiatives and referenda from 10% to 8%, lets a short initiative become a mini-initiative, simplifies the count for unincorporated-area measures, and allows statistical sampling to verify signatures.",
+      "cost_line": "No tax or rate in the ballot title; amends the Clark County Home Rule Charter.",
+      "pro_summary": "Cathie Garber, Liz Cline and Dorothy Gasque: no citizen petition has qualified since 2014; a lower threshold and signature sampling keep safeguards while making the process achievable.",
+      "con_summary": "Janet Landesberg and Chuck Green: voters rejected the same thresholds in 2022 by 59%; every signature should be verified, and lower thresholds elsewhere produced no initiatives.",
+      "lean_mappings": {},
+      "sources_note": "Sources: VoteWA voters' guide measure record (local pamphlet statements, S1); sample ballot (S2); county election page (S3); Charter Review Commission page (S4). 2022 Charter Amendment No. 14 record and results (S5, S6)."
+    },
+    {
+      "slug": "clark-clark-county-proposed-charter-amendment-no-27",
+      "what_it_does": "Lets the County Council order independent performance and program audits of county operations and requires it to set up an independent auditing process by ordinance; state audits continue.",
+      "cost_line": "No tax or rate in the ballot title; amends the Clark County Home Rule Charter.",
+      "pro_summary": "Peter Silliman, Liz Cline and Ann Donnelly: the body that approves department budgets should be able to commission performance audits, as other charter counties allow.",
+      "con_summary": "John Latta, Dijana Katan and Janet Landesberg: councilors and residents can already request audits and the State Auditor reviews for free; the measure's fiscal analysis says it could cost at least $100,000 more a year.",
+      "lean_mappings": {
+        "spending": {
+          "direction": -1,
+          "basis": "YES gives the Council power to commission independent performance and program audits, the oversight-and-audit pole; it authorizes audits rather than restraining any budget.",
+          "citations": [
+            "S1",
+            "S2"
+          ]
+        }
+      },
+      "sources_note": "Sources: VoteWA voters' guide measure record (local pamphlet statements, S1); sample ballot (S2); county election page (S3); Charter Review Commission page (S4)."
+    },
+    {
+      "slug": "clark-clark-county-proposition-no-12",
+      "what_it_does": "Authorizes up to $366,204,000 in 31-year general obligation bonds to remodel and expand the Clark County Jail, add courtrooms and build or remodel the Sheriff's Office headquarters, repaid by a countywide excess property tax.",
+      "cost_line": "Up to $366,204,000 in bonds over up to 31 years, repaid by a new countywide excess property tax; supporters estimate about $86 a year for a median home. No rate is stated in the ballot title.",
+      "pro_summary": "Ann Donnelly, Sue Marshall and John Horch: the jail, built more than 40 years ago, is overcrowded and unsafe; expansion would add treatment and reentry space and cut the cost of housing inmates elsewhere.",
+      "con_summary": "No statement against was filed: after recruitment attempts, no one in the jurisdiction volunteered to write one.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES adds a new 31-year countywide excess property-tax levy to repay up to $366 million in bonds.",
+          "citations": [
+            "S1",
+            "S2"
+          ]
+        },
+        "spending": {
+          "direction": 2,
+          "basis": "YES funds a large capital expansion: more jail capacity, added courtrooms and a new or remodeled Sheriff's headquarters.",
+          "citations": [
+            "S1",
+            "S2"
+          ]
+        }
+      },
+      "sources_note": "Sources: VoteWA voters' guide measure record 7342 (S1); sample ballot (S2); county election page (S3)."
+    },
+    {
+      "slug": "clark-clark-county-proposition-no-13",
+      "what_it_does": "Lifts the county's regular property-tax levy to $1.15 per $1,000 in 2027 (about $0.44 more) to pay for more corrections officers, sheriff's deputies and prosecutors; the 2027 amount becomes the base for later years.",
+      "cost_line": "County levy up to $1.15 per $1,000 in 2027, about $0.44 (62%) more than 2026: about $264 more on a $600,000 property, per the statement against; supporters put the cost at about $212 a year per median household.",
+      "pro_summary": "Ann Donnelly, Sue Marshall and John Horch: the Sheriff's Office has one of the lowest deputy-to-population ratios in the state; the levy funds deputies, corrections officers and prosecutors.",
+      "con_summary": "Margaret Tweet: a 62% jump in the county levy rate, raised to staff a jail expansion voters have not yet approved, on top of a 0.1% criminal justice sales tax the Council adopted in April 2026.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES raises the county regular levy from about $0.71 to $1.15 per $1,000 (about 62%) and makes the 2027 amount the base for future limits.",
+          "citations": [
+            "S1",
+            "S2"
+          ]
+        },
+        "spending": {
+          "direction": 1,
+          "basis": "YES pays for additional deputies, corrections officers and prosecutors, expanding staffing beyond current service.",
+          "citations": [
+            "S1",
+            "S2"
+          ]
+        }
+      },
+      "sources_note": "Sources: VoteWA voters' guide measure record 7344 (S1); sample ballot (S2); county election page (S3)."
+    },
+    {
+      "slug": "clark-battle-ground-school-district-no-119-proposition-no-11",
+      "what_it_does": "Restores Battle Ground Public Schools' educational programs and operations levy, which expired in 2025, for 2027-2029: safety, smaller classes, special education, reading and math support, curriculum and activities.",
+      "cost_line": "Estimated $1.76 per $1,000 a year: $37,025,000 (2027), $38,690,000 (2028), $40,430,000 (2029); about $1,144 a year on a $650,000 home.",
+      "pro_summary": "Terry Dotson and Sabrena Worthy: replaces the levy that expired in 2025, lowering the amount from the failed proposals as the community asked; failure risks state financial oversight.",
+      "con_summary": "Richard Rylander: the fourth attempt after three failures; about $1,144 a year on a $650,000 home, with no line-item commitment on how the general-fund money is spent.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES restores a lapsed operations levy at an estimated $1.76 per $1,000, below the $1.95 the district sought in April 2025.",
+          "citations": [
+            "S1",
+            "S2",
+            "S4"
+          ],
+          "adjusted_by_refutation": true
+        }
+      },
+      "sources_note": "Sources: VoteWA voters' guide measure record 7345 (S1); sample ballot (S2); county election page (S3); April 2025 Prop 9 record (S4) and results (S5); February 2025 results (S6)."
+    },
+    {
+      "slug": "kitsap-south-kitsap-school-district-no-402-proposition-no-1",
+      "what_it_does": "Authorizes a three-year South Kitsap School District capital levy (2027-2029) for elementary security cameras, intercoms, entrance access controls and bus radios, student Chromebooks and cybersecurity, a high school theater renovation and gym bleachers, and synthetic turf fields at South Kitsap High and Marcus Whitman Middle School. Passes with a simple majority.",
+      "cost_line": "Estimated $1.50 per $1,000 of assessed value: $23.5 million (2027), $24.2 million (2028) and $24.9 million (2029), $72.6 million in total. That is about $750 a year on a $500,000 home (the district rounds to $756). It is not described as replacing an expiring levy and would be collected alongside the district's EP&O levy.",
+      "pro_summary": "The statement in favor (Katherine Ander and Carl Olson, South Kitsap School Supporters) says the state does not pay for most school repairs or technology, and that even the newest schools are over 30 years old. It says the money must stay in South Kitsap for voter-approved projects, and acting now avoids costlier failures later.",
+      "con_summary": "No statement against was filed. The Auditor's Office recruited by text, email, press release and social media, and no one came forward.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "A yes vote adds a new three-year property tax of about $1.50 per $1,000 ($72.6 million). No source describes it as replacing an expiring levy, and the district has no bond debt. Whether any of the 2018 capital levy is still being collected was not found; if it were, that would argue for +1.",
+          "citations": [
+            "S1",
+            "S2",
+            "S3",
+            "S7"
+          ]
+        }
+      },
+      "sources_note": "Sources: VoteWA voters' guide measure 7380 (S1); the district's levy page and flyer (S2-S3); South Kitsap School Supporters (S4); Kitsap Daily News / Port Orchard Independent coverage of the 2026 levy (S5-S6), the 2018 capital levy (S7), the district's 2024 plans after the failed bond (S8), and the 2026 campaign (S9). A Kitsap Sun story was paywalled (HTTP 402) and not used."
+    },
+    {
+      "slug": "kitsap-kitsap-county-public-utility-district-no-1-proposition-no-1",
+      "what_it_does": "Asks whether Kitsap Public Utility District (KPUD), now a water, wastewater and fiber utility, may build or buy electric generation, transmission or distribution facilities. Puget Sound Energy serves the county today. A yes vote gives KPUD that authority permanently with no second public vote required, though it does not have to use it. The board has committed to a feasibility study first, and if PSE will not sell, KPUD could seek to acquire the system through condemnation. A no vote ends the current effort.",
+      "cost_line": "No tax, rate or bond in the ballot title. KPUD says property taxes and rates would not change because of the vote. A yes vote does trigger the board's promised feasibility study, estimated at $300,000-$500,000. The cost of any later acquisition is unknown; Jefferson PUD paid $103 million for PSE's much smaller Jefferson County system in 2010.",
+      "pro_summary": "The statement in favor (David Behar, William Woznicki and Sue Ellen White) says a yes vote allows a transparent study of public power, and the effort stops if the numbers don't work. It argues PUD rates run below PSE's, that money paid to PSE shareholders could stay local, and that decisions would be closer to ratepayers.",
+      "con_summary": "The statement against (Varon Mullis, Robert P. McGee and Shannon Turner, Citizens for Accountable Utilities in Kitsap) says the measure grants broad, permanent authority to buy or build a utility before any cost evidence, with no second vote. It notes that similar measures failed in Skagit, Island and Thurston counties, and that KPUD can study costs without this vote.",
+      "lean_mappings": {},
+      "sources_note": "Sources: VoteWA voters' guide measure 7376 (S1); KPUD's Exploring Electric Service page, Prop 1 fact publication, Resolution 26-07-28A, the June 22, 2026 general manager memo, an Oct. 7 presentation and a July listening-session post (S2-S7); Kitsap Daily News coverage including PSE's response (S8); RCW 54.08.070 and 54.16.040 (S9-S10). No lean: the measure raises no tax and authorizes no spending, and the local-control reading (state-regulated private utility versus locally governed public one) does not fit the rubric's poles. Kitsap Sun stories were paywalled (HTTP 402) and not used."
+    },
+    {
+      "slug": "thurston-timberland-regional-library-district-proposition-no-1",
+      "what_it_does": "Lifts Timberland Regional Library's regular property tax levy from about $0.22 to $0.35 per $1,000 of assessed value for 2027 and 2028; the 2028 amount becomes the base for later limits. TRL says about 96% of its budget comes from this levy, and that the money would restore open hours, staffing, collections and programs after 2026 budget cuts. The measure is decided by the combined vote of all five TRL counties.",
+      "cost_line": "From $0.228924 to $0.35 per $1,000 of assessed value, about $14 million more in 2027. Estimates for a Thurston home range from about $40 a year on a $334,000 home (explanatory statement) to $59 a year on the $457,400 median (TRL) and $69 a year on a $530,959 home (statement for).",
+      "pro_summary": "The statement for (TimberStrong Libraries Committee) says the levy has not risen in 25 years and has been eroded by rising costs, and that approval would restore hours and staffing and expand collections and programs: 'a long overdue cost-of-living raise.'",
+      "con_summary": "The statement against (Sean Swope, Citizens for Accountable TR Libraries) says property owners already face rising bills, and that the library should first show it has cut costs, sought grants and managed existing resources better. It says a no vote 'is not a vote against libraries or literacy.'",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "A yes vote is a levy lid lift, which the taxes pole_b names explicitly: it raises TRL's regular levy rate by more than half, from about $0.22 (exactly $0.228924) to $0.35 per $1,000, adding about $14 million in 2027.",
+          "citations": [
+            "S1",
+            "S4",
+            "S7"
+          ]
+        },
+        "spending": {
+          "direction": 1,
+          "basis": "A yes vote funds more open hours, staffing, collections and programs after recent cuts, against an opposing case that the library should first cut costs and prove prudent management.",
+          "citations": [
+            "S1",
+            "S4",
+            "S5"
+          ],
+          "added_by_refutation": true
+        }
+      },
+      "sources_note": "Local voters' pamphlet pages 24-25 (S1) and sample ballot (S2); Auditor's past-results list (S3); TRL levy page, Q&A and board news release (S4-S6); JOLT, Nisqually Valley News, Daily World and Chronicle coverage (S7-S11); PDC queries (S12-S13). The outcome of Olympia's Oct. 6 support resolution was not confirmed."
+    },
+    {
+      "slug": "thurston-yelm-community-schools-proposition-no-1",
+      "what_it_does": "Authorizes a two-year educational programs and operations (EP&O) levy for Yelm Community Schools, which has had no local levy for 2025 and 2026 after four failed attempts. It would keep the programs in place in 2025-26, such as current class sizes, AP and electives, athletics, activities, nurses, security and school resource officers,. The district says a limited amount would also let the board bring back some cut programs, and that if the levy fails the state would move it into financial oversight.",
+      "cost_line": "Up to $11,194,449 in 2027 and $12,278,072 in 2028, at an estimated $1.50 per $1,000 of assessed value. That is the lowest rate that qualifies for full state levy equalization; the legal maximum is $2.50. No Yelm EP&O levy is being collected now, so this adds a tax to current bills.",
+      "pro_summary": "The statement for (Yelm Kids First) says that after repeated levy failures the district has already cut staff, programs and athletics, and that the levy pays for teachers, counselors, nurses, safety staff and activities the state does not fully fund.",
+      "con_summary": "The statement against (Martin Miller and Frank Vance) says voters have said no four times and the levy restores none of the cuts. It says the district used one-time capital money for recurring costs, and that residents should press Olympia to meet its 'paramount duty' instead of taxing neighbors.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "No Yelm EP&O levy is being collected in 2025 or 2026. A yes vote brings back an excess levy of an estimated $1.50 per $1,000, about $11.2 million in 2027 and $12.3 million in 2028, so relative to current bills it is a new tax rather than a like-for-like renewal.",
+          "citations": [
+            "S1",
+            "S4",
+            "S7"
+          ]
+        }
+      },
+      "sources_note": "Local voters' pamphlet pages 26-27 (S1) and sample ballot (S2); Auditor's past-results list and 2025 SOS results (S3, S11); district levy FAQ (S4); Nisqually Valley News coverage 2025-2026 (S5-S10); PDC query (S12). parental-rights is not mapped: the sources describe staffing, programs and operations, not notification, records or opt-outs."
+    },
+    {
+      "slug": "thurston-thurston-county-fire-protection-district-no-3-lacey-fire-district-3-proposition-no-1",
+      "what_it_does": "Authorizes Lacey Fire District 3 to issue up to $98.3 million in general obligation bonds, repaid by property taxes over up to 20 years. The money would build a new station north of I-5 (Britton Pkwy), replace Station 32 on the Yelm Highway corridor, and build a regional live fire training facility and a logistics warehouse, plus property, other capital improvements and apparatus. The district cites more than 18,000 calls a year and only one of five stations north of I-5.",
+      "cost_line": "About $0.23 per $1,000 of assessed value, or about $9.60 a month on a $500,000 home, per the explanatory statement; the district's fact sheet gives $0.22 to $0.25 ($8 to $11 a month). Bond money cannot pay salaries or operations.",
+      "pro_summary": "The statement for (Steve Brooks and Tom Carroll) says calls are up 43% in ten years, a disaster could cut off the area north of I-5, and building now avoids higher construction costs later.",
+      "con_summary": "No statement against was filed; the pamphlet says no one in the jurisdiction contacted the Auditor to write one.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "A yes vote adds a new excess property tax of about $0.23 per $1,000 (about $9.60 a month on a $500,000 home) for up to 20 years to repay $98.3 million in capital bonds. It is a moderate new tax for capital projects, not an operating levy.",
+          "citations": [
+            "S1",
+            "S5"
+          ],
+          "adjusted_by_refutation": true
+        },
+        "spending": {
+          "direction": 1,
+          "basis": "A yes vote funds new public capital beyond current service: a new station north of I-5 to close a response coverage gap, plus a new regional live fire training facility and a logistics warehouse, sized for 20 years of growth.",
+          "citations": [
+            "S1",
+            "S5",
+            "S6",
+            "S7"
+          ],
+          "added_by_refutation": true
+        }
+      },
+      "sources_note": "Local voters' pamphlet page 28 (S1; the page also carries a stray 'Fire Protection District 12' heading and ballot title left over from the November 2025 pamphlet, see S11) and sample ballot (S2); Auditor's past-results list (S3); district bond page and fact sheet (S4-S5); JOLT coverage (S6-S9); PDC query (S10). The outcome of Lacey's Oct. 6 support resolution was not confirmed, and the remaining term of the 2017 bond was not found."
+    },
+    {
+      "slug": "thurston-west-thurston-regional-fire-authority-rochester-littlerock-proposition-no-1",
+      "what_it_does": "Authorizes the West Thurston Regional Fire Authority (Rochester and Littlerock) to collect a one-year excess maintenance and operations levy in 2027. The ballot title covers maintenance and operations to keep current fire and EMS service. The authority cites failing apparatus, a facility water system replacement and an aging fleet, and the statement for says all the money will go to apparatus replacement and facility maintenance. Earlier M&O levies failed in 2022 and 2024, and the August 2026 levies were short of 60% on election night.",
+      "cost_line": "$1,547,228 in 2027, about $0.36 per $1,000 of assessed value: at most $15 a month ($180 a year) on a $500,000 home. Needs 60% approval.",
+      "pro_summary": "The statement for (Tyler Mason and Cathe Linn) says many frontline vehicles are at or past their service life, and that stations need HVAC, roof, electrical and plumbing work. It says replacing equipment before it fails costs less than waiting for emergencies.",
+      "con_summary": "No statement against was filed; the pamphlet says no one in the jurisdiction contacted the Auditor to write one.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "A yes vote adds a one-year excess levy of about $0.36 per $1,000 on top of the regular fire levy. Recent M&O levies failed, so it adds to current bills, but it is small and lasts one year.",
+          "citations": [
+            "S1",
+            "S3",
+            "S6"
+          ]
+        }
+      },
+      "sources_note": "Local voters' pamphlet page 29 (S1) and sample ballot (S2); Auditor's past-results list and SOS 2022/2024 results (S3-S5); WTRFA Strategic Plan 2026-2030 (S6); Chronicle coverage of the August 2026 levies (S7-S8); PDC query (S9). Certified August 2026 results were not retrieved."
     }
   ]
 }
