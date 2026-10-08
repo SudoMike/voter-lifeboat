@@ -1,0 +1,37 @@
+{
+  "contest_slug": "measures",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/statewide/scoring/measures.json",
+    "data/washington-state/elections/2026-11-03-general/statewide/dossiers/measures/",
+    "data/final/2026-11-03-general/rubric.json"
+  ],
+  "verdicts": [
+    {
+      "candidate": "initiative-measure-no-ip26-645",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked on two grounds. (1) The tax has never been collected (first payments 2029), so YES prevents a tax rather than cutting one; but the rubric's pole A is explicitly 'oppose new taxes (income, wealth...)' and pole B names the 'millionaires tax', so a vote on whether this tax takes effect is squarely on the axis. (2) Strength: the dossier shows the largest revenue effect of any measure ($11.4 billion over SFY 2027-2031 per OFM) plus a standing statutory ban on any state or local income tax; -2 holds. Citations S1, S3, S5, S8 each support the basis."
+    },
+    {
+      "candidate": "initiative-measure-no-ip26-645",
+      "axis": "local-control",
+      "verdict": "upheld",
+      "note": "Closest call. Direction: pole A is 'skepticism of state mandates', pole B 'state mandates'; a state statute that removes a tax option from every county, city and local jurisdiction (S5 sec. 4(3)) is a state rule over local discretion, so +1 is the right sign even though the yes campaign frames the measure as 'restores your right to decide' (S4) -- that is about voters versus the Legislature, not about which level of government decides. Strongest counterargument: a NO vote does not give local governments the option either, because RCW 1.90.100(1) (I-2111) already bars local income taxes and ESSB 6346 exempted only the state tax (S9, S7); the practical difference for localities is the initiative's broader 'income' definition, 'measured by' clause and liberal-construction rule (S5). That supports keeping strength 1 rather than 2, not dropping the mapping, because the measure's own text and ballot subject ('state and local taxes', S1) put the local ban on the ballot. Director may prefer to drop it if a near-zero practical change should carry no lean."
+    },
+    {
+      "candidate": "initiative-measure-no-ip26-645",
+      "axis": "spending",
+      "verdict": "upheld",
+      "note": "Attacked as double counting the taxes mapping, since the measure contains no audit, performance or spending rule and its spending effect runs entirely through revenue. Upheld at 1 because the dossier carries separate spending evidence: the yes statement's central case is accountability for past spending (dedicated-fund transfers, unkept capital-gains commitments, 'demonstrate they can keep the commitments', S4), and the no case and OFM/legislative intent tie the revenue to program expansions (free school meals, child care, WFTC expansion; S3, S8). This mirrors the primary's practice of mapping spending +1 for levies that fund program expansion. Strength 2 would overstate it."
+    },
+    {
+      "candidate": "initiative-measure-no-ip26-645",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "Checked against the dossier: what_it_does matches the repeal and the sec. 4 prohibition (S5) and correctly says the sales/B&O/WFTC changes are not repealed (S2, S5); cost_line figures ($11.4 billion SFY 2027-2031, $377 million fair start for kids, about $150 million agency savings, no local revenue effect) match OFM (S3). pro_summary and con_summary name the pamphlet signatories as printed (S4) and attribute every claim. The con_summary deliberately omits the statement's '$13 billion over four years' and '460,000 families' figures, which conflict with OFM's $11.4 billion estimate and the Attorney General's statement that the accompanying credits and exemptions remain (S2, S3); the dossier records both claims with that context. Neither summary assigns the pamphlet authors to a PDC committee, which the sources do not establish."
+    }
+  ],
+  "missing": [],
+  "review_notes": "Fresh read of the dossier and rubric. Applicable measure axes are taxes, spending, local-control, social and parental-rights; the dossier holds no evidence on social or parental-rights (the Planned Parenthood Advocates signer on the con statement is a signatory, not policy content), so no missing mappings are proposed. Factual points re-checked while reviewing: the $1 million standard deduction is per individual, shared by spouses or registered domestic partners (ESSB 6346 sec. 314), which the dossier states precisely; OFM's prose $279,000 vs table $271,000 DSHS discrepancy is recorded, not resolved."
+}
