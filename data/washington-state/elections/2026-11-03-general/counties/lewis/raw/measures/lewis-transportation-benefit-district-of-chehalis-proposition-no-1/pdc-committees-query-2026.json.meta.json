@@ -1,0 +1,13 @@
+{
+  "url": "https://data.wa.gov/resource/3h9x-7bvm.json?$where=election_year%3d%272026%27+AND+filer_type%21%3d%27CA%27+AND+%28jurisdiction_county%3d%27LEWIS%27+OR+upper%28filer_name%29+like+%27%25LIBRAR%25%27+OR+upper%28filer_name%29+like+%27%25TIMBER%25%27+OR+upper%28filer_name%29+like+%27%25CHEHALIS%25%27+OR+upper%28filer_name%29+like+%27%25TRL%25%27%29&$select=id%2cfiler_name%2cfiler_type%2ccommittee_category%2cjurisdiction%2cjurisdiction_county%2cballot_number%2cfor_or_against%2cregistered%2ccontributions_amount%2cexpenditures_amount%2ccommittee_city",
+  "retrieved_at": "2026-10-09",
+  "method": "curl -L (User-Agent 'Mozilla/5.0')",
+  "stage": "raw",
+  "source_type": "pdc",
+  "tier": 1,
+  "outlet": "Washington Public Disclosure Commission",
+  "bytes": 3532,
+  "sha256": "2119a8850b0e98eefc62a9db1cafb103c0909c23a1fa44512b7694df1c8a7144",
+  "cache_file": "data/.cache/lewis/pdc-committees-lewis-2026.json",
+  "notes": "PDC campaign finance summary (data.wa.gov 3h9x-7bvm), 2026 non-candidate filers with jurisdiction county Lewis or a name matching library, timber, Chehalis or TRL."
+}
