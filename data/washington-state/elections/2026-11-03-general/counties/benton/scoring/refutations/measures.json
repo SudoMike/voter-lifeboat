@@ -1,0 +1,42 @@
+{
+  "contest_slug": "measures",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/benton/scoring/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/benton/dossiers/measures/",
+    "data/final/2026-11-03-general/rubric.json"
+  ],
+  "verdicts": [
+    {
+      "candidate": "benton-city-of-benton-city-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1 and S3 (mayor-council to council-manager, effective March 1, 2027; council hires a manager as chief administrator and picks a mayor from its members to chair meetings). cost_line matches S1: no tax, statement for concedes added payroll, no figure published. pro_summary attributes the statement to the City of Benton City as the pamphlet does (S1) and quotes Burton accurately (S2: council oversight of the executive, 50+ unpaid hours a week). con_summary matches S1 and S4. Empty lean_mappings checked and agreed: taxes has nothing to score (no levy, no cost figure); spending evidence points both ways (accountability claims vs a new paid executive); local-control does not apply because the measure changes the city's internal structure, not the city/state or city/region relationship (S1, S3)."
+    },
+    {
+      "candidate": "benton-city-of-benton-city-proposition-no-2",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked on strength: the ballot title frames it as 'restoring' a rate the city had in 2005 (S6), and the statement for says it keeps current services. But the dossier's tax facts are clear: a levy lid lift (cap lift, the rubric's pole_b example) that raises the rate from $0.71435 (2025, S2) to $1.60 per $1,000 (S1), more than double, with CPI growth through 2036 and the higher amount kept as the base afterward (S1, S7). 2 fits a large rate increase via a cap lift. Citations S1, S2, S7 support each claim. Spending considered and rejected: the statement for says the levy 'does not create new programs or expand services' (S1)."
+    },
+    {
+      "candidate": "benton-city-of-benton-city-proposition-no-2",
+      "axis": "_display",
+      "verdict": "adjust",
+      "note": "Arithmetic checks: $1.60 x 300 = $480; $0.71435 x 300 = $214.31; difference $266 (all match). The $398,000 shortfall in pro_summary matches the statement's $699,280 - $301,474 = $397,806 (S1); the dossier notes the two itemized costs sum to only $687,360, but the summary relays the statement's own figure, which is acceptable. what_it_does matches S1 and S7. One attribution problem in cost_line: 'The city says it would raise about $400,000 more a year' cites the statement for, which the voters' guide prints with no author listed (S1; the dossier says so explicitly). Corrected last sentence: 'The statement for says it would add about $400,000 a year.' Minor: 'permanent base' in what_it_does is a fair paraphrase of S1/S7 (the 2036 amount is the base for later levy limits) and need not change. pro_summary and con_summary otherwise match S1, S8 and S9."
+    },
+    {
+      "candidate": "benton-kiona-benton-city-school-district-no-52-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked toward 2: the expired levy is not being collected now, so a yes vote takes Ki-Be bills from no EP&O levy to $1.30 per $1,000 (about $390 on a $300,000 home) compared with 2026 (S1). But it is a replacement of an existing, voter-approved levy type (S1, S2, S5), at a rate close to the $1.28699 collected in 2025 (S6) and below the $1.50 rejected twice (S8). That is the renewal tier (1), consistent with Spokane's replacement-levy mappings. Citations S1, S6, S8 support the basis. Spending considered and rejected: the stated aim is restoring cut staff and services, not expansion beyond the prior level (S1, S8). parental-rights considered and rejected: the board's 'topics other than the students' remark (S1) names no topic."
+    },
+    {
+      "candidate": "benton-kiona-benton-city-school-district-no-52-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "Arithmetic checks: $1.30 x 300 = $390; $1.30 x 443.267 = $576.25, matching the board's $576 (S1); $1.28699 rounds to $1.29 (S6); vote margins 840 - 790 = 50 (S3) and 1,064 - 1,030 = 34 (S4). Levy amounts $2,208,341 and $2,318,758 match S1. what_it_does matches S1 and S2 (two years, listed uses, about 11% of the General Fund with LEA). pro_summary matches S1 (two failures, more than $3.00 million cut, lost teachers, return of counselors, support positions and athletics transportation) and S11 (KiBe Kids Yes!). Small attribution looseness, not worth a correction: the $804,000 LEA figure comes from the district's levy page and NewsTalk 870 (S2, S10), not the board's pamphlet statement, though both are the district speaking. con_summary matches S1, S3, S4, S8 and S11."
+    }
+  ],
+  "missing": []
+}
