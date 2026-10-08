@@ -1,0 +1,107 @@
+{
+  "contest_slug": "state-representative-position-no-1-legislative-district-no-1",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/king/dossiers/state-representative-position-no-1-legislative-district-no-1/"],
+  "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering school funding, tax structure, housing rules, health funding and criminal-justice statutes.",
+  "race_blurb": "Democratic incumbent Davina Duerr, chair of the House Local Government Committee, faces first-time Republican candidate Maggie Wang; Duerr took about three quarters of the primary vote. The race contrasts Duerr's vote for the 2026 tax on income over $1 million with Wang's pledge to stop tax increases and audit state spending.",
+  "candidates": [
+    {
+      "slug": "davina-duerr",
+      "summary": "Incumbent State Representative since 2019 and chair of the House Local Government Committee, an architect and former Bothell deputy mayor whose record centers housing supply, permitting and growth management.",
+      "highlights": [
+        "Lists seven bills that became law last term, including cheaper affordable-housing construction, faster housing permits and a growth-management loophole fix [S1]",
+        "Voted for ESSB 6346, the 2026 tax on income over $1 million that I-645 would repeal, and co-signed a session report calling it a historic step [S3][S6]",
+        "Voted for ESHB 1296 (2025), which amended the I-2081 parental-rights list [S4]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S3", "S6"],
+          "basis": "Voted for the 9.9% tax on income over $1 million and co-signed a session report praising it as fixing an upside-down tax code."
+        },
+        "housing": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S1", "S6"],
+          "basis": "Housing record centers supply-side measures: streamlining permits, cutting permitting delays (HB 2418) and lowering construction costs, rather than tenant protections."
+        },
+        "local-control": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S6"],
+          "basis": "Chairs Local Government and passed state-level rules on growth management and local permitting timelines, setting standards for cities."
+        },
+        "climate": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1"],
+          "basis": "Lists a bill phasing out super-pollutant refrigerants and is endorsed by Washington Conservation Action; no stated position on carbon pricing."
+        },
+        "experience": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S6"],
+          "basis": "In office since 2019, committee chair, seven bills enacted last term; opponent has never held office."
+        },
+        "social": {
+          "score": 1,
+          "confidence": "low",
+          "citations": ["S10"],
+          "basis": "Endorsed by Planned Parenthood Alliance Advocates; no statement of her own on reproductive or LGBTQ+ policy."
+        },
+        "parental-rights": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S4", "S5"],
+          "basis": "Voted for ESHB 1296, which modified and narrowed parts of the I-2081 parental-rights list; no campaign statement on the topic."
+        }
+      }
+    },
+    {
+      "slug": "maggie-wang",
+      "summary": "First-time Republican candidate and former Redmond restaurant owner running on stopping tax increases, auditing state spending, public safety and parental rights.",
+      "highlights": [
+        "Pledges to \"stop new tax increases\" and focus on \"lower taxes\" [S1][S2]",
+        "Supports auditing state spending and cutting wasteful programs [S2]",
+        "Names parental rights as one of her three priorities; endorsed by the King County Republican Party [S1][S4]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "Pamphlet and website both center lower taxes and a pledge to stop new tax increases."
+        },
+        "spending": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "Supports auditing state spending, cutting wasteful programs and reducing unnecessary spending; opposes 'bureaucratic expansion.'"
+        },
+        "safety": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S1", "S2"],
+          "basis": "Supports law enforcement and first responders and 'safer neighborhoods'; no detailed enforcement or prevention proposals."
+        },
+        "experience": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1"],
+          "basis": "No prior elected office; running on a small-business background against a seven-year incumbent."
+        },
+        "parental-rights": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S1", "S2"],
+          "basis": "Names parental rights as a core priority and supports 'parental involvement' in schools, without specific notification or opt-out proposals."
+        }
+      }
+    }
+  ]
+}
