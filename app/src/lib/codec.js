@@ -36,6 +36,20 @@ export function encodeProfile(data, context, answers) {
   return b64url(unescape(encodeURIComponent(json)))
 }
 
+/**
+ * Encode a profile for another election's page, named by its index entry
+ * (elections.json). `e` is the entry's `app_id` and `v` its `data_version`,
+ * the two values that page compares against its own `data.election.id` and
+ * `data.data_version`, so it shows no "data updated" banner.
+ */
+export function encodeProfileForElection(entry, context, answers) {
+  return encodeProfile(
+    { election: { id: entry.app_id }, data_version: entry.data_version },
+    context,
+    answers
+  )
+}
+
 export function decodeProfile(fragment) {
   try {
     const json = decodeURIComponent(escape(unb64url(fragment)))

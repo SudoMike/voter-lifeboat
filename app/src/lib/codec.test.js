@@ -1,6 +1,6 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import { decodeProfile, encodeProfile } from './codec.js'
+import { decodeProfile, encodeProfile, encodeProfileForElection } from './codec.js'
 import { loadElection } from './elections.js'
 
 test('profile payload round-trips derived location state without street address', () => {
@@ -84,4 +84,29 @@ test('a primary report link renders against the primary after the general goes a
   // Same election and data version as the link: no data-changed banner.
   assert.equal(decoded.electionId, got.data.election.id)
   assert.equal(decoded.dataVersion, got.data.data_version)
+})
+
+test('re-encoding for an archived election carries its app id and data version, same context and answers', () => {
+  const archived = {
+    id: '2026-08-04-primary',
+    app_id: '2026-08-04-primary-special',
+    status: 'archived',
+    data_version: '5204e0a',
+  }
+  const context = {
+    coverageStatus: 'statewide_only',
+    county: { id: 'king', fips: '53033', name: 'King County' },
+    districts: {},
+    missingLayers: [],
+    matched: '4218 SW Othello St, Seattle, WA',
+  }
+  const answers = { housing: { v: 1, w: 2 }, 'parental-rights': { v: -1.5, w: 1 } }
+  const decoded = decodeProfile(encodeProfileForElection(archived, context, answers))
+  assert.equal(decoded.electionId, '2026-08-04-primary-special')
+  assert.equal(decoded.dataVersion, '5204e0a')
+  assert.equal(decoded.context.coverageStatus, 'statewide_only')
+  assert.deepEqual(decoded.context.county, context.county)
+  assert.deepEqual(decoded.context.districts, {})
+  assert.deepEqual(decoded.answers, answers)
+  assert.equal(JSON.stringify(decoded).includes('Othello'), false)
 })

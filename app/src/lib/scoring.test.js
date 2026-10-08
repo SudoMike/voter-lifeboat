@@ -122,3 +122,23 @@ test('the general interview asks about parental-rights only when the ballot is s
   const scored = axesForBallot(general, [{ candidates: [cand({ 'parental-rights': 1 })] }], [])
   assert.deepEqual(statementAxes(interviewItemsForBallot(general, scored)), ['parental-rights'])
 })
+
+test('alignCandidate ignores answered axes the candidate was never scored on', () => {
+  const c = cand({ housing: 1, taxes: -1 })
+  const base = { housing: { v: 1, w: 1 }, taxes: { v: 0, w: 1 } }
+  // A general voter's parental-rights answer, which no primary candidate was
+  // scored on, must not move a primary score, even at maximum weight.
+  const extra = { ...base, 'parental-rights': { v: -2, w: 4 } }
+  const a = alignCandidate(c, base, 2)
+  const b = alignCandidate(c, extra, 2)
+  assert.equal(b.score, a.score)
+  assert.deepEqual(b.shared, ['housing', 'taxes'])
+  assert.equal(b.coverage, a.coverage)
+  // ...and the same holds through rankContest, which sizes coverage from the
+  // axes the contest's candidates were scored on.
+  const contest = { candidates: [c, cand({ housing: -1, taxes: 1 })] }
+  assert.deepEqual(
+    rankContest(contest, extra).rows.map((r) => [r.score, r.coverage]),
+    rankContest(contest, base).rows.map((r) => [r.score, r.coverage])
+  )
+})
