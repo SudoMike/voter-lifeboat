@@ -3,17 +3,31 @@
 Election: 2026 Washington general election, November 3, 2026 (VoteWA
 election 899, county code 20).
 
-Research status (#31): researched, scored and refuted; not yet declared in
-`APP_PACKAGES["2026-11-03-general"]["counties"]`. The builder
+Status (#31): shipped at partial coverage in
+`APP_PACKAGES["2026-11-03-general"]["counties"]`, with its elections office
+(`https://www.klickitatcounty.gov/1136/ElectionsVoter-Registration`), its
+voters' pamphlet (`pamphletPdfs['klickitat/local-voters-pamphlet']`, PDF
+page = printed page) and its VoteWA guide (`countyGuides.klickitat`,
+`c=20`). `COUNTY_LAYERS.klickitat` reads `EMSDST` (DOR EMS2025, layer 6,
+proposed below) beside `COUNTY_COUNCIL` and `FIRDST`. The East and West
+District Court seats stay `DISTCRT` and hidden: `klickitat/DISTCRT` is in
+`UNRESOLVABLE_SCOPES`, and the builder block's `unresolvable_layers`
+(added at ship time, since the override hook cannot report a layer) makes
+the package itself say `partial_county`. CD 4 ships with Benton's research,
+LD 14 with Yakima's, LD 17 with Clark's. Live ballots on 2026-10-08, each
+`partial_county` with no missing layer: 205 S Columbus Ave, Goldendale (LD
+17, the EMS levy) and 100 E Market St, Bickleton (LD 14, no EMS levy);
+neither shows a District Court seat. The paragraphs below describe the
+package as researched.
+
+Research status (#31): researched, scored and refuted. The builder
 (`pipeline/build_votewa_lite_data.py --county klickitat`) writes
-`interim/app-contests.json` and `interim/app-measures.json` and prints
-`full_county`, but that is only because the bulk builder's override hook
-cannot mark a layer unresolvable: the two District Court seats are scoped
-`DISTCRT`, for which no queryable boundary was found (see District
-scoping), and the Emergency Medical Services District measure needs
-`EMSDST`, which `COUNTY_LAYERS.klickitat` does not yet read. With `EMSDST`
-added and `DISTCRT` listed in `UNRESOLVABLE_SCOPES`, the county is honestly
-`partial_county` (two uncontested judge seats hidden).
+`interim/app-contests.json` and `interim/app-measures.json`. As researched
+it printed `full_county`, only because the bulk builder's override hook
+could not mark a layer unresolvable: the two District Court seats are
+scoped `DISTCRT`, for which no queryable boundary was found (see District
+scoping), and the Emergency Medical Services District measure needed
+`EMSDST`, which `COUNTY_LAYERS.klickitat` did not yet read.
 
 ## Sources
 

@@ -3,7 +3,21 @@
 Election: 2026 Washington general election, November 3, 2026 (VoteWA
 election 899, county code 02).
 
-Research package for #31 (county wave 6). Not yet shipped. Contests and
+Status (#31): shipped at Full County Coverage in
+`APP_PACKAGES["2026-11-03-general"]["counties"]`, with its elections office
+(`https://www.asotincountywa.gov/186/Current-Election`), its local pamphlet
+(`pamphletPdfs['asotin/local-voters-pamphlet']`, cited by PDF page) and its
+VoteWA guide (`countyGuides.asotin`, `c=02`). `COUNTY_LAYERS.asotin` reads
+`PUDDST` (DOR PUD2025) and `RURALEMSDST` (the presence layer on DOR TCA2025
+proposed below, `value: '2'`) beside `EMSDST`; `districts.js` names
+`RURALEMSDST` '2' `Asotin County Rural EMS District No. 2`. CD 5 and LD 9
+ship with Spokane's research. Live ballots on 2026-10-08, each
+`full_county` with no missing layer: 829 5th St, Clarkston (PUD seat, no
+local measure), 121 2nd St, Asotin (neither) and 992 Park Rd, Anatone
+(Rural EMS levy, no PUD seat). The paragraphs below describe the package
+as researched.
+
+Research package for #31 (county wave 6). Contests and
 measures are built by `pipeline/build_votewa_lite_data.py --county asotin`
 from the VoteWA candidate list (`raw/votewa/candidate-list.csv.url`) and the
 overrides and measures in that script's

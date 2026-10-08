@@ -3,12 +3,23 @@
 Election: 2026 Washington general election, November 3, 2026 (VoteWA
 election 899, county code 25).
 
-Status (#31): researched, scored and refuted; not yet declared in
-`APP_PACKAGES`. The builder reports `full_county`, but the two District
-Court seats are scoped `DISTCRT` (`North`, `South`), which no adapter layer
-resolves yet (see District scoping). Until a layer is added the assembler
-will mark Pacific `partial_county` for `DISTCRT`, or the director adds
-`pacific/DISTCRT` to `UNRESOLVABLE_SCOPES`.
+Status (#31): shipped at partial coverage in
+`APP_PACKAGES["2026-11-03-general"]["counties"]`, with its VoteWA guide
+(`countyGuides.pacific`, `c=25`) and no elections office URL:
+`https://www.co.pacific.wa.us/auditor/elections.htm` timed out on ports 80
+and 443 again at ship time (2026-10-08) and `pacificcountywa.gov` does not
+resolve, so the app links the statewide county elections office list.
+`COUNTY_LAYERS.pacific` reads `EMSDST` (DOR EMS2025, layer 6, proposed
+below) beside `FIRDST`. The North and South District Court seats stay
+`DISTCRT` and hidden: `pacific/DISTCRT` is in `UNRESOLVABLE_SCOPES`, and the
+builder block's `unresolvable_layers` (added at ship time) makes the
+package itself say `partial_county`. CD 3 ships with Clark's research, LD
+19 with Thurston's. Live ballots on 2026-10-08, each `partial_county` with
+no missing layer: 300 Memorial Dr, South Bend (Timberland and North Pacific
+EMS), 115 Bolstad St, Long Beach (Timberland only) and 38 2nd St, Bay
+Center (Timberland, EMS and Fire District 6); none shows a District Court
+seat. The paragraphs below describe the package as researched (the builder
+then reported `full_county`).
 
 ## Sources
 

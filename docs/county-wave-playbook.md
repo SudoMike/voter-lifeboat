@@ -430,11 +430,11 @@ voters outside the district.
 
 As of the builder runs on 2026-10-08 (#22, #28, #29, #30, #31), the shipped
 general packages that are `partial_county` are Spokane and Okanogan (both
-`PUDDST`). Benton,
+`PUDDST`) and Klickitat and Pacific (both `DISTCRT`). Benton,
 Clark, Kitsap, Pierce, Snohomish (since #27), Thurston, Whatcom, Yakima,
 Skagit, Cowlitz, Grant, Island, Lewis, Franklin, Chelan, Clallam, Grays
-Harbor, Mason, Walla Walla, Stevens, Whitman, Douglas, Jefferson and
-Kittitas are `full_county`; all twenty-five ship with King. A PUD
+Harbor, Mason, Walla Walla, Stevens, Whitman, Douglas, Jefferson, Kittitas
+and Asotin are `full_county`; all twenty-nine ship with King. A PUD
 commissioner is nominated by district but elected by the whole PUD in the
 general (RCW 54.12.010(3)), so a countywide PUD's seat is scoped `COUNTY`
 (Clark, Kitsap, Thurston), not `PUDDST`.
@@ -687,6 +687,47 @@ CD 8 with King's and LD 13 Senate and House with Grant's. Each county's
 Court of Appeals seat is its own information-only copy. Both link their
 local pamphlet at the cited page (PDF page = printed page) and their VoteWA
 guide otherwise.
+
+Klickitat and Pacific shipped on 2026-10-08 (#31) as `partial_county` for
+`DISTCRT` alone (`klickitat/DISTCRT` and `pacific/DISTCRT` are in
+`UNRESOLVABLE_SCOPES`). Each elects its two District Court judges by
+district: Klickitat's East and West courts (Auditor's 2025 Votes by
+District: 7,550 and 8,871 voters, precincts split between them), Pacific's
+North and South (2022: 23 and 18 precincts, some straddling). No county,
+DOR or ArcGIS Online layer of either pair exists, so the four uncontested
+seats ship with their true `DISTCRT` scopes and stay hidden. The bulk
+builder's override hook cannot report a layer unresolvable, so the
+county's `ELECTION_MEASURES` block now names it in `unresolvable_layers`
+and the package itself says `partial_county`; use it whenever an override
+scopes a race to a layer no adapter reads. Both counties' EMS levies read
+DOR EMS2025 (layer 6, `1`; Klickitat's district leaves out Bickleton,
+Pacific's North Pacific district the Ocean Beach, Ocosta and North River
+school districts, where Ocean Park reads `OB`); Pacific's Fire District 3
+and 6 levies read FIR2025, and its Timberland levy is county-wide (LIB2025
+has one Pacific polygon). Commissioner and PUD seats in both are elected
+county-wide in the general. Pacific's county site (`co.pacific.wa.us`) did
+not answer and `pacificcountywa.gov` does not resolve, so Pacific ships no
+elections office URL (the app falls back to the statewide office list) and
+links its VoteWA guide only; Klickitat links its combined SOS and local
+pamphlet (PDF page = printed page) and its guide.
+
+Asotin shipped on 2026-10-08 (#31) as `full_county`. Its PUD No. 1 is
+Clarkston and Clarkston Heights, not the county, and elects PUD-wide: the
+seat is `PUDDST` `1` and reads DOR PUD2025. Its Rural EMS District No. 2
+levy has no DOR EMS polygon (EMS2025's Asotin `1` is EMS District #1, the
+same area as Fire District 1, and the archived primary's `EMSDST` `1` scope
+for this levy was wrong; the primary is frozen). The new key `RURALEMSDST`
+is a presence layer on DOR TCA2025 (layer 23) with `where COUNTYNAME =
+'ASOTIN' AND DISTATTRIB IN ('0025','0030','0030F')` and `value: '2'`: the
+district's 2025 tax code areas, identified from DOR's levy detail, the
+county's rate table and the precinct parts that voted on it. A boundary
+change after tax year 2025 would be missed; re-check the TCAs when DOR
+publishes 2026. Shared races (11 across the three): Klickitat's CD 4 with
+Benton's scoring, LD 14 with Yakima's, LD 17 with Clark's; Pacific's CD 3
+with Clark's and LD 19 with Thurston's; Asotin's CD 5 and LD 9 with
+Spokane's. Klickitat's and Asotin's Court of Appeals seats are their own
+information-only copies. Asotin links its local pamphlet by PDF page (the
+printed numbers run 36 ahead) and its VoteWA guide otherwise.
 
 ## 13. Reference
 
