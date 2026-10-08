@@ -73,7 +73,7 @@ sources:
 Jamie Keenan-deVargas is a horticultural retail worker and renter running for office for the first time [S1][S3]. He holds a BA in Urban Engagement (minor in politics) from the University of Washington Tacoma [S1]. He founded the Immigrant Defense Coalition in Tacoma and is founder and director of Resist Overreach, an Olympia nonprofit that drafts local legislation to limit ICE activity [S1][S4]. He describes his campaign as volunteer-led and "inherently a populist campaign" [S1][S3].
 
 ## Positions
-- **Campaign money and reform:** says he takes no corporate or PAC money [S2][S5]. His top stated priority is removing corporate influence from politics; he proposes banning political spending by corporations with foreign ownership above set thresholds, conditioning large state contracts and tax preferences on a political-spending waiver, and a 50% licensing-fee increase on members of politically active real-estate trade associations to fund public election vouchers [S5].
+- **Campaign money and reform:** says he is "corporate PAC-free" and rejects corporate PACs and lobbying money [S2][S5]. His top stated priority is removing corporate influence from politics; he proposes banning political spending by corporations with foreign ownership above set thresholds, conditioning large state contracts and tax preferences on a political-spending waiver, and a 50% licensing-fee increase on members of politically active real-estate trade associations to fund public election vouchers [S5].
 - **Taxes:** says his platform is "heavily reliant on tax restructuring" and that he would champion a 2% tax on financial intangibles for portfolios over $100 million, and later a land value tax and a graduated property surcharge [S5]. Calls the 2026 "Millionaire's Tax" "performative" because he expects it to fail in court [S5]. Proposes a windfall-profits tax on price-gouging and pledges to lower costs "without taxing working people" [S1][S2].
 - **Spending:** proposes free childcare until elementary school plus state-funded after-school programs, universal single-payer health care, fare-free transit and expanded rail [S2][S5].
 - **Housing:** supports statewide caps on rent increases at the rate of inflation with no exemptions, repeal of the state ban on local rent control (RCW 35.21.830), a state social-housing program with community land trust ownership, statewide Housing First and an expanded right to counsel for tenants [S2][S4][S5]. Says "state preemption must be massively expanded" on zoning, wants infill and multifamily social housing exempt from SEPA, abolition of parking minimums, and default approval of affordable-housing permits after about 90 days [S5].
@@ -101,7 +101,7 @@ PDC (updated 2026-09-21): $5,312.22 raised and $3,157.69 spent [S8].
 
 ## Scoring notes
 - First-time candidate and renter running against the incumbent from the left within the same party [S1][S3].
-- Refuses corporate and PAC money and makes campaign-finance reform his top priority [S2][S5].
+- Rejects corporate PAC and lobbying money and makes campaign-finance reform his top priority [S2][S5].
 - Proposes rent caps, single-payer health care, free childcare and new wealth taxes [S2][S5].
 - Calls for decriminalizing drug use, removing school resource officers and divesting from prisons [S4][S5].
 - Raised about $5,300 against the incumbent's $110,000 [S8].

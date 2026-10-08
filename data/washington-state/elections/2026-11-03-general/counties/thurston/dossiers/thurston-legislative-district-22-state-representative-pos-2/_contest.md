@@ -38,7 +38,7 @@ Both oppose I-1 and I-638 (lisa-parshley.md S20; jamie-keenan-devargas.md S7). P
 
 ## Differentiating issue axes
 Because both are Democrats who agree on direction on several issues, the contrast is mostly degree and approach:
-1. **Reform / campaign money:** Keenan-deVargas refuses corporate and PAC money and makes campaign-finance restrictions his top priority; Parshley accepts contributions of up to $2,400 each from health, energy and business donors and PACs.
+1. **Reform / campaign money:** Keenan-deVargas rejects corporate PAC and lobbying money and makes campaign-finance restrictions his top priority; Parshley accepts contributions of up to $2,400 each from health, energy and business donors, including some PACs.
 2. **Record vs. renewal:** one-term House incumbent with six years on the Olympia council vs. a first-time candidate.
 3. **Health care:** both back the Washington Health Trust (Parshley is its prime sponsor); Keenan-deVargas argues it is stalled in Parshley's committee.
 4. **Housing:** Parshley pairs supply-first language with renter protections and voted for 2025 rent stabilization; Keenan-deVargas wants inflation-indexed rent caps with no exemptions, social housing and much broader state preemption of local zoning.
