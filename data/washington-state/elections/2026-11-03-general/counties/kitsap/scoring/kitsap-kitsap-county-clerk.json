@@ -1,0 +1,56 @@
+{
+  "contest_slug": "kitsap-kitsap-county-clerk",
+  "scored_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/kitsap/dossiers/kitsap-kitsap-county-clerk/"
+  ],
+  "office_does": "The county clerk keeps Kitsap County Superior Court records and filings, helps judges, lawyers and the public through the court process, and handles jury administration and passport services.",
+  "race_blurb": "Two candidates who prefer the Democratic Party: incumbent David T Lewis III, a 41-year veteran of the office and clerk since 2021, faces deputy clerk Brien Kennedy, a former tech and e-commerce executive who promises a public audit, plain-language guides and monthly office hours. This is the third contested clerk race in 28 years.",
+  "candidates": [
+    {
+      "slug": "david-t-lewis-iii",
+      "summary": "Kitsap County Clerk since 2021 after more than four decades in the clerk's office; president of the Washington Association of County Clerks.",
+      "highlights": [
+        "Appointed clerk in 2021, elected in 2022; 41+ years in the clerk's office [S1]",
+        "Cites e-filing as a modernization that improves access to justice [S1]",
+        "Endorsed by the Kitsap County Democrats and the 26th LD Democrats [S1]"
+      ],
+      "evidence_level": "pamphlet-only",
+      "withdrawn": false,
+      "scores": {
+        "experience": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1"],
+          "basis": "Four decades in the office and the sitting clerk since 2021; president of the state clerks' association."
+        }
+      }
+    },
+    {
+      "slug": "brien-kennedy",
+      "summary": "Deputy clerk for about a year and former Amazon, Microsoft and e-commerce executive, running a first campaign on accountability and plain-language public service.",
+      "highlights": [
+        "Pledges a full public operational audit of the clerk's office [S3][S1]",
+        "Promises plain-language guides, monthly public office hours and an annual report, with no added staff or budget [S3][S2]",
+        "Says 'Unopposed races must stop'; this is the third contested clerk race in 28 years [S2][S1]",
+        "Has been in the clerk's office just over a year after a private-sector career [S4]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "experience": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S4", "S2"],
+          "basis": "First-time candidate who argues repeatedly for fresh eyes and outside management experience over long tenure in the office."
+        },
+        "spending": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S3", "S2"],
+          "basis": "Proposes a public audit of contracts, staffing and technology spending and improvements 'without more staff or more budget'; does not call for cuts."
+        }
+      }
+    }
+  ]
+}
