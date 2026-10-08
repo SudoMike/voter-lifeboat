@@ -18,8 +18,13 @@ test('King legislative seats read office first, with a clean district number', (
     office: 'State Senator',
     place: 'Legislative District 46',
   })
+  // The seat is in `district` (KCE's shape) or, since #20, in `office`.
   const rep = general.contests.find(
-    (c) => c.scope?.layer === 'LEGDST' && c.scope.value === '46' && /Position No\. 1/.test(c.district)
+    (c) =>
+      c.owner === 'king' &&
+      c.scope?.layer === 'LEGDST' &&
+      c.scope.value === '46' &&
+      /Position No\. 1/.test(`${c.office} ${c.district}`)
   )
   assert.deepEqual(contestHeading(rep), {
     office: 'State Representative Position No. 1',
@@ -38,10 +43,9 @@ test('King city and council seats put the seat before the jurisdiction', () => {
   const seattle = general.contests.find((c) => c.scope?.layer === 'SCCDST')
   assert.deepEqual(contestHeading(seattle), { office: 'Council District No. 5', place: 'City of Seattle' })
   const kcc = general.contests.find((c) => c.scope?.layer === 'KCCDST')
-  assert.deepEqual(contestHeading(kcc), {
-    office: kcc.district,
-    place: 'Metropolitan King County',
-  })
+  const { office, place } = contestHeading(kcc)
+  assert.match(office, /^Council District No\. \d+$/)
+  assert.equal(place, 'Metropolitan King County')
 })
 
 test('contests without a district read as countywide or statewide', () => {

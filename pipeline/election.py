@@ -67,18 +67,22 @@ APP_PACKAGES = {
     },
     "2026-11-03-general": {
         "statewide_ballot": True,
-        "counties": ["king"],
+        "counties": ["king", "snohomish"],
         "district_contests": "county",
     },
 }
 
 
-# The District layers each county's District Adapter resolves from an
-# address: app/src/lib/geo.js KING_LAYERS for King (test_general_app_data.py
-# keeps the two equal). assemble_app_data.py gives a county `full_county`
-# coverage only when every DISTRICT scope it ships uses one of these layers.
+# The District layers each shipped county's District Adapter resolves from
+# an address: app/src/lib/geo.js KING_LAYERS for King; for any other county
+# the Census layers (CONGDST, LEGDST, CITY) plus COUNTY_LAYERS[<county>]
+# (test_general_app_data.py keeps each entry equal to geo.js).
+# assemble_app_data.py gives a county `full_county` coverage only when every
+# DISTRICT scope it ships uses one of these layers (and, for a non-King
+# county, its package also claims full_county).
 DISTRICT_ADAPTER_LAYERS = {
     "king": ("CONGDST", "LEGDST", "KCCDST", "SCCDST", "JUDDST", "FIRDST", "SCHDST", "CITY", "CEMDST"),
+    "snohomish": ("CONGDST", "LEGDST", "CITY", "PUDDST", "SCHDST", "FIRDST", "HOSPDST", "LIBDST", "RFADST"),
 }
 
 
@@ -169,6 +173,8 @@ def votewa_county_label(county_id: str) -> str:
 COUNTY_ELECTIONS_URLS = {
     "2026-11-03-general": {
         "king": "https://kingcounty.gov/en/dept/elections",
+        # Snohomish County Auditor, Elections & Voter Registration (200, 2026-10-08).
+        "snohomish": "https://www.snohomishcountywa.gov/224/Elections-Voter-Registration",
     },
 }
 

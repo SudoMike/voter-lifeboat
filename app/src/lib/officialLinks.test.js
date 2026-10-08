@@ -121,6 +121,40 @@ test('King general pages link the KCE local pamphlet or the SOS King edition at 
   assert.ok(n > 150, `${n} King pamphlet links`)
 })
 
+test('Snohomish general pages link the county Local Voters\' Pamphlet at that page', () => {
+  assert.equal(
+    pamphletLink([{ edition: 'local-voters-pamphlet', page: 92 }], 'snohomish', general.election.id),
+    'https://www.snohomishcountywa.gov/DocumentCenter/View/151457#page=92'
+  )
+  // The primary keeps its own Snohomish pamphlet.
+  assert.equal(
+    pamphletLink([{ edition: 'local-voters-pamphlet', page: 2 }], 'snohomish', primary.election.id),
+    'https://www.snohomishcountywa.gov/DocumentCenter/View/149774#page=2'
+  )
+  let n = 0
+  for (const item of [...general.contests, ...general.measures]) {
+    if (item.owner !== 'snohomish') continue
+    const pages = item.candidates ? item.candidates.map((c) => c.pamphlet_pages) : [item.pamphlet_pages]
+    for (const p of pages.filter((x) => x?.length)) {
+      assert.match(
+        pamphletLink(p, 'snohomish', general.election.id),
+        /^https:\/\/www\.snohomishcountywa\.gov\/DocumentCenter\/View\/151457#page=\d+$/,
+        item.slug
+      )
+      n++
+    }
+  }
+  assert.ok(n > 40, `${n} Snohomish pamphlet links`)
+})
+
+test('the shipped general links Snohomish County Elections directly', () => {
+  assert.deepEqual(countyElectionsOffice(general, { id: 'snohomish', name: 'Snohomish County' }), {
+    name: 'Snohomish County Elections',
+    url: 'https://www.snohomishcountywa.gov/224/Elections-Voter-Registration',
+    direct: true,
+  })
+})
+
 test('the shipped general links King County Elections directly', () => {
   assert.deepEqual(countyElectionsOffice(general, { id: 'king', name: 'King County' }), {
     name: 'King County Elections',

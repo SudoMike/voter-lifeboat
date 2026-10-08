@@ -3,14 +3,16 @@
     "data/washington-state/elections/2026-11-03-general/statewide/scoring/*.json",
     "data/washington-state/elections/2026-11-03-general/statewide/scoring/refutations/*.json",
     "data/washington-state/elections/2026-11-03-general/counties/king/scoring/*.json",
-    "data/washington-state/elections/2026-11-03-general/counties/king/scoring/refutations/*.json"
+    "data/washington-state/elections/2026-11-03-general/counties/king/scoring/refutations/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/snohomish/scoring/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/snohomish/scoring/refutations/*.json"
   ],
   "script": "pipeline/merge_scores.py",
   "verdict_stats": {
-    "upheld": 628,
-    "adjust": 61,
+    "upheld": 815,
+    "adjust": 65,
     "refuted": 2,
-    "missing_added": 9,
+    "missing_added": 11,
     "missing_dropped_low": 2
   },
   "contests": [
@@ -8908,6 +8910,2383 @@
               "basis": "Seven years on a city council but new to the Legislature, running against a long-serving incumbent."
             }
           }
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-congressional-district-2-u-s-representative",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/snohomish/dossiers/snohomish-congressional-district-2-u-s-representative/"
+      ],
+      "office_does": "A U.S. Representative writes and votes on federal law and spending, oversees the executive branch, and serves constituents for a two-year term; the 2nd District covers part of Snohomish County and all of Skagit, Whatcom, Island and San Juan counties.",
+      "race_blurb": "Thirteen-term Democratic incumbent Rick Larsen, the lead Democrat on the Transportation & Infrastructure Committee, faces first-time Republican candidate Edwin H. Feller. The race contrasts Larsen's ICE-accountability, climate and abortion-rights positions with Feller's lower-tax, enforcement-first and sex-based Title IX platform.",
+      "candidates": [
+        {
+          "slug": "rick-larsen",
+          "summary": "Thirteen-term incumbent and lead Democrat on the House Transportation & Infrastructure Committee, running on lowering costs, health care access, ICE accountability, abortion rights and infrastructure funding.",
+          "highlights": [
+            "Will not vote for full-year DHS and ICE funding without oversight; voted against the Laken Riley Act [S2][S7]",
+            "Calls health care a right and backs universal coverage, with a record of ACA and Medicare cost measures [S2]",
+            "Voted for the Inflation Reduction Act and calls climate mitigation a top priority [S2][S8]",
+            "Supports the Women's Health Protection Act and cites a 100% voting record on choice [S2]",
+            "Voted for the 2024 Israel and Ukraine security supplementals [S9][S10]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S6"
+              ],
+              "basis": "Supports scrapping the cap on income subject to Social Security taxes and voted against the 2025 One Big Beautiful Bill Act; no broader wealth-tax position stated."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S5",
+                "S8"
+              ],
+              "basis": "Backs expanded child care, a $17 minimum wage, Medicare hearing benefits and infrastructure investment; voted for the Inflation Reduction Act."
+            },
+            "safety": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "On fentanyl pairs 'addiction is a disease' and prevention/recovery funding with strengthening law enforcement against traffickers."
+            },
+            "climate": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S8"
+              ],
+              "basis": "Says mitigating climate change must be a top priority, supports clean energy, and voted for the Inflation Reduction Act."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S5"
+              ],
+              "basis": "Thirteenth-term incumbent and lead Democrat on Transportation & Infrastructure, facing a first-time candidate."
+            },
+            "immigration": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S7"
+              ],
+              "basis": "Conditions DHS/ICE funding on oversight, wants ICE body cameras and visible ID, supports ending family detention and private detention, and voted against the Laken Riley Act."
+            },
+            "healthcare": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "States universal coverage as a goal but his record and proposals work through ACA and Medicare; no single-payer proposal.",
+              "adjusted_by_refutation": true
+            },
+            "social": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Supports suspending the filibuster to pass the Women's Health Protection Act, cites a 100% pro-choice record, endorsed by Planned Parenthood Action Fund and Stonewall Democrats."
+            },
+            "tech": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Calls for 'strong guardrails' on data centers so their power and water costs are not passed to ratepayers."
+            },
+            "defense": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S9",
+                "S10"
+              ],
+              "basis": "Voted for the 2024 Israel and Ukraine security supplementals while opposing 'reckless foreign wars.'"
+            },
+            "reform": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "S2: has voted for legislation to 'end partisan gerrymandering, require disclosure of dark money, expand opportunities to vote' (dark-money disclosure is a named pole-B item).",
+              "added_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "edwin-h-feller",
+          "summary": "First-time Republican candidate and retired HVAC professional from Whatcom County, running on lower taxes, smaller government, enforcement-first immigration and public safety, energy deregulation and sex-based Title IX eligibility.",
+          "highlights": [
+            "Blames the affordability crisis on high taxes and a government grown too large; supports balanced budgets [S1]",
+            "Proposes ending sanctuary policies, designating cartels as terrorist organizations and merit-based immigration [S2]",
+            "Would dismantle environmental mandates and repeal federal carbon taxes while expanding nuclear and hydro [S2]",
+            "Supports defining sex in Title IX as biological sex and a federal ban on irreversible medical procedures for minors [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Says the affordability crisis comes from taxes being too high and proposes repealing federal carbon taxes."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Supports balanced budgets, says government has grown too large, and lists fiscal responsibility as a priority."
+            },
+            "safety": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Supports robust law enforcement and a federal Safe Streets mandate tying grants to local cooperation and ending sanctuary policies."
+            },
+            "climate": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Proposes dismantling 'radical environmental mandates', repealing federal carbon taxes and expanding nuclear and hydro capacity."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Has never held public office and runs explicitly against a long-serving incumbent."
+            },
+            "immigration": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Supports secure borders, ending sanctuary policies and a merit-based system that ends chain migration."
+            },
+            "social": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Supports codifying Title IX 'sex' as biological sex in athletics and a federal ban on irreversible medical procedures for minors."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-court-of-appeals-division-1-district-2-judge-position-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/snohomish/dossiers/snohomish-court-of-appeals-division-1-district-2-judge-position-2/"
+      ],
+      "office_does": "A Court of Appeals judge hears appeals from superior courts; Division 1, District 2 judges are elected by Snohomish County voters to six-year terms.",
+      "race_blurb": "Uncontested: Judge Linda Coburn, on the Court of Appeals since 2021, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "linda-coburn",
+          "summary": "Court of Appeals judge since 2021 and former Edmonds Municipal Court judge and Snohomish County public defender, running unopposed.",
+          "highlights": [
+            "Court of Appeals judge since 2021; Edmonds Municipal Court judge until 2021 [S1]",
+            "Former Snohomish County public defender and law clerk at the Court of Appeals and Snohomish County Superior Court [S1]",
+            "Member of the Supreme Court's Minority and Justice Commission; Judicial College faculty [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-10-state-representative-pos-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/snohomish/dossiers/snohomish-legislative-district-10-state-representative-pos-1/"
+      ],
+      "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering school funding, tax structure, housing rules, health funding and criminal-justice statutes.",
+      "race_blurb": "Democratic incumbent Clyde Shavers, a Navy veteran and attorney who has voted against the recent state tax increases, faces Republican Stanwood councilmember Robert (Chili) Hicks, a retired Navy Master Chief. They differ most on parental rights in schools, spending and abortion.",
+      "candidates": [
+        {
+          "slug": "clyde-shavers",
+          "summary": "Incumbent State Representative and Vice Chair of House Education, a Naval Academy graduate and Yale-trained attorney from Whidbey Island who campaigns on lowering costs and not raising taxes.",
+          "highlights": [
+            "Voted no on the 2026 tax on income over $1 million, the 2025 gas-tax package, the services sales tax and the B&O increases [S7][S9][S10][S11]",
+            "\"I do not support raising taxes\" [S3]",
+            "Voted for the 2025 rent-increase limits (EHB 1217) and against the 2025 clean fuel standard bill [S12][S13]",
+            "Says he is \"100 percent pro-choice\"; voted for ESHB 1296, the parental-rights amendments I-1 would repeal [S3][S8]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S7",
+                "S9",
+                "S10",
+                "S11"
+              ],
+              "basis": "Voted against the income tax over $1M, the gas-tax package, the services sales tax and B&O increases, and states he does not support raising taxes."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S14"
+              ],
+              "basis": "Voted against the 2025-27 operating budget twice; no stated spending philosophy."
+            },
+            "housing": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S12",
+                "S3"
+              ],
+              "basis": "Voted for the 2025 rent-increase limits, and favors incentives for nonprofit affordable-housing development."
+            },
+            "climate": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S9",
+                "S13"
+              ],
+              "basis": "Backs a clean-energy economy and fusion research, but voted against the 2025 clean fuel standard bill and the gas-tax package."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S3"
+              ],
+              "basis": "General pledge to support law enforcement with resources and tools; no enforcement or prevention specifics."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Sitting representative and Education Committee vice chair, facing a first-term city councilmember."
+            },
+            "social": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S3",
+                "S16"
+              ],
+              "basis": "Repeatedly states he is \"100 percent pro-choice\"; endorsed by Planned Parenthood Alliance Advocates; no record on gender or sports policy."
+            },
+            "parental-rights": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S8"
+              ],
+              "basis": "Voted for ESHB 1296, which amended and narrowed parts of the I-2081 parents' rights list; no campaign statement on the topic."
+            }
+          }
+        },
+        {
+          "slug": "robert-chili-hicks",
+          "summary": "Stanwood City Councilmember (elected 2024) and retired Navy Master Chief running on lower taxes, spending audits, enforcement-first public safety and parental rights.",
+          "highlights": [
+            "Proposes lowering the sales tax, repealing the estate tax and stopping new taxes and fees [S3]",
+            "Calls for independent audits, public review of every major budget and performance-based funding [S3]",
+            "Would restore the original parents' bill of rights, require schools to post curricula and notify parents before non-emergency health services [S2][S3]",
+            "Supports police pursuits and a crackdown on fentanyl dealers, with treatment for those ready [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Pamphlet and platform pledge to lower taxes, cut the sales tax, repeal the estate tax and stop new taxes and fees."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Centers fiscal discipline, independent audits, public budget review and performance-based funding."
+            },
+            "safety": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Platform centers police pursuits, full police funding, accountability for judges and prosecutors and a drug-dealer crackdown; treatment is secondary."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Local elected experience (Stanwood council since 2024) but no state legislative record, challenging an incumbent."
+            },
+            "parental-rights": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Would restore the original parents' bill of rights, require curriculum posting, and require parent notice before non-emergency health services."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-10-state-representative-pos-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/snohomish/dossiers/snohomish-legislative-district-10-state-representative-pos-2/"
+      ],
+      "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, including ferry funding, school funding, tax structure and criminal-justice statutes.",
+      "race_blurb": "Four-term Democratic incumbent Dave Paul, chair of House Postsecondary Education & Workforce, faces Republican Tim Hazelo, a Navy veteran and contractor from Oak Harbor. They split on the income tax over $1 million, electric ferries and state spending.",
+      "candidates": [
+        {
+          "slug": "dave-paul",
+          "summary": "Incumbent State Representative seeking a fifth term, a Skagit Valley College administrator who chairs the House Postsecondary Education & Workforce Committee.",
+          "highlights": [
+            "Voted for the 2026 tax on income over $1 million and the 2025 gas-tax package; voted against the 2025 services sales tax and B&O increases [S5][S7][S8][S9]",
+            "Says he is \"fighting to fix our upside-down tax code\" [S1]",
+            "Prioritizes funding three more electric ferries; voted for the 2025 clean fuel standard bill [S15][S11]",
+            "States he is pro-choice; voted for ESHB 1296 [S1][S6]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S5",
+                "S7",
+                "S8",
+                "S9"
+              ],
+              "basis": "Voted for the income tax over $1M and the gas-tax package and backs fixing the 'upside-down tax code', but voted against the 2025 services sales tax and B&O increases."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "low",
+              "citations": [
+                "S12"
+              ],
+              "basis": "Voted for the 2025-27 operating budget; no stated spending philosophy beyond protecting college grant funding."
+            },
+            "housing": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S10",
+                "S2"
+              ],
+              "basis": "Voted for the 2025 rent-increase limits and names affordable housing a priority."
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S11",
+                "S15",
+                "S3"
+              ],
+              "basis": "Voted for the 2025 clean fuel standard bill and prioritizes electric-ferry funding; endorsed by Sierra Club."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S15"
+              ],
+              "basis": "Seeking a fifth term, committee chair, with enacted bills; opponent has never held public office."
+            },
+            "social": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S14"
+              ],
+              "basis": "Pamphlet states he is pro-choice; endorsed by Planned Parenthood Alliance Advocates; no record on gender or sports policy.",
+              "adjusted_by_refutation": true
+            },
+            "parental-rights": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S6"
+              ],
+              "basis": "Voted for ESHB 1296, which amended and narrowed parts of the I-2081 parents' rights list; no campaign statement on the topic."
+            }
+          }
+        },
+        {
+          "slug": "tim-hazelo",
+          "summary": "Republican Navy veteran, contractor and truck driver from Oak Harbor and former Island County Republican chair, running against income taxes and electric ferries and for spending audits.",
+          "highlights": [
+            "\"No income taxes on Washington State residents!\" [S3]",
+            "Calls for audits and transparency of every dollar spent [S3]",
+            "Opposes electric ferries as less dependable and costlier; favors diesel-electric boats [S6]",
+            "Would end cashless bail and cut housing regulations [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S6"
+              ],
+              "basis": "Platform opposes any income tax; Herald reports he opposes the millionaires' tax and any tax not approved by voters."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S6",
+                "S1"
+              ],
+              "basis": "Calls for audits of every dollar, blames unsustainable spending for taxes, and questions social-program spending."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Would cut red tape and regulations he says drive up housing costs; no other housing proposals."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S6"
+              ],
+              "basis": "Would end cashless bail and 'catch and release'; no broader public-safety program."
+            },
+            "climate": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S6"
+              ],
+              "basis": "Opposes the state's electric ferries in favor of diesel-electric on cost and reliability grounds."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "No elected public office beyond precinct committee officer, challenging a four-term incumbent."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-21-state-representative-pos-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/snohomish/dossiers/snohomish-legislative-district-21-state-representative-pos-1/"
+      ],
+      "office_does": "A State Representative writes and votes on Washington state law and the state budgets, covering school funding, tax structure, housing and land-use rules for cities, and criminal-justice statutes.",
+      "race_blurb": "Two Democrats: incumbent Strom Peterson, House Housing chair who also sits on the Snohomish County Council, faces Mukilteo Council President Jason Moon, who pledges to give up his city seat. The race contrasts Peterson's state housing mandates and Millionaire's Tax vote with Moon's calls for local control over density and protecting taxpayers.",
+      "candidates": [
+        {
+          "slug": "strom-peterson",
+          "summary": "Incumbent State Representative and House Housing Committee chair, also a Snohomish County Councilmember and Edmonds small-business owner, whose record centers rent stabilization, supportive-housing siting and gun-safety laws.",
+          "highlights": [
+            "Chairs the House Housing Committee; co-sponsored 2025 rent stabilization (EHB 1217) [S1][S7]",
+            "Prime sponsor of ESHB 2266 (2026), requiring cities to allow supportive housing and shelters [S8][S11]",
+            "Co-sponsored and voted for the 2026 Millionaire's Tax [S2][S5]",
+            "Campaigns on reproductive freedom and gun-safety laws [S1][S2][S3]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S5"
+              ],
+              "basis": "Voted for ESSB 6346 and says he was 'proud to cosponsor and vote for the Millionaire's Tax' to fix an 'upside-down' tax code."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Cites nearly a billion dollars for the Housing Trust Fund and investments in behavioral health, transportation and workforce training."
+            },
+            "housing": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S7",
+                "S8"
+              ],
+              "basis": "Co-sponsored rent stabilization (7% plus CPI cap), prime-sponsored supportive-housing siting and highlights Housing Trust Fund investment, alongside supply bills."
+            },
+            "safety": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Emphasizes gun-safety laws and expanded treatment and behavioral-health services rather than enforcement measures."
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S9"
+              ],
+              "basis": "Voted for the 2025 clean fuels bill; endorsed by Conservation Action and serves on a coal-opposition board; no carbon-pricing statement."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Sitting House committee chair and county councilmember, former Edmonds council president."
+            },
+            "local-control": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S8",
+                "S11",
+                "S2"
+              ],
+              "basis": "Prime sponsor of a 2026 law requiring local governments to allow supportive housing and shelters in residential areas; cites state middle-housing legislation."
+            },
+            "social": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Repeated statements defending abortion rights and pledging to fight for LGBTQ neighbors; endorsed by Planned Parenthood Alliance Advocates."
+            },
+            "parental-rights": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S6"
+              ],
+              "basis": "Co-sponsored and voted for ESHB 1296, which amended and narrowed parts of the I-2081 parental-rights list; no campaign statement on the topic."
+            }
+          }
+        },
+        {
+          "slug": "jason-moon",
+          "summary": "Mukilteo City Council President and business partner running as a Democrat on local control of housing density, protecting taxpayers, law-enforcement staffing and full-time representation.",
+          "highlights": [
+            "Says 'state mandated density threatens the character of our communities' and local governments need more control [S1][S2]",
+            "Pledges to protect taxpayers from higher taxes: 'It's not a Revenue problem, it's a spending problem' [S2]",
+            "Will resign from the Mukilteo City Council if elected; criticizes the incumbent's two offices [S1][S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Pledges leadership 'that protects taxpayers from higher taxes' and says the state has a spending, not revenue, problem."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Calls for balanced, accountable budgeting while protecting essential services."
+            },
+            "local-control": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Pamphlet and site both oppose state-mandated density and 'top-down' housing mandates and call for more local control."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Says low law-enforcement staffing 'has to change,' while also calling addiction and homelessness system failures."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "City council president running on 'fresh perspectives' against a long-serving legislator; has local but not state office."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-21-state-representative-pos-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/snohomish/dossiers/snohomish-legislative-district-21-state-representative-pos-2/"
+      ],
+      "office_does": "A State Representative writes and votes on Washington state law and the state budgets, covering school funding, tax structure, housing rules, health funding and criminal-justice statutes.",
+      "race_blurb": "Democratic incumbent Lillian Ortiz-Self, House Majority Caucus Chair and a school counselor, faces Libertarian Bruce Guthrie, a retired executive and teacher. Ortiz-Self voted for the 2026 tax on income over $1 million; repealing that tax is Guthrie's top issue.",
+      "candidates": [
+        {
+          "slug": "lillian-ortiz-self",
+          "summary": "Incumbent State Representative and House Majority Caucus Chair, an Everett School District counselor, campaigning on education, behavioral health, child care, immigrant protections and reproductive rights.",
+          "highlights": [
+            "House Majority Caucus Chair; sits on Education and Children, Youth and Families [S1]",
+            "Voted for ESSB 6346 and ESSB 5813's capital gains and estate tax changes [S5][S7]",
+            "Says she introduced bills on private detention oversight and notice of federal employment-document requests [S2]",
+            "Voted for ESHB 1296 (2025), which amended the I-2081 parental-rights list [S6]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S5",
+                "S7"
+              ],
+              "basis": "Recorded votes for ESSB 6346 (tax on income over $1 million) and ESSB 5813 (more progressive capital gains and estate taxes)."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Says the state needs leadership 'ready and willing to invest in Washington' to backfill federal cuts to services."
+            },
+            "housing": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S8",
+                "S9"
+              ],
+              "basis": "Co-sponsored and voted for EHB 1217 rent and fee limits and voted for ESHB 2266 supportive-housing siting."
+            },
+            "safety": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Pairs expanding behavioral health care and gun violence prevention with 'strengthening and diversifying law enforcement.'"
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3",
+                "S10"
+              ],
+              "basis": "Cites climate action and clean-economy infrastructure and voted for the 2025 clean fuels bill; no carbon-pricing statement."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Long-serving representative and eight-year House Majority Caucus Chair."
+            },
+            "local-control": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S9"
+              ],
+              "basis": "Voted for ESHB 2266, which sets state rules requiring cities to allow supportive housing and shelters."
+            },
+            "immigration": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Says states must be 'the first line of defense' and that she introduced detention-oversight and ICE-notice bills to protect immigrants."
+            },
+            "social": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Campaign site states abortion protection is something she has 'long fought for' and must keep fighting for."
+            },
+            "parental-rights": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S6"
+              ],
+              "basis": "Voted for ESHB 1296, which amended and narrowed parts of the I-2081 parental-rights list; no campaign statement on the topic."
+            }
+          }
+        },
+        {
+          "slug": "bruce-guthrie",
+          "summary": "Libertarian candidate in his seventh campaign, a retired sales and marketing executive and teacher from Edmonds, whose top issue is repealing the state income tax.",
+          "highlights": [
+            "Top issue: 'Oppose/Repeal State Income Tax'; also cut gas taxes and state spending [S1][S2]",
+            "Would arrest shoplifters and bike thieves and stop 'subsidizing' homelessness [S2]",
+            "Supports barring 'genetic males' from girls' sports in grades 9 and up, school vouchers and legislative term limits [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Repeatedly calls for repealing the state income tax and cutting gas and other state taxes."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Pamphlet and site both call for cutting record-level state spending."
+            },
+            "housing": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Blames high rents on property taxes and land over-regulation that limits supply."
+            },
+            "safety": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Proposes reducing homelessness by arresting shoplifters and bike thieves and ending subsidies."
+            },
+            "climate": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Opposes the gas tax and says the Climate Commitment Act and cap-and-invest have raised gas prices without helping the environment."
+            },
+            "immigration": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Would help ICE deport people convicted of crimes but not cooperate in deporting others: a mixed position."
+            },
+            "reform": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Supports term limits of four terms for legislators."
+            },
+            "social": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Supports barring 'genetic males' from competing against girls in grades 9 and above.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Has never held elected office; seventh Libertarian campaign."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-21-state-senator",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/snohomish/dossiers/snohomish-legislative-district-21-state-senator/"
+      ],
+      "office_does": "A State Senator writes and votes on Washington state law and the operating, capital and transportation budgets, and the Senate confirms the governor's appointments.",
+      "race_blurb": "Democratic incumbent Marko Liias, in the Senate since 2014 and chair of its Transportation Committee, faces Republican Riaz Khan, a former Mukilteo councilmember. Liias has voted for the 2026 tax on income over $1 million and other progressive tax bills; Khan campaigns on lower taxes, spending restraint and parental rights.",
+      "candidates": [
+        {
+          "slug": "marko-liias",
+          "summary": "Incumbent State Senator since 2014 and chair of the Senate Transportation Committee, a former state representative and Mukilteo councilmember whose record includes clean-fuels laws, progressive tax votes and student cellphone limits.",
+          "highlights": [
+            "Chairs Senate Transportation; in the Legislature since 2008 [S1]",
+            "Voted for ESSB 6346, the 9.9% tax on income over $1 million, and ESSB 5813's capital gains and estate tax changes [S5][S7]",
+            "Lists clean fuels, building-emissions and greenhouse-gas tracking laws among his achievements [S3]",
+            "Prime sponsor of SB 5346, restricting student cellphone use in public schools [S11]",
+            "Voted for ESHB 1296 (2025), which amended the I-2081 parental-rights list [S6]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S5",
+                "S7"
+              ],
+              "basis": "Recorded votes for ESSB 6346 (tax on income over $1 million) and ESSB 5813 (more progressive capital gains and estate taxes), two independent tax votes."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Campaigns on transportation infrastructure jobs and lists school-funding and transportation packages as achievements; no stated restraint agenda."
+            },
+            "housing": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S8"
+              ],
+              "basis": "Cites winning resources for affordable units and voted for EHB 1217 rent and fee limits, alongside calls for more housing near transit."
+            },
+            "climate": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S10"
+              ],
+              "basis": "Lists the Low Carbon Fuel Standard, building-emissions standards and GHG tracking as achievements and voted for the 2025 clean fuels bill."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Senator since 2014, representative 2008-2014, current committee chair and former Majority Floor Leader."
+            },
+            "local-control": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S9"
+              ],
+              "basis": "Says he has demanded more housing near light rail and voted for ESHB 2266's state rules on siting supportive housing and shelters."
+            },
+            "tech": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S11"
+              ],
+              "basis": "Sponsored student cellphone restrictions and says he is working to tax large social media platforms and search engines to fund local news."
+            },
+            "immigration": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Pamphlet cites advocacy for immigrant neighbors and protecting families from 'dangerous federal policies'; no specific bill cited."
+            },
+            "social": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Pamphlet cites his advocacy for LGBTQ+ neighbors; no specific policy on gender or reproductive issues cited."
+            },
+            "parental-rights": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S6"
+              ],
+              "basis": "Voted for ESHB 1296, which amended and narrowed parts of the I-2081 parental-rights list; no campaign statement on the topic."
+            }
+          }
+        },
+        {
+          "slug": "riaz-khan",
+          "summary": "Boeing employee and former Mukilteo City Councilmember (2019-2023) running on lower taxes, reduced spending, public safety and parental rights.",
+          "highlights": [
+            "Former Mukilteo City Councilmember and Boeing SPEEA council representative [S1]",
+            "Lists 'Lower Taxes' and reducing unnecessary government spending as priorities [S1][S2]",
+            "Names protecting parental rights as a priority, without specific proposals [S1][S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Lists lower taxes as a top priority and says Washington's future depends on protecting taxpayers; stated generally, without specific tax proposals."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Supports responsible budgeting and reducing unnecessary government spending, without naming cuts."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "One term on a city council and no state office, challenging a twelve-year senator."
+            },
+            "parental-rights": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Names preserving parental rights as a priority in pamphlet and site, without detail on notification or opt-outs."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-38-state-representative-pos-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/snohomish/dossiers/snohomish-legislative-district-38-state-representative-pos-1/"
+      ],
+      "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering school funding, tax structure, housing rules, health funding and criminal-justice statutes.",
+      "race_blurb": "Democratic incumbent Julio Cortes, seeking a third term, faces Army veteran and nurse Jeff Kelly of the centrist Cascade Party after a primary in which Cortes took about half the vote. Both put affordability first; they differ on the 2026 millionaires tax, rent limits and how to approach public safety.",
+      "candidates": [
+        {
+          "slug": "julio-cortes",
+          "summary": "Two-term incumbent and City of Everett economic-development manager whose record includes votes for the millionaires tax, rent-increase limits and juvenile diversion standards.",
+          "highlights": [
+            "Voted for ESSB 6346, the 2026 tax on income over $1 million, and co-signed a session report celebrating it [S6][S7]",
+            "Co-sponsored and voted for the 2025 limit on annual rent increases, while also backing faster permitting [S9][S10][S11]",
+            "Cites standardizing juvenile diversion programs and wants more funding for diversion and reentry support [S1][S11]",
+            "Voted for ESHB 1296 (2025 parental-rights amendments) [S8]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S6",
+                "S7",
+                "S11"
+              ],
+              "basis": "Voted for the 9.9% tax on income over $1 million, co-signed a report calling it historic, promoted it in interviews and would consider lifting the 1% property-tax growth cap."
+            },
+            "spending": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S11"
+              ],
+              "basis": "Defends programs such as early learning and child care but says the state should not fund programs it cannot sustain and should cut low-impact ones: genuinely mixed."
+            },
+            "housing": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S9",
+                "S10",
+                "S11"
+              ],
+              "basis": "Co-sponsored and voted for the 2025 rent-increase cap, while also calling for cutting red tape and faster permitting to add supply."
+            },
+            "safety": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S11"
+              ],
+              "basis": "Cites standardizing juvenile diversion and wants to shift money from jailing youth and adults to support systems and social-worker programs; also wants police hiring that reflects communities."
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S11"
+              ],
+              "basis": "Said the state should be more aggressive at targeting major polluters and investing in green technology; single interview statement."
+            },
+            "healthcare": {
+              "score": 1,
+              "confidence": "low",
+              "citations": [
+                "S11"
+              ],
+              "basis": "Reported by the Herald as among sponsors of a 2025 Washington Health Trust (universal coverage) bill that died in committee; no statement of his own on single-payer."
+            },
+            "immigration": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S6"
+              ],
+              "basis": "Co-signed a session report expressing concern about ICE actions and listing passed bills restricting masked officers and immigration enforcement's use of license plate readers."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S11"
+              ],
+              "basis": "Incumbent since 2022 seeking a third term, against a first-time candidate; a shorter tenure than a senior legislator."
+            },
+            "social": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Pamphlet pledges to keep fighting for reproductive rights and lists a Planned Parenthood endorsement; no LGBTQ+ or sports statement."
+            },
+            "parental-rights": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S8"
+              ],
+              "basis": "Voted for ESHB 1296, which modified the I-2081 parental-rights list; no campaign statement on the topic."
+            }
+          }
+        },
+        {
+          "slug": "thomas-jeff-kelly",
+          "summary": "First-time Cascade Party candidate, an Army combat medic, registered nurse and north Everett neighborhood chair, running on affordability, law-enforcement funding and spending review.",
+          "highlights": [
+            "Would 'fully fund law enforcement' and treat addiction without 'enabling' it [S1][S2]",
+            "Wants lower taxes and a smaller state gas tax, and a fairer 'proportional' tax plan [S1][S2][S4]",
+            "Would run cost-benefit reviews of state programs and expects spending cuts [S4]",
+            "Favors builder-friendly housing policy and faster permits [S2][S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2",
+                "S4"
+              ],
+              "basis": "Lists lowering taxes and a gas-tax cut as priorities, but also calls the system regressive and promises an undefined fairer plan, so not maximal."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S5"
+              ],
+              "basis": "Says the Legislature must cut spending and would run cost-benefit analysis of programs, while warning against cavalier cuts."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S4"
+              ],
+              "basis": "Would increase housing through builder-friendly policies and streamlined permits; no tenant-protection position."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Would fully fund law enforcement and retail-theft units and treat addiction 'not enable it', while also funding behavioral health services."
+            },
+            "climate": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Calls for reducing the state gas tax burden at the pump; no position on carbon pricing or clean energy."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3",
+                "S4"
+              ],
+              "basis": "First-time candidate with no elected office, from a new third party, running on outsider 'accountability'."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-38-state-representative-pos-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/snohomish/dossiers/snohomish-legislative-district-38-state-representative-pos-2/"
+      ],
+      "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering school funding, tax structure, housing rules, health funding and criminal-justice statutes.",
+      "race_blurb": "Uncontested: Democratic incumbent Mary Fosse is the only candidate for this seat.",
+      "candidates": [
+        {
+          "slug": "mary-fosse",
+          "summary": "Incumbent Democratic State Representative and House Deputy Majority Floor Leader, a former Everett City Councilmember, running unopposed.",
+          "highlights": [
+            "State Representative and Deputy Majority Floor Leader; previously on the Everett City Council [S1]",
+            "Lists lowering the cost of living, affordable housing, childcare and healthcare access as priorities [S1]",
+            "Endorsed by Sen. June Robinson, Sheriff Johnson, SnoCo Democrats, Planned Parenthood Alliance Advocates and the Washington State Labor Council [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-38-state-senator",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/snohomish/dossiers/snohomish-legislative-district-38-state-senator/"
+      ],
+      "office_does": "A State Senator writes and votes on Washington state law and the operating, capital and transportation budgets, and confirms the governor's appointments, for a four-year term.",
+      "race_blurb": "Democratic incumbent June Robinson, chair of the Senate budget committee, faces first-time Republican candidate Brad Bender; Robinson took about two thirds of the primary vote. The race contrasts Robinson's sponsorship of the 2026 tax on income over $1 million with Bender's call for a low-tax state.",
+      "candidates": [
+        {
+          "slug": "june-robinson",
+          "summary": "Incumbent State Senator and chair of Senate Ways & Means, in the Legislature since 2013, a public-health professional whose record centers the state budget, tax reform, housing and health care.",
+          "highlights": [
+            "Chairs the Senate Ways & Means (budget) Committee; in the House 2013-2020 and the Senate since 2020 [S5]",
+            "Co-sponsored and voted for SB 6346, the 2026 tax on income over $1 million, and prime-sponsored the 2021 capital gains tax [S6][S7][S8]",
+            "Pledges to safeguard reproductive rights and defend immigrant and LGBTQ+ neighbors [S1]",
+            "Voted for ESHB 1296 (2025 parental-rights amendments) and EHB 1217 (rent increase limits) [S9][S10]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S6",
+                "S7",
+                "S8"
+              ],
+              "basis": "Co-sponsored and voted for the 9.9% tax on income over $1 million, prime-sponsored the 2021 capital gains tax, and calls asking millionaires to pay a fair share her tax-reform achievement."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Cites record investments in housing, behavioral health, child care and health care and ties tax reform to sustaining public investment; as budget chair she also manages constraints, so not maximal."
+            },
+            "housing": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2",
+                "S10"
+              ],
+              "basis": "Voted for the 2025 cap on residential rent increases, cites record investments in affordable housing and is a former housing consortium director."
+            },
+            "immigration": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Pamphlet pledges to defend immigrant neighbors; no specific enforcement or sanctuary measures named."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S5"
+              ],
+              "basis": "In the Legislature since 2013 and chair of Senate Ways & Means; opponent has never held office."
+            },
+            "social": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Pledges to safeguard reproductive rights and defend LGBTQ+ neighbors, calls reproductive care a human right, will protect abortion access and objects to attacks on care for transgender people."
+            },
+            "parental-rights": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S9"
+              ],
+              "basis": "Voted for ESHB 1296, which modified the I-2081 parental-rights list, and says she helped pass the state's comprehensive sex-education law; no statement on notification or opt-outs."
+            }
+          }
+        },
+        {
+          "slug": "brad-bender",
+          "summary": "First-time Republican candidate, an electrician and small-business owner running on making Washington a low-tax, affordable state.",
+          "highlights": [
+            "Wants Washington to be 'a reasonable, economical, and low-tax state' [S1]",
+            "Says Democrats in Olympia raise taxes to cover their own spending [S1]",
+            "No prior elected office; over thirty years in the electrical field [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Pamphlet statement centers lowering taxes and a 'low-tax state'; a single source."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Criticizes state spending as the driver of tax increases; no specific cuts or audits proposed."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "States he has no previous elected experience and offers a 'blue-collar voice' against a long-serving incumbent."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-39-state-representative-pos-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/snohomish/dossiers/snohomish-legislative-district-39-state-representative-pos-1/"
+      ],
+      "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering taxes, school funding, housing rules, health policy and criminal-justice statutes.",
+      "race_blurb": "Two-term Republican incumbent Sam Low, ranking Republican on House Housing, faces Democrat Kathryn Lewandowsky, a registered nurse and first-time candidate. The race contrasts Low's opposition to the 2026 tax on income over $1 million and his supply-side housing record with Lewandowsky's single-payer health care and tenant-protection platform.",
+      "candidates": [
+        {
+          "slug": "kathryn-lewandowsky",
+          "summary": "Registered nurse and former hospital union steward running for office for the first time on single-payer health care, housing as a human right and a pause on data-center growth.",
+          "highlights": [
+            "Supports a universal, publicly accountable single-payer health care system; board officer of Whole Washington and One Payer States [S1][S2]",
+            "Calls housing a human right and backs tenant protections and more affordable housing [S1][S2]",
+            "Says data-center expansion must stop until privacy and cost protections are law [S3]",
+            "Endorsed by Snohomish County Democrats and Washington State Stonewall Democrats [S1][S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "healthcare": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Platform calls for a universal single-payer system; she holds board roles in two single-payer advocacy organizations."
+            },
+            "housing": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Calls housing a human right, not a speculative investment, and supports expanding affordable housing and protecting tenants from predatory practices."
+            },
+            "tech": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Says data-center growth must stop until laws protect privacy and make corporations bear the costs, and opposes shifting data-center power costs onto families."
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Supports accelerating the clean-energy transition and calls climate stability a right; no stated position on carbon pricing."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Has never held public office; running against a two-term incumbent."
+            },
+            "social": {
+              "score": 1,
+              "confidence": "low",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Endorsed by Washington State Stonewall Democrats; no statement of her own on LGBTQ+ or reproductive policy."
+            }
+          }
+        },
+        {
+          "slug": "sam-low",
+          "summary": "Two-term Republican incumbent and former Snohomish County councilmember, ranking Republican on House Housing, running on tax relief, transportation, housing supply and public safety.",
+          "highlights": [
+            "Voted against ESSB 6346, the 2026 tax on income over $1 million, and joined the 24-hour House floor fight against it [S2][S3][S4]",
+            "Says Washington 'does not have a revenue problem. It has a spending problem' [S3]",
+            "Prime sponsor of EHB 1345, allowing detached ADUs outside urban growth areas, signed in 2026 [S3][S10]",
+            "Voted against 2025 rent-increase limits (EHB 1217) and the clean-fuels expansion (2SHB 1409) [S7][S8]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S3",
+                "S9"
+              ],
+              "basis": "Voted no on ESSB 6346 and ESSB 5814, publicly opposed the income tax and pledges tax relief; multiple independent sources."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Calls the 2026 supplemental budget unsustainable, opposed using pension surplus to ease budget pressure, and says the state has a spending problem."
+            },
+            "housing": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S7",
+                "S10",
+                "S12"
+              ],
+              "basis": "Blames regulation and permitting for housing costs, sponsored rural ADU legalization, and voted against 2025 rent-increase limits."
+            },
+            "climate": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S8"
+              ],
+              "basis": "Criticizes CCA and fuel taxes as driving costs and wants CCA revenue for roads; voted no on the 2025 clean-fuels expansion."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Lists prioritizing public safety and law-enforcement endorsements; sponsored benefits for families of fallen officers; no detailed enforcement proposals."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S5"
+              ],
+              "basis": "Two-term incumbent and committee ranking member, three terms on the county council, 12 bills enacted in 2025-2026."
+            },
+            "parental-rights": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S6"
+              ],
+              "basis": "Voted no on ESHB 1296, which amended the I-2081 parental-rights list; no campaign statement on the topic."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-39-state-representative-pos-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/snohomish/dossiers/snohomish-legislative-district-39-state-representative-pos-2/"
+      ],
+      "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering taxes, school funding, housing rules, health policy and criminal-justice statutes.",
+      "race_blurb": "Open seat left by retiring Republican Rep. Carolyn Eslick. Democrat Ida Keeley, a former juvenile court and child-welfare administrator, faces Republican Steve Ewing, a former Lake Stevens councilmember running on low taxes, balanced budgets and public safety.",
+      "candidates": [
+        {
+          "slug": "ida-keeley",
+          "summary": "First-time candidate and former juvenile court and DCYF administrator running on affordability, school and special-education funding, and public safety that combines accountability with prevention.",
+          "highlights": [
+            "More than 25 years in court, child-welfare and juvenile-justice administration; founding member of Dawson Place [S1][S3]",
+            "Supports staffed, trained law enforcement alongside behavioral-health, treatment and youth-intervention investments [S2]",
+            "Supports a pause on new high-capacity data centers and enforceable AI standards [S2]",
+            "Pledges to fully fund public schools and special education [S1][S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S5"
+              ],
+              "basis": "Explicitly pairs law-enforcement staffing and accountability with prevention, treatment and youth-intervention spending."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Wants to expand affordable housing and childcare, protect economic-security programs and fully fund schools, while also stressing stewardship of tax dollars."
+            },
+            "tech": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Supports a pause on new high-capacity data centers until safeguards exist and enforceable AI standards."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "First-time candidate, though with a long public-administration career; opponent has six years of city council service."
+            }
+          }
+        },
+        {
+          "slug": "steve-ewing",
+          "summary": "Former Lake Stevens councilmember (2019-2025) and Department of Corrections hearings officer running on low taxes, balanced budgets, public safety and 'normal' government.",
+          "highlights": [
+            "Says he passed balanced budgets and opposed higher taxes on the city council [S1]",
+            "Calls for 'taxes that are spent wisely and kept low' [S2]",
+            "Calls statewide limits on police 'extremism'; endorsed by WACOPS [S1][S2]",
+            "Endorsed by the 39th District's Republican delegation [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Pamphlet and site both pledge low taxes and say he opposed higher taxes; claims are his own, with no independently reviewed votes."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Emphasizes balanced budgets and taxes 'spent wisely'; no specific cuts proposed."
+            },
+            "safety": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Calls statewide limits on police an 'extremism' to reverse and is endorsed by WACOPS."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Six years on the Lake Stevens City Council plus planning, health and library boards; never served in the Legislature."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-44-state-representative-pos-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/snohomish/dossiers/snohomish-legislative-district-44-state-representative-pos-1/"
+      ],
+      "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering school funding, tax structure, housing rules, health funding and criminal-justice statutes.",
+      "race_blurb": "Democratic incumbent Brandy Donaghy, Vice Chair of House Transportation since her 2021 appointment, faces first-time Republican candidate Chris Elder; both are Navy veterans. Donaghy voted for the 2025 and 2026 tax increases; Elder runs on cutting wasteful spending rather than raising taxes.",
+      "candidates": [
+        {
+          "slug": "brandy-donaghy",
+          "summary": "Incumbent State Representative since 2021 and House Transportation vice chair, a Navy veteran whose record centers road safety, emergency preparedness and consumer protection.",
+          "highlights": [
+            "Sponsored traffic safety camera expansion (2024), young-driver education (2025) and school albuterol access (2026) [S3]",
+            "States that reproductive health care and gender-affirming care are health care [S2]",
+            "Voted for the 2026 tax on income over $1 million and the 2025 tax increases [S7][S8][S9][S10]",
+            "Voted for EHB 1217 (2025 rent-increase limits) and ESHB 1296 (2025 parents' rights amendments) [S11][S12]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S7",
+                "S8",
+                "S9",
+                "S10"
+              ],
+              "basis": "Voted for ESSB 6346 (9.9% tax on income over $1 million) and for the 2025 capital gains/estate, excise and B&O tax increases."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S6"
+              ],
+              "basis": "Supports public investment in affordable childcare, healthcare-workforce pipelines and behavioral-health and crisis-response funding; no spending-restraint positions."
+            },
+            "housing": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S11"
+              ],
+              "basis": "Voted for the 2025 limits on rent and fee increases; her own housing statement emphasizes building supply through transit-oriented and co-housing models."
+            },
+            "safety": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S6"
+              ],
+              "basis": "Session update frames public safety around 'prevention, early intervention' and behavioral-health and crisis-response funding."
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Committed to policies that 'reduce carbon emissions, promote renewable and clean energy sources'; no stated position on carbon pricing."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S4"
+              ],
+              "basis": "Five-year incumbent and committee vice chair; opponent is a first-time candidate."
+            },
+            "social": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S15"
+              ],
+              "basis": "States 'Reproductive health care is health care' and 'Gender affirming care is healthcare'; endorsed by Planned Parenthood Alliance Advocates."
+            },
+            "parental-rights": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S12",
+                "S17"
+              ],
+              "basis": "Voted for ESHB 1296, which amended the I-2081 list of parent and guardian rights; no campaign statement on the topic."
+            }
+          }
+        },
+        {
+          "slug": "chris-elder",
+          "summary": "First-time Republican candidate, a 20-year Navy aviation veteran, farmer, realtor and small-business owner running on spending restraint, lower taxes and public safety.",
+          "highlights": [
+            "Will 'reduce wasteful spending rather than raise taxes,' citing state budget growth of more than 110% in a decade [S3]",
+            "Would 'lessen regulations that hinder affordable housing' [S3]",
+            "Supports law enforcement, more police per capita and crime prevention [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Pamphlet pledges to 'lower taxes'; website says he will fight to reduce spending 'rather than raise taxes' and let residents keep more of their earnings."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Centers his campaign on budget growth outpacing inflation, cutting waste and full spending transparency."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Would 'lessen regulations that hinder affordable housing'; no further housing proposals."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Supports law enforcement and raising Washington's low police-per-capita levels, alongside unspecified crime-prevention strategies."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "First time seeking office, running against a five-year incumbent."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-44-state-representative-pos-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/snohomish/dossiers/snohomish-legislative-district-44-state-representative-pos-2/"
+      ],
+      "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering school funding, tax structure, housing rules, health funding and criminal-justice statutes.",
+      "race_blurb": "Democratic incumbent April Berg, chair of the House Finance Committee, faces first-time Republican candidate Tonya Stadlman, a 30-year housing-industry manager. Berg helped lead the 2026 tax on income over $1 million; Stadlman runs on lower taxes, auditing spending, permitting reform and restoring parental rights.",
+      "candidates": [
+        {
+          "slug": "april-berg",
+          "summary": "Incumbent State Representative since 2021 and House Finance Committee chair, a former Everett and Edmonds school board director who says she helped lead the 2026 Millionaires Tax.",
+          "highlights": [
+            "Says she helped lead the Millionaires Tax, 'the first step in addressing our regressive tax structure' [S3][S5]",
+            "Platform supports the Housing Trust Fund, permanent supportive housing and universal childcare [S2]",
+            "Supports clean fuel standards and science-based climate action [S2]",
+            "Voted for EHB 1217 (2025 rent-increase limits) and ESHB 1296 (2025 parents' rights amendments) [S11][S12]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3",
+                "S5",
+                "S7"
+              ],
+              "basis": "Finance chair who voted for ESSB 6346 and says she helped lead it as a fix for a regressive tax code in which 'the wealthiest few paid far less than their fair share'."
+            },
+            "spending": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Platform calls for universal childcare, more early-learning and school funding and housing investment; pamphlet says 'more needs to be done' after current investments."
+            },
+            "housing": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S11"
+              ],
+              "basis": "Platform supports the Housing Trust Fund, permanent supportive housing and fewer barriers for shelters; voted for the 2025 rent and fee increase limits."
+            },
+            "climate": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Platform supports clean fuel standards and science-based climate action; endorsed by Washington Conservation Action."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S4"
+              ],
+              "basis": "Incumbent since 2021 and Finance Committee chair, with prior school-board service; opponent has never held office."
+            },
+            "social": {
+              "score": 1,
+              "confidence": "low",
+              "citations": [
+                "S1",
+                "S16"
+              ],
+              "basis": "Lists a Planned Parenthood endorsement and is endorsed by Planned Parenthood Alliance Advocates; no statement of her own on reproductive or LGBTQ+ policy."
+            },
+            "parental-rights": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S12",
+                "S17"
+              ],
+              "basis": "Voted for ESHB 1296, which amended the I-2081 list of parent and guardian rights; no campaign statement on the topic."
+            },
+            "local-control": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S6"
+              ],
+              "basis": "Prime sponsor of HB 2442 (enacted), which 'gives local governments the flexibility to use their local tax revenues' for housing, childcare and behavioral health: loosening state limits on local governments (pole A).",
+              "added_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "tonya-stadlman",
+          "summary": "First-time Republican candidate with 30 years managing affordable and conventional housing, running on a 'Six to Fix' platform of lower taxes, audits, permitting reform, public safety and parental rights.",
+          "highlights": [
+            "Would cut household costs 'starting with the gas tax' and 'audit where the money is going' before new revenue [S2]",
+            "Says 'you cannot make housing more affordable by making housing more expensive to build' [S2]",
+            "Safety plan pairs consequences for repeat offenders with treatment and recovery [S2]",
+            "Pledges to 'restore and protect parental rights' and parents' access to information about their children's education [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Pamphlet pledges 'lower taxes'; platform would cut the gas tax first, audit before asking for revenue and examine B&O reform."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Platform standard 'Audit Before Ask'; says more spending or programs do not solve problems and calls for auditing programs and measuring outcomes."
+            },
+            "housing": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Would reduce barriers, speed permitting and encourage starter homes, arguing that regulation makes housing more expensive."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Supports law enforcement and consequences for repeat offenders, cites low police staffing, and adds treatment and recovery for addiction-driven crime."
+            },
+            "climate": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Would start household cost relief with the gas tax; no other energy or climate positions."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Has not held public office; running against the Finance Committee chair."
+            },
+            "parental-rights": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Pledges to 'restore and protect parental rights and ensure parents have access to important information about their children's education and well-being'."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-legislative-district-44-state-senator",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/snohomish/dossiers/snohomish-legislative-district-44-state-senator/"
+      ],
+      "office_does": "A State Senator writes and votes on Washington state law and the operating, capital and transportation budgets, covering the tax structure, school funding, criminal-justice statutes and housing rules, and confirms gubernatorial appointments.",
+      "race_blurb": "Democratic incumbent John Lovick, a former State Patrol trooper, county sheriff and county executive, faces Republican Sherri Larkin, a Snohomish School Board director in her first legislative race. Lovick voted for the 2025 and 2026 state tax increases; Larkin runs on reducing the tax burden and restraining state spending.",
+      "candidates": [
+        {
+          "slug": "john-lovick",
+          "summary": "Incumbent State Senator since 2021, former Snohomish County Sheriff and Executive and longtime State Patrol trooper, whose record centers law-enforcement training and accountability standards and road safety.",
+          "highlights": [
+            "Prime sponsor of SB 5974 (2026), setting eligibility and certification standards for police chiefs, marshals and sheriffs [S5]",
+            "Cites three new regional peace-officer academies and supports light rail to Everett and beyond [S1]",
+            "Voted for the 2026 tax on income over $1 million and the 2025 capital gains, excise and B&O tax increases [S8][S9][S10][S11]",
+            "Voted for EHB 1217 (2025 rent-increase limits) and ESHB 1296 (2025 amendments to the I-2081 parents' rights list) [S12][S13]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S8",
+                "S9",
+                "S10",
+                "S11"
+              ],
+              "basis": "Voted for ESSB 6346 (9.9% tax on income over $1 million) and for the 2025 capital gains/estate (ESSB 5813), excise (ESSB 5814) and B&O (ESHB 2081) tax increases."
+            },
+            "housing": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S12"
+              ],
+              "basis": "Voted for EHB 1217, the 2025 limits on residential rent and fee increases; no campaign statement on housing."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S5"
+              ],
+              "basis": "Record centers law-enforcement capacity (three new regional police academies) and standards for law-enforcement leaders (SB 5974), framed around feeling safe; no stated prevention or diversion agenda."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S4"
+              ],
+              "basis": "Senator since 2021 after nine House years, plus service as county sheriff and executive; opponent has never held legislative office."
+            },
+            "social": {
+              "score": 1,
+              "confidence": "low",
+              "citations": [
+                "S1",
+                "S17"
+              ],
+              "basis": "Lists a Planned Parenthood endorsement and is endorsed by Planned Parenthood Alliance Advocates; no statement of his own on reproductive or LGBTQ+ policy."
+            },
+            "parental-rights": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S13",
+                "S18"
+              ],
+              "basis": "Voted for ESHB 1296, which amended the I-2081 list of parent and guardian rights; no campaign statement on the topic."
+            }
+          }
+        },
+        {
+          "slug": "sherri-larkin",
+          "summary": "Snohomish School Board director since 2023 and former teacher, a first-time legislative candidate running on stronger schools, safer communities and smarter spending.",
+          "highlights": [
+            "Says a rapidly expanding state government has left families \"overtaxed and overburdened\" [S1]",
+            "Pledges to restore \"fiscal integrity\" and reduce the burden on families and businesses [S1]",
+            "Wants safe neighborhoods \"where law enforcement is supported\" [S1]",
+            "Endorsers quoted on her site describe her school-board work in parental-rights terms [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Pamphlet says families are 'overtaxed and overburdened' and pledges to 'reduce the heavy burden on families and businesses'."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Criticizes a 'rapidly expanding state government' with 'programs that too often deliver no measurable results' and runs on 'Smarter Spending' and restoring fiscal integrity."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Calls for 'safe neighborhoods where law enforcement is supported'; no specific enforcement or prevention proposals."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "First legislative race, with three years of school-board service, against a long-serving incumbent."
+            },
+            "parental-rights": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Only endorser quotes on her site (parents 'should have a voice'; school-board work 'back toward ... parental rights'); no statement of her own."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-public-utility-district-no-1-commissioner-district-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/snohomish/dossiers/snohomish-public-utility-district-no-1-commissioner-district-1/"
+      ],
+      "office_does": "A Snohomish County PUD commissioner sets policy for the customer-owned electric and water utility serving Snohomish County and Camano Island, including rates, power contracts, resource planning and reliability; in the general every PUD voter elects the District 1 seat.",
+      "race_blurb": "Incumbent Sid Logan, commissioner since 2017, faces former Island County Commissioner Janet St Clair. Both promise low rates and reliable service; Logan runs on his rate and power-contract record, St Clair on doing more on climate and growing water and energy investments.",
+      "candidates": [
+        {
+          "slug": "sid-logan",
+          "summary": "Incumbent PUD commissioner since 2017 and Energy Northwest director, running on low rates, the revised BPA power contract, reliability and a 97% carbon-free supply.",
+          "highlights": [
+            "Says five of his nine years had no general rate increase and expects none for 2027 [S1]",
+            "Advocated the revised BPA contract that he says removes exposure to extreme market prices [S1]",
+            "Endorsed by Rep. Rick Larsen, County Executive Dave Somers, Councilmember Nate Nehring and IBEW Local 77 [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "janet-st-clair",
+          "summary": "Former two-term Island County commissioner and longtime nonprofit executive, running on low rates, grid resilience to climate and cyber threats, and expanded water and energy investment.",
+          "highlights": [
+            "Eight years as Island County Commissioner and four terms as Board of Health chair [S1]",
+            "Promises low bills and reliable service and says the PUD must do more on climate and economic challenges [S1][S2]",
+            "Endorsed by Democratic legislators, Snohomish County Democrats and Washington Conservation Action [S1][S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-snohomish-county-district-court-cascade-district-judge-position-no-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/snohomish/dossiers/snohomish-snohomish-county-district-court-cascade-district-judge-position-no-1/"
+      ],
+      "office_does": "A Snohomish County District Court judge hears misdemeanor and gross-misdemeanor criminal cases, traffic infractions, small claims, civil cases up to the district-court limit, and protection orders, and is elected by the voters of the court's electoral district to a four-year term.",
+      "race_blurb": "Uncontested: Judge Jennifer Rancourt, on the District Court since 2019, is the only candidate. Elected by Cascade District voters only.",
+      "candidates": [
+        {
+          "slug": "jennifer-rancourt",
+          "summary": "District Court judge since 2019 and 2022-23 presiding judge, previously a trial attorney for 17 years, running unopposed.",
+          "highlights": [
+            "District Court judge since 2019; presiding judge 2022-23; Dean of the State Judicial College, 2024 [S1]",
+            "17 years as a trial attorney in Snohomish County and 9 years as a judge pro tem [S1]",
+            "Says she formed the county's first driver's-license relicensing program [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-snohomish-county-district-court-cascade-district-judge-position-no-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/snohomish/dossiers/snohomish-snohomish-county-district-court-cascade-district-judge-position-no-2/"
+      ],
+      "office_does": "A Snohomish County District Court judge hears misdemeanor and gross-misdemeanor criminal cases, traffic infractions, small claims, civil cases up to the district-court limit, and protection orders, and is elected by the voters of the court's electoral district to a four-year term.",
+      "race_blurb": "Uncontested: Judge Rachelle Francis, appointed in 2023 and retained in 2024, is the only candidate. Elected by Cascade District voters only.",
+      "candidates": [
+        {
+          "slug": "rachelle-francis",
+          "summary": "District Court judge since 2023 (appointed, then retained by voters in 2024) and a Snohomish County public defender for 22 years, running unopposed.",
+          "highlights": [
+            "Appointed to the Cascade Division in 2023 by a unanimous County Council vote; retained by voters in 2024 [S1]",
+            "22 years as a Snohomish County public defender, including involuntary behavioral-health treatment cases [S1]",
+            "Says access to community services is often key to reducing recidivism [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-snohomish-county-district-court-everett-district-judge-position-no-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/snohomish/dossiers/snohomish-snohomish-county-district-court-everett-district-judge-position-no-1/"
+      ],
+      "office_does": "A Snohomish County District Court judge hears misdemeanor and gross-misdemeanor criminal cases, traffic infractions, small claims, civil cases up to the district-court limit, and protection orders, and is elected by the voters of the court's electoral district to a four-year term.",
+      "race_blurb": "Uncontested: Judge Anthony E. Howard, a District Court judge since 2015, is the only candidate. Elected by Everett District voters only.",
+      "candidates": [
+        {
+          "slug": "anthony-e-howard",
+          "summary": "District Court judge since 2015, previously a court commissioner and trial attorney, running unopposed.",
+          "highlights": [
+            "District Court judge since 2015; commissioner 2011-2015; presiding judge 2016-2018 [S1]",
+            "Mental Health Court judge 2019-2023; founded a Youth Traffic Court [S1]",
+            "Endorsed by all five County Councilmembers and the entire District Court bench [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-snohomish-county-district-court-everett-district-judge-position-no-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/snohomish/dossiers/snohomish-snohomish-county-district-court-everett-district-judge-position-no-2/"
+      ],
+      "office_does": "A Snohomish County District Court judge hears misdemeanor and gross-misdemeanor criminal cases, traffic infractions, small claims, civil cases up to the district-court limit, and protection orders, and is elected by the voters of the court's electoral district to a four-year term.",
+      "race_blurb": "Uncontested: Judge Jennifer Millett, on the Everett Division bench since January 2026, is the only candidate for the short and full term. Elected by Everett District voters only.",
+      "candidates": [
+        {
+          "slug": "jennifer-millett",
+          "summary": "Everett Division District Court judge since January 2026 and former court commissioner and prosecutor, running unopposed for the short and full term.",
+          "highlights": [
+            "District Court judge, Everett Division, since January 2026; commissioner 2022-2026 [S1]",
+            "Former City of Marysville prosecuting attorney and Snohomish County deputy prosecutor [S1]",
+            "Says she helped develop alternative court programs in District and Municipal Courts [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-snohomish-county-district-court-evergreen-district-judge-position-no-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/snohomish/dossiers/snohomish-snohomish-county-district-court-evergreen-district-judge-position-no-1/"
+      ],
+      "office_does": "A Snohomish County District Court judge hears misdemeanor and gross-misdemeanor criminal cases, traffic infractions, small claims, civil cases up to the district-court limit, and protection orders, and is elected by the voters of the court's electoral district to a four-year term.",
+      "race_blurb": "Uncontested: Judge Rick Leo, elected to the Evergreen Division in 2022, is the only candidate. Elected by Evergreen District voters only.",
+      "candidates": [
+        {
+          "slug": "rick-leo",
+          "summary": "Evergreen Division District Court judge since 2023 and former court commissioner, prosecutor and defense attorney, running unopposed.",
+          "highlights": [
+            "Evergreen District Court judge since 2023; District Court commissioner 2015-2023 [S1]",
+            "Former deputy prosecutor, public defender and private defense attorney [S1]",
+            "Past president of the District and Municipal Court Judges' Association [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-snohomish-county-district-court-evergreen-district-judge-position-no-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/snohomish/dossiers/snohomish-snohomish-county-district-court-evergreen-district-judge-position-no-2/"
+      ],
+      "office_does": "A Snohomish County District Court judge hears misdemeanor and gross-misdemeanor criminal cases, traffic infractions, small claims, civil cases up to the district-court limit, and protection orders, and is elected by the voters of the court's electoral district to a four-year term.",
+      "race_blurb": "Uncontested: Judge Patricia Lyon, on the Evergreen District Court bench since 2003, is the only candidate. Elected by Evergreen District voters only.",
+      "candidates": [
+        {
+          "slug": "patricia-lyon",
+          "summary": "Evergreen District Court judge since 2003 and former deputy prosecutor, running unopposed.",
+          "highlights": [
+            "Evergreen District Court judge since 2003; says she has been elected six times [S1]",
+            "Snohomish County deputy prosecuting attorney 1999-2002 [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-snohomish-county-district-court-south-district-judge-position-no-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/snohomish/dossiers/snohomish-snohomish-county-district-court-south-district-judge-position-no-1/"
+      ],
+      "office_does": "A Snohomish County District Court judge hears misdemeanor and gross-misdemeanor criminal cases, traffic infractions, small claims, civil cases up to the district-court limit, and protection orders, and is elected by the voters of the court's electoral district to a four-year term.",
+      "race_blurb": "Uncontested: Judge Elizabeth Fraser, a District Court judge since 2013, is the only candidate. Elected by South District voters only.",
+      "candidates": [
+        {
+          "slug": "elizabeth-fraser",
+          "summary": "District Court judge since 2013 and longtime Snohomish County public-defense attorney and administrator, running unopposed.",
+          "highlights": [
+            "District Court judge since 2013; twice presiding judge [S1]",
+            "Public defender 1988-2001 and Office of Public Defense attorney administrator 2001-2012 [S1]",
+            "Says she embraces her court's therapeutic approach [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-snohomish-county-district-court-south-district-judge-position-no-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/snohomish/dossiers/snohomish-snohomish-county-district-court-south-district-judge-position-no-2/"
+      ],
+      "office_does": "A Snohomish County District Court judge hears misdemeanor and gross-misdemeanor criminal cases, traffic infractions, small claims, civil cases up to the district-court limit, and protection orders, and is elected by the voters of the court's electoral district to a four-year term.",
+      "race_blurb": "Uncontested: Judge Jeffrey D. Goodwin, a District Court judge since 2004, is the only candidate. Elected by South District voters only.",
+      "candidates": [
+        {
+          "slug": "jeffrey-d-goodwin",
+          "summary": "District Court judge for 22 years and president of the statewide District and Municipal Court Judges' Association, running unopposed.",
+          "highlights": [
+            "Appointed in 2004 and re-elected six times; twice presiding judge [S1]",
+            "President of the statewide District and Municipal Court Judges' Association [S1]",
+            "Former prosecutor, public defender and civil and criminal practitioner [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-snohomish-county-district-court-south-district-judge-position-no-3",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/snohomish/dossiers/snohomish-snohomish-county-district-court-south-district-judge-position-no-3/"
+      ],
+      "office_does": "A Snohomish County District Court judge hears misdemeanor and gross-misdemeanor criminal cases, traffic infractions, small claims, civil cases up to the district-court limit, and protection orders, and is elected by the voters of the court's electoral district to a four-year term.",
+      "race_blurb": "Uncontested: Judge Matthew Baldock, appointed to the District Court in 2023, is the only candidate. Elected by South District voters only.",
+      "candidates": [
+        {
+          "slug": "matthew-baldock",
+          "summary": "District Court judge since 2023 and a Snohomish County deputy prosecutor for 21 years, running unopposed.",
+          "highlights": [
+            "Appointed to the South District Court in 2023 [S1]",
+            "21 years as a Snohomish County deputy prosecutor, including chief of the criminal division [S1]",
+            "Former Court of Appeals law clerk [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "snohomish-snohomish-county-prosecuting-attorney",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/snohomish/dossiers/snohomish-snohomish-county-prosecuting-attorney/"
+      ],
+      "office_does": "The Prosecuting Attorney charges and prosecutes felonies county-wide and misdemeanors in unincorporated areas, and is the county government's civil lawyer; four-year partisan term.",
+      "race_blurb": "Uncontested: incumbent Jason Cummings, Prosecuting Attorney since 2023, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "jason-cummings",
+          "summary": "Incumbent Snohomish County Prosecuting Attorney since 2023, with 27 years in the county prosecutor's office, running unopposed.",
+          "highlights": [
+            "Prosecuting Attorney since 2023; Chief Civil Deputy 2007-2022 and a deputy prosecutor before that [S1]",
+            "Lists safe, livable communities, transparency and integrity as priorities [S1]",
+            "Endorsed by deputy prosecutors, the Deputy Sheriffs' Association, Everett and Lynnwood police guilds, Executive Dave Somers and Sheriff Susanna Johnson [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
         }
       ]
     }
