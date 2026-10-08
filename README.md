@@ -32,7 +32,8 @@ pipeline/election.py                              per-election declarations
 app/                                              Vite + React SPA + zero-dep server.js
 design-mockup/                                    the "Harbor" design system
 docs/adr/                                         architecture decisions
-CONTEXT.md                                        domain language
+CONTEXT.md                                        domain language (read first)
+AGENTS.md                                         where agents start: glossary, docs, conventions
 ```
 
 Each election is its own dataset (ADR-0004). `/washington-state` serves the
