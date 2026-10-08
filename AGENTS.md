@@ -13,6 +13,11 @@ Read these before changing anything, in this order:
    build and test.
 3. **`docs/adr/`** — architecture decisions. ADR-0002 (pipeline-only
    verification) and ADR-0004 (one dataset per election) constrain most work.
+   When a task settles a decision, check it against three criteria: hard to
+   reverse, surprising to a future reader without context, and the outcome of
+   a real trade-off between alternatives. If all three hold, offer the user an
+   ADR in the format of the existing files; do not write one unasked, and skip
+   the offer when any criterion is missing.
 4. **`docs/county-wave-playbook.md`** for county coverage work, and
    `data/washington-state/elections/<id>/counties/king/dossiers/RESEARCH-GUIDE.md`
    for anything that touches a Dossier.
