@@ -13,7 +13,7 @@ const DISTRICT_LABELS = {
   KCCDST: 'King County Council District',
   SCCDST: 'Seattle City Council District',
   COUNTY_COUNCIL: 'County Council District',
-  JUDDST: 'County Judicial District',
+  JUDDST: 'King County District Court Electoral District',
   DISTCRT: 'District Court',
   PORTDST: 'Port Commissioner District',
   PUDDST: 'Public Utility District',
@@ -28,6 +28,20 @@ const DISTRICT_LABELS = {
   WATDST: 'Water District',
   PTBA: 'Public Transportation Benefit Area',
   AQUIFER: 'Aquifer Protection Area',
+}
+
+// Layers whose values are codes for named places. King GIS's JUDDST layer
+// returns the King County District Court electoral district as a code; King
+// County Elections names the seats by the full name ('Southwest Electoral
+// District'). JUDDST is a King-only layer (geo.js KING_LAYERS).
+const NAMED_VALUES = {
+  JUDDST: {
+    NE: 'King County District Court, Northeast Electoral District',
+    SE: 'King County District Court, Southeast Electoral District',
+    SW: 'King County District Court, Southwest Electoral District',
+    W: 'King County District Court, West Electoral District',
+    SH: 'King County District Court, Shoreline Electoral District',
+  },
 }
 
 // Districts that decide which candidates a voter sees come first, then the
@@ -76,6 +90,8 @@ export function describeDistrict(key, value, bodyName = null) {
   if (!raw) return null
   if (bodyName) return `${bodyName} ${raw}`
   if (key === 'CITY') return `City of ${tidy(raw)}`
+  const named = NAMED_VALUES[key]?.[raw.toUpperCase()]
+  if (named) return named
   const label = DISTRICT_LABELS[key]
   // An unconfigured layer is still worth showing; a bare key beats dropping it.
   if (!label) return `${key} ${tidy(raw)}`
@@ -97,6 +113,15 @@ export function describeDistricts(districts = {}, { contests = [], county = null
     .sort((a, b) => rank(a) - rank(b) || a.localeCompare(b))
     .map((key) => ({ key, text: describeDistrict(key, districts[key], bodyNameFor(key, county, contests)) }))
     .filter((d) => d.text)
+}
+
+// Names for the layer ids a ballot context lists in missingLayers, for the
+// partial-coverage banner and the Ballot Brief. 'county-local' stands for a
+// county with no District Adapter at all (geo.js).
+const LAYER_ONLY_LABELS = { CITY: 'City', 'county-local': 'local county districts' }
+
+export function layerLabel(key) {
+  return LAYER_ONLY_LABELS[key] || DISTRICT_LABELS[key] || key
 }
 
 export { DISTRICT_LABELS, ORDER as DISTRICT_ORDER }

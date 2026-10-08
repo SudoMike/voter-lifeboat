@@ -62,3 +62,20 @@ test('Ballot Brief prints a contest term when the data carries one', () => {
   )
   assert.match(text, /## SUPREME COURT — Justice Position No\. 1\nTerm: 2-year unexpired term/)
 })
+
+test('Ballot Brief names unresolved district lookups in words, not layer ids', () => {
+  const text = buildBrief(
+    data,
+    { coverageStatus: 'partial_county', county: { name: 'King County' }, districts: {}, missingLayers: ['KCCDST', 'SCCDST', 'JUDDST'] },
+    { judicial: { v: 1, w: 1 } },
+    [],
+    [],
+    'https://example.test/',
+    ''
+  )
+  assert.match(
+    text,
+    /District lookups that did not resolve: King County Council District, Seattle City Council District, King County District Court Electoral District\./
+  )
+  assert.doesNotMatch(text, /KCCDST|SCCDST|JUDDST/)
+})

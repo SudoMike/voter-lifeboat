@@ -1,6 +1,6 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import { describeDistrict, describeDistricts } from './districts.js'
+import { describeDistrict, describeDistricts, layerLabel } from './districts.js'
 
 // Every value shape below was taken from a live resolver response, so these
 // cases document what the county GIS services actually return.
@@ -28,7 +28,6 @@ test('values that already read as a name stand alone', () => {
 
 test('codes are tidied without mangling initialisms', () => {
   assert.equal(describeDistrict('FIRDST', 'TACOMA'), 'Fire District Tacoma')
-  assert.equal(describeDistrict('JUDDST', 'SE'), 'County Judicial District SE')
   assert.equal(describeDistrict('SCCDST', 'SCC5'), 'Seattle City Council District 5')
   assert.equal(describeDistrict('CITY', 'Everett'), 'City of Everett')
 })
@@ -67,4 +66,40 @@ test('districts that pick candidates sort ahead of levy-only districts', () => {
 
 test('an unconfigured layer is shown rather than silently dropped', () => {
   assert.equal(describeDistrict('NEWDST', '7'), 'NEWDST 7')
+})
+
+test('King District Court electoral districts read by name, not code', () => {
+  assert.equal(describeDistrict('JUDDST', 'NE'), 'King County District Court, Northeast Electoral District')
+  assert.equal(describeDistrict('JUDDST', 'SE'), 'King County District Court, Southeast Electoral District')
+  assert.equal(describeDistrict('JUDDST', 'SW'), 'King County District Court, Southwest Electoral District')
+  assert.equal(describeDistrict('JUDDST', 'W'), 'King County District Court, West Electoral District')
+  assert.equal(describeDistrict('JUDDST', 'SH'), 'King County District Court, Shoreline Electoral District')
+  assert.equal(describeDistrict('JUDDST', 'sh'), 'King County District Court, Shoreline Electoral District')
+  // A code King has not published before still shows, rather than vanishing.
+  assert.equal(describeDistrict('JUDDST', 'XX'), 'King County District Court Electoral District XX')
+})
+
+test('the director context for a Seattle address lists every district in words', () => {
+  const lines = describeDistricts(
+    { CONGDST: '7', LEGDST: '46', KCCDST: '1', SCCDST: 'SCC5', JUDDST: 'W', SCHDST: '1', CITY: 'Seattle' },
+    { county: 'king' }
+  ).map((d) => d.text)
+  assert.deepEqual(lines, [
+    'City of Seattle',
+    'Congressional District 7',
+    'Legislative District 46',
+    'King County Council District 1',
+    'Seattle City Council District 5',
+    'King County District Court, West Electoral District',
+    'School District 1',
+  ])
+})
+
+test('layer ids in coverage warnings read as district names', () => {
+  assert.equal(layerLabel('KCCDST'), 'King County Council District')
+  assert.equal(layerLabel('SCCDST'), 'Seattle City Council District')
+  assert.equal(layerLabel('JUDDST'), 'King County District Court Electoral District')
+  assert.equal(layerLabel('CITY'), 'City')
+  assert.equal(layerLabel('county-local'), 'local county districts')
+  assert.equal(layerLabel('NEWDST'), 'NEWDST')
 })

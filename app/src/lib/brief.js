@@ -5,6 +5,8 @@
 import { rankContest, measureLean } from './scoring.js'
 import { longElectionDay } from './elections.js'
 import { pamphletLink } from './officialLinks.js'
+import { contestHeading } from './contests.js'
+import { layerLabel } from './districts.js'
 
 export { pamphletLink }
 
@@ -35,7 +37,7 @@ function coverageText(context, election) {
     ]
     if (context.missingLayers?.length) {
       lines.push(
-        `District lookups that did not resolve: ${context.missingLayers.join(', ')}. Races scoped to these districts are the ones to double-check against my official ballot.`
+        `District lookups that did not resolve: ${context.missingLayers.map(layerLabel).join(', ')}. Races scoped to these districts are the ones to double-check against my official ballot.`
       )
     }
     return lines
@@ -66,9 +68,8 @@ export function buildBrief(data, context, answers, contests, measures, shareUrl,
 
   for (const contest of contests) {
     const { rows, tooClose } = rankContest(contest, answers)
-    L.push(
-      `## ${contest.office.toUpperCase()} — ${contest.district || (contest.scope?.kind === 'STATEWIDE' ? 'Statewide' : 'Countywide')}`
-    )
+    const { office, place } = contestHeading(contest)
+    L.push(`## ${office.toUpperCase()} — ${place}`)
     if (contest.term) L.push(`Term: ${contest.term}`)
     if (contest.office_does) L.push(`(${contest.office_does})`)
     if (contest.uncontested) L.push('Uncontested — shown for information only.')

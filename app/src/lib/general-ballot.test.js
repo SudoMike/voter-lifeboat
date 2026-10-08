@@ -16,6 +16,7 @@ import {
   rankContest,
 } from './scoring.js'
 import { buildBrief } from './brief.js'
+import { contestHeading } from './contests.js'
 
 const data = JSON.parse(
   readFileSync(new URL('../../public/data/2026-11-03-general/app-data.json', import.meta.url), 'utf8')
@@ -242,7 +243,8 @@ test('a King Ballot Brief is a full county guide naming every contest once and e
   assert.match(text, /Resolved county: King County/)
   assert.doesNotMatch(text, /STATEWIDE-ONLY|PARTIAL COUNTY/)
   for (const c of contests) {
-    const heading = `## ${c.office.toUpperCase()} — ${c.district || 'Countywide'}`
+    const { office, place } = contestHeading(c)
+    const heading = `## ${office.toUpperCase()} — ${place}`
     assert.equal(text.split('\n').filter((l) => l === heading).length, 1, heading)
   }
   assert.equal(text.split('\n').filter((l) => l.startsWith('## SUPREME COURT')).length, 5)
@@ -273,4 +275,14 @@ test('the general ships contest terms from the statewide package', () => {
   assert.equal(terms['justice-position-no-1-supreme-court'], '2-year unexpired term')
   assert.equal(terms['justice-position-no-5-supreme-court'], '2-year unexpired term')
   assert.equal(terms['justice-position-no-3-supreme-court'], '6-year term')
+})
+
+test('the King Ballot Brief heads each contest office first, then where (issue #25)', () => {
+  const { text } = briefFor(ADDRESSES.pinehurst)
+  assert.match(text, /^## STATE SENATOR — Legislative District 46$/m)
+  assert.match(text, /^## STATE REPRESENTATIVE POSITION NO\. 1 — Legislative District 46$/m)
+  assert.match(text, /^## JUDGE POSITION NO\. 1 — King County District Court, West Electoral District$/m)
+  assert.match(text, /^## COUNCIL DISTRICT NO\. 5 — City of Seattle$/m)
+  assert.match(text, /^## PROSECUTING ATTORNEY — Countywide$/m)
+  assert.doesNotMatch(text, /^## (LEGISLATIVE DISTRICT|CITY OF|\w+ ELECTORAL DISTRICT)/m)
 })
