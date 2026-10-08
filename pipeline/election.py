@@ -68,7 +68,8 @@ APP_PACKAGES = {
     "2026-11-03-general": {
         "statewide_ballot": True,
         "counties": ["king", "snohomish", "spokane", "pierce", "clark", "kitsap", "thurston", "yakima", "whatcom",
-                     "benton", "skagit", "cowlitz", "grant", "island", "lewis"],
+                     "benton", "skagit", "cowlitz", "grant", "island", "lewis", "franklin", "chelan", "clallam",
+                     "grays-harbor"],
         "district_contests": "county",
     },
 }
@@ -237,6 +238,19 @@ COUNTY_ELECTIONS_URLS = {
         # whose /current-election/ page links VoteWA's guide;
         # lewiscountywa.gov/offices/auditor/elections/ answers 404).
         "lewis": "https://elections.lewiscountywa.gov/",
+        # Franklin County Auditor, Elections (200, 2026-10-08; the page that
+        # links the general's local voters' pamphlet).
+        "franklin": "https://www.franklincountywa.gov/Elections",
+        # Chelan County Elections (200, 2026-10-08, "Elections - Home"; its
+        # November 3, 2026 General Election page sits under it).
+        "chelan": "https://www.co.chelan.wa.us/elections",
+        # Clallam County Auditor, Elections & Voter Registration (200,
+        # 2026-10-08; clallamcountywa.gov/elections 301s here).
+        "clallam": "https://www.clallamcountywa.gov/162/Elections-Voter-Registration",
+        # Grays Harbor County Auditor, Elections (200, 2026-10-08; the
+        # Auditor's current_election.php, which links VoteWA's guide, sits
+        # beside it).
+        "grays-harbor": "https://www.graysharbor.us/government/Auditors/elections.php",
     },
 }
 

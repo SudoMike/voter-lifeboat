@@ -153,7 +153,8 @@ class GeneralPackagesTest(unittest.TestCase):
 
     def test_shipped_general_counties(self):
         self.assertEqual(["king", "snohomish", "spokane", "pierce", "clark", "kitsap", "thurston", "yakima", "whatcom",
-                          "benton", "skagit", "cowlitz", "grant", "island", "lewis"],
+                          "benton", "skagit", "cowlitz", "grant", "island", "lewis", "franklin", "chelan", "clallam",
+                          "grays-harbor"],
                          election.APP_PACKAGES[GENERAL.id]["counties"])
 
     def test_wave2_builders_are_full_county(self):
@@ -195,6 +196,23 @@ class GeneralPackagesTest(unittest.TestCase):
                 for item in doc.get("contests", doc.get("measures")):
                     if item["scope"]["kind"] == "DISTRICT":
                         self.assertIn(item["scope"]["layer"], layers, item["slug"])
+
+    def test_wave4b_builders_are_full_county(self):
+        # Franklin, Chelan, Clallam and Grays Harbor (#29): every scope
+        # resolves through geo.js COUNTY_LAYERS (Franklin PORTDST and FIRDST,
+        # Chelan SCHDST, Clallam DISTCRT, SCHDST and PUDALL, Grays Harbor
+        # LIBDST and SCHDST since #29).
+        for county in ("franklin", "chelan", "clallam", "grays-harbor"):
+            for name in ("app-contests.json", "app-measures.json"):
+                doc = json.loads((GENERAL.county(county) / "interim" / name).read_text())
+                self.assertEqual("full_county", doc["coverage"], f"{county} {name}")
+                layers = election.DISTRICT_ADAPTER_LAYERS[county]
+                for item in doc.get("contests", doc.get("measures")):
+                    if item["scope"]["kind"] == "DISTRICT":
+                        self.assertIn(item["scope"]["layer"], layers, item["slug"])
+        pud = json.loads((GENERAL.county("clallam") / "interim/app-contests.json").read_text())["contests"]
+        pud = next(c for c in pud if c["slug"] == "clallam-public-utility-district-no-1-of-clallam-county-commissioner-district-no-2")
+        self.assertEqual({"kind": "DISTRICT", "county": "clallam", "layer": "PUDALL", "value": "1"}, pud["scope"])
 
     def test_measure_pages_come_from_the_builder_block(self):
         # m(..., pages=) names local-voters-pamphlet PDF pages; the default is none.
