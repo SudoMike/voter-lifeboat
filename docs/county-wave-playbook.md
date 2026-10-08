@@ -428,9 +428,10 @@ DOR GIS layer, a PDF-only map, a layer that is not public), the rule is:
 Never scope a district race `COUNTY` to make it appear: that shows it to
 voters outside the district.
 
-As of the builder runs on 2026-10-08 (#22), the only general package that
-is `partial_county` is Spokane (`PUDDST`). Clark, Kitsap, Pierce,
-Snohomish (since #27) and Thurston are `full_county`; all six ship. A PUD
+As of the builder runs on 2026-10-08 (#22, #28), the only shipped general
+package that is `partial_county` is Spokane (`PUDDST`). Benton, Clark,
+Kitsap, Pierce, Snohomish (since #27), Thurston, Whatcom and Yakima are
+`full_county`; all nine ship with King. A PUD
 commissioner is nominated by district but elected by the whole PUD in the
 general (RCW 54.12.010(3)), so a countywide PUD's seat is scoped `COUNTY`
 (Clark, Kitsap, Thurston), not `PUDDST`.
@@ -489,6 +490,26 @@ every other polygon has a `CONSOL_NUM` too. Shared races ship with the
 researching package's scoring: Kitsap's CD 6 and LD 26 with Pierce's,
 Thurston's CD 10 and LD 2 with Pierce's, CD 3 and LD 20 with Clark's, LD
 35 with Kitsap's (13 races). See each county's `COMPLETENESS.md`.
+
+Yakima, Whatcom and Benton shipped on 2026-10-08 (#28) as `full_county`.
+Yakima needs only its commissioner layer (Commissioner District 1 is
+elected by district, `COUNTY_COUNCIL` `1`); Whatcom's port and PUD seats
+are countywide in the general and its Fire District 1 levy reads DOR
+FIR2025 (`1`). Benton's PUD is not the whole county (Richland and most of
+West Richland are outside it), so its seat is scoped `PUDDST` `Benton PUD`
+and resolves from the Auditor's precinct layer
+`PrecinctSplits/FeatureServer/6` (`PUD_District`, with `where PUD_District
+= 'Benton PUD'` because the field also reads `'<Null>'` and, for precinct
+4017, `'Yes'`); its Ki-Be levy reads DOR SCH2025 (`52`). Shared races:
+Yakima's CD 4 with Benton's scoring, Benton's LD 14 and LD 15 House seats
+with Yakima's, Whatcom's CD 2 with Snohomish's (6 races). The live checks
+found that `geo.js` stripped a trailing "City" from the Census place
+`BASENAME` (Benton City resolved as `Benton`); it now strips the suffix
+from `NAME` only. The bulk builder files Yakima's and Benton's District
+Court seats under category `County` (VoteWA District Type `Countywide`);
+the category is display-only and `validate_scoring.py` treats the seats as
+judicial by slug. Whatcom's override hook in `ELECTION_MEASURES` could
+rename them `Judicial`.
 
 ## 13. Reference
 

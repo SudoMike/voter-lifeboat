@@ -3,10 +3,12 @@
 Election: 2026 Washington general election, November 3, 2026 (VoteWA
 election 899, county code 03).
 
-As of 2026-10-08 (#28) this package is researched but not declared:
-`pipeline/election.py` does not list Benton in
-`APP_PACKAGES["2026-11-03-general"]["counties"]`, so nothing here ships until
-the director adds it. Contests and measures are built by
+Shipped (#28): the package is declared in
+`APP_PACKAGES["2026-11-03-general"]["counties"]` and ships at Full County
+Coverage, with the elections office link
+`https://www.bentoncountywa.gov/government/elected_officials/auditor/elections/index.php`
+and the county's VoteWA guide (`officialLinks.js` `countyGuides.benton`).
+Contests and measures are built by
 `pipeline/build_votewa_lite_data.py --county benton` from the VoteWA
 candidate list (`raw/votewa/candidate-list.csv.url`) and the measures curated
 in that script's `ELECTION_MEASURES` block, checked against the Benton County
@@ -24,7 +26,7 @@ initiatives are dropped by the builder and ship from the statewide package.
 | U.S. Representative (CD 4) | 1 | 1 | 0 | `CONGDST` | here |
 | LD 8 Senate, Rep. Pos. 1, Pos. 2 | 3 | 1 | 2 | `LEGDST` | here (Pos. 1, 2 info-only) |
 | LD 16 Rep. Pos. 1, Pos. 2 | 2 | 2 | 0 | `LEGDST` | here |
-| LD 14 Rep. Pos. 1, Pos. 2; LD 15 Senate, Rep. Pos. 1, Pos. 2 | 5 | 4 | 1 | `LEGDST` | assigned to Yakima (#28); not researched here |
+| LD 14 Rep. Pos. 1, Pos. 2; LD 15 Senate, Rep. Pos. 1, Pos. 2 | 5 | 4 | 1 | `LEGDST` | Yakima package; the four House seats ship with Yakima's scoring and dossiers |
 | Assessor, Auditor, Clerk, Coroner, Prosecuting Attorney, Sheriff, Treasurer | 7 | 2 | 5 | countywide | here |
 | County Commissioner District #2 | 1 | 0 | 1 | countywide | here (info-only) |
 | District Court Judge 1 to 5 | 5 | 1 | 4 | countywide | here |
@@ -72,18 +74,22 @@ would link the guide through `officialLinks.js` `countyGuides`.
   `Kiona-Benton City School District 52`).
 - Benton City: Census incorporated place `Benton City` at 1009 Dale Ave.
 
-`app/src/lib/geo.js` `COUNTY_LAYERS.benton` lists only `COUNTY_COUNCIL`
-(CommissionerDistrict layer 6) and `FIRDST` (DOR 7). Neither `PUDDST` nor
-`SCHDST` is resolvable yet, so if Benton were declared today it would
-assemble as `partial_county` with the PUD race and the Ki-Be levy hidden.
-The builder still prints `full_county` because its unresolvable set tracks
-only contest rows with no configured format; the package notes say so.
-Proposed for the director:
+`app/src/lib/geo.js` `COUNTY_LAYERS.benton` reads both (#28): `PUDDST`
+from PrecinctSplits layer 6, `PUD_District`, with `where PUD_District =
+'Benton PUD'`, and `SCHDST` from DOR SCH2025 (layer 20) `DISTATTRIB`. Live
+2026-10-08: Kennewick and Benton City `Benton PUD`, Richland and West
+Richland no feature; Benton City `52`, Kennewick `17`, Richland `400`.
 
-```js
-{ key: 'PUDDST', url: 'https://services7.arcgis.com/NURlY7V8UHl6XumF/arcgis/rest/services/PrecinctSplits/FeatureServer/6/query', attr: 'PUD_District' },
-{ key: 'SCHDST', url: `${DOR_TAX_DISTRICTS}/20/query`, attr: 'DISTATTRIB' },
-```
+Known layer issue: precinct 4017 (West Richland, `PrecinctName` WR17) is
+coded `PUD_District` `Yes`, not `Benton PUD`, and cast no 2024 PUD vote.
+The `where` filter makes it read as no PUD district, so its voters do not
+see the PUD race; if 4017 is in fact inside the PUD, that is a missing
+race there, not a wrong one. Richland precinct 6322.1 reads the string
+`<Null>`, which the filter also drops.
+
+`Benton City` is the Census place `BASENAME`. Until #28 `geo.js` stripped a
+trailing "City" from it (CITY `Benton`), which hid both Benton City
+propositions; it now strips the suffix from `NAME` only.
 
 ## Known gaps
 
@@ -91,10 +97,11 @@ Proposed for the director:
   Court contests category `County` (District Type `Countywide`). The
   scoring follows the judicial rules (only `judicial`, `safety`,
   `experience`), and `validate_scoring.py` treats them as judicial by slug.
-  A `Judicial` category would need an override hook in
-  `build_votewa_lite_data.py`, which the shared builder does not have.
+  The category is display-only and ships as is; Whatcom's merge added an
+  `overrides` hook to `ELECTION_MEASURES` that could rename them later.
 - The Tri-City Herald blocked scripted and WebFetch access; its coverage
   appears only through reprints or not at all. The research session's web
   search quota ran out, so sources were found by direct fetches.
-- LD 14 and LD 15 are left to Yakima's package (#28 assignment); until it
-  lands, `verify_dossiers.py benton` lists them as untouched.
+- LD 14 and LD 15 House seats are researched by Yakima's package; the
+  rebuilt plan names them `researched_in` yakima with no
+  `candidates_missing`. Yakima's CD 4 ships with this package's scoring.

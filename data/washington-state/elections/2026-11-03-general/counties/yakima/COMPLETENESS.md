@@ -3,9 +3,11 @@
 Election: 2026 Washington general election, November 3, 2026 (VoteWA
 election 899, county code 39).
 
-As of 2026-10-09 (#28) this package is researched but not declared: it is
-not in `APP_PACKAGES["2026-11-03-general"]["counties"]`, so Yakima addresses
-still get the Statewide-Only Guide until the director ships it. Its
+Shipped (#28): the package is declared in
+`APP_PACKAGES["2026-11-03-general"]["counties"]` and ships at Full County
+Coverage, with the elections office link
+`https://www.yakimacounty.us/170/Elections` and the county's VoteWA guide
+(`officialLinks.js` `countyGuides.yakima`) for its unpaged citations. Its
 contests come from `pipeline/build_votewa_lite_data.py --county yakima`
 (VoteWA candidate list, pointer `raw/votewa/candidate-list.csv.url`, pinned
 by `sha256` and `sha256_case_normalized`), and the builder reports
@@ -20,7 +22,7 @@ statewide package.
 
 | Kind | Contests | Contested | Uncontested (info-only) | Scope | Research |
 |---|---|---|---|---|---|
-| U.S. Representative (CD 4) | 1 | 1 | 0 | `CONGDST` 4 | Benton package (wave-3 assignment); not researched here |
+| U.S. Representative (CD 4) | 1 | 1 | 0 | `CONGDST` 4 | Benton package; ships with Benton's scoring and dossiers |
 | State Representative (LD 14 Pos. 1, 2; LD 15 Pos. 1, 2) | 4 | 4 | 0 | `LEGDST` | this package |
 | State Senator (LD 15) | 1 | 0 | 1 | `LEGDST` 15 | this package |
 | Assessor, Auditor, Prosecuting Attorney, Sheriff, Treasurer | 5 | 5 | 0 | countywide | this package |
@@ -86,9 +88,13 @@ for Spokane. Other web sources have pointers under `raw/candidates/<contest>/`.
   an override to `votewa.parse_contests`, and adding that plumbing was
   outside this package's write fence. All four seats are uncontested and
   carry no scores, so the effect is the display category only.
-- CD 4 is researched by the Benton package. Until Benton's research is on
-  main, `build_research_plan.py` cannot name it, and `verify_dossiers.py`
-  counts it as one untouched contest.
+- CD 4 is researched by the Benton package; the rebuilt plan names it
+  `researched_in` benton with no `candidates_missing`. Benton's LD 14 and LD
+  15 House seats ship with this package's scoring.
+- District Court categories: the seats keep the bulk builder's category
+  `County` (display only). Whatcom's merge added an `overrides` hook to
+  `ELECTION_MEASURES`, which could rename them `Judicial` / `Yakima County
+  District Court` in a later change; the slugs would change with it.
 - The Court of Appeals Division III District 3 seat also appears on other
   counties' ballots (Chelan, Douglas, Kittitas, Klickitat); this package
   wrote its info-only entry because it is uncontested and not in the plan.

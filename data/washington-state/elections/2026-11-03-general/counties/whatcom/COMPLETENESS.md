@@ -3,9 +3,13 @@
 Election: 2026 Washington general election, November 3, 2026 (VoteWA
 election 899, county code 37).
 
-As of 2026-10-08 (#28) this package is researched, scored and refuted but
-not declared: it does not ship until the director adds it to
-`APP_PACKAGES["2026-11-03-general"]["counties"]`. `interim/app-contests.json`
+Shipped (#28): the package is declared in
+`APP_PACKAGES["2026-11-03-general"]["counties"]` and ships at Full County
+Coverage, with the elections office link
+`https://www.whatcomcounty.us/2794/Elections` (whatcomcounty.us answers 403
+to scripts, so it is unchecked; it is the Elections page the primary's
+Whatcom measure citations name) and the county's VoteWA guide
+(`officialLinks.js` `countyGuides.whatcom`). `interim/app-contests.json`
 and `interim/app-measures.json` are built by
 `pipeline/build_votewa_lite_data.py --county whatcom` from the VoteWA
 candidate list (`raw/votewa/candidate-list.csv.url`) and the measures and
