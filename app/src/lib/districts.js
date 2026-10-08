@@ -36,6 +36,9 @@ const DISTRICT_LABELS = {
   PARKDST: 'Park District',
   CEMDST: 'Cemetery District',
   WATDST: 'Water District',
+  // San Juan SWDDST: the Lopez Solid Waste Disposal District, read as a
+  // presence layer on DOR PRT2025 (geo.js), a constant 'LOPEZ'.
+  SWDDST: 'Solid waste disposal district',
   PTBA: 'Public Transportation Benefit Area',
   AQUIFER: 'Aquifer Protection Area',
   UNINC: 'Unincorporated County',
@@ -78,6 +81,22 @@ const NAMED_VALUES = {
     POK1: 'Port of Kahlotus Commissioner District 1',
     POK2: 'Port of Kahlotus Commissioner District 2',
     POK3: 'Port of Kahlotus Commissioner District 3',
+    // San Juan PORTDST reads WA DOR PRT2025 codes (geo.js; #32).
+    LOPEZ: 'Port of Lopez',
+    ORCAS: 'Port of Orcas',
+    'FRI HAR': 'Port of Friday Harbor',
+  },
+  // San Juan PARKDST reads WA DOR PKR2025 codes (geo.js; #32): Orcas Island's
+  // and San Juan Island's park and recreation districts.
+  PARKDST: {
+    ORCAS: 'Orcas Island Park and Recreation District',
+    'S J': 'San Juan Island Park and Recreation District',
+  },
+  // San Juan SWDDST is presence-only: geo.js reports 'LOPEZ' inside the
+  // Port of Lopez polygon (the district's three Lopez precincts), nothing
+  // elsewhere.
+  SWDDST: {
+    LOPEZ: 'Lopez Solid Waste Disposal District',
   },
   // Kittitas DISTCRT reads the Auditor's Court_Districts court_district_name
   // (geo.js), which leaves out the county; the ballot names the seats
@@ -121,7 +140,7 @@ const NAMED_VALUES = {
 const ORDER = [
   'CITY', 'CONGDST', 'LEGDST', 'KCCDST', 'SCCDST', 'COUNTY_COUNCIL', 'JUDDST', 'DISTCRT', 'KCDISTCRT',
   'PORTDST', 'PUDDST', 'PUDALL', 'FIRDST', 'FIRE_AUTH', 'RFADST', 'PROPFIRDST', 'EMSDST', 'RURALEMSDST',
-  'SCHDST', 'HOSPDST', 'LIBDST', 'PARKDST', 'CEMDST', 'WATDST', 'PTBA', 'AQUIFER', 'UNINC',
+  'SCHDST', 'HOSPDST', 'LIBDST', 'PARKDST', 'CEMDST', 'WATDST', 'SWDDST', 'PTBA', 'AQUIFER', 'UNINC',
 ]
 
 // Layers that show only their NAMED_VALUES. Douglas's county fire layer also

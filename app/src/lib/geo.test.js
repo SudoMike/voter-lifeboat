@@ -1853,3 +1853,51 @@ test('Adams resolves Park District 2 from DOR PKR2025 and Fire District 4 from D
   assert.ok(scopeMatches(fd4, context))
   assert.ok(!scopeMatches(park2, context))
 })
+
+// San Juan (#32, wave 7). Live point queries 2026-10-08 at the
+// Census-geocoded points of the addresses below. The Lopez Solid Waste
+// Disposal District has no DOR polygon; SWDDST is a presence layer on DOR
+// PRT2025 filtered to the Port of Lopez (the same three Lopez precincts).
+const SAN_JUAN_SWD_WHERE = "DISTATTRIB = 'LOPEZ'"
+
+test('San Juan resolves fire, port, park and the Lopez solid waste district from DOR layers', async () => {
+  const fd4 = { kind: 'DISTRICT', county: 'san-juan', layer: 'FIRDST', value: '4' }
+  const lopezPort = { kind: 'DISTRICT', county: 'san-juan', layer: 'PORTDST', value: 'LOPEZ' }
+  const orcasPark = { kind: 'DISTRICT', county: 'san-juan', layer: 'PARKDST', value: 'ORCAS' }
+  const lopezSwd = { kind: 'DISTRICT', county: 'san-juan', layer: 'SWDDST', value: 'LOPEZ' }
+  // 2225 Fisherman Bay Rd, Lopez Island: SCH '144', FIR '4', PRT 'LOPEZ', no park.
+  const calls = mockWave2('2225 FISHERMAN BAY RD, LOPEZ ISLAND, WA, 98261', '055', 'San Juan County', [
+    dorLayer(20, '144'), dorLayer(7, '4'), dorLayer(16, 'LOPEZ'),
+  ])
+  let context = await lookupBallotContext(wave2Data('san-juan'), '2225 Fisherman Bay Rd Lopez Island WA 98261')
+  assert.equal(context.county.id, 'san-juan')
+  assert.equal(context.coverageStatus, 'full_county')
+  assert.deepEqual(context.missingLayers, [])
+  assert.equal(context.districts.SWDDST, 'LOPEZ')
+  for (const s of [fd4, lopezPort, lopezSwd]) assert.ok(scopeMatches(s, context), s.layer)
+  assert.ok(!scopeMatches(orcasPark, context))
+  const swd = calls
+    .filter((u) => !u.startsWith('/api'))
+    .map((u) => new URL(u))
+    .filter((u) => u.pathname.endsWith('WADOR_PropertyTax/MapServer/16/query') && u.searchParams.get('where'))
+  assert.equal(swd.length, 1)
+  assert.equal(swd[0].searchParams.get('where'), SAN_JUAN_SWD_WHERE)
+  assert.equal(swd[0].searchParams.get('outFields'), 'DISTATTRIB')
+  // 500 Rose St, Eastsound: SCH '137', FIR '2', PRT 'ORCAS', PKR 'ORCAS'.
+  mockWave2('500 ROSE ST, EASTSOUND, WA, 98245', '055', 'San Juan County', [
+    dorLayer(20, '137'), dorLayer(7, '2'), dorLayer(16, 'ORCAS'), dorLayer(14, 'ORCAS'),
+  ])
+  context = await lookupBallotContext(wave2Data('san-juan'), '500 Rose St Eastsound WA 98245')
+  assert.deepEqual(context.missingLayers, [])
+  assert.equal('SWDDST' in context.districts, false)
+  assert.ok(scopeMatches(orcasPark, context))
+  for (const s of [fd4, lopezPort, lopezSwd]) assert.ok(!scopeMatches(s, context), s.layer)
+  // 350 Court St, Friday Harbor: SCH '149', FIR '3', PRT 'FRI HAR', PKR 'S J'.
+  mockWave2('350 COURT ST, FRIDAY HARBOR, WA, 98250', '055', 'San Juan County', [
+    dorLayer(20, '149'), dorLayer(7, '3'), dorLayer(16, 'FRI HAR'), dorLayer(14, 'S J'),
+  ])
+  context = await lookupBallotContext(wave2Data('san-juan'), '350 Court St Friday Harbor WA 98250')
+  assert.deepEqual(context.missingLayers, [])
+  assert.equal(context.districts.PORTDST, 'FRI HAR')
+  for (const s of [fd4, lopezPort, orcasPark, lopezSwd]) assert.ok(!scopeMatches(s, context), s.layer)
+})

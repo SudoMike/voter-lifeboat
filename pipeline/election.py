@@ -122,6 +122,10 @@ DISTRICT_ADAPTER_LAYERS = {
     "pacific": ("CONGDST", "LEGDST", "CITY", "FIRDST", "EMSDST"),
     "asotin": ("CONGDST", "LEGDST", "CITY", "EMSDST", "PUDDST", "RURALEMSDST"),
     "adams": ("CONGDST", "LEGDST", "CITY", "CEMDST", "PARKDST", "FIRDST"),
+    "skamania": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "WATDST"),
+    # San Juan's Lopez Solid Waste levy reads SWDDST, a presence layer on DOR
+    # PRT2025 (the Port of Lopez polygon; see geo.js).
+    "san-juan": ("CONGDST", "LEGDST", "CITY", "SCHDST", "FIRDST", "PORTDST", "PARKDST", "SWDDST"),
 }
 
 

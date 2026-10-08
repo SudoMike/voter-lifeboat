@@ -744,7 +744,48 @@ const COUNTY_LAYERS = {
     { key: 'HOSPDST', url: `${DOR_TAX_DISTRICTS}/11/query`, attr: 'DISTATTRIB' },
   ],
   'san-juan': [
+    // Re-probed 2026-10-08 (#32): 350 Court St, Friday Harbor -> '149'; 2225
+    // Fisherman Bay Rd, 86 School Rd and 4102 Mud Bay Rd, Lopez Island ->
+    // '144'; 500 Rose St, Eastsound -> '137'; Shaw interior point (-122.9645,
+    // 48.5770) -> '10'. Only the archived primary uses it (Lopez Island SD
+    // 144 levy).
     { key: 'SCHDST', url: `${DOR_TAX_DISTRICTS}/20/query`, attr: 'DISTATTRIB' },
+    // WA DOR FIR2025 (#32): Fire Protection District No. 4 (Lopez Island Fire
+    // & EMS) levy, scoped '4'. Live 2026-10-08: 2225 Fisherman Bay Rd, 86
+    // School Rd and 4102 Mud Bay Rd, Lopez Island -> '4'; 350 Court St,
+    // Friday Harbor -> '3'; 500 Rose St, Eastsound -> '2'; Shaw interior
+    // point -> '5'; Decatur interior point (-122.8150, 48.5050) -> no feature.
+    { key: 'FIRDST', url: `${DOR_TAX_DISTRICTS}/7/query`, attr: 'DISTATTRIB' },
+    // WA DOR PRT2025 (#32): Port of Lopez Prop. 1 (commissioner term length),
+    // scoped 'LOPEZ'. Live 2026-10-08: the three Lopez addresses above ->
+    // 'LOPEZ'; 500 Rose St, Eastsound -> 'ORCAS'; 350 Court St, Friday Harbor
+    // -> 'FRI HAR'; Shaw and Decatur interior points -> no feature.
+    { key: 'PORTDST', url: `${DOR_TAX_DISTRICTS}/16/query`, attr: 'DISTATTRIB' },
+    // WA DOR PKR2025 (#32): Orcas Island Park and Recreation District Prop. 1,
+    // scoped 'ORCAS'. Live 2026-10-08: 500 Rose St, Eastsound -> 'ORCAS'; 350
+    // Court St, Friday Harbor -> 'S J' (San Juan Island's park district); the
+    // Lopez addresses, Shaw and Decatur -> no feature.
+    { key: 'PARKDST', url: `${DOR_TAX_DISTRICTS}/14/query`, attr: 'DISTATTRIB' },
+    // Lopez Solid Waste Disposal District Prop. 1 (#32), scoped SWDDST
+    // 'LOPEZ'. The district has no DOR polygon of its own (the 2025 layers
+    // have no solid-waste group) and no county tax-district feature. Its
+    // levy is voted on in the three Lopez precincts, SJ030-SJ032 (SOS
+    // exports 2020-2025), and the research package's 425-point grid over
+    // Lopez and Decatur found the Port of Lopez polygon equal to those
+    // precincts on land (see counties/san-juan/COMPLETENESS.md), so it is
+    // read as a presence layer on DOR PRT2025: any feature passing the
+    // `where` means the district ('LOPEZ' is the only PRT2025 feature with
+    // that code statewide). Live 2026-10-08: 2225 Fisherman Bay Rd, 86 School
+    // Rd and 4102 Mud Bay Rd, Lopez Island -> 'LOPEZ'; 500 Rose St,
+    // Eastsound, 350 Court St, Friday Harbor and the Decatur and Shaw
+    // interior points -> no feature.
+    {
+      key: 'SWDDST',
+      url: `${DOR_TAX_DISTRICTS}/16/query`,
+      attr: 'DISTATTRIB',
+      where: "DISTATTRIB = 'LOPEZ'",
+      value: 'LOPEZ',
+    },
   ],
   skagit: [
     { key: 'COUNTY_COUNCIL', url: 'https://geo.skagitcountywa.gov/server/rest/services/Districts/CommissionerDistrictWebMap/MapServer/5/query', attr: 'COMMDIST' },
@@ -756,7 +797,15 @@ const COUNTY_LAYERS = {
     { key: 'SCHDST', url: `${DOR_TAX_DISTRICTS}/20/query`, attr: 'DISTATTRIB' },
   ],
   skamania: [
+    // Re-probed 2026-10-08 (#32): 240 NW Vancouver Ave, Stevenson -> 2; 71
+    // Cooper Ave, Underwood -> 3. No general scope uses it (Commissioner
+    // District 3 is elected county-wide; every general scope is COUNTY or
+    // CD/LD).
     { key: 'COUNTY_COUNCIL', url: 'https://services3.arcgis.com/uKh72TYBlxpm42Cm/arcgis/rest/services/CommissionerDistrict/FeatureServer/0/query', attr: 'CommDist' },
+    // Re-probed 2026-10-08 (#32): 10 Home Valley Cut Off Rd, Stevenson and
+    // interior point (-121.775, 45.715) -> '1' (Home Valley Water District);
+    // Stevenson, Underwood and Carson addresses -> no feature. Only the
+    // archived primary uses it.
     { key: 'WATDST', url: `${DOR_TAX_DISTRICTS}/22/query`, attr: 'DISTATTRIB' },
   ],
   stevens: [
