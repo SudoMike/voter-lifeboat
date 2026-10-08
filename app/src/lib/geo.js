@@ -525,13 +525,32 @@ function trimDistrictNumber(value) {
   return n ? String(parseInt(n, 10)) : null
 }
 
+// The Census 'Current' vintage renames these layers when it rotates (on
+// 2026-10-08 it answered '120th Congressional Districts' and '2026 State
+// Legislative Districts - Lower/Upper' where it had answered '119th' and
+// '2024'), so match them by suffix rather than by full name.
+function firstGeoMatching(pt, pattern) {
+  const key = Object.keys(pt.geographies || {}).find((k) => pattern.test(k))
+  return key ? firstGeo(pt, key) : null
+}
+
+// The district number: BASENAME ('6'), else the vintage's own key (CD119,
+// CD120, ...: '06'), else GEOID ('5306'), which leads with the 2-digit state FIPS.
+function congressionalNumber(feature) {
+  if (!feature) return null
+  if (feature.BASENAME) return feature.BASENAME
+  const cdKey = Object.keys(feature).find((k) => /^CD\d+$/.test(k) && feature[k])
+  if (cdKey) return feature[cdKey]
+  return feature.GEOID ? String(feature.GEOID).slice(2) : null
+}
+
 function lookupCensusDistricts(pt) {
-  const congressional = firstGeo(pt, '119th Congressional Districts')
-  const lower = firstGeo(pt, '2024 State Legislative Districts - Lower')
-  const upper = firstGeo(pt, '2024 State Legislative Districts - Upper')
+  const congressional = firstGeoMatching(pt, /Congressional Districts$/)
+  const lower = firstGeoMatching(pt, /State Legislative Districts - Lower$/)
+  const upper = firstGeoMatching(pt, /State Legislative Districts - Upper$/)
   const place = firstGeo(pt, 'Incorporated Places')
   const districts = {}
-  const cd = trimDistrictNumber(congressional?.BASENAME || congressional?.CD119 || congressional?.GEOID)
+  const cd = trimDistrictNumber(congressionalNumber(congressional))
   const ld = trimDistrictNumber(lower?.BASENAME || lower?.SLDL || upper?.BASENAME || upper?.SLDU)
   const city = (place?.BASENAME || place?.NAME || '').replace(/\s+city$/i, '').trim()
   if (cd) districts.CONGDST = cd
