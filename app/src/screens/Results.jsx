@@ -12,6 +12,7 @@ import {
 } from '../lib/scoring.js'
 import { writeHash } from '../lib/codec.js'
 import { buildBrief } from '../lib/brief.js'
+import { contestHeading } from '../lib/contests.js'
 import {
   DROP_BOX_URL,
   VOTEWA_URL,
@@ -252,14 +253,14 @@ function MarkerLegend() {
 function ContestCard({ data, contest, answers }) {
   const [openSlug, setOpenSlug] = useState(null)
   const { rows, tooClose } = rankContest(contest, answers)
+  const { office, place } = contestHeading(contest)
+  const heading = `${office.toUpperCase()} · ${place.toUpperCase()}`
 
   if (contest.uncontested) {
     const c = contest.candidates[0]
     return (
       <section className="panel panel--sand" style={{ margin: '12px 20px 0' }}>
-        <div className="eyebrow eyebrow--sm eyebrow--muted">
-          {contest.office.toUpperCase()} · {(contest.district || (contest.scope?.kind === 'STATEWIDE' ? 'STATEWIDE' : 'COUNTYWIDE')).toUpperCase()}
-        </div>
+        <div className="eyebrow eyebrow--sm eyebrow--muted">{heading}</div>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 2 }}>
           <div style={{ fontWeight: 800, fontSize: 15 }}>{c.name}</div>
           <div style={{ fontSize: 12, fontWeight: 800, color: 'var(--muted)' }}>uncontested · info only</div>
@@ -281,9 +282,7 @@ function ContestCard({ data, contest, answers }) {
   return (
     <section className="card" style={{ margin: '16px 20px 0', overflow: 'hidden' }}>
       <div style={{ padding: '14px 18px 10px', borderBottom: '2px dashed var(--sand)' }}>
-        <div className="eyebrow eyebrow--sm">
-          {contest.office.toUpperCase()} · {(contest.district || (contest.scope?.kind === 'STATEWIDE' ? 'STATEWIDE' : 'COUNTYWIDE')).toUpperCase()}
-        </div>
+        <div className="eyebrow eyebrow--sm">{heading}</div>
         {contest.term && (
           <div className="note" style={{ marginTop: 3, fontSize: 11.5, fontWeight: 800 }}>
             {contest.term}
