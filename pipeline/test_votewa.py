@@ -154,7 +154,7 @@ class GeneralPackagesTest(unittest.TestCase):
     def test_shipped_general_counties(self):
         self.assertEqual(["king", "snohomish", "spokane", "pierce", "clark", "kitsap", "thurston", "yakima", "whatcom",
                           "benton", "skagit", "cowlitz", "grant", "island", "lewis", "franklin", "chelan", "clallam",
-                          "grays-harbor", "mason", "walla-walla", "stevens"],
+                          "grays-harbor", "mason", "walla-walla", "stevens", "whitman", "douglas"],
                          election.APP_PACKAGES[GENERAL.id]["counties"])
 
     def test_wave2_builders_are_full_county(self):
@@ -213,8 +213,11 @@ class GeneralPackagesTest(unittest.TestCase):
         # Mason (#30): PUDDST and SCHDST read DOR PUD2025 and SCH2025. Walla
         # Walla (#30): SCHDST and PARKDST read DOR SCH2025 and PKR2025.
         # Stevens (#30): LIBDST, FIRDST and SCHDST read DOR LIB2025, FIR2025
-        # and SCH2025.
-        for county in ("mason", "walla-walla", "stevens"):
+        # and SCH2025. Whitman (#30): CEMDST, LIBDST and SCHDST read DOR
+        # CEM2025, LIB2025 and SCH2025 next to FIRDST and PARKDST. Douglas
+        # (#30): SCHDST, CEMDST and HOSPDST read DOR; PROPFIRDST the county's
+        # fire layer.
+        for county in ("mason", "walla-walla", "stevens", "whitman", "douglas"):
             for name in ("app-contests.json", "app-measures.json"):
                 doc = json.loads((GENERAL.county(county) / "interim" / name).read_text())
                 self.assertEqual("full_county", doc["coverage"], f"{county} {name}")

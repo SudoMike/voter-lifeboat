@@ -43,7 +43,11 @@
     "data/washington-state/elections/2026-11-03-general/counties/walla-walla/scoring/measures.json",
     "data/washington-state/elections/2026-11-03-general/counties/walla-walla/scoring/refutations/measures.json",
     "data/washington-state/elections/2026-11-03-general/counties/stevens/scoring/measures.json",
-    "data/washington-state/elections/2026-11-03-general/counties/stevens/scoring/refutations/measures.json"
+    "data/washington-state/elections/2026-11-03-general/counties/stevens/scoring/refutations/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/whitman/scoring/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/whitman/scoring/refutations/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/douglas/scoring/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/douglas/scoring/refutations/measures.json"
   ],
   "script": "pipeline/merge_scores.py",
   "measures": [
@@ -2586,6 +2590,712 @@
         }
       },
       "sources_note": "VoteWA voters' guide measure 7331 (S1); Spokesman-Review coverage of the November levies (S2) and the failed April 2026 capital levy (S3); April 2026 Stevens results (S4)."
+    },
+    {
+      "slug": "whitman-whitman-county-rural-library-district-proposition-no-1",
+      "what_it_does": "Restores the Whitman County Rural Library District's regular property tax levy to up to $0.45 per $1,000 of assessed value for 2027 collection and keeps that maximum for nine more years; the 2036 levy amount becomes the base for later limits (chapter 84.55 RCW). The district says the money would first close a budget deficit and keep current services. Voters in unincorporated Whitman County and 12 towns decide it; Pullman, Colton, Rosalia and Uniontown are not in the district.",
+      "cost_line": "From about $0.396 to up to $0.45 per $1,000 of assessed value for ten years; the district puts it at $14.30 more a year on a $275,000 home ($5.20 more per $100,000).",
+      "pro_summary": "The statement for (Blaine Golden) calls the library the only free public gathering space in many towns, cites 2,264 programs and 57,173 items circulated in 2025, and says local taxation 'preserves local control' and keeps the budget balanced. The district says it is restoring an existing levy that has eroded under the 1% limit, not adding a new tax, and asks for less than the $0.50 maximum.",
+      "con_summary": "No statement against was submitted; the voters' guide says no volunteers came forward after repeated recruitment attempts. The district says that without it, hours, programs or services could be reduced.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "A yes vote is a levy lid lift that raises the library district's regular levy rate from about $0.396 to up to $0.45 per $1,000 for ten years.",
+          "citations": [
+            "S1",
+            "S3",
+            "S4"
+          ]
+        }
+      },
+      "sources_note": "VoteWA voters' guide record 7390 (S1) and the Whitman local voters' pamphlet, p. 12 (S2); the district's levy FAQ (S3); Whitman County Gazette 2026 and 2018 coverage (S4, S6); SOS February 2018 results (S5); Lewiston Tribune 2009 and 2013 coverage of earlier lid lifts (S7-S8); PDC query (S9)."
+    },
+    {
+      "slug": "whitman-cheney-school-district-no-360-proposition-no-1",
+      "what_it_does": "Replaces Cheney School District's educational programs and operation levy, which expires in 2027, with a three-year levy for 2028-2030. It pays for athletics, activities, counselors, nurses, paraeducators, smaller classes, special education, safety and other costs the state does not fund. The district is in Spokane County; only a handful of Whitman County voters live in it.",
+      "cost_line": "Estimated $2.10 per $1,000 of assessed value each year: $18.45 million in 2028, $19 million in 2029 and $19.55 million in 2030, about $57 million in total. The expiring levy was estimated at $1.97 per $1,000 (about $51 million over three years) when it went to voters in February 2024.",
+      "pro_summary": "The statement for (Committee for Great Schools: Meridth Lemelin, Nicole Williams, Amy Pruett) says the levy maintains current programs, failure would bring 'drastic cuts,' and 'This is not a new tax.' The district projects the combined school tax rate to dip from $3.93 to $3.90 per $1,000.",
+      "con_summary": "No statement against was submitted; the voters' guide says no volunteers came forward after repeated recruitment attempts.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "A yes vote replaces an expiring EP&O levy that is moderately larger than before: about $57 million versus about $51 million, and an estimated $2.10 versus $1.97 per $1,000. The district projects the combined school rate to fall from $3.93 to $3.90. This is a replacement levy, not a new tax.",
+          "citations": [
+            "S1",
+            "S4",
+            "S5",
+            "S6"
+          ]
+        }
+      },
+      "sources_note": "VoteWA voters' guide record 7328 (S1) and the Whitman local voters' pamphlet, p. 13 (S2); Cheney Public Schools levy page (S3); Spokesman-Review coverage of the 2026 levies (S4-S5), the 2024 levies (S6) and February 2024 results (S7); SOS Whitman results for 2024 and 2025 showing the district's few Whitman voters (S8-S9); PDC query (S10)."
+    },
+    {
+      "slug": "whitman-cheney-school-district-no-360-proposition-no-2",
+      "what_it_does": "Replaces Cheney School District's capital levy, which expires in 2027, with a three-year levy for 2028-2030. It pays for instructional technology, security cameras and entry controls, and safety infrastructure such as roofing, HVAC, plumbing, lighting and fencing. The district is in Spokane County; only a handful of Whitman County voters live in it.",
+      "cost_line": "Estimated $0.10 per $1,000 of assessed value in 2028 ($880,000), $0.15 in 2029 ($1.35 million) and $0.20 in 2030 ($1.9 million), about $4.1 million in total. The expiring capital levy was estimated at 9 cents per $1,000 (about $2.3 million over three years) when it went to voters in 2024.",
+      "pro_summary": "The statement for (Committee for Great Schools: Meridth Lemelin, Nicole Williams, Amy Pruett) calls it 'a replacement levy, not a new tax.' It says the levy funds classroom technology, roof, HVAC and fire-alarm work, and security cameras and door locks, and that deferring maintenance would cost more later.",
+      "con_summary": "No statement against was submitted; the voters' guide says no volunteers came forward after repeated recruitment attempts.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "A yes vote replaces an expiring capital levy. The new levy is larger than the expiring levy's 2024 estimate (about $4.1 million at 10-20 cents versus $2.3 million at 9 cents), but the district projects the combined school rate to dip from $3.93 to $3.90. Scored as a replacement. The rise in this levy alone is a case for +2.",
+          "citations": [
+            "S1",
+            "S4",
+            "S5",
+            "S6"
+          ]
+        }
+      },
+      "sources_note": "VoteWA voters' guide record 7329 (S1) and the Whitman local voters' pamphlet, p. 14 (S2); Cheney Public Schools levy page (S3); Spokesman-Review coverage of the 2026 levies (S4-S5), the 2024 levies (S6) and February 2024 results (S7); SOS Whitman results for 2024 and 2025 (S8-S9); PDC query (S10)."
+    },
+    {
+      "slug": "whitman-town-of-albion-proposition-no-1",
+      "what_it_does": "One-year excess property tax levy for fire protection, law enforcement services, emergency response and other public safety purposes in Albion. The town passed a $20,000 levy for the same services in 2023; none was on the 2024 or 2025 general ballots.",
+      "cost_line": "$20,000, an estimated $0.459 per $1,000 of assessed value (about $45.90 a year per $100,000), collected in 2027.",
+      "pro_summary": "The statement for (Corina Anderson) says it provides dedicated funding to maintain fire protection, law enforcement, emergency response and other public safety services for the town.",
+      "con_summary": "No statement against was submitted; the voters' guide says no volunteers came forward after repeated recruitment attempts.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "A yes vote adds a one-year $20,000 excess levy. Albion's last such levy was approved in 2023 and none was on the 2024 or 2025 general ballots, so it is not the continuation of a yearly levy.",
+          "citations": [
+            "S1",
+            "S3",
+            "S5",
+            "S6"
+          ]
+        }
+      },
+      "sources_note": "VoteWA voters' guide record 7392 (S1) and the Whitman local voters' pamphlet, p. 15 (S2); SOS results for 2023, 2024 and 2025 (S3, S5, S6); Whitman County Gazette 2023 coverage (S4). The pamphlet spells the author 'Andersen'."
+    },
+    {
+      "slug": "whitman-town-of-albion-proposition-no-2",
+      "what_it_does": "One-year excess property tax levy to maintain the Albion town cemetery, including hazardous tree removal, trimming and grounds improvements. No Albion cemetery levy appears in 2022-2025 results.",
+      "cost_line": "$5,000, an estimated $0.114 per $1,000 of assessed value (about $11.40 a year per $100,000), collected in 2027.",
+      "pro_summary": "The statement for (Corina Anderson) says it provides dedicated funding to remove hazardous trees, improve public safety and preserve the cemetery for future generations.",
+      "con_summary": "No statement against was submitted; the voters' guide says no volunteers came forward after repeated recruitment attempts.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "A yes vote adds a one-year $5,000 excess levy for a purpose not on Albion ballots in 2022-2025.",
+          "citations": [
+            "S1",
+            "S3",
+            "S4",
+            "S5",
+            "S6"
+          ]
+        }
+      },
+      "sources_note": "VoteWA voters' guide record 7393 (S1) and the Whitman local voters' pamphlet, p. 16 (S2); SOS results for 2022-2025 (S3-S6). No other coverage found."
+    },
+    {
+      "slug": "whitman-town-of-colton-proposition-no-880",
+      "what_it_does": "One-year excess property tax levy that continues the town's support for general operations, street improvements and the water and sewer systems. Colton voters have approved a $30,000 levy for these purposes each year since at least 2022.",
+      "cost_line": "$30,000, approximately $0.53 per $1,000 of assessed value, collected in 2027 (the 2025 levy was estimated at $0.71 and the 2024 levy at $0.80 for the same amount).",
+      "pro_summary": "No statement for was submitted. The explanatory statement says the levy would continue the current level of support for general operations, streets and water/sewer work.",
+      "con_summary": "No statement against was submitted; the voters' guide says no volunteers came forward after repeated recruitment attempts.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "A yes vote renews Colton's annual $30,000 operations levy at the same dollar amount, approved each year since at least 2022.",
+          "citations": [
+            "S1",
+            "S3",
+            "S4",
+            "S7",
+            "S8"
+          ]
+        }
+      },
+      "sources_note": "VoteWA voters' guide record 7394 (S1) and the Whitman local voters' pamphlet, p. 17 (S2); SOS results for 2022-2025 (S3, S4, S7, S8); Whitman County Gazette 2024 and 2025 coverage (S5-S6)."
+    },
+    {
+      "slug": "whitman-town-of-endicott-proposition-no-1",
+      "what_it_does": "One-year excess property tax levy for fire protection and emergency services, including contracted fire protection, equipment and training. Endicott voters have approved a fire and EMT levy each year since at least 2022.",
+      "cost_line": "$13,500, an estimated $0.44 per $1,000 of assessed value, collected in 2027 (the 2024 levy was $12,000 at $0.47).",
+      "pro_summary": "The statement for (Mayor Dean Marty) says it provides dedicated funding to maintain reliable fire protection and emergency services for residents, businesses and property.",
+      "con_summary": "No statement against was submitted; the voters' guide says no volunteers came forward after repeated recruitment attempts.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "A yes vote renews Endicott's annual fire and EMT levy, slightly larger in dollars ($13,500 versus $12,000 in 2024) at a similar estimated rate ($0.44 versus $0.47).",
+          "citations": [
+            "S1",
+            "S3",
+            "S5",
+            "S7"
+          ]
+        }
+      },
+      "sources_note": "VoteWA voters' guide record 7395 (S1) and the Whitman local voters' pamphlet, p. 18 (S2); SOS results for 2022-2025 (S3, S4, S7, S8); Whitman County Gazette 2024 and 2025 coverage (S5-S6)."
+    },
+    {
+      "slug": "whitman-town-of-endicott-proposition-no-2",
+      "what_it_does": "One-year excess property tax levy to maintain and improve Endicott's parks: mowing, trees, playgrounds, irrigation and other park facilities. A park levy has been on Endicott's ballot each year since at least 2022; it drew 54.7% yes in 2022 and 52.7% in 2024, short of the 60% excess levies need, and passed with 61.5% in 2025.",
+      "cost_line": "$15,000, an estimated $0.49 per $1,000 of assessed value, collected in 2027.",
+      "pro_summary": "The statement for (Mayor Dean Marty) says it provides dedicated funding to preserve community park facilities for current and future generations.",
+      "con_summary": "No statement against was submitted; the voters' guide says no volunteers came forward after repeated recruitment attempts. The park levy drew 87-78 (52.7%) in 2024, short of the 60% needed, and passed 59-37 (61.5%) in 2025.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "A yes vote renews Endicott's annual park maintenance levy, on the ballot each year since at least 2022; the 2025 levy passed with 61.5% and is collected in 2026.",
+          "citations": [
+            "S1",
+            "S3",
+            "S7",
+            "S8"
+          ]
+        }
+      },
+      "sources_note": "VoteWA voters' guide record 7396 (S1) and the Whitman local voters' pamphlet, p. 18 (S2); SOS results for 2022-2025 (S3, S4, S7, S8); Whitman County Gazette 2024 and 2025 coverage (S5-S6). The prior park levy amount was not found."
+    },
+    {
+      "slug": "whitman-town-of-endicott-proposition-no-3",
+      "what_it_does": "One-year excess property tax levy for street maintenance and related public safety in Endicott: repairs, drainage, lighting, traffic control, snow and ice response and street liability insurance. Endicott voters have approved a street levy each year since at least 2022.",
+      "cost_line": "$35,000, an estimated $1.14 per $1,000 of assessed value, collected in 2027 (the 2024 levy was $30,000 at an estimated $1.14).",
+      "pro_summary": "The statement for (Mayor Dean Marty) says it provides dedicated funding to maintain safe streets and related public safety infrastructure for residents, visitors and emergency responders.",
+      "con_summary": "No statement against was submitted; the voters' guide says no volunteers came forward after repeated recruitment attempts.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "A yes vote renews Endicott's annual street levy at the same estimated rate as 2024 ($1.14 per $1,000), $5,000 larger in dollars.",
+          "citations": [
+            "S1",
+            "S3",
+            "S5",
+            "S7"
+          ]
+        }
+      },
+      "sources_note": "VoteWA voters' guide record 7397 (S1) and the Whitman local voters' pamphlet, p. 19 (S2); SOS results for 2022-2025 (S3, S4, S7, S8); Whitman County Gazette 2024 and 2025 coverage (S5-S6)."
+    },
+    {
+      "slug": "whitman-town-of-garfield-proposition-no-1",
+      "what_it_does": "One-year excess property tax levy for street maintenance, repair and improvements in Garfield: streetlights, gravel road grading and oiling, potholes, weed control, snow plowing and related public works salaries. The statement for says the street fund has no other revenue of its own; the levy has passed each year since at least 2023.",
+      "cost_line": "$72,000, an estimated $2.24 per $1,000 of assessed value, collected in 2027 (the 2025 levy was the same amount at an estimated $2.50).",
+      "pro_summary": "The statement for (Clerk/Treasurer Rebecca Pfaff) says all street operations depend on the levy because the street fund generates no revenue of its own: 'If you value well-maintained and snow plowed streets ... please support and vote Yes.'",
+      "con_summary": "No statement against was submitted; the voters' guide says no volunteers came forward after repeated recruitment attempts.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "A yes vote renews Garfield's annual $72,000 street levy at the same dollar amount as 2025 and a lower estimated rate.",
+          "citations": [
+            "S1",
+            "S3",
+            "S4",
+            "S5"
+          ]
+        }
+      },
+      "sources_note": "VoteWA voters' guide record 7398 (S1) and the Whitman local voters' pamphlet, p. 20 (S2); Town of Garfield Resolutions 2026-13 and 2025-04 (S3-S4); SOS results for 2023-2025 (S5-S7)."
+    },
+    {
+      "slug": "whitman-town-of-oakesdale-proposition-no-1",
+      "what_it_does": "One-year special property tax levy to fund fire protection and emergency medical services for the Town of Oakesdale, collected in 2027. No explanatory statement or statements for or against were filed (hardship waiver), and the measure is not in the printed pamphlet.",
+      "cost_line": "$14,000, an estimated $0.46 per $1,000 of assessed value, collected in 2027.",
+      "pro_summary": "No statement for was filed; a hardship waiver is on file with the county. Oakesdale voters approved a public safety levy in 2024 with 81.8% yes.",
+      "con_summary": "No statement against was filed and no committee was found in PDC filings.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "A yes vote approves a new one-year special property tax of $14,000 (about $0.46 per $1,000) for 2027; Oakesdale had no town levy on the November 2025 general ballot, and the sources show no levy it would continue.",
+          "citations": [
+            "S1",
+            "S2",
+            "S4"
+          ]
+        }
+      },
+      "sources_note": "VoteWA voters' guide record 7399, ballot title only, hardship waiver (S1); Secretary of State results for 2024, 2023 and 2025 (S2-S4); Department of Revenue 2025 levy detail (S5); MRSC on excess levies (S6); PDC query (S7). Not in the printed pamphlet."
+    },
+    {
+      "slug": "whitman-town-of-oakesdale-proposition-no-2",
+      "what_it_does": "One-year special property tax levy for street work, street lights, street expenses and maintenance in Oakesdale, collected in 2027. No explanatory statement or statements for or against were filed (hardship waiver), and the measure is not in the printed pamphlet.",
+      "cost_line": "$60,000, an estimated $1.93 per $1,000 of assessed value, collected in 2027.",
+      "pro_summary": "No statement for was filed; a hardship waiver is on file with the county. Oakesdale voters approved two street levies in 2024 with about 65% yes.",
+      "con_summary": "No statement against was filed and no committee was found in PDC filings.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "A yes vote approves a new one-year special property tax of $60,000 (about $1.93 per $1,000) for 2027; Oakesdale had no town levy on the November 2025 general ballot, and the sources show no levy it would continue.",
+          "citations": [
+            "S1",
+            "S2",
+            "S4"
+          ]
+        }
+      },
+      "sources_note": "VoteWA voters' guide record 7400, ballot title only, hardship waiver (S1); Secretary of State results for 2024, 2023 and 2025 (S2-S4); Department of Revenue 2025 levy detail (S5); MRSC on excess levies (S6); PDC query (S7). Not in the printed pamphlet."
+    },
+    {
+      "slug": "whitman-city-of-palouse-proposition-no-1",
+      "what_it_does": "One-year excess property tax levy for the operation and maintenance of Palouse's city infrastructure (Resolution 2026-08). Palouse has asked for this levy, with the pool and street levies, on the 2024 and 2025 ballots as well.",
+      "cost_line": "$55,000 collected in 2027: the ballot title estimates $0.73058 per $1,000 of assessed value, the explanatory statement $0.5912.",
+      "pro_summary": "No statement for was filed; the voters' guide says no volunteers came forward. The council's resolution cites a great need for maintaining the infrastructure for the City of Palouse and related services. Palouse voters approved the same levy in 2024 and 2025, most recently with 65.4% yes in 2025.",
+      "con_summary": "No statement against was filed and no committee was found in PDC filings.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "A yes vote continues Palouse's annual one-year infrastructure levy, approved in 2024 and 2025, at the same $55,000 asked in 2024 and a rate at or below the 2024 estimate.",
+          "citations": [
+            "S5",
+            "S3",
+            "S7",
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "VoteWA voters' guide record 7401 (S1) and pamphlet page 21 (S2); 2024 results (S3); Resolution 2026-08 (S4); Daily News 2024 levy roundup (S5); 2023 and 2025 results (S6, S7); Department of Revenue 2025 levy detail (S8); MRSC and RCW 84.52.052 (S9, S10); PDC query (S11). The ballot title and the explanatory statement give different rates for the same dollar amount."
+    },
+    {
+      "slug": "whitman-city-of-palouse-proposition-no-2",
+      "what_it_does": "One-year excess property tax levy for the operation and maintenance of the Palouse swimming pool (Resolution 2026-09). Palouse has asked for this levy, with the infrastructure and street levies, on the 2024 and 2025 ballots as well.",
+      "cost_line": "$50,000 collected in 2027: the ballot title estimates $0.6641 per $1,000 of assessed value, the explanatory statement $0.53748.",
+      "pro_summary": "No statement for was filed; the voters' guide says no volunteers came forward. The council's resolution cites a great need for maintaining its swimming pool and related services. Palouse voters approved the same levy in 2024 and 2025, most recently with 65.9% yes in 2025.",
+      "con_summary": "No statement against was filed and no committee was found in PDC filings.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "A yes vote continues Palouse's annual one-year pool levy, approved in 2024 and 2025, at the same $50,000 asked in 2024 and a rate at or below the 2024 estimate.",
+          "citations": [
+            "S5",
+            "S3",
+            "S7",
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "VoteWA voters' guide record 7402 (S1) and pamphlet page 21 (S2); 2024 results (S3); Resolution 2026-09 (S4); Daily News 2024 levy roundup (S5); 2023 and 2025 results (S6, S7); Department of Revenue 2025 levy detail (S8); MRSC and RCW 84.52.052 (S9, S10); PDC query (S11). The ballot title and the explanatory statement give different rates for the same dollar amount."
+    },
+    {
+      "slug": "whitman-city-of-palouse-proposition-no-3",
+      "what_it_does": "One-year excess property tax levy for street improvements and the purchase, repair and maintenance of the vehicles and equipment used to maintain Palouse's streets (Resolution 2026-10). Palouse has asked for a street levy, with the infrastructure and pool levies, on the 2024 and 2025 ballots as well.",
+      "cost_line": "$50,000 collected in 2027: the ballot title estimates $0.6641 per $1,000 of assessed value, the explanatory statement $0.53748.",
+      "pro_summary": "No statement for was filed; the voters' guide says no volunteers came forward. The council's resolution cites a great need for providing street improvements and equipment. Palouse voters approved a street (road oiling) levy in 2024 and 2025, most recently with 65.8% yes; this one also covers street vehicles and equipment.",
+      "con_summary": "No statement against was filed and no committee was found in PDC filings.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "A yes vote continues Palouse's annual one-year street levy, approved in 2024 and 2025, at the same $50,000 asked in 2024 and a rate at or below the 2024 estimate.",
+          "citations": [
+            "S5",
+            "S3",
+            "S7",
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "VoteWA voters' guide record 7403 (S1) and pamphlet page 22 (S2); 2024 results (S3); Resolution 2026-10 (S4); Daily News 2024 levy roundup (S5); 2023 and 2025 results (S6, S7); Department of Revenue 2025 levy detail (S8); MRSC and RCW 84.52.052 (S9, S10); PDC query (S11). The ballot title and the explanatory statement give different rates for the same dollar amount."
+    },
+    {
+      "slug": "whitman-town-of-rosalia-proposition-no-1",
+      "what_it_does": "One-year special (excess) property tax levy for Rosalia's street fund: street lights, seal coating, shoulder work, capital improvements, equipment, maintenance staff wages and regular maintenance including plowing and sanding, and grant match for future street projects.",
+      "cost_line": "$50,000 collected in 2027, at $1.50 per $1,000 of assessed value per the ballot title.",
+      "pro_summary": "No statement for was filed; the voters' guide says no volunteers came forward. Rosalia voters approved the 2025 street levy with 69.9% yes.",
+      "con_summary": "No statement against was filed and no committee was found in PDC filings. The 2024 street levy received 59.0% yes, short of the 60% excess levies need.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "A yes vote continues Rosalia's annual one-year street levy, approved in 2025 with 69.9% yes, at $1.50 per $1,000; the 2024 request for the same $50,000 was estimated at $1.77.",
+          "citations": [
+            "S6",
+            "S1",
+            "S4"
+          ]
+        }
+      },
+      "sources_note": "VoteWA voters' guide record 7404 (S1) and pamphlet page 23 (S2); 2024, 2023 and 2025 results (S3, S5, S6); Daily News 2024 levy roundup (S4); Department of Revenue 2025 levy detail (S7); MRSC on excess levies (S8); PDC query (S9)."
+    },
+    {
+      "slug": "whitman-town-of-st-john-proposition-no-1",
+      "what_it_does": "Renews St. John's one-year special property tax levy for the maintenance, repair, improvement and replacement of town streets and sidewalks, including chip sealing, pothole repair, manhole covers and street sweeping.",
+      "cost_line": "$90,000, an estimated $1.89 per $1,000 of assessed value, collected in 2027 (the 2024 request was $80,000 at about $2.00).",
+      "pro_summary": "No statement for was filed; the voters' guide says no volunteers came forward. The town says the levy would continue funding for street and sidewalk upkeep. Voters approved the street levy in 2025 with 67.9% yes.",
+      "con_summary": "No statement against was filed and no committee was found in PDC filings.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "The ballot title renews the town's annual street levy, approved in 2024 and 2025, at an estimated $1.89 per $1,000 against about $2.00 for the 2024 request, though the amount rises from $80,000 to $90,000.",
+          "citations": [
+            "S1",
+            "S3",
+            "S7",
+            "S4"
+          ]
+        }
+      },
+      "sources_note": "VoteWA voters' guide record 7405 (S1) and pamphlet page 24 (S2); 2024, 2023 and 2025 results (S3, S6, S7); Daily News 2024 levy roundup (S4); Gazette 2025 levy preview (S5); Department of Revenue 2025 levy detail (S8); MRSC on excess levies (S9); PDC query (S10)."
+    },
+    {
+      "slug": "whitman-town-of-st-john-proposition-no-2",
+      "what_it_does": "Renews St. John's one-year special property tax levy for water and sewer upgrades and capital improvements: wells, the water system, equipment and the sewer treatment plant.",
+      "cost_line": "$80,000, an estimated $1.68 per $1,000 of assessed value, collected in 2027 (the 2024 request was $60,000 at about $1.50).",
+      "pro_summary": "No statement for was filed; the voters' guide says no volunteers came forward. The town says the levy would keep water and wastewater service reliable and cites recent pump motor and well monitoring work. Voters approved it in 2025 with 72.6% yes.",
+      "con_summary": "No statement against was filed and no committee was found in PDC filings.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "The ballot title renews the town's annual water and sewer levy, approved in 2024 and 2025, at an estimated $1.68 per $1,000; the amount is $80,000, up from the $60,000 ($1.50) reported for 2024.",
+          "citations": [
+            "S1",
+            "S3",
+            "S7",
+            "S4"
+          ]
+        }
+      },
+      "sources_note": "VoteWA voters' guide record 7406 (S1) and pamphlet page 25 (S2); 2024, 2023 and 2025 results (S3, S6, S7); Daily News 2024 levy roundup (S4); Gazette 2025 levy preview (S5); Department of Revenue 2025 levy detail (S8); MRSC on excess levies (S9); PDC query (S10)."
+    },
+    {
+      "slug": "whitman-city-of-tekoa-proposition-no-1",
+      "what_it_does": "One-year special property tax levy for oiling gravel streets, chip sealing, asphalt replacement and sidewalk repair in Tekoa, including the city's match for state Transportation Improvement Board grants such as a pending Main Street sidewalk project. Tekoa's 2025 street levy fell short of the 60% needed.",
+      "cost_line": "$50,000, an estimated $1.23 per $1,000 of assessed value, collected in 2027.",
+      "pro_summary": "Resident Doug Palmer's statement for says street and sidewalk improvements benefit all citizens and keep the city safe. The city says levy money would match grants, including a Transportation Improvement Board sidewalk grant application ($187,600 from TIB, with a $40,000 street-levy match).",
+      "con_summary": "Resident Jequetta Lucki's statement against says streets that are harder to work on do not get the same attention as others. One council member voted against placing the levy, and the 2025 street levy drew 58.2% yes, short of the 60% needed.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "A yes vote approves a $50,000 one-year street levy (about $1.23 per $1,000) for 2027; the 2025 street levy drew 58.2% yes, short of the 60% excess levies need, so it does not continue a levy collected in 2026.",
+          "citations": [
+            "S1",
+            "S9",
+            "S11"
+          ]
+        }
+      },
+      "sources_note": "VoteWA voters' guide record 7407 (S1) and pamphlet page 26 (S2); 2024, 2023 and 2025 results (S3, S8, S9); Tekoa City Council minutes for June 15, July 20 and August 17, 2026 (S4-S6); Daily News 2024 levy roundup (S7); Department of Revenue 2025 levy detail (S10); MRSC on excess levies (S11); PDC query (S12). Whether the 2025 levy failed is inferred from its 58.2% vote and the 60% rule; no certification notice was found."
+    },
+    {
+      "slug": "whitman-town-of-uniontown-proposition-no-1",
+      "what_it_does": "One-year excess property tax levy for Uniontown's general operations, water and sewer improvements and general maintenance; the council excluded employee wages. The town filed no explanatory statement.",
+      "cost_line": "About $30,000, approximately $0.64 per $1,000 of assessed value, collected in 2027; about $224 on a $350,000 home.",
+      "pro_summary": "No statement for was filed; the voters' guide says no volunteers came forward. The town council voted unanimously to place the levy on the ballot.",
+      "con_summary": "No statement against was filed and no committee was found in PDC filings. A council member said that with a county tax increase in 2027 and a continuing school tax, it 'might be a hard sell.'",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "A yes vote approves a new one-year excess levy of about $30,000 (about $0.64 per $1,000) for general operations, water and sewer and maintenance; no earlier town levy for this purpose was found.",
+          "citations": [
+            "S1",
+            "S4",
+            "S3",
+            "S6"
+          ]
+        }
+      },
+      "sources_note": "VoteWA voters' guide record 7408 (S1) and pamphlet page 27 (S2); 2024 and 2025 results (S3, S6); Gazette report on the council's June 10 vote (S4); Daily News 2024 levy roundup (S5); Department of Revenue 2025 levy detail (S7); MRSC on excess levies (S8); PDC query (S9). No explanatory statement was filed."
+    },
+    {
+      "slug": "whitman-whitman-county-fire-protection-district-no-8-proposition-no-1",
+      "what_it_does": "Four-year excess property tax levy for the maintenance and operation of Fire District No. 8 (LaCrosse area), collected 2027 through 2030 (Resolution No. 2026-1). It keeps the district's $75,000-a-year special levy, the amount collected in 2024 and 2025.",
+      "cost_line": "$75,000 a year for four years, an estimated $0.36 per $1,000 of assessed value (about $108 a year on a $300,000 property). The 2025 special levy was $0.354 per $1,000, on top of a $0.285 regular levy.",
+      "pro_summary": "No statement for was filed; the guide says no volunteers came forward. Voters approved the district's levy in 2022 (68%) and 2025 (67%).",
+      "con_summary": "No statement against was filed and no opposition committee was found.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "A yes vote continues Fire District 8's $75,000-a-year special levy, the same amount collected in 2024 and 2025, for 2027 through 2030. It continues an existing levy at about the same amount rather than raising the rate, so the mapping is +1.",
+          "citations": [
+            "S1",
+            "S5",
+            "S6"
+          ]
+        }
+      },
+      "sources_note": "VoteWA voters' guide record 7409 (S1); local voters' pamphlet pages 28 and 3 (S2, S3); county assessor subfund report (S4); DOR levy detail for 2025 and 2024 (S5, S6); SOS results for November 2022 and 2025 (S7, S8); PDC query (S9)."
+    },
+    {
+      "slug": "whitman-whitman-county-fire-protection-district-no-14-proposition-no-1",
+      "what_it_does": "Levy lid lift setting Fire District No. 14's (Colton area) regular property tax levy at $1.08 per $1,000 of assessed value for 2027 collection, for fire protection, life safety services, apparatus and equipment, and firefighter safety. The 2027 amount becomes the base for later 1% limits (Resolution No. 26-03).",
+      "cost_line": "$1.08 per $1,000 of assessed value for 2027 collection, up from $0.633 in 2025 (DOR), about 71% higher. On a $300,000 property, about $324 a year against about $190 at the 2025 rate.",
+      "pro_summary": "No statement for was filed; the district took a hardship waiver from the pamphlet. The ballot title says the money would maintain and improve fire protection and life safety services and replace apparatus and equipment.",
+      "con_summary": "No statement against was filed and no opposition committee was found.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "A yes vote is a levy lid lift raising Fire District 14's regular levy rate from $0.63305 per $1,000 (2025) to $1.08, about 71% higher.",
+          "citations": [
+            "S1",
+            "S4"
+          ]
+        }
+      },
+      "sources_note": "VoteWA voters' guide record 7410 (S1); local voters' pamphlet page 3 (hardship waiver list, S2); county assessor subfund report (S3); DOR levy detail for 2025 and 2024 (S4, S5); SOS results for November 2022 through 2025, showing no earlier district measure (S6-S9); PDC query (S10). No 2026 rate was found in a readable source."
+    },
+    {
+      "slug": "whitman-lacrosse-park-recreation-district-no-1-proposition-no-1",
+      "what_it_does": "One-year special levy for the operation, maintenance and capital improvements of the LaCrosse swimming pool and the district's existing buildings; it also supports district youth programs (swim team, soccer, football, basketball, baseball). Voters have approved this levy every year since at least 2023.",
+      "cost_line": "$75,000, an estimated $0.31 per $1,000 of assessed value, collected in 2027 (about $93 on a $300,000 property). The same amount was collected in 2025.",
+      "pro_summary": "Katie Bailey's statement says the levy keeps the pool open and supports youth programs, calling the pool 'the lifeblood of our community in the summer months' and a source of jobs for local youth.",
+      "con_summary": "Jerry Chastain's statement: 'I understand that the pool is a big deal for our community; however, I believe our tax dollars should be prioritized elsewhere.'",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "A yes vote continues the district's yearly pool levy at the same $75,000 collected in 2025. It renews an existing levy at about the same amount, so the mapping is +1.",
+          "citations": [
+            "S1",
+            "S6"
+          ]
+        }
+      },
+      "sources_note": "VoteWA voters' guide record 7411 (S1); local voters' pamphlet page 29 (S2); SOS results for November 2023, 2024 and 2025 (S3-S5); DOR levy detail for 2025 and 2024 (S6, S7); PDC query (S8)."
+    },
+    {
+      "slug": "whitman-garfield-park-recreation-district-no-2-proposition-no-1",
+      "what_it_does": "One-year property tax levy for pool maintenance and repair, higher operating costs (wages and chemicals) and new pool equipment (Resolution 2026-04). The district's levy amount has varied: $150,000 collected in 2024, $30,000 in 2025.",
+      "cost_line": "$140,000, an estimated $1.05 per $1,000 of assessed value, collected in 2027 (about $315 on a $300,000 property), against $30,000 ($0.31) collected in 2025.",
+      "pro_summary": "No statement for was filed; the district took a hardship waiver from the pamphlet. The ballot title cites increased wages and chemical costs and new pool equipment.",
+      "con_summary": "No statement against was filed and no opposition committee was found.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "A yes vote approves a $140,000 levy at an estimated $1.05 per $1,000, tied in the ballot title to increased wages, chemical costs and new pool equipment. That is more than four times the $30,000 ($0.31) collected in 2025, so the mapping is +2. The district collected $150,000 in 2024.",
+          "citations": [
+            "S1",
+            "S7",
+            "S8"
+          ]
+        }
+      },
+      "sources_note": "VoteWA voters' guide record 7412 (S1); local voters' pamphlet page 3 (hardship waiver list, S2); SOS results for November 2022 through 2025 (S3-S6); DOR levy detail for 2025 and 2024 (S7, S8); PDC query (S9). Whether a levy is being collected in 2026 was not found."
+    },
+    {
+      "slug": "whitman-st-john-park-recreation-district-no-3-proposition-no-1",
+      "what_it_does": "One-year special levy for the district's operating fund, swimming pool, capital outlay and cumulative reserve. Voters have approved the St. John park district's yearly levy each November since at least 2022.",
+      "cost_line": "$75,000, an estimated $0.2506 per $1,000 of assessed value, collected in 2027 (about $75 on a $300,000 property). The same amount was collected in 2024 and 2025.",
+      "pro_summary": "No statement for was filed; the district took a hardship waiver from the pamphlet.",
+      "con_summary": "No statement against was filed and no opposition committee was found.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "A yes vote continues the district's yearly $75,000 operating levy, the same amount collected in 2024 and 2025, so the mapping is +1.",
+          "citations": [
+            "S1",
+            "S7",
+            "S8"
+          ]
+        }
+      },
+      "sources_note": "VoteWA voters' guide record 7413 (S1); local voters' pamphlet page 3 (hardship waiver list, S2); SOS results for November 2022 through 2025 (S3-S6); DOR levy detail for 2025 and 2024 (S7, S8); PDC query (S9)."
+    },
+    {
+      "slug": "whitman-oakesdale-park-recreation-district-no-4-proposition-no-1",
+      "what_it_does": "One-year special levy to operate, maintain and improve the district's recreational facilities. Voters have approved the district's yearly levy each November since at least 2022.",
+      "cost_line": "$120,000, an estimated $0.53 per $1,000 of assessed value, collected in 2027 (about $159 on a $300,000 property). The same amount was collected in 2025, at $0.69.",
+      "pro_summary": "No statement for was filed; the district took a hardship waiver from the pamphlet.",
+      "con_summary": "No statement against was filed and no opposition committee was found.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "A yes vote continues the district's yearly levy at $120,000, the amount collected in 2025, so the mapping is +1.",
+          "citations": [
+            "S1",
+            "S7"
+          ]
+        }
+      },
+      "sources_note": "VoteWA voters' guide record 7414 (S1); local voters' pamphlet page 3 (hardship waiver list, S2); SOS results for November 2022 through 2025 (S3-S6); DOR levy detail for 2025 and 2024 (S7, S8); PDC query (S9)."
+    },
+    {
+      "slug": "whitman-endicott-parks-recreation-district-no-7-proposition-no-1",
+      "what_it_does": "One-year special levy for the district's operating fund, swimming pool, capital outlay and cumulative reserve. Voters approved a $65,000 levy in 2024, collected in 2025.",
+      "cost_line": "$65,000, an estimated $0.42 or less per $1,000 of assessed value, collected in 2027 (up to about $126 on a $300,000 property). The same amount was collected in 2025.",
+      "pro_summary": "No statement for was filed; the district took a hardship waiver from the pamphlet.",
+      "con_summary": "No statement against was filed and no opposition committee was found.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "A yes vote approves a one-year $65,000 levy, the same amount the district collected in 2025, so the mapping is +1.",
+          "citations": [
+            "S1",
+            "S5"
+          ]
+        }
+      },
+      "sources_note": "VoteWA voters' guide record 7418 (S1); local voters' pamphlet page 3 (hardship waiver list, S2); SOS results for November 2024 and 2025 (S3, S4); DOR levy detail for 2025 and 2024 (S5, S6); PDC query (S7). Whether a levy is being collected in 2026 was not found."
+    },
+    {
+      "slug": "whitman-oakesdale-cemetery-district-no-1-proposition-no-1",
+      "what_it_does": "One-year special levy for continued improvements and maintenance of the Oakesdale cemetery. Voters have approved the district's yearly levy each November since at least 2022.",
+      "cost_line": "$70,000, an estimated $0.35 per $1,000 of assessed value, collected in 2027 (about $105 on a $300,000 property). About the same amount was collected in 2024 and 2025.",
+      "pro_summary": "No statement for was filed; the district took a hardship waiver from the pamphlet.",
+      "con_summary": "No statement against was filed and no opposition committee was found.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "A yes vote continues the district's yearly $70,000 levy, the amount collected in 2024 and 2025, so the mapping is +1.",
+          "citations": [
+            "S1",
+            "S7",
+            "S8"
+          ]
+        }
+      },
+      "sources_note": "VoteWA voters' guide record 7419 (S1); local voters' pamphlet page 3 (hardship waiver list, S2); SOS results for November 2022 through 2025 (S3-S6); DOR levy detail for 2025 and 2024 (S7, S8); PDC query (S9)."
+    },
+    {
+      "slug": "whitman-whitman-county-garfield-cemetery-district-no-2-proposition-no-2026-1",
+      "what_it_does": "One-year levy for equipment, sprinkler-system improvements and other operation and maintenance of the district's cemeteries (WCCD2 and Silver Creek), including tree removal, turf care and records work. The board says it has reduced the amount from earlier years.",
+      "cost_line": "$105,000, an estimated $0.82 or less per $1,000 of assessed value, collected in 2027 (up to about $246 on a $300,000 property), down from $120,000 in 2025 and $140,000 in 2024.",
+      "pro_summary": "The district board's statement (Linda Kildew) says the levy funds staff, fuel, water, electricity and maintenance, sprinkler and tree work, veterans' memorial plans and reviving Silver Creek Cemetery, and that the board 'has been able to reduce the requested amount this year.'",
+      "con_summary": "No statement against was filed (no volunteers came forward) and no opposition committee was found.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "A yes vote continues the district's yearly operating levy at $105,000, below the $120,000 collected in 2025 and $140,000 in 2024. It renews an existing levy without raising it, so the mapping is +1.",
+          "citations": [
+            "S1",
+            "S7",
+            "S8"
+          ]
+        }
+      },
+      "sources_note": "VoteWA voters' guide record 7420 (S1); local voters' pamphlet page 30 (S2); SOS results for November 2022 through 2025 (S3-S6); DOR levy detail for 2025 and 2024 (S7, S8); PDC query (S9). The pamphlet heads it Proposition No. 2026-1, VoteWA as Proposition No. 1."
+    },
+    {
+      "slug": "whitman-st-john-cemetery-district-no-3-proposition-no-1",
+      "what_it_does": "One-year special property tax levy for the maintenance and operation of the St. John cemetery district. The district's last special levy found was $16,000, collected in 2025.",
+      "cost_line": "$20,000, an estimated $0.16 per $1,000 of assessed value, collected in 2027 (about $48 on a $300,000 property), against a $16,000 special levy ($0.075) in 2025.",
+      "pro_summary": "No statement for was filed; the guide says no volunteers came forward.",
+      "con_summary": "No statement against was filed and no opposition committee was found.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "A yes vote approves a $20,000 special levy at an estimated $0.16 per $1,000, 25% more than the $16,000 ($0.075) special levy last collected in 2025, at about twice the rate. That is a rise, so the mapping is +2.",
+          "citations": [
+            "S1",
+            "S5"
+          ]
+        }
+      },
+      "sources_note": "VoteWA voters' guide record 7421 (S1); local voters' pamphlet page 31 (S2); SOS results for November 2024 and 2025 (S3, S4); DOR levy detail for 2025 and 2024 (S5, S6); PDC query (S7). Whether a levy is being collected in 2026 was not found."
+    },
+    {
+      "slug": "whitman-whitman-county-endicott-cemetery-district-no-4-proposition-no-1",
+      "what_it_does": "One-year excess property tax levy for the maintenance and operation of the Endicott cemetery district, renewing a levy that expires in 2026 (Resolution No. 2026-1).",
+      "cost_line": "$40,000, an estimated $0.37 per $1,000 of assessed value, collected in 2027 (about $111 on a $300,000 property). This is the same amount as the 2026 levy (about $0.38).",
+      "pro_summary": "No statement for was filed; the guide says no volunteers came forward. Voters approved the district's levy in 2022, 2024 and 2025, each time with about 68% to 71% yes.",
+      "con_summary": "No statement against was filed and no opposition committee was found.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "A yes vote renews an expiring levy at the same $40,000 collected in 2025 and approved for 2026, at an estimated $0.37 against $0.38. It renews at about the same rate, so the mapping is +1.",
+          "citations": [
+            "S1",
+            "S6",
+            "S8"
+          ]
+        }
+      },
+      "sources_note": "VoteWA voters' guide record 7422 (S1); local voters' pamphlet page 31 (S2); SOS results for November 2022, 2024 and 2025 (S3-S5); DOR levy detail for 2025 and 2024 (S6, S7); Whitman County Gazette on the 2025 renewal (S8); PDC query (S9)."
+    },
+    {
+      "slug": "douglas-public-hospital-district-no-1-okanogan-and-douglas-counties-three-rivers-hospital-proposition-no-1",
+      "what_it_does": "Lets the hospital district that runs Three Rivers Hospital in Brewster issue up to $48 million in bonds over as long as 30 years to remodel, renovate and re-equip the hospital. The district reaches from Okanogan County into northern Douglas County; supporters say it serves communities from Mansfield to Mazama. A $45 million version got 52.3% in November 2025 and failed. Needs 60% to pass.",
+      "cost_line": "About $0.73 per $1,000 of assessed value, roughly $219 a year ($18 a month) on a $300,000 home, for up to 30 years.",
+      "pro_summary": "The statement in favor (Michael Pruett, the hospital board's chair) says the bond keeps quality care close to home at a community-owned hospital. It calls the project a practical upgrade of patient spaces, technology and infrastructure, and links local care to wildfire and emergency resilience.",
+      "con_summary": "The statement against (Melvin Sorensen) says voters should first get county-wide information on how best to meet Okanogan County's medical needs, and that $48 million and 30 years of taxes would lock in the current system; a county-wide study might favor a central facility with outlying urgent care centers. His rebuttal adds that the county's three small hospitals compete with each other, that Three Rivers is fragile, and that if it failed residents would pay for decades with no hospital.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "A yes vote adds a new excess property tax of about $0.73 per $1,000 for up to 30 years to repay up to $48 million in bonds. The hospital's hope of later ending its ER operating levy is not part of the measure.",
+          "citations": [
+            "S1",
+            "S4",
+            "S5"
+          ]
+        }
+      },
+      "sources_note": "Sources: VoteWA voters' guide record 7283 (S1); the official sample ballot (S2); the hospital's proposal, cost and FAQ pages (S3-S5); VoteWA record 6866 and Secretary of State results for the November 2025 bond (S6, S7); RCW 84.52.056 (S8)."
+    },
+    {
+      "slug": "douglas-douglas-county-public-hospital-district-no-2-proposition-no-1",
+      "what_it_does": "Renews the Waterville-area hospital district's one-year operating levy, which pays for its ambulance service and a clinic contracted with Wenatchee Valley Medical Center. The district asks for the same levy every year; voters approved it in 2020, 2022, 2024 and 2025. Needs 60% to pass.",
+      "cost_line": "$80,000 in 2027, about $0.36 per $1,000 of assessed value (about $108 on a $300,000 property). The 2025 and 2026 levies were the same amount and rate.",
+      "pro_summary": "No statement in favor was filed. The district says the levy provides sufficient funds for its clinic and ambulance services.",
+      "con_summary": "No statement against this measure was filed, and no opposing committee is listed.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "A yes vote renews the district's recurring one-year levy at the same $80,000 and $0.36 per $1,000 as the last two years. It is a renewal, not a new tax.",
+          "citations": [
+            "S1",
+            "S4",
+            "S5"
+          ]
+        }
+      },
+      "sources_note": "Sources: VoteWA voters' guide record 7320 (S1); the official sample ballot (S2); district Resolution #91 (S3); VoteWA records for the 2025 and 2026 levies (S4, S5); Secretary of State results for 2020-2025 (S6-S9); RCW 84.52.052 (S10). No news coverage was found."
+    },
+    {
+      "slug": "douglas-eastmont-school-district-no-206-proposition-no-1",
+      "what_it_does": "Lets Eastmont School District borrow $125 million in bonds, repaid by property taxes over up to 20 years. The money rebuilds the oldest parts of Kenroy, Lee and Cascade elementary schools, built 1957-1967, replacing 15 portables, and pays for security entrances, roofs, HVAC, parking and athletic upgrades at other schools. The district expects about $25 million in state aid. Bonds failed in 2022 and twice in 2024, the 2024 tries just under 60%. Needs 60% to pass.",
+      "cost_line": "The district estimates $0.79 per $1,000 of assessed value for 20 years, about $395 a year ($32.92 a month) on a $500,000 home. It does not say whether that is on top of the current school rate.",
+      "pro_summary": "The statement in favor (Alejandro C. Cruz, Dr. Gene Sharratt and Dr. Sue Kane) says the three elementaries are aging, overcrowded and costly to maintain. It says the bond replaces 15 portables, eliminates 162 exterior classroom doors with secure entrances and interior halls, moves pickup away from busy streets, and qualifies Eastmont for about $25 million in state funds.",
+      "con_summary": "No statement against this measure was filed; the county says no one came forward to serve on an opposing committee.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "A yes vote authorizes $125 million in new bonds repaid by an excess property tax the district estimates at $0.79 per $1,000 for 20 years.",
+          "citations": [
+            "S1",
+            "S3"
+          ]
+        }
+      },
+      "sources_note": "Sources: VoteWA voters' guide record 7321 (S1); the official sample ballot (S2); the district's 2026, 2024 and 2022 bond pages (S3-S5); NCWLIFE on the board's vote and the facilities committee (S6, S7); Secretary of State results for 2022 and both 2024 elections (S8-S10); RCW 84.52.056 (S11)."
+    },
+    {
+      "slug": "douglas-proposed-rimrock-meadows-fire-protection-district-no-9-proposition-no-1",
+      "what_it_does": "Forms a new fire protection district for the Rimrock Meadows area of Douglas County (about 29 square miles; Ephrata mailing addresses), which is in no fire district today, run by three elected commissioners and paid for by property taxes. Only voters inside the proposed boundary vote. The three commissioner races on the same ballot fill its first board if it forms. The ballot statement says a majority forms it; state law (RCW 52.02.110) says three-fifths.",
+      "cost_line": "No levy is set by this vote. Once formed, the board may levy up to $0.50 per $1,000 (RCW 52.16.130), plus up to $0.50 each under RCW 52.16.140 and 52.16.160, within state limits.",
+      "pro_summary": "The statement in favor (committee: Gerald Dotson, Christine Crisler and Truman Crisler) is a resident's account of three wildfire evacuation notices since 2017, including a three-day evacuation in 2020, and says this part of the county has been overlooked for a fire district.",
+      "con_summary": "No statement against this measure was filed; the county says no one came forward to serve on an opposing committee.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "A yes vote creates a new property-taxing district where none exists. No rate is set by this vote, though state law lets the board levy up to $0.50 per $1,000 and more, so the lean is weaker.",
+          "citations": [
+            "S1",
+            "S6",
+            "S9",
+            "S10",
+            "S11"
+          ]
+        },
+        "spending": {
+          "direction": 1,
+          "basis": "A yes vote creates a public fire protection and emergency medical service, financed by a property tax levy, for an area that no fire district covers today.",
+          "citations": [
+            "S1",
+            "S5",
+            "S6"
+          ],
+          "added_by_refutation": true
+        }
+      },
+      "sources_note": "Sources: VoteWA voters' guide record 7425 (S1); the official sample ballot (S2); county Resolutions CE 26-19B and CE 26-25 (S3); the Wenatchee World on the Auditor's announcement (S4); the county's fire district and address GIS records (S5, S6); RCW 52.02.080, 52.02.110, 52.16.130, 52.16.140 and 52.16.160 (S7-S11)."
+    },
+    {
+      "slug": "douglas-douglas-county-cemetery-district-no-2-proposition-no-1",
+      "what_it_does": "Renews the yearly maintenance levy for the cemetery district that runs seven cemeteries and a mausoleum in the Waterville area, paying for upkeep and irrigation. The levy for 2025 fell short of 60% and the district cut irrigation; the 2026 levy passed. Needs 60% to pass.",
+      "cost_line": "$50,000 in 2027, about $0.22 per $1,000 of assessed value (about $66 on a $300,000 property). The 2026 levy was $60,000 at about $0.25.",
+      "pro_summary": "The statement in favor (Jenna Dixon, Sandra Stoddard and Terri Thomsen) says the levy keeps cemetery services affordable, keeps up the rural cemeteries and restores normal irrigation with upgraded systems.",
+      "con_summary": "No statement against this measure was filed; the county says no one came forward to serve on an opposing committee.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "A yes vote renews the district's recurring one-year maintenance levy, $10,000 smaller than 2026's at a lower estimated rate. It is a renewal, not a new tax.",
+          "citations": [
+            "S1",
+            "S4"
+          ]
+        }
+      },
+      "sources_note": "Sources: VoteWA voters' guide record 7322 (S1); the official sample ballot (S2); district Resolution #2026/001 (S3); VoteWA records for the 2025 and 2026 levies (S4, S5); Secretary of State results for 2020-2025 (S6-S9); RCW 84.52.052 (S10). No news coverage was found."
     }
   ]
 }

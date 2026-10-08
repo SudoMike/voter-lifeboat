@@ -45,14 +45,18 @@
     "data/washington-state/elections/2026-11-03-general/counties/walla-walla/scoring/*.json",
     "data/washington-state/elections/2026-11-03-general/counties/walla-walla/scoring/refutations/*.json",
     "data/washington-state/elections/2026-11-03-general/counties/stevens/scoring/*.json",
-    "data/washington-state/elections/2026-11-03-general/counties/stevens/scoring/refutations/*.json"
+    "data/washington-state/elections/2026-11-03-general/counties/stevens/scoring/refutations/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/whitman/scoring/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/whitman/scoring/refutations/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/douglas/scoring/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/douglas/scoring/refutations/*.json"
   ],
   "script": "pipeline/merge_scores.py",
   "verdict_stats": {
-    "upheld": 2112,
-    "adjust": 185,
+    "upheld": 2158,
+    "adjust": 186,
     "refuted": 11,
-    "missing_added": 29,
+    "missing_added": 30,
     "missing_dropped_low": 12
   },
   "contests": [
@@ -33670,6 +33674,750 @@
             "Treasurer Leslie Valz, elected in 2022, is not on the ballot [S1][S2]"
           ],
           "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "whitman-court-of-appeals-division-3-district-2-judge-position-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/whitman/dossiers/whitman-court-of-appeals-division-3-district-2-judge-position-1/"
+      ],
+      "office_does": "A Court of Appeals judge reviews trial-court decisions on appeal; Division III, District 2 elects one judge from Adams, Asotin, Benton, Columbia, Franklin, Garfield, Grant, Walla Walla and Whitman counties.",
+      "race_blurb": "Uncontested: Judge Tyson R. Hill, appointed by Gov. Ferguson effective Jan. 1, 2026 to replace retiring Judge George Fearing, is the only candidate for the remaining two years of the term.",
+      "candidates": [
+        {
+          "slug": "tyson-r-hill",
+          "summary": "Court of Appeals judge since his appointment effective Jan. 1, 2026; previously a Grant County Superior Court judge (from 2021) and District Court judge, and the Grant County Prosecutor's lead appellate attorney. The only candidate on the ballot.",
+          "highlights": [
+            "Appointed by Gov. Ferguson to replace retiring Judge George Fearing, effective Jan. 1, 2026 [S2]",
+            "More than 12 years as a Grant County District and Superior Court judge; co-founded Grant County's first therapeutic drug court [S1][S2]",
+            "Former lead appellate prosecutor and law clerk to Justice James M. Johnson [S1][S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "whitman-whitman-county-assessor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/whitman/dossiers/whitman-whitman-county-assessor/"
+      ],
+      "office_does": "The county assessor values all taxable property in Whitman County, calculates property tax levies for local taxing districts, and runs property tax exemption programs.",
+      "race_blurb": "Uncontested: incumbent Assessor Wraylee Flodin, appointed in 2021 and elected since, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "wraylee-flodin",
+          "summary": "Whitman County Assessor since her July 2021 appointment, previously chief deputy treasurer. Unopposed in 2022 and again on this ballot.",
+          "highlights": [
+            "Appointed assessor in July 2021 after four years in the treasurer's office, the last as chief deputy treasurer [S3]",
+            "Says she oversees the yearly review of more than 40,000 parcels and has updated assessment ratios to meet state requirements [S1]",
+            "Addressed a 2025 valuation-notice error affecting property owners in ten towns [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "whitman-whitman-county-auditor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/whitman/dossiers/whitman-whitman-county-auditor/"
+      ],
+      "office_does": "The auditor runs Whitman County's elections and voter registration, records deeds and other documents, issues vehicle, vessel and marriage licenses, and keeps the county's accounts with the treasurer.",
+      "race_blurb": "Open seat: Auditor Sandy Jamison is retiring. Senior Deputy Auditor Crystn Guenthner, whom Jamison endorses, took 6,041 primary votes to 1,794 for Kenneth Millar, a county IT employee who said on primary night he hopes the winner will 'shake things up'; both filed with no party preference.",
+      "candidates": [
+        {
+          "slug": "crystn-guenthner",
+          "summary": "Whitman County's Senior Deputy Auditor since 2019 and a Colfax city councilmember since 2018, running on experience and continuity in the auditor's office.",
+          "highlights": [
+            "Senior Deputy Auditor since 2019, working in elections, recording and licensing [S1][S3]",
+            "Colfax City Council since 2018; won re-election in 2023 [S1][S7]",
+            "Would keep ballot quality-control procedures, look into postal problems and report them to the public [S3]",
+            "Endorsed by retiring Auditor Sandy Jamison [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3",
+                "S7"
+              ],
+              "basis": "Senior deputy in the office since 2019, elected councilmember since 2018 and endorsed by the outgoing auditor; repeatedly campaigns on 'Trusted Experience' and preserving institutional knowledge."
+            }
+          }
+        },
+        {
+          "slug": "kenneth-millar",
+          "summary": "Colfax resident who works in Whitman County Information Technology, a former Census recruiting manager and poll worker, running on accuracy, consistency and stewardship of taxpayer resources.",
+          "highlights": [
+            "Works in county IT; holds degrees in conservation ecology and biology and in accounting [S1][S3]",
+            "Would add verification checkpoints and process reviews to ballot mailing [S3]",
+            "Says public service is 'a duty, not a career' [S1]",
+            "Said on primary night he hopes the winner can 'shake things up' and make changes [S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3",
+                "S5"
+              ],
+              "basis": "Outsider to the auditor's office with no elected experience who calls for changes in the office, though a county employee with poll-worker and Census operations experience."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "whitman-whitman-county-clerk",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/whitman/dossiers/whitman-whitman-county-clerk/"
+      ],
+      "office_does": "The county clerk keeps the records and handles the funds of the Whitman County Superior Court.",
+      "race_blurb": "Uncontested: Jill Whelchel, county clerk since 2015, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "jill-whelchel",
+          "summary": "Whitman County Clerk since 2015; previously the county's staff guardian ad litem and CASA program manager. The only candidate on the ballot.",
+          "highlights": [
+            "County clerk since 2015; unopposed in 2022 [S4]",
+            "Served as the county's staff guardian ad litem and CASA program manager from 2005 to 2014 [S1]",
+            "Says she will keep Superior Court records accurate and accessible to the public [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "whitman-whitman-county-commissioner-district-3-commissioner-3",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/whitman/dossiers/whitman-whitman-county-commissioner-district-3-commissioner-3/"
+      ],
+      "office_does": "The three county commissioners are Whitman County's executive and legislative authority: they adopt the budget and county ordinances, including zoning and planning, and appoint department heads.",
+      "race_blurb": "Uncontested: Commissioner Chad Whetzel, appointed in March 2025 and elected in November 2025, is the only candidate. District 3 voters nominated him in the primary; the whole county votes in the general.",
+      "candidates": [
+        {
+          "slug": "chad-whetzel",
+          "summary": "District 3 county commissioner since March 2025; Pullman-area farrier, longtime Fire District 12 EMT and captain, and former Planning Commission chair. The only candidate on the ballot.",
+          "highlights": [
+            "Appointed in March 2025 to replace Michael Largent, then won the November 2025 election 4,594 to 4,116 [S5]",
+            "Planning Commission member for 12 years, eight as chair; Fire District 12 EMT and captain [S1]",
+            "Says he would balance \"responsible growth\" with preserving the county's rural heritage [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "whitman-whitman-county-coroner",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/whitman/dossiers/whitman-whitman-county-coroner/"
+      ],
+      "office_does": "The coroner investigates sudden, unexpected, accidental, suspicious and unattended deaths in Whitman County, determines cause and manner of death, and completes death certificates.",
+      "race_blurb": "Uncontested open seat: Coroner Annie Pillers is retiring, and her chief deputy, Cassie Richardson, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "cassie-richardson",
+          "summary": "Chief Deputy Coroner since January 2025 and a deputy coroner from 2022; a state-certified medicolegal death investigator with a forensic medicine master's degree. Endorsed by the retiring coroner and the only candidate on the ballot.",
+          "highlights": [
+            "Deputy coroner from November 2022, chief deputy coroner since January 2025 [S3]",
+            "State-certified medicolegal death investigator with a 2025 master's in forensic medicine [S1]",
+            "Endorsed by retiring Coroner Annie Pillers [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "whitman-whitman-county-district-court-judge-position-no-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/whitman/dossiers/whitman-whitman-county-district-court-judge-position-no-1/"
+      ],
+      "office_does": "The District Court judge hears misdemeanor criminal cases, traffic infractions, protection orders, small claims and civil cases up to $100,000 in Whitman County.",
+      "race_blurb": "Uncontested: Judge John Hart, on the bench since his 2018 election, is the only candidate and submitted no statement.",
+      "candidates": [
+        {
+          "slug": "john-hart",
+          "summary": "Whitman County District Court judge since 2018; previously a public defender for about 15 years and Colfax Municipal Court judge. Unopposed in 2022 and again on this ballot; submitted no statement.",
+          "highlights": [
+            "District Court judge since December 2018, after defeating Rob Rembert for an open seat [S4]",
+            "About 15 years as a public defender and Colfax Municipal Court judge before the bench [S4]",
+            "Received the 2024 Presidential Award of the District and Municipal Court Judges' Association; Washington Judicial College dean in 2023 [S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "whitman-whitman-county-prosecuting-attorney",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/whitman/dossiers/whitman-whitman-county-prosecuting-attorney/"
+      ],
+      "office_does": "The prosecuting attorney charges and prosecutes crimes in Whitman County and serves as the legal adviser to county officials.",
+      "race_blurb": "Uncontested open seat: Prosecuting Attorney Denis Tracy is retiring after six terms, and his chief deputy, Dan LeBeau, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "dan-lebeau",
+          "summary": "Whitman County deputy prosecutor for more than 20 years and chief deputy since 2016; former Colton Municipal Court judge. Endorsed by the retiring prosecutor and the only candidate on the ballot.",
+          "highlights": [
+            "Chief deputy prosecutor since 2016 after more than two decades in the office [S1]",
+            "Chairs the state bar's Criminal Law Section executive committee; Colton Municipal Court judge 2016-2022 [S1]",
+            "Endorsed by retiring Prosecutor Denis Tracy [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "whitman-whitman-county-sheriff",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/whitman/dossiers/whitman-whitman-county-sheriff/"
+      ],
+      "office_does": "The sheriff leads county law enforcement in Whitman County, including patrol and investigations, the county jail, civil process and court security, and the regional drug task force.",
+      "race_blurb": "Uncontested: Sheriff Brett Myers, in office since 2003, is seeking a seventh term with no opponent.",
+      "candidates": [
+        {
+          "slug": "brett-j-myers",
+          "summary": "Whitman County Sheriff since 2003 after serving as a deputy and sergeant in the office from 1996. Unopposed in 2022 and again on this ballot; submitted no pamphlet statement.",
+          "highlights": [
+            "Sheriff since January 2003; seeking a seventh four-year term [S4]",
+            "Deputy from 1996 and sergeant from 2000 before becoming sheriff [S5]",
+            "Unopposed in 2022, with 10,564 votes to 487 write-ins [S7]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "whitman-whitman-county-treasurer",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/whitman/dossiers/whitman-whitman-county-treasurer/"
+      ],
+      "office_does": "The treasurer is the county's banker: the office collects and distributes property taxes for the county and local taxing districts, invests public funds and handles tax foreclosures.",
+      "race_blurb": "Uncontested: Treasurer Chris Nelson, first elected in 2018, is the only candidate and submitted no statement.",
+      "candidates": [
+        {
+          "slug": "chris-nelson",
+          "summary": "Whitman County Treasurer since winning the 2018 election over the incumbent; previously the county's IT director. Unopposed in 2022 and again on this ballot; submitted no pamphlet statement.",
+          "highlights": [
+            "Defeated incumbent Treasurer Mark Clinton in 2018, 51.75% to 48.25% in the reported count [S4]",
+            "County IT director from 2009, with 20 years in Washington county government before running [S3]",
+            "Unopposed in 2022, with 10,043 votes to 449 write-ins [S6]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "douglas-court-of-appeals-division-3-district-3-judge-position-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/douglas/dossiers/douglas-court-of-appeals-division-3-district-3-judge-position-1/"
+      ],
+      "office_does": "A Court of Appeals judge reviews trial-court decisions on appeal; Division III, District 3 elects two judges from Chelan, Douglas, Kittitas, Klickitat and Yakima counties.",
+      "race_blurb": "Uncontested: Judge Megan K. Murphy, appointed by Gov. Inslee in January 2025 and elected unopposed in 2025 to finish the term, is the only candidate for a six-year term.",
+      "candidates": [
+        {
+          "slug": "megan-k-murphy",
+          "summary": "Court of Appeals, Division III judge since January 2025; previously a Yakima County deputy prosecutor and civil litigator. The only candidate on the ballot.",
+          "highlights": [
+            "Appointed by Gov. Jay Inslee in January 2025 to replace Judge Rebecca Pennell [S2]",
+            "Yakima County deputy prosecutor from 2001, then civil litigation, latest as a partner at Fox Ballard [S1][S2]",
+            "Unopposed in the November 2025 election for the seat [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "douglas-douglas-county-assessor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/douglas/dossiers/douglas-douglas-county-assessor/"
+      ],
+      "office_does": "The assessor sets the market value of every taxable property in the county each year, the basis for property tax bills, and runs the senior, disability and open-space exemption programs.",
+      "race_blurb": "Uncontested: incumbent Jim Ruud (Prefers Republican Party), assessor for 20 years by his statement, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "jim-ruud",
+          "summary": "Douglas County Assessor for 20 years by his statement and a real estate managing broker; the only candidate on the ballot.",
+          "highlights": [
+            "Assessor for 20 years, by his statement [S1]",
+            "Pledges fair, accurate and transparent assessments [S1]",
+            "Unopposed in 2022 with 11,939 votes [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "douglas-douglas-county-auditor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/douglas/dossiers/douglas-douglas-county-auditor/"
+      ],
+      "office_does": "The auditor runs the county's elections and records deeds and other documents; in Douglas County the office also handles licensing, payroll, accounts payable and budgeting.",
+      "race_blurb": "Uncontested: Thad Duvall (Prefers Nonpartisan Party), auditor since his 1997 appointment and elected eight times, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "thad-duvall",
+          "summary": "Douglas County Auditor since 1997 and a past president of the state county auditors' association; the only candidate on the ballot.",
+          "highlights": [
+            "Appointed auditor in 1997 and elected eight times since, by his statement [S1]",
+            "Past president of the Washington State Association of County Auditors [S1]",
+            "Unopposed in 2022 with 12,700 votes [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "douglas-douglas-county-clerk-of-superior-court",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/douglas/dossiers/douglas-douglas-county-clerk-of-superior-court/"
+      ],
+      "office_does": "The Superior Court clerk keeps the county court's records and filings, runs jury administration, and collects court fines, fees and restitution.",
+      "race_blurb": "Incumbent Jenn Biggar, appointed in 2021 and elected unopposed in 2022, faces court facilitator and former deputy clerk Andrea Jester. Biggar runs on modernizing the office; Jester on customer service and staff retention, with the endorsement of the union representing the office's staff. Biggar led the primary 5,285 to 3,812.",
+      "candidates": [
+        {
+          "slug": "jenn-biggar",
+          "summary": "Douglas County Clerk since her 2021 appointment, elected unopposed in 2022, and incoming president of the Washington State Association of County Clerks.",
+          "highlights": [
+            "Says she recovered about $90,000 from the state while refunding legal financial obligations after State v. Blake [S3]",
+            "Implemented the TrueFile electronic filing system in 2023 and put court calendars and Zoom links online [S3]",
+            "Plans a new jury system with electronic responses and text reminders [S3]",
+            "Endorsed by retired Judge John Hotchkiss, retired Clerk Tristen Worthen and county clerks statewide [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S5",
+                "S6"
+              ],
+              "basis": "Five-year incumbent, appointed in 2021 and elected in 2022, running on her record in office."
+            }
+          }
+        },
+        {
+          "slug": "andrea-jester",
+          "summary": "Douglas County court facilitator and former deputy clerk and jury administrator, also administrative director and EMT with Waterville EMS.",
+          "highlights": [
+            "Would focus on customer service, staff training and retention, and consistent procedures [S1][S2]",
+            "Says 'high turnover creates inconsistency and frustration for both staff and the public' [S2]",
+            "Endorsed by AFSCME Council 2 Local 846-DC, which represents the Clerk's Office staff [S1][S3]",
+            "Has worked in the court as deputy clerk, jury program administrator and financial collections officer [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Challenger seeking change in how the office is run, though her experience comes from inside the same court system."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "douglas-douglas-county-commissioner-district-3-commissioner-district-no-3",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/douglas/dossiers/douglas-douglas-county-commissioner-district-3-commissioner-district-no-3/"
+      ],
+      "office_does": "Douglas County's three commissioners adopt the county budget and property-tax levies, set land-use rules for the unincorporated county, and oversee roads, facilities and county departments.",
+      "race_blurb": "Two-term incumbent Marc Straub of Orondo faces Michael S. Lesky, who states an Independent preference and filed no voters' guide statement. Lesky drew 710 votes to Straub's 2,583 in the District 3 primary; the whole county votes in the general.",
+      "candidates": [
+        {
+          "slug": "marc-s-straub",
+          "summary": "District 3 commissioner since his 2018 election and former 17-year CEO of Building North Central Washington, running for a third term on economic development, infrastructure upkeep and fiscal restraint.",
+          "highlights": [
+            "First elected in 2018 with 64.8% and re-elected unopposed in 2022 [S3][S4]",
+            "Says the county 'should never take a state-plus-one approach' to regulation [S2]",
+            "Pledges to prioritize funding for the Sheriff's office, emergency services and first responders [S2]",
+            "Chaired the board in 2022 when commissioners set up an in-house public defender's office [S7]; said the Wenatchi Landing development would create hundreds of jobs [S8]",
+            "Endorsed by the Douglas County Republican Central Committee and retired Sheriff Kevin Morris [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3",
+                "S4"
+              ],
+              "basis": "Eight-year incumbent and board chair who runs on 'experience matters' and continuing work already in motion."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Platform of limited government, a balanced budget prioritizing core functions, and 'resisting waste'; stated in his own campaign materials."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Campaign priority on funding the Sheriff's office and first responders; no prevention or diversion program proposals."
+            }
+          }
+        },
+        {
+          "slug": "michael-s-lesky",
+          "summary": "Candidate with an Orondo mailing address who prefers the Independent Party; he filed no voters' guide statement, reports no campaign activity to the PDC, and no public platform was found.",
+          "highlights": [
+            "Received 710 of 3,308 votes (21.5%) in the District 3 primary [S3]",
+            "Filed no voters' guide statement; his PDC registration shows no contributions or spending [S1][S4]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "douglas-douglas-county-coroner",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/douglas/dossiers/douglas-douglas-county-coroner/"
+      ],
+      "office_does": "The coroner investigates unexpected, unattended or suspicious deaths, decides on autopsies and toxicology, notifies families and signs death certificates.",
+      "race_blurb": "Uncontested: incumbent Tanner Bateman (Prefers Republican Party), coroner since 2023 and a former deputy coroner, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "tanner-bateman",
+          "summary": "Douglas County Coroner since 2023, an Army veteran and certified death investigator; the only candidate on the ballot.",
+          "highlights": [
+            "Coroner since 2023 after serving as deputy coroner [S1]",
+            "Says in-house transport of autopsy cases saves the county money [S1]",
+            "Set up tissue and organ donation with SightLife and LifeNet Health [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "douglas-douglas-county-district-court-judge",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/douglas/dossiers/douglas-douglas-county-district-court-judge/"
+      ],
+      "office_does": "The district court judge hears misdemeanors, traffic infractions, small claims, civil cases up to $100,000 and protection orders, and holds felony preliminary hearings.",
+      "race_blurb": "Uncontested: Judge Eric C. Biggar, on the district court bench since 2018 and a county prosecutor for about 23 years before that, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "eric-c-biggar",
+          "summary": "Douglas County District Court Judge since 2018, previously about 23 years as a deputy and chief criminal deputy prosecutor; the only candidate on the ballot.",
+          "highlights": [
+            "District Court Judge since 2018 [S1]",
+            "Deputy and chief criminal deputy prosecutor in Douglas County until 2014 [S1]",
+            "Unopposed in 2022 with 11,156 votes [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "douglas-douglas-county-prosecuting-attorney",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/douglas/dossiers/douglas-douglas-county-prosecuting-attorney/"
+      ],
+      "office_does": "The prosecuting attorney decides which criminal cases to charge and prosecutes them, and is the county government's lawyer in civil matters.",
+      "race_blurb": "Uncontested, but the only candidate has resigned: appointed prosecutor Sean P. Lewis (Prefers Republican Party) stepped down for health reasons on Sept. 30, 2026, and his name remains on the ballot. Former prosecutor Gordon Edgar is serving as interim; commissioners plan another interim appointment in early 2027.",
+      "candidates": [
+        {
+          "slug": "sean-p-lewis",
+          "summary": "Appointed Douglas County prosecutor in 2025 with 30 years of legal experience; he resigned for health reasons effective Sept. 30, 2026, but remains the only name on the ballot.",
+          "highlights": [
+            "Resigned effective Sept. 30, 2026, citing health reasons; his name stays on the ballot [S3]",
+            "Says he cut overspending on criminal case management and reduced a backlog of unprosecuted cases [S1]",
+            "Appointed by the county commissioners to finish Gordon Edgar's term [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "douglas-douglas-county-sheriff",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/douglas/dossiers/douglas-douglas-county-sheriff/"
+      ],
+      "office_does": "The sheriff is Douglas County's elected chief law enforcement officer and runs the Sheriff's Office, which patrols and investigates across the county and coordinates emergency response.",
+      "race_blurb": "Sheriff Kevin Morris retired in March and commissioners appointed Undersheriff Tyler Caille to finish the term. Caille, running on continuity with the backing of the three living former sheriffs, faces Chelan County Sheriff's Sgt. Adam Musgrove, a Navy veteran running on change; Caille led the August primary 4,936 to 2,780.",
+      "candidates": [
+        {
+          "slug": "tyler-i-caille",
+          "summary": "Appointed Douglas County Sheriff since March 2026 after seven years as undersheriff and about 20 years in the office; also fire chief of Douglas County Fire District 5 in Mansfield.",
+          "highlights": [
+            "Appointed sheriff by the county commissioners effective March 1, 2026, to finish Kevin Morris's term [S5]",
+            "Lists focused enforcement on illegal drugs and gangs, countywide staffing and deployment, and keeping school resource officers [S3]",
+            "Pledges deputy wellness support and partnerships with crisis and behavioral-health professionals [S3]",
+            "Endorsed by former sheriffs Morris, Gjesdal and LaRoche and 22 Washington sheriffs [S4]",
+            "Led the August primary with 4,936 votes [S12]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S5",
+                "S6"
+              ],
+              "basis": "Sitting appointed sheriff after seven years as undersheriff and nearly 20 years in the office, running on continuity."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Enforcement priorities on drugs and gangs and visible presence, paired with crisis and behavioral-health partnerships."
+            }
+          }
+        },
+        {
+          "slug": "adam-musgrove",
+          "summary": "Chelan County Sheriff's Office sergeant and former chief of patrol and a Navy veteran, running for office for the first time on bringing change to the Douglas County Sheriff's Office.",
+          "highlights": [
+            "Says he is 'not interested in maintaining the status quo' and wants 'meaningful change' [S1]",
+            "Backs 'Broken Windows' policing and 'zero-tolerance' for gang-type crime [S2]",
+            "Says mental health cannot be passed 'onto the hospital or the jail'; his campaign says he co-founded the Chelan County Behavioral Health Unit [S2][S3]",
+            "Says he 'will not enforce laws that infringe upon your rights' [S2]",
+            "Endorsed by the Douglas County Republican Central Committee (19-1) and Teamsters Local 760 [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S5"
+              ],
+              "basis": "First-time candidate from another agency running explicitly against the status quo, though with 20 years in law enforcement."
+            },
+            "safety": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Zero-tolerance gang enforcement and 'war on drugs' language, alongside a mental-health response he says keeps people out of jail.",
+              "adjusted_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "douglas-douglas-county-treasurer",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/douglas/dossiers/douglas-douglas-county-treasurer/"
+      ],
+      "office_does": "The treasurer collects property taxes and other county revenue, pays the county's bills, and invests county funds.",
+      "race_blurb": "Uncontested: incumbent Felisha L. Rosales (Prefers Republican Party), appointed in 2021 and elected in 2022, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "felisha-l-rosales",
+          "summary": "Douglas County Treasurer since her 2021 appointment, with 20 years in public and private finance; the only candidate on the ballot.",
+          "highlights": [
+            "Appointed treasurer in December 2021, elected in 2022 [S1]",
+            "Says she increased county investment interest revenue [S1]",
+            "Unopposed in 2022 with 11,584 votes [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "douglas-proposed-rimrock-meadows-fire-protection-district-no-9-commissioner-no-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/douglas/dossiers/douglas-proposed-rimrock-meadows-fire-protection-district-no-9-commissioner-no-1/"
+      ],
+      "office_does": "The three fire commissioners would be the first board of the proposed Rimrock Meadows fire district, running its fire protection and emergency services and setting its property tax levy; they take office only if voters form the district.",
+      "race_blurb": "The only contested seat on the proposed district's first board. Longtime Rimrock Meadows property owner Ron Cabral, a first-time candidate, faces Carol Mayer, a neighboring wheat farmer, former Rimrock Meadows board member who describes more than 25 years at Grant County PUD.",
+      "candidates": [
+        {
+          "slug": "ronald-ron-cabral",
+          "summary": "Rimrock Meadows property owner of 15 years with a background in transportation, logistics, fabrication and marketing, running for office for the first time.",
+          "highlights": [
+            "Wants to give Rimrock Meadows 'representation and professional Fire protection' [S1]",
+            "Would draw on county, state, federal and grant funding to build the district [S1]",
+            "Says he led a campaign to restore the state ferry Puyallup [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "carol-mayer",
+          "summary": "Farms next to Rimrock Meadows, served about eight years on its board, and spent more than 25 years at Grant County PUD, including as clerk of the board and senior supply-chain manager.",
+          "highlights": [
+            "Calls a formal fire district 'essential' for consistent emergency response [S1]",
+            "Cites procurement, regulatory-compliance and auditing experience from Grant County PUD [S1]",
+            "Lived at Rimrock Meadows for 23 years and still owns a lot there [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "douglas-proposed-rimrock-meadows-fire-protection-district-no-9-commissioner-no-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/douglas/dossiers/douglas-proposed-rimrock-meadows-fire-protection-district-no-9-commissioner-no-2/"
+      ],
+      "office_does": "Fire commissioners set the fire district's budget and tax levy and oversee its fire and emergency services; this would be the new district's first board.",
+      "race_blurb": "Uncontested: Kurt M. Blanchard is the only candidate for Position 2 on the first board of the proposed Rimrock Meadows fire district, which exists only if voters approve its formation on the same ballot.",
+      "candidates": [
+        {
+          "slug": "kurt-m-blanchard",
+          "summary": "Small construction company owner running for the new district's first board on cooperation with neighboring districts and fiscal transparency; the only candidate for Position 2.",
+          "highlights": [
+            "Wants close cooperation with neighboring fire districts [S1]",
+            "Calls for transparent fiscal accountability [S1]",
+            "Says fire governance should stay separate from political endorsements [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "douglas-proposed-rimrock-meadows-fire-protection-district-no-9-commissioner-no-3",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/douglas/dossiers/douglas-proposed-rimrock-meadows-fire-protection-district-no-9-commissioner-no-3/"
+      ],
+      "office_does": "Fire commissioners set the fire district's budget and tax levy and oversee its fire and emergency services; this would be the new district's first board.",
+      "race_blurb": "Uncontested: David Walker is the only candidate for Position 3 on the first board of the proposed Rimrock Meadows fire district, which exists only if voters approve its formation on the same ballot.",
+      "candidates": [
+        {
+          "slug": "david-walker",
+          "summary": "Retired 38-year fire-service veteran and former fire chief who says he served as a fire and hospital district commissioner in Skagit County; the only candidate for Position 3.",
+          "highlights": [
+            "Retired after 38 years in the fire service, including as a fire chief, by his statement [S1]",
+            "Says the first board must build the district's legal, administrative and operational foundations [S1]",
+            "Wants reliable emergency service at reasonable cost [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "douglas-public-utility-district-no-1-of-douglas-county-commissioner-district-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/douglas/dossiers/douglas-public-utility-district-no-1-of-douglas-county-commissioner-district-2/"
+      ],
+      "office_does": "Douglas County PUD's three elected commissioners set policy, budgets and electric rates for the county-wide utility that owns Wells Dam, for six-year terms.",
+      "race_blurb": "Board president Molly Simpson, on the commission since 2015, defends the PUD's low rates and its 2024 rule that large new loads such as data centers buy their own market power. East Wenatchee Water District commissioner Nick Warner says the PUD is sitting on too much cash and should cut local bills instead of raising rates. All of Douglas County votes on the seat.",
+      "candidates": [
+        {
+          "slug": "molly-doneen-simpson",
+          "summary": "Douglas County PUD commissioner since 2015 and current board president, a former Washington Apple Commission staffer running on low-cost Wells Dam power and making large new loads pay for growth.",
+          "highlights": [
+            "Cites the 2024 policy requiring loads over 1.5 MW to buy power on the open market and pay a delivery fee: 'Growth needs to pay for growth' [S1]",
+            "Says Microsoft is the first customer on that plan and large crypto and data loads move to it by 2028 [S1]",
+            "Calls her approach fiscally conservative and says she is 'very protective' of Wells Dam [S1][S2]",
+            "Won the seat in 2014 with 58.7% and was re-elected unopposed in 2020 [S5][S6]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "nick-warner",
+          "summary": "East Wenatchee Water District commissioner, elected in 2017, running to stop rate increases he says only build PUD reserves, fund local discounts from out-of-area power sales, lower rates for schools and churches, and expand rural broadband.",
+          "highlights": [
+            "Says PUD working capital grew from $60M to over $385M while 2025 rates rose 3% for residents and 8% for schools and churches [S2]",
+            "Would freeze rate increases meant to build reserves and offer 'Public Power Benefit' discounts [S2]",
+            "Proposes new transmission interconnections, wildfire mitigation, undergrounding and rural broadband [S2]",
+            "Elected water commissioner in 2017 and re-elected unopposed in 2023 [S3][S4]"
+          ],
+          "evidence_level": "moderate",
           "withdrawn": false,
           "scores": {}
         }

@@ -4,8 +4,8 @@ package at partial coverage, Pierce's (#21) and Snohomish's (#27) at full
 coverage, Clark's, Kitsap's and Thurston's at full coverage (#22), and
 Yakima's, Whatcom's, Benton's, Skagit's, Cowlitz's and Grant's at full
 coverage (#28), Island's, Lewis's, Franklin's, Chelan's, Clallam's and
-Grays Harbor's at full coverage (#29), and Mason's, Walla Walla's and
-Stevens's at full coverage (#30).
+Grays Harbor's at full coverage (#29), and Mason's, Walla Walla's,
+Stevens's, Whitman's and Douglas's at full coverage (#30).
 
 These read the committed outputs of merge_scores.py and assemble_app_data.py,
 so they fail if the general is re-assembled from the wrong packages, King's
@@ -43,11 +43,25 @@ WAVE4B = (FRANKLIN, CHELAN, CLALLAM, GRAYS_HARBOR)
 MASON = GENERAL.county("mason")
 WALLA_WALLA = GENERAL.county("walla-walla")
 STEVENS = GENERAL.county("stevens")
+WHITMAN = GENERAL.county("whitman")
+DOUGLAS = GENERAL.county("douglas")
 SHIPPED = ("king", "snohomish", "spokane", "pierce", "clark", "kitsap", "thurston", "yakima", "whatcom", "benton",
            "skagit", "cowlitz", "grant", "island", "lewis", "franklin", "chelan", "clallam", "grays-harbor", "mason",
-           "walla-walla", "stevens")
+           "walla-walla", "stevens", "whitman", "douglas")
 STATEWIDE = {"kind": "STATEWIDE"}
 GEO_JS = election.ROOT / "app/src/lib/geo.js"
+# Whitman measures that filed hardship waivers: on the ballot and in VoteWA's
+# guide, not in the printed local pamphlet (its p. 3 lists them).
+WHITMAN_UNPRINTED = {
+    "whitman-town-of-oakesdale-proposition-no-1",
+    "whitman-town-of-oakesdale-proposition-no-2",
+    "whitman-whitman-county-fire-protection-district-no-14-proposition-no-1",
+    "whitman-garfield-park-recreation-district-no-2-proposition-no-1",
+    "whitman-st-john-park-recreation-district-no-3-proposition-no-1",
+    "whitman-oakesdale-park-recreation-district-no-4-proposition-no-1",
+    "whitman-endicott-parks-recreation-district-no-7-proposition-no-1",
+    "whitman-oakesdale-cemetery-district-no-1-proposition-no-1",
+}
 
 
 def read(path):
@@ -55,12 +69,12 @@ def read(path):
 
 
 class GeneralPackagesTest(unittest.TestCase):
-    def test_general_ships_the_statewide_package_and_twenty_two_counties(self):
+    def test_general_ships_the_statewide_package_and_twenty_four_counties(self):
         self.assertTrue(election.ELECTION_META[GENERAL.id]["statewide_complete"])
         self.assertEqual(list(SHIPPED), election.APP_PACKAGES[GENERAL.id]["counties"])
         self.assertEqual([GENERAL.state, KING, SNOHOMISH, SPOKANE, PIERCE, CLARK, KITSAP, THURSTON,
                           YAKIMA, WHATCOM, BENTON, SKAGIT, COWLITZ, GRANT, ISLAND, LEWIS, *WAVE4B, MASON, WALLA_WALLA,
-                          STEVENS],
+                          STEVENS, WHITMAN, DOUGLAS],
                          GENERAL.shipped_packages())
 
     def test_king_adapter_layers_match_geo_js(self):
@@ -117,6 +131,10 @@ class GeneralPackagesTest(unittest.TestCase):
                          election.county_elections_url(GENERAL.id, "walla-walla"))
         self.assertEqual("https://www.stevenscountywa.gov/20911/Elections",
                          election.county_elections_url(GENERAL.id, "stevens"))
+        self.assertEqual("https://www.whitmancounty.gov/172/Current-Election",
+                         election.county_elections_url(GENERAL.id, "whitman"))
+        self.assertEqual("https://www.douglascountywa.gov/206/Current-Election",
+                         election.county_elections_url(GENERAL.id, "douglas"))
         self.assertIsNone(election.county_elections_url(GENERAL.id, "garfield"))
         # The primary's shipped app data predates the field.
         self.assertIsNone(election.county_elections_url("2026-08-04-primary", "king"))
@@ -157,10 +175,12 @@ class GeneralAppDataTest(unittest.TestCase):
         cls.wave4b_measures = [m for d in WAVE4B for m in read(d / "interim/app-measures.json")["measures"]]
         cls.mason_contests = read(MASON / "interim/app-contests.json")["contests"]
         cls.mason_measures = read(MASON / "interim/app-measures.json")["measures"]
-        cls.wave5_contests = [c for d in (WALLA_WALLA, STEVENS) for c in read(d / "interim/app-contests.json")["contests"]]
-        cls.wave5_measures = [m for d in (WALLA_WALLA, STEVENS) for m in read(d / "interim/app-measures.json")["measures"]]
+        cls.wave5_contests = [c for d in (WALLA_WALLA, STEVENS, WHITMAN, DOUGLAS)
+                              for c in read(d / "interim/app-contests.json")["contests"]]
+        cls.wave5_measures = [m for d in (WALLA_WALLA, STEVENS, WHITMAN, DOUGLAS)
+                              for m in read(d / "interim/app-measures.json")["measures"]]
 
-    def test_twenty_one_counties_are_full_spokane_partial(self):
+    def test_twenty_three_counties_are_full_spokane_partial(self):
         # Spokane is partial_county because its Stevens County PUD seat is
         # scoped to PUDDST, which no public layer resolves. Snohomish's nine
         # District Court seats resolve from the Auditor's Court_Districts
@@ -183,7 +203,10 @@ class GeneralAppDataTest(unittest.TestCase):
         # DOR SCH2025 (#30). Walla Walla's Dixie school and Prescott park
         # levies read DOR SCH2025 and PKR2025; Stevens's library, fire and
         # Nine Mile Falls school measures DOR LIB2025, FIR2025 and SCH2025
-        # (#30).
+        # (#30). Whitman's library, cemetery and Cheney school measures read
+        # DOR LIB2025, CEM2025 and SCH2025; Douglas's Eastmont and Cemetery
+        # District 2 measures DOR SCH2025 and CEM2025, and its proposed Rimrock
+        # Meadows fire district the county's own fire layer (PROPFIRDST, #30).
         self.assertEqual({
             "statewide_complete": True,
             "supported_counties": [{
@@ -261,6 +284,12 @@ class GeneralAppDataTest(unittest.TestCase):
             }, {
                 "id": "stevens", "name": "Stevens County", "state": "WA", "fips": "53065",
                 "coverage": "full_county", "elections_url": "https://www.stevenscountywa.gov/20911/Elections",
+            }, {
+                "id": "whitman", "name": "Whitman County", "state": "WA", "fips": "53075",
+                "coverage": "full_county", "elections_url": "https://www.whitmancounty.gov/172/Current-Election",
+            }, {
+                "id": "douglas", "name": "Douglas County", "state": "WA", "fips": "53017",
+                "coverage": "full_county", "elections_url": "https://www.douglascountywa.gov/206/Current-Election",
             }],
         }, self.app["coverage"])
 
@@ -323,6 +352,16 @@ class GeneralAppDataTest(unittest.TestCase):
             ("stevens-stevens-county-fire-protection-district-no-10-proposition-no-1", "FIRDST", "10"),
             ("stevens-nine-mile-falls-school-district-no-325-179-proposition-no-1", "SCHDST", "179J"),
             ("stevens-nine-mile-falls-school-district-no-325-179-proposition-no-2", "SCHDST", "179J"),
+            ("whitman-whitman-county-rural-library-district-proposition-no-1", "LIBDST", "L"),
+            ("whitman-cheney-school-district-no-360-proposition-no-1", "SCHDST", "316"),
+            ("whitman-oakesdale-cemetery-district-no-1-proposition-no-1", "CEMDST", "1"),
+            ("whitman-whitman-county-fire-protection-district-no-14-proposition-no-1", "FIRDST", "14"),
+            ("whitman-oakesdale-park-recreation-district-no-4-proposition-no-1", "PARKDST", "4"),
+            ("whitman-town-of-st-john-proposition-no-1", "CITY", "St. John"),
+            ("douglas-eastmont-school-district-no-206-proposition-no-1", "SCHDST", "206"),
+            ("douglas-douglas-county-cemetery-district-no-2-proposition-no-1", "CEMDST", "2"),
+            ("douglas-douglas-county-public-hospital-district-no-2-proposition-no-1", "HOSPDST", "2"),
+            ("douglas-proposed-rimrock-meadows-fire-protection-district-no-9-proposition-no-1", "PROPFIRDST", "009"),
         ):
             county = next((c for c in ("grays-harbor", "walla-walla") if slug.startswith(f"{c}-")), slug.split("-")[0])
             self.assertEqual({"kind": "DISTRICT", "county": county, "layer": layer, "value": value},
@@ -374,7 +413,7 @@ class GeneralAppDataTest(unittest.TestCase):
                           + self.wave3b_measures + self.wave4_measures + self.wave4b_measures + self.mason_measures
                           + self.wave5_measures],
                          [m["slug"] for m in self.app["measures"]])
-        self.assertEqual((543, 137), (len(self.app["contests"]), len(self.app["measures"])))
+        self.assertEqual((578, 173), (len(self.app["contests"]), len(self.app["measures"])))
 
     def test_king_records_keep_owner_scope_and_uncontested_verbatim(self):
         for source in self.king_contests:
@@ -461,7 +500,7 @@ class GeneralAppDataTest(unittest.TestCase):
 
     def test_provenance_names_the_shipped_packages(self):
         for d in (GENERAL.state, KING, SNOHOMISH, SPOKANE, PIERCE, CLARK, KITSAP, THURSTON, YAKIMA, WHATCOM, BENTON,
-                  SKAGIT, COWLITZ, GRANT, ISLAND, LEWIS, *WAVE4B, MASON, WALLA_WALLA, STEVENS):
+                  SKAGIT, COWLITZ, GRANT, ISLAND, LEWIS, *WAVE4B, MASON, WALLA_WALLA, STEVENS, WHITMAN, DOUGLAS):
             self.assertIn(f"{election.rel(d)}/**", self.app["derived_from"])
         merged = read(GENERAL.final / "scores.json")["derived_from"] + read(
             GENERAL.final / "measures.json")["derived_from"]
@@ -502,11 +541,12 @@ class GeneralAppDataTest(unittest.TestCase):
             if not measure["lean_mappings"]:
                 no_axis.append(measure["slug"])
             # Spokane's, Pierce's, Kitsap's, Whatcom's, Benton's, Grant's,
-            # Island's, Lewis's, Grays Harbor's and Stevens's measures cite
-            # VoteWA's unpaged online guide (officialLinks.js countyGuides), so
-            # they carry no pages.
+            # Island's, Lewis's, Grays Harbor's, Stevens's and Douglas's
+            # measures cite VoteWA's unpaged online guide (officialLinks.js
+            # countyGuides), so they carry no pages; so do Whitman's eight that
+            # filed hardship waivers and are not in its printed pamphlet.
             if measure["owner"] in ("spokane", "pierce", "kitsap", "whatcom", "benton", "grant", "island", "lewis",
-                                    "grays-harbor", "stevens"):
+                                    "grays-harbor", "stevens", "douglas") or measure["slug"] in WHITMAN_UNPRINTED:
                 self.assertEqual([], measure["pamphlet_pages"], measure["slug"])
             else:
                 self.assertTrue(measure["pamphlet_pages"], measure["slug"])
@@ -595,11 +635,12 @@ class GeneralSpokaneTest(unittest.TestCase):
     def test_spokane_ships_its_own_research_only(self):
         import shared_contests
         # Franklin's CD 5 and Chelan's LD 7 copies ship with Spokane's research
-        # (#29), as do Walla Walla's CD 5 and Stevens's CD 5, LD 7 and Stevens
-        # PUD copies (#30). Stevens's Court of Appeals III-1 Pos. 2 copy is its
-        # own information-only entry, as each county's Court of Appeals copy is.
+        # (#29), as do Walla Walla's CD 5, Stevens's CD 5, LD 7 and Stevens
+        # PUD copies, Whitman's CD 5 and LD 9 House copies and Douglas's LD 7
+        # copies (#30). Stevens's Court of Appeals III-1 Pos. 2 copy is its own
+        # information-only entry, as each county's Court of Appeals copy is.
         others = {shared_contests.contest_key(c) for c in self.app["contests"]
-                  if c["owner"] not in ("spokane", "franklin", "chelan", "walla-walla", "stevens")}
+                  if c["owner"] not in ("spokane", "franklin", "chelan", "walla-walla", "stevens", "whitman", "douglas")}
         spokane = [c for c in self.app["contests"] if c["owner"] == "spokane"]
         self.assertEqual(31, len(spokane))
         self.assertEqual(15, sum(1 for c in spokane if c["uncontested"]))
@@ -1084,6 +1125,76 @@ class GeneralWallaWallaStevensTest(unittest.TestCase):
                     self.assertEqual([], pages, item["slug"])
 
 
+class GeneralWhitmanDouglasTest(unittest.TestCase):
+    """Whitman and Douglas (#30): counts, the shared federal and legislative
+    races shipped with Spokane's, Benton's, King's and Grant's research, the
+    proposed Rimrock Meadows fire district's scope, and pages."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.app = read(GENERAL.final / "app-data.json")
+        cls.contests = {c["slug"]: c for c in cls.app["contests"]}
+        cls.measures = {m["slug"]: m for m in cls.app["measures"]}
+
+    def test_counts(self):
+        for county, counts in (("whitman", (13, 10, 31)), ("douglas", (22, 12, 5))):
+            own = [c for c in self.app["contests"] if c["owner"] == county]
+            self.assertEqual(counts, (len(own), sum(c["uncontested"] for c in own),
+                                      sum(1 for m in self.app["measures"] if m["owner"] == county)), county)
+            self.assertFalse([c for c in own if "supreme" in c["slug"]])
+
+    def test_shared_races_ship_with_the_researching_package(self):
+        shared = {
+            "whitman-congressional-district-5-u-s-representative": "spokane-congressional-district-5-u-s-representative",
+            "douglas-congressional-district-4-u-s-representative": "benton-congressional-district-4-u-s-representative",
+            "douglas-congressional-district-8-u-s-representative": "congressional-district-8-united-states-representative",
+            "douglas-legislative-district-7-state-senator": "spokane-legislative-district-7-state-senator",
+            "douglas-legislative-district-13-state-senator": "grant-legislative-district-13-state-senator",
+        }
+        for pos in (1, 2):
+            shared[f"whitman-legislative-district-9-state-representative-pos-{pos}"] = (
+                f"spokane-legislative-district-9-state-representative-pos-{pos}")
+            shared[f"douglas-legislative-district-7-state-representative-pos-{pos}"] = (
+                f"spokane-legislative-district-7-state-representative-pos-{pos}")
+            shared[f"douglas-legislative-district-13-state-representative-pos-{pos}"] = (
+                f"grant-legislative-district-13-state-representative-pos-{pos}")
+        for slug, owner_slug in shared.items():
+            shipped, source = self.contests[slug], self.contests[owner_slug]
+            by_slug = {c["slug"]: c for c in source["candidates"]}
+            self.assertEqual(sorted(by_slug), sorted(c["slug"] for c in shipped["candidates"]), slug)
+            for cand in shipped["candidates"]:
+                for field in ("scores", "summary", "highlights", "sources", "evidence_level"):
+                    self.assertEqual(by_slug[cand["slug"]][field], cand[field], f"{slug}: {cand['slug']}: {field}")
+                if not shipped["uncontested"]:
+                    self.assertTrue(cand["scores"], f"{slug}: {cand['slug']}")
+
+    def test_rimrock_meadows_is_scoped_to_the_proposed_district(self):
+        # Formation and the three initial commissioners are voted on inside the
+        # proposed boundary only; its own layer key keeps the primary's
+        # Douglas FIRDST scope on DOR.
+        rimrock = {"kind": "DISTRICT", "county": "douglas", "layer": "PROPFIRDST", "value": "009"}
+        for n in (1, 2, 3):
+            self.assertEqual(rimrock, self.contests[
+                f"douglas-proposed-rimrock-meadows-fire-protection-district-no-9-commissioner-no-{n}"]["scope"])
+        self.assertEqual(rimrock, self.measures[
+            "douglas-proposed-rimrock-meadows-fire-protection-district-no-9-proposition-no-1"]["scope"])
+        self.assertEqual({"kind": "COUNTY", "county": "douglas"}, self.contests[
+            "douglas-public-utility-district-no-1-of-douglas-county-commissioner-district-2"]["scope"])
+
+    def test_pamphlet_pages(self):
+        # Whitman prints a local pamphlet (PDF page = printed page); Douglas's
+        # records cite VoteWA only.
+        self.assertEqual([{"edition": "local-voters-pamphlet", "page": 11}],
+                         self.contests["whitman-whitman-county-sheriff"]["candidates"][0]["pamphlet_pages"])
+        self.assertTrue(self.measures["whitman-whitman-county-rural-library-district-proposition-no-1"]["pamphlet_pages"])
+        for slug in WHITMAN_UNPRINTED:
+            self.assertEqual([], self.measures[slug]["pamphlet_pages"], slug)
+        for item in self.app["contests"] + self.app["measures"]:
+            if item["owner"] == "douglas":
+                for pages in [c["pamphlet_pages"] for c in item.get("candidates", [])] + [item.get("pamphlet_pages", [])]:
+                    self.assertEqual([], pages, item["slug"])
+
+
 class GeneralRefutationsAppliedTest(unittest.TestCase):
     """merge_scores.py applies `adjust`, `refuted` and medium/high `missing`
     verdicts, for candidates and measures."""
@@ -1128,7 +1239,7 @@ class GeneralRefutationsAppliedTest(unittest.TestCase):
 
     def test_verdict_counts(self):
         stats = read(GENERAL.final / "scores.json")["verdict_stats"]
-        self.assertEqual({"upheld": 2112, "adjust": 185, "refuted": 11, "missing_added": 29, "missing_dropped_low": 12}, stats)
+        self.assertEqual({"upheld": 2158, "adjust": 186, "refuted": 11, "missing_added": 30, "missing_dropped_low": 12}, stats)
 
 
 if __name__ == "__main__":
