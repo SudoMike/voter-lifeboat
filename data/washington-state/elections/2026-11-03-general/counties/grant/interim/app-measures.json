@@ -1,0 +1,149 @@
+{
+  "county": "grant",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/grant/raw/votewa/candidate-list.csv.url",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7343&e=899&la=en&c=13",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7346&e=899&la=en&c=13",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7347&e=899&la=en&c=13",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7348&e=899&la=en&c=13",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7349&e=899&la=en&c=13"
+  ],
+  "coverage": "full_county",
+  "notes": [],
+  "measures": [
+    {
+      "slug": "grant-grant-county-advisory-vote-only-proposition-no-1",
+      "owner": "grant",
+      "jurisdiction": "Grant County",
+      "proposition": "Advisory Vote Only - Proposition No. 1",
+      "title": "Sales and Use Tax for Mental Health or Chemical Dependency Treatment or Therapeutic Courts",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "grant"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Advisory vote: asks whether the county commissioners should adopt a 0.1% sales and use tax (RCW 82.14.460) for chemical dependency and mental health treatment and therapeutic courts. The vote does not itself impose the tax; the board may decide afterwards.",
+      "cost_line": "If the board later adopts it: 0.1% sales and use tax (one cent on a $10 purchase), county-wide.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7349&e=899&la=en&c=13"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "grant-grant-county-public-hospital-district-no-4-mckay-healthcare-rehabilitation-proposition-no-1",
+      "owner": "grant",
+      "jurisdiction": "Grant County Public Hospital District No. 4 (McKay Healthcare & Rehabilitation)",
+      "proposition": "Proposition No. 1",
+      "title": "Bonds for Expansion of McKay Healthcare & Rehabilitation Center",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "grant",
+        "layer": "HOSPDST",
+        "value": "4"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Authorizes up to $9,940,000 of general obligation bonds, maturing within 30 years and repaid by an excess property tax levy, to add a 16-bed assisted living unit, a 16-bed memory care unit and other capital improvements at McKay Healthcare & Rehabilitation Center in Soap Lake.",
+      "cost_line": "Estimated $0.61 per $1,000 of assessed value (about $15.27 a month on a $300,000 home); up to $9,940,000 in bonds.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7343&e=899&la=en&c=13"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "grant-city-of-moses-lake-proposition-no-1",
+      "owner": "grant",
+      "jurisdiction": "City of Moses Lake",
+      "proposition": "Proposition No. 1",
+      "title": "Public Safety Sales and Use Tax",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "grant",
+        "layer": "CITY",
+        "value": "Moses Lake"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Raises the city's sales and use tax by 0.1% (RCW 82.14.450) for public safety: police staffing and retention, operations, maintenance and capital, and other criminal justice services.",
+      "cost_line": "0.1% sales and use tax (one cent on a $10 purchase); about $1.2 million in 2027.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7347&e=899&la=en&c=13"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "grant-grant-county-fire-protection-district-no-7-proposition-no-1",
+      "owner": "grant",
+      "jurisdiction": "Grant County Fire Protection District No. 7",
+      "proposition": "Proposition No. 1",
+      "title": "Emergency Medical Service Property Tax Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "grant",
+        "layer": "FIRDST",
+        "value": "7"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Replaces the last two years of the district's 2022 EMS levy (up to $0.25, suspended in 2024) with a six-year EMS levy first levied in 2026 for collection from 2027.",
+      "cost_line": "Up to $0.50 per $1,000 of assessed value (no more than $150 a year on a $300,000 home).",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7348&e=899&la=en&c=13"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "grant-grant-county-cemetery-district-no-2-wilson-creek-proposition-no-1",
+      "owner": "grant",
+      "jurisdiction": "Grant County Cemetery District No. 2 (Wilson Creek)",
+      "proposition": "Proposition No. 1",
+      "title": "Special Levy for Maintenance and Operations",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "grant",
+        "layer": "CEMDST",
+        "value": "2"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Authorizes the cemetery district's yearly one-year special levy for maintenance and operations of the Wilson Creek cemetery, collected in 2027.",
+      "cost_line": "$12,000, approximately $0.18 per $1,000 of assessed value, collected in 2027.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7346&e=899&la=en&c=13"
+          ]
+        }
+      }
+    }
+  ]
+}
