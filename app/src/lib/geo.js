@@ -414,7 +414,14 @@ const COUNTY_LAYERS = {
   garfield: [],
   grant: [
     { key: 'COUNTY_COUNCIL', url: 'https://services2.arcgis.com/hQZvdtFxRzJpMtdS/arcgis/rest/services/County_Commissioner_Districts/FeatureServer/27/query', attr: 'DistrictNo' },
+    // Live 2026-10-08 (#28): 127 Main Ave E, Soap Lake -> HSP2025 '4'
+    // (McKay Healthcare); 321 S Balsam St, Moses Lake -> '1'.
     { key: 'HOSPDST', url: `${DOR_TAX_DISTRICTS}/11/query`, attr: 'DISTATTRIB' },
+    // WA DOR FIR2025 and CEM2025 (#28). Live 2026-10-08: 34875 Park Lake Rd
+    // NE, Coulee City -> FIRDST '7'; 103 Railroad St, Wilson Creek ->
+    // CEMDST '2'; 321 S Balsam St, Moses Lake -> neither.
+    { key: 'FIRDST', url: `${DOR_TAX_DISTRICTS}/7/query`, attr: 'DISTATTRIB' },
+    { key: 'CEMDST', url: `${DOR_TAX_DISTRICTS}/3/query`, attr: 'DISTATTRIB' },
   ],
   'grays-harbor': [
     { key: 'FIRDST', url: `${DOR_TAX_DISTRICTS}/7/query`, attr: 'DISTATTRIB' },
@@ -463,6 +470,9 @@ const COUNTY_LAYERS = {
   ],
   skagit: [
     { key: 'COUNTY_COUNCIL', url: 'https://geo.skagitcountywa.gov/server/rest/services/Districts/CommissionerDistrictWebMap/MapServer/5/query', attr: 'COMMDIST' },
+    // Live 2026-10-08 (#28): 5800 Main St, Bow -> FIR2025 '5'; 305 N 6th
+    // St, La Conner -> SCH2025 '311'; 700 S 2nd St, Mount Vernon -> no fire
+    // district, SCH2025 '320'.
     { key: 'FIRDST', url: `${DOR_TAX_DISTRICTS}/7/query`, attr: 'DISTATTRIB' },
     { key: 'HOSPDST', url: `${DOR_TAX_DISTRICTS}/11/query`, attr: 'DISTATTRIB' },
     { key: 'SCHDST', url: `${DOR_TAX_DISTRICTS}/20/query`, attr: 'DISTATTRIB' },
