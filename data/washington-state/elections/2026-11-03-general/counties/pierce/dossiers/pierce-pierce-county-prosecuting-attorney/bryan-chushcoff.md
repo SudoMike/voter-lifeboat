@@ -7,6 +7,7 @@ evidence_level: moderate
 researched_at: 2026-10-08
 derived_from:
   - data/washington-state/elections/2026-11-03-general/counties/pierce/raw/candidates/pierce-pierce-county-prosecuting-attorney/
+  - data/washington-state/elections/2026-11-03-general/counties/pierce/raw/votewa/candidate-statements/race-186806.json
 sources:
   - id: S1
     tier: 1
@@ -50,21 +51,30 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?committee_id=41460&election_year=2026
     page: https://www.pdc.wa.gov/political-disclosure-reporting-data/browse-search-data/candidates/3391226
     accessed: 2026-10-08
+  - id: S8
+    tier: 1
+    type: votewa
+    ref: VoteWA candidate record, race 186806 (Pierce County Prosecuting Attorney, election 899), "Statement" field: the candidate's own submitted general-election statement (occupation, education, statement)
+    url: https://voter.votewa.gov/elections/candidate.ashx?e=899&r=186806&b=0&la=en&c=27
+    pointer: counties/pierce/raw/votewa/candidate-statements/race-186806.json.meta.json
+    accessed: 2026-10-08
 ---
 
-No candidate statement was available to read: the Pierce County local voters' pamphlet (piercecountywa.gov) returned a Cloudflare challenge, and VoteWA had not posted candidate statements as of 2026-10-08. A News Tribune article on the race could not be retrieved. This dossier rests on the campaign website and PDC filings; his judicial service is taken from the campaign's own description and was not separately verified against court records.
+His general-election statement comes from his VoteWA candidate record, where the "Statement" field holds the text he submitted (not yet marked approved for display on 2026-10-08) [S8]; the Pierce County printed local voters' pamphlet (piercecountywa.gov) returned a Cloudflare challenge and was not read. A News Tribune article on the race could not be retrieved. This dossier also rests on the campaign website and PDC filings; his judicial service is taken from his own statement and campaign and was not separately verified against court records.
 
 ## Background
-Bryan Chushcoff is a former Pierce County Superior Court judge; his campaign says he was elected to seven four-year terms and served 28 years [S1][S2]. He was twice elected presiding judge (four years), served nine more years on the court's executive committee, four years on the state Board for Judicial Administration, and five years on the Superior Court Judges' Association board, including as treasurer [S2]. Before the bench he spent 19 years as a self-employed attorney in Tacoma handling civil and criminal matters [S2]. He holds a J.D. from the University of Puget Sound School of Law and a B.A. in business administration from the University of Washington, and graduated from Tacoma Public Schools [S2]. He was born and raised in Tacoma [S1].
+Bryan Chushcoff is a former Pierce County Superior Court judge; his campaign says he was elected to seven four-year terms and served 28 years [S1][S2]. He was twice elected presiding judge (four years), served nine more years on the court's executive committee, four years on the state Board for Judicial Administration, and five years on the Superior Court Judges' Association board, including as treasurer [S2]. His statement gives his service as "Superior Court Judge 1997 – 2025" and says that as presiding judge for four years he managed 100 employees and a budget of more than $14 million [S8]. Before the bench he spent 19 years as a self-employed attorney in Tacoma handling civil and criminal matters [S2]. He holds a J.D. from the University of Puget Sound School of Law and a B.A. in business administration from the University of Washington, and graduated from Tacoma Public Schools [S2]. He was born and raised in Tacoma [S1].
 
 ## Positions
 - **Charging and backlog:** argues that the office's "core failure is management," citing a rise in jail bookings with no charges filed from 8% in 2019 to 15.3% in 2024, a drop in new felony filings from 4,934 (2019) to 3,727 (2025), and a rise in average pending cases from 1,589 to 1,835; says these trends must be corrected [S3].
+- **Statement critique of the office (his assessment):** says management of the Prosecutor's Office "is failing": case resolutions take longer, "far fewer cases are being filed than a few years ago, yet more cases are pending unresolved," and as delays grow "taxpayers bear an increased burden for jail housing, medical, and legal costs"; says a communication "gap" with law enforcement still exists and causes mistakes, and that the county "faces significant risk from pending claims" [S8].
+- **Statement pledges (says he will):** pledges "to fix the Prosecutor's Office through better staff accountability, staff reorganization, technological improvement and employee training" [S8]. Says he wants Pierce County "to be a safe, prosperous place for families" [S8].
 - **Performance management:** says the prosecutor should "gather data, analyze trends, identify bottlenecks" and manage "toward results," with performance data driving strategy [S3].
 - **Staffing:** says he will prioritize mentorship for new attorneys, "advocate for increased funding to retain experienced staff," and reorganize the office to strengthen accountability [S1].
 - **Law enforcement and victims:** says he will restore accountability, support law enforcement and protect victims [S4].
 - **Independence:** says "politics has no place in the Prosecutor's Office" and cites his service as a nonpartisan judge [S1].
 - **Court modernization record (as judge):** says he led translation of criminal court forms into four languages, partnered with the Clerk on electronic filing, helped launch the Electronic Court Order system, supported video-conference access, contributed to adoption of court rule GR 31.1 on access to judicial administrative records, and helped write SSB 5165 expanding court commissioners' authority [S1][S2].
-- No stated position on diversion programs or bail was found [S1][S3].
+- No stated position on diversion programs or bail was found [S1][S3][S8].
 
 ## Positions on the 2026 initiatives
 - **I-645 (IP26-645):** No public position found as of 2026-10-08.
@@ -72,15 +82,15 @@ Bryan Chushcoff is a former Pierce County Superior Court judge; his campaign say
 - **I-638 (IL26-638):** No public position found as of 2026-10-08.
 
 ## Record
-- 28 years as a Superior Court judge per his campaign, including two terms as presiding judge [S2].
+- 28 years as a Superior Court judge per his campaign (1997-2025 per his statement), including two terms as presiding judge [S2][S8]. His statement says that as presiding judge he achieved "efficiencies like electronic filing, and easier record access" and "guided the Court through hard budget times" [S8].
 - Campaign finance (PDC, data updated 2026-10-05): $25,706.75 in contributions, a $10,000 loan, and $7,767.57 spent for 2026 [S7].
 
 ## Endorsements
 - Pierce County Republican Party [S4].
-- Tacoma Police Union IUPA Local 6, Puyallup Police Association, and Pierce County Deputy Sheriff's Independent Guild; the campaign says every law enforcement union that has endorsed in the race has endorsed him [S5].
+- Tacoma Police Union IUPA Local 6, Puyallup Police Association, and Pierce County Deputy Sheriff's Independent Guild (the last two also named in his statement); the campaign says every law enforcement union that has endorsed in the race has endorsed him [S5].
 - Gig Harbor Professional Firefighters IAFF Local 3390 [S6].
 
 ## Scoring notes
 - Former judge with 28 years on the bench, running against the office's current leadership and its incumbent-backed chief criminal deputy [S2][S3].
-- Campaign centers on a rising decline-to-charge rate, falling felony filings and a growing pending-case backlog [S3].
+- Campaign centers on a rising decline-to-charge rate, falling felony filings and a growing pending-case backlog, which his statement ties to taxpayer jail and legal costs [S3][S8].
 - Endorsed by the county Republican Party and police unions [S4][S5].

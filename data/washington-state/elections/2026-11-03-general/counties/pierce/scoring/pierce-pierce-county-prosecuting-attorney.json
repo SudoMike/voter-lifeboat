@@ -1,41 +1,94 @@
 {
   "contest_slug": "pierce-pierce-county-prosecuting-attorney",
   "scored_at": "2026-10-08",
-  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-pierce-county-prosecuting-attorney/"],
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-pierce-county-prosecuting-attorney/"
+  ],
   "office_does": "The Pierce County Prosecuting Attorney decides which crimes to charge and prosecutes them, and serves as the county's civil legal counsel.",
-  "race_blurb": "With Prosecutor Mary Robnett retiring, her Chief Criminal Deputy Coreen Schnepf faces former Superior Court Judge Bryan Chushcoff. Both run on enforcement; Chushcoff targets the office's charging and backlog numbers, while Schnepf runs on her trial record and continuity.",
+  "race_blurb": "With Prosecutor Mary Robnett retiring, her Chief Criminal Deputy Coreen Schnepf faces former Superior Court Judge Bryan Chushcoff. Both run on enforcement; Chushcoff says the office's management is failing on charging and backlog, while Schnepf runs on her trial record and continuity.",
   "candidates": [
     {
       "slug": "coreen-schnepf",
       "summary": "Chief Criminal Deputy in the Pierce County Prosecutor's Office and a 20-year trial prosecutor, endorsed by outgoing Prosecutor Mary Robnett.",
       "highlights": [
-        "Chief Criminal Deputy since 2024; earlier led the Domestic Violence and Human Trafficking Unit and prosecuted in Kitsap County [S2]",
+        "Chief Criminal Deputy since 2024, leading a 180-person criminal division; earlier led the Domestic Violence and Human Trafficking Unit [S2][S8]",
+        "Says she 'has no patience for crime of any kind' and will hold accountable those who make life 'challenging, expensive, and unsafe' [S8]",
         "Would add focus on stolen cars and organized retail theft and build digital-evidence capacity [S3]",
-        "Endorsed by Robnett, Legislative District Democrats, Mainstream Republicans, WEA and three IAFF locals [S4][S6]",
-        "Raised about $95k for 2026, per PDC [S7]"
+        "Endorsed by Robnett, Legislative District Democrats, Mainstream Republicans, WEA and three IAFF locals [S4][S6]"
       ],
       "evidence_level": "moderate",
       "withdrawn": false,
       "scores": {
-        "safety": {"score": -1, "confidence": "medium", "citations": ["S1", "S3", "S5"], "basis": "Runs on violent-crime convictions and more focus on car and retail theft; an endorser also describes a compassionate approach, and no diversion position is stated."},
-        "experience": {"score": -1, "confidence": "high", "citations": ["S2", "S5"], "basis": "Twenty-year career prosecutor and current chief criminal deputy, running as the incumbent-backed successor and 'next generation of leadership'; first run for office."}
+        "safety": {
+          "score": -1,
+          "confidence": "high",
+          "citations": [
+            "S1",
+            "S3",
+            "S8"
+          ],
+          "basis": "Repeatedly runs on convictions for violent crime, more focus on car and retail theft and 'no patience for crime of any kind'; states no position on diversion, bail, policing levels or treatment, and an endorser describes a compassionate approach."
+        },
+        "experience": {
+          "score": -1,
+          "confidence": "high",
+          "citations": [
+            "S2",
+            "S5",
+            "S8"
+          ],
+          "basis": "Twenty-year career prosecutor and current chief criminal deputy, running as the incumbent-backed successor; first run for office."
+        },
+        "spending": {
+          "score": -1,
+          "confidence": "low",
+          "citations": [
+            "S3"
+          ],
+          "basis": "Pledges to 'show you what the office delivers for every dollar' and hold town halls; a single accountability line with no call for new spending."
+        }
       }
     },
     {
       "slug": "bryan-chushcoff",
-      "summary": "Former Pierce County Superior Court judge (28 years, per his campaign), running on fixing the office's charging rates, felony filings and case backlog.",
+      "summary": "Former Pierce County Superior Court judge (1997-2025, per his campaign), running on fixing the office's charging rates, felony filings and case backlog.",
       "highlights": [
-        "Says he served seven terms as a Superior Court judge, including two terms as presiding judge [S2]",
+        "Says he served seven terms as a Superior Court judge, including two terms as presiding judge over 100 employees and a $14 million budget [S2][S8]",
         "Cites the decline-to-charge rate rising from 8% of bookings (2019) to 15.3% (2024) and a growing felony backlog [S3]",
-        "Would advocate for more funding to retain experienced staff and reorganize the office [S1]",
-        "Endorsed by the Pierce County Republican Party and the Tacoma Police Union [S4][S5]"
+        "Says delays shift jail, medical and legal costs to taxpayers and pledges staff accountability, reorganization and training [S8]",
+        "Endorsed by the Pierce County Republican Party, the Tacoma Police Union and the deputy sheriffs' guild [S4][S5]"
       ],
       "evidence_level": "moderate",
       "withdrawn": false,
       "scores": {
-        "safety": {"score": -2, "confidence": "medium", "citations": ["S3", "S4", "S5"], "basis": "Calls the rising rate of arrests ending without charges and the falling felony filings failures to correct, pledges to support law enforcement, and is backed by police unions."},
-        "experience": {"score": -2, "confidence": "medium", "citations": ["S2"], "basis": "Campaign cites 28 years and seven elected terms on the Superior Court plus court leadership roles, presented as proven leadership (not independently verified)."},
-        "spending": {"score": 0, "confidence": "medium", "citations": ["S1", "S3"], "basis": "Pairs performance management and measurable outcomes with a call for more funding to retain staff."}
+        "safety": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": [
+            "S3",
+            "S8"
+          ],
+          "basis": "Criticizes the rising decline-to-charge rate, falling felony filings and a communication gap with law enforcement, framed as management failures; no stated position on diversion, bail or sentencing."
+        },
+        "experience": {
+          "score": -2,
+          "confidence": "medium",
+          "citations": [
+            "S2",
+            "S8"
+          ],
+          "basis": "Campaign and statement cite 28 years (1997-2025) on the Superior Court plus presiding-judge and statewide court leadership, presented as proven leadership (not independently verified)."
+        },
+        "spending": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": [
+            "S1",
+            "S3",
+            "S8"
+          ],
+          "basis": "Calls the office's core failure management, wants performance data to drive strategy, and says backlog costs fall on taxpayers; the one counterweight is a call for more funding to retain experienced staff."
+        }
       }
     }
   ]
