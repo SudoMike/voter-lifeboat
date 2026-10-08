@@ -1,0 +1,101 @@
+{
+  "contest_slug": "state-senator-legislative-district-no-30",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/king/dossiers/state-senator-legislative-district-no-30/",
+    "data/washington-state/elections/2026-11-03-general/counties/king/scoring/state-senator-legislative-district-no-30.json"
+  ],
+  "verdicts": [
+    {
+      "candidate": "claire-wilson",
+      "axis": "taxes",
+      "verdict": "upheld"
+    },
+    {
+      "candidate": "claire-wilson",
+      "axis": "spending",
+      "verdict": "upheld"
+    },
+    {
+      "candidate": "claire-wilson",
+      "axis": "housing",
+      "verdict": "upheld"
+    },
+    {
+      "candidate": "claire-wilson",
+      "axis": "safety",
+      "verdict": "upheld"
+    },
+    {
+      "candidate": "claire-wilson",
+      "axis": "climate",
+      "verdict": "upheld"
+    },
+    {
+      "candidate": "claire-wilson",
+      "axis": "experience",
+      "verdict": "upheld"
+    },
+    {
+      "candidate": "claire-wilson",
+      "axis": "social",
+      "verdict": "upheld"
+    },
+    {
+      "candidate": "claire-wilson",
+      "axis": "parental-rights",
+      "verdict": "adjust",
+      "adjusted_score": 1,
+      "adjusted_confidence": "medium",
+      "note": "Direction rests on one ESHB 1296 vote [S9]. Her sexuality-education bill is self-described [S5] and the dossier says only that districts select curricula, which is not a stated position on parental notification or opt-outs. Her site also claims 'empowering the voice of parents' [S2]. Medium matches the single-vote calibration (Taylor, Reeves)."
+    },
+    {
+      "candidate": "michael-rutland",
+      "axis": "taxes",
+      "verdict": "adjust",
+      "adjusted_score": -2,
+      "adjusted_confidence": "medium",
+      "note": "All the tax evidence is one pamphlet statement [S1]: oppose new income taxes, budgeting instead of higher taxes. S3 says government 'should live within its means', which is spending evidence. That is one clear statement with no record, so medium."
+    },
+    {
+      "candidate": "michael-rutland",
+      "axis": "spending",
+      "verdict": "upheld"
+    },
+    {
+      "candidate": "michael-rutland",
+      "axis": "safety",
+      "verdict": "upheld"
+    },
+    {
+      "candidate": "michael-rutland",
+      "axis": "local-control",
+      "verdict": "upheld"
+    },
+    {
+      "candidate": "michael-rutland",
+      "axis": "experience",
+      "verdict": "upheld"
+    },
+    {
+      "candidate": "michael-rutland",
+      "axis": "parental-rights",
+      "verdict": "adjust",
+      "adjusted_score": -1,
+      "adjusted_confidence": "low",
+      "note": "'Every parent deserves a voice' and 'parental involvement' [S1][S3] name no notification, records or opt-out right. His opponent, who voted for ESHB 1296, uses near-identical 'voice of parents' language [S2 of claire-wilson.md]. The direction is inferred, so low."
+    }
+  ],
+  "missing": [
+    {
+      "candidate": "michael-rutland",
+      "axis": "climate",
+      "proposed_score": -1,
+      "confidence": "medium",
+      "citations": [
+        "S1"
+      ],
+      "basis": "Pamphlet pledges to repeal policies 'driving up fuel and grocery prices' [S1]. Pole_a names repealing or paring back fuel-cost climate policy, and this is a single clear statement."
+    }
+  ]
+}

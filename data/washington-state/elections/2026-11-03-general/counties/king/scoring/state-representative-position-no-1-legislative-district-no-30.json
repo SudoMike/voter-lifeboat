@@ -1,0 +1,46 @@
+{
+  "contest_slug": "state-representative-position-no-1-legislative-district-no-30",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/king/dossiers/state-representative-position-no-1-legislative-district-no-30/"],
+  "office_does": "A State Representative writes and votes on Washington state law and the operating, capital, and transportation budgets, including school funding, taxes, housing, and criminal statutes.",
+  "race_blurb": "Incumbent Democrat Jamila E. Taylor, chair of the House Civil Rights & Judiciary Committee, faces first-time Republican candidate Tiffany Bowyer, a Federal Way small-business owner. The race splits on taxes, government spending, and public safety.",
+  "candidates": [
+    {
+      "slug": "jamila-e-taylor",
+      "summary": "Incumbent state representative and attorney who chairs the House Civil Rights & Judiciary Committee, running on gun-violence, police-training, housing, and tax-credit legislation.",
+      "highlights": [
+        "Voted for ESSB 6346, the 2026 tax on income over $1 million [S4]",
+        "Says excessive policing and incarceration should not be the community solution to crime rooted in systemic inequity [S2]",
+        "Voted for ESHB 1296 and ESSB 5599; endorsed by SEIU 775 and Planned Parenthood Alliance Advocates [S5][S7][S11][S12]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": 1, "confidence": "high", "citations": ["S1", "S4"], "basis": "Voted for the tax on income over $1 million; otherwise cites targeted small-business tax cuts and expanded working-family credits."},
+        "spending": {"score": 1, "confidence": "medium", "citations": ["S1", "S2"], "basis": "Runs on delivering public resources for housing and childcare and calls for free childcare options."},
+        "housing": {"score": 1, "confidence": "medium", "citations": ["S1", "S2"], "basis": "Cites delivering housing resources and pledges that every family can keep a roof over their head and access services."},
+        "safety": {"score": 1, "confidence": "high", "citations": ["S1", "S2"], "basis": "Centers root causes of crime and says excessive policing and incarceration are not the solution, while citing police-training and trust legislation."},
+        "experience": {"score": -2, "confidence": "high", "citations": ["S1", "S2"], "basis": "Sitting representative and committee chair with bills passed since 2021, against a first-time candidate."},
+        "social": {"score": 1, "confidence": "high", "citations": ["S7", "S8", "S12"], "basis": "Voted for ESSB 5599 on youth access to gender-affirming and reproductive care; endorsed by Planned Parenthood Alliance Advocates."},
+        "parental-rights": {"score": 1, "confidence": "medium", "citations": ["S5", "S6"], "basis": "Voted for ESHB 1296, which amended the Initiative 2081 parental-rights list; no separate statement on the topic."}
+      }
+    },
+    {
+      "slug": "tiffany-bowyer",
+      "summary": "First-time candidate and Federal Way small-business owner running on voting no on new taxes, independent audits of state programs, and full police staffing.",
+      "highlights": [
+        "Pledges to vote no on new taxes that burden working families and small businesses [S2]",
+        "Calls for independent audits, transparent reporting, and performance standards for state programs [S2]",
+        "Supports fully staffing police and repeat-offender accountability alongside behavioral-health teams [S2]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": -2, "confidence": "high", "citations": ["S1", "S2"], "basis": "Pledges to vote no on new taxes and blames rising property taxes and fees on growing government spending."},
+        "spending": {"score": -2, "confidence": "high", "citations": ["S1", "S2"], "basis": "Centers independent audits, performance standards, and government living within its means."},
+        "safety": {"score": -1, "confidence": "medium", "citations": ["S2"], "basis": "Prioritizes full police staffing and repeat-offender accountability, paired with behavioral-health teams."},
+        "experience": {"score": 2, "confidence": "high", "citations": ["S1"], "basis": "First-time candidate with no elected experience, running against an incumbent committee chair."}
+      }
+    }
+  ]
+}
