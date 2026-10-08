@@ -59,6 +59,10 @@ sources:
     url: https://voter.votewa.gov/candidatelist.aspx?c=03&e=899
     pointer: counties/benton/raw/votewa/candidate-list.csv.url
     accessed: 2026-10-08
+photo:
+  url: https://micahvalentine.us/wp-content/uploads/2026/08/Micah-Valentine.png
+  page: https://micahvalentine.us/benton-pud/
+  kind: campaign-website
 ---
 
 ## Background

@@ -94,6 +94,10 @@ sources:
     url: https://www.whidbeynewstimes.com/2026/10/01/letter-re-elect-banks-for-county-prosecutor/
     pointer: counties/island/raw/candidates/island-island-county-county-prosecutor/wnt-2026-10-01-letter-reay-for-banks.url
     accessed: 2026-10-09
+photo:
+  url: https://scottforprosecutor.org/airo-assets/images/candidate/headshot
+  page: https://scottforprosecutor.org/about
+  kind: campaign-website
 ---
 
 ## Background

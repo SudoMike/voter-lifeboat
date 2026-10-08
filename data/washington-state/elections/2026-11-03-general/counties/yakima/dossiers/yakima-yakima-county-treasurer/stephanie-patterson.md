@@ -41,6 +41,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3391533
     pointer: counties/yakima/raw/candidates/yakima-yakima-county-treasurer/pdc-stephanie-patterson.url
     accessed: 2026-10-09
+photo:
+  url: https://stephanie4treasurer.com/airo-assets/images/pages/home/candidate-portrait
+  page: https://stephanie4treasurer.com/
+  kind: campaign-website
 ---
 
 ## Background

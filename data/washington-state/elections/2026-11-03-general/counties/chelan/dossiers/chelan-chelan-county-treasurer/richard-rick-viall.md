@@ -69,6 +69,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3321674
     pointer: counties/chelan/raw/candidates/chelan-chelan-county-treasurer/pdc-viall.url
     accessed: 2026-10-08
+photo:
+  url: https://rick4treasurer.org/rick-hero.jpg
+  page: https://rick4treasurer.org/
+  kind: campaign-website
 ---
 
 ## Background

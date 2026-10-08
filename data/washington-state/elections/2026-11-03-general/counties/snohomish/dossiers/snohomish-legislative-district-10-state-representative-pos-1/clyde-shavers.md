@@ -136,6 +136,10 @@ sources:
     url: https://www.heraldnet.com/2026/07/09/10th-district-candidates-discuss-affordability-electric-ferries-and-housing/
     pointer: counties/snohomish/raw/candidates/snohomish-legislative-district-10-state-representative-pos-1/clyde-shavers--s17.url
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/34050.jpg
+  page: https://leg.wa.gov/legislators/all-representatives-and-senators/clyde-shavers
+  kind: government
 ---
 
 ## Background

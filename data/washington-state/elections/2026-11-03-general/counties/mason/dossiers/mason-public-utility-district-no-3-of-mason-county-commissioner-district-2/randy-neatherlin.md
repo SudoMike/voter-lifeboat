@@ -59,6 +59,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?$where=jurisdiction_county='MASON'%20AND%20election_year='2026'%20AND%20office='PUBLIC%20UTILITY%20COMMISSIONER'
     pointer: counties/mason/raw/candidates/mason-public-utility-district-no-3-of-mason-county-commissioner-district-2/pdc-mason-2026-pud.json.url
     accessed: 2026-10-09
+photo:
+  url: https://cms2.revize.com/revize/masonwa/Images/Government/County%20Commissioners/District%201/randy.jpg
+  page: https://masoncountywa.gov/government/county_commissioners/district_1.php
+  kind: government
 ---
 
 ## Background

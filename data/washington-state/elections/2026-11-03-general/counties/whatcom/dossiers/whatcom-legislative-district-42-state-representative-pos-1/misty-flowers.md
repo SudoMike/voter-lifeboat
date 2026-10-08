@@ -76,6 +76,10 @@ sources:
     url: https://www.cascadiadaily.com/2025/nov/04/early-results-indicate-a-progressive-supermajority-for-whatcom-county-council/
     pointer: counties/whatcom/raw/candidates/whatcom-legislative-district-42-state-representative-pos-1/cdn-2025-11-04-council-results.url
     accessed: 2026-10-08
+photo:
+  url: https://electmisty.com/wp-content/uploads/2025/08/IMG_20250803_0006399413-1-scaled.jpg
+  page: https://electmisty.com/
+  kind: campaign-website
 ---
 
 ## Background

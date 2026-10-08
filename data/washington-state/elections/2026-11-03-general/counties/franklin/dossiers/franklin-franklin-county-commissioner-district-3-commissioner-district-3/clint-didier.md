@@ -81,6 +81,10 @@ sources:
     url: https://results.votewa.gov/results/public/api/elections/franklin-county-wa/20260804/ballot-items
     pointer: counties/franklin/raw/franklin/votewa-2026-08-04-primary-results.json.url
     accessed: 2026-10-08
+photo:
+  url: https://www.franklincountywa.gov/ImageRepository/Document?documentID=1909
+  page: https://www.franklincountywa.gov/m/directory/employee?eid=34
+  kind: government
 ---
 
 ## Background

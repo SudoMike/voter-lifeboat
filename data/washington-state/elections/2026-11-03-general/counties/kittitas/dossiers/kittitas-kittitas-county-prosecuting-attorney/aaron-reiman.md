@@ -67,6 +67,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?election_year=2026&jurisdiction_county=KITTITAS&$limit=200
     pointer: counties/kittitas/raw/kittitas/pdc-kittitas-2026.json.url
     accessed: 2026-10-08
+photo:
+  url: https://reiman4prosecutor.com/images/portrait-flag.png
+  page: https://reiman4prosecutor.com/about
+  kind: campaign-website
 ---
 
 ## Background

@@ -52,6 +52,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3390899
     pointer: counties/skagit/raw/candidates/skagit-skagit-county-clerk/pdc-beaton.json.url
     accessed: 2026-10-08
+photo:
+  url: https://www.skagitcountywa.gov/media/ygyhz324/melissa.jpg
+  page: https://www.skagitcountywa.gov/government/courts/clerk-s-office/
+  kind: government
 ---
 
 ## Background

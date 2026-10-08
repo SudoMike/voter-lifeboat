@@ -59,6 +59,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3391145
     pointer: counties/spokane/raw/candidates/spokane-spokane-county-district-court-judge-position-no-4/pdc-ulrich.url
     accessed: 2026-10-08
+photo:
+  url: https://i0.wp.com/nicholasulrichforjudge.com/wp-content/uploads/2026/03/tuf26-45.jpg?resize=683%2C1024&ssl=1
+  page: https://nicholasulrichforjudge.com/
+  kind: campaign-website
 ---
 
 ## Background

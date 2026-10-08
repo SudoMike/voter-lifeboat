@@ -46,6 +46,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3392195
     pointer: counties/grant/raw/candidates/grant-grant-superior-court-judge-position-03/pdc-bevier.url
     accessed: 2026-10-08
+photo:
+  url: https://img1.wsimg.com/isteam/ip/98afcff4-a3d6-4a28-8d56-fb5ef604e74e/IMG_7390.jpeg
+  page: https://electtrevorbevier.com/
+  kind: campaign-website
 ---
 
 ## Background

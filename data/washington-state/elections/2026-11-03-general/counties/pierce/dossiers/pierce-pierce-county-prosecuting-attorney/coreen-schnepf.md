@@ -58,6 +58,10 @@ sources:
     url: https://voter.votewa.gov/elections/candidate.ashx?e=899&r=186806&b=0&la=en&c=27
     pointer: counties/pierce/raw/votewa/candidate-statements/race-186806.json.meta.json
     accessed: 2026-10-08
+photo:
+  url: https://www.coreenforprosecutor.com/_astro/coreen.PmW3cROb_ZS1jDV.webp
+  page: https://www.coreenforprosecutor.com/
+  kind: campaign-website
 ---
 
 Her general-election statement comes from her VoteWA candidate record, where the "Statement" field holds the text she submitted (not yet marked approved for display on 2026-10-08) [S8]; the Pierce County printed local voters' pamphlet (piercecountywa.gov) returned a Cloudflare challenge and was not read. The campaign links a News Tribune article on the race ("Top deputy prosecutor, former judge square off in Pierce County prosecutor race"), but thenewstribune.com could not be retrieved, so it is not cited. This dossier also rests on the campaign website, a WEA-PAC endorsement list and PDC filings.

@@ -107,6 +107,10 @@ sources:
     ref: WA Legislature, latest session documents (2026 session dates)
     url: https://leg.wa.gov/bills-meetings-and-session/session/session-documents/latest-session-documents/
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/12002.jpg
+  page: https://leg.wa.gov/memberphoto/12002.jpg
+  kind: government
 ---
 
 ## Background

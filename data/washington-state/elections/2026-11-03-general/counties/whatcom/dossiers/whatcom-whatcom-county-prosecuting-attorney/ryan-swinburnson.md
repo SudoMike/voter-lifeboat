@@ -98,6 +98,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2025-3328399
     pointer: counties/whatcom/raw/candidates/whatcom-whatcom-county-prosecuting-attorney/pdc-ryan-swinburnson-2025.url
     accessed: 2026-10-08
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/69d71b50383e4f0c9defca4b/f0a2a072-2835-4b81-a45e-6b84b4cf1538/Campaign+Photo+1.jpg
+  page: https://www.swinburnsonforprosecutor.com/
+  kind: campaign-website
 ---
 
 ## Background

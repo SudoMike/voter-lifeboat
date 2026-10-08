@@ -138,6 +138,10 @@ sources:
     url: https://www.whidbeynewstimes.com/2026/08/07/two-island-county-races-remain-too-close-to-call/
     pointer: counties/island/raw/candidates/island-island-county-county-sheriff/wnt-2026-08-07-too-close.url
     accessed: 2026-10-09
+photo:
+  url: https://run.imgix.net/c9c26b99-1f00-4985-9e2e-4e846918c671/0e63eda8-dbd7-4b27-88e5-37b2d66df164/0e63eda8-dbd7-4b27-88e5-37b2d66df164.png?ixlib=js-3.8.0&bri=0&con=0&sat=0&high=0&shad=0&usm=0&rect=0%2C0%2C1332%2C1795
+  page: https://www.wasserforsheriff.com/
+  kind: campaign-website
 ---
 
 ## Background

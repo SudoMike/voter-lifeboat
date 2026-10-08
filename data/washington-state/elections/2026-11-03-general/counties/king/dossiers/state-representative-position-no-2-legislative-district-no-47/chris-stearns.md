@@ -79,6 +79,10 @@ sources:
     outlet: King County Democrats, 2026 endorsements (primary and general)
     url: https://www.kcdems.org/our-party/e/2026-endorsements/
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/34023.jpg
+  page: https://leg.wa.gov/memberphoto/34023.jpg
+  kind: government
 ---
 
 ## Background

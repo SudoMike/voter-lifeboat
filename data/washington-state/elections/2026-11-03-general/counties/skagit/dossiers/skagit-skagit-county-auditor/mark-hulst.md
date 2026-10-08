@@ -61,6 +61,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3391418
     pointer: counties/skagit/raw/candidates/skagit-skagit-county-auditor/pdc-hulst.json.url
     accessed: 2026-10-08
+photo:
+  url: https://hulstforauditor.com/wp-content/uploads/2026/04/Color-Photo.jpg
+  page: https://hulstforauditor.com/
+  kind: campaign-website
 ---
 
 ## Background

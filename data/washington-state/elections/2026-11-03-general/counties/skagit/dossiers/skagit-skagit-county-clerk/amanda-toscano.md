@@ -52,6 +52,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3395856
     pointer: counties/skagit/raw/candidates/skagit-skagit-county-clerk/pdc-toscano.json.url
     accessed: 2026-10-08
+photo:
+  url: https://skagitresidents.com/assets/images/amanda.webp
+  page: https://skagitresidents.com/amanda-toscano/
+  kind: campaign-website
 ---
 
 ## Background

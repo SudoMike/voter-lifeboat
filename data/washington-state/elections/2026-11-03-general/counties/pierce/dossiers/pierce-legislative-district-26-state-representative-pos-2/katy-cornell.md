@@ -77,6 +77,10 @@ sources:
     url: https://washingtonstatestandard.com/voter-guides/2026-washington-state-primary-election/
     accessed: 2026-07-18
     carried_from: data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-26-state-representative-position-2/katy-cornell.md S2
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/693cc0753ca490583e089114/605065e2-5978-4dba-b286-b893b01c1892/F-Edit_006.jpg
+  page: https://www.katycornell.com/
+  kind: campaign-website
 ---
 
 ## Background

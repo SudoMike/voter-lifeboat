@@ -59,6 +59,10 @@ sources:
     url: https://www.klog.com/cowlitz-county-superior-court-judge-marilyn-hann-announces-retirement-klog-100-7-news/
     pointer: counties/cowlitz/raw/candidates/cowlitz-cowlitz-superior-court-judge-position-4/klog-2025-05-20-hann-retirement.url
     accessed: 2026-10-09
+photo:
+  url: https://www.retainjudgekarmy.com/wp-content/uploads/2026/05/IMG_4105-768x1024.jpeg
+  page: https://www.retainjudgekarmy.com/
+  kind: campaign-website
 ---
 
 ## Background

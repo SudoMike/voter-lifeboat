@@ -59,6 +59,10 @@ sources:
     url: https://www.peninsuladailynews.com/2026/08/26/clallam-auditor-candidates-each-make-case-for-november-election/
     pointer: counties/clallam/raw/candidates/clallam-clallam-county-auditor/pdn-2026-08-26-auditor-forum.url
     accessed: 2026-10-09
+photo:
+  url: https://www.clallamcountywa.gov/ImageRepository/Document?documentID=28738
+  page: https://www.clallamcountywa.gov/m/directory/employee?eid=6
+  kind: government
 ---
 
 ## Background

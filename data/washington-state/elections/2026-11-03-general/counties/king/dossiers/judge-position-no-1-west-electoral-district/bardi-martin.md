@@ -109,6 +109,10 @@ sources:
     outlet: PDC contributions (data.wa.gov kv7h-kjye), candidate in-kind contributions
     url: https://data.wa.gov/resource/kv7h-kjye.json?election_year=2026&filer_id=MARTB--425&contributor_name=Bardi%20Martin
     accessed: 2026-10-08
+photo:
+  url: https://cdn.kingcounty.gov/-/media/king-county/courts/district-court/judge_photos/judge-martin.jpg
+  page: https://kingcounty.gov/en/court/district-court/courts-jails-legal-system/court-calendars-locations-operations/judges/bios/judge-martin
+  kind: government
 ---
 
 ## Background

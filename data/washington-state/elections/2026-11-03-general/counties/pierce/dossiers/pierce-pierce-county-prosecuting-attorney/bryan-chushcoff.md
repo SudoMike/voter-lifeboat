@@ -58,6 +58,10 @@ sources:
     url: https://voter.votewa.gov/elections/candidate.ashx?e=899&r=186806&b=0&la=en&c=27
     pointer: counties/pierce/raw/votewa/candidate-statements/race-186806.json.meta.json
     accessed: 2026-10-08
+photo:
+  url: https://static.wixstatic.com/media/e08722_9237303227124b42b03bf4550a399e08~mv2.png/v1/fill/w_220,h_274,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e08722_9237303227124b42b03bf4550a399e08~mv2.png
+  page: https://www.bryanforjustice.com/
+  kind: campaign-website
 ---
 
 His general-election statement comes from his VoteWA candidate record, where the "Statement" field holds the text he submitted (not yet marked approved for display on 2026-10-08) [S8]; the Pierce County printed local voters' pamphlet (piercecountywa.gov) returned a Cloudflare challenge and was not read. A News Tribune article on the race could not be retrieved. This dossier also rests on the campaign website and PDC filings; his judicial service is taken from his own statement and campaign and was not separately verified against court records.

@@ -67,6 +67,10 @@ sources:
     url: https://results.votewa.gov/results/public/api/elections/walla-walla-county-wa/20260804/ballot-items
     pointer: counties/walla-walla/raw/candidates/walla-walla-walla-walla-county-sheriff/votewa-2026-08-04-primary-results.json.url
     accessed: 2026-10-08
+photo:
+  url: https://daschofskyforsheriff.com/assets/portrait-headshot.jpg
+  page: https://daschofskyforsheriff.com/
+  kind: campaign-website
 ---
 
 ## Background

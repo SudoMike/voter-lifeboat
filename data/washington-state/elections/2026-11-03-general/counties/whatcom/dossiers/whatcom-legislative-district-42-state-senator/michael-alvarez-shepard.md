@@ -145,6 +145,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3382164
     pointer: counties/whatcom/raw/candidates/whatcom-legislative-district-42-state-senator/pdc-michael-alvarez-shepard.url
     accessed: 2026-10-08
+photo:
+  url: https://run.imgix.net/6c272bc4-aaac-42eb-8990-b7b9b1247e96/205ffa53-8aec-4b68-95c8-923e1dd6fd67/205ffa53-8aec-4b68-95c8-923e1dd6fd67.jpeg?ixlib=js-3.8.0&bri=0&con=0&sat=0&high=0&shad=0&usm=0&rect=0%2C0%2C6232%2C4986
+  page: https://www.shepardforsenate.com/about
+  kind: campaign-website
 ---
 
 ## Background

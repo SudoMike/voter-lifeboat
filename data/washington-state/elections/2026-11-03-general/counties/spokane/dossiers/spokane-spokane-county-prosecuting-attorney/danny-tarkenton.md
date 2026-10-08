@@ -83,6 +83,10 @@ sources:
     url: https://nohateinwastate.org/endorse
     pointer: counties/spokane/raw/candidates/spokane-spokane-county-prosecuting-attorney/nohateinwastate-endorse.url
     accessed: 2026-10-08
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/69c0180ebee72b1230dc905c/1db21901-d8d4-4286-890d-372f35cf9864/Danny_260328_0127.jpg
+  page: https://www.dannyforprosecutor.com/
+  kind: campaign-website
 ---
 
 ## Background

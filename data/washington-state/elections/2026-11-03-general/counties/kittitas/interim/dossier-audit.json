@@ -1,0 +1,29 @@
+{
+  "script": "pipeline/verify_dossiers.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/kittitas/interim/research-plan.json",
+    "data/washington-state/elections/2026-11-03-general/counties/kittitas/dossiers/"
+  ],
+  "missing": [],
+  "no_frontmatter": [],
+  "invalid_evidence_levels": [],
+  "invalid_source_formats": [],
+  "evidence_levels": {
+    "rich": 4,
+    "moderate": 1,
+    "pamphlet-only": 1
+  },
+  "contest_overviews_missing": [],
+  "untouched_contests": [],
+  "untouched_measures": [],
+  "invalid_photos": [],
+  "photos": {
+    "present": 3,
+    "missing": 3
+  },
+  "researched_elsewhere": [
+    "kittitas-congressional-district-8-u-s-representative -> king/congressional-district-8-united-states-representative",
+    "kittitas-legislative-district-13-state-representative-pos-1 -> grant/grant-legislative-district-13-state-representative-pos-1",
+    "kittitas-legislative-district-13-state-representative-pos-2 -> grant/grant-legislative-district-13-state-representative-pos-2"
+  ]
+}

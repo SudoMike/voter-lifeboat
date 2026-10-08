@@ -124,6 +124,10 @@ sources:
     url: https://www.yakimaherald.com/news/northwest/congressional-candidates-duresky-and-mckinney-to-debate-in-central-wa-on-sept-30/article_f7508053-ed71-5cb0-b9e5-a936967826d0.html
     pointer: counties/benton/raw/candidates/benton-congressional-district-4-u-s-representative/yhr-2026-09-22-debate-announced.url
     accessed: 2026-10-08
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/69a870a4a563476b34eb3115/a0374750-1660-4e84-b80b-4a5d55cb4274/john-flannel-portrait.jpg
+  page: https://www.johnduresky4congress.com/about
+  kind: campaign-website
 ---
 
 ## Background

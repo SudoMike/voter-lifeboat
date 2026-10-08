@@ -1,0 +1,30 @@
+{
+  "script": "pipeline/verify_dossiers.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/kitsap/interim/research-plan.json",
+    "data/washington-state/elections/2026-11-03-general/counties/kitsap/dossiers/"
+  ],
+  "missing": [],
+  "no_frontmatter": [],
+  "invalid_evidence_levels": [],
+  "invalid_source_formats": [],
+  "evidence_levels": {
+    "rich": 7,
+    "moderate": 11,
+    "pamphlet-only": 2
+  },
+  "contest_overviews_missing": [],
+  "untouched_contests": [],
+  "untouched_measures": [],
+  "invalid_photos": [],
+  "photos": {
+    "present": 11,
+    "missing": 9
+  },
+  "researched_elsewhere": [
+    "kitsap-congressional-district-6-u-s-representative -> pierce/pierce-congressional-district-6-u-s-representative",
+    "kitsap-legislative-district-26-state-senator -> pierce/pierce-legislative-district-26-state-senator",
+    "kitsap-legislative-district-26-state-representative-pos-1 -> pierce/pierce-legislative-district-26-state-representative-pos-1",
+    "kitsap-legislative-district-26-state-representative-pos-2 -> pierce/pierce-legislative-district-26-state-representative-pos-2"
+  ]
+}

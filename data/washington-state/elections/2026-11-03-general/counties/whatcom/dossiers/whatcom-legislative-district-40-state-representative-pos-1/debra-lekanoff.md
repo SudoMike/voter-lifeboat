@@ -90,6 +90,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3321415
     pointer: counties/whatcom/raw/candidates/whatcom-legislative-district-40-state-representative-pos-1/pdc-debra-lekanoff.url
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/29106.jpg
+  page: https://leg.wa.gov/memberphoto/29106.jpg
+  kind: government
 ---
 
 ## Background

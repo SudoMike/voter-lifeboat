@@ -131,6 +131,10 @@ sources:
     outlet: Association of Washington Business (2026 candidate endorsements)
     url: https://www.awb.org/2026-candidate-endorsements/
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/24075.jpg
+  page: https://leg.wa.gov/memberphoto/24075.jpg
+  kind: government
 ---
 
 ## Background

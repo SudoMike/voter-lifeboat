@@ -38,6 +38,10 @@ sources:
     outlet: Snoqualmie Valley Record (Grace Gorenflo, "Early primary election results", 2026-08-04, results as of 2026-08-10)
     url: https://www.valleyrecord.com/2026/08/04/early-primary-election-results-election-2026/
     accessed: 2026-10-08
+photo:
+  url: https://votejoann.com/JoAnn%20Tolentino.JPG
+  page: https://votejoann.com/
+  kind: campaign-website
 ---
 
 ## Background

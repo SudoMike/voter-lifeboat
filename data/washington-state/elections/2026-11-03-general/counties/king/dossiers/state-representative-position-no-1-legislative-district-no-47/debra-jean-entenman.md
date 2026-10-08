@@ -80,6 +80,10 @@ sources:
     outlet: The Urbanist, 2026 primary election endorsements (2026-07-16)
     url: https://www.theurbanist.org/2026-primary-election-endorsements/
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/11403.jpg
+  page: https://leg.wa.gov/memberphoto/11403.jpg
+  kind: government
 ---
 
 ## Background

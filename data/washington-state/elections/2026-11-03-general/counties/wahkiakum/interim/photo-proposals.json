@@ -1,0 +1,37 @@
+{
+  "script": "pipeline/propose_candidate_photos.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/wahkiakum/interim/research-plan.json",
+    "data/washington-state/elections/2026-11-03-general/counties/wahkiakum/dossiers/"
+  ],
+  "election": "2026-11-03-general",
+  "package": "wahkiakum",
+  "review_copies": "data/.cache/photos/2026-11-03-general/wahkiakum/",
+  "summary": {
+    "proposed": 0,
+    "no-website": 2,
+    "fetch-failed": 0,
+    "no-image-found": 0,
+    "images_ok": 0
+  },
+  "proposals": [
+    {
+      "contest_slug": "wahkiakum-wahkiakum-county-county-assessor",
+      "candidate_slug": "drew-jenkins",
+      "name": "Drew Jenkins",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    },
+    {
+      "contest_slug": "wahkiakum-wahkiakum-county-county-assessor",
+      "candidate_slug": "justin-moriarty",
+      "name": "Justin Moriarty",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    }
+  ]
+}

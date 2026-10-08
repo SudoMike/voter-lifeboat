@@ -1,0 +1,82 @@
+{
+  "script": "pipeline/propose_candidate_photos.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/jefferson/interim/research-plan.json",
+    "data/washington-state/elections/2026-11-03-general/counties/jefferson/dossiers/"
+  ],
+  "election": "2026-11-03-general",
+  "package": "jefferson",
+  "review_copies": "data/.cache/photos/2026-11-03-general/jefferson/",
+  "summary": {
+    "proposed": 1,
+    "no-website": 0,
+    "fetch-failed": 2,
+    "no-image-found": 1,
+    "images_ok": 1
+  },
+  "proposals": [
+    {
+      "contest_slug": "jefferson-jefferson-county-commissioner-district-3-district-3",
+      "candidate_slug": "anji-scalf",
+      "name": "Anji Scalf",
+      "website": "https://www.voteforscalf.org/",
+      "website_from": "dossier",
+      "status": "fetch-failed",
+      "candidates": [
+        {
+          "url": "https://content.campaignpartner.net/images/148380/Screenshot_2026-01-04_at_6.05.56PM.png",
+          "page": "https://www.voteforscalf.org/",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "http_status": 404,
+          "content_type": null,
+          "bytes": null,
+          "status": "fetch-failed"
+        }
+      ]
+    },
+    {
+      "contest_slug": "jefferson-jefferson-county-commissioner-district-3-district-3",
+      "candidate_slug": "stephen-t-nieman",
+      "name": "Stephen T. Nieman",
+      "website": "https://www.nieman4commissioner.com/",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "jefferson-public-utility-district-no-1-of-jefferson-county-commissioner-district-2",
+      "candidate_slug": "keith-kisler",
+      "name": "Keith Kisler",
+      "website": "https://keithkisler4pud.org/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://content.campaignpartner.net/images/152180/IMG_3006.jpg",
+          "page": "https://keithkisler4pud.org/",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 339400,
+          "status": "ok",
+          "width": 1125,
+          "height": 1500,
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/jefferson/jefferson-public-utility-district-no-1-of-jefferson-county-commissioner-district-2/keith-kisler-1.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "jefferson-public-utility-district-no-1-of-jefferson-county-commissioner-district-2",
+      "candidate_slug": "michael-brittain",
+      "name": "Michael Brittain",
+      "website": "https://mike4pud.com/",
+      "website_from": "dossier",
+      "status": "fetch-failed",
+      "candidates": [],
+      "error": "HTTPError: Forbidden"
+    }
+  ]
+}

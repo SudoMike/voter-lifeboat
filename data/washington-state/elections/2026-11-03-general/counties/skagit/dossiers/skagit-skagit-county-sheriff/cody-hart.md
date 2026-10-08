@@ -87,6 +87,10 @@ sources:
     url: https://skagitrepublicans.com/informationforvoters
     pointer: counties/skagit/raw/candidates/skagit-skagit-county-sheriff/skagit-republicans-voters.html.url
     accessed: 2026-10-08
+photo:
+  url: https://img1.wsimg.com/isteam/ip/39d6f76e-c6b0-4dd9-a6b7-1fd799ca34ea/blob-f7b32a8.png
+  page: https://codyhart.org/
+  kind: campaign-website
 ---
 
 ## Identity note

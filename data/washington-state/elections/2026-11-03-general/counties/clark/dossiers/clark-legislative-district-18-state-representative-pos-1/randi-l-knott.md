@@ -68,6 +68,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3390901
     pointer: counties/clark/raw/candidates/clark-legislative-district-18-state-representative-pos-1/pdc-knott.url
     accessed: 2026-10-08
+photo:
+  url: https://static.wixstatic.com/media/a91ae9_4803dcb207bb4521afc6730627467af6~mv2.jpg/v1/fill/w_700,h_1050,al_c,q_85/RK_3.jpg
+  page: https://www.electrandi.com/about
+  kind: campaign-website
 ---
 
 ## Background

@@ -117,6 +117,10 @@ sources:
     url: https://www.spokesman.com/stories/2026/sep/22/parental-rights-debate-makes-its-way-to-ballot-ami/
     pointer: counties/spokane/raw/candidates/spokane-legislative-district-3-state-representative-pos-1/spokesman-2026-09-22-parental-rights.url
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/35429.jpg
+  page: https://leg.wa.gov/legislators/all-representatives-and-senators/natasha-hill
+  kind: government
 ---
 
 ## Background

@@ -122,6 +122,10 @@ sources:
     url: https://www.heraldnet.com/2026/07/09/10th-district-candidates-discuss-affordability-electric-ferries-and-housing/
     pointer: counties/snohomish/raw/candidates/snohomish-legislative-district-10-state-representative-pos-2/dave-paul--s15.url
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/29095.jpg
+  page: https://leg.wa.gov/legislators/all-representatives-and-senators/dave-paul
+  kind: government
 ---
 
 ## Background

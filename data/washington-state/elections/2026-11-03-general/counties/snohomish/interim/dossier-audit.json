@@ -1,0 +1,35 @@
+{
+  "script": "pipeline/verify_dossiers.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/snohomish/interim/research-plan.json",
+    "data/washington-state/elections/2026-11-03-general/counties/snohomish/dossiers/"
+  ],
+  "missing": [],
+  "no_frontmatter": [],
+  "invalid_evidence_levels": [],
+  "invalid_source_formats": [],
+  "evidence_levels": {
+    "rich": 12,
+    "moderate": 15,
+    "pamphlet-only": 1
+  },
+  "contest_overviews_missing": [],
+  "untouched_contests": [],
+  "untouched_measures": [],
+  "invalid_photos": [],
+  "photos": {
+    "present": 19,
+    "missing": 9
+  },
+  "researched_elsewhere": [
+    "snohomish-congressional-district-1-u-s-representative -> king/congressional-district-1-united-states-representative",
+    "snohomish-congressional-district-8-u-s-representative -> king/congressional-district-8-united-states-representative",
+    "snohomish-legislative-district-1-state-representative-pos-1 -> king/state-representative-position-no-1-legislative-district-no-1",
+    "snohomish-legislative-district-1-state-representative-pos-2 -> king/state-representative-position-no-2-legislative-district-no-1",
+    "snohomish-legislative-district-12-state-representative-pos-1 -> king/state-representative-position-no-1-legislative-district-no-12",
+    "snohomish-legislative-district-12-state-representative-pos-2 -> king/state-representative-position-no-2-legislative-district-no-12",
+    "snohomish-legislative-district-32-state-senator -> king/state-senator-legislative-district-no-32",
+    "snohomish-legislative-district-32-state-representative-pos-1 -> king/state-representative-position-no-1-legislative-district-no-32",
+    "snohomish-legislative-district-32-state-representative-pos-2 -> king/state-representative-position-no-2-legislative-district-no-32"
+  ]
+}

@@ -69,6 +69,10 @@ sources:
     url: https://www.wenatcheeworld.com/news/local/candidates-file-for-election-in-chelan-douglas-counties/article_b6c515c5-226f-437e-98ac-c822caab5f7b.html
     pointer: counties/chelan/raw/candidates/chelan-chelan-county-sheriff/ww-2026-05-11-candidates-file.url
     accessed: 2026-10-08
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/6a04fa483d95372159493e40/64887e9f-4328-47a1-9a93-779d4473e81a/website_AboutMe.png
+  page: https://www.langlowforsheriff.com/meet-stan
+  kind: campaign-website
 ---
 
 ## Background

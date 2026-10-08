@@ -1,0 +1,28 @@
+{
+  "script": "pipeline/verify_dossiers.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/walla-walla/interim/research-plan.json",
+    "data/washington-state/elections/2026-11-03-general/counties/walla-walla/dossiers/"
+  ],
+  "missing": [],
+  "no_frontmatter": [],
+  "invalid_evidence_levels": [],
+  "invalid_source_formats": [],
+  "evidence_levels": {
+    "moderate": 4,
+    "rich": 4
+  },
+  "contest_overviews_missing": [],
+  "untouched_contests": [],
+  "untouched_measures": [],
+  "invalid_photos": [],
+  "photos": {
+    "present": 5,
+    "missing": 3
+  },
+  "researched_elsewhere": [
+    "walla-walla-congressional-district-5-u-s-representative -> spokane/spokane-congressional-district-5-u-s-representative",
+    "walla-walla-legislative-district-16-state-representative-pos-1 -> benton/benton-legislative-district-16-state-representative-pos-1",
+    "walla-walla-legislative-district-16-state-representative-pos-2 -> benton/benton-legislative-district-16-state-representative-pos-2"
+  ]
+}

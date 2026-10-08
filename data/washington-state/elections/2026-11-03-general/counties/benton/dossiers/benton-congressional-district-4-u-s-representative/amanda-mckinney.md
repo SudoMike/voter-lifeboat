@@ -110,6 +110,10 @@ sources:
     url: https://www.yakimaherald.com/news/local/government/yakima-county-commissioner-amanda-mckinney-announces-campaign-for-congress/article_9c2a90d4-c6f6-4c5e-b4f2-57896e969ff6.html
     pointer: counties/benton/raw/candidates/benton-congressional-district-4-u-s-representative/yhr-2025-12-19-mckinney-launch.url
     accessed: 2026-10-08
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/69414dc907486468d86ae59d/d60c3278-f7ce-430d-b8a9-722e7f0d813b/Amanda+McKinney+Headshot+2.JPG
+  page: https://www.mckinneyforwashington.com/
+  kind: campaign-website
 ---
 
 ## Background

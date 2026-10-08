@@ -59,6 +59,10 @@ sources:
     url: https://skagitrepublicans.com/informationforvoters
     pointer: counties/skagit/raw/candidates/skagit-skagit-county-treasurer/scrp-information-for-voters.html.url
     accessed: 2026-10-08
+photo:
+  url: https://skagitresidents.com/assets/images/tim.webp
+  page: https://skagitresidents.com/tim-garrison/
+  kind: campaign-website
 ---
 
 ## Background

@@ -88,6 +88,10 @@ sources:
     outlet: Seattle Gay News (endorsement of Tatiana Brown, LD 37 Senate)
     url: https://www.sgn.org/story/168742
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/34036.jpg
+  page: https://leg.wa.gov/memberphoto/34036.jpg
+  kind: government
 ---
 
 ## Background

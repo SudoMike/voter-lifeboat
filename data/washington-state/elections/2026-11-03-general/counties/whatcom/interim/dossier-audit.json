@@ -1,0 +1,27 @@
+{
+  "script": "pipeline/verify_dossiers.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/whatcom/interim/research-plan.json",
+    "data/washington-state/elections/2026-11-03-general/counties/whatcom/dossiers/"
+  ],
+  "missing": [],
+  "no_frontmatter": [],
+  "invalid_evidence_levels": [],
+  "invalid_source_formats": [],
+  "evidence_levels": {
+    "rich": 5,
+    "moderate": 12,
+    "pamphlet-only": 1
+  },
+  "contest_overviews_missing": [],
+  "untouched_contests": [],
+  "untouched_measures": [],
+  "invalid_photos": [],
+  "photos": {
+    "present": 11,
+    "missing": 7
+  },
+  "researched_elsewhere": [
+    "whatcom-congressional-district-2-u-s-representative -> snohomish/snohomish-congressional-district-2-u-s-representative"
+  ]
+}

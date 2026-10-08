@@ -70,6 +70,10 @@ sources:
     url: https://www.leavenworthecho.com/stories/chelan-nonprofit-leader-enters-12th-district-house-race,168148
     accessed: 2026-07-16
     carried_from: data/washington-state/elections/2026-08-04-primary/counties/king/dossiers/state-representative-position-no-1-legislative-district-no-12/stacy-willoughby.md S2
+photo:
+  url: https://static.wixstatic.com/media/88e548_decced7a85e44bac8ecda7c12c75cd6a~mv2.png
+  page: https://www.stacyforhouse.com/
+  kind: campaign-website
 ---
 
 ## Background

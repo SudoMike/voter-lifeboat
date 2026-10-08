@@ -1,0 +1,335 @@
+{
+  "script": "pipeline/propose_candidate_photos.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/grays-harbor/interim/research-plan.json",
+    "data/washington-state/elections/2026-11-03-general/counties/grays-harbor/dossiers/"
+  ],
+  "election": "2026-11-03-general",
+  "package": "grays-harbor",
+  "review_copies": "data/.cache/photos/2026-11-03-general/grays-harbor/",
+  "summary": {
+    "proposed": 9,
+    "no-website": 3,
+    "fetch-failed": 0,
+    "no-image-found": 2,
+    "images_ok": 12
+  },
+  "proposals": [
+    {
+      "contest_slug": "grays-harbor-grays-harbor-county-assessor",
+      "candidate_slug": "dan-lindgren",
+      "name": "Dan Lindgren",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    },
+    {
+      "contest_slug": "grays-harbor-grays-harbor-county-assessor",
+      "candidate_slug": "josh-nuxoll",
+      "name": "Josh Nuxoll",
+      "website": "https://nuxoll4assessor.com/",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "grays-harbor-grays-harbor-county-auditor",
+      "candidate_slug": "charlee-paull",
+      "name": "Charlee Paull",
+      "website": "https://charleeforgraysharbor.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://img1.wsimg.com/isteam/ip/f406bcf6-1a10-4944-91c9-fbf76173d9e7/1W2A3885%20(1).jpeg",
+          "page": "https://charleeforgraysharbor.com/",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 240567,
+          "status": "ok",
+          "width": 1706,
+          "height": 2560,
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/grays-harbor/grays-harbor-grays-harbor-county-auditor/charlee-paull-1.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "grays-harbor-grays-harbor-county-auditor",
+      "candidate_slug": "brielle-s-joyce",
+      "name": "Brielle S Joyce",
+      "website": "https://www.brielleforgraysharbor.org/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://brielleforgraysharbor.org/img/og-card-v2.png",
+          "page": "https://www.brielleforgraysharbor.org/",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 355257,
+          "status": "ok",
+          "width": 1200,
+          "height": 630,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/grays-harbor/grays-harbor-grays-harbor-county-auditor/brielle-s-joyce-1.jpg"
+        },
+        {
+          "url": "https://www.brielleforgraysharbor.org/img/site-qr.svg",
+          "page": "https://www.brielleforgraysharbor.org/",
+          "kind": "campaign-website",
+          "why": "img 260x260",
+          "width": 260,
+          "height": 260,
+          "http_status": 200,
+          "content_type": "image/svg+xml",
+          "bytes": 27195,
+          "status": "fetch-failed",
+          "error": "not a decodable image"
+        }
+      ]
+    },
+    {
+      "contest_slug": "grays-harbor-grays-harbor-county-prosecutor",
+      "candidate_slug": "jason-f-walker",
+      "name": "Jason F. Walker",
+      "website": "https://www.walkerforprosecutor.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://assets.nationbuilder.com/walker/sites/1/meta_images/original/Logo_placeholder.png?1775170740",
+          "page": "https://www.walkerforprosecutor.com/",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 190938,
+          "status": "ok",
+          "width": 2304,
+          "height": 1124,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/grays-harbor/grays-harbor-grays-harbor-county-prosecutor/jason-f-walker-1.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "grays-harbor-grays-harbor-county-prosecutor",
+      "candidate_slug": "daniel-crawford",
+      "name": "Daniel Crawford",
+      "website": "https://voteforcrawford.com/",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "grays-harbor-grays-harbor-county-sheriff",
+      "candidate_slug": "darrin-e-wallace",
+      "name": "Darrin E. Wallace",
+      "website": "https://wallaceforsheriff.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://wallaceforsheriff.com/content/campaignsign.webp",
+          "page": "https://wallaceforsheriff.com/",
+          "kind": "campaign-website",
+          "why": "img 1170x894",
+          "width": 1170,
+          "height": 894,
+          "http_status": 200,
+          "content_type": "image/webp",
+          "bytes": 65242,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/grays-harbor/grays-harbor-grays-harbor-county-sheriff/darrin-e-wallace-1.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "grays-harbor-grays-harbor-county-sheriff",
+      "candidate_slug": "edward-welter",
+      "name": "Edward Welter",
+      "website": "https://www.graysharborsheriff.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://static1.squarespace.com/static/69fa3a4eb2cce8197e0aa347/t/69fe7c23621f9100249fe539/1778285603726/Sign+-+Yard.png?format=1500w",
+          "page": "https://www.graysharborsheriff.com/",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "width": 2304,
+          "height": 1728,
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 247176,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/grays-harbor/grays-harbor-grays-harbor-county-sheriff/edward-welter-1.jpg"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/69fa3a4eb2cce8197e0aa347/672994d2-a1fc-4713-9491-51b7b0a1d5ec/IMG_0450.jpeg",
+          "page": "https://www.graysharborsheriff.com/",
+          "kind": "campaign-website",
+          "why": "img 4284x5712",
+          "width": 2500,
+          "height": 3333,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 674958,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/grays-harbor/grays-harbor-grays-harbor-county-sheriff/edward-welter-2.jpg"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/69fa3a4eb2cce8197e0aa347/9a89d7e4-e64a-4914-941f-3dbbfecd3fe9/IMG_0465.jpeg",
+          "page": "https://www.graysharborsheriff.com/",
+          "kind": "campaign-website",
+          "why": "img 3024x4032",
+          "width": 2500,
+          "height": 3333,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 614730,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/grays-harbor/grays-harbor-grays-harbor-county-sheriff/edward-welter-3.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "grays-harbor-grays-harbor-county-treasurer",
+      "candidate_slug": "shawn-d-hill",
+      "name": "Shawn D. Hill",
+      "website": "https://retainshawnhill.org/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://img1.wsimg.com/isteam/ip/1f8ec53d-5315-4218-8a71-b4f8fbe5449f/Campaign%20Sign-dcfc861.jpg",
+          "page": "https://retainshawnhill.org/",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 111694,
+          "status": "ok",
+          "width": 1600,
+          "height": 1200,
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/grays-harbor/grays-harbor-grays-harbor-county-treasurer/shawn-d-hill-1.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "grays-harbor-grays-harbor-county-treasurer",
+      "candidate_slug": "wes-cormier",
+      "name": "Wes Cormier",
+      "website": "https://www.voteforwes.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://static.wixstatic.com/media/11cc43_9b1a9328eff34b2f880d75c0fd19fc5d~mv2.jpg/v1/fill/w_991,h_204,al_c/11cc43_9b1a9328eff34b2f880d75c0fd19fc5d~mv2.jpg",
+          "page": "https://www.voteforwes.com/",
+          "kind": "campaign-website",
+          "why": "twitter:image",
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 37912,
+          "status": "ok",
+          "width": 991,
+          "height": 204,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/grays-harbor/grays-harbor-grays-harbor-county-treasurer/wes-cormier-1.jpg"
+        },
+        {
+          "url": "https://static.wixstatic.com/media/11cc43_2ac8a50c0c4647338e93649d7b595512~mv2.jpg/v1/fill/w_276,h_406,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Candidate%20Picture.jpg",
+          "page": "https://www.voteforwes.com/",
+          "kind": "campaign-website",
+          "why": "img 276x406",
+          "width": 276,
+          "height": 406,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 47303,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/grays-harbor/grays-harbor-grays-harbor-county-treasurer/wes-cormier-2.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "grays-harbor-grays-harbor-county-commissioner-district-3-commissioner-3",
+      "candidate_slug": "stan-sturgeon",
+      "name": "Stan Sturgeon",
+      "website": "https://votestansturgeon.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://img1.wsimg.com/isteam/ip/7da04e92-3dd1-415d-aab5-72d3f471e857/Stan%20Sign%20Final%20copy.png",
+          "page": "https://votestansturgeon.com/",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 175856,
+          "status": "ok",
+          "width": 1536,
+          "height": 1024,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/grays-harbor/grays-harbor-grays-harbor-county-commissioner-district-3-commissioner-3/stan-sturgeon-1.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "grays-harbor-grays-harbor-county-commissioner-district-3-commissioner-3",
+      "candidate_slug": "jr-streifel",
+      "name": "JR Streifel",
+      "website": "https://electjr.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://img1.wsimg.com/isteam/ip/3ce588ea-a1f6-410a-8cf8-60748c305d4c/thumbnails/thumbnail-e8fc23dc-5b1e-4698-8fa5-bcf0fed87ae5.png",
+          "page": "https://electjr.com/",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 8676,
+          "status": "ok",
+          "width": 1920,
+          "height": 1080,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/grays-harbor/grays-harbor-grays-harbor-county-commissioner-district-3-commissioner-3/jr-streifel-1.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "grays-harbor-grays-harbor-county-district-court-judge-position-no-2",
+      "candidate_slug": "david-mistachkin",
+      "name": "David Mistachkin",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    },
+    {
+      "contest_slug": "grays-harbor-grays-harbor-county-district-court-judge-position-no-2",
+      "candidate_slug": "megan-valentine",
+      "name": "Megan Valentine",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    }
+  ]
+}

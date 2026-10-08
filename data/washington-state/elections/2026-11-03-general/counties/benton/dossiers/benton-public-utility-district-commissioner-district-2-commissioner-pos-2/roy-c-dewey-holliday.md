@@ -45,6 +45,10 @@ sources:
     url: https://voter.votewa.gov/candidatelist.aspx?c=03&e=899
     pointer: counties/benton/raw/votewa/candidate-list.csv.url
     accessed: 2026-10-08
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/6a0bce036fb77f5131c46f6f/73025115-aa40-471a-84f2-900d50108b00/IMG_0643.jpeg
+  page: https://www.hollidayforpud.com/
+  kind: campaign-website
 ---
 
 ## Background

@@ -81,6 +81,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?election_year=2026&jurisdiction_county=KITTITAS&$limit=200
     pointer: counties/kittitas/raw/kittitas/pdc-kittitas-2026.json.url
     accessed: 2026-10-08
+photo:
+  url: https://irp.cdn-website.com/f8b26386/dms3rep/multi/opt/Cori+for+Coroner_0009-1920w.jpg
+  page: https://www.mckeanforcoroner.com/about
+  kind: campaign-website
 ---
 
 ## Background

@@ -83,6 +83,10 @@ sources:
     url: https://longforprosecutor.com/endorsements/
     pointer: counties/benton/raw/candidates/benton-benton-county-prosecuting-attorney/long-campaign-endorsements.url
     accessed: 2026-10-08
+photo:
+  url: https://bradklippert4sheriff.com/brad.jpg.jpeg
+  page: https://bradklippert4sheriff.com/
+  kind: campaign-website
 ---
 
 ## Background

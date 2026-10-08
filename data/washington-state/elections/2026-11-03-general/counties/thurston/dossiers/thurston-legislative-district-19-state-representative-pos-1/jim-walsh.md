@@ -236,6 +236,10 @@ sources:
     url: https://chinookobserver.com/2024/12/19/19th-ld-legislators-prefile-flurry-of-bills/
     pointer: counties/thurston/raw/candidates/thurston-legislative-district-19-state-representative-pos-1/chinook-2024-12-19-prefile.url
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/27181.jpg
+  page: https://leg.wa.gov/memberphoto/27181.jpg
+  kind: government
 ---
 
 ## Background

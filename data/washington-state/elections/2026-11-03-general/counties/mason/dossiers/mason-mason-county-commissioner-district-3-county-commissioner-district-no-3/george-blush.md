@@ -82,6 +82,10 @@ sources:
     url: https://results.votewa.gov/results/public/api/elections/mason-county-wa/20260804/ballot-items
     pointer: counties/mason/raw/candidates/mason-mason-county-commissioner-district-3-county-commissioner-district-no-3/votewa-2026-08-04-primary-results.json.url
     accessed: 2026-10-09
+photo:
+  url: https://cms8.revize.com/revize/sheltonwa/government/city%20council/photos/CM%20Blush%20-%20Web%20.png
+  page: https://sheltonwa.gov/government/city_council/city_council_members/
+  kind: government
 ---
 
 ## Background

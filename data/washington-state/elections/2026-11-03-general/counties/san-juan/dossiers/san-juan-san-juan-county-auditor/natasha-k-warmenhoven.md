@@ -52,6 +52,10 @@ sources:
     url: https://theorcasonian.com/auditor-seeks-volunteers-to-write-opposing-statements-in-voting-guide-for-november-ballot-measures/
     pointer: counties/san-juan/raw/candidates/san-juan-san-juan-county-auditor/orcasonian-2026-08-11-auditor-seeks-con-writers.html.url
     accessed: 2026-10-08
+photo:
+  url: https://natashaforauditor.com/ws/media-library/cb96739a502747d7acc0310ef2f2b221/img_1228.jpeg
+  page: https://natashaforauditor.com/
+  kind: campaign-website
 ---
 
 ## Background

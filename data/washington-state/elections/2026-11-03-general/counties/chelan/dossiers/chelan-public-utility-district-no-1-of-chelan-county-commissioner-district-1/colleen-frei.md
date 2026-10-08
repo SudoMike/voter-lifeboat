@@ -66,6 +66,10 @@ sources:
     url: https://www.wenatcheeworld.com/news/local/new-trustees-appointed-to-community-foundation-board/article_5794abe5-eeac-4b9f-81da-6a80be5e880b.html
     pointer: counties/chelan/raw/candidates/chelan-public-utility-district-no-1-of-chelan-county-commissioner-district-1/ww-2025-07-21-cf-trustees.url
     accessed: 2026-10-08
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/6a235e02a69eab183609c556/30e34f40-4ba6-45cb-9492-7b838146de0b/Colleen-Headshot-02.jpg
+  page: https://www.colleenforpudcommissioner.com/
+  kind: campaign-website
 ---
 
 ## Background

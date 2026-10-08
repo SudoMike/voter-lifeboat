@@ -61,6 +61,10 @@ sources:
     outlet: King County Council staff report (revised), Proposed No. 2026-0012, Jan. 27, 2026
     url: https://kingcounty.legistar1.com/kingcounty/attachments/d27d7302-13e1-4741-a4e2-029e67ec76cf.docx
     accessed: 2026-10-08
+photo:
+  url: https://www.electnyjatforjudge.com/heroimage.jpg
+  page: https://electnyjatforjudge.com/
+  kind: campaign-website
 ---
 
 ## Background

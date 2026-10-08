@@ -250,6 +250,10 @@ sources:
     url: https://wslwebservices.leg.wa.gov/LegislationService.asmx/GetLegislation?biennium=2023-24&billNumber=2113
     pointer: counties/kitsap/raw/candidates/kitsap-legislative-district-23-state-representative-pos-1/leg-bill-i-2113.url
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/MemberPhoto/31527.jpg
+  page: https://leg.wa.gov/MemberPhoto/31527.jpg
+  kind: government
 ---
 
 ## Background

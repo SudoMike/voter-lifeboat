@@ -117,6 +117,10 @@ sources:
     outlet: Washington State Legislature, House floor amendment 375 to SHB 1296 (Jacobsen)
     url: https://lawfilesext.leg.wa.gov/biennium/2025-26/Htm/Amendments/House/1296-S%20AMH%20JACO%20WARG%20184.htm
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/31528.jpg
+  page: https://leg.wa.gov/memberphoto/31528.jpg
+  kind: government
 ---
 
 ## Background

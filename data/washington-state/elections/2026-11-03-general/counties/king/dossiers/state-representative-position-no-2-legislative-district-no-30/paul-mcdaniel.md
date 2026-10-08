@@ -83,6 +83,10 @@ sources:
     outlet: Federal Way Mirror (2026-08-19)
     url: https://www.federalwaymirror.com/2026/08/19/final-primary-election-results-are-in-for-federal-way/
     accessed: 2026-10-08
+photo:
+  url: https://paul4washington.com/wp-content/uploads/2026/07/paul-mcdaniel_blue-suit-headshot-web.jpg
+  page: https://paul4washington.com/
+  kind: campaign-website
 ---
 
 ## Background

@@ -62,6 +62,10 @@ sources:
     url: https://voter.votewa.gov/elections/candidate.ashx?e=899&r=186807&b=0&la=en&c=27
     pointer: counties/pierce/raw/votewa/candidate-statements/race-186807.json.meta.json
     accessed: 2026-10-08
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/681b89567ae9046d7b47c7ea/504c28f5-9365-4396-8588-1cfaf6d489aa/IMG_6108+background+copy.jpg
+  page: https://www.electoleary.com/
+  kind: campaign-website
 ---
 
 ## Background

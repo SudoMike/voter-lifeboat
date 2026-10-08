@@ -61,6 +61,10 @@ sources:
     url: https://www.masoncounty.com/story/2026/05/07/news/candidates-file-for-aug-primary/7055.html
     pointer: counties/mason/raw/candidates/mason-mason-county-clerk/smcj-2026-05-07-candidates-file.html.url
     accessed: 2026-10-09
+photo:
+  url: https://cms2.revize.com/revize/masonwa/Images/Department/Criminal%20Justice/Superior%20Court%20Clerk/clerk.jpg
+  page: https://masoncountywa.gov/clerk/
+  kind: government
 ---
 
 ## Background

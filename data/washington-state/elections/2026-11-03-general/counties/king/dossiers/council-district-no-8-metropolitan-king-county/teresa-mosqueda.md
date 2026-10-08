@@ -144,6 +144,10 @@ sources:
     outlet: RCW 82.14.542, sales and use tax for additional services assisting children and their families (effective Jan. 1, 2027)
     url: https://app.leg.wa.gov/RCW/default.aspx?cite=82.14.542
     accessed: 2026-10-08
+photo:
+  url: https://cdn.kingcounty.gov/-/media/king-county/depts/council/teresa-mosqueda/councilmember-teresa-mosqueda_1600x700.jpg
+  page: https://kingcounty.gov/en/legacy/council/mosqueda
+  kind: government
 ---
 
 ## Background

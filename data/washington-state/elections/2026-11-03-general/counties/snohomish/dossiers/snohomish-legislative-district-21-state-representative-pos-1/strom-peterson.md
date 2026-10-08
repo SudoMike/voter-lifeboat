@@ -77,6 +77,10 @@ sources:
     type: campaign-website
     url: https://votestrom.com/
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/20755.jpg
+  page: https://leg.wa.gov/legislators/all-representatives-and-senators/strom-peterson
+  kind: government
 ---
 
 ## Background

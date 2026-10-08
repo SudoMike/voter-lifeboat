@@ -159,6 +159,10 @@ sources:
     url: https://washingtonstatestandard.com/2026/10/01/poll-shows-gluesenkamp-perez-and-braun-neck-and-neck-in-race-for-southwest-wa-swing-district/
     pointer: counties/clark/raw/candidates/clark-congressional-district-3-u-s-representative/wss-2026-10-01-opb-poll.url
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/17289.jpg
+  page: https://leg.wa.gov/memberphoto/17289.jpg
+  kind: government
 ---
 
 ## Background

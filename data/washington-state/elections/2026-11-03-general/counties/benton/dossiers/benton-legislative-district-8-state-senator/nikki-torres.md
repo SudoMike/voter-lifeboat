@@ -154,6 +154,10 @@ sources:
     url: https://results.votewa.gov/results/public/api/elections/washington/20260804/data
     pointer: counties/benton/raw/candidates/benton-legislative-district-8-state-senator/votewa-results-20260804.url
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/34047.jpg
+  page: https://leg.wa.gov/legislators/all-representatives-and-senators/nikki-torres
+  kind: government
 ---
 
 ## Background

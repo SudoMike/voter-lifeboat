@@ -40,6 +40,10 @@ sources:
     outlet: Federal Way Mirror (2026-08-19)
     url: https://www.federalwaymirror.com/2026/08/19/final-primary-election-results-are-in-for-federal-way/
     accessed: 2026-10-08
+photo:
+  url: https://static.wixstatic.com/media/c2f3c2_0c66a22833dc4979ba9ca5cbad799486~mv2.jpg
+  page: https://www.tiffanybowyer.com/
+  kind: campaign-website
 ---
 
 ## Background

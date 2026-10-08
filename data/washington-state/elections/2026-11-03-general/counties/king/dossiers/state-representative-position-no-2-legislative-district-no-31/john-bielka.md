@@ -51,6 +51,10 @@ sources:
     outlet: Auburn Reporter (2026-08-04)
     url: https://www.auburn-reporter.com/2026/08/04/most-auburn-area-incumbents-easily-advance-from-primary-races/
     accessed: 2026-10-08
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/69f77077756c2b65a348b3c7/0b3e8eca-e999-4600-b515-8e2ee135fd9e/Head+Shot+JB.jpg
+  page: https://bielka31.com/
+  kind: campaign-website
 ---
 
 ## Background

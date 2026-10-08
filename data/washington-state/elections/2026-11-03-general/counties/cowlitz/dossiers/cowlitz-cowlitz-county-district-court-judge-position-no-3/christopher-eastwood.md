@@ -45,6 +45,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3391276
     pointer: counties/cowlitz/raw/candidates/cowlitz-cowlitz-county-district-court-judge-position-no-3/pdc-eastwood.url
     accessed: 2026-10-09
+photo:
+  url: https://eastwoodforjudge.com/wp-content/uploads/2026/04/Us-together-05491-768x890.jpg
+  page: https://eastwoodforjudge.com/
+  kind: campaign-website
 ---
 
 ## Background

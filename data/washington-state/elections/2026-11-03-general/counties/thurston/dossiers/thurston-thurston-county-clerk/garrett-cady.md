@@ -40,6 +40,10 @@ sources:
     url: https://www.thejoltnews.com/stories/thurston-county-canvassing-board-certifies-aug-4-primary-election-results,30975
     pointer: counties/thurston/raw/candidates/thurston-thurston-county-clerk/jolt-2026-08-19-certified.url
     accessed: 2026-10-08
+photo:
+  url: https://static.wixstatic.com/media/4ed398_0188d866e8384d229b6d2c3797a20396~mv2.jpg
+  page: https://www.garrettcadyforcountyclerk.com/
+  kind: campaign-website
 ---
 
 ## Background

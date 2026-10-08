@@ -54,6 +54,10 @@ sources:
     url: https://columbiabasinherald.com/news/2026/aug/14/raap-durfee-advance-to-general-election-in-grant-county-commissioner-race/
     pointer: counties/grant/raw/candidates/grant-grant-county-commissioner-district-3-commissioner-district-3/cbh-2026-08-14-raap-durfee-advance.url
     accessed: 2026-10-08
+photo:
+  url: https://www.electkellyraap.org/uploads/1/5/5/7/155773528/img-4306_orig.jpeg
+  page: https://www.electkellyraap.org/
+  kind: campaign-website
 ---
 
 ## Background

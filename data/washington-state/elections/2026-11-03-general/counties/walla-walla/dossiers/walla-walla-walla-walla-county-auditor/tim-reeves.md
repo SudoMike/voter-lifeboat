@@ -67,6 +67,10 @@ sources:
     url: https://results.votewa.gov/results/public/api/elections/walla-walla-county-wa/20260804/ballot-items
     pointer: counties/walla-walla/raw/candidates/walla-walla-walla-walla-county-auditor/votewa-2026-08-04-primary-results.json.url
     accessed: 2026-10-08
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/69d93153a9f98d4149b02c1a/d7d94a1b-1033-42b4-b2d6-0a127d54831b/Tim+Reeves+headshot.jpg
+  page: https://www.reevesforcountyauditor.com/
+  kind: campaign-website
 ---
 
 ## Background

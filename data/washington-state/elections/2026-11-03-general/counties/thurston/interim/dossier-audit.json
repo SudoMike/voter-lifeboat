@@ -1,0 +1,35 @@
+{
+  "script": "pipeline/verify_dossiers.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/thurston/interim/research-plan.json",
+    "data/washington-state/elections/2026-11-03-general/counties/thurston/dossiers/"
+  ],
+  "missing": [],
+  "no_frontmatter": [],
+  "invalid_evidence_levels": [],
+  "invalid_source_formats": [],
+  "evidence_levels": {
+    "rich": 8,
+    "moderate": 10,
+    "pamphlet-only": 2
+  },
+  "contest_overviews_missing": [],
+  "untouched_contests": [],
+  "untouched_measures": [],
+  "invalid_photos": [],
+  "photos": {
+    "present": 14,
+    "missing": 6
+  },
+  "researched_elsewhere": [
+    "thurston-congressional-district-3-u-s-representative -> clark/clark-congressional-district-3-u-s-representative",
+    "thurston-congressional-district-10-u-s-representative -> pierce/pierce-congressional-district-10-u-s-representative",
+    "thurston-legislative-district-2-state-representative-pos-1 -> pierce/pierce-legislative-district-2-state-representative-pos-1",
+    "thurston-legislative-district-2-state-representative-pos-2 -> pierce/pierce-legislative-district-2-state-representative-pos-2",
+    "thurston-legislative-district-20-state-representative-pos-1 -> clark/clark-legislative-district-20-state-representative-pos-1",
+    "thurston-legislative-district-20-state-representative-pos-2 -> clark/clark-legislative-district-20-state-representative-pos-2",
+    "thurston-legislative-district-35-state-senator -> kitsap/kitsap-legislative-district-35-state-senator",
+    "thurston-legislative-district-35-state-representative-pos-1 -> kitsap/kitsap-legislative-district-35-state-representative-pos-1",
+    "thurston-legislative-district-35-state-representative-pos-2 -> kitsap/kitsap-legislative-district-35-state-representative-pos-2"
+  ]
+}

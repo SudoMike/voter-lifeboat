@@ -53,6 +53,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3391271
     pointer: counties/thurston/raw/candidates/thurston-thurston-county-commissioner-district-no-5-county-commissioner/pdc-nicolas-martinez-dunning.url
     accessed: 2026-10-08
+photo:
+  url: https://www.electnicdunning.com/img/nic-640.7a74a58c.webp
+  page: https://www.electnicdunning.com/
+  kind: campaign-website
 ---
 
 ## Background

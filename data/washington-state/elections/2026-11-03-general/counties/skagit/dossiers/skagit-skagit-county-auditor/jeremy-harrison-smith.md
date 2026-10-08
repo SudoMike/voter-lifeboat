@@ -61,6 +61,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3391669
     pointer: counties/skagit/raw/candidates/skagit-skagit-county-auditor/pdc-harrison-smith.json.url
     accessed: 2026-10-08
+photo:
+  url: https://run.imgix.net/4a5fe5b8-afae-4e43-b9fe-e2f548e9abc0/e8e00684-f212-4826-ad1e-9bacba8853d7/e8e00684-f212-4826-ad1e-9bacba8853d7.jpg
+  page: https://www.jeremyharrisonsmith.com/
+  kind: campaign-website
 ---
 
 ## Background

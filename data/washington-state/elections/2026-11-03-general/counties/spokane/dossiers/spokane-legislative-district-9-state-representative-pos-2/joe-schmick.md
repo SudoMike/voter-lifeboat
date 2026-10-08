@@ -68,6 +68,10 @@ sources:
     url: https://wslwebservices.leg.wa.gov/LegislationService.asmx/GetRollCalls?biennium=2025-26&billNumber=1296
     pointer: counties/spokane/raw/candidates/spokane-legislative-district-9-state-representative-pos-2/leg-rollcalls-eshb-1296.url
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/13209.jpg
+  page: https://leg.wa.gov/legislators/all-representatives-and-senators/joe-schmick
+  kind: government
 ---
 
 ## Background

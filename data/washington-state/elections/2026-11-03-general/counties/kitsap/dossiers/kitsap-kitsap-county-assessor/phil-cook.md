@@ -47,6 +47,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3392245
     pointer: counties/kitsap/raw/candidates/kitsap-kitsap-county-assessor/pdc-cook.url
     accessed: 2026-10-08
+photo:
+  url: https://kitsap.gov/assessor/PublishingImages/philcook_flag_2023.jpg
+  page: https://kitsap.gov/assessor
+  kind: government
 ---
 
 ## Background

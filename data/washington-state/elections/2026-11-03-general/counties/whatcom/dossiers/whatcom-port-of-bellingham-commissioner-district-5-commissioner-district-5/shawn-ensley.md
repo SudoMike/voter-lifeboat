@@ -76,6 +76,10 @@ sources:
     url: https://www.cascadiadaily.com/2026/aug/04/primary-election-2026-updates-for-whatcom-skagit-counties/
     pointer: counties/whatcom/raw/candidates/whatcom-port-of-bellingham-commissioner-district-5-commissioner-district-5/cdn-2026-08-04-primary-updates.url
     accessed: 2026-10-08
+photo:
+  url: https://static.wixstatic.com/media/1cadf6_e5bd091ca80943bbb75ab1192f8eccae~mv2.jpg
+  page: https://www.ensleyforport.com/about-5
+  kind: campaign-website
 ---
 
 ## Background

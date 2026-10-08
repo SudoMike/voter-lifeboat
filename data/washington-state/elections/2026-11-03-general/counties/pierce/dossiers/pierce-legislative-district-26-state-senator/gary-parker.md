@@ -53,6 +53,10 @@ sources:
     url: https://washingtonstatestandard.com/2026/03/04/republican-will-try-to-unseat-krishnadasan-in-wa-state-senate/
     accessed: 2026-07-17
     carried_from: data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-26-state-senator/gary-parker.md S2
+photo:
+  url: https://garyparkerforwa.com/assets/parker-portrait.png
+  page: https://garyparkerforwa.com/
+  kind: campaign-website
 ---
 
 ## Background

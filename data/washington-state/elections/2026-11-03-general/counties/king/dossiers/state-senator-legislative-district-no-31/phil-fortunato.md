@@ -97,6 +97,10 @@ sources:
     outlet: Auburn Reporter (2026-08-04)
     url: https://www.auburn-reporter.com/2026/08/04/most-auburn-area-incumbents-easily-advance-from-primary-races/
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/3474.jpg
+  page: https://leg.wa.gov/memberphoto/3474.jpg
+  kind: government
 ---
 
 ## Background

@@ -61,6 +61,10 @@ sources:
     url: https://kennedyforclerk.com/press
     pointer: counties/kitsap/raw/candidates/kitsap-kitsap-county-clerk/kennedy-press.url
     accessed: 2026-10-08
+photo:
+  url: https://kennedyforclerk.com/images/campaign_portrait_1.jpeg
+  page: https://kennedyforclerk.com/
+  kind: campaign-website
 ---
 
 ## Background

@@ -52,6 +52,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?election_year=2026&legislative_district=29
     page: https://my.pdc.wa.gov/registration/public/-/#/public/registration/69497
     accessed: 2026-10-08
+photo:
+  url: https://img1.wsimg.com/isteam/ip/c0adfde1-8efd-42ad-9a3d-ea7f024fd1b4/headshot%201.jpg
+  page: https://davidsenator.com/
+  kind: campaign-website
 ---
 
 ## Background

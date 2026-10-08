@@ -96,6 +96,10 @@ sources:
     url: https://data.wa.gov/resource/kv7h-kjye.json?filer_id=BUTLE--424&election_year=2026&$order=amount%20DESC&$limit=40
     pointer: counties/island/raw/candidates/island-island-county-county-clerk/pdc-contrib-butler.url
     accessed: 2026-10-09
+photo:
+  url: https://img1.wsimg.com/isteam/ip/2b1a6f49-8d9f-4863-a76f-e38e2ecb2193/Dierdre%20Butler%20Portrait%202-da98d41.JPG
+  page: https://votedierdre.com/
+  kind: campaign-website
 ---
 
 ## Background

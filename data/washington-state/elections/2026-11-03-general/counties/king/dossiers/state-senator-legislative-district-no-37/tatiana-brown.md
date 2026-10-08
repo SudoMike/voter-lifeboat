@@ -60,6 +60,10 @@ sources:
     ref: PDC campaign finance summary (data.wa.gov dataset 3h9x-7bvm), candidacy 3391684, record updated 2026-10-05
     url: https://data.wa.gov/resource/3h9x-7bvm.json?candidacy_id=3391684&election_year=2026
     accessed: 2026-10-08
+photo:
+  url: https://static1.squarespace.com/static/69e5ddd5f6a6e74e6c544b90/t/69ec47d33af7d1473e773731/1777092563532/IMG_9124.JPG?format=1500w
+  page: https://www.tatianaforwa.org/
+  kind: campaign-website
 ---
 
 ## Background

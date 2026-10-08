@@ -69,6 +69,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3394425
     pointer: counties/chelan/raw/candidates/chelan-chelan-county-assessor/pdc-port.url
     accessed: 2026-10-08
+photo:
+  url: https://fairpropertytaxes.com/assets/britini-port-wide.jpg
+  page: https://fairpropertytaxes.com/
+  kind: campaign-website
 ---
 
 ## Background

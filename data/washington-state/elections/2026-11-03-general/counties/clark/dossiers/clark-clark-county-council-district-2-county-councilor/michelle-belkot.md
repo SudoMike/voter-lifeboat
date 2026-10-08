@@ -130,6 +130,10 @@ sources:
     url: https://www.columbian.com/news/2026/jan/07/clark-county-council-approves-hike-in-sales-tax-to-pay-for-affordable-housing-behavioral-health-services/
     pointer: counties/clark/raw/candidates/clark-clark-county-council-district-2-county-councilor/col-2026-01-07-sales-tax.url
     accessed: 2026-10-08
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/699eadf9998edd5a8b3d32c0/4d0a226c-7995-40e9-aafa-26c737a18b5a/Story_Clark-County-Today-Michelle-Belkot.jpg
+  page: https://www.electbelkot.com/
+  kind: campaign-website
 ---
 
 ## Background

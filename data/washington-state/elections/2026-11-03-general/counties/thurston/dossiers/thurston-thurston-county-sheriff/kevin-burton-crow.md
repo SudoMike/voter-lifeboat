@@ -67,6 +67,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3390945
     pointer: counties/thurston/raw/candidates/thurston-thurston-county-sheriff/pdc-kevin-burton-crow.url
     accessed: 2026-10-08
+photo:
+  url: https://assets.nationbuilder.com/votekevinforsheriff/pages/16/attachments/original/1768714342/KBC_Woods_Cropped.jpg?1768714342
+  page: https://www.burton-crowforsheriff.com/
+  kind: campaign-website
 ---
 
 ## Background

@@ -1,0 +1,131 @@
+{
+  "script": "pipeline/propose_candidate_photos.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/klickitat/interim/research-plan.json",
+    "data/washington-state/elections/2026-11-03-general/counties/klickitat/dossiers/"
+  ],
+  "election": "2026-11-03-general",
+  "package": "klickitat",
+  "review_copies": "data/.cache/photos/2026-11-03-general/klickitat/",
+  "summary": {
+    "proposed": 2,
+    "no-website": 4,
+    "fetch-failed": 0,
+    "no-image-found": 0,
+    "images_ok": 4
+  },
+  "proposals": [
+    {
+      "contest_slug": "klickitat-klickitat-county-commissioner-district-2-county-commissioner-2",
+      "candidate_slug": "lori-zoller",
+      "name": "Lori Zoller",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    },
+    {
+      "contest_slug": "klickitat-klickitat-county-commissioner-district-2-county-commissioner-2",
+      "candidate_slug": "andy-kallinen",
+      "name": "Andy Kallinen",
+      "website": "https://andykforklickitat.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://img1.wsimg.com/isteam/ip/e1175860-5f1b-45f5-be85-dcce6f42a726/Columbia%20River%20west%20of%20Lyle.jpg",
+          "page": "https://andykforklickitat.com/",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 79434,
+          "status": "ok",
+          "width": 2048,
+          "height": 849,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/klickitat/klickitat-klickitat-county-commissioner-district-2-county-commissioner-2/andy-kallinen-1.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "klickitat-klickitat-county-klickitat-county-sheriff",
+      "candidate_slug": "dwayne-t-matulovich",
+      "name": "Dwayne T. Matulovich",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    },
+    {
+      "contest_slug": "klickitat-klickitat-county-klickitat-county-sheriff",
+      "candidate_slug": "tony-warren",
+      "name": "Tony Warren",
+      "website": "https://www.tonywarrenforsheriff.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://static1.squarespace.com/static/6933307223a7ef50eb4e441b/t/69acba03004dbe79fcfb012f/1772927491134/largerfont.png?format=1500w",
+          "page": "https://www.tonywarrenforsheriff.com/",
+          "kind": "campaign-website",
+          "why": "twitter:image",
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 63054,
+          "status": "ok",
+          "width": 1309,
+          "height": 791,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/klickitat/klickitat-klickitat-county-klickitat-county-sheriff/tony-warren-1.jpg"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/6933307223a7ef50eb4e441b/10117664-73a5-4217-ba58-dd0536e862c3/20251202_135351.jpg",
+          "page": "https://www.tonywarrenforsheriff.com/",
+          "kind": "campaign-website",
+          "why": "img 3024x4032",
+          "width": 2500,
+          "height": 3333,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 855201,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/klickitat/klickitat-klickitat-county-klickitat-county-sheriff/tony-warren-2.jpg"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/6933307223a7ef50eb4e441b/ba5b3517-70b5-42a0-9d4a-32b6596a0a6d/20251202_134429.jpg",
+          "page": "https://www.tonywarrenforsheriff.com/",
+          "kind": "campaign-website",
+          "why": "img 3024x4032",
+          "width": 2500,
+          "height": 3333,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 1478752,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/klickitat/klickitat-klickitat-county-klickitat-county-sheriff/tony-warren-3.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "klickitat-public-utility-district-commissioner-district-3-public-utility-district-1-commissioner-pos-3",
+      "candidate_slug": "logan-b-siebert",
+      "name": "Logan B. Siebert",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    },
+    {
+      "contest_slug": "klickitat-public-utility-district-commissioner-district-3-public-utility-district-1-commissioner-pos-3",
+      "candidate_slug": "dan-g-gunkel",
+      "name": "Dan G. Gunkel",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    }
+  ]
+}

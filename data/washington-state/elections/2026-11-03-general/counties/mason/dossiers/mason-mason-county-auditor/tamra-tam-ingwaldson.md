@@ -82,6 +82,10 @@ sources:
     url: https://www.masoncounty.com/story/2026/05/14/news/candidates-file-for-august-primary/7108.html
     pointer: counties/mason/raw/candidates/mason-mason-county-auditor/smcj-2026-05-14-candidates-file.html.url
     accessed: 2026-10-09
+photo:
+  url: https://static.wixstatic.com/media/16d2d5_52dea55d301c4f96a7759db7a8802aa9~mv2.jpg/v1/fill/w_301,h_240,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/_DSA3449-Edit-8IN.jpg
+  page: https://www.tamraforauditor.com/
+  kind: campaign-website
 ---
 
 ## Background

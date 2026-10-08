@@ -47,6 +47,10 @@ sources:
     url: https://termlimits.com/yuri-marinchik-pledges-to-support-congressional-term-limits/
     accessed: 2026-07-16
     carried_from: data/washington-state/elections/2026-08-04-primary/counties/king/dossiers/state-representative-position-no-2-legislative-district-no-33/yuri-marinchik.md S4
+photo:
+  url: https://assets.zyrosite.com/YA9QDRhA028et3bE/photo_2026-04-26_21-44-35-CAviCvfNozQa6aRo.jpg
+  page: https://yuriwa.com/
+  kind: campaign-website
 ---
 
 ## Background

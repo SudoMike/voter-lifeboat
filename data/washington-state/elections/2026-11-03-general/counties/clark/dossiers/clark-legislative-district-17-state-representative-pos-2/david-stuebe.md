@@ -160,6 +160,10 @@ sources:
     url: https://results.vote.wa.gov/results/20221108/legislative-all.html
     pointer: counties/clark/raw/candidates/clark-legislative-district-17-state-representative-pos-2/sos-results-20221108-legislative.url
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/35431.jpg
+  page: https://leg.wa.gov/memberphoto/35431.jpg
+  kind: government
 ---
 
 ## Background

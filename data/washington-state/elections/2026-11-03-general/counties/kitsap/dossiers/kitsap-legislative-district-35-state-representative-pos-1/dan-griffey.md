@@ -131,6 +131,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3340126
     pointer: counties/kitsap/raw/candidates/kitsap-legislative-district-35-state-representative-pos-1/pdc-griffey.url
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/MemberPhoto/20752.jpg
+  page: https://leg.wa.gov/MemberPhoto/20752.jpg
+  kind: government
 ---
 
 ## Background

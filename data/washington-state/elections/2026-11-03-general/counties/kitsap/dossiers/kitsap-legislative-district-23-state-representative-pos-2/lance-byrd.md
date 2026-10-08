@@ -68,6 +68,10 @@ sources:
     url: https://washingtonstatestandard.com/2026/05/12/more-legislative-races-to-watch-this-year-in-wa/
     pointer: counties/kitsap/raw/candidates/kitsap-legislative-district-23-state-representative-pos-1/wss-2026-05-12-races-to-watch.url
     accessed: 2026-10-08
+photo:
+  url: https://lancebyrd.com/lance-byrd-hero.jpg
+  page: https://lancebyrd.com/
+  kind: campaign-website
 ---
 
 ## Background

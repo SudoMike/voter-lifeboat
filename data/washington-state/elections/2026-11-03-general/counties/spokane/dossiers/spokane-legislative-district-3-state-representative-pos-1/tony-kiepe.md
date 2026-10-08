@@ -69,6 +69,10 @@ sources:
     url: https://www.spokesman.com/stories/2026/aug/16/republican-on-top-in-spokanes-3rd-district-primary/
     pointer: counties/spokane/raw/candidates/spokane-legislative-district-3-state-representative-pos-1/spokesman-2026-08-16-spin-control.url
     accessed: 2026-10-08
+photo:
+  url: https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,h=1024,fit=crop/6YBlYPXDasBRmltF/tony-40-AoXLHJzystTQx9cn.jpg
+  page: https://www.kiepeforwa.com/
+  kind: campaign-website
 ---
 
 ## Background

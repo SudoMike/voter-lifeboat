@@ -67,6 +67,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3391655
     pointer: counties/clark/raw/candidates/clark-clark-county-council-district-1-county-councilor/pdc-shull.url
     accessed: 2026-10-08
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/69d00e99069c2b17077372e3/62a1870f-9e8f-4163-aab6-fe256099fd84/QUACKENBUSH_1086+copy.png
+  page: https://www.electbryanshull.com/
+  kind: campaign-website
 ---
 
 ## Background

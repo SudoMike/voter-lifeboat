@@ -114,6 +114,10 @@ sources:
     outlet: 34th District Democrats, 2026 endorsements
     url: https://34dems.org/2026-endorsements/
     accessed: 2026-10-08
+photo:
+  url: https://cdn.kingcounty.gov/-/media/king-county/courts/district-court/judge_photos/judge-masaniai.jpg
+  page: https://kingcounty.gov/en/court/district-court/courts-jails-legal-system/court-calendars-locations-operations/judges/bios/judge-masaniai
+  kind: government
 ---
 
 ## Background

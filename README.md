@@ -78,6 +78,9 @@ python3 pipeline/validate_scoring.py         # sanity-check the merged data
 python3 -m unittest discover -s pipeline -p "test_*.py"
 ```
 
+The pipeline is stdlib Python except `extract_pamphlet_text.py` (pypdf) and
+`propose_candidate_photos.py` (Pillow): `pip install -r pipeline/requirements.txt`.
+
 King and the six original counties (clark, kitsap, pierce, snohomish, spokane,
 thurston) have their own `build_<county>_lite_data.py` builders. Other pipeline
 stages are documented in `data/washington-state/README.md`.

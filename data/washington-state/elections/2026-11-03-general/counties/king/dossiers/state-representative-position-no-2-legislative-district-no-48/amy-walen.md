@@ -66,6 +66,10 @@ sources:
     ref: PDC campaign finance summary (data.wa.gov dataset 3h9x-7bvm), candidacy 3382165, record updated 2026-10-07
     url: https://data.wa.gov/resource/3h9x-7bvm.json?candidacy_id=3382165&election_year=2026
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/29109.jpg
+  page: https://leg.wa.gov/memberphoto/29109.jpg
+  kind: government
 ---
 
 ## Background

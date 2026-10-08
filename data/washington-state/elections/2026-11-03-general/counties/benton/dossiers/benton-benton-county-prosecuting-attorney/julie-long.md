@@ -69,6 +69,10 @@ sources:
     url: https://results.votewa.gov/results/public/api/elections/benton-county-wa/20260804/ballot-items
     pointer: counties/benton/raw/candidates/benton-benton-county-prosecuting-attorney/votewa-2026-08-04-primary-results.url
     accessed: 2026-10-08
+photo:
+  url: https://longforprosecutor.com/wp-content/uploads/2026/05/Julie6-1.png
+  page: https://longforprosecutor.com/
+  kind: campaign-website
 ---
 
 ## Background

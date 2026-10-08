@@ -69,6 +69,10 @@ sources:
     url: https://results.votewa.gov/results/public/api/elections/benton-county-wa/20260804/ballot-items
     pointer: counties/benton/raw/candidates/benton-benton-county-prosecuting-attorney/votewa-2026-08-04-primary-results.url
     accessed: 2026-10-08
+photo:
+  url: https://static.wixstatic.com/media/6674e0_025b7e746ed5473a92167b1783d6280b~mv2.jpg/v1/crop/x_0,y_107,w_4480,h_4750/fill/w_800,h_848,al_c,q_85,enc_auto/6674e0_025b7e746ed5473a92167b1783d6280b~mv2.jpg
+  page: https://www.ericforprosecutor.com/
+  kind: campaign-website
 ---
 
 ## Background

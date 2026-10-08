@@ -75,6 +75,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3392636
     pointer: counties/grays-harbor/raw/candidates/grays-harbor-grays-harbor-county-treasurer/pdc-hill.json.url
     accessed: 2026-10-08
+photo:
+  url: https://media-001-us.cdn.govstack.com/graysharbor-003-us/media/kd1pr10k/shawn-hill-treasurer.jpg
+  page: https://www.graysharbor.gov/government/treasurer/
+  kind: government
 ---
 
 ## Background

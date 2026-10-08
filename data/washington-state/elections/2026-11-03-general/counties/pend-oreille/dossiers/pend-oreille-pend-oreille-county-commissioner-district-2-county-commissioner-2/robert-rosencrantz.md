@@ -86,6 +86,10 @@ sources:
     url: 'https://data.wa.gov/resource/3h9x-7bvm.json?election_year=2026&jurisdiction_county=PEND%20OREILLE&$limit=200'
     pointer: counties/pend-oreille/raw/pend-oreille/pdc-pend-oreille-2026.json.url
     accessed: 2026-10-08
+photo:
+  url: https://static.wixstatic.com/media/850478_e525cd20c9ff4b218711d160ff3fc3a3~mv2.jpg/v1/fill/w_240,h_336,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Robert%20Rosencrantz.jpg
+  page: https://www.robertrosencrantz.com/
+  kind: campaign-website
 ---
 
 ## Background

@@ -55,6 +55,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3391400
     pointer: counties/yakima/raw/candidates/yakima-yakima-county-prosecuting-attorney/pdc-quinn-dalan.url
     accessed: 2026-10-09
+photo:
+  url: https://vote4quinn.com/wp-content/uploads/2026/02/TransparentBG-2-683x1024.png
+  page: https://vote4quinn.com/
+  kind: campaign-website
 ---
 
 ## Background

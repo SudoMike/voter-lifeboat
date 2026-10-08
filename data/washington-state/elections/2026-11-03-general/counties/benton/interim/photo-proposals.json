@@ -1,0 +1,526 @@
+{
+  "script": "pipeline/propose_candidate_photos.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/benton/interim/research-plan.json",
+    "data/washington-state/elections/2026-11-03-general/counties/benton/dossiers/"
+  ],
+  "election": "2026-11-03-general",
+  "package": "benton",
+  "review_copies": "data/.cache/photos/2026-11-03-general/benton/",
+  "summary": {
+    "proposed": 9,
+    "no-website": 4,
+    "fetch-failed": 0,
+    "no-image-found": 5,
+    "images_ok": 24
+  },
+  "proposals": [
+    {
+      "contest_slug": "benton-congressional-district-4-u-s-representative",
+      "candidate_slug": "amanda-mckinney",
+      "name": "Amanda McKinney",
+      "website": "https://mckinneyforwashington.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://static1.squarespace.com/static/69414dc907486468d86ae59d/t/6946cf7b8e035c2d44db2fe0/1766248315599/Screenshot+2025-12-20+at+11.31.32%E2%80%AFAM.png?format=1500w",
+          "page": "https://www.mckinneyforwashington.com/",
+          "kind": "campaign-website",
+          "why": "twitter:image",
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 383780,
+          "status": "ok",
+          "width": 1500,
+          "height": 781,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/benton/benton-congressional-district-4-u-s-representative/amanda-mckinney-1.jpg"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/69414dc907486468d86ae59d/d60c3278-f7ce-430d-b8a9-722e7f0d813b/Amanda+McKinney+Headshot+2.JPG",
+          "page": "https://www.mckinneyforwashington.com/",
+          "kind": "campaign-website",
+          "why": "img 1622x2048",
+          "width": 1622,
+          "height": 2048,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 534597,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/benton/benton-congressional-district-4-u-s-representative/amanda-mckinney-2.jpg"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/69414dc907486468d86ae59d/c196473d-891d-44d7-9fff-dc1f691d3b58/20250614JL1270.JPG",
+          "page": "https://www.mckinneyforwashington.com/",
+          "kind": "campaign-website",
+          "why": "img 2130x1536",
+          "width": 2130,
+          "height": 1536,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 521055,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/benton/benton-congressional-district-4-u-s-representative/amanda-mckinney-3.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-congressional-district-4-u-s-representative",
+      "candidate_slug": "john-duresky",
+      "name": "John Duresky",
+      "website": "https://www.johnduresky4congress.com/issues",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "benton-legislative-district-8-state-senator",
+      "candidate_slug": "nikki-torres",
+      "name": "Nikki Torres",
+      "website": "https://www.nikkitorresforwa.com/about",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/62a87a8f0702642ade528cac/da3fb3ab-8a9b-47ac-8ac6-e8eb0a225f08/275130573_262821556017690_6800329019048577095_n.jpg",
+          "page": "https://www.nikkitorresforwa.com/about",
+          "kind": "campaign-website",
+          "why": "img 958x952",
+          "width": 958,
+          "height": 952,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 83791,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/benton/benton-legislative-district-8-state-senator/nikki-torres-1.jpg"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/62a87a8f0702642ade528cac/94c73306-2d02-4a86-9590-2f21bcf185d9/IMG_5445.jpeg",
+          "page": "https://www.nikkitorresforwa.com/about",
+          "kind": "campaign-website",
+          "why": "img 480x640",
+          "width": 480,
+          "height": 640,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 156162,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/benton/benton-legislative-district-8-state-senator/nikki-torres-2.jpg"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/62a87a8f0702642ade528cac/da928d86-60c3-4891-9fa9-42008792c2c1/IMG_5462.jpeg",
+          "page": "https://www.nikkitorresforwa.com/about",
+          "kind": "campaign-website",
+          "why": "img 480x640",
+          "width": 480,
+          "height": 640,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 105251,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/benton/benton-legislative-district-8-state-senator/nikki-torres-3.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-legislative-district-8-state-senator",
+      "candidate_slug": "gabe-galbraith",
+      "name": "Gabe Galbraith",
+      "website": "https://gabeforwa.com/",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "benton-legislative-district-16-state-representative-pos-1",
+      "candidate_slug": "mark-klicker",
+      "name": "Mark Klicker",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    },
+    {
+      "contest_slug": "benton-legislative-district-16-state-representative-pos-1",
+      "candidate_slug": "kyle-palmer",
+      "name": "Kyle Palmer",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    },
+    {
+      "contest_slug": "benton-legislative-district-16-state-representative-pos-2",
+      "candidate_slug": "skyler-rude",
+      "name": "Skyler Rude",
+      "website": "https://www.electskylerrude.com/protecting-business",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "benton-legislative-district-16-state-representative-pos-2",
+      "candidate_slug": "derek-sarley",
+      "name": "Derek Sarley",
+      "website": "https://sarleyforwashington.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://sarleyforwashington.com/wp-content/uploads/2026/06/unnamed-scaled.jpg",
+          "page": "https://sarleyforwashington.com/",
+          "kind": "campaign-website",
+          "why": "img 1920x2560",
+          "width": 1920,
+          "height": 2560,
+          "http_status": 200,
+          "content_type": "image/webp",
+          "bytes": 4274152,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/benton/benton-legislative-district-16-state-representative-pos-2/derek-sarley-1.jpg"
+        },
+        {
+          "url": "https://sarleyforwashington.com/wp-content/uploads/2026/06/nils-huenerfuerst-N_CFelOVgOw-unsplash-1.jpg",
+          "page": "https://sarleyforwashington.com/",
+          "kind": "campaign-website",
+          "why": "img 640x480",
+          "width": 640,
+          "height": 480,
+          "http_status": 200,
+          "content_type": "image/webp",
+          "bytes": 378438,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/benton/benton-legislative-district-16-state-representative-pos-2/derek-sarley-2.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-benton-county-prosecuting-attorney",
+      "candidate_slug": "eric-eisinger",
+      "name": "Eric Eisinger",
+      "website": "https://www.ericforprosecutor.com/",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "benton-benton-county-prosecuting-attorney",
+      "candidate_slug": "julie-long",
+      "name": "Julie Long",
+      "website": "https://longforprosecutor.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://longforprosecutor.com/wp-content/uploads/2026/05/Julie6-1.png",
+          "page": "https://longforprosecutor.com/",
+          "kind": "campaign-website",
+          "why": "img 600x868",
+          "width": 600,
+          "height": 868,
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 176824,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/benton/benton-benton-county-prosecuting-attorney/julie-long-1.jpg"
+        },
+        {
+          "url": "https://longforprosecutor.com/wp-content/uploads/2026/05/Julie-Yard-Sign-1.jpg",
+          "page": "https://longforprosecutor.com/",
+          "kind": "campaign-website",
+          "why": "img 600x449",
+          "width": 600,
+          "height": 449,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 67092,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/benton/benton-benton-county-prosecuting-attorney/julie-long-2.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-benton-county-sheriff",
+      "candidate_slug": "michael-mike-clark",
+      "name": "Michael (Mike) Clark",
+      "website": "https://mikeclark4sheriff.com/about/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://mikeclark4sheriff.com/UserFiles/image/IMG_1346.webp",
+          "page": "https://mikeclark4sheriff.com/about/",
+          "kind": "campaign-website",
+          "why": "img 500x605",
+          "width": 1172,
+          "height": 1417,
+          "http_status": 200,
+          "content_type": "image/webp",
+          "bytes": 76684,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/benton/benton-benton-county-sheriff/michael-mike-clark-1.jpg"
+        },
+        {
+          "url": "https://mikeclark4sheriff.com/UserFiles/image/IMG_1665.webp",
+          "page": "https://mikeclark4sheriff.com/about/",
+          "kind": "campaign-website",
+          "why": "img 500x549",
+          "width": 2000,
+          "height": 2197,
+          "http_status": 200,
+          "content_type": "image/webp",
+          "bytes": 185898,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/benton/benton-benton-county-sheriff/michael-mike-clark-2.jpg"
+        },
+        {
+          "url": "https://mikeclark4sheriff.com/UserFiles/image/IMG_8291.webp",
+          "page": "https://mikeclark4sheriff.com/about/",
+          "kind": "campaign-website",
+          "why": "img 500x375",
+          "width": 2000,
+          "height": 1500,
+          "http_status": 200,
+          "content_type": "image/webp",
+          "bytes": 519302,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/benton/benton-benton-county-sheriff/michael-mike-clark-3.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-benton-county-sheriff",
+      "candidate_slug": "brad-klippert",
+      "name": "Brad Klippert",
+      "website": "https://bradklippert4sheriff.com/",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "benton-benton-county-district-court-judge-1",
+      "candidate_slug": "talesha-sams",
+      "name": "Talesha Sams",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    },
+    {
+      "contest_slug": "benton-benton-county-district-court-judge-1",
+      "candidate_slug": "michael-mike-rio",
+      "name": "Michael \"Mike\" Rio",
+      "website": "https://rioforjudge.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://rioforjudge.com/wp-content/uploads/2026/10/FOP-Lodge7-1-790x1024.png",
+          "page": "https://rioforjudge.com/",
+          "kind": "campaign-website",
+          "why": "img 790x1024",
+          "width": 790,
+          "height": 1024,
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 76550,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/benton/benton-benton-county-district-court-judge-1/michael-mike-rio-1.jpg"
+        },
+        {
+          "url": "https://rioforjudge.com/wp-content/uploads/2026/10/Michael-Rio-Endorsement-1-scaled-1-813x1024.jpg",
+          "page": "https://rioforjudge.com/",
+          "kind": "campaign-website",
+          "why": "img 800x1008",
+          "width": 813,
+          "height": 1024,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 111739,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/benton/benton-benton-county-district-court-judge-1/michael-mike-rio-2.jpg"
+        },
+        {
+          "url": "https://rioforjudge.com/wp-content/uploads/2026/05/Michael-Rio-Yard_Logo.jpg",
+          "page": "https://rioforjudge.com/",
+          "kind": "campaign-website",
+          "why": "img 800x600",
+          "width": 800,
+          "height": 600,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 90600,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/benton/benton-benton-county-district-court-judge-1/michael-mike-rio-3.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-public-utility-district-commissioner-district-2-commissioner-pos-2",
+      "candidate_slug": "roy-c-dewey-holliday",
+      "name": "Roy C. \"Dewey\"  Holliday",
+      "website": "https://www.hollidayforpud.com",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://static1.squarespace.com/static/6a0bce036fb77f5131c46f6f/t/6a9b3651ca9ca46790d1899b/1788556881787/logo_B_navy_white_red.png?format=1500w",
+          "page": "https://www.hollidayforpud.com/",
+          "kind": "campaign-website",
+          "why": "twitter:image",
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 49446,
+          "status": "ok",
+          "width": 2500,
+          "height": 354,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/benton/benton-public-utility-district-commissioner-district-2-commissioner-pos-2/roy-c-dewey-holliday-1.jpg"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/6a0bce036fb77f5131c46f6f/73025115-aa40-471a-84f2-900d50108b00/IMG_0643.jpeg",
+          "page": "https://www.hollidayforpud.com/",
+          "kind": "campaign-website",
+          "why": "img 2257x3075",
+          "width": 2257,
+          "height": 3075,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 851016,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/benton/benton-public-utility-district-commissioner-district-2-commissioner-pos-2/roy-c-dewey-holliday-2.jpg"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/6a0bce036fb77f5131c46f6f/a859993f-cd84-4978-be2d-a754d168d42d/Dewey+Holliday+%284%29.png",
+          "page": "https://www.hollidayforpud.com/",
+          "kind": "campaign-website",
+          "why": "img 1317x2000",
+          "width": 1317,
+          "height": 2000,
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 4901112,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/benton/benton-public-utility-district-commissioner-district-2-commissioner-pos-2/roy-c-dewey-holliday-3.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-public-utility-district-commissioner-district-2-commissioner-pos-2",
+      "candidate_slug": "micah-valentine",
+      "name": "Micah Valentine",
+      "website": "https://micahvalentine.us/benton-pud/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://micahvalentine.us/wp-content/uploads/2026/08/Micah-Valentine.png",
+          "page": "https://micahvalentine.us/benton-pud/",
+          "kind": "campaign-website",
+          "why": "img 1066x1600",
+          "width": 1066,
+          "height": 1600,
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 450145,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/benton/benton-public-utility-district-commissioner-district-2-commissioner-pos-2/micah-valentine-1.jpg"
+        },
+        {
+          "url": "https://micahvalentine.us/wp-content/uploads/2020/12/MicahValentineLogo_BlueRed-300x300.png",
+          "page": "https://micahvalentine.us/benton-pud/",
+          "kind": "campaign-website",
+          "why": "img 300x300",
+          "width": 300,
+          "height": 300,
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 5706,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/benton/benton-public-utility-district-commissioner-district-2-commissioner-pos-2/micah-valentine-2.jpg"
+        },
+        {
+          "url": "https://micahvalentine.us/wp-content/uploads/2021/02/Map-of-Kennewick-WA-W-Valentine-min-300x275.jpg",
+          "page": "https://micahvalentine.us/benton-pud/",
+          "kind": "campaign-website",
+          "why": "img 300x275",
+          "width": 300,
+          "height": 275,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 14339,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/benton/benton-public-utility-district-commissioner-district-2-commissioner-pos-2/micah-valentine-3.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-city-of-richland-council-pos-4",
+      "candidate_slug": "kyle-saltz",
+      "name": "Kyle Saltz",
+      "website": "https://kylesaltz.com/issues/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://kylesaltz.com/wp-content/uploads/2025/06/Kylepolice.jpg",
+          "page": "https://kylesaltz.com/issues/",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "width": 1170,
+          "height": 1432,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 235811,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/benton/benton-city-of-richland-council-pos-4/kyle-saltz-1.jpg"
+        },
+        {
+          "url": "https://kylesaltz.com/wp-content/uploads/2025/06/Kylepolice-837x1024.jpg",
+          "page": "https://kylesaltz.com/issues/",
+          "kind": "campaign-website",
+          "why": "img 800x979",
+          "width": 837,
+          "height": 1024,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 125463,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/benton/benton-city-of-richland-council-pos-4/kyle-saltz-2.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "benton-city-of-richland-council-pos-4",
+      "candidate_slug": "mary-s-lipton",
+      "name": "Mary S. Lipton",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    }
+  ]
+}

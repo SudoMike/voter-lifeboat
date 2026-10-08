@@ -51,6 +51,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?$where=jurisdiction_county='OKANOGAN'%20AND%20election_year='2026'&$limit=200
     pointer: counties/okanogan/raw/candidates/okanogan-okanogan-county-coroner/pdc-okanogan-2026-county-races.json.url
     accessed: 2026-10-08
+photo:
+  url: https://static.wixstatic.com/media/86ea88_5dd6a01fd9244228ba17ddea70e7bee2~mv2.jpg/v1/fill/w_626,h_626,al_c,q_85,enc_auto/Cindy%20Jensen.jpg
+  page: https://www.cindyjensenforcoroner.org/
+  kind: campaign-website
 ---
 
 ## Background

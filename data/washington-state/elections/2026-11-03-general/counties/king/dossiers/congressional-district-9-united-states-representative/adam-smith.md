@@ -147,6 +147,10 @@ sources:
     outlet: NO HATE in WA State, endorsement page ("Elected Officials and Candidates Opposing I-001 & I-638")
     url: https://nohateinwastate.org/endorse
     accessed: 2026-10-08
+photo:
+  url: https://adamsmith.house.gov/sites/evo-subsites/adamsmith.house.gov/files/evo-media-image/319px-adam_smith_official_photo.jpg
+  page: https://adamsmith.house.gov/
+  kind: government
 ---
 
 ## Background

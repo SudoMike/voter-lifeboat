@@ -59,6 +59,10 @@ sources:
     url: https://www.chrisforpud.com/priorities
     pointer: counties/thurston/raw/candidates/thurston-thurston-county-public-utility-district-commissioner-district-no-3-public-utility-district-commissioner/chrisforpud-priorities.url
     accessed: 2026-10-08
+photo:
+  url: https://assets.nationbuilder.com/chrisforpud/pages/9/attachments/original/1779662403/BZ9A6504-99.jpg?1779662403
+  page: https://www.chrisforpud.com/
+  kind: campaign-website
 ---
 
 ## Background

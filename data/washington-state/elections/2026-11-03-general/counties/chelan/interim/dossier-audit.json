@@ -1,0 +1,29 @@
+{
+  "script": "pipeline/verify_dossiers.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/chelan/interim/research-plan.json",
+    "data/washington-state/elections/2026-11-03-general/counties/chelan/dossiers/"
+  ],
+  "missing": [],
+  "no_frontmatter": [],
+  "invalid_evidence_levels": [],
+  "invalid_source_formats": [],
+  "evidence_levels": {
+    "moderate": 9,
+    "rich": 5
+  },
+  "contest_overviews_missing": [],
+  "untouched_contests": [],
+  "untouched_measures": [],
+  "invalid_photos": [],
+  "photos": {
+    "present": 7,
+    "missing": 7
+  },
+  "researched_elsewhere": [
+    "chelan-congressional-district-8-u-s-representative -> king/congressional-district-8-united-states-representative",
+    "chelan-legislative-district-7-state-senator -> spokane/spokane-legislative-district-7-state-senator",
+    "chelan-legislative-district-12-state-representative-pos-1 -> king/state-representative-position-no-1-legislative-district-no-12",
+    "chelan-legislative-district-12-state-representative-pos-2 -> king/state-representative-position-no-2-legislative-district-no-12"
+  ]
+}

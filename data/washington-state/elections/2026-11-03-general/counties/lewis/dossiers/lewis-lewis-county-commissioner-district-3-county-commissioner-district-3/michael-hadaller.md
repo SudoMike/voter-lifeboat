@@ -75,6 +75,10 @@ sources:
     url: https://www.lcpud.org/about-us/meet-the-commissioners/
     pointer: counties/lewis/raw/candidates/lewis-lewis-county-commissioner-district-3-county-commissioner-district-3/lcpud-meet-the-commissioners.html.url
     accessed: 2026-10-09
+photo:
+  url: https://www.lcpud.org/wp-content/uploads/mike.jpg
+  page: https://www.lcpud.org/about-us/meet-the-commissioners/
+  kind: government
 ---
 
 ## Background

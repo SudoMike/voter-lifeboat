@@ -67,6 +67,10 @@ sources:
     url: "https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3393507"
     pointer: counties/thurston/raw/candidates/thurston-legislative-district-22-state-representative-pos-2/pdc-jamie-keenan-devargas.url
     accessed: 2026-10-08
+photo:
+  url: https://images.solidarity.tech/fit-in/1200x0/filters:no_upscale()/ic8hp7iz0zvqyeudh438eqomyvsq
+  page: https://www.jamiekeenandevargas.com/
+  kind: campaign-website
 ---
 
 ## Background

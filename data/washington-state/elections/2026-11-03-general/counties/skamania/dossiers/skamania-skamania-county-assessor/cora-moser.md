@@ -67,6 +67,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?election_year=2026&jurisdiction_county=SKAMANIA&$limit=200
     pointer: counties/skamania/raw/pdc/skamania-2026.json.url
     accessed: 2026-10-08
+photo:
+  url: https://img1.wsimg.com/isteam/ip/f21cd034-414a-4e9a-8d36-a531f42b5ca6/DA5B9A07-D1DB-40EE-9CED-628BBBB3FCB8.png
+  page: https://votemoser.com/
+  kind: campaign-website
 ---
 
 ## Background

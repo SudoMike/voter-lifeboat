@@ -56,6 +56,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3382146
     pointer: counties/yakima/raw/candidates/yakima-yakima-county-sheriff/pdc-jake-church.url
     accessed: 2026-10-09
+photo:
+  url: https://votechurch.com/wp-content/uploads/2025/10/DSC_5072.jpg
+  page: https://votechurch.com/
+  kind: campaign-website
 ---
 
 ## Background

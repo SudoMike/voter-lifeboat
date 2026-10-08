@@ -1,0 +1,135 @@
+{
+  "script": "pipeline/propose_candidate_photos.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/stevens/interim/research-plan.json",
+    "data/washington-state/elections/2026-11-03-general/counties/stevens/dossiers/"
+  ],
+  "election": "2026-11-03-general",
+  "package": "stevens",
+  "review_copies": "data/.cache/photos/2026-11-03-general/stevens/",
+  "summary": {
+    "proposed": 2,
+    "no-website": 5,
+    "fetch-failed": 0,
+    "no-image-found": 1,
+    "images_ok": 3
+  },
+  "proposals": [
+    {
+      "contest_slug": "stevens-stevens-county-auditor",
+      "candidate_slug": "lori-larsen",
+      "name": "Lori Larsen",
+      "website": "https://www.electlorilarsen.com/",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "stevens-stevens-county-auditor",
+      "candidate_slug": "eric-simpson",
+      "name": "Eric Simpson",
+      "website": "https://www.ericforauditor.org/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://ericforauditor.org/wp-content/uploads/2026/05/Facebook_Logo_Primary.png",
+          "page": "https://www.ericforauditor.org/",
+          "kind": "campaign-website",
+          "why": "img 2084x2084",
+          "width": 2084,
+          "height": 2084,
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 54771,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/stevens/stevens-stevens-county-auditor/eric-simpson-1.jpg"
+        },
+        {
+          "url": "https://ericforauditor.org/wp-content/uploads/2026/05/eric-logo-sign-2.png",
+          "page": "https://www.ericforauditor.org/",
+          "kind": "campaign-website",
+          "why": "img 1621x1218",
+          "width": 1621,
+          "height": 1218,
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 317564,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/stevens/stevens-stevens-county-auditor/eric-simpson-2.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "stevens-stevens-county-commissioner-district-2-commissioner-2",
+      "candidate_slug": "mark-burrows",
+      "name": "Mark Burrows",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    },
+    {
+      "contest_slug": "stevens-stevens-county-commissioner-district-2-commissioner-2",
+      "candidate_slug": "jack-griffin-jr",
+      "name": "Jack Griffin Jr",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    },
+    {
+      "contest_slug": "stevens-stevens-county-coroner",
+      "candidate_slug": "johnathan-waldrop",
+      "name": "Johnathan Waldrop",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    },
+    {
+      "contest_slug": "stevens-stevens-county-coroner",
+      "candidate_slug": "roseanne-ennis-jezerinac",
+      "name": "Roseanne Ennis Jezerinac",
+      "website": "https://roseanneforcoroner.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://static.wixstatic.com/media/a0f65d_90ab485aa69d43a18d419daad67b6c2d%7Emv2.jpg/v1/fit/w_2500,h_1330,al_c/a0f65d_90ab485aa69d43a18d419daad67b6c2d%7Emv2.jpg",
+          "page": "https://www.roseanneforcoroner.com/",
+          "kind": "campaign-website",
+          "why": "twitter:image",
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 398384,
+          "status": "ok",
+          "width": 1080,
+          "height": 1330,
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/stevens/stevens-stevens-county-coroner/roseanne-ennis-jezerinac-1.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "stevens-stevens-county-district-court-district-court-judge",
+      "candidate_slug": "c-olivia-irwin",
+      "name": "C. Olivia Irwin",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    },
+    {
+      "contest_slug": "stevens-stevens-county-district-court-district-court-judge",
+      "candidate_slug": "gina-a-tveit",
+      "name": "Gina A. Tveit",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    }
+  ]
+}

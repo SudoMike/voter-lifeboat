@@ -1,0 +1,239 @@
+{
+  "script": "pipeline/propose_candidate_photos.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/lewis/interim/research-plan.json",
+    "data/washington-state/elections/2026-11-03-general/counties/lewis/dossiers/"
+  ],
+  "election": "2026-11-03-general",
+  "package": "lewis",
+  "review_copies": "data/.cache/photos/2026-11-03-general/lewis/",
+  "summary": {
+    "proposed": 4,
+    "no-website": 4,
+    "fetch-failed": 0,
+    "no-image-found": 2,
+    "images_ok": 9
+  },
+  "proposals": [
+    {
+      "contest_slug": "lewis-lewis-county-auditor",
+      "candidate_slug": "mitchell-l-merrill",
+      "name": "Mitchell L. Merrill",
+      "website": "https://merrill4auditor.com/",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "lewis-lewis-county-auditor",
+      "candidate_slug": "mitch-townsend",
+      "name": "Mitch Townsend",
+      "website": "https://www.mitch4auditor.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://static.wixstatic.com/media/0fbe60_6c0f654cc13047a89fee4fbbe1bddf88~mv2.jpg/v1/fill/w_1454,h_798,al_c/0fbe60_6c0f654cc13047a89fee4fbbe1bddf88~mv2.jpg",
+          "page": "https://www.mitch4auditor.com/",
+          "kind": "campaign-website",
+          "why": "twitter:image",
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 220988,
+          "status": "ok",
+          "width": 1454,
+          "height": 798,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/lewis/lewis-lewis-county-auditor/mitch-townsend-1.jpg"
+        },
+        {
+          "url": "https://static.wixstatic.com/media/0fbe60_b3911969a68e42abbbc0daa190b16663~mv2.jpg/v1/fill/w_280,h_373,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/270523ea-e908-4795-946f-247ba13c2b7b-md_edited.jpg",
+          "page": "https://www.mitch4auditor.com/",
+          "kind": "campaign-website",
+          "why": "img 280x373",
+          "width": 280,
+          "height": 373,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 25981,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/lewis/lewis-lewis-county-auditor/mitch-townsend-2.jpg"
+        },
+        {
+          "url": "https://static.wixstatic.com/media/11062b_12299b7ee285456b840b8561ddd37c0e~mv2.jpeg/v1/fill/w_270,h_328,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/pexels-matheus-natan-3297593-(1)%20(2).jpeg",
+          "page": "https://www.mitch4auditor.com/",
+          "kind": "campaign-website",
+          "why": "img 270x328",
+          "width": 270,
+          "height": 328,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 30300,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/lewis/lewis-lewis-county-auditor/mitch-townsend-3.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "lewis-lewis-county-coroner",
+      "candidate_slug": "warren-mcleod",
+      "name": "Warren McLeod",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    },
+    {
+      "contest_slug": "lewis-lewis-county-coroner",
+      "candidate_slug": "jessica-stickley",
+      "name": "Jessica Stickley",
+      "website": "https://www.stickleyforcoroner.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://img1.wsimg.com/isteam/ip/d48e1726-0bf5-43ea-8c2d-545b1e0e99ff/headshot%201.JPG",
+          "page": "https://stickleyforcoroner.com/",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 114193,
+          "status": "ok",
+          "width": 879,
+          "height": 791,
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/lewis/lewis-lewis-county-coroner/jessica-stickley-1.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "lewis-lewis-county-sheriff",
+      "candidate_slug": "gabriel-j-frase",
+      "name": "Gabriel J Frase",
+      "website": "https://www.frase4sheriff.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://static.wixstatic.com/media/8031af_48b82d57f24e47119ea7e938e7a25f4a~mv2.png/v1/fill/w_2500,h_1406,al_c/8031af_48b82d57f24e47119ea7e938e7a25f4a~mv2.png",
+          "page": "https://www.frase4sheriff.com/",
+          "kind": "campaign-website",
+          "why": "twitter:image",
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 4075934,
+          "status": "ok",
+          "width": 2500,
+          "height": 1406,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/lewis/lewis-lewis-county-sheriff/gabriel-j-frase-1.jpg"
+        },
+        {
+          "url": "https://static.wixstatic.com/media/8031af_858c650274fd4f34a5a9ad9ae2675d10~mv2.png/v1/fill/w_418,h_351,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/FRASE%20Meet%20and%20Greet%20Template%20(4).png",
+          "page": "https://www.frase4sheriff.com/",
+          "kind": "campaign-website",
+          "why": "img 418x351",
+          "width": 418,
+          "height": 351,
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 83633,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/lewis/lewis-lewis-county-sheriff/gabriel-j-frase-2.jpg"
+        },
+        {
+          "url": "https://static.wixstatic.com/media/8031af_b01473807c0a4ab38c51b42ccd67457e~mv2.png/v1/fill/w_80,h_45,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/8031af_b01473807c0a4ab38c51b42ccd67457e~mv2.png",
+          "page": "https://www.frase4sheriff.com/",
+          "kind": "campaign-website",
+          "why": "img 320x307",
+          "width": 80,
+          "height": 45,
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 6809,
+          "status": "ok",
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/lewis/lewis-lewis-county-sheriff/gabriel-j-frase-3.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "lewis-lewis-county-sheriff",
+      "candidate_slug": "tracy-murphy",
+      "name": "Tracy Murphy",
+      "website": "https://www.tracymurphyforsheriff.com/",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "lewis-lewis-county-commissioner-district-3-county-commissioner-district-3",
+      "candidate_slug": "scott-brummer",
+      "name": "Scott Brummer",
+      "website": "https://scottbrummer.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://scottbrummer.com/wp-content/uploads/2026/02/official-portrait.jpeg",
+          "page": "https://scottbrummer.com/",
+          "kind": "campaign-website",
+          "why": "img 764x1146",
+          "width": 764,
+          "height": 1146,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 134407,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/lewis/lewis-lewis-county-commissioner-district-3-county-commissioner-district-3/scott-brummer-1.jpg"
+        },
+        {
+          "url": "https://scottbrummer.com/wp-content/uploads/2026/02/favicon-300x300-removebg-preview-1.png",
+          "page": "https://scottbrummer.com/",
+          "kind": "campaign-website",
+          "why": "img 300x300",
+          "width": 300,
+          "height": 300,
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 75535,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/lewis/lewis-lewis-county-commissioner-district-3-county-commissioner-district-3/scott-brummer-2.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "lewis-lewis-county-commissioner-district-3-county-commissioner-district-3",
+      "candidate_slug": "michael-hadaller",
+      "name": "Michael Hadaller",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    },
+    {
+      "contest_slug": "lewis-public-utility-district-commissioner-district-1-commissioner-district-1",
+      "candidate_slug": "steve-grega",
+      "name": "Steve Grega",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    },
+    {
+      "contest_slug": "lewis-public-utility-district-commissioner-district-1-commissioner-district-1",
+      "candidate_slug": "jeff-baine",
+      "name": "Jeff Baine",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    }
+  ]
+}

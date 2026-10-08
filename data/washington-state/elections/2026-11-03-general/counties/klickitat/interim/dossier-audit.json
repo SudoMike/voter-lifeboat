@@ -1,0 +1,30 @@
+{
+  "script": "pipeline/verify_dossiers.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/klickitat/interim/research-plan.json",
+    "data/washington-state/elections/2026-11-03-general/counties/klickitat/dossiers/"
+  ],
+  "missing": [],
+  "no_frontmatter": [],
+  "invalid_evidence_levels": [],
+  "invalid_source_formats": [],
+  "evidence_levels": {
+    "rich": 2,
+    "moderate": 4
+  },
+  "contest_overviews_missing": [],
+  "untouched_contests": [],
+  "untouched_measures": [],
+  "invalid_photos": [],
+  "photos": {
+    "present": 2,
+    "missing": 4
+  },
+  "researched_elsewhere": [
+    "klickitat-congressional-district-4-u-s-representative -> benton/benton-congressional-district-4-u-s-representative",
+    "klickitat-legislative-district-14-state-representative-pos-1 -> yakima/yakima-legislative-district-14-state-representative-pos-1",
+    "klickitat-legislative-district-14-state-representative-pos-2 -> yakima/yakima-legislative-district-14-state-representative-pos-2",
+    "klickitat-legislative-district-17-state-representative-pos-1 -> clark/clark-legislative-district-17-state-representative-pos-1",
+    "klickitat-legislative-district-17-state-representative-pos-2 -> clark/clark-legislative-district-17-state-representative-pos-2"
+  ]
+}

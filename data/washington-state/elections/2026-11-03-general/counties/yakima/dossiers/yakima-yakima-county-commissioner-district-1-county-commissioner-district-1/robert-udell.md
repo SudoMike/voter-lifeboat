@@ -56,6 +56,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3391022
     pointer: counties/yakima/raw/candidates/yakima-yakima-county-commissioner-district-1-county-commissioner-district-1/pdc-robert-udell.url
     accessed: 2026-10-09
+photo:
+  url: https://bobforyakima.com/wp-content/uploads/2026/01/TWE_0013-2-13.png
+  page: https://bobforyakima.com/
+  kind: campaign-website
 ---
 
 ## Background

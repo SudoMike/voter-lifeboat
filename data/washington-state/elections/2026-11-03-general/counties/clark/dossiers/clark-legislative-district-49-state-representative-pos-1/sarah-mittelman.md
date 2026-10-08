@@ -96,6 +96,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3391687
     pointer: counties/clark/raw/candidates/clark-legislative-district-49-state-representative-pos-1/pdc-mittelman.url
     accessed: 2026-10-08
+photo:
+  url: https://sarah4wa.com/assets/hero.jpg
+  page: https://sarah4wa.com/
+  kind: campaign-website
 ---
 
 ## Background

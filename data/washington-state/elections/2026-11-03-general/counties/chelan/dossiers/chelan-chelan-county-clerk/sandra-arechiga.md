@@ -90,6 +90,10 @@ sources:
     url: https://www.wenatcheeworld.com/news/local/chelan-county-candidates-smith-and-strand-arechiga-and-young-advance-to-general-election/article_0a9fdc0e-6a09-4098-85c0-9a6d68628863.html
     pointer: counties/chelan/raw/candidates/chelan-chelan-county-clerk/ww-2026-08-10-clerk-advance.url
     accessed: 2026-10-08
+photo:
+  url: https://sandraforclerk.com/wp-content/uploads/2026/05/att.BpFcV1njhCkGRWmeAnY4IZ7iPYImyS3iUFQMe0EUz5I.jpeg
+  page: https://sandraforclerk.com/
+  kind: campaign-website
 ---
 
 ## Background

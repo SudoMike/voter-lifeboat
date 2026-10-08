@@ -76,6 +76,10 @@ sources:
     url: https://results.votewa.gov/results/public/api/elections/douglas-county-wa/20260804/ballot-items
     pointer: counties/douglas/raw/douglas/votewa-results-20260804-ballot-items.url
     accessed: 2026-10-08
+photo:
+  url: https://www.adammusgroveforsheriff.com/media/headshots/adam-musgrove-for-sheriff-min.png
+  page: https://www.adammusgroveforsheriff.com/
+  kind: campaign-website
 ---
 
 ## Background

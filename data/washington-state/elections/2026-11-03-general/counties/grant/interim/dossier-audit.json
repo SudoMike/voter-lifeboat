@@ -1,0 +1,28 @@
+{
+  "script": "pipeline/verify_dossiers.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/grant/interim/research-plan.json",
+    "data/washington-state/elections/2026-11-03-general/counties/grant/dossiers/"
+  ],
+  "missing": [],
+  "no_frontmatter": [],
+  "invalid_evidence_levels": [],
+  "invalid_source_formats": [],
+  "evidence_levels": {
+    "rich": 4,
+    "moderate": 10
+  },
+  "contest_overviews_missing": [],
+  "untouched_contests": [],
+  "untouched_measures": [],
+  "invalid_photos": [],
+  "photos": {
+    "present": 4,
+    "missing": 10
+  },
+  "researched_elsewhere": [
+    "grant-congressional-district-4-u-s-representative -> benton/benton-congressional-district-4-u-s-representative",
+    "grant-legislative-district-16-state-representative-pos-1 -> benton/benton-legislative-district-16-state-representative-pos-1",
+    "grant-legislative-district-16-state-representative-pos-2 -> benton/benton-legislative-district-16-state-representative-pos-2"
+  ]
+}

@@ -61,6 +61,10 @@ sources:
     url: https://www.chronline.com/stories/filing-week-wraps-up-mcentire-picks-up-challenger-from-own-party-coroner-draws-opponents,402095
     pointer: counties/lewis/raw/candidates/lewis-lewis-county-coroner/chronline-2026-05-08-filing-week.html.url
     accessed: 2026-10-09
+photo:
+  url: https://img1.wsimg.com/isteam/ip/d48e1726-0bf5-43ea-8c2d-545b1e0e99ff/headshot%201.JPG
+  page: https://www.stickleyforcoroner.com/
+  kind: campaign-website
 ---
 
 ## Background

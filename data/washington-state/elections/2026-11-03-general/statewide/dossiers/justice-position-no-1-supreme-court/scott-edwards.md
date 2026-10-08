@@ -95,6 +95,10 @@ sources:
     outlet: The Seattle Times editorial board (primary endorsement of opponent, July 12, 2026; courts.wa.gov eClips copy)
     url: https://www.courts.wa.gov/content/publicupload/eclips/2026%2007%2013%20Seattle%20Times%20endorsements%20WA%20primary%202026%20State%20Supreme%20Court%20Position%201.pdf
     accessed: 2026-10-08
+photo:
+  url: https://votescottedwards.com/wp-content/uploads/2026/03/15704.jpg
+  page: https://votescottedwards.com/
+  kind: campaign-website
 ---
 
 ## Background

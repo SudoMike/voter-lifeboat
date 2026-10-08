@@ -1,0 +1,99 @@
+{
+  "script": "pipeline/propose_candidate_photos.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/pend-oreille/interim/research-plan.json",
+    "data/washington-state/elections/2026-11-03-general/counties/pend-oreille/dossiers/"
+  ],
+  "election": "2026-11-03-general",
+  "package": "pend-oreille",
+  "review_copies": "data/.cache/photos/2026-11-03-general/pend-oreille/",
+  "summary": {
+    "proposed": 2,
+    "no-website": 2,
+    "fetch-failed": 0,
+    "no-image-found": 0,
+    "images_ok": 3
+  },
+  "proposals": [
+    {
+      "contest_slug": "pend-oreille-pend-oreille-county-commissioner-district-2-county-commissioner-2",
+      "candidate_slug": "robert-rosencrantz",
+      "name": "Robert Rosencrantz",
+      "website": "https://www.robertrosencrantz.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://static.wixstatic.com/media/850478_f162fead29484a1daf30cbee1f5d0120%7Emv2.jpg/v1/fit/w_2500,h_1330,al_c/850478_f162fead29484a1daf30cbee1f5d0120%7Emv2.jpg",
+          "page": "https://www.robertrosencrantz.com/",
+          "kind": "campaign-website",
+          "why": "twitter:image",
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 114550,
+          "status": "ok",
+          "width": 1200,
+          "height": 562,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/pend-oreille/pend-oreille-pend-oreille-county-commissioner-district-2-county-commissioner-2/robert-rosencrantz-1.jpg"
+        },
+        {
+          "url": "https://static.wixstatic.com/media/850478_e525cd20c9ff4b218711d160ff3fc3a3~mv2.jpg/v1/fill/w_240,h_336,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Robert%20Rosencrantz.jpg",
+          "page": "https://www.robertrosencrantz.com/",
+          "kind": "campaign-website",
+          "why": "img 240x336",
+          "width": 240,
+          "height": 336,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 15384,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/pend-oreille/pend-oreille-pend-oreille-county-commissioner-district-2-county-commissioner-2/robert-rosencrantz-2.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "pend-oreille-pend-oreille-county-commissioner-district-2-county-commissioner-2",
+      "candidate_slug": "brandy-parker-warren",
+      "name": "Brandy Parker Warren",
+      "website": "https://www.warren4pocounty.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://content.campaignpartner.net/images/154800/Brandy_Warren3.png",
+          "page": "https://www.warren4pocounty.com/",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 234565,
+          "status": "ok",
+          "width": 1500,
+          "height": 1500,
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/pend-oreille/pend-oreille-pend-oreille-county-commissioner-district-2-county-commissioner-2/brandy-parker-warren-1.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "pend-oreille-public-utility-district-commissioner-district-2-public-utility-commissioner-2",
+      "candidate_slug": "gerry-david-bradbury",
+      "name": "Gerry David Bradbury",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    },
+    {
+      "contest_slug": "pend-oreille-public-utility-district-commissioner-district-2-public-utility-commissioner-2",
+      "candidate_slug": "ernie-hood",
+      "name": "Ernie Hood",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    }
+  ]
+}

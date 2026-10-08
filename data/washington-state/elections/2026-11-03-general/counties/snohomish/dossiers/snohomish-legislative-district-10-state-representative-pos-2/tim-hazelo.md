@@ -58,6 +58,10 @@ sources:
     page: https://www.pdc.wa.gov/political-disclosure-reporting-data/browse-search-data/candidates/41619
     pointer: counties/snohomish/raw/candidates/snohomish-legislative-district-10-state-representative-pos-2/tim-hazelo--s7.url
     accessed: 2026-10-08
+photo:
+  url: https://static.wixstatic.com/media/13312d_9c9835bdb1b546ffbc164d556300b145~mv2.png/v1/fill/w_966,h_1076,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/headshot_edited.png
+  page: https://www.votehazelo.com/
+  kind: campaign-website
 ---
 
 ## Background

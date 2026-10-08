@@ -116,6 +116,10 @@ sources:
     title: Home page (landing page only)
     url: https://www.marshall4wa.com/
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/35413.jpg
+  page: https://leg.wa.gov/memberphoto/35413.jpg
+  kind: government
 ---
 
 ## Background

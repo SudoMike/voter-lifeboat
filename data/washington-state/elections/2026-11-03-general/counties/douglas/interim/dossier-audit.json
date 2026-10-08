@@ -1,0 +1,31 @@
+{
+  "script": "pipeline/verify_dossiers.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/douglas/interim/research-plan.json",
+    "data/washington-state/elections/2026-11-03-general/counties/douglas/dossiers/"
+  ],
+  "missing": [],
+  "no_frontmatter": [],
+  "invalid_evidence_levels": [],
+  "invalid_source_formats": [],
+  "evidence_levels": {
+    "moderate": 4,
+    "rich": 3,
+    "pamphlet-only": 3
+  },
+  "contest_overviews_missing": [],
+  "untouched_contests": [],
+  "untouched_measures": [],
+  "invalid_photos": [],
+  "photos": {
+    "present": 4,
+    "missing": 6
+  },
+  "researched_elsewhere": [
+    "douglas-congressional-district-4-u-s-representative -> benton/benton-congressional-district-4-u-s-representative",
+    "douglas-congressional-district-8-u-s-representative -> king/congressional-district-8-united-states-representative",
+    "douglas-legislative-district-7-state-senator -> spokane/spokane-legislative-district-7-state-senator",
+    "douglas-legislative-district-13-state-representative-pos-1 -> grant/grant-legislative-district-13-state-representative-pos-1",
+    "douglas-legislative-district-13-state-representative-pos-2 -> grant/grant-legislative-district-13-state-representative-pos-2"
+  ]
+}

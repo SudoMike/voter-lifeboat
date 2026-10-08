@@ -96,6 +96,10 @@ sources:
     url: https://housedemocrats.wa.gov/davis/biography/
     accessed: 2026-07-16
     carried_from: data/washington-state/elections/2026-08-04-primary/counties/king/dossiers/state-representative-position-no-2-legislative-district-no-32/lauren-davis.md S3
+photo:
+  url: https://leg.wa.gov/memberphoto/29104.jpg
+  page: https://leg.wa.gov/memberphoto/29104.jpg
+  kind: government
 ---
 
 ## Background

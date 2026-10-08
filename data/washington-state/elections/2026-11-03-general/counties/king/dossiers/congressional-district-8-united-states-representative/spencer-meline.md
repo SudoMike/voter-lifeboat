@@ -69,6 +69,10 @@ sources:
     url: https://www.fec.gov/data/candidate/H6WA08167/
     accessed: 2026-10-08
     note: latest report covers through 2026-07-15 (pre-primary); third-quarter reports are due Oct. 15
+photo:
+  url: https://cdn.prod.website-files.com/6a039d746f415ed9d732b21a/6a0d3f104322eac0caa7131e_spencer-meline-headshot-cropped.png
+  page: https://www.melineforcongress.com/
+  kind: campaign-website
 ---
 
 ## Background

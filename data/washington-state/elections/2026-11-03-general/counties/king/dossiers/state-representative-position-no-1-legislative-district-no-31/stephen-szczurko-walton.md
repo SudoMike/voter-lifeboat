@@ -40,6 +40,10 @@ sources:
     outlet: Auburn Reporter (2026-08-04)
     url: https://www.auburn-reporter.com/2026/08/04/most-auburn-area-incumbents-easily-advance-from-primary-races/
     accessed: 2026-10-08
+photo:
+  url: https://stephen4district31.com/wp-content/uploads/2026/08/Image-9-of-92.jpg
+  page: https://stephen4district31.com/
+  kind: campaign-website
 ---
 
 ## Background

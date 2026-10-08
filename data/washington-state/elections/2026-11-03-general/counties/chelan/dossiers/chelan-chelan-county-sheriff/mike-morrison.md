@@ -90,6 +90,10 @@ sources:
     url: https://www.wenatcheeworld.com/news/local/auditors-continue-counting-in-primary-election/article_e4afecea-7867-4480-a420-c75e68f11c81.html
     pointer: counties/chelan/raw/candidates/chelan-chelan-county-sheriff/ww-2026-08-07-primary-count.url
     accessed: 2026-10-08
+photo:
+  url: https://irp.cdn-website.com/e6781dd7/dms3rep/multi/opt/mikemorrison-2026-1920w.png
+  page: https://www.re-electsheriffmorrison.com/
+  kind: campaign-website
 ---
 
 ## Background

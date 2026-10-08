@@ -58,6 +58,10 @@ sources:
     url: https://www.sanjuanjournal.com/2026/06/17/lwv-observer-corps-notes-on-public-meetings-38/
     pointer: counties/san-juan/raw/candidates/san-juan-san-juan-county-auditor/sjj-2026-06-17-lwv-observer-notes-38.html.url
     accessed: 2026-10-08
+photo:
+  url: https://content.campaignpartner.net/images/154530/HL_-_Headshot_2.jpeg
+  page: https://heatherlee4auditor.com/
+  kind: campaign-website
 ---
 
 ## Background

@@ -47,6 +47,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3395409
     pointer: counties/yakima/raw/candidates/yakima-yakima-county-assessor/pdc-keith-effler.url
     accessed: 2026-10-09
+photo:
+  url: https://effler.us/assets/images/image01.jpg
+  page: https://effler.us/
+  kind: campaign-website
 ---
 
 ## Background

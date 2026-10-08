@@ -53,6 +53,10 @@ sources:
     url: https://voter.votewa.gov/elections/candidate.ashx?e=899&r=186805&b=0&la=en&c=27
     pointer: counties/pierce/raw/votewa/candidate-statements/race-186805.json.meta.json
     accessed: 2026-10-08
+photo:
+  url: https://electdamontownsend.org/assets/damon.jpg
+  page: https://electdamontownsend.org/
+  kind: campaign-website
 ---
 
 His general-election statement comes from his VoteWA candidate record, where the "Statement" field holds the text he submitted (not yet marked approved for display on 2026-10-08) [S7]; the Pierce County printed local voters' pamphlet (piercecountywa.gov) returned a Cloudflare challenge and was not read. This dossier also rests on the campaign website, PDC filings, and 2022 sources from his earlier run for the same office. The campaign also publishes an opposition-research site about the incumbent (lindafarmer.net), which his campaign home page links to [S1]; per the source policy it was not used for either candidate.

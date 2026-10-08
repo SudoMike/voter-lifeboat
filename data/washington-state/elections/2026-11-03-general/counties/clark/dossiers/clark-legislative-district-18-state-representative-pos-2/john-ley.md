@@ -159,6 +159,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3364791
     pointer: counties/clark/raw/candidates/clark-legislative-district-18-state-representative-pos-2/pdc-ley.url
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/35422.jpg
+  page: https://leg.wa.gov/memberphoto/35422.jpg
+  kind: government
 ---
 
 ## Background

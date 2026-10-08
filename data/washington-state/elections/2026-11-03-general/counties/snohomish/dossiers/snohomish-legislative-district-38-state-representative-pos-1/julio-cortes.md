@@ -88,6 +88,10 @@ sources:
     outlet: Washington State Public Disclosure Commission (open data, dataset 3h9x-7bvm)
     url: https://data.wa.gov/resource/3h9x-7bvm.json?election_year=2026&legislative_district=38
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/34028.jpg
+  page: https://leg.wa.gov/legislators/all-representatives-and-senators/julio-cortes
+  kind: government
 ---
 
 ## Background

@@ -110,6 +110,10 @@ sources:
     url: https://www.inlander.com/news/regardless-of-which-two-candidates-move-forward-after-the-primary-a-republican-will-replace-rep/article_cf7c9d00-b7d5-434b-8946-49b53e9d9926.html
     pointer: counties/spokane/raw/candidates/spokane-legislative-district-4-state-representative-pos-2/inlander-2026-07-30-4th-district.url
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/31521.jpg
+  page: https://leg.wa.gov/legislators/all-representatives-and-senators/rob-chase
+  kind: government
 ---
 
 ## Background

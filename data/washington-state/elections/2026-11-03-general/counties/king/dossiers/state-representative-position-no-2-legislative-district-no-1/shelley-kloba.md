@@ -96,6 +96,10 @@ sources:
     outlet: Everett Herald (HeraldNet)
     url: https://www.heraldnet.com/2026/08/04/kloba-moon-leading-in-1st-district-house-race/
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/26168.jpg
+  page: https://leg.wa.gov/memberphoto/26168.jpg
+  kind: government
 ---
 
 ## Background

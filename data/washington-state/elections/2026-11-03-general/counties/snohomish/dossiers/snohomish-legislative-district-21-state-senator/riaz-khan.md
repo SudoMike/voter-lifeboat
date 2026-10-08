@@ -27,6 +27,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?election_year=2026&legislative_district=21
     page: https://www.pdc.wa.gov/political-disclosure-reporting-data/browse-search-data/candidates/41882
     accessed: 2026-10-08
+photo:
+  url: https://www.electriaz.com/riaz_head.png
+  page: https://www.electriaz.com/
+  kind: campaign-website
 ---
 
 ## Background

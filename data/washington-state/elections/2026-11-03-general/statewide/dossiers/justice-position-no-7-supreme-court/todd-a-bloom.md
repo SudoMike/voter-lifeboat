@@ -101,6 +101,10 @@ sources:
     outlet: Washington State Standard (Jake Goldstein-Street, 2026-10-07), republished by Vashon-Maury Island Beachcomber
     url: https://www.vashonbeachcomber.com/2026/10/07/election-2026-state-supreme-court-candidates-make-their-case/
     accessed: 2026-10-08
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/6a3463366c62844aa0fa381c/f43bf91c-360b-45bd-8125-93f2b1be3d93/Todd+Bloom+Edited+Photo+3.png
+  page: https://www.electtoddbloom.com/about
+  kind: campaign-website
 ---
 
 ## Background

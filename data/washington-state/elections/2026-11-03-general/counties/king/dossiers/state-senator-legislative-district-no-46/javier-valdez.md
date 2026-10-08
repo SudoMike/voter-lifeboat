@@ -86,6 +86,10 @@ sources:
     ref: King County Elections, August 4, 2026 primary results (certified 2026-08-18); vote counts from the results CSV linked there (https://election-results-01.kingcounty.gov/webresults.csv, read 2026-10-08)
     url: https://kingcounty.gov/en/dept/elections/results/2026/august-primary-election
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/27975.jpg
+  page: https://leg.wa.gov/memberphoto/27975.jpg
+  kind: government
 ---
 
 ## Background

@@ -87,6 +87,10 @@ sources:
     url: https://skagitrepublicans.com/informationforvoters
     pointer: counties/skagit/raw/candidates/skagit-skagit-county-commissioner-district-3/scrp-information-for-voters.html.url
     accessed: 2026-10-08
+photo:
+  url: https://fussellforcoroner.com/assets/images/derrill_fussell.webp
+  page: https://fussellforcoroner.com/
+  kind: campaign-website
 ---
 
 ## Background

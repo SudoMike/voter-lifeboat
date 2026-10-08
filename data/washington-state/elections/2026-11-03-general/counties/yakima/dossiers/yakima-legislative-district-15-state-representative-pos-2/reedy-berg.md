@@ -96,6 +96,10 @@ sources:
     url: https://www.yakimaherald.com/news/local/government/elections/the-midterms-are-almost-here-heres-whats-on-your-yakima-ballot/article_ce0cd1af-aba1-41bf-866c-170520c92fa9.html
     pointer: counties/yakima/raw/candidates/yakima-legislative-district-15-state-representative-pos-2/yh-2026-10-03-whats-on-your-ballot.url
     accessed: 2026-10-09
+photo:
+  url: https://reedyberg.com/reedy-headshot.jpg
+  page: https://www.reedyberg.com
+  kind: campaign-website
 ---
 
 ## Background

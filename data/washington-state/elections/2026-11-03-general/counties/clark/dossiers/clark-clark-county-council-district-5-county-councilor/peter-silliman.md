@@ -147,6 +147,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3391268
     pointer: counties/clark/raw/candidates/clark-clark-county-council-district-5-county-councilor/pdc-silliman.url
     accessed: 2026-10-08
+photo:
+  url: https://www.electpetersilliman.com/wp-content/uploads/2026/08/peter-profile-pic-3.jpg
+  page: https://www.electpetersilliman.com/about/
+  kind: campaign-website
 ---
 
 ## Background

@@ -54,6 +54,10 @@ sources:
     url: https://columbiabasinherald.com/news/2026/aug/14/raap-durfee-advance-to-general-election-in-grant-county-commissioner-race/
     pointer: counties/grant/raw/candidates/grant-grant-county-commissioner-district-3-commissioner-district-3/cbh-2026-08-14-raap-durfee-advance.url
     accessed: 2026-10-08
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/6a024079f6229e5bccfcdfa4/5d020708-4500-46b5-a3b7-f4b8543b2698/Shannon+bio+pic+2.jpg
+  page: https://www.electshannondurfee.com/about-shannon
+  kind: campaign-website
 ---
 
 ## Background

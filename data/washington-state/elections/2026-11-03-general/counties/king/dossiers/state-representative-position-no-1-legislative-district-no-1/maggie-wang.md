@@ -40,6 +40,10 @@ sources:
     outlet: Everett Herald (HeraldNet)
     url: https://www.heraldnet.com/2026/08/04/kloba-moon-leading-in-1st-district-house-race/
     accessed: 2026-10-08
+photo:
+  url: https://www.maggieforolympia.com/images/maggie-profile.jpg
+  page: https://www.maggieforolympia.com/
+  kind: campaign-website
 ---
 
 ## Background

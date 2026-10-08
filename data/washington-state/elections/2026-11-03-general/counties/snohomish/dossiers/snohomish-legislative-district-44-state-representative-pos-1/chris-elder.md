@@ -44,6 +44,10 @@ sources:
     page: https://www.pdc.wa.gov/political-disclosure-reporting-data/browse-search-data/candidates/41326
     pointer: data/washington-state/elections/2026-11-03-general/counties/snohomish/raw/candidates/snohomish-legislative-district-44-state-representative-pos-1/chris-elder--s5.url
     accessed: 2026-10-08
+photo:
+  url: https://static.wixstatic.com/media/eee579_143c973d20ed44b8adf13ca19b1d1084~mv2.png/v1/fill/w_1354,h_1320,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/Chris%20Pamphlet%20pic.png
+  page: https://www.electchriselder.com/
+  kind: campaign-website
 ---
 
 ## Background

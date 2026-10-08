@@ -111,6 +111,10 @@ sources:
     url: https://www.statesmanexaminer.com/articles/mail-in-voting-more-accessible-in-kettle-falls
     pointer: counties/stevens/raw/news/se-mail-in-voting-more-accessible-in-kettle-falls.html.url
     accessed: 2026-10-08
+photo:
+  url: https://images.int.dreamhosters.ai/account-1134784/9c8f3a8bec1ee1bd.jpg
+  page: https://www.electlorilarsen.com/
+  kind: campaign-website
 ---
 
 ## Background

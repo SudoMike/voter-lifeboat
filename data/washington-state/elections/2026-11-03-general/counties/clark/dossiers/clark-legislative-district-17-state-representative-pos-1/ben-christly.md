@@ -61,6 +61,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3391091
     pointer: counties/clark/raw/candidates/clark-legislative-district-17-state-representative-pos-1/pdc-christly.url
     accessed: 2026-10-08
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/695467d08fbaf9350fe1c66f/d447f263-5c03-48ad-abb1-656ae207506a/Ben+Christly+Website+Hero+v4.png
+  page: https://www.electbenchristly.com/
+  kind: campaign-website
 ---
 
 ## Background

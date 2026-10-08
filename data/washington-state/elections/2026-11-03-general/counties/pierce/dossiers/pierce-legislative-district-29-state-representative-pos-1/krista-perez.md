@@ -52,6 +52,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?election_year=2026&legislative_district=29
     page: https://my.pdc.wa.gov/registration/public/-/#/public/registration/69074
     accessed: 2026-10-08
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/6786b2c833c4e17a8b7d8513/03e3ebf3-5ddd-4957-a72c-e5a3719930a3/KristaPerez53.jpg
+  page: https://www.votekristaperez.org/about
+  kind: campaign-website
 ---
 
 ## Background

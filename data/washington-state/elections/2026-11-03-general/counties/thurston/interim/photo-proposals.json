@@ -1,0 +1,649 @@
+{
+  "script": "pipeline/propose_candidate_photos.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/thurston/interim/research-plan.json",
+    "data/washington-state/elections/2026-11-03-general/counties/thurston/dossiers/"
+  ],
+  "election": "2026-11-03-general",
+  "package": "thurston",
+  "review_copies": "data/.cache/photos/2026-11-03-general/thurston/",
+  "summary": {
+    "proposed": 14,
+    "no-website": 1,
+    "fetch-failed": 2,
+    "no-image-found": 3,
+    "images_ok": 31
+  },
+  "proposals": [
+    {
+      "contest_slug": "thurston-legislative-district-19-state-representative-pos-1",
+      "candidate_slug": "jim-walsh",
+      "name": "Jim Walsh",
+      "website": "https://electjimwalsh.org/",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "thurston-legislative-district-19-state-representative-pos-1",
+      "candidate_slug": "kevin-moynihan",
+      "name": "Kevin Moynihan",
+      "website": "https://www.kevinmoynihan.com",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://static.wixstatic.com/media/88e548_46aa192b4aab4f439eb5957b8a8f77d2%7Emv2.png/v1/fit/w_2500,h_1330,al_c/88e548_46aa192b4aab4f439eb5957b8a8f77d2%7Emv2.png",
+          "page": "https://www.kevinmoynihan.com/",
+          "kind": "campaign-website",
+          "why": "twitter:image",
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 135448,
+          "status": "ok",
+          "width": 1773,
+          "height": 1330,
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/thurston/thurston-legislative-district-19-state-representative-pos-1/kevin-moynihan-1.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "thurston-legislative-district-19-state-representative-pos-2",
+      "candidate_slug": "terry-carlson",
+      "name": "Terry Carlson",
+      "website": "https://www.electterrycarlson.com",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://static1.squarespace.com/static/6984264634f1ae6a44f66bbb/t/6a2879a07f5f10197984dd3c/1781037472920/terry+social+share.jpg?format=1500w",
+          "page": "https://www.electterrycarlson.com/",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "width": 1080,
+          "height": 1080,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 103877,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/thurston/thurston-legislative-district-19-state-representative-pos-2/terry-carlson-1.jpg"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/6984264634f1ae6a44f66bbb/5b95b07c-cd9e-4931-a15f-35ebea35f835/ccd+logo+rodeo.png",
+          "page": "https://www.electterrycarlson.com/",
+          "kind": "campaign-website",
+          "why": "img 3591x2736",
+          "width": 2500,
+          "height": 1905,
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 3428025,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/thurston/thurston-legislative-district-19-state-representative-pos-2/terry-carlson-2.jpg"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/6984264634f1ae6a44f66bbb/00299604-591d-4bf9-9ee2-bfc0941f848b/terry4.jpg",
+          "page": "https://www.electterrycarlson.com/",
+          "kind": "campaign-website",
+          "why": "img 1061x1512",
+          "width": 1061,
+          "height": 1512,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 391600,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/thurston/thurston-legislative-district-19-state-representative-pos-2/terry-carlson-3.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "thurston-legislative-district-19-state-representative-pos-2",
+      "candidate_slug": "joel-mcentire",
+      "name": "Joel McEntire",
+      "website": "https://joelmcentire.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://joelmcentire.com/wp-content/uploads/2020/02/OBkbdH6v-610x458.png",
+          "page": "https://joelmcentire.com/",
+          "kind": "campaign-website",
+          "why": "img 610x458",
+          "width": 610,
+          "height": 458,
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 25911,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/thurston/thurston-legislative-district-19-state-representative-pos-2/joel-mcentire-1.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "thurston-legislative-district-22-state-representative-pos-1",
+      "candidate_slug": "beth-doglio",
+      "name": "Beth Doglio",
+      "website": "https://www.bethdoglio.com/",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "thurston-legislative-district-22-state-representative-pos-1",
+      "candidate_slug": "don-hewett",
+      "name": "Don Hewett",
+      "website": null,
+      "website_from": null,
+      "status": "no-website",
+      "candidates": []
+    },
+    {
+      "contest_slug": "thurston-legislative-district-22-state-representative-pos-2",
+      "candidate_slug": "lisa-parshley",
+      "name": "Lisa Parshley",
+      "website": "https://www.lisaparshley.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://assets.nationbuilder.com/lisaparshley/sites/1/meta_images/original/logo_2x.png?1767465926",
+          "page": "https://www.lisaparshley.com/",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 32141,
+          "status": "ok",
+          "width": 480,
+          "height": 361,
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/thurston/thurston-legislative-district-22-state-representative-pos-2/lisa-parshley-1.jpg"
+        },
+        {
+          "url": "https://assets.nationbuilder.com/lisaparshley/pages/45/attachments/original/1780327925/LP.png?1780327925",
+          "page": "https://www.lisaparshley.com/",
+          "kind": "campaign-website",
+          "why": "img 300x384",
+          "width": 1582,
+          "height": 2024,
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 3707569,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/thurston/thurston-legislative-district-22-state-representative-pos-2/lisa-parshley-2.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "thurston-legislative-district-22-state-representative-pos-2",
+      "candidate_slug": "jamie-keenan-devargas",
+      "name": "Jamie Keenan-deVargas",
+      "website": "https://www.jamiekeenandevargas.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://images.solidarity.tech/fit-in/1200x0/filters:no_upscale()/ic8hp7iz0zvqyeudh438eqomyvsq",
+          "page": "https://www.jamiekeenandevargas.com/",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 2773427,
+          "status": "ok",
+          "width": 1200,
+          "height": 1246,
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/thurston/thurston-legislative-district-22-state-representative-pos-2/jamie-keenan-devargas-1.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "thurston-thurston-county-assessor",
+      "candidate_slug": "jj-olson",
+      "name": "JJ Olson",
+      "website": "https://www.jjforassessor.com/",
+      "website_from": "dossier",
+      "status": "fetch-failed",
+      "candidates": [],
+      "error": "HTTPError: Forbidden"
+    },
+    {
+      "contest_slug": "thurston-thurston-county-assessor",
+      "candidate_slug": "lynda-nashed-zeman",
+      "name": "Lynda Nashed Zeman",
+      "website": "https://www.lyndaforthurston.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://assets.nationbuilder.com/lyndaforthurston/sites/1/meta_images/original/Zeman_web_logo.png?1775144912",
+          "page": "https://www.lyndaforthurston.com/",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 426667,
+          "status": "ok",
+          "width": 4800,
+          "height": 2965,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/thurston/thurston-thurston-county-assessor/lynda-nashed-zeman-1.jpg"
+        },
+        {
+          "url": "https://assets.nationbuilder.com/lyndaforthurston/pages/3/attachments/original/1774403382/bridge_vertical_2.jpg?1774403382",
+          "page": "https://www.lyndaforthurston.com/",
+          "kind": "campaign-website",
+          "why": "img 400x600",
+          "width": 6960,
+          "height": 4640,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 8011400,
+          "status": "ok",
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/thurston/thurston-thurston-county-assessor/lynda-nashed-zeman-2.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "thurston-thurston-county-clerk",
+      "candidate_slug": "nicole-miller",
+      "name": "Nicole Miller",
+      "website": "https://www.nicoleforclerk.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://assets.nationbuilder.com/nicoleforclerk/sites/1/meta_images/original/Web_logo.png?1775144046",
+          "page": "https://www.nicoleforclerk.com/",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 2736164,
+          "status": "ok",
+          "width": 4800,
+          "height": 2868,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/thurston/thurston-thurston-county-clerk/nicole-miller-1.jpg"
+        },
+        {
+          "url": "https://assets.nationbuilder.com/nicoleforclerk/pages/9/attachments/original/1791227094/Headshot_resized_website.jpg?1791227094",
+          "page": "https://www.nicoleforclerk.com/",
+          "kind": "campaign-website",
+          "why": "img 350x431",
+          "width": 2708,
+          "height": 3341,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 944803,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/thurston/thurston-thurston-county-clerk/nicole-miller-2.jpg"
+        },
+        {
+          "url": "https://assets.nationbuilder.com/nicoleforclerk/pages/34/attachments/original/1784592884/TLMCLC_no_background.png?1784592884",
+          "page": "https://www.nicoleforclerk.com/",
+          "kind": "campaign-website",
+          "why": "img 225x225",
+          "width": 241,
+          "height": 241,
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 99071,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/thurston/thurston-thurston-county-clerk/nicole-miller-3.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "thurston-thurston-county-clerk",
+      "candidate_slug": "garrett-cady",
+      "name": "Garrett Cady",
+      "website": "https://www.garrettcadyforcountyclerk.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://static.wixstatic.com/media/4ed398_3173810440de49e0b933d64e9e424e0e~mv2.png/v1/fill/w_1050,h_600,al_c/4ed398_3173810440de49e0b933d64e9e424e0e~mv2.png",
+          "page": "https://www.garrettcadyforcountyclerk.com/",
+          "kind": "campaign-website",
+          "why": "twitter:image",
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 229992,
+          "status": "ok",
+          "width": 1050,
+          "height": 600,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/thurston/thurston-thurston-county-clerk/garrett-cady-1.jpg"
+        },
+        {
+          "url": "https://static.wixstatic.com/media/4ed398_0188d866e8384d229b6d2c3797a20396~mv2.jpg/v1/fill/w_280,h_344,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Garrett8334-3072_edited.jpg",
+          "page": "https://www.garrettcadyforcountyclerk.com/",
+          "kind": "campaign-website",
+          "why": "img 280x344",
+          "width": 280,
+          "height": 344,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 15298,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/thurston/thurston-thurston-county-clerk/garrett-cady-2.jpg"
+        },
+        {
+          "url": "https://static.wixstatic.com/media/4ed398_32a0a77aabd74b5382fdc174784c92c7~mv2.png/v1/fill/w_280,h_241,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/OMB%20Logo.png",
+          "page": "https://www.garrettcadyforcountyclerk.com/",
+          "kind": "campaign-website",
+          "why": "img 280x241",
+          "width": 280,
+          "height": 241,
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 39746,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/thurston/thurston-thurston-county-clerk/garrett-cady-3.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "thurston-thurston-county-commissioner-district-no-5-county-commissioner",
+      "candidate_slug": "nicolas-martinez-dunning",
+      "name": "Nicolas Martinez-Dunning",
+      "website": "https://electnicdunning.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://www.electnicdunning.com/img/share.jpg",
+          "page": "https://www.electnicdunning.com/",
+          "kind": "campaign-website",
+          "why": "twitter:image",
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 89329,
+          "status": "ok",
+          "width": 1200,
+          "height": 630,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/thurston/thurston-thurston-county-commissioner-district-no-5-county-commissioner/nicolas-martinez-dunning-1.jpg"
+        },
+        {
+          "url": "https://www.electnicdunning.com/img/sanders-400.3700ed7b.webp",
+          "page": "https://www.electnicdunning.com/",
+          "kind": "campaign-website",
+          "why": "img 400x400",
+          "width": 400,
+          "height": 400,
+          "http_status": 200,
+          "content_type": "image/webp",
+          "bytes": 10882,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/thurston/thurston-thurston-county-commissioner-district-no-5-county-commissioner/nicolas-martinez-dunning-2.jpg"
+        },
+        {
+          "url": "https://www.electnicdunning.com/img/ryder-400.542faf31.webp",
+          "page": "https://www.electnicdunning.com/",
+          "kind": "campaign-website",
+          "why": "img 400x400",
+          "width": 400,
+          "height": 400,
+          "http_status": 200,
+          "content_type": "image/webp",
+          "bytes": 10448,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/thurston/thurston-thurston-county-commissioner-district-no-5-county-commissioner/nicolas-martinez-dunning-3.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "thurston-thurston-county-commissioner-district-no-5-county-commissioner",
+      "candidate_slug": "emily-clouse",
+      "name": "Emily Clouse",
+      "website": "https://clouseforcommissioner.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://static1.squarespace.com/static/63e8c2475bddc31915ce72e4/t/695c5f63d1387a38ad4f4670/1767661411966/SocialShare_EmilyClouse.png?format=1500w",
+          "page": "https://www.clouseforcommissioner.com/",
+          "kind": "campaign-website",
+          "why": "twitter:image",
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 663328,
+          "status": "ok",
+          "width": 1500,
+          "height": 811,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/thurston/thurston-thurston-county-commissioner-district-no-5-county-commissioner/emily-clouse-1.jpg"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/63e8c2475bddc31915ce72e4/1f50e3cd-4071-4cd5-a9b9-04e900442a2d/IMG_0090_edit.png",
+          "page": "https://www.clouseforcommissioner.com/",
+          "kind": "campaign-website",
+          "why": "img 4032x3024",
+          "width": 2500,
+          "height": 1875,
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 10990224,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/thurston/thurston-thurston-county-commissioner-district-no-5-county-commissioner/emily-clouse-2.jpg"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/63e8c2475bddc31915ce72e4/e19da041-bf97-49db-84e2-5e6bc2b5d82b/IMG_2660.png",
+          "page": "https://www.clouseforcommissioner.com/",
+          "kind": "campaign-website",
+          "why": "img 4032x3024",
+          "width": 2500,
+          "height": 1875,
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 10309511,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/thurston/thurston-thurston-county-commissioner-district-no-5-county-commissioner/emily-clouse-3.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "thurston-thurston-county-sheriff",
+      "candidate_slug": "derek-sanders",
+      "name": "Derek Sanders",
+      "website": "https://www.sandersforsheriff.org/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://assets.nationbuilder.com/sandersforsheriff/sites/1/meta_images/original/DerekSanders-Logo.png?1767914803",
+          "page": "https://www.sandersforsheriff.org/",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 187591,
+          "status": "ok",
+          "width": 2948,
+          "height": 1000,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/thurston/thurston-thurston-county-sheriff/derek-sanders-1.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "thurston-thurston-county-sheriff",
+      "candidate_slug": "kevin-burton-crow",
+      "name": "Kevin Burton-Crow",
+      "website": "https://www.burton-crowforsheriff.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://assets.nationbuilder.com/votekevinforsheriff/pages/16/meta_images/original/KBC_SHERIFF_STAR.png?1777525729",
+          "page": "https://www.burton-crowforsheriff.com/",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 463987,
+          "status": "ok",
+          "width": 4688,
+          "height": 4688,
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/thurston/thurston-thurston-county-sheriff/kevin-burton-crow-1.jpg"
+        },
+        {
+          "url": "https://assets.nationbuilder.com/votekevinforsheriff/pages/16/attachments/original/1789756808/IMG_0442.PNG?1789756808",
+          "page": "https://www.burton-crowforsheriff.com/",
+          "kind": "campaign-website",
+          "why": "img 800x800",
+          "width": 3000,
+          "height": 3000,
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 9417404,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/thurston/thurston-thurston-county-sheriff/kevin-burton-crow-2.jpg"
+        },
+        {
+          "url": "https://assets.nationbuilder.com/votekevinforsheriff/pages/16/attachments/original/1768714342/KBC_Woods_Cropped.jpg?1768714342",
+          "page": "https://www.burton-crowforsheriff.com/",
+          "kind": "campaign-website",
+          "why": "img 353x441",
+          "width": 1526,
+          "height": 1908,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 479004,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/thurston/thurston-thurston-county-sheriff/kevin-burton-crow-3.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "thurston-thurston-county-public-utility-district-commissioner-district-no-1-public-utility-district-commissioner",
+      "candidate_slug": "jim-campbell",
+      "name": "Jim Campbell",
+      "website": "https://retainjimcampbell.com/",
+      "website_from": "dossier",
+      "status": "no-image-found",
+      "candidates": []
+    },
+    {
+      "contest_slug": "thurston-thurston-county-public-utility-district-commissioner-district-no-1-public-utility-district-commissioner",
+      "candidate_slug": "troy-kirby",
+      "name": "Troy Kirby",
+      "website": "https://kirby4pud.org/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://static1.squarespace.com/static/69fd33d474c08042a6751c1b/t/69fd37208e44a90c6238a64e/1778202400468/447783960_8457107300971389_8494369843826367524_n.jpg?format=1500w",
+          "page": "https://www.kirby4pud.org/",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "width": 946,
+          "height": 960,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 76028,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/thurston/thurston-thurston-county-public-utility-district-commissioner-district-no-1-public-utility-district-commissioner/troy-kirby-1.jpg"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/69fd33d474c08042a6751c1b/3573a37f-9b01-44b1-af12-acab555127b9/548561073_25468680462720807_3480254670162714706_n.jpg",
+          "page": "https://www.kirby4pud.org/",
+          "kind": "campaign-website",
+          "why": "img 1699x2048",
+          "width": 1699,
+          "height": 2048,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 759263,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/thurston/thurston-thurston-county-public-utility-district-commissioner-district-no-1-public-utility-district-commissioner/troy-kirby-2.jpg"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/69fd33d474c08042a6751c1b/a42a98c8-220e-4ad6-a184-0d7a101b2c9d/495571775_24386357447619786_6582717124855644542_n.jpg",
+          "page": "https://www.kirby4pud.org/",
+          "kind": "campaign-website",
+          "why": "img 2048x1536",
+          "width": 2048,
+          "height": 1536,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 372589,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/thurston/thurston-thurston-county-public-utility-district-commissioner-district-no-1-public-utility-district-commissioner/troy-kirby-3.jpg"
+        }
+      ]
+    },
+    {
+      "contest_slug": "thurston-thurston-county-public-utility-district-commissioner-district-no-3-public-utility-district-commissioner",
+      "candidate_slug": "jeff-curry",
+      "name": "Jeff Curry",
+      "website": "https://jeff-curry.com",
+      "website_from": "dossier",
+      "status": "fetch-failed",
+      "candidates": [],
+      "error": "HTTPError: Service Unavailable"
+    },
+    {
+      "contest_slug": "thurston-thurston-county-public-utility-district-commissioner-district-no-3-public-utility-district-commissioner",
+      "candidate_slug": "chris-pettit",
+      "name": "Chris Pettit",
+      "website": "https://www.chrisforpud.com/",
+      "website_from": "dossier",
+      "status": "proposed",
+      "candidates": [
+        {
+          "url": "https://assets.nationbuilder.com/chrisforpud/sites/1/meta_images/original/Chris_Pettit_Sign_%2824_x_9_in%29.png?1777682436",
+          "page": "https://www.chrisforpud.com/",
+          "kind": "campaign-website",
+          "why": "og:image",
+          "http_status": 200,
+          "content_type": "image/png",
+          "bytes": 59449,
+          "status": "ok",
+          "width": 2000,
+          "height": 1000,
+          "portrait_like": false,
+          "review_copy": "data/.cache/photos/2026-11-03-general/thurston/thurston-thurston-county-public-utility-district-commissioner-district-no-3-public-utility-district-commissioner/chris-pettit-1.jpg"
+        },
+        {
+          "url": "https://assets.nationbuilder.com/chrisforpud/pages/9/attachments/original/1779662403/BZ9A6504-99.jpg?1779662403",
+          "page": "https://www.chrisforpud.com/",
+          "kind": "campaign-website",
+          "why": "img 200x300",
+          "width": 2880,
+          "height": 4318,
+          "http_status": 200,
+          "content_type": "image/jpeg",
+          "bytes": 2717662,
+          "status": "ok",
+          "portrait_like": true,
+          "review_copy": "data/.cache/photos/2026-11-03-general/thurston/thurston-thurston-county-public-utility-district-commissioner-district-no-3-public-utility-district-commissioner/chris-pettit-2.jpg"
+        }
+      ]
+    }
+  ]
+}

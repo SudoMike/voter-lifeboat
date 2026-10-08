@@ -1,0 +1,24 @@
+{
+  "script": "pipeline/verify_dossiers.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/king/interim/research-plan.json",
+    "data/washington-state/elections/2026-11-03-general/counties/king/dossiers/"
+  ],
+  "missing": [],
+  "no_frontmatter": [],
+  "invalid_evidence_levels": [],
+  "invalid_source_formats": [],
+  "evidence_levels": {
+    "rich": 45,
+    "moderate": 54,
+    "pamphlet-only": 3
+  },
+  "contest_overviews_missing": [],
+  "untouched_contests": [],
+  "untouched_measures": [],
+  "invalid_photos": [],
+  "photos": {
+    "present": 80,
+    "missing": 22
+  }
+}

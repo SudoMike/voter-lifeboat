@@ -110,6 +110,10 @@ sources:
     outlet: NO HATE in WA State, endorsement page ("Elected Officials and Candidates Opposing I-001 & I-638")
     url: https://nohateinwastate.org/endorse
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/27290.jpg
+  page: https://leg.wa.gov/memberphoto/27290.jpg
+  kind: government
 ---
 
 ## Background

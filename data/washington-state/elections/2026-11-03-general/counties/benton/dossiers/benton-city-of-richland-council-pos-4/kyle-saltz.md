@@ -67,6 +67,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3391678
     pointer: counties/benton/raw/candidates/benton-city-of-richland-council-pos-4/pdc-saltz.url
     accessed: 2026-10-08
+photo:
+  url: https://kylesaltz.com/wp-content/uploads/2025/06/KyleSaltz-1024x1536.jpg
+  page: https://kylesaltz.com/
+  kind: campaign-website
 ---
 
 ## Background

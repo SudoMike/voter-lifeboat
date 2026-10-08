@@ -141,6 +141,10 @@ sources:
     outlet: Lynnwood Times
     url: https://lynnwoodtimes.com/2026/02/05/ian-birk/
     accessed: 2026-10-08
+photo:
+  url: https://ianbirk.com/wp-content/uploads/2026/02/birk-home-home.jpg
+  page: https://ianbirk.com/
+  kind: campaign-website
 ---
 
 ## Background

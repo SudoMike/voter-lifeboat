@@ -82,6 +82,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3390975
     pointer: counties/clark/raw/candidates/clark-legislative-district-17-state-representative-pos-2/pdc-perez.url
     accessed: 2026-10-08
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/67cf44c94a25b77ec76eb5d2/0e3e08e8-2185-46e5-96ed-261fcfaaea71/16KSP_5065iP_pp.jpg
+  page: https://electdianaperez.com/
+  kind: campaign-website
 ---
 
 ## Background

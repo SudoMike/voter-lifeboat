@@ -52,6 +52,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3391645
     pointer: counties/cowlitz/raw/candidates/cowlitz-cowlitz-county-district-court-judge-position-no-3/pdc-knowles.url
     accessed: 2026-10-09
+photo:
+  url: https://knowlesforjudge.com/assets/nicole-2-C-Myjcei.jpeg
+  page: https://knowlesforjudge.com/about
+  kind: campaign-website
 ---
 
 ## Background

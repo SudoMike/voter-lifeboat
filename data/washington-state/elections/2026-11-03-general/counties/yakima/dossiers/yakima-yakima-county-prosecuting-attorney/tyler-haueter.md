@@ -48,6 +48,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3392194
     pointer: counties/yakima/raw/candidates/yakima-yakima-county-prosecuting-attorney/pdc-tyler-haueter.url
     accessed: 2026-10-09
+photo:
+  url: https://tylerforyakima.com/headshot.jpg
+  page: https://tylerforyakima.com/
+  kind: campaign-website
 ---
 
 ## Background
