@@ -861,7 +861,8 @@ ELECTION_MEASURES = {
                   ("FIRDST", "3"),
                   "Raises the fire district's regular property tax levy to fund district operations, including emergency medical (ambulance) services; the 2027 levy becomes the base for later years' limits.",
                   "$1.24 per $1,000 of assessed value for assessment in 2026 and collection in 2027 (the district says its current rate is $0.86).",
-                  "https://www.franklincountywa.gov/DocumentCenter/View/4553/2611-Franklin-County-Voters-Pamphlet-"),
+                  "https://www.franklincountywa.gov/DocumentCenter/View/4553/2611-Franklin-County-Voters-Pamphlet-",
+                  pages=(16,)),
             ],
             "extra_notes": [
                 "Franklin County Commissioner District 3 is elected by district in the general (VoteWA District "
