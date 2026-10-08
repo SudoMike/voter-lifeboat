@@ -83,7 +83,7 @@ sources:
 ### Staffing and operations
 - Wants "three or four" more deputies, saying the county has one of the lowest deputy-to-population ratios in the state; wants records, reports and records requests "streamlined" and modernized [S4].
 - Would "ensure fiscal responsibility, maximizing the budget to increase essential staffing and training" [S1].
-- Would stay active on patrol rather than "manage from behind the desk" [S4]; platform includes internal accountability standards, shift changes for deputy safety and wellness, and "intentional, structural changes" despite the current sheriff's endorsement ("endorsement does not mean duplication") [S3].
+- Would stay active on patrol rather than "manage from behind the desk" [S4]; platform includes internal accountability standards, shift changes for deputy safety and wellness, and "intentional, structural changes" despite the current sheriff's endorsement ("endorsement does not mean duplication"); "True progress requires comprehensive restructuring, not passive management." He calls himself "the only active law enforcement officer in this race" [S3].
 
 ### Enforcement and community policing
 - Lists drug enforcement, property crime and traffic safety; wants to crack down on drug and abuse-related crime [S3][S4].

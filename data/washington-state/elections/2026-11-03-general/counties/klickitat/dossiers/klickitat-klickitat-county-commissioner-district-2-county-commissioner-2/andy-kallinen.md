@@ -73,7 +73,8 @@ sources:
 
 ### Public safety and the jail
 - Calls public safety "the number one responsibility of government"; wants enough deputies to address the state's ranking of 51st of 51 in officers per capita, and adequate staffing and retention at the 911 center and jail [S2]. Would like "two more deputies, at a minimum," possibly multipurpose deputies covering animal control or court security, and more dispatchers to cut overtime and burnout [S3].
-- Does not object to running corrections as a separate county department but says "the manner in which it was handled was terrible" and that it caused "turmoil, distrust, and anxiety"; he would have studied root causes and options first [S3].
+- Does not object to running corrections as a separate county department but says "the manner in which it was handled was terrible" and that it caused "turmoil, distrust, and anxiety"; to him the process looked as though officials were "winging it," and he would have identified the problem, root causes and several options first [S3].
+- On unfilled county mental-health positions: "You can't just do business as usual. We have to try and find a way to do something different" [S3].
 - On mental health, wants a dedicated crisis responder and to find out why county mental-health positions go unfilled; says jail should be "the last thing" for people in mental-health crisis [S3].
 - In his 2024 legislative campaign he said "Crime has increased while liberals have worked to defund the police" and helped draft and testified for HB 2765 (2016), which he calls pro-law enforcement [S2][S4].
 

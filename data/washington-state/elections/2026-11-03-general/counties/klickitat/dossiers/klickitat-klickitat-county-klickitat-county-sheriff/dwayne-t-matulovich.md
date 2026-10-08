@@ -68,6 +68,7 @@ sources:
 
 ### Public safety and the Sheriff's Office
 - "The biggest thing I want to do is start building that trust again"; says residents want "more patrols, more thorough investigations" [S2].
+- "Nineteen years of full-time law enforcement experience gives me insight into what needs to be changed" [S1].
 - Will improve deputies' training and morale and build relationships with other agencies and county departments while "managing the budget responsibly" [S1].
 - Agreed at the July forum on the need for more deputies [S3].
 
