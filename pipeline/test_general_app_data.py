@@ -1,6 +1,6 @@
 """The general's shipped data: the statewide package, King's schema-2
-package at Full County Coverage (issues #9 and #16), and Snohomish's
-app-*.json package at partial coverage (#21).
+package at Full County Coverage (issues #9 and #16), and Snohomish's and
+Spokane's app-*.json packages at partial coverage (#21).
 
 These read the committed outputs of merge_scores.py and assemble_app_data.py,
 so they fail if the general is re-assembled from the wrong packages, King's
@@ -17,6 +17,7 @@ import election
 GENERAL = election.Election("2026-11-03-general")
 KING = GENERAL.county("king")
 SNOHOMISH = GENERAL.county("snohomish")
+SPOKANE = GENERAL.county("spokane")
 STATEWIDE = {"kind": "STATEWIDE"}
 GEO_JS = election.ROOT / "app/src/lib/geo.js"
 
@@ -26,10 +27,10 @@ def read(path):
 
 
 class GeneralPackagesTest(unittest.TestCase):
-    def test_general_ships_the_statewide_package_king_and_snohomish(self):
+    def test_general_ships_the_statewide_package_king_snohomish_and_spokane(self):
         self.assertTrue(election.ELECTION_META[GENERAL.id]["statewide_complete"])
-        self.assertEqual(["king", "snohomish"], election.APP_PACKAGES[GENERAL.id]["counties"])
-        self.assertEqual([GENERAL.state, KING, SNOHOMISH], GENERAL.shipped_packages())
+        self.assertEqual(["king", "snohomish", "spokane"], election.APP_PACKAGES[GENERAL.id]["counties"])
+        self.assertEqual([GENERAL.state, KING, SNOHOMISH, SPOKANE], GENERAL.shipped_packages())
 
     def test_king_adapter_layers_match_geo_js(self):
         block = re.search(r"const KING_LAYERS = \{(.*?)\n\}", GEO_JS.read_text(), re.S).group(1)
@@ -51,7 +52,9 @@ class GeneralPackagesTest(unittest.TestCase):
                          election.county_elections_url(GENERAL.id, "king"))
         self.assertEqual("https://www.snohomishcountywa.gov/224/Elections-Voter-Registration",
                          election.county_elections_url(GENERAL.id, "snohomish"))
-        self.assertIsNone(election.county_elections_url(GENERAL.id, "spokane"))
+        self.assertEqual("https://www.spokanecounty.gov/elections",
+                         election.county_elections_url(GENERAL.id, "spokane"))
+        self.assertIsNone(election.county_elections_url(GENERAL.id, "pierce"))
         # The primary's shipped app data predates the field.
         self.assertIsNone(election.county_elections_url("2026-08-04-primary", "king"))
         for urls in election.COUNTY_ELECTIONS_URLS.values():
@@ -75,11 +78,14 @@ class GeneralAppDataTest(unittest.TestCase):
         cls.king_measures = read(KING / "interim/measures.json")["measures"]
         cls.sno_contests = read(SNOHOMISH / "interim/app-contests.json")["contests"]
         cls.sno_measures = read(SNOHOMISH / "interim/app-measures.json")["measures"]
+        cls.spo_contests = read(SPOKANE / "interim/app-contests.json")["contests"]
+        cls.spo_measures = read(SPOKANE / "interim/app-measures.json")["measures"]
 
-    def test_king_is_full_and_snohomish_partial(self):
+    def test_king_is_full_snohomish_and_spokane_partial(self):
         # Snohomish is partial_county because its nine District Court seats
         # are scoped to DISTCRT (Cascade/Everett/Evergreen/South electoral
-        # districts), which no GIS layer resolves.
+        # districts), which no GIS layer resolves; Spokane because its
+        # Stevens County PUD seat is scoped to PUDDST, likewise.
         self.assertEqual({
             "statewide_complete": True,
             "supported_counties": [{
@@ -89,19 +95,26 @@ class GeneralAppDataTest(unittest.TestCase):
                 "id": "snohomish", "name": "Snohomish County", "state": "WA", "fips": "53061",
                 "coverage": "partial_county",
                 "elections_url": "https://www.snohomishcountywa.gov/224/Elections-Voter-Registration",
+            }, {
+                "id": "spokane", "name": "Spokane County", "state": "WA", "fips": "53063",
+                "coverage": "partial_county", "elections_url": "https://www.spokanecounty.gov/elections",
             }],
         }, self.app["coverage"])
 
-    def test_every_scope_is_resolvable_except_snohomish_district_court(self):
+    def test_every_scope_is_resolvable_except_snohomish_district_court_and_spokane_pud(self):
         unresolved = []
         for item in self.app["contests"] + self.app["measures"]:
             scope = item["scope"]
             if scope["kind"] == "DISTRICT":
-                self.assertIn(scope["county"], ("king", "snohomish"), item["slug"])
+                self.assertIn(scope["county"], ("king", "snohomish", "spokane"), item["slug"])
                 if scope["layer"] not in election.DISTRICT_ADAPTER_LAYERS[scope["county"]]:
                     unresolved.append((scope["county"], scope["layer"], item["slug"]))
-        self.assertEqual({("snohomish", "DISTCRT")}, {u[:2] for u in unresolved})
-        self.assertEqual(9, len(unresolved))
+        self.assertEqual({("snohomish", "DISTCRT"), ("spokane", "PUDDST")}, {u[:2] for u in unresolved})
+        self.assertEqual(10, len(unresolved))
+        fd9 = self.measures["spokane-spokane-county-fire-protection-district-no-9-proposition-no-1"]
+        self.assertEqual({"kind": "DISTRICT", "county": "spokane", "layer": "FIRDST", "value": "Fire District 9"}, fd9["scope"])
+        sd81 = self.measures["spokane-spokane-school-district-no-81-proposition-no-1"]
+        self.assertEqual({"kind": "DISTRICT", "county": "spokane", "layer": "SCHDST", "value": "Spokane #81"}, sd81["scope"])
         rfa = self.measures["snohomish-south-snohomish-county-fire-rescue-regional-fire-authority-proposition-no-1"]
         self.assertEqual({"kind": "DISTRICT", "county": "snohomish", "layer": "RFADST", "value": "SCRFA"}, rfa["scope"])
         cemetery = self.measures["king-county-cemetery-district-no-1-proposition-no-1"]
@@ -121,12 +134,13 @@ class GeneralAppDataTest(unittest.TestCase):
                              sorted(c["slug"] for c in shipped["candidates"]))
         self.assertIn("sean-odonnell", [c["slug"] for c in self.contests["justice-position-no-4-supreme-court"]["candidates"]])
 
-    def test_ballot_is_statewide_plus_king_in_kce_order_then_snohomish(self):
-        self.assertEqual([c["slug"] for c in self.king_contests] + [c["slug"] for c in self.sno_contests],
+    def test_ballot_is_statewide_plus_king_in_kce_order_then_snohomish_then_spokane(self):
+        self.assertEqual([c["slug"] for c in self.king_contests + self.sno_contests + self.spo_contests],
                          [c["slug"] for c in self.app["contests"]])
-        self.assertEqual([m["slug"] for m in self.state_measures + self.king_measures + self.sno_measures],
+        self.assertEqual([m["slug"] for m in self.state_measures + self.king_measures + self.sno_measures
+                          + self.spo_measures],
                          [m["slug"] for m in self.app["measures"]])
-        self.assertEqual((132, 35), (len(self.app["contests"]), len(self.app["measures"])))
+        self.assertEqual((163, 55), (len(self.app["contests"]), len(self.app["measures"])))
 
     def test_king_records_keep_owner_scope_and_uncontested_verbatim(self):
         for source in self.king_contests:
@@ -213,14 +227,16 @@ class GeneralAppDataTest(unittest.TestCase):
 
     def test_provenance_names_the_shipped_packages(self):
         for path in (f"{election.rel(GENERAL.state)}/**", f"{election.rel(KING)}/**",
-                     f"{election.rel(SNOHOMISH)}/**"):
+                     f"{election.rel(SNOHOMISH)}/**", f"{election.rel(SPOKANE)}/**"):
             self.assertIn(path, self.app["derived_from"])
         merged = read(GENERAL.final / "scores.json")["derived_from"] + read(
             GENERAL.final / "measures.json")["derived_from"]
         self.assertTrue([d for d in merged if "/counties/king/" in d])
         self.assertTrue([d for d in merged if "/counties/snohomish/" in d])
+        self.assertTrue([d for d in merged if "/counties/spokane/" in d])
         self.assertFalse([d for d in merged + self.app["derived_from"]
-                          if "/counties/" in d and not ("/counties/king" in d or "/counties/snohomish" in d)])
+                          if "/counties/" in d
+                          and not any(f"/counties/{c}" in d for c in ("king", "snohomish", "spokane"))])
 
     def test_statewide_candidates_carry_ballot_order_pamphlet_pages_and_sources(self):
         for source in self.state_contests:
@@ -249,7 +265,12 @@ class GeneralAppDataTest(unittest.TestCase):
                 self.assertTrue(measure[field], f"{measure['slug']}: {field}")
             if not measure["lean_mappings"]:
                 no_axis.append(measure["slug"])
-            self.assertTrue(measure["pamphlet_pages"], measure["slug"])
+            # Spokane's measures cite VoteWA's unpaged online guide
+            # (officialLinks.js countyGuides), so they carry no pages.
+            if measure["owner"] == "spokane":
+                self.assertEqual([], measure["pamphlet_pages"], measure["slug"])
+            else:
+                self.assertTrue(measure["pamphlet_pages"], measure["slug"])
         self.assertEqual(7, len(no_axis), no_axis)
         self.assertTrue(all(s.startswith("snohomish-") for s in no_axis), no_axis)
 
@@ -305,6 +326,37 @@ class GeneralSnohomishTest(unittest.TestCase):
                 self.assertIn("pamphlet_pages", cand, cand["slug"])
 
 
+class GeneralSpokaneTest(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.app = read(GENERAL.final / "app-data.json")
+        cls.measures = {m["slug"]: m for m in cls.app["measures"]}
+
+    def test_spokane_ships_its_own_research_only(self):
+        import shared_contests
+        others = {shared_contests.contest_key(c) for c in self.app["contests"] if c["owner"] != "spokane"}
+        spokane = [c for c in self.app["contests"] if c["owner"] == "spokane"]
+        self.assertEqual(31, len(spokane))
+        self.assertEqual(15, sum(1 for c in spokane if c["uncontested"]))
+        self.assertFalse([c["slug"] for c in spokane if shared_contests.contest_key(c) in others])
+        self.assertFalse([c for c in spokane if "supreme" in c["slug"]])
+        self.assertEqual(20, sum(1 for m in self.app["measures"] if m["owner"] == "spokane"))
+
+    def test_spokane_cites_the_unpaged_votewa_guide(self):
+        # pamphlet_refs.py finds no page in a VoteWA guide citation; the app
+        # links officialLinks.js countyGuides.spokane instead.
+        for contest in self.app["contests"]:
+            if contest["owner"] == "spokane":
+                for cand in contest["candidates"]:
+                    self.assertEqual([], cand["pamphlet_pages"], cand["slug"])
+
+    def test_fire_district_3_spending_mapping_added_by_refutation(self):
+        mappings = self.measures["spokane-spokane-county-fire-protection-district-no-3-proposition-no-1"]["lean_mappings"]
+        self.assertEqual({"taxes", "spending"}, set(mappings))
+        self.assertEqual(1, mappings["spending"]["direction"])
+        self.assertTrue(mappings["spending"].get("added_by_refutation"))
+
+
 class GeneralRefutationsAppliedTest(unittest.TestCase):
     """merge_scores.py applies `adjust`, `refuted` and medium/high `missing`
     verdicts, for candidates and measures."""
@@ -349,7 +401,7 @@ class GeneralRefutationsAppliedTest(unittest.TestCase):
 
     def test_verdict_counts(self):
         stats = read(GENERAL.final / "scores.json")["verdict_stats"]
-        self.assertEqual({"upheld": 815, "adjust": 65, "refuted": 2, "missing_added": 11, "missing_dropped_low": 2}, stats)
+        self.assertEqual({"upheld": 980, "adjust": 78, "refuted": 2, "missing_added": 14, "missing_dropped_low": 2}, stats)
 
 
 if __name__ == "__main__":

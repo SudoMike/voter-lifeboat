@@ -67,7 +67,7 @@ APP_PACKAGES = {
     },
     "2026-11-03-general": {
         "statewide_ballot": True,
-        "counties": ["king", "snohomish"],
+        "counties": ["king", "snohomish", "spokane"],
         "district_contests": "county",
     },
 }
@@ -83,6 +83,7 @@ APP_PACKAGES = {
 DISTRICT_ADAPTER_LAYERS = {
     "king": ("CONGDST", "LEGDST", "KCCDST", "SCCDST", "JUDDST", "FIRDST", "SCHDST", "CITY", "CEMDST"),
     "snohomish": ("CONGDST", "LEGDST", "CITY", "PUDDST", "SCHDST", "FIRDST", "HOSPDST", "LIBDST", "RFADST"),
+    "spokane": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "PTBA", "LIBDST", "SCHDST", "FIRDST", "PARKDST"),
 }
 
 
@@ -175,6 +176,10 @@ COUNTY_ELECTIONS_URLS = {
         "king": "https://kingcounty.gov/en/dept/elections",
         # Snohomish County Auditor, Elections & Voter Registration (200, 2026-10-08).
         "snohomish": "https://www.snohomishcountywa.gov/224/Elections-Voter-Registration",
+        # Spokane County Auditor, Elections: the address the county's own
+        # 2026 primary voters' pamphlet prints. It answers 403 (Cloudflare) to
+        # scripted requests (2026-10-08), so its 200 is unchecked here.
+        "spokane": "https://www.spokanecounty.gov/elections",
     },
 }
 

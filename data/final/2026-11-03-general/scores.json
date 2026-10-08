@@ -5,14 +5,16 @@
     "data/washington-state/elections/2026-11-03-general/counties/king/scoring/*.json",
     "data/washington-state/elections/2026-11-03-general/counties/king/scoring/refutations/*.json",
     "data/washington-state/elections/2026-11-03-general/counties/snohomish/scoring/*.json",
-    "data/washington-state/elections/2026-11-03-general/counties/snohomish/scoring/refutations/*.json"
+    "data/washington-state/elections/2026-11-03-general/counties/snohomish/scoring/refutations/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/scoring/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/spokane/scoring/refutations/*.json"
   ],
   "script": "pipeline/merge_scores.py",
   "verdict_stats": {
-    "upheld": 815,
-    "adjust": 65,
+    "upheld": 980,
+    "adjust": 78,
     "refuted": 2,
-    "missing_added": 11,
+    "missing_added": 14,
     "missing_dropped_low": 2
   },
   "contests": [
@@ -11285,6 +11287,2433 @@
             "Endorsed by deputy prosecutors, the Deputy Sheriffs' Association, Everett and Lynnwood police guilds, Executive Dave Somers and Sheriff Susanna Johnson [S1]"
           ],
           "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-congressional-district-5-u-s-representative",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/spokane/dossiers/spokane-congressional-district-5-u-s-representative/"
+      ],
+      "office_does": "The U.S. Representative for Washington's 5th District votes on federal law, taxes, spending and oversight for 12 Eastern Washington counties, including Spokane.",
+      "race_blurb": "A 2024 rematch: first-term Republican Michael Baumgartner, who led the August primary with 48%, faces Democrat Carmela Conroy, a former diplomat and deputy prosecutor who took 20.8%. They split on the 2025 tax-and-spending law, tariffs, immigration enforcement, the Iran war and Israel aid, and gender-affirming care for minors.",
+      "candidates": [
+        {
+          "slug": "michael-baumgartner",
+          "summary": "First-term Republican congressman, former Spokane County Treasurer and state senator, running on tax cuts, border security and defense.",
+          "highlights": [
+            "Voted for the 2025 tax and spending law (H.R. 1) on passage and final concurrence [S10]",
+            "Voted for the SAVE Act and the Laken Riley Act [S11]",
+            "Backs higher military spending and cuts to social services, citing the national debt [S16]",
+            "Supports a federal ban on gender-affirming care for minors [S14]",
+            "Sponsored a bill to bar members of Congress from trading individual stocks [S1]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S10",
+                "S15"
+              ],
+              "basis": "Voted for the 2025 H.R. 1 tax cuts, campaigns on having reduced taxes, and calls a state income tax 'terrible'."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S16"
+              ],
+              "basis": "Calls for curbing 'reckless government spending' and cutting social services, but backs higher defense spending, so restraint is selective."
+            },
+            "immigration": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S8",
+                "S11",
+                "S14"
+              ],
+              "basis": "Strongly supports border security and enforcement, voted for the Laken Riley Act, and calls the crackdown 'largely successful' while criticizing some ICE operations."
+            },
+            "social": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S14",
+                "S6"
+              ],
+              "basis": "Supports and says he voted for a federal ban on gender-affirming care for minors; leaves abortion law to the states."
+            },
+            "defense": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S13",
+                "S16"
+              ],
+              "basis": "Supports continuing the Iran conflict 'as long as it takes', U.S. aid to Israel, and a larger defense budget."
+            },
+            "climate": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S7",
+                "S1",
+                "S16"
+              ],
+              "basis": "Applauded withdrawal from the Columbia Basin agreement, defends the Snake River dams, and dismisses 'environmental fads'."
+            },
+            "tech": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S14"
+              ],
+              "basis": "Frames AI as a race with China and offers federal incentives for data centers, with a requirement that they pay for their power and water costs.",
+              "adjusted_by_refutation": true
+            },
+            "reform": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Sponsored legislation banning individual stock trading by members of Congress."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Incumbent congressman with prior service as county treasurer and state senator."
+            },
+            "healthcare": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S5",
+                "S16"
+              ],
+              "basis": "Official site backs a 'patient-centered' system where Americans are not 'forced to follow bureaucratic directives', working within the existing structure (rural hospital fund) [S5]; he supports the H.R. 1 Medicaid eligibility restrictions as cost-cutting [S16]. Clearly not single-payer; -1 rather than -2 because pole_a's 'protect ACA/Medicaid' does not describe him.",
+              "added_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "carmela-conroy",
+          "summary": "Democrat and former U.S. diplomat and Spokane County deputy prosecutor, in a rematch, running on ending tariffs, restoring health funding and checking the executive branch.",
+          "highlights": [
+            "Would end tariffs and fund rural hospitals, Social Security, Medicare and Medicaid [S1]",
+            "Platform would extend Medicaid to all children and undo 2025 H.R. 1 eligibility rules [S3]",
+            "Would defund immigration detention centers and release non-criminal detainees [S3]",
+            "Calls the Iran conflict a war and says aid to Israel should be halted [S5]",
+            "Supports a congressional stock-trading ban [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Pledges to restore and expand Medicare/Medicaid funding, public education funding and investment in housing and child care."
+            },
+            "healthcare": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S4"
+              ],
+              "basis": "Platform extends Medicaid to all children; the Spokesman-Review reports she supports universal single-payer healthcare.",
+              "adjusted_by_refutation": true
+            },
+            "immigration": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S6"
+              ],
+              "basis": "Would defund detention centers, release non-criminal detainees, and opposes DHS enforcement operations in cities."
+            },
+            "defense": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S5"
+              ],
+              "basis": "Would end the Iran war, defund 'aggressive' military operations, and halt aid to Israel."
+            },
+            "social": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S6"
+              ],
+              "basis": "Opposes a federal ban on gender-affirming care for minors, leaving it to patients, doctors and parents; pledges to keep politicians out of the doctor's office.",
+              "adjusted_by_refutation": true
+            },
+            "tech": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S6"
+              ],
+              "basis": "Raises water and power concerns about data centers and wants local and state governments to decide on them."
+            },
+            "reform": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Supports a congressional stock-trading ban and accountability for people named in the Epstein files."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Never held elected office; a long career as a diplomat and prosecutor."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-court-of-appeals-division-3-district-1-judge-position-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/spokane/dossiers/spokane-court-of-appeals-division-3-district-1-judge-position-2/"
+      ],
+      "office_does": "A Court of Appeals judge reviews appeals from superior-court cases in Eastern Washington; District 1 judges are elected for six-year terms by voters in Ferry, Lincoln, Okanogan, Pend Oreille, Spokane and Stevens counties.",
+      "race_blurb": "Uncontested: Judge Tracy Arlene Staab, who won the seat in 2020, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "tracy-arlene-staab",
+          "summary": "Court of Appeals judge (Division III, District 1) elected in 2020, previously a Spokane Municipal Court judge (2009-2020) and federal appellate defender; the only candidate on the ballot.",
+          "highlights": [
+            "Won this seat in 2020 with 62.84% of the district vote [S3]",
+            "Spokane Municipal Court judge from 2009 and earlier a Court of Appeals law clerk and federal appellate defense attorney [S2]",
+            "Submitted no statement to the 2026 voters' guide [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-legislative-district-3-state-representative-pos-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/spokane/dossiers/spokane-legislative-district-3-state-representative-pos-1/"
+      ],
+      "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering the tax structure, school and child-care funding, housing and landlord-tenant law, behavioral-health funding and criminal-justice statutes.",
+      "race_blurb": "A 2024 rematch in central Spokane: Democratic incumbent Natasha Hill, who took 64.5% in the August primary, faces Republican Tony Kiepe. Hill campaigns on the 2026 millionaires tax and housing legislation; Kiepe runs on a full state budget audit, no new taxes and more police and jail capacity.",
+      "candidates": [
+        {
+          "slug": "natasha-hill",
+          "summary": "One-term Democratic incumbent, Vice Chair of the House Housing Committee and civil litigation attorney from Hillyard, whose record includes votes for the 2026 millionaires tax and the 2025 rent-increase limits.",
+          "highlights": [
+            "Voted for ESSB 6346, the 2026 tax on income over $1 million that I-645 would repeal, and says she \"led on\" it [S1][S3]",
+            "Voted for the 2025 limits on rent and fee increases (EHB 1217) and has called for rent stabilization [S5][S9]",
+            "Voted for ESHB 1296 and is listed as opposing I-001 and I-638 [S4][S10]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S1",
+                "S7",
+                "S9"
+              ],
+              "basis": "Voted for ESSB 6346; independently says she led on the millionaire tax, platform calls for the wealthy to pay an equitable share, and backed keeping the capital gains tax."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S11",
+                "S7"
+              ],
+              "basis": "Co-wrote an op-ed urging rejection of child-care and early-learning cuts; platform supports investment in treatment, housing and job training."
+            },
+            "housing": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S5",
+                "S6",
+                "S9",
+                "S1"
+              ],
+              "basis": "Voted for EHB 1217 rent-increase limits and called for statewide rent stabilization, while also backing supply measures such as condominium reform and land banks."
+            },
+            "safety": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S7"
+              ],
+              "basis": "Says incarceration without care is not effective and supports investment in mental health, addiction treatment, housing and job training."
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S7"
+              ],
+              "basis": "Platform supports a just transition away from fossil fuels and clean-energy investment; no specific carbon-pricing record in the dossier."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S13"
+              ],
+              "basis": "Incumbent since 2025 with two sessions and a committee vice chair post; shorter tenure than a long-serving legislator, against a never-elected opponent."
+            },
+            "immigration": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S12"
+              ],
+              "basis": "Says she supported critical protections for immigrants; co-wrote an op-ed criticizing federal prosecution of ICE-facility protesters."
+            },
+            "social": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S7",
+                "S10"
+              ],
+              "basis": "Platform pledges to champion safe access to abortion; publicly listed as opposing I-638."
+            },
+            "parental-rights": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S10",
+                "S15"
+              ],
+              "basis": "Voted for ESHB 1296, which narrowed parts of the I-2081 parental-rights law, and is listed as opposing I-001, which would restore it."
+            }
+          }
+        },
+        {
+          "slug": "tony-kiepe",
+          "summary": "Republican Medicare insurance agent and chair of the Spokane County Conservancy Board, running a second time for the seat on a full state budget audit, fiscal restraint and law enforcement.",
+          "highlights": [
+            "Priorities: \"full budget audit,\" affordable housing, thriving businesses and fiscal responsibility [S2]",
+            "Says \"the answer is not tax more\" and the state should make cuts instead of raising taxes [S3]",
+            "Wants more police, \"keeping criminals in jail\" and investment in a jail [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Questionnaire rejects raising taxes in favor of cuts; a single source without a specific tax pledge or plan."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Website and questionnaire both center a complete government audit, cutting waste and defunding programs that do not show results."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S5"
+              ],
+              "basis": "Attributes high building costs to bureaucracy and permitting fees and supports faster permitting; no tenant-protection or public-housing proposals."
+            },
+            "safety": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S5"
+              ],
+              "basis": "Calls funding police the first priority, wants to keep criminals in jail and build jail capacity; named enforcement as the top issue in 2024 as well."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S4"
+              ],
+              "basis": "No elected experience; several unsuccessful city council and House bids."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-legislative-district-3-state-representative-pos-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/spokane/dossiers/spokane-legislative-district-3-state-representative-pos-2/"
+      ],
+      "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering the tax structure, school and child-care funding, housing and landlord-tenant law, behavioral-health funding and criminal-justice statutes.",
+      "race_blurb": "An open seat after 23 years of Democrat Timm Ormsby: Republican teacher Natalie Poulson narrowly led the primary over Democrat Luc Jasmin III, the governors' Eastern Washington liaison. Poulson runs on no new taxes, audits and enforcement-first public safety; Jasmin on child care, education, health care and housing-first services.",
+      "candidates": [
+        {
+          "slug": "natalie-poulson",
+          "summary": "Republican special-education teacher and former Spokane Public Schools employee, running again after losing to Ormsby in 2022, on lower taxes, spending audits, enforcement-first public safety and parental rights.",
+          "highlights": [
+            "Will \"stand against any form of state income tax\" and wants to repeal or lower the B&O tax [S2][S6]",
+            "\"Enforcement first\": consequences for property crime and public drug use, involuntary treatment, treatment-first over housing-first [S3][S4]",
+            "Describes herself as pro-life and supports limits on gender-affirming care for minors [S4]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S4",
+                "S6"
+              ],
+              "basis": "Opposes any state income tax and new broad-based taxes and would repeal or lower the B&O tax, in repeated statements."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S3",
+                "S4"
+              ],
+              "basis": "Repeatedly calls for independent audits, cutting bureaucracy and not renewing programs without results."
+            },
+            "housing": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S4",
+                "S5"
+              ],
+              "basis": "\"Supply-side solutions, not more spending or mandates\": cut permitting delays, fees and state construction mandates, favor market-rate housing."
+            },
+            "safety": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S4",
+                "S5"
+              ],
+              "basis": "\"Enforcement first,\" ending catch-and-release, custody or mandatory programs for repeat offenders, involuntary treatment and treatment-first over housing-first."
+            },
+            "climate": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S5"
+              ],
+              "basis": "Opposes natural-gas restrictions in new construction on cost grounds; no broader climate-policy statement."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S6"
+              ],
+              "basis": "Never held public office beyond precinct committee officer; runs as a non-politician seeking change after 30 years of the same representation."
+            },
+            "local-control": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S8",
+                "S3"
+              ],
+              "basis": "Advocates local control of housing decisions and wants to stop Olympia from piling on construction rules."
+            },
+            "immigration": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Opposes state suits against federal immigration enforcement and sanctuary incentives; supports cooperation on serious criminals."
+            },
+            "social": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Pro-life and supports parental consent and limits on irreversible gender-affirming procedures for minors, while respecting current abortion law and adult choice."
+            },
+            "parental-rights": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Names parental rights as a platform plank (families, not government, make decisions for children) without specific notification or opt-out proposals."
+            },
+            "tech": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Opposes broad AI regulation as harmful to innovation but would roll back data-center tax exemptions."
+            }
+          }
+        },
+        {
+          "slug": "luc-jasmin-iii",
+          "summary": "Democratic child-care business owner and Eastern Washington liaison for Governors Inslee and Ferguson, running on cost of living, child care, education, health care and housing.",
+          "highlights": [
+            "Supports a more progressive tax structure but said he would not back further tax increases in his first term [S4][S6]",
+            "Backs housing-first approaches, behavioral-health crisis responders and tenant protections against rent hikes [S3][S4]",
+            "Supports current protections for gender-affirming care and abortion; endorsed by Gov. Ferguson, the State Labor Council and WEA [S1][S4]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S5",
+                "S6"
+              ],
+              "basis": "Supports asking those with the most resources to pay more, but said he will not support further tax increases in his first term."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S6",
+                "S7"
+              ],
+              "basis": "Opposes closing the budget gap through cuts to schools and behavioral health and proposes more investment in education and health care, while citing reduced administrative waste."
+            },
+            "housing": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S4",
+                "S3"
+              ],
+              "basis": "Pairs tenant protections against rent hikes and down-payment assistance with supply measures (missing middle, office conversions, faster building)."
+            },
+            "safety": {
+              "score": 1,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S4"
+              ],
+              "basis": "Backs housing first, non-police crisis response and harm reduction, with law enforcement focused on trafficking and violent crime and clear expectations on public drug use."
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Would condition data-center tax breaks on renewable-energy and water commitments and fund home energy-efficiency upgrades."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S6",
+                "S9",
+                "S1"
+              ],
+              "basis": "Never held legislative office, but runs on four years inside state government as the governors' liaison and his Olympia relationships.",
+              "adjusted_by_refutation": true
+            },
+            "local-control": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Says local leaders know the economy better than Olympia in backing Spokane's tax pilot and supports protecting local governments from unfunded mandates."
+            },
+            "immigration": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S4",
+                "S9"
+              ],
+              "basis": "Wants the state to act as a firewall so agencies are not tools of punitive immigration crackdowns; lists immigrants' rights as a priority."
+            },
+            "social": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S4",
+                "S2"
+              ],
+              "basis": "Supports current gender-affirming-care protections and shield laws and fully supports abortion protections, in questionnaire and campaign site."
+            },
+            "tech": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S4"
+              ],
+              "basis": "Supports impact assessments and audits for high-risk AI, a ban on algorithmic discrimination, data protection and tighter data-center exemptions."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-legislative-district-4-state-representative-pos-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/spokane/dossiers/spokane-legislative-district-4-state-representative-pos-1/"
+      ],
+      "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering school funding, tax structure, housing rules, health funding and criminal-justice statutes.",
+      "race_blurb": "Two first-time Republican candidates are competing for the Spokane Valley seat Rep. Suzanne Schmidt is leaving to run for county commissioner. Hillary Pham, an Air Force veteran and aide to Rep. Rob Chase, led the primary narrowly over Trent Maier, a cidery owner and former Spokane Valley Chamber chair endorsed by Schmidt.",
+      "candidates": [
+        {
+          "slug": "hillary-q-pham",
+          "summary": "Air Force veteran and legislative assistant to Rep. Rob Chase, running for office for the first time on affordability, housing and public safety.",
+          "highlights": [
+            "Names affordability and better pathways to home ownership as her top priorities [S4]",
+            "Calls the Climate Commitment Act a \"huge monster\" and would change parts of it rather than repeal it [S4]",
+            "Supports Rep. Chase's bill to create two autonomous regions in Washington; endorsed by Chase [S2][S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Runs on affordability and keeping grocery bag fees low; reported among candidates focused on lowering taxes, with no explicit tax plank of her own.",
+              "adjusted_by_refutation": true
+            },
+            "climate": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S4"
+              ],
+              "basis": "Says the Climate Commitment Act and gas tax raise costs without measurable progress; would change parts of the act rather than repeal it."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Pledges to defend public safety and 'stand with law enforcement'; no specific enforcement or prevention proposals.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S4"
+              ],
+              "basis": "First-time candidate, but presents legislative-staff and county intergovernmental experience as readiness to 'hit the ground running'."
+            }
+          }
+        },
+        {
+          "slug": "trent-maier",
+          "summary": "Electrical engineer and Trailbreaker Cider co-founder, former Greater Spokane Valley Chamber chair, running for office for the first time on lower taxes, less regulation and public safety.",
+          "highlights": [
+            "Runs for \"lower taxes\" and pledges to fight unnecessary tax increases [S1][S2]",
+            "Supports recruiting more police officers and restoring accountability in the criminal justice system; endorsed by the county prosecutor and sheriff [S2][S3]",
+            "Endorsed by Rep. Suzanne Schmidt, two county commissioners and the Association of Washington Business [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S5"
+              ],
+              "basis": "Voter guide, website and interview all center lower taxes and opposing tax increases."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Website says government should 'live within its means' and commits to responsible spending, without specific cuts."
+            },
+            "safety": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S3",
+                "S5"
+              ],
+              "basis": "Supports more officers, criminal-justice accountability and keeping dangerous offenders off the streets; prioritizes public-safety capital funding; endorsed by prosecutor and sheriff."
+            },
+            "climate": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S4"
+              ],
+              "basis": "Calls the Climate Commitment Act's expectations irresponsible and prefers market innovation over mandates; opposes policies raising utility costs."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S4"
+              ],
+              "basis": "No prior office or government work; runs on 15 years of business experience."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-legislative-district-4-state-representative-pos-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/spokane/dossiers/spokane-legislative-district-4-state-representative-pos-2/"
+      ],
+      "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering school funding, tax structure, housing rules, health funding and criminal-justice statutes.",
+      "race_blurb": "Republican incumbent Rob Chase faces first-time Democratic candidate Rob Tupper after a close primary (43% to 41%). The race turns on Chase's bill to create two autonomous regions within Washington, which Tupper opposes, and on taxes: Chase voted against the 2026 income tax and Tupper would keep it.",
+      "candidates": [
+        {
+          "slug": "rob-chase",
+          "summary": "Two-term State Representative and former Spokane County treasurer whose signature proposal would divide Washington into two autonomous regions.",
+          "highlights": [
+            "Voted against the 2026 tax on income over $1 million and the 2025 B&O and services tax bills [S4][S6][S7]",
+            "Prime sponsor of HB 2085 to create autonomous Puget Sound and Columbia regions [S8]",
+            "Says human activity does not affect climate change and calls the Climate Commitment Act the most damaging tax [S9][S10]",
+            "Supported the parental-rights and girls'-sports initiatives and voted against ESHB 1296 [S5][S9]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S4",
+                "S6",
+                "S7",
+                "S10"
+              ],
+              "basis": "Voted no on ESSB 6346 and on the 2025 B&O (EHB 2081) and services excise (ESSB 5814) tax bills; pledges to lower taxes for everyone."
+            },
+            "climate": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S9",
+                "S10"
+              ],
+              "basis": "Says climate change is not human-caused, the state should not act to slow it, and the Climate Commitment Act is 'taxing the air'."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S11"
+              ],
+              "basis": "Two House terms and eight years as county treasurer, facing a first-time candidate."
+            },
+            "local-control": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S8",
+                "S9"
+              ],
+              "basis": "Sponsors HB 2085 to devolve state government to two autonomous regions with their own governors, judges and legislators.",
+              "adjusted_by_refutation": true
+            },
+            "social": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S9"
+              ],
+              "basis": "Opposes abortion except for ectopic pregnancy and supported the initiative barring athletes assigned male at birth from girls' sports; cites a perfect Family Policy Institute score."
+            },
+            "parental-rights": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S5",
+                "S9"
+              ],
+              "basis": "Supported the I-1 parental-rights initiative, voted against ESHB 1296 and for faster parent access to special-education evaluations."
+            },
+            "tech": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S10"
+              ],
+              "basis": "Supports building AI data centers unless they significantly affect nearby residents."
+            }
+          }
+        },
+        {
+          "slug": "rob-tupper",
+          "summary": "Retired teacher, engineer and commercial fisherman running as a Democrat for the first time, centering opposition to splitting the state, universal healthcare and keeping the income tax.",
+          "highlights": [
+            "Would focus on maintaining the 2026 tax on income over $1 million [S6]",
+            "Pledges to fight for universal healthcare coverage [S3]",
+            "Lists \"No Data Centers\" as his first issue [S3]",
+            "Calls for community-oriented policing coordinated with social services [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S6"
+              ],
+              "basis": "Would focus on maintaining the tax on income over $1 million; website argues the sales-tax-reliant system is regressive."
+            },
+            "healthcare": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S6"
+              ],
+              "basis": "Website pledges universal healthcare coverage; interested in partnering with Whole Washington, a universal-healthcare group.",
+              "adjusted_by_refutation": true
+            },
+            "tech": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S6"
+              ],
+              "basis": "Opposes data centers; 'No Data Centers' is his lead website issue, citing power, water, land and tax breaks."
+            },
+            "safety": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Frames crime around root causes and backs police-clinician co-deployment and community-oriented policing coordinated with social services."
+            },
+            "climate": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S5",
+                "S6"
+              ],
+              "basis": "Says fossil-fuel use drives climate change; favors carbon-credit funds for building efficiency, forests and nuclear research."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "First run for office; describes himself as 'not a career politician' against a two-term incumbent."
+            },
+            "social": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S5"
+              ],
+              "basis": "Says government should not interfere in private matters like abortion; no stated position on LGBTQ+ issues."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-legislative-district-6-state-representative-pos-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/spokane/dossiers/spokane-legislative-district-6-state-representative-pos-1/"
+      ],
+      "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering school funding, tax structure, housing rules, health funding and criminal-justice statutes.",
+      "race_blurb": "Open seat left by Rep. Mike Volz, now Spokane County treasurer. Democrat Michaela Kelso, a retired Army linguist who led the six-way primary, faces Republican Alan Nolan, a Mead School Board director and retired Air Force officer; they split on the tax on income over $1 million, I-1 and I-638, housing regulation and data centers.",
+      "candidates": [
+        {
+          "slug": "michaela-kelso",
+          "summary": "Retired U.S. Army intelligence linguist and Democratic party officer, on her third run for the Legislature, whose priorities are housing costs, health care and school funding.",
+          "highlights": [
+            "Supports the 2026 tax on income over $1 million: \"Let them pay their fair share\" [S2]",
+            "Opposes Initiative 1 and Initiative 638 [S2]",
+            "Favors density, affordable units inside market-rate projects and rent-control legislation [S5][S6]",
+            "Wants a temporary statewide moratorium on data centers [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Supports the tax on income over $1 million and says higher earners should be taxed at a higher rate."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S6",
+                "S3"
+              ],
+              "basis": "Calls for guaranteeing and funding quality education and lowering the school-bond threshold so districts need not 'beg' for funds."
+            },
+            "housing": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S5",
+                "S6"
+              ],
+              "basis": "Backed rent-control legislation and wants inclusionary affordable units, alongside upzoning away from single-family-only land."
+            },
+            "healthcare": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S6",
+                "S3"
+              ],
+              "basis": "Calls single-payer systems 'vastly superior' but proposes incremental regulation of insurers and drug costs as the starting point."
+            },
+            "social": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S10"
+              ],
+              "basis": "Opposes I-638 (objecting to its sex-verification requirement); endorsed by Planned Parenthood Advocates."
+            },
+            "parental-rights": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Opposes I-1 and says educators, not outside mandates, should determine what students learn."
+            },
+            "tech": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Favors a temporary statewide data-center moratorium until the Legislature sets rules."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S5"
+              ],
+              "basis": "Has never held public office (party PCO and state committee member only); opponent holds a school-board seat."
+            }
+          }
+        },
+        {
+          "slug": "alan-nolan",
+          "summary": "Mead School Board director since 2023, retired Air Force lieutenant colonel and co-owner of a design and construction firm, running on spending cuts, lower taxes and school choice.",
+          "highlights": [
+            "Opposes the 2026 tax on income over $1 million and campaigned against a transit sales-tax renewal [S2][S7]",
+            "Top goal is restoring fiscal responsibility through spending reductions [S8]",
+            "Supports I-638 and state education dollars following students to charter and private schools [S7][S2]",
+            "Would revert the state energy code to 2018 and reform the Growth Management Act to lower housing costs [S2][S8]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S7",
+                "S3"
+              ],
+              "basis": "Opposes the tax on income over $1 million ('We do not need another tax') and campaigned against renewing STA's sales tax."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S8",
+                "S5",
+                "S9"
+              ],
+              "basis": "Top goal is spending reductions; pledges agency performance results and named a 50% cut to the attorney general's budget."
+            },
+            "housing": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S8",
+                "S3"
+              ],
+              "basis": "Would lower housing costs by repealing energy-code mandates, loosening GMA land restrictions and cutting fees and regulations."
+            },
+            "climate": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S8"
+              ],
+              "basis": "Wants recent energy-efficiency building mandates repealed, saying the state limits energy use without regard to cost."
+            },
+            "local-control": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Says local governments should decide data-center locations: 'I believe in local control.'"
+            },
+            "tech": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Says Eastern Washington has good reasons to host data centers, subject to a robust local process; no moratorium."
+            },
+            "social": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S7",
+                "S2"
+              ],
+              "basis": "Asks voters to approve I-638 and worked with school directors statewide on girls'-sports proposals."
+            },
+            "parental-rights": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S7",
+                "S2",
+                "S5"
+              ],
+              "basis": "Calls parents the 'rightful authority' over their children's education and backs funding that follows the student and school choice."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S6",
+                "S7"
+              ],
+              "basis": "School-board director since 2023 with state building-code roles; no legislative tenure."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S5"
+              ],
+              "basis": "Says the Legislature has undercut law enforcement with recent laws [S3]; campaign site calls for 'consequences for criminal behavior' and addiction policies that do not 'enable it' [S5]. Pole_a, but only general statements with no enforcement specifics, so -1.",
+              "added_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-legislative-district-6-state-representative-pos-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/spokane/dossiers/spokane-legislative-district-6-state-representative-pos-2/"
+      ],
+      "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering school funding, tax structure, housing rules, health funding and criminal-justice statutes.",
+      "race_blurb": "Open seat left by retiring Rep. Jenny Graham. Former Spokane City Councilmember Jonathan Bingle, endorsed by Graham, won a majority in the primary and faces first-time Democratic candidate Julia Payne; they split on income taxes, spending, gender policy and data centers.",
+      "candidates": [
+        {
+          "slug": "jonathan-bingle",
+          "summary": "Republican former Spokane City Councilmember (2022-2025), small-business owner and pastor, running on lower taxes, public safety, treatment-first homelessness policy and parental rights.",
+          "highlights": [
+            "Opposes all forms of income tax and proposes zero-based budgeting and performance audits [S9]",
+            "On the council, helped criminalize open drug use and make being in parks after hours arrestable [S2]",
+            "Proposed council restrictions on transgender bathroom access, sports and gender-affirming care for minors [S2]",
+            "Platform calls for parental notification in all school matters and full curriculum transparency [S9]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S9",
+                "S1",
+                "S6"
+              ],
+              "basis": "Pledges to oppose all income taxes including capital gains and new 'fees', and to reduce the tax burden."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S9",
+                "S8",
+                "S7"
+              ],
+              "basis": "Zero-based budgeting and audits; would cut anything not tied to infrastructure or physical safety; calls homelessness spending a failure."
+            },
+            "housing": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S9",
+                "S2"
+              ],
+              "basis": "Blames regulation and impact fees for costs and backs market-led supply; council votes to drop parking mandates and downtown height limits."
+            },
+            "safety": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S9"
+              ],
+              "basis": "Council record criminalizing open drug use and park-hours violations; platform of tougher penalties and treatment-first homelessness policy."
+            },
+            "climate": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S9"
+              ],
+              "basis": "Would repeal or roll back the Climate Commitment Act and opposes carbon policies that raise fuel costs."
+            },
+            "local-control": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S9"
+              ],
+              "basis": "Would stop unfunded state mandates on cities and counties and top-down mandates that bypass local representatives."
+            },
+            "social": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S9",
+                "S7"
+              ],
+              "basis": "Council amendment and platform to ban gender-affirming treatment for minors and restrict trans participation in girls' sports; supports a 13-week abortion limit."
+            },
+            "parental-rights": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S9"
+              ],
+              "basis": "Platform calls for full curriculum transparency, parental notification in all school matters and school choice."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "One Spokane City Council term (2022-2025); no legislative tenure; opponent is a first-time candidate."
+            }
+          }
+        },
+        {
+          "slug": "julia-payne",
+          "summary": "First-time Democratic candidate, office administrator and long-time Spokane Pride volunteer, running on affordability, accessibility and constituent access.",
+          "highlights": [
+            "Supports the Millionaire's Tax and a more graduated tax code [S6][S5]",
+            "Supports banning data-center construction unless strict self-sufficiency requirements are met [S6]",
+            "Favors a universal health care approach to address provider shortages [S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S6",
+                "S5"
+              ],
+              "basis": "Supports the Millionaire's Tax, 'more creative revenue options' and graduated taxation of those with means."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S5"
+              ],
+              "basis": "Would direct new progressive revenue to programs such as child care and fully fund firefighting."
+            },
+            "safety": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S5",
+                "S6"
+              ],
+              "basis": "Calls for higher accountability standards for police and a mix of treatment-first and housing-first approaches; calls protester prosecutions unjust."
+            },
+            "healthcare": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S5"
+              ],
+              "basis": "Says a universal health care approach would help fix the mental-health provider shortage."
+            },
+            "tech": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S6"
+              ],
+              "basis": "Supports a ban on data-center construction unless strict sustainability requirements are met, plus comprehensive regulation."
+            },
+            "social": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S7",
+                "S9"
+              ],
+              "basis": "Spokane Pride volunteer and board officer, endorsed by Stonewall Democrats and Planned Parenthood Advocates; no policy statement of her own.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "First-time candidate with no prior office, running on lived experience."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-legislative-district-6-state-senator",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/spokane/dossiers/spokane-legislative-district-6-state-senator/"
+      ],
+      "office_does": "A State Senator writes and votes on Washington state law and the operating, capital and transportation budgets, and confirms the governor's appointees.",
+      "race_blurb": "Uncontested: incumbent Jeff Holy (Prefers Republican Party) is the only candidate.",
+      "candidates": [
+        {
+          "slug": "jeff-holy",
+          "summary": "Incumbent 6th District state senator, a retired Spokane police detective and attorney; the only candidate on the ballot.",
+          "highlights": [
+            "Two-term state senator and former three-term state representative; retired Spokane police detective and attorney [S1]",
+            "Voted Nay on ESSB 6346, the 2026 tax on income over $1 million [S2]",
+            "Worked with a Democratic senator on a bipartisan bill to limit license-plate-reader surveillance [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-legislative-district-7-state-representative-pos-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/spokane/dossiers/spokane-legislative-district-7-state-representative-pos-1/"
+      ],
+      "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets.",
+      "race_blurb": "Uncontested: incumbent Andrew Engell (Prefers Republican Party) is the only candidate.",
+      "candidates": [
+        {
+          "slug": "andrew-engell",
+          "summary": "First-term 7th District state representative, a former congressional district staffer, farmer and volunteer firefighter; the only candidate on the ballot.",
+          "highlights": [
+            "First-term representative; former deputy district director for Rep. Cathy McMorris Rodgers [S1]",
+            "Says four of his bills passed in his first term [S1]",
+            "Voted Nay on ESSB 6346, the 2026 tax on income over $1 million [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-legislative-district-7-state-representative-pos-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/spokane/dossiers/spokane-legislative-district-7-state-representative-pos-2/"
+      ],
+      "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets.",
+      "race_blurb": "Uncontested: incumbent Hunter Abell (Prefers Republican Party) is the only candidate.",
+      "candidates": [
+        {
+          "slug": "hunter-abell",
+          "summary": "First-term 7th District state representative, an attorney, rancher, Navy commander and past state bar president; the only candidate on the ballot.",
+          "highlights": [
+            "State representative since 2025; past Washington State Bar Association president and former Ferry County District Court judge [S1]",
+            "Priorities: constitutional rights, the rural way of life, and a more prosperous state for families and businesses [S1]",
+            "Voted Nay on ESSB 6346, the 2026 tax on income over $1 million [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-legislative-district-7-state-senator",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/spokane/dossiers/spokane-legislative-district-7-state-senator/"
+      ],
+      "office_does": "A State Senator writes and votes on Washington state law and the operating, capital and transportation budgets, and confirms the governor's appointees.",
+      "race_blurb": "Republican Shelly Short, the Senate Republican Floor Leader and a legislator since 2009, faces independent Ronald McCoy, a former Chewelah mayor and Navy veteran. Short took 57.9% and McCoy 27.7% in the primary.",
+      "candidates": [
+        {
+          "slug": "shelly-short",
+          "summary": "Incumbent Republican senator and Senate Republican Floor Leader, in the Legislature since 2009, focused on agriculture, natural resources, wildfire and opposing state taxes and regulation.",
+          "highlights": [
+            "Voted against the 2026 tax on income over $1 million (ESSB 6346) [S5]",
+            "Voted against the 2025 capital-gains/estate and B&O tax increases [S6]",
+            "Voted against the 2025-27 operating budget [S7]",
+            "Voted against ESHB 1296, the 2025 changes to the parental-rights list [S8]",
+            "Calls wildfire risk and homeowner insurance her top priority [S3]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S5",
+                "S6"
+              ],
+              "basis": "Voted Nay on ESSB 6346, SB 5813 and HB 2081 and pledges to stand against 'endless taxes'."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S7"
+              ],
+              "basis": "Opposes 'unchecked spending' and voted against the 2025-27 operating budget; no specific audit or cut proposals found."
+            },
+            "local-control": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Campaigns on fighting 'burdensome agency rules' and battling state government when it stands in the way of local prosperity.",
+              "adjusted_by_refutation": true
+            },
+            "parental-rights": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S8"
+              ],
+              "basis": "Voted against ESHB 1296, which modified and narrowed parts of the I-2081 parental-rights list; no campaign statement on the topic."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "In the Legislature since 2009, senator since 2017 and Republican Floor Leader."
+            }
+          }
+        },
+        {
+          "slug": "ronald-l-mccoy",
+          "summary": "Independent former Chewelah mayor and retired Navy petty officer, running on rural healthcare, small-business tax relief and independence from party and lobbyists.",
+          "highlights": [
+            "Former Chewelah mayor (1998-2002) and city councilmember [S1][S3]",
+            "Focuses on rural healthcare access for older and disabled residents [S3]",
+            "Names tax burdens on small businesses and 'protect taxpayers' as priorities [S1][S2]",
+            "Says the district was not built by lobbyists and special interests [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2",
+                "S3"
+              ],
+              "basis": "Names small-business and household tax burdens as a concern and 'protect taxpayers' as a goal, without a specific tax proposal."
+            },
+            "reform": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Runs as an independent against lobbyists, special interests and 'big money'."
+            },
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Former small-city mayor and councilmember with no state-level office, running as a change candidate against an 18-year legislator."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-legislative-district-9-state-representative-pos-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/spokane/dossiers/spokane-legislative-district-9-state-representative-pos-1/"
+      ],
+      "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets.",
+      "race_blurb": "Uncontested: incumbent Mary Dye (Prefers Republican Party) is the only candidate.",
+      "candidates": [
+        {
+          "slug": "mary-dye",
+          "summary": "9th District state representative since 2015 and ranking Republican on House Environment and Energy; a wheat farmer. The only candidate on the ballot.",
+          "highlights": [
+            "Representative since 2015; ranking member of House Environment and Energy and on Appropriations and Capital Budget [S1]",
+            "Focus on water, hydropower, farming and fisheries in the 9th District [S1]",
+            "Voted Nay on ESSB 6346, the 2026 tax on income over $1 million [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-legislative-district-9-state-representative-pos-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/spokane/dossiers/spokane-legislative-district-9-state-representative-pos-2/"
+      ],
+      "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering taxes, school funding, public safety and natural-resource rules.",
+      "race_blurb": "Republican Rep. Joe Schmick, a former farmer in office since 2007, faces Democrat Karina Wallace, a peer support specialist making her first run for office. Schmick took 61.6% in the primary; the race contrasts his fiscal-restraint record with her lobbying-reform and worker-protection platform.",
+      "candidates": [
+        {
+          "slug": "joe-schmick",
+          "summary": "Republican incumbent since 2007 and former second-generation farmer, running on curbing state spending, agriculture and water, and parental involvement in schools.",
+          "highlights": [
+            "Voted against the 2026 tax on income over $1 million and the 2025 capital-gains/estate and B&O tax increases [S5][S6]",
+            "Voted against the 2025-27 operating budget [S7]",
+            "Says 'We don't have a revenue problem, we have a spending problem' [S2]",
+            "Wants more local school-board control and parents informed of what is taught; voted against ESHB 1296 [S2][S8]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S2",
+                "S5",
+                "S6"
+              ],
+              "basis": "Nay on ESSB 6346, SB 5813 and HB 2081, and campaigns on tax relief and 'a spending problem', not a revenue problem."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S7"
+              ],
+              "basis": "Calls for curbing state spending and living within means, and voted against the 2025-27 operating budget."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Says Democratic police reforms made communities less safe and police need more tools and support; no detail on treatment or diversion."
+            },
+            "parental-rights": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S8"
+              ],
+              "basis": "Campaign plank that parents have a right to know what is taught in class, plus Nay on ESHB 1296 (amendments narrowing the I-2081 parental-rights list)."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1"
+              ],
+              "basis": "Serving in the House since 2007."
+            }
+          }
+        },
+        {
+          "slug": "karina-wallace",
+          "summary": "Democrat and certified peer support specialist from Cheney, a first-time candidate running on paycheck protection, rural healthcare access and lobbying reform.",
+          "highlights": [
+            "Refuses corporate PAC money and lobbyist donations [S1]",
+            "Wants stronger lobbying disclosure and closed gift loopholes [S2]",
+            "Supports legal immigration pathways, due process and humane treatment [S2]",
+            "Endorsed by the Washington State Labor Council and Spokane Regional Labor Council [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "reform": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Refuses corporate PAC and lobbyist money and proposes lobbying disclosure and gift-loophole limits."
+            },
+            "immigration": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S2"
+              ],
+              "basis": "Supports due process and humane treatment and says fear-based enforcement does not make communities safer; also backs 'orderly legal immigration pathways'."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "First-time candidate who describes herself as 'not a career politician'."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-public-utility-district-no-1-of-stevens-county-commissioner-district-2-pud-commissioner",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/spokane/dossiers/spokane-public-utility-district-no-1-of-stevens-county-commissioner-district-2-pud-commissioner/"
+      ],
+      "office_does": "A Stevens PUD commissioner sits on the three-member board of an elected water and sewer utility serving about 5,000 customers in Stevens County and parts of Spokane County, for a six-year term.",
+      "race_blurb": "Every voter in the PUD, including its small Spokane County portion, votes on the District 2 seat. Commissioner Howie Kubik, a retired Avista lineman who has held the seat for 17 years without recent opposition, faces registered nurse Andrea Morgan, who stresses preventive maintenance, predictable rates and transparency.",
+      "candidates": [
+        {
+          "slug": "howie-kubik",
+          "summary": "Incumbent PUD commissioner for 17 years (self-reported) and a retired 37-year Avista lineman and foreman, running on reliable, safe and cost-effective water and sewer service.",
+          "highlights": [
+            "PUD commissioner for 17 years; re-elected unopposed in 2014 and 2020 [S1][S2][S3]",
+            "Retired after 37 years at Avista as a lineman, foreman and local representative [S1]",
+            "Says he has worked for reliable, safe and cost-effective utility service [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "andrea-morgan",
+          "summary": "Registered nurse of nearly 40 years and 33-year Stevens County property owner running for her first office, stressing preventive maintenance, predictable rates and transparency.",
+          "highlights": [
+            "Registered nurse for nearly 40 years; no prior elected office [S1]",
+            "Prioritizes preventive maintenance and long-term stability to keep rates predictable [S1]",
+            "Wants to balance infrastructure needs with natural resources and private property rights [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-spokane-county-assessor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/spokane/dossiers/spokane-spokane-county-assessor/"
+      ],
+      "office_does": "The assessor values every taxable property in Spokane County each year for property taxes and runs exemption programs such as the senior and disabled-persons exemption.",
+      "race_blurb": "Uncontested: incumbent Tom Konis (Prefers Republican Party), assessor since 2019, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "tom-konis",
+          "summary": "Incumbent Spokane County Assessor since 2019, with the office since 1993 as an appraiser; the only candidate on the ballot.",
+          "highlights": [
+            "Assessor since 2019; joined the office as an appraiser in 1993 [S1]",
+            "Credits his office with technology upgrades and cites work on SSB 6162 property-tax relief for seniors, disabled residents and disabled veterans [S1]",
+            "Promoted the senior and disabled-persons property-tax exemption in a 2025 op-ed with Treasurer Mike Volz [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-spokane-county-auditor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/spokane/dossiers/spokane-spokane-county-auditor/"
+      ],
+      "office_does": "The county auditor runs elections and voter registration, records property documents, issues vehicle and marriage licenses, and keeps the county's financial records and payroll.",
+      "race_blurb": "Democrat Callie Gee, a 24-year-old accountant who led the primary, faces Republican Spokane City Councilmember Michael Cathcart for the seat retiring Democrat Vicky Dalton has held since 1998; Dalton endorses Cathcart. Both pledge to protect vote-by-mail and publish county spending online.",
+      "candidates": [
+        {
+          "slug": "callie-gee",
+          "summary": "First-time Democratic candidate and public accountant who co-chairs the Spokane County Young Democrats and stresses election security and spending transparency.",
+          "highlights": [
+            "Pledges independent oversight and protection of vote-by-mail, and wider election-observer training [S1][S6]",
+            "Would build a public portal tracking county spending to show where cuts could be made [S6]",
+            "Endorsed by the Spokane County Democrats, the Spokane Regional Labor Council and Commissioner Amber Waldref [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S6",
+                "S7",
+                "S8"
+              ],
+              "basis": "24-year-old first-time candidate who says the job isn't about who's been in politics the longest and stresses that she is younger than most who run."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S6"
+              ],
+              "basis": "Pledges fiscal responsibility and efficiency and a spending portal to find bottlenecks and possible cuts."
+            }
+          }
+        },
+        {
+          "slug": "michael-cathcart",
+          "summary": "Two-term Republican Spokane City Councilmember and former council finance chair, endorsed by retiring Auditor Vicky Dalton, who pitches himself as a budget hawk and election-transparency watchdog.",
+          "highlights": [
+            "Would livestream canvassing and post-election audits and expand risk-limiting audits [S2]",
+            "Calls himself a 'budget hawk' and proposes an open-checkbook platform for county spending [S2]",
+            "Led a city charter amendment taking redistricting away from council members [S3]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3",
+                "S8"
+              ],
+              "basis": "Most senior Spokane City Councilmember, elected 2019 and 2023, former finance chair and chair of several regional boards.",
+              "adjusted_by_refutation": true
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Repeatedly frames himself as a budget hawk and financial watchdog offering fiscally conservative answers to budget shortfalls."
+            },
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3"
+              ],
+              "basis": "Campaign site carries an endorser's account that he opposed major tax increases and led a ban on local income taxes in Spokane."
+            },
+            "reform": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Led a charter amendment taking redistricting out of politicians' hands and presents open government as his record."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-spokane-county-clerk",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/spokane/dossiers/spokane-spokane-county-clerk/"
+      ],
+      "office_does": "The county clerk keeps Superior Court records, takes court filings, fees and restitution, and runs the court's administrative operations.",
+      "race_blurb": "Two first-time candidates seek to replace retiring Republican Clerk Tim Fitzgerald: Republican Dave Lucas, Cheney's municipal court administrator, and Democrat Elliot Robison, a health-care data analyst. The race contrasts court-administration experience with outside technology skills.",
+      "candidates": [
+        {
+          "slug": "dave-lucas",
+          "summary": "Cheney Municipal Court administrator and retired Marine Corps lieutenant colonel running on court-administration experience.",
+          "highlights": [
+            "Cites e-filing reforms, a court food bank and a Narcan center he started in Cheney [S5]",
+            "Promises faster, more accurate service and modernization that protects sensitive information [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S5"
+              ],
+              "basis": "Runs on 'Experience Matters' and his record as a municipal court administrator, though he has not held countywide office."
+            }
+          }
+        },
+        {
+          "slug": "elliot-robison",
+          "summary": "CHAS Health business intelligence analyst and first-time candidate proposing translated forms, court notifications and public operational reporting.",
+          "highlights": [
+            "Proposes expanded court guides, notifications, translated forms and public operational reporting [S1]",
+            "Pledges a constructive, union-friendly workplace; endorsed by the Spokane Regional Labor Council and Spokane County Democrats [S1][S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S4"
+              ],
+              "basis": "Calls for 'a new generation of leadership' and pitches newer, fresher skills from outside court administration."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-spokane-county-commissioner-district-2-commissioner",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/spokane/dossiers/spokane-spokane-county-commissioner-district-2-commissioner/"
+      ],
+      "office_does": "A county commissioner is one of the board members who adopt Spokane County's budget and tax levels and oversee county roads, jails and buildings.",
+      "race_blurb": "Uncontested: incumbent Amber Waldref (Prefers Democratic Party), a commissioner since 2023, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "amber-waldref",
+          "summary": "Incumbent Spokane County Commissioner (District 2) since 2023 and former Spokane City Council member (2010-2017); the only candidate on the ballot.",
+          "highlights": [
+            "Commissioner since 2023; Spokane City Council 2010-2017 and past chair of the Spokane Regional Health District and Spokane Transit Authority boards [S1]",
+            "Priorities: the opioid crisis, more housing through smart growth, reducing homelessness and protecting drinking water [S1]",
+            "Calls for investment in substance treatment and fixing the justice system [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-spokane-county-commissioner-district-4-commissioner",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/spokane/dossiers/spokane-spokane-county-commissioner-district-4-commissioner/"
+      ],
+      "office_does": "A county commissioner is one of five board members who adopt Spokane County's budget, set county tax and land-use policy for unincorporated areas, and oversee the jail and criminal justice funding.",
+      "race_blurb": "Republican State Rep. Suzanne Schmidt and independent Rachelle Miller, a social worker who reached the ballot as a primary write-in, are running to replace retiring Commissioner Mary Brooks. Data centers divide them most sharply: Miller would support a ban, and Schmidt would accept projects that do not raise utility rates or harm water.",
+      "candidates": [
+        {
+          "slug": "suzanne-schmidt",
+          "summary": "Two-term Republican state representative for the 4th Legislative District and former CEO of Associated Builders and Contractors Inland Pacific, running on cutting red tape, backing law enforcement and keeping taxes in check.",
+          "highlights": [
+            "Voted against ESSB 6346 (2026 tax on income over $1 million), ESSB 5813 (2025 capital gains and estate tax changes) and ESHB 2081 (2025 B&O tax increases) [S7][S9][S10]",
+            "Would rather grow the tax base than raise property taxes to close the county's projected $30 million deficit [S4]",
+            "Would not support a data center that raises utility rates, threatens water or strains the grid [S2]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S7",
+                "S9",
+                "S10",
+                "S4",
+                "S2"
+              ],
+              "basis": "Voted no on three 2025-26 state tax bills including ESSB 6346, says property taxes are already too much of a burden, and pledges to keep taxes in check."
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S11"
+              ],
+              "basis": "Campaign pledges to cut waste and protect taxpayer dollars; voted against the 2025-27 state operating budget."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S4"
+              ],
+              "basis": "Would cut red tape, streamline county permitting and push for development-friendly state rules on housing."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S4"
+              ],
+              "basis": "Platform says she will back law enforcement and keep criminals off the streets; also supports replacing the jail with a facility that includes treatment."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S4"
+              ],
+              "basis": "Two-term state representative and ranking committee member who says eight of her bills became law."
+            }
+          }
+        },
+        {
+          "slug": "rachelle-miller",
+          "summary": "Independent licensed clinical social worker and first-time candidate who reached the ballot through a primary write-in campaign centered on opposing AI data centers.",
+          "highlights": [
+            "Would support an outright ban on data centers in Spokane County and opposes tax breaks for them [S5]",
+            "Says the deficit stems from state mandates, not residents underpaying, but would consider a property tax increase to fund essential services [S2][S5]",
+            "Backs co-responder programs, the Regional Stabilization Center and stable funding for treatment [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S5"
+              ],
+              "basis": "Platform says the answer is not more taxes on struggling families, yet she told the Spokesman-Review she would consider raising property taxes to close the deficit."
+            },
+            "safety": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Platform centers opioid-settlement treatment programs and co-responder models that keep people out of jails, along with lasting solutions for homelessness."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S5"
+              ],
+              "basis": "First-time candidate running as an independent outsider recruited over data centers."
+            },
+            "reform": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Runs as an independent on 'No party sent me. No donor owns me.'"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-spokane-county-district-court-judge-position-no-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/spokane/dossiers/spokane-spokane-county-district-court-judge-position-no-1/"
+      ],
+      "office_does": "A Spokane County District Court judge hears misdemeanor and gross-misdemeanor criminal cases and traffic infractions, sets bail and holds preliminary hearings; all judges are elected countywide.",
+      "race_blurb": "Uncontested: incumbent Judge Patrick T Johnson is the only candidate.",
+      "candidates": [
+        {
+          "slug": "patrick-t-johnson",
+          "summary": "Spokane County District Court judge since 2018, previously a deputy prosecutor for 20 years; the only candidate on the ballot.",
+          "highlights": [
+            "Judge since 2018, presiding over Veterans Court and criminal dockets [S1]",
+            "Deputy prosecuting attorney 1998-2018 and retired Army Reserve JAG major [S1]",
+            "Adjunct professor at Gonzaga University School of Law [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-spokane-county-district-court-judge-position-no-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/spokane/dossiers/spokane-spokane-county-district-court-judge-position-no-2/"
+      ],
+      "office_does": "A Spokane County District Court judge, elected countywide for four years, hears misdemeanor and gross-misdemeanor criminal cases, traffic and civil cases, small claims and protection orders; the main discretion is in release, sentencing, probation and therapeutic-court supervision.",
+      "race_blurb": "Open seat: Judge Jeffrey Smith is retiring and endorses Spokane Municipal Court Commissioner Mike Valerien, a former city prosecutor. Valerien faces attorney and pro tem judge Deanna Crull, whose practice mixes prosecution and public defense and who narrowly lost a 2022 District Court race. Both carry an 'Exceptionally Well Qualified' bar rating, and many local judges endorse both.",
+      "candidates": [
+        {
+          "slug": "mike-michael-valerien",
+          "summary": "Spokane Municipal Court commissioner since 2016 after eight years as a City of Spokane assistant prosecutor; Air Force veteran and former 911 operator. Says judges should apply the law as the Legislature wrote it.",
+          "highlights": [
+            "Full-time Spokane Municipal Court commissioner since 2016, including therapeutic-court hearings [S3][S4]",
+            "Eight years as a city prosecutor, including Veteran's Court [S4][S7]",
+            "\"The Legislature passes the laws and it's my job to enforce the law as they've written it\" [S7]",
+            "Rated Exceptionally Well Qualified by the Spokane County Bar Association panel (2026) [S6]",
+            "Endorsed by retiring incumbent Jeff Smith, Prosecutor Preston McCollam and the Spokane Police Guild [S5][S7]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "judicial": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S7",
+                "S2"
+              ],
+              "basis": "States an apply-the-law-as-written philosophy (Legislature writes, judge enforces as written, subject to the Constitution), with discretion reserved for sentencing and probation."
+            },
+            "safety": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S3",
+                "S4",
+                "S7"
+              ],
+              "basis": "Prosecution formation and an 'hold offenders accountable' pledge, balanced by therapeutic-court work and his statement that 'we are not able to prosecute ourselves from these problems'; no bail position."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S4",
+                "S7"
+              ],
+              "basis": "Not an incumbent, but runs on ten years of full-time bench service as a commissioner and is endorsed by the retiring incumbent."
+            }
+          }
+        },
+        {
+          "slug": "deanna-kathleen-crull",
+          "summary": "Attorney and law-firm owner since 2009 who has served as a District Court pro tem judge since 2019, Airway Heights court commissioner since 2020 and a judge on several tribal courts; her practice has included prosecution and contract public defense.",
+          "highlights": [
+            "District Court pro tem judge since 2019 and Airway Heights Municipal Court commissioner since 2020 [S1][S2]",
+            "Former city and county prosecutor; contract public defender in Lincoln and Adams counties [S2]",
+            "Backs therapeutic alternatives for \"qualified, motivated individuals\" while stressing accountability [S1][S6]",
+            "Used her 2022 SCBA rating (Exceptionally Well Qualified); skipped the 2026 evaluation and bar poll [S5]",
+            "Lost the 2022 District Court Position 6 race, 48.6% to 50.7% [S8]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "judicial": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S6"
+              ],
+              "basis": "Describes a problem-solving, individualized approach that weighs history, circumstances and rehabilitation; says 'the old ways no longer serve the community' and stresses access to justice."
+            },
+            "safety": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2",
+                "S3",
+                "S6"
+              ],
+              "basis": "Mixed formation with long-running public-defense work, plus support for therapeutic alternatives and early intervention, qualified by an emphasis on accountability and community safety; no bail position."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2",
+                "S6"
+              ],
+              "basis": "Not an incumbent, but runs on 25 years of practice and seven years of pro tem, commissioner and tribal-court judicial service."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-spokane-county-district-court-judge-position-no-3",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/spokane/dossiers/spokane-spokane-county-district-court-judge-position-no-3/"
+      ],
+      "office_does": "A Spokane County District Court judge hears misdemeanor and gross-misdemeanor criminal cases and traffic infractions, sets bail and holds preliminary hearings; all judges are elected countywide.",
+      "race_blurb": "Uncontested: incumbent Judge Jenny Zappone is the only candidate.",
+      "candidates": [
+        {
+          "slug": "jenny-zappone",
+          "summary": "Spokane County District Court judge since 2022 and a former senior deputy prosecutor; the only candidate on the ballot.",
+          "highlights": [
+            "Judge since 2022; former senior deputy prosecutor and victim-advocate unit supervisor [S1]",
+            "Started a language-access committee spanning the Municipal, District and Superior courts [S1]",
+            "Cites a grant for evidence-based domestic-violence treatment won while she ran the DV docket [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-spokane-county-district-court-judge-position-no-4",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/spokane/dossiers/spokane-spokane-county-district-court-judge-position-no-4/"
+      ],
+      "office_does": "A Spokane County District Court judge, elected countywide for four years, hears misdemeanor and gross-misdemeanor criminal cases, traffic and civil cases, small claims and protection orders; the main discretion is in pretrial matters, plea and sentencing decisions and therapeutic-court supervision.",
+      "race_blurb": "Open seat: incumbent Patti Connolly Walker is not running and endorses Nicholas Ulrich, an Attorney General's Office section chief and pro tem judge. Ulrich faces Michael Addams, Cheney's city prosecutor, a pro tem judicial officer and an Air Force veteran. The Spokane County Bar panel rated Ulrich Exceptionally Well Qualified and Addams Qualified; fundraising is close.",
+      "candidates": [
+        {
+          "slug": "nicholas-ulrich",
+          "summary": "Spokane-born section chief in the Washington Attorney General's Office Torts Division and a pro tem judge in Spokane County courts since 2021, after a Court of Appeals clerkship and work as a public defender and in private practice.",
+          "highlights": [
+            "Section chief, Torts Division, Washington Attorney General's Office; former Court of Appeals Division III law clerk [S1][S3]",
+            "Pro tem judge or commissioner in Airway Heights, District and Superior courts since 2021 [S3]",
+            "Says a judge must \"follow the law wherever it leads and not be swayed by personal preferences\" [S2]",
+            "Rated Exceptionally Well Qualified by the Spokane County Bar Association panel (2026) [S6]",
+            "Endorsed by retiring Judge Patti Connolly Walker, Prosecutor Preston McCollam and the Spokane Police Guild [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "judicial": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S5"
+              ],
+              "basis": "States a restraint-oriented approach: follow the law wherever it leads, not personal preferences, beliefs or partisan views."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3",
+                "S4"
+              ],
+              "basis": "Not an incumbent, but runs as 'the most experienced candidate' on a clerkship, decade of litigation and five years of pro tem service, endorsed by the retiring incumbent and most of the local bench."
+            }
+          }
+        },
+        {
+          "slug": "michael-r-addams",
+          "summary": "City of Cheney prosecutor and owner of Addams & Associates who serves as a pro tem commissioner and judge in Spokane County courts; 24-year Air Force and Air National Guard veteran and EWU law and ethics instructor.",
+          "highlights": [
+            "Municipal prosecutor for Cheney and EWU; former director of a statewide prosecutors' association program [S3][S5]",
+            "Superior Court commissioner pro tem since 2021, District Court judge pro tem since 2025 [S5]",
+            "Priorities: accountability to reduce repeat offenses, plus therapeutic courts that address addiction and mental health [S2]",
+            "Rated Qualified by the Spokane County Bar Association panel (2026) [S6]",
+            "Endorsed by Rep. Suzanne Schmidt, three District Court judges and many prosecutors [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S4",
+                "S5"
+              ],
+              "basis": "Prosecution formation and prosecutor-heavy endorsements; leads with accountability and reducing repeat offenses while also backing therapeutic courts; no bail position.",
+              "adjusted_by_refutation": true
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S5"
+              ],
+              "basis": "Not an incumbent, but runs on more than a decade of legal practice, prosecution and pro tem judicial service."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-spokane-county-district-court-judge-position-no-5",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/spokane/dossiers/spokane-spokane-county-district-court-judge-position-no-5/"
+      ],
+      "office_does": "A Spokane County District Court judge hears misdemeanor and gross-misdemeanor criminal cases and traffic infractions, sets bail and holds preliminary hearings; all judges are elected countywide.",
+      "race_blurb": "Uncontested: incumbent Judge Jennifer L. Fassbender is the only candidate.",
+      "candidates": [
+        {
+          "slug": "jennifer-l-fassbender",
+          "summary": "Spokane County District Court judge since 2018 and Airway Heights Municipal Court judge 2009-2018; the only candidate on the ballot.",
+          "highlights": [
+            "District Court judge since 2018; Airway Heights Municipal Court judge 2009-2018 [S1]",
+            "Secretary/treasurer of the state District and Municipal Court Judges' Association [S1]",
+            "Member of the Spokane County Law and Justice Council [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-spokane-county-district-court-judge-position-no-6",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/spokane/dossiers/spokane-spokane-county-district-court-judge-position-no-6/"
+      ],
+      "office_does": "A Spokane County District Court judge hears misdemeanor and gross-misdemeanor criminal cases and traffic infractions, sets bail and holds preliminary hearings; all judges are elected countywide.",
+      "race_blurb": "Uncontested: incumbent Judge Andrew Biviano is the only candidate.",
+      "candidates": [
+        {
+          "slug": "andrew-biviano",
+          "summary": "Spokane County District Court judge since 2023, a former federal prosecutor and private-practice attorney; the only candidate on the ballot.",
+          "highlights": [
+            "Judge since January 2023 [S1]",
+            "Assistant U.S. Attorney 2006-2012, then private practice 2012-2023 [S1]",
+            "Former mental health case manager; stresses a fair, accessible and dignified court process [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-spokane-county-district-court-judge-position-no-7",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/spokane/dossiers/spokane-spokane-county-district-court-judge-position-no-7/"
+      ],
+      "office_does": "A Spokane County District Court judge hears misdemeanor and gross-misdemeanor criminal cases and traffic infractions, sets bail and holds preliminary hearings; all judges are elected countywide.",
+      "race_blurb": "Uncontested: incumbent Judge Aimee N. Maurer is the only candidate.",
+      "candidates": [
+        {
+          "slug": "aimee-n-maurer",
+          "summary": "Spokane County District Court judge for about 12 years and former presiding judge; the only candidate on the ballot.",
+          "highlights": [
+            "About 12 years on the District Court bench, including as presiding judge [S1]",
+            "Past dean of the Washington State Judicial College, which trains judges statewide [S1]",
+            "Served on statewide civil-rules and pattern-jury-instruction committees [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-spokane-county-district-court-judge-position-no-8",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/spokane/dossiers/spokane-spokane-county-district-court-judge-position-no-8/"
+      ],
+      "office_does": "A Spokane County District Court judge hears misdemeanor and gross-misdemeanor criminal cases and traffic infractions, sets bail and holds preliminary hearings; all judges are elected countywide.",
+      "race_blurb": "Uncontested: incumbent Judge Richard M. Leland is the only candidate.",
+      "candidates": [
+        {
+          "slug": "richard-m-leland",
+          "summary": "Spokane County District Court judge since 2013; the only candidate on the ballot.",
+          "highlights": [
+            "District Court judge since 2013 [S1]",
+            "Statement stresses public safety, a voice for crime victims and careful spending of court dollars [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-spokane-county-prosecuting-attorney",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/spokane/dossiers/spokane-spokane-county-prosecuting-attorney/"
+      ],
+      "office_does": "The prosecuting attorney decides which crimes are charged and prioritized, offers diversion, handles the county's civil cases and advises the county commissioners.",
+      "race_blurb": "Appointed Republican Prosecutor Preston McCollam, a 13-year prosecutor who took 50.6% in the primary, faces Danny Tarkenton, an independent Iraq War veteran admitted to the bar in 2025. They differ on experience, on enforcement versus restorative justice, and on a sales tax for a new regional justice center.",
+      "candidates": [
+        {
+          "slug": "preston-mccollam",
+          "summary": "Appointed Spokane County Prosecutor since 2025 and former chief criminal deputy, endorsed by the sheriff, police unions and every county prosecutor since 1969.",
+          "highlights": [
+            "Would push to restore felony charges for some drug crimes and aggressively prosecute fentanyl traffickers [S3][S6]",
+            "Started the 'Step Forward' felony diversion program and backs therapeutic courts [S3][S8]",
+            "Supports a narrowly tailored sales tax for a regional justice center with treatment services [S6][S7]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3",
+                "S6",
+                "S8"
+              ],
+              "basis": "Enforcement-led platform (felony drug charges, consequences for repeat offenders, law-enforcement partnership) that also expands diversion and therapeutic courts."
+            },
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S6",
+                "S8"
+              ],
+              "basis": "More than a decade as a prosecutor, chief criminal deputy from 2023 and appointed head of the office since 2025."
+            },
+            "taxes": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S6",
+                "S7"
+              ],
+              "basis": "Would support asking voters for a sales tax increase narrowly tailored to fund the public safety overhaul."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S6",
+                "S8"
+              ],
+              "basis": "Backs a new regional justice center with medical, behavioral health and drug treatment, and argues for more attorney positions and higher pay."
+            }
+          }
+        },
+        {
+          "slug": "danny-tarkenton",
+          "summary": "Independent attorney, Iraq War veteran and former deputy prosecutor admitted to the bar in 2025, running on restorative justice and reducing repeat offending.",
+          "highlights": [
+            "Calls a retributive 'prosecute everything' approach harmful and would expand restorative justice and therapeutic courts [S9]",
+            "Says jail crowding can be eased by choosing more carefully which crimes to prosecute [S6]",
+            "Endorsed by Mayor Lisa Brown, the Spokane Regional Labor Council and Fuse Washington; listed by NO HATE in WA State as opposing I-1 and I-638 [S4][S10]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S3",
+                "S6",
+                "S9"
+              ],
+              "basis": "Repeatedly centers diversion, restorative justice, therapeutic courts and charging restraint over prosecution alone."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "high",
+              "citations": [
+                "S6",
+                "S8",
+                "S9"
+              ],
+              "basis": "Licensed in 2025, never elected, argues an outsider is needed and that trial experience is not required for the role."
+            },
+            "reform": {
+              "score": 1,
+              "confidence": "low",
+              "citations": [
+                "S1",
+                "S2",
+                "S6"
+              ],
+              "basis": "Runs as an independent against 'party machines' and says prosecutors serve communities, not political parties.",
+              "adjusted_by_refutation": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-spokane-county-sheriff",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/spokane/dossiers/spokane-spokane-county-sheriff/"
+      ],
+      "office_does": "The sheriff runs the Spokane County Sheriff's Office, the county's chief law-enforcement agency, which patrols unincorporated areas, makes arrests and serves court orders and warrants.",
+      "race_blurb": "Uncontested: incumbent John F. Nowels (Prefers Republican Party), sheriff since 2023, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "john-f-nowels",
+          "summary": "Incumbent Spokane County Sheriff since 2023 after 28+ years in the Sheriff's Office; the only candidate on the ballot.",
+          "highlights": [
+            "Sheriff since 2023; 28+ years in the office, including undersheriff and drug task force commander [S1]",
+            "Cites ending a 40+ vacancy rate and launching a Real Time Crime Center [S1]",
+            "Joined three other Eastern Washington sheriffs in a 2026 lawsuit against a state law letting decertification remove sheriffs [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "spokane-spokane-county-treasurer",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/spokane/dossiers/spokane-spokane-county-treasurer/"
+      ],
+      "office_does": "The treasurer receives all money due Spokane County and pays it out on warrants issued by the county auditor.",
+      "race_blurb": "Uncontested: Treasurer Mike Volz (Prefers Republican Party), appointed and elected in 2025, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "mike-volz",
+          "summary": "Spokane County Treasurer since 2025 and a state representative since 2017; a CPA and Army veteran. The only candidate on the ballot.",
+          "highlights": [
+            "Appointed, then elected, treasurer in 2025 after serving as chief deputy treasurer [S1]",
+            "Licensed CPA and Army veteran; 6th District state representative since 2017 [S1]",
+            "Promoted senior and disabled-persons property-tax relief in a 2025 op-ed with Assessor Tom Konis [S2]"
+          ],
+          "evidence_level": "moderate",
           "withdrawn": false,
           "scores": {}
         }
