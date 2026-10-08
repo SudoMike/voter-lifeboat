@@ -88,9 +88,10 @@ test('every statewide contest and measure in the shipped general gets a paged SO
         n++
       }
   for (const m of general.measures) {
-    // Spokane's, Pierce's, Kitsap's, Whatcom's, Benton's, Grant's, Island's
-    // and Lewis's measures cite VoteWA's unpaged online guide (countyGuides).
-    if (['spokane', 'pierce', 'kitsap', 'whatcom', 'benton', 'grant', 'island', 'lewis'].includes(m.owner)) continue
+    // Spokane's, Pierce's, Kitsap's, Whatcom's, Benton's, Grant's, Island's,
+    // Lewis's and Grays Harbor's measures cite VoteWA's unpaged online guide
+    // (countyGuides).
+    if (['spokane', 'pierce', 'kitsap', 'whatcom', 'benton', 'grant', 'island', 'lewis', 'grays-harbor'].includes(m.owner)) continue
     assert.match(pamphletLink(m.pamphlet_pages, m.owner, general.election.id), /#page=\d+$/, m.slug)
     n++
   }
@@ -349,6 +350,51 @@ test('shipped Island and Lewis records link their VoteWA guide; their offices li
   for (const [county, name, url] of [
     ['island', 'Island County', 'https://www.islandcountywa.gov/423/Elections-Voter-Registration'],
     ['lewis', 'Lewis County', 'https://elections.lewiscountywa.gov/'],
+  ]) {
+    assert.deepEqual(countyElectionsOffice(general, { id: county, name }), { name: `${name} Elections`, url, direct: true })
+  }
+})
+
+test('shipped Franklin, Chelan and Clallam records link their local pamphlet at the cited page, Grays Harbor its VoteWA guide', () => {
+  const id = general.election.id
+  const PDF = {
+    franklin: 'https://www.franklincountywa.gov/DocumentCenter/View/4553/2611-Franklin-County-Voters-Pamphlet-',
+    chelan: 'https://www.co.chelan.wa.us/files/elections/documents/election/2026%20November%203%20General%20Election%20LVP.pdf',
+    clallam: 'https://www.clallamcountywa.gov/DocumentCenter/View/29375/2026-General-Voter-Pamphlet',
+  }
+  const GUIDE = {
+    franklin: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=11',
+    chelan: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=04',
+    clallam: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=05',
+    'grays-harbor': 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=14',
+  }
+  // Franklin FPD 3 is PDF p. 16 (printed p. 58); Clallam District Court 1 p. 55.
+  assert.equal(pamphletLink([{ edition: 'local-voters-pamphlet', page: 16 }], 'franklin', id), `${PDF.franklin}#page=16`)
+  assert.equal(pamphletLink([{ edition: 'local-voters-pamphlet', page: 55 }], 'clallam', id), `${PDF.clallam}#page=55`)
+  const paged = { franklin: 0, chelan: 0, clallam: 0 }
+  const guided = { franklin: 0, chelan: 0, clallam: 0, 'grays-harbor': 0 }
+  for (const item of [...general.contests, ...general.measures]) {
+    if (!(item.owner in guided)) continue
+    const pages = item.candidates ? item.candidates.map((c) => c.pamphlet_pages) : [item.pamphlet_pages]
+    for (const p of pages) {
+      if (p?.length) {
+        assert.ok(item.owner in PDF, item.slug)
+        assert.equal(pamphletLink(p, item.owner, id), `${PDF[item.owner]}#page=${p[0].page}`, item.slug)
+        paged[item.owner]++
+      } else {
+        // Grays Harbor's records, and races shipped with another package's research.
+        assert.equal(pamphletLink(p, item.owner, id), GUIDE[item.owner], item.slug)
+        guided[item.owner]++
+      }
+    }
+  }
+  assert.ok(paged.franklin >= 15 && paged.chelan >= 20 && paged.clallam >= 25 && guided['grays-harbor'] >= 29,
+    JSON.stringify({ paged, guided }))
+  for (const [county, name, url] of [
+    ['franklin', 'Franklin County', 'https://www.franklincountywa.gov/Elections'],
+    ['chelan', 'Chelan County', 'https://www.co.chelan.wa.us/elections'],
+    ['clallam', 'Clallam County', 'https://www.clallamcountywa.gov/162/Elections-Voter-Registration'],
+    ['grays-harbor', 'Grays Harbor County', 'https://www.graysharbor.us/government/Auditors/elections.php'],
   ]) {
     assert.deepEqual(countyElectionsOffice(general, { id: county, name }), { name: `${name} Elections`, url, direct: true })
   }

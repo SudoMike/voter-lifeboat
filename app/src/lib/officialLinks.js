@@ -130,6 +130,20 @@ const ELECTIONS = {
       // Court Pos. 4 p. 37, Clerk p. 47, Longview Prop 1 pp. 57-58).
       'cowlitz/local-voters-pamphlet':
         'https://www.co.cowlitz.wa.us/DocumentCenter/View/39451/G126-Combined-Voters-Pamplet_SOS',
+      // Chelan, Clallam and Franklin general Local Voters' Pamphlets (#29),
+      // from each package's pointer counties/<county>/raw/<county>/
+      // local-voters-pamphlet.pdf.url. Checked 2026-10-08: each 200
+      // application/pdf with the sha256 in the pointer's meta. Citations are
+      // PDF pages. Chelan: 24 pages (candidates pp. 6-15, Wenatchee SD 246
+      // pp. 16-17, Cashmere p. 18). Clallam: the printed combined state and
+      // local pamphlet, 72 pages (District Court 1 p. 55, QVSD p. 58, FD 6
+      // pp. 62-63). Franklin: 16 pages, printed pp. 43-58 (Assessor PDF p. 5,
+      // FPD 3 p. 16).
+      'chelan/local-voters-pamphlet':
+        'https://www.co.chelan.wa.us/files/elections/documents/election/2026%20November%203%20General%20Election%20LVP.pdf',
+      'clallam/local-voters-pamphlet': 'https://www.clallamcountywa.gov/DocumentCenter/View/29375/2026-General-Voter-Pamphlet',
+      'franklin/local-voters-pamphlet':
+        'https://www.franklincountywa.gov/DocumentCenter/View/4553/2611-Franklin-County-Voters-Pamphlet-',
     },
     // Counties whose research cites VoteWA's online voters' guide, which has
     // no page numbers, instead of a printed pamphlet: their records carry no
@@ -156,6 +170,11 @@ const ELECTIONS = {
     // Island and Lewis dossiers cite VoteWA only (#29): neither county prints
     // a general pamphlet, and each Auditor links this guide as its own.
     // Checked 2026-10-08: both 200 text/html.
+    // Chelan's Court of Appeals record and Clallam's measure records cite
+    // VoteWA as well as their pamphlets; Franklin's cite the pamphlet only,
+    // and its guide links any record without a page. Grays Harbor's dossiers
+    // cite VoteWA only: the county posts no printed pamphlet (#29). Checked
+    // 2026-10-08: each 200 text/html.
     countyGuides: {
       spokane: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=32',
       pierce: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=27',
@@ -169,6 +188,10 @@ const ELECTIONS = {
       grant: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=13',
       island: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=15',
       lewis: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=21',
+      franklin: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=11',
+      chelan: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=04',
+      clallam: 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=05',
+      'grays-harbor': 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=14',
     },
     pamphletIndex: `${SOS_GENERAL_2026}/2026-voters-pamphlet-pdfs`,
   },
