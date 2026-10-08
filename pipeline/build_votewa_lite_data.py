@@ -1584,6 +1584,92 @@ ELECTION_MEASURES = {
                 "levy FIRDST '1' (layer 7) and the Three Rivers hospital bonds HOSPDST '1J' (layer 11).",
             ],
         },
+        # Pacific (#31). Contests: VoteWA GENERAL 2026 export for county 25
+        # (counties/pacific/raw/votewa/candidate-list.csv.url); measures: VoteWA's
+        # online voters' guide for county 25 (raw/votewa/voter-guide/), which
+        # lists exactly the export's races plus four local measures. The
+        # county's own site (co.pacific.wa.us / pacificcountywa.gov) did not
+        # answer on 2026-10-08, so no local pamphlet or sample ballot was read.
+        # Electorates checked against SOS results (counties/pacific/raw/sos/):
+        # - Commissioner #03: nominated by district, elected county-wide (RCW
+        #   36.32.040): every one of the 39 precincts voted in the 2018 #03 race
+        #   (9,231 votes of 11,105 ballots) and the 2022 #03 general, while the
+        #   2022 primary for #03 ran in District 3's precincts only.
+        # - PUD No. 2: one Pacific polygon in DOR PUD2025 (layer 17,
+        #   DISTATTRIB '2') whose area equals the county's (6,737,423,706 sq ft
+        #   vs 6,737,558,937 for all TCA2025 polygons); every precinct voted
+        #   in the 2018 and 2022 PUD races (RCW 54.12.010(3)). Scope COUNTY.
+        # - District Court: two electoral districts. In 2022 the North District
+        #   judge drew 3,221 votes (23 Willapa Harbor precincts: Raymond, South
+        #   Bend, Menlo, Lebam, Bay Center, North Cove ...) and the South
+        #   District 18 precincts (Long Beach peninsula, Ilwaco, Chinook,
+        #   Naselle, Nemah); 12,068 ballots. Scoped DISTCRT 'North' / 'South';
+        #   no public GIS layer for these districts was found (see
+        #   counties/pacific/COMPLETENESS.md), so the layer is unresolvable
+        #   until the director adds one.
+        # Measure scopes point-checked 2026-10-08 (Census geocoder, Current
+        # vintage; DOR WADOR_PropertyTax tax year 2025):
+        # - Timberland: DOR LIB2025 (12) has one Pacific polygon, 'L', with the
+        #   county's area (South Bend, Raymond, Long Beach, Ilwaco, Ocean Park,
+        #   Naselle, Tokeland, Chinook all 'L'): scope COUNTY.
+        # - EMSDST '1' (DOR EMS2025, layer 6): 300 Memorial Dr, South Bend; 230
+        #   2nd St, Raymond; 793 State Rte 4, Naselle; 38 2nd St, Bay Center ->
+        #   '1'. 1511 Bay Ave, Ocean Park -> 'OB'; 2964 Kindred Ave, Tokeland ->
+        #   'SBH'; Long Beach, Ilwaco, Chinook -> no feature (the ballot title
+        #   excludes the Ocean Beach, Ocosta and North River school districts).
+        # - FIRDST '3' (FIR2025, layer 7): 1000 State Rte 6, Raymond (Menlo).
+        # - FIRDST '6': 38 2nd St and 3 Park St E, Bay Center.
+        "pacific": {
+            "overrides": {
+                ("COUNTY", "COUNTY COMMISSIONER #03"): (
+                    "County", "Pacific County Commissioner District 3", "County Commissioner #03", ("COUNTY", None)),
+                ("COURT - NORTH DISTRICT", "DISTRICT COURT JUDGE"): (
+                    "Judicial", "Pacific County District Court North District", "District Court Judge",
+                    ("DISTCRT", "North")),
+                ("COURT - SOUTH DISTRICT", "DISTRICT COURT JUDGE"): (
+                    "Judicial", "Pacific County District Court South District", "District Court Judge",
+                    ("DISTCRT", "South")),
+                ("PUD DISTRICT 2", "PUBLIC UTILITY COMMISSIONER #01"): (
+                    "PublicUtility", "Public Utility District No. 2 of Pacific County", "Commissioner District 1",
+                    ("COUNTY", None)),
+            },
+            "measures": [
+                m("Timberland Regional Library District", "Proposition No. 1",
+                  "Regular Property Tax Levy Lid Lift for Library Services, Operations and Maintenance",
+                  ("COUNTY", None),
+                  "Restores the Timberland Regional Library District's regular property tax levy from about $0.22 to $0.35 per $1,000 of assessed value for 2027 and 2028; the 2028 levy amount becomes the base for later limits (chapter 84.55 RCW).",
+                  "From $0.228924 to $0.35 per $1,000 of assessed value in 2027 and 2028; about $40.44 a year on a $334,000 home, per the explanatory statement.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7284&e=899&la=en&c=25"),
+                m("North Pacific County Emergency Medical Services District No. 1", "Proposition No. 1",
+                  "Ambulance and Emergency Medical Services Funding",
+                  ("EMSDST", "1"),
+                  "Renews the EMS district's one-year excess levy for 2027 to subsidize ambulance and emergency medical service in the Naselle, Nemah, Bay Center, South Bend, Raymond and Willapa Valley areas (Resolution 2026-721). Needs 60% approval.",
+                  "$0.40 per $1,000 of assessed value, no more than $800,000, collected in 2027 only.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7388&e=899&la=en&c=25"),
+                m("Pacific County Fire Protection District No. 3", "Proposition No. 1",
+                  "Property Tax Levy Lid Lift for Fire Protection, Suppression and Prevention",
+                  ("FIRDST", "3"),
+                  "Raises Fire District 3's regular property tax levy to up to $0.61 per $1,000 for collection in 2027 (Resolution 26-2503-01); that levy becomes the base for later limits. The district serves Menlo, Lebam, Frances, Baleville, Elk Horn Flats, Old Willapa and East Raymond.",
+                  "Up to $0.61 per $1,000 of assessed value in 2027, a $0.20 increase per the explanatory statement.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7389&e=899&la=en&c=25"),
+                m("Pacific County Fire Protection District No. 6", "Proposition No. 1",
+                  "Authorizing Regular Property Tax Levy",
+                  ("FIRDST", "6"),
+                  "Restores Fire District 6's regular property tax levy to $0.50 per $1,000 for collection in 2027 and lets it grow up to 6% a year (capped at $1.50 per $1,000) for the next five years (Resolution 2026-7-23-1); the 2031 levy becomes the base for later limits.",
+                  "$0.50 per $1,000 of assessed value in 2027, then up to 6% more levy revenue a year through 2032 collection.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7391&e=899&la=en&c=25"),
+            ],
+            "extra_notes": [
+                "Pacific County's two District Court seats are elected by electoral district (North: the Willapa Harbor "
+                "precincts; South: the Long Beach peninsula, Ilwaco, Chinook, Naselle and Nemah precincts) and are scoped "
+                "DISTCRT 'North' and 'South'. No public GIS layer for these districts was found; until one is added the "
+                "seats cannot be matched to an address.",
+                "Pacific County PUD No. 2 and Timberland Regional Library District each cover all of Pacific County "
+                "(WA DOR PUD2025 and LIB2025 each have one Pacific polygon with the county's area).",
+                "The EMS measure is scoped EMSDST '1' (WA DOR EMS2025, layer 6) and the fire measures FIRDST '3' and '6' "
+                "(WA DOR FIR2025, layer 7), DISTATTRIB.",
+            ],
+        },
         # Skagit: the four measures the Auditor's Ballot Measures page lists
         # for the general (counties/skagit/raw/skagit/ballot-measures.html.url),
         # text from the local voters' pamphlet pages 18-21 and VoteWA

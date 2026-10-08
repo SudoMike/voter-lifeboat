@@ -1,0 +1,468 @@
+{
+  "county": "pacific",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/pacific/raw/votewa/candidate-list.csv.url",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7284&e=899&la=en&c=25",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7388&e=899&la=en&c=25",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7389&e=899&la=en&c=25",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7391&e=899&la=en&c=25"
+  ],
+  "coverage": "full_county",
+  "notes": [
+    "Pacific County's two District Court seats are elected by electoral district (North: the Willapa Harbor precincts; South: the Long Beach peninsula, Ilwaco, Chinook, Naselle and Nemah precincts) and are scoped DISTCRT 'North' and 'South'. No public GIS layer for these districts was found; until one is added the seats cannot be matched to an address.",
+    "Pacific County PUD No. 2 and Timberland Regional Library District each cover all of Pacific County (WA DOR PUD2025 and LIB2025 each have one Pacific polygon with the county's area).",
+    "The EMS measure is scoped EMSDST '1' (WA DOR EMS2025, layer 6) and the fire measures FIRDST '3' and '6' (WA DOR FIR2025, layer 7), DISTATTRIB."
+  ],
+  "contests": [
+    {
+      "slug": "pacific-congressional-district-3-u-s-representative",
+      "owner": "pacific",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 3",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pacific",
+        "layer": "CONGDST",
+        "value": "3"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pacific County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "john-braun",
+          "name": "John Braun",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "marie-gluesenkamp-perez",
+          "name": "Marie Gluesenkamp Perez",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pacific-legislative-district-19-state-representative-pos-1",
+      "owner": "pacific",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 19",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pacific",
+        "layer": "LEGDST",
+        "value": "19"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pacific County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "jim-walsh",
+          "name": "Jim Walsh",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "kevin-moynihan",
+          "name": "Kevin Moynihan",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pacific-legislative-district-19-state-representative-pos-2",
+      "owner": "pacific",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 19",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pacific",
+        "layer": "LEGDST",
+        "value": "19"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pacific County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "terry-carlson",
+          "name": "Terry Carlson",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "joel-mcentire",
+          "name": "Joel McEntire",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pacific-pacific-county-county-assessor",
+      "owner": "pacific",
+      "category": "County",
+      "office": "County Assessor",
+      "district": "Pacific County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "pacific"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pacific County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "bruce-walker",
+          "name": "Bruce Walker",
+          "party": "States No Party Preference",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "jeffrey-phelan",
+          "name": "Jeffrey Phelan",
+          "party": "States No Party Preference",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pacific-pacific-county-county-auditor",
+      "owner": "pacific",
+      "category": "County",
+      "office": "County Auditor",
+      "district": "Pacific County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "pacific"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pacific County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "dotsi-graves",
+          "name": "Dotsi Graves",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "nicole-deskins",
+          "name": "Nicole Deskins",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pacific-pacific-county-county-clerk",
+      "owner": "pacific",
+      "category": "County",
+      "office": "County Clerk",
+      "district": "Pacific County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "pacific"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pacific County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "emma-rose",
+          "name": "Emma Rose",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pacific-pacific-county-county-sheriff",
+      "owner": "pacific",
+      "category": "County",
+      "office": "County Sheriff",
+      "district": "Pacific County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "pacific"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pacific County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "daniel-c-garcia",
+          "name": "Daniel C. Garcia",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "rich-byrd",
+          "name": "Rich Byrd",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pacific-pacific-county-county-treasurer",
+      "owner": "pacific",
+      "category": "County",
+      "office": "County Treasurer",
+      "district": "Pacific County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "pacific"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pacific County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "sheila-didion",
+          "name": "Sheila Didion",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pacific-pacific-county-prosecuting-attorney",
+      "owner": "pacific",
+      "category": "County",
+      "office": "Prosecuting Attorney",
+      "district": "Pacific County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "pacific"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pacific County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "jennifer-zorn",
+          "name": "Jennifer Zorn",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "michael-s-turner",
+          "name": "Michael S. Turner",
+          "party": "States No Party Preference",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pacific-pacific-county-commissioner-district-3-county-commissioner-03",
+      "owner": "pacific",
+      "category": "County",
+      "office": "County Commissioner #03",
+      "district": "Pacific County Commissioner District 3",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "pacific"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pacific County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "pattie-gray",
+          "name": "Pattie Gray",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "jerry-doyle",
+          "name": "Jerry Doyle",
+          "party": "Prefers Independent Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pacific-pacific-county-district-court-north-district-district-court-judge",
+      "owner": "pacific",
+      "category": "Judicial",
+      "office": "District Court Judge",
+      "district": "Pacific County District Court North District",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pacific",
+        "layer": "DISTCRT",
+        "value": "North"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pacific County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "scott-harmer",
+          "name": "Scott Harmer",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pacific-pacific-county-district-court-south-district-district-court-judge",
+      "owner": "pacific",
+      "category": "Judicial",
+      "office": "District Court Judge",
+      "district": "Pacific County District Court South District",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "pacific",
+        "layer": "DISTCRT",
+        "value": "South"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pacific County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "nancy-r-mcallister",
+          "name": "Nancy R. McAllister",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "pacific-public-utility-district-no-2-of-pacific-county-commissioner-district-1",
+      "owner": "pacific",
+      "category": "PublicUtility",
+      "office": "Commissioner District 1",
+      "district": "Public Utility District No. 2 of Pacific County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "pacific"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Pacific County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "pamela-pam-hickey",
+          "name": "Pamela \"Pam\" Hickey",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
