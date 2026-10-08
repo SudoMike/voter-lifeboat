@@ -304,6 +304,77 @@ test('King County honors a partial data package even when every GIS layer resolv
   assert.equal(context.coverageStatus, 'partial_county')
 })
 
+// King County Cemetery District No. 1 (Vashon-Maury Island) has no King GIS
+// layer; King's adapter reads the WA DOR cemetery layer the other counties use.
+function mockKing(matchedAddress, attrsFor) {
+  const calls = []
+  global.fetch = async (url) => {
+    calls.push(String(url))
+    if (String(url).startsWith('/api/geocode')) {
+      return {
+        ok: true,
+        async json() {
+          return {
+            result: {
+              addressMatches: [{
+                matchedAddress,
+                coordinates: { x: -122.46, y: 47.45 },
+                geographies: { Counties: [{ STATE: '53', COUNTY: '033', NAME: 'King County' }] },
+              }],
+            },
+          }
+        },
+      }
+    }
+    const attrs = attrsFor(String(url))
+    return { ok: true, async json() { return { features: attrs ? [{ attributes: attrs }] : [] } } }
+  }
+  return calls
+}
+
+const kingFull = { coverage: { statewide_complete: true, supported_counties: [{ id: 'king', coverage: 'full_county' }] } }
+
+test('King resolves the cemetery district from the DOR cemetery layer', async () => {
+  const calls = mockKing('10105 SW BANK RD, VASHON, WA, 98070', (url) =>
+    url.includes('WADOR_PropertyTax/MapServer/3/query')
+      ? { DISTATTRIB: '1' }
+      : { CONGDST: '7', LEGDST: '34', KCCDST: '8', SCCDST: null, juddst: 'W', FIRDST: '13', SCHDST: '402', NAME: 'King County' }
+  )
+  const context = await lookupBallotContext(kingFull, '10105 SW Bank Rd Vashon WA 98070')
+  assert.equal(context.coverageStatus, 'full_county')
+  assert.equal(context.districts.CEMDST, '1')
+  assert.equal(context.districts.CITY, undefined)
+  assert.deepEqual(context.missingLayers, [])
+  const dor = calls.find((u) => u.includes('WADOR_PropertyTax'))
+  assert.ok(dor.startsWith('https://webgis.dor.wa.gov/arcgis/rest/services/Programs/WADOR_PropertyTax/MapServer/3/query?'), dor)
+  assert.equal(new URL(dor).searchParams.get('outFields'), 'DISTATTRIB')
+  assert.ok(scopeMatches({ kind: 'DISTRICT', county: 'king', layer: 'CEMDST', value: '1' }, context))
+})
+
+test('a King address outside the cemetery district has no CEMDST and stays full', async () => {
+  mockKing('600 4TH AVE, SEATTLE, WA, 98104', (url) =>
+    url.includes('WADOR_PropertyTax')
+      ? null
+      : { CONGDST: '7', LEGDST: '36', KCCDST: '4', SCCDST: 'SCC7', juddst: 'W', FIRDST: null, SCHDST: '1', NAME: 'Seattle' }
+  )
+  const context = await lookupBallotContext(kingFull, '600 4th Ave Seattle WA 98104')
+  assert.equal(context.coverageStatus, 'full_county')
+  assert.equal('CEMDST' in context.districts, false)
+  assert.ok(!scopeMatches({ kind: 'DISTRICT', county: 'king', layer: 'CEMDST', value: '1' }, context))
+})
+
+test('a failed DOR cemetery lookup degrades a King ballot to partial', async () => {
+  mockKing('10105 SW BANK RD, VASHON, WA, 98070', (url) =>
+    url.includes('WADOR_PropertyTax') ? undefined : { CONGDST: '7', LEGDST: '34', NAME: 'King County' }
+  )
+  const realFetch = global.fetch
+  global.fetch = async (url) =>
+    String(url).includes('WADOR_PropertyTax') ? { ok: false, async json() { return {} } } : realFetch(url)
+  const context = await lookupBallotContext(kingFull, '10105 SW Bank Rd Vashon WA 98070')
+  assert.equal(context.coverageStatus, 'partial_county')
+  assert.deepEqual(context.missingLayers, ['CEMDST'])
+})
+
 test('hasZip ignores a five-digit house number and only trusts a trailing ZIP', () => {
   assert.equal(hasZip('19019 SE 128th St'), false)
   assert.equal(hasZip('19019 SE 128th Street'), false)
