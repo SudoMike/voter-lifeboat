@@ -1,0 +1,45 @@
+{
+  "url": "https://voter.votewa.gov/candidatelist.aspx?c=30&e=899",
+  "retrieved_at": "2026-10-08",
+  "method": "CSV export of the official VoteWA candidate list (ASP.NET postback), election GENERAL 2026, county Skamania",
+  "stage": "raw",
+  "election_dropdown": {
+    "value": "899",
+    "label": "GENERAL 2026 (11/03/2026) (General)"
+  },
+  "county_dropdown": {
+    "value": "30",
+    "label": "Skamania"
+  },
+  "manual_export_steps": [
+    "Open https://voter.votewa.gov/candidatelist.aspx",
+    "Election dropdown: choose 'GENERAL 2026 (11/03/2026) (General)' (option value 899); the page posts back",
+    "County dropdown: choose 'Skamania' (option value 30); the page posts back. Equivalent direct URL: https://voter.votewa.gov/candidatelist.aspx?c=30&e=899",
+    "Click the grid's 'Export to CSV' icon (input ctl00$ContentPlaceHolder1$grdCandidates$ctl00$ctl02$ctl00$ExportToCsvButton); the response is text/csv with Content-Disposition attachment;filename=\"CandidateList.csv\""
+  ],
+  "scripted_export": "python3 pipeline/fetch_votewa_candidate_list.py --election 2026-11-03-general --refresh --write-pointer skamania: GET the direct URL with a cookie jar, check the selected Election and County labels, then POST the form back to its action replaying every hidden input (__VIEWSTATE__, __VIEWSTATE, __EVENTVALIDATION, Telerik ClientState fields) and every <select> (selected option, else the first; ctl00$ddlLanguages='en-us'), plus ctl00$ContentPlaceHolder1$grdCandidates$ctl00$ctl02$ctl00$ExportToCsvButton=' '.",
+  "cache_file": "data/.cache/votewa/candidatelist-c30-e899.csv",
+  "bytes": 6039,
+  "sha256": "ff6853552be99e5eee752ca1d0f97ca34241dbc97e641a4779331d864b8a34dc",
+  "sha256_case_normalized": "30297400c0bbfc803962c52616d1fba9aa90aeefb0bfc02739802e0c18cf0628",
+  "csv_rows": 29,
+  "csv_columns": [
+    "District Type",
+    "District",
+    "Race",
+    "Term Type",
+    "Term Length",
+    "Name",
+    "Mailing Address",
+    "Email",
+    "Phone",
+    "Filing Date",
+    "Party Preference",
+    "Status",
+    "Election Status"
+  ],
+  "election_status_counts": {
+    "": 29
+  },
+  "notes": "Official county candidate filing data for the November 3, 2026 general. The 'Election Status' column is blank for every row in the general export, and the export lists only general-election candidates (top-two survivors of partisan and judicial primaries plus offices filed directly for the general). The CSV has no Ballot Order column; the grid's Ballot Order is HTML-only."
+}
