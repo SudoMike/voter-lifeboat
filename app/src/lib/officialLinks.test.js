@@ -89,10 +89,10 @@ test('every statewide contest and measure in the shipped general gets a paged SO
       }
   for (const m of general.measures) {
     // Spokane's, Pierce's, Kitsap's, Whatcom's, Benton's, Grant's, Island's,
-    // Lewis's, Grays Harbor's, Stevens's and Douglas's measures cite VoteWA's
+    // Lewis's, Grays Harbor's, Stevens's, Douglas's and Okanogan's measures cite VoteWA's
     // unpaged online guide (countyGuides), as do Whitman's eight that filed
     // hardship waivers (not in its printed pamphlet).
-    if (['spokane', 'pierce', 'kitsap', 'whatcom', 'benton', 'grant', 'island', 'lewis', 'grays-harbor', 'stevens', 'douglas'].includes(m.owner)) continue
+    if (['spokane', 'pierce', 'kitsap', 'whatcom', 'benton', 'grant', 'island', 'lewis', 'grays-harbor', 'stevens', 'douglas', 'okanogan'].includes(m.owner)) continue
     if (m.owner === 'whitman' && !m.pamphlet_pages.length) continue
     assert.match(pamphletLink(m.pamphlet_pages, m.owner, general.election.id), /#page=\d+$/, m.slug)
     n++
@@ -529,6 +529,26 @@ test('shipped Douglas records link the county\'s VoteWA guide', () => {
   assert.deepEqual(countyElectionsOffice(general, { id: 'douglas', name: 'Douglas County' }), {
     name: 'Douglas County Elections',
     url: 'https://www.douglascountywa.gov/206/Current-Election',
+    direct: true,
+  })
+})
+
+test('shipped Okanogan records link the county\'s VoteWA guide', () => {
+  const id = general.election.id
+  const GUIDE = 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=24'
+  let n = 0
+  for (const item of [...general.contests, ...general.measures]) {
+    if (item.owner !== 'okanogan') continue
+    const pages = item.candidates ? item.candidates.map((c) => c.pamphlet_pages) : [item.pamphlet_pages]
+    for (const p of pages) {
+      assert.equal(pamphletLink(p, 'okanogan', id), GUIDE, item.slug)
+      n++
+    }
+  }
+  assert.ok(n >= 33, String(n))
+  assert.deepEqual(countyElectionsOffice(general, { id: 'okanogan', name: 'Okanogan County' }), {
+    name: 'Okanogan County Elections',
+    url: 'https://www.okanogancounty.gov/337/Elections',
     direct: true,
   })
 })
