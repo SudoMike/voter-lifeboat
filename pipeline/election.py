@@ -339,6 +339,16 @@ COUNTY_ELECTIONS_URLS = {
         # the page that links the general's voters' pamphlet, sample ballot and
         # measure resolutions; the package's raw/san-juan/current-election.html.url).
         "san-juan": "https://www.sanjuancountywa.gov/1292/Current-Election",
+        # Lincoln County Auditor, Current & Future Elections (200 text/html,
+        # 2026-10-08; the page that links the general's local voters'
+        # pamphlet and sample ballot; the package's
+        # raw/lincoln/current-future-elections.html.url). The county moved
+        # from co.lincoln.wa.us, whose elections path now answers 404.
+        "lincoln": "https://www.lincolncountywa.com/312/Current-Future-Elections",
+        # Pend Oreille County Auditor, Elections (200 text/html, 2026-10-08;
+        # the page that links the general's local voters' pamphlet and sample
+        # ballot; pendoreilleco.org redirects to pendoreille.gov).
+        "pend-oreille": "https://www.pendoreille.gov/auditor/page/elections",
     },
 }
 
