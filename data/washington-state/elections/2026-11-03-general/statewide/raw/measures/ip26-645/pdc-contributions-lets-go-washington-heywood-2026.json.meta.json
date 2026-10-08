@@ -1,0 +1,12 @@
+{
+  "url": "https://data.wa.gov/resource/kv7h-kjye.json?committee_id=30644&election_year=2026&$where=upper(contributor_name)%20like%20'%25HEYWOOD%25'%20AND%20cash_or_in_kind='Cash'&$select=contributor_name,amount,receipt_date,filer_name&$order=receipt_date",
+  "retrieved_at": "2026-10-08",
+  "stage": "raw",
+  "method": "source pointer; HTTP GET (curl), cached copy under data/.cache/ip26-645 (gitignored)",
+  "cache_file": "data/.cache/ip26-645/pdc-lgw-heywood.json",
+  "bytes": 1145,
+  "sha256": "f34985dc27e185c3fa87cd8507701feab752f94e9e61533d6df1b4f379831152",
+  "publisher": "Washington Public Disclosure Commission (PDC), Contributions dataset on data.wa.gov",
+  "tier": 1,
+  "notes": "Cash contributions from Brian Heywood to 'Let's Go Washington (Sponsored by Brian Heywood)' (committee 30644), election year 2026: seven gifts totaling $605,000 (2026-01-12 through 2026-06-25). Committee 30644 is a multi-measure PAC (it backs IP26-645, IL26-001 and IL26-638); its 2026 total (sum 3876110.50, 1,742 rows, latest receipt 2026-10-02) is cached as pdc-lgw-total.json."
+}

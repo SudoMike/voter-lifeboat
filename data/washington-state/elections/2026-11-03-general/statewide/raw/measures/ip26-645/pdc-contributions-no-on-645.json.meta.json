@@ -1,0 +1,12 @@
+{
+  "url": "https://data.wa.gov/resource/kv7h-kjye.json?committee_id=42211&$where=amount>=500000&$select=contributor_name,amount,receipt_date&$order=receipt_date",
+  "retrieved_at": "2026-10-08",
+  "stage": "raw",
+  "method": "source pointer; HTTP GET (curl), cached copy under data/.cache/ip26-645 (gitignored)",
+  "cache_file": "data/.cache/ip26-645/pdc-no-500k.json",
+  "bytes": 1186,
+  "sha256": "137875c4f9125a7c1e41ebeba4dc2cdfec71ec9158e6b2c2a38da83983a465e4",
+  "publisher": "Washington Public Disclosure Commission (PDC), Contributions to Candidates and Political Committees dataset on data.wa.gov",
+  "tier": 1,
+  "notes": "Itemized contributions of $500,000 or more to 'No on 645' (committee 42211), by receipt date. Companion queries cached alongside: top contributors by total (committee_id=42211, $select=contributor_name,sum(amount),min/max(receipt_date),count(*), $group=contributor_name, $order=total DESC, $limit=10 -> data/.cache/ip26-645/pdc-no-top.json) and committee totals (count 142, sum 11522533.97, latest receipt 2026-10-03 -> pdc-no-total.json)."
+}
