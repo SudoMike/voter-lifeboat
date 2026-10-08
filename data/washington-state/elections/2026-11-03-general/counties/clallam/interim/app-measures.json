@@ -1,0 +1,259 @@
+{
+  "county": "clallam",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/clallam/raw/votewa/candidate-list.csv.url",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7289&e=899&la=en&c=05",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7290&e=899&la=en&c=05",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7291&e=899&la=en&c=05",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7292&e=899&la=en&c=05",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7293&e=899&la=en&c=05",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7294&e=899&la=en&c=05",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7296&e=899&la=en&c=05"
+  ],
+  "coverage": "full_county",
+  "notes": [
+    "Public Utility District No. 1 of Clallam County Commissioner District No. 2 is scoped PUDALL '1': the whole PUD votes in the general (RCW 54.12.010(3)), and the City of Port Angeles is outside the PUD's commissioner districts; no District Adapter layer reads PUD membership yet (counties/clallam/COMPLETENESS.md).",
+    "District Court 1 and District Court 2 are separate electoral districts, scoped DISTCRT '1' and '2' to the Auditor's District_Court layer (proposed for COUNTY_LAYERS.clallam)."
+  ],
+  "measures": [
+    {
+      "slug": "clallam-clallam-county-proposed-charter-amendment-no-1",
+      "owner": "clallam",
+      "jurisdiction": "Clallam County",
+      "proposition": "Proposed Charter Amendment No. 1",
+      "title": "Charter Amendment Requiring County Commissioner District Town Hall Meetings",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "clallam"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 42
+        },
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 43
+        }
+      ],
+      "what_it_does": "Amends Article II of the county charter: each commissioner must hold at least one town hall a year in their own district, and the three commissioners together at least one a year in each district, all outside normal business hours with 30 days' notice.",
+      "cost_line": "No tax or fee; no fiscal statement was filed.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7289&e=899&la=en&c=05"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "clallam-clallam-county-proposed-charter-amendment-no-2",
+      "owner": "clallam",
+      "jurisdiction": "Clallam County",
+      "proposition": "Proposed Charter Amendment No. 2",
+      "title": "Charter Amendment Establishing an Ethics Review Board",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "clallam"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 44
+        },
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 45
+        }
+      ],
+      "what_it_does": "Amends Article VIII of the county charter to create a three-member, unpaid ethics review board (one member per commissioner district, appointed by elected county officials) that reviews complaints that elected county officials broke the county code of ethics and publishes written findings; it cannot impose penalties.",
+      "cost_line": "No tax or fee; board members serve without pay (opponents cite staff and process costs; no fiscal statement was filed).",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7290&e=899&la=en&c=05"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "clallam-clallam-county-proposed-charter-amendment-no-3",
+      "owner": "clallam",
+      "jurisdiction": "Clallam County",
+      "proposition": "Proposed Charter Amendment No. 3",
+      "title": "Charter Amendment Requiring Printing of the Full Text of Proposed Charter Amendments in the Local Voters' Pamphlet",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "clallam"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 46
+        },
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 47
+        }
+      ],
+      "what_it_does": "Amends Article XI of the county charter to require the full text of every proposed charter amendment to be printed in the local voters' pamphlet.",
+      "cost_line": "No tax or fee; affects what the Auditor prints in future pamphlets.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7291&e=899&la=en&c=05"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "clallam-quillayute-valley-school-district-no-402-proposition-no-1",
+      "owner": "clallam",
+      "jurisdiction": "Quillayute Valley School District No. 402",
+      "proposition": "Proposition No. 1",
+      "title": "Bonds to Rebuild Forks Middle School",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "clallam",
+        "layer": "SCHDST",
+        "value": "402"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 58
+        }
+      ],
+      "what_it_does": "Authorizes $34,000,000 of general obligation bonds, maturing within 25 years and repaid by excess property taxes, to build a new Forks Middle School replacing three existing buildings on the site.",
+      "cost_line": "$34,000,000 in bonds repaid over up to 25 years by an excess property tax levy; the ballot materials print no rate estimate.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7296&e=899&la=en&c=05"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "clallam-clallam-county-fire-protection-district-no-1-proposition-no-1",
+      "owner": "clallam",
+      "jurisdiction": "Clallam County Fire Protection District No. 1",
+      "proposition": "Proposition No. 1",
+      "title": "Property Tax Levy for Fire Protection and Emergency Medical Services",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "clallam",
+        "layer": "FIRDST",
+        "value": "1"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 59
+        }
+      ],
+      "what_it_does": "Sets the Forks-area fire district's regular levy at $1.00 per $1,000 for 2027 collection and lets it grow each year for nine more years by the greater of 1% or West Region CPI-U; the 2035 maximum becomes the base for later limits.",
+      "cost_line": "$1.00 per $1,000 of assessed value for 2027 collection, then CPI-based growth (at least 1%) through 2035.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7292&e=899&la=en&c=05"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "clallam-clallam-county-fire-protection-district-no-2-proposition-no-1",
+      "owner": "clallam",
+      "jurisdiction": "Clallam County Fire Protection District No. 2",
+      "proposition": "Proposition No. 1",
+      "title": "Property Tax Levy For Emergency Medical Services",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "clallam",
+        "layer": "FIRDST",
+        "value": "2"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 60
+        },
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 61
+        }
+      ],
+      "what_it_does": "Authorizes a ten-year EMS property tax levy for the fire district around Port Angeles, collected from 2027, used only for emergency medical services (the district says it would end transport bills for district residents).",
+      "cost_line": "Up to $0.50 per $1,000 of assessed value a year for ten years, starting with 2027 collection.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7293&e=899&la=en&c=05"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "clallam-clallam-county-fire-protection-district-no-6-proposition-no-1",
+      "owner": "clallam",
+      "jurisdiction": "Clallam County Fire Protection District No. 6",
+      "proposition": "Proposition No. 1",
+      "title": "Property Tax Levy For Fire Protection and Emergency Services",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "clallam",
+        "layer": "FIRDST",
+        "value": "6"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 62
+        },
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 63
+        }
+      ],
+      "what_it_does": "Restores the regular levy of the all-volunteer Three Rivers fire district (La Push Road, Quillayute Prairie, Mora) to up to $1.50 per $1,000 for 2027 collection; the amount levied becomes the base for future levy limits.",
+      "cost_line": "Up to $1.50 per $1,000 of assessed value for 2027 collection; the amount levied becomes the base for later years.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7294&e=899&la=en&c=05"
+          ]
+        }
+      }
+    }
+  ]
+}
