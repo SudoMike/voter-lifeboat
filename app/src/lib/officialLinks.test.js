@@ -89,10 +89,11 @@ test('every statewide contest and measure in the shipped general gets a paged SO
       }
   for (const m of general.measures) {
     // Spokane's, Pierce's, Kitsap's, Whatcom's, Benton's, Grant's, Island's,
-    // Lewis's, Grays Harbor's, Stevens's, Douglas's and Okanogan's measures cite VoteWA's
-    // unpaged online guide (countyGuides), as do Whitman's eight that filed
-    // hardship waivers (not in its printed pamphlet).
-    if (['spokane', 'pierce', 'kitsap', 'whatcom', 'benton', 'grant', 'island', 'lewis', 'grays-harbor', 'stevens', 'douglas', 'okanogan'].includes(m.owner)) continue
+    // Lewis's, Grays Harbor's, Stevens's, Douglas's, Okanogan's and Pacific's measures cite
+    // VoteWA's unpaged online guide (countyGuides), as do Whitman's eight that
+    // filed hardship waivers (not in its printed pamphlet).
+    if (['spokane', 'pierce', 'kitsap', 'whatcom', 'benton', 'grant', 'island', 'lewis', 'grays-harbor', 'stevens', 'douglas', 'okanogan',
+      'pacific'].includes(m.owner)) continue
     if (m.owner === 'whitman' && !m.pamphlet_pages.length) continue
     assert.match(pamphletLink(m.pamphlet_pages, m.owner, general.election.id), /#page=\d+$/, m.slug)
     n++
@@ -593,6 +594,72 @@ test('shipped Jefferson and Kittitas records link their local pamphlet at the ci
     'https://www.co.jefferson.wa.us/DocumentCenter/View/25551#page=14')
   assert.equal(pamphletLink([{ edition: 'local-voters-pamphlet', page: 10 }], 'kittitas', id),
     'https://www.co.kittitas.wa.us/uploads/auditor/elections/voters-pamphlet//General%20Pamphlet.pdf#page=10')
+})
+
+test('shipped Klickitat and Asotin records link their pamphlet at the cited PDF page, else the county\'s VoteWA guide', () => {
+  const id = general.election.id
+  for (const [county, name, pdf, guide, office, counts] of [
+    ['klickitat', 'Klickitat County', 'https://www.klickitatcounty.gov/DocumentCenter/View/23954',
+      'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=20',
+      'https://www.klickitatcounty.gov/1136/ElectionsVoter-Registration', [15, 10]],
+    ['asotin', 'Asotin County',
+      'https://www.asotincountywa.gov/DocumentCenter/View/18054/2026GeneralElectionLocalVotersPamphlet-_Asotin-82726',
+      'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=02',
+      'https://www.asotincountywa.gov/186/Current-Election', [12, 6]],
+  ]) {
+    let paged = 0
+    let guided = 0
+    for (const item of [...general.contests, ...general.measures]) {
+      if (item.owner !== county) continue
+      const pages = item.candidates ? item.candidates.map((c) => c.pamphlet_pages) : [item.pamphlet_pages]
+      for (const p of pages) {
+        if (p?.length) {
+          // Citations are PDF pages (Klickitat's equal the printed ones;
+          // Asotin's run 36 behind).
+          assert.equal(pamphletLink(p, county, id), `${pdf}#page=${p[0].page}`, item.slug)
+          paged++
+        } else {
+          // CD and LD seats ship another package's research; Asotin's Court
+          // of Appeals seat cites VoteWA.
+          assert.equal(pamphletLink(p, county, id), guide, item.slug)
+          guided++
+        }
+      }
+    }
+    assert.deepEqual([paged, guided], counts, county)
+    assert.deepEqual(countyElectionsOffice(general, { id: county, name }), {
+      name: `${name} Elections`,
+      url: office,
+      direct: true,
+    })
+  }
+  // Klickitat's EMS levy, p. 56; Asotin's Rural EMS levy, PDF p. 12 (printed p. 48).
+  assert.equal(pamphletLink([{ edition: 'local-voters-pamphlet', page: 56 }], 'klickitat', id),
+    'https://www.klickitatcounty.gov/DocumentCenter/View/23954#page=56')
+  assert.equal(pamphletLink([{ edition: 'local-voters-pamphlet', page: 12 }], 'asotin', id),
+    'https://www.asotincountywa.gov/DocumentCenter/View/18054/2026GeneralElectionLocalVotersPamphlet-_Asotin-82726#page=12')
+})
+
+test('shipped Pacific records link the county\'s VoteWA guide; its office falls back to the statewide list', () => {
+  const id = general.election.id
+  const GUIDE = 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=25'
+  let n = 0
+  for (const item of [...general.contests, ...general.measures]) {
+    if (item.owner !== 'pacific') continue
+    const pages = item.candidates ? item.candidates.map((c) => c.pamphlet_pages) : [item.pamphlet_pages]
+    for (const p of pages) {
+      assert.equal(pamphletLink(p, 'pacific', id), GUIDE, item.slug)
+      n++
+    }
+  }
+  assert.equal(n, 25)
+  // co.pacific.wa.us did not answer on 2026-10-08 (#31), so the shipped
+  // coverage carries no elections_url for Pacific.
+  assert.deepEqual(countyElectionsOffice(general, { id: 'pacific', name: 'Pacific County' }), {
+    name: 'Pacific County Elections',
+    url: COUNTY_OFFICES_URL,
+    direct: false,
+  })
 })
 
 test('the shipped general links Snohomish County Elections directly', () => {

@@ -1681,3 +1681,138 @@ test('Kittitas resolves the Upper and Lower District Court from the Auditor Cour
   assert.ok(scopeMatches(upper, context))
   assert.ok(!scopeMatches(lower, context))
 })
+
+// Klickitat, Pacific and Asotin (#31, wave 6). Live point queries 2026-10-08
+// at the Census-geocoded points of the addresses below. Klickitat and Pacific
+// ship partial_county: their District Court seats are DISTCRT, which no
+// layer resolves.
+const partialData = (id) => ({
+  coverage: { statewide_complete: true, supported_counties: [{ id, coverage: 'partial_county' }] },
+})
+const klickitatCommissioner = (value) => ({
+  path: 'Klickitat/Layers/MapServer/21/query', attributes: { NO: value },
+})
+
+test('Klickitat resolves EMS District No. 1 from DOR EMS2025; Bickleton is outside it', async () => {
+  const ems = { kind: 'DISTRICT', county: 'klickitat', layer: 'EMSDST', value: '1' }
+  const east = { kind: 'DISTRICT', county: 'klickitat', layer: 'DISTCRT', value: 'East' }
+  const west = { kind: 'DISTRICT', county: 'klickitat', layer: 'DISTCRT', value: 'West' }
+  // 205 S Columbus Ave, Goldendale: commissioner '3', no FIR2025, EMS '1'.
+  const calls = mockWave2('205 S COLUMBUS AVE, GOLDENDALE, WA, 98620', '039', 'Klickitat County', [
+    klickitatCommissioner('3'), dorLayer(6, '1'),
+  ])
+  let context = await lookupBallotContext(partialData('klickitat'), '205 S Columbus Ave Goldendale WA 98620')
+  assert.equal(context.county.id, 'klickitat')
+  assert.equal(context.coverageStatus, 'partial_county')
+  assert.equal(coverageAdvice(context), 'degraded')
+  assert.deepEqual(context.missingLayers, [])
+  assert.equal(context.districts.EMSDST, '1')
+  assert.ok(scopeMatches(ems, context))
+  assert.ok(!scopeMatches(east, context))
+  assert.ok(!scopeMatches(west, context))
+  const emsCall = calls.find((u) => u.includes('WADOR_PropertyTax/MapServer/6/query'))
+  assert.equal(new URL(emsCall).searchParams.get('outFields'), 'DISTATTRIB')
+  // 100 E Market St, Bickleton: commissioner '3', FD '2', no EMS district.
+  mockWave2('100 E MARKET ST, BICKLETON, WA, 99322', '039', 'Klickitat County', [
+    klickitatCommissioner('3'), dorLayer(7, '2'),
+  ])
+  context = await lookupBallotContext(partialData('klickitat'), '100 E Market St Bickleton WA 99322')
+  assert.deepEqual(context.missingLayers, [])
+  assert.equal(context.districts.EMSDST, undefined)
+  assert.ok(!scopeMatches(ems, context))
+  // The archived primary's Lyle FD 4 levy still reads DOR FIRDST.
+  assert.ok(!scopeMatches({ kind: 'DISTRICT', county: 'klickitat', layer: 'FIRDST', value: '4' }, context))
+})
+
+test('Pacific resolves North Pacific County EMS District No. 1 and Fire Districts 3 and 6 from DOR', async () => {
+  const ems = { kind: 'DISTRICT', county: 'pacific', layer: 'EMSDST', value: '1' }
+  const fd3 = { kind: 'DISTRICT', county: 'pacific', layer: 'FIRDST', value: '3' }
+  const fd6 = { kind: 'DISTRICT', county: 'pacific', layer: 'FIRDST', value: '6' }
+  const north = { kind: 'DISTRICT', county: 'pacific', layer: 'DISTCRT', value: 'North' }
+  // 38 2nd St, Bay Center: EMS '1', FD '6'.
+  const calls = mockWave2('38 2ND ST, BAY CENTER, WA, 98527', '049', 'Pacific County', [
+    dorLayer(6, '1'), dorLayer(7, '6'),
+  ])
+  let context = await lookupBallotContext(partialData('pacific'), '38 2nd St Bay Center WA 98527')
+  assert.equal(context.county.id, 'pacific')
+  assert.equal(context.coverageStatus, 'partial_county')
+  assert.equal(coverageAdvice(context), 'degraded')
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(scopeMatches(ems, context))
+  assert.ok(scopeMatches(fd6, context))
+  assert.ok(!scopeMatches(fd3, context))
+  assert.ok(!scopeMatches(north, context))
+  const emsCall = calls.find((u) => u.includes('WADOR_PropertyTax/MapServer/6/query'))
+  assert.equal(new URL(emsCall).searchParams.get('outFields'), 'DISTATTRIB')
+  // 1000 State Rte 6, Raymond (Menlo area): EMS '1', FD '3'.
+  mockWave2('1000 STATE RTE 6, RAYMOND, WA, 98577', '049', 'Pacific County', [dorLayer(6, '1'), dorLayer(7, '3')])
+  context = await lookupBallotContext(partialData('pacific'), '1000 State Rte 6 Raymond WA 98577')
+  assert.ok(scopeMatches(ems, context))
+  assert.ok(scopeMatches(fd3, context))
+  assert.ok(!scopeMatches(fd6, context))
+  // 1511 Bay Ave, Ocean Park: the Ocean Beach EMS code 'OB', FD '1'.
+  mockWave2('1511 BAY AVE, OCEAN PARK, WA, 98640', '049', 'Pacific County', [dorLayer(6, 'OB'), dorLayer(7, '1')])
+  context = await lookupBallotContext(partialData('pacific'), '1511 Bay Ave Ocean Park WA 98640')
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(!scopeMatches(ems, context))
+  // 115 Bolstad St, Long Beach: no EMS or fire district.
+  mockWave2('115 BOLSTAD ST, LONG BEACH, WA, 98631', '049', 'Pacific County', [])
+  context = await lookupBallotContext(partialData('pacific'), '115 Bolstad St Long Beach WA 98631')
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(!scopeMatches(ems, context))
+  assert.ok(!scopeMatches(fd3, context))
+  assert.ok(!scopeMatches(fd6, context))
+})
+
+// DOR TCA2025 (layer 23): the mock keeps a feature only when the request's
+// `where` lists its tax code area, as the server does.
+const ASOTIN_RURAL_EMS_WHERE = "COUNTYNAME = 'ASOTIN' AND DISTATTRIB IN ('0025','0030','0030F')"
+const asotinTca = (tca) => ({
+  path: 'WADOR_PropertyTax/MapServer/23/query',
+  attributes: { DISTATTRIB: tca },
+  keep: (where) => where === ASOTIN_RURAL_EMS_WHERE && ['0025', '0030', '0030F'].includes(tca),
+})
+
+test('Asotin resolves its PUD from DOR PUD2025 and Rural EMS District No. 2 from its tax code areas', async () => {
+  const pud = { kind: 'DISTRICT', county: 'asotin', layer: 'PUDDST', value: '1' }
+  const ruralEms = { kind: 'DISTRICT', county: 'asotin', layer: 'RURALEMSDST', value: '2' }
+  // The archived primary's misscoped copy of the rural levy.
+  const primaryEms = { kind: 'DISTRICT', county: 'asotin', layer: 'EMSDST', value: '1' }
+  // 829 5th St, Clarkston: EMS2025 'CLAR', PUD '1', TCA '0021'.
+  const calls = mockWave2('829 5TH ST, CLARKSTON, WA, 99403', '003', 'Asotin County', [
+    dorLayer(6, 'CLAR'), dorLayer(17, '1'), asotinTca('0021'),
+  ])
+  let context = await lookupBallotContext(wave2Data('asotin'), '829 5th St Clarkston WA 99403')
+  assert.equal(context.county.id, 'asotin')
+  assert.equal(context.coverageStatus, 'full_county')
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(scopeMatches(pud, context))
+  assert.ok(!scopeMatches(ruralEms, context))
+  assert.equal('RURALEMSDST' in context.districts, false)
+  const tca = new URL(calls.find((u) => u.includes('WADOR_PropertyTax/MapServer/23/query')))
+  assert.equal(tca.searchParams.get('outFields'), 'DISTATTRIB')
+  assert.equal(tca.searchParams.get('where'), ASOTIN_RURAL_EMS_WHERE)
+  // 1406 16th Ave, Clarkston Heights: EMS District #1 '1', PUD '1', TCA '0023P'.
+  mockWave2('1406 16TH AVE, CLARKSTON, WA, 99403', '003', 'Asotin County', [
+    dorLayer(6, '1'), dorLayer(17, '1'), asotinTca('0023P'),
+  ])
+  context = await lookupBallotContext(wave2Data('asotin'), '1406 16th Ave Clarkston WA 99403')
+  assert.ok(scopeMatches(pud, context))
+  assert.ok(!scopeMatches(ruralEms, context))
+  assert.ok(scopeMatches(primaryEms, context))
+  // 121 2nd St, Asotin: EMS2025 'ASOT', no PUD, TCA '0026'.
+  mockWave2('121 2ND ST, ASOTIN, WA, 99402', '003', 'Asotin County', [dorLayer(6, 'ASOT'), asotinTca('0026')])
+  context = await lookupBallotContext(wave2Data('asotin'), '121 2nd St Asotin WA 99402')
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(!scopeMatches(pud, context))
+  assert.ok(!scopeMatches(ruralEms, context))
+  // 992 Park Rd, Anatone: no EMS2025 or PUD feature, TCA '0030' -> the
+  // presence layer's constant '2'.
+  mockWave2('992 PARK RD, ANATONE, WA, 99401', '003', 'Asotin County', [asotinTca('0030')])
+  context = await lookupBallotContext(wave2Data('asotin'), '992 Park Rd Anatone WA 99401')
+  assert.deepEqual(context.missingLayers, [])
+  assert.equal(context.districts.RURALEMSDST, '2')
+  assert.ok(scopeMatches(ruralEms, context))
+  assert.ok(!scopeMatches(pud, context))
+  assert.ok(!scopeMatches(primaryEms, context))
+})

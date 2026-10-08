@@ -1,0 +1,71 @@
+{
+  "contest_slug": "measures",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/pacific/scoring/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/pacific/dossiers/measures/",
+    "data/final/2026-11-03-general/rubric.json"
+  ],
+  "verdicts": [
+    {
+      "candidate": "pacific-timberland-regional-library-district-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Hardest attack: the ballot title says 'restore' and the rate has eroded under the 1% limit (S1, S3), the restoration profile that earned Grays Harbor FD2 a 1. It fails on size: from $0.228924 to $0.35 (S1) is a 53% rate increase, a levy lid lift named in taxes pole_b, and TRL last sought an increase in 2009 (S1, S3), so a yes vote does not re-approve a recently set rate. Consistent with Grays Harbor's and Thurston's 2 for the same measure. S1 and S2 support the basis. Spending: restores 2026 cuts (S1, S3) with no expansion dispute shown; not mapping it is defensible. Social and parental-rights: no change to collections or access (S1); not mapped, correctly."
+    },
+    {
+      "candidate": "pacific-timberland-regional-library-district-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1 ($0.22 to $0.35 for 2027 and 2028, 2028 amount as base, five-county vote), S3 ($3.8 million shortfall, layoffs) and the dossier's DOR check that all of Pacific County is in TRL. cost_line: '$0.228924 to $0.35' matches S1; '$31 a year on the $239,100 median' is TRL's own figure (S2), correctly attributed. Recomputing gives about $29 ((0.35 - 0.228924) x 239.1 = $28.95), so TRL's number runs slightly high, as in the Grays Harbor review, but the attribution is right. '$40 a year on a $334,000 home' matches S1 ($40.44). pro_summary matches S1 ('hasn't increased in 25 years', 'a long overdue cost-of-living raise', restores hours and staffing). con_summary matches S1, including the quoted line."
+    },
+    {
+      "candidate": "pacific-north-pacific-county-emergency-medical-services-district-no-1-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked upward: on the yes-versus-no comparison used for McCleary in Grays Harbor, a no vote leaves no EMS levy in 2027, so a yes imposes the full $0.40 per $1,000 (S1). The attack fails because this is an explicit, annually renewed replacement levy ('replacing the expired 2026 levy', 'must be renewed annually', S1) that voters have approved repeatedly (73.62% in 2025, S2; 68.49% in 2024, S3; 74.27% in 2020, S4), the replacement profile other packages map at 1. Attacked downward: an excess property tax is still a tax yes, so not below 1. One basis wording issue: 'rather than raising a rate' is not verified, since the dossier never states the 2026 levy's rate; S1 only says the new levy replaces it. The direction does not depend on it."
+    },
+    {
+      "candidate": "pacific-north-pacific-county-emergency-medical-services-district-no-1-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1 (one-year excess levy for 2027, the named service areas, all county property outside the Ocean Beach, Ocosta and North River school districts, 60% approval). cost_line matches S1 ($0.40, $800,000 cap, 2027 only); 0.40 x 240 = $96 checks. pro_summary: 'replaces the expiring 2026 levy and keeps current ambulance service levels through 2027' is S1; '73.6% in 2025' is S2 (73.62%). con_summary matches S1 and S5."
+    },
+    {
+      "candidate": "pacific-pacific-county-fire-protection-district-no-3-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked on strength: the district frames it as keeping current service levels after revenue grew only about 1.76% a year for 14 years (S1), a maintenance case. It fails on size: a $0.20 increase to $0.61 per $1,000 (S1) is roughly half again over the implied current rate of about $0.41, and it is a levy lid lift named in taxes pole_b. That matches the 2 given to TRL and Montesano and contrasts with the 7% restoration that got FD2 a 1 in Grays Harbor. Pamphlet-only evidence, but the rate figures come from the district's own resolution (S1)."
+    },
+    {
+      "candidate": "pacific-pacific-county-fire-protection-district-no-3-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1 (up to $0.61 for 2027 collection, base for later limits, the named communities, about 1.76% a year revenue growth). cost_line matches S1 ($0.20 increase); 0.20 x 240 = $48 checks. pro_summary is the board's explanatory statement (S1), correctly attributed to the board since no statement for was filed. con_summary matches S1 and S3."
+    },
+    {
+      "candidate": "pacific-pacific-county-fire-protection-district-no-6-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked on size: S1 says the measure 'restore[s]' the levy to $0.50 but gives no current rate, so the restoration could be small, as with Grays Harbor FD2 (1). It holds at 2 because the measure also replaces the 1% limit with up to 6% a year for five years (S1), about 34% compounded revenue growth against about 5% under the default limit, the multi-year limit-factor shape that kept Montesano at 2. The district also says the money will 'significantly improve and expand' services (S1), not just restore them. The basis is accurate and cites S1."
+    },
+    {
+      "candidate": "pacific-pacific-county-fire-protection-district-no-6-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1 ($0.50 for 2027 collection, 106% limit factor for five years capped at $1.50, 2031 levy as base) and the dossier's DOR placement around Bay Center. cost_line: 'through 2032 collection' matches S1 ('collected in 2032'); 0.50 x 240 = $120 checks. pro_summary quotes S1 accurately. con_summary matches S1 and S3. The dossier notes that S1 gives no current rate, and the display text avoids implying one, which is right."
+    }
+  ],
+  "missing": [
+    {
+      "candidate": "pacific-pacific-county-fire-protection-district-no-6-proposition-no-1",
+      "axis": "spending",
+      "proposed_score": 1,
+      "confidence": "medium",
+      "citations": [
+        "S1"
+      ],
+      "basis": "The district's resolution and explanatory statement say approval 'will provide funding for the District to significantly improve and expand current fire and emergency services' (S1). Unlike TRL, FD3 and the EMS district, which fund existing service levels, this is an explicit expansion case with no restraint framing, and spending applies to measures. The dossier's reason for not mapping it (a small district's expansion is not the program-expansion debate) is not a rubric scope rule. +1, not +2, because the evidence is one pamphlet-only source and the scale of the expansion is unstated."
+    }
+  ]
+}

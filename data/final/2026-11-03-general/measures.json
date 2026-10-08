@@ -51,7 +51,13 @@
     "data/washington-state/elections/2026-11-03-general/counties/okanogan/scoring/measures.json",
     "data/washington-state/elections/2026-11-03-general/counties/okanogan/scoring/refutations/measures.json",
     "data/washington-state/elections/2026-11-03-general/counties/jefferson/scoring/measures.json",
-    "data/washington-state/elections/2026-11-03-general/counties/jefferson/scoring/refutations/measures.json"
+    "data/washington-state/elections/2026-11-03-general/counties/jefferson/scoring/refutations/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/klickitat/scoring/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/klickitat/scoring/refutations/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/pacific/scoring/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/pacific/scoring/refutations/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/asotin/scoring/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/asotin/scoring/refutations/measures.json"
   ],
   "script": "pipeline/merge_scores.py",
   "measures": [
@@ -3477,6 +3483,122 @@
         }
       },
       "sources_note": "Sources: the Jefferson local pamphlet, page 15 (S1); VoteWA record 7292 (S2); the Jefferson Elections page (S3); the Forks Forum (S4); DOR 2025 levy detail (S5); county GIS (S6); a PDC query showing no committee (S7). No statements for or against were filed."
+    },
+    {
+      "slug": "klickitat-emergency-medical-services-district-no-1-klickitat-county-proposition-no-1",
+      "what_it_does": "Makes the county ambulance district's property tax levy permanent, at up to $0.50 per $1,000 of assessed value, starting with 2027 collection. Voters renewed the levy for six years in 2018 and 2024; this removes the end date and the need for future renewal votes. The money may be spent only on emergency medical services. The district covers the county except the Bickleton area. State law calls for 60% approval for a permanent levy; the district's resolution says a simple majority.",
+      "cost_line": "Up to $0.50 per $1,000 of assessed value every year with no end date: about $250 a year on a $500,000 property at the full rate. The 2026 rate under the current levy is about $0.48, raising $2.56 million.",
+      "pro_summary": "No statement in favor was filed. The district says the levy pays for its ambulances, facilities, equipment and trained emergency medical personnel; in 2024 it described about 2,417 911 responses a year across 1,400 square miles.",
+      "con_summary": "No statement against was filed and no opposing committee is listed. A permanent levy ends the six-year re-votes that voters have approved twice with about 74%; state law requires a referendum procedure for permanent levies (15% of voters can petition), which the district's resolution does not mention.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "A yes vote keeps the existing EMS levy at the same $0.50 maximum but with no end date. It is a continuation of a tax voters approved in 2018 and 2024, not a new or higher one.",
+          "citations": [
+            "S1",
+            "S2",
+            "S4",
+            "S5"
+          ]
+        }
+      },
+      "sources_note": "Sources: the local voters' pamphlet page 56 (S1); EMS District Resolution 2026-02 (S2); VoteWA records for 2026 and 2024 (S3, S4); the Assessor's 2026 levy report (S5); RCW 84.52.069 (S6); SOS results for 2024 and 2018 (S7, S8); the Auditor's 2025 votes by district (S9); a district-written Sentinel column (S10). No news coverage of the 2026 measure was found."
+    },
+    {
+      "slug": "pacific-timberland-regional-library-district-proposition-no-1",
+      "what_it_does": "Lifts Timberland Regional Library's regular property tax levy from about $0.22 to $0.35 per $1,000 of assessed value for 2027 and 2028; the 2028 amount becomes the base for later limits. TRL says it would keep hours, staff and collections after a $3.8 million shortfall and 2026 layoffs. Voters in all five TRL counties decide it; all of Pacific County is in the district.",
+      "cost_line": "From $0.228924 to $0.35 per $1,000 of assessed value. TRL estimates $31 a year on the $239,100 median Pacific County home; the explanatory statement gives about $40 a year on a $334,000 home.",
+      "pro_summary": "Supporters say the levy has not risen in 25 years and the increase is 'a long overdue cost-of-living raise' that would restore hours and staffing.",
+      "con_summary": "Opponents say households already face rising levies and the library should cut costs, seek grants and manage existing money better first; 'Voting No is not a vote against libraries or literacy.'",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "A yes vote is a levy lid lift, named in the taxes pole_b, raising TRL's regular rate by more than half, from $0.228924 to $0.35 per $1,000.",
+          "citations": [
+            "S1",
+            "S2"
+          ]
+        }
+      },
+      "sources_note": "VoteWA guide record 7284 (S1); TRL levy page (S2); Chinook Observer/Thurston Chronicle coverage of the trustees' decision (S3); PDC committee query (S4)."
+    },
+    {
+      "slug": "pacific-north-pacific-county-emergency-medical-services-district-no-1-proposition-no-1",
+      "what_it_does": "Renews the North Pacific County EMS District's one-year excess levy for 2027 to subsidize ambulance and emergency medical service in the Naselle, Nemah, Bay Center, South Bend, Raymond and Willapa Valley areas. The district covers Pacific County outside the Ocean Beach, Ocosta and North River school districts. Needs 60% approval.",
+      "cost_line": "$0.40 per $1,000 of assessed value, no more than $800,000, collected in 2027 only (about $96 on a $240,000 property).",
+      "pro_summary": "The district says the levy replaces the expiring 2026 levy and keeps current ambulance service levels through 2027; voters renewed it with 73.6% in 2025.",
+      "con_summary": "No statement against was filed and no opposition committee was found.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 1,
+          "basis": "A yes vote approves an excess property tax levy, but it renews an expiring one-year levy that voters have approved annually, so +1.",
+          "citations": [
+            "S1",
+            "S2"
+          ]
+        }
+      },
+      "sources_note": "VoteWA guide record 7388 (S1); SOS results for the 2025, 2024 and 2020 renewals (S2-S4); PDC committee query (S5)."
+    },
+    {
+      "slug": "pacific-pacific-county-fire-protection-district-no-3-proposition-no-1",
+      "what_it_does": "Raises Fire District 3's regular property tax levy to up to $0.61 per $1,000 for 2027 collection; that levy becomes the base for later limits. The district serves Menlo, Lebam, Frances, Baleville, Elk Horn Flats, Old Willapa and East Raymond and says revenue growth of about 1.76% a year has fallen behind costs.",
+      "cost_line": "Up to $0.61 per $1,000 of assessed value in 2027, a $0.20 increase per the district (about $48 more a year on a $240,000 property).",
+      "pro_summary": "The district's board says the increase keeps its current fire protection service levels for the near future.",
+      "con_summary": "No statement against was filed and no opposition committee was found.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "A yes vote is a levy lid lift (taxes pole_b) raising the district's rate by about half, to $0.61 per $1,000.",
+          "citations": [
+            "S1"
+          ]
+        }
+      },
+      "sources_note": "VoteWA guide record 7389 (S1); SOS 2025 results (S2); PDC committee query (S3). No local news coverage found."
+    },
+    {
+      "slug": "pacific-pacific-county-fire-protection-district-no-6-proposition-no-1",
+      "what_it_does": "Restores Fire District 6's regular property tax levy to $0.50 per $1,000 for 2027 collection and lets levy revenue grow up to 6% a year (capped at $1.50 per $1,000) for the next five years; the 2031 levy becomes the base for later limits. The district, around Bay Center, says the levy is its main funding source.",
+      "cost_line": "$0.50 per $1,000 of assessed value in 2027, then up to 6% more levy revenue a year through 2032 collection (about $120 a year on a $240,000 property at $0.50).",
+      "pro_summary": "The district says approval would let it 'significantly improve and expand' fire and emergency services.",
+      "con_summary": "No statement against was filed and no opposition committee was found.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "A yes vote is a levy lid lift (taxes pole_b) that restores the rate to $0.50 and allows up to 6% yearly growth for five years instead of 1%.",
+          "citations": [
+            "S1"
+          ]
+        },
+        "spending": {
+          "direction": 1,
+          "basis": "The district's resolution and explanatory statement say approval 'will provide funding for the District to significantly improve and expand current fire and emergency services' (S1). Unlike TRL, FD3 and the EMS district, which fund existing service levels, this is an explicit expansion case with no restraint framing, and spending applies to measures. The dossier's reason for not mapping it (a small district's expansion is not the program-expansion debate) is not a rubric scope rule. +1, not +2, because the evidence is one pamphlet-only source and the scale of the expansion is unstated.",
+          "citations": [
+            "S1"
+          ],
+          "added_by_refutation": true
+        }
+      },
+      "sources_note": "VoteWA guide record 7391 (S1); SOS 2025 results (S2); PDC committee query (S3). No local news coverage found."
+    },
+    {
+      "slug": "asotin-asotin-county-rural-ems-district-no-2-proposition-no-1",
+      "what_it_does": "Authorizes Asotin County Rural EMS District No. 2 (the county outside Clarkston and Fire District 1: Anatone, Cloverland and south to Oregon) to levy a regular property tax for six years starting in 2027. The money pays for the county's contract with Lewiston Fire Department paramedics and ambulances. It replaces the levy that expires at the end of 2026. It failed in the August primary, 118 to 146, and is back for a second vote; a simple majority passes it.",
+      "cost_line": "Up to $0.28 per $1,000 of assessed value a year for 2027-2032, up from a current ceiling of $0.15 (the 2025 rate was about $0.12): $28 a year per $100,000 at the full rate.",
+      "pro_summary": "A group of rural residents says the levy pays for the advanced life support ambulance contract, cannot be used for other county expenses, and that without it EMS would stop when the Lewiston contract runs out. They say Life Flight is no substitute. The commissioners say they cannot advocate but have explained what it pays for.",
+      "con_summary": "No statement against was filed and no opposition campaign was found. The measure nearly doubles the maximum EMS rate, and district voters rejected it with 55% voting no in August.",
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "A yes vote raises the district's regular EMS levy ceiling from $0.15 to $0.28 per $1,000 (the 2025 rate was about $0.12) for six more years.",
+          "citations": [
+            "S1",
+            "S6"
+          ]
+        }
+      },
+      "sources_note": "Asotin local voters' pamphlet p. 12 (S1) and VoteWA guide record 7276 (S2); VoteWA August 2026 and SOS 2020 results (S3, S4); RCW 84.52.069 (S5); DOR 2025 levy detail and the county's 2025 tax rates (S6, S7); KOZE coverage (S8-S11, S13); supporters' letter (S12); PDC query (S14)."
     }
   ]
 }

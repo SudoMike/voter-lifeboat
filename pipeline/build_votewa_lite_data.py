@@ -601,6 +601,64 @@ COUNTY_CONFIG = {
 # its measures are not curated yet, so it can never pass for "no measures".
 ELECTION_MEASURES = {
     "2026-11-03-general": {
+        # Asotin (#31): checked against the Asotin County Auditor's general
+        # sample ballot (precinct 001.02 Anatone) and local voters' pamphlet
+        # (counties/asotin/raw/asotin/{sample-ballot,local-voters-pamphlet}.pdf.url,
+        # linked from asotincountywa.gov/186/Current-Election) and VoteWA's
+        # online guide for county 02 (raw/votewa/voter-guide/guide.json.url),
+        # which list one local measure (guide record 7276; pamphlet PDF page 12).
+        # Overrides: County Commissioner 3 is nominated by district and elected
+        # county-wide in the general (RCW 36.32.040, 36.32.050(1)): the SOS
+        # precinct exports put Commissioner 1, 2 and 3 (2020) on all 26
+        # precincts, while the 2026 primary's District No. 3 race reported 7
+        # units (raw/asotin/). It keeps the primary's contest name so its slug
+        # matches. The District Court is one county-wide court. Asotin County
+        # PUD No. 1 is not the whole county: its commissioners are elected
+        # PUD-wide (RCW 54.12.010(3)) by 22 of 26 precincts (SOS exports for
+        # Commissioner 1 in 2020, 3 in 2022 and 2 in 2024; Anatone, Asotin #1
+        # and #2 and Rural Asotin are outside), so the seat is scoped PUDDST
+        # '1' read from WA DOR PUD2025 (layer 17), whose single Asotin polygon
+        # ('1') covers Clarkston and the Clarkston Heights tax code areas:
+        # '1' at 829 5th St, Clarkston and 1406 16th Ave, Clarkston; no
+        # feature in the City of Asotin (-117.0482, 46.3393) or at Anatone
+        # (-117.1335, 46.1347).
+        # Measure scope: Rural EMS District No. 2 is not DOR EMS2025's
+        # Asotin '1' polygon (that is EMS District #1, the Fire District 1
+        # area: '1' at 1406 16th Ave, Clarkston; no feature at Anatone). The
+        # county's 2025 tax rates by tax code area and DOR's 2025 levy detail
+        # ('EMS Dist #1 Special', $0.12084) put the rural EMS levy in TCAs 25,
+        # 30 and 30F, the Anatone and Rural Asotin precinct parts that voted
+        # on it in 2020 and August 2026. It is scoped RURALEMSDST '2', read
+        # from DOR TCA2025 (layer 23) with where COUNTYNAME = 'ASOTIN' AND
+        # DISTATTRIB IN ('0025','0030','0030F') (see counties/asotin/COMPLETENESS.md).
+        "asotin": {
+            "overrides": {
+                ("COUNTY", "COUNTY COMMISSIONER 3"): (
+                    "County", "Asotin County Commissioner District 3", "County Commissioner 3", ("COUNTY", None)),
+                ("COUNTY", "DISTRICT COURT JUDGE"): (
+                    "Judicial", "Asotin County District Court", "District Court Judge", ("COUNTY", None)),
+                ("PUBLIC UTILITY DISTRICT", "PUBLIC UTILITY COMMISSIONER 1"): (
+                    "PublicUtility", "Asotin County Public Utility District", "Commissioner District No. 1",
+                    ("PUDDST", "1")),
+            },
+            "measures": [
+                m("Asotin County Rural EMS District No. 2", "Proposition No. 1",
+                  "Emergency Medical Services Regular Property Tax Levy",
+                  ("RURALEMSDST", "2"),
+                  "Authorizes Asotin County Rural Emergency Medical Service District No. 2 (the Anatone and rural southern county area) to levy a regular property tax for six years starting in 2027 to pay for contracted emergency medical services, replacing the levy that expires at the end of 2026 (Resolution No. 26-27; RCW 84.52.069). The same proposition failed in the August 4, 2026 primary.",
+                  "Up to $0.28 per $1,000 of assessed value a year for 2027-2032, up from a current limit of $0.15 (the 2025 rate was about $0.12).",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7276&e=899&la=en&c=02",
+                  pages=(12,)),
+            ],
+            "extra_notes": [
+                "Asotin County Rural EMS District No. 2 Proposition No. 1 is scoped RURALEMSDST '2': the district is tax code areas "
+                "0025, 0030 and 0030F (WA DOR TCA2025, layer 23), the Anatone and rural southern county area; it is not the DOR "
+                "EMS2025 Asotin '1' polygon, which is EMS District #1 (the Fire District 1 area around Clarkston Heights).",
+                "Asotin County Commissioner District 3 is nominated by district and elected county-wide in the general "
+                "(RCW 36.32.040, RCW 36.32.050(1)); Asotin County PUD No. 1 covers Clarkston and the Clarkston Heights area, not "
+                "the whole county, and every PUD voter elects each commissioner (RCW 54.12.010(3)): scoped PUDDST '1' (WA DOR PUD2025, layer 17).",
+            ],
+        },
         # Benton (#28): the three local measures on the Benton County Auditor's
         # general sample ballot (counties/benton/raw/benton/sample-ballot.pdf.url),
         # transcribed from VoteWA's online voters' guide records (e=899, c=03).
@@ -1288,6 +1346,68 @@ ELECTION_MEASURES = {
                 "(court_district_name 'Upper District Court' / 'Lower District Court').",
             ],
         },
+        # Klickitat (#31): checked against the Auditor's general sample ballot
+        # and the combined state/local voters' pamphlet (counties/klickitat/raw/
+        # klickitat/{sample-ballot,local-voters-pamphlet}.pdf.url; local section
+        # pp. 39-57, measure p. 56) and VoteWA's online guide for county 20
+        # (raw/votewa/voter-guide/voterguide.json.url): the same 18 non-Supreme
+        # Court contests and one local measure; the pamphlet's participating
+        # jurisdictions are the State, the County, PUD No. 1 and EMS District
+        # No. 1. Overrides: Commissioner 2 (VoteWA District 'County') is
+        # nominated by district and elected county-wide in the general (RCW
+        # 36.32.040; SOS precinct exports: the 2018 and 2022 Commissioner 2
+        # races on all 29 precincts, the 2024 Commissioner 1 and 3 races on all
+        # 33); named as in the primary so its dossiers carry forward. PUD No. 1
+        # covers the whole county (Auditor's 2025 Votes by District: 16,421
+        # registered voters, the county total; DOR PUD2025 layer 17 has one
+        # Klickitat polygon, DISTATTRIB '1', at Goldendale, White Salmon,
+        # Bingen, Lyle, Bickleton, Trout Lake and Klickitat) and the whole PUD
+        # elects each commissioner (RCW 54.12.010(3); 2022 Pos. 2 and 2024
+        # Pos. 1 on every precinct), so the seat is COUNTY; the generic rule
+        # misreads District 'PUBLIC UTILITY DISTRICT # 1' as commissioner
+        # district 1, and the primary's names are kept. The East and West
+        # District Courts are separate electorates that partition the county
+        # (2025 Votes by District: 7,550 + 8,871 = 16,421; SOS 2022: East on 18
+        # and West on 16 of 29 precincts, several split): scoped DISTCRT
+        # 'East'/'West'. No county, DOR or ArcGIS Online layer of those
+        # districts was found (see counties/klickitat/COMPLETENESS.md), so
+        # DISTCRT is unresolvable and the county stays partial_county.
+        # Measure scope: EMSDST '1' is DOR EMS2025 (layer 6), one Klickitat
+        # polygon: '1' at Goldendale, White Salmon, Bingen, Lyle, Trout Lake and
+        # Klickitat, no feature at 100 E Market St, Bickleton (the district has
+        # 16,105 of the county's 16,421 voters). 2026-10-08.
+        "klickitat": {
+            "overrides": {
+                ("COUNTY", "COUNTY COMMISSIONER 2"): (
+                    "County", "Klickitat County Commissioner District 2", "County Commissioner 2", ("COUNTY", None)),
+                ("PUBLIC UTILITY DISTRICT # 1", "PUBLIC UTILITY DISTRICT #1 COMMISSIONER POS. 3"): (
+                    "PublicUtility", "Public Utility District Commissioner District 3",
+                    "Public Utility District #1 Commissioner Pos. 3", ("COUNTY", None)),
+                ("EAST DISTRICT COURT", "KLICKITAT COUNTY EAST DISTRICT COURT JUDGE"): (
+                    "Judicial", "Klickitat County East District Court", "Judge", ("DISTCRT", "East")),
+                ("WEST DISTRICT COURT", "KLICKITAT COUNTY WEST DISTRICT COURT JUDGE"): (
+                    "Judicial", "Klickitat County West District Court", "Judge", ("DISTCRT", "West")),
+            },
+            # No layer of the East/West court districts exists (#31 ship):
+            # the package is partial_county, as app/src/lib/data-consistency.test.js
+            # UNRESOLVABLE_SCOPES 'klickitat/DISTCRT' records.
+            "unresolvable_layers": ["DISTCRT"],
+            "measures": [
+                m("Emergency Medical Services District No. 1, Klickitat County", "Proposition No. 1",
+                  "Permanent Regular Emergency Medical Services Property Tax Levy",
+                  ("EMSDST", "1"),
+                  "Makes the EMS district's property tax levy permanent, at up to $0.50 per $1,000 of assessed value, first levied in 2026 for collection in 2027, in place of the six-year renewal voters approved in 2024 (collected 2025-2030). The money pays only for emergency medical services: ambulances, paramedics and EMTs, training, equipment and stations. The district covers the whole county except the Bickleton area.",
+                  "Up to $0.50 per $1,000 of assessed value every year with no end date (about $250 a year on a $500,000 home at the full rate); the district's 2026 rate under its current levy is about $0.48, raising $2.56 million.",
+                  "https://www.klickitatcounty.gov/DocumentCenter/View/23954",
+                  pages=(56,)),
+            ],
+            "extra_notes": [
+                "The East and West District Court judge seats are scoped DISTCRT 'East' and 'West': the two courts are "
+                "separate electorates and no queryable boundary layer for them was found, so both stay hidden.",
+                "EMS District No. 1 Proposition No. 1 is scoped EMSDST '1' (WA DOR EMS2025, layer 6); the Bickleton area "
+                "is outside the district.",
+            ],
+        },
         # Lewis (#29): checked against the Lewis County Auditor's general sample
         # ballot (counties/lewis/raw/lewis/sample-ballot.pdf.url) and VoteWA's
         # online guide for county 21 (raw/votewa/voter-guide/guide.json.url),
@@ -1524,6 +1644,96 @@ ELECTION_MEASURES = {
                 "no public GIS layer separates the two, so both PUD seats are scoped PUDDST and hidden (partial_county).",
                 "The Methow Valley EMS levy is scoped EMSDST 'MV' (WA DOR EMS2025, layer 6, DISTATTRIB); the Fire District 1 "
                 "levy FIRDST '1' (layer 7) and the Three Rivers hospital bonds HOSPDST '1J' (layer 11).",
+            ],
+        },
+        # Pacific (#31). Contests: VoteWA GENERAL 2026 export for county 25
+        # (counties/pacific/raw/votewa/candidate-list.csv.url); measures: VoteWA's
+        # online voters' guide for county 25 (raw/votewa/voter-guide/), which
+        # lists exactly the export's races plus four local measures. The
+        # county's own site (co.pacific.wa.us / pacificcountywa.gov) did not
+        # answer on 2026-10-08, so no local pamphlet or sample ballot was read.
+        # Electorates checked against SOS results (counties/pacific/raw/sos/):
+        # - Commissioner #03: nominated by district, elected county-wide (RCW
+        #   36.32.040): every one of the 39 precincts voted in the 2018 #03 race
+        #   (9,231 votes of 11,105 ballots) and the 2022 #03 general, while the
+        #   2022 primary for #03 ran in District 3's precincts only.
+        # - PUD No. 2: one Pacific polygon in DOR PUD2025 (layer 17,
+        #   DISTATTRIB '2') whose area equals the county's (6,737,423,706 sq ft
+        #   vs 6,737,558,937 for all TCA2025 polygons); every precinct voted
+        #   in the 2018 and 2022 PUD races (RCW 54.12.010(3)). Scope COUNTY.
+        # - District Court: two electoral districts. In 2022 the North District
+        #   judge drew 3,221 votes (23 Willapa Harbor precincts: Raymond, South
+        #   Bend, Menlo, Lebam, Bay Center, North Cove ...) and the South
+        #   District 18 precincts (Long Beach peninsula, Ilwaco, Chinook,
+        #   Naselle, Nemah); 12,068 ballots. Scoped DISTCRT 'North' / 'South';
+        #   no public GIS layer for these districts was found (see
+        #   counties/pacific/COMPLETENESS.md), so the layer is unresolvable
+        #   until the director adds one.
+        # Measure scopes point-checked 2026-10-08 (Census geocoder, Current
+        # vintage; DOR WADOR_PropertyTax tax year 2025):
+        # - Timberland: DOR LIB2025 (12) has one Pacific polygon, 'L', with the
+        #   county's area (South Bend, Raymond, Long Beach, Ilwaco, Ocean Park,
+        #   Naselle, Tokeland, Chinook all 'L'): scope COUNTY.
+        # - EMSDST '1' (DOR EMS2025, layer 6): 300 Memorial Dr, South Bend; 230
+        #   2nd St, Raymond; 793 State Rte 4, Naselle; 38 2nd St, Bay Center ->
+        #   '1'. 1511 Bay Ave, Ocean Park -> 'OB'; 2964 Kindred Ave, Tokeland ->
+        #   'SBH'; Long Beach, Ilwaco, Chinook -> no feature (the ballot title
+        #   excludes the Ocean Beach, Ocosta and North River school districts).
+        # - FIRDST '3' (FIR2025, layer 7): 1000 State Rte 6, Raymond (Menlo).
+        # - FIRDST '6': 38 2nd St and 3 Park St E, Bay Center.
+        "pacific": {
+            "overrides": {
+                ("COUNTY", "COUNTY COMMISSIONER #03"): (
+                    "County", "Pacific County Commissioner District 3", "County Commissioner #03", ("COUNTY", None)),
+                ("COURT - NORTH DISTRICT", "DISTRICT COURT JUDGE"): (
+                    "Judicial", "Pacific County District Court North District", "District Court Judge",
+                    ("DISTCRT", "North")),
+                ("COURT - SOUTH DISTRICT", "DISTRICT COURT JUDGE"): (
+                    "Judicial", "Pacific County District Court South District", "District Court Judge",
+                    ("DISTCRT", "South")),
+                ("PUD DISTRICT 2", "PUBLIC UTILITY COMMISSIONER #01"): (
+                    "PublicUtility", "Public Utility District No. 2 of Pacific County", "Commissioner District 1",
+                    ("COUNTY", None)),
+            },
+            # No layer of the North/South court districts exists (#31 ship):
+            # the package is partial_county, as app/src/lib/data-consistency.test.js
+            # UNRESOLVABLE_SCOPES 'pacific/DISTCRT' records.
+            "unresolvable_layers": ["DISTCRT"],
+            "measures": [
+                m("Timberland Regional Library District", "Proposition No. 1",
+                  "Regular Property Tax Levy Lid Lift for Library Services, Operations and Maintenance",
+                  ("COUNTY", None),
+                  "Restores the Timberland Regional Library District's regular property tax levy from about $0.22 to $0.35 per $1,000 of assessed value for 2027 and 2028; the 2028 levy amount becomes the base for later limits (chapter 84.55 RCW).",
+                  "From $0.228924 to $0.35 per $1,000 of assessed value in 2027 and 2028; about $40.44 a year on a $334,000 home, per the explanatory statement.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7284&e=899&la=en&c=25"),
+                m("North Pacific County Emergency Medical Services District No. 1", "Proposition No. 1",
+                  "Ambulance and Emergency Medical Services Funding",
+                  ("EMSDST", "1"),
+                  "Renews the EMS district's one-year excess levy for 2027 to subsidize ambulance and emergency medical service in the Naselle, Nemah, Bay Center, South Bend, Raymond and Willapa Valley areas (Resolution 2026-721). Needs 60% approval.",
+                  "$0.40 per $1,000 of assessed value, no more than $800,000, collected in 2027 only.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7388&e=899&la=en&c=25"),
+                m("Pacific County Fire Protection District No. 3", "Proposition No. 1",
+                  "Property Tax Levy Lid Lift for Fire Protection, Suppression and Prevention",
+                  ("FIRDST", "3"),
+                  "Raises Fire District 3's regular property tax levy to up to $0.61 per $1,000 for collection in 2027 (Resolution 26-2503-01); that levy becomes the base for later limits. The district serves Menlo, Lebam, Frances, Baleville, Elk Horn Flats, Old Willapa and East Raymond.",
+                  "Up to $0.61 per $1,000 of assessed value in 2027, a $0.20 increase per the explanatory statement.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7389&e=899&la=en&c=25"),
+                m("Pacific County Fire Protection District No. 6", "Proposition No. 1",
+                  "Authorizing Regular Property Tax Levy",
+                  ("FIRDST", "6"),
+                  "Restores Fire District 6's regular property tax levy to $0.50 per $1,000 for collection in 2027 and lets it grow up to 6% a year (capped at $1.50 per $1,000) for the next five years (Resolution 2026-7-23-1); the 2031 levy becomes the base for later limits.",
+                  "$0.50 per $1,000 of assessed value in 2027, then up to 6% more levy revenue a year through 2032 collection.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7391&e=899&la=en&c=25"),
+            ],
+            "extra_notes": [
+                "Pacific County's two District Court seats are elected by electoral district (North: the Willapa Harbor "
+                "precincts; South: the Long Beach peninsula, Ilwaco, Chinook, Naselle and Nemah precincts) and are scoped "
+                "DISTCRT 'North' and 'South'. No public GIS layer for these districts was found; until one is added the "
+                "seats cannot be matched to an address.",
+                "Pacific County PUD No. 2 and Timberland Regional Library District each cover all of Pacific County "
+                "(WA DOR PUD2025 and LIB2025 each have one Pacific polygon with the county's area).",
+                "The EMS measure is scoped EMSDST '1' (WA DOR EMS2025, layer 6) and the fire measures FIRDST '3' and '6' "
+                "(WA DOR FIR2025, layer 7), DISTATTRIB.",
             ],
         },
         # Skagit: the four measures the Auditor's Ballot Measures page lists
@@ -2025,6 +2235,10 @@ def config_for(county, election_id):
     cfg["measures"] = list(per["measures"]) if per else []
     cfg["extra_notes"] = list(per.get("extra_notes", [])) if per else []
     cfg["overrides"] = dict(per.get("overrides", {})) if per else {}
+    # Layers an override scopes a contest to that no District Adapter layer
+    # resolves (Klickitat's and Pacific's DISTCRT): the override hook cannot
+    # report them, so the block names them and the package says partial_county.
+    cfg["unresolvable_layers"] = tuple(per.get("unresolvable_layers", ())) if per else ()
     return cfg, per is not None
 
 
@@ -2036,6 +2250,13 @@ def county_docs(county, cfg, election_id, measures_curated=True):
     overrides = cfg.get("overrides") or {}
     override = (lambda r, _u: overrides.get((r["District"].strip().upper(), r["Race"].strip().upper()))) if overrides else None
     raw_contests = votewa.parse_contests(rows, county, cfg, unresolvable, override)
+    declared = set(cfg.get("unresolvable_layers", ()))
+    for c in raw_contests:
+        if c["scope"][0] in declared:
+            unresolvable.add(c["scope"][0])
+    for mm in cfg["measures"]:
+        if mm["scope"][0] in declared:
+            unresolvable.add(mm["scope"][0])
     label = election.VOTEWA_SOURCES[election_id]["label"]
     out_contests = votewa.app_contests(
         county, raw_contests,

@@ -70,7 +70,7 @@ APP_PACKAGES = {
         "counties": ["king", "snohomish", "spokane", "pierce", "clark", "kitsap", "thurston", "yakima", "whatcom",
                      "benton", "skagit", "cowlitz", "grant", "island", "lewis", "franklin", "chelan", "clallam",
                      "grays-harbor", "mason", "walla-walla", "stevens", "whitman", "douglas", "okanogan",
-                     "jefferson", "kittitas"],
+                     "jefferson", "kittitas", "klickitat", "pacific", "asotin"],
         "district_contests": "county",
     },
 }
@@ -114,6 +114,13 @@ DISTRICT_ADAPTER_LAYERS = {
     "okanogan": ("CONGDST", "LEGDST", "CITY", "FIRDST", "HOSPDST", "EMSDST"),
     "jefferson": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "CEMDST", "FIRDST", "SCHDST"),
     "kittitas": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "FIRDST", "DISTCRT"),
+    # Klickitat's East/West and Pacific's North/South District Court seats
+    # stay DISTCRT, which no layer resolves (see
+    # app/src/lib/data-consistency.test.js UNRESOLVABLE_SCOPES), so both
+    # counties ship partial_county.
+    "klickitat": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "FIRDST", "EMSDST"),
+    "pacific": ("CONGDST", "LEGDST", "CITY", "FIRDST", "EMSDST"),
+    "asotin": ("CONGDST", "LEGDST", "CITY", "EMSDST", "PUDDST", "RURALEMSDST"),
 }
 
 
@@ -294,6 +301,19 @@ COUNTY_ELECTIONS_URLS = {
         # Kittitas County Auditor, Elections (200 text/html, 2026-10-08; the
         # page that links the general's "General Pamphlet" and sample ballot).
         "kittitas": "https://www.co.kittitas.wa.us/auditor/elections/default.aspx",
+        # Klickitat County Auditor, Elections/Voter Registration (200
+        # text/html, 2026-10-08; the page that links the general's voters'
+        # pamphlet and sample ballot; klickitatcounty.org redirects here).
+        "klickitat": "https://www.klickitatcounty.gov/1136/ElectionsVoter-Registration",
+        # Pacific: none. The Auditor's elections page
+        # (https://www.co.pacific.wa.us/auditor/elections.htm) timed out on
+        # ports 80 and 443 on 2026-10-08 (#31 research and ship), and
+        # pacificcountywa.gov does not resolve, so the app links the
+        # statewide county elections office list instead.
+        # Asotin County Auditor, Current Election (200 text/html, 2026-10-08;
+        # the page that links the general's local voters' pamphlet and sample
+        # ballot; the package's raw/asotin/current-election.html.url).
+        "asotin": "https://www.asotincountywa.gov/186/Current-Election",
     },
 }
 

@@ -1,0 +1,300 @@
+{
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/klickitat/interim/contests.json",
+    "data/washington-state/elections/2026-11-03-general/counties/klickitat/interim/measures.json"
+  ],
+  "script": "pipeline/build_research_plan.py",
+  "contests": [
+    {
+      "contest_slug": "klickitat-congressional-district-4-u-s-representative",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 4",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "amanda-mckinney",
+          "name": "Amanda McKinney",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-4-u-s-representative/amanda-mckinney.md"
+        },
+        {
+          "slug": "john-duresky",
+          "name": "John Duresky",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-4-u-s-representative/john-duresky.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "benton",
+          "contest_slug": "benton-congressional-district-4-u-s-representative",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/benton/scoring/benton-congressional-district-4-u-s-representative.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "yakima",
+          "benton",
+          "grant",
+          "franklin",
+          "douglas",
+          "okanogan"
+        ]
+      }
+    },
+    {
+      "contest_slug": "klickitat-legislative-district-14-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 14",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "gloria-mendoza",
+          "name": "Gloria Mendoza",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-14-state-representative-position-1/gloria-mendoza.md"
+        },
+        {
+          "slug": "chelsea-dimas",
+          "name": "Chelsea Dimas",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-14-state-representative-position-1/chelsea-dimas.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "yakima",
+          "contest_slug": "yakima-legislative-district-14-state-representative-pos-1",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/yakima/scoring/yakima-legislative-district-14-state-representative-pos-1.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "yakima",
+          "benton",
+          "franklin"
+        ]
+      }
+    },
+    {
+      "contest_slug": "klickitat-legislative-district-14-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 14",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "deb-manjarrez",
+          "name": "Deb Manjarrez",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-14-state-representative-position-2/deb-manjarrez.md"
+        },
+        {
+          "slug": "ezequiel-morfin",
+          "name": "Ezequiel Morfin",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-14-state-representative-position-2/ezequiel-morfin.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "yakima",
+          "contest_slug": "yakima-legislative-district-14-state-representative-pos-2",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/yakima/scoring/yakima-legislative-district-14-state-representative-pos-2.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "yakima",
+          "benton",
+          "franklin"
+        ]
+      }
+    },
+    {
+      "contest_slug": "klickitat-legislative-district-17-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 17",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "ben-christly",
+          "name": "Ben Christly",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-17-state-representative-position-1/ben-christly.md"
+        },
+        {
+          "slug": "kevin-waters",
+          "name": "Kevin Waters",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-17-state-representative-position-1/kevin-waters.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "clark",
+          "contest_slug": "clark-legislative-district-17-state-representative-pos-1",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/clark/scoring/clark-legislative-district-17-state-representative-pos-1.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "clark"
+        ]
+      }
+    },
+    {
+      "contest_slug": "klickitat-legislative-district-17-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 17",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "diana-h-perez",
+          "name": "Diana H. Perez",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-17-state-representative-position-2/diana-h-perez.md"
+        },
+        {
+          "slug": "david-stuebe",
+          "name": "David Stuebe",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-17-state-representative-position-2/david-stuebe.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "clark",
+          "contest_slug": "clark-legislative-district-17-state-representative-pos-2",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/clark/scoring/clark-legislative-district-17-state-representative-pos-2.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "clark"
+        ]
+      }
+    },
+    {
+      "contest_slug": "klickitat-klickitat-county-commissioner-district-2-county-commissioner-2",
+      "category": "County",
+      "office": "County Commissioner 2",
+      "district": "Klickitat County Commissioner District 2",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "lori-zoller",
+          "name": "Lori Zoller",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/klickitat/dossiers/klickitat-klickitat-county-commissioner-district-2-county-commissioner-2/lori-zoller.md"
+        },
+        {
+          "slug": "andy-kallinen",
+          "name": "Andy Kallinen",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/klickitat/dossiers/klickitat-klickitat-county-commissioner-district-2-county-commissioner-2/andy-kallinen.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "klickitat-klickitat-county-klickitat-county-sheriff",
+      "category": "County",
+      "office": "Klickitat County Sheriff",
+      "district": "Klickitat County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "dwayne-t-matulovich",
+          "name": "Dwayne T. Matulovich",
+          "party_preference": "Prefers Independent Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/klickitat/dossiers/klickitat-klickitat-county-klickitat-county-sheriff/dwayne-t-matulovich.md"
+        },
+        {
+          "slug": "tony-warren",
+          "name": "Tony Warren",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/klickitat/dossiers/klickitat-klickitat-county-klickitat-county-sheriff/tony-warren.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "klickitat-public-utility-district-commissioner-district-3-public-utility-district-1-commissioner-pos-3",
+      "category": "PublicUtility",
+      "office": "Public Utility District #1 Commissioner Pos. 3",
+      "district": "Public Utility District Commissioner District 3",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "logan-b-siebert",
+          "name": "Logan B. Siebert",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/klickitat/dossiers/klickitat-public-utility-district-commissioner-district-3-public-utility-district-1-commissioner-pos-3/logan-b-siebert.md"
+        },
+        {
+          "slug": "dan-g-gunkel",
+          "name": "Dan G. Gunkel",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/klickitat/dossiers/klickitat-public-utility-district-commissioner-district-3-public-utility-district-1-commissioner-pos-3/dan-g-gunkel.md"
+        }
+      ]
+    }
+  ],
+  "measures": [
+    {
+      "jurisdiction": "Emergency Medical Services District No. 1, Klickitat County",
+      "proposition": "Proposition No. 1",
+      "title": "Permanent Regular Emergency Medical Services Property Tax Levy",
+      "slug": "klickitat-emergency-medical-services-district-no-1-klickitat-county-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    }
+  ],
+  "carry_forward_from": "2026-08-04-primary"
+}
