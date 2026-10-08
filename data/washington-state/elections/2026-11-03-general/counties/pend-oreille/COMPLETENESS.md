@@ -3,9 +3,19 @@
 Election: 2026 Washington general election, November 3, 2026 (VoteWA
 election 899, county code 26).
 
-Status (#32): research package, not yet shipped. Not in
-`APP_PACKAGES["2026-11-03-general"]["counties"]`; the director's ship pass
-declares it, adds the layers proposed below and runs the live checks.
+Status (#32): shipped at Full County Coverage in
+`APP_PACKAGES["2026-11-03-general"]["counties"]`, with its elections office
+(`https://www.pendoreille.gov/auditor/page/elections`), its pamphlet
+(`pamphletPdfs['pend-oreille/local-voters-pamphlet']`, PDF page = printed
+page - 38) and its VoteWA guide (`countyGuides['pend-oreille']`, `c=26`).
+`COUNTY_LAYERS['pend-oreille']` gained `SCHDST` (DOR 20) and `SEWDST` (DOR
+21) as proposed below; `COUNTY_COUNCIL` and `HOSPDST` were re-probed. CD 5
+and LD 7 ship with Spokane's research, the Superior Court Pos. 2 seat with
+Stevens's. Live ballots on 2026-10-08, each `full_county` with no missing
+layer: 4571 State Route 211, Newport (hospital bonds and the Sacheen Lake
+levy), 1722 Kirkpatrick Rd, Elk (hospital bonds and the Riverside levy) and
+201 Main St, Ione (no local measure). The paragraphs below describe the
+package as researched.
 
 Contests and measures are built by
 `pipeline/build_votewa_lite_data.py --county pend-oreille` from the VoteWA

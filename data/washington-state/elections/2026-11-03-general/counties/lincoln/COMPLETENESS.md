@@ -3,8 +3,18 @@
 Election: 2026 Washington general election, November 3, 2026 (VoteWA
 election 899, county code 22).
 
-Research package for #32 (county wave 7). Not yet declared in
-`APP_PACKAGES["2026-11-03-general"]["counties"]`; the director ships it.
+Status (#32): shipped at Full County Coverage in
+`APP_PACKAGES["2026-11-03-general"]["counties"]`, with its elections office
+(`https://www.lincolncountywa.com/312/Current-Future-Elections`), its
+pamphlet (`pamphletPdfs['lincoln/local-voters-pamphlet']`, PDF page =
+printed page) and its VoteWA guide (`countyGuides.lincoln`, `c=22`). No
+layer was added; `CEMDST` was re-probed. CD 5 and LD 9 ship with Spokane's
+research. Live ballots on 2026-10-08, each `full_county` with no missing
+layer and the 12 contests and no local measure: 450 Logan St, Davenport and
+211 W 2nd St, Sprague. The paragraphs below describe the package as
+researched.
+
+Research package for #32 (county wave 7).
 
 Contests are built by `pipeline/build_votewa_lite_data.py --county lincoln`
 from the VoteWA candidate list (`raw/votewa/candidate-list.csv.url`, 24
