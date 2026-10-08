@@ -87,12 +87,12 @@ class GeneralAppDataTest(unittest.TestCase):
         cls.pie_contests = read(PIERCE / "interim/app-contests.json")["contests"]
         cls.pie_measures = read(PIERCE / "interim/app-measures.json")["measures"]
 
-    def test_king_and_pierce_are_full_snohomish_and_spokane_partial(self):
-        # Snohomish is partial_county because its nine District Court seats
-        # are scoped to DISTCRT (Cascade/Everett/Evergreen/South electoral
-        # districts), which no GIS layer resolves; Spokane because its
-        # Stevens County PUD seat is scoped to PUDDST, likewise. Pierce's
-        # KCDISTCRT, PTBA and SCHDST read the Election_Precincts layer.
+    def test_king_snohomish_and_pierce_are_full_spokane_partial(self):
+        # Spokane is partial_county because its Stevens County PUD seat is
+        # scoped to PUDDST, which no public layer resolves. Snohomish's nine
+        # District Court seats resolve from the Auditor's Court_Districts
+        # layer (DISTCRT, #27). Pierce's KCDISTCRT, PTBA and SCHDST read the
+        # Election_Precincts layer.
         self.assertEqual({
             "statewide_complete": True,
             "supported_counties": [{
@@ -100,7 +100,7 @@ class GeneralAppDataTest(unittest.TestCase):
                 "coverage": "full_county", "elections_url": "https://kingcounty.gov/en/dept/elections",
             }, {
                 "id": "snohomish", "name": "Snohomish County", "state": "WA", "fips": "53061",
-                "coverage": "partial_county",
+                "coverage": "full_county",
                 "elections_url": "https://www.snohomishcountywa.gov/224/Elections-Voter-Registration",
             }, {
                 "id": "spokane", "name": "Spokane County", "state": "WA", "fips": "53063",
@@ -111,7 +111,7 @@ class GeneralAppDataTest(unittest.TestCase):
             }],
         }, self.app["coverage"])
 
-    def test_every_scope_is_resolvable_except_snohomish_district_court_and_spokane_pud(self):
+    def test_every_scope_is_resolvable_except_spokane_pud(self):
         unresolved = []
         for item in self.app["contests"] + self.app["measures"]:
             scope = item["scope"]
@@ -119,8 +119,11 @@ class GeneralAppDataTest(unittest.TestCase):
                 self.assertIn(scope["county"], ("king", "snohomish", "spokane", "pierce"), item["slug"])
                 if scope["layer"] not in election.DISTRICT_ADAPTER_LAYERS[scope["county"]]:
                     unresolved.append((scope["county"], scope["layer"], item["slug"]))
-        self.assertEqual({("snohomish", "DISTCRT"), ("spokane", "PUDDST")}, {u[:2] for u in unresolved})
-        self.assertEqual(10, len(unresolved))
+        self.assertEqual({("spokane", "PUDDST")}, {u[:2] for u in unresolved})
+        self.assertEqual(1, len(unresolved))
+        everett = self.contests["snohomish-snohomish-county-district-court-everett-district-judge-position-no-1"]
+        self.assertEqual({"kind": "DISTRICT", "county": "snohomish", "layer": "DISTCRT",
+                          "value": "Everett District Court"}, everett["scope"])
         fd9 = self.measures["spokane-spokane-county-fire-protection-district-no-9-proposition-no-1"]
         self.assertEqual({"kind": "DISTRICT", "county": "spokane", "layer": "FIRDST", "value": "Fire District 9"}, fd9["scope"])
         sd81 = self.measures["spokane-spokane-school-district-no-81-proposition-no-1"]

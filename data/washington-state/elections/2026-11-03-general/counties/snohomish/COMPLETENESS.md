@@ -3,13 +3,14 @@
 Election: 2026 Washington general election, November 3, 2026 (VoteWA
 election 899, county code 34).
 
-As of 2026-10-08 (#21) this package ships in the general at
-`coverage: "partial_county"`: `pipeline/election.py` declares it in
+This package shipped in the general on 2026-10-08 (#21) at
+`coverage: "partial_county"` (District Court seats unresolved) and is
+`full_county` since #27: `pipeline/election.py` declares it in
 `APP_PACKAGES["2026-11-03-general"]["counties"]` with a
 `DISTRICT_ADAPTER_LAYERS["snohomish"]` entry, and every contest and measure
-scope except the District Court seats' `DISTCRT` is one the Snohomish
-District Adapter (Census `CONGDST`/`LEGDST`/`CITY` plus `app/src/lib/geo.js`
-`COUNTY_LAYERS.snohomish`) resolves from an address. Assembly reads
+scope is one the Snohomish District Adapter (Census `CONGDST`/`LEGDST`/`CITY`
+plus `app/src/lib/geo.js` `COUNTY_LAYERS.snohomish`) resolves from an
+address. Assembly reads
 `interim/app-contests.json` and `interim/app-measures.json`, built by
 `pipeline/build_snohomish_lite_data.py` from the VoteWA candidate list and
 the county's sample ballot and Local Voters' Pamphlet.
@@ -26,7 +27,7 @@ package.
 | State Senator / Representative (LD 1, 10, 12, 21, 32, 38, 39, 44) | 20 | 19 | 1 (LD 38 Rep. Pos. 2) | `LEGDST` |
 | Prosecuting Attorney | 1 | 0 | 1 | countywide |
 | Court of Appeals, Division 1, District 2, Position 2 | 1 | 0 | 1 | countywide |
-| District Court (Cascade, Everett, Evergreen, South) | 9 | 0 | 9 | `DISTCRT` (unresolvable) |
+| District Court (Cascade, Everett, Evergreen, South) | 9 | 0 | 9 | `DISTCRT` (`<Name> District Court`) |
 | PUD No. 1 Commissioner District 1 | 1 | 1 | 0 | countywide (whole PUD votes in the general, RCW 54.12.010(3)) |
 
 Nine races were researched in King and ship with King's scoring and
@@ -59,20 +60,34 @@ Fire & Rescue RFA Prop 1 (`RFADST` `SCRFA`) and Public Hospital District 1
   `SRF`; 2930 Wetmore Ave, Everett no feature. Filtered: Lynnwood `SCRFA`,
   Monroe none.
 - `DISTCRT`: Snohomish County District Court elects judges by electoral
-  district. No county or DOR GIS layer publishes those boundaries, so the
-  nine seats are hidden and voters see the partial-coverage notice.
-  `snohomish/DISTCRT` is in `UNRESOLVABLE_SCOPES`
-  (`app/src/lib/data-consistency.test.js`).
+  district (Cascade, Everett, Evergreen, South). Wave 1 found no layer; #27
+  found the Auditor's own: `https://services6.arcgis.com/z6WYi9VRHfgwgtyW/
+  arcgis/rest/services/Court_Districts/FeatureServer/0`, attribute
+  `District`, four polygons valued `Cascade District Court`, `Everett
+  District Court`, `Evergreen District Court`, `South District Court`. Its
+  ArcGIS Online item (`aa298eefc0ee4cdb9bfe8d2b02f574d0`, credited to the
+  Auditor's Office, Elections, and county IT GIS) describes it as one of
+  the districts "which hold elections", maintained by Elections from voter
+  precinct portions joined with VoteWA district data. The same polygons are
+  published as `gis.snoco.org/sis/rest/services/Districts/
+  Districts_and_Boundaries/MapServer/41` ("District Court"); the two
+  agreed at every point checked. Together the four cover about 2,105 sq mi,
+  the county's land area. The builder scopes the seats to the layer's
+  string (`DISTCRT` `Everett District Court`). Live point queries
+  2026-10-08: 2930 Wetmore Ave, Everett and 11930 Cyrus Way, Mukilteo and
+  1049 State Ave, Marysville `Everett District Court`; 806 W Main St,
+  Monroe and 116 Union Ave, Snohomish `Evergreen District Court`; 19100
+  44th Ave W, Lynnwood and 121 5th Ave N, Edmonds `South District Court`;
+  15728 Main St NE, Duvall (King County) no feature. The Snohomish
+  precinct layers (`Voter_Precinct_Districts`, `Precincts`) carry no
+  court attribute.
 
 ## Known gaps
 
-- District Court seats (above) never appear on a Snohomish ballot.
 - The VoteWA pointer meta (`raw/votewa/candidate-list.csv.meta.json`)
-  predates `sha256_case_normalized`, so a fresh export (whose District
-  columns differ in case) fails the builder's check until the meta is
-  re-written with `fetch_votewa_candidate_list.py --write-pointer
-  snohomish` from a cache that matches its `sha256` (the case-normalized
-  digest of that export is
-  `7580eaf60d6e46174d60fe45f851022e36c8616d601f14b7880a650ccdce993b`).
+  records `sha256_case_normalized`
+  (`7580eaf60d6e46174d60fe45f851022e36c8616d601f14b7880a650ccdce993b`)
+  since #27; a re-export on 2026-10-08 reproduced that digest, and the
+  builder output was byte-identical.
 - PUD No. 1 also serves Camano Island (Island County); this package scopes
   the race to Snohomish County only.

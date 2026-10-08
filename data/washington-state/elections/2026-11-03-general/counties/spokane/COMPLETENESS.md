@@ -74,6 +74,35 @@ the county's VoteWA guide instead (`app/src/lib/officialLinks.js`
   (`app/src/lib/data-consistency.test.js`); the seat is hidden and those
   voters see the partial-coverage notice.
 
+  Re-searched 2026-10-08 (#27); no authoritative boundary was found, so
+  the scope stays unresolved rather than guessed:
+  - WA DOR `WADOR_PropertyTax/MapServer` PUD layers for every tax year
+    2007 to 2025 (`PUD2025` is layer 17): no feature in Spokane County.
+    Stevens PUD is one polygon, `COUNTYNAME` `STEVENS`, `DISTATTRIB` `1`.
+  - Spokane County `gismo.spokanecounty.org`: `OpenData/Boundary` (layer
+    9 Voting Precincts: `PRECINCTID`, `COUNTY` only), `Elections/
+    ElectionsWeb` (precincts, schools, municipal), `SCOUT/DistrictLookup`
+    (commissioner, fire, municipal, schools, water, precincts, WRIA,
+    aquifer): no PUD or special-district layer, and no precinct layer with
+    district attributes.
+  - Spokane County Water Districts (`OpenData/Boundary/MapServer/10`)
+    has nine `Stevens County PUD` polygons, each a water system
+    (`SUBNAME` River Park Estates, Halfmoon Ranchos, Denison, West Shore,
+    Westshore Addition, Chattaroy Springs West, Clayton, Riverside, one
+    unnamed), five marked `SYSTEMTYPE` `Satellite`. These are service
+    areas of systems the PUD owns or operates, not the PUD's annexed
+    electoral territory.
+  - Stevens PUD's own GIS (`services3.arcgis.com/177TdACxJQCVcGnn`,
+    `CITYWORKS_PUD`) requires a token; stevenspud.org answers 403.
+    NoaNet's `PUD_Stevens` layer is the Stevens County outline from DNR
+    jurisdiction data.
+  - Precinct results: the Secretary of State's 2020 general all-precinct
+    export lists Spokane's votes for this seat (354) under one aggregate
+    pseudo-precinct, `PCT 7000`, so it names no precinct.
+  An authoritative source would be the Spokane County Auditor's list of
+  precincts (or precinct portions) carrying the Stevens PUD ballot style,
+  or Stevens PUD's annexation resolutions with legal descriptions.
+
 ## Known gaps
 
 - The Stevens County PUD seat (above) never appears on a Spokane ballot.
@@ -82,11 +111,8 @@ the county's VoteWA guide instead (`app/src/lib/officialLinks.js`
   FIR2025 (layer 7), which places the rest of FD 2 correctly. If the town
   is not in FD 2, its voters are shown FD 2 Prop 1 wrongly. Not resolved.
 - The VoteWA pointer meta (`raw/votewa/candidate-list.csv.meta.json`)
-  pins the research cache's `sha256` and has no `sha256_case_normalized`.
-  The director should run `python3 pipeline/fetch_votewa_candidate_list.py
-  --election 2026-11-03-general --write-pointer spokane` once, from a cache
-  matching that `sha256`, so a later re-fetch that differs only in case
-  still passes the builder's check.
+  records `sha256_case_normalized` since #27 (re-exported 2026-10-08, same
+  12,190 bytes; the builder output was byte-identical).
 - The county elections office URL (`https://www.spokanecounty.gov/elections`,
   printed in the county's primary pamphlet) answers 403 to scripted
   requests, so it was not checked for HTTP 200.

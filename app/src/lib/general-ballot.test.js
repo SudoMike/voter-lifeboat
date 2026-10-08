@@ -1,6 +1,6 @@
 // The November 3, 2026 general as shipped: King County at Full County
-// Coverage (issue #16), Snohomish and Spokane at partial coverage and Pierce
-// at full coverage (#21), every other Washington address a Statewide-Only
+// Coverage (issue #16), Spokane at partial coverage, Pierce at full coverage
+// (#21) and Snohomish at full coverage (#27), every other Washington address a Statewide-Only
 // Guide (issue #9). These run the app's own ballot, interview, lean and Ballot Brief
 // code against public/data/2026-11-03-general.
 import test from 'node:test'
@@ -66,7 +66,7 @@ const STATE_MEASURES = [
   'initiative-measure-no-il26-638',
 ]
 
-test('the general ships King and Pierce at full county coverage, Snohomish and Spokane at partial, with their elections offices', () => {
+test('the general ships King, Snohomish and Pierce at full county coverage, Spokane at partial, with their elections offices', () => {
   assert.equal(data.election.id, '2026-11-03-general')
   assert.deepEqual(data.coverage, {
     statewide_complete: true,
@@ -80,13 +80,13 @@ test('the general ships King and Pierce at full county coverage, Snohomish and S
         elections_url: 'https://kingcounty.gov/en/dept/elections',
       },
       {
-        // Partial: Snohomish District Court seats are scoped to electoral
-        // districts (DISTCRT) no GIS layer resolves (#21).
+        // Full since #27: the District Court seats (DISTCRT) resolve from the
+        // Auditor's Court_Districts layer.
         id: 'snohomish',
         name: 'Snohomish County',
         state: 'WA',
         fips: '53061',
-        coverage: 'partial_county',
+        coverage: 'full_county',
         elections_url: 'https://www.snohomishcountywa.gov/224/Elections-Voter-Registration',
       },
       {
@@ -195,22 +195,29 @@ test('a Pierce ballot: its own districts, King\'s research for shared races, tra
   assert.equal(coverageAdvice(pie({})), null)
 })
 
-test('a Snohomish ballot: statewide races once, its districts, South County Fire only inside the RFA', () => {
+test('a Snohomish ballot: statewide races once, its districts and District Court seats, South County Fire only inside the RFA', () => {
   const SNOHOMISH = { id: 'snohomish', fips: '53061', name: 'Snohomish County' }
-  const sno = (districts) => ({ coverageStatus: 'partial_county', county: SNOHOMISH, districts, missingLayers: [] })
-  // 19100 44th Ave W, Lynnwood (live 2026-10-08, see geo.js RFADST).
-  const lynnwood = ballotFor(sno({ CONGDST: '2', LEGDST: '32', CITY: 'Lynnwood', RFADST: 'SCRFA' }))
+  const sno = (districts) => ({ coverageStatus: 'full_county', county: SNOHOMISH, districts, missingLayers: [] })
+  // 19100 44th Ave W, Lynnwood (live 2026-10-08, see geo.js RFADST, DISTCRT).
+  const lynnwood = ballotFor(sno({
+    CONGDST: '2', LEGDST: '32', CITY: 'Lynnwood', RFADST: 'SCRFA', DISTCRT: 'South District Court',
+  }))
   const slugs = lynnwood.contests.map((c) => c.slug)
   assert.equal(new Set(slugs).size, slugs.length)
   for (const slug of SUPREME_COURT) assert.ok(slugs.includes(slug), slug)
   assert.ok(slugs.includes('snohomish-legislative-district-32-state-senator'))
-  // No District Court seat: DISTCRT never resolves, so they stay hidden.
-  assert.ok(!slugs.some((s) => s.includes('district-court')), slugs.join())
+  // Only the South District Court's three seats, not the other districts'.
+  const courts = slugs.filter((s) => s.includes('district-court'))
+  assert.deepEqual(courts.sort(), [1, 2, 3].map((n) => `snohomish-snohomish-county-district-court-south-district-judge-position-no-${n}`))
   assert.ok(lynnwood.measures.some((m) => m.slug.includes('south-snohomish-county-fire-rescue')))
-  const monroe = ballotFor(sno({ CONGDST: '1', LEGDST: '12', CITY: 'Monroe', HOSPDST: 'Hospital District 1' }))
+  const monroe = ballotFor(sno({
+    CONGDST: '1', LEGDST: '12', CITY: 'Monroe', HOSPDST: 'Hospital District 1', DISTCRT: 'Evergreen District Court',
+  }))
   assert.ok(!monroe.measures.some((m) => m.slug.includes('south-snohomish-county-fire-rescue')))
   assert.ok(monroe.measures.some((m) => m.slug === 'snohomish-public-hospital-district-no-1-proposition-no-1'))
-  assert.equal(coverageAdvice(sno({})), 'degraded')
+  assert.deepEqual(monroe.contests.map((c) => c.slug).filter((s) => s.includes('district-court')).sort(),
+    [1, 2].map((n) => `snohomish-snohomish-county-district-court-evergreen-district-judge-position-no-${n}`))
+  assert.equal(coverageAdvice(sno({})), null)
 })
 
 test('each Supreme Court contest ships once, owned by the statewide package', () => {
