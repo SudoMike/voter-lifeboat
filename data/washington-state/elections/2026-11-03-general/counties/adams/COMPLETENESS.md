@@ -3,8 +3,20 @@
 Election: 2026 Washington general election, November 3, 2026 (VoteWA
 election 899, county code 01).
 
-Research package for #31 (county wave 6). Not yet declared in
-`APP_PACKAGES["2026-11-03-general"]["counties"]`; the director ships it.
+Status (#31): shipped at Full County Coverage in
+`APP_PACKAGES["2026-11-03-general"]["counties"]`, with its elections office
+(`https://www.co.adams.wa.gov/162/Elections-Elecciones`) and its VoteWA
+guide (`countyGuides.adams`, `c=01`; no local pamphlet). `COUNTY_LAYERS.adams`
+gained `FIRDST` (DOR FIR2025, layer 7), as proposed below, beside `CEMDST`
+and `PARKDST`. CD 4 ships with Benton's research, CD 5 and LD 9 with
+Spokane's, LD 13 with Grant's. Live ballots on 2026-10-08, each
+`full_county` with no missing layer: 425 E Main St, Othello (CD 4, LD 9, no
+local measure), 155 W Main St, Washtucna (CD 5, LD 9, Park District 2 pool
+levy), 210 W Broadway Ave, Ritzville (CD 5, LD 9, no local measure) and the
+interior point (-118.02, 47.15) (CD 5, LD 9, Fire District 4 levy). The
+paragraphs below describe the package as researched.
+
+Research package for #31 (county wave 6).
 
 Contests and measures are built by
 `pipeline/build_votewa_lite_data.py --election 2026-11-03-general --county adams`
