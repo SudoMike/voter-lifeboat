@@ -70,5 +70,5 @@ Files under PDC mini reporting, so no contribution totals are reported [S3].
 
 ## Scoring notes
 
-- Experience: three-term incumbent with 23 years in the office, against a former lead deputy clerk [S1].
+- Experience: clerk for about 12 years, with 23 years in the office, against a former lead deputy clerk [S1].
 - Her stated agenda is e-filing and customer access, framed as continuity [S1].
