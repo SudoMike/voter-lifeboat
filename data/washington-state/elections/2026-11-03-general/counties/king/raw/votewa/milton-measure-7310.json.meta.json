@@ -1,0 +1,9 @@
+{
+  "url": "https://voter.votewa.gov/elections/measure.ashx?m=7310&e=899&la=en&c=27",
+  "retrieved_at": "2026-10-08T00:41:26Z",
+  "method": "curl (browser User-Agent); endpoint read from votewa-vg.js",
+  "stage": "raw",
+  "bytes": 3883,
+  "sha256": "8814c95bf39f8936cb95965b4721c9a784f31f607da96bcc5b70126c3ae27c17",
+  "notes": "VoteWA voter-guide measure JSON for City of Milton Proposition No. 1. KCE's eid=55 list links Milton to http://voter.votewa.gov/genericvoterguide.aspx?e=899&c=27&language=en#/measure/7310 (c=27 is Pierce County, which administers Milton) instead of a KCE cid page; that page is an Angular shell whose script (Scripts/votewa-vg.js) loads this endpoint with params m, e, la, c. Carries BallotTitle, ExplanatoryStatement, ArgumentFor/Against, Rebuttals. The same statements are printed in the King local pamphlet (City of Milton section)."
+}

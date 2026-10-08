@@ -1,0 +1,9 @@
+{
+  "url": "https://aqua.kingcounty.gov/elections/candidatefiling/2026/2026-candidates.csv",
+  "retrieved_at": "2026-10-08T00:41:32Z",
+  "method": "curl (browser User-Agent)",
+  "stage": "raw",
+  "bytes": 40320,
+  "sha256": "a500215d018771cf4fa8e09c9785aaeb37d8f885f4b9987686f7f5b8d7d8e053",
+  "notes": "Official KCE 2026 candidate filing list (all 2026 races, filing week, campaign website/email). Re-fetched for the general; byte-identical to the primary package's copy (same sha256). KCE publishes no general-specific CSV: 2026-general-candidates.csv, 2026-general-election-candidates.csv and 2026-november-candidates.csv all 404, and neither candidates.aspx?eid=55 nor the November 2026 page links a CSV. Its Ballot Order column is the filing-week primary order, so parse_candidates.py takes general ballot order from the eid=55 list instead."
+}

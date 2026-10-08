@@ -1,0 +1,655 @@
+{
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/king/raw/kce/ballotmeasures-eid55.html"
+  ],
+  "script": "pipeline/parse_candidates.py",
+  "election": {
+    "name": "November 3, 2026 General Election",
+    "kce_eid": 55
+  },
+  "notes": "Local measures only. Ballot title, explanatory statement and pro/con statements come from each measure's KCE detail page (the text KCE prints in the local voters' pamphlet), or from VoteWA's measure JSON when KCE links there instead (Milton). rebuttal_of_against is the proponents' rebuttal; rebuttal_of_for the opponents'. scope_unresolved marks a scope the King District Adapter cannot resolve yet.",
+  "statewide_owned_measures": [
+    "Initiative Measure No. IP26-645",
+    "Initiative Measure No. IL26-001",
+    "Initiative Measure No. IL26-638"
+  ],
+  "measures": [
+    {
+      "jurisdiction": "City of Bothell",
+      "proposition": "Proposition No. 1",
+      "title": "Annexation Into Shoreline Fire Department Regional Fire Authority",
+      "slug": "city-of-bothell-proposition-no-1",
+      "kce_contest_id": "102252",
+      "kce_group": "City",
+      "ballot_title": "The Bothell City Council adopted Resolution No. 1784, approving annexation into the Shoreline Fire Department Regional Fire Authority and related plan amendment. To maintain current fire and emergency medical service levels and provide long-term financial and operational sustainability for such services within Bothell, should Bothell be annexed into and become a part of the Shoreline Fire Department Regional Fire Authority, effective March 1, 2027, pursuant to the plan amendment, as provided in Resolution No. 1784?",
+      "explanatory_statement": "The Bothell City Council adopted Resolution 1784 requesting voter approval to annex into and become part of the Shoreline Fire Department Regional Fire Authority (\"RFA\"). As the region has grown and costs have increased, Bothell has considered governance/service models for fire and emergency medical services (\u201cEMS\u201d). As part of its study, Bothell contracted with the RFA for fire administration (Fire Chief) services.\n\nThe City Council has determined that annexing into the RFA ensures long-term sustainability of funding to maintain current fire protection and EMS service levels. Annexation will not change the delivery or the level of services to Bothell residents.\n\nIf annexation is approved, Bothell Fire Department would become part of the larger RFA, instead of operating as a standalone, smaller fire department. By combining resources and expertise and coordinating efforts, fire and EMS service can gain efficiencies, including response operations. Bothell voters will be entitled to vote on all ballot measures proposed by the RFA\u2014including those pertaining to taxation and benefit charges. Bothell will have representation on the RFA Board. If annexation is rejected, Bothell would need to reseek voter approval, negotiate a new agreement with RFA or another agency, or reconstitute the Bothell Fire Department.\n\nhttps://bothellwa.gov/2209/Fire-Service-Study",
+      "statements": {
+        "for": {
+          "submitted": true,
+          "text": "As Bothell grows, our fire and emergency medical response needs to grow with us. Proposition 1 gives our community a proven way to deliver quality emergency care when every second counts. That\u2019s why the Bothell Professional Firefighters Association, IAFF Local 2099, has endorsed this measure.\n\nRegional fire service is the standard model in our area for good reasons. By joining the Shoreline Regional Fire Authority, Bothell Fire will become part of a larger organization that can share resources, coordinate personnel, expand specialized capabilities, and improve operational efficiency. Instead of spending local taxpayer dollars to duplicate administrative systems and equipment across multiple independent agencies, annexation combines resources with neighboring communities\u2014maximizing those resources where they belong: out in our neighborhoods serving our residents.\n\nJoining the RFA also helps Bothell plan for costs ahead. Sharing the cost of future facilities and equipment across a larger regional tax base lightens the financial impact on our city, protecting Bothell residents from bearing those costs alone while improving service in our community.\n\nWith a Yes vote, we retain a significant amount of control over the direction of the fire service in Bothell. Our city will have a substantial voice in how the RFA is run with three of the nine seats on the RFA\u2019s governing board.\n\nVote Yes on Proposition 1 to keep strong local decision-making about fire and emergency medical service, give our firefighters and residents the resources of a larger regional department, and set Bothell up well for future service improvements.",
+          "submitted_by": "Wesley Wang, Brandon Keith, Mason Thompson"
+        },
+        "against": {
+          "submitted": false,
+          "text": "There is no statement against this measure. No one in the jurisdiction contacted King County Elections to serve on the committee to write a statement against the measure.\n\nJurisdictions that place measures on the ballot also appoint members of the public to \u201cpro\u201d and \u201ccon\u201d committees. These committees prepare statements either for or against the ballot measure. These statements are published in the local voters\u2019 pamphlet to help voters make informed decisions.\n\nIf the jurisdiction is unable to appoint a committee, King County Elections can appoint any eligible committee members who come forward. To join a committee in the future, please contact the jurisdiction."
+        },
+        "rebuttal_of_against": null,
+        "rebuttal_of_for": null
+      },
+      "passage_requirement": "Simple majority (RCW 52.26.300)",
+      "full_text_url": "https://kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/ballots/whats-on-the-ballot/ballot-measures/2026/11/bothell",
+      "contact": "For questions about this measure, contact: Kyle Stannert, City Manager, (425) 806-6141, kyle.stannert@bothellwa.gov",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "CITY",
+        "value": "Bothell"
+      },
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/king/raw/kce/ballotmeasures-eid55.html",
+        "data/washington-state/elections/2026-11-03-general/counties/king/raw/kce/measures/ballotmeasures-cid102252.html"
+      ]
+    },
+    {
+      "jurisdiction": "City of Clyde Hill",
+      "proposition": "Proposition No. 1",
+      "title": "Levy to Continue Providing Public Safety and Land Use Services in Clyde Hill",
+      "slug": "city-of-clyde-hill-proposition-no-1",
+      "kce_contest_id": "102249",
+      "kce_group": "City",
+      "ballot_title": "To fund public safety and land use services, and to remain an independent city, the Clyde Hill City Council passed Resolution No. 725 proposing an increase to its regular property tax levy from approximately $0.30 to $0.50 per $1,000 of assessed valuation for 2027 with 3% annual increases to the annual limit factor for 2028-2036. Exemptions apply to seniors, veterans, and disabled persons who qualify under RCW 84.36.381.\n\nShould this proposition be approved?",
+      "explanatory_statement": "Clyde Hill Resolution No. 725 asks voters to increase the City\u2019s portion of property taxes to pay for police, fire, emergency medical services, 911 dispatch, land use, and zoning services. Clyde Hill has the third lowest levy rate in King County, receiving less than $0.05 of every $1.00 paid in property taxes.\n\nA resident-led Financial Sustainability Task Force concluded that the City cut expenses where it could and kept staffing lean compared to similar sized cities. It concluded that further reductions threaten basic services and legal requirements. Without additional revenues, Clyde Hill will not have the requisite funds to remain an independent city with local control of its police department and zoning issues, as well as the quality fire and emergency medical services residents have come to expect.\n\nIf approved, Clyde Hill\u2019s property tax levy rate would increase from $0.29548 per $1,000 of assessed valuation in 2026 to a levy rate not to exceed $0.50 per $1,000 of assessed valuation in 2027. This equates to about a $225 increase in the city\u2019s portion of property taxes per $1,000,000 of assessed valuation. In 2028-2036, the total regular property levy amount would increase by a limit factor of 3% annually. The final levy in 2036 will become the base for establishing levy rates for following years.\n\nIf this proposition is rejected, the City is projected to run out of operating funds by the end of 2030. It will be unable to sustain current service levels and may need to consider dissolution.",
+      "statements": {
+        "for": {
+          "submitted": true,
+          "text": "We value Clyde Hill for its safety, quality of services, and small-town accountability. Rising costs and state limits on revenue growth now constrain the City\u2019s ability to deliver the services we expect. Clyde Hill receives only about 4.5% of your total property tax bill and its city tax rate is among the lowest in the region (Clyde Hill $0.30; Medina $0.59; Bellevue $0.96; Kirkland $0.86 per $1,000 assessed value).\n\nOur budget gap cannot be closed by cuts alone. Proposition 1 is a modest revenue solution recommended by the resident-led task force. It increases only the City\u2019s portion of your taxes. All revenue stays in Clyde Hill to support the essential services that make our city the special place we choose to make our home.\n\nUltimately, residents will decide the fate of Clyde Hill. Passing Proposition 1 means we keep our accredited police department and preserve land-use control that protects our neighborhood character and home values.\n\nPlease vote \"Yes\" to keep Clyde Hill safe and independent, with its future in the hands of its residents.",
+          "submitted_by": "Jay Henningsen, Carl Picciotto, Tony Williams, thecampaignforclydehill.com"
+        },
+        "against": {
+          "submitted": false,
+          "text": "No statement submitted. Statements in favor of and in opposition to a ballot measure are submitted by committees appointed by the jurisdiction. The committee in opposition withdrew from the process to write a statement in opposition. If you would like to be involved with a committee in the future please contact the jurisdiction."
+        },
+        "rebuttal_of_against": {
+          "submitted": true,
+          "text": "Please vote \u201cYes\u201d on Prop 1 to keep Clyde Hill \u2013 Clyde Hill. It protects our home values, keeps our city tax rate relatively low, maintains our public safety, and keeps us in control of our future.\n\nLearn more at thecampaignforclydehill.com.",
+          "submitted_by": "Jay Henningsen, Carl Picciotto, Tony Williams, thecampaignforclydehill.com"
+        },
+        "rebuttal_of_for": {
+          "submitted": false,
+          "text": "No statement submitted. Statements in favor of and in opposition to a ballot measure are submitted by committees appointed by the jurisdiction. The committee in opposition withdrew from the process to write a statement in opposition. If you would like to be involved with a committee in the future please contact the jurisdiction."
+        }
+      },
+      "passage_requirement": "Simple majority (RCW 84.55.050)",
+      "full_text_url": "https://kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/ballots/whats-on-the-ballot/ballot-measures/2026/11/clyde-hill",
+      "contact": "For questions about this measure, contact: Heather Thomas-Murphy, City Administrator, (425) 453-7800, cityhall@clydehill.org",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "CITY",
+        "value": "Clyde Hill"
+      },
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/king/raw/kce/ballotmeasures-eid55.html",
+        "data/washington-state/elections/2026-11-03-general/counties/king/raw/kce/measures/ballotmeasures-cid102249.html"
+      ]
+    },
+    {
+      "jurisdiction": "City of Issaquah",
+      "proposition": "Proposition No. 1",
+      "title": "Parks and Open Space Bonds",
+      "slug": "city-of-issaquah-proposition-no-1",
+      "kce_contest_id": "102244",
+      "kce_group": "City",
+      "ballot_title": "The Issaquah City Council adopted Ordinance No. 3142, concerning bonds for parks, trails, and recreation projects.\n\nIf approved, this proposition would authorize the City to: complete various projects, including sports fields and courts, new trails, trailhead improvements, restoration of Confluence Park\u2019s Ek House, playground improvements, a new dog park, and related capital improvements; issue no more than $18,000,000 of general obligation bonds maturing within 20 years; and levy annual excess property taxes to pay and retire such bonds, all as provided in Ordinance No. 3142.\n\nShould this proposition be approved?",
+      "explanatory_statement": "The City of Issaquah is proposing to issue up to $18 million of bonds for various park, trail, and recreation projects. If approved by voters, these park bonds would replace the City\u2019s retiring park bonds and mature 20 years after they are issued.\n\nThe proposed park bond projects include: sports fields and courts at a variety of locations; new trails on Cougar and Squak mountains that connect to surrounding regional trails, trailhead improvements for West Tiger Mountain; restoration of Confluence Park\u2019s Ek House; playground improvements and a new dog park at Tibbetts Valley Park; and related capital improvements. All of these projects were identified as community priorities in the adopted 2024 Park System Plan.\n\nThe City proposes issuing the new bonds as the prior bonds mature to keep property taxes similar, meaning the estimated cost to a $1 million homeowner would average about $80 per year. Low-income seniors, certain veterans and others who qualify for tax exemptions from the retiring bonds would continue to be exempt.\n\nFor more information, go to issaquahwa.gov/parkbond.",
+      "statements": {
+        "for": {
+          "submitted": true,
+          "text": "This is a renewal\u2014not a new tax\u2014and an investment in the parks, trails, and gathering places that make Issaquah a great place to call home.\n\nAfter years of planning and community input, residents identified clear priorities: three turf fields with sustainable cork infill at Issaquah Valley, Clark, and Grand Ridge elementary schools; a rebuilt mountain trailhead; new Cougar & Squak Mountain trail loops; a restored Ek House gathering space at Confluence Park; an all-abilities playground and dog park; and new pickleball courts. Maintenance is built in from the start.\n\nWithout this renewal, completing these community priorities could take more than 30 years. Issaquah\u2019s natural beauty and exceptional access to parks and trails are part of what makes our community\u2014and our homes\u2014so desirable. Renewing this bond protects and strengthens that investment for the next generation. A community is only as strong as the places it holds in common: a shared trail, a shared field, a shared bench in the shade. Places to play, gather, explore, and belong.\n\nVote Yes to renew our investment in Issaquah. Supported by: Issaquah FC, Issaquah Little League, PTSA, Issaquah Alps Trails Club",
+          "submitted_by": "Jeffrey Newell, Robin Beukers, Donovan Richards"
+        },
+        "against": {
+          "submitted": true,
+          "text": "The Issaquah Strategic Park Plan is in place. This specific proposed bond fails because it only asked what we could do, but did not ask to prioritize projects that will achieve our stated goals and outcomes. This needs to happen before selecting $18.5M, and will show measured progress. It uses 20 years of future Parks bonding capacity, but not that it best meets our citywide 20 year goals. It is good that there are many aspirational goals, outcomes, and values in our Parks plan: Connectivity. Vibrancy. Resiliency. Balance. Peaks to Creeks Plan. We need to prioritize before spending if we want to show progress. Develop and implement benchmarking and Level of Service (LOS) measures that will inform and prioritize funding decisions and projects.\n\nThis is not an argument against specific projects. We should proceed with purpose and intentionality, or no funding amount will allow reaching our goals. Bond spending may only be used for new capital projects, though needs to connect with our broader Parks Strategic Plan (Ex: Facilities, Maintenance, Operations, Programming, etc.).\n\nAsk only that we vote \u2018Not yet\u2019.",
+          "submitted_by": "Steve Pereira"
+        },
+        "rebuttal_of_against": {
+          "submitted": true,
+          "text": "This wasn\u2019t guesswork. Years of planning and extensive resident surveying shaped this list. These projects are the priorities Issaquah residents identified\u2014not a City wish list. \u201cNot yet\u201d means delaying investments our community has already prioritized, potentially for decades. Far from ignoring the will of the people, this renewal reflects it: fields, trails, playgrounds and gathering spaces residents asked for. The planning has been done. The priorities are clear. Vote Yes to honor that process.",
+          "submitted_by": "Jeffrey Newell, Robin Beukers, Donovan Richards"
+        },
+        "rebuttal_of_for": {
+          "submitted": true,
+          "text": "Issaquah\u2019s Strategic Park Plan is ambitious, comprehensive, and possible. It should guide inform project selection priorities, and track progress of its systematic City 20 year Parks implementation vision.\n\nThis proposal does something, but needs a citywide conversation to determine and select the most pressing needs are selected. High inflation costs necessarily need drive selection for the best Parks. Not yet.",
+          "submitted_by": "Steve Pereira"
+        }
+      },
+      "passage_requirement": "60% majority and minimum turnout of 40% of voters casting ballots in last general election (Washington Constitution, art. VII, sec. 2(b))",
+      "full_text_url": "https://kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/ballots/whats-on-the-ballot/ballot-measures/2026/11/issaquah",
+      "contact": "For questions about this measure, contact: Jeff Watling, Parks & Community Services Director, (425) 837-3325, jeffw@issaquahwa.gov",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "CITY",
+        "value": "Issaquah"
+      },
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/king/raw/kce/ballotmeasures-eid55.html",
+        "data/washington-state/elections/2026-11-03-general/counties/king/raw/kce/measures/ballotmeasures-cid102244.html"
+      ]
+    },
+    {
+      "jurisdiction": "City of Kenmore",
+      "proposition": "Proposition No. 1",
+      "title": "Climate & Environmental Stewardship, Affordable Housing, and Human Services Levy",
+      "slug": "city-of-kenmore-proposition-no-1",
+      "kce_contest_id": "102240",
+      "kce_group": "City",
+      "ballot_title": "Kenmore City Council passed Ordinance 26-0644 regarding funding for programing and services. To fund Climate & Environmental Stewardship, Affordable Housing, and Human Services, this proposition increases Kenmore\u2019s maximum regular property tax levy rate to $1.25/$1,000 for collection in 2027; sets the limit factor for Kenmore\u2019s regular property tax levy increases in 2028-2032 to 6%; authorizes the 2032 levy amount as the basis to calculate subsequent levies (RCW 84.55); and exempts qualifying seniors, veterans, and others (RCW 84.36).\n\nShould this proposition be approved?",
+      "explanatory_statement": "The City of Kenmore seeks voter approval to increase the City\u2019s regular property tax levy up to $1.25 per $1,000 of assessed value to fund programs and services for Climate & Environmental Stewardship, Affordable Housing, and Human Services.\n\nUnder state law, without voter approval, a city may increase its regular property tax levy amount by only 1% each year, which has not kept pace with inflation and costs of providing City programs and services.\n\nIf approved, Proposition 1 would authorize the increase of the City\u2019s levy rate by approximately $0.36 per $1,000 assessed value, for a total regular property tax rate not to exceed $1.25 per $1,000 assessed value for collection in 2027, and allow the levy amount to increase by up to 6% in the succeeding five years (2028-2032). The total rate may not exceed the maximum property tax levy rate allowed to cities by state law. The 2032 levy amount would be the basis to calculate subsequent levies. The increase in the City\u2019s regular property tax levy, combined with cost-cutting measures by the City, will promote financial sustainability for City operations and programs.\n\nProposition 1 would add approximately $30 per month to the property tax bill for a home assessed at Kenmore\u2019s average value of $1,000,000. Proposition 1 would exempt qualifying seniors, veterans, and others from the increase.",
+      "statements": {
+        "for": {
+          "submitted": true,
+          "text": "Proposition 1 funds trees, greenspace, and readiness for hotter summers, wildfire smoke, and heavier storms and flooding. It provides affordable homes through ARCH, our regional housing partner, so seniors, essential workers, and our kids can live here. And it connects our neighbors to the food, utilities, and health care support they need.\n\nIt costs $3/month per $100,000 of assessed value \u2014 about $29/month for Kenmore\u2019s median home. Eligible seniors, retired persons with disabilities, and disabled veterans are exempt from the increase. State law limits regular property tax increases to 1% a year, but Kenmore\u2019s costs have risen about 5% a year over the past five years. This levy lid lift helps us keep services despite inflation, and without creating debt. State law requires these dollars fund only the purposes on your ballot.\n\nHotter, smokier summers, heavier storms, rising housing costs, and neighbors in crisis don't wait for a better budget year. And solutions get more expensive the longer we wait. It costs less to keep a family housed and fed than it does to react after they lose their home.\n\nCutting resiliency programs doesn't save money. It defers the bill. Vote Yes on Proposition 1.",
+          "submitted_by": "Tracy Banaszynski, Edouard Lassalle, Juliana Pooley, www.yeskenmore.org"
+        },
+        "against": {
+          "submitted": true,
+          "text": "Keep Kenmore affordable and the City Council accountable. Vote No on Proposition 1. If passed, it will raise Kenmore's property tax rate by over 51% in 2027\u2014costing the average household over $2,000 during the six-year levy period. Worse, this increase will become permanent and the base for further tax increases.\n\nMany Kenmore residents already feel the strain of rising costs. Higher property taxes don\u2019t just affect homeowners. They also lead to increased rents, higher costs for local businesses, and less affordability for everyone, especially those least able to absorb another tax increase. These effects are regressive. This is simply the wrong time for another major tax increase.\n\nSince 2020, Kenmore\u2019s population grew just 1.6%, while City spending increased more than 40% and staffing grew 36%. Now, having exhausted one-time COVID funds and other temporary revenues, the City Council is asking taxpayers to make up the difference.\n\nThere\u2019s no guarantee the new taxes will be spent on \u201cClimate and Environmental Stewardship, Affordable Housing, and Human Services.\u201d Prop. 1 will allow the City Council to \u201cmodify spending priorities and shift funding among authorized uses.\u201d Future Councils may redirect funds without voter approval. Demand accountability. Protect affordability. Vote No on Prop. 1.",
+          "submitted_by": "Laurie Sperry, John Hendrickson, Dave Postetter, www.AffordableKenmore.com"
+        },
+        "rebuttal_of_against": {
+          "submitted": true,
+          "text": "Kenmore\u2019s increased spending: population growth (1%), inflation (29%!), and necessary new resiliency services (10%). The state 1% property tax cap on cities means voters must approve levies such as Prop 1 just to keep up with inflation.\n\nState law prohibits levies from being blank checks. Prop 1 funds community resiliency: heat pumps and solar to lower utility bills, backup power during storms, more tree canopy, and affordable homes for families. It helps everyone. Vote Yes.",
+          "submitted_by": "Tracy Banaszynski, Edouard Lassalle, Juliana Pooley, www.yeskenmore.org"
+        },
+        "rebuttal_of_for": {
+          "submitted": true,
+          "text": "Kenmore\u2019s commitments to housing stability, climate resilience, and social support remain in place without Proposition 1. The City will continue funding these priorities. This vote is about fiscal accountability and balancing our shared values with affordability.\n\nWe must demand disciplined budgeting rather than permanent tax spikes. By aligning spending with existing revenues, we ensure transparency, protect lower and middle-income residents from rising taxes, and keep our community accessible and financially responsible for everyone. Vote No.",
+          "submitted_by": "Laurie Sperry, John Hendrickson, Dave Postetter, www.AffordableKenmore.com"
+        }
+      },
+      "passage_requirement": "Simple majority (RCW 84.55.050)",
+      "full_text_url": "https://kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/ballots/whats-on-the-ballot/ballot-measures/2026/11/kenmore",
+      "contact": "For questions about this measure, contact: Scott Passey, City Clerk, (425) 984-6193, spassey@kenmorewa.gov",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "CITY",
+        "value": "Kenmore"
+      },
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/king/raw/kce/ballotmeasures-eid55.html",
+        "data/washington-state/elections/2026-11-03-general/counties/king/raw/kce/measures/ballotmeasures-cid102240.html"
+      ]
+    },
+    {
+      "jurisdiction": "City of Lake Forest Park",
+      "proposition": "Proposition No. 1",
+      "title": "Public Safety Services Levy Lid Lift",
+      "slug": "city-of-lake-forest-park-proposition-no-1",
+      "kce_contest_id": "102243",
+      "kce_group": "City",
+      "ballot_title": "The City Council of the City of Lake Forest Park adopted Resolution No. 26-2084 to fund Public Safety Services.\n\nThis proposition would fund Public Safety Services per the Resolution including police services, safety equipment, 911 dispatch, emergency management services, jail services, and mental health crisis response by temporarily setting the maximum total regular levy rate at $0.88920/$1,000 for collection in 2027, with annual increases for five years based on inflation (Seattle region CPI-U). Qualifying low-income seniors, disabled veterans, and other disabled persons are exempt under RCW 84.36.381.\n\nShould this proposition be approved?",
+      "explanatory_statement": "The City of Lake Forest Park proposes Proposition 1 to provide sustainable funding for Public Safety Services including: police staffing, training, and safety equipment; 911 dispatch services; jail services; prosecution and public defense costs; and crisis intervention and mental health response programs.\n\nProposition 1 would temporarily authorize an annual increase of approximately $1.2 million in the City\u2019s regular property tax levy through a levy lid lift. Without a voter approved levy lid lift, the City is limited to increasing its tax levy by 1%. The additional levy funds from Proposition 1 would be tracked separately and could only be used to pay for the cost of Public Safety Services.\n\nProposition 1 would cost property owners $0.22 per $1,000 of assessed valuation ($22 per $100,000). In 2027, for a $963,000 median value home this would be about $211.86 annually or $17.66 per month. For each of the next five years (2028 \u2013 2032), the levy lid lift could be increased by the rate of inflation, which requires an open public process and a council vote to approve.\n\nProposition 1 exempts qualifying seniors, disabled veterans and others with disabilities from the levy increase. When Proposition 1 expires, the levy will decrease to what it would have been if never approved and the City had only taken the 1% increase authorized by state law.",
+      "statements": {
+        "for": {
+          "submitted": true,
+          "text": "Lake Forest Park faces the same difficult choices that other communities across the state face, concocted by Tim Eyman and maintained by the State Legislature. While inflation has increased annually by 2.8% and by over 5% recently, revenues have been hamstrung by a 1% annual cap on property tax increases.\n\nAs the years have ticked by, cities have struggled to fund basic operations. Some have reduced staffing. Brier cut police department funding. Edmonds explored selling off parks.\n\nLake Forest Park staff project that our status quo will exhaust the general fund by 2031. While the city has cut costs by closing City Hall on Fridays, preserving current services requires further action. Our city government listened to feedback when designing this levy, ensuring transparency by moving the process through the Finance Committee. The City Council recognizing this crisis, unanimously voted to send this levy to us.\n\nIn voting down levies for decades, our beloved Lake Forest Park has been borrowing against the future. We are lucky to live here, and it is time for our votes to reflect the best of our values. To preserve our commitment to safety, community policing, and our environment, please vote Yes on Proposition 1.",
+          "submitted_by": "Marty Ross, www.yesonlfpprop1.com"
+        },
+        "against": {
+          "submitted": true,
+          "text": "Fully funding public safety in Lake Forest Park is critical. As I told the police before last year\u2019s vote, I\u2019d happily vote for the tax increase if would increase the police budget. I support raising taxes to increase funds for public safety; unfortunately, the city has not committed to do that. Instead, they have only committed to spend the $1M per year tax increase on public safety, with no commitment to add this additional amount to the current spending for public safety from the general fund.\n\nThe City exaggerates the budget struggles. The unrestricted general fund revenue increased by about $4M total, $1M per year, from 2021 to 2025, vastly more than the $35k the city implies because property tax is not the only source of general funds. The City describes a ~$400k structural deficit, yet has added, rather than cut, non-safety personnel. New hires cost an amount similar to the current deficit.\n\nA \u2018no\u2019 vote does not threaten our public safety. It directs the city to restrain non-safety spending and commit to increasing funds for our police and public safety personnel.",
+          "submitted_by": "T.J. Fudge, nolfpprop1@gmail.com"
+        },
+        "rebuttal_of_against": {
+          "submitted": true,
+          "text": "Inflation has hit the city's public safety budget hard. The costs of 911, jail, legal services, and policing have risen dramatically recently, and the city has drawn down one-time general funds to fill the gap. Maintaining our service levels requires additional revenue.\n\nWe vote our values when electing a council to protect what we care about. Let's give city government and staff the tools to deliver these priorities and hold them accountable to it.",
+          "submitted_by": "Marty Ross, www.yesonlfpprop1.com"
+        },
+        "rebuttal_of_for": {
+          "submitted": false,
+          "text": "No statement submitted."
+        }
+      },
+      "passage_requirement": "Simple majority (RCW 84.55.050)",
+      "full_text_url": "https://kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/ballots/whats-on-the-ballot/ballot-measures/2026/11/lake-forest-park",
+      "contact": "For questions about this measure, contact: Phillip Hill, City Administrator, (206) 368-5440, phill@cityoflfp.gov",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "CITY",
+        "value": "Lake Forest Park"
+      },
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/king/raw/kce/ballotmeasures-eid55.html",
+        "data/washington-state/elections/2026-11-03-general/counties/king/raw/kce/measures/ballotmeasures-cid102243.html"
+      ]
+    },
+    {
+      "jurisdiction": "City of Milton",
+      "proposition": "Proposition No. 1",
+      "title": "Additional Sales and Use Tax for Police and Public Safety",
+      "slug": "city-of-milton-proposition-no-1",
+      "kce_contest_id": null,
+      "kce_group": null,
+      "votewa_measure_id": "7310",
+      "ballot_title": "The Milton City Council adopted Resolution 26-2005 concerning a proposition to maintain funding for police services and public safety. If approved, this proposition would increase the sales and use tax rate by one-tenth of one percent (0.001) to provide ongoing funding for public safety purposes permitted under RCW 82.14.450, such as providing adequate law enforcement staffing levels. This increase would become effective in 2027.\n\nShould this proposition be approved?",
+      "explanatory_statement": "If approved by the voters, the proposition would maintain funding for police services and community safety. In order to maintain police services and community safety at levels which meet the city\u2019s and community\u2019s expectations, the city is in need of additional funds to supplement existing city general fund revenue which is applied for these purposes. If approved, this proposition would increase the sales and use tax rate by one-tenth of one percent (0.001) to provide ongoing funding for public safety purposes permitted under RCW 82.14.450, such as providing adequate law enforcement staffing levels. This increase would become effective in 2027. Pursuant to RCW 82.14.450(7), the City of Milton will be required to share 15% of tax proceeds received by the city pursuant to this action with the county.",
+      "statements": {
+        "for": {
+          "submitted": true,
+          "text": "Safety is more important now than ever. Approving a one-tenth of one percent (0.1%) sales tax - just one-tenth of a penny on every dollar - will allow the Milton Police Department to maintain its current budget and high-quality services.Committee Members: Dave Strader, Jacki Strader\n\nYESonMiltonProp1@gmail.com\n\nCosts for staffing, training, insurance, technology, equipment, investigations, jail services, prosecution, and municipal court operations continue to rise, while demand for public safety has increased dramatically. This small, locally generated investment ensures we retain highly trained officers equipped with modern tools for today\u2019s challenges, delivering the responsive law enforcement our community expects.\n\nBy approving this measure, you help preserve financial stability, ease pressure on the General Fund, and protect funding for streets, parks, and essential infrastructure. Your Yes vote invests in peace of mind, supports community safety, meets growing criminal justice needs, and safeguards Milton\u2019s quality of life now and in the future.\n\nProtect what matters most. Vote Yes.",
+          "submitted_by": "Dave Strader, Jacki Strader, YESonMiltonProp1@gmail.com"
+        },
+        "against": {
+          "submitted": false,
+          "text": "No statement was submitted against this issue."
+        },
+        "rebuttal_of_against": null,
+        "rebuttal_of_for": null
+      },
+      "passage_requirement": null,
+      "full_text_url": null,
+      "contact": null,
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "CITY",
+        "value": "Milton"
+      },
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/king/raw/kce/ballotmeasures-eid55.html",
+        "data/washington-state/elections/2026-11-03-general/counties/king/raw/votewa/milton-measure-7310.json"
+      ]
+    },
+    {
+      "jurisdiction": "City of SeaTac",
+      "proposition": "Proposition No. 1",
+      "title": "Fire Prevention and Criminal Justice Sales and Use Tax",
+      "slug": "city-of-seatac-proposition-no-1",
+      "kce_contest_id": "102260",
+      "kce_group": "City",
+      "ballot_title": "The City Council of the City of SeaTac passed Ordinance No. 26-1017 concerning funding for public safety and other City services. If approved, this proposition would increase the City\u2019s sales and use tax rate by 1/10th of 1% (0.1%) to provide funding for public safety services, including but not limited to, fire protection, fire prevention and emergency medical response; law enforcement support and staffing and retention; criminal justice purposes; public safety operations, maintenance and capital; and other public safety operations and services authorized under RCW 82.14.450. Should this proposition be approved?",
+      "explanatory_statement": "The City of SeaTac provides public safety and related services directly and through contracts with the Puget Sound Regional Fire Authority and King County Sheriff\u2019s Office. These services support residents and thousands of people who travel to SeaTac daily to access local hotels, restaurants, businesses, employment opportunities, and the Seattle-Tacoma International Airport, located entirely within the City.\n\nThis influx produces a daily visitor population more than six times the City\u2019s residential population. Serving residents and travelers results in a disproportionately high number of complex fire and emergency medical incidents and increases demands on public safety services. Inflation and hazardous workplace conditions have increased the cost of these services. City revenues have not kept pace, and additional resources are needed to continue providing critical fire, medical and public safety services.\n\nProposition 1 would authorize a 0.1% sales and use tax on taxable retail sales and uses within SeaTac. The tax would apply to taxable purchases by residents and travelers. Only transactions taxable under Washington law would be taxed; most groceries are exempt. State law also exempts motor vehicle sales and the first 36 months of vehicle leases from this tax. Revenue from the tax would be shared 85% to the City and 15% to King County. At least one-third of the revenue would be used solely for fire protection purposes, criminal justice purposes, or both, as required by RCW 82.14.450. This tax would add $0.10 to a taxable $100 purchase.",
+      "statements": {
+        "for": {
+          "submitted": true,
+          "text": "The City of SeaTac is a unique community. Every day, thousands of workers, travelers, visitors, and airport users come into our city, creating demands on public safety services including police, fire, and emergency medical response. These services protect everyone who lives, works, visits, and does business in SeaTac.\n\nProposition 1 provides a fair way to fund essential services. Rather than placing the burden solely on SeaTac residents, this modest 0.1% Public Safety sales tax asks everyone who makes taxable purchases in our community to contribute\u2014including visitors, travelers, workers who use and benefit from services.\n\nOur city provides public safety services to a community that is far larger each day than the number of people who live here. It is only fair that the people who come to SeaTac and rely on our public safety system also contribute to keeping those services strong.\n\nBy acting now, the City of SeaTac has the opportunity to keep and maintain local control over how locally generated revenue is used. If King County were to impose its own public safety sales tax first, SeaTac would receive a smaller share of that revenue and have less control over its use. Vote Yes on Proposition 1",
+          "submitted_by": "James Lovell, Damiana Merryweather"
+        },
+        "against": {
+          "submitted": true,
+          "text": "The people of SeaTac are awake and watching\u2014again. In 2014, the City Council and staff imposed a utility tax on electricity, cable, internet, phone, and more. In 2015, voters replaced that council, the utility tax was repealed, and the City Manager fired. The new council even rejected the automatic property-tax increase. That began ten years of fiscal accountability, new sidewalks, surplus funds, and increased police staffing to keep SeaTac safe.\n\nSince then, most of the City Council has been replaced by people with a different agenda. The surplus is gone, spending out of control, and now they want to raise taxes again\u2014this time on our local businesses. A thriving business community has helped make SeaTac one of the most affordable cities in King County. Don\u2019t kill the goose that lays the golden eggs and price ourselves out of our own community. What\u2019s next\u2014another utility tax or property-tax increase? The council and staff are flirting with their own jobs\u2014again\n\nPlease don\u2019t be fooled. The B&O tax is a red flag for what could be coming if we don\u2019t change course. We\u2019ve done it before, we can do it again.\n\nVote No on this tax increase!",
+          "submitted_by": "Susan Constable"
+        },
+        "rebuttal_of_against": {
+          "submitted": true,
+          "text": "Proposition 1 this is not a tax on SeaTac residents or local businesses. It is the best tool we have to recover revenue from the thousands of travelers who visit SeaTac every year. In a time of unprecedented increase in public safety costs, it is the best way to ensure that residents and visitors alike continue to have reliable public safety and emergency services.",
+          "submitted_by": "James Lovell, Damiana Merryweather"
+        },
+        "rebuttal_of_for": {
+          "submitted": true,
+          "text": "A Public Safety Sales Tax is even higher than a B&O tax. Those, and new utility taxes, were all planned for at the same council meeting. This council and staff have a spending problem\u2014SeaTac residents are already taxed to death. The Airport is a red herring. The largest transactions at the airport\u2014airline tickets\u2014are exempt from sales tax. These new taxes are regressive and hurt residents.\n\nFor all our sakes, Vote No!",
+          "submitted_by": "Susan Constable"
+        }
+      },
+      "passage_requirement": "Simple majority (RCW 82.14.450)",
+      "full_text_url": "https://kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/ballots/whats-on-the-ballot/ballot-measures/2026/11/seatac",
+      "contact": "For questions about this measure, contact: Cindy Corsilles, City Attorney, (206) 973-4662, cityclerk@seatacwa.gov",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "CITY",
+        "value": "SeaTac"
+      },
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/king/raw/kce/ballotmeasures-eid55.html",
+        "data/washington-state/elections/2026-11-03-general/counties/king/raw/kce/measures/ballotmeasures-cid102260.html"
+      ]
+    },
+    {
+      "jurisdiction": "City of Seattle",
+      "proposition": "Proposition No. 1",
+      "title": "Seattle Transit Measure",
+      "slug": "city-of-seattle-proposition-no-1",
+      "kce_contest_id": "102258",
+      "kce_group": "City",
+      "ballot_title": "The City of Seattle adopted Ordinance No. 127474 concerning funding for transit service and related transportation needs in Seattle.\n\nThe City of Seattle\u2019s Proposition 1 would dedicate funding to transit services benefiting Seattle residents, including more frequent service; affordable fare programs for qualifying individuals; reliability, access, and climate projects; enhanced service on RapidRide and routes serving regional centers and high equity priority areas; facilitation of Sound Transit expansion; and others as provided in Ordinance 127474. It authorizes a 0.3% sales and use tax for up to ten years to replace the current voter-approved 0.15% sales tax expiring March 31, 2027.\n\nShould this Proposition be approved?",
+      "explanatory_statement": "In 2020, Ordinance 126250 enacted a 0.15 percent, six-year sales and use tax for transportation purposes. The tax was enacted under authority granted to the City by Seattle voters in approving Ordinance 126115. The tax expires March 31, 2027.\n\nTo replace this funding, Proposition 1 proposes granting the City authority to enact a sales and use tax for transit purposes by a future ordinance, with a maximum rate of 0.3 percent and a maximum length of ten years. The new tax cannot take effect earlier than April 1, 2027.\n\nTax revenue would be only for purposes described in Ordinance 127474, including (among others): King County Metro services with over 65 percent of stops within Seattle; implementing King County Regional Transit Safety Task Force recommendations; service hours on current and future RapidRide lines serving Seattle, connections to regional centers, and routes serving high equity priority areas; programs supporting transit access for qualifying seniors, individuals with disabilities, residents of low-income housing, youth and young adults, students, and others; planning for and deployment of increased electric transit in certain pollution-impacted communities; transit infrastructure maintenance and capital improvements; and staffing of programs to facilitate Sound Transit 3 projects.\n\nThe Seattle Transit Advisory Board will serve as the public oversight committee charged with advising on spending of Proposition 1 revenues. Annual and midterm City reports, as well as reports requested in partnership with King County Metro, will evaluate the effectiveness of money spent and services provided.",
+      "statements": {
+        "for": {
+          "submitted": true,
+          "text": "Seattle needs great transit. Without it, riders with disabilities, older adults, youth, and working families are stuck waiting for the bus and miss opportunities. Transit should be a seamless part of peoples\u2019 lives, not a burden to plan around.\n\nIn 2020, we voted to improve bus service across Seattle. That measure has delivered: buses run more often, and 10,000 of our neighbors receive free transit passes. But this funding runs out in 2027 unless we renew it.\n\nFor just $29 more per year per household, Proposition 1 will ensure buses come more often, later at night, and on weekends. It will double the free passes for low income Seattleites. With buses we can count on, more families can skip the expense of gas or a second car. And we can all enjoy less traffic and cleaner air. Vote \u201cYes\u201d to keep Seattle's buses coming.\n\nEndorsed by Mayor Katie Wilson, King County Executive Girmay Zahilay, Seattle City Councilmembers Hollingsworth, Saka, Foster, Juarez, Kettle, Lin, Rinck, Rivera, and Saka, King County Councilmembers Bar\u00f3n, Dembowski, Lewis and Mosqueda, MLK Labor, ATU 587, King County Democrats, Seattle Streets Alliance, 350 Seattle, Transit Riders Union, Transportation Choices Coalition, The Urbanist, and more.",
+          "submitted_by": "Kirk Hovenkotter, Kathryn Ricchiuto, Nick Sattele, info@hoponboardseattle.org"
+        },
+        "against": {
+          "submitted": true,
+          "text": "Seattle politicians say they care about affordability, then ask residents to approve another regressive sales tax. Proposition 1 would double the Seattle Transit Measure sales tax from 0.15% to 0.30%, putting our sales tax at 10.7%, among the highest rates of any major city in America. Before demanding more from taxpayers, government should demonstrate accountability for the money it already receives.\n\nThe measure includes funding connected to Sound Transit, even as the agency struggles to deliver projects voters were promised. Ballard and West Seattle residents have paid Sound Transit taxes for years while planned light-rail expansions face enormous financial challenges and uncertainty. Meanwhile, transit agencies are leaving fare revenue uncollected. At least one-third of riders on Sound Transit boarded without paying during the World Cup. Taxpayers should not continually be asked to pay more while agencies fail to collect fares from riders.\n\nSeattle families already face high housing, food, utility, and transportation costs. Sales taxes disproportionately burden working families and people with lower incomes because they consume a larger share of household earnings. Reliable transit matters. So does accountability. City Hall should prioritize existing resources, demand responsible management, and improve fare collection before raising taxes.\n\nVote No on Proposition 1.",
+          "submitted_by": "Ari Hoffman"
+        },
+        "rebuttal_of_against": {
+          "submitted": true,
+          "text": "This measure funds bus service from King County Metro. Voting no cuts bus service working people rely on. Without it, late night and shift workers lose out. This measure helps us afford to live in our expensive city.\n\nThe measure costs a low income household $17 a year. Owning a car costs $11,577 a year. Proposition 1 provides free ORCA cards to 22,000 of the lowest income riders. Vote yes on Proposition 1.",
+          "submitted_by": "Kirk Hovenkotter, Kathryn Ricchiuto, Nick Sattele, info@hoponboardseattle.org"
+        },
+        "rebuttal_of_for": {
+          "submitted": true,
+          "text": "The proponents call Proposition 1 \u201cjust $29 more,\u201d but that minimizes the real issue: Seattle\u2019s sales tax would climb to 10.7%, hitting working families and low-income residents hardest. Doubling this regressive tax is not affordability.\n\nReliable transit deserves responsible management. Before demanding more, City Hall and transit agencies should prioritize existing revenue, collect unpaid fares, and prove taxpayers are getting results. Seattleites already pay heavily for promised transit projects. Vote no until accountability comes first.",
+          "submitted_by": "Ari Hoffman"
+        }
+      },
+      "passage_requirement": "Simple Majority (RCW 36.73.065(1))",
+      "full_text_url": "https://kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/ballots/whats-on-the-ballot/ballot-measures/2026/11/seattle",
+      "contact": "For questions about this measure, contact: Polly Grow, Seattle Ethics and Elections Commission, (206) 615-1248, polly.grow@seattle.gov",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "CITY",
+        "value": "Seattle"
+      },
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/king/raw/kce/ballotmeasures-eid55.html",
+        "data/washington-state/elections/2026-11-03-general/counties/king/raw/kce/measures/ballotmeasures-cid102258.html"
+      ]
+    },
+    {
+      "jurisdiction": "City of Shoreline",
+      "proposition": "Proposition No. 1",
+      "title": "Formation of the Shoreline Metropolitan Park District",
+      "slug": "city-of-shoreline-proposition-no-1",
+      "kce_contest_id": "102239",
+      "kce_group": "City",
+      "ballot_title": "The Shoreline City Council adopted Resolution No. 562 concerning the creation of a metropolitan park district in Shoreline.\n\nThis proposition would create the Shoreline Metropolitan Park District to finance and refinance the acquisition, construction, operation, maintenance, programming, renovation, and expansion of a pool facility and future recreational facilities. The District, with the same boundaries as Shoreline, governed by a Board composed of City Councilmembers, would exercise powers in state law, provide ongoing funding, levy regular property taxes not to exceed $0.75/$1,000 assessed valuation (anticipated initial rate $0.55/$1,000, or as necessary to generate approximately $8.8 million annually).\n\nShould the Shoreline Metropolitan Park District be formed?",
+      "explanatory_statement": "If approved by voters, this proposition creates the Shoreline Metropolitan Park District (MPD) to finance and refinance the construction, operation, and maintenance of a new indoor pool facility and potential future recreational facilities. The MPD would have the same boundaries as the City of Shoreline (City). The MPD would be a new taxing jurisdiction (RCW 35.61) governed by a board composed of City Councilmembers. City staff would operate and maintain the pool pursuant to an agreement with the MPD.\n\nThe approximately 48,000 square foot facility would be built on City-owned property at 17828 Midvale Ave N. The preliminary accessible design includes an 8-lane lap pool with diving well; recreation pool with a lazy river for walking and floating; warmer hydrotherapy pool; sauna; universal changerooms; party rooms; parking; and outdoor spaces connecting to the Interurban Trail.\n\nCreating the MPD would allow for construction of future recreational facilities should additional funding be available. The pool facility design leaves space for a potential recreation facility addition.\n\nThe anticipated initial property tax levy rate is $0.55/$1,000 assessed valuation, or as necessary to generate approximately $8.8 million annually. The maximum allowable rate is $0.75/$1,000. Revenue would pay for pool facility construction, operation, and maintenance. Revenue could only be used for the pool facility and future recreational facilities, not other City needs.\n\nTax collection would start in 2028. A homeowner with a median value home ($831,000 in 2026) would pay approximately $421 per year, an average of $35 per month, in additional property taxes.",
+      "statements": {
+        "for": {
+          "submitted": true,
+          "text": "It\u2019s Time Shoreline! Let\u2019s invest in our future. Imagine kids learning water safety, teenagers competing in swim meets, adults enjoying lap swims, and seniors staying healthy through supportive water exercise. Take a float through the lazy river while neighbors take fitness classes and build community. A well-planned aquatics facility through Proposition 1 will provide a safe, accessible home base for high school swim teams and a welcoming gathering place for residents of all ages.\n\nStudies show that formal swimming lessons reduce drowning risk in young children by 88% while aquatic exercise improves strength, mobility, and fall prevention in older adults. A local pool prepares our youth to safely explore Washington's waters and helps keep aging residents active.\n\nShoreline residents shouldn\u2019t have to leave town or pay higher non-resident fees for pool access. Creating a Metropolitan Park District (MPD) establishes stable, dedicated local funding to build, operate, and maintain an affordable, year-round facility right here at home.\n\nEquitably funded through property taxes, this measure invests directly in health, safety, and community well-being. Make a difference today. Vote yes on Proposition 1 for a healthy vision of Shoreline\u2019s future. The future is now!",
+          "submitted_by": "Krishnakant Nammi, Susie McDowell, Buddy Smith, letshorelineswim.org"
+        },
+        "against": {
+          "submitted": true,
+          "text": "A Permanent Tax Hike for a $100 Million Luxury Pool? Shoreline voters need to consider this proposal carefully. We cannot afford to get this wrong.\n\nThis measure creates a new Metropolitan Park District with the power to permanently raise local/city property taxes by at least 33% \u2014 all to fund a $100 million pool facility to start. But this is not a temporary bond. It's a permanent tax, and it hands the newly created Metropolitan Park District sweeping authority to fund future projects without ever coming back to voters for approval.\n\nEvery resident pays the price. Property owners foot the bill directly, and landlords will no doubt pass the cost straight through to renters in the form of higher rent.\n\nShoreline wants you to pay $100 million for just a luxury pool facility \u2013 no recreation center, no fitness center, no senior center, no commercial kitchen. It\u2019s way too much money for too little that will benefit too few. The city has more pressing priorities that should be addressed with any future tax increase. Don\u2019t create a new tax district that gives the city a blank check. Proposition 1 will make Shoreline less affordable for all forever. Vote no.",
+          "submitted_by": "Sandra Cribbs, Jeff Hays, Joseph Smith, www.shorelineprop1.com"
+        },
+        "rebuttal_of_against": {
+          "submitted": true,
+          "text": "The Con statement is fundamentally inaccurate. The MPD wouldn\u2019t have sweeping tax authority; it is limited between 55 and 75 cents per $1,000 assessed. Their claim that the MPD will increase property taxes by 33% is false. It would increase approximately 5.5% to 7.5%.\n\nRather than a luxury expense, the measure simply replaces the pool we enjoyed from 1971 to 2020. Fearmongering + incorrect arithmetic = a bad argument. Vote yes.",
+          "submitted_by": "Krishnakant Nammi, Susie McDowell, Buddy Smith, letshorelineswim.org"
+        },
+        "rebuttal_of_for": {
+          "submitted": true,
+          "text": "This is no time to add $100M in debt for a pool facility and saddle taxpayers with a 33% local tax increase. These are extremely uncertain economic times with high interest rates and rising inflation.\n\nNumerous other tax increases are already approved or expected in the next 2-3 years. Recent property tax increases have far outpaced inflation. There\u2019s a limit to what taxpayers can afford. Prioritization of limited tax dollars is crucial. Vote no.",
+          "submitted_by": "Sandra Cribbs, Jeff Hays, Joseph Smith, www.shorelineprop1.com"
+        }
+      },
+      "passage_requirement": "Simple majority (RCW 35.61.040)",
+      "full_text_url": "https://kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/ballots/whats-on-the-ballot/ballot-measures/2026/11/shoreline",
+      "contact": "For questions about this measure, contact: Eric Bratton, Communications Program Manager, (206) 801-2217, ebratton@shorelinewa.gov",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "CITY",
+        "value": "Shoreline"
+      },
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/king/raw/kce/ballotmeasures-eid55.html",
+        "data/washington-state/elections/2026-11-03-general/counties/king/raw/kce/measures/ballotmeasures-cid102239.html"
+      ]
+    },
+    {
+      "jurisdiction": "Auburn School District No. 408",
+      "proposition": "Proposition No. 1",
+      "title": "School Construction and Replacement Bonds",
+      "slug": "auburn-school-district-no-408-proposition-no-1",
+      "kce_contest_id": "102259",
+      "kce_group": "School",
+      "ballot_title": "The Board of Directors of Auburn School District No. 408 has approved Resolution No. 1426, concerning a proposition to finance construction of new and replacement schools. This proposition would authorize the District to provide funds to construct a new Middle School and replace Cascade Middle School and Alpac Elementary, to increase capacity and reduce class sizes, modernize technology and learning environments, improve safety and security, and renovate playfields for student and community use, by issuing up to $491,000,000 of general obligation bonds maturing within 20 years, and levying annual excess property taxes to repay the bonds, as the resolution provides.\n\nShould this proposition be:",
+      "explanatory_statement": "Passage of Proposition 1 enables Auburn School District to finance the construction of new and replacement schools by issuing up to $491,000,000 of general obligation bonds. If voters approve this proposition, the District will use the bond proceeds to (1) construct and equip a new Middle School #5, (2) construct and equip a new middle school with enlarged capacity to replace Cascade Middle School, and (3) construct and equip a new elementary school with enlarged capacity to replace Alpac Elementary School. These projects will increase school capacity, reduce class sizes and the use of portable classrooms, improve safety and security, modernize technology and student learning environments, improve energy efficiency, and improve and expand playfields and athletic facilities for student and community use.\n\nIf voters approve this proposition, the District expects to receive approximately $36,248,500 in construction assistance funds from the State to complete these projects. The bonds will mature within 20 years and be repaid from annual excess property tax levies. The District\u2019s website at www.auburn.wednet.edu/2026election has the anticipated tax impact associated with this bond. A property tax exemption may be available to senior or disabled homeowners who meet specified income limits. For information regarding exemptions, call the King County Assessor at (206) 296-3920.",
+      "statements": {
+        "for": {
+          "submitted": true,
+          "text": "Vote Yes to build a brand-new middle school and replace the aging, outdated Cascade Middle School and Alpac Elementary. Today, over 1,100 of our middle schoolers are crowded into 45 temporary portables, while Alpac faces constant, costly repairs. This bond directly solves overcrowding district-wide in the middle schools.\n\nOur community and students deserve modern facilities now\u2014not years down the road. Clean, safe, and modern schools ignite student pride, boost teacher commitment, and uplift entire neighborhoods. Our kids deserve spaces designed for success.\n\nThis is a fiscally responsible investment. Auburn School District has a proven track record of delivering projects on time and under budget while keeping taxes low. At an estimated cost of just $1.10 per $1,000 of assessed value\u2014about $50.41 a month for a $550,000 home\u2014we can secure three modern schools to serve generations.\n\nA majority voted Yes in the last election, but we need a 60% supermajority to secure critical state matching funds. Our students cannot wait.",
+          "submitted_by": "Cari Manry, Terri Herren"
+        },
+        "against": {
+          "submitted": true,
+          "text": "The Auburn School District is demanding a massive $491 million bond package to build three local schools, averaging a staggering $163 million per individual facility. Meanwhile, the neighboring Tacoma School District is successfully building eight separate schools for an average total cost of $66 million each.\n\nThe new Lowell and Whittier are modern, state-of-the-art elementary schools for under $50 million each. However, Auburn demands a whopping $118 million to demolish, design & build Alpac Elementary. This massive cost discrepancy begs an obvious question: where exactly is the other $68 million going for this school alone?\n\nFurthermore, the district's advertised $1.10 property tax rate completely fails to cover repaying the $491 million principal plus the $350+ million in interest debt. Repaying this massive accumulated interest forces true initial rates up to $1.93 per $1,000, exposing a huge gap between the advertised numbers and the harsh financial reality.\n\nWorking families and honest local people are barely getting by in today's tough economic environment. The school district must bring local taxpayers a reasonable, fiscally responsible request instead of pushing over-inflated, expensive dreams that place an unfair, heavy financial burden on our entire community. Vote No",
+          "submitted_by": "Eric Petersen"
+        },
+        "rebuttal_of_against": {
+          "submitted": true,
+          "text": "Misleading comparisons ignore differences in school size, site conditions, and long-term construction standards. Auburn is building schools designed to last a century and has a proven record of completing projects on time and on budget. Replacing aging schools and overcrowded portables now is a smarter long-term investment than continuing costly repairs. Vote Yes to provide safe, modern schools for generations of Auburn students.",
+          "submitted_by": "Cari Manry, Terri Herren"
+        },
+        "rebuttal_of_for": {
+          "submitted": true,
+          "text": "If you own property assessed at $600,000, your current property tax bill for schools alone is $4,800. If you add this bond at the true cost of $1.93 per $1,000, your school tax portion will jump to $5,958 per year.\n\nTacoma's approved $650 million bond replaces or renovates 11 aging schools; Auburn wants $491 million for just 3. Don't be bullied, make them resubmit this with real cost, not bloated numbers. Vote no.",
+          "submitted_by": "Eric Petersen"
+        }
+      },
+      "passage_requirement": "60% yes vote and a minimum turnout of 40% of voters casting ballots in last general election (Washington Constitution, art. VII, sec. 2(b))",
+      "full_text_url": "https://kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/ballots/whats-on-the-ballot/ballot-measures/2026/11/auburn-sd",
+      "contact": "For questions about this measure, contact: Cindi Blansfield, Associate Superintendent, (253) 931-4930, cblansfield@auburn.wednet.edu",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "SCHDST",
+        "value": "408"
+      },
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/king/raw/kce/ballotmeasures-eid55.html",
+        "data/washington-state/elections/2026-11-03-general/counties/king/raw/kce/measures/ballotmeasures-cid102259.html"
+      ]
+    },
+    {
+      "jurisdiction": "Highline School District No. 401",
+      "proposition": "Proposition No. 1",
+      "title": "Bonds to Replace and Rebuild Deteriorating Schools and Improve Safety",
+      "slug": "highline-school-district-no-401-proposition-no-1",
+      "kce_contest_id": "102241",
+      "kce_group": "School",
+      "ballot_title": "The Board of Directors of Highline School District No. 401 adopted Resolution No. 11-26, concerning neighborhood school improvements and safety upgrades. This proposition would authorize the District to: replace or rebuild four deteriorating schools (Cascade, Chinook, Sylvester, CHOICE Academy), including new career/technical learning spaces, secure entrances, security camera upgrades; make critical districtwide core building system upgrades, including heating, roofing, electrical, plumbing; implement districtwide health, security, fire system and earthquake safety upgrades; issue $595,400,000 of general obligation bonds maturing within 21 years; and levy annual excess property taxes to repay the bonds, all as provided in Resolution No. 11-26. Should this proposition be:",
+      "explanatory_statement": "Proposition 1 authorizes school construction bonds to replace and rebuild deteriorating schools and make districtwide safety and accessibility improvements and upgrades. Proposition 1 will improve student, staff and community safety, security and accessibility, enhance student learning environments, improve and expand educational opportunities, and provide necessary student educational facilities (including career/technical learning spaces).\n\nThe bonds will allow Highline Public Schools to: (1) address critical needs districtwide, including core building system upgrades and site improvements (plumbing, hot water systems, HVAC, electrical, roofing, security, fire systems and earthquake safety upgrades); (2) construct a new school to replace Sylvester Middle School; (3) construct a new school to replace Cascade Middle School; (4) partially rebuild and modernize Chinook Middle School (replacing the oldest, most outdated buildings, facilities and infrastructure with new construction; renovating and updating existing usable buildings; and replacing portables with permanent classrooms); (5) rebuild and modernize the former Southern Heights Elementary School site as a new facility for CHOICE Academy; and (6) develop design plans for construction, redevelopment or replacement of Valley View Early Learning Center and Hilltop Elementary School. More information is available at highlineschools.org/bondandlevy.\n\nThe $595,400,000 of general obligation bonds will be repaid from annual excess property taxes sufficient to pay bond debt service over a maximum term of 21 years. Exemptions from taxes may be available to certain homeowners. For more information, contact the King County Department of Assessments, 206-296-3920.",
+      "statements": {
+        "for": {
+          "submitted": true,
+          "text": "Highline students deserve schools that are safe, healthy, and equipped for today\u2019s learning. Vote yes on Prop. 1 to rebuild aging schools, address critical repairs, and make schools ADA accessible and more secure from safety threats.\n\nThis bond will provide all middle school students in our community with secure, modern classrooms. It would replace Cascade and Sylvester middle schools, rebuild Chinook Middle School, and rebuild Southern Heights for CHOICE Academy. It ensures an equal middle school educational environment for students in every Highline neighborhood.\n\nVoting Yes protects our community\u2019s investments in public facilities. As roofs, heating, plumbing, and electrical systems age, repairs become more costly, and facilities failures disrupt student learning. The bond is a practical investment that ensures safe, reliable facilities for students and our community for decades to come.\n\nLocal bonds are the only way to fund school construction and repairs. The state doesn\u2019t provide this funding. Highline has a decades-long track record of completing projects on time and on budget. Quality schools strengthen neighborhoods and make communities safer. Please join parents, educators, neighbors and community leaders in voting yes on Prop. 1 so all Highline students can learn in safe, modern schools.",
+          "submitted_by": "Tina Orwall, Dan Satterberg, Sili Savusa, www.yesforHighline.org"
+        },
+        "against": {
+          "submitted": true,
+          "text": "Vote No for Now on Highline\u2019s record-breaking $595.4 million bond proposal. If passed, taxpayers will have approved more than $1.4 billion in construction debt in just ten years. Meanwhile, Highline spends more than $25,000 per student annually, $3,000 more than the state average. Yet 67% of students test below grade level in reading, and 76% fail math and science grade level standards.\n\nEven at newly rebuilt schools, state data shows worsening attendance and declining academic performance. New buildings may look impressive, but bricks and mortar cannot fix failing academics.\n\nThe district wants to rebuild three middle schools at once. Why not begin with two and return later for the third? A smaller bond would improve schools while keeping costs more manageable. With the cost of living climbing rapidly, families cannot afford this unnecessary burden.\n\nStudents deserve safe schools and strong academics. Taxpayers deserve responsible spending, transparency, and accountability. Highline has ignored community concerns and failed to earn our trust. Why should we trust the district with a bond this large? Send Highline back to the drawing board. Demand a smaller, smarter bond that puts students first and gives taxpayers a fair deal. Vote No for Now.",
+          "submitted_by": "Mike Bishoff, Kirsten Cooper, Katie Paulson, BetterPlanforHighline.com"
+        },
+        "rebuttal_of_against": {
+          "submitted": true,
+          "text": "Students attending Highline\u2019s newly built schools have higher attendance and engagement. All students deserve safe, modern schools. We can\u2019t afford to put off replacing aging, outdated schools while construction costs escalate, costing taxpayers much more later. Prop. 1 was shaped by a community-led advisory committee, recommending a practical plan focused on critical needs and responsible stewardship of tax dollars. Highline has earned our trust by delivering new schools on time, on budget. Please vote Yes!",
+          "submitted_by": "Tina Orwall, Dan Satterberg, Sili Savusa, www.yesforHighline.org"
+        },
+        "rebuttal_of_for": {
+          "submitted": true,
+          "text": "Safe & equitable schools shouldn\u2019t require a $595.4M price tag. Real equity means safe facilities & academic progress, but even at new facilities, academics are falling. Massive construction debt isn't a practical or acceptable substitute for classroom learning.\n\nAsking taxpayers for $161.3M for Chinook\u2019s partial remodel - delayed until 2031- is not reasonable when full rebuilds at Sylvester ($180.3M) & Cascade ($172.1M) cost roughly the same. Demand smarter, more responsible planning: Vote No for Now!",
+          "submitted_by": "Mike Bishoff, Kirsten Cooper, Katie Paulson, BetterPlanforHighline.com"
+        }
+      },
+      "passage_requirement": "60% majority and minimum turnout of 40% of voters casting ballots in last general election (Washington Constitution, art. VII, sec. 2(b))",
+      "full_text_url": "https://kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/ballots/whats-on-the-ballot/ballot-measures/2026/11/highline-sd-1",
+      "contact": "For questions about this measure, contact: Andrew Burgess, Controller, (206) 631-3201, andrew.burgess@highlineschools.org",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "SCHDST",
+        "value": "401"
+      },
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/king/raw/kce/ballotmeasures-eid55.html",
+        "data/washington-state/elections/2026-11-03-general/counties/king/raw/kce/measures/ballotmeasures-cid102241.html"
+      ]
+    },
+    {
+      "jurisdiction": "Highline School District No. 401",
+      "proposition": "Proposition No. 2",
+      "title": "Educational Technology and Capital Improvements Levy",
+      "slug": "highline-school-district-no-401-proposition-no-2",
+      "kce_contest_id": "102242",
+      "kce_group": "School",
+      "ballot_title": "The Board of Directors of Highline School District No. 401 adopted Resolution No. 12-26, concerning educational technology and capital improvements to maintain student learning. This proposition would fund districtwide technology, programs and staff and other capital improvements not funded by the State, including cybersecurity protections, reliable internet, technology operations and infrastructure, and student/staff technology access, and authorize the District to levy the following excess taxes on all taxable property within the District:\n\nCollection Year\n\nEstimated Levy Rate/$1,000 Assessed Value\n\nLevy Amount\n\n2027\n\n$0.36\n\n$12,000,000\n\n2028\n\n$0.35\n\n$12,000,000\n\n2029\n\n$0.34\n\n$12,000,000\n\n2030\n\n$0.32\n\n$12,000,000\n\nall as provided in Resolution No. 12-26. Should this proposition be approved?",
+      "explanatory_statement": "Proposition 2 authorizes a capital levy for educational technology and capital improvements to maintain student learning and improve student and staff safety and security. Proposition 2 will address the existing condition of educational technology equipment, infrastructure and systems and aging and educationally outdated school facilities.\n\nThe capital levy will fund: (1) cybersecurity protections and systems that protect student and staff data; (2) reliable internet, wireless networks and technology infrastructure that support teaching and learning; (3) student and staff devices, classroom technology and instructional software; (4) educator and staff training and support to implement technology improvements; and (5) other technology improvements and upgrades districtwide. The capital levy will also fund districtwide capital improvements to support the construction, modernization and remodeling of schools and facilities. More information is available at highlineschools.org/bondandlevy.\n\nThe proposed four-year levy would authorize collection of $12,000,000 in each of the years 2027 through 2030. The levy rate per $1,000 of assessed value required to produce these amounts is estimated to be $0.36 in 2027, $0.35 in 2028, $0.34 in 2029, and $0.32 in 2030. Exact levy rates will be determined based on actual assessed value at the time of levy.\n\nExemptions from taxes may be available to certain homeowners. For more information, contact the King County Department of Assessments, 206-296-3920.",
+      "statements": {
+        "for": {
+          "submitted": true,
+          "text": "Highline students and teachers rely on technology. Voting yes on Prop. 2 restores expired funding approved by voters for the secure systems, reliable internet, and classroom tools that prepare students for success.\n\nThis levy funds cybersecurity to protect sensitive student information. It pays for instructional software, internet access, teacher training for responsible technology use, technical support, and devices for students and staff. It funds the system that enables schools to reach parents in an emergency and for day-to-day communication. Technology costs are rising. The levy fills the gap between the funding provided by the state and the actual costs of meeting the technology needs of students and schools.\n\nModern, reliable technology is an essential investment in student learning. Students must learn safe, responsible use of the technology they encounter now and in the future. Reliable technology means students spend more time learning, and teachers spend more time teaching and less time waiting for systems to work.\n\nThe technology levy is a practical investment in the tools Highline students need today and the skills they will need to be successful in the future. Please join parents, educators, neighbors and community leaders in voting Yes for Highline by November 3.",
+          "submitted_by": "Trisha Arias, Karen Keiser, Pat Thompson, www.yesforHighline.org"
+        },
+        "against": {
+          "submitted": true,
+          "text": "As Highline parents, we deeply support our public schools and want high-quality learning environments for every student. We also know that real student success comes from dedicated teachers, not screen time. We are voting No on this levy because our children and teachers deserve proven, human-led instruction over endless tech contracts.\n\nHighline\u2019s 1:1 device policy gives every child an internet-connected device starting in Kindergarten. While major urban districts and private schools are scaling back devices and auditing tech contracts, Highline is asking us to auto-renew. We need to pause and reassess how tech is being used in our classrooms.\n\nVoters have approved multiple tech levies since 2018, yet academic outcomes have gone down. Relying on expensive and unproven programs like i-Ready instead of comprehensive, evidence-based instruction simply isn\u2019t working. Furthermore, this levy is a blank check; with Policy 6101 just changed in June, it will give administrators upfront authority to sign million-dollar tech contracts without a public meeting or school board vote.\n\nA No vote isn't abandoning our schools; it\u2019s demanding smarter, low-tech learning and real district accountability before writing a $48 million check. Our students and our teachers deserve better. Vote No for Now.",
+          "submitted_by": "Mike Bishoff, Katie Paulson, Lauren Schmidt, BetterPlanforHighline.com"
+        },
+        "rebuttal_of_against": {
+          "submitted": true,
+          "text": "This levy funds technology for student safety, parent communication, and cybersecurity - not more screentime. Teachers use technology in human-led modern classroom instruction. Students need to learn safe, responsible use of technology to be prepared for future careers. Fact check: Policy 6101 still requires school board approval of million-dollar tech contracts. Voters overwhelmingly approved Highline\u2019s one/only tech levy in 2020. Vote yes: restore expired funding and give our students the same advantages as other communities.",
+          "submitted_by": "Trisha Arias, Karen Keiser, Pat Thompson, www.yesforHighline.org"
+        },
+        "rebuttal_of_for": {
+          "submitted": true,
+          "text": "Prop 2 falsely assumes more tech equals more learning and software saves teacher time. Supporting schools shouldn't mean funding unproven technology or forcing early device reliance on young children.\n\nSafe, working schools need transparent plans, not blank checks. Vote No to demand district accountability: audit all tech contracts, remove 1:1 devices in early grades, establish clear districtwide screen policies, and restore direct school board oversight over academics and spending. Highline students deserve better.",
+          "submitted_by": "Mike Bishoff, Katie Paulson, Lauren Schmidt, BetterPlanforHighline.com"
+        }
+      },
+      "passage_requirement": "Simple majority (Wash. Const. art. VII, sec. 2(a))",
+      "full_text_url": "https://kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/ballots/whats-on-the-ballot/ballot-measures/2026/11/highline-sd-2",
+      "contact": "For questions about this measure, contact: Andrew Burgess, Controller, (206) 631-3201, andrew.burgess@highlineschools.org",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "SCHDST",
+        "value": "401"
+      },
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/king/raw/kce/ballotmeasures-eid55.html",
+        "data/washington-state/elections/2026-11-03-general/counties/king/raw/kce/measures/ballotmeasures-cid102242.html"
+      ]
+    },
+    {
+      "jurisdiction": "Kent School District No. 415",
+      "proposition": "Proposition No. 1",
+      "title": "Replacement of Expiring Educational Programs and Operations Levy",
+      "slug": "kent-school-district-no-415-proposition-no-1",
+      "kce_contest_id": "102257",
+      "kce_group": "School",
+      "ballot_title": "The Board of Directors of Kent School District No. 415 adopted Resolution No. 1718 concerning a proposition to support educational programs and operations expenses. If approved, this proposition would authorize the District to levy the following excess taxes, replacing an expiring levy, on all taxable property within the District, to support educational programs and operations not funded by the State\u2019s statutory program of basic education.\n\nCollection Year\n\nApproximate Levy Rate/$1,000 Assessed Value\n\nLevy Amount\n\n2028\n\n$1.95\n\n$104,700,000\n\n2029\n\n$1.93\n\n$111,100,000\n\n2030\n\n$1.88\n\n$115,700,000\n\n2031\n\n$1.84\n\n$121,400,000\n\nShould this proposition be approved?",
+      "explanatory_statement": "Passage of Proposition 1 would allow Kent School District to replace an expiring voter-approved levy for school programs and operations by levying $104,700,000 for collection in 2028, $111,100,000 for collection in 2029, $115,700,000 for collection in 2030, and $121,400,000 for collection in 2031. The proposed levy would replace an existing levy that voters previously approved and expires in 2027. The expiring levy currently funds approximately 15% of the District\u2019s general operating expenses. If approved, the proposed replacement levy would pay for day-to-day school operations to meet student needs not funded by the State, including but not limited to college and career readiness staff and programs, physical, social, and emotional learning staff and programs (including mental health counselors and staff), materials, supplies, and operational costs (including utilities and insurance), transportation, safety and security staff, athletic and extra-curricular programs, electives, and classroom support programs.\n\nBased on projected assessed valuation information, the District estimates a tax rate of $1.95 per $1,000 of assessed valuation for 2028; $1.93 per $1,000 of assessed valuation for 2029; $1.88 per $1,000 of assessed valuation for 2030; and $1.84 per $1,000 of assessed valuation for 2031. A property tax exemption may be available to senior or disabled homeowners who meet specified income limits. For information regarding exemptions, call the King County Assessor at (206) 296-3920.",
+      "statements": {
+        "for": {
+          "submitted": true,
+          "text": "Our schools are one of the most important investments our community makes\u2014and this renewal levy will help keep that investment strong. It provides critical local funding that keeps schools safe, supports student learning, provides extracurricular opportunities, and helps ensure every child has access to the resources they need to succeed.\n\nVoting Yes means continuing local funding that directly supports students, teachers, and programs not fully paid for by the state. This includes academic support, athletics, arts, mental health resources, music, safety, and transportation. This investment touches thousands of students and helps recruit and retain the outstanding teachers and staff who prepare these students for college, careers, and life.\n\nLet\u2019s renew our commitment to strong schools by voting Yes! Strong schools support local businesses, strengthen property values, and prepare the next generation of workers and leaders. This proposal continues a long tradition of local investment in our schools while maintaining one of the lowest school levy rates among neighboring districts.\n\nThis levy is not a new tax. It is a continued investment in educational opportunities today and in the strength of our community tomorrow. Please join us in voting Yes for our students, our schools, and our shared future.",
+          "submitted_by": "Dana Ralph, Bill Boyce, Jeff Wagner, citizensforkentschools.com"
+        },
+        "against": {
+          "submitted": true,
+          "text": "We all want strong schools and well-supported students, but writing a bigger check will not fix poor financial management. The district is asking for significantly more money while class sizes grow, enrollment declines, and families are left wondering where the money is actually going. We cannot continue to fund failing leadership while our students bear the burden of larger classes and reduced support.\n\nDistrict leadership has consistently turned a deaf ear to the community, and this levy comes with no binding promises to safeguard a single program or staffing group. Make no mistake: this tax hike will not bring back the vital resources cut this year, and it will not stop them from cutting more next year. We cannot keep writing blank checks to an administration that refuses to listen, consistently provides less than surrounding districts, and prioritizes themselves over students.\n\nFurthermore, this levy is running a year ahead of schedule, with no effect on funding until 2028. Voting \u201cNo\u201d now costs our classrooms nothing in 2027. Stand up for true accountability, new leadership, and better outcomes for our children. Vote no today, and let the district earn your trust with a community-aligned plan before trying again next year.",
+          "submitted_by": "Joseph Riley"
+        },
+        "rebuttal_of_against": {
+          "submitted": true,
+          "text": "The opposition\u2019s claims don\u2019t match the facts. Kent School District has passed seven consecutive independent financial accountability audits and maintained a high credit rating\u2014measurable signs of responsible financial management, not financial disarray.\n\nThis renewal levy isn\u2019t a blank check. It provides funding for local schools, with accountability for every dollar. Our students deserve decisions based on facts and transparency, not misleading claims that undermine confidence in our schools and the people who serve them.",
+          "submitted_by": "Dana Ralph, Bill Boyce, Jeff Wagner, citizensforkentschools.com"
+        },
+        "rebuttal_of_for": {
+          "submitted": true,
+          "text": "Supporters claim this levy will fund things like student supports, athletics, and the arts. The last levy promised those same things through 2027, but the district cut them this year.\n\nDon\u2019t accept empty promises. While taxes are rising, test scores and graduation rates are dropping, staffing is being cut, and class sizes are growing. Vote \u201cNo\u201d today. Make the district earn your trust with a community-aligned plan and new leadership before trying again next year.",
+          "submitted_by": "Joseph Riley"
+        }
+      },
+      "passage_requirement": "Simple majority (Wash. Const. art. VII, sec. 2(a))",
+      "full_text_url": "https://kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/ballots/whats-on-the-ballot/ballot-measures/2026/11/kent-sd",
+      "contact": "For questions about this measure, contact: Dr. Wade Barringer, Deputy Superintendent, (253) 373-7001, Wade.Barringer@kent.k12.wa.us",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "SCHDST",
+        "value": "415"
+      },
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/king/raw/kce/ballotmeasures-eid55.html",
+        "data/washington-state/elections/2026-11-03-general/counties/king/raw/kce/measures/ballotmeasures-cid102257.html"
+      ]
+    },
+    {
+      "jurisdiction": "King County Fire Protection District No. 20",
+      "proposition": "Proposition No. 1",
+      "title": "Bonds to Improve Fire and Emergency Response Facilities",
+      "slug": "king-county-fire-protection-district-no-20-proposition-no-1",
+      "kce_contest_id": "102253",
+      "kce_group": "SpecialPurposeDistrict",
+      "ballot_title": "The Board of Fire Commissioners of King County Fire Protection District No. 20 adopted Resolution No. 2026-002, concerning emergency response facilities to protect public health, life and property. This proposition would authorize the District to: improve emergency response support facilities and infrastructure on two sites owned by the District; renovate and modernize the existing fire station; acquire firefighting and emergency response apparatus; issue no more than $16,000,000 of general obligation bonds maturing within 20 years; and levy annual excess property taxes to repay the bonds, all as provided in Resolution No. 2026-002. Should this proposition be:",
+      "explanatory_statement": "King County Fire Protection District No. 20 provides fire suppression and rescue services, emergency medical services, and fire prevention and community education to protect life and property from the adverse effects of fires, medical emergencies or exposure to dangerous conditions.\n\nThe Board of Fire Commissioners has determined the inadequate size and aging and outdated facilities of the District, and the need to improve site security and resilience, operational readiness and efficiency, and community, firefighter and emergency responder safety, require the District to improve emergency response support facilities and infrastructure on two sites owned by the District. The improvements include renovating and modernizing the existing fire station, and acquiring firefighting and emergency response apparatus.\n\nIf approved, this proposition would authorize no more than $16,000,000 of general obligation bonds that would mature within a maximum of 20 years and be repaid from annual excess property taxes. The estimated tax rate is approximately $0.28 per $1,000 of assessed value. Exemptions from taxes may be available to certain homeowners. For more information, contact the King County Department of Assessments, 206-296-3920.",
+      "statements": {
+        "for": {
+          "submitted": true,
+          "text": "As a neighborhood committee we support this bond because it is an investment in the safety and preparedness of our community. We deserve reliable emergency services, safe facilities for our firefighters, and the resources needed to meet future challenges.\n\nOur firefighters respond to thousands of emergency calls from a station that was built more than 40 years ago and is not seismic approved. While the dedication of our firefighters has never changed, some of the facilities and apparatus they rely on every day have reached the end of their useful life and need replacing.\n\nThis bond will modernize Fire Station 20, replace an aging reserve engine, and improve the district's emergency operations campus by constructing nearby secure storage for emergency equipment and reserve apparatus. These projects/buildings will help protect emergency vehicles, supplies, improve firefighter safety, and ensure the district is prepared to respond to all emergencies and disasters.\n\nThe proposed bond is focused on long-term capital improvements that cannot be funded through the district's regular operating budget. By making these investments now, we can preserve and improve the facilities and equipment that support emergency response for years to come. Vote Yes on the KCFD No. 20 Community Safety Bond.",
+          "submitted_by": "Terry Miller, Alesia D. Cannday, Margie Lindberg"
+        },
+        "against": {
+          "submitted": false,
+          "text": "There is no statement against this measure. No one in the jurisdiction contacted King County Elections to serve on the committee to write a statement against the measure.\n\nJurisdictions that place measures on the ballot also appoint members of the public to \u201cpro\u201d and \u201ccon\u201d committees. These committees prepare statements either for or against the ballot measure. These statements are published in the local voters\u2019 pamphlet to help voters make informed decisions.\n\nIf the jurisdiction is unable to appoint a committee, King County Elections can appoint any eligible committee members who come forward. To join a committee in the future, please contact the jurisdiction."
+        },
+        "rebuttal_of_against": null,
+        "rebuttal_of_for": null
+      },
+      "passage_requirement": "60% majority and minimum turnout of 40% of voters casting ballots in last general election (Washington Constitution, art. VII, sec. 2(b))",
+      "full_text_url": "https://kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/ballots/whats-on-the-ballot/ballot-measures/2026/11/fire-20",
+      "contact": "For questions about this measure, contact: Eric Hicks, Fire Chief, (206) 772-1430, ehicks@kcfd20.org",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "FIRDST",
+        "value": "20"
+      },
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/king/raw/kce/ballotmeasures-eid55.html",
+        "data/washington-state/elections/2026-11-03-general/counties/king/raw/kce/measures/ballotmeasures-cid102253.html"
+      ]
+    },
+    {
+      "jurisdiction": "King County Cemetery District No. 1",
+      "proposition": "Proposition No. 1",
+      "title": "Levy for Retention and Improvement of Vashon Cemetery Services",
+      "slug": "king-county-cemetery-district-no-1-proposition-no-1",
+      "kce_contest_id": "102254",
+      "kce_group": "SpecialPurposeDistrict",
+      "ballot_title": "To support operational expenses, modernize and maintain burial records, acquire essential equipment, advance the development of green burial practices, and facilitate the acquisition of additional property, the Board of King County Cemetery District No. 1 adopted Resolution No. 295 proposing a permanent increase in its regular property tax levy from approximately $.03 ($.02816) to $.05 per $1000 of assessed valuation beginning in 2027.\n\nShould this proposition be:",
+      "explanatory_statement": "This measure concerns the continued stewardship and preservation of the Vashon Cemetery. The cemetery serves as the final resting place for generations of island residents and is a significant historical and community resource. Funds generated by this measure would support routine maintenance, preservation of cemetery records, repair and upkeep of facilities, and protection of the site's historical character to help ensure that the cemetery remains safe, accessible, and well maintained, while preserving its role as a place of remembrance and reflection for current and future generations. The measure does not change ownership or governance of the cemetery. An increase of two cents per $1000 of assessed valuation results in an annual property tax increase, per $100,000 of assessed property tax value, of two dollars per year. If approved, the property tax levy increase would result in a total levy of five dollars ($5.00) per $100,000 of assessed value.",
+      "statements": {
+        "for": {
+          "submitted": false,
+          "text": "There is no statement in favor of this measure. No one in the jurisdiction contacted King County Elections to serve on the committee to write a statement for the measure.\n\nJurisdictions that place measures on the ballot also appoint members of the public to \u201cpro\u201d and \u201ccon\u201d committees. These committees prepare statements either for or against the ballot measure. These statements are published in the local voters\u2019 pamphlet to help voters make informed decisions.\n\nIf the jurisdiction is unable to appoint a committee, King County Elections can appoint any eligible committee members who come forward. To join a committee in the future, please contact the jurisdiction."
+        },
+        "against": {
+          "submitted": false,
+          "text": "There is no statement against this measure. No one in the jurisdiction contacted King County Elections to serve on the committee to write a statement against the measure.\n\nJurisdictions that place measures on the ballot also appoint members of the public to \u201cpro\u201d and \u201ccon\u201d committees. These committees prepare statements either for or against the ballot measure. These statements are published in the local voters\u2019 pamphlet to help voters make informed decisions.\n\nIf the jurisdiction is unable to appoint a committee, King County Elections can appoint any eligible committee members who come forward. To join a committee in the future, please contact the jurisdiction."
+        },
+        "rebuttal_of_against": null,
+        "rebuttal_of_for": null
+      },
+      "passage_requirement": "Simple majority (RCW 84.55.050)",
+      "full_text_url": "https://kingcounty.gov/-/media/king-county/depts/elections/how-to-vote/ballots/whats-on-the-ballot/ballot-measures/2026/11/cemetery",
+      "contact": "For questions about this measure, contact: Catherine Sullivan, Commissioner, 98070cemeterycommissioner@gmail.com",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "king",
+        "layer": "CEMDST",
+        "value": "1"
+      },
+      "scope_unresolved": "King's District Adapter (app/src/lib/geo.js KING_LAYERS) has no CEMDST layer; WA DOR tax-district layer 3 has King feature DISTATTRIB=1 (raw/gis/dor-cemdst-king.json).",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/king/raw/kce/ballotmeasures-eid55.html",
+        "data/washington-state/elections/2026-11-03-general/counties/king/raw/kce/measures/ballotmeasures-cid102254.html"
+      ]
+    }
+  ]
+}
