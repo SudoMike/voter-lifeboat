@@ -1,0 +1,123 @@
+{
+  "county": "skagit",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/skagit/raw/votewa/candidate-list.csv.url",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7426&e=899&la=en&c=29",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7427&e=899&la=en&c=29",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7428&e=899&la=en&c=29",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7429&e=899&la=en&c=29"
+  ],
+  "coverage": "full_county",
+  "notes": [],
+  "measures": [
+    {
+      "slug": "skagit-city-of-mount-vernon-proposition-no-1",
+      "owner": "skagit",
+      "jurisdiction": "City of Mount Vernon",
+      "proposition": "Proposition No. 1",
+      "title": "Renewal of Sales and Use Tax for Transportation Improvements (Mount Vernon Transportation Benefit District)",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "skagit",
+        "layer": "CITY",
+        "value": "Mount Vernon"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Renews the Mount Vernon Transportation Benefit District's 0.2% sales and use tax for ten more years to pay for street repair, preservation and other transportation improvements in the city.",
+      "cost_line": "0.2% sales and use tax (2 cents on $10), about $2.3 million a year; the current tax ends in April 2027 unless renewed.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7426&e=899&la=en&c=29"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "skagit-city-of-sedro-woolley-proposition-no-1",
+      "owner": "skagit",
+      "jurisdiction": "City of Sedro-Woolley",
+      "proposition": "Proposition No. 1",
+      "title": "Annexation into Central Skagit Rural Partial-County Library District",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "skagit",
+        "layer": "CITY",
+        "value": "Sedro-Woolley"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Annexes the City of Sedro-Woolley into the Central Skagit Rural Partial-County Library District, replacing the city's contract for library service with district membership.",
+      "cost_line": "District levy estimated at $0.232 per $1,000 of assessed value from 2028; the city plans to cut its own levy by up to $474,115, a net increase of about $11 in 2028 on a $519,450 home.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7427&e=899&la=en&c=29"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "skagit-la-conner-school-district-no-311-proposition-no-1",
+      "owner": "skagit",
+      "jurisdiction": "La Conner School District No. 311",
+      "proposition": "Proposition No. 1",
+      "title": "Educational Facility Modernization and Technology Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "skagit",
+        "layer": "SCHDST",
+        "value": "311"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Authorizes a four-year capital levy to modernize existing school buildings and replace and upgrade technology systems.",
+      "cost_line": "$350,000 to $395,000 a year for 2027 through 2030 ($1,490,000 total), about $0.31 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7428&e=899&la=en&c=29"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "skagit-skagit-county-fire-protection-district-no-5-proposition-no-1",
+      "owner": "skagit",
+      "jurisdiction": "Skagit County Fire Protection District No. 5",
+      "proposition": "Proposition No. 1",
+      "title": "Authorizing Regular Property Tax Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "skagit",
+        "layer": "FIRDST",
+        "value": "5"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Restores the fire district's regular property tax levy to $0.78 per $1,000 and lets it grow up to 3% a year for five years (Allen, Bow, Edison, Samish Island, Chuckanut Drive).",
+      "cost_line": "$0.78 per $1,000 of assessed value in 2027, then up to 3% more a year (never above $1.50).",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7429&e=899&la=en&c=29"
+          ]
+        }
+      }
+    }
+  ]
+}

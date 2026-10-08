@@ -446,6 +446,12 @@ COUNTY_CONFIG = {
     "skagit": {
         "name": "Skagit County", "fips": "53057",
         "commissioner": "{n}",
+        # Skagit PUD No. 1 is countywide (VoteWA district 'SKAGIT PUD
+        # DISTRICT COUNTYWIDE'; DOR PUD2025 layer 17 polygon DISTATTRIB '1'
+        # at Anacortes, Mount Vernon, Concrete and Marblemount) and the whole
+        # PUD elects each commissioner in the general (RCW 54.12.010(3)), so
+        # the seat is scoped COUNTY. The primary had no PUD race.
+        "pud": "{n}", "pud_layer_key": "COUNTY",
         "measures": [
             m("Darrington School District No. 330", "Proposition No. 1", "Replacement Educational Programs and Operations Levy",
               ("SCHDST", "330"),
@@ -575,7 +581,43 @@ COUNTY_CONFIG = {
 # ballot; a county with no entry gets an empty measure list and a note saying
 # its measures are not curated yet, so it can never pass for "no measures".
 ELECTION_MEASURES = {
-    "2026-11-03-general": {},
+    "2026-11-03-general": {
+        # Skagit: the four measures the Auditor's Ballot Measures page lists
+        # for the general (counties/skagit/raw/skagit/ballot-measures.html.url),
+        # text from the local voters' pamphlet pages 18-21 and VoteWA
+        # measures 7426-7429. Scope values point-checked 2026-10-08 (Census
+        # geocoder + DOR WADOR_PropertyTax layers 7 and 20).
+        "skagit": {"measures": [
+            # 700 S 2nd St, Mount Vernon -> Census place 'Mount Vernon city'.
+            m("City of Mount Vernon", "Proposition No. 1",
+              "Renewal of Sales and Use Tax for Transportation Improvements (Mount Vernon Transportation Benefit District)",
+              ("CITY", "Mount Vernon"),
+              "Renews the Mount Vernon Transportation Benefit District's 0.2% sales and use tax for ten more years to pay for street repair, preservation and other transportation improvements in the city.",
+              "0.2% sales and use tax (2 cents on $10), about $2.3 million a year; the current tax ends in April 2027 unless renewed.",
+              "https://voter.votewa.gov/elections/measure.ashx?m=7426&e=899&la=en&c=29"),
+            # 325 Metcalf St, Sedro-Woolley -> Census place 'Sedro-Woolley city'.
+            m("City of Sedro-Woolley", "Proposition No. 1",
+              "Annexation into Central Skagit Rural Partial-County Library District",
+              ("CITY", "Sedro-Woolley"),
+              "Annexes the City of Sedro-Woolley into the Central Skagit Rural Partial-County Library District, replacing the city's contract for library service with district membership.",
+              "District levy estimated at $0.232 per $1,000 of assessed value from 2028; the city plans to cut its own levy by up to $474,115, a net increase of about $11 in 2028 on a $519,450 home.",
+              "https://voter.votewa.gov/elections/measure.ashx?m=7427&e=899&la=en&c=29"),
+            # 305 N 6th St, La Conner -> DOR SCH2025 (layer 20) DISTATTRIB '311'.
+            m("La Conner School District No. 311", "Proposition No. 1",
+              "Educational Facility Modernization and Technology Levy",
+              ("SCHDST", "311"),
+              "Authorizes a four-year capital levy to modernize existing school buildings and replace and upgrade technology systems.",
+              "$350,000 to $395,000 a year for 2027 through 2030 ($1,490,000 total), about $0.31 per $1,000 of assessed value.",
+              "https://voter.votewa.gov/elections/measure.ashx?m=7428&e=899&la=en&c=29"),
+            # 5800 Main St, Bow (Edison) -> DOR FIR2025 (layer 7) DISTATTRIB '5'.
+            m("Skagit County Fire Protection District No. 5", "Proposition No. 1",
+              "Authorizing Regular Property Tax Levy",
+              ("FIRDST", "5"),
+              "Restores the fire district's regular property tax levy to $0.78 per $1,000 and lets it grow up to 3% a year for five years (Allen, Bow, Edison, Samish Island, Chuckanut Drive).",
+              "$0.78 per $1,000 of assessed value in 2027, then up to 3% more a year (never above $1.50).",
+              "https://voter.votewa.gov/elections/measure.ashx?m=7429&e=899&la=en&c=29"),
+        ]},
+    },
 }
 
 
