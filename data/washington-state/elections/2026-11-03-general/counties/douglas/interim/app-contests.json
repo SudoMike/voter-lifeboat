@@ -12,7 +12,7 @@
   "coverage": "full_county",
   "notes": [
     "Douglas County prints no local voters' pamphlet for the general; candidate statements and measure texts are in VoteWA's online voters' guide (genericvoterguide.aspx?e=899&c=09).",
-    "The proposed Rimrock Meadows Fire Protection District No. 9 and its commissioner races are scoped to the county's Fire Districts layer (FireNumber '009'); DOR's 2025 fire layer has no such district."
+    "The proposed Rimrock Meadows Fire Protection District No. 9 and its commissioner races are scoped to PROPFIRDST '009', the county's Fire Districts layer (FireNumber '009'); DOR's 2025 fire layer has no such district."
   ],
   "contests": [
     {
@@ -652,7 +652,7 @@
       "scope": {
         "kind": "DISTRICT",
         "county": "douglas",
-        "layer": "FIRDST",
+        "layer": "PROPFIRDST",
         "value": "009"
       },
       "office_does": null,
@@ -692,7 +692,7 @@
       "scope": {
         "kind": "DISTRICT",
         "county": "douglas",
-        "layer": "FIRDST",
+        "layer": "PROPFIRDST",
         "value": "009"
       },
       "office_does": null,
@@ -721,7 +721,7 @@
       "scope": {
         "kind": "DISTRICT",
         "county": "douglas",
-        "layer": "FIRDST",
+        "layer": "PROPFIRDST",
         "value": "009"
       },
       "office_does": null,

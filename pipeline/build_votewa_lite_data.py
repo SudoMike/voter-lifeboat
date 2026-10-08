@@ -834,8 +834,10 @@ ELECTION_MEASURES = {
         # CEM2025 '2'; 100 Eastmont Ave, East Wenatchee and 1 Rock Island Dr,
         # Rock Island -> SCH2025 '206' (Waterville '209', Bridgeport '75').
         # The proposed Rimrock Meadows Fire Protection District No. 9 has no
-        # DOR polygon (it does not exist until voters form it): FIRDST '009'
-        # is the county's own Fire Districts layer (gis.douglascountywa.gov/
+        # DOR polygon (it does not exist until voters form it): PROPFIRDST
+        # '009' (a key of its own, since COUNTY_LAYERS.douglas's FIRDST reads
+        # DOR FIR2025 for the archived primary's FD 15 'J15') is the county's
+        # own Fire Districts layer (gis.douglascountywa.gov/
         # server/rest/services/All_Districts_Temporary/MapServer/4 FireNumber
         # '009', 'Proposed Rimrock Meadows Fire District #9', edited
         # 2026-08-19); 1005 Ashcroft Dr, 431 Murcur Pl and 9005 W Coyote Trl,
@@ -865,13 +867,13 @@ ELECTION_MEASURES = {
                     ("COUNTY", None)),
                 ("RIMROCK MEADOWS FIRE PROTECTION DISTRICT NO. 9", "COMMISSIONER NO. 1"): (
                     "Local", "Proposed Rimrock Meadows Fire Protection District No. 9", "Commissioner No. 1",
-                    ("FIRDST", "009")),
+                    ("PROPFIRDST", "009")),
                 ("RIMROCK MEADOWS FIRE PROTECTION DISTRICT NO. 9", "COMMISSIONER NO. 2"): (
                     "Local", "Proposed Rimrock Meadows Fire Protection District No. 9", "Commissioner No. 2",
-                    ("FIRDST", "009")),
+                    ("PROPFIRDST", "009")),
                 ("RIMROCK MEADOWS FIRE PROTECTION DISTRICT NO. 9", "COMMISSIONER NO. 3"): (
                     "Local", "Proposed Rimrock Meadows Fire Protection District No. 9", "Commissioner No. 3",
-                    ("FIRDST", "009")),
+                    ("PROPFIRDST", "009")),
             },
             "measures": [
                 m("Public Hospital District No. 1, Okanogan and Douglas Counties (Three Rivers Hospital)", "Proposition No. 1",
@@ -894,7 +896,7 @@ ELECTION_MEASURES = {
                   "https://voter.votewa.gov/elections/measure.ashx?m=7321&e=899&la=en&c=09"),
                 m("Proposed Rimrock Meadows Fire Protection District No. 9", "Proposition No. 1",
                   "Formation of Rimrock Meadows Fire Protection District No. 9",
-                  ("FIRDST", "009"),
+                  ("PROPFIRDST", "009"),
                   "Forms a fire protection district (RCW 52.02) for the Rimrock Meadows area north of Ephrata, which has no fire district today, governed by three elected commissioners and financed by a property tax levy. The commissioner races on the same ballot fill its first board if it forms.",
                   "No levy is set by this vote; once formed, the district's board may levy regular property taxes for fire protection (up to $0.50 per $1,000 under RCW 52.16.130, with further $0.50 levies under RCW 52.16.140 and .160 subject to the statutory limits).",
                   "https://voter.votewa.gov/elections/measure.ashx?m=7425&e=899&la=en&c=09"),
@@ -909,7 +911,7 @@ ELECTION_MEASURES = {
                 "Douglas County prints no local voters' pamphlet for the general; candidate statements and measure "
                 "texts are in VoteWA's online voters' guide (genericvoterguide.aspx?e=899&c=09).",
                 "The proposed Rimrock Meadows Fire Protection District No. 9 and its commissioner races are scoped to "
-                "the county's Fire Districts layer (FireNumber '009'); DOR's 2025 fire layer has no such district.",
+                "PROPFIRDST '009', the county's Fire Districts layer (FireNumber '009'); DOR's 2025 fire layer has no such district.",
             ],
         },
         # Franklin (#29). Ballot checked against the Auditor's general sample
