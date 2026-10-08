@@ -552,8 +552,24 @@ const COUNTY_LAYERS = {
     { key: 'CEMDST', url: `${DOR_TAX_DISTRICTS}/3/query`, attr: 'DISTATTRIB' },
   ],
   mason: [
+    // Re-probed 2026-10-08 (#30): 525 W Cota St, Shelton -> '3'; 23850 NE
+    // State Route 3, Belfair -> '1'; 24151 N US Hwy 101, Hoodsport -> '2'.
+    // No general scope uses it (the commissioner race is county-wide).
     { key: 'COUNTY_COUNCIL', url: 'https://gis.masoncountywa.gov/arcgis/rest/services/MasonCoSite/Districts/MapServer/1/query', attr: 'DIST_ID' },
+    // Re-probed 2026-10-08 (#30): Belfair -> 'NMRFA'; Hoodsport -> '18';
+    // 525 W Cota St, Shelton -> no feature.
     { key: 'FIRDST', url: `${DOR_TAX_DISTRICTS}/7/query`, attr: 'DISTATTRIB' },
+    // WA DOR PUD2025 (#30): Mason is split between PUD No. 1 (Hood Canal,
+    // Hoodsport) and PUD No. 3 (the rest of the county); each PUD elects its
+    // commissioners PUD-wide in the general, so the seats are scoped '1' and
+    // '3'. Live 2026-10-08: 24151 N US Hwy 101, Hoodsport -> '1'; 525 W Cota
+    // St, Shelton and 23850 NE State Route 3, Belfair -> '3'.
+    { key: 'PUDDST', url: `${DOR_TAX_DISTRICTS}/17/query`, attr: 'DISTATTRIB' },
+    // WA DOR SCH2025 (#30): Southside SD 42, McCleary SD 65 (mostly in Grays
+    // Harbor) and Pioneer SD 402 measures. Live 2026-10-08: 161 SE Collier
+    // Rd, Shelton -> '42'; 281 W Bonnieview Dr, McCleary -> '65'; 112 E
+    // Spencer Lake Rd, Shelton -> '402'; 525 W Cota St, Shelton '309'.
+    { key: 'SCHDST', url: `${DOR_TAX_DISTRICTS}/20/query`, attr: 'DISTATTRIB' },
   ],
   okanogan: [
     { key: 'FIRDST', url: `${DOR_TAX_DISTRICTS}/7/query`, attr: 'DISTATTRIB' },

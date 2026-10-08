@@ -39,12 +39,14 @@
     "data/washington-state/elections/2026-11-03-general/counties/clallam/scoring/*.json",
     "data/washington-state/elections/2026-11-03-general/counties/clallam/scoring/refutations/*.json",
     "data/washington-state/elections/2026-11-03-general/counties/grays-harbor/scoring/*.json",
-    "data/washington-state/elections/2026-11-03-general/counties/grays-harbor/scoring/refutations/*.json"
+    "data/washington-state/elections/2026-11-03-general/counties/grays-harbor/scoring/refutations/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/mason/scoring/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/mason/scoring/refutations/*.json"
   ],
   "script": "pipeline/merge_scores.py",
   "verdict_stats": {
-    "upheld": 2054,
-    "adjust": 181,
+    "upheld": 2074,
+    "adjust": 182,
     "refuted": 9,
     "missing_added": 27,
     "missing_dropped_low": 12
@@ -32215,6 +32217,480 @@
             "Appointed in 2021 to replace Russ Skolrood; elected unopposed in 2022 [S2][S4]",
             "As board president, backed a 3% rate increase in 2025 and a no-increase 2026 budget that used reserves [S6][S7]",
             "Wrote in 2026 that small modular nuclear reactors could add reliable power, with cost questions unresolved [S8]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "mason-mason-county-assessor",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/mason/dossiers/mason-mason-county-assessor/"
+      ],
+      "office_does": "The Assessor values property in Mason County for property tax under state rules and reports annually to the Department of Revenue.",
+      "race_blurb": "Uncontested: Assessor Patti McLean (Prefers Independent Party), in office since 2019, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "patti-mclean",
+          "summary": "Mason County Assessor since 2019, who started at the office's front counter in 1991; the only candidate on the ballot.",
+          "highlights": [
+            "Assessor since 2019, in the office since 1991 [S1]",
+            "Runs as an Independent, saying local offices should remain nonpartisan [S1]",
+            "Re-elected in 2022 with 55.4% over George Blush [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "mason-mason-county-auditor",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/mason/dossiers/mason-mason-county-auditor/"
+      ],
+      "office_does": "The auditor runs Mason County's elections and voter registration, records deeds and documents, issues licenses and keeps the county's accounts and financial reports.",
+      "race_blurb": "First-term Auditor Steve Duenkel, a Republican who also chairs the county Republican Party, runs on financial oversight and election security. Democrat Tamra Ingwaldson, a former United Way director who led the primary, promises nonpartisan administration and better support for staff.",
+      "candidates": [
+        {
+          "slug": "tamra-tam-ingwaldson",
+          "summary": "Former United Way of Mason County executive director and telecom employee, now with a tiny-home village nonprofit, running to make the auditor's office nonpartisan and more open.",
+          "highlights": [
+            "Over 20 years in nonprofit management and 20 in corporate telecommunications; no prior elected office [S1][S4]",
+            "Says an auditor who chairs a political party has a conflict of interest; promises administration 'without political influence' [S5]",
+            "Promises secure, accessible elections and better tools, training and staffing for office staff [S1][S5]",
+            "Endorsed by former auditors Karen Herr and Paddy McGuire, Commissioner Sharon Trask and the Mason County Democrats [S6]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S4",
+                "S5"
+              ],
+              "basis": "First-time candidate from nonprofit and corporate work, running to change how the office is led, though with long organizational leadership."
+            }
+          }
+        },
+        {
+          "slug": "steve-duenkel",
+          "summary": "Mason County Auditor since 2023 and county Republican Party chair, with a 37-year finance career at Boeing, Safeco and a small business, running as the county's financial 'watch dog'.",
+          "highlights": [
+            "Promises internal audits and controls 'to ensure your tax dollars are properly spent' and stronger budget oversight [S1][S3]",
+            "Told commissioners in 2026 the county was below its reserve policy; a commissioner disputed it [S7]",
+            "Plans tabulation-equipment upgrades and continued voter-roll maintenance [S1][S3]",
+            "Filed, then withdrew, deepfake lawsuits against a commissioner and an opponent's campaign treasurer [S5][S6]",
+            "Endorsed by former Democratic Auditor Al Brotche and former Secretary of State Sam Reed [S1][S3]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3",
+                "S4",
+                "S7"
+              ],
+              "basis": "Repeated, explicit focus on fiscal oversight: internal audits and controls on county spending, budget oversight, and public warnings that the county is short of its reserve policy."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3",
+                "S4"
+              ],
+              "basis": "First-term incumbent running on his record in the office."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "mason-mason-county-clerk",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/mason/dossiers/mason-mason-county-clerk/"
+      ],
+      "office_does": "The county clerk keeps the Superior Court's records and filings and collects and pays out the fees and money the court orders.",
+      "race_blurb": "Two Republicans: Clerk Charles Rhodes, elected in 2022, runs on modernizing the office and current collections; challenger Tammy Clark, a longtime law-office manager, promises to restore trust and stabilize staffing. The primary split 49% to 48%.",
+      "candidates": [
+        {
+          "slug": "charles-g-rhodes",
+          "summary": "Mason County Clerk since 2023, a licensed private investigator, Certified Fraud Examiner and Air Force veteran, running on his record in the office.",
+          "highlights": [
+            "Clerk since January 2023 after defeating the appointed incumbent in 2022 [S1][S3]",
+            "Says the office upgraded technology, modernized procedures and trained staff, saving the county money [S1]",
+            "Says collections are current and delinquent accounts are pursued [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "First-term incumbent running on his record in the office."
+            }
+          }
+        },
+        {
+          "slug": "tammy-clark",
+          "summary": "Law-office manager in Shelton for nine years, with more than 20 years in legal administration, running to restore trust and stability in the Clerk's Office.",
+          "highlights": [
+            "More than 20 years of legal management, the last nine in Mason County law offices [S1]",
+            "Promises proper staffing, transparent oversight and an end to high turnover [S1]",
+            "Endorsed by retired Clerk Pat Swartos, a Democrat who held the office 1984-2012 [S4]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Challenger from private legal administration promising to 'restore trust' and rebuild an office she says has high turnover."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "mason-mason-county-commissioner-district-3-county-commissioner-district-no-3",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/mason/dossiers/mason-mason-county-commissioner-district-3-county-commissioner-district-no-3/"
+      ],
+      "office_does": "The three county commissioners are Mason County's legislative body: they adopt the budget, pass ordinances and oversee roads, property and county services. Commissioners are nominated by district and elected county-wide.",
+      "race_blurb": "Open seat: Commissioner Sharon Trask did not run and resigned in September. Two Shelton City Council members who split on a 2024 homeless-housing sales tax meet again after a five-vote council race in 2021. Democrat Miguel Gutierrez campaigns on housing, health care and living wages; Republican George Blush on cracking down on encampments and blight and ending wasteful spending.",
+      "candidates": [
+        {
+          "slug": "miguel-gutierrez",
+          "summary": "Shelton City Council member since 2022 and former special education teacher, campaigning on 'Housing, Healthcare, and Hope' for Mason County.",
+          "highlights": [
+            "Calls for living wages, child care, elder care, affordable housing and security from medical bankruptcy [S1]",
+            "Voted for a 0.1% city sales tax to house people who are homeless and fund their services, rejected 4-3 [S9]",
+            "Voted to give the downtown homeless shelter's operator $20,000 and sits on its board [S1][S10]",
+            "Moved to pause the city's Flock license-plate camera contract [S12]",
+            "Endorsed by former county auditors and commissioners and by the Mason County Democrats [S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "housing": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S9"
+              ],
+              "basis": "Voted for a city sales tax to house people who are homeless and lists affordable housing among his goals: public investment in housing."
+            },
+            "taxes": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S9"
+              ],
+              "basis": "Voted for a new 0.1% city sales tax (about $310,000 a year) for homeless housing and services."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Platform of new public programs (living wages, child care, elder care, security from medical bankruptcy) delivered through government."
+            },
+            "safety": {
+              "score": 1,
+              "confidence": "low",
+              "citations": [
+                "S9",
+                "S10",
+                "S12"
+              ],
+              "basis": "Backed homeless shelter funding and a homeless-services tax, and moved to pause the city's license-plate camera contract; no stated policing platform."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S7",
+                "S8"
+              ],
+              "basis": "Second-term city council member (elected 2021, re-elected 2025) with an elected record, though new to county office."
+            }
+          }
+        },
+        {
+          "slug": "george-blush",
+          "summary": "Shelton City Council member, park board president and Mason County Housing Authority chair who runs a downtown restaurant, campaigning for a 'cleaner, safer, and more prosperous' county.",
+          "highlights": [
+            "Would unite code enforcement with the Sheriff's Office against illegal dumping, encampments and blight [S1]",
+            "Promises to end wasteful spending and live within the county's means [S1]",
+            "Voted against a 0.1% city sales tax for homeless housing and services [S6]",
+            "Would restore animal control and expand water access for wildfire fighting [S1]",
+            "Endorsed by the Mason County Republican Party; first of the party's three nominees for the vacant seat [S1][S8]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "safety": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Enforcement-first platform: code enforcement working with the sheriff against encampments, dumping and blight, and 'cracking down on crime and encampments.'"
+            },
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S2"
+              ],
+              "basis": "Explicit commitment to 'ending wasteful spending and living within our means' and fiscal responsibility.",
+              "adjusted_by_refutation": true
+            },
+            "taxes": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S6"
+              ],
+              "basis": "Voted against a new 0.1% city sales tax for homeless housing and services."
+            },
+            "experience": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S5"
+              ],
+              "basis": "Runs on 'proven government, business, and nonprofit leadership experience': city council since 2024, park board president and housing authority chair."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "mason-mason-county-coroner",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/mason/dossiers/mason-mason-county-coroner/"
+      ],
+      "office_does": "The Coroner investigates deaths in Mason County and works with families of the deceased.",
+      "race_blurb": "Uncontested: Coroner Jaime Taylor (Prefers Democratic Party), first elected in 2022, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "jaime-taylor",
+          "summary": "Mason County Coroner, nationally certified medicolegal death investigator with more than 18 years in death investigation; the only candidate on the ballot.",
+          "highlights": [
+            "Board-certified by the American Board of Medicolegal Death Investigators [S1]",
+            "Completing a four-year elected term after prior appointed experience [S1]",
+            "Unopposed in 2022 and 2026 [S2][S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "mason-mason-county-district-court-district-court-judge",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/mason/dossiers/mason-mason-county-district-court-district-court-judge/"
+      ],
+      "office_does": "Mason County's one District Court judge, elected county-wide for four years, hears and decides the court's cases, including criminal and protection-order matters.",
+      "race_blurb": "Uncontested: Judge George Alan Steele, on the District Court bench since 2019, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "george-alan-steele",
+          "summary": "Mason County District Court Judge since 2019 and a Shelton Municipal Court judge from 2009; the only candidate on the ballot.",
+          "highlights": [
+            "District Court Judge since January 2019, re-elected 2022; Shelton Municipal Court from 2009 [S1]",
+            "Says 'a judge is not a policy maker' and has authored two adopted court rules [S1]",
+            "In 2025 a Superior Court judge removed him from a protection-order case after he declined to find probable cause three times [S4][S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "mason-mason-county-prosecutor",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/mason/dossiers/mason-mason-county-prosecutor/"
+      ],
+      "office_does": "The Prosecuting Attorney prosecutes crimes in Mason County and is the civil lawyer for county government.",
+      "race_blurb": "Uncontested: Prosecuting Attorney Michael Dorcy (Prefers Republican Party), in office since 2011, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "michael-dorcy",
+          "summary": "Mason County Prosecuting Attorney since 2011 and a deputy prosecutor there before that; the only candidate on the ballot.",
+          "highlights": [
+            "Prosecuting Attorney since January 2011; deputy prosecutor 2004-2010 [S1][S2]",
+            "Names indigent defense funding and availability as the office's primary issue [S1]",
+            "Promises a 'firm and fair' approach and closer work with law enforcement [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "mason-mason-county-sheriff",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/mason/dossiers/mason-mason-county-sheriff/"
+      ],
+      "office_does": "The Sheriff leads the Mason County Sheriff's Office, the county's law enforcement agency.",
+      "race_blurb": "Uncontested: Sheriff Ryan Spurling (Prefers Republican Party), in office since 2023, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "ryan-spurling",
+          "summary": "Mason County Sheriff since 2023, retired after 25 years with the Washington State Patrol; the only candidate on the ballot.",
+          "highlights": [
+            "Sheriff since 2023; 25 years with the State Patrol and more than 22 years of military service [S1]",
+            "Promises a transparent office that is responsible with tax dollars [S1]",
+            "Opposed the 2026 state law letting a state board remove sheriffs, parts of which a judge enjoined [S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "mason-mason-county-treasurer",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/mason/dossiers/mason-mason-county-treasurer/"
+      ],
+      "office_does": "The treasurer collects property taxes and other county revenue, banks and invests the money of the county and its taxing districts, and manages county debt.",
+      "race_blurb": "Appointed Treasurer Brittany Pearson, a Democrat with 25 years on the office's staff, faces Republican Randy Lewis, a retired actuary; the ballot fills the rest of this term and the next. Pearson led the primary 54% to 46%.",
+      "candidates": [
+        {
+          "slug": "brittany-a-pearson",
+          "summary": "Appointed Mason County Treasurer after 25 years in the Treasurer's Office, running on knowledge of the office 'from the ground up'.",
+          "highlights": [
+            "25 years in the Treasurer's Office: tax collection, county finance, banking, investments, management [S1]",
+            "Priorities: fiscal responsibility, accuracy, accessibility and customer service [S1]",
+            "Led the August primary with 54% [S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "25-year career in the office she now leads by appointment; runs explicitly on experience and institutional knowledge."
+            }
+          }
+        },
+        {
+          "slug": "randy-lewis",
+          "summary": "Mason County native and retired actuary, a member of the county Planning Advisory Commission, seeking his first elected office.",
+          "highlights": [
+            "Retired actuary who chaired rate-setting and asset/liability committees for corporations [S1]",
+            "Would apply financial forecasting and risk management to county revenue and spending [S1]",
+            "Member of the Mason County Planning Advisory Commission [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "First-time candidate bringing private-sector actuarial experience to an office he has not worked in."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "mason-public-utility-district-no-1-of-mason-county-commissioner-district-2",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/mason/dossiers/mason-public-utility-district-no-1-of-mason-county-commissioner-district-2/"
+      ],
+      "office_does": "A Mason County PUD No. 1 commissioner sits on the three-member elected board that sets policy, budgets and the strategic plan for the electric and water utility based in Potlatch, for a six-year term; the whole PUD votes.",
+      "race_blurb": "Uncontested: Commissioner Ron Gold, in his third term representing District 2 (Skokomish Valley and Potlatch), is the only candidate and submitted no statement.",
+      "candidates": [
+        {
+          "slug": "ronald-s-gold",
+          "summary": "Mason County PUD No. 1 commissioner for District 2 in his third term; the only candidate on the ballot.",
+          "highlights": [
+            "District 2 commissioner for the 2021-2026 term, his third [S2]",
+            "Re-elected unopposed in 2020 [S3]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "mason-public-utility-district-no-3-of-mason-county-commissioner-district-2",
+      "scored_at": "2026-10-09",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/mason/dossiers/mason-public-utility-district-no-3-of-mason-county-commissioner-district-2/"
+      ],
+      "office_does": "A Mason PUD 3 commissioner sits on the three-member elected board that sets policy, the budget and rates for the public electric and fiber utility serving most of Mason County, for a six-year term; the whole PUD votes.",
+      "race_blurb": "Open seat: Commissioner Tom Farmer is not on the ballot. Sitting county commissioner Randy Neatherlin runs on 20 years in local office and a goal of no rate increases for four years. Retired state land surveyor and Forest Festival president Mick Sprouffske praises PUD 3's public power and fiber service and pledges affordable rates within state mandates.",
+      "candidates": [
+        {
+          "slug": "mick-sprouffske",
+          "summary": "Licensed land surveyor retired from the state Department of Natural Resources, Navy veteran and Mason County Forest Festival president, running for his first elected office.",
+          "highlights": [
+            "Managed DNR's Public Land Survey Office, working with all 39 county auditors [S1]",
+            "Credits PUD 3's public power with lower rates, reliability and shorter outages, and praises its fiber program [S1]",
+            "Will advocate for affordable electricity rates 'as allowed by state mandates' [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "randy-neatherlin",
+          "summary": "Mason County Commissioner (District 1) in his fourth term and former Port of Allyn commissioner, running on rate restraint and broadband.",
+          "highlights": [
+            "14 years as county commissioner and 6 as a Port of Allyn commissioner [S1][S3]",
+            "Aims for zero rate increases for four years by 'budgeting and living within our means' [S1]",
+            "Prioritizes PUD broadband competition, local service hubs and infrastructure for future growth [S1]"
           ],
           "evidence_level": "moderate",
           "withdrawn": false,

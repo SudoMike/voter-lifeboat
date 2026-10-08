@@ -1,0 +1,16 @@
+{
+  "county": "mason",
+  "script": "pipeline/extract_pdf_text.mjs",
+  "files": [
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/mason/raw/mason/local-voters-pamphlet.pdf.url",
+      "url": "https://www.masoncountywa.gov/Documents/Departments/Auditor/Elections/Current%20Election/General_2026_Local_Voters_Pamphlet.pdf",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/mason/interim/pdf-text/local-voters-pamphlet.txt"
+    },
+    {
+      "source_pointer": "data/washington-state/elections/2026-11-03-general/counties/mason/raw/mason/sample-ballot.pdf.url",
+      "url": "https://www.masoncountywa.gov/Documents/Departments/Auditor/Elections/Current%20Election/Web_Sample_Ballot.pdf",
+      "output": "data/washington-state/elections/2026-11-03-general/counties/mason/interim/pdf-text/sample-ballot.txt"
+    }
+  ]
+}
