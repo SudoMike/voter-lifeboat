@@ -69,7 +69,7 @@ sources:
 ---
 
 ## What the office does
-The PUD's powers are exercised through its three-member commission [S6]. Public Utility District No. 1 of Wahkiakum County covers the whole county: WA DOR's 2025 PUD layer has a single Wahkiakum polygon, district 1 [S7]. Each is nominated by the voters of a commissioner district and elected by all PUD voters [S6]; the 2022 and 2024 PUD commissioner races were on every precinct's general ballot [S4][S5]. Six-year term [S1].
+The PUD's powers are exercised through its three-member commission [S6]. Public Utility District No. 1 of Wahkiakum County covers the whole county: WA DOR's 2025 PUD layer has a single Wahkiakum polygon, district 1 [S7]. Each commissioner is nominated by the voters of a commissioner district and elected by all PUD voters [S6]; the 2022 and 2024 PUD commissioner races were on every precinct's general ballot [S4][S5]. Six-year term [S1].
 
 ## Race dynamics
 Uncontested. Commissioner Gene Healy, elected unopposed in 2020, is the only candidate [S1][S3].
