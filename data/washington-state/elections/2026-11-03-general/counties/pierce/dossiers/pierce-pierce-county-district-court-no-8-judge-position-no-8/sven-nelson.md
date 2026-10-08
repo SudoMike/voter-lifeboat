@@ -73,7 +73,6 @@ Since 2019 he has served as a judge pro tempore in municipal and district courts
 - Board member, Washington Council of Police and Sheriffs.
 - Former board president and treasurer, Rebuilding Hope Sexual Assault Center.
 - Campaign treasurer for University Place Councilmember Ed Wood (2018, 2020, 2024).
-- Elder at University Place Presbyterian Church.
 
 Only two candidates filed for Position 8, so the race did not appear on the August primary ballot. No primary dossier exists.
 
@@ -132,4 +131,4 @@ Not researched: judicial candidates are not scored on initiative positions.
 - About 30 years of prosecution with seven years as a judge pro tem; no full-time bench service [S1][S3].
 - Formation is prosecution, centered on victims of sexual assault and elder abuse. He frames treatment and community-court options as compatible with accountability, and cautions that restorative approaches must not minimize accountability [S1][S3].
 - Holds the TPCBA "Exceptionally Well Qualified" rating [S5].
-- Endorsed by the retiring incumbent and, per his campaign, most Pierce County judges, police and firefighter unions, and party organizations on both sides [S1][S2].
+- Endorsed by Position 8 Judge Lineberry, whom his campaign and statement describe as retiring, and, per his campaign, most Pierce County judges, police and firefighter unions, and party organizations on both sides [S1][S2].

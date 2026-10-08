@@ -85,7 +85,7 @@ A district court has jurisdiction, concurrent with the superior court, over misd
 
 ## District and race dynamics
 
-- **Open seat.** Judge Jeanette A. Lineberry is listed as a sitting Pierce County District Court judge [S4]. Sven Nelson's statement and campaign describe her as the retiring Position 8 judge, and she endorses him [S5][S6]. Neither candidate is a sitting judge of this court [S4].
+- **No incumbent on the ballot.** Judge Jeanette A. Lineberry is still listed as a sitting Pierce County District Court judge [S4], but she is not one of the two candidates who filed for Position 8. Sven Nelson's statement and campaign describe her as the retiring Position 8 judge, and she endorses him [S5][S6]. Neither candidate is a sitting judge of this court [S4].
 - **No primary.** Only two candidates filed, so the race skipped the August primary.
 - **Candidates.** The race pairs two different paths to the bench:
   - Sven Nelson: a 30-year Pierce County deputy prosecutor and judge pro tem since 2019 [S5][S6].
@@ -96,7 +96,7 @@ A district court has jurisdiction, concurrent with the superior court, over misd
 
 ## Differentiating issue axes
 
-- **Experience (record vs. renewal).** Both run on courtroom experience. Nelson's is three decades of prosecution plus pro tem service. Armstrong's is a year as a full-time presiding judge of a small municipal court plus pro tem service and a civil practice.
+- **Experience (record vs. renewal).** Both run on courtroom experience. Nelson's is three decades of prosecution plus pro tem service. Armstrong's is a year (2025) as presiding judge of the single-judge Bremerton Municipal Court, plus pro tem service and a civil practice [S11].
 - **Safety (formation).** This is the clearest split. Nelson's formation is prosecution, centered on sexual assault and elder abuse. He frames treatment and community court as compatible with accountability and warns restorative justice must not "minimize accountability." Armstrong's formation is civil. He emphasizes treatment-based rehabilitation (substance use, mental health, DV-MRT), restorative justice and the burden of legal financial obligations. Neither has a documented bail record.
 - **Judicial approach.** Evidence is thin for both. Nelson stresses decisions from "the facts, the law, and the record." Armstrong stresses sentencing consistency and says equal justice is achievable "without Judicial reforms."
 
