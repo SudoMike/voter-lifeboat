@@ -27,17 +27,16 @@ PRIMARY = "2026-08-04-primary"
 
 GENERAL_CFG = {
     "name": "Spokane County",
-    # Measure scopes on layers COUNTY_LAYERS["spokane"] (app/src/lib/geo.js)
-    # does not have yet (#21). Each value below is what a live point query of
-    # the proposed layer returns; until the layer is added the measures are
-    # hidden and the package is partial_county.
+    # Measure scopes resolve through geo.js COUNTY_LAYERS["spokane"] (#21,
+    # live point queries 2026-10-08, values in the comments below):
     #   SCHDST: gismo.spokanecounty.org .../OpenData/Boundary/MapServer/6, attr DISTRCTNAME
     #   FIRDST: gismo.spokanecounty.org .../OpenData/Boundary/MapServer/1, attr NAME
     #           (NAME, not CODE/SERVICE/DISTRICTID: towns that contract for
     #           fire service, e.g. Rockford and Spangle, carry their own NAME
     #           with the district's CODE, and the City of Cheney polygon
     #           carries DISTRICTID 32103 like Fire District 3)
-    "unresolvable_layers": ["SCHDST", "FIRDST"],
+    # PUDDST (Stevens County PUD) stays unresolvable; general_override marks it.
+    "unresolvable_layers": [],
 }
 
 # The general's local measures, transcribed 2026-10-08 from Spokane County's

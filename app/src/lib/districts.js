@@ -47,6 +47,19 @@ const NAMED_VALUES = {
   RFADST: {
     SCRFA: 'South Snohomish County Fire & Rescue Regional Fire Authority',
   },
+  // Spokane FIRDST reads the county fire layer's NAME (geo.js). Districts
+  // read 'Fire District 9'; these other polygons are cities with their own
+  // department, towns served by contract, and land outside every district.
+  FIRDST: {
+    'SPOKANE VALLEY FIRE': 'Spokane Valley Fire Department (Fire District 1)',
+    'CITY OF SPOKANE': 'City of Spokane Fire Department',
+    CHENEY: 'Cheney Fire Department',
+    'AIRWAY HEIGHTS': 'Airway Heights Fire Department',
+    ROCKFORD: 'Town of Rockford (fire service by contract)',
+    SPANGLE: 'Town of Spangle (fire service by contract)',
+    'CONTRACT SERVICE': 'Fire service by contract (no fire district)',
+    UNSERVED: 'No fire district',
+  },
 }
 
 // Districts that decide which candidates a voter sees come first, then the
@@ -105,6 +118,9 @@ export function describeDistrict(key, value, bodyName = null) {
   // Codes that carry a service prefix ('SCC5') still have the number we want.
   const numbered = raw.match(/^[A-Za-z]+(\d+)$/)
   if (numbered) return `${label} ${numbered[1]}`
+  // Spokane's school layer names districts 'Spokane #81'.
+  const hashed = key === 'SCHDST' && raw.match(/^(.*\S)\s*#(\d+)$/)
+  if (hashed) return `${hashed[1]} School District No. ${hashed[2]}`
   // Values that already read as a proper name stand on their own.
   if (/district|authority|area|county/i.test(raw)) return tidy(raw)
   return `${label} ${tidy(raw)}`

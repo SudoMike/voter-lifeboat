@@ -602,3 +602,71 @@ test('another RFA or no fire feature leaves RFADST unset', async () => {
   assert.equal('RFADST' in context.districts, false)
   assert.ok(!scopeMatches(snohomishRfa, context))
 })
+
+// Spokane school and fire districts come from the county's OpenData/Boundary
+// service: layer 6 DISTRCTNAME and layer 1 NAME (live 2026-10-08, #21:
+// 808 W Spokane Falls Blvd -> 'Spokane #81', 'City of Spokane'; 3801 E
+// Farwell Rd, Mead -> 'Mead #354', 'Fire District 9').
+function mockSpokane(matchedAddress, school, fire) {
+  const calls = []
+  global.fetch = async (url) => {
+    calls.push(String(url))
+    if (String(url).startsWith('/api/geocode')) {
+      return {
+        ok: true,
+        async json() {
+          return {
+            result: {
+              addressMatches: [{
+                matchedAddress,
+                coordinates: { x: -117.36, y: 47.77 },
+                geographies: {
+                  Counties: [{ STATE: '53', COUNTY: '063', NAME: 'Spokane County' }],
+                  '120th Congressional Districts': [{ BASENAME: '5' }],
+                  '2026 State Legislative Districts - Lower': [{ BASENAME: '7' }],
+                },
+              }],
+            },
+          }
+        },
+      }
+    }
+    const u = String(url)
+    const attrs = u.includes('Boundary/MapServer/6/query')
+      ? { DISTRCTNAME: school }
+      : u.includes('Boundary/MapServer/1/query')
+        ? { NAME: fire }
+        : null
+    return { ok: true, async json() { return { features: attrs ? [{ attributes: attrs }] : [] } } }
+  }
+  return calls
+}
+
+const spokaneData = {
+  coverage: { statewide_complete: true, supported_counties: [{ id: 'spokane', coverage: 'partial_county' }] },
+}
+
+test('Spokane resolves school and fire districts by name from the county layers', async () => {
+  const calls = mockSpokane('3801 E FARWELL RD, MEAD, WA, 99021', 'Mead #354', 'Fire District 9')
+  const context = await lookupBallotContext(spokaneData, '3801 E Farwell Rd Mead WA 99021')
+  assert.equal(context.districts.SCHDST, 'Mead #354')
+  assert.equal(context.districts.FIRDST, 'Fire District 9')
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(scopeMatches({ kind: 'DISTRICT', county: 'spokane', layer: 'FIRDST', value: 'Fire District 9' }, context))
+  assert.ok(!scopeMatches({ kind: 'DISTRICT', county: 'spokane', layer: 'SCHDST', value: 'Spokane #81' }, context))
+  const fire = calls.find((u) => u.includes('Boundary/MapServer/1/query'))
+  // NAME, not CODE: contract towns carry the serving district's CODE.
+  assert.equal(new URL(fire).searchParams.get('outFields'), 'NAME')
+  const school = calls.find((u) => u.includes('Boundary/MapServer/6/query'))
+  assert.equal(new URL(school).searchParams.get('outFields'), 'DISTRCTNAME')
+})
+
+test('a Spokane city with its own fire department matches no fire district measure', async () => {
+  mockSpokane('808 W SPOKANE FALLS BLVD, SPOKANE, WA, 99201', 'Spokane #81', 'City of Spokane')
+  const context = await lookupBallotContext(spokaneData, '808 W Spokane Falls Blvd Spokane WA 99201')
+  assert.equal(context.districts.FIRDST, 'City of Spokane')
+  assert.ok(scopeMatches({ kind: 'DISTRICT', county: 'spokane', layer: 'SCHDST', value: 'Spokane #81' }, context))
+  for (const n of [2, 3, 9, 11, 12]) {
+    assert.ok(!scopeMatches({ kind: 'DISTRICT', county: 'spokane', layer: 'FIRDST', value: `Fire District ${n}` }, context))
+  }
+})

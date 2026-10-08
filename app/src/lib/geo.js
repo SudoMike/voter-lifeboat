@@ -204,6 +204,31 @@ const COUNTY_LAYERS = {
       attr: 'NAME',
     },
     {
+      // School districts. DISTRCTNAME is the name the general's measures are
+      // scoped to ('Spokane #81', 'Central Valley #356'). Live 2026-10-08
+      // (#21): 808 W Spokane Falls Blvd, Spokane -> 'Spokane #81'; 22710 E
+      // Country Vista Dr, Liberty Lake -> 'Central Valley #356'; 3801 E
+      // Farwell Rd, Mead -> 'Mead #354'. DOR SCH2025 agrees (81, 356, 354).
+      key: 'SCHDST',
+      url: 'https://gismo.spokanecounty.org/arcgis/rest/services/OpenData/Boundary/MapServer/6/query',
+      attr: 'DISTRCTNAME',
+    },
+    {
+      // Fire districts. NAME, not CODE or DISTRICTID: towns that contract
+      // for fire service carry their own NAME with the district's CODE
+      // (Rockford '11', Spangle '03'), and the City of Cheney polygon carries
+      // DISTRICTID 32103 like Fire District 3. Cities with their own fire
+      // department read 'City of Spokane', 'Cheney', 'Airway Heights';
+      // outside every district, 'Unserved'. Live 2026-10-08 (#21): 3801 E
+      // Farwell Rd, Mead -> 'Fire District 9'; 808 W Spokane Falls Blvd ->
+      // 'City of Spokane'; 22710 E Country Vista Dr -> 'Spokane Valley Fire'.
+      // Known gap: the Town of Fairfield (102 E Main St) is 'Fire District 2'
+      // here but outside FD 2 in DOR FIR2025 (layer 7).
+      key: 'FIRDST',
+      url: 'https://gismo.spokanecounty.org/arcgis/rest/services/OpenData/Boundary/MapServer/1/query',
+      attr: 'NAME',
+    },
+    {
       // Park & recreation districts; the Rosalia district spans the Whitman
       // County line and its Spokane-side value is 'ROSA'.
       key: 'PARKDST',

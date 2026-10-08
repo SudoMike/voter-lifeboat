@@ -27,6 +27,15 @@ test('values that already read as a name stand alone', () => {
   assert.equal(describeDistrict('RFADST', 'SCRFA'), 'South Snohomish County Fire & Rescue Regional Fire Authority')
 })
 
+test('Spokane school and fire layer values read as names', () => {
+  assert.equal(describeDistrict('SCHDST', 'Spokane #81'), 'Spokane School District No. 81')
+  assert.equal(describeDistrict('SCHDST', 'Reardan/Edwall #9'), 'Reardan/Edwall School District No. 9')
+  assert.equal(describeDistrict('FIRDST', 'Fire District 9'), 'Fire District 9')
+  assert.equal(describeDistrict('FIRDST', 'City of Spokane'), 'City of Spokane Fire Department')
+  assert.equal(describeDistrict('FIRDST', 'Spokane Valley Fire'), 'Spokane Valley Fire Department (Fire District 1)')
+  assert.equal(describeDistrict('FIRDST', 'Unserved'), 'No fire district')
+})
+
 test('codes are tidied without mangling initialisms', () => {
   assert.equal(describeDistrict('FIRDST', 'TACOMA'), 'Fire District Tacoma')
   assert.equal(describeDistrict('SCCDST', 'SCC5'), 'Seattle City Council District 5')

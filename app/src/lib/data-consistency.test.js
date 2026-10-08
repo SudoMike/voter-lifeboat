@@ -120,6 +120,13 @@ const UNRESOLVABLE_SCOPES = new Set([
   // those boundaries (build_snohomish_lite_data.py general_override), so the
   // general's Snohomish package is partial_county.
   'snohomish/DISTCRT',
+  // Spokane voters inside Public Utility District No. 1 of Stevens County
+  // vote for its commissioner seat; no electoral boundary layer for the
+  // PUD's Spokane territory is published (the county's Water Districts layer
+  // maps water-service areas, not electoral boundaries;
+  // build_spokane_lite_data.py general_override), so the general's Spokane
+  // package is partial_county.
+  'spokane/PUDDST',
 ])
 
 const CENSUS_LAYERS = new Set(['CONGDST', 'LEGDST', 'CITY'])
