@@ -56,8 +56,10 @@ DOR_LAYER_KEYS = {
 TAX_BASIS = "YES approves a local tax, levy, bond, or annexation measure for the listed public service."
 
 
-def m(jurisdiction, proposition, title, scope, what_it_does, cost_line, source_url):
-    """Measure entry. scope is (layer, value), ('COUNTY', None), or ('CITY', name)."""
+def m(jurisdiction, proposition, title, scope, what_it_does, cost_line, source_url, pages=()):
+    """Measure entry. scope is (layer, value), ('COUNTY', None), or ('CITY', name).
+    pages: PDF pages of the county's local-voters-pamphlet pointer that print
+    the measure (officialLinks.js pamphletPdfs links them); none by default."""
     return {
         "jurisdiction": jurisdiction,
         "proposition": proposition,
@@ -66,6 +68,7 @@ def m(jurisdiction, proposition, title, scope, what_it_does, cost_line, source_u
         "what_it_does": what_it_does,
         "cost_line": cost_line,
         "source_url": source_url,
+        "pages": tuple(pages),
     }
 
 
@@ -654,7 +657,8 @@ ELECTION_MEASURES = {
                   ("CITY", "Longview"),
                   "Lifts Longview's regular property tax levy to hire firefighter paramedics/EMTs, replace aging equipment, buy a fire engine and build a third fire station; the 2027 levy becomes the base for future levy limits.",
                   "Raises the city's regular levy rate by $1.15 per $1,000 of assessed value beginning in 2027 (opponents: from $1.955 to $3.105).",
-                  "https://voter.votewa.gov/elections/measure.ashx?m=7372&e=899&la=en&c=08"),
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7372&e=899&la=en&c=08",
+                  pages=(57, 58)),
             ],
         },
         # Grant (#28). Measures: Grant County Elections' November 2026 sample
@@ -736,28 +740,32 @@ ELECTION_MEASURES = {
               ("CITY", "Mount Vernon"),
               "Renews the Mount Vernon Transportation Benefit District's 0.2% sales and use tax for ten more years to pay for street repair, preservation and other transportation improvements in the city.",
               "0.2% sales and use tax (2 cents on $10), about $2.3 million a year; the current tax ends in April 2027 unless renewed.",
-              "https://voter.votewa.gov/elections/measure.ashx?m=7426&e=899&la=en&c=29"),
+              "https://voter.votewa.gov/elections/measure.ashx?m=7426&e=899&la=en&c=29",
+              pages=(18,)),
             # 325 Metcalf St, Sedro-Woolley -> Census place 'Sedro-Woolley city'.
             m("City of Sedro-Woolley", "Proposition No. 1",
               "Annexation into Central Skagit Rural Partial-County Library District",
               ("CITY", "Sedro-Woolley"),
               "Annexes the City of Sedro-Woolley into the Central Skagit Rural Partial-County Library District, replacing the city's contract for library service with district membership.",
               "District levy estimated at $0.232 per $1,000 of assessed value from 2028; the city plans to cut its own levy by up to $474,115, a net increase of about $11 in 2028 on a $519,450 home.",
-              "https://voter.votewa.gov/elections/measure.ashx?m=7427&e=899&la=en&c=29"),
+              "https://voter.votewa.gov/elections/measure.ashx?m=7427&e=899&la=en&c=29",
+              pages=(19,)),
             # 305 N 6th St, La Conner -> DOR SCH2025 (layer 20) DISTATTRIB '311'.
             m("La Conner School District No. 311", "Proposition No. 1",
               "Educational Facility Modernization and Technology Levy",
               ("SCHDST", "311"),
               "Authorizes a four-year capital levy to modernize existing school buildings and replace and upgrade technology systems.",
               "$350,000 to $395,000 a year for 2027 through 2030 ($1,490,000 total), about $0.31 per $1,000 of assessed value.",
-              "https://voter.votewa.gov/elections/measure.ashx?m=7428&e=899&la=en&c=29"),
+              "https://voter.votewa.gov/elections/measure.ashx?m=7428&e=899&la=en&c=29",
+              pages=(20,)),
             # 5800 Main St, Bow (Edison) -> DOR FIR2025 (layer 7) DISTATTRIB '5'.
             m("Skagit County Fire Protection District No. 5", "Proposition No. 1",
               "Authorizing Regular Property Tax Levy",
               ("FIRDST", "5"),
               "Restores the fire district's regular property tax levy to $0.78 per $1,000 and lets it grow up to 3% a year for five years (Allen, Bow, Edison, Samish Island, Chuckanut Drive).",
               "$0.78 per $1,000 of assessed value in 2027, then up to 3% more a year (never above $1.50).",
-              "https://voter.votewa.gov/elections/measure.ashx?m=7429&e=899&la=en&c=29"),
+              "https://voter.votewa.gov/elections/measure.ashx?m=7429&e=899&la=en&c=29",
+              pages=(21,)),
         ]},
         # Whatcom (#28). Measures: VoteWA's online voters' guide for Whatcom
         # County (voterguide.ashx?e=899&c=37, read 2026-10-08) lists five local
@@ -876,7 +884,7 @@ def county_docs(county, cfg, election_id, measures_curated=True):
             "proposition": prop,
             "title": mm["title"],
             "scope": scope_json(county, mm["scope"]),
-            "pamphlet_pages": [],
+            "pamphlet_pages": [{"edition": "local-voters-pamphlet", "page": p} for p in mm["pages"]],
             "what_it_does": mm["what_it_does"],
             "cost_line": mm["cost_line"],
             "pro_summary": None,
