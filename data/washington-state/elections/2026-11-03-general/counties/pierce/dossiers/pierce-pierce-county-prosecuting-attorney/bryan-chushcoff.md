@@ -87,7 +87,7 @@ Bryan Chushcoff is a former Pierce County Superior Court judge; his campaign say
 
 ## Endorsements
 - Pierce County Republican Party [S4].
-- Tacoma Police Union IUPA Local 6, Puyallup Police Association, and Pierce County Deputy Sheriff's Independent Guild (the last two also named in his statement); the campaign says every law enforcement union that has endorsed in the race has endorsed him [S5].
+- Tacoma Police Union IUPA Local 6, Puyallup Police Association, and Pierce County Deputy Sheriff's Independent Guild (the last two also named in his statement); the campaign says every law enforcement union that has endorsed in the race has endorsed him [S5][S8].
 - Gig Harbor Professional Firefighters IAFF Local 3390 [S6].
 
 ## Scoring notes
