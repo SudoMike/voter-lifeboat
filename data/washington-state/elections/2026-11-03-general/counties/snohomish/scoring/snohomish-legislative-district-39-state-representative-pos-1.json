@@ -1,0 +1,115 @@
+{
+  "contest_slug": "snohomish-legislative-district-39-state-representative-pos-1",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/snohomish/dossiers/snohomish-legislative-district-39-state-representative-pos-1/"],
+  "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering taxes, school funding, housing rules, health policy and criminal-justice statutes.",
+  "race_blurb": "Two-term Republican incumbent Sam Low, ranking Republican on House Housing, faces Democrat Kathryn Lewandowsky, a registered nurse and first-time candidate. The race contrasts Low's opposition to the 2026 tax on income over $1 million and his supply-side housing record with Lewandowsky's single-payer health care and tenant-protection platform.",
+  "candidates": [
+    {
+      "slug": "kathryn-lewandowsky",
+      "summary": "Registered nurse and former hospital union steward running for office for the first time on single-payer health care, housing as a human right and a pause on data-center growth.",
+      "highlights": [
+        "Supports a universal, publicly accountable single-payer health care system; board officer of Whole Washington and One Payer States [S1][S2]",
+        "Calls housing a human right and backs tenant protections and more affordable housing [S1][S2]",
+        "Says data-center expansion must stop until privacy and cost protections are law [S3]",
+        "Endorsed by Snohomish County Democrats and Washington State Stonewall Democrats [S1][S4]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "healthcare": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "Platform calls for a universal single-payer system; she holds board roles in two single-payer advocacy organizations."
+        },
+        "housing": {
+          "score": 2,
+          "confidence": "medium",
+          "citations": ["S1", "S2"],
+          "basis": "Calls housing a human right, not a speculative investment, and supports expanding affordable housing and protecting tenants from predatory practices."
+        },
+        "tech": {
+          "score": 2,
+          "confidence": "medium",
+          "citations": ["S1", "S3"],
+          "basis": "Says data-center growth must stop until laws protect privacy and make corporations bear the costs, and opposes shifting data-center power costs onto families."
+        },
+        "climate": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S2"],
+          "basis": "Supports accelerating the clean-energy transition and calls climate stability a right; no stated position on carbon pricing."
+        },
+        "experience": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1"],
+          "basis": "Has never held public office; running against a two-term incumbent."
+        },
+        "social": {
+          "score": 1,
+          "confidence": "low",
+          "citations": ["S4"],
+          "basis": "Endorsed by Washington State Stonewall Democrats; no statement of her own on LGBTQ+ or reproductive policy."
+        }
+      }
+    },
+    {
+      "slug": "sam-low",
+      "summary": "Two-term Republican incumbent and former Snohomish County councilmember, ranking Republican on House Housing, running on tax relief, transportation, housing supply and public safety.",
+      "highlights": [
+        "Voted against ESSB 6346, the 2026 tax on income over $1 million, and joined the 24-hour House floor fight against it [S2][S3][S4]",
+        "Says Washington 'does not have a revenue problem. It has a spending problem' [S3]",
+        "Prime sponsor of EHB 1345, allowing detached ADUs outside urban growth areas, signed in 2026 [S3][S10]",
+        "Voted against 2025 rent-increase limits (EHB 1217) and the clean-fuels expansion (2SHB 1409) [S7][S8]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S2", "S3", "S9"],
+          "basis": "Voted no on ESSB 6346 and ESSB 5814, publicly opposed the income tax and pledges tax relief; multiple independent sources."
+        },
+        "spending": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S3"],
+          "basis": "Calls the 2026 supplemental budget unsustainable, opposed using pension surplus to ease budget pressure, and says the state has a spending problem."
+        },
+        "housing": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S3", "S7", "S10", "S12"],
+          "basis": "Blames regulation and permitting for housing costs, sponsored rural ADU legalization, and voted against 2025 rent-increase limits."
+        },
+        "climate": {
+          "score": -2,
+          "confidence": "medium",
+          "citations": ["S3", "S8"],
+          "basis": "Criticizes CCA and fuel taxes as driving costs and wants CCA revenue for roads; voted no on the 2025 clean-fuels expansion."
+        },
+        "safety": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S1", "S3"],
+          "basis": "Lists prioritizing public safety and law-enforcement endorsements; sponsored benefits for families of fallen officers; no detailed enforcement proposals."
+        },
+        "experience": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S5"],
+          "basis": "Two-term incumbent and committee ranking member, three terms on the county council, 12 bills enacted in 2025-2026."
+        },
+        "parental-rights": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S6"],
+          "basis": "Voted no on ESHB 1296, which amended the I-2081 parental-rights list; no campaign statement on the topic."
+        }
+      }
+    }
+  ]
+}

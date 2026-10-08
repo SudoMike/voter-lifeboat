@@ -1,0 +1,96 @@
+{
+  "contest_slug": "snohomish-legislative-district-38-state-senator",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/snohomish/dossiers/snohomish-legislative-district-38-state-senator/"],
+  "office_does": "A State Senator writes and votes on Washington state law and the operating, capital and transportation budgets, and confirms the governor's appointments, for a four-year term.",
+  "race_blurb": "Democratic incumbent June Robinson, chair of the Senate budget committee, faces first-time Republican candidate Brad Bender; Robinson took about two thirds of the primary vote. The race contrasts Robinson's sponsorship of the 2026 tax on income over $1 million with Bender's call for a low-tax state.",
+  "candidates": [
+    {
+      "slug": "june-robinson",
+      "summary": "Incumbent State Senator and chair of Senate Ways & Means, in the Legislature since 2013, a public-health professional whose record centers the state budget, tax reform, housing and health care.",
+      "highlights": [
+        "Chairs the Senate Ways & Means (budget) Committee; in the House 2013-2020 and the Senate since 2020 [S5]",
+        "Co-sponsored and voted for SB 6346, the 2026 tax on income over $1 million, and prime-sponsored the 2021 capital gains tax [S6][S7][S8]",
+        "Pledges to safeguard reproductive rights and defend immigrant and LGBTQ+ neighbors [S1]",
+        "Voted for ESHB 1296 (2025 parental-rights amendments) and EHB 1217 (rent increase limits) [S9][S10]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S6", "S7", "S8"],
+          "basis": "Co-sponsored and voted for the 9.9% tax on income over $1 million, prime-sponsored the 2021 capital gains tax, and calls asking millionaires to pay a fair share her tax-reform achievement."
+        },
+        "spending": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S2"],
+          "basis": "Cites record investments in housing, behavioral health, child care and health care and ties tax reform to sustaining public investment; as budget chair she also manages constraints, so not maximal."
+        },
+        "housing": {
+          "score": 2,
+          "confidence": "medium",
+          "citations": ["S1", "S2", "S10"],
+          "basis": "Voted for the 2025 cap on residential rent increases, cites record investments in affordable housing and is a former housing consortium director."
+        },
+        "immigration": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1"],
+          "basis": "Pamphlet pledges to defend immigrant neighbors; no specific enforcement or sanctuary measures named."
+        },
+        "experience": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S5"],
+          "basis": "In the Legislature since 2013 and chair of Senate Ways & Means; opponent has never held office."
+        },
+        "social": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S3"],
+          "basis": "Pledges to safeguard reproductive rights and defend LGBTQ+ neighbors, calls reproductive care a human right, will protect abortion access and objects to attacks on care for transgender people."
+        },
+        "parental-rights": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S3", "S9"],
+          "basis": "Voted for ESHB 1296, which modified the I-2081 parental-rights list, and says she helped pass the state's comprehensive sex-education law; no statement on notification or opt-outs."
+        }
+      }
+    },
+    {
+      "slug": "brad-bender",
+      "summary": "First-time Republican candidate, an electrician and small-business owner running on making Washington a low-tax, affordable state.",
+      "highlights": [
+        "Wants Washington to be 'a reasonable, economical, and low-tax state' [S1]",
+        "Says Democrats in Olympia raise taxes to cover their own spending [S1]",
+        "No prior elected office; over thirty years in the electrical field [S1]"
+      ],
+      "evidence_level": "pamphlet-only",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -2,
+          "confidence": "medium",
+          "citations": ["S1"],
+          "basis": "Pamphlet statement centers lowering taxes and a 'low-tax state'; a single source."
+        },
+        "spending": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S1"],
+          "basis": "Criticizes state spending as the driver of tax increases; no specific cuts or audits proposed."
+        },
+        "experience": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1"],
+          "basis": "States he has no previous elected experience and offers a 'blue-collar voice' against a long-serving incumbent."
+        }
+      }
+    }
+  ]
+}

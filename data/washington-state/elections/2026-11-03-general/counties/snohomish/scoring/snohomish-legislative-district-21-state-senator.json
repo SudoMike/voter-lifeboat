@@ -1,0 +1,51 @@
+{
+  "contest_slug": "snohomish-legislative-district-21-state-senator",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/snohomish/dossiers/snohomish-legislative-district-21-state-senator/"],
+  "office_does": "A State Senator writes and votes on Washington state law and the operating, capital and transportation budgets, and the Senate confirms the governor's appointments.",
+  "race_blurb": "Democratic incumbent Marko Liias, in the Senate since 2014 and chair of its Transportation Committee, faces Republican Riaz Khan, a former Mukilteo councilmember. Liias has voted for the 2026 tax on income over $1 million and other progressive tax bills; Khan campaigns on lower taxes, spending restraint and parental rights.",
+  "candidates": [
+    {
+      "slug": "marko-liias",
+      "summary": "Incumbent State Senator since 2014 and chair of the Senate Transportation Committee, a former state representative and Mukilteo councilmember whose record includes clean-fuels laws, progressive tax votes and student cellphone limits.",
+      "highlights": [
+        "Chairs Senate Transportation; in the Legislature since 2008 [S1]",
+        "Voted for ESSB 6346, the 9.9% tax on income over $1 million, and ESSB 5813's capital gains and estate tax changes [S5][S7]",
+        "Lists clean fuels, building-emissions and greenhouse-gas tracking laws among his achievements [S3]",
+        "Prime sponsor of SB 5346, restricting student cellphone use in public schools [S11]",
+        "Voted for ESHB 1296 (2025), which amended the I-2081 parental-rights list [S6]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": 2, "confidence": "high", "citations": ["S5", "S7"], "basis": "Recorded votes for ESSB 6346 (tax on income over $1 million) and ESSB 5813 (more progressive capital gains and estate taxes), two independent tax votes."},
+        "spending": {"score": 1, "confidence": "medium", "citations": ["S1", "S3"], "basis": "Campaigns on transportation infrastructure jobs and lists school-funding and transportation packages as achievements; no stated restraint agenda."},
+        "housing": {"score": 1, "confidence": "medium", "citations": ["S1", "S8"], "basis": "Cites winning resources for affordable units and voted for EHB 1217 rent and fee limits, alongside calls for more housing near transit."},
+        "climate": {"score": 2, "confidence": "high", "citations": ["S3", "S10"], "basis": "Lists the Low Carbon Fuel Standard, building-emissions standards and GHG tracking as achievements and voted for the 2025 clean fuels bill."},
+        "experience": {"score": -2, "confidence": "high", "citations": ["S1"], "basis": "Senator since 2014, representative 2008-2014, current committee chair and former Majority Floor Leader."},
+        "local-control": {"score": 1, "confidence": "medium", "citations": ["S1", "S9"], "basis": "Says he has demanded more housing near light rail and voted for ESHB 2266's state rules on siting supportive housing and shelters."},
+        "tech": {"score": 1, "confidence": "medium", "citations": ["S3", "S11"], "basis": "Sponsored student cellphone restrictions and says he is working to tax large social media platforms and search engines to fund local news."},
+        "immigration": {"score": 1, "confidence": "medium", "citations": ["S1"], "basis": "Pamphlet cites advocacy for immigrant neighbors and protecting families from 'dangerous federal policies'; no specific bill cited."},
+        "social": {"score": 1, "confidence": "medium", "citations": ["S1", "S2"], "basis": "Pamphlet cites his advocacy for LGBTQ+ neighbors; no specific policy on gender or reproductive issues cited."},
+        "parental-rights": {"score": 1, "confidence": "medium", "citations": ["S6"], "basis": "Voted for ESHB 1296, which amended and narrowed parts of the I-2081 parental-rights list; no campaign statement on the topic."}
+      }
+    },
+    {
+      "slug": "riaz-khan",
+      "summary": "Boeing employee and former Mukilteo City Councilmember (2019-2023) running on lower taxes, reduced spending, public safety and parental rights.",
+      "highlights": [
+        "Former Mukilteo City Councilmember and Boeing SPEEA council representative [S1]",
+        "Lists 'Lower Taxes' and reducing unnecessary government spending as priorities [S1][S2]",
+        "Names protecting parental rights as a priority, without specific proposals [S1][S2]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": -2, "confidence": "medium", "citations": ["S1", "S2"], "basis": "Lists lower taxes as a top priority and says Washington's future depends on protecting taxpayers; stated generally, without specific tax proposals."},
+        "spending": {"score": -1, "confidence": "medium", "citations": ["S1", "S2"], "basis": "Supports responsible budgeting and reducing unnecessary government spending, without naming cuts."},
+        "experience": {"score": 1, "confidence": "medium", "citations": ["S1"], "basis": "One term on a city council and no state office, challenging a twelve-year senator."},
+        "parental-rights": {"score": -1, "confidence": "medium", "citations": ["S1", "S2"], "basis": "Names preserving parental rights as a priority in pamphlet and site, without detail on notification or opt-outs."}
+      }
+    }
+  ]
+}
