@@ -87,7 +87,9 @@ pamphlet text, county/local dossiers, measures, and county-specific scoping.
 King County is fully supported in both elections; the general's package
 status is in `elections/2026-11-03-general/counties/king/COMPLETENESS.md`.
 
-From the general on, King's interim files are schema 2 (`parse_candidates.py`)
+From the general on, King's interim files are schema 2 (`parse_candidates.py`;
+since #20 `office` is the seat and `district` the jurisdiction, as in every
+other package)
 and `assemble_app_data.py` reads them by rule rather than by the primary's
 hand-written scope tables:
 
@@ -125,6 +127,15 @@ County packages may exist before the app supports that county. A package marked
 needs parsed contests/measures, dossiers, scoring files, and district scoping
 before it can be added to `coverage.supported_counties`.
 
+In the general, county packages are built from VoteWA election 899's
+candidate list (`pipeline/fetch_votewa_candidate_list.py`, then the county's
+builder; the export's Election Status column is blank, so
+`election.VOTEWA_SOURCES` filters on `""`) and taken through research,
+scoring and refutation by `docs/county-wave-playbook.md`. A race another
+package already researched (for example a legislative district King shares)
+is not researched again: `build_research_plan.py` names the owning package
+and `assemble_app_data.py` ships that package's scoring and dossiers.
+
 ## Transformations
 
 `E` is `data/washington-state/elections/<id>`; `F` is `data/final/<id>`.
@@ -133,12 +144,13 @@ before it can be added to `coverage.supported_counties`.
 |---|---|
 | `pipeline/extract_pamphlet_text.py` | King `.pdf.url` pointers → cached PDFs → `E/counties/king/interim/pamphlet-text/` |
 | `pipeline/extract_pdf_text.mjs <county>` | county `.pdf.url` pointers → `E/counties/<county>/interim/pdf-text/` |
-| `pipeline/build_votewa_lite_data.py` | VoteWA candidate-list CSVs → `E/counties/*/interim/app-{contests,measures}.json` |
-| `pipeline/build_<county>_lite_data.py` | county pdf-text → `E/counties/<county>/interim/app-{contests,measures}.json` (clark, kitsap, pierce, snohomish, spokane, thurston) |
+| `pipeline/fetch_votewa_candidate_list.py` | VoteWA candidate list (form-post CSV export) → `data/.cache/votewa/` + `E/counties/<county>/raw/votewa/candidate-list.csv.{url,meta.json}` (sha256-pinned pointer; the general onward) |
+| `pipeline/build_votewa_lite_data.py` | VoteWA candidate-list CSVs (`pipeline/votewa.py`) → `E/counties/*/interim/app-{contests,measures}.json` (the 32 counties in `COUNTY_CONFIG`; `--county` for one) |
+| `pipeline/build_<county>_lite_data.py` | primary: county pdf-text → `E/counties/<county>/interim/app-{contests,measures}.json`; the general onward: the county's VoteWA export (clark, kitsap, pierce, snohomish, spokane, thurston) |
 | `pipeline/parse_candidates.py` | King raw KCE HTML/CSV → `E/counties/king/interim/{contests,measures}.json` |
 | `pipeline/build_pamphlet_index.py` | King contests/measures/page text → `E/counties/king/interim/pamphlet-index.json` |
 | `pipeline/normalize_research_inputs.py` | county `app-*.json` → county `interim/{contests,measures}.json`; for the primary also `E/statewide/interim/contests.json` (see below) |
-| `pipeline/build_research_plan.py` | package contests/measures/index → `interim/research-plan.json` |
+| `pipeline/build_research_plan.py` | package contests/measures/index → `interim/research-plan.json` (in the general, also which races another package already researched: `pipeline/shared_contests.py`) |
 | `pipeline/verify_dossiers.py` | package dossiers + plan → `interim/dossier-audit.json` |
 | `pipeline/extract_axis_notes.py` | package `_contest.md` files + measures → `E/counties/king/interim/axis-notes.md` |
 | `pipeline/validate_scoring.py` | package scoring + dossiers + `F/rubric.json` → validation report |
@@ -166,8 +178,8 @@ field names another script (or is `null`, as in hand-built files):
   the run before anything is written.
 
 King has no `app-contests.json`, so its contests never feed the normalizer.
-The general currently has no other county packages, so running the
-normalizer for it changes no file.
+In the general it normalizes the county packages ingested so far (#20:
+clark, kitsap, pierce, snohomish, spokane, thurston); none of them ships.
 
 ## Election Facts
 
@@ -201,8 +213,11 @@ normalizer for it changes no file.
   County, King, at `full_county` (#16): 97 contests (the 5 statewide Supreme
   Court contests plus 92 King contests, 41 of them uncontested and
   information-only) and 18 measures (3 statewide, 15 King local). Every
-  other Washington address gets the Statewide-Only Guide; no other county
-  package exists yet for this election.
+  other Washington address gets the Statewide-Only Guide. Six other county
+  packages (clark, kitsap, pierce, snohomish, spokane, thurston) are
+  ingested from the VoteWA GENERAL 2026 export (#20) but not declared, so
+  they do not ship. `docs/county-wave-playbook.md` is the procedure for
+  taking a county the rest of the way.
 - District (congressional and legislative) contests are county-owned
   (`district_contests: "county"`). Uncontested contests ship information-only
   (`scoring/<slug>.json` with empty `scores`).
