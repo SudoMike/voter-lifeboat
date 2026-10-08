@@ -133,8 +133,9 @@ COUNTY_CONFIG = {
         # 'Benton PUD' on exactly the precincts that voted in the 2024 PUD
         # race (SOS 20241105 Benton precinct export), except 4017 (coded
         # 'Yes'; no 2024 PUD vote). Kennewick, Prosser, Benton City: 'Benton
-        # PUD'; 625 Swift Blvd, Richland: null (2026-10-08, #28). The layer
-        # is not in COUNTY_LAYERS.benton yet (see the general's extra_notes).
+        # PUD'; 625 Swift Blvd, Richland: null (2026-10-08, #28).
+        # COUNTY_LAYERS.benton reads that layer with where PUD_District =
+        # 'Benton PUD', so 4017's 'Yes' reads as no district.
         "pud": "Benton PUD",
         "measures": [
             m("Benton County Fire Protection District No. 4", "Proposition No. 1", "Restoration of Regular Property Tax Levy",
@@ -596,7 +597,8 @@ ELECTION_MEASURES = {
         # transcribed from VoteWA's online voters' guide records (e=899, c=03).
         # CITY: Census place 'Benton City' at 1009 Dale Ave, Benton City.
         # SCHDST: DOR SCH2025 (layer 20) DISTATTRIB '52' at the same address
-        # (2026-10-08); COUNTY_LAYERS.benton has no SCHDST layer yet.
+        # (2026-10-08), which COUNTY_LAYERS.benton reads; the PUD race's
+        # PUDDST reads the Auditor's PrecinctSplits layer (see COUNTY_CONFIG).
         "benton": {
             "measures": [
                 m("City of Benton City", "Proposition No. 1", "Adoption of the Council-Manager Form of Government",
@@ -614,15 +616,6 @@ ELECTION_MEASURES = {
                   "Authorizes a two-year educational programs and operation levy replacing an expired levy.",
                   "Estimated $1.30 per $1,000 of assessed value: $2,208,341 in 2027 and $2,318,758 in 2028.",
                   "https://voter.votewa.gov/elections/measure.ashx?m=7273&e=899&la=en&c=03"),
-            ],
-            "extra_notes": [
-                "Kiona-Benton City School District No. 52 Proposition No. 1 is scoped SCHDST '52' (WA DOR "
-                "SCH2025, layer 20, DISTATTRIB), which app/src/lib/geo.js COUNTY_LAYERS.benton does not list "
-                "yet; until that layer is added the measure cannot be matched to a Benton address.",
-                "The Benton County PUD Commissioner Pos. 2 race is scoped PUDDST 'Benton PUD': the whole PUD "
-                "votes in the general (RCW 54.12.010(3)), but the PUD excludes Richland and most of West "
-                "Richland. The Benton County Auditor's PrecinctSplits layer (attribute PUD_District) resolves it; "
-                "COUNTY_LAYERS.benton does not list that layer yet, so until it is added the race is hidden.",
             ],
         },
         # Whatcom (#28). Measures: VoteWA's online voters' guide for Whatcom

@@ -818,6 +818,9 @@ function mockWave2(matchedAddress, countyFips, countyName, features) {
     const hit = features.find((f) => u.pathname.includes(f.path))
     let attrs = hit && field in hit.attributes ? { [field]: hit.attributes[field] } : null
     if (attrs && where === "CONSOL_DIS LIKE 'WTRFA%'" && !String(hit.attributes.CONSOL_DIS).startsWith('WTRFA')) attrs = null
+    // An equality filter (Benton PUDDST: PUD_District = 'Benton PUD').
+    const eq = where?.match(/^(\w+) = '(.*)'$/)
+    if (attrs && eq && hit.attributes[eq[1]] !== eq[2]) attrs = null
     return { ok: true, async json() { return { features: attrs ? [{ attributes: attrs }] : [] } } }
   }
   return calls
@@ -905,4 +908,87 @@ test('a Thurston point outside WTRFA keeps its fire district and gets no RFA', a
   context = await lookupBallotContext(wave2Data('thurston'), '105 W Yelm Ave Yelm WA 98597')
   assert.ok(scopeMatches({ kind: 'DISTRICT', county: 'thurston', layer: 'SCHDST', value: 'YELM' }, context))
   assert.ok(!scopeMatches({ kind: 'DISTRICT', county: 'thurston', layer: 'RFADST', value: 'FD01' }, context))
+})
+
+// Yakima, Whatcom and Benton (#28). Live point queries 2026-10-08 at the
+// Census-geocoded points of the addresses below.
+const dorLayer = (n, value) => ({ path: `WADOR_PropertyTax/MapServer/${n}/query`, attributes: { DISTATTRIB: value } })
+const bentonPrecinct = (value) => ({ path: 'PrecinctSplits/FeatureServer/6', attributes: { PUD_District: value } })
+
+test('Benton resolves Benton PUD from PrecinctSplits and its school district from DOR SCH2025', async () => {
+  // 1009 Dale Ave, Benton City: Benton PUD, Kiona-Benton City SD 52, FD 2.
+  const calls = mockWave2('1009 DALE AVE, BENTON CITY, WA, 99320', '005', 'Benton County', [
+    { path: 'CommissionerDistrict/FeatureServer/6', attributes: { District: '2' } },
+    dorLayer(7, '2'),
+    bentonPrecinct('Benton PUD'),
+    dorLayer(20, '52'),
+  ])
+  const context = await lookupBallotContext(wave2Data('benton'), '1009 Dale Ave Benton City WA 99320')
+  assert.equal(context.coverageStatus, 'full_county')
+  assert.equal(context.districts.PUDDST, 'Benton PUD')
+  assert.equal(context.districts.SCHDST, '52')
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(scopeMatches({ kind: 'DISTRICT', county: 'benton', layer: 'PUDDST', value: 'Benton PUD' }, context))
+  assert.ok(scopeMatches({ kind: 'DISTRICT', county: 'benton', layer: 'SCHDST', value: '52' }, context))
+  const pud = calls.filter((u) => u.includes('PrecinctSplits')).map((u) => new URL(u).searchParams)
+  assert.deepEqual(pud.map((p) => [p.get('outFields'), p.get('where')]), [['PUD_District', "PUD_District = 'Benton PUD'"]])
+})
+
+test('a Kennewick point gets the PUD race but not the Ki-Be levy', async () => {
+  // 210 W 6th Ave, Kennewick: Benton PUD, Kennewick SD 17.
+  mockWave2('210 W 6TH AVE, KENNEWICK, WA, 99336', '005', 'Benton County', [
+    { path: 'CommissionerDistrict/FeatureServer/6', attributes: { District: '3' } },
+    bentonPrecinct('Benton PUD'),
+    dorLayer(20, '17'),
+  ])
+  const context = await lookupBallotContext(wave2Data('benton'), '210 W 6th Ave Kennewick WA 99336')
+  assert.ok(scopeMatches({ kind: 'DISTRICT', county: 'benton', layer: 'PUDDST', value: 'Benton PUD' }, context))
+  assert.ok(!scopeMatches({ kind: 'DISTRICT', county: 'benton', layer: 'SCHDST', value: '52' }, context))
+})
+
+test('Richland and West Richland precinct 4017 get no Benton PUD race', async () => {
+  // 625 Swift Blvd, Richland: PUD_District null.
+  mockWave2('625 SWIFT BLVD, RICHLAND, WA, 99352', '005', 'Benton County', [bentonPrecinct(null), dorLayer(20, '400')])
+  let context = await lookupBallotContext(wave2Data('benton'), '625 Swift Blvd Richland WA 99352')
+  assert.equal('PUDDST' in context.districts, false)
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(!scopeMatches({ kind: 'DISTRICT', county: 'benton', layer: 'PUDDST', value: 'Benton PUD' }, context))
+  // Precinct 4017 is coded 'Yes' (no 2024 PUD vote); Richland 6322.1 reads '<Null>'.
+  for (const value of ['Yes', '<Null>']) {
+    mockWave2('3801 W VAN GIESEN ST, WEST RICHLAND, WA, 99353', '005', 'Benton County', [bentonPrecinct(value)])
+    context = await lookupBallotContext(wave2Data('benton'), '3801 W Van Giesen St West Richland WA 99353')
+    assert.equal('PUDDST' in context.districts, false, value)
+  }
+})
+
+test('Yakima Commissioner District 1 shows only inside district 1', async () => {
+  const d1 = { kind: 'DISTRICT', county: 'yakima', layer: 'COUNTY_COUNCIL', value: '1' }
+  // 115 W Naches Ave, Selah -> ID 1; 128 N 2nd St, Yakima -> ID 2.
+  mockWave2('115 W NACHES AVE, SELAH, WA, 98942', '077', 'Yakima County', [
+    { path: 'Commissioner_District_Election_2022/FeatureServer/0', attributes: { ID: 1 } },
+  ])
+  let context = await lookupBallotContext(wave2Data('yakima'), '115 W Naches Ave Selah WA 98942')
+  assert.equal(context.coverageStatus, 'full_county')
+  assert.equal(context.districts.COUNTY_COUNCIL, '1')
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(scopeMatches(d1, context))
+  mockWave2('128 N 2ND ST, YAKIMA, WA, 98901', '077', 'Yakima County', [
+    { path: 'Commissioner_District_Election_2022/FeatureServer/0', attributes: { ID: 2 } },
+  ])
+  context = await lookupBallotContext(wave2Data('yakima'), '128 N 2nd St Yakima WA 98901')
+  assert.equal(context.districts.COUNTY_COUNCIL, '2')
+  assert.ok(!scopeMatches(d1, context))
+})
+
+test('Whatcom Fire District 1 resolves from DOR FIR2025 at Everson', async () => {
+  // 111 W Main St, Everson -> FIR2025 '1', Port of Bellingham district 4.
+  mockWave2('111 W MAIN ST, EVERSON, WA, 98247', '073', 'Whatcom County', [
+    { path: '2021ProposedPOBDistricts', attributes: { Council: 4 } },
+    dorLayer(7, '1'),
+  ])
+  const context = await lookupBallotContext(wave2Data('whatcom'), '111 W Main St Everson WA 98247')
+  assert.equal(context.coverageStatus, 'full_county')
+  assert.equal(context.districts.FIRDST, '1')
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(scopeMatches({ kind: 'DISTRICT', county: 'whatcom', layer: 'FIRDST', value: '1' }, context))
 })
