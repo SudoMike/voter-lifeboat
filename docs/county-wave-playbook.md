@@ -366,14 +366,25 @@ are counted as `researched_elsewhere` and must have no copy in your
    that address's official sample ballot. To check before declaring, run
    steps 3 and 4 and then `git checkout -- data/final app/public/data`.
 
-   Known issue (2026-10-08): the Census geocoder's `Current` vintage now
-   names its layers `120th Congressional Districts` and `2026 State
-   Legislative Districts - Lower/Upper`, while `geo.js`
-   `lookupCensusDistricts` looks for `119th` and `2024`. Until that is
-   fixed, every non-King address reports `missing=["CONGDST","LEGDST"]`,
-   `partial_county`, and no congressional or legislative contests. Do not
-   ship a non-King county before the fix.
-5. `cd app && npm ci && npm test && npm run build`. `data-consistency.test.js`
+   The Census geocoder's `Current` vintage renamed its layers to `120th
+   Congressional Districts` and `2026 State Legislative Districts -
+   Lower/Upper` on 2026-10-08; `geo.js` matches them by suffix since #26,
+   so non-King addresses resolve `CONGDST` and `LEGDST` again (Snohomish
+   live checks, #21).
+5. **Declare the adapter's layers.** Add the county to
+   `election.DISTRICT_ADAPTER_LAYERS`: `CONGDST`, `LEGDST`, `CITY` plus every
+   `key` in `geo.js` `COUNTY_LAYERS[<county>]` (`test_general_app_data.py`
+   checks the two agree). The assembler then marks the county
+   `partial_county` if any shipped DISTRICT scope uses another layer, even
+   if the package claims `full_county`, and prints each such scope.
+6. **Pamphlet links.** Add the county's general pamphlet PDF to
+   `app/src/lib/officialLinks.js` `pamphletPdfs` as
+   `'<county>/<edition>'` (edition = the raw pointer's name, e.g.
+   `local-voters-pamphlet`), checked live (200, a PDF, PDF pages equal the
+   cited pages). Candidate pages come from the county's own dossiers'
+   pamphlet citations; `pamphlet_refs.PAMPHLET_REF` must recognize the
+   edition id.
+7. `cd app && npm ci && npm test && npm run build`. `data-consistency.test.js`
    fails if a shipped DISTRICT scope uses a layer the county's adapter lacks
    and is not in `UNRESOLVABLE_SCOPES` (section 12).
 
@@ -411,6 +422,15 @@ are `partial_county` for: Kitsap `PUDDST` (PUD No. 1 District 2), Pierce
 Pierce `Election_Precincts` layer's `KING_DISTRICT` attribute could resolve
 it), Snohomish `DISTCRT` (District Court electoral districts), Spokane
 `PUDDST`. Clark and Thurston are `full_county`.
+
+Snohomish shipped on 2026-10-08 (#21) as `partial_county` for `DISTCRT`
+alone (`snohomish/DISTCRT` is in `UNRESOLVABLE_SCOPES`): its nine District
+Court seats (Cascade, Everett, Evergreen, South) stay hidden. Its South
+County Fire RFA measure (`RFADST` `SCRFA`) resolves: `geo.js` reads DOR
+FIR2025 (layer 7) `DISTATTRIB` with `where DISTATTRIB = 'SCRFA'`, because
+that layer mixes fire-district numbers and RFA codes (see
+`counties/snohomish/COMPLETENESS.md`). A layer config may carry such a
+`where` when a shared layer holds more than the key means.
 
 ## 13. Reference
 
