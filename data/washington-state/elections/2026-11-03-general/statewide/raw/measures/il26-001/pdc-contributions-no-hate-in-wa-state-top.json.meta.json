@@ -1,0 +1,12 @@
+{
+  "url": "https://data.wa.gov/resource/kv7h-kjye.json?committee_id=38851&election_year=2026&$select=contributor_name,sum(amount)%20as%20total,min(receipt_date)%20as%20first,max(receipt_date)%20as%20last,count(*)%20as%20n&$group=contributor_name&$order=total%20DESC&$limit=15",
+  "retrieved_at": "2026-10-08",
+  "stage": "raw",
+  "method": "source pointer; HTTP GET (curl), cached copy under data/.cache/il26-001 (gitignored)",
+  "cache_file": "data/.cache/il26-001/pdc-contributions-no-hate-in-wa-state-top.json",
+  "bytes": 2112,
+  "sha256": "78685652d3b793228051202d2b0e38791f2433011f9d51edab54abed26760518",
+  "publisher": "Washington Public Disclosure Commission (PDC), Contributions to Candidates and Political Committees dataset on data.wa.gov",
+  "tier": 1,
+  "notes": "Top 15 contributors by total to 'No Hate in WA State' (committee 38851), election year 2026, grouped by contributor_name. Committee totals from the same dataset (count 1436, sum 2293942.22, latest receipt 2026-10-06) match the PDC summary row. 'SMALL CONTRIBUTIONS' is PDC's aggregate line for unitemized gifts, not a donor."
+}
