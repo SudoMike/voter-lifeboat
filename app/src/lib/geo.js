@@ -520,7 +520,19 @@ const COUNTY_LAYERS = {
     },
   ],
   ferry: [
+    // Re-probed 2026-10-08 (#32): 350 E Delaware Ave and 290 E Tessie Blvd,
+    // Republic -> 2; 10 Customs Rd, Curlew and 151 Main St, Orient -> 1; 39
+    // Shortcut Rd, Inchelium and 11665 State Rte 21, Keller -> 3. No general
+    // scope uses it (Commissioner District 2 is elected county-wide); only the
+    // archived primary does. Ferry County PUD No. 1's Commissioner #3 seat is
+    // scoped COUNTY, not PUDDST: DOR PUD2025 (layer 17) has a gap at
+    // Inchelium (39 Shortcut Rd answers TCA2025 '8888' and no PUD feature),
+    // but the SOS precinct exports put every PUD race on all 19 precincts,
+    // Inchelium included (counties/ferry/COMPLETENESS.md).
     { key: 'COUNTY_COUNCIL', url: 'https://services8.arcgis.com/BBejpmYP0j5q6NLc/arcgis/rest/services/Political_Boundaries/FeatureServer/0/query', attr: 'DISTRICT' },
+    // Re-probed 2026-10-08 (#32): Republic -> 'REP'; Orient -> '3'; Curlew,
+    // Inchelium and Keller -> no feature. No general scope uses it (no Ferry
+    // measure in the general); only the archived primary's EMS levies do.
     { key: 'EMSDST', url: `${DOR_TAX_DISTRICTS}/6/query`, attr: 'DISTATTRIB' },
   ],
   franklin: [
@@ -861,7 +873,20 @@ const COUNTY_LAYERS = {
     { key: 'SCHDST', url: `${DOR_TAX_DISTRICTS}/20/query`, attr: 'DISTATTRIB' },
   ],
   wahkiakum: [
+    // Re-probed 2026-10-08 (#32): 64 Main St and 6 Linquist Ln, Cathlamet ->
+    // '2'; 222 E Sunny Sands Rd (Puget Island) -> '1'; 1391 State Rte 4 and
+    // 391 Middle Valley Rd, Skamokawa, 4 Covered Bridge Rd, Grays River and 50
+    // Rosburg School Rd, Rosburg -> '3'. No general scope uses it
+    // (Commissioner District 3 is elected county-wide); only the archived
+    // primary does.
     { key: 'COUNTY_COUNCIL', url: 'https://services5.arcgis.com/SQaKrZ90pTH1GKNW/arcgis/rest/services/Commissioner_Districts1/FeatureServer/1/query', attr: 'District_Number' },
+    // WA DOR FIR2025 (#32): Fire Protection District No. 2 (Skamokawa)'s EMS
+    // levy, scoped '2' (the county-wide EMS levy is COUNTY). Live 2026-10-08:
+    // 1391 State Rte 4 and 391 Middle Valley Rd, Skamokawa -> '2'; Grays River
+    // and Rosburg -> '3'; Puget Island -> '1'; 6 Linquist Ln, Cathlamet
+    // (outside the town) -> '4'; 64 Main St, inside the Town of Cathlamet ->
+    // no feature.
+    { key: 'FIRDST', url: `${DOR_TAX_DISTRICTS}/7/query`, attr: 'DISTATTRIB' },
   ],
   'walla-walla': [
     // Re-probed 2026-10-08 (#30): 315 W Main St, Walla Walla -> '1'; 108 S D

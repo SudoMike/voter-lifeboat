@@ -131,6 +131,11 @@ DISTRICT_ADAPTER_LAYERS = {
     # Pend Oreille's Sacheen Lake levy reads SEWDST, DOR SEW2025 (layer 21;
     # see geo.js).
     "pend-oreille": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "HOSPDST", "SCHDST", "SEWDST"),
+    # Ferry's general scopes are all COUNTY, CD 5 or LD 7; its PUD No. 1 seat
+    # is COUNTY because DOR PUD2025 misses part of Inchelium (see geo.js).
+    "ferry": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "EMSDST"),
+    # Wahkiakum's Fire District 2 EMS levy reads FIRDST, DOR FIR2025 (layer 7).
+    "wahkiakum": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "FIRDST"),
 }
 
 
