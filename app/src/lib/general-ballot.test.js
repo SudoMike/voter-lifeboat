@@ -3,7 +3,7 @@
 // (#21), Snohomish at full coverage (#27), Clark, Kitsap and Thurston at full
 // coverage (#22), Yakima, Whatcom, Benton, Skagit, Cowlitz and Grant at full
 // coverage (#28), Island, Lewis, Franklin, Chelan, Clallam and Grays Harbor at
-// full coverage (#29), Mason, Walla Walla and Stevens at full coverage (#30), every other Washington address a Statewide-Only Guide (issue #9). These run the app's own ballot, interview, lean and Ballot Brief
+// full coverage (#29), Mason, Walla Walla, Stevens, Whitman and Douglas at full coverage (#30), every other Washington address a Statewide-Only Guide (issue #9). These run the app's own ballot, interview, lean and Ballot Brief
 // code against public/data/2026-11-03-general.
 import test from 'node:test'
 import assert from 'node:assert/strict'
@@ -69,7 +69,7 @@ const STATE_MEASURES = [
   'initiative-measure-no-il26-638',
 ]
 
-test('the general ships twenty-one counties at full county coverage, Spokane at partial, with their elections offices', () => {
+test('the general ships twenty-three counties at full county coverage, Spokane at partial, with their elections offices', () => {
   assert.equal(data.election.id, '2026-11-03-general')
   assert.deepEqual(data.coverage, {
     statewide_complete: true,
@@ -289,6 +289,27 @@ test('the general ships twenty-one counties at full county coverage, Spokane at 
         fips: '53065',
         coverage: 'full_county',
         elections_url: 'https://www.stevenscountywa.gov/20911/Elections',
+      },
+      {
+        // Full: the library, cemetery and Cheney SD measures read DOR LIB2025,
+        // CEM2025 and SCH2025 (#30).
+        id: 'whitman',
+        name: 'Whitman County',
+        state: 'WA',
+        fips: '53075',
+        coverage: 'full_county',
+        elections_url: 'https://www.whitmancounty.gov/172/Current-Election',
+      },
+      {
+        // Full: Eastmont SD and Cemetery District 2 read DOR SCH2025 and
+        // CEM2025; the proposed Rimrock Meadows fire district the county's
+        // own fire layer (PROPFIRDST, #30).
+        id: 'douglas',
+        name: 'Douglas County',
+        state: 'WA',
+        fips: '53017',
+        coverage: 'full_county',
+        elections_url: 'https://www.douglascountywa.gov/206/Current-Election',
       },
     ],
   })
@@ -889,6 +910,99 @@ test('a Stevens ballot: Spokane\'s research for CD 5, LD 7 and the PUD seat, lib
   assert.deepEqual(ownLocal(co, 'stevens'), [])
   assert.ok(co.contests.some((c) => c.slug === PUD))
   assert.equal(coverageAdvice(st({})), null)
+})
+
+test('a Whitman ballot: Spokane\'s research for CD 5 and LD 9, town, library, park, cemetery and fire measures by district', () => {
+  const WHITMAN = { id: 'whitman', fips: '53075', name: 'Whitman County' }
+  const wh = (districts) => ({ coverageStatus: 'full_county', county: WHITMAN, districts, missingLayers: [] })
+  const LIBRARY = 'whitman-whitman-county-rural-library-district-proposition-no-1'
+  const CHENEY = [1, 2].map((n) => `whitman-cheney-school-district-no-360-proposition-no-${n}`)
+  // Districts as the live District Adapter resolved them on 2026-10-08.
+  // 325 SE Paradise St, Pullman: no local measure.
+  const pu = ballotFor(wh({ CONGDST: '5', LEGDST: '9', CITY: 'Pullman', COUNTY_COUNCIL: '2', SCHDST: '267' }))
+  const ps = pu.contests.map((c) => c.slug)
+  assert.equal(new Set(ps).size, ps.length)
+  assert.equal(ps.length, 13 + SUPREME_COURT.length)
+  for (const slug of SUPREME_COURT) assert.ok(ps.includes(slug), slug)
+  sameScoring(pu, 'whitman-congressional-district-5-u-s-representative', 'spokane-congressional-district-5-u-s-representative')
+  for (const pos of [1, 2])
+    sameScoring(pu, `whitman-legislative-district-9-state-representative-pos-${pos}`, `spokane-legislative-district-9-state-representative-pos-${pos}`)
+  assert.ok(!pu.contests.some((c) => c.owner !== 'whitman' && c.owner !== 'statewide'))
+  // Commissioner District 3 is elected countywide in the general.
+  assert.ok(ps.includes('whitman-whitman-county-commissioner-district-3-commissioner-3'))
+  assert.deepEqual(ownLocal(pu, 'whitman'), [])
+  // 101 Steptoe Ave, Oakesdale: library L, Park District 4, Cemetery District 1.
+  const oa = ballotFor(wh({
+    CONGDST: '5', LEGDST: '9', CITY: 'Oakesdale', COUNTY_COUNCIL: '1', PARKDST: '4', CEMDST: '1', LIBDST: 'L', SCHDST: '324',
+  }))
+  assert.deepEqual(ownLocal(oa, 'whitman'), [
+    LIBRARY,
+    'whitman-town-of-oakesdale-proposition-no-1',
+    'whitman-town-of-oakesdale-proposition-no-2',
+    'whitman-oakesdale-park-recreation-district-no-4-proposition-no-1',
+    'whitman-oakesdale-cemetery-district-no-1-proposition-no-1',
+  ])
+  // 110 S Montgomery St, Uniontown: FD 14, no library levy.
+  const un = ballotFor(wh({ CONGDST: '5', LEGDST: '9', CITY: 'Uniontown', COUNTY_COUNCIL: '2', FIRDST: '14', SCHDST: '306' }))
+  assert.deepEqual(ownLocal(un, 'whitman'), [
+    'whitman-town-of-uniontown-proposition-no-1',
+    'whitman-whitman-county-fire-protection-district-no-14-proposition-no-1',
+  ])
+  // 200 S Mill St, Colfax: the library levy only (Cemetery District 6 has none).
+  const co = ballotFor(wh({ CONGDST: '5', LEGDST: '9', CITY: 'Colfax', COUNTY_COUNCIL: '3', CEMDST: '6', LIBDST: 'L', SCHDST: '300' }))
+  assert.deepEqual(ownLocal(co, 'whitman'), [LIBRARY])
+  // Interior point (-117.70, 47.24): Cheney SD's Whitman portion.
+  const ch = ballotFor(wh({ CONGDST: '5', LEGDST: '9', COUNTY_COUNCIL: '1', FIRDST: '5', LIBDST: 'L', SCHDST: '316' }))
+  assert.deepEqual(ownLocal(ch, 'whitman'), [LIBRARY, ...CHENEY])
+  assert.equal(coverageAdvice(wh({})), null)
+})
+
+test('a Douglas ballot: Benton\'s, Spokane\'s and Grant\'s research for the shared races, Rimrock only inside the proposed district', () => {
+  const DOUGLAS = { id: 'douglas', fips: '53017', name: 'Douglas County' }
+  const dg = (districts) => ({ coverageStatus: 'full_county', county: DOUGLAS, districts, missingLayers: [] })
+  const RIMROCK = 'douglas-proposed-rimrock-meadows-fire-protection-district-no-9'
+  const RIMROCK_SEATS = [1, 2, 3].map((n) => `${RIMROCK}-commissioner-no-${n}`)
+  const HOSP2 = 'douglas-douglas-county-public-hospital-district-no-2-proposition-no-1'
+  const CEM2 = 'douglas-douglas-county-cemetery-district-no-2-proposition-no-1'
+  // Districts as the live District Adapter resolved them on 2026-10-08.
+  // 100 Eastmont Ave, East Wenatchee: Eastmont SD 206.
+  const ew = ballotFor(dg({ CONGDST: '4', LEGDST: '7', CITY: 'East Wenatchee', FIRDST: '2', SCHDST: '206', PROPFIRDST: '002' }))
+  const es = ew.contests.map((c) => c.slug)
+  assert.equal(new Set(es).size, es.length)
+  assert.equal(es.length, 15 + SUPREME_COURT.length)
+  for (const slug of SUPREME_COURT) assert.ok(es.includes(slug), slug)
+  sameScoring(ew, 'douglas-congressional-district-4-u-s-representative', 'benton-congressional-district-4-u-s-representative')
+  sameScoring(ew, 'douglas-legislative-district-7-state-senator', 'spokane-legislative-district-7-state-senator')
+  assert.ok(!ew.contests.some((c) => c.owner !== 'douglas' && c.owner !== 'statewide'))
+  assert.ok(!es.some((s) => s.startsWith(RIMROCK)))
+  assert.deepEqual(ownLocal(ew, 'douglas'), ['douglas-eastmont-school-district-no-206-proposition-no-1'])
+  // 213 S Chelan Ave, Waterville: Hospital District 2, Cemetery District 2.
+  const wv = ballotFor(dg({ CONGDST: '4', LEGDST: '7', CITY: 'Waterville', HOSPDST: '2', SCHDST: '209', CEMDST: '2', PROPFIRDST: '000' }))
+  assert.deepEqual(ownLocal(wv, 'douglas'), [HOSP2, CEM2])
+  // 1206 Columbia Ave, Bridgeport: Three Rivers Hospital (District 1) bonds.
+  const bp = ballotFor(dg({ CONGDST: '4', LEGDST: '7', CITY: 'Bridgeport', HOSPDST: '1', SCHDST: '75', PROPFIRDST: 'BPR' }))
+  assert.deepEqual(ownLocal(bp, 'douglas'),
+    ['douglas-public-hospital-district-no-1-okanogan-and-douglas-counties-three-rivers-hospital-proposition-no-1'])
+  // 1005 Ashcroft Dr, Ephrata (Rimrock Meadows): LD 13, formation and three seats.
+  const rr = ballotFor(dg({ CONGDST: '4', LEGDST: '13', SCHDST: '209', PROPFIRDST: '009' }))
+  const rs = rr.contests.map((c) => c.slug)
+  assert.equal(rs.length, 18 + SUPREME_COURT.length)
+  for (const slug of RIMROCK_SEATS) assert.ok(rs.includes(slug), slug)
+  sameScoring(rr, 'douglas-legislative-district-13-state-senator', 'grant-legislative-district-13-state-senator')
+  for (const pos of [1, 2])
+    sameScoring(rr, `douglas-legislative-district-13-state-representative-pos-${pos}`, `grant-legislative-district-13-state-representative-pos-${pos}`)
+  assert.ok(!rs.some((s) => s.includes('legislative-district-7')))
+  assert.deepEqual(ownLocal(rr, 'douglas'), [`${RIMROCK}-proposition-no-1`])
+  // 448 Belmont Pl, Ephrata: the county layer's existing district '001', no Rimrock items.
+  const bl = ballotFor(dg({ CONGDST: '4', LEGDST: '7', FIRDST: '1', HOSPDST: '2', SCHDST: '209', CEMDST: '2', PROPFIRDST: '001' }))
+  assert.ok(!bl.contests.some((c) => c.slug.startsWith(RIMROCK)))
+  assert.deepEqual(ownLocal(bl, 'douglas'), [HOSP2, CEM2])
+  // CD 8 (King's research) reaches one north East Wenatchee precinct.
+  const cd8 = ballotFor(dg({ CONGDST: '8', LEGDST: '7', SCHDST: '206' }))
+  const owner = data.contests.find((c) => c.slug === 'congressional-district-8-united-states-representative')
+  const shipped = cd8.contests.find((c) => c.slug === 'douglas-congressional-district-8-u-s-representative')
+  assert.deepEqual(shipped.candidates.map((c) => [c.slug, c.scores]), owner.candidates.map((c) => [c.slug, c.scores]))
+  assert.equal(coverageAdvice(dg({})), null)
 })
 
 test('a Spokane ballot: its own districts, school and fire measures by name, no PUD seat', () => {

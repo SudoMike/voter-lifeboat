@@ -1,0 +1,366 @@
+{
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/whitman/interim/contests.json",
+    "data/washington-state/elections/2026-11-03-general/counties/whitman/interim/measures.json"
+  ],
+  "script": "pipeline/build_research_plan.py",
+  "contests": [
+    {
+      "contest_slug": "whitman-congressional-district-5-u-s-representative",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 5",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "michael-baumgartner",
+          "name": "Michael Baumgartner",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-5-u-s-representative/michael-baumgartner.md"
+        },
+        {
+          "slug": "carmela-conroy",
+          "name": "Carmela Conroy",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-5-u-s-representative/carmela-conroy.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "spokane",
+          "contest_slug": "spokane-congressional-district-5-u-s-representative",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/spokane/scoring/spokane-congressional-district-5-u-s-representative.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "spokane",
+          "franklin",
+          "walla-walla",
+          "stevens"
+        ]
+      }
+    },
+    {
+      "contest_slug": "whitman-legislative-district-9-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 9",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "joe-schmick",
+          "name": "Joe Schmick",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-9-state-representative-position-2/joe-schmick.md"
+        },
+        {
+          "slug": "karina-wallace",
+          "name": "Karina Wallace",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-9-state-representative-position-2/karina-wallace.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "spokane",
+          "contest_slug": "spokane-legislative-district-9-state-representative-pos-2",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/spokane/scoring/spokane-legislative-district-9-state-representative-pos-2.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "spokane"
+        ]
+      }
+    },
+    {
+      "contest_slug": "whitman-whitman-county-auditor",
+      "category": "County",
+      "office": "Auditor",
+      "district": "Whitman County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "crystn-guenthner",
+          "name": "Crystn Guenthner",
+          "party_preference": "States No Party Preference",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/whitman/dossiers/whitman-whitman-county-auditor/crystn-guenthner.md"
+        },
+        {
+          "slug": "kenneth-millar",
+          "name": "Kenneth Millar",
+          "party_preference": "States No Party Preference",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/whitman/dossiers/whitman-whitman-county-auditor/kenneth-millar.md"
+        }
+      ]
+    }
+  ],
+  "measures": [
+    {
+      "jurisdiction": "Whitman County Rural Library District",
+      "proposition": "Proposition No. 1",
+      "title": "Restoring Regular Property Tax Levy for Library Services",
+      "slug": "whitman-whitman-county-rural-library-district-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Cheney School District No. 360",
+      "proposition": "Proposition No. 1",
+      "title": "Replacement Educational Programs and Operation Levy",
+      "slug": "whitman-cheney-school-district-no-360-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Cheney School District No. 360",
+      "proposition": "Proposition No. 2",
+      "title": "Replacement Capital Levy for Technology, Security and Infrastructure Improvements",
+      "slug": "whitman-cheney-school-district-no-360-proposition-no-2",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Town of Albion",
+      "proposition": "Proposition No. 1",
+      "title": "Protective Services",
+      "slug": "whitman-town-of-albion-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Town of Albion",
+      "proposition": "Proposition No. 2",
+      "title": "Cemetery Maintenance and Hazardous Tree Removal",
+      "slug": "whitman-town-of-albion-proposition-no-2",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Town of Colton",
+      "proposition": "Proposition No. 880",
+      "title": "Levy of Additional Taxes",
+      "slug": "whitman-town-of-colton-proposition-no-880",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Town of Endicott",
+      "proposition": "Proposition No. 1",
+      "title": "Fire Protection and Emergency Services Excess Levy",
+      "slug": "whitman-town-of-endicott-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Town of Endicott",
+      "proposition": "Proposition No. 2",
+      "title": "Park Excess Levy",
+      "slug": "whitman-town-of-endicott-proposition-no-2",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Town of Endicott",
+      "proposition": "Proposition No. 3",
+      "title": "Street Maintenance and Public Safety Excess Levy",
+      "slug": "whitman-town-of-endicott-proposition-no-3",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Town of Garfield",
+      "proposition": "Proposition No. 1",
+      "title": "Street Maintenance and Repair Levy",
+      "slug": "whitman-town-of-garfield-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Town of Oakesdale",
+      "proposition": "Proposition No. 1",
+      "title": "Fire Protection and Emergency Medical Service Levy",
+      "slug": "whitman-town-of-oakesdale-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Town of Oakesdale",
+      "proposition": "Proposition No. 2",
+      "title": "Street Maintenance Levy",
+      "slug": "whitman-town-of-oakesdale-proposition-no-2",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "City of Palouse",
+      "proposition": "Proposition No. 1",
+      "title": "Operation and Maintenance of Infrastructure Levy",
+      "slug": "whitman-city-of-palouse-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "City of Palouse",
+      "proposition": "Proposition No. 2",
+      "title": "Pool Maintenance and Operations Levy",
+      "slug": "whitman-city-of-palouse-proposition-no-2",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "City of Palouse",
+      "proposition": "Proposition No. 3",
+      "title": "Street Improvements and Equipment Levy",
+      "slug": "whitman-city-of-palouse-proposition-no-3",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Town of Rosalia",
+      "proposition": "Proposition No. 1",
+      "title": "Street Levy",
+      "slug": "whitman-town-of-rosalia-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Town of St. John",
+      "proposition": "Proposition No. 1",
+      "title": "Street Improvement Levy",
+      "slug": "whitman-town-of-st-john-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Town of St. John",
+      "proposition": "Proposition No. 2",
+      "title": "Water and Sewer Levy",
+      "slug": "whitman-town-of-st-john-proposition-no-2",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "City of Tekoa",
+      "proposition": "Proposition No. 1",
+      "title": "Street Levy",
+      "slug": "whitman-city-of-tekoa-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Town of Uniontown",
+      "proposition": "Proposition No. 1",
+      "title": "Levy of Additional Taxes",
+      "slug": "whitman-town-of-uniontown-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Whitman County Fire Protection District No. 8",
+      "proposition": "Proposition No. 1",
+      "title": "Maintenance and Operation Levy",
+      "slug": "whitman-whitman-county-fire-protection-district-no-8-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Whitman County Fire Protection District No. 14",
+      "proposition": "Proposition No. 1",
+      "title": "Levy Lid Lift",
+      "slug": "whitman-whitman-county-fire-protection-district-no-14-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "LaCrosse Park & Recreation District No. 1",
+      "proposition": "Proposition No. 1",
+      "title": "Operation and Maintenance Levy",
+      "slug": "whitman-lacrosse-park-recreation-district-no-1-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Garfield Park & Recreation District No. 2",
+      "proposition": "Proposition No. 1",
+      "title": "Maintenance, Repair and Operating Cost Levy",
+      "slug": "whitman-garfield-park-recreation-district-no-2-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "St. John Park & Recreation District No. 3",
+      "proposition": "Proposition No. 1",
+      "title": "Operating Fund Levy",
+      "slug": "whitman-st-john-park-recreation-district-no-3-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Oakesdale Park & Recreation District No. 4",
+      "proposition": "Proposition No. 1",
+      "title": "Operating, Maintaining and Improving Recreational Facilities",
+      "slug": "whitman-oakesdale-park-recreation-district-no-4-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Endicott Parks & Recreation District No. 7",
+      "proposition": "Proposition No. 1",
+      "title": "Operating, Capital Outlay and Cumulative Reserve Levy",
+      "slug": "whitman-endicott-parks-recreation-district-no-7-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Oakesdale Cemetery District No. 1",
+      "proposition": "Proposition No. 1",
+      "title": "Improvements and Maintenance Levy",
+      "slug": "whitman-oakesdale-cemetery-district-no-1-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Whitman County (Garfield) Cemetery District No. 2",
+      "proposition": "Proposition No. 2026-1",
+      "title": "Operation and Maintenance Levy",
+      "slug": "whitman-whitman-county-garfield-cemetery-district-no-2-proposition-no-2026-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "St. John Cemetery District No. 3",
+      "proposition": "Proposition No. 1",
+      "title": "Funds to Maintain & Operate Cemetery",
+      "slug": "whitman-st-john-cemetery-district-no-3-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Whitman County (Endicott) Cemetery District No. 4",
+      "proposition": "Proposition No. 1",
+      "title": "Maintenance and Operations Levy",
+      "slug": "whitman-whitman-county-endicott-cemetery-district-no-4-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    }
+  ],
+  "carry_forward_from": "2026-08-04-primary"
+}

@@ -432,8 +432,8 @@ As of the builder runs on 2026-10-08 (#22, #28, #29, #30), the only shipped
 general package that is `partial_county` is Spokane (`PUDDST`). Benton,
 Clark, Kitsap, Pierce, Snohomish (since #27), Thurston, Whatcom, Yakima,
 Skagit, Cowlitz, Grant, Island, Lewis, Franklin, Chelan, Clallam, Grays
-Harbor, Mason, Walla Walla and Stevens are `full_county`; all twenty-one
-ship with King. A PUD
+Harbor, Mason, Walla Walla, Stevens, Whitman and Douglas are
+`full_county`; all twenty-three ship with King. A PUD
 commissioner is nominated by district but elected by the whole PUD in the
 general (RCW 54.12.010(3)), so a countywide PUD's seat is scoped `COUNTY`
 (Clark, Kitsap, Thurston), not `PUDDST`.
@@ -618,6 +618,32 @@ only copy. Walla Walla links its local pamphlet at the cited page and its
 VoteWA guide otherwise; Stevens links its VoteWA guide only.
 stevenscountywa.gov answers 403 to a bare scripted User-Agent and 200 to a
 browser one, so its elections URL was checked with a browser User-Agent.
+
+Whitman and Douglas shipped on 2026-10-08 (#30) as `full_county`.
+Whitman's library levy reads DOR LIB2025 (`L`; Pullman, Rosalia, Garfield,
+Endicott, Colton and Uniontown are outside), its four cemetery levies DOR
+CEM2025 (`1`-`4`), and Cheney SD 360's two levies DOR SCH2025 (`316`, the
+district's thin Whitman strip north of St. John; no street address there
+geocodes, so the live check used the interior point -117.70, 47.24). Its
+town, fire and park measures read Census places and the DOR FIR2025 and
+PKR2025 layers the county already listed. Eight of its measures filed
+hardship waivers and are not in the printed pamphlet; they link the VoteWA
+guide. The Census geocoder places some Colfax Main St addresses in Albion
+(see `counties/whitman/COMPLETENESS.md`). Douglas's Eastmont SD 206 bonds
+read DOR SCH2025 and its Cemetery District 2 levy CEM2025. Its proposed
+Rimrock Meadows Fire Protection District No. 9 (formation and three initial
+commissioners, voted on inside the proposed boundary only) has no DOR
+polygon, since the district does not exist yet: the new key `PROPFIRDST`
+reads the county's own `All_Districts_Temporary/MapServer/4` `FireNumber`
+(`009`). It is a separate key so the archived primary's Douglas `FIRDST`
+scope keeps reading DOR, and `districts.js` shows only `009` for it (the
+layer's other values repeat existing fire districts). The service is named
+"Temporary": re-probe it before relying on it after this election. Shared
+races (13): Whitman's CD 5 and LD 9 Pos. 1 and 2 with Spokane's scoring;
+Douglas's CD 4 with Benton's, CD 8 with King's, LD 7 Senate and House with
+Spokane's, LD 13 Senate and House with Grant's. Whitman links its local
+pamphlet at the cited page and its VoteWA guide otherwise; Douglas prints no
+pamphlet and links its VoteWA guide.
 
 ## 13. Reference
 

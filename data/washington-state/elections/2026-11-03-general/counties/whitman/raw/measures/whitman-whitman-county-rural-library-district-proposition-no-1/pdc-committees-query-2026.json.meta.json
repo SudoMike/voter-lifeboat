@@ -1,0 +1,13 @@
+{
+  "url": "https://data.wa.gov/resource/3h9x-7bvm.json?$where=election_year=2026%20AND%20filer_type!=%27Candidate%27%20AND%20(upper(jurisdiction_county)=%27WHITMAN%27%20OR%20upper(filer_name)%20like%20%27%25LIBRAR%25%27%20OR%20upper(filer_name)%20like%20%27%25CHENEY%25%27%20OR%20upper(filer_name)%20like%20%27%25GREAT%20SCHOOLS%25%27)&$limit=500",
+  "retrieved_at": "2026-10-08",
+  "method": "curl -L (User-Agent 'Mozilla/5.0')",
+  "stage": "raw",
+  "source_type": "pdc",
+  "tier": 1,
+  "outlet": "PDC campaign finance summary (data.wa.gov 3h9x-7bvm)",
+  "cache_file": "data/.cache/whitman/meas1/pdc-committees-query-2026.json",
+  "bytes": 36942,
+  "sha256": "1d32955ac49393ba877bc47bcc7401276f9c7cfed12aeb169fdd936589771104",
+  "notes": "2026 non-candidate PDC filers with jurisdiction county Whitman or names matching library, Cheney or Great Schools: no committee for or against the Whitman County Rural Library District measure (library committees listed are in Thurston, Snohomish, Seattle, Stevens, Clallam, Pierce and Fort Vancouver)."
+}

@@ -89,9 +89,11 @@ test('every statewide contest and measure in the shipped general gets a paged SO
       }
   for (const m of general.measures) {
     // Spokane's, Pierce's, Kitsap's, Whatcom's, Benton's, Grant's, Island's,
-    // Lewis's, Grays Harbor's and Stevens's measures cite VoteWA's unpaged
-    // online guide (countyGuides).
-    if (['spokane', 'pierce', 'kitsap', 'whatcom', 'benton', 'grant', 'island', 'lewis', 'grays-harbor', 'stevens'].includes(m.owner)) continue
+    // Lewis's, Grays Harbor's, Stevens's and Douglas's measures cite VoteWA's
+    // unpaged online guide (countyGuides), as do Whitman's eight that filed
+    // hardship waivers (not in its printed pamphlet).
+    if (['spokane', 'pierce', 'kitsap', 'whatcom', 'benton', 'grant', 'island', 'lewis', 'grays-harbor', 'stevens', 'douglas'].includes(m.owner)) continue
+    if (m.owner === 'whitman' && !m.pamphlet_pages.length) continue
     assert.match(pamphletLink(m.pamphlet_pages, m.owner, general.election.id), /#page=\d+$/, m.slug)
     n++
   }
@@ -476,6 +478,57 @@ test('shipped Stevens records link the county\'s VoteWA guide', () => {
   assert.deepEqual(countyElectionsOffice(general, { id: 'stevens', name: 'Stevens County' }), {
     name: 'Stevens County Elections',
     url: 'https://www.stevenscountywa.gov/20911/Elections',
+    direct: true,
+  })
+})
+
+test('shipped Whitman records link the local pamphlet at the cited page, else the county\'s VoteWA guide', () => {
+  const id = general.election.id
+  const PDF = 'https://www.whitmancounty.gov/DocumentCenter/View/12618'
+  const GUIDE = 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=38'
+  // Sheriff Myers, pamphlet p. 11 (PDF page = printed page).
+  assert.equal(pamphletLink([{ edition: 'local-voters-pamphlet', page: 11 }], 'whitman', id), `${PDF}#page=11`)
+  let paged = 0
+  let guided = 0
+  for (const item of [...general.contests, ...general.measures]) {
+    if (item.owner !== 'whitman') continue
+    const pages = item.candidates ? item.candidates.map((c) => c.pamphlet_pages) : [item.pamphlet_pages]
+    for (const p of pages) {
+      if (p?.length) {
+        assert.equal(pamphletLink(p, 'whitman', id), `${PDF}#page=${p[0].page}`, item.slug)
+        paged++
+      } else {
+        // CD 5, LD 9, the Court of Appeals seat and the eight hardship-waiver
+        // measures cite VoteWA or another package.
+        assert.equal(pamphletLink(p, 'whitman', id), GUIDE, item.slug)
+        guided++
+      }
+    }
+  }
+  assert.ok(paged >= 32 && guided >= 14, JSON.stringify({ paged, guided }))
+  assert.deepEqual(countyElectionsOffice(general, { id: 'whitman', name: 'Whitman County' }), {
+    name: 'Whitman County Elections',
+    url: 'https://www.whitmancounty.gov/172/Current-Election',
+    direct: true,
+  })
+})
+
+test('shipped Douglas records link the county\'s VoteWA guide', () => {
+  const id = general.election.id
+  const GUIDE = 'https://voter.votewa.gov/genericvoterguide.aspx?e=899&c=09'
+  let n = 0
+  for (const item of [...general.contests, ...general.measures]) {
+    if (item.owner !== 'douglas') continue
+    const pages = item.candidates ? item.candidates.map((c) => c.pamphlet_pages) : [item.pamphlet_pages]
+    for (const p of pages) {
+      assert.equal(pamphletLink(p, 'douglas', id), GUIDE, item.slug)
+      n++
+    }
+  }
+  assert.ok(n >= 37, String(n))
+  assert.deepEqual(countyElectionsOffice(general, { id: 'douglas', name: 'Douglas County' }), {
+    name: 'Douglas County Elections',
+    url: 'https://www.douglascountywa.gov/206/Current-Election',
     direct: true,
   })
 })

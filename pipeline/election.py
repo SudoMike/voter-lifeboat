@@ -69,7 +69,7 @@ APP_PACKAGES = {
         "statewide_ballot": True,
         "counties": ["king", "snohomish", "spokane", "pierce", "clark", "kitsap", "thurston", "yakima", "whatcom",
                      "benton", "skagit", "cowlitz", "grant", "island", "lewis", "franklin", "chelan", "clallam",
-                     "grays-harbor", "mason", "walla-walla", "stevens"],
+                     "grays-harbor", "mason", "walla-walla", "stevens", "whitman", "douglas"],
         "district_contests": "county",
     },
 }
@@ -105,6 +105,8 @@ DISTRICT_ADAPTER_LAYERS = {
     "mason": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "FIRDST", "PUDDST", "SCHDST"),
     "walla-walla": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "SCHDST", "PARKDST"),
     "stevens": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "FIRDST", "LIBDST", "SCHDST"),
+    "whitman": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "FIRDST", "PARKDST", "CEMDST", "LIBDST", "SCHDST"),
+    "douglas": ("CONGDST", "LEGDST", "CITY", "FIRDST", "HOSPDST", "SCHDST", "CEMDST", "PROPFIRDST"),
 }
 
 
@@ -268,6 +270,12 @@ COUNTY_ELECTIONS_URLS = {
         # bare User-Agent and 200 to a browser User-Agent (2026-10-08), so a
         # plain scripted check cannot verify it.
         "stevens": "https://www.stevenscountywa.gov/20911/Elections",
+        # Whitman County Auditor, Current Election (200, 2026-10-08; the page
+        # that links the general's local voters' pamphlet and sample ballot).
+        "whitman": "https://www.whitmancounty.gov/172/Current-Election",
+        # Douglas County Auditor, Current Election (200, 2026-10-08; the page
+        # that links the general's sample ballot and measure resolutions).
+        "douglas": "https://www.douglascountywa.gov/206/Current-Election",
     },
 }
 
