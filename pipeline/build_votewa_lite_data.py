@@ -898,6 +898,73 @@ ELECTION_MEASURES = {
                 "Auditor's District_Court layer, which COUNTY_LAYERS.clallam reads.",
             ],
         },
+        # Columbia (#32). Measures: the Columbia County Auditor's local voters'
+        # pamphlet (counties/columbia/raw/columbia/local-voters-pamphlet.pdf.url,
+        # DocumentCenter 8822, linked from columbiaco.com/616/2026-General-
+        # Election; PDF page = printed page + 1) and VoteWA's online guide for
+        # county 07 (raw/votewa/voter-guide/) both list two local measures,
+        # guide records 7423 and 7379 (PDF pp. 10 and 11); the Brooklyn
+        # precinct sample ballot (raw/columbia/sample-ballot-page-{1,2}.jpg.url)
+        # carries the pool levy only. Scopes point-checked 2026-10-08 (Census
+        # geocoder, Current vintage; WA DOR PKR2025, layer 14, DISTATTRIB;
+        # Columbia has two polygons, 'CPR' and 'PRES'):
+        # - PARKDST 'CPR' (Columbia County Park and Recreation Pool District,
+        #   VoteWA jurisdiction PKR070004): 341 E Main St, Dayton; 650 Wagon
+        #   Rd, Dayton; 100 Hogeye Hollow Rd, Dayton; rural points (-117.75,
+        #   46.45) and (-117.80, 46.10); and (-118.20, 46.45) in the rural
+        #   Starbuck school district. No feature at 101 and 401 Main St,
+        #   Starbuck: the district is the county minus the Town of Starbuck and
+        #   the Prescott park district (explanatory statement); the 2024 pool
+        #   levy was on every precinct but STARBUCK CITY (raw/columbia/sos-*).
+        # - PARKDST 'PRES' (Prescott Joint Park and Recreation District, joint
+        #   with Walla Walla County): the interior point (-118.21, 46.40) on
+        #   the county's western edge (bbox -118.242..-118.179, 46.331..46.500);
+        #   no Columbia street address there geocodes. SOS exports put the
+        #   2022 and 2024 Prescott levies on the ALTO and STARBUCK COUNTRY
+        #   precinct parts only (7 and 10 votes). Walla Walla's package carries
+        #   its own copy scoped to Walla Walla County (same guide record 7379),
+        #   so each county's voters see one copy.
+        # Overrides: Commissioner No. 3 is nominated by district and elected
+        # county-wide in the general (RCW 36.32.040, 36.32.050(1); Columbia is
+        # a non-charter county): the 2026 primary race drew 417 votes against
+        # about 1,050 in county-wide races (raw/columbia/votewa-2026-08-04-
+        # primary-results.json.url), while the SOS precinct exports put
+        # Commissioner #3 (2022) and #1 and #2 (2024) on all 13 voting
+        # precincts, the same 13 as Sheriff and Governor. It keeps the
+        # primary's contest name so its slug and primary dossiers carry
+        # forward. The District Court is one county-wide district (2022 judge
+        # race on all 13 precincts).
+        "columbia": {
+            "overrides": {
+                ("COUNTY", "COLUMBIA COUNTY COMMISSIONER NO. 3"): (
+                    "County", "Columbia County Commissioner District 3", "Columbia County Commissioner No. 3",
+                    ("COUNTY", None)),
+                ("COURT DISTRICT", "COLUMBIA COUNTY DISTRICT COURT JUDGE"): (
+                    "Judicial", "Columbia County District Court", "District Court Judge", ("COUNTY", None)),
+            },
+            "measures": [
+                m("Columbia County Park and Recreation Pool District", "Proposition No. 1", "Operation Excess Levy",
+                  ("PARKDST", "CPR"),
+                  "Authorizes a one-year excess property tax levy in 2026 for collection in 2027 to fund operation and maintenance of the pool the district plans to build in Dayton (the old Dayton pool closed in 2017). The district, formed by voters in 2023, covers the county except the Town of Starbuck and the Prescott park district's area.",
+                  "$200,000 collected in 2027, approximately $0.20 per $1,000 of assessed value.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7423&e=899&la=en&c=07",
+                  pages=(10,)),
+                m("Prescott Joint Park and Recreation District", "Proposition No. 1",
+                  "Maintenance & Operation Excess Levy",
+                  ("PARKDST", "PRES"),
+                  "Authorizes a one-year excess property tax levy for the park and recreation district's maintenance and operation expenses in 2027, its main source of operating money (chiefly the Prescott pool). The district is joint with Walla Walla County; only a thinly settled strip of western Columbia County is in it.",
+                  "$175,000 collected in 2027 across the whole district, approximately $0.35 per $1,000 of assessed value.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7379&e=899&la=en&c=07",
+                  pages=(11,)),
+            ],
+            "extra_notes": [
+                "Columbia County Commissioner No. 3 is nominated by district and elected county-wide in the general "
+                "(RCW 36.32.040, RCW 36.32.050(1); SOS precinct results 2022 and 2024: commissioner races on all 13 precincts).",
+                "Both local measures are park and recreation district levies read from WA DOR PKR2025 (layer 14): 'CPR' is the "
+                "Columbia County Park and Recreation Pool District (the county minus the Town of Starbuck and the Prescott "
+                "district), 'PRES' the Columbia County part of the Prescott Joint Park and Recreation District.",
+            ],
+        },
         # Cowlitz (#28). Measures: the county's general sample ballot and
         # local voters' pamphlet (counties/cowlitz/raw/cowlitz/
         # {sample-ballot,local-voters-pamphlet}.pdf.url, pamphlet pp. 57-58)
