@@ -1,18 +1,29 @@
 {
   "derived_from": [
     "data/washington-state/elections/ACTIVE",
-    "data/final/2026-08-04-primary/app-data.json"
+    "data/final/2026-08-04-primary/app-data.json",
+    "data/final/2026-11-03-general/app-data.json"
   ],
   "script": "pipeline/assemble_app_data.py",
-  "active": "2026-08-04-primary",
+  "active": "2026-11-03-general",
   "elections": [
     {
       "id": "2026-08-04-primary",
+      "app_id": "2026-08-04-primary-special",
       "name": "August 4, 2026 Primary and Special Election",
       "day": "2026-08-04",
       "scope": "Washington State",
-      "status": "active",
+      "status": "archived",
       "data_version": "5204e0a"
+    },
+    {
+      "id": "2026-11-03-general",
+      "app_id": "2026-11-03-general",
+      "name": "November 3, 2026 General Election",
+      "day": "2026-11-03",
+      "scope": "Washington State",
+      "status": "active",
+      "data_version": "089c26e"
     }
   ]
 }

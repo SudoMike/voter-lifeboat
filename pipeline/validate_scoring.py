@@ -177,6 +177,8 @@ for scoring_dir in SCORING_DIRS:
         d = json.load(open(f))
         n_scores += sum(len(c.get("scores") or {}) for c in d["candidates"])
 
+if not any((p / "interim/research-plan.json").exists() for p in PACKAGES):
+    print(f"nothing to validate: no package in {E.id} has interim/research-plan.json yet")
 print(f"errors: {len(errors)}")
 for e in errors:
     print("  E:", e)

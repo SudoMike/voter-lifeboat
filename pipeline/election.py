@@ -23,18 +23,22 @@ APP_DATA_ROOT = ROOT / "app/public/data"
 # Display metadata for each election, keyed by package id. `app_id` is the id
 # baked into app-data.json and report links (codec.js); it predates the
 # package ids and must not change for an election that has shipped.
+# `statewide_complete` is a declared coverage fact: True once every Statewide
+# Contest for the election is in its app data (app-data `coverage`).
 ELECTION_META = {
     "2026-08-04-primary": {
         "app_id": "2026-08-04-primary-special",
         "name": "August 4, 2026 Primary and Special Election",
         "day": "2026-08-04",
         "scope": "Washington State",
+        "statewide_complete": True,
     },
     "2026-11-03-general": {
         "app_id": "2026-11-03-general",
         "name": "November 3, 2026 General Election",
         "day": "2026-11-03",
         "scope": "Washington State",
+        "statewide_complete": False,
     },
 }
 

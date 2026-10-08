@@ -11,7 +11,11 @@ Outputs:
   data/final/<id>/app-data.json
   app/public/data/<id>/app-data.json
   data/final/elections.json and app/public/data/elections.json (index of
-    every election whose app-data exists; `active` from elections/ACTIVE)
+    every election whose app-data exists, with package `id`, `app_id` and
+    `status`; `active` from elections/ACTIVE)
+
+An empty package (no King interim files, no scores) assembles to app data
+with no contests; rubric.json and interview.json are always required.
 
 Scope model:
   {"kind": "STATEWIDE"}
@@ -77,11 +81,24 @@ COUNTY_NAMES = {
     "yakima": ("Yakima County", "53077"),
 }
 
-contests = json.load(open(INTERIM / "contests.json"))["contests"]
-scores = {c["contest_slug"]: c for c in json.load(open(FINAL / "scores.json"))["contests"]}
-measures_scored = {m["slug"]: m for m in json.load(open(FINAL / "measures.json"))["measures"]}
-measures_meta = json.load(open(INTERIM / "measures.json"))["measures"]
-pidx = json.load(open(INTERIM / "pamphlet-index.json"))
+
+
+def load_optional(path, key, default):
+    """A package still being researched may not have this file yet."""
+    if not path.exists():
+        return default
+    data = json.load(open(path))
+    return data[key] if key else data
+
+
+# An election package may be empty (a new election before research lands):
+# missing King interim files and score files mean "no contests yet", not an
+# error. rubric.json and interview.json are hand-authored and always required.
+contests = load_optional(INTERIM / "contests.json", "contests", [])
+scores = {c["contest_slug"]: c for c in load_optional(FINAL / "scores.json", "contests", [])}
+measures_scored = {m["slug"]: m for m in load_optional(FINAL / "measures.json", "measures", [])}
+measures_meta = load_optional(INTERIM / "measures.json", "measures", [])
+pidx = load_optional(INTERIM / "pamphlet-index.json", None, {"candidates": {}, "measures": {}})
 rubric = json.load(open(FINAL / "rubric.json"))
 interview = json.load(open(FINAL / "interview.json"))
 
@@ -269,7 +286,9 @@ for m in measures_meta:
         "lean_mappings": ms.get("lean_mappings", {}),
     })
 
-supported_counties = [{"id": "king", "name": "King County", "state": "WA", "fips": "53033", "coverage": "full_county"}]
+supported_counties = []
+if contests or measures_meta:
+    supported_counties.append({"id": "king", "name": "King County", "state": "WA", "fips": "53033", "coverage": "full_county"})
 shared_scores = shared_score_index(scores)
 for county_dir in sorted(E.counties.iterdir()):
     if county_dir.name == "king" or not county_dir.is_dir():
@@ -330,7 +349,7 @@ app_data = {
         "scope": META["scope"],
     },
     "coverage": {
-        "statewide_complete": True,
+        "statewide_complete": META["statewide_complete"],
         "supported_counties": supported_counties,
     },
     "rubric": {"scale": rubric["scale"], "axes": rubric["axes"]},
@@ -360,6 +379,7 @@ def write_election_index():
             continue
         entries.append({
             "id": election_id,
+            "app_id": meta["app_id"],
             "name": meta["name"],
             "day": meta["day"],
             "scope": meta["scope"],

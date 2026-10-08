@@ -1,7 +1,30 @@
 import React from 'react'
 import GitHubLink from './GitHubLink.jsx'
+import { archivedElections, electionHref } from '../lib/elections.js'
 
-export default function Landing({ data, onStart }) {
+// Archived elections from the index, each at its own route.
+function PastElections({ index, election, base }) {
+  const past = archivedElections(index)
+  if (!past.length) return null
+  return (
+    <details className="note past-elections" style={{ textAlign: 'center', padding: '0 24px 10px', fontSize: 12 }}>
+      <summary>Past elections</summary>
+      <ul>
+        {past.map((e) => (
+          <li key={e.id}>
+            {e.id === election?.id ? (
+              <>{e.name} (this guide)</>
+            ) : (
+              <a href={electionHref(base, e)}>{e.name}</a>
+            )}
+          </li>
+        ))}
+      </ul>
+    </details>
+  )
+}
+
+export default function Landing({ data, index, election, base, onStart }) {
   return (
     <main className="screen screen--app rise">
       <header
@@ -27,7 +50,7 @@ export default function Landing({ data, onStart }) {
         <p className="lede" style={{ marginTop: 16 }}>
           Get through your whole ballot in three minutes — see how everyone on{' '}
           <em>your</em> covered ballot lines up with <em>your</em> values.
-          Washington State primary · Aug 4, 2026.
+          {data.election.scope} · {data.election.name}.
         </p>
       </section>
       <section style={{ padding: '20px 24px 0' }}>
@@ -75,6 +98,7 @@ export default function Landing({ data, onStart }) {
           <a href="#methodology">How this guide is built</a> ·{' '}
           <a href="#data">Open dataset</a>
         </div>
+        <PastElections index={index} election={election} base={base} />
         <div
           className="note"
           style={{ textAlign: 'center', padding: '0 24px 18px', fontSize: 12 }}

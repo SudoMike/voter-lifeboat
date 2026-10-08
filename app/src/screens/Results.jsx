@@ -13,6 +13,7 @@ import {
 import { writeHash } from '../lib/codec.js'
 import { buildBrief, pamphletLink } from '../lib/brief.js'
 import { copyText } from '../lib/clipboard.js'
+import { postReport, shouldRecordReport } from '../lib/reports.js'
 import GitHubLink from './GitHubLink.jsx'
 
 const EVIDENCE = {
@@ -28,25 +29,6 @@ function postFeedback(payload) {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload),
   })
-}
-
-// Fire-and-forget: record this report (answers + ballot context, never an address)
-// into the public dataset. See /api/report in server.js and the #data page.
-function postReport(data, context, answers) {
-  const a = {}
-  for (const [axis, { v, w }] of Object.entries(answers)) a[axis] = [v, w]
-  fetch('/api/report', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      v: data.data_version,
-      election: data.election?.id,
-      coverageStatus: context.coverageStatus,
-      county: context.county,
-      districts: context.districts || {},
-      answers: a,
-    }),
-  }).catch(() => {})
 }
 
 function ReportButton({ contest, candidate }) {
@@ -620,7 +602,7 @@ function Footer() {
   )
 }
 
-export default function Results({ data, ballotContext, answers, restored, onStartOver }) {
+export default function Results({ data, election, ballotContext, answers, restored, onStartOver }) {
   const contests = useMemo(
     () => contestsOnBallot(data, ballotContext, scopeMatches),
     [data, ballotContext]
@@ -637,14 +619,14 @@ export default function Results({ data, ballotContext, answers, restored, onStar
     setShareUrl(writeHash(data, ballotContext, answers))
   }, [data, ballotContext, answers])
 
-  // Record fresh completions in the public dataset — once, and never for
-  // reports someone else shared (that would double-count the original voter).
+  // Record fresh completions in the public dataset — once, never for reports
+  // someone else shared, and never for an archived election (see reports.js).
   const recorded = useRef(false)
   useEffect(() => {
-    if (restored || recorded.current) return
+    if (recorded.current || !shouldRecordReport({ election, restored })) return
     recorded.current = true
     postReport(data, ballotContext, answers)
-  }, [restored, data, ballotContext, answers])
+  }, [election, restored, data, ballotContext, answers])
 
   const copyLink = () => {
     copyText(shareUrl)

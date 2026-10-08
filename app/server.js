@@ -53,6 +53,25 @@ function readBody(req, res, onJson) {
 
 const COVERAGE_STATUSES = new Set(['full_county', 'partial_county', 'statewide_only'])
 
+// Archived elections stay explorable, but their reports must not land in the
+// dataset. The client already skips the post (src/lib/reports.js); this is the
+// backstop. Ids come from the shipped election index (written by
+// pipeline/assemble_app_data.py), matching both the package id and the app id
+// that report records carry.
+function archivedElectionIds() {
+  try {
+    const index = JSON.parse(readFileSync(join(DIST, 'data/elections.json'), 'utf8'))
+    return new Set(
+      (index.elections || [])
+        .filter((e) => e.status === 'archived')
+        .flatMap((e) => [e.id, e.app_id].filter(Boolean))
+    )
+  } catch {
+    return new Set()
+  }
+}
+const ARCHIVED_ELECTIONS = archivedElectionIds()
+
 // { v, election, coverageStatus, county, districts, answers } -> sanitized record
 function sanitizeReport(payload) {
   const districts = {}
@@ -155,6 +174,10 @@ const server = createServer((req, res) => {
         res.writeHead(400, { 'Content-Type': 'application/json' })
         return res.end('{"error":"missing answers"}')
       }
+      if (record.election && ARCHIVED_ELECTIONS.has(record.election)) {
+        res.writeHead(409, { 'Content-Type': 'application/json' })
+        return res.end('{"error":"election is archived"}')
+      }
       appendFileSync(REPORTS_FILE, JSON.stringify(record) + '\n')
       res.writeHead(204).end()
     })
@@ -205,7 +228,13 @@ const server = createServer((req, res) => {
     return
   }
   if (!existsSync(file) || statSync(file).isDirectory()) {
-    file = join(DIST, 'index.html') // SPA fallback (hash routing needs only /)
+    // Data files never fall back to the SPA page: a missing election file must
+    // be a 404, not HTML the app would fail to parse as JSON.
+    if (path.startsWith('/data/')) {
+      res.writeHead(404).end()
+      return
+    }
+    file = join(DIST, 'index.html') // SPA fallback: / and /<election-id> routes
   }
   const ext = extname(file)
   res.writeHead(200, {
