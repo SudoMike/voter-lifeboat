@@ -1,0 +1,145 @@
+{
+  "contest_slug": "kitsap-legislative-district-35-state-representative-pos-1",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/kitsap/dossiers/kitsap-legislative-district-35-state-representative-pos-1/"],
+  "office_does": "A State Representative serves a two-year term writing and voting on Washington state law and the operating, capital and transportation budgets, covering school funding, tax structure, housing rules, health funding and criminal-justice statutes.",
+  "race_blurb": "Republican Rep. Dan Griffey, a retired firefighter first elected in 2014, faces Democrat Jim Pierson, an Army Special Forces veteran and former tech-industry manager. Griffey led the primary with 52%; they split on the income tax, public safety, reproductive rights and immigration.",
+  "candidates": [
+    {
+      "slug": "dan-griffey",
+      "summary": "Retired Mason County firefighter and former House Republican Whip, in the House since 2014, running on affordability, crime and keeping businesses in the state.",
+      "highlights": [
+        "Voted against ESSB 6346, the tax on income over $1 million; his amendment to exempt public pensions from it failed [S6][S7]",
+        "Campaign site keeps a 'No State Income Tax' plank and calls for a balanced-budget requirement [S5]",
+        "'We must put families before felons': tougher penalties and 'applying the law as written' [S5][S2]",
+        "Wants a lower gas tax and hydropower counted as renewable energy [S2][S5]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S2", "S5", "S6", "S8", "S9", "S10"],
+          "basis": "Voted no on ESSB 6346, ESSB 5813 and ESHB 2081 and yes on I-2111; 'No State Income Tax' platform plank and interview opposition."
+        },
+        "spending": {
+          "score": -2,
+          "confidence": "medium",
+          "citations": ["S5"],
+          "basis": "Wants budgets based on actual revenues, a balanced-budget requirement and a five-day review period to 'find waste to cut.'"
+        },
+        "housing": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S2", "S5"],
+          "basis": "Prioritizes private property rights and land-use freedom; says excessive regulations choke growth."
+        },
+        "safety": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S2", "S5"],
+          "basis": "'Families before felons' platform with tougher sentences; calls for applying the law as written and ending loopholes that let criminals walk free."
+        },
+        "climate": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S2", "S5"],
+          "basis": "Wants a lower gas tax and hydropower recognized as renewable, citing consumer energy costs."
+        },
+        "experience": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S2", "S4"],
+          "basis": "Elected 2014, former House Republican Whip; campaign cites 141 bills passed."
+        },
+        "local-control": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S5"],
+          "basis": "Supports housing legislation that 'keeps local decisions local.'"
+        },
+        "social": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S14", "S15"],
+          "basis": "Voted against ESSB 5599 and ESHB 1469 (2023 reproductive and gender-affirming care bills); no campaign statements or I-638 position."
+        },
+        "parental-rights": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S11", "S12", "S13"],
+          "basis": "Voted for I-2081 and against ESHB 1296, the changes I-1 would repeal; no campaign statement on I-1."
+        }
+      }
+    },
+    {
+      "slug": "jim-pierson",
+      "summary": "Army Special Forces veteran and former product and program manager at Apple, Microsoft and GoDaddy, a Democratic precinct officer running on healthcare costs, fair taxes and housing.",
+      "highlights": [
+        "Wants 'the wealthiest individuals and corporations to contribute their share' with property-tax relief for seniors and working families [S2]",
+        "Platform: reproductive rights protected, discrimination banned, an expanded path to citizenship [S6]",
+        "Wants healthcare to 'move away from a for-profit system' without 'breaking what works' [S6][S1]",
+        "Says he does not accept corporate contributions [S5]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S2", "S6"],
+          "basis": "Wants the ultra-wealthy and large corporations to pay more while keeping property taxes low; no statement on the income tax itself."
+        },
+        "housing": {
+          "score": 0,
+          "confidence": "medium",
+          "citations": ["S2", "S6"],
+          "basis": "Pairs renter protections with more supply, faster permitting and condo construction-defect liability reform."
+        },
+        "safety": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S6"],
+          "basis": "Calls for accountable policing, treatment and recovery access, and prevention investments."
+        },
+        "climate": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S6"],
+          "basis": "Backs renewable-energy investment and holding polluters accountable, framed as 'practical' climate policy that lowers costs."
+        },
+        "healthcare": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S6"],
+          "basis": "Wants healthcare moved away from a for-profit system, but 'without breaking what works.'"
+        },
+        "immigration": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S6"],
+          "basis": "Says immigrants deserve 'a fair and expanded path to citizenship.'"
+        },
+        "social": {
+          "score": 2,
+          "confidence": "medium",
+          "citations": ["S6", "S1"],
+          "basis": "Platform: live authentically, love who you love, reproductive rights protected and discrimination banned."
+        },
+        "reform": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S5"],
+          "basis": "Says his campaign does not accept corporate contributions."
+        },
+        "experience": {
+          "score": 2,
+          "confidence": "medium",
+          "citations": ["S1", "S2"],
+          "basis": "Has held no public office beyond precinct committee officer; pitches 'a different perspective' against a 12-year incumbent."
+        }
+      }
+    }
+  ]
+}
