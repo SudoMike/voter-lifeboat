@@ -222,7 +222,9 @@ Campaign finance is the PDC summary dataset (data.wa.gov `3h9x-7bvm`).
   running). Blake Richards and Monte Renzelman, both `rich`, carried from
   the primary dossiers and refreshed. Scores: Richards `safety` -2 high,
   `experience` 0 medium; Renzelman `experience` -1 high, `safety` -1 high.
-  Refutation: see `scoring/refutations/`.
+  The refutation upheld all four scores. It flagged that Renzelman's
+  experience basis quoted his campaign slogan, which the dossier did not
+  carry; the slogan is now in the dossier with its source.
 - **PUD Commissioner District No. 1** (contested, open seat; board
   president Judy Ridge, who won it in 2020, is not running). Joe Louis and
   Darcy Nelly, both `pamphlet-only`. No rubric axis applies to a
@@ -236,6 +238,8 @@ Campaign finance is the PDC summary dataset (data.wa.gov `3h9x-7bvm`).
 - **Rural EMS District No. 2 Prop. 1:** `rich`. Mapped `taxes` +2: the
   ceiling rises from $0.15 to $0.28 per $1,000 and the 2025 rate was
   $0.12. The same proposition failed in the August primary, 118 to 146.
+  The measure refutation upheld the mapping and adjusted one phrase of
+  `pro_summary` ("only dedicated funding"), fixed in `scoring/measures.json`.
 
 ## Known gaps
 

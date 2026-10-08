@@ -71,7 +71,7 @@ sources:
 
 ## Background
 
-- **Current role.** Chief of Police of the City of Asotin for the past 11 years [S2].
+- **Current role.** Chief of Police of the City of Asotin for the past 11 years [S2]. His campaign slogan is "Experience You Can Trust, Leadership the Community Can Count On" [S2].
 - **Career.** POST-certified through North Idaho College's law enforcement program in 1993. Began as a reserve officer in Moscow, Idaho. Full-time Asotin County deputy from 1995, rising to sergeant. Then 13 years with the Lewiston Police Department [S2]. Says he has more than 31 years of full-time law enforcement in the Lewis-Clark Valley, including more than 10 as chief [S1].
 - **Specialties.** Field training officer, SWAT, critical incident negotiator, K9 handler, entry team leader. A member of the Asotin County Jail Committee "from its beginning" [S1].
 - **Credentials.** Executive certificate in Washington and Master Police Officer certificate in Idaho; member of the Washington Association of Sheriffs and Police Chiefs for over 10 years. Named officer of the year by the Asotin County Sheriff's Office and the Lewiston Police Department [S1].
