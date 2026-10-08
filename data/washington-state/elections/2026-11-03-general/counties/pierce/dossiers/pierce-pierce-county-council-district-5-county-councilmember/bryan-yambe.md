@@ -9,6 +9,7 @@ carried_forward_from: data/washington-state/elections/2026-08-04-primary/countie
 derived_from:
   - data/washington-state/elections/2026-11-03-general/counties/pierce/raw/candidates/pierce-pierce-county-council-district-5-county-councilmember/
   - data/washington-state/elections/2026-08-04-primary/counties/pierce/dossiers/pierce-pierce-county-council-district-5-county-councilmember/bryan-yambe.md
+  - data/washington-state/elections/2026-11-03-general/counties/pierce/raw/votewa/candidate-statements/race-186808.json
 sources:
   - id: S1
     tier: 1
@@ -79,10 +80,19 @@ sources:
     outlet: Washington Secretary of State election results, August 4, 2026 primary, Pierce County (certified; data as of 2026-09-11)
     url: https://results.vote.wa.gov/
     accessed: 2026-10-08
+  - id: S12
+    tier: 1
+    type: votewa
+    ref: VoteWA candidate record, race 186808 (Pierce County Council District No. 5, election 899), "Statement" field: the candidate's own submitted general-election statement (occupation, education, statement)
+    url: https://voter.votewa.gov/elections/candidate.ashx?e=899&r=186808&b=0&la=en&c=27
+    pointer: counties/pierce/raw/votewa/candidate-statements/race-186808.json.meta.json
+    accessed: 2026-10-08
 ---
 
 ## Background
-Bryan Yambe (prefers Democratic Party) was appointed to the Pierce County Council in 2025 after eleven years on the Fife City Council, including as deputy mayor [S2][S6]. He was born in Tacoma [S6]. He lists service on the Pierce County Regional Council, the Tacoma-Pierce County Health Department board, the Puget Sound Regional Council Transportation Board and Economic Development Board (alternate), and the Association of Washington Cities Education Advisory Committee [S6].
+His general-election statement comes from his VoteWA candidate record, where the "Statement" field holds the text he submitted (not yet marked approved for display on 2026-10-08) [S12]; the Pierce County printed local voters' pamphlet for the general could not be read (Cloudflare block).
+
+Bryan Yambe (prefers Democratic Party) was appointed to the Pierce County Council in 2025 after eleven years on the Fife City Council, including as deputy mayor [S2][S6]. He was born in Tacoma [S6]. His statement says his father immigrated to the United States and found stability through a union career, which he says shaped his commitment to "fighting for working families"; it lists his education as Decatur High School, Highline College and an Association of Washington Cities Advanced Certificate of Municipal Leadership [S12]. He lists service on the Pierce County Regional Council, the Tacoma-Pierce County Health Department board, the Puget Sound Regional Council Transportation Board and Economic Development Board (alternate), and the Association of Washington Cities Education Advisory Committee [S6].
 
 In the August 4 primary he received 12,179 votes (61.5%) to Republican Bettina Gese's 7,575 (38.3%) [S11].
 
@@ -91,6 +101,7 @@ In the August 4 primary he received 12,179 votes (61.5%) to Republican Bettina G
 - **Public safety:** would invest in law enforcement, fire and emergency services, expand crisis response for people with mental-health and substance-use issues, invest in youth intervention programs, and strengthen police-community partnerships "to build trust and accountability" [S4]. Says "accountability and compassion can — and must — work together" [S3].
 - **Transportation:** would expand transit service, invest in sidewalks, streetlights and traffic flow, and support multimodal options [S4]. Argues Pierce County should receive the Sound Transit investments its residents have funded and opposes delaying South Sound projects [S2].
 - **Health and climate:** would expand crisis care, behavioral health and addiction treatment "on demand," expand nutrition assistance, and prioritize "frontline communities and the urgent local action required to mitigate climate change" [S4].
+- **General statement (says he will):** says he will "keep fighting" for residents of Tacoma, Fife and unincorporated Pierce County by "listening, building coalitions," and has worked "to elevate food security as a county priority and expand support for seniors, working families, and vulnerable residents" [S12].
 - **Primary statement:** his primary pamphlet statement listed affordable housing, behavioral-health and crisis-response funding, transportation safety, food security and core public-safety services [S1].
 - **Economy:** would expand job training and apprenticeships and support small businesses through the Pierce County Business Accelerator [S4].
 
@@ -104,15 +115,17 @@ In the August 4 primary he received 12,179 votes (61.5%) to Republican Bettina G
 - Voted aye on the 2026-2027 biennial budget (O2025-562s3, 2025-11-25), which passed 4-3 with Councilmembers Morell, Herrera and Cruver voting nay [S8]. His campaign says the budget protected core public-safety services and increased Sheriff's Office funding while investing in behavioral health and crisis response [S3].
 - Voted aye on O2026-523s (2026-06-23), expanding housing options including cottage housing, which passed 6-1 [S9].
 - His campaign says he supported council approval of $12.2 million for four projects creating or preserving 646 affordable homes, helped secure $5 million to rehabilitate the 248-unit Chateau Rainier apartments in Fife, helped authorize $400,000 in emergency food-bank support, and supported the county's Vision Zero initiative [S3].
+- His general statement summarizes his first council year as helping secure $12.2 million creating or preserving 646 affordable homes, passing "the Justice Fund to advance safer communities and a fairer justice system," expanding childcare access, strengthening behavioral-health investments, and securing emergency food assistance after federal funding cuts [S12]. These are his own descriptions.
 - Campaign finance (PDC, data updated 2026-10-05): $48,846.00 raised and $42,431.19 spent for 2026 [S10].
 
 ## Endorsements
 - Gov. Bob Ferguson, Lt. Gov. Denny Heck, Attorney General Nick Brown, U.S. Rep. Adam Smith, House Speaker Laurie Jinkins and other state legislators [S5].
 - Pierce County Central Labor Council, Tacoma Fire Fighters IAFF Local 31, Pierce County Firefighters Local 726, Washington Education Association, ATU 751 and 758, SEIU 1199NW, Teamsters 117, ILWU Local 23 and building-trades unions [S5].
+- His statement lists firefighters, Planned Parenthood, labor unions, State Treasurer Mike Pellicciotti, Sens. Conway and Trudeau and County Executive Mello [S12].
 - Washington Conservation Action, Environmental Coalition of Pierce County, Washington Bikes, Planned Parenthood Alliance Advocates, Alliance for Gun Responsibility Victory Fund, Moms Demand Gun Sense, Indivisible Tacoma, and the 25th, 27th and 29th LD Democrats [S5].
 
 ## Scoring notes
 - Incumbent since 2025 with eleven years of Fife council service before that [S2][S6].
-- Voted for the council-imposed 0.1% public-safety sales tax and the 2026-2027 budget, both opposed by the council's Republican members [S7][S8].
-- Housing platform pairs permit streamlining with public affordable-housing investment, rapid rehousing and homebuyer programs [S3][S4][S9].
+- Voted for the council-imposed 0.1% public-safety sales tax (passed 5-2; Councilmembers Herrera and Cruver voted nay, Morell aye) and the 2026-2027 budget (passed 4-3; Morell, Herrera and Cruver nay) [S7][S8].
+- Housing platform pairs permit streamlining with public affordable-housing investment, rapid rehousing and homebuyer programs; his statement leads with the $12.2 million for 646 affordable homes [S3][S4][S9][S12].
 - Public-safety platform pairs first-responder funding with crisis response, youth intervention and violence prevention [S3][S4].

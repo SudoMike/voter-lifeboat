@@ -1,49 +1,148 @@
 {
   "contest_slug": "pierce-pierce-county-council-district-5-county-councilmember",
   "scored_at": "2026-10-08",
-  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-pierce-county-council-district-5-county-councilmember/"],
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/pierce/dossiers/pierce-pierce-county-council-district-5-county-councilmember/"
+  ],
   "office_does": "The District 5 councilmember is one of seven Pierce County Council members who adopt the county budget, ordinances, taxes and land-use rules for an area including Fife, the Port of Tacoma, Parkland and parts of Spanaway and Tacoma.",
   "race_blurb": "Incumbent Democrat Bryan Yambe, appointed in 2025 after eleven years on the Fife City Council, faces Republican Bettina Gese, a Puyallup Tribal member and small-business owner; Yambe took 61.5% in the primary. The race turns on Yambe's votes for the county's public-safety sales tax and budget versus Gese's call to cut taxes and spending.",
   "candidates": [
     {
       "slug": "bryan-yambe",
-      "summary": "Appointed councilmember since 2025 and former Fife deputy mayor, running on affordable housing, public safety with crisis response, and transportation investment.",
+      "summary": "Appointed councilmember since 2025 and former Fife deputy mayor, running on affordable housing, public safety with crisis response, food security and transportation investment.",
       "highlights": [
         "Voted for the 0.1% criminal-justice sales tax (passed 5-2) and the 2026-2027 budget (passed 4-3) [S7][S8]",
+        "Says his first year helped secure $12.2 million creating or preserving 646 affordable homes [S3][S12]",
         "Voted for the cottage-housing ordinance expanding housing options [S9]",
-        "Platform pairs permit streamlining with affordable-housing investment and rapid rehousing [S4]",
         "Pairs first-responder funding with crisis response and youth intervention [S3][S4]",
         "Endorsed by Gov. Bob Ferguson, the Central Labor Council and Washington Conservation Action [S5]"
       ],
       "evidence_level": "rich",
       "withdrawn": false,
       "scores": {
-        "taxes": {"score": 1, "confidence": "high", "citations": ["S3", "S7"], "basis": "Voted for the council-imposed 0.1% criminal-justice sales tax and campaigns on it as the 'Justice Fund'; also promotes senior and low-income property-tax relief."},
-        "spending": {"score": 1, "confidence": "high", "citations": ["S3", "S4", "S8"], "basis": "Voted for the 2026-2027 budget over Republican opposition and campaigns on expanded housing, behavioral-health, food and transit investment."},
-        "housing": {"score": 1, "confidence": "high", "citations": ["S3", "S4", "S9"], "basis": "Supports public affordable-housing funding, rapid rehousing and homebuyer programs, alongside permit streamlining and a yes vote on cottage housing."},
-        "safety": {"score": 1, "confidence": "medium", "citations": ["S3", "S4"], "basis": "Funds deputies and first responders but emphasizes crisis response, behavioral-health treatment, youth intervention and violence prevention."},
-        "climate": {"score": 1, "confidence": "medium", "citations": ["S4", "S5"], "basis": "Platform calls for 'urgent local action required to mitigate climate change'; endorsed by Washington Conservation Action and the Environmental Coalition of Pierce County."},
-        "experience": {"score": -2, "confidence": "high", "citations": ["S2", "S6"], "basis": "Sitting councilmember with eleven prior years on the Fife City Council and several regional board seats."}
+        "taxes": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": [
+            "S3",
+            "S7",
+            "S12"
+          ],
+          "basis": "Voted for the council-imposed 0.1% criminal-justice sales tax and campaigns on it as the 'Justice Fund'; a flat sales tax, and he also promotes senior and low-income property-tax relief."
+        },
+        "spending": {
+          "score": 1,
+          "confidence": "high",
+          "citations": [
+            "S3",
+            "S4",
+            "S8",
+            "S12"
+          ],
+          "basis": "Voted for the 2026-2027 budget and campaigns on expanded housing, childcare, behavioral-health, food and transit investment."
+        },
+        "housing": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": [
+            "S3",
+            "S4",
+            "S9",
+            "S12"
+          ],
+          "basis": "Leads with public affordable-housing funding, rapid rehousing and homebuyer programs, alongside permit streamlining and a yes vote on cottage housing."
+        },
+        "safety": {
+          "score": 0,
+          "confidence": "medium",
+          "citations": [
+            "S3",
+            "S4",
+            "S7",
+            "S12"
+          ],
+          "basis": "Leads with law enforcement, fire and EMS investment and voted for the tax funding deputy hiring, while emphasizing crisis response, youth intervention and a 'fairer justice system'."
+        },
+        "climate": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": [
+            "S4"
+          ],
+          "basis": "Platform calls for 'the urgent local action required to mitigate climate change'."
+        },
+        "experience": {
+          "score": -2,
+          "confidence": "high",
+          "citations": [
+            "S2",
+            "S6",
+            "S12"
+          ],
+          "basis": "Sitting councilmember with eleven prior years on the Fife City Council and several regional board seats, running on what he has 'delivered'."
+        }
       }
     },
     {
       "slug": "bettina-gese",
-      "summary": "Puyallup Tribal member, former geoduck diver, real-estate agent and small-business owner running on lower taxes, spending restraint and public safety.",
+      "summary": "Puyallup Tribal member, former geoduck diver, real-estate agent and small-business owner running on lower taxes, spending restraint, infrastructure and public safety.",
       "highlights": [
         "Pledges to 'push back on unnecessary tax increases': 'we have a spending problem' [S3]",
+        "Would prioritize neglected roads and bridges, including the Canyon Road project and the War Memorial and Milroy bridges [S3][S7]",
         "Would streamline permitting while protecting single-family neighborhoods from denser development [S3]",
-        "Frames public safety around accountability for repeat crime and addiction [S3]",
-        "Wants the Canyon Road project, War Memorial Bridge and Milroy Bridge prioritized [S3]",
+        "Frames public safety around accountability for repeat crime and recovery pathways to 'end the revolving door' [S3][S7]",
         "Endorsed by the Puyallup Tribe of Indians [S2]"
       ],
       "evidence_level": "moderate",
       "withdrawn": false,
       "scores": {
-        "taxes": {"score": -2, "confidence": "medium", "citations": ["S1", "S2", "S3"], "basis": "Runs under a 'Lower Taxes' plank pledging to resist unnecessary tax increases and protect families from rising costs."},
-        "spending": {"score": -2, "confidence": "medium", "citations": ["S2", "S3"], "basis": "Says 'we don't have a money problem — we have a spending problem' and would cut wasteful and unnecessary spending while protecting essential programs."},
-        "housing": {"score": -1, "confidence": "medium", "citations": ["S3"], "basis": "Would cut costs, streamline permitting and increase supply 'where it makes sense,' while opposing denser development in single-family neighborhoods."},
-        "safety": {"score": -1, "confidence": "medium", "citations": ["S3"], "basis": "Emphasizes accountability for repeat crime and disorder and says 'enabling destructive behavior under the guise of compassion helps no one,' while backing recovery pathways."},
-        "experience": {"score": 2, "confidence": "medium", "citations": ["S2", "S4"], "basis": "First-time candidate who presents herself as 'not a career politician' against a sitting incumbent."}
+        "taxes": {
+          "score": -2,
+          "confidence": "medium",
+          "citations": [
+            "S1",
+            "S2",
+            "S3"
+          ],
+          "basis": "Runs under a 'Lower Taxes' plank pledging to resist unnecessary tax increases and protect families from rising costs."
+        },
+        "spending": {
+          "score": -2,
+          "confidence": "medium",
+          "citations": [
+            "S2",
+            "S3",
+            "S7"
+          ],
+          "basis": "Says 'we don't have a money problem — we have a spending problem', would cut wasteful spending while protecting essential programs, and pledges transparent spending."
+        },
+        "housing": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": [
+            "S3"
+          ],
+          "basis": "Would cut costs, streamline permitting and increase supply 'where it makes sense', while opposing denser development in single-family neighborhoods."
+        },
+        "safety": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": [
+            "S3",
+            "S7"
+          ],
+          "basis": "Emphasizes accountability for repeat crime and says 'enabling destructive behavior under the guise of compassion helps no one', while backing recovery pathways."
+        },
+        "experience": {
+          "score": 2,
+          "confidence": "medium",
+          "citations": [
+            "S2",
+            "S4",
+            "S7"
+          ],
+          "basis": "First-time candidate who presents herself as 'not a career politician' against a sitting incumbent."
+        }
       }
     }
   ]
