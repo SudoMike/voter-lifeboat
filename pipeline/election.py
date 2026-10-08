@@ -102,6 +102,7 @@ DISTRICT_ADAPTER_LAYERS = {
     "chelan": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "SCHDST"),
     "clallam": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "PUDDST", "FIRDST", "DISTCRT", "SCHDST", "PUDALL"),
     "grays-harbor": ("CONGDST", "LEGDST", "CITY", "FIRDST", "LIBDST", "SCHDST"),
+    "mason": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "FIRDST", "PUDDST", "SCHDST"),
 }
 
 

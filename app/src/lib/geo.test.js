@@ -1326,3 +1326,45 @@ test('Grays Harbor resolves Timberland Regional Library (not Ocean Shores) and M
   assert.deepEqual(context.missingLayers, [])
   assert.ok(!scopeMatches(trl, context))
 })
+
+// Mason (#30, wave 5). Live point queries 2026-10-08 at the Census-geocoded
+// points of the addresses below.
+const masonCommissioner = (n) => ({ path: 'MasonCoSite/Districts/MapServer/1', attributes: { DIST_ID: n } })
+
+test('Mason resolves PUD No. 1 or No. 3 and its school districts from DOR', async () => {
+  const pud1 = { kind: 'DISTRICT', county: 'mason', layer: 'PUDDST', value: '1' }
+  const pud3 = { kind: 'DISTRICT', county: 'mason', layer: 'PUDDST', value: '3' }
+  const sd65 = { kind: 'DISTRICT', county: 'mason', layer: 'SCHDST', value: '65' }
+  const sd402 = { kind: 'DISTRICT', county: 'mason', layer: 'SCHDST', value: '402' }
+  // 525 W Cota St, Shelton: commissioner 3, no fire district, PUD 3, Shelton SD 309.
+  const calls = mockWave2('525 W COTA ST, SHELTON, WA, 98584', '045', 'Mason County', [
+    masonCommissioner('3'), dorLayer(17, '3'), dorLayer(20, '309'),
+  ])
+  let context = await lookupBallotContext(wave2Data('mason'), '525 W Cota St Shelton WA 98584')
+  assert.equal(context.coverageStatus, 'full_county')
+  assert.deepEqual(context.missingLayers, [])
+  assert.deepEqual([context.districts.PUDDST, context.districts.SCHDST], ['3', '309'])
+  assert.ok(scopeMatches(pud3, context))
+  assert.ok(!scopeMatches(pud1, context))
+  assert.ok(!scopeMatches(sd402, context))
+  for (const n of [17, 20]) {
+    const url = calls.find((u) => u.includes(`WADOR_PropertyTax/MapServer/${n}/query`))
+    assert.equal(new URL(url).searchParams.get('outFields'), 'DISTATTRIB')
+  }
+  // 24151 N US Hwy 101, Hoodsport: commissioner 2, FIR2025 '18', PUD 1, Hood Canal SD 404.
+  mockWave2('24151 N US HWY 101, HOODSPORT, WA, 98548', '045', 'Mason County', [
+    masonCommissioner('2'), dorLayer(7, '18'), dorLayer(17, '1'), dorLayer(20, '404'),
+  ])
+  context = await lookupBallotContext(wave2Data('mason'), '24151 N US Hwy 101 Hoodsport WA 98548')
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(scopeMatches(pud1, context))
+  assert.ok(!scopeMatches(pud3, context))
+  // 281 W Bonnieview Dr, McCleary (Mason side): PUD 3, McCleary SD 65.
+  mockWave2('281 BONNIEVIEW DR, MCCLEARY, WA, 98557', '045', 'Mason County', [
+    masonCommissioner('2'), dorLayer(7, '13'), dorLayer(17, '3'), dorLayer(20, '65'),
+  ])
+  context = await lookupBallotContext(wave2Data('mason'), '281 W Bonnieview Dr McCleary WA 98557')
+  assert.ok(scopeMatches(sd65, context))
+  assert.ok(scopeMatches(pud3, context))
+  assert.ok(!scopeMatches({ ...sd65, county: 'grays-harbor' }, context))
+})
