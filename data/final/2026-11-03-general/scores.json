@@ -51,13 +51,17 @@
     "data/washington-state/elections/2026-11-03-general/counties/douglas/scoring/*.json",
     "data/washington-state/elections/2026-11-03-general/counties/douglas/scoring/refutations/*.json",
     "data/washington-state/elections/2026-11-03-general/counties/okanogan/scoring/*.json",
-    "data/washington-state/elections/2026-11-03-general/counties/okanogan/scoring/refutations/*.json"
+    "data/washington-state/elections/2026-11-03-general/counties/okanogan/scoring/refutations/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/jefferson/scoring/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/jefferson/scoring/refutations/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/kittitas/scoring/*.json",
+    "data/washington-state/elections/2026-11-03-general/counties/kittitas/scoring/refutations/*.json"
   ],
   "script": "pipeline/merge_scores.py",
   "verdict_stats": {
-    "upheld": 2185,
-    "adjust": 188,
-    "refuted": 13,
+    "upheld": 2202,
+    "adjust": 191,
+    "refuted": 21,
     "missing_added": 30,
     "missing_dropped_low": 12
   },
@@ -35005,6 +35009,738 @@
             "35 years as a mining executive responsible for 16 large-scale mines [S1]",
             "Pledges 'dependable and low-cost electricity to all PUD customers' [S1]",
             "Cites experience with high-voltage line construction and budget management [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "jefferson-jefferson-county-assessor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/jefferson/dossiers/jefferson-jefferson-county-assessor/"
+      ],
+      "office_does": "The assessor values all taxable property in Jefferson County for property tax purposes; four-year term.",
+      "race_blurb": "Uncontested: Chuck Garland, a residential appraiser in the Assessor's Office, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "chuck-garland",
+          "summary": "Residential appraiser in the Jefferson County Assessor's Office and Marine Corps veteran; the only candidate for assessor.",
+          "highlights": [
+            "Five years as a residential appraiser in the Assessor's Office [S1]",
+            "Wants values 'fair, accurate, and grounded in real market data' [S1]",
+            "No prior elected office [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "jefferson-jefferson-county-auditor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/jefferson/dossiers/jefferson-jefferson-county-auditor/"
+      ],
+      "office_does": "The auditor records documents, keeps county accounts and runs elections in Jefferson County; four-year term.",
+      "race_blurb": "Uncontested: Lauralee Kiesel, a 21-year Assessor's Office employee, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "lauralee-kiesel",
+          "summary": "Longtime Jefferson County Assessor's Office employee (21 years) with banking and small-business experience; the only candidate for auditor.",
+          "highlights": [
+            "21 years in the Assessor's Office, including budgeting and levy work [S1]",
+            "Promises 'a smooth transition' and customer service [S1]",
+            "States no party preference [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "jefferson-jefferson-county-clerk",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/jefferson/dossiers/jefferson-jefferson-county-clerk/"
+      ],
+      "office_does": "The county clerk keeps the Superior Court's records and handles money paid into court; four-year term.",
+      "race_blurb": "Uncontested: Clerk Amanda Hamilton, in office since 2023, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "amanda-hamilton",
+          "summary": "Jefferson County Clerk since 2023 with more than 20 years in county law-and-justice work; the only candidate.",
+          "highlights": [
+            "Clerk since 2023 [S1]",
+            "Priorities: access to justice and keeping up with new rules [S1]",
+            "Former CASA advocate [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "jefferson-jefferson-county-commissioner-district-3-district-3",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/jefferson/dossiers/jefferson-jefferson-county-commissioner-district-3-district-3/",
+        "data/final/2026-11-03-general/rubric.json"
+      ],
+      "office_does": "The District 3 commissioner is one of three members of the Board of County Commissioners, which adopts the county budget, sets land-use policy and oversees county government; nominated by District 3, elected county-wide, four-year term.",
+      "race_blurb": "Open seat: Commissioner Greg Brotherton is not seeking re-election. Democrat Anji Scalf, a WSU Extension 4-H coordinator backed by Brotherton and two other past District 3 commissioners, led the four-way primary; Republican Stephen T. Nieman, a construction manager on his first run, was second. Both put county finances first: Scalf with a long-range plan and department-level reporting, Nieman with no new taxes and possible service cuts.",
+      "candidates": [
+        {
+          "slug": "anji-scalf",
+          "summary": "WSU Extension 4-H coordinator and former Sequim-Dungeness Valley Chamber of Commerce director from Port Ludlow; a Democrat on her first run for county office. Led the primary with 36.5%.",
+          "highlights": [
+            "Top priority: a long-range county financial plan, to 'live within our means while we grow the tax base' [S3][S4]",
+            "Would require every department to report what its spending delivers [S6]",
+            "Backs simpler permitting and stock building plans to cut housing costs [S3][S10]",
+            "Flatly opposes a local data center; wants the Port Townsend water system modernized [S10]",
+            "Endorsed by Commissioner Greg Brotherton and former commissioners Kler, Austin, Sullivan and Huntingford [S5]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "spending": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S6",
+                "S1"
+              ],
+              "basis": "Leads with a long-range financial plan, department-by-department spending reports and efficiency before asking residents to pay more, while also calling for investment in families, housing and infrastructure."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S4",
+                "S10"
+              ],
+              "basis": "Housing proposals are supply-side: permits simple enough to 'walk in, get it, and walk out' and county stock plans to reduce building costs."
+            },
+            "experience": {
+              "score": 0,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S5",
+                "S8"
+              ],
+              "basis": "Has held no county office (precinct committee officer only), but knows the county budget from inside WSU Extension and runs with the endorsement of past commissioners.",
+              "adjusted_by_refutation": true
+            },
+            "reform": {
+              "score": -1,
+              "confidence": "low",
+              "citations": [
+                "S5",
+                "S6",
+                "S4"
+              ],
+              "basis": "Stresses collaboration, continuity and institutional memory and is endorsed by the outgoing commissioner and predecessors; her changes (impact reporting, more engagement) work within existing structures.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "stephen-t-nieman",
+          "summary": "Port Ludlow construction manager and consultant running as the only Republican, at the county party's invitation; first run for office. Second in the primary with 32.0%.",
+          "highlights": [
+            "Calls balancing the budget 'without further tax increases' the county's biggest challenge, possibly with service cuts [S1]",
+            "Wants stronger oversight and measurable change for programs that do not deliver results [S1]",
+            "Proposes workforce townhome villages with developer equity stakes and 'growth pays for growth' infrastructure [S4]",
+            "Wants the Critical Areas Ordinance loosened and permitting reviewed [S1][S7]",
+            "Backs on-demand transit and mobility hubs: 'get cars off the road' [S8][S10]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "taxes": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S4"
+              ],
+              "basis": "Pamphlet makes balancing the budget 'without further tax increases' the top challenge; his infrastructure plan says existing taxpayers should not bear the cost of growth."
+            },
+            "spending": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Calls for hard budget decisions including possible service cuts, stronger oversight of ineffective programs, and less reliance on grants and administrative growth."
+            },
+            "housing": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S4",
+                "S10"
+              ],
+              "basis": "Permitting review to lower costs and a 'market-oriented public-private partnership' in which developers keep equity stakes; also cites the Habitat for Humanity model."
+            },
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3",
+                "S8"
+              ],
+              "basis": "No prior elected office; runs as an outside challenger to what he calls an entrenched county governing philosophy."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "jefferson-jefferson-county-district-court-judge-position-no-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/jefferson/dossiers/jefferson-jefferson-county-district-court-judge-position-no-1/"
+      ],
+      "office_does": "Jefferson County District Court hears misdemeanor and gross misdemeanor cases; its one judge is elected county-wide to a four-year term.",
+      "race_blurb": "Uncontested: Judge Mindy Walker, on the bench since 2019, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "mindy-walker",
+          "summary": "Jefferson County's District Court judge since 2019 and its presiding judge; the only candidate.",
+          "highlights": [
+            "Elected District Court judge since 2019 [S1]",
+            "Champions the Behavioral Health Court and wants therapeutic courts expanded [S1]",
+            "Former judge pro tem and private practitioner in federal, tribal and state courts [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "jefferson-jefferson-county-prosecutor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/jefferson/dossiers/jefferson-jefferson-county-prosecutor/"
+      ],
+      "office_does": "The prosecuting attorney prosecutes crimes and advises county government on legal matters; four-year term.",
+      "race_blurb": "Uncontested: Prosecuting Attorney James Kennedy, in office since 2019, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "james-kennedy",
+          "summary": "Jefferson County Prosecuting Attorney since 2019 and Army veteran of two Iraq tours; the only candidate.",
+          "highlights": [
+            "Prosecutor since 2019; helped create the county's first Children's Advocacy Center [S1]",
+            "Backs rehabilitative services and a restorative-justice pilot in therapeutic courts [S1]",
+            "Nearly six years in the U.S. Army [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "jefferson-jefferson-county-sheriff",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/jefferson/dossiers/jefferson-jefferson-county-sheriff/"
+      ],
+      "office_does": "The sheriff is Jefferson County's chief law enforcement officer, running patrol, investigations and the jail; four-year term.",
+      "race_blurb": "Only Sheriff Andy Pernsteiner, appointed in 2025, is on the ballot; a write-in candidate has registered with the PDC.",
+      "candidates": [
+        {
+          "slug": "andy-pernsteiner",
+          "summary": "Jefferson County Sheriff since his 2025 appointment, a 28-year member of the office and former undersheriff; the only name on the ballot.",
+          "highlights": [
+            "Appointed sheriff Feb. 24, 2025, after six years as undersheriff [S5][S1]",
+            "Wants partnerships on substance abuse, homelessness and mental health [S1]",
+            "Opposed Senate Bill 5974 on oversight of sheriffs [S7]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "jefferson-jefferson-county-treasurer",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/jefferson/dossiers/jefferson-jefferson-county-treasurer/"
+      ],
+      "office_does": "The treasurer receives, pays out and safeguards county and special-district money; four-year term.",
+      "race_blurb": "Uncontested: Treasurer Stacie Prada, in office since 2015, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "stacie-prada",
+          "summary": "Jefferson County Treasurer since 2015 and past president of the Washington Association of County Officials; the only candidate.",
+          "highlights": [
+            "Treasurer since 2015 [S1]",
+            "Priority: finish the new county financial system [S1]",
+            "WACO president 2021-2022 [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "jefferson-public-utility-district-no-1-of-jefferson-county-commissioner-district-2",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/jefferson/dossiers/jefferson-public-utility-district-no-1-of-jefferson-county-commissioner-district-2/",
+        "data/final/2026-11-03-general/rubric.json"
+      ],
+      "office_does": "A Jefferson PUD commissioner is one of three board members governing the county's public electric, water, sewer and broadband utility; nominated from District 2 (Cape George, Marrowstone, Port Hadlock, Chimacum, Irondale) and elected by the whole county to a six-year term.",
+      "race_blurb": "Open seat; incumbent Kenneth Collins is not running. Chimacum farmer and Finnriver co-founder Keith Kisler faces Port Hadlock computer-business owner and Navy veteran Michael Brittain, both first-time candidates. Both back more local and renewable power and treat broadband as essential; Kisler stresses conservation and affordability programs, Brittain faster customer service and a review of charges. No rubric axis applies to PUD races.",
+      "candidates": [
+        {
+          "slug": "keith-kisler",
+          "summary": "Chimacum farmer, co-founder of Finnriver Farm & Cidery and founder of Chimacum Valley Grainery; first run for office. Endorsed by the Jefferson County Democrats and Washington Conservation Action.",
+          "highlights": [
+            "Priorities: stable, transparent rates, grid resiliency and rural broadband [S3]",
+            "Wants local generation, solar, wind and storage to reduce reliance on BPA's '250-mile extension cord' [S7]",
+            "Would make the PUD's low-income rate program more accessible [S7]",
+            "Raised $10,326 as of Oct. 1 [S8]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        },
+        {
+          "slug": "michael-brittain",
+          "summary": "Port Hadlock owner of two computer-repair stores and Navy veteran (2003-2007) with a wireless engineering background; first run for office.",
+          "highlights": [
+            "Wants faster, accurate answers for PUD customers [S4]",
+            "Would review all PUD charges with low-income residents in mind [S4]",
+            "Supports expanding reservoirs and exploring ocean, wind and solar power [S4]",
+            "No endorsements listed; $1,000 raised as of Oct. 2 [S3][S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "kittitas-court-of-appeals-division-3-district-3-judge-position-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/kittitas/dossiers/kittitas-court-of-appeals-division-3-district-3-judge-position-1/"
+      ],
+      "office_does": "A Court of Appeals judge decides appeals from superior court cases; Division III's District 3 (Chelan, Douglas, Kittitas, Klickitat and Yakima counties) elects two of its five judges for six-year terms.",
+      "race_blurb": "Uncontested: Judge Megan K. Murphy, appointed to the court in January 2025, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "megan-k-murphy",
+          "summary": "Court of Appeals, Division III judge since her January 2025 appointment; former Yakima County deputy prosecutor and civil litigator.",
+          "highlights": [
+            "Appointed to Division III in January 2025, replacing Judge Rebecca Pennell [S1][S2]",
+            "Yakima County deputy prosecutor for about five years from 2001, then civil litigation [S1][S2]",
+            "Partner at Fox Ballard in Seattle before her appointment [S2]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "kittitas-kittitas-county-assessor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/kittitas/dossiers/kittitas-kittitas-county-assessor/"
+      ],
+      "office_does": "The assessor values real and personal property in the county for property taxation.",
+      "race_blurb": "Uncontested: Assessor Mike Hougardy, in office for nine years, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "mike-hougardy",
+          "summary": "Kittitas County Assessor for the past nine years, running unopposed for another term.",
+          "highlights": [
+            "Assessor for the past nine years [S1]",
+            "Statement stresses transparent, customer-focused and equitable appraisals [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "kittitas-kittitas-county-auditor",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/kittitas/dossiers/kittitas-kittitas-county-auditor/"
+      ],
+      "office_does": "The auditor runs county elections, records documents and licenses, and keeps the county's financial accounts.",
+      "race_blurb": "Uncontested: Auditor Bryan Elliott is the only candidate for a second term.",
+      "candidates": [
+        {
+          "slug": "bryan-elliott",
+          "summary": "First-term Kittitas County Auditor and Army National Guard officer, running unopposed for a second term.",
+          "highlights": [
+            "Elected auditor in 2022, defeating Jerry Pettit [S3]",
+            "Installed 24/7 live-view cameras in the Election Center [S1][S3]",
+            "Cites three consecutive timely audits with no questioned costs [S1][S3]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "kittitas-kittitas-county-clerk",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/kittitas/dossiers/kittitas-kittitas-county-clerk/"
+      ],
+      "office_does": "The county clerk keeps the Superior Court's records and handles its filings and court funds.",
+      "race_blurb": "Uncontested: Chief Deputy Clerk Stephanie George is the only candidate for the seat of retiring Clerk Karen Bowen.",
+      "candidates": [
+        {
+          "slug": "stephanie-george",
+          "summary": "Chief deputy clerk in the Kittitas County Clerk's Office, running unopposed for the open clerk's seat.",
+          "highlights": [
+            "Chief Deputy Clerk since 2022; briefly interim county clerk in late 2022 [S1]",
+            "Clerk Karen Bowen is retiring [S3]",
+            "Promises an organized, responsive and accessible office [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "kittitas-kittitas-county-commissioner-district-3-commissioner-3",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/kittitas/dossiers/kittitas-kittitas-county-commissioner-district-3-commissioner-3/"
+      ],
+      "office_does": "The three county commissioners are the county's legislative and executive board: they adopt the budget, set policy and oversee county departments.",
+      "race_blurb": "Uncontested: Commissioner Brett Wachsmith, in office since 2019, is the only candidate. Nominated in District 3, the seat is elected county-wide.",
+      "candidates": [
+        {
+          "slug": "brett-wachsmith",
+          "summary": "Kittitas County commissioner since 2019 and former county treasurer, running unopposed.",
+          "highlights": [
+            "Commissioner since 2019; county treasurer 2015-2018 [S1]",
+            "Cites work on mental health, developmental disabilities and veterans' services [S1]",
+            "Unopposed in 2022 and 2026 [S4][S5]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "kittitas-kittitas-county-coroner",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/kittitas/dossiers/kittitas-kittitas-county-coroner/"
+      ],
+      "office_does": "The coroner runs death investigations in Kittitas County, certifies cause and manner of death and keeps the related public records, working with families, law enforcement and medical partners.",
+      "race_blurb": "Coroner Cori McKean, the long-time chief deputy appointed after Coroner Nick Henderson's 2025 death, runs to keep the office's direction and build a county morgue. Deputy Coroner Charlie Divine runs on modernizing investigations and restoring accountability and team culture. An outside investigation this year cleared McKean of a staff complaint. Both the short and the full term are on the ballot; McKean led the primary 65% to 35%.",
+      "candidates": [
+        {
+          "slug": "cori-mckean",
+          "summary": "Appointed Kittitas County Coroner and former chief deputy coroner, running to keep the office's direction and add a county morgue.",
+          "highlights": [
+            "In the Coroner's Office since 2019; chief deputy who led its 2024 accreditation [S2][S4]",
+            "Appointed coroner in November 2025 after Nick Henderson's death [S5][S6]",
+            "An outside investigation of a 2026 staff complaint found her decisions within her authority [S7][S8]",
+            "Proposes the county's first dedicated morgue, citing a feasibility study [S3]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "medium",
+              "citations": [
+                "S2",
+                "S4",
+                "S6"
+              ],
+              "basis": "Sitting coroner and long-time chief deputy who led the office's accreditation, running to be retained."
+            },
+            "spending": {
+              "score": 1,
+              "confidence": "low",
+              "citations": [
+                "S3"
+              ],
+              "basis": "Proposes a new, purpose-built county morgue facility, while framing it as a cost-conscious rural solution.",
+              "adjusted_by_refutation": true
+            }
+          }
+        },
+        {
+          "slug": "charlie-divine",
+          "summary": "Kittitas County deputy coroner since 2022 and former anesthesia technician, running on modernizing investigations and restoring confidence in the office.",
+          "highlights": [
+            "Deputy coroner since 2022, hired by Nick Henderson; state-certified death investigator [S1][S3]",
+            "About 20 years as an anesthesia technician at Harborview and UW Medical Center [S1][S3]",
+            "Would modernize investigations, improve accountability and rebuild a team-centered culture [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Deputy coroner of four years challenging the incumbent and campaigning on change."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "kittitas-kittitas-county-prosecuting-attorney",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/kittitas/dossiers/kittitas-kittitas-county-prosecuting-attorney/"
+      ],
+      "office_does": "The prosecuting attorney decides which crimes to charge and prosecutes them in Kittitas County's courts, and gives legal advice and representation to county government.",
+      "race_blurb": "Open seat: Prosecutor Greg Zempel is retiring after eight terms and endorsed his chief criminal deputy, Jodi Hammond, who runs on experience and continuity. Aaron Reiman, a former military and city prosecutor now working as a public defender, runs as an independent on a fresh look at the office and more diversion. Hammond led the three-way primary 37% to 34%.",
+      "candidates": [
+        {
+          "slug": "jodi-hammond",
+          "summary": "Chief criminal deputy prosecutor with 22 years as a prosecutor, endorsed by retiring Prosecutor Greg Zempel and running on experience and continuity.",
+          "highlights": [
+            "In the county prosecutor's office since 2011; chief criminal deputy since 2018 [S4]",
+            "Top priority: uphold Zempel's approach, fight for victims and hold offenders accountable [S5]",
+            "Endorsed by Zempel, Commissioner Brett Wachsmith and current and former police leaders [S3]",
+            "Says violent crime is rising and is resource-intensive for prosecutors [S6]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S4",
+                "S6"
+              ],
+              "basis": "Office's chief criminal deputy for years, 22 years a prosecutor, running explicitly on experience as the retiring prosecutor's chosen successor."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S3",
+                "S5"
+              ],
+              "basis": "Emphasizes holding offenders accountable and fighting for victims, endorsed by police leaders; no diversion or treatment proposals in the dossier."
+            }
+          }
+        },
+        {
+          "slug": "aaron-reiman",
+          "summary": "Ellensburg public defender and former Navy JAG, Coast Guard and city prosecutor, running as an independent to bring a fresh look and more diversion to the office.",
+          "highlights": [
+            "Navy JAG and Coast Guard lawyer; Ellensburg city prosecutor from 2020; now a public defender [S1][S6]",
+            "Running as an independent to keep national politics out of the office [S4]",
+            "Would prosecute violent and repeat offenders while expanding pre-filing diversion and recovery-navigator referrals [S1][S4]",
+            "Would seek ways to lower diversion and treatment costs for indigent defendants [S4][S5]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S4"
+              ],
+              "basis": "Long legal career, but never worked in the county prosecutor's office and campaigns on a 'fresh slate, fresh eyes'."
+            },
+            "safety": {
+              "score": 1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3",
+                "S4"
+              ],
+              "basis": "Pairs prosecuting violent and repeat offenders with specific proposals for pre-filing diversion, cheaper treatment access and recovery-navigator referrals, more prevention-oriented than his opponent."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "kittitas-kittitas-county-sheriff",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/kittitas/dossiers/kittitas-kittitas-county-sheriff/"
+      ],
+      "office_does": "The sheriff runs county law enforcement: patrol and emergency response across the county, criminal investigations, search and rescue, the jail and county emergency management.",
+      "race_blurb": "Open seat: Sheriff Clay Myers is retiring. Chief Deputy Ben Kokjer, 21 years in the office, runs on reliable response, investigations and accountability. Darryl Chepoda Jr., an Upper County rancher and retired fire chief, runs on transparency, constitutional rights, community engagement and wildfire evacuation. Kokjer led the primary 78% to 22%.",
+      "candidates": [
+        {
+          "slug": "ben-kokjer",
+          "summary": "Chief Deputy of Operations at the Kittitas County Sheriff's Office, 21 years with the office, running on reliable response, investigations and accountability.",
+          "highlights": [
+            "Deputy since 2005; operations commander from 2019, now chief deputy running patrol and major crimes [S2][S6][S7]",
+            "Promises a well-trained deputy shows up 'wherever in the county you live' [S1][S3]",
+            "Would hold offenders accountable while keeping body-worn cameras and protecting constitutional rights [S1]",
+            "Wants an Upper County Emergency Operations Center and a fully equipped West County Precinct [S1]"
+          ],
+          "evidence_level": "rich",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": -2,
+              "confidence": "high",
+              "citations": [
+                "S1",
+                "S2",
+                "S6",
+                "S7"
+              ],
+              "basis": "21 years in the office, now its chief deputy running day-to-day operations, campaigning to 'build on our history'."
+            },
+            "safety": {
+              "score": -1,
+              "confidence": "medium",
+              "citations": [
+                "S1",
+                "S3"
+              ],
+              "basis": "Enforcement-led platform (response coverage, investigations, holding offenders accountable), tempered by body cameras and constitutional-rights commitments."
+            }
+          }
+        },
+        {
+          "slug": "darryl-chepoda-jr",
+          "summary": "Fifth-generation Upper County rancher and retired fire chief, running as an independent on transparency, constitutional rights and community engagement.",
+          "highlights": [
+            "Rancher and farmer; lists work as a retired fire chief, contractor and miner, and no law enforcement experience [S1]",
+            "Wants full and open transparency, constitutional rights and community engagement [S1]",
+            "Says wildfire evacuation needs renewed focus; floats an opt-in community information app [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {
+            "experience": {
+              "score": 2,
+              "confidence": "medium",
+              "citations": [
+                "S1"
+              ],
+              "basis": "No law enforcement background in his statement; an outsider candidacy."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "contest_slug": "kittitas-kittitas-county-treasurer",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/kittitas/dossiers/kittitas-kittitas-county-treasurer/"
+      ],
+      "office_does": "The treasurer collects property taxes, invests and accounts for county and taxing-district funds.",
+      "race_blurb": "Uncontested: Treasurer Amy Cziske, in office since 2019, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "amy-cziske",
+          "summary": "Kittitas County Treasurer since 2019, running unopposed for a third term.",
+          "highlights": [
+            "Treasurer since 2019; in the office since 2015 [S3]",
+            "Cites modernized procedures and stronger internal controls [S1]"
+          ],
+          "evidence_level": "moderate",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "kittitas-lower-kittitas-county-district-court-district-court-judge",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/kittitas/dossiers/kittitas-lower-kittitas-county-district-court-district-court-judge/"
+      ],
+      "office_does": "The district court judge hears misdemeanors, traffic infractions, small claims and civil cases up to the statutory limit for the Lower Kittitas County district (Ellensburg, Kittitas, Thorp, Vantage and the rest of the lower county).",
+      "race_blurb": "Uncontested: Judge Paul Sander, on the Lower Kittitas County District Court since 2018, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "paul-sander",
+          "summary": "Lower Kittitas County District Court judge since 2018, running unopposed.",
+          "highlights": [
+            "Judge since his 2018 election [S1]",
+            "Helped create the county's Department of Public Defense and a multi-district Behavioral Health Court [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "kittitas-public-utility-district-no-1-of-kittitas-county-commissioner-district-1-commissioner-1",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/kittitas/dossiers/kittitas-public-utility-district-no-1-of-kittitas-county-commissioner-district-1-commissioner-1/"
+      ],
+      "office_does": "PUD commissioners govern Kittitas County PUD No. 1, a public electric utility: they set rates, budgets and policy.",
+      "race_blurb": "Uncontested: Commissioner Rick Catlin, first elected in 2020, is the only candidate for a six-year term.",
+      "candidates": [
+        {
+          "slug": "rick-catlin",
+          "summary": "Kittitas PUD No. 1 commissioner since 2020 and retired electrical contractor, running unopposed.",
+          "highlights": [
+            "Commissioner for six years; won in 2020 [S1][S3]",
+            "Journeyman electrician and former electrical contractor [S1]"
+          ],
+          "evidence_level": "pamphlet-only",
+          "withdrawn": false,
+          "scores": {}
+        }
+      ]
+    },
+    {
+      "contest_slug": "kittitas-upper-kittitas-county-district-court-district-court-judge",
+      "scored_at": "2026-10-08",
+      "derived_from": [
+        "data/washington-state/elections/2026-11-03-general/counties/kittitas/dossiers/kittitas-upper-kittitas-county-district-court-district-court-judge/"
+      ],
+      "office_does": "The district court judge hears misdemeanors, traffic infractions, small claims and civil cases up to the statutory limit for the Upper Kittitas County district (Cle Elum, Roslyn, Easton, Ronald, Snoqualmie Pass and nearby precincts).",
+      "race_blurb": "Uncontested: Judge Craig Juris, on the Upper Kittitas County District Court since 2022, is the only candidate.",
+      "candidates": [
+        {
+          "slug": "craig-juris",
+          "summary": "Upper Kittitas County District Court judge for four years and a former deputy prosecutor of 22 years, running unopposed.",
+          "highlights": [
+            "Judge for four years; won the 2022 race 2,704 to 2,463 [S1][S3]",
+            "22 years as a deputy prosecuting attorney before the bench [S1]"
           ],
           "evidence_level": "pamphlet-only",
           "withdrawn": false,
