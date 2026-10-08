@@ -428,14 +428,25 @@ DOR GIS layer, a PDF-only map, a layer that is not public), the rule is:
 Never scope a district race `COUNTY` to make it appear: that shows it to
 voters outside the district.
 
-As of the builder runs on 2026-10-08, the six counties' general packages
-are `partial_county` for: Kitsap `PUDDST` (PUD No. 1 District 2),
-Snohomish `DISTCRT` (District Court electoral districts), Spokane
-`PUDDST`. Clark, Pierce and Thurston are `full_county`.
+As of the builder runs on 2026-10-08, the general packages are
+`partial_county` for: Kitsap `PUDDST` (PUD No. 1 District 2), Spokane
+`PUDDST`. Clark, Pierce, Snohomish (since #27) and Thurston are
+`full_county`.
+
+Before calling a scope unresolvable, look for a precinct-built district
+layer from the county Auditor: ArcGIS Online items whose description says
+the district is built from voter precincts or precinct portions and VoteWA
+district data are the election's own geography (Snohomish
+`Court_Districts`, found in #27 after wave 1 missed it). Searching the
+county's ArcGIS org (`arcgis.com/sharing/rest/search?q=... orgid:<id>`)
+finds them faster than browsing services.
 
 Snohomish shipped on 2026-10-08 (#21) as `partial_county` for `DISTCRT`
-alone (`snohomish/DISTCRT` is in `UNRESOLVABLE_SCOPES`): its nine District
-Court seats (Cascade, Everett, Evergreen, South) stay hidden. Its South
+alone, and became `full_county` in #27: its nine District Court seats
+(Cascade, Everett, Evergreen, South) resolve from the Auditor's
+`Court_Districts/FeatureServer/0` layer (services6, `District` =
+`Everett District Court`, ...), and the builder scopes the seats to that
+string. Its South
 County Fire RFA measure (`RFADST` `SCRFA`) resolves: `geo.js` reads DOR
 FIR2025 (layer 7) `DISTATTRIB` with `where DISTATTRIB = 'SCRFA'`, because
 that layer mixes fire-district numbers and RFA codes (see
@@ -445,7 +456,9 @@ that layer mixes fire-district numbers and RFA codes (see
 Spokane shipped on 2026-10-08 (#21) as `partial_county` for `PUDDST` alone
 (`spokane/PUDDST` is in `UNRESOLVABLE_SCOPES`): its Stevens County PUD
 seat stays hidden, because the only candidate layer (county Water
-Districts) maps water service, not an electoral boundary. Its school and
+Districts) maps water service, not an electoral boundary. #27 re-searched
+(DOR PUD layers 2007-2025, county and Stevens PUD GIS, 2020 precinct
+results) and found no authoritative boundary. Its school and
 fire levies resolve from the county's `OpenData/Boundary` layers 6
 (`DISTRCTNAME`) and 1 (`NAME`; not `CODE`, which contract towns share). See
 `counties/spokane/COMPLETENESS.md`, including the Town of Fairfield fire

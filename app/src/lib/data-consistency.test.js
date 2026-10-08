@@ -120,7 +120,9 @@ const UNRESOLVABLE_SCOPES = new Set([
   // PUD's Spokane territory is published (the county's Water Districts layer
   // maps water-service areas, not electoral boundaries;
   // build_spokane_lite_data.py general_override), so the general's Spokane
-  // package is partial_county.
+  // package is partial_county. Re-searched in #27 (DOR PUD layers 2007-2025,
+  // Spokane County and Stevens PUD GIS, precinct results): none found; see
+  // counties/spokane/COMPLETENESS.md.
   'spokane/PUDDST',
 ])
 
