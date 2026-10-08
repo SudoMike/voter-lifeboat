@@ -1,0 +1,245 @@
+{
+  "contest_slug": "measures",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/king/scoring/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/king/dossiers/measures/",
+    "data/final/2026-11-03-general/rubric.json"
+  ],
+  "verdicts": [
+    {
+      "candidate": "city-of-bothell-proposition-no-1",
+      "axis": "local-control",
+      "verdict": "upheld",
+      "note": "Attacked on strength: the pro statement says Bothell keeps 'a significant amount of control' with three of nine seats (S2), and the primary scored FD43's annexation at 1. But FD43 was a district joining a regional authority where its voters gained representation; here a city department run by the elected council is dissolved into a regional board on which Bothell is a one-third minority, and that board sets the levy and benefit charge and may amend the plan's finance section without a vote (S1, S3). That is the rubric's named pole-B case (regional consolidation) and matches Black Diamond's 2 in the primary. S1, S2, S3 all support the basis."
+    },
+    {
+      "candidate": "city-of-bothell-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Close call on strength. Arguments for 2: a new RFA levy (~$0.45, authority to $1.00) plus a fire benefit charge land on Bothell property, and even the city's best case is about $33 a month net (S3), larger in dollars than Lake Forest Park's lid lift. Arguments for 1, which prevail: the ballot title sets no rate (S1); the measure moves fire funding from the city general fund to the RFA, which the city calls 'a relative shift in where their fire services dollars are sourced from' (S4); and the net figure depends on a non-binding council levy cut and on rates the RFA board sets in late 2027 (S3). No one filed a con statement, so nothing in the record frames the vote as a tax fight. S3 and S4 support the basis."
+    },
+    {
+      "candidate": "city-of-bothell-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1/S3 (March 1, 2027; 3-3-3 board). cost_line correctly says the ballot title gives no rate, quotes the plan's ~$0.45 expected rate and $1.00 authority, and attributes the $72/$33 figures to city staff with the conditional council levy cut (S3). pro_summary names Wang, Keith and Thompson and quotes 'a substantial voice' accurately (S2). con_summary matches the pamphlet notice and S4."
+    },
+    {
+      "candidate": "city-of-clyde-hill-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Permanent lid lift raising the city rate from $0.29548 to up to $0.50 (69-72%, S1, S3, S7, S12), then 3% a year for nine years with a permanent new base. That is a near-doubling in rate terms with no reversion, so 2 fits the scale. The city's share is only about 4.5% of the total bill, but the dollar change (~$900 on a $4M home, S3) is material, unlike the cemetery district. Citations support the basis."
+    },
+    {
+      "candidate": "city-of-clyde-hill-proposition-no-1",
+      "axis": "local-control",
+      "verdict": "upheld",
+      "note": "Sign checked: YES keeps police and land use with the city rather than contracting out or merging, which is pole A (local control) and so negative. The ballot title itself states the purpose as 'to remain an independent city' (S1), the FAQ names merger as the alternative (S5), and the task force lists contracting police and merging as fallbacks (S6), so this is not just campaign framing. Strength 1 is right because a NO does not dissolve the city and the first fallback is resubmission (S6). Not double counting with taxes: the governance stake is separate from the rate."
+    },
+    {
+      "candidate": "city-of-clyde-hill-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "Rates, 3% limit factor 2028-2036, permanent base, and $225 per $1M / ~$900 on $4M all match S1 and S3. Pro authors (Henningsen, Picciotto, Williams) correct. Minor optional fix: the statement calls Prop 1 'a modest revenue solution,' not 'a modest increase'; quoting that phrase would be more exact. con_summary matches the pamphlet's withdrawal notice (S2)."
+    },
+    {
+      "candidate": "city-of-issaquah-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "New $18M authorization, but S3 states the council's intent that it 'replace the retiring bonds, resulting in a renewal of property taxes' and S1/S4 say the levy stays at about 8 cents. A replacement at a similar rate is 1 on the scale, consistent with Kent. Note that the 2014 bonds keep paying through 2033 (S3), so for some years the old and new debt overlap; the city's 'similar rate' claim rests on staggered issuance, which the basis reflects."
+    },
+    {
+      "candidate": "city-of-issaquah-proposition-no-1",
+      "axis": "spending",
+      "verdict": "upheld",
+      "note": "Attacked as double counting a capital bond as program expansion. Upheld: S4 shows new capacity (new trail corridors and 35+ acres of open space, new dog park, playground and pickleball courts, school fields opened to year-round community use), not replacement of worn facilities. Opposition concedes the projects and argues only prioritization (S2). 1 is the right strength."
+    },
+    {
+      "candidate": "city-of-issaquah-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "cost_line quotes the $18,000,000 / 20-year authorization from S1 and attributes the 8-cent rate and ~$80 on a $1M home to the city (S1, S4). Pro authors and the 'renewal rather than a new tax' framing match S2; con correctly attributes the 'Not yet' position and the no-objection-to-projects point to Pereira (S2)."
+    },
+    {
+      "candidate": "city-of-kenmore-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "+$0.36 on a stated $0.70 rate (~51%), 6% annual growth for five years, and a permanent 2032 base (S1, S3); the con statement centers on the tax increase (S2). Large and permanent fits 2, consistent with Clyde Hill."
+    },
+    {
+      "candidate": "city-of-kenmore-proposition-no-1",
+      "axis": "spending",
+      "verdict": "upheld",
+      "note": "Closest call in this file. The con side argues the levy mainly backfills the general fund and that the council can move money among uses (S2, S10), and the chosen $0.36 scenario also targets the reserve goal (S5, S6). But staff costed the programs as 'Enhanced + Special Projects' (S5), the ordinance dedicates the purpose to climate, ARCH housing and human services (S1, S3), and the pro case is explicitly about investing in those programs (S2). That supports +1 rather than 2."
+    },
+    {
+      "candidate": "city-of-kenmore-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "Rates, 6% factor, permanent base, $30 a month on $1M, and the exemption match S1/S7. Pro authors (Banaszynski, Lassalle, Pooley) and con authors (Sperry, Hendrickson, Postetter) correct, and the quoted phrases appear in S2."
+    },
+    {
+      "candidate": "city-of-lake-forest-park-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "adjust",
+      "adjusted_score": 1,
+      "adjusted_confidence": "medium",
+      "note": "Direction right, strength overstated relative to the scale and to the other measures here. This is neither a brand-new tax nor a near-doubling: the increase is about a third of the city rate ($0.66920 to $0.88920), and unlike Clyde Hill and Kenmore it is temporary; after 2032 'the levy will decrease to what it would have been if never approved' (S1, S3). The con statement does not oppose the tax as such ('I support raising taxes to increase funds for public safety', S2); it disputes whether the money adds to existing safety spending. The 19-vote 2025 loss (S6) shows the vote is close, not that the tax is large. Scored 1."
+    },
+    {
+      "candidate": "city-of-lake-forest-park-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "Rate, $0.22 increase, CPI-U escalator through 2032, and $211.86 / $17.66 on the $963,000 median home all match S1/S3. pro_summary attributes the 2031 general-fund projection and the unanimous vote to Marty Ross's statement, which is correct even though the dossier could not confirm either independently. con_summary for T.J. Fudge matches S2. Optional: what_it_does could add that each annual inflation increase needs a council vote (S1)."
+    },
+    {
+      "candidate": "city-of-milton-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked on strength: 0.1% raises only about $200,000 a year (S4). But it is a brand-new, permanent tax that neither county now levies (S4), and the scale puts new taxes at 2; SeaTac's identical tax is also 2. Citations S1 and S4 support it."
+    },
+    {
+      "candidate": "city-of-milton-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "cost_line quotes the 0.001 rate, attributes the ~$200,000 estimate to the city, and the 10.3%/10.2% current rates come from DOR (S6). The +0.1 arithmetic is the dossier's own, but it is a plain sum and not presented as an official figure. Pro authors (Dave and Jacki Strader) and quotes match S2; the no-volunteers note matches S2/S5."
+    },
+    {
+      "candidate": "city-of-seatac-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "New permanent 0.1% sales tax, ~$2M a year (S1, S3); con statement is centered on taxes (S2). 2 is consistent with Milton. The B&O reference (S9) is context and is correctly cited."
+    },
+    {
+      "candidate": "city-of-seatac-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "cost_line quotes '$0.10 to a taxable $100 purchase' (S1) and the ordinance's $2M / $1.7M figures (S3). Pro authors (Lovell, Merryweather) and the county-ordering 'local control' point match S2. con_summary for Susan Constable reports what the statement says without adopting its contested 2014-2015 history, which the dossier found partly unsupported (S10, S11)."
+    },
+    {
+      "candidate": "city-of-seattle-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Tested against the primary's adjustment of Seattle's library levy from 2 to 1. That adjustment was for a replacement at a similar rate whose 'expansion' was measured against a mayoral proposal. Here the replacement doubles the statutory rate (0.15% to 0.3%, the maximum, S1, S7), average revenue rises from $56.6M to $138M a year (S7, S8), and the Council rejected a 0.225% option 2-7 (S9, S11). That is the 'near-doubling' case the primary's scale reserves 2 for, and the con case is centered on the tax (S2). 2 stands."
+    },
+    {
+      "candidate": "city-of-seattle-proposition-no-1",
+      "axis": "spending",
+      "verdict": "upheld",
+      "note": "Checked citations: S8 supports ~95,000 more service hours, S20 the trips and ORCA 10,000 to 22,000 increase, S3/S10 the new safety and security category, S11 the 75% floor. This is a clear program expansion. Strength 2 was considered: the expansion is large (service up about half, passes more than doubled). But the measure is still mostly continuation of existing service, no measure in this file or the primary carries spending above 1, and 1 matches Shoreline's and Auburn's expansion mappings."
+    },
+    {
+      "candidate": "city-of-seattle-proposition-no-1",
+      "axis": "_display",
+      "verdict": "adjust",
+      "note": "Two corrections. (1) what_it_does says 'at least 75% going to transit service'. The Section 3 floor covers subsections 2.A-2.E, and as enacted 2.A includes transit safety and security (2.A.2), so the floor is not service-only (S3, S11). Reword to 'at least 75% going to bus service and transit safety and security'. (2) cost_line says the combined rate 'would rise from 10.55% to 10.7%'. That is the measure's own increment, but the separate countywide 0.1% roads tax starts January 2027, before this tax would begin in April 2027, so the rate voters would actually pay is 10.8% (S7, S22, S17). Add: 'or 10.8% including the separate county roads tax that starts in January 2027.' The $58 (SDOT, full 0.3%) vs $29 (campaign, increase) attribution is correct and should stay. Applied: measures.json display text corrected as described (2026-10-08)."
+    },
+    {
+      "candidate": "city-of-shoreline-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "New junior taxing district with permanent levy authority ($0.55 initial, $0.75 cap, ~$8.8M a year, no end date, S1). The scale puts a new district at 2, and the con case is about a permanent new tax (S2)."
+    },
+    {
+      "candidate": "city-of-shoreline-proposition-no-1",
+      "axis": "spending",
+      "verdict": "upheld",
+      "note": "Attacked as 'restoring' rather than expanding, since Shoreline had a pool from 1971 to 2020. The new facility is larger than the old 6-lane pool (8 lanes plus a diving well, recreation pool, lazy river, therapy pool), has ongoing operating support from the tax (S1, S5), and the district may fund future recreation facilities. That is public investment beyond restoring the prior service. 1 is fine. local-control is correctly omitted: the existing council governs the district (S1)."
+    },
+    {
+      "candidate": "city-of-shoreline-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "cost_line quotes $0.75 cap / $0.55 initial / $8.8M and attributes $421 a year to the city's explanatory statement (S1). (The dossier notes $0.55 x $831,000 is about $457; the cost_line correctly does not present its own number.) Pro and con authors and claims match S2."
+    },
+    {
+      "candidate": "auburn-school-district-no-408-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "New $491M authorization (third try), not a renewal. The district's own tables show the combined bond rate rising from $1.50 (2026) to $2.53 (2027-2031), about +69% (S5), and the con case is about tax burden (S2). Unlike Highline Prop 1, the new debt does not replace retiring debt at a flat rate, so 2 holds."
+    },
+    {
+      "candidate": "auburn-school-district-no-408-proposition-no-1",
+      "axis": "spending",
+      "verdict": "upheld",
+      "note": "Middle School #5 is new capacity (S1, S4: 1,100+ students in portables), beyond replacing Cascade and Alpac. The con statement is about cost per school, not about the expansion, but the basis does not overclaim. 1 is right."
+    },
+    {
+      "candidate": "auburn-school-district-no-408-proposition-no-1",
+      "axis": "_display",
+      "verdict": "adjust",
+      "note": "what_it_does says 'The same three-school plan failed... in 2024 (55%) and 2025 (54%)'. The 2024 measure was a different, larger package ($532.1M including capital improvements to 16 schools and 6 support buildings, S5, S9). Reword to 'The same three schools were in bonds that failed in 2024 (a larger $532 million package, 55%) and 2025 (54%).' cost_line and the pro/con summaries match S2-S5; the con summary's '$1.93' is correctly attributed to Petersen. Applied: measures.json display text corrected as described (2026-10-08)."
+    },
+    {
+      "candidate": "highline-school-district-no-401-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "adjust",
+      "adjusted_score": 1,
+      "adjusted_confidence": "medium",
+      "note": "Strength overstated, and the basis misattributes the rate increase. The $0.42 combined increase is for Props 1 and 2 together, and Prop 2 alone is $0.36 in 2027 (Prop 2 S1). The district's table (S5) shows total bond rates, existing plus proposed, of $2.30 in 2026 and $2.36, $2.32, $2.28, $2.25 in 2027-2030. So this bond is sized to roughly replace retiring debt at about the current bond rate (+$0.06 at most), the same 'replacement at a similar rate' pattern scored 1 for Issaquah. The $595.4M size and the con case on cumulative debt (S2) keep the direction clear, so not refuted. Scored 1; the basis should drop the '$0.42' framing and cite the bond-rate table. Applied: the basis in measures.json now cites the bond-rate table instead of the combined $0.42; the score change is left to merge_scores.py."
+    },
+    {
+      "candidate": "highline-school-district-no-401-proposition-no-1",
+      "axis": "_display",
+      "verdict": "adjust",
+      "note": "cost_line gives only the combined Props 1+2 figure ($4.47 to $4.89; $210 on a $500,000 home), which a voter will read as this bond's cost. Add the district's own bond-rate projection: 'The district projects total bond rates (existing plus this bond) of $2.30 per $1,000 in 2026 and $2.36 in 2027, falling to $2.25 by 2030; most of the combined increase comes from Prop. 2' (S5). what_it_does and the pro/con summaries match S1-S3 and the named authors. Applied: measures.json display text corrected as described (2026-10-08)."
+    },
+    {
+      "candidate": "highline-school-district-no-401-proposition-no-2",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked from both sides. For 2: it is a new line on current bills after a four-year gap and supplies most of the combined $0.42 increase (S1, S7). For dropping to nothing: the district frames it as resuming lapsed funding (S5). 1 holds: a four-year capital levy at $0.32-$0.36, about half the 2020 levy's rate (S8), is neither a near-doubling nor a permanent new tax. With Prop 1 adjusted to 1, the two Highline measures are now consistent."
+    },
+    {
+      "candidate": "highline-school-district-no-401-proposition-no-2",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "Ballot-title rates and $12M a year are quoted exactly (S1); the $210 figure is correctly labeled as combined with Prop 1 (S6, S7). Pro (Arias, Keiser, Thompson) and con (Bishoff, Paulson, Schmidt) authors are correct; the con summary reports the Policy 6101 'blank check' claim as the con's claim, which is appropriate given the dossier found it disputed (S12, S13). parental-rights is correctly omitted: the con's device and screen demands are about district policy, not parental notification or opt-out."
+    },
+    {
+      "candidate": "kent-school-district-no-415-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Replacement EP&O levy. The first-year amount is about 22% above the expiring levy's 2023 last-year estimate and the rate about 13% higher ($1.95 vs ~$1.72, S1, S7), and the con calls it a 'tax hike' (S2). Moderate growth on a replacement is 1 on the scale, consistent with Issaquah and Highline Prop 1. spending is correctly omitted: district officials describe stabilizing, not expanding (S4)."
+    },
+    {
+      "candidate": "kent-school-district-no-415-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "cost_line quotes all four ballot-title rates and amounts (S1) and correctly attributes the $1.72 / $85.8M comparison to the 2023 estimates (S7). It rightly omits the unconfirmed Kent Reporter household figures. Pro authors (Ralph, Boyce, Wagner) and con author (Riley) correct; 'seven consecutive clean financial audits' paraphrases 'seven consecutive independent financial accountability audits' (S2) acceptably."
+    },
+    {
+      "candidate": "king-county-fire-protection-district-no-20-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Brand-new excess bond levy (~$0.28) for a district with no bond levy in any year checked (S1, S8-S11); about a 19% rise in the district's total rate. 'Brand-new tax' is 2 on the scale, and the issue size ($16M) does not change the type. spending is correctly omitted: renovation and replacement only (S3, S5)."
+    },
+    {
+      "candidate": "king-county-fire-protection-district-no-20-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "cost_line quotes $16,000,000, ~$0.28 per $1,000 (S1) and the district's $196 / $16.33 on a $700,000 home (S4, S5). Pro authors and the 'not seismic approved' quote match S2 (attributed to the statement, not the district, as the dossier notes). con_summary matches S2."
+    },
+    {
+      "candidate": "king-county-cemetery-district-no-1-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Hardest consistency check. The rate rises about 78% ($0.02816 to $0.05, permanent, S1, S9), close to Clyde Hill's 69-72%, which is 2. Upheld at 1 anyway: the scale's 'near-doubling' test is a proxy for a material tax change, and here the change is about $2 per $100,000, about $17 a year on a median island home (S1, S7). It is the district's first increase in 50 years on a rate essentially unchanged since 1976 (S3), and nobody campaigned on either side (S2, S11). If the lead prefers a pure rate-percentage rule, this should be 2 alongside Clyde Hill, but the dollar scale argues for 1."
+    },
+    {
+      "candidate": "king-county-cemetery-district-no-1-proposition-no-1",
+      "axis": "spending",
+      "verdict": "upheld",
+      "note": "The ballot title's purposes go beyond operations: green burial development, land acquisition, a first truck, and records modernization (S1, S3); the Beachcomber's land and green-burial context (S7) corroborates it. Counter-evidence: part of the money closes an operating shortfall (S3), and the district holds a $527,000 cash balance against $152,000 in budgeted expenses (S7). Both support 1 rather than 2, not dropping the mapping."
+    },
+    {
+      "candidate": "king-county-cemetery-district-no-1-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "cost_line quotes the ballot title's '$.03 ($.02816) to $.05' and attributes $2 per $100,000 to the district and $17 to the Beachcomber (S1, S7). pro_summary correctly says no statement was filed and attributes the shortfall claim to the district's resolution (S3). Optional for balance: the Beachcomber reports a $527,000 cash balance that commissioners want held for land (S7), which explains why the district asks for a levy increase while holding reserves."
+    }
+  ],
+  "missing": [],
+  "review_notes": "Strength scale applied (from the primary): 2 = brand-new tax or district, near-doubling, or large permanent lid lift; 1 = renewal or replacement at a similar or moderately higher rate, or a temporary or minor increase. Two adjustments came out of this: Lake Forest Park taxes 2->1 (temporary six-year lid lift, about a third higher, con not anti-tax) and Highline Prop 1 taxes 2->1 (the district's table shows total bond rates roughly flat, $2.30 to $2.36, so the bond replaces retiring debt; the $0.42 increase is mostly Prop 2). Resulting taxes-2 set: Clyde Hill, Kenmore, Milton, SeaTac, Seattle, Shoreline, Auburn, FD20. Taxes-1 set: Bothell, Issaquah, Lake Forest Park, Highline 1 and 2, Kent, Cemetery. Missing mappings considered and rejected: SeaTac local-control (the pro statement's 'less control' argument is about pre-empting a county tax under RCW 82.14.450's ordering rule; the dossier treats this as revenue share, not governance, and it is too thin for medium confidence); Highline Prop 2 parental-rights (the con's device and screen demands are about district policy, not notification or opt-out; the dossier says so explicitly); spending on Bothell, Clyde Hill, Lake Forest Park, Milton, SeaTac, Kent, FD20 and Highline Prop 1 (the dossiers show maintenance or replacement, not expansion); Shoreline local-control (same council governs). No social mappings are supported anywhere."
+}
