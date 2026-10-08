@@ -3,14 +3,16 @@
 Election: 2026 Washington general election, November 3, 2026 (VoteWA
 election 899, county code 06).
 
-As of 2026-10-08 (#22) this package is researched but **not declared**:
-`pipeline/election.py` does not list it in `APP_PACKAGES["2026-11-03-general"]["counties"]`,
-so Clark addresses still get the Statewide-Only Guide until the director
-ships it. Assembly would read `interim/app-contests.json` and
-`interim/app-measures.json`, built by `pipeline/build_clark_lite_data.py`
-from the VoteWA candidate list, Clark's sample ballot and local voters'
-pamphlet, and Clark's VoteWA online voters' guide. The package is
-`partial_county` for one layer, `SCHDST` (below).
+Shipped 2026-10-08 (#22) at **Full County Coverage** (`full_county`):
+`pipeline/election.py` declares it in `APP_PACKAGES["2026-11-03-general"]["counties"]`
+with its elections office (`https://clark.wa.gov/elections`). Assembly
+reads `interim/app-contests.json` and `interim/app-measures.json`, built by
+`pipeline/build_clark_lite_data.py` from the VoteWA candidate list, Clark's
+sample ballot and local voters' pamphlet, and Clark's VoteWA online voters'
+guide. Every scope resolves, including `SCHDST` (below). The app links the
+pamphlet PDF at the cited page (`officialLinks.js` `pamphletPdfs`
+`clark/local-voters-pamphlet`; PDF pages equal printed pages) and Clark's
+VoteWA guide (`countyGuides.clark`) for records without pages.
 
 ## What ships
 
@@ -74,19 +76,18 @@ District No. 119 Proposition No. 11 (EP&O levy), `SCHDST` `119`.
   `PUDDST` layer in `COUNTY_LAYERS.clark` is unused in the general.
 - `FIRDST`: in `COUNTY_LAYERS.clark`, unused (East County Fire and Rescue's
   measure was rescinded; no fire measure is on the general ballot).
-- `SCHDST` (**not in `COUNTY_LAYERS.clark`**): Battle Ground SD Prop 11 is
-  scoped `SCHDST` `119` and listed in the builder's `unresolvable_layers`,
-  so the package is `partial_county` and the measure stays hidden until a
-  layer is added. Proposed layer:
+- `SCHDST` (in `COUNTY_LAYERS.clark` since #22): Battle Ground SD Prop 11
+  is scoped `SCHDST` `119`; the builder's `unresolvable_layers` is empty.
+  Layer:
   `https://gis.clark.wa.gov/arcgisfed/rest/services/ClarkView_Public/SchoolDistrict/MapServer/0/query`,
   attribute `SCHDST` (integer; 37 Vancouver, 93 Mount Pleasant, 98
   Hockinson, 101 La Center, 102 Woodland, 103 Green Mountain, 112 Washougal,
   114 Evergreen, 117 Camas, 119 Battle Ground, 122 Ridgefield). Point query
   2026-10-08 at 109 SW 1st St, Battle Ground (Census -122.53766, 45.78008):
   `SCHDST` 119; DOR SCH2025 (layer 20) gives `DISTATTRIB` '119' at the same
-  point. At 1300 Franklin St, Vancouver: `SCHDST` 37. If the director adds
-  it, remove `SCHDST` from `unresolvable_layers` and the package is
-  `full_county`.
+  point. At 1300 Franklin St, Vancouver: `SCHDST` 37. Both re-verified by
+  the director on 2026-10-08 and by live ballots through the app's own
+  `lookupBallotContext`.
 
 ## Research state
 

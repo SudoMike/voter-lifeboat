@@ -3,13 +3,18 @@
 Election: 2026 Washington general election, November 3, 2026 (VoteWA
 election 899, county code 31).
 
-As of 2026-10-08 (#22) this package is researched but **not declared**:
-`pipeline/election.py` does not list it in
-`APP_PACKAGES["2026-11-03-general"]["counties"]`, so it does not ship. The
-builder (`pipeline/build_thurston_lite_data.py`) marks it `partial_county`
-because two measure scopes use layers that `app/src/lib/geo.js`
-`COUNTY_LAYERS.thurston` does not have yet (`SCHDST`, `RFADST`; see below).
-Adding both layers would make every scope resolvable.
+Shipped 2026-10-08 (#22) at **Full County Coverage** (`full_county`):
+`pipeline/election.py` declares it in
+`APP_PACKAGES["2026-11-03-general"]["counties"]` with its elections office
+(`https://www.thurstoncountywa.gov/departments/auditor/elections`). Every
+scope resolves: `app/src/lib/geo.js` `COUNTY_LAYERS.thurston` gained
+`SCHDST` and `RFADST` in #22 (see below), and the builder
+(`pipeline/build_thurston_lite_data.py`) lists no unresolvable layer. The
+app links both cited editions at the cited PDF page (`officialLinks.js`
+`pamphletPdfs` `thurston/local-voters-pamphlet`, whose PDF pages run 46
+behind its printed numbers, and `thurston/voters-pamphlet-edition-27-thurston`).
+CD 10 and LD 2 ship with Pierce's scoring and dossiers, CD 3 and LD 20
+with Clark's, LD 35 with Kitsap's.
 
 ## Sources
 
@@ -72,19 +77,21 @@ contests as `untouched_contests`.
 - **Lacey Fire District 3 Prop. 1**: `FIRDST` `FD03` (DISPATCH_G on
   `ThurstonExt/Thurston_FireDistricts_TCOMM/FeatureServer/0`; 420 College
   St SE, Lacey). Resolves today.
-- **Yelm Community Schools Prop. 1**: `SCHDST` `YELM`. **No layer yet.**
-  Proposed: `https://tconline.co.thurston.wa.us/server/rest/services/Common_Layers/Jurisdictions/FeatureServer/10/query`,
+- **Yelm Community Schools Prop. 1**: `SCHDST` `YELM`. Layer (since #22):
+  `https://tconline.co.thurston.wa.us/server/rest/services/Common_Layers/Jurisdictions/FeatureServer/10/query`,
   attr `SchoolDistrictName` (105 Yelm Ave W, Yelm -> `YELM`; 601 4th Ave E,
   Olympia -> `OLYMPIA`; 420 College St SE, Lacey -> `NORTH THURSTON`;
   18346 Albany St SW, Rochester -> `ROCHESTER`). DOR SCH2025 (layer 20)
   agrees at Yelm (`2`).
-- **West Thurston Regional Fire Authority Prop. 1**: `RFADST` `FD01`. **No
-  layer yet.** The fire layer splits WTRFA into two polygons (`DISPATCH_G`
+- **West Thurston Regional Fire Authority Prop. 1**: `RFADST` `FD01`,
+  resolved since #22. The fire layer splits WTRFA into two polygons (`DISPATCH_G`
   `FD01`/`FD11`, `CONSOL_DIS` `WTRFA - South Btn`/`WTRFA - North Btn`), so
   neither `FIRDST` nor `FIRE_AUTH` can match one value; both polygons carry
-  `CONSOL_NUM` `FD01` and no other polygon does. Proposed: the same fire
-  layer, attr `CONSOL_NUM`, `where: "CONSOL_DIS LIKE 'WTRFA%'"` (18346
-  Albany St SW, Rochester and 10828 Littlerock Rd SW, Olympia -> `FD01`).
+  `CONSOL_NUM` `FD01` and no other polygon does. `geo.js` reads the same
+  fire layer, attr `CONSOL_NUM`, `where: "CONSOL_DIS LIKE 'WTRFA%'"` (18346
+  Albany St SW, Rochester and 10828 Littlerock Rd SW, Olympia -> `FD01`;
+  Lacey, Yelm and Olympia -> no feature, while `FIRDST` still reads `FD03`
+  at Lacey from the same layer).
   DOR FIR2025 has two values (`1/WTRFA/1B`, `11/WTRFA/11B`).
 
 ## Known gaps

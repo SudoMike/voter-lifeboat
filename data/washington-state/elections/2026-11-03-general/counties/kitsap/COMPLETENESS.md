@@ -3,15 +3,17 @@
 Election: 2026 Washington general election, November 3, 2026 (VoteWA
 election 899, county code 18).
 
-As of 2026-10-08 (#22) this package is researched but **not declared**:
-`pipeline/election.py` does not list it in
-`APP_PACKAGES["2026-11-03-general"]["counties"]`, so it does not ship until
-the director declares it. Assembly would read `interim/app-contests.json`
-and `interim/app-measures.json`, built by `pipeline/build_kitsap_lite_data.py`
-from the VoteWA candidate list and Kitsap County's online voters' guide on
-VoteWA. The package says `coverage: "partial_county"` because of one scope
-(`SCHDST`, below) that has a public layer the District Adapter does not read
-yet.
+Shipped 2026-10-08 (#22) at **Full County Coverage** (`full_county`):
+`pipeline/election.py` declares it in
+`APP_PACKAGES["2026-11-03-general"]["counties"]` with its elections office
+(`https://www.kitsap.gov/auditor/Pages/Elections.aspx`, 200 on 2026-10-08).
+Assembly reads `interim/app-contests.json` and `interim/app-measures.json`,
+built by `pipeline/build_kitsap_lite_data.py` from the VoteWA candidate
+list and Kitsap County's online voters' guide on VoteWA. Every scope
+resolves, including `SCHDST` (below). Records carry no pamphlet pages; the
+app links Kitsap's VoteWA guide (`officialLinks.js` `countyGuides.kitsap`).
+CD 6 and LD 26 (Senator, Pos. 1, Pos. 2) ship with Pierce's scoring and
+dossiers.
 
 ## What the ballot holds
 
@@ -78,8 +80,8 @@ sample ballot.
 
 ## District scoping
 
-- `SCHDST` (South Kitsap SD Prop 1): not in `geo.js`
-  `COUNTY_LAYERS.kitsap`. Proposed layer: Kitsap County GIS
+- `SCHDST` (South Kitsap SD Prop 1): in `geo.js` `COUNTY_LAYERS.kitsap`
+  since #22. Layer: Kitsap County GIS
   `https://services6.arcgis.com/qt3UCV9x5kB4CwRA/arcgis/rest/services/School_District_Outlines/FeatureServer/0`,
   attribute `DISTRICT` (values `100-C`, `303`, `400`, `401`, `402`, `403`;
   `raw/kitsap/school-district-outlines.json.url`). Live 2026-10-08:
@@ -87,11 +89,10 @@ sample ballot.
   345 6th St, Bremerton `100-C`; 19050 Jensen Way NE, Poulsbo `400`;
   280 Madison Ave N, Bainbridge Island `303`; 15376 Seabeck Hwy NW,
   Seabeck `401`. DOR SCH2025 (layer 20) `DISTATTRIB` agreed at each point
-  except Bremerton (`100` vs the county's `100-C`). Until the layer is added
-  the measure is hidden and the package is `partial_county`; the builder
-  lists `SCHDST` in `GENERAL_CFG["unresolvable_layers"]` and its notes say a
-  layer exists.
-- `COUNTY_COUNCIL` and `FIRDST`, already in `COUNTY_LAYERS.kitsap`, are not
+  except Bremerton (`100` vs the county's `100-C`). The director re-verified
+  Port Orchard, Bremerton and Seabeck on 2026-10-08; the builder's
+  `unresolvable_layers` is empty and the package is `full_county`.
+- `COUNTY_COUNCIL` and `FIRDST`, also in `COUNTY_LAYERS.kitsap`, are not
   used by any general contest or measure.
 - The PUD seat, which #20 left as `PUDDST` (unresolvable), is now scoped
   `COUNTY` (the whole PUD votes in the general and KPUD is countywide), so

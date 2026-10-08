@@ -85,10 +85,8 @@ address).
   the Census geocoder and the precinct layer's `CONGRESSIONAL` field agree.
   811 Main St, Buckley is a Pierce CD 8 address.
 - The VoteWA pointer meta (`raw/votewa/candidate-list.csv.meta.json`)
-  pins the research cache's `sha256` and has no `sha256_case_normalized`.
-  The director should run `python3 pipeline/fetch_votewa_candidate_list.py
-  --election 2026-11-03-general --write-pointer pierce` once, from a cache
-  matching that `sha256`.
+  carries `sha256_case_normalized` since #27 (6730ab2, a re-export with the
+  same byte count); the builder rebuilds both elections byte-identical.
 - `interim/dossier-audit.json` is the pre-research audit; a fresh
   `verify_dossiers.py pierce --election 2026-11-03-general` reports 0
   errors (rich 18, moderate 23, pamphlet-only 3; 5 researched elsewhere)

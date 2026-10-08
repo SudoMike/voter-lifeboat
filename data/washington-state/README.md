@@ -17,7 +17,7 @@ Elections:
 | id | Election | Status |
 |---|---|---|
 | `2026-08-04-primary` | August 4, 2026 Primary and Special Election | archived, served at `/washington-state/2026-08-04-primary` |
-| `2026-11-03-general` | November 3, 2026 General Election | active (`ACTIVE`); King County at Full County Coverage, Snohomish County at partial coverage (District Court electoral districts unresolvable), Spokane County at partial coverage (Stevens County PUD seat unresolvable), Pierce County at Full County Coverage, every other county a Statewide-Only Guide (5 Supreme Court contests, 3 initiatives) |
+| `2026-11-03-general` | November 3, 2026 General Election | active (`ACTIVE`); King, Snohomish, Pierce, Clark, Kitsap and Thurston Counties at Full County Coverage, Spokane County at partial coverage (Stevens County PUD seat unresolvable), every other county a Statewide-Only Guide (5 Supreme Court contests, 3 initiatives) |
 
 Every pipeline script takes `--election <id>`; without it the script uses the
 id in `elections/ACTIVE`. Outputs land in `data/final/<id>/` and the app copy
@@ -136,15 +136,17 @@ package already researched (for example a legislative district King shares)
 is not researched again: `build_research_plan.py` names the owning package
 and `assemble_app_data.py` ships that package's scoring and dossiers.
 
-A declared non-King county (Snohomish, Spokane and Pierce, from #21) ships its
+A declared non-King county (Snohomish, Spokane and Pierce, from #21; Clark,
+Kitsap and Thurston, from #22) ships its
 `interim/app-{contests,measures}.json`. Its candidates' `pamphlet_pages` come
 from its own dossiers' `type: pamphlet` citations (`pamphlet_refs.py`; edition
 ids are the package's `raw/*/<edition>.pdf.url` pointer names, such as
-`local-voters-pamphlet`, or Pierce's `voters-pamphlet-edition-09-pierce`, the
-SOS edition); a race shipped with another package's research
+`local-voters-pamphlet`, or Pierce's `voters-pamphlet-edition-09-pierce` and
+Thurston's `voters-pamphlet-edition-27-thurston`, the SOS editions); a race
+shipped with another package's research
 carries none. A county whose dossiers cite VoteWA's unpaged online voters'
-guide instead of a printed pamphlet (Spokane; Pierce's county offices and
-local measures) ships no pages for them; the app links
+guide instead of a printed pamphlet (Spokane, Kitsap; Pierce's county
+offices and local measures) ships no pages for them; the app links
 that guide (`officialLinks.js` `countyGuides`). Its coverage is `full_county` only when its package says so and
 every DISTRICT scope it ships is in `election.DISTRICT_ADAPTER_LAYERS[<county>]`
 (the Census layers plus `geo.js` `COUNTY_LAYERS[<county>]`). See the county's
@@ -196,8 +198,9 @@ field names another script (or is `null`, as in hand-built files):
   the run before anything is written.
 
 King has no `app-contests.json`, so its contests never feed the normalizer.
-In the general it normalizes the county packages ingested so far (#20:
-clark, kitsap, pierce, snohomish, spokane, thurston); none of them ships.
+In the general it normalizes the six VoteWA-built county packages (#20:
+clark, kitsap, pierce, snohomish, spokane, thurston), all of which now ship
+(#21, #22).
 
 ## Election Facts
 
@@ -227,15 +230,15 @@ clark, kitsap, pierce, snohomish, spokane, thurston); none of them ships.
   provenance is in the `.meta.json` siblings and the interview's
   `derived_from`. Intended measure axes: I-645 → `taxes`, `local-control`;
   I-1 → `parental-rights`; I-638 → `social`.
-- Coverage today: `coverage.statewide_complete: true` and four Supported
+- Coverage today: `coverage.statewide_complete: true` and seven Supported
   Counties: King at `full_county` (#16; 92 contests, 41 uncontested and
-  information-only, 15 measures), Snohomish and Spokane at `partial_county`
-  and Pierce at `full_county` (#21). 206 contests (5 statewide Supreme Court
-  contests included) and 69 measures. Every other Washington address gets
-  the Statewide-Only Guide. Three other county packages (clark, kitsap,
-  thurston) are ingested from the VoteWA GENERAL 2026 export (#20) but not
-  declared, so they do not ship. `docs/county-wave-playbook.md` is the procedure for
-  taking a county the rest of the way.
+  information-only, 15 measures), Pierce at `full_county` and Spokane at
+  `partial_county` (#21), Snohomish at `full_county` (shipped partial in
+  #21, District Court resolved in #27), and Clark, Kitsap and Thurston at
+  `full_county` (#22). 281 contests (5 statewide Supreme Court contests
+  included) and 87 measures. Every other Washington address gets the
+  Statewide-Only Guide. `docs/county-wave-playbook.md` is the procedure for
+  taking a county from research to shipped.
 - District (congressional and legislative) contests are county-owned
   (`district_contests: "county"`). Uncontested contests ship information-only
   (`scoring/<slug>.json` with empty `scores`).
