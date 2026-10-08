@@ -1,0 +1,29 @@
+{
+  "script": "pipeline/verify_dossiers.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/benton/interim/research-plan.json",
+    "data/washington-state/elections/2026-11-03-general/counties/benton/dossiers/"
+  ],
+  "missing": [],
+  "no_frontmatter": [],
+  "invalid_evidence_levels": [],
+  "invalid_source_formats": [],
+  "evidence_levels": {
+    "rich": 6,
+    "moderate": 12
+  },
+  "contest_overviews_missing": [],
+  "untouched_contests": [],
+  "untouched_measures": [],
+  "invalid_photos": [],
+  "photos": {
+    "present": 11,
+    "missing": 7
+  },
+  "researched_elsewhere": [
+    "benton-legislative-district-14-state-representative-pos-1 -> yakima/yakima-legislative-district-14-state-representative-pos-1",
+    "benton-legislative-district-14-state-representative-pos-2 -> yakima/yakima-legislative-district-14-state-representative-pos-2",
+    "benton-legislative-district-15-state-representative-pos-1 -> yakima/yakima-legislative-district-15-state-representative-pos-1",
+    "benton-legislative-district-15-state-representative-pos-2 -> yakima/yakima-legislative-district-15-state-representative-pos-2"
+  ]
+}

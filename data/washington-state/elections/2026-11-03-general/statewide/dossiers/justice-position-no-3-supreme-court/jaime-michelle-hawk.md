@@ -114,6 +114,10 @@ sources:
     outlet: King County Bar Association
     url: https://www.kcba.org/?pg=Rating-of-Candidates-in-2026-Election
     accessed: 2026-10-08
+photo:
+  url: https://www.judgehawk.com/_next/image?url=%2Fimages%2Fhawk-blue-scarf.jpg&w=640&q=75&dpl=dpl_3kdnKi4vYjjCgWXVETSMFc8krjTR
+  page: https://www.judgehawk.com/
+  kind: campaign-website
 ---
 
 ## Background

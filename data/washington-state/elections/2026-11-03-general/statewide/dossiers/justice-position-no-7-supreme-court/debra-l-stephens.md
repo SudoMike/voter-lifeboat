@@ -101,6 +101,10 @@ sources:
     outlet: Washington State Standard (Jake Goldstein-Street, 2026-10-07), republished by Vashon-Maury Island Beachcomber
     url: https://www.vashonbeachcomber.com/2026/10/07/election-2026-state-supreme-court-candidates-make-their-case/
     accessed: 2026-10-08
+photo:
+  url: https://www.courts.wa.gov/images/JusticeStephens2025.png
+  page: https://www.courts.wa.gov/appellate_trial_courts/SupremeCourt/?fa=supremecourt.justices
+  kind: government
 ---
 
 ## Background

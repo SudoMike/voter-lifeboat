@@ -120,6 +120,10 @@ sources:
     outlet: Washington State Standard (via The Columbian)
     url: https://www.columbian.com/news/2026/sep/09/was-supreme-court-election-heats-up/
     accessed: 2026-10-08
+photo:
+  url: https://www.courts.wa.gov/images/JusticeAngelis.png
+  page: https://www.courts.wa.gov/appellate_trial_courts/SupremeCourt/?fa=supremecourt.justices
+  kind: government
 ---
 
 ## Background

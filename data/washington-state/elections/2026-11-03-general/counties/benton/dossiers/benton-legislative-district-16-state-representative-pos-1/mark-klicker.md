@@ -124,6 +124,10 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json?id=ca-2026-3364752
     pointer: counties/benton/raw/candidates/benton-legislative-district-16-state-representative-pos-1/pdc-mark-klicker.url
     accessed: 2026-10-08
+photo:
+  url: https://leg.wa.gov/memberphoto/31524.jpg
+  page: https://leg.wa.gov/legislators/all-representatives-and-senators/mark-klicker
+  kind: government
 ---
 
 ## Background

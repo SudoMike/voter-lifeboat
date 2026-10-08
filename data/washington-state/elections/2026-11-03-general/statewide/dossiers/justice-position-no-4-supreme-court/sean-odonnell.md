@@ -121,6 +121,10 @@ sources:
     outlet: Lynnwood Times
     url: https://lynnwoodtimes.com/2026/02/06/judge-sean-odonnell/
     accessed: 2026-10-08
+photo:
+  url: https://static.wixstatic.com/media/e2cb43_a2fa16a9357740a2a8e7d7f365d47946~mv2.jpeg/v1/crop/x_60,y_217,w_2964,h_3508/fill/w_264,h_276,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/image0%20(2).jpeg
+  page: https://www.odonnellforjustice.com/
+  kind: campaign-website
 ---
 
 ## Background

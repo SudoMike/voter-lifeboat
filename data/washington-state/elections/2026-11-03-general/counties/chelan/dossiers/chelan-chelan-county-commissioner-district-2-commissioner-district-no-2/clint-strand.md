@@ -76,6 +76,10 @@ sources:
     url: https://www.wenatcheeworld.com/news/local/chelan-county-grapples-with-4m-deficit/article_ccb5c46e-424f-4c39-a59b-ddd74a4381fc.html
     pointer: counties/chelan/raw/candidates/chelan-chelan-county-commissioner-district-2-commissioner-district-no-2/ww-2025-04-09-deficit.url
     accessed: 2026-10-08
+photo:
+  url: https://images.squarespace-cdn.com/content/v1/69fcfb5b0df4826ed1090dbd/b8d3595f-fa96-4339-af8e-18f2b9896730/C.Strand.PNG
+  page: https://www.electclintstrand.com/
+  kind: campaign-website
 ---
 
 ## Background
