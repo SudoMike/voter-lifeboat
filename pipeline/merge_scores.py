@@ -6,8 +6,9 @@ Rules:
   adjust             -> apply adjusted_score and/or adjusted_confidence
   missing (med/high) -> add the proposed score (low-confidence proposals are
                         dropped: the app excludes low anyway)
-  measures: same verdict semantics against lean_mappings ("_display" verdicts
-  are notes only)
+  measures: same verdict semantics against lean_mappings, the new direction
+  in `adjusted_direction` or `adjusted_score` ("_display" verdicts are notes
+  only: their corrections are applied by hand to scoring/measures.json)
 
 Packages: the statewide package plus the counties declared in
 election.APP_PACKAGES (every county package for the primary).
@@ -108,8 +109,12 @@ for scoring_dir in SCORING_DIRS:
                 del m["lean_mappings"][v["axis"]]
                 stats["refuted"] += 1
             elif v.get("verdict") == "adjust":
-                if v.get("adjusted_direction") in (-1, 1):
-                    lm["direction"] = v["adjusted_direction"]
+                # Measure refutations name the new direction either
+                # `adjusted_direction` or, like candidate verdicts,
+                # `adjusted_score` (the general's King file uses the latter).
+                direction = v.get("adjusted_direction", v.get("adjusted_score"))
+                if direction in (-2, -1, 1, 2):
+                    lm["direction"] = direction
                 lm["adjusted_by_refutation"] = True
                 stats["adjust"] += 1
             else:

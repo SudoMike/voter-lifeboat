@@ -67,9 +67,18 @@ APP_PACKAGES = {
     },
     "2026-11-03-general": {
         "statewide_ballot": True,
-        "counties": [],  # King joins in #16
+        "counties": ["king"],
         "district_contests": "county",
     },
+}
+
+
+# The District layers each county's District Adapter resolves from an
+# address: app/src/lib/geo.js KING_LAYERS for King (test_general_app_data.py
+# keeps the two equal). assemble_app_data.py gives a county `full_county`
+# coverage only when every DISTRICT scope it ships uses one of these layers.
+DISTRICT_ADAPTER_LAYERS = {
+    "king": ("CONGDST", "LEGDST", "KCCDST", "SCCDST", "JUDDST", "FIRDST", "SCHDST", "CITY", "CEMDST"),
 }
 
 

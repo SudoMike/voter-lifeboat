@@ -17,7 +17,7 @@ Elections:
 | id | Election | Status |
 |---|---|---|
 | `2026-08-04-primary` | August 4, 2026 Primary and Special Election | archived, served at `/washington-state/2026-08-04-primary` |
-| `2026-11-03-general` | November 3, 2026 General Election | active (`ACTIVE`); Statewide-Only Guide (5 Supreme Court contests, 3 initiatives), no county packages shipped yet |
+| `2026-11-03-general` | November 3, 2026 General Election | active (`ACTIVE`); King County at Full County Coverage, every other county a Statewide-Only Guide (5 Supreme Court contests, 3 initiatives) |
 
 Every pipeline script takes `--election <id>`; without it the script uses the
 id in `elections/ACTIVE`. Outputs land in `data/final/<id>/` and the app copy
@@ -76,16 +76,47 @@ statewide package is the ballot source for Statewide Contests
 (`counties`). `merge_scores.py` and `assemble_app_data.py` read only those
 packages, so a county package being researched never leaks into the app.
 The primary uses `counties: None` (King's interim files plus every county's
-`app-*.json`, its original behaviour). The general declares no counties yet,
-so `coverage.supported_counties` is empty and every Washington address gets
-the Statewide-Only Guide; King joins in #16.
+`app-*.json`, its original behaviour). The general declares `["king"]` (#16),
+so King is its only Supported County and every other Washington address gets
+the Statewide-Only Guide.
 
 ### `counties/king/`
 
 Owns King County local coverage: King County Elections raw pages/CSVs, local
 pamphlet text, county/local dossiers, measures, and county-specific scoping.
-King County is fully supported in the primary. In the general its package is
-being researched and is not shipped.
+King County is fully supported in both elections; the general's package
+status is in `elections/2026-11-03-general/counties/king/COMPLETENESS.md`.
+
+From the general on, King's interim files are schema 2 (`parse_candidates.py`)
+and `assemble_app_data.py` reads them by rule rather than by the primary's
+hand-written scope tables:
+
+- `owner`: `"statewide"` marks the Supreme Court contests KCE also lists. They
+  are not shipped from King; the statewide package's own contest takes their
+  place in King's (KCE ballot) order, so each appears once. Assembly stops if
+  King lists a statewide-owned contest the statewide package lacks, or with
+  different candidate names.
+- `scope`: used verbatim. Every DISTRICT layer must be one the King District
+  Adapter resolves (`election.DISTRICT_ADAPTER_LAYERS["king"]`, kept equal to
+  `KING_LAYERS` in `app/src/lib/geo.js` by `test_general_app_data.py`), or
+  King is assembled as `partial_county` and the unresolvable records are
+  printed. `CEMDST` (Cemetery District No. 1) is resolved from the WA DOR
+  cemetery layer; the measure's `scope_unresolved` note in
+  `interim/measures.json` predates that and is not read by assembly.
+- `uncontested`: shipped information-only, with no scores: `office_does`,
+  `race_blurb` and the candidate's summary and highlights from the
+  empty-score `scoring/<slug>.json`. An uncontested contest with no scoring
+  file ships as the official ballot entry alone (`evidence_level:
+  "official-ballot-only"`); a contested contest with no scoring file stops
+  assembly.
+- Pamphlet pages: from each dossier's `type: pamphlet` source refs
+  (`pipeline/pamphlet_refs.py`), which name the statement page.
+  `interim/pamphlet-index.json` is a name search that also hits endorsement
+  lists on other candidates' pages, so it is used only for a record with no
+  dossier, and for a legislative contest only on pages that carry that
+  contest's own statement heading. Edition ids are the King raw pointer names
+  (`local-edition`, `voters-pamphlet-edition-0N-king-*`); the app links them
+  in `app/src/lib/officialLinks.js`.
 
 ### Other County Packages
 
@@ -166,10 +197,11 @@ normalizer for it changes no file.
   provenance is in the `.meta.json` siblings and the interview's
   `derived_from`. Intended measure axes: I-645 → `taxes`, `local-control`;
   I-1 → `parental-rights`; I-638 → `social`.
-- Coverage today: Statewide-Only. `coverage.statewide_complete: true`,
-  `supported_counties: []`, so every Washington address gets the
-  Statewide-Only Guide. King County's package is being researched and joins
-  `APP_PACKAGES["2026-11-03-general"]["counties"]` in #16; no other county
+- Coverage today: `coverage.statewide_complete: true` and one Supported
+  County, King, at `full_county` (#16): 97 contests (the 5 statewide Supreme
+  Court contests plus 92 King contests, 41 of them uncontested and
+  information-only) and 18 measures (3 statewide, 15 King local). Every
+  other Washington address gets the Statewide-Only Guide; no other county
   package exists yet for this election.
 - District (congressional and legislative) contests are county-owned
   (`district_contests: "county"`). Uncontested contests ship information-only

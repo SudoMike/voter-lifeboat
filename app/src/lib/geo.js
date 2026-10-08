@@ -2,7 +2,8 @@
 // 1. US Census geocoder: address -> lat/lon + county, no key needed but no
 //    CORS headers either, so it's proxied through our own /api/geocode.
 // 2. Supported counties use their own District Adapter. King County currently
-//    uses King County GIS layers on ArcGIS Online.
+//    uses King County GIS layers on ArcGIS Online, plus the WA DOR cemetery
+//    district layer.
 
 const KC = 'https://services.arcgis.com/Ej0PsM5Aw677QF1W/arcgis/rest/services'
 
@@ -11,7 +12,15 @@ const ADDRESS_POINTS = `${KC}/ADDRESS_POINT_642/FeatureServer/0/query`
 const KING_COUNTY_FIPS = '53033'
 const WASHINGTON_STATE_FIPS = '53'
 
-// layer key -> [service, attribute that carries the value]
+// WA Dept of Revenue statewide taxing-district boundaries (tax year 2025).
+// Layer ids shift when DOR publishes a new tax year; re-verify annually
+// (MapServer?f=json lists them; on 2026-10-08 layer 3 was CEM2025, 7 FIR2025,
+// 14 PRK2025 ... 20 SCH2025, the newest tax year).
+const DOR_TAX_DISTRICTS =
+  'https://webgis.dor.wa.gov/arcgis/rest/services/Programs/WADOR_PropertyTax/MapServer'
+
+// layer key -> [King GIS service name, or a full layer URL; attribute that
+// carries the value]
 const KING_LAYERS = {
   CONGDST: ['CONGDST_AREA_405', 'CONGDST'],
   LEGDST: ['LEGDST_AREA_410', 'LEGDST'],
@@ -21,6 +30,17 @@ const KING_LAYERS = {
   FIRDST: ['FIRDST_AREA_407', 'FIRDST'],
   SCHDST: ['SCHDST_AREA_416', 'SCHDST'],
   CITY: ['CITYDST_AREA_337', 'NAME'],
+  // King County Cemetery District No. 1 (Vashon-Maury Island). King GIS
+  // publishes no cemetery layer, so this reads the DOR layer the other
+  // counties use. It has exactly one King feature, DISTATTRIB '1'
+  // (raw/gis/dor-cemdst-king.json in the general's King package); a live point
+  // query at 10105 SW Bank Rd, Vashon returned '1' and downtown Seattle none
+  // (2026-10-08).
+  CEMDST: [`${DOR_TAX_DISTRICTS}/3`, 'DISTATTRIB'],
+}
+
+function kingLayerQueryUrl(service) {
+  return service.startsWith('https://') ? `${service}/query` : `${KC}/${service}/FeatureServer/0/query`
 }
 
 const COUNTY_IDS = {
@@ -64,11 +84,6 @@ const COUNTY_IDS = {
   '53075': 'whitman',
   '53077': 'yakima',
 }
-
-// WA Dept of Revenue statewide taxing-district boundaries (tax year 2025).
-// Layer ids shift when DOR publishes a new tax year; re-verify annually.
-const DOR_TAX_DISTRICTS =
-  'https://webgis.dor.wa.gov/arcgis/rest/services/Programs/WADOR_PropertyTax/MapServer'
 
 const COUNTY_LAYERS = {
   clark: [
@@ -429,7 +444,7 @@ async function queryKingLayer(key, x, y) {
     returnGeometry: 'false',
     f: 'json',
   })
-  const res = await fetch(`${KC}/${service}/FeatureServer/0/query?${params}`)
+  const res = await fetch(`${kingLayerQueryUrl(service)}?${params}`)
   if (!res.ok) throw new GeoError(`District lookup failed (${key}).`, 'network', { layer: key })
   const data = await res.json()
   if (data.error) throw new GeoError(`District lookup failed (${key}).`, 'network', { layer: key })

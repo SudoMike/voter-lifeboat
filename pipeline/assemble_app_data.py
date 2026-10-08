@@ -10,7 +10,12 @@ Inputs (E = data/washington-state/elections/<id>):
   Legacy (the primary): E/counties/king/interim/{contests,measures,
     pamphlet-index}.json, which also carry the primary's Supreme Court contests
   County packages: the declared `counties`, or for the primary every
-    E/counties/*/interim/app-*.json
+    E/counties/*/interim/app-*.json. A declared King package (the general
+    onward) is schema 2 instead: E/counties/king/interim/{contests,measures,
+    pamphlet-index}.json with owner/scope/uncontested per record, pamphlet
+    pages from its dossiers' pamphlet citations (pamphlet_refs.py), and
+    full_county coverage only when election.DISTRICT_ADAPTER_LAYERS["king"]
+    resolves every scope
   data/final/<id>/{scores,measures,rubric,interview}.json
   dossiers/** of the packages above
 
@@ -35,6 +40,7 @@ import re
 import subprocess
 
 import election
+import pamphlet_refs
 from election import ROOT, rel
 
 E = election.Election(election.from_argv())
@@ -45,18 +51,19 @@ FINAL = E.final
 if PACKAGES["statewide_ballot"]:
     # Statewide Contests and measures come from the statewide package. County
     # packages ship only once declared in election.APP_PACKAGES.
-    COUNTY_DIRS = [E.county(c) for c in PACKAGES["counties"]]
-    if KING in COUNTY_DIRS:
-        raise SystemExit(
-            "King's schema-2 package (owner/scope per contest) has no assembly "
-            "rule yet; add one before declaring king in election.APP_PACKAGES"
-        )
+    # King's package is schema 2 (parse_candidates.py: owner/scope/uncontested
+    # per record); every other county ships through interim/app-*.json.
+    DECLARED_DIRS = [E.county(c) for c in PACKAGES["counties"]]
+    KING_SHIPS = KING in DECLARED_DIRS
+    COUNTY_DIRS = [d for d in DECLARED_DIRS if d != KING]
     INTERIM = STATE / "interim"
-    DOSSIER_DIRS = [STATE / "dossiers"] + [d / "dossiers" for d in COUNTY_DIRS]
+    DOSSIER_DIRS = [STATE / "dossiers"] + [d / "dossiers" for d in DECLARED_DIRS]
 else:
     # The primary: King's interim files hold King's ballot including the
     # Supreme Court contests; every other county ships via app-*.json.
     COUNTY_DIRS = sorted(p for p in E.counties.iterdir() if p.is_dir() and p.name != "king")
+    DECLARED_DIRS = None
+    KING_SHIPS = False
     INTERIM = KING / "interim"
     DOSSIER_DIRS = [STATE / "dossiers", KING / "dossiers"] + [d / "dossiers" for d in COUNTY_DIRS]
 COUNTY_NAMES = {
@@ -293,7 +300,7 @@ def assembled_contest(con, owner, scope, sc, cands):
     return out
 
 
-def assembled_measure(m, owner, scope):
+def assembled_measure(m, owner, scope, pamphlet_pages=None):
     ms = measures_scored.get(m["slug"])
     if not ms:
         raise SystemExit(f"no scored measure for {m['slug']}")
@@ -304,7 +311,7 @@ def assembled_measure(m, owner, scope):
         "proposition": m["proposition"],
         "title": m["title"],
         "scope": scope,
-        "pamphlet_pages": pidx["measures"].get(m["slug"], []),
+        "pamphlet_pages": pidx["measures"].get(m["slug"], []) if pamphlet_pages is None else pamphlet_pages,
         "what_it_does": ms.get("what_it_does"),
         "cost_line": ms.get("cost_line"),
         "pro_summary": ms.get("pro_summary"),
@@ -352,6 +359,165 @@ else:
         out_measures.append(assembled_measure(m, "king", MEASURE_SCOPES[m["slug"]]))
     if contests or measures_meta:
         supported_counties.append({"id": "king", "name": "King County", "state": "WA", "fips": "53033", "coverage": "full_county"})
+
+
+# --- King's schema-2 package (the general onward) ---------------------------
+#
+# contests.json/measures.json carry, per record, `owner` ("statewide" for the
+# Supreme Court contests the statewide package already ships), `scope` (used
+# verbatim) and `uncontested`. An uncontested contest ships information-only:
+# office_does, race_blurb and the candidate summary/highlights from its
+# empty-score scoring file, or, where the package has no scoring file for it,
+# the official ballot entry alone (`official-ballot-only`).
+#
+# Pamphlet pages come from the dossier's own pamphlet citations (`type:
+# pamphlet` sources), which name the candidate statement page. The
+# name-search pamphlet-index.json also matches endorsement lists (its Jayapal
+# entry is ten pages of endorsements and misses her statement on Edition 04
+# p. 24), so it is only the fallback for a record with no dossier.
+
+def king_editions():
+    """Edition ids of King's pamphlet pointers (raw/pamphlet, raw/sos)."""
+    return sorted(
+        p.name[: -len(".pdf.url")]
+        for d in ("raw/pamphlet", "raw/sos")
+        for p in (KING / d).glob("*.pdf.url")
+    )
+
+
+def dossier_pamphlet_pages(dossier_slug, slug, editions):
+    return pamphlet_refs.sources_pages(parse_sources(dossier_slug, slug), editions)
+
+
+def pamphlet_page_texts(editions):
+    """(edition, page) -> whitespace-normalized page text from interim/pdf-text."""
+    texts = {}
+    for edition in editions:
+        f = KING / "interim/pdf-text" / f"{edition}.txt"
+        if not f.exists():
+            continue
+        for m in re.finditer(r"^--- page (\d+) ---\n(.*?)(?=^--- page \d+ ---|\Z)", f.read_text(), re.S | re.M):
+            texts[(edition, int(m.group(1)))] = re.sub(r"\s+", " ", m.group(2))
+    return texts
+
+
+def legislative_heading(con):
+    """The SOS pamphlet's statement heading for a King legislative contest:
+    'State Representative | District 36 Position 2 |', 'State Senator | District 33 |'."""
+    seat = con["district"].strip()
+    office = "State Senator" if seat.startswith("State Senator") else "State Representative"
+    pos = re.search(r"Position No\.\s*(\d+)", seat)
+    return f"{office} | District {con['scope']['value']}" + (f" Position {pos.group(1)}" if pos else "") + " |"
+
+
+def index_fallback_pages(con, c, king_pidx, page_texts):
+    """pamphlet-index.json pages for a candidate with no dossier. For a
+    legislative contest only the pages that carry its own statement heading
+    are kept: the index also matches a name in another page's endorsement
+    list (Liz Berry on the Seattle D5 page, Shaun Scott on the LD43 Senate
+    page, Manka Dhingra on a District Court page)."""
+    pages = king_pidx["candidates"].get(c["slug"], [])
+    if con["category"] != "State":
+        return pages
+    heading = legislative_heading(con)
+    return [p for p in pages if heading in page_texts.get((p["edition"], p["page"]), "")]
+
+
+def dossier_exists(dossier_slug, slug):
+    return any((d / dossier_slug / f"{slug}.md").exists() for d in DOSSIER_DIRS)
+
+
+def ballot_only_scoring(con):
+    """Info-only entry for an uncontested contest the package did not research."""
+    return {
+        "contest_slug": con["slug"],
+        "office_does": None,
+        "race_blurb": None,
+        "candidates": [
+            {"slug": c["slug"], "evidence_level": "official-ballot-only", "summary": None,
+             "highlights": [], "scores": {}}
+            for c in con["candidates"]
+        ],
+    }
+
+
+def assemble_king_schema2(statewide_contests):
+    """King's contests in KCE ballot order, each statewide-owned entry replaced
+    by the statewide package's own contest (so it appears once), King's
+    measures, and King's supported_counties entry."""
+    interim = KING / "interim"
+    contests_doc = json.load(open(interim / "contests.json"))
+    measures_doc = json.load(open(interim / "measures.json"))
+    king_pidx = json.load(open(interim / "pamphlet-index.json"))
+    editions = king_editions()
+    page_texts = pamphlet_page_texts(editions)
+    statewide_by_slug = {c["slug"]: c for c in statewide_contests}
+    adapter = set(election.DISTRICT_ADAPTER_LAYERS["king"])
+    unresolved = []
+
+    def check_scope(slug, scope):
+        if scope.get("county") != "king" or scope.get("kind") not in ("COUNTY", "DISTRICT"):
+            raise SystemExit(f"king {slug}: unexpected scope {scope}")
+        if scope["kind"] == "DISTRICT" and scope["layer"] not in adapter:
+            unresolved.append(f"{slug} ({scope['layer']})")
+
+    def pages_for(con):
+        def pages(c):
+            if dossier_exists(con["slug"], c["slug"]):
+                return dossier_pamphlet_pages(con["slug"], c["slug"], editions)
+            return index_fallback_pages(con, c, king_pidx, page_texts)
+        return pages
+
+    ordered, placed = [], set()
+    for con in contests_doc["contests"]:
+        if con["owner"] == "statewide":
+            shipped = statewide_by_slug.get(con["slug"])
+            if shipped is None:
+                raise SystemExit(f"king lists statewide-owned {con['slug']}, which the statewide package lacks")
+            # Compared by name: slugs differ by package ("sean-o-donnell" in
+            # King's, "sean-odonnell" in the statewide package).
+            if sorted(c["name"] for c in con["candidates"]) != sorted(c["name"] for c in shipped["candidates"]):
+                raise SystemExit(f"{con['slug']}: King and statewide candidate lists differ")
+            ordered.append(shipped)
+            placed.add(con["slug"])
+            continue
+        if con["owner"] != "king":
+            raise SystemExit(f"king {con['slug']}: unknown owner {con['owner']!r}")
+        check_scope(con["slug"], con["scope"])
+        if con["uncontested"] != (len(con["candidates"]) == 1):
+            raise SystemExit(f"king {con['slug']}: uncontested flag disagrees with its candidates")
+        sc = scores.get(con["slug"])
+        if sc is None:
+            if not con["uncontested"]:
+                raise SystemExit(f"no scores for {con['slug']}")
+            sc = ballot_only_scoring(con)
+        if con["uncontested"] and any(c.get("scores") for c in sc["candidates"]):
+            raise SystemExit(f"king {con['slug']}: uncontested contest carries scores")
+        cands = assembled_candidates(con, sc, pages_for(con))
+        ordered.append(assembled_contest(con, "king", con["scope"], sc, cands))
+    ordered += [c for c in statewide_contests if c["slug"] not in placed]
+
+    measures = []
+    for m in measures_doc["measures"]:
+        check_scope(m["slug"], m["scope"])
+        if dossier_exists("measures", m["slug"]):
+            pages = dossier_pamphlet_pages("measures", m["slug"], editions)
+        else:
+            pages = king_pidx["measures"].get(m["slug"], [])
+        measures.append(assembled_measure(m, "king", m["scope"], pages))
+
+    for item in unresolved:
+        print(f"king scope its District Adapter cannot resolve: {item}")
+    name, fips = COUNTY_NAMES["king"]
+    county = {"id": "king", "name": name, "state": "WA", "fips": fips,
+              "coverage": "partial_county" if unresolved else "full_county"}
+    return ordered, measures, county
+
+
+if KING_SHIPS:
+    out_contests, king_measures, king_county = assemble_king_schema2(out_contests)
+    out_measures += king_measures
+    supported_counties.append(king_county)
 
 shared_scores = shared_score_index(scores)
 for county_dir in COUNTY_DIRS:
@@ -406,7 +572,7 @@ app_data = {
         f"{rel(E.counties)}/*/interim/app-*.json",
     ] if PACKAGES["counties"] is None else [
         f"{rel(STATE)}/**",
-        *(f"{rel(d)}/**" for d in COUNTY_DIRS),
+        *(f"{rel(d)}/**" for d in DECLARED_DIRS),
     ]) + [
         f"{rel(FINAL)}/scores.json",
         f"{rel(FINAL)}/measures.json",
