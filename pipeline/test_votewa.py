@@ -153,7 +153,7 @@ class GeneralPackagesTest(unittest.TestCase):
 
     def test_shipped_general_counties(self):
         self.assertEqual(["king", "snohomish", "spokane", "pierce", "clark", "kitsap", "thurston", "yakima", "whatcom",
-                          "benton"], election.APP_PACKAGES[GENERAL.id]["counties"])
+                          "benton", "skagit", "cowlitz", "grant"], election.APP_PACKAGES[GENERAL.id]["counties"])
 
     def test_wave2_builders_are_full_county(self):
         # Every Clark, Kitsap and Thurston scope resolves through geo.js
@@ -172,6 +172,21 @@ class GeneralPackagesTest(unittest.TestCase):
             for name in ("app-contests.json", "app-measures.json"):
                 doc = json.loads((GENERAL.county(county) / "interim" / name).read_text())
                 self.assertEqual(("full_county", notes), (doc["coverage"], len(doc["notes"])), f"{county} {name}")
+
+    def test_wave3b_builders_are_full_county(self):
+        # Skagit, Cowlitz and Grant (#28): every scope resolves through
+        # geo.js COUNTY_LAYERS (Grant FIRDST and CEMDST since #28).
+        for county in ("skagit", "cowlitz", "grant"):
+            for name in ("app-contests.json", "app-measures.json"):
+                doc = json.loads((GENERAL.county(county) / "interim" / name).read_text())
+                self.assertEqual("full_county", doc["coverage"], f"{county} {name}")
+
+    def test_measure_pages_come_from_the_builder_block(self):
+        # m(..., pages=) names local-voters-pamphlet PDF pages; the default is none.
+        self.assertEqual((), bv.m("X", "P1", "T", ("COUNTY", None), "w", "c", "u")["pages"])
+        doc = json.loads((GENERAL.county("cowlitz") / "interim" / "app-measures.json").read_text())
+        self.assertEqual([{"edition": "local-voters-pamphlet", "page": 57}, {"edition": "local-voters-pamphlet", "page": 58}],
+                         doc["measures"][0]["pamphlet_pages"])
 
 if __name__ == "__main__":
     unittest.main()

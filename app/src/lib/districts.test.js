@@ -72,6 +72,16 @@ test('Benton PUD and Yakima, Whatcom and Benton district numbers read as names',
   assert.equal(describeDistrict('FIRDST', '1'), 'Fire District 1')
 })
 
+test('Skagit and Grant DOR district numbers read as names', () => {
+  // Live 2026-10-08 (#28): La Conner (SD 311), Bow (FD 5), Coulee City
+  // (FD 7), Wilson Creek (Cemetery District 2), Soap Lake (Hospital District 4).
+  assert.equal(describeDistrict('SCHDST', '311'), 'School District 311')
+  assert.equal(describeDistrict('FIRDST', '5'), 'Fire District 5')
+  assert.equal(describeDistrict('FIRDST', '7'), 'Fire District 7')
+  assert.equal(describeDistrict('CEMDST', '2'), 'Cemetery District 2')
+  assert.equal(describeDistrict('HOSPDST', '4'), 'Hospital District 4')
+})
+
 test('codes are tidied without mangling initialisms', () => {
   assert.equal(describeDistrict('FIRDST', 'TACOMA'), 'Fire District Tacoma')
   assert.equal(describeDistrict('SCCDST', 'SCC5'), 'Seattle City Council District 5')

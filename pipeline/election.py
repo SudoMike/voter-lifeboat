@@ -68,7 +68,7 @@ APP_PACKAGES = {
     "2026-11-03-general": {
         "statewide_ballot": True,
         "counties": ["king", "snohomish", "spokane", "pierce", "clark", "kitsap", "thurston", "yakima", "whatcom",
-                     "benton"],
+                     "benton", "skagit", "cowlitz", "grant"],
         "district_contests": "county",
     },
 }
@@ -92,6 +92,9 @@ DISTRICT_ADAPTER_LAYERS = {
     "yakima": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "FIRDST"),
     "whatcom": ("CONGDST", "LEGDST", "CITY", "PORTDST", "FIRDST", "HOSPDST"),
     "benton": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "FIRDST", "PUDDST", "SCHDST"),
+    "skagit": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "FIRDST", "HOSPDST", "SCHDST"),
+    "cowlitz": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL"),
+    "grant": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "HOSPDST", "FIRDST", "CEMDST"),
 }
 
 
@@ -212,6 +215,15 @@ COUNTY_ELECTIONS_URLS = {
         # Benton County Auditor, Elections (200, 2026-10-08;
         # bentoncountywa.gov/elections 302s here).
         "benton": "https://www.bentoncountywa.gov/government/elected_officials/auditor/elections/index.php",
+        # Skagit County Auditor, Elections and Voting (200, 2026-10-08;
+        # skagitcountywa.gov/elections serves the same page).
+        "skagit": "https://www.skagitcountywa.gov/government/auditor-s-office/elections-and-voting/",
+        # Cowlitz County Auditor, Elections (200, 2026-10-08; the page that
+        # links the general's local voters' pamphlet).
+        "cowlitz": "https://www.co.cowlitz.wa.us/2357/Elections",
+        # Grant County Auditor, Elections (200, 2026-10-08; grantcountywa.gov/
+        # elections answers 404, and /1374/Current-Election sits under it).
+        "grant": "https://www.grantcountywa.gov/270/Elections",
     },
 }
 

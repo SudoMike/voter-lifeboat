@@ -1,0 +1,356 @@
+{
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/grant/interim/contests.json",
+    "data/washington-state/elections/2026-11-03-general/counties/grant/interim/measures.json"
+  ],
+  "script": "pipeline/build_research_plan.py",
+  "contests": [
+    {
+      "contest_slug": "grant-congressional-district-4-u-s-representative",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 4",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "amanda-mckinney",
+          "name": "Amanda McKinney",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-4-u-s-representative/amanda-mckinney.md"
+        },
+        {
+          "slug": "john-duresky",
+          "name": "John Duresky",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-4-u-s-representative/john-duresky.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "benton",
+          "contest_slug": "benton-congressional-district-4-u-s-representative",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/benton/scoring/benton-congressional-district-4-u-s-representative.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "yakima",
+          "benton"
+        ]
+      }
+    },
+    {
+      "contest_slug": "grant-legislative-district-13-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 13",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "tom-dent",
+          "name": "Tom Dent",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-13-state-representative-position-1/tom-dent.md"
+        },
+        {
+          "slug": "juan-jerry-garcia",
+          "name": "Juan \"Jerry\" Garcia",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-13-state-representative-position-1/juan-jerry-garcia.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "grant-legislative-district-13-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 13",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "deanna-martinez",
+          "name": "Deanna Martinez",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-13-state-representative-position-2/deanna-martinez.md"
+        },
+        {
+          "slug": "joshua-thompson",
+          "name": "Joshua Thompson",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-13-state-representative-position-2/joshua-thompson.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "grant-legislative-district-16-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 16",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "mark-klicker",
+          "name": "Mark Klicker",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-16-state-representative-position-1/mark-klicker.md"
+        },
+        {
+          "slug": "kyle-palmer",
+          "name": "Kyle Palmer",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-16-state-representative-position-1/kyle-palmer.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "benton",
+          "contest_slug": "benton-legislative-district-16-state-representative-pos-1",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/benton/scoring/benton-legislative-district-16-state-representative-pos-1.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "benton"
+        ]
+      }
+    },
+    {
+      "contest_slug": "grant-legislative-district-16-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 16",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "skyler-rude",
+          "name": "Skyler Rude",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-16-state-representative-position-2/skyler-rude.md"
+        },
+        {
+          "slug": "derek-sarley",
+          "name": "Derek Sarley",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-16-state-representative-position-2/derek-sarley.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "benton",
+          "contest_slug": "benton-legislative-district-16-state-representative-pos-2",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/benton/scoring/benton-legislative-district-16-state-representative-pos-2.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "benton"
+        ]
+      }
+    },
+    {
+      "contest_slug": "grant-grant-county-county-assessor",
+      "category": "County",
+      "office": "County Assessor",
+      "district": "Grant County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "clayton-johnson",
+          "name": "Clayton Johnson",
+          "party_preference": "States No Party Preference",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        },
+        {
+          "slug": "anson-bartrand",
+          "name": "Anson Bartrand",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        }
+      ]
+    },
+    {
+      "contest_slug": "grant-grant-county-county-auditor",
+      "category": "County",
+      "office": "County Auditor",
+      "district": "Grant County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "shannon-falstad",
+          "name": "Shannon Falstad",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/grant/dossiers/grant-grant-county-county-auditor/shannon-falstad.md"
+        },
+        {
+          "slug": "darci-homesley",
+          "name": "Darci Homesley",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/grant/dossiers/grant-grant-county-county-auditor/darci-homesley.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "grant-grant-county-commissioner-district-3-commissioner-district-3",
+      "category": "County",
+      "office": "Commissioner District #3",
+      "district": "Grant County Commissioner District 3",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "kelly-raap",
+          "name": "Kelly Raap",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/grant/dossiers/grant-grant-county-commissioner-district-3-commissioner-district-3/kelly-raap.md"
+        },
+        {
+          "slug": "shannon-durfee",
+          "name": "Shannon Durfee",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/grant/dossiers/grant-grant-county-commissioner-district-3-commissioner-district-3/shannon-durfee.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "grant-grant-county-county-sheriff",
+      "category": "County",
+      "office": "County Sheriff",
+      "district": "Grant County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "darrik-gregg",
+          "name": "Darrik Gregg",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/grant/dossiers/grant-grant-county-county-sheriff/darrik-gregg.md"
+        },
+        {
+          "slug": "joey-kriete",
+          "name": "Joey Kriete",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/grant/dossiers/grant-grant-county-county-sheriff/joey-kriete.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "grant-grant-superior-court-judge-position-03",
+      "category": "Judicial",
+      "office": "Judge Position #03",
+      "district": "Grant Superior Court",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "kenneth-ken-chadwick",
+          "name": "Kenneth \"Ken\" Chadwick",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/grant/dossiers/grant-grant-superior-court-judge-position-03/kenneth-ken-chadwick.md"
+        },
+        {
+          "slug": "trevor-bevier",
+          "name": "Trevor Bevier",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/grant/dossiers/grant-grant-superior-court-judge-position-03/trevor-bevier.md"
+        }
+      ]
+    }
+  ],
+  "measures": [
+    {
+      "jurisdiction": "Grant County",
+      "proposition": "Advisory Vote Only - Proposition No. 1",
+      "title": "Sales and Use Tax for Mental Health or Chemical Dependency Treatment or Therapeutic Courts",
+      "slug": "grant-grant-county-advisory-vote-only-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Grant County Public Hospital District No. 4 (McKay Healthcare & Rehabilitation)",
+      "proposition": "Proposition No. 1",
+      "title": "Bonds for Expansion of McKay Healthcare & Rehabilitation Center",
+      "slug": "grant-grant-county-public-hospital-district-no-4-mckay-healthcare-rehabilitation-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "City of Moses Lake",
+      "proposition": "Proposition No. 1",
+      "title": "Public Safety Sales and Use Tax",
+      "slug": "grant-city-of-moses-lake-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Grant County Fire Protection District No. 7",
+      "proposition": "Proposition No. 1",
+      "title": "Emergency Medical Service Property Tax Levy",
+      "slug": "grant-grant-county-fire-protection-district-no-7-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Grant County Cemetery District No. 2 (Wilson Creek)",
+      "proposition": "Proposition No. 1",
+      "title": "Special Levy for Maintenance and Operations",
+      "slug": "grant-grant-county-cemetery-district-no-2-wilson-creek-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    }
+  ],
+  "carry_forward_from": "2026-08-04-primary"
+}

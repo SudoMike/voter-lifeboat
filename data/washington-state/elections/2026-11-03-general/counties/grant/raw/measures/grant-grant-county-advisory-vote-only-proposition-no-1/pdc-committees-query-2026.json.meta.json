@@ -1,0 +1,19 @@
+{
+  "url": "https://data.wa.gov/resource/3h9x-7bvm.json?$where=election_year='2026'%20AND%20(upper(filer_name)%20like%20'%25MCKAY%25'%20OR%20upper(filer_name)%20like%20'%25MOSES%20LAKE%25'%20OR%20upper(filer_name)%20like%20'%25SOAP%20LAKE%25'%20OR%20upper(filer_name)%20like%20'%25GRANT%20C%25'%20OR%20upper(filer_name)%20like%20'%25CEMETERY%25'%20OR%20upper(filer_name)%20like%20'%25WILSON%20CREEK%25'%20OR%20upper(filer_name)%20like%20'%25BEHAVIORAL%25'%20OR%20upper(filer_name)%20like%20'%25MENTAL%20HEALTH%25'%20OR%20upper(filer_name)%20like%20'%25MCKAY%25'%20OR%20upper(jurisdiction)%20like%20'%25GRANT%25'%20OR%20upper(jurisdiction)%20like%20'%25MOSES%20LAKE%25'%20OR%20upper(jurisdiction)%20like%20'%25SOAP%20LAKE%25')&$limit=500",
+  "retrieved_at": "2026-10-08",
+  "method": "curl -sL with a browser User-Agent for issue #28 measure research; cached at data/.cache/grant/grant-grant-county-advisory-vote-only-proposition-no-1/pdc-committees-query-2026.json",
+  "stage": "raw",
+  "source_type": "pdc",
+  "tier": 1,
+  "outlet": "Public Disclosure Commission (data.wa.gov 3h9x-7bvm)",
+  "cache_file": "data/.cache/grant/grant-grant-county-advisory-vote-only-proposition-no-1/pdc-committees-query-2026.json",
+  "bytes": 53545,
+  "sha256": "6f8c9e23aac44d3097ea153f4b051583a9cd4fa4e3408e6def9b93fa6a5bada2",
+  "cited_by": [
+    {
+      "dossier": "data/washington-state/elections/2026-11-03-general/counties/grant/dossiers/measures/grant-grant-county-advisory-vote-only-proposition-no-1.md",
+      "source_id": "S8"
+    }
+  ],
+  "query": "$where=election_year='2026' AND (upper(filer_name) like '%MCKAY%' OR upper(filer_name) like '%MOSES LAKE%' OR upper(filer_name) like '%SOAP LAKE%' OR upper(filer_name) like '%GRANT C%' OR upper(filer_name) like '%CEMETERY%' OR upper(filer_name) like '%WILSON CREEK%' OR upper(filer_name) like '%BEHAVIORAL%' OR upper(filer_name) like '%MENTAL HEALTH%' OR upper(filer_name) like '%MCKAY%' OR upper(jurisdiction) like '%GRANT%' OR upper(jurisdiction) like '%MOSES LAKE%' OR upper(jurisdiction) like '%SOAP LAKE%')&$limit=500"
+}

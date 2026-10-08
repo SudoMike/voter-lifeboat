@@ -1,8 +1,8 @@
 // The November 3, 2026 general as shipped: King County at Full County
 // Coverage (issue #16), Spokane at partial coverage, Pierce at full coverage
 // (#21), Snohomish at full coverage (#27), Clark, Kitsap and Thurston at full
-// coverage (#22), Yakima, Whatcom and Benton at full coverage (#28), every
-// other Washington address a Statewide-Only Guide (issue #9). These run the app's own ballot, interview, lean and Ballot Brief
+// coverage (#22), Yakima, Whatcom, Benton, Skagit, Cowlitz and Grant at full
+// coverage (#28), every other Washington address a Statewide-Only Guide (issue #9). These run the app's own ballot, interview, lean and Ballot Brief
 // code against public/data/2026-11-03-general.
 import test from 'node:test'
 import assert from 'node:assert/strict'
@@ -68,7 +68,7 @@ const STATE_MEASURES = [
   'initiative-measure-no-il26-638',
 ]
 
-test('the general ships nine counties at full county coverage, Spokane at partial, with their elections offices', () => {
+test('the general ships twelve counties at full county coverage, Spokane at partial, with their elections offices', () => {
   assert.equal(data.election.id, '2026-11-03-general')
   assert.deepEqual(data.coverage, {
     statewide_complete: true,
@@ -170,6 +170,35 @@ test('the general ships nine counties at full county coverage, Spokane at partia
         fips: '53005',
         coverage: 'full_county',
         elections_url: 'https://www.bentoncountywa.gov/government/elected_officials/auditor/elections/index.php',
+      },
+      {
+        // Full: PUD and commissioner seats are countywide; the Fire District 5
+        // and La Conner SD levies resolve from DOR FIR2025/SCH2025 (#28).
+        id: 'skagit',
+        name: 'Skagit County',
+        state: 'WA',
+        fips: '53057',
+        coverage: 'full_county',
+        elections_url: 'https://www.skagitcountywa.gov/government/auditor-s-office/elections-and-voting/',
+      },
+      {
+        // Full: every county seat is countywide; one city measure (#28).
+        id: 'cowlitz',
+        name: 'Cowlitz County',
+        state: 'WA',
+        fips: '53015',
+        coverage: 'full_county',
+        elections_url: 'https://www.co.cowlitz.wa.us/2357/Elections',
+      },
+      {
+        // Full: fire, cemetery and hospital district measures resolve from
+        // DOR FIR2025, CEM2025 and HSP2025 (#28).
+        id: 'grant',
+        name: 'Grant County',
+        state: 'WA',
+        fips: '53025',
+        coverage: 'full_county',
+        elections_url: 'https://www.grantcountywa.gov/270/Elections',
       },
     ],
   })
@@ -373,6 +402,91 @@ test('a Benton ballot: Yakima\'s research for LD 14/15, the PUD seat only inside
     sameScoring(ld15, `benton-legislative-district-15-state-representative-pos-${pos}`, `yakima-legislative-district-15-state-representative-pos-${pos}`)
   assert.ok(!ld15.contests.some((c) => c.owner === 'yakima'))
   assert.equal(coverageAdvice(ben({})), null)
+})
+
+test('a Skagit ballot: Snohomish\'s research for CD 2 and LD 10, Whatcom\'s for LD 40, levies by district', () => {
+  const SKAGIT = { id: 'skagit', fips: '53057', name: 'Skagit County' }
+  const ska = (districts) => ({ coverageStatus: 'full_county', county: SKAGIT, districts, missingLayers: [] })
+  // Districts as the live District Adapter resolved them on 2026-10-08.
+  // 700 S 2nd St, Mount Vernon.
+  const mv = ballotFor(ska({ CONGDST: '2', LEGDST: '10', CITY: 'Mount Vernon', COUNTY_COUNCIL: '2', HOSPDST: '1', SCHDST: '320' }))
+  const ms = mv.contests.map((c) => c.slug)
+  assert.equal(new Set(ms).size, ms.length)
+  for (const slug of SUPREME_COURT) assert.ok(ms.includes(slug), slug)
+  sameScoring(mv, 'skagit-congressional-district-2-u-s-representative', 'snohomish-congressional-district-2-u-s-representative')
+  for (const pos of [1, 2])
+    sameScoring(mv, `skagit-legislative-district-10-state-representative-pos-${pos}`, `snohomish-legislative-district-10-state-representative-pos-${pos}`)
+  assert.ok(!mv.contests.some((c) => c.owner === 'snohomish'))
+  // PUD and commissioner seats are elected countywide in the general.
+  for (const slug of ['skagit-public-utility-district-commissioner-district-1-commissioner-1', 'skagit-skagit-county-commissioner-district-3'])
+    assert.ok(ms.includes(slug), slug)
+  assert.deepEqual(ownLocal(mv, 'skagit'), ['skagit-city-of-mount-vernon-proposition-no-1'])
+  // 5800 Main St, Bow: LD 40, Fire District 5.
+  const bow = ballotFor(ska({ CONGDST: '2', LEGDST: '40', COUNTY_COUNCIL: '1', FIRDST: '5', HOSPDST: '304', SCHDST: '100' }))
+  for (const pos of [1, 2])
+    sameScoring(bow, `skagit-legislative-district-40-state-representative-pos-${pos}`, `whatcom-legislative-district-40-state-representative-pos-${pos}`)
+  assert.ok(!bow.contests.some((c) => c.owner === 'whatcom'))
+  assert.deepEqual(ownLocal(bow, 'skagit'), ['skagit-skagit-county-fire-protection-district-no-5-proposition-no-1'])
+  // 305 N 6th St, La Conner: La Conner SD 311.
+  const lc = ballotFor(ska({ CONGDST: '2', LEGDST: '10', CITY: 'La Conner', COUNTY_COUNCIL: '1', SCHDST: '311' }))
+  assert.deepEqual(ownLocal(lc, 'skagit'), ['skagit-la-conner-school-district-no-311-proposition-no-1'])
+  assert.equal(coverageAdvice(ska({})), null)
+})
+
+test('a Cowlitz ballot: Thurston\'s research for LD 19, Clark\'s for CD 3 and LD 20, Longview Prop 1 only in Longview', () => {
+  const COWLITZ = { id: 'cowlitz', fips: '53015', name: 'Cowlitz County' }
+  const cow = (districts) => ({ coverageStatus: 'full_county', county: COWLITZ, districts, missingLayers: [] })
+  // 1525 Broadway, Longview.
+  const lv = ballotFor(cow({ CONGDST: '3', LEGDST: '19', CITY: 'Longview', COUNTY_COUNCIL: '2' }))
+  const ls = lv.contests.map((c) => c.slug)
+  assert.equal(new Set(ls).size, ls.length)
+  for (const slug of SUPREME_COURT) assert.ok(ls.includes(slug), slug)
+  sameScoring(lv, 'cowlitz-congressional-district-3-u-s-representative', 'clark-congressional-district-3-u-s-representative')
+  for (const pos of [1, 2])
+    sameScoring(lv, `cowlitz-legislative-district-19-state-representative-pos-${pos}`, `thurston-legislative-district-19-state-representative-pos-${pos}`)
+  assert.ok(!lv.contests.some((c) => c.owner === 'thurston' || c.owner === 'clark'))
+  assert.ok(ls.includes('cowlitz-public-utility-district-no-1-of-cowlitz-county-commissioner-district-1'))
+  assert.deepEqual(ownLocal(lv, 'cowlitz'), ['cowlitz-city-of-longview-proposition-1'])
+  // 200 E Scott Ave, Woodland: LD 20, no local measure.
+  const wd = ballotFor(cow({ CONGDST: '3', LEGDST: '20', CITY: 'Woodland', COUNTY_COUNCIL: '1' }))
+  for (const pos of [1, 2])
+    sameScoring(wd, `cowlitz-legislative-district-20-state-representative-pos-${pos}`, `clark-legislative-district-20-state-representative-pos-${pos}`)
+  assert.ok(!wd.contests.some((c) => c.slug.includes('district-19')))
+  assert.deepEqual(ownLocal(wd, 'cowlitz'), [])
+  assert.deepEqual(wd.measures.map((m) => m.slug), STATE_MEASURES)
+  assert.equal(coverageAdvice(cow({})), null)
+})
+
+test('a Grant ballot: Benton\'s research for CD 4, the advisory vote countywide, district measures by district', () => {
+  const GRANT = { id: 'grant', fips: '53025', name: 'Grant County' }
+  const gra = (districts) => ({ coverageStatus: 'full_county', county: GRANT, districts, missingLayers: [] })
+  const ADVISORY = 'grant-grant-county-advisory-vote-only-proposition-no-1'
+  const HOSP4 = 'grant-grant-county-public-hospital-district-no-4-mckay-healthcare-rehabilitation-proposition-no-1'
+  // 321 S Balsam St, Moses Lake: LD 13, Hospital District 1.
+  const ml = ballotFor(gra({ CONGDST: '4', LEGDST: '13', CITY: 'Moses Lake', COUNTY_COUNCIL: '2', HOSPDST: '1' }))
+  const ms = ml.contests.map((c) => c.slug)
+  assert.equal(new Set(ms).size, ms.length)
+  for (const slug of SUPREME_COURT) assert.ok(ms.includes(slug), slug)
+  sameScoring(ml, 'grant-congressional-district-4-u-s-representative', 'benton-congressional-district-4-u-s-representative')
+  assert.ok(!ml.contests.some((c) => c.owner === 'benton'))
+  assert.ok(ms.includes('grant-legislative-district-13-state-representative-pos-1'))
+  assert.ok(ms.includes('grant-court-of-appeals-division-3-district-2-judge-position-1'))
+  assert.ok(!ms.some((s) => s.includes('district-16')), ms.join())
+  assert.deepEqual(ownLocal(ml, 'grant'), [ADVISORY, 'grant-city-of-moses-lake-proposition-no-1'])
+  // 127 Main Ave E, Soap Lake: Hospital District 4.
+  const sl = ballotFor(gra({ CONGDST: '4', LEGDST: '13', CITY: 'Soap Lake', COUNTY_COUNCIL: '1', HOSPDST: '4' }))
+  assert.deepEqual(ownLocal(sl, 'grant'), [ADVISORY, HOSP4])
+  // 103 Railroad St, Wilson Creek: Cemetery District 2 too.
+  const wc = ballotFor(gra({ CONGDST: '4', LEGDST: '13', CITY: 'Wilson Creek', COUNTY_COUNCIL: '1', HOSPDST: '4', CEMDST: '2' }))
+  assert.deepEqual(ownLocal(wc, 'grant'), [ADVISORY, HOSP4, 'grant-grant-county-cemetery-district-no-2-wilson-creek-proposition-no-1'])
+  // 34875 Park Lake Rd NE, Coulee City: Fire District 7.
+  const cc = ballotFor(gra({ CONGDST: '4', LEGDST: '13', COUNTY_COUNCIL: '1', HOSPDST: '4', FIRDST: '7' }))
+  assert.deepEqual(ownLocal(cc, 'grant'), [ADVISORY, HOSP4, 'grant-grant-county-fire-protection-district-no-7-proposition-no-1'])
+  // An LD 16 address: Benton's research for the House seats.
+  const ld16 = ballotFor(gra({ CONGDST: '4', LEGDST: '16', COUNTY_COUNCIL: '3' }))
+  for (const pos of [1, 2])
+    sameScoring(ld16, `grant-legislative-district-16-state-representative-pos-${pos}`, `benton-legislative-district-16-state-representative-pos-${pos}`)
+  assert.equal(coverageAdvice(gra({})), null)
 })
 
 test('a Spokane ballot: its own districts, school and fire measures by name, no PUD seat', () => {

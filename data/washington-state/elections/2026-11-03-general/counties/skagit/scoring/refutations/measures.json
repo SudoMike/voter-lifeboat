@@ -1,0 +1,68 @@
+{
+  "contest_slug": "measures",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/skagit/scoring/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/skagit/dossiers/measures/",
+    "data/washington-state/elections/2026-11-03-general/counties/skagit/interim/pdf-text/",
+    "data/washington-state/elections/2026-11-03-general/counties/skagit/interim/voter-guide-text/",
+    "data/final/2026-11-03-general/rubric.json"
+  ],
+  "verdicts": [
+    {
+      "candidate": "skagit-city-of-mount-vernon-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Pamphlet page 18 (S1) says the measure would 'continue the local sales tax at the same rate for an additional 10-year period', at $2,300,000 a year. The city FAQ (S4) calls it 'the same tax voters approved in 2016'. DOR (S7) puts the combined rate at 9.0%, which includes this 0.2%. A same-rate renewal is the 1 tier, as in the Spokane renewals. Attacked toward 0 because no one's rate changes. Rejected: a yes vote keeps a tax that otherwise ends in April 2027. Spending and local-control were checked and rejected: the money continues the existing street program (S1, S4), and the council already runs the district."
+    },
+    {
+      "candidate": "skagit-city-of-mount-vernon-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1 (0.2%, ten years, transportation-only purposes, 2016 approval) and S4 (expires at the end of March 2027). 'Spring 2027' covers both S1's April and S4's March. cost_line matches S1 (0.2% is 20 cents per $100; $2.3 million) and S7 (9.0%). pro_summary names the committee and spokesperson LuAnne Gordan Burkhart and paraphrases the statement accurately (College Way/I-5, the Hoag Road/LaVenture signal, overlays, 436 crosswalks and curbs). It leaves out the statement's $27 million grant figure, which no source documents. con_summary matches the pamphlet notice, and the Vander Stoep quote is as reported in S5."
+    },
+    {
+      "candidate": "skagit-city-of-sedro-woolley-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked toward 0 or no mapping: the net household effect is about $11 a year on a $519,450 home (S1, S4), and the library receives the same money either way (S5). Rejected. A yes vote puts a new taxing district's levy (about $0.232 per $1,000, about $517,255) on city property. The offset is a city budget decision of 'up to' $474,115, stated for 2028 only (S1), and nothing in the measure binds later city levies. Once residents can vote in the district, city property is also inside any future library levy lid lift (S1, S6, S7). A small net increase on a new levy fits 1, not 2. King's Black Diamond PSRFA annexation got 2 for a 'significantly higher fire tax'; here the gross increase is nearly offset. S1 and S4 support the basis."
+    },
+    {
+      "candidate": "skagit-city-of-sedro-woolley-proposition-no-1",
+      "axis": "local-control",
+      "verdict": "upheld",
+      "note": "Annexation into a separate taxing district is in local-control scope under the 2026-10-08 addendum (annexations, regional authorities). A yes vote moves the city from a negotiated interlocal contract into a district whose board sets the levy that city property pays directly. In exchange, residents get a vote in that district (S1, S4, S5). The statement for says the arrangement 'can't be changed in the future unless voted on by us' (S1). Considered 2 by analogy to King's Black Diamond annexation (city contract to regional authority, scored 2). Rejected: the district already runs the library, the city's payment is already tied to the district's levy rate (S1, S5), and the agreements run to 2039 (S5), so control shifts only a little, as in the King Fire District 43 annexation (1). The direction is right: +1 points toward the district/regional pole, because the city gives up its contract role and the new voting right is a vote in the larger district."
+    },
+    {
+      "candidate": "skagit-city-of-sedro-woolley-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1 (annexation, contract service, voting from Jan. 1, 2027) and S5 (the district has operated the library since 2017, so 'already runs the city's library under a contract' is accurate). The cost_line figures ($0.2320, $517,255 rounded to $517,000, 'up to $474,115', $11 on $519,450, 2028 start) match pamphlet page 19 verbatim. pro_summary paraphrases Macomber's statement accurately ('simplifies how we fund library service', 'already paying', the council 'committed to lowering City property taxes', 'a say on future District measures - such as bonds or levies'). con_summary matches the pamphlet notice. sources_note correctly flags that S6/S7 and S5 disagree on whether annexation is linked to a lid lift."
+    },
+    {
+      "candidate": "skagit-la-conner-school-district-no-311-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Pamphlet page 20 (S1): $350,000 to $395,000 a year for 2027-2030, $1,490,000 in total, about $0.307-$0.308 per $1,000. It is not described as a replacement. A modest, temporary new capital levy is 1, matching the Highline technology levy precedent. Checked whether it is really a renewal. S6 mentions 'the last of the technology levy funding' but does not say where that money came from. The only technology levy found, the February 2016 Prop. 2 (itself a 'Replacement' levy), failed (S7). Either reading gives 1, so the uncertainty does not change the score."
+    },
+    {
+      "candidate": "skagit-la-conner-school-district-no-311-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1 (four-year capital levy for modernization and technology) and S4/S5 (computers, iPads, audio-visual systems, facility repairs). The cost_line amounts and total match S1. '$154 a year on a $500,000 property' is correct arithmetic at $0.307; S4 rounded it to about $150. pro_summary correctly says no statement for was filed and attributes the rationale to Board President Susie Deyo (S4) and board members (S5). con_summary matches the pamphlet notice."
+    },
+    {
+      "candidate": "skagit-skagit-county-fire-protection-district-no-5-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Pamphlet page 21 (S1) sets the levy at $0.78 per $1,000, allows a 103% limit factor for five years and makes the 2031 levy the permanent base. The fact sheet (S4) gives the current rate as $0.3363 and net increases of $133 and $222 a year on $300,000 and $500,000 homes. Attacked toward 1: the ballot calls it a 'restore', and the district's rate is the lowest of the seven Skagit districts compared (S4). Rejected: no source gives a year the district last levied $0.78, the rate rises about 2.3 times, and the higher base is permanent (S1, S3). That is the Spokane Fire District 9 tier (2). S1, S3 and S4 support the basis. Spending was considered and rejected: the explanatory statement says services continue 'at existing levels' (S1), and the resolution's 'additional staffing' recital (S3) does not appear in voter materials."
+    },
+    {
+      "candidate": "skagit-skagit-county-fire-protection-district-no-5-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1 ($0.78 levied in 2026 for collection in 2027, 103% for five years, 2031 base), S1 and S4 (all-volunteer; Allen, Bow, Edison, Samish Island, Chuckanut Drive) and S4 (apparatus replacement as the main need). cost_line matches S4 ($0.3363; $133 and $222 net increases). pro_summary names the committee and spokesperson Andrea Leebron-Clay and paraphrases the statement accurately (volunteers; engine, equipment, fuel and operating costs; the 1% limit; the rating and insurance premiums). con_summary matches the pamphlet notice. Minor: 'for 2027' refers to the collection year. The ballot title says levied in 2026 for collection in 2027, so the wording is acceptable."
+    }
+  ],
+  "missing": []
+}

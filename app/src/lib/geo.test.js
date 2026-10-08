@@ -1028,3 +1028,48 @@ test('a Census place whose name ends in City keeps it; only NAME loses the legal
   context = await lookupBallotContext(wave2Data('benton'), '1009 Dale Ave Benton City WA 99320')
   assert.equal(context.districts.CITY, 'Benton City')
 })
+
+// Skagit and Grant (#28, wave 3b). Live DOR point queries 2026-10-08 at the
+// Census-geocoded points of the addresses below.
+test('Skagit Fire District 5 and La Conner School District 311 resolve from DOR', async () => {
+  const fd5 = { kind: 'DISTRICT', county: 'skagit', layer: 'FIRDST', value: '5' }
+  const sd311 = { kind: 'DISTRICT', county: 'skagit', layer: 'SCHDST', value: '311' }
+  // 5800 Main St, Bow: FIR2025 '5', SCH2025 '100' (Burlington-Edison).
+  mockWave2('5800 MAIN ST, BOW, WA, 98232', '057', 'Skagit County', [dorLayer(7, '5'), dorLayer(20, '100')])
+  let context = await lookupBallotContext(wave2Data('skagit'), '5800 Main St Bow WA 98232')
+  assert.equal(context.coverageStatus, 'full_county')
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(scopeMatches(fd5, context))
+  assert.ok(!scopeMatches(sd311, context))
+  // 305 N 6th St, La Conner: SCH2025 '311', no fire district feature.
+  mockWave2('305 N 6TH ST, LA CONNER, WA, 98257', '057', 'Skagit County', [dorLayer(20, '311')])
+  context = await lookupBallotContext(wave2Data('skagit'), '305 N 6th St La Conner WA 98257')
+  assert.equal(context.districts.SCHDST, '311')
+  assert.ok(scopeMatches(sd311, context))
+  assert.ok(!scopeMatches(fd5, context))
+})
+
+test('Grant Fire District 7, Cemetery District 2 and Hospital District 4 resolve from DOR', async () => {
+  const fd7 = { kind: 'DISTRICT', county: 'grant', layer: 'FIRDST', value: '7' }
+  const cem2 = { kind: 'DISTRICT', county: 'grant', layer: 'CEMDST', value: '2' }
+  const hosp4 = { kind: 'DISTRICT', county: 'grant', layer: 'HOSPDST', value: '4' }
+  // 34875 Park Lake Rd NE, Coulee City: FIR2025 '7', HSP2025 '4', no cemetery district.
+  mockWave2('34875 PARK LAKE RD NE, COULEE CITY, WA, 99115', '025', 'Grant County', [dorLayer(7, '7'), dorLayer(11, '4')])
+  let context = await lookupBallotContext(wave2Data('grant'), '34875 Park Lake Rd NE Coulee City WA 99115')
+  assert.equal(context.coverageStatus, 'full_county')
+  assert.deepEqual(context.missingLayers, [])
+  assert.equal(context.districts.FIRDST, '7')
+  assert.ok(scopeMatches(fd7, context))
+  assert.ok(scopeMatches(hosp4, context))
+  assert.ok(!scopeMatches(cem2, context))
+  // 103 Railroad St, Wilson Creek: CEM2025 '2', HSP2025 '4', no fire district.
+  mockWave2('103 RAILROAD ST, WILSON CREEK, WA, 98860', '025', 'Grant County', [dorLayer(3, '2'), dorLayer(11, '4')])
+  context = await lookupBallotContext(wave2Data('grant'), '103 Railroad St Wilson Creek WA 98860')
+  assert.equal(context.districts.CEMDST, '2')
+  assert.ok(scopeMatches(cem2, context))
+  assert.ok(!scopeMatches(fd7, context))
+  // 321 S Balsam St, Moses Lake: HSP2025 '1' only.
+  mockWave2('321 S BALSAM ST, MOSES LAKE, WA, 98837', '025', 'Grant County', [dorLayer(11, '1')])
+  context = await lookupBallotContext(wave2Data('grant'), '321 S Balsam St Moses Lake WA 98837')
+  for (const scope of [fd7, cem2, hosp4]) assert.ok(!scopeMatches(scope, context), scope.layer)
+})

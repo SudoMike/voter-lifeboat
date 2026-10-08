@@ -1,0 +1,102 @@
+{
+  "contest_slug": "grant-legislative-district-13-state-representative-pos-1",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/grant/dossiers/grant-legislative-district-13-state-representative-pos-1/"],
+  "office_does": "A State Representative writes and votes on Washington state law and the operating, capital and transportation budgets, covering the tax structure, water and agriculture policy, school and child-care funding, and criminal-justice statutes.",
+  "race_blurb": "Six-term Republican incumbent Tom Dent, a Moses Lake pilot and bison rancher, faces Democrat Juan \"Jerry\" Garcia, an Othello organizer making his first legislative bid. Dent runs on seniority, water and wildfire work and voted against the 2026 millionaires tax; Garcia runs on reforming what he calls a regressive tax system, refusing corporate PAC money and universal health care.",
+  "candidates": [
+    {
+      "slug": "tom-dent",
+      "summary": "Six-term Republican incumbent, ranking member on the House agriculture and natural resources committee, and owner of an aerial-application business and bison ranch near Moses Lake.",
+      "highlights": [
+        "Voted against ESSB 6346, the 2026 tax on income over $1 million, and called it an unconstitutional income tax [S5][S7]",
+        "Voted against the 2026 supplemental operating budget, saying the state has \"a spending problem\" [S6]",
+        "Names finishing the Odessa Groundwater Replacement Program as the district's top need [S16]",
+        "Voted against ESHB 1296, the 2025 changes to the I-2081 parental-rights law [S8]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S7", "S5", "S10", "S12"],
+          "basis": "Voted against ESSB 6346 and issued a statement calling it an unconstitutional income tax; also voted against the 2025 B&O and capital-gains/estate tax increases."
+        },
+        "spending": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S6", "S5", "S17"],
+          "basis": "Voted against the 2026 supplemental operating budget over spending growth, repeatedly says the state has a spending problem, and wants an audit of the day-care system."
+        },
+        "housing": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S14", "S15"],
+          "basis": "Voted against the 2025 rent and fee increase limits (EHB 1217); no other housing statements in the dossier."
+        },
+        "safety": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S6"],
+          "basis": "Says current policies fail to hold repeat or violent offenders accountable and put victims second; a single statement."
+        },
+        "climate": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S3", "S6"],
+          "basis": "Sponsored the enacted Climate Commitment Act agricultural fuel exemption and attributes high fuel prices to the carbon tax; no call to repeal the CCA."
+        },
+        "experience": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S4", "S17"],
+          "basis": "In the House since 2015, third in seniority in his caucus, with a long list of enacted bills; campaigns explicitly on seniority."
+        },
+        "parental-rights": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S8", "S9"],
+          "basis": "Voted against ESHB 1296, which modified and narrowed parts of the I-2081 parental-rights list; no direct campaign statement of his own on I-1."
+        }
+      }
+    },
+    {
+      "slug": "juan-jerry-garcia",
+      "summary": "Democrat from Othello, former corrections officer and founder of Indivisible Othello, making his first legislative run on tax reform, no corporate PAC money and universal health care.",
+      "highlights": [
+        "Wants to \"fix our regressive tax system\" and proposes taxing stock and bond wealth above about $100 million [S1][S2]",
+        "Accepts no corporate PAC money and backs ranked-choice voting [S1][S2]",
+        "Names universal health care and finishing the Odessa Groundwater Replacement Program as his top two issues [S2]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "Statement pledges to fix the regressive tax system and the Q&A proposes a property tax on stock and bond holdings above about $100 million."
+        },
+        "reform": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "Refuses corporate PAC money, backs ranked-choice voting and says getting big money out of politics is his consistent emphasis."
+        },
+        "healthcare": {
+          "score": 2,
+          "confidence": "medium",
+          "citations": ["S2"],
+          "basis": "Names championing universal health care as one of two issues he would spend political capital on; one explicit statement."
+        },
+        "experience": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S2"],
+          "basis": "Never held elected office; a first-time legislative challenger to a six-term incumbent."
+        }
+      }
+    }
+  ]
+}

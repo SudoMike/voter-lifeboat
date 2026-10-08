@@ -1,0 +1,500 @@
+{
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/skagit/interim/contests.json",
+    "data/washington-state/elections/2026-11-03-general/counties/skagit/interim/measures.json"
+  ],
+  "script": "pipeline/build_research_plan.py",
+  "contests": [
+    {
+      "contest_slug": "skagit-congressional-district-2-u-s-representative",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 2",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "rick-larsen",
+          "name": "Rick Larsen",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-2-u-s-representative/rick-larsen.md"
+        },
+        {
+          "slug": "edwin-h-feller",
+          "name": "Edwin H. Feller",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/congressional-district-2-u-s-representative/edwin-h-feller.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "snohomish",
+          "contest_slug": "snohomish-congressional-district-2-u-s-representative",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/snohomish/scoring/snohomish-congressional-district-2-u-s-representative.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "snohomish",
+          "whatcom"
+        ]
+      }
+    },
+    {
+      "contest_slug": "skagit-legislative-district-10-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 10",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "clyde-shavers",
+          "name": "Clyde Shavers",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-10-state-representative-position-1/clyde-shavers.md"
+        },
+        {
+          "slug": "robert-chili-hicks",
+          "name": "Robert (Chili) Hicks",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-10-state-representative-position-1/robert-chili-hicks.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "snohomish",
+          "contest_slug": "snohomish-legislative-district-10-state-representative-pos-1",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/snohomish/scoring/snohomish-legislative-district-10-state-representative-pos-1.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "snohomish"
+        ]
+      }
+    },
+    {
+      "contest_slug": "skagit-legislative-district-10-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 10",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "dave-paul",
+          "name": "Dave Paul",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-10-state-representative-position-2/dave-paul.md"
+        },
+        {
+          "slug": "tim-hazelo",
+          "name": "Tim Hazelo",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-10-state-representative-position-2/tim-hazelo.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "snohomish",
+          "contest_slug": "snohomish-legislative-district-10-state-representative-pos-2",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/snohomish/scoring/snohomish-legislative-district-10-state-representative-pos-2.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "snohomish"
+        ]
+      }
+    },
+    {
+      "contest_slug": "skagit-legislative-district-39-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 39",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "kathryn-lewandowsky",
+          "name": "Kathryn Lewandowsky",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-39-state-representative-position-1/kathryn-lewandowsky.md"
+        },
+        {
+          "slug": "sam-low",
+          "name": "Sam Low",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-39-state-representative-position-1/sam-low.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "snohomish",
+          "contest_slug": "snohomish-legislative-district-39-state-representative-pos-1",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/snohomish/scoring/snohomish-legislative-district-39-state-representative-pos-1.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "snohomish"
+        ]
+      }
+    },
+    {
+      "contest_slug": "skagit-legislative-district-39-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 39",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "ida-keeley",
+          "name": "Ida Keeley",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-39-state-representative-position-2/ida-keeley.md"
+        },
+        {
+          "slug": "steve-ewing",
+          "name": "Steve Ewing",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-39-state-representative-position-2/steve-ewing.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "snohomish",
+          "contest_slug": "snohomish-legislative-district-39-state-representative-pos-2",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/snohomish/scoring/snohomish-legislative-district-39-state-representative-pos-2.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "snohomish"
+        ]
+      }
+    },
+    {
+      "contest_slug": "skagit-legislative-district-40-state-representative-pos-1",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 40",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "debra-lekanoff",
+          "name": "Debra Lekanoff",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-40-state-representative-position-1/debra-lekanoff.md"
+        },
+        {
+          "slug": "cindy-carter",
+          "name": "Cindy Carter",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-40-state-representative-position-1/cindy-carter.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "whatcom",
+          "contest_slug": "whatcom-legislative-district-40-state-representative-pos-1",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/whatcom/scoring/whatcom-legislative-district-40-state-representative-pos-1.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "whatcom"
+        ]
+      }
+    },
+    {
+      "contest_slug": "skagit-legislative-district-40-state-representative-pos-2",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 40",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "alex-ramel",
+          "name": "Alex Ramel",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-40-state-representative-position-2/alex-ramel.md"
+        },
+        {
+          "slug": "joseph-segault",
+          "name": "Joseph Segault",
+          "party_preference": "States No Party Preference",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/statewide/dossiers/legislative-district-40-state-representative-position-2/joseph-segault.md"
+        }
+      ],
+      "shared": {
+        "researched_in": {
+          "package": "whatcom",
+          "contest_slug": "whatcom-legislative-district-40-state-representative-pos-2",
+          "scoring": "data/washington-state/elections/2026-11-03-general/counties/whatcom/scoring/whatcom-legislative-district-40-state-representative-pos-2.json",
+          "candidates_missing": []
+        },
+        "also_listed_by": [
+          "whatcom"
+        ]
+      }
+    },
+    {
+      "contest_slug": "skagit-skagit-county-auditor",
+      "category": "County",
+      "office": "Auditor",
+      "district": "Skagit County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "jeremy-harrison-smith",
+          "name": "Jeremy Harrison-Smith",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/skagit/dossiers/skagit-skagit-county-auditor/jeremy-harrison-smith.md"
+        },
+        {
+          "slug": "mark-hulst",
+          "name": "Mark Hulst",
+          "party_preference": "Prefers Independent Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "primary",
+          "primary_dossier": "data/washington-state/elections/2026-08-04-primary/counties/skagit/dossiers/skagit-skagit-county-auditor/mark-hulst.md"
+        }
+      ]
+    },
+    {
+      "contest_slug": "skagit-skagit-county-clerk",
+      "category": "County",
+      "office": "Clerk",
+      "district": "Skagit County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "melissa-beaton",
+          "name": "Melissa Beaton",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        },
+        {
+          "slug": "amanda-toscano",
+          "name": "Amanda Toscano",
+          "party_preference": "Prefers Independent Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        }
+      ]
+    },
+    {
+      "contest_slug": "skagit-skagit-county-commissioner-district-3",
+      "category": "County",
+      "office": "Commissioner District 3",
+      "district": "Skagit County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "keith-l-wagoner",
+          "name": "Keith L. Wagoner",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        },
+        {
+          "slug": "joe-burns",
+          "name": "Joe Burns",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        }
+      ]
+    },
+    {
+      "contest_slug": "skagit-skagit-county-coroner",
+      "category": "County",
+      "office": "Coroner",
+      "district": "Skagit County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "alex-lathum",
+          "name": "Alex Lathum",
+          "party_preference": "Prefers Democratic Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        },
+        {
+          "slug": "derrill-fussell",
+          "name": "Derrill Fussell",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        }
+      ]
+    },
+    {
+      "contest_slug": "skagit-skagit-county-sheriff",
+      "category": "County",
+      "office": "Sheriff",
+      "district": "Skagit County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "chris-baldwin",
+          "name": "Chris Baldwin",
+          "party_preference": "Prefers Independent Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        },
+        {
+          "slug": "cody-hart",
+          "name": "Cody Hart",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        }
+      ]
+    },
+    {
+      "contest_slug": "skagit-skagit-county-treasurer",
+      "category": "County",
+      "office": "Treasurer",
+      "district": "Skagit County",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "jackie-brunson",
+          "name": "Jackie Brunson",
+          "party_preference": "Prefers Democrat Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        },
+        {
+          "slug": "timothy-garrison",
+          "name": "Timothy Garrison",
+          "party_preference": "Prefers Republican Party",
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        }
+      ]
+    },
+    {
+      "contest_slug": "skagit-public-utility-district-commissioner-district-1-commissioner-1",
+      "category": "PublicUtility",
+      "office": "Commissioner 1",
+      "district": "Public Utility District Commissioner District 1",
+      "depth": "light",
+      "candidates": [
+        {
+          "slug": "andrew-miller",
+          "name": "Andrew Miller",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        },
+        {
+          "slug": "spencer-roozen",
+          "name": "Spencer Roozen",
+          "party_preference": null,
+          "campaign_website": null,
+          "pamphlet_pages": [],
+          "carry_forward": "new",
+          "primary_dossier": null
+        }
+      ]
+    }
+  ],
+  "measures": [
+    {
+      "jurisdiction": "City of Mount Vernon",
+      "proposition": "Proposition No. 1",
+      "title": "Renewal of Sales and Use Tax for Transportation Improvements (Mount Vernon Transportation Benefit District)",
+      "slug": "skagit-city-of-mount-vernon-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "City of Sedro-Woolley",
+      "proposition": "Proposition No. 1",
+      "title": "Annexation into Central Skagit Rural Partial-County Library District",
+      "slug": "skagit-city-of-sedro-woolley-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "La Conner School District No. 311",
+      "proposition": "Proposition No. 1",
+      "title": "Educational Facility Modernization and Technology Levy",
+      "slug": "skagit-la-conner-school-district-no-311-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    },
+    {
+      "jurisdiction": "Skagit County Fire Protection District No. 5",
+      "proposition": "Proposition No. 1",
+      "title": "Authorizing Regular Property Tax Levy",
+      "slug": "skagit-skagit-county-fire-protection-district-no-5-proposition-no-1",
+      "pamphlet_pages": [],
+      "carry_forward": "new"
+    }
+  ],
+  "carry_forward_from": "2026-08-04-primary"
+}

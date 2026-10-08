@@ -56,8 +56,10 @@ DOR_LAYER_KEYS = {
 TAX_BASIS = "YES approves a local tax, levy, bond, or annexation measure for the listed public service."
 
 
-def m(jurisdiction, proposition, title, scope, what_it_does, cost_line, source_url):
-    """Measure entry. scope is (layer, value), ('COUNTY', None), or ('CITY', name)."""
+def m(jurisdiction, proposition, title, scope, what_it_does, cost_line, source_url, pages=()):
+    """Measure entry. scope is (layer, value), ('COUNTY', None), or ('CITY', name).
+    pages: PDF pages of the county's local-voters-pamphlet pointer that print
+    the measure (officialLinks.js pamphletPdfs links them); none by default."""
     return {
         "jurisdiction": jurisdiction,
         "proposition": proposition,
@@ -66,6 +68,7 @@ def m(jurisdiction, proposition, title, scope, what_it_does, cost_line, source_u
         "what_it_does": what_it_does,
         "cost_line": cost_line,
         "source_url": source_url,
+        "pages": tuple(pages),
     }
 
 
@@ -462,6 +465,12 @@ COUNTY_CONFIG = {
     "skagit": {
         "name": "Skagit County", "fips": "53057",
         "commissioner": "{n}",
+        # Skagit PUD No. 1 is countywide (VoteWA district 'SKAGIT PUD
+        # DISTRICT COUNTYWIDE'; DOR PUD2025 layer 17 polygon DISTATTRIB '1'
+        # at Anacortes, Mount Vernon, Concrete and Marblemount) and the whole
+        # PUD elects each commissioner in the general (RCW 54.12.010(3)), so
+        # the seat is scoped COUNTY. The primary had no PUD race.
+        "pud": "{n}", "pud_layer_key": "COUNTY",
         "measures": [
             m("Darrington School District No. 330", "Proposition No. 1", "Replacement Educational Programs and Operations Levy",
               ("SCHDST", "330"),
@@ -618,6 +627,146 @@ ELECTION_MEASURES = {
                   "https://voter.votewa.gov/elections/measure.ashx?m=7273&e=899&la=en&c=03"),
             ],
         },
+        # Cowlitz (#28). Measures: the county's general sample ballot and
+        # local voters' pamphlet (counties/cowlitz/raw/cowlitz/
+        # {sample-ballot,local-voters-pamphlet}.pdf.url, pamphlet pp. 57-58)
+        # list one local measure; VoteWA's online guide for county 08 agrees.
+        # CITY 'Longview': Census place at 1525 Broadway, Longview.
+        # Overrides: the Commissioner, District Court and PUD seats are voted
+        # county-wide in the general (RCW 36.32.040, RCW 54.12.010(3); SOS
+        # results: 2024 Commissioner D2 56,821 votes of 59,822 ballots, 2022
+        # District Court and PUD D3 about 30,400 each; DOR PUD2025 has one
+        # Cowlitz polygon, DISTATTRIB '1'). The commissioner keeps the
+        # primary's contest name so primary dossiers carry forward.
+        "cowlitz": {
+            "overrides": {
+                ("COUNTY", "COMMISSIONER DISTRICT 3"): (
+                    "County", "Cowlitz County Commissioner District 3", "Commissioner District 3", ("COUNTY", None)),
+                ("DISTRICT COURT", "JUDGE POSITION 1"): (
+                    "Judicial", "Cowlitz County District Court", "Judge Position No. 1", ("COUNTY", None)),
+                ("DISTRICT COURT", "JUDGE POSITION 2"): (
+                    "Judicial", "Cowlitz County District Court", "Judge Position No. 2", ("COUNTY", None)),
+                ("DISTRICT COURT", "JUDGE POSITION 3"): (
+                    "Judicial", "Cowlitz County District Court", "Judge Position No. 3", ("COUNTY", None)),
+                ("PUBLIC UTILITY DISTRICT ALL", "COMMISSIONER DISTRICT 1"): (
+                    "PublicUtility", "Public Utility District No. 1 of Cowlitz County", "Commissioner District 1",
+                    ("COUNTY", None)),
+            },
+            "measures": [
+                m("City of Longview", "Proposition 1", "Levy Lid Lift (Fire and Emergency Medical Services)",
+                  ("CITY", "Longview"),
+                  "Lifts Longview's regular property tax levy to hire firefighter paramedics/EMTs, replace aging equipment, buy a fire engine and build a third fire station; the 2027 levy becomes the base for future levy limits.",
+                  "Raises the city's regular levy rate by $1.15 per $1,000 of assessed value beginning in 2027 (opponents: from $1.955 to $3.105).",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7372&e=899&la=en&c=08",
+                  pages=(57, 58)),
+            ],
+        },
+        # Grant (#28). Measures: Grant County Elections' November 2026 sample
+        # ballot (raw/grant/sample-ballot.pdf.url, DocumentCenter 16964, linked
+        # from grantcountywa.gov/1374/Current-Election) and VoteWA's online
+        # voters' guide (voterguide.ashx?e=899&c=13, read 2026-10-08) both list
+        # five local measures. Scopes point-checked 2026-10-08 (Census
+        # geocoder, Current vintage; WA DOR 2025 layers 3 CEM, 7 FIR, 11 HSP):
+        # 321 S Balsam St, Moses Lake -> CITY 'Moses Lake'; 127 Main Ave E,
+        # Soap Lake -> HSP2025 DISTATTRIB '4'; 34875 Park Lake Rd NE, Coulee
+        # City -> FIR2025 '7'; 103 Railroad St, Wilson Creek -> CEM2025 '2'.
+        # Overrides: VoteWA files the commissioner race as Countywide (elected
+        # county-wide in the general, RCW 36.32.040); it keeps the primary's
+        # contest name so primary dossiers carry forward. The District Court
+        # seats (District Type Countywide) are judicial seats of one
+        # county-wide court. Grant County PUD (Public Utility District No. 2
+        # of Grant County) is county-wide (DOR PUD2025 layer 17 has a single
+        # Grant polygon, DISTATTRIB '2', at Moses Lake, Soap Lake, Coulee
+        # City, Grand Coulee and Wilson Creek alike) and the whole PUD elects
+        # each commissioner in the general (RCW 54.12.010(3)), so its rows
+        # (District 'Grant County PUD All', which classify() cannot number)
+        # are scoped COUNTY.
+        "grant": {
+            "overrides": {
+                ("COUNTY", "COMMISSIONER DISTRICT #3"): (
+                    "County", "Grant County Commissioner District 3", "Commissioner District #3", ("COUNTY", None)),
+                ("COUNTY", "DISTRICT COURT JUDGE #1"): (
+                    "Judicial", "Grant County District Court", "Judge Position No. 1", ("COUNTY", None)),
+                ("COUNTY", "DISTRICT COURT JUDGE #2"): (
+                    "Judicial", "Grant County District Court", "Judge Position No. 2", ("COUNTY", None)),
+                ("COUNTY", "DISTRICT COURT JUDGE #3"): (
+                    "Judicial", "Grant County District Court", "Judge Position No. 3", ("COUNTY", None)),
+                ("GRANT COUNTY PUD ALL", "COMMISSIONER DIST #3"): (
+                    "PublicUtility", "Public Utility District No. 2 of Grant County", "Commissioner District 3",
+                    ("COUNTY", None)),
+                ("GRANT COUNTY PUD ALL", "COMMISSIONER DIST #B AL"): (
+                    "PublicUtility", "Public Utility District No. 2 of Grant County", "Commissioner District B (At Large)",
+                    ("COUNTY", None)),
+            },
+            "measures": [
+                m("Grant County", "Advisory Vote Only - Proposition No. 1",
+                  "Sales and Use Tax for Mental Health or Chemical Dependency Treatment or Therapeutic Courts",
+                  ("COUNTY", None),
+                  "Advisory vote: asks whether the county commissioners should adopt a 0.1% sales and use tax (RCW 82.14.460) for chemical dependency and mental health treatment and therapeutic courts. The vote does not itself impose the tax; the board may decide afterwards.",
+                  "If the board later adopts it: 0.1% sales and use tax (one cent on a $10 purchase), county-wide.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7349&e=899&la=en&c=13"),
+                m("Grant County Public Hospital District No. 4 (McKay Healthcare & Rehabilitation)", "Proposition No. 1",
+                  "Bonds for Expansion of McKay Healthcare & Rehabilitation Center",
+                  ("HOSPDST", "4"),
+                  "Authorizes up to $9,940,000 of general obligation bonds, maturing within 30 years and repaid by an excess property tax levy, to add a 16-bed assisted living unit, a 16-bed memory care unit and other capital improvements at McKay Healthcare & Rehabilitation Center in Soap Lake.",
+                  "Estimated $0.61 per $1,000 of assessed value (about $15.27 a month on a $300,000 home); up to $9,940,000 in bonds.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7343&e=899&la=en&c=13"),
+                m("City of Moses Lake", "Proposition No. 1", "Public Safety Sales and Use Tax",
+                  ("CITY", "Moses Lake"),
+                  "Raises the city's sales and use tax by 0.1% (RCW 82.14.450) for public safety: police staffing and retention, operations, maintenance and capital, and other criminal justice services.",
+                  "0.1% sales and use tax (one cent on a $10 purchase); about $1.2 million in 2027.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7347&e=899&la=en&c=13"),
+                m("Grant County Fire Protection District No. 7", "Proposition No. 1", "Emergency Medical Service Property Tax Levy",
+                  ("FIRDST", "7"),
+                  "Replaces the last two years of the district's 2022 EMS levy (up to $0.25, suspended in 2024) with a six-year EMS levy first levied in 2026 for collection from 2027.",
+                  "Up to $0.50 per $1,000 of assessed value (no more than $150 a year on a $300,000 home).",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7348&e=899&la=en&c=13"),
+                m("Grant County Cemetery District No. 2 (Wilson Creek)", "Proposition No. 1", "Special Levy for Maintenance and Operations",
+                  ("CEMDST", "2"),
+                  "Authorizes the cemetery district's yearly one-year special levy for maintenance and operations of the Wilson Creek cemetery, collected in 2027.",
+                  "$12,000, approximately $0.18 per $1,000 of assessed value, collected in 2027.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7346&e=899&la=en&c=13"),
+            ],
+        },
+        # Skagit: the four measures the Auditor's Ballot Measures page lists
+        # for the general (counties/skagit/raw/skagit/ballot-measures.html.url),
+        # text from the local voters' pamphlet pages 18-21 and VoteWA
+        # measures 7426-7429. Scope values point-checked 2026-10-08 (Census
+        # geocoder + DOR WADOR_PropertyTax layers 7 and 20).
+        "skagit": {"measures": [
+            # 700 S 2nd St, Mount Vernon -> Census place 'Mount Vernon city'.
+            m("City of Mount Vernon", "Proposition No. 1",
+              "Renewal of Sales and Use Tax for Transportation Improvements (Mount Vernon Transportation Benefit District)",
+              ("CITY", "Mount Vernon"),
+              "Renews the Mount Vernon Transportation Benefit District's 0.2% sales and use tax for ten more years to pay for street repair, preservation and other transportation improvements in the city.",
+              "0.2% sales and use tax (2 cents on $10), about $2.3 million a year; the current tax ends in April 2027 unless renewed.",
+              "https://voter.votewa.gov/elections/measure.ashx?m=7426&e=899&la=en&c=29",
+              pages=(18,)),
+            # 325 Metcalf St, Sedro-Woolley -> Census place 'Sedro-Woolley city'.
+            m("City of Sedro-Woolley", "Proposition No. 1",
+              "Annexation into Central Skagit Rural Partial-County Library District",
+              ("CITY", "Sedro-Woolley"),
+              "Annexes the City of Sedro-Woolley into the Central Skagit Rural Partial-County Library District, replacing the city's contract for library service with district membership.",
+              "District levy estimated at $0.232 per $1,000 of assessed value from 2028; the city plans to cut its own levy by up to $474,115, a net increase of about $11 in 2028 on a $519,450 home.",
+              "https://voter.votewa.gov/elections/measure.ashx?m=7427&e=899&la=en&c=29",
+              pages=(19,)),
+            # 305 N 6th St, La Conner -> DOR SCH2025 (layer 20) DISTATTRIB '311'.
+            m("La Conner School District No. 311", "Proposition No. 1",
+              "Educational Facility Modernization and Technology Levy",
+              ("SCHDST", "311"),
+              "Authorizes a four-year capital levy to modernize existing school buildings and replace and upgrade technology systems.",
+              "$350,000 to $395,000 a year for 2027 through 2030 ($1,490,000 total), about $0.31 per $1,000 of assessed value.",
+              "https://voter.votewa.gov/elections/measure.ashx?m=7428&e=899&la=en&c=29",
+              pages=(20,)),
+            # 5800 Main St, Bow (Edison) -> DOR FIR2025 (layer 7) DISTATTRIB '5'.
+            m("Skagit County Fire Protection District No. 5", "Proposition No. 1",
+              "Authorizing Regular Property Tax Levy",
+              ("FIRDST", "5"),
+              "Restores the fire district's regular property tax levy to $0.78 per $1,000 and lets it grow up to 3% a year for five years (Allen, Bow, Edison, Samish Island, Chuckanut Drive).",
+              "$0.78 per $1,000 of assessed value in 2027, then up to 3% more a year (never above $1.50).",
+              "https://voter.votewa.gov/elections/measure.ashx?m=7429&e=899&la=en&c=29",
+              pages=(21,)),
+        ]},
         # Whatcom (#28). Measures: VoteWA's online voters' guide for Whatcom
         # County (voterguide.ashx?e=899&c=37, read 2026-10-08) lists five local
         # measures; whatcomcounty.us answered 403 (Cloudflare) to scripted
@@ -735,7 +884,7 @@ def county_docs(county, cfg, election_id, measures_curated=True):
             "proposition": prop,
             "title": mm["title"],
             "scope": scope_json(county, mm["scope"]),
-            "pamphlet_pages": [],
+            "pamphlet_pages": [{"edition": "local-voters-pamphlet", "page": p} for p in mm["pages"]],
             "what_it_does": mm["what_it_does"],
             "cost_line": mm["cost_line"],
             "pro_summary": None,

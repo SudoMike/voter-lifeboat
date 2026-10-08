@@ -1,0 +1,82 @@
+{
+  "contest_slug": "measures",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/grant/scoring/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/grant/dossiers/measures/",
+    "data/final/2026-11-03-general/rubric.json"
+  ],
+  "verdicts": [
+    {
+      "candidate": "grant-grant-county-advisory-vote-only-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Hardest attack: the vote imposes no tax. The explanatory statement says it 'would not itself impose any tax' (S1), and the board can adopt the tax by ordinance either way (S2, S5). But a lean mapping records which pole a YES vote aligns with, not what the vote enacts. The ballot question asks whether a new 0.1% sales tax 'should be adopted' (S1, S3), so a yes vote is a direct statement of support for a brand-new tax of about $2.7 million a year (S4). The county administrator calls it 'a new tax' (S4), and no existing RCW 82.14.460 tax is replaced (S1, S2, S4). King's scale gives a brand-new tax 2, and new local sales taxes (Milton, SeaTac, Liberty Lake) map to 2. The advisory status changes the consequence of the vote, not the preference it expresses, so it does not justify cutting the strength to 1. Citations S1, S2 and S4 support the basis. Spending was considered and not proposed: RCW 82.14.460 requires 'new or expanded programs' (S5), but it allows up to 50% supplanting in the first three years and the county says the spending plan 'hasn't been determined' (S4). No local-control angle: the county uses authority it already has (S2)."
+    },
+    {
+      "candidate": "grant-grant-county-advisory-vote-only-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1, S2 and S5 (advisory only; 0.1% under RCW 82.14.460; the board may adopt by ordinance without a vote and decides afterward). cost_line matches S1 (10 cents per $100), S6 (8.2% to 8.5% combined rates) and S4 ($2.7 million a year). pro_summary paraphrases the statement for accurately ('largest of only 10 counties', early treatment reduces pressure on law enforcement, emergency services and courts) and correctly lists no author. One small wording point: the dossier quotes the statement as saying the money would 'support' mental health care and related services (S1); 'expand' in pro_summary is not quoted in the dossier, though the statute's 'new or expanded programs' rule (S5) makes it a fair paraphrase. con_summary matches S1 and S8."
+    },
+    {
+      "candidate": "grant-grant-county-public-hospital-district-no-4-mckay-healthcare-rehabilitation-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked on strength: the district says grants and low-interest loans pay for most of the project (S1), and the bond is described as 'not a giant ask' (S4). But the measure itself is a brand-new excess property tax of about $0.61 per $1,000 for up to 30 years (S1, S4), and McKay 'has never had a bond increase' since 1938 (S1); no existing bond levy is replaced. That matches King and Spokane new bond levies scored 2 (King FD20, Spokane FD's $70M bond). S1 and S4 support the rate, term and amount."
+    },
+    {
+      "candidate": "grant-grant-county-public-hospital-district-no-4-mckay-healthcare-rehabilitation-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1-S3 ($9.94 million, up to 30 years, 16-bed assisted living, 16-bed memory care, wellness center with daycare; majority from grants and low-interest loans; 60% to pass per S12). cost_line matches S1 ($0.61, $15.27 a month) and S4 ($183.24 a year). 'The district has had no bond levy before' slightly restates S1's 'has never had a bond increase', but the dossier finds no existing bond levy in any source (S1, S3, S4), so it stands. pro_summary paraphrases the statement for accurately ('70% ... over the age of 65 will require skilled services' rendered as 'most people over 65'; daycare and elder respite; jobs; since 1938 without a bond) and the Team McKay committee matches S13. con_summary matches S1."
+    },
+    {
+      "candidate": "grant-city-of-moses-lake-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked on strength: 0.1% is small in dollars (about $1.2 million, S1, S3), and the money is framed as keeping current police staffing, not expanding (S1). But the ballot title imposes a new tax with no expiration date and replaces no existing RCW 82.14.450 tax (S1, S2), the same profile as Liberty Lake, Milton and SeaTac, all mapped 2. S1, S3 and S8 support the 8.5% to 8.6% rate change and the $1.2 million estimate. Spending was considered and rejected: the stated purpose is filling vacancies the city would otherwise leave open amid a structural deficit (S1, S2, S7), not expansion. No local-control mapping: the council chose a vote over a councilmanic tax it could impose (S2, S4), which is a process choice."
+    },
+    {
+      "candidate": "grant-city-of-moses-lake-proposition-no-1",
+      "axis": "_display",
+      "verdict": "adjust",
+      "note": "what_it_does matches S1, S2 and S9 (0.1%, RCW 82.14.450, no stated end date, 85/15 split, keeping current staffing amid a deficit). cost_line matches S1, S3 and S8. pro_summary matches the statement for (three 2026 vacancies not being filled; 'most equitable'; visitors and non-residents share the cost; no groceries or gasoline). con_summary overstates the council members' positions. In S7, Councilman Victor Lombardi said property taxes should be 'the last resort', and Councilman Jeremy Davis said the city can 'tighten our belts' and should avoid new taxes if possible. The dossier itself notes that 'both spoke mainly about property taxes', and the council then voted 7-0 to send this measure to voters (S3). Saying flatly that they 'preferred cuts and efficiencies to new taxes' drops both points. Suggested con_summary: \"No statement against this measure was filed, and no opposing committee is listed. During spring budget talks, two council members said the city should tighten its belt and avoid new taxes where possible, speaking mainly about property taxes; the council later voted 7-0 to put this measure on the ballot.\""
+    },
+    {
+      "candidate": "grant-grant-county-fire-protection-district-no-7-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Hardest attack: it is legally a replacement EMS levy under RCW 84.52.069 needing only a simple majority (S2, S14), and replacement levies usually map to 1. The attack fails on the numbers. Against the no-vote baseline, where the district resumes the $0.25 levy for 2027 and 2028 collections (S2, S3), a yes vote doubles the rate to $0.50 (S1) and then extends $0.50 for four more years, through 2032, after the 2022 levy would have ended (S1, S2, S5). Revenue goes from about $125,000 to about $250,000 a year (S3, S9). King's scale gives 2 for a near-doubling, and Spokane mapped a fire levy that more than doubled its rate ($0.65 to $1.50) at 2 despite its replacement form. The context does not soften it: the district suspended the EMS levy after promising in the 2023 lid-lift pamphlet that it 'would no longer levy the $.25 EMS levy' (S7), so a yes vote moves from $0 collected today to $0.50. Citations S1, S2, S3, S5 and S7 support the basis. Spending was considered and not proposed: the $0.50 levy also adds an ambulance and intermediate-life-support equipment (S3), but the district frames the money mainly as keeping two grant-funded positions that otherwise lapse ('we'll have to decrease services', S3; 'get away from the grant funding', S9), so the expansion evidence is mixed."
+    },
+    {
+      "candidate": "grant-grant-county-fire-protection-district-no-7-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1 and S2: it replaces the last two years of the 2022 $0.25 levy (suspended since 2024, S1), with a new six-year levy of up to $0.50 collected 2027-2032, and a failed vote resumes $0.25 for 2027 and 2028 collections. The dossier notes the resolution's heading says 'the final year' while its Section 4 and the ballot title say two years; the display follows the ballot title, which is correct. cost_line matches S1 ($150 a year on $300,000) and S3/S9 ($250,000 a year), and the $75 difference is correct arithmetic. It rightly avoids the Herald's conflicting '$75 per year' figure for the 50-cent levy. pro_summary: calls 'nearly doubled' (roughly 300 to 568-590, S3), the SAFER grant sunsetting in 2027, and keeping both positions plus an ambulance all match S3. con_summary matches S11 (Cliff Sears supported the levy but worried about two tax measures on one ballot)."
+    },
+    {
+      "candidate": "grant-grant-county-cemetery-district-no-2-wilson-creek-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked on strength: the amount rises $500 (about 4.3%), and the printed rate is identical to 2026's even though the amount is higher. The dossier computes that the true rate at 2026 valuation would be about $0.183, not $0.1756 (S1, S3). That is still a small renewal-plus-growth increase on a one-year levy that the district runs every year (S1) and voters approved in 2022-2025 (S3-S9). King and Spokane map recurring same-rate or near-same-rate replacement levies (Rockford, Spangle) at 1. S1 and S3 support the basis. No spending axis: the money pays routine upkeep (S1)."
+    },
+    {
+      "candidate": "grant-grant-county-cemetery-district-no-2-wilson-creek-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1 (maintenance worker, electricity, mower fuel and repairs; a special levy run 'every year') and S2 (60% to pass). 'Voters have approved it every year' rests on S1 plus results for 2022-2025 (S3-S9); earlier years were not retrieved, but nothing contradicts it. cost_line's $12,000, 17.6 cents and $53 on $300,000 are correct from the printed estimate (S1), and $11,500 for 2024-2026 matches S3-S5. The dossier's note that the printed rate may understate the final rate is not reflected, but 'about' covers an estimate. pro_summary and con_summary match S1 and S12."
+    }
+  ],
+  "missing": [
+    {
+      "candidate": "grant-grant-county-public-hospital-district-no-4-mckay-healthcare-rehabilitation-proposition-no-1",
+      "axis": "spending",
+      "proposed_score": 1,
+      "confidence": "medium",
+      "citations": ["S1", "S3", "S4"],
+      "basis": "A yes vote helps build new senior-care capacity, a 16-bed assisted living unit, a 16-bed memory care unit and a community wellness center with daycare, an expansion beyond the district's current services.",
+      "note": "The dossier declines spending because most of the cost comes from grants and loans (S1, S3). That is an argument about the size of the tax, not the direction of the spending. King mapped spending +1 on bonds that pay for clear new capacity (Auburn's fifth middle school, Issaquah parks), and Spokane's refutation applied the same rule to FD3. Here the bond pays for wholly new facilities: 'a 16-bed assisted living unit, a 16-bed memory care unit, and other capital improvements' including 'an intergenerational community wellness center with licensed daycare' (S1). It is the first phase of a planned continuing-care campus (S3), and the district says memory care has 'not many openings available' (S4). Strength 1, not 2, because the bond is a minority share of the project funding (S1, S4)."
+    }
+  ]
+}
