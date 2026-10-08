@@ -1,0 +1,57 @@
+{
+  "contest_slug": "skagit-skagit-county-sheriff",
+  "reviewed_at": "2026-10-08",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/skagit/dossiers/skagit-skagit-county-sheriff/",
+    "data/washington-state/elections/2026-11-03-general/counties/skagit/scoring/skagit-skagit-county-sheriff.json"
+  ],
+  "verdicts": [
+    {
+      "candidate": "chris-baldwin",
+      "axis": "experience",
+      "verdict": "upheld",
+      "note": "32 years in the Sheriff's Office, current chief of field operations, and a statement that runs on decisions 'based on experience' (S1, S4). That is the maximal proven-record case. It is an administrative command record, not tenure in elected office, but the axis describes the candidate's profile and his is fully insider. High holds: the pamphlet and campaign site repeat it."
+    },
+    {
+      "candidate": "chris-baldwin",
+      "axis": "safety",
+      "verdict": "adjust",
+      "adjusted_score": -1,
+      "adjusted_confidence": "medium",
+      "note": "0 means the evidence is evenly balanced, and here it is not. On the enforcement side: 'supporting and retaining well-trained deputies' and 'addressing crime proactively' are two of his five pamphlet priorities (S1), and his campaign cites grant-funded added patrol deputies and the rebuilt drug task force aimed at trafficking organizations (S5). On the prevention side: the co-response model and the 'rights and dignity' line (S1, S5). Co-response puts clinicians in patrol cars with deputies on crisis calls, so it is police-led rather than a non-police responder, and 'rights and dignity' is a conduct standard, not a services platform. The weight leans toward the enforcement and staffing pole with a prevention component, which is -1. Medium: one statement plus campaign-described record, no third-party policy coverage."
+    },
+    {
+      "candidate": "cody-hart",
+      "axis": "experience",
+      "verdict": "upheld",
+      "note": "He has held no public office and has no law enforcement employment, and the pamphlet presents him as 'a change-in-leadership candidate, not someone who has been part of the current problems in the Sheriff's Office' (S1). Maximal outsider case; high holds on S1 alone. S3 is a website whose footer still refers to his 2024 congressional run, but it isn't needed for this score."
+    },
+    {
+      "candidate": "cody-hart",
+      "axis": "spending",
+      "verdict": "adjust",
+      "adjusted_score": -1,
+      "adjusted_confidence": "medium",
+      "note": "The direction (audit and oversight pole) is right. The evidence is about corruption and fraud ('confronting the misuse of public funds', 'reporting millions of dollars of waste, fraud, and abuse', S1), not about budget levels, restraint before new spending, or performance standards for county programs. -2 ('fully' the pole) overstates a single pamphlet theme that is about misconduct allegations. The S3 claim ('hundreds of millions of dollars ... in Washington state') comes from a site the dossier says is framed around his 2024 2nd Congressional District run, so it may predate this race and is not independent support for a sheriff-race spending position. -1 medium, resting on S1."
+    },
+    {
+      "candidate": "cody-hart",
+      "axis": "safety",
+      "verdict": "upheld",
+      "note": "'Bring accountability and law and order back to Skagit County' (S1) is one clear enforcement-pole statement, with no prevention or services content anywhere in the dossier. Medium fits a single clear statement. However, the basis's immigration-enforcement plank (S3) belongs to the immigration axis, which does not apply to County contests, and S3 may date from his congressional campaign, so it should not count toward safety. His civil-rights framing ('resident's rights over protecting government') concerns government accountability, not prevention policy, and does not offset. -1 medium holds on S1."
+    }
+  ],
+  "missing": [
+    {
+      "candidate": "chris-baldwin",
+      "axis": "spending",
+      "proposed_score": -1,
+      "confidence": "medium",
+      "citations": [
+        "S1",
+        "S7"
+      ],
+      "basis": "Lists 'ensuring transparency and responsible use of tax dollars' as a pamphlet priority (S1). He also acted on it: he declined a county-paid supplemental pamphlet mailing, saying 'I do not believe it is necessary to create additional expenses for taxpayers' (S7, also S10). His campaign further cites a Professional Standards and Accountability unit (S5). That is a restraint and oversight statement plus a matching action, the same evidence pattern as Toscano's upheld clerk-race spending -1 medium. Grant-funded deputies (S5) are outside revenue, not a county spending-expansion stance, so they do not pull the other way."
+    }
+  ]
+}
