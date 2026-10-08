@@ -1,0 +1,42 @@
+{
+  "contest_slug": "measures",
+  "reviewed_at": "2026-10-09",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/island/scoring/measures.json",
+    "data/washington-state/elections/2026-11-03-general/counties/island/dossiers/measures/",
+    "data/final/2026-11-03-general/rubric.json"
+  ],
+  "verdicts": [
+    {
+      "candidate": "island-unincorporated-island-county-advisory-vote",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "what_it_does matches S1 (non-binding, 'will not change the law', displays unaffected), S8/S9 (city residents excluded) and S3/S5/S6 (one-year delay for a more restrictive ordinance). cost_line matches S1 (no tax) and S7/S9 ($3,000-$3,500, raised by Safe and Humane Fireworks at the board's request). pro_summary attributes the statement to the named committee (S1) and the $11,560 to the SHFC committee (S11). con_summary attributes the statement to the Committee to Keep Fireworks, with Johnson's authorship sourced to the Record (S9), and correctly notes no opposition committee (S11). Empty lean_mappings checked and agreed: no levy or appropriation (taxes, spending); the county already holds the authority under RCW 70.77.395 and nothing moves between governments (local-control); fireworks touch none of the social or parental-rights topics."
+    },
+    {
+      "candidate": "island-city-of-langley-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked on strength: the city says it is 'not a budget expansion' and the no side supports a smaller increase (S1). But a yes vote is a permanent levy lid lift (the rubric's pole_b cap-lift example) raising the rate from $1.0106789 to $1.66, about 64%, roughly $499 a year on the average home (S1, S2, S14), and officials say more lifts will follow (S6). 2 is consistent with other large permanent city lid lifts (Clyde Hill, Kenmore, Benton City). Citations S1, S2, S6, S14 support each claim."
+    },
+    {
+      "candidate": "island-city-of-langley-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "Arithmetic checks: 0.648544721 / 1.0106789 = 64.2%; 770,000 x 0.648544721 / 1,000 = $499.38; 500,000 x same = $324.27; $42/month and $500.50/year are the city's own figures (S1, S2), attributed to the city. Small inconsistency inherited from the ballot itself, not an error in the summary: 1.66 - 1.0106789 = 0.6493, not the stated 0.648544721 (both figures quoted from S1); the difference is under a tenth of a cent per $1,000. Revenue $492,000 to $808,000 is attributed to the Record (S6). what_it_does matches S1, S3, S14 (permanent, general services and technology, 1% growth after 2027, senior/disability exemption). pro_summary is credited to the City of Langley as in the guide (S1); service cuts and unfilled jobs match S2/S6; Langley Citizens for the Levy matches S16. con_summary matches the Committee for Fair Tax Increase statement (S1): '65%' is their figure; the tourism shift and smaller-increase support are accurate; no opposition PDC committee (S16). Omitted mappings agreed: local-control rests only on campaign rhetoric about 'a distant county office' and the measure moves no authority (S1, S4, S15); spending is mixed (restoring services vs filling an administrator job and new technology, S1, S2)."
+    },
+    {
+      "candidate": "island-port-district-of-south-whidbey-island-proposition-no-1",
+      "axis": "taxes",
+      "verdict": "upheld",
+      "note": "Attacked toward 2: it is a permanent lid lift (pole_b cap-lift example) raising the port rate 55% (S1), and the Benton refutation rejected a 'restoring' framing when upholding 2 for Benton City Prop 2. Upheld at 1 because the dollar size is small (6 cents per $1,000, about $52 a year on an $866,000 home, S1, S2) and the new rate stays below the 2017 rate of $0.183 (S11); this matches the King County Cemetery District precedent (large percentage, very small dollars, scored 1). Thurston's Timberland 55% lift was scored 2, so this is a judgment call at the margin, not an error. Citations S1, S2, S11 support the basis."
+    },
+    {
+      "candidate": "island-port-district-of-south-whidbey-island-proposition-no-1",
+      "axis": "_display",
+      "verdict": "upheld",
+      "note": "Arithmetic checks: 0.169 - 0.109 = 0.06; 0.06 / 0.109 = 55.0%; 866,000 x 0.06 / 1,000 = $51.96 = 12 x $4.33 (port figure, S2/S3); 500,000 x 0.06 / 1,000 = $30; 8,054,482,542 x 0.06 / 1,000 = $483,269 (S8), labeled computed. what_it_does matches S1 (rate, 2027 start, permanent base, listed purposes including the incubator). pro_summary correctly notes no author is named in the guide (S1) and attributes the 2017-rate and staff/fee-cut claims to the port (S2). con_summary matches S1 ('No community members have come forward') and S16. Omitted spending mapping agreed: preservation and grant matching ('not talking about new stuff', S5) versus incubator expansion and new ferry infrastructure (S1, S2) point both ways; local-control has no basis (S5)."
+    }
+  ],
+  "missing": []
+}
