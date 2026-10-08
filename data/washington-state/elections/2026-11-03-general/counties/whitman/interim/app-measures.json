@@ -1,0 +1,997 @@
+{
+  "county": "whitman",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/whitman/raw/votewa/candidate-list.csv.url",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7328&e=899&la=en&c=38",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7329&e=899&la=en&c=38",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7390&e=899&la=en&c=38",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7392&e=899&la=en&c=38",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7393&e=899&la=en&c=38",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7394&e=899&la=en&c=38",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7395&e=899&la=en&c=38",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7396&e=899&la=en&c=38",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7397&e=899&la=en&c=38",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7398&e=899&la=en&c=38",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7399&e=899&la=en&c=38",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7400&e=899&la=en&c=38",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7401&e=899&la=en&c=38",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7402&e=899&la=en&c=38",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7403&e=899&la=en&c=38",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7404&e=899&la=en&c=38",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7405&e=899&la=en&c=38",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7406&e=899&la=en&c=38",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7407&e=899&la=en&c=38",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7408&e=899&la=en&c=38",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7409&e=899&la=en&c=38",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7410&e=899&la=en&c=38",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7411&e=899&la=en&c=38",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7412&e=899&la=en&c=38",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7413&e=899&la=en&c=38",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7414&e=899&la=en&c=38",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7418&e=899&la=en&c=38",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7419&e=899&la=en&c=38",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7420&e=899&la=en&c=38",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7421&e=899&la=en&c=38",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7422&e=899&la=en&c=38"
+  ],
+  "coverage": "full_county",
+  "notes": [
+    "Whitman County Rural Library District Proposition No. 1 is scoped LIBDST 'L' (WA DOR LIB2025, layer 12): Pullman and the towns of Rosalia, Garfield, Endicott, Colton and Uniontown are outside the district, so it is not county-wide.",
+    "Cheney School District No. 360's two levies reach a small Whitman area north of St. John; DOR SCH2025 (layer 20) numbers that portion '316', so both are scoped SCHDST '316'."
+  ],
+  "measures": [
+    {
+      "slug": "whitman-whitman-county-rural-library-district-proposition-no-1",
+      "owner": "whitman",
+      "jurisdiction": "Whitman County Rural Library District",
+      "proposition": "Proposition No. 1",
+      "title": "Restoring Regular Property Tax Levy for Library Services",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whitman",
+        "layer": "LIBDST",
+        "value": "L"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 12
+        }
+      ],
+      "what_it_does": "Restores the Whitman County Rural Library District's regular property tax levy to $0.45 per $1,000 of assessed value for 2027 collection and keeps that maximum for nine more years; the 2036 levy amount becomes the base for later limits (chapter 84.55 RCW).",
+      "cost_line": "From $0.39 to $0.45 per $1,000 of assessed value; the district puts it at $14.30 more a year on a $275,000 home.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7390&e=899&la=en&c=38"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whitman-cheney-school-district-no-360-proposition-no-1",
+      "owner": "whitman",
+      "jurisdiction": "Cheney School District No. 360",
+      "proposition": "Proposition No. 1",
+      "title": "Replacement Educational Programs and Operation Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whitman",
+        "layer": "SCHDST",
+        "value": "316"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 13
+        }
+      ],
+      "what_it_does": "Replaces Cheney School District's expiring educational programs and operation levy for three years, paying for school safety, athletics, extracurricular activities, art, music, special education and staffing above the state allocation.",
+      "cost_line": "Estimated $2.10 per $1,000 of assessed value: $18,450,000 in 2028, $19,000,000 in 2029 and $19,550,000 in 2030.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7328&e=899&la=en&c=38"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whitman-cheney-school-district-no-360-proposition-no-2",
+      "owner": "whitman",
+      "jurisdiction": "Cheney School District No. 360",
+      "proposition": "Proposition No. 2",
+      "title": "Replacement Capital Levy for Technology, Security and Infrastructure Improvements",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whitman",
+        "layer": "SCHDST",
+        "value": "316"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 14
+        }
+      ],
+      "what_it_does": "Replaces Cheney School District's expiring capital levy for three years, for instructional technology, security cameras and entry controls, and other safety infrastructure.",
+      "cost_line": "Estimated $0.10, $0.15 and $0.20 per $1,000 of assessed value: $880,000 in 2028, $1,350,000 in 2029 and $1,900,000 in 2030.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7329&e=899&la=en&c=38"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whitman-town-of-albion-proposition-no-1",
+      "owner": "whitman",
+      "jurisdiction": "Town of Albion",
+      "proposition": "Proposition No. 1",
+      "title": "Protective Services",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whitman",
+        "layer": "CITY",
+        "value": "Albion"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 15
+        }
+      ],
+      "what_it_does": "One-year excess property tax levy for fire protection, law enforcement services, emergency response and other public safety purposes in Albion.",
+      "cost_line": "$20,000, an estimated $0.459 per $1,000 of assessed value, collected in 2027.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7392&e=899&la=en&c=38"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whitman-town-of-albion-proposition-no-2",
+      "owner": "whitman",
+      "jurisdiction": "Town of Albion",
+      "proposition": "Proposition No. 2",
+      "title": "Cemetery Maintenance and Hazardous Tree Removal",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whitman",
+        "layer": "CITY",
+        "value": "Albion"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 16
+        }
+      ],
+      "what_it_does": "One-year excess property tax levy to maintain the Albion town cemetery, including hazardous tree removal and grounds improvements.",
+      "cost_line": "$5,000, an estimated $0.114 per $1,000 of assessed value, collected in 2027.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7393&e=899&la=en&c=38"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whitman-town-of-colton-proposition-no-880",
+      "owner": "whitman",
+      "jurisdiction": "Town of Colton",
+      "proposition": "Proposition No. 880",
+      "title": "Levy of Additional Taxes",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whitman",
+        "layer": "CITY",
+        "value": "Colton"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 17
+        }
+      ],
+      "what_it_does": "One-year excess property tax levy that continues the town's support for general operations, street improvements and the water and sewer systems.",
+      "cost_line": "$30,000, approximately $0.53 per $1,000 of assessed value, collected in 2027.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7394&e=899&la=en&c=38"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whitman-town-of-endicott-proposition-no-1",
+      "owner": "whitman",
+      "jurisdiction": "Town of Endicott",
+      "proposition": "Proposition No. 1",
+      "title": "Fire Protection and Emergency Services Excess Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whitman",
+        "layer": "CITY",
+        "value": "Endicott"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 18
+        }
+      ],
+      "what_it_does": "One-year excess property tax levy for fire protection and emergency services, including contracted fire protection, equipment and training.",
+      "cost_line": "$13,500, an estimated $0.44 per $1,000 of assessed value, collected in 2027.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7395&e=899&la=en&c=38"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whitman-town-of-endicott-proposition-no-2",
+      "owner": "whitman",
+      "jurisdiction": "Town of Endicott",
+      "proposition": "Proposition No. 2",
+      "title": "Parks Excess Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whitman",
+        "layer": "CITY",
+        "value": "Endicott"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 18
+        }
+      ],
+      "what_it_does": "One-year excess property tax levy to maintain and improve Endicott's parks: mowing, trees, playgrounds, irrigation and other park facilities.",
+      "cost_line": "$15,000, an estimated $0.49 per $1,000 of assessed value, collected in 2027.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7396&e=899&la=en&c=38"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whitman-town-of-endicott-proposition-no-3",
+      "owner": "whitman",
+      "jurisdiction": "Town of Endicott",
+      "proposition": "Proposition No. 3",
+      "title": "Street Maintenance and Public Safety Excess Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whitman",
+        "layer": "CITY",
+        "value": "Endicott"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 19
+        }
+      ],
+      "what_it_does": "One-year excess property tax levy for street maintenance and related public safety in Endicott.",
+      "cost_line": "$35,000, an estimated $1.14 per $1,000 of assessed value (explanatory statement), collected in 2027.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7397&e=899&la=en&c=38"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whitman-town-of-garfield-proposition-no-1",
+      "owner": "whitman",
+      "jurisdiction": "Town of Garfield",
+      "proposition": "Proposition No. 1",
+      "title": "Street Maintenance and Repair Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whitman",
+        "layer": "CITY",
+        "value": "Garfield"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 20
+        }
+      ],
+      "what_it_does": "One-year excess property tax levy for street maintenance, repair and improvements in Garfield; the town says its street fund has no other revenue of its own.",
+      "cost_line": "$72,000, an estimated $2.24 per $1,000 of assessed value, collected in 2027.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7398&e=899&la=en&c=38"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whitman-town-of-oakesdale-proposition-no-1",
+      "owner": "whitman",
+      "jurisdiction": "Town of Oakesdale",
+      "proposition": "Proposition No. 1",
+      "title": "Fire Protection and Emergency Medical Service Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whitman",
+        "layer": "CITY",
+        "value": "Oakesdale"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "One-year special property tax levy to fund fire protection and emergency medical services for Oakesdale.",
+      "cost_line": "$14,000, an estimated $0.46 per $1,000 of assessed value, collected in 2027.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7399&e=899&la=en&c=38"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whitman-town-of-oakesdale-proposition-no-2",
+      "owner": "whitman",
+      "jurisdiction": "Town of Oakesdale",
+      "proposition": "Proposition No. 2",
+      "title": "Street Maintenance Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whitman",
+        "layer": "CITY",
+        "value": "Oakesdale"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "One-year special property tax levy for street work, street lights and street maintenance in Oakesdale.",
+      "cost_line": "$60,000, an estimated $1.93 per $1,000 of assessed value, collected in 2027.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7400&e=899&la=en&c=38"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whitman-city-of-palouse-proposition-no-1",
+      "owner": "whitman",
+      "jurisdiction": "City of Palouse",
+      "proposition": "Proposition No. 1",
+      "title": "Operation and Maintenance of Infrastructure Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whitman",
+        "layer": "CITY",
+        "value": "Palouse"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 21
+        }
+      ],
+      "what_it_does": "One-year excess property tax levy for the operation and maintenance of Palouse's city infrastructure (Resolution 2026-08).",
+      "cost_line": "$55,000 collected in 2027: the ballot title estimates $0.73058 per $1,000 of assessed value, the explanatory statement $0.5912.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7401&e=899&la=en&c=38"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whitman-city-of-palouse-proposition-no-2",
+      "owner": "whitman",
+      "jurisdiction": "City of Palouse",
+      "proposition": "Proposition No. 2",
+      "title": "Pool Maintenance and Operations Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whitman",
+        "layer": "CITY",
+        "value": "Palouse"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 21
+        }
+      ],
+      "what_it_does": "One-year excess property tax levy for the operation and maintenance of the Palouse swimming pool (Resolution 2026-09).",
+      "cost_line": "$50,000 collected in 2027: the ballot title estimates $0.6641 per $1,000 of assessed value, the explanatory statement $0.53748.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7402&e=899&la=en&c=38"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whitman-city-of-palouse-proposition-no-3",
+      "owner": "whitman",
+      "jurisdiction": "City of Palouse",
+      "proposition": "Proposition No. 3",
+      "title": "Street Improvements and Equipment Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whitman",
+        "layer": "CITY",
+        "value": "Palouse"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 22
+        }
+      ],
+      "what_it_does": "One-year excess property tax levy for street improvements and the vehicles and equipment used to maintain Palouse's streets (Resolution 2026-10).",
+      "cost_line": "$50,000, an estimated $0.6641 per $1,000 of assessed value, collected in 2027.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7403&e=899&la=en&c=38"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whitman-town-of-rosalia-proposition-no-1",
+      "owner": "whitman",
+      "jurisdiction": "Town of Rosalia",
+      "proposition": "Proposition No. 1",
+      "title": "Street Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whitman",
+        "layer": "CITY",
+        "value": "Rosalia"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 23
+        }
+      ],
+      "what_it_does": "One-year special (excess) property tax levy for Rosalia's street fund: street lights, seal coating, shoulder work, equipment and street maintenance.",
+      "cost_line": "$50,000 collected in 2027, at $1.50 per $1,000 of assessed value per the ballot title.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7404&e=899&la=en&c=38"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whitman-town-of-st-john-proposition-no-1",
+      "owner": "whitman",
+      "jurisdiction": "Town of St. John",
+      "proposition": "Proposition No. 1",
+      "title": "Street Improvement Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whitman",
+        "layer": "CITY",
+        "value": "St. John"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 24
+        }
+      ],
+      "what_it_does": "Renews St. John's one-year special property tax levy for the maintenance, repair, improvement and replacement of town streets.",
+      "cost_line": "$90,000, an estimated $1.89 per $1,000 of assessed value, collected in 2027.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7405&e=899&la=en&c=38"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whitman-town-of-st-john-proposition-no-2",
+      "owner": "whitman",
+      "jurisdiction": "Town of St. John",
+      "proposition": "Proposition No. 2",
+      "title": "Water and Sewer Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whitman",
+        "layer": "CITY",
+        "value": "St. John"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 25
+        }
+      ],
+      "what_it_does": "Renews St. John's one-year special property tax levy for water and sewer upgrades and capital improvements.",
+      "cost_line": "$80,000, an estimated $1.68 per $1,000 of assessed value, collected in 2027.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7406&e=899&la=en&c=38"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whitman-city-of-tekoa-proposition-no-1",
+      "owner": "whitman",
+      "jurisdiction": "City of Tekoa",
+      "proposition": "Proposition No. 1",
+      "title": "Street Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whitman",
+        "layer": "CITY",
+        "value": "Tekoa"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 26
+        }
+      ],
+      "what_it_does": "One-year special property tax levy for oiling gravel streets, chip sealing, asphalt replacement and sidewalk repair in Tekoa, including grant match.",
+      "cost_line": "$50,000, an estimated $1.23 per $1,000 of assessed value, collected in 2027.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7407&e=899&la=en&c=38"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whitman-town-of-uniontown-proposition-no-1",
+      "owner": "whitman",
+      "jurisdiction": "Town of Uniontown",
+      "proposition": "Proposition No. 1",
+      "title": "Levy of Additional Taxes",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whitman",
+        "layer": "CITY",
+        "value": "Uniontown"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 27
+        }
+      ],
+      "what_it_does": "One-year excess property tax levy for Uniontown's general operations, water and sewer improvements and general maintenance, not employee wages.",
+      "cost_line": "About $30,000, approximately $0.64 per $1,000 of assessed value, collected in 2027.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7408&e=899&la=en&c=38"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whitman-whitman-county-fire-protection-district-no-8-proposition-no-1",
+      "owner": "whitman",
+      "jurisdiction": "Whitman County Fire Protection District No. 8",
+      "proposition": "Proposition No. 1",
+      "title": "Maintenance and Operation Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whitman",
+        "layer": "FIRDST",
+        "value": "8"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 28
+        }
+      ],
+      "what_it_does": "Four-year excess property tax levy for the maintenance and operation of Fire District No. 8 (LaCrosse area), collected 2027 through 2030 (Resolution No. 2026-1).",
+      "cost_line": "$75,000 a year, an estimated $0.36 per $1,000 of assessed value.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7409&e=899&la=en&c=38"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whitman-whitman-county-fire-protection-district-no-14-proposition-no-1",
+      "owner": "whitman",
+      "jurisdiction": "Whitman County Fire Protection District No. 14",
+      "proposition": "Proposition No. 1",
+      "title": "Levy Lid Lift",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whitman",
+        "layer": "FIRDST",
+        "value": "14"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "Sets Fire District No. 14's regular property tax levy at $1.08 per $1,000 of assessed value for 2027 collection, for fire protection, life safety services, apparatus and equipment, and firefighter safety; that amount becomes the base for later limits (Resolution No. 26-03).",
+      "cost_line": "$1.08 per $1,000 of assessed value for 2027 collection; the guide gives no current rate.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7410&e=899&la=en&c=38"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whitman-lacrosse-park-recreation-district-no-1-proposition-no-1",
+      "owner": "whitman",
+      "jurisdiction": "LaCrosse Park & Recreation District No. 1",
+      "proposition": "Proposition No. 1",
+      "title": "Operation and Maintenance Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whitman",
+        "layer": "PARKDST",
+        "value": "1"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 29
+        }
+      ],
+      "what_it_does": "One-year special levy for the operation, maintenance and capital improvements of the LaCrosse swimming pool and the district's existing buildings.",
+      "cost_line": "$75,000, an estimated $0.31 per $1,000 of assessed value, collected in 2027.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7411&e=899&la=en&c=38"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whitman-garfield-park-recreation-district-no-2-proposition-no-1",
+      "owner": "whitman",
+      "jurisdiction": "Garfield Park & Recreation District No. 2",
+      "proposition": "Proposition No. 1",
+      "title": "Maintenance, Repair and Operating Cost Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whitman",
+        "layer": "PARKDST",
+        "value": "2"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "One-year property tax levy for pool maintenance, repair, higher operating costs (wages and chemicals) and new pool equipment (Resolution 2026-04).",
+      "cost_line": "$140,000, an estimated $1.05 per $1,000 of assessed value, collected in 2027.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7412&e=899&la=en&c=38"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whitman-st-john-park-recreation-district-no-3-proposition-no-1",
+      "owner": "whitman",
+      "jurisdiction": "St. John Park & Recreation District No. 3",
+      "proposition": "Proposition No. 1",
+      "title": "Operating Fund Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whitman",
+        "layer": "PARKDST",
+        "value": "3"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "One-year special levy for the district's operating fund, swimming pool, capital outlay and cumulative reserve.",
+      "cost_line": "$75,000, an estimated $0.2506 per $1,000 of assessed value, collected in 2027.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7413&e=899&la=en&c=38"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whitman-oakesdale-park-recreation-district-no-4-proposition-no-1",
+      "owner": "whitman",
+      "jurisdiction": "Oakesdale Park & Recreation District No. 4",
+      "proposition": "Proposition No. 1",
+      "title": "Operating, Maintaining and Improving Recreational Facilities",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whitman",
+        "layer": "PARKDST",
+        "value": "4"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "One-year special levy to operate, maintain and improve the district's recreational facilities.",
+      "cost_line": "$120,000, an estimated $0.53 per $1,000 of assessed value, collected in 2027.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7414&e=899&la=en&c=38"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whitman-endicott-parks-recreation-district-no-7-proposition-no-1",
+      "owner": "whitman",
+      "jurisdiction": "Endicott Parks & Recreation District No. 7",
+      "proposition": "Proposition No. 1",
+      "title": "Operating, Capital Outlay and Cumulative Reserve Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whitman",
+        "layer": "PARKDST",
+        "value": "7"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "One-year special levy for the district's operating fund, swimming pool, capital outlay and cumulative reserve.",
+      "cost_line": "$65,000, an estimated $0.42 or less per $1,000 of assessed value, collected in 2027.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7418&e=899&la=en&c=38"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whitman-oakesdale-cemetery-district-no-1-proposition-no-1",
+      "owner": "whitman",
+      "jurisdiction": "Oakesdale Cemetery District No. 1",
+      "proposition": "Proposition No. 1",
+      "title": "Improvements and Maintenance Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whitman",
+        "layer": "CEMDST",
+        "value": "1"
+      },
+      "pamphlet_pages": [],
+      "what_it_does": "One-year special levy for continued improvements and maintenance of the Oakesdale cemetery.",
+      "cost_line": "$70,000, an estimated $0.35 per $1,000 of assessed value, collected in 2027.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7419&e=899&la=en&c=38"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whitman-whitman-county-garfield-cemetery-district-no-2-proposition-no-2026-1",
+      "owner": "whitman",
+      "jurisdiction": "Whitman County (Garfield) Cemetery District No. 2",
+      "proposition": "Proposition No. 2026-1",
+      "title": "Operation and Maintenance Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whitman",
+        "layer": "CEMDST",
+        "value": "2"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 30
+        }
+      ],
+      "what_it_does": "One-year levy for equipment, sprinkler-system improvements and other operation and maintenance of the district's cemeteries (Garfield and Silver Creek).",
+      "cost_line": "$105,000, an estimated $0.82 or less per $1,000 of assessed value, collected in 2027.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7420&e=899&la=en&c=38"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whitman-st-john-cemetery-district-no-3-proposition-no-1",
+      "owner": "whitman",
+      "jurisdiction": "St. John Cemetery District No. 3",
+      "proposition": "Proposition No. 1",
+      "title": "Funds to Maintain & Operate Cemetery",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whitman",
+        "layer": "CEMDST",
+        "value": "3"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 31
+        }
+      ],
+      "what_it_does": "One-year special property tax levy for the maintenance and operation of the St. John cemetery district.",
+      "cost_line": "$20,000, an estimated $0.16 per $1,000 of assessed value, collected in 2027.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7421&e=899&la=en&c=38"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "whitman-whitman-county-endicott-cemetery-district-no-4-proposition-no-1",
+      "owner": "whitman",
+      "jurisdiction": "Whitman County (Endicott) Cemetery District No. 4",
+      "proposition": "Proposition No. 1",
+      "title": "Maintenance and Operations Levy",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "whitman",
+        "layer": "CEMDST",
+        "value": "4"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 31
+        }
+      ],
+      "what_it_does": "One-year excess property tax levy for the maintenance and operation of the Endicott cemetery district, renewing a levy that expires in 2026 (Resolution No. 2026-1).",
+      "cost_line": "$40,000, an estimated $0.37 per $1,000 of assessed value, collected in 2027.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7422&e=899&la=en&c=38"
+          ]
+        }
+      }
+    }
+  ]
+}
