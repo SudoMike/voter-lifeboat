@@ -627,6 +627,60 @@ ELECTION_MEASURES = {
                   "https://voter.votewa.gov/elections/measure.ashx?m=7273&e=899&la=en&c=03"),
             ],
         },
+        # Chelan (#29). Measures: Chelan County Elections' general sample
+        # ballot and Local Voters' Pamphlet (counties/chelan/raw/chelan/
+        # {sample-ballot,local-voters-pamphlet}.pdf.url, pamphlet pp. 16-18,
+        # linked from co.chelan.wa.us/elections/pages/november-3-2026-general-
+        # election) list two local measures; VoteWA's online guide for county
+        # 04 (raw/votewa/voter-guide/voterguide.json.url) agrees. Scopes
+        # point-checked 2026-10-08 (Census geocoder, Current vintage; WA DOR
+        # 2025 layer 20 SCH2025): 101 Woodring St, Cashmere -> CITY
+        # 'Cashmere'; 350 Orondo Ave, Wenatchee -> SCH2025 DISTATTRIB '246'
+        # (101 Woodring St, Cashmere -> '222', not in the district).
+        # Overrides: VoteWA files the commissioner race as Countywide; it is
+        # nominated by district and elected county-wide in the general (RCW
+        # 36.32.040; SOS 2022 general: Commissioner District No. 2 drew 33,392
+        # votes of 34,530 Chelan ballots) and keeps the primary's contest name
+        # so primary dossiers carry forward. The District Court seats
+        # (District Type County) are judicial seats of one county-wide court
+        # (2022 Judge #1: 29,039 votes). Chelan County PUD (Public Utility
+        # District No. 1 of Chelan County) is county-wide (DOR PUD2025 layer
+        # 17 DISTATTRIB '1' at Wenatchee, Cashmere, Leavenworth, Chelan and
+        # Stehekin alike) and the whole PUD elects each commissioner in the
+        # general (RCW 54.12.010(3); 2022 District 3: 28,626 votes), so its
+        # rows (District 'PUD ALL', which classify() cannot number) are
+        # scoped COUNTY.
+        "chelan": {
+            "overrides": {
+                ("COUNTY", "COMMISSIONER DISTRICT NO. 2"): (
+                    "County", "Chelan County Commissioner District 2", "Commissioner District No. 2", ("COUNTY", None)),
+                ("CHELAN COUNTY", "DISTRICT COURT JUDGE POSITION 1"): (
+                    "Judicial", "Chelan County District Court", "Judge Position No. 1", ("COUNTY", None)),
+                ("CHELAN COUNTY", "DISTRICT COURT JUDGE POSITION 2"): (
+                    "Judicial", "Chelan County District Court", "Judge Position No. 2", ("COUNTY", None)),
+                ("PUD ALL", "PUBLIC UTILITY DIST COMMISSIONER DIST 1"): (
+                    "PublicUtility", "Public Utility District No. 1 of Chelan County", "Commissioner District 1",
+                    ("COUNTY", None)),
+                ("PUD ALL", "PUBLIC UTILITY DIST COMMISSIONER DIST B"): (
+                    "PublicUtility", "Public Utility District No. 1 of Chelan County", "Commissioner District B (At Large)",
+                    ("COUNTY", None)),
+            },
+            "measures": [
+                m("Wenatchee School District No. 246", "Proposition No. 1",
+                  "Bonds to Replace Deteriorating Wenatchee High School and Improve School Air Quality Districtwide",
+                  ("SCHDST", "246"),
+                  "Authorizes $275,000,000 of general obligation bonds, maturing within 20 years and repaid by excess property taxes, to build a new Wenatchee High School on the existing campus (replacing classrooms and portables, expanding career/technical education space) and replace aging HVAC at seven other schools; it would also qualify the district for an estimated $83,000,000 in state matching funds.",
+                  "$275,000,000 in bonds over up to 20 years; the district estimates $1.46 per $1,000 of assessed value a year.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7302&e=899&la=en&c=04",
+                  pages=(16, 17)),
+                m("City of Cashmere", "Proposition No. 1", "Public Safety and Government Services Levy Lid Lift",
+                  ("CITY", "Cashmere"),
+                  "Lifts Cashmere's regular property tax levy to keep essential city services, including public safety, operating, and lets the levy rise up to 9% a year from 2028 to 2032; the 2032 levy becomes the base for future levy limits.",
+                  "$1.5737 per $1,000 of assessed value for 2027 collection, then up to 9% more a year through 2032.",
+                  "https://voter.votewa.gov/elections/measure.ashx?m=7301&e=899&la=en&c=04",
+                  pages=(18,)),
+            ],
+        },
         # Cowlitz (#28). Measures: the county's general sample ballot and
         # local voters' pamphlet (counties/cowlitz/raw/cowlitz/
         # {sample-ballot,local-voters-pamphlet}.pdf.url, pamphlet pp. 57-58)

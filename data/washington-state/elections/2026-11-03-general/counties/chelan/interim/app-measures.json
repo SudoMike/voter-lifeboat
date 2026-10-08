@@ -1,0 +1,81 @@
+{
+  "county": "chelan",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/chelan/raw/votewa/candidate-list.csv.url",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7301&e=899&la=en&c=04",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7302&e=899&la=en&c=04"
+  ],
+  "coverage": "full_county",
+  "notes": [],
+  "measures": [
+    {
+      "slug": "chelan-wenatchee-school-district-no-246-proposition-no-1",
+      "owner": "chelan",
+      "jurisdiction": "Wenatchee School District No. 246",
+      "proposition": "Proposition No. 1",
+      "title": "Bonds to Replace Deteriorating Wenatchee High School and Improve School Air Quality Districtwide",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "chelan",
+        "layer": "SCHDST",
+        "value": "246"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 16
+        },
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 17
+        }
+      ],
+      "what_it_does": "Authorizes $275,000,000 of general obligation bonds, maturing within 20 years and repaid by excess property taxes, to build a new Wenatchee High School on the existing campus (replacing classrooms and portables, expanding career/technical education space) and replace aging HVAC at seven other schools; it would also qualify the district for an estimated $83,000,000 in state matching funds.",
+      "cost_line": "$275,000,000 in bonds over up to 20 years; the district estimates $1.46 per $1,000 of assessed value a year.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7302&e=899&la=en&c=04"
+          ]
+        }
+      }
+    },
+    {
+      "slug": "chelan-city-of-cashmere-proposition-no-1",
+      "owner": "chelan",
+      "jurisdiction": "City of Cashmere",
+      "proposition": "Proposition No. 1",
+      "title": "Public Safety and Government Services Levy Lid Lift",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "chelan",
+        "layer": "CITY",
+        "value": "Cashmere"
+      },
+      "pamphlet_pages": [
+        {
+          "edition": "local-voters-pamphlet",
+          "page": 18
+        }
+      ],
+      "what_it_does": "Lifts Cashmere's regular property tax levy to keep essential city services, including public safety, operating, and lets the levy rise up to 9% a year from 2028 to 2032; the 2032 levy becomes the base for future levy limits.",
+      "cost_line": "$1.5737 per $1,000 of assessed value for 2027 collection, then up to 9% more a year through 2032.",
+      "pro_summary": null,
+      "con_summary": null,
+      "lean_mappings": {
+        "taxes": {
+          "direction": 2,
+          "basis": "YES approves a local tax, levy, bond, or annexation measure for the listed public service.",
+          "citations": [
+            "https://voter.votewa.gov/elections/measure.ashx?m=7301&e=899&la=en&c=04"
+          ]
+        }
+      }
+    }
+  ]
+}
