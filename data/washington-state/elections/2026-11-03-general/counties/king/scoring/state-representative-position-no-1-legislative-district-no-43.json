@@ -1,0 +1,115 @@
+{
+  "contest_slug": "state-representative-position-no-1-legislative-district-no-43",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/king/dossiers/state-representative-position-no-1-legislative-district-no-43/"],
+  "office_does": "One of two Washington State Representatives for the 43rd District (central Seattle), voting on state law, budgets and taxes for two-year terms.",
+  "race_blurb": "Two Democrats: Nicole Macri, in office since 2017 with a housing and homelessness record, faces first-time candidate Alby Clendennin, a UW resident director who emphasizes corporate influence in politics and AI regulation. Only Macri has stated positions on the statewide initiatives (no on all).",
+  "candidates": [
+    {
+      "slug": "nicole-macri",
+      "summary": "Incumbent since 2017 and DESC deputy director; record centered on rent stabilization and supportive housing, with explicit positions on abortion access, gender-affirming care and the statewide initiatives.",
+      "highlights": [
+        "'I'm voting no on all statewide initiatives' (I-645, I-1, I-638) [S1]",
+        "Voted for 2025 rent stabilization and was an original sponsor of ESHB 2266, requiring cities to allow supportive housing and shelters [S8][S10]",
+        "Voted for the 2026 tax on household income over $1 million [S7]",
+        "Commits to 'fully funding access to abortion' and a 'sanctuary state for gender-affirming care' [S3]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {
+          "score": 2,
+          "confidence": "medium",
+          "citations": ["S7", "S1"],
+          "basis": "Voted for the millionaires tax and opposes I-645's repeal of it; also cites cutting small business taxes."
+        },
+        "spending": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1", "S3"],
+          "basis": "Cites tax revenue funding schools and childcare, funding supportive housing and fully funding abortion access."
+        },
+        "housing": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S8", "S10", "S2"],
+          "basis": "Led on rent stabilization ('prevent rent gouging') and sponsored the supportive-housing siting law; DESC supportive-housing career."
+        },
+        "climate": {
+          "score": 2,
+          "confidence": "medium",
+          "citations": ["S3", "S1"],
+          "basis": "'Aggressively tackling climate change by modernizing our energy grid, cutting building emissions'."
+        },
+        "experience": {
+          "score": -2,
+          "confidence": "high",
+          "citations": ["S1", "S8", "S10"],
+          "basis": "Incumbent since 2017 with enacted housing legislation."
+        },
+        "local-control": {
+          "score": 2,
+          "confidence": "medium",
+          "citations": ["S10", "S9"],
+          "basis": "Original sponsor of ESHB 2266, a state requirement that cities allow supportive housing and shelters in specified zones."
+        },
+        "immigration": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1"],
+          "basis": "Cites work to protect immigrant neighbors from 'hateful federal overreach'."
+        },
+        "healthcare": {
+          "score": -1,
+          "confidence": "medium",
+          "citations": ["S1", "S3", "S2"],
+          "basis": "Frames healthcare as making care and insurance affordable and accessible within the current system; no single-payer statement."
+        },
+        "social": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1", "S3", "S4"],
+          "basis": "Explicit commitments to expand and fund abortion access and keep Washington a sanctuary for gender-affirming care; opposes I-638."
+        },
+        "parental-rights": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S6", "S1"],
+          "basis": "Voted yea on ESHB 1296 (2025) and says she is voting no on all statewide initiatives, including I-1."
+        }
+      }
+    },
+    {
+      "slug": "alby-clendennin",
+      "summary": "First-time candidate and UW resident director who describes himself as a pragmatic progressive Democrat focused on reducing corporate influence in politics and regulating AI.",
+      "highlights": [
+        "Priorities: 'reducing corporate influence in politics' and 'regulating artificial intelligence to prevent unfair pricing' [S1]",
+        "Calls for strengthening public services and 'a government that prioritizes people over profit' [S1]",
+        "No campaign website and no reported contributions as of mid-September 2026 [S1][S4]",
+        "No public position found on the three initiatives [S1]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "experience": {
+          "score": 2,
+          "confidence": "high",
+          "citations": ["S1"],
+          "basis": "No elected or government experience; first run for office."
+        },
+        "reform": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1"],
+          "basis": "Names reducing corporate influence in politics as a top priority; no specific reform proposals."
+        },
+        "tech": {
+          "score": 1,
+          "confidence": "medium",
+          "citations": ["S1"],
+          "basis": "Wants to regulate AI to prevent unfair pricing."
+        }
+      }
+    }
+  ]
+}
