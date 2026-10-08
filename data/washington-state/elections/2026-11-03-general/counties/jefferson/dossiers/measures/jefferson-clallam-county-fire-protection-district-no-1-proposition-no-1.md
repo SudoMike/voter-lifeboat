@@ -62,6 +62,12 @@ sources:
     url: https://data.wa.gov/resource/3h9x-7bvm.json
     pointer: counties/jefferson/raw/jefferson/pdc-west-end-measure-committees-2026.json.url
     accessed: 2026-10-08
+  - id: S8
+    tier: 1
+    type: official-record
+    ref: RCW 84.55.050(1) (a levy lid lift is authorized by a majority of the voters voting on the proposition)
+    url: https://app.leg.wa.gov/RCW/default.aspx?cite=84.55.050
+    accessed: 2026-10-08
 ---
 ## What it does
 
@@ -69,6 +75,7 @@ Proposition No. 1 is a multi-year levy lid lift for Clallam County Fire Protecti
 
 - Fire districts may levy up to $1.50 per $1,000 [S1].
 - After the ten-year period, absent another vote, the levy returns to the statutory 1% growth limit [S1].
+- A levy lid lift passes with a simple majority of those voting on it [S8].
 - Exemptions for qualifying seniors, veterans and others under chapter 84.36 RCW apply [S1].
 - **A small part of the district is in Jefferson County.** The pamphlet notes it [S1], and the county's Elections page calls it "Clallam/Jefferson County Fire District No. 1" [S3]. The Jefferson part is a small area south of Forks that includes Dowans Creek Road; DOR's tax data number it Jefferson "Fire Dist #9" [S5][S6].
 
