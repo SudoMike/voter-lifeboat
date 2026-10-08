@@ -125,6 +125,14 @@ const UNRESOLVABLE_SCOPES = new Set([
   // Spokane County and Stevens PUD GIS, precinct results): none found; see
   // counties/spokane/COMPLETENESS.md.
   'spokane/PUDDST',
+  // Okanogan's PUD seats (#30): the Okanogan County PUD race is voted on 247
+  // of the county's 248 precincts and Ferry County PUD No. 1's on the other
+  // 8 (Bodie, Buckhorn Mtn, Chesaw, Myers Creek, San Poil, Sourdough, Toroda,
+  // Wauconda; SOS 2024 precinct export). No public layer separates them (DOR
+  // PUD2025 has one Okanogan polygon over the whole county), so both seats
+  // are hidden and the general's Okanogan package is partial_county; see
+  // counties/okanogan/COMPLETENESS.md.
+  'okanogan/PUDDST',
 ])
 
 const CENSUS_LAYERS = new Set(['CONGDST', 'LEGDST', 'CITY'])

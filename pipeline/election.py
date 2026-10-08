@@ -107,6 +107,10 @@ DISTRICT_ADAPTER_LAYERS = {
     "stevens": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "FIRDST", "LIBDST", "SCHDST"),
     "whitman": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "FIRDST", "PARKDST", "CEMDST", "LIBDST", "SCHDST"),
     "douglas": ("CONGDST", "LEGDST", "CITY", "FIRDST", "HOSPDST", "SCHDST", "CEMDST", "PROPFIRDST"),
+    # Okanogan's two PUD seats stay PUDDST, which no layer resolves (see
+    # app/src/lib/data-consistency.test.js UNRESOLVABLE_SCOPES), so the
+    # county ships partial_county.
+    "okanogan": ("CONGDST", "LEGDST", "CITY", "FIRDST", "HOSPDST", "EMSDST"),
 }
 
 

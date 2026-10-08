@@ -605,8 +605,25 @@ const COUNTY_LAYERS = {
     { key: 'SCHDST', url: `${DOR_TAX_DISTRICTS}/20/query`, attr: 'DISTATTRIB' },
   ],
   okanogan: [
+    // Fire Protection District No. 1's levy lid lift (#30). Re-probed
+    // 2026-10-08: 38 Swanson Mill Rd, Oroville -> '1'; 50 Lost River Rd,
+    // Mazama, 206 Riverside Ave, Winthrop and 118 S Glover St, Twisp -> '6';
+    // 1308 Ironwood St, Oroville (the city), 415 Hospital Way, Brewster and
+    // 2 S Ash St, Omak -> no feature.
     { key: 'FIRDST', url: `${DOR_TAX_DISTRICTS}/7/query`, attr: 'DISTATTRIB' },
+    // Three Rivers Hospital (Public Hospital District No. 1, Okanogan and
+    // Douglas Counties) bonds, scoped '1J' (#30). Re-probed 2026-10-08:
+    // Mazama, Winthrop, Twisp and Brewster -> '1J'; Omak -> '3'; Oroville
+    // (city and Swanson Mill Rd) -> '4'.
     { key: 'HOSPDST', url: `${DOR_TAX_DISTRICTS}/11/query`, attr: 'DISTATTRIB' },
+    // WA DOR EMS2025 (#30): the Methow Valley EMS District's levy, scoped
+    // 'MV' (the district leaves out the towns of Twisp and Winthrop, which
+    // run their own levies, scoped CITY). Live 2026-10-08: 50 Lost River
+    // Rd, Mazama -> 'MV'; 118 S Glover St, Twisp -> 'TC'; 206 Riverside Ave,
+    // Winthrop -> 'WC'; 415 Hospital Way, Brewster -> 'BC'; 1308 Ironwood
+    // St, Oroville -> 'OC'; 38 Swanson Mill Rd, Oroville -> 'OR'; 2 S Ash St,
+    // Omak -> no feature.
+    { key: 'EMSDST', url: `${DOR_TAX_DISTRICTS}/6/query`, attr: 'DISTATTRIB' },
   ],
   pacific: [
     { key: 'FIRDST', url: `${DOR_TAX_DISTRICTS}/7/query`, attr: 'DISTATTRIB' },

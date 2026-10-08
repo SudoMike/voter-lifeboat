@@ -1531,3 +1531,59 @@ test('Douglas resolves Eastmont SD, Cemetery District 2 and the proposed Rimrock
   // The archived primary's Douglas fire scopes still read DOR FIRDST.
   assert.ok(scopeMatches({ kind: 'DISTRICT', county: 'douglas', layer: 'FIRDST', value: '2' }, context))
 })
+
+// Okanogan (#30, wave 5). Live point queries 2026-10-08 at the
+// Census-geocoded points of the addresses below. The county ships
+// partial_county: its PUD seats are PUDDST, which no layer resolves.
+const okanoganData = {
+  coverage: { statewide_complete: true, supported_counties: [{ id: 'okanogan', coverage: 'partial_county' }] },
+}
+
+test('Okanogan resolves the Methow Valley EMS District, FD 1 and Three Rivers Hospital from DOR', async () => {
+  const methowEms = { kind: 'DISTRICT', county: 'okanogan', layer: 'EMSDST', value: 'MV' }
+  const fd1 = { kind: 'DISTRICT', county: 'okanogan', layer: 'FIRDST', value: '1' }
+  const threeRivers = { kind: 'DISTRICT', county: 'okanogan', layer: 'HOSPDST', value: '1J' }
+  const pud = { kind: 'DISTRICT', county: 'okanogan', layer: 'PUDDST', value: '1' }
+  // 50 Lost River Rd, Mazama: EMS 'MV', FD 6, hospital '1J'.
+  const calls = mockWave2('50 LOST RIVER RD, MAZAMA, WA, 98833', '047', 'Okanogan County', [
+    dorLayer(6, 'MV'), dorLayer(7, '6'), dorLayer(11, '1J'),
+  ])
+  let context = await lookupBallotContext(okanoganData, '50 Lost River Rd Mazama WA 98833')
+  assert.equal(context.county.id, 'okanogan')
+  // A partial package never reads full_county, and the app says so.
+  assert.equal(context.coverageStatus, 'partial_county')
+  assert.equal(coverageAdvice(context), 'degraded')
+  assert.deepEqual(context.missingLayers, [])
+  assert.equal(context.districts.EMSDST, 'MV')
+  assert.ok(scopeMatches(methowEms, context))
+  assert.ok(scopeMatches(threeRivers, context))
+  assert.ok(!scopeMatches(fd1, context))
+  assert.ok(!scopeMatches(pud, context))
+  const ems = calls.find((u) => u.includes('WADOR_PropertyTax/MapServer/6/query'))
+  assert.equal(new URL(ems).searchParams.get('outFields'), 'DISTATTRIB')
+  // 118 S Glover St, Twisp: the town's own EMS code 'TC', outside 'MV'.
+  mockWave2('118 GLOVER ST, TWISP, WA, 98856', '047', 'Okanogan County', [
+    dorLayer(6, 'TC'), dorLayer(7, '6'), dorLayer(11, '1J'),
+  ])
+  context = await lookupBallotContext(okanoganData, '118 S Glover St Twisp WA 98856')
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(!scopeMatches(methowEms, context))
+  assert.ok(scopeMatches(threeRivers, context))
+  // 38 Swanson Mill Rd, Oroville: FD 1, EMS 'OR', hospital '4'.
+  mockWave2('38 SWANSON MILL RD, OROVILLE, WA, 98844', '047', 'Okanogan County', [
+    dorLayer(6, 'OR'), dorLayer(7, '1'), dorLayer(11, '4'),
+  ])
+  context = await lookupBallotContext(okanoganData, '38 Swanson Mill Rd Oroville WA 98844')
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(scopeMatches(fd1, context))
+  assert.ok(!scopeMatches(threeRivers, context))
+  assert.ok(!scopeMatches(methowEms, context))
+  // 2 S Ash St, Omak: no EMS or fire district, hospital '3'.
+  mockWave2('2 ASH ST S, OMAK, WA, 98841', '047', 'Okanogan County', [dorLayer(11, '3')])
+  context = await lookupBallotContext(okanoganData, '2 S Ash St Omak WA 98841')
+  assert.deepEqual(context.missingLayers, [])
+  assert.equal(context.districts.EMSDST, undefined)
+  assert.ok(!scopeMatches(fd1, context))
+  assert.ok(!scopeMatches(threeRivers, context))
+  assert.ok(!scopeMatches(pud, context))
+})
