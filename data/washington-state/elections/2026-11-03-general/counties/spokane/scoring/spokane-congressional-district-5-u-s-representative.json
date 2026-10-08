@@ -1,0 +1,56 @@
+{
+  "contest_slug": "spokane-congressional-district-5-u-s-representative",
+  "scored_at": "2026-10-08",
+  "derived_from": ["data/washington-state/elections/2026-11-03-general/counties/spokane/dossiers/spokane-congressional-district-5-u-s-representative/"],
+  "office_does": "The U.S. Representative for Washington's 5th District votes on federal law, taxes, spending and oversight for 12 Eastern Washington counties, including Spokane.",
+  "race_blurb": "A 2024 rematch: first-term Republican Michael Baumgartner, who led the August primary with 48%, faces Democrat Carmela Conroy, a former diplomat and deputy prosecutor who took 20.8%. They split on the 2025 tax-and-spending law, tariffs, immigration enforcement, the Iran war and Israel aid, and gender-affirming care for minors.",
+  "candidates": [
+    {
+      "slug": "michael-baumgartner",
+      "summary": "First-term Republican congressman, former Spokane County Treasurer and state senator, running on tax cuts, border security and defense.",
+      "highlights": [
+        "Voted for the 2025 tax and spending law (H.R. 1) on passage and final concurrence [S10]",
+        "Voted for the SAVE Act and the Laken Riley Act [S11]",
+        "Backs higher military spending and cuts to social services, citing the national debt [S16]",
+        "Supports a federal ban on gender-affirming care for minors [S14]",
+        "Sponsored a bill to bar members of Congress from trading individual stocks [S1]"
+      ],
+      "evidence_level": "rich",
+      "withdrawn": false,
+      "scores": {
+        "taxes": {"score": -2, "confidence": "high", "citations": ["S1", "S10", "S15"], "basis": "Voted for the 2025 H.R. 1 tax cuts, campaigns on having reduced taxes, and calls a state income tax 'terrible'."},
+        "spending": {"score": -1, "confidence": "medium", "citations": ["S4", "S16"], "basis": "Calls for curbing 'reckless government spending' and cutting social services, but backs higher defense spending, so restraint is selective."},
+        "immigration": {"score": -2, "confidence": "high", "citations": ["S8", "S11", "S14"], "basis": "Strongly supports border security and enforcement, voted for the Laken Riley Act, and calls the crackdown 'largely successful' while criticizing some ICE operations."},
+        "social": {"score": -2, "confidence": "high", "citations": ["S14", "S6"], "basis": "Supports and says he voted for a federal ban on gender-affirming care for minors; leaves abortion law to the states."},
+        "defense": {"score": -2, "confidence": "high", "citations": ["S13", "S16"], "basis": "Supports continuing the Iran conflict 'as long as it takes', U.S. aid to Israel, and a larger defense budget."},
+        "climate": {"score": -1, "confidence": "medium", "citations": ["S7", "S1", "S16"], "basis": "Applauded withdrawal from the Columbia Basin agreement, defends the Snake River dams, and dismisses 'environmental fads'."},
+        "tech": {"score": -1, "confidence": "medium", "citations": ["S14"], "basis": "Frames AI as a race with China and offers federal incentives for data centers, with a requirement that they pay for their power and water costs."},
+        "reform": {"score": 1, "confidence": "medium", "citations": ["S1"], "basis": "Sponsored legislation banning individual stock trading by members of Congress."},
+        "experience": {"score": -2, "confidence": "high", "citations": ["S1", "S2"], "basis": "Incumbent congressman with prior service as county treasurer and state senator."}
+      }
+    },
+    {
+      "slug": "carmela-conroy",
+      "summary": "Democrat and former U.S. diplomat and Spokane County deputy prosecutor, in a rematch, running on ending tariffs, restoring health funding and checking the executive branch.",
+      "highlights": [
+        "Would end tariffs and fund rural hospitals, Social Security, Medicare and Medicaid [S1]",
+        "Platform would extend Medicaid to all children and undo 2025 H.R. 1 eligibility rules [S3]",
+        "Would defund immigration detention centers and release non-criminal detainees [S3]",
+        "Calls the Iran conflict a war and says aid to Israel should be halted [S5]",
+        "Supports a congressional stock-trading ban [S3]"
+      ],
+      "evidence_level": "moderate",
+      "withdrawn": false,
+      "scores": {
+        "spending": {"score": 2, "confidence": "medium", "citations": ["S1", "S3"], "basis": "Pledges to restore and expand Medicare/Medicaid funding, public education funding and investment in housing and child care."},
+        "healthcare": {"score": 2, "confidence": "medium", "citations": ["S3", "S4"], "basis": "Platform extends Medicaid to all children; the Spokesman-Review reports she supports universal single-payer healthcare."},
+        "immigration": {"score": 2, "confidence": "high", "citations": ["S3", "S6"], "basis": "Would defund detention centers, release non-criminal detainees, and opposes DHS enforcement operations in cities."},
+        "defense": {"score": 2, "confidence": "high", "citations": ["S3", "S5"], "basis": "Would end the Iran war, defund 'aggressive' military operations, and halt aid to Israel."},
+        "social": {"score": 2, "confidence": "medium", "citations": ["S1", "S6"], "basis": "Opposes a federal ban on gender-affirming care for minors, leaving it to patients, doctors and parents; pledges to keep politicians out of the doctor's office."},
+        "tech": {"score": 1, "confidence": "medium", "citations": ["S6"], "basis": "Raises water and power concerns about data centers and wants local and state governments to decide on them."},
+        "reform": {"score": 1, "confidence": "medium", "citations": ["S3"], "basis": "Supports a congressional stock-trading ban and accountability for people named in the Epstein files."},
+        "experience": {"score": 1, "confidence": "high", "citations": ["S1"], "basis": "Never held elected office; a long career as a diplomat and prosecutor."}
+      }
+    }
+  ]
+}
