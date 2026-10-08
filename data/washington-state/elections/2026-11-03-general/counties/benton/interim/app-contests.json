@@ -1,0 +1,912 @@
+{
+  "county": "benton",
+  "script": "pipeline/build_votewa_lite_data.py",
+  "derived_from": [
+    "data/washington-state/elections/2026-11-03-general/counties/benton/raw/votewa/candidate-list.csv.url",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7271&e=899&la=en&c=03",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7272&e=899&la=en&c=03",
+    "https://voter.votewa.gov/elections/measure.ashx?m=7273&e=899&la=en&c=03"
+  ],
+  "coverage": "full_county",
+  "notes": [
+    "Kiona-Benton City School District No. 52 Proposition No. 1 is scoped SCHDST '52' (WA DOR SCH2025, layer 20, DISTATTRIB), which app/src/lib/geo.js COUNTY_LAYERS.benton does not list yet; until that layer is added the measure cannot be matched to a Benton address."
+  ],
+  "contests": [
+    {
+      "slug": "benton-congressional-district-4-u-s-representative",
+      "owner": "benton",
+      "category": "Federal",
+      "office": "U.S. Representative",
+      "district": "Congressional District 4",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "benton",
+        "layer": "CONGDST",
+        "value": "4"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Benton County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "amanda-mckinney",
+          "name": "Amanda McKinney",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "john-duresky",
+          "name": "John Duresky",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "benton-legislative-district-8-state-senator",
+      "owner": "benton",
+      "category": "State",
+      "office": "State Senator",
+      "district": "Legislative District 8",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "benton",
+        "layer": "LEGDST",
+        "value": "8"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Benton County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "nikki-torres",
+          "name": "Nikki Torres",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "gabe-galbraith",
+          "name": "Gabe Galbraith",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "benton-legislative-district-8-state-representative-pos-1",
+      "owner": "benton",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 8",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "benton",
+        "layer": "LEGDST",
+        "value": "8"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Benton County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "stephanie-barnard",
+          "name": "Stephanie Barnard",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "benton-legislative-district-8-state-representative-pos-2",
+      "owner": "benton",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 8",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "benton",
+        "layer": "LEGDST",
+        "value": "8"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Benton County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "april-connors",
+          "name": "April Connors",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "benton-legislative-district-14-state-representative-pos-1",
+      "owner": "benton",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 14",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "benton",
+        "layer": "LEGDST",
+        "value": "14"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Benton County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "gloria-mendoza",
+          "name": "Gloria Mendoza",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "chelsea-dimas",
+          "name": "Chelsea Dimas",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "benton-legislative-district-14-state-representative-pos-2",
+      "owner": "benton",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 14",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "benton",
+        "layer": "LEGDST",
+        "value": "14"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Benton County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "deb-manjarrez",
+          "name": "Deb Manjarrez",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "ezequiel-morfin",
+          "name": "Ezequiel Morfin",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "benton-legislative-district-15-state-senator",
+      "owner": "benton",
+      "category": "State",
+      "office": "State Senator",
+      "district": "Legislative District 15",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "benton",
+        "layer": "LEGDST",
+        "value": "15"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Benton County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "jeremie-dufault",
+          "name": "Jeremie Dufault",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "benton-legislative-district-15-state-representative-pos-1",
+      "owner": "benton",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 15",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "benton",
+        "layer": "LEGDST",
+        "value": "15"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Benton County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "chris-corry",
+          "name": "Chris Corry",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "jack-mcentire",
+          "name": "Jack McEntire",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "benton-legislative-district-15-state-representative-pos-2",
+      "owner": "benton",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 15",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "benton",
+        "layer": "LEGDST",
+        "value": "15"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Benton County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "reedy-berg",
+          "name": "Reedy Berg",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "liz-hallock",
+          "name": "Liz Hallock",
+          "party": "Prefers No Kings Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "benton-legislative-district-16-state-representative-pos-1",
+      "owner": "benton",
+      "category": "State",
+      "office": "State Representative Pos. 1",
+      "district": "Legislative District 16",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "benton",
+        "layer": "LEGDST",
+        "value": "16"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Benton County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "mark-klicker",
+          "name": "Mark Klicker",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "kyle-palmer",
+          "name": "Kyle Palmer",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "benton-legislative-district-16-state-representative-pos-2",
+      "owner": "benton",
+      "category": "State",
+      "office": "State Representative Pos. 2",
+      "district": "Legislative District 16",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "benton",
+        "layer": "LEGDST",
+        "value": "16"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Benton County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "skyler-rude",
+          "name": "Skyler Rude",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "derek-sarley",
+          "name": "Derek Sarley",
+          "party": "Prefers Democratic Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "benton-benton-county-assessor",
+      "owner": "benton",
+      "category": "County",
+      "office": "Assessor",
+      "district": "Benton County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "benton"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Benton County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "bill-spencer",
+          "name": "Bill Spencer",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "benton-benton-county-auditor",
+      "owner": "benton",
+      "category": "County",
+      "office": "Auditor",
+      "district": "Benton County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "benton"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Benton County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "brenda-chilton",
+          "name": "Brenda Chilton",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "benton-benton-county-clerk",
+      "owner": "benton",
+      "category": "County",
+      "office": "Clerk",
+      "district": "Benton County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "benton"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Benton County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "josie-delvin",
+          "name": "Josie Delvin",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "benton-benton-county-commissioner-district-2",
+      "owner": "benton",
+      "category": "County",
+      "office": "Commissioner District #2",
+      "district": "Benton County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "benton"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Benton County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "michael-alvarez",
+          "name": "Michael Alvarez",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "benton-benton-county-coroner",
+      "owner": "benton",
+      "category": "County",
+      "office": "Coroner",
+      "district": "Benton County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "benton"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Benton County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "william-bill-leach",
+          "name": "William \"Bill\" Leach",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "benton-benton-county-prosecuting-attorney",
+      "owner": "benton",
+      "category": "County",
+      "office": "Prosecuting Attorney",
+      "district": "Benton County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "benton"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Benton County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "eric-eisinger",
+          "name": "Eric Eisinger",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "julie-long",
+          "name": "Julie Long",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "benton-benton-county-sheriff",
+      "owner": "benton",
+      "category": "County",
+      "office": "Sheriff",
+      "district": "Benton County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "benton"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Benton County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "michael-mike-clark",
+          "name": "Michael (Mike) Clark",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "brad-klippert",
+          "name": "Brad Klippert",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "benton-benton-county-treasurer",
+      "owner": "benton",
+      "category": "County",
+      "office": "Treasurer",
+      "district": "Benton County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "benton"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Benton County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "kenneth-spencer-jr",
+          "name": "Kenneth Spencer Jr",
+          "party": "Prefers Republican Party",
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "benton-court-of-appeals-division-3-district-2-judge-position-1",
+      "owner": "benton",
+      "category": "Judicial",
+      "office": "Judge Position 1",
+      "district": "Court of Appeals, Division 3, District 2",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "benton"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Benton County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "tyson-r-hill",
+          "name": "Tyson R. Hill",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "benton-benton-county-district-court-judge-1",
+      "owner": "benton",
+      "category": "County",
+      "office": "District Court Judge 1",
+      "district": "Benton County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "benton"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Benton County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "talesha-sams",
+          "name": "Talesha Sams",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "michael-mike-rio",
+          "name": "Michael \"Mike\" Rio",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "benton-benton-county-district-court-judge-2",
+      "owner": "benton",
+      "category": "County",
+      "office": "District Court Judge 2",
+      "district": "Benton County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "benton"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Benton County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "james-jim-bell",
+          "name": "James \"Jim\" Bell",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "benton-benton-county-district-court-judge-3",
+      "owner": "benton",
+      "category": "County",
+      "office": "District Court Judge 3",
+      "district": "Benton County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "benton"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Benton County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "dan-kathren",
+          "name": "Dan Kathren",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "benton-benton-county-district-court-judge-4",
+      "owner": "benton",
+      "category": "County",
+      "office": "District Court Judge 4",
+      "district": "Benton County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "benton"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Benton County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "jennifer-johnson",
+          "name": "Jennifer Johnson",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "benton-benton-county-district-court-judge-5",
+      "owner": "benton",
+      "category": "County",
+      "office": "District Court Judge 5",
+      "district": "Benton County",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "benton"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Benton County. Candidate scoring is not complete for this county yet.",
+      "uncontested": true,
+      "candidates": [
+        {
+          "slug": "jennifer-m-lampson-azure",
+          "name": "Jennifer M. (Lampson) Azure",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "benton-public-utility-district-commissioner-district-2-commissioner-pos-2",
+      "owner": "benton",
+      "category": "PublicUtility",
+      "office": "Commissioner Pos. 2",
+      "district": "Public Utility District Commissioner District 2",
+      "scope": {
+        "kind": "COUNTY",
+        "county": "benton"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Benton County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "roy-c-dewey-holliday",
+          "name": "Roy C. \"Dewey\"  Holliday",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "micah-valentine",
+          "name": "Micah Valentine",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    },
+    {
+      "slug": "benton-city-of-richland-council-pos-4",
+      "owner": "benton",
+      "category": "City",
+      "office": "Council Pos. 4",
+      "district": "City Of Richland",
+      "scope": {
+        "kind": "DISTRICT",
+        "county": "benton",
+        "layer": "CITY",
+        "value": "Richland"
+      },
+      "office_does": null,
+      "race_blurb": "Official ballot listing imported from the VoteWA GENERAL 2026 candidate list for Benton County. Candidate scoring is not complete for this county yet.",
+      "uncontested": false,
+      "candidates": [
+        {
+          "slug": "kyle-saltz",
+          "name": "Kyle Saltz",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        },
+        {
+          "slug": "mary-s-lipton",
+          "name": "Mary S. Lipton",
+          "party": null,
+          "evidence_level": "official-ballot-only",
+          "withdrawn": false,
+          "summary": "Official ballot candidate. Voter Lifeboat has not completed a scored dossier for this candidate yet.",
+          "highlights": [],
+          "scores": {},
+          "sources": []
+        }
+      ]
+    }
+  ]
+}
