@@ -13,6 +13,7 @@ import {
 import { writeHash } from '../lib/codec.js'
 import { buildBrief } from '../lib/brief.js'
 import { contestHeading } from '../lib/contests.js'
+import { layerLabel } from '../lib/districts.js'
 import {
   DROP_BOX_URL,
   VOTEWA_URL,
@@ -773,7 +774,7 @@ export default function Results({ data, election, index, base, ballotContext, an
             could not be matched to your address, so local contests may be
             missing.
             {ballotContext.missingLayers?.length
-              ? ` District lookups that did not resolve: ${ballotContext.missingLayers.join(', ')}.`
+              ? ` District lookups that did not resolve: ${ballotContext.missingLayers.map(layerLabel).join(', ')}.`
               : ''}
           </div>
         )}

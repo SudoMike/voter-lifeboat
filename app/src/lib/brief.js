@@ -6,6 +6,7 @@ import { rankContest, measureLean } from './scoring.js'
 import { longElectionDay } from './elections.js'
 import { pamphletLink } from './officialLinks.js'
 import { contestHeading } from './contests.js'
+import { layerLabel } from './districts.js'
 
 export { pamphletLink }
 
@@ -36,7 +37,7 @@ function coverageText(context, election) {
     ]
     if (context.missingLayers?.length) {
       lines.push(
-        `District lookups that did not resolve: ${context.missingLayers.join(', ')}. Races scoped to these districts are the ones to double-check against my official ballot.`
+        `District lookups that did not resolve: ${context.missingLayers.map(layerLabel).join(', ')}. Races scoped to these districts are the ones to double-check against my official ballot.`
       )
     }
     return lines
