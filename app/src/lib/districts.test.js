@@ -153,6 +153,18 @@ test('San Juan port, park and solid waste districts read as their names', () => 
       'Lopez Solid Waste Disposal District'])
 })
 
+test('Pend Oreille Sacheen Lake Water and Sewer District reads as its name', () => {
+  // Live 2026-10-08 (#32): DOR SEW2025 '3' at 4571 State Route 211, Newport
+  // (Sacheen Lake), with HSP2025 '1' and SCH2025 '56'.
+  assert.equal(layerLabel('SEWDST'), 'Water and sewer district')
+  assert.equal(describeDistrict('SEWDST', '3'), 'Sacheen Lake Water and Sewer District')
+  assert.equal(describeDistrict('SEWDST', '2'), 'Water and sewer district 2')
+  assert.deepEqual(
+    describeDistricts({ SEWDST: '3', HOSPDST: '1', SCHDST: '56', CONGDST: '5', LEGDST: '7' }).map((d) => d.text),
+    ['Congressional District 5', 'Legislative District 7', 'School District 56', 'Hospital District 1',
+      'Sacheen Lake Water and Sewer District'])
+})
+
 test('Kittitas Upper and Lower District Court read with the county name', () => {
   // Live 2026-10-08 (#31): Court_Districts court_district_name 'Lower
   // District Court' at 205 W 5th Ave, Ellensburg; 'Upper District Court' at

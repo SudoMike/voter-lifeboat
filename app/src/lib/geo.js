@@ -680,6 +680,10 @@ const COUNTY_LAYERS = {
     { key: 'LIBDST', url: `${DOR_TAX_DISTRICTS}/12/query`, attr: 'DISTATTRIB' },
   ],
   lincoln: [
+    // Re-probed 2026-10-08 (#32): 211 W 2nd St, Sprague -> '7'; 302 S Lake
+    // St, Reardan -> '1'; 450 Logan St, Davenport -> no feature. No general
+    // scope uses it (every general scope is COUNTY, CD 5 or LD 9); only the
+    // archived primary's Cemetery District 7 levy does.
     { key: 'CEMDST', url: `${DOR_TAX_DISTRICTS}/3/query`, attr: 'DISTATTRIB' },
   ],
   mason: [
@@ -740,8 +744,34 @@ const COUNTY_LAYERS = {
     { key: 'EMSDST', url: `${DOR_TAX_DISTRICTS}/6/query`, attr: 'DISTATTRIB' },
   ],
   'pend-oreille': [
+    // Re-probed 2026-10-08 (#32): 714 W Pine St, Newport -> 'Commissioner -
+    // 02'; 111 Calispell Ave, Cusick, 201 Main St, Ione and 305 Park St,
+    // Metaline Falls -> 'Commissioner - 03'; 4571 State Route 211, Newport
+    // (Sacheen Lake) and 1722 Kirkpatrick Rd, Elk -> 'Commissioner - 01'. No
+    // general scope uses it (Commissioner District 2 is elected county-wide);
+    // only the archived primary does.
     { key: 'COUNTY_COUNCIL', url: 'https://services1.arcgis.com/o3wuEYcU5N00WpI1/arcgis/rest/services/Commissioner_Districts___Open_Data/FeatureServer/0/query', attr: 'commission' },
+    // WA DOR HSP2025: Public Hospital District No. 1's Newport Community
+    // Hospital bonds, scoped '1' (#32). Re-probed 2026-10-08: Newport,
+    // Cusick, 4571 State Route 211 (Sacheen Lake) and 1722 Kirkpatrick Rd,
+    // Elk -> '1'; 201 Main St, Ione and 305 Park St, Metaline Falls -> '2'
+    // (Hospital District No. 2, outside).
     { key: 'HOSPDST', url: `${DOR_TAX_DISTRICTS}/11/query`, attr: 'DISTATTRIB' },
+    // WA DOR SCH2025 (#32): Riverside School District No. 416-62's
+    // replacement levy, scoped '62' (the district's Pend Oreille strip along
+    // the Spokane County line near Elk). Live 2026-10-08: 1722 Kirkpatrick Rd
+    // and 3441 Allen Rd, Elk -> '62'; Newport and Sacheen Lake -> '56';
+    // Cusick -> '59'; Ione and Metaline Falls -> '70'.
+    { key: 'SCHDST', url: `${DOR_TAX_DISTRICTS}/20/query`, attr: 'DISTATTRIB' },
+    // WA DOR SEW2025, DOR's sewer-district layer (#32): the Sacheen Lake Water
+    // and Sewer District's one-year M&O levy, scoped '3'. DOR's 2025 levy
+    // detail lists one sewer levy in Pend Oreille County ('Sewer Excess',
+    // TDCODE 261600170), the Sacheen Lake district's; the layer's other
+    // Pend Oreille polygons ('1', '2', 'LID') carry no 2026 measure. Live
+    // 2026-10-08: 4571 State Route 211, 62 Schaefers Beach Dr and 636
+    // Mountain View Dr, Newport -> '3'; 714 W Pine St, Newport, Cusick, Ione,
+    // Metaline Falls and 1722 Kirkpatrick Rd, Elk -> no feature.
+    { key: 'SEWDST', url: `${DOR_TAX_DISTRICTS}/21/query`, attr: 'DISTATTRIB' },
   ],
   'san-juan': [
     // Re-probed 2026-10-08 (#32): 350 Court St, Friday Harbor -> '149'; 2225

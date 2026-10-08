@@ -127,6 +127,10 @@ DISTRICT_ADAPTER_LAYERS = {
     # San Juan's Lopez Solid Waste levy reads SWDDST, a presence layer on DOR
     # PRT2025 (the Port of Lopez polygon; see geo.js).
     "san-juan": ("CONGDST", "LEGDST", "CITY", "SCHDST", "FIRDST", "PORTDST", "PARKDST", "SWDDST"),
+    "lincoln": ("CONGDST", "LEGDST", "CITY", "CEMDST"),
+    # Pend Oreille's Sacheen Lake levy reads SEWDST, DOR SEW2025 (layer 21;
+    # see geo.js).
+    "pend-oreille": ("CONGDST", "LEGDST", "CITY", "COUNTY_COUNCIL", "HOSPDST", "SCHDST", "SEWDST"),
 }
 
 
