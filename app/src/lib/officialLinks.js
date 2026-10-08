@@ -76,6 +76,12 @@ const ELECTIONS = {
         'https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2005%C2%A0-%20King%20-%20North%20and%20Eastside.pdf',
       'king/voters-pamphlet-edition-06-king-south-southeast':
         'https://www.sos.wa.gov/sites/default/files/2026-10/Voters%20Pamphlet%202026%20-%20Edition%2006%20-%20King%20-%20South%20and%20Southeast.pdf',
+      // Snohomish County Auditor's general Local Voters' Pamphlet, from the
+      // package pointer counties/snohomish/raw/snohomish/
+      // local-voters-pamphlet.pdf.url. Checked 2026-10-08: 301 to
+      // .../View/151457/Nov-3-2026-General-Pamphlet, then 200
+      // application/pdf, 104 pages; PDF pages equal the printed page numbers.
+      'snohomish/local-voters-pamphlet': 'https://www.snohomishcountywa.gov/DocumentCenter/View/151457',
     },
     pamphletIndex: `${SOS_GENERAL_2026}/2026-voters-pamphlet-pdfs`,
   },
