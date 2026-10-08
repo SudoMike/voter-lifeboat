@@ -537,7 +537,7 @@ test('coverageAdvice reports degraded coverage from either cause', () => {
 // 2026-10-08, unfiltered: 19100 44th Ave W, Lynnwood -> 'SCRFA'; 806 W Main
 // St, Monroe -> 'SRF'). The mock answers like the server: the feature at the
 // point, dropped when the request's `where` excludes it.
-function mockSnohomish(matchedAddress, dorValue) {
+function mockSnohomish(matchedAddress, dorValue, court = null) {
   const calls = []
   global.fetch = async (url) => {
     calls.push(String(url))
@@ -565,7 +565,9 @@ function mockSnohomish(matchedAddress, dorValue) {
     const kept = dorValue && (!where || where === `DISTATTRIB = '${dorValue}'`)
     const attrs = String(url).includes('WADOR_PropertyTax/MapServer/7/query') && kept
       ? { DISTATTRIB: dorValue }
-      : null
+      : String(url).includes('Court_Districts/FeatureServer/0/query') && court
+        ? { District: court }
+        : null
     return { ok: true, async json() { return { features: attrs ? [{ attributes: attrs }] : [] } } }
   }
   return calls
@@ -601,6 +603,33 @@ test('another RFA or no fire feature leaves RFADST unset', async () => {
   context = await lookupBallotContext(snohomishData, '2930 Wetmore Ave Everett WA 98201')
   assert.equal('RFADST' in context.districts, false)
   assert.ok(!scopeMatches(snohomishRfa, context))
+})
+
+// Snohomish District Court electoral districts come from the Auditor's
+// Court_Districts layer, District attribute (live 2026-10-08, #27: 2930
+// Wetmore Ave, Everett -> 'Everett District Court'; 806 W Main St, Monroe ->
+// 'Evergreen District Court'). The seats are scoped to that exact string.
+const snohomishCourt = (name) => ({ kind: 'DISTRICT', county: 'snohomish', layer: 'DISTCRT', value: `${name} District Court` })
+
+test('Snohomish resolves its District Court electoral district from Court_Districts', async () => {
+  const calls = mockSnohomish('2930 WETMORE AVE, EVERETT, WA, 98201', null, 'Everett District Court')
+  const context = await lookupBallotContext(snohomishData, '2930 Wetmore Ave Everett WA 98201')
+  assert.equal(context.districts.DISTCRT, 'Everett District Court')
+  assert.deepEqual(context.missingLayers, [])
+  assert.ok(scopeMatches(snohomishCourt('Everett'), context))
+  for (const other of ['Cascade', 'Evergreen', 'South']) assert.ok(!scopeMatches(snohomishCourt(other), context))
+  const court = calls.filter((u) => u.includes('Court_Districts'))
+  assert.equal(court.length, 1)
+  assert.ok(court[0].startsWith('https://services6.arcgis.com/z6WYi9VRHfgwgtyW/arcgis/rest/services/Court_Districts/FeatureServer/0/query?'), court[0])
+  assert.equal(new URL(court[0]).searchParams.get('outFields'), 'District')
+})
+
+test('a Snohomish point in another court district does not see Everett seats', async () => {
+  mockSnohomish('806 W MAIN ST, MONROE, WA, 98272', 'SRF', 'Evergreen District Court')
+  const context = await lookupBallotContext(snohomishData, '806 W Main St Monroe WA 98272')
+  assert.equal(context.districts.DISTCRT, 'Evergreen District Court')
+  assert.ok(scopeMatches(snohomishCourt('Evergreen'), context))
+  assert.ok(!scopeMatches(snohomishCourt('Everett'), context))
 })
 
 // Spokane school and fire districts come from the county's OpenData/Boundary

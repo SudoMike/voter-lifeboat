@@ -36,6 +36,8 @@ GENERAL_CFG = {
     #           with the district's CODE, and the City of Cheney polygon
     #           carries DISTRICTID 32103 like Fire District 3)
     # PUDDST (Stevens County PUD) stays unresolvable; general_override marks it.
+    # Re-searched 2026-10-08 (#27): no public electoral boundary exists (see
+    # counties/spokane/COMPLETENESS.md, District scoping).
     "unresolvable_layers": [],
 }
 

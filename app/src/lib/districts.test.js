@@ -44,6 +44,8 @@ test('Pierce Election_Precincts values read as names; NO flags drop out', () => 
   assert.equal(describeDistrict('PTBA', 'YES'), 'Public Transportation Benefit Area')
   assert.equal(describeDistrict('DISTCRT', 'NO'), null)
   assert.equal(describeDistrict('KCDISTCRT', 'NO'), null)
+  // Snohomish's Court_Districts layer names the district outright (#27).
+  assert.equal(describeDistrict('DISTCRT', 'Everett District Court'), 'Everett District Court')
   const lines = describeDistricts({
     CONGDST: '8', LEGDST: '31', COUNTY_COUNCIL: '1', DISTCRT: 'NO', KCDISTCRT: 'YES', PTBA: 'YES',
     SCHDST: 'AUBURN SCHOOL DISTRICT NO. 408', CITY: 'Auburn',

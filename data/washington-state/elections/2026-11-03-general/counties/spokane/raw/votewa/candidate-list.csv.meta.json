@@ -20,7 +20,8 @@
   "scripted_export": "python3 pipeline/fetch_votewa_candidate_list.py --election 2026-11-03-general --refresh --write-pointer spokane: GET the direct URL with a cookie jar, check the selected Election and County labels, then POST the form back to its action replaying every hidden input (__VIEWSTATE__, __VIEWSTATE, __EVENTVALIDATION, Telerik ClientState fields) and every <select> (selected option, else the first; ctl00$ddlLanguages='en-us'), plus ctl00$ContentPlaceHolder1$grdCandidates$ctl00$ctl02$ctl00$ExportToCsvButton=' '.",
   "cache_file": "data/.cache/votewa/candidatelist-c32-e899.csv",
   "bytes": 12190,
-  "sha256": "404527bca2c72e26796b3eb11e58ffe1bb7b0bc8754609b6745aea2c5a1dd3f7",
+  "sha256": "442bca0bfeed01ac00ba695f01060f0b64d49b4de839c4d03c822a1ef98c08f7",
+  "sha256_case_normalized": "e8db5d48ada19d2d9f2922f27665d3ff42aa7edd8ec4e984ffda79fade556cd5",
   "csv_rows": 57,
   "csv_columns": [
     "District Type",

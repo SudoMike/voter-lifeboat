@@ -31,7 +31,9 @@ PRIMARY = "2026-08-04-primary"
 # COUNTY_LAYERS["snohomish"] reads RFADST from the WA DOR FIR2025 layer
 # (WADOR_PropertyTax/MapServer/7, DISTATTRIB, filtered to 'SCRFA'; 'SCRFA' at
 # 19100 44th Ave W, Lynnwood, live 2026-10-08, #21). DISTCRT (District Court
-# electoral districts) has no layer; general_override marks it unresolvable.
+# electoral districts) reads the Auditor's Court_Districts layer, whose
+# District values are '<Name> District Court' (#27); general_override scopes
+# the seats to those values.
 GENERAL_CFG = {"name": "Snohomish County", "unresolvable_layers": []}
 
 _GEN = "data/washington-state/elections/2026-11-03-general/counties/snohomish"
@@ -191,13 +193,14 @@ def general_override(r, unresolvable):
         return ("PublicUtility", "Public Utility District No. 1", f"Commissioner District {n}", ("COUNTY", None))
     if dtype == "JUDICIAL" and district.endswith(" DISTRICT COURT"):
         # Snohomish County District Court elects judges by electoral
-        # district (Cascade, Everett, Evergreen, South); geo.js has no layer
-        # for those districts yet.
+        # district (Cascade, Everett, Evergreen, South). geo.js DISTCRT reads
+        # the Auditor's Court_Districts layer (#27), whose District values are
+        # 'Cascade District Court' ... 'South District Court'; the scope value
+        # is that string.
         name = district[: -len(" DISTRICT COURT")].title()
         n = votewa.district_number(race)
-        unresolvable.add("DISTCRT")
         return ("Judicial", f"Snohomish County District Court, {name} District", f"Judge Position No. {n}",
-                ("DISTCRT", name))
+                ("DISTCRT", f"{name} District Court"))
     return None
 
 
