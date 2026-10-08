@@ -3,7 +3,7 @@ name: Eddy Ury
 slug: eddy-ury
 contest: whatcom-public-utility-district-no-1-of-whatcom-county-commissioner-district-1
 depth: light
-evidence_level: rich
+evidence_level: moderate
 researched_at: 2026-10-08
 derived_from:
   - data/washington-state/elections/2026-11-03-general/counties/whatcom/interim/voter-guide-text/race-186925.txt
