@@ -5,7 +5,8 @@ environment, so this package is keyed to the official sample ballot URL
 pointer and cross-validated against the official VoteWA PRIMARY 2026
 candidate list export (data/washington-state/elections/<id>/statewide/raw). Scopes cover
 CONGDST, LEGDST, CITY, COUNTY_COUNCIL, FIRDST, DISTCRT, and countywide via
-the Pierce district adapter in app/src/lib/geo.js. PCO races are excluded
+the Pierce district adapter in app/src/lib/geo.js (the general adds KCDISTCRT,
+PTBA and SCHDST). PCO races are excluded
 (statewide convention).
 """
 
@@ -36,11 +37,12 @@ PRIMARY = "2026-08-04-primary"
 
 GENERAL_CFG = {
     "name": "Pierce County",
-    # Measure scope layers the Pierce District Adapter (geo.js
-    # COUNTY_LAYERS.pierce) does not resolve yet. Both exist as attributes of
-    # the Election_Precincts layer it already queries for DISTCRT: SCHOOL
-    # (school district name) and PIERCE_TRANSIT ('YES'/'NO').
-    "unresolvable_layers": ("SCHDST", "PTBA"),
+    # Measure scopes resolve through geo.js COUNTY_LAYERS.pierce (#21): SCHDST
+    # and PTBA read the Election_Precincts layer's SCHOOL (school district
+    # name) and PIERCE_TRANSIT ('YES'/'NO'), the layer DISTCRT reads
+    # PC_DISTRICT from (live point queries 2026-10-08, values in the comments
+    # below).
+    "unresolvable_layers": (),
 }
 
 _GENERAL_RAW = "data/washington-state/elections/2026-11-03-general/counties/pierce/raw"
@@ -115,7 +117,7 @@ GENERAL_MEASURES = {"2026-11-03-general": {
                          "About $1.33 per $1,000 more (to a maximum $2.90 per $1,000) for 2027, then up to 6% a year through 2032."),
         # Pierce Transit's benefit area: Election_Precincts PIERCE_TRANSIT
         # 'YES' at 930 Tacoma Ave S, Tacoma; 'NO' at 121 Washington St, South
-        # Prairie (2026-10-08). Not configured in geo.js: unresolvable.
+        # Prairie (2026-10-08). geo.js PTBA reads PIERCE_TRANSIT.
         _general_measure("pierce-pierce-transit-proposition-no-1", "7308", "Pierce Transit", "Proposition No. 1",
                          "Maintaining and Expanding Local Transit Service Sales and Use Tax Increase", _district("PTBA", "YES"),
                          "Adds a 0.3% sales and use tax from April 1, 2027 to maintain and expand Pierce Transit bus service and fund fare-free rides for seniors and youth.",
@@ -162,9 +164,8 @@ def general_override(r, unresolvable):
         # races as King's package, on the ballot in the Pierce precincts whose
         # Election_Precincts KING_DISTRICT is 'YES' (Pierce-side Auburn:
         # 1402 Lake Tapps Pkwy SE returned KING_DISTRICT YES, PC_DISTRICT NO,
-        # 2026-10-08). geo.js has no layer for that field yet.
+        # 2026-10-08). geo.js KCDISTCRT reads KING_DISTRICT.
         n = votewa.district_number(race)
-        unresolvable.add("KCDISTCRT")
         return ("Judicial", "King County District Court, Southeast Electoral District", f"Judge Position No. {n}",
                 ("KCDISTCRT", "YES"))
     return None
