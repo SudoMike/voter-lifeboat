@@ -1030,6 +1030,7 @@ export async function geocode(address) {
     x: match.coordinates.x,
     y: match.coordinates.y,
     matched: match.matchedAddress,
+    addressComponents: match.addressComponents || {},
     county,
     geographies: match.geographies || {},
   }
@@ -1192,6 +1193,14 @@ async function lookupCountyDistricts(pt) {
   const layers = COUNTY_LAYERS[pt.county.id]
   const districts = lookupCensusDistricts(pt)
   const missingLayers = []
+  // Census defect observed 2026-10-08: TIGER line 655635849 places Colfax's
+  // N Main St range 318-498 in Albion. Suppress the wrong city's Measures
+  // until Census fixes the segment. Postal/place mismatches elsewhere are
+  // legitimate, so this guard is limited to Whitman, COLFAX and Albion.
+  if (pt.county.id === 'whitman' && pt.addressComponents.city?.toUpperCase() === 'COLFAX' && districts.CITY === 'Albion') {
+    delete districts.CITY
+    missingLayers.push('CITY')
+  }
   // Every Washington address sits in a congressional and a legislative
   // district; their absence means the census response degraded (e.g. the
   // geography vintage rotated), not that the voter has none.

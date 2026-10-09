@@ -632,7 +632,10 @@ town, fire and park measures read Census places and the DOR FIR2025 and
 PKR2025 layers the county already listed. Eight of its measures filed
 hardship waivers and are not in the printed pamphlet; they link the VoteWA
 guide. The Census geocoder places some Colfax Main St addresses in Albion
-(see `counties/whitman/COMPLETENESS.md`). Douglas's Eastmont SD 206 bonds
+(see `counties/whitman/COMPLETENESS.md`). The #37 override in `geo.js` leaves
+`CITY` unresolved for Whitman matches with postal city COLFAX and Incorporated
+Place Albion, giving Partial County Coverage instead of Albion's Measures.
+Douglas's Eastmont SD 206 bonds
 read DOR SCH2025 and its Cemetery District 2 levy CEM2025. Its proposed
 Rimrock Meadows Fire Protection District No. 9 (formation and three initial
 commissioners, voted on inside the proposed boundary only) has no DOR
