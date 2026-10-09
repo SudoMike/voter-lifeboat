@@ -137,7 +137,9 @@ export function buildBrief(data, context, answers, contests, measures, shareUrl)
             ? `${r.score}/100 match`
             : c.withdrawn
               ? 'WITHDRAWN after pamphlet printing'
-              : 'not enough evidence to score'
+              : r.reason === 'experience-only'
+                ? 'scored on record vs. renewal only; no Alignment Score'
+                : 'not enough evidence to score'
         L.push(`#### ${c.name}${c.party ? ` (${c.party})` : ''} — ${head} [evidence: ${c.evidence_level}]`)
         if (c.summary) L.push(c.summary)
         for (const h of c.highlights || []) L.push(`- ${h}`)
@@ -176,7 +178,7 @@ export function buildBrief(data, context, answers, contests, measures, shareUrl)
 Use these instructions only after I ask you to generate the report.
 
 ## YOUR RESEARCH
-Search the web for every serious contender above: news coverage, endorsements, donor records, public statements, voting history where applicable. If you do NOT have web access, say so in a prominent banner at the top of the report and confine yourself to analyzing this brief's own contents — do not invent outside facts and do not fabricate links. Candidates marked "not enough evidence to score" are in scope: you may find evidence the pipeline didn't, and one of them may be the best pick. Apply the research lenses I chose and address anything else I asked you to check directly and prominently in the report. Also draw on whatever you already know about me from our past conversations — my circumstances, priorities, and how I think — to sharpen your verdicts.
+Search the web for every serious contender above: news coverage, endorsements, donor records, public statements, voting history where applicable. If you do NOT have web access, say so in a prominent banner at the top of the report and confine yourself to analyzing this brief's own contents — do not invent outside facts and do not fabricate links. Candidates marked "not enough evidence to score" or "scored on record vs. renewal only; no Alignment Score" are in scope: you may find evidence the pipeline didn't, and one of them may be the best pick. Apply the research lenses I chose and address anything else I asked you to check directly and prominently in the report. Also draw on whatever you already know about me from our past conversations — my circumstances, priorities, and how I think — to sharpen your verdicts.
 
 ## COVERAGE RULES
 - Cover EVERY contested race on my ballot, each in its own section, with exactly ONE explicit pick per race. Skip uncontested races.

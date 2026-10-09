@@ -69,14 +69,18 @@ export const LOW_COVERAGE = 0.5 // < half the voter's answered, applicable axes
 
 export function alignCandidate(candidate, answers, applicableAnswered) {
   if (candidate.withdrawn) return { score: null, shared: [], reason: 'withdrawn' }
+  const usable = Object.entries(candidate.scores || {}).filter(([, s]) => s.confidence !== 'low')
   const shared = []
-  for (const [axis, s] of Object.entries(candidate.scores || {})) {
-    if (s.confidence === 'low') continue
+  for (const [axis] of usable) {
     if (answers[axis] == null) continue
     shared.push(axis)
   }
   if (shared.length < MIN_SHARED_AXES) {
-    return { score: null, shared, reason: 'insufficient-data' }
+    return {
+      score: null, shared,
+      reason: usable.length === 1 && usable[0][0] === 'experience'
+        ? 'experience-only' : 'insufficient-data',
+    }
   }
   let num = 0
   let den = 0
