@@ -206,9 +206,10 @@ Each Contest belongs to exactly one, derived from its pipeline category.
 _Avoid_: Card group, bucket, level
 
 **Pick Row**:
-One line on a Ballot Section card, one per Contest: the Contest heading,
-the Candidate Photo, the best-match name and the score dial, or the Lean for
-a Measure. Tapping it opens the Contest's full card in place.
+One line on a Ballot Section card, one per contested Contest: the Contest
+heading, the Candidate Photo, the best-match name and the score dial, or the
+Lean for a Measure. Tapping it opens the Contest's full card in place. A
+section's uncontested Contests share one muted row at the foot of the card.
 _Avoid_: Summary row, collapsed card, list item
 
 **AI Report**:

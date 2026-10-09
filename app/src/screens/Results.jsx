@@ -238,16 +238,16 @@ function MarkerLegend() {
   return (
     <div className="marker-legend">
       <div className="marker-legend__item">
-        <div className="gauge gauge--legend" style={{ '--pct': '80%' }}><b>80</b></div>
-        <span><strong>Green dial</strong> — a strong match with your answers. The number is the score (0–100); the ring fills to match.</span>
+        <div className="gauge" style={{ '--pct': '80%' }}><b><DialFace pct={80} word="match" /></b></div>
+        <span><strong>Green dial</strong> — a strong match with your answers. The percentage is how closely the candidate's scored positions line up with yours; the ring fills to match.</span>
       </div>
       <div className="marker-legend__item">
-        <div className="gauge gauge--low gauge--legend" style={{ '--pct': '40%' }}><b>40</b></div>
-        <span><strong>Gray dial</strong> — a real score, but a weak match (below {STRONG_MATCH}).</span>
+        <div className="gauge gauge--low" style={{ '--pct': '40%' }}><b><DialFace pct={40} word="match" /></b></div>
+        <span><strong>Gray dial</strong> — a real score, but a weak match (below {STRONG_MATCH}%). The name beside it is still the best of the options.</span>
       </div>
       <div className="marker-legend__item">
-        <div className="gauge--dashed gauge--legend">?</div>
-        <span><strong>Dashed square</strong> — no confident score: a rough read from thin evidence (shows a faint number), a candidate we couldn't score (<b>?</b>), or one who withdrew (<b>—</b>).</span>
+        <div className="gauge--dashed">?</div>
+        <span><strong>Dashed square</strong> — no confident score: a rough read from thin evidence (a faint percentage marked "rough"), a candidate we couldn't score (<b>?</b>), or one who withdrew (<b>—</b>).</span>
       </div>
       <div className="marker-legend__item">
         <CandidatePhoto name="Ballot Charted" size={34} />
@@ -257,9 +257,20 @@ function MarkerLegend() {
   )
 }
 
+// What the dial reads: the match as a percentage over one word saying what
+// it is, so "69% match" needs no legend.
+function DialFace({ pct, word }) {
+  return (
+    <>
+      <span className="dial__pct">{pct}%</span>
+      <span className="dial__word">{word}</span>
+    </>
+  )
+}
+
 // The score dial beside a ranked candidate: a round dial for a confident
 // score, a dashed square for a rough read, "?" when we could not score, "—"
-// when the candidate withdrew. The pick rows reuse it for the best match.
+// when the candidate withdrew. The Pick Rows reuse it for the best match.
 function ScoreDial({ row }) {
   const c = row.cand
   if (c.withdrawn)
@@ -269,16 +280,18 @@ function ScoreDial({ row }) {
   if (c.evidence_level === 'pamphlet-only' || row.coverage < LOW_COVERAGE)
     return (
       <div className="gauge--dashed" title={`Rough read only (${row.score}/100) — thin evidence, so treat this as provisional.`}>
-        {row.score}
+        <DialFace pct={row.score} word="rough" />
       </div>
     )
   return (
     <div
       className={`gauge${row.score < STRONG_MATCH ? ' gauge--low' : ''}`}
       style={{ '--pct': `${row.score}%` }}
-      title={`${row.score}/100 match with your answers — ${row.score < STRONG_MATCH ? 'a weak match' : 'a strong match'}.`}
+      title={`${row.score}% match with your answers — ${row.score < STRONG_MATCH ? 'a weak match' : 'a strong match'}.`}
     >
-      <b>{row.score}</b>
+      <b>
+        <DialFace pct={row.score} word="match" />
+      </b>
     </div>
   )
 }
@@ -601,13 +614,35 @@ function MeasurePickRow({ measure, answers, onOpen }) {
   )
 }
 
+// The muted row at the foot of a Ballot Section card naming its uncontested
+// contests; it opens into their info panels.
+function UncontestedRow({ contests, onOpen }) {
+  const names = contests.map((c) => c.candidates[0]?.name).filter(Boolean)
+  return (
+    <button className="pick pick--uncontested" onClick={onOpen}>
+      <div className="pick__text">
+        <span className="pick__tag">
+          {contests.length} uncontested{names.length ? ': ' : ''}
+        </span>
+        {names.join(', ')}
+      </div>
+      <div className="chev">▾</div>
+    </button>
+  )
+}
+
 // One Ballot Section as one card: its name, then a Pick Row per measure and
-// contest. `openKey` names the one contest or measure open across the page.
+// contested contest, then one muted row for its uncontested contests.
+// `openKey` names the one contest, measure or uncontested row open across
+// the page.
 function BallotSectionCard({ section, data, answers, openKey, setOpenKey }) {
+  const uncontested = section.contests.filter((c) => c.uncontested)
   const slots = [
     ...section.measures.map((m) => ({ key: `measure:${m.slug}`, measure: m })),
-    ...section.contests.map((c) => ({ key: `contest:${c.slug}`, contest: c })),
+    ...section.contests.filter((c) => !c.uncontested).map((c) => ({ key: `contest:${c.slug}`, contest: c })),
   ]
+  const uncontestedKey = `uncontested:${section.name}`
+  const close = () => setOpenKey(null)
   return (
     <section className="card ballot-section">
       <div className="ballot-section__head">
@@ -615,7 +650,6 @@ function BallotSectionCard({ section, data, answers, openKey, setOpenKey }) {
       </div>
       {slots.map(({ key, measure, contest }) => {
         const open = openKey === key
-        const close = () => setOpenKey(null)
         const show = () => setOpenKey(key)
         return (
           <div key={key} className={`pick-slot${open ? ' pick-open' : ''}`}>
@@ -633,6 +667,17 @@ function BallotSectionCard({ section, data, answers, openKey, setOpenKey }) {
           </div>
         )
       })}
+      {uncontested.length > 0 && (
+        <div className={`pick-slot${openKey === uncontestedKey ? ' pick-open pick-open--stack' : ''}`}>
+          {openKey === uncontestedKey ? (
+            uncontested.map((c) => (
+              <ContestCard key={c.slug} data={data} contest={c} answers={answers} onCollapse={close} />
+            ))
+          ) : (
+            <UncontestedRow contests={uncontested} onOpen={() => setOpenKey(uncontestedKey)} />
+          )}
+        </div>
+      )}
     </section>
   )
 }
