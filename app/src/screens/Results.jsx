@@ -383,7 +383,7 @@ function ContestCard({ data, contest, answers, onCollapse }) {
               <div style={{ flex: 1, minWidth: 0 }}>
                 <div className={`cand-name${r.score != null && r.score < STRONG_MATCH ? ' cand-name--dim' : ''}`}>
                   {c.name}{' '}
-                  {r.best && <span className="best-tag">★ Best match for you</span>}
+                  {r.best && <span className="best-tag">★ Great match for you</span>}
                   {c.withdrawn && <span className="withdrawn-tag">withdrew</span>}
                 </div>
                 <div className={`evidence ${ev.cls}`}>
@@ -424,8 +424,8 @@ function ContestCard({ data, contest, answers, onCollapse }) {
 // The Lean pill a measure shows on its Pick Row and in its card, or null
 // when the interview did not map onto the measure.
 function leanPill(lean) {
-  return lean === 'yes' ? { text: 'leans YES', bg: 'var(--seafoam)' }
-    : lean === 'no' ? { text: 'leans NO', bg: 'var(--coral)' }
+  return lean === 'yes' ? { text: 'vote YES', bg: 'var(--seafoam)' }
+    : lean === 'no' ? { text: 'vote NO', bg: 'var(--coral)' }
     : lean === 'split' ? { text: 'genuinely split', bg: 'var(--muted-deep)' }
     : null
 }
@@ -581,7 +581,7 @@ function PickRow({ contest, answers, onOpen }) {
     pick = (
       <>
         {top.cand.name}
-        {top.best && <> <span className="best-tag">★ Best match</span></>}
+        {top.best && <> <span className="best-tag">★ Great match</span></>}
       </>
     )
   }
