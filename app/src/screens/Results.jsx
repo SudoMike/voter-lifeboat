@@ -35,6 +35,8 @@ import { postReport, shouldRecordReport } from '../lib/reports.js'
 import GitHubLink from './GitHubLink.jsx'
 import CandidatePhoto from './CandidatePhoto.jsx'
 
+const EXPERIENCE_ONLY_COPY = 'Scored on record vs. renewal only. Not enough issue evidence to compare against your values.'
+
 const EVIDENCE = {
   rich: { marks: '◆◆◆', cls: 'evidence--rich', label: 'Rich record' },
   moderate: { marks: '◆◆◇', cls: 'evidence--mod', label: 'Moderate record' },
@@ -122,11 +124,11 @@ function CandidateExpanded({ data, contest, row, answers }) {
   const c = row.cand
   const srcById = Object.fromEntries((c.sources || []).map((s) => [s.id, s]))
   const axes = Object.entries(c.scores || {})
-    .filter(([axis]) => answers[axis])
-    .sort((a, b) => answers[b[0]].w - answers[a[0]].w)
+    .filter(([axis]) => answers[axis] || (row.reason === 'experience-only' && axis === 'experience'))
+    .sort((a, b) => (answers[b[0]]?.w || 0) - (answers[a[0]]?.w || 0))
   const pam = pamphletLink(c.pamphlet_pages, contest.owner, data.election?.id)
   return (
-    <div className="race-expand rise">
+    <div id={`candidate-evidence-${contest.slug}-${c.slug}`} className="race-expand rise">
       {c.summary && (
         <p className="copy" style={{ fontSize: 13, marginBottom: 12 }}>
           {c.summary}
@@ -153,8 +155,8 @@ function CandidateExpanded({ data, contest, row, answers }) {
         <div className="stack" style={{ gap: 14 }}>
           {axes.map(([axisId, s]) => {
             const ax = data.rubric.axes.find((a) => a.id === axisId)
-            const you = answers[axisId].v
-            const verdict = axisMatchVerdict(you, s.score)
+            const you = answers[axisId]?.v
+            const verdict = you == null ? { label: 'not answered', cls: '', partial: false } : axisMatchVerdict(you, s.score)
             const cites = (s.citations || []).map((id) => srcById[id]).filter(Boolean)
             return (
               <div key={axisId}>
@@ -167,11 +169,11 @@ function CandidateExpanded({ data, contest, row, answers }) {
                 </div>
                 <div className="axis-track">
                   <div className={`axis-dot${verdict.partial ? ' axis-dot--partial' : ''}`} style={{ left: pct(s.score) }} />
-                  <div className="axis-you" style={{ left: pct(you) }} />
+                  {you != null && <div className="axis-you" style={{ left: pct(you) }} />}
                 </div>
                 <div className="axis-scale">
                   <span>{ax?.pole_a.label.toLowerCase()}</span>
-                  <span className="you">◆ you</span>
+                  {you != null && <span className="you">◆ you</span>}
                   <span>{ax?.pole_b.label.toLowerCase()}</span>
                 </div>
                 <div className="axis-note">
@@ -247,7 +249,7 @@ function MarkerLegend() {
       </div>
       <div className="marker-legend__item">
         <div className="gauge--dashed">?</div>
-        <span><strong>Dashed square</strong> — no confident score: a rough read from thin evidence (a faint percentage marked "rough"), a candidate we couldn't score (<b>?</b>), or one who withdrew (<b>—</b>).</span>
+        <span><strong>Dashed square</strong> — no confident score: a rough read from thin evidence (a faint percentage marked "rough"), a candidate we couldn't score (<b>?</b>), or one who withdrew (<b>—</b>). A <b>?</b> can mean scored on record vs. renewal only, or not enough evidence to compare. Open the candidate card to see the available evidence.</span>
       </div>
       <div className="marker-legend__item">
         <CandidatePhoto name="Ballot Charted" size={34} />
@@ -276,7 +278,7 @@ function ScoreDial({ row }) {
   if (c.withdrawn)
     return <div className="gauge--dashed" title="Withdrew after the pamphlet was printed — may still be on your ballot.">—</div>
   if (row.score == null)
-    return <div className="gauge--dashed" title="Not enough confident evidence to score this candidate against your values.">?</div>
+    return <div className="gauge--dashed" title={row.reason === 'experience-only' ? EXPERIENCE_ONLY_COPY : "Not enough confident evidence to score this candidate against your values."}>?</div>
   if (c.evidence_level === 'pamphlet-only' || row.coverage < LOW_COVERAGE)
     return (
       <div className="gauge--dashed" title={`Rough read only (${row.score}/100) — thin evidence, so treat this as provisional.`}>
@@ -376,6 +378,8 @@ function ContestCard({ data, contest, answers, onCollapse }) {
             <button
               className={`cand${c.withdrawn ? ' cand--withdrawn' : ''}`}
               style={{ padding: `${i === 0 ? 13 : 9}px 18px ${last && !open ? 16 : 6}px` }}
+              aria-expanded={open}
+              aria-controls={open ? `candidate-evidence-${contest.slug}-${c.slug}` : undefined}
               onClick={() => setOpenSlug(open ? null : c.slug)}
             >
               <ScoreDial row={r} />
@@ -398,7 +402,7 @@ function ContestCard({ data, contest, answers, onCollapse }) {
                 )}
                 {r.score == null && !c.withdrawn && (
                   <div className="note" style={{ fontSize: 11 }}>
-                    Not enough confident evidence to score against your values.
+                    {r.reason === 'experience-only' ? EXPERIENCE_ONLY_COPY : 'Not enough confident evidence to score against your values.'}
                   </div>
                 )}
                 {r.score != null && r.coverage < LOW_COVERAGE && (

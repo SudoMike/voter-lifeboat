@@ -142,3 +142,36 @@ test('alignCandidate ignores answered axes the candidate was never scored on', (
     rankContest(contest, base).rows.map((r) => [r.score, r.coverage])
   )
 })
+
+test('experience-only describes usable evidence regardless of skipped answers', () => {
+  for (const answers of [{ experience: { v: -1, w: 1 } }, {}]) {
+    assert.deepEqual(alignCandidate(cand({ experience: -1 }), answers, 1), {
+      score: null, shared: Object.keys(answers), reason: 'experience-only',
+    })
+  }
+  const c = cand({ experience: -1 })
+  c.scores.judicial = { score: 1, confidence: 'low' }
+  assert.equal(alignCandidate(c, {}, 0).reason, 'experience-only')
+  assert.equal(alignCandidate({ scores: { experience: { score: -1, confidence: 'low' } } }, {}, 0).reason, 'insufficient-data')
+  assert.equal(alignCandidate(cand({}), {}, 0).reason, 'insufficient-data')
+  assert.equal(alignCandidate(cand({ judicial: 1 }), {}, 0).reason, 'insufficient-data')
+  assert.equal(alignCandidate(cand({ experience: -1 }, { withdrawn: true }), {}, 0).reason, 'withdrawn')
+})
+
+test('skipping another usable axis does not make a candidate experience-only', () => {
+  const c = cand({ experience: -1, judicial: 1 })
+  assert.equal(alignCandidate(c, { experience: { v: -1, w: 1 } }, 2).reason, 'insufficient-data')
+  assert.equal(alignCandidate(c, { judicial: { v: 1, w: 1 } }, 2).reason, 'insufficient-data')
+  assert.equal(alignCandidate(c, { experience: { v: -1, w: 1 }, judicial: { v: 1, w: 1 } }, 2).score, 67)
+})
+
+test('Justice Position 5 distinguishes Angelis evidence and keeps Larson scored first', () => {
+  const contest = general.contests.find((c) => c.candidates.some((c) => c.name === 'Theo Angelis'))
+  assert.ok(contest)
+  const answers = Object.fromEntries(general.rubric.axes.map((a) => [a.id, { v: 0, w: 1 }]))
+  const { rows } = rankContest(contest, answers)
+  assert.equal(rows.find((r) => r.cand.name === 'Theo Angelis').reason, 'experience-only')
+  assert.equal(rows.find((r) => r.cand.name === 'Theo Angelis').score, null)
+  assert.equal(rows[0].cand.name, 'Dave Larson')
+  assert.equal(rows[0].score, alignCandidate(rows[0].cand, answers).score)
+})

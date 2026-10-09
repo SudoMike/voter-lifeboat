@@ -183,3 +183,21 @@ test('a Ballot Brief with no measures has no Measures section', () => {
   assert.doesNotMatch(text, /^## MEASURES$/m)
   assert.match(text, /^## COURTS$/m)
 })
+
+test('Ballot Brief distinguishes experience-only evidence from missing evidence', () => {
+  const contest = {
+    slug: 'x', office: 'Supreme Court', district: 'Justice Position No. 5',
+    category: 'StateSupremeCourt', scope: { kind: 'STATEWIDE' },
+    candidates: [
+      { name: 'Experience candidate', scores: { experience: { score: -1, confidence: 'high' } } },
+      { name: 'No evidence candidate', scores: {} },
+      { name: 'Skipped issue candidate', scores: { experience: { score: -1, confidence: 'high' }, judicial: { score: 1, confidence: 'high' } } },
+    ],
+  }
+  for (const profile of [{}, { experience: { v: -1, w: 1 } }]) {
+    const text = buildBrief(data, statewideOnly, profile, [contest], [], 'https://example.test/')
+    assert.match(text, /#### Experience candidate — scored on record vs\. renewal only; no Alignment Score/)
+    assert.match(text, /#### No evidence candidate — not enough evidence to score/)
+    assert.match(text, /#### Skipped issue candidate — not enough evidence to score/)
+  }
+})
