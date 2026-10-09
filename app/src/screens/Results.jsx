@@ -12,6 +12,7 @@ import {
 } from '../lib/scoring.js'
 import { writeHash } from '../lib/codec.js'
 import { buildBrief } from '../lib/brief.js'
+import { ballotSections } from '../lib/ballotSections.js'
 import { contestHeading } from '../lib/contests.js'
 import { layerLabel } from '../lib/districts.js'
 import {
@@ -256,7 +257,35 @@ function MarkerLegend() {
   )
 }
 
-function ContestCard({ data, contest, answers }) {
+// The score dial beside a ranked candidate: a round dial for a confident
+// score, a dashed square for a rough read, "?" when we could not score, "—"
+// when the candidate withdrew. The pick rows reuse it for the best match.
+function ScoreDial({ row }) {
+  const c = row.cand
+  if (c.withdrawn)
+    return <div className="gauge--dashed" title="Withdrew after the pamphlet was printed — may still be on your ballot.">—</div>
+  if (row.score == null)
+    return <div className="gauge--dashed" title="Not enough confident evidence to score this candidate against your values.">?</div>
+  if (c.evidence_level === 'pamphlet-only' || row.coverage < LOW_COVERAGE)
+    return (
+      <div className="gauge--dashed" title={`Rough read only (${row.score}/100) — thin evidence, so treat this as provisional.`}>
+        {row.score}
+      </div>
+    )
+  return (
+    <div
+      className={`gauge${row.score < STRONG_MATCH ? ' gauge--low' : ''}`}
+      style={{ '--pct': `${row.score}%` }}
+      title={`${row.score}/100 match with your answers — ${row.score < STRONG_MATCH ? 'a weak match' : 'a strong match'}.`}
+    >
+      <b>{row.score}</b>
+    </div>
+  )
+}
+
+// The full contest card, opened in place from its pick row; `onCollapse`
+// closes it from the heading.
+function ContestCard({ data, contest, answers, onCollapse }) {
   const [openSlug, setOpenSlug] = useState(null)
   const { rows, tooClose } = rankContest(contest, answers)
   const { office, place } = contestHeading(contest)
@@ -265,8 +294,11 @@ function ContestCard({ data, contest, answers }) {
   if (contest.uncontested) {
     const c = contest.candidates[0]
     return (
-      <section className="panel panel--sand" style={{ margin: '12px 20px 0' }}>
-        <div className="eyebrow eyebrow--sm eyebrow--muted">{heading}</div>
+      <section className="panel panel--sand card--embedded">
+        <button className="card-head" onClick={onCollapse}>
+          <div className="eyebrow eyebrow--sm eyebrow--muted">{heading}</div>
+          <div className="chev">▴</div>
+        </button>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 10, marginTop: 4 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, minWidth: 0 }}>
             <CandidatePhoto photo={c.photo} name={c.name} size={40} />
@@ -299,9 +331,12 @@ function ContestCard({ data, contest, answers }) {
   }
 
   return (
-    <section className="card" style={{ margin: '16px 20px 0', overflow: 'hidden' }}>
+    <section className="card card--embedded" style={{ overflow: 'hidden' }}>
       <div style={{ padding: '14px 18px 10px', borderBottom: '2px dashed var(--sand)' }}>
-        <div className="eyebrow eyebrow--sm">{heading}</div>
+        <button className="card-head" onClick={onCollapse}>
+          <div className="eyebrow eyebrow--sm">{heading}</div>
+          <div className="chev">▴</div>
+        </button>
         {contest.term && (
           <div className="note" style={{ marginTop: 3, fontSize: 11.5, fontWeight: 800 }}>
             {contest.term}
@@ -330,21 +365,7 @@ function ContestCard({ data, contest, answers }) {
               style={{ padding: `${i === 0 ? 13 : 9}px 18px ${last && !open ? 16 : 6}px` }}
               onClick={() => setOpenSlug(open ? null : c.slug)}
             >
-              {c.withdrawn ? (
-                <div className="gauge--dashed" title="Withdrew after the pamphlet was printed — may still be on your ballot.">—</div>
-              ) : r.score == null ? (
-                <div className="gauge--dashed" title="Not enough confident evidence to score this candidate against your values.">?</div>
-              ) : c.evidence_level === 'pamphlet-only' || r.coverage < LOW_COVERAGE ? (
-                <div className="gauge--dashed" title={`Rough read only (${r.score}/100) — thin evidence, so treat this as provisional.`}>{r.score}</div>
-              ) : (
-                <div
-                  className={`gauge${r.score < STRONG_MATCH ? ' gauge--low' : ''}`}
-                  style={{ '--pct': `${r.score}%` }}
-                  title={`${r.score}/100 match with your answers — ${r.score < STRONG_MATCH ? 'a weak match' : 'a strong match'}.`}
-                >
-                  <b>{r.score}</b>
-                </div>
-              )}
+              <ScoreDial row={r} />
               <CandidatePhoto photo={c.photo} name={c.name} size={46} />
               <div style={{ flex: 1, minWidth: 0 }}>
                 <div className={`cand-name${r.score != null && r.score < STRONG_MATCH ? ' cand-name--dim' : ''}`}>
@@ -387,117 +408,95 @@ function ContestCard({ data, contest, answers }) {
   )
 }
 
-function MeasureCard({ data, measure, answers }) {
-  const [open, setOpen] = useState(false)
-  const { lean } = measureLean(measure, answers)
-  const pill =
-    lean === 'yes' ? { text: 'leans YES', bg: 'var(--seafoam)' }
+// The Lean pill a measure shows on its Pick Row and in its card, or null
+// when the interview did not map onto the measure.
+function leanPill(lean) {
+  return lean === 'yes' ? { text: 'leans YES', bg: 'var(--seafoam)' }
     : lean === 'no' ? { text: 'leans NO', bg: 'var(--coral)' }
     : lean === 'split' ? { text: 'genuinely split', bg: 'var(--muted-deep)' }
     : null
+}
+
+function LeanPill({ pill }) {
+  if (!pill) return <span className="note" style={{ fontSize: 11 }}>no lean</span>
+  return (
+    <span className="pill-lean" style={{ background: pill.bg }}>
+      {pill.text}
+    </span>
+  )
+}
+
+// The full measure card, opened in place from its Pick Row; `onToggle`
+// collapses it from the heading.
+function MeasureCard({ data, measure, answers, onToggle }) {
+  const { lean } = measureLean(measure, answers)
+  const pill = leanPill(lean)
   const pam = pamphletLink(measure.pamphlet_pages, measure.owner, data.election?.id)
   return (
-    <section className="card" style={{ margin: '12px 20px 0', overflow: 'hidden' }}>
-      <button className="cand" style={{ padding: '14px 18px' }} onClick={() => setOpen(!open)}>
+    <section className="card card--embedded" style={{ overflow: 'hidden' }}>
+      <button className="cand" style={{ padding: '14px 18px' }} onClick={onToggle}>
         <div style={{ flex: 1 }}>
           <div className="eyebrow eyebrow--sm">
             {measure.jurisdiction.toUpperCase()} · {measure.proposition.toUpperCase()}
           </div>
           <div style={{ fontWeight: 800, fontSize: 15, marginTop: 2 }}>{measure.title}</div>
         </div>
-        {pill ? (
-          <span className="pill-lean" style={{ background: pill.bg }}>
-            {pill.text}
-          </span>
-        ) : (
-          <span className="note" style={{ fontSize: 11 }}>no lean</span>
-        )}
-        <div className="chev">{open ? '▴' : '▾'}</div>
+        <LeanPill pill={pill} />
+        <div className="chev">▴</div>
       </button>
-      {open && (
-        <div className="race-expand rise" style={{ marginTop: 0 }}>
-          <div style={{ background: 'var(--seafoam-tint)', borderRadius: 14, padding: '13px 15px' }}>
-            <div className="eyebrow" style={{ letterSpacing: 1 }}>WHAT IT ACTUALLY DOES</div>
-            <p className="copy" style={{ fontSize: 13.5, marginTop: 5, color: 'var(--navy)' }}>
-              {measure.what_it_does} {measure.cost_line && <em>({measure.cost_line})</em>}
-            </p>
-          </div>
-          {pill ? (
-            <div style={{ marginTop: 12, display: 'flex', alignItems: 'center', gap: 12 }}>
-              <span className="pill-lean" style={{ background: pill.bg, fontSize: 15, padding: '8px 16px' }}>
-                {pill.text}
-              </span>
-              <div style={{ fontSize: 12, lineHeight: 1.4, fontWeight: 700, color: 'var(--ink-soft)' }}>
-                for you — based on your {Object.keys(measure.lean_mappings).join(' & ')} answers
-              </div>
-            </div>
-          ) : (
-            <div className="dashed-note" style={{ marginTop: 12 }}>
-              <strong>No lean shown</strong> — your interview didn't map cleanly onto this one, and we won't fake it.
-            </div>
-          )}
-          <div style={{ display: 'flex', gap: 10, marginTop: 14 }}>
-            <div style={{ flex: 1, background: 'var(--seafoam-tint)', borderRadius: 14, padding: '12px 13px' }}>
-              <div className="eyebrow" style={{ letterSpacing: 1, color: 'var(--seafoam-deep)' }}>✓ PRO</div>
-              <p style={{ fontSize: 12, lineHeight: 1.55, fontWeight: 600, margin: '5px 0 0' }}>{measure.pro_summary}</p>
-            </div>
-            <div style={{ flex: 1, background: 'var(--coral-tint)', borderRadius: 14, padding: '12px 13px' }}>
-              <div className="eyebrow" style={{ letterSpacing: 1, color: '#C05A3E' }}>✕ CON</div>
-              <p style={{ fontSize: 12, lineHeight: 1.55, fontWeight: 600, margin: '5px 0 0' }}>{measure.con_summary}</p>
-            </div>
-          </div>
-          <p className="note" style={{ margin: '12px 0 0', textAlign: 'center', fontSize: 11.5 }}>
-            Summaries of official pamphlet statements —{' '}
-            {pam ? (
-              <a className="cite" href={pam} target="_blank" rel="noopener noreferrer">
-                read them unedited
-              </a>
-            ) : (
-              'see the official pamphlet'
-            )}
-            .
+      <div className="race-expand rise" style={{ marginTop: 0 }}>
+        <div style={{ background: 'var(--seafoam-tint)', borderRadius: 14, padding: '13px 15px' }}>
+          <div className="eyebrow" style={{ letterSpacing: 1 }}>WHAT IT ACTUALLY DOES</div>
+          <p className="copy" style={{ fontSize: 13.5, marginTop: 5, color: 'var(--navy)' }}>
+            {measure.what_it_does} {measure.cost_line && <em>({measure.cost_line})</em>}
           </p>
         </div>
-      )}
+        {pill ? (
+          <div style={{ marginTop: 12, display: 'flex', alignItems: 'center', gap: 12 }}>
+            <span className="pill-lean" style={{ background: pill.bg, fontSize: 15, padding: '8px 16px' }}>
+              {pill.text}
+            </span>
+            <div style={{ fontSize: 12, lineHeight: 1.4, fontWeight: 700, color: 'var(--ink-soft)' }}>
+              for you — based on your {Object.keys(measure.lean_mappings).join(' & ')} answers
+            </div>
+          </div>
+        ) : (
+          <div className="dashed-note" style={{ marginTop: 12 }}>
+            <strong>No lean shown</strong> — your interview didn't map cleanly onto this one, and we won't fake it.
+          </div>
+        )}
+        <div style={{ display: 'flex', gap: 10, marginTop: 14 }}>
+          <div style={{ flex: 1, background: 'var(--seafoam-tint)', borderRadius: 14, padding: '12px 13px' }}>
+            <div className="eyebrow" style={{ letterSpacing: 1, color: 'var(--seafoam-deep)' }}>✓ PRO</div>
+            <p style={{ fontSize: 12, lineHeight: 1.55, fontWeight: 600, margin: '5px 0 0' }}>{measure.pro_summary}</p>
+          </div>
+          <div style={{ flex: 1, background: 'var(--coral-tint)', borderRadius: 14, padding: '12px 13px' }}>
+            <div className="eyebrow" style={{ letterSpacing: 1, color: '#C05A3E' }}>✕ CON</div>
+            <p style={{ fontSize: 12, lineHeight: 1.55, fontWeight: 600, margin: '5px 0 0' }}>{measure.con_summary}</p>
+          </div>
+        </div>
+        <p className="note" style={{ margin: '12px 0 0', textAlign: 'center', fontSize: 11.5 }}>
+          Summaries of official pamphlet statements —{' '}
+          {pam ? (
+            <a className="cite" href={pam} target="_blank" rel="noopener noreferrer">
+              read them unedited
+            </a>
+          ) : (
+            'see the official pamphlet'
+          )}
+          .
+        </p>
+      </div>
     </section>
   )
 }
 
-const WHO_CAN_WIN = {
-  primary: 'For close matches, factor in who realistically has a shot of advancing past the primary.',
-  general: 'For close matches, factor in who realistically has a shot of winning.',
-}
-
-const concernChips = (kind) => [
-  {
-    label: '🚩 No extremists',
-    text: "I don't want to support extremists in any direction, even if they match my values on paper. Check each candidate's record, endorsements, and donors for red flags.",
-  },
-  {
-    label: '💰 Follow the money',
-    text: 'Look closely at who funds each candidate — individual donors, PACs, party money — and flag anything that could pull them away from my interests.',
-  },
-  {
-    label: '🔨 Real track record',
-    text: 'I care more about what candidates have actually done than what they say. Which of these have a real record of delivering?',
-  },
-  {
-    label: '🗳️ Who can win',
-    text: WHO_CAN_WIN[kind] || WHO_CAN_WIN.general,
-  },
-]
-
 function BriefSection({ data, context, answers, contests, measures, shareUrl }) {
   const [copied, setCopied] = useState(false)
-  const [concerns, setConcerns] = useState('')
-  const addChip = (t) =>
-    setConcerns((prev) => (prev.includes(t) ? prev : prev ? `${prev.trimEnd()}\n${t}` : t))
   const text = useMemo(
-    () => buildBrief(data, context, answers, contests, measures, shareUrl, concerns),
-    [data, context, answers, contests, measures, shareUrl, concerns]
+    () => buildBrief(data, context, answers, contests, measures, shareUrl),
+    [data, context, answers, contests, measures, shareUrl]
   )
-  const words = text.split(/\s+/).length
-  const chips = useMemo(() => concernChips(electionGuide(data.election).kind), [data])
   const copy = () => {
     // writeText rejects when the document loses focus mid-click; leave the
     // button in its resting state so the voter can simply try again.
@@ -507,66 +506,11 @@ function BriefSection({ data, context, answers, contests, measures, shareUrl }) 
     <section className="screen--navy" style={{ margin: '24px 0 0', padding: '30px 24px' }}>
       <div className="eyebrow" style={{ letterSpacing: 2 }}>⚓ THE BALLOT BRIEF</div>
       <h1 className="display" style={{ fontSize: 26, lineHeight: 1.2, marginTop: 8, color: 'var(--cream)' }}>
-        <span style={{ color: 'var(--amber-border)' }}>Highly recommended:</span> Take your ballot to your own AI
+        Take your ballot to your own AI
       </h1>
       <p className="copy" style={{ fontSize: 14, marginTop: 10, color: '#C7D4DF' }}>
-        The report below is a good starting point for matching your priorities to
-        candidates — but we <strong style={{ color: 'var(--cream)' }}>highly recommend</strong>{' '}
-        moving the conversation to your own chatbot (ChatGPT or Claude, for example),
-        where it can dig deeper and build you a much more personalized, much prettier
-        report. Just tap the button to copy everything, then paste it into your chatbot.
+        Your chatbot can dig deeper and build you a personal report. One tap copies everything.
       </p>
-      <div className="packet" style={{ marginTop: 18 }}>
-        {text.split('\n').slice(4, 5)[0]?.slice(0, 60)}…<br />
-        {data.rubric.axes
-          .filter((a) => answers[a.id])
-          .slice(0, 2)
-          .map((a) => `${a.title} · `)}
-        …<br />
-        <span className="hint">+ summaries &amp; sources for all {contests.length + measures.length} contests</span>
-      </div>
-      <div style={{ marginTop: 18 }}>
-        <label
-          className="copy"
-          htmlFor="brief-concerns"
-          style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#C7D4DF' }}
-        >
-          Anything you want the AI to know or check? <span style={{ fontWeight: 400 }}>(optional)</span>
-        </label>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, margin: '10px 0' }}>
-          {chips.map((chip) => (
-            <button
-              key={chip.label}
-              type="button"
-              onClick={() => addChip(chip.text)}
-              disabled={concerns.includes(chip.text)}
-              style={{
-                font: 'inherit',
-                fontSize: 12,
-                fontWeight: 700,
-                color: concerns.includes(chip.text) ? '#7E93A6' : 'var(--cream)',
-                background: 'transparent',
-                border: '1.5px solid currentColor',
-                borderRadius: 999,
-                padding: '5px 12px',
-                cursor: concerns.includes(chip.text) ? 'default' : 'pointer',
-              }}
-            >
-              {concerns.includes(chip.text) ? '✓ ' : '+ '}
-              {chip.label}
-            </button>
-          ))}
-        </div>
-        <textarea
-          id="brief-concerns"
-          className="field"
-          rows={3}
-          value={concerns}
-          onChange={(e) => setConcerns(e.target.value)}
-          placeholder={'Tap a suggestion above or write your own — e.g. "I\'m torn on the transit measure, push back on my lean."'}
-          style={{ resize: 'vertical' }}
-        />
-      </div>
       <div style={{ marginTop: 18, textAlign: 'center' }}>
         <button className="btn btn--coral btn--lg" style={{ fontSize: 18, padding: '15px 32px' }} onClick={copy}>
           Copy my Ballot Brief
@@ -574,13 +518,121 @@ function BriefSection({ data, context, answers, contests, measures, shareUrl }) 
       </div>
       {copied && (
         <div className="copied rise" style={{ marginTop: 16 }}>
-          ✓ Your Ballot Brief is in your clipboard — now open ChatGPT, Claude, or any
-          chatbot and paste it in. The prompt is included.
+          ✓ Copied. Paste this into your AI and hit Enter to chat about your Ballot Brief.
         </div>
       )}
-      <p className="note" style={{ margin: '8px 0 0', textAlign: 'center', fontSize: 11.5 }}>
-        ~{Math.round(words / 100) * 100} words · plain text · yours to keep
-      </p>
+    </section>
+  )
+}
+
+// One Pick Row on a Ballot Section card: the contest heading, the Candidate
+// Photo, the best-match name and the score dial, so the collapsed overview
+// alone is the cheat sheet. Tapping it opens the full card in place.
+function PickRow({ contest, answers, onOpen }) {
+  const { rows, tooClose } = rankContest(contest, answers)
+  const { office, place } = contestHeading(contest)
+  const heading = `${office.toUpperCase()} · ${place.toUpperCase()}`
+  // A withdrawn candidate is never the pick; rankContest sorts them last.
+  const standing = rows.filter((r) => !r.cand.withdrawn)
+  const top = standing[0]
+  let dial
+  let photos
+  let pick
+  if (contest.uncontested) {
+    const c = contest.candidates[0]
+    dial = null
+    photos = <CandidatePhoto photo={c.photo} name={c.name} size={40} />
+    pick = (
+      <>
+        {c.name} <span className="pick__tag">uncontested</span>
+      </>
+    )
+  } else if (tooClose) {
+    const [a, b] = standing
+    dial = <div className="pick__mark" title="Too close to call — your top two are within our margin of noise.">⚖</div>
+    photos = (
+      <span className="pick__pair">
+        <CandidatePhoto photo={a.cand.photo} name={a.cand.name} size={40} />
+        <CandidatePhoto photo={b.cand.photo} name={b.cand.name} size={40} />
+      </span>
+    )
+    pick = `${a.cand.name} or ${b.cand.name}`
+  } else if (!top || top.score == null) {
+    // Nobody could be scored: today's "?" marker (wording is #39's).
+    dial = top ? <ScoreDial row={top} /> : null
+    photos = null
+    pick = <span className="pick__none">No confident score — {standing.map((r) => r.cand.name).join(', ') || 'no candidates'}</span>
+  } else {
+    dial = <ScoreDial row={top} />
+    photos = <CandidatePhoto photo={top.cand.photo} name={top.cand.name} size={40} />
+    pick = (
+      <>
+        {top.cand.name}
+        {top.best && <> <span className="best-tag">★ Best match</span></>}
+      </>
+    )
+  }
+  return (
+    <button className="pick" onClick={onOpen}>
+      {dial}
+      {photos}
+      <div className="pick__text">
+        <div className="eyebrow eyebrow--sm eyebrow--muted">{heading}</div>
+        <div className="pick__name">{pick}</div>
+      </div>
+      <div className="chev">▾</div>
+    </button>
+  )
+}
+
+function MeasurePickRow({ measure, answers, onOpen }) {
+  const { lean } = measureLean(measure, answers)
+  return (
+    <button className="pick" onClick={onOpen}>
+      <div className="pick__text">
+        <div className="eyebrow eyebrow--sm eyebrow--muted">
+          {measure.jurisdiction.toUpperCase()} · {measure.proposition.toUpperCase()}
+        </div>
+        <div className="pick__name">{measure.title}</div>
+      </div>
+      <LeanPill pill={leanPill(lean)} />
+      <div className="chev">▾</div>
+    </button>
+  )
+}
+
+// One Ballot Section as one card: its name, then a Pick Row per measure and
+// contest. `openKey` names the one contest or measure open across the page.
+function BallotSectionCard({ section, data, answers, openKey, setOpenKey }) {
+  const slots = [
+    ...section.measures.map((m) => ({ key: `measure:${m.slug}`, measure: m })),
+    ...section.contests.map((c) => ({ key: `contest:${c.slug}`, contest: c })),
+  ]
+  return (
+    <section className="card ballot-section">
+      <div className="ballot-section__head">
+        <h3 className="display ballot-section__name">{section.name}</h3>
+      </div>
+      {slots.map(({ key, measure, contest }) => {
+        const open = openKey === key
+        const close = () => setOpenKey(null)
+        const show = () => setOpenKey(key)
+        return (
+          <div key={key} className={`pick-slot${open ? ' pick-open' : ''}`}>
+            {measure ? (
+              open ? (
+                <MeasureCard data={data} measure={measure} answers={answers} onToggle={close} />
+              ) : (
+                <MeasurePickRow measure={measure} answers={answers} onOpen={show} />
+              )
+            ) : open ? (
+              <ContestCard data={data} contest={contest} answers={answers} onCollapse={close} />
+            ) : (
+              <PickRow contest={contest} answers={answers} onOpen={show} />
+            )}
+          </div>
+        )
+      })}
     </section>
   )
 }
@@ -685,6 +737,11 @@ export default function Results({ data, election, index, base, ballotContext, an
     () => measuresOnBallot(data, ballotContext, scopeMatches),
     [data, ballotContext]
   )
+  // The Ballot Sections of this Covered Ballot, in ballot order. One contest
+  // or measure is open at a time across the page; it is page state only and
+  // is never written to the Report Link.
+  const sections = useMemo(() => ballotSections(contests, measures), [contests, measures])
+  const [openKey, setOpenKey] = useState(null)
   const [shareUrl, setShareUrl] = useState('')
   const [linkCopied, setLinkCopied] = useState(false)
 
@@ -737,7 +794,11 @@ export default function Results({ data, election, index, base, ballotContext, an
           · {coverageLabel.toLowerCase()} · <span className="accent">covered scores cite sources</span>
         </p>
         <div className="share-row" style={{ marginTop: 10 }}>
-          <button className="btn btn--navy btn--xs" onClick={copyLink}>
+          <button
+            className="btn btn--navy btn--xs"
+            onClick={copyLink}
+            title="This page's link holds your answers (never your address). Bookmark it to come back; share it only with people you'd show your values to."
+          >
             {linkCopied ? '✓ link copied' : '🔗 Copy link to my report'}
           </button>
           <button className="linkish" style={{ fontSize: 12 }} onClick={onStartOver}>
@@ -759,14 +820,9 @@ export default function Results({ data, election, index, base, ballotContext, an
             <a href={VOTEWA_URL} target="_blank" rel="noopener noreferrer">VoteWA.gov</a>
           </p>
         )}
-        <p className="note" style={{ margin: '8px 0 0', fontSize: 11 }}>
-          This page's link holds your answers (never your address) — bookmark it
-          to come back, share it only with people you'd show your values to.
-        </p>
         {dataChanged && (
           <div className="banner-tcc" style={{ marginTop: 10 }}>
-            ☔ Our data has been updated since this link was made — scores may
-            have shifted slightly. Start over for the latest coverage.
+            ☔ Our data has been updated since this link was made — start over for the latest.
           </div>
         )}
         {ballotContext.coverageStatus === 'statewide_only' && (
@@ -804,27 +860,24 @@ export default function Results({ data, election, index, base, ballotContext, an
       <div style={{ margin: '32px 24px 0' }}>
         <h2 className="display" style={{ fontSize: 25, margin: 0 }}>Report</h2>
         <p className="copy" style={{ fontSize: 13.5, lineHeight: 1.6, margin: '8px 0 0', color: 'var(--ink-soft)' }}>
-          The report below comes from matching your answers to our database of
-          candidates and measures. It beats picking names at random, but it can't
-          know everything about you. For a recommendation built around your
-          situation, tap <strong>Copy my Ballot Brief</strong> above and paste it
-          into your own chatbot.
+          Your answers matched against our candidate and measure database. Tap any row for the evidence.
         </p>
-        <MarkerLegend />
+        <details className="how-to-read">
+          <summary>How to read the dials</summary>
+          <MarkerLegend />
+        </details>
       </div>
 
-      {contests.map((c) => (
-        <ContestCard key={c.slug} data={data} contest={c} answers={scored} />
+      {sections.map((section) => (
+        <BallotSectionCard
+          key={section.name}
+          section={section}
+          data={data}
+          answers={scored}
+          openKey={openKey}
+          setOpenKey={setOpenKey}
+        />
       ))}
-
-      {measures.length > 0 && (
-        <>
-          <h2 className="display" style={{ fontSize: 19, margin: '22px 24px 0' }}>Measures</h2>
-          {measures.map((m) => (
-            <MeasureCard key={m.slug} data={data} measure={m} answers={scored} />
-          ))}
-        </>
-      )}
 
       {resultsNote && (
         <p className="note" style={{ margin: '16px 24px 0', textAlign: 'center', color: 'var(--muted)' }}>

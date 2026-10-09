@@ -1914,7 +1914,7 @@ const briefFor = (context) => {
   return {
     contests,
     measures,
-    text: buildBrief(data, context, agreeWithEverything(items), contests, measures, 'https://example.test/washington-state#p=abc', ''),
+    text: buildBrief(data, context, agreeWithEverything(items), contests, measures, 'https://example.test/washington-state#p=abc'),
   }
 }
 
@@ -1924,8 +1924,10 @@ test('the statewide-only Ballot Brief carries the warning and every contest and 
   assert.match(text, /Coverage: STATEWIDE-ONLY GUIDE/)
   assert.match(text, /omits county, city, school, fire, judicial district, and other local contests/)
   assert.match(text, /Resolved county: Test County/)
-  for (const c of contests) assert.ok(text.includes(`## SUPREME COURT — ${c.district}`), c.slug)
-  assert.match(text, /## BALLOT MEASURES/)
+  for (const c of contests) assert.ok(text.includes(`### SUPREME COURT — ${c.district}`), c.slug)
+  // Ballot Sections (#40): measures first, then the courts.
+  assert.match(text, /^## MEASURES$/m)
+  assert.ok(text.indexOf('## MEASURES') < text.indexOf('## COURTS'))
   for (const m of measures) {
     const line = text.split('\n').find((l) => l.startsWith(`### ${m.jurisdiction} ${m.proposition}:`))
     assert.ok(line, `${m.slug} missing from brief`)
@@ -1941,10 +1943,15 @@ test('a King Ballot Brief is a full county guide naming every contest once and e
   assert.doesNotMatch(text, /STATEWIDE-ONLY|PARTIAL COUNTY/)
   for (const c of contests) {
     const { office, place } = contestHeading(c)
-    const heading = `## ${office.toUpperCase()} — ${place}`
+    const heading = `### ${office.toUpperCase()} — ${place}`
     assert.equal(text.split('\n').filter((l) => l === heading).length, 1, heading)
   }
-  assert.equal(text.split('\n').filter((l) => l.startsWith('## SUPREME COURT')).length, 5)
+  assert.equal(text.split('\n').filter((l) => l.startsWith('### SUPREME COURT')).length, 5)
+  // Ballot Sections (#40), in Washington ballot order.
+  assert.deepEqual(
+    text.split('\n').filter((l) => /^## [A-Z]+$/.test(l) && !/INSTRUCTIONS|RESEARCH|RULES|PHOTOS|PRESENTATION/.test(l)),
+    ['## MEASURES', '## FEDERAL', '## STATE', '## COURTS', '## COUNTY', '## LOCAL']
+  )
   for (const m of measures)
     assert.ok(text.split('\n').some((l) => l.startsWith(`### ${m.jurisdiction} ${m.proposition}:`)), m.slug)
   assert.match(text, /Official pamphlet statement: https:\/\/cdn\.kingcounty\.gov\/.*local-edition\.pdf#page=\d+/)
@@ -1976,10 +1983,10 @@ test('the general ships contest terms from the statewide package', () => {
 
 test('the King Ballot Brief heads each contest office first, then where (issue #25)', () => {
   const { text } = briefFor(ADDRESSES.pinehurst)
-  assert.match(text, /^## STATE SENATOR — Legislative District 46$/m)
-  assert.match(text, /^## STATE REPRESENTATIVE POSITION NO\. 1 — Legislative District 46$/m)
-  assert.match(text, /^## JUDGE POSITION NO\. 1 — King County District Court, West Electoral District$/m)
-  assert.match(text, /^## COUNCIL DISTRICT NO\. 5 — City of Seattle$/m)
-  assert.match(text, /^## PROSECUTING ATTORNEY — Countywide$/m)
-  assert.doesNotMatch(text, /^## (LEGISLATIVE DISTRICT|CITY OF|\w+ ELECTORAL DISTRICT)/m)
+  assert.match(text, /^### STATE SENATOR — Legislative District 46$/m)
+  assert.match(text, /^### STATE REPRESENTATIVE POSITION NO\. 1 — Legislative District 46$/m)
+  assert.match(text, /^### JUDGE POSITION NO\. 1 — King County District Court, West Electoral District$/m)
+  assert.match(text, /^### COUNCIL DISTRICT NO\. 5 — City of Seattle$/m)
+  assert.match(text, /^### PROSECUTING ATTORNEY — Countywide$/m)
+  assert.doesNotMatch(text, /^### (LEGISLATIVE DISTRICT|CITY OF|\w+ ELECTORAL DISTRICT)/m)
 })

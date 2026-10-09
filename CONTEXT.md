@@ -205,6 +205,12 @@ Washington ballot lists them: Measures, Federal, State, Courts, County, Local.
 Each Contest belongs to exactly one, derived from its pipeline category.
 _Avoid_: Card group, bucket, level
 
+**Pick Row**:
+One line on a Ballot Section card, one per Contest: the Contest heading,
+the Candidate Photo, the best-match name and the score dial, or the Lean for
+a Measure. Tapping it opens the Contest's full card in place.
+_Avoid_: Summary row, collapsed card, list item
+
 **AI Report**:
 The HTML page a voter's own chatbot builds from the Ballot Brief, outside
 Voter Lifeboat.

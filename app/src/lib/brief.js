@@ -4,11 +4,41 @@
 
 import { rankContest, measureLean } from './scoring.js'
 import { longElectionDay } from './elections.js'
-import { pamphletLink } from './officialLinks.js'
+import { electionGuide, pamphletLink } from './officialLinks.js'
 import { contestHeading } from './contests.js'
 import { layerLabel } from './districts.js'
+import { ballotSections } from './ballotSections.js'
 
 export { pamphletLink }
+
+const WHO_CAN_WIN = {
+  primary: 'For close matches, factor in who realistically has a shot of advancing past the primary.',
+  general: 'For close matches, factor in who realistically has a shot of winning.',
+}
+
+// The Research Lenses the chatbot offers in Orientation Mode, before the AI
+// Report. `kind` is electionGuide(...).kind; the last lens reads differently
+// in a primary.
+export function researchLenses(kind) {
+  return [
+    {
+      name: 'No extremists',
+      text: "I don't want to support extremists in any direction, even if they match my values on paper. Check each candidate's record, endorsements, and donors for red flags.",
+    },
+    {
+      name: 'Follow the money',
+      text: 'Look closely at who funds each candidate — individual donors, PACs, party money — and flag anything that could pull them away from my interests.',
+    },
+    {
+      name: 'Real track record',
+      text: 'I care more about what candidates have actually done than what they say. Which of these have a real record of delivering?',
+    },
+    {
+      name: 'Who can win',
+      text: WHO_CAN_WIN[kind] || WHO_CAN_WIN.general,
+    },
+  ]
+}
 
 function axisName(data, id) {
   return data.rubric.axes.find((a) => a.id === id)?.title || id
@@ -48,7 +78,7 @@ function coverageText(context, election) {
   ]
 }
 
-export function buildBrief(data, context, answers, contests, measures, shareUrl, concerns) {
+export function buildBrief(data, context, answers, contests, measures, shareUrl) {
   const L = []
   L.push(`# MY BALLOT BRIEF — ${data.election?.scope || 'Washington State'}, ${data.election?.name || ''}`)
   L.push('')
@@ -66,44 +96,11 @@ export function buildBrief(data, context, answers, contests, measures, shareUrl,
   }
   L.push('')
 
-  for (const contest of contests) {
-    const { rows, tooClose } = rankContest(contest, answers)
-    const { office, place } = contestHeading(contest)
-    L.push(`## ${office.toUpperCase()} — ${place}`)
-    if (contest.term) L.push(`Term: ${contest.term}`)
-    if (contest.office_does) L.push(`(${contest.office_does})`)
-    if (contest.uncontested) L.push('Uncontested — shown for information only.')
-    if (tooClose)
-      L.push(
-        'NOTE: my top two scores here are within the noise margin — genuinely too close to call.'
-      )
-    for (const r of rows) {
-      const c = r.cand
-      const head =
-        r.score != null
-          ? `${r.score}/100 match`
-          : c.withdrawn
-            ? 'WITHDRAWN after pamphlet printing'
-            : 'not enough evidence to score'
-      L.push(`### ${c.name}${c.party ? ` (${c.party})` : ''} — ${head} [evidence: ${c.evidence_level}]`)
-      if (c.summary) L.push(c.summary)
-      for (const h of c.highlights || []) L.push(`- ${h}`)
-      const urls = (c.sources || [])
-        .map((s) => s.url)
-        .filter(Boolean)
-        .slice(0, 5)
-      if (urls.length) L.push(`Sources: ${urls.join(' · ')}`)
-      const pam = pamphletLink(c.pamphlet_pages, contest.owner, data.election?.id)
-      if (pam) L.push(`Official pamphlet statement: ${pam}`)
-      // The Candidate Photo, verified by the pipeline; the AI Report hotlinks it.
-      if (c.photo?.url) L.push(`Photo: ${c.photo.url} (from ${c.photo.page || c.photo.url})`)
-    }
-    L.push('')
-  }
-
-  if (measures.length) {
-    L.push('## BALLOT MEASURES')
-    for (const m of measures) {
+  // Grouped under the Ballot Sections in ballot order, as the Report is, so
+  // the AI Report follows the Report.
+  for (const section of ballotSections(contests, measures)) {
+    L.push(`## ${section.name.toUpperCase()}`)
+    for (const m of section.measures) {
       const { lean } = measureLean(m, answers)
       const leanTxt =
         lean === 'yes'
@@ -120,8 +117,42 @@ export function buildBrief(data, context, answers, contests, measures, shareUrl,
       if (m.con_summary) L.push(`Con: ${m.con_summary}`)
       const pam = pamphletLink(m.pamphlet_pages, m.owner, data.election?.id)
       if (pam) L.push(`Official pamphlet entry: ${pam}`)
+      L.push('')
     }
-    L.push('')
+    for (const contest of section.contests) {
+      const { rows, tooClose } = rankContest(contest, answers)
+      const { office, place } = contestHeading(contest)
+      L.push(`### ${office.toUpperCase()} — ${place}`)
+      if (contest.term) L.push(`Term: ${contest.term}`)
+      if (contest.office_does) L.push(`(${contest.office_does})`)
+      if (contest.uncontested) L.push('Uncontested — shown for information only.')
+      if (tooClose)
+        L.push(
+          'NOTE: my top two scores here are within the noise margin — genuinely too close to call.'
+        )
+      for (const r of rows) {
+        const c = r.cand
+        const head =
+          r.score != null
+            ? `${r.score}/100 match`
+            : c.withdrawn
+              ? 'WITHDRAWN after pamphlet printing'
+              : 'not enough evidence to score'
+        L.push(`#### ${c.name}${c.party ? ` (${c.party})` : ''} — ${head} [evidence: ${c.evidence_level}]`)
+        if (c.summary) L.push(c.summary)
+        for (const h of c.highlights || []) L.push(`- ${h}`)
+        const urls = (c.sources || [])
+          .map((s) => s.url)
+          .filter(Boolean)
+          .slice(0, 5)
+        if (urls.length) L.push(`Sources: ${urls.join(' · ')}`)
+        const pam = pamphletLink(c.pamphlet_pages, contest.owner, data.election?.id)
+        if (pam) L.push(`Official pamphlet statement: ${pam}`)
+        // The Candidate Photo, verified by the pipeline; the AI Report hotlinks it.
+        if (c.photo?.url) L.push(`Photo: ${c.photo.url} (from ${c.photo.page || c.photo.url})`)
+      }
+      L.push('')
+    }
   }
 
   L.push('---')
@@ -134,20 +165,18 @@ export function buildBrief(data, context, answers, contests, measures, shareUrl,
   L.push('')
   L.push('## FIRST RESPONSE INSTRUCTIONS')
   L.push(
-    'Do not generate the HTML report immediately. First, briefly welcome me, summarize what election data and coverage limits you have, and tell me you can generate the HTML report now if I want. Also tell me I can ask questions, add personal context, or refine my priorities before you generate the report. Wait for me to ask before producing the HTML report.'
+    'Do not generate the HTML report immediately. First, briefly welcome me, summarize what election data and coverage limits you have, and tell me you can generate the HTML report now if I want. Then offer me these four research lenses and ask me which to apply (any, all, or none):'
+  )
+  for (const lens of researchLenses(electionGuide(data.election).kind)) L.push(`- ${lens.name}: ${lens.text}`)
+  L.push(
+    'Also ask whether there is anything else I want you to know or check — personal context, a contest I am torn on, priorities to refine. Wait for my answer before producing the HTML report.'
   )
   L.push('')
-  if (concerns?.trim()) {
-    L.push('## MY QUESTIONS AND CONCERNS')
-    L.push(concerns.trim())
-    L.push('Address these directly and prominently in your report.')
-    L.push('')
-  }
   L.push(`## WHEN I ASK FOR THE HTML REPORT
 Use these instructions only after I ask you to generate the report.
 
 ## YOUR RESEARCH
-Search the web for every serious contender above: news coverage, endorsements, donor records, public statements, voting history where applicable. If you do NOT have web access, say so in a prominent banner at the top of the report and confine yourself to analyzing this brief's own contents — do not invent outside facts and do not fabricate links. Candidates marked "not enough evidence to score" are in scope: you may find evidence the pipeline didn't, and one of them may be the best pick. Also draw on whatever you already know about me from our past conversations — my circumstances, priorities, and how I think — to sharpen your verdicts.
+Search the web for every serious contender above: news coverage, endorsements, donor records, public statements, voting history where applicable. If you do NOT have web access, say so in a prominent banner at the top of the report and confine yourself to analyzing this brief's own contents — do not invent outside facts and do not fabricate links. Candidates marked "not enough evidence to score" are in scope: you may find evidence the pipeline didn't, and one of them may be the best pick. Apply the research lenses I chose and address anything else I asked you to check directly and prominently in the report. Also draw on whatever you already know about me from our past conversations — my circumstances, priorities, and how I think — to sharpen your verdicts.
 
 ## COVERAGE RULES
 - Cover EVERY contested race on my ballot, each in its own section, with exactly ONE explicit pick per race. Skip uncontested races.
@@ -160,7 +189,7 @@ Match the REFERENCE DESIGN at the bottom of these instructions: a warm editorial
 1. Masthead: title, election and date, my districts.
 2. The no-web-access banner, if that applies.
 3. "Verdicts at a glance", subtitled "What I recommend for each contested race": one small chip per race and measure — race, your pick, verdict color — each anchor-linked to its section below. Directly above the chips, a one-line legend spelling out what the two colors mean.
-4. One section per race, in the same order as this brief, then the measures.
+4. One section per race and measure, grouped and in the same order as this brief: Measures, Federal, State, Courts, County, Local.
 5. Closing: patterns you noticed across races (e.g. one of my values doing hidden work in the rankings) and questions back to me — only real ones; if none, say so in one line.
 6. Footer: sources consulted, a reminder that I should verify against the linked sources before voting — the vote is mine, not yours or a tool's — and the regenerate link from the top of this brief.
 
