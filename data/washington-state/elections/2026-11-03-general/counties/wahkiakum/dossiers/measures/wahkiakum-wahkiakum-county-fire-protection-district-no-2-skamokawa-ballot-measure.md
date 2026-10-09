@@ -2,7 +2,7 @@
 slug: wahkiakum-wahkiakum-county-fire-protection-district-no-2-skamokawa-ballot-measure
 jurisdiction: Wahkiakum County Fire Protection District No. 2 (Skamokawa)
 title: "Emergency Medical Services Levy - Replacement of Existing Levy"
-researched_at: 2026-10-08
+researched_at: 2026-10-09
 evidence_level: pamphlet-only
 derived_from:
   - data/washington-state/elections/2026-11-03-general/counties/wahkiakum/interim/measures.json
@@ -24,10 +24,10 @@ sources:
   - id: S3
     tier: 1
     type: official-record
-    outlet: RCW 84.52.069, Emergency medical care and service levies (as published on leg.wa.gov 2026-10-08)
+    outlet: RCW 84.52.069, Emergency medical care and service levies (as published on leg.wa.gov 2026-10-09)
     url: https://app.leg.wa.gov/RCW/default.aspx?cite=84.52.069
     pointer: counties/wahkiakum/raw/law/rcw-84.52.069.html.url
-    accessed: 2026-10-08
+    accessed: 2026-10-09
   - id: S4
     tier: 2
     type: legal-notice
@@ -51,6 +51,8 @@ sources:
     accessed: 2026-10-08
 ---
 ## What it does
+
+The ballot title describes a replacement of Skamokawa Fire District 2's existing emergency medical services levy with a ten-year property tax under Resolution #2026-01, collected from 2027 for EMS operating and equipment costs. After the first year, growth is limited and tied to the Consumer Price Index [S1]. The ballot cites RCW 84.52.069 [S1], whose text as published on leg.wa.gov limits EMS levies to $0.50 per $1,000 [S3]. The ballot does not explain the proposed $1.00 rate [S1].
 
 "If approved by voters, this proposition would authorize Wahkiakum County Fire Protection District #2 (Skamokawa) to levy a regular property tax at a rate not to exceed one dollar per one thousand dollars of assessed valuation on all taxable property within the district. The levy proceeds would be used to fund operational and equipment costs as more fully described in Fire District #2 Resolution #2026-01 and RCW 84.52.069. The levy would be authorized for a ten-year period, with collection beginning in 2027; and would be subject to RCW chapter 84.55 limitations on levy increases in years two through ten, which are linked to the Consumer Price Index. The final year's levy dollar amount would be used to compute limitations for subsequent levies as provided by RCW Chapter 84.55." Qualifying seniors, veterans and disabled persons would be eligible for exemption under RCW 84.36.381 [S1].
 
