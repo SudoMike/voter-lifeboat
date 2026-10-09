@@ -168,6 +168,12 @@ available data and coverage limits, and offer to generate a report without
 generating it until the voter asks.
 _Avoid_: Intro mode, pre-report mode
 
+**Research Lens**:
+One of the named angles the Ballot Brief asks the voter's chatbot to offer in
+Orientation Mode before building the AI Report: no extremists, follow the
+money, real track record, who can win.
+_Avoid_: Concern chip, suggestion, filter
+
 **Statement Card**:
 The Interview's core unit: a short, neutrally worded position statement the
 voter agrees with, disagrees with, or skips.
@@ -192,6 +198,12 @@ The page showing one voter's Covered Ballot ranked against their Values
 Profile, headlined "Your ballot, charted". It is what a Report Link opens and
 what an Anonymous Report Record records.
 _Avoid_: Results page, results screen, final report
+
+**Ballot Section**:
+One of the groups a Report divides a Covered Ballot into, in the order a
+Washington ballot lists them: Measures, Federal, State, Courts, County, Local.
+Each Contest belongs to exactly one, derived from its pipeline category.
+_Avoid_: Card group, bucket, level
 
 **AI Report**:
 The HTML page a voter's own chatbot builds from the Ballot Brief, outside
