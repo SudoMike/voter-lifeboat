@@ -1,6 +1,6 @@
 {
   "contest_slug": "measures",
-  "reviewed_at": "2026-10-08",
+  "reviewed_at": "2026-10-09",
   "derived_from": [
     "data/washington-state/elections/2026-11-03-general/counties/wahkiakum/scoring/measures.json",
     "data/washington-state/elections/2026-11-03-general/counties/wahkiakum/dossiers/measures/",
@@ -28,9 +28,22 @@
     {
       "candidate": "wahkiakum-wahkiakum-county-fire-protection-district-no-2-skamokawa-ballot-measure",
       "axis": "_display",
-      "verdict": "adjust",
-      "note": "The facts check out: up to $1.00 per $1,000 for ten years from 2027 collection, Resolution #2026-01, operating and equipment costs, chapter 84.55 CPI-linked limits after year one [S1]; $300 on $300,000 by arithmetic; no statements for or against and no PDC committee [S1][S6]. Two wording problems. (1) what_it_does says as fact that it 'Replaces Skamokawa's Fire District 2 emergency medical services levy', but the dossier found no Fire District 2 EMS rate on the 2025 levy sheet and could not identify the existing levy [S2]. Attribute it instead: 'The ballot title calls it a replacement of the district's existing EMS levy; ...'. Likewise pro_summary's 'the district calls it' should say the ballot title calls it [S1]. (2) con_summary puts the dossier's own statutory observation in the slot meant for arguments against, and says flatly that the statute 'caps such levies at $0.50', where the dossier hedges that this is the text as published on leg.wa.gov with amendment history through 2018 [S3]. Cut con_summary to 'No statement against was published and no opposition committee is registered.' If the statute point stays anywhere, hedge it ('The state EMS-levy statute as published online...') and note that the county's own EMS levy is on the same ballot [S1][S3]. Optional for cost_line: add that the 2025 levy sheet showed no separate district EMS rate [S2]."
+      "verdict": "upheld",
+      "note": "Rechecked the corrected display copy for issue #38. The ballot title, rather than the guide, describes the levy as replacing an existing EMS levy [S1]; the current district EMS rate remains unestablished [S2]. The ten-year term, 2027 collection, operating and equipment costs, Resolution #2026-01 and CPI-linked growth limits match S1. what_it_does attributes the $0.50 limit to RCW 84.52.069 as published on leg.wa.gov, rechecked live 2026-10-09 [S3], and states only that the ballot does not explain its proposed $1.00 rate [S1]. It makes no finding about the Measure's legality. con_summary contains only the absence of a published statement against or registered opposition committee [S1][S6]. pro_summary attributes replacement wording to the ballot title [S1]. The same-election statutory restriction stays in the Dossier's research discussion and is absent from voter-facing scoring copy. Cost and the taxes direction +1 are unchanged. A second independent agent, who did not author the corrected scoring copy, verified the revised Dossier and display copy against their listed sources: the replacement description and term are attributed to S1, the published statutory limit to S3, and the absence of arguments against or an opposition committee to S1 and S6. This independent refutation upholds the revised copy and preserves the existing taxes Lean direction +1."
     }
   ],
-  "missing": []
+  "missing": [],
+  "prior_reviews": [
+    {
+      "reviewed_at": "2026-10-08",
+      "verdicts": [
+        {
+          "candidate": "wahkiakum-wahkiakum-county-fire-protection-district-no-2-skamokawa-ballot-measure",
+          "axis": "_display",
+          "verdict": "adjust",
+          "note": "The facts check out: up to $1.00 per $1,000 for ten years from 2027 collection, Resolution #2026-01, operating and equipment costs, chapter 84.55 CPI-linked limits after year one [S1]; $300 on $300,000 by arithmetic; no statements for or against and no PDC committee [S1][S6]. Two wording problems. (1) what_it_does says as fact that it 'Replaces Skamokawa's Fire District 2 emergency medical services levy', but the dossier found no Fire District 2 EMS rate on the 2025 levy sheet and could not identify the existing levy [S2]. Attribute it instead: 'The ballot title calls it a replacement of the district's existing EMS levy; ...'. Likewise pro_summary's 'the district calls it' should say the ballot title calls it [S1]. (2) con_summary puts the dossier's own statutory observation in the slot meant for arguments against, and says flatly that the statute 'caps such levies at $0.50', where the dossier hedges that this is the text as published on leg.wa.gov with amendment history through 2018 [S3]. Cut con_summary to 'No statement against was published and no opposition committee is registered.' If the statute point stays anywhere, hedge it ('The state EMS-levy statute as published online...') and note that the county's own EMS levy is on the same ballot [S1][S3]. Optional for cost_line: add that the 2025 levy sheet showed no separate district EMS rate [S2]."
+        }
+      ]
+    }
+  ]
 }
