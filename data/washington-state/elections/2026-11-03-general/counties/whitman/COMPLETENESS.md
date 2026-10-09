@@ -140,7 +140,10 @@ Geocoder caveat: the Census geocoder places `304 N Main St, Colfax, WA
 99111` (the elections office) and `400 N Main St, Colfax` in the Town of
 Albion (-117.2475, 46.7916), not Colfax, so the app would show those
 addresses Albion's two levies. `200 S Mill St, Colfax` geocodes correctly.
-This is a geocoder range error the package cannot fix.
+This is a geocoder range error the package cannot fix. The #37 override in
+`geo.js` leaves `CITY` unresolved for Whitman matches with postal city COLFAX
+and Incorporated Place Albion, giving Partial County Coverage and omitting
+Albion's Measures until Census fixes TIGER line 655635849.
 
 ## Sources
 

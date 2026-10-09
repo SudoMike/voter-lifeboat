@@ -788,7 +788,7 @@ test('a Pierce point outside Pierce Transit and King District Court matches neit
 // the addresses below; the mock answers like the server, dropping a feature
 // a request's `where` excludes (the Thurston fire layer's polygons carry
 // CONSOL_DIS 'WTRFA - South Btn'/'WTRFA - North Btn' only inside the RFA).
-function mockWave2(matchedAddress, countyFips, countyName, features) {
+function mockWave2(matchedAddress, countyFips, countyName, features, censusMatch = {}) {
   const calls = []
   global.fetch = async (url) => {
     calls.push(String(url))
@@ -800,8 +800,10 @@ function mockWave2(matchedAddress, countyFips, countyName, features) {
             result: {
               addressMatches: [{
                 matchedAddress,
+                addressComponents: censusMatch.addressComponents,
                 coordinates: { x: -122.9, y: 46.9 },
                 geographies: {
+                  ...censusMatch.geographies,
                   Counties: [{ STATE: '53', COUNTY: countyFips, NAME: countyName }],
                   '120th Congressional Districts': [{ BASENAME: '10' }],
                   '2026 State Legislative Districts - Lower': [{ BASENAME: '2' }],
@@ -2022,4 +2024,34 @@ test('Columbia resolves the Pool District and Prescott park districts from DOR P
   assert.deepEqual(context.missingLayers, [])
   assert.equal('PARKDST' in context.districts, false)
   for (const s of [pool, prescott]) assert.ok(!scopeMatches(s, context), s.value)
+})
+
+test('Colfax matches misplaced in Albion omit Albion Measures and report missing CITY', async () => {
+  const albionScope = { kind: 'DISTRICT', county: 'whitman', layer: 'CITY', value: 'Albion' }
+  for (const [postalCity, place, missing] of [
+    ['COLFAX', 'Albion', true],
+    ['ALBION', 'Albion', false],
+    ['COLFAX', 'Colfax', false],
+  ]) {
+    mockWave2(`400 N MAIN ST, ${postalCity}, WA`, '075', 'Whitman County', [], {
+      addressComponents: { city: postalCity },
+      geographies: { 'Incorporated Places': [{ BASENAME: place }] },
+    })
+    const context = await lookupBallotContext(wave2Data('whitman'), '400 N Main St')
+    assert.deepEqual(context.missingLayers, missing ? ['CITY'] : [])
+    assert.equal(context.coverageStatus, missing ? 'partial_county' : 'full_county')
+    assert.equal(coverageAdvice(context), missing ? 'degraded' : null)
+    assert.equal(context.districts.CITY, missing ? undefined : place)
+    assert.equal(scopeMatches(albionScope, context), !missing && place === 'Albion')
+  }
+})
+
+test('legitimate postal-city mismatch still resolves the incorporated CITY', async () => {
+  mockWave2('3609 MARKET PL W, TACOMA, WA, 98466', '053', 'Pierce County', [], {
+    addressComponents: { city: 'TACOMA' },
+    geographies: { 'Incorporated Places': [{ BASENAME: 'University Place' }] },
+  })
+  const context = await lookupBallotContext(wave2Data('pierce'), '3609 Market Pl W Tacoma WA 98466')
+  assert.equal(context.districts.CITY, 'University Place')
+  assert.deepEqual(context.missingLayers, [])
 })
